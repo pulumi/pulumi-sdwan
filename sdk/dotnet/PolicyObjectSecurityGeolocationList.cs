@@ -60,7 +60,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Geolocation List
+        /// Geolocation  List
         /// </summary>
         [Output("entries")]
         public Output<ImmutableArray<Outputs.PolicyObjectSecurityGeolocationListEntry>> Entries { get; private set; } = null!;
@@ -139,7 +139,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.PolicyObjectSecurityGeolocationListEntryArgs>? _entries;
 
         /// <summary>
-        /// Geolocation List
+        /// Geolocation  List
         /// </summary>
         public InputList<Inputs.PolicyObjectSecurityGeolocationListEntryArgs> Entries
         {
@@ -177,7 +177,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.PolicyObjectSecurityGeolocationListEntryGetArgs>? _entries;
 
         /// <summary>
-        /// Geolocation List
+        /// Geolocation  List
         /// </summary>
         public InputList<Inputs.PolicyObjectSecurityGeolocationListEntryGetArgs> Entries
         {

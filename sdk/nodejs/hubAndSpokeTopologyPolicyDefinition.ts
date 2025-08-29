@@ -48,31 +48,31 @@ export class HubAndSpokeTopologyPolicyDefinition extends pulumi.CustomResource {
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of topologies
      */
-    public readonly topologies!: pulumi.Output<outputs.HubAndSpokeTopologyPolicyDefinitionTopology[]>;
+    declare public readonly topologies: pulumi.Output<outputs.HubAndSpokeTopologyPolicyDefinitionTopology[]>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * VPN list ID
      */
-    public readonly vpnListId!: pulumi.Output<string | undefined>;
+    declare public readonly vpnListId: pulumi.Output<string | undefined>;
     /**
      * VPN list version
      */
-    public readonly vpnListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly vpnListVersion: pulumi.Output<number | undefined>;
 
     /**
      * Create a HubAndSpokeTopologyPolicyDefinition resource with the given unique name, arguments, and options.
@@ -87,26 +87,26 @@ export class HubAndSpokeTopologyPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as HubAndSpokeTopologyPolicyDefinitionState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["topologies"] = state ? state.topologies : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpnListId"] = state ? state.vpnListId : undefined;
-            resourceInputs["vpnListVersion"] = state ? state.vpnListVersion : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["topologies"] = state?.topologies;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpnListId"] = state?.vpnListId;
+            resourceInputs["vpnListVersion"] = state?.vpnListVersion;
         } else {
             const args = argsOrState as HubAndSpokeTopologyPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.topologies === undefined) && !opts.urn) {
+            if (args?.topologies === undefined && !opts.urn) {
                 throw new Error("Missing required property 'topologies'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["topologies"] = args ? args.topologies : undefined;
-            resourceInputs["vpnListId"] = args ? args.vpnListId : undefined;
-            resourceInputs["vpnListVersion"] = args ? args.vpnListVersion : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["topologies"] = args?.topologies;
+            resourceInputs["vpnListId"] = args?.vpnListId;
+            resourceInputs["vpnListVersion"] = args?.vpnListVersion;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }

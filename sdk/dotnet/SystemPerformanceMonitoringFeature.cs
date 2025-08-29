@@ -65,7 +65,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> AppPerfMonitorAppGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Application performance monitoring enable or disable - Default value: `false`
+        /// Application performance monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Output("appPerfMonitorEnabled")]
         public Output<bool?> AppPerfMonitorEnabled { get; private set; } = null!;
@@ -77,7 +78,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// UMTS event driven monitoring enable or disable - Default value: `false`
+        /// UMTS event driven monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Output("eventDrivenConfigEnabled")]
         public Output<bool?> EventDrivenConfigEnabled { get; private set; } = null!;
@@ -95,13 +97,15 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// UMTS monitoring enable or disable - Default value: `false`
+        /// UMTS monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Output("monitoringConfigEnabled")]
         public Output<bool?> MonitoringConfigEnabled { get; private set; } = null!;
 
         /// <summary>
-        /// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        /// UMTS monitoring interval(Minutes)
+        ///   - Choices: `30`, `60`
         /// </summary>
         [Output("monitoringConfigInterval")]
         public Output<string?> MonitoringConfigInterval { get; private set; } = null!;
@@ -177,7 +181,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Application performance monitoring enable or disable - Default value: `false`
+        /// Application performance monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("appPerfMonitorEnabled")]
         public Input<bool>? AppPerfMonitorEnabled { get; set; }
@@ -189,7 +194,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// UMTS event driven monitoring enable or disable - Default value: `false`
+        /// UMTS event driven monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("eventDrivenConfigEnabled")]
         public Input<bool>? EventDrivenConfigEnabled { get; set; }
@@ -213,13 +219,15 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// UMTS monitoring enable or disable - Default value: `false`
+        /// UMTS monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("monitoringConfigEnabled")]
         public Input<bool>? MonitoringConfigEnabled { get; set; }
 
         /// <summary>
-        /// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        /// UMTS monitoring interval(Minutes)
+        ///   - Choices: `30`, `60`
         /// </summary>
         [Input("monitoringConfigInterval")]
         public Input<string>? MonitoringConfigInterval { get; set; }
@@ -251,7 +259,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Application performance monitoring enable or disable - Default value: `false`
+        /// Application performance monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("appPerfMonitorEnabled")]
         public Input<bool>? AppPerfMonitorEnabled { get; set; }
@@ -263,7 +272,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// UMTS event driven monitoring enable or disable - Default value: `false`
+        /// UMTS event driven monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("eventDrivenConfigEnabled")]
         public Input<bool>? EventDrivenConfigEnabled { get; set; }
@@ -287,13 +297,15 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// UMTS monitoring enable or disable - Default value: `false`
+        /// UMTS monitoring enable or disable
+        ///   - Default value: `false`
         /// </summary>
         [Input("monitoringConfigEnabled")]
         public Input<bool>? MonitoringConfigEnabled { get; set; }
 
         /// <summary>
-        /// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+        /// UMTS monitoring interval(Minutes)
+        ///   - Choices: `30`, `60`
         /// </summary>
         [Input("monitoringConfigInterval")]
         public Input<string>? MonitoringConfigInterval { get; set; }

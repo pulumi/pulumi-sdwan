@@ -33,11 +33,14 @@ type ServiceObjectTrackerGroupFeature struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Object ID - Range: `1`-`1000`
+	// Object ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrOutput `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrOutput `pulumi:"objectTrackerIdVariable"`
-	// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list criteria boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	Reachable pulumi.StringPtrOutput `pulumi:"reachable"`
 	// Variable name
 	ReachableVariable pulumi.StringPtrOutput `pulumi:"reachableVariable"`
@@ -86,11 +89,14 @@ type serviceObjectTrackerGroupFeatureState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Object ID - Range: `1`-`1000`
+	// Object ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId *int `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable *string `pulumi:"objectTrackerIdVariable"`
-	// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list criteria boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	Reachable *string `pulumi:"reachable"`
 	// Variable name
 	ReachableVariable *string `pulumi:"reachableVariable"`
@@ -107,11 +113,14 @@ type ServiceObjectTrackerGroupFeatureState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Object ID - Range: `1`-`1000`
+	// Object ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrInput
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrInput
-	// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list criteria boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	Reachable pulumi.StringPtrInput
 	// Variable name
 	ReachableVariable pulumi.StringPtrInput
@@ -132,11 +141,14 @@ type serviceObjectTrackerGroupFeatureArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Object ID - Range: `1`-`1000`
+	// Object ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId *int `pulumi:"objectTrackerId"`
 	// Variable name
 	ObjectTrackerIdVariable *string `pulumi:"objectTrackerIdVariable"`
-	// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list criteria boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	Reachable *string `pulumi:"reachable"`
 	// Variable name
 	ReachableVariable *string `pulumi:"reachableVariable"`
@@ -152,11 +164,14 @@ type ServiceObjectTrackerGroupFeatureArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Object ID - Range: `1`-`1000`
+	// Object ID
+	//   - Range: `1`-`1000`
 	ObjectTrackerId pulumi.IntPtrInput
 	// Variable name
 	ObjectTrackerIdVariable pulumi.StringPtrInput
-	// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list criteria boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	Reachable pulumi.StringPtrInput
 	// Variable name
 	ReachableVariable pulumi.StringPtrInput
@@ -266,7 +281,8 @@ func (o ServiceObjectTrackerGroupFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerGroupFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Object ID - Range: `1`-`1000`
+// Object ID
+//   - Range: `1`-`1000`
 func (o ServiceObjectTrackerGroupFeatureOutput) ObjectTrackerId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerGroupFeature) pulumi.IntPtrOutput { return v.ObjectTrackerId }).(pulumi.IntPtrOutput)
 }
@@ -276,7 +292,9 @@ func (o ServiceObjectTrackerGroupFeatureOutput) ObjectTrackerIdVariable() pulumi
 	return o.ApplyT(func(v *ServiceObjectTrackerGroupFeature) pulumi.StringPtrOutput { return v.ObjectTrackerIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+// tracker ref list criteria boolean and or
+//   - Choices: `and`, `or`
+//   - Default value: `or`
 func (o ServiceObjectTrackerGroupFeatureOutput) Reachable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceObjectTrackerGroupFeature) pulumi.StringPtrOutput { return v.Reachable }).(pulumi.StringPtrOutput)
 }

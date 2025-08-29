@@ -132,14 +132,16 @@ public class TransportCellularControllerFeature extends com.pulumi.resources.Cus
         return this.featureProfileId;
     }
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     @Export(name="firmwareAutoSim", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> firmwareAutoSim;
 
     /**
-     * @return Enable/Disable Firmware Auto Sim - Default value: `true`
+     * @return Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> firmwareAutoSim() {
@@ -174,14 +176,16 @@ public class TransportCellularControllerFeature extends com.pulumi.resources.Cus
         return this.name;
     }
     /**
-     * Set primary SIM slot - Range: `0`-`1`
+     * Set primary SIM slot
+     *   - Range: `0`-`1`
      * 
      */
     @Export(name="primarySimSlot", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> primarySimSlot;
 
     /**
-     * @return Set primary SIM slot - Range: `0`-`1`
+     * @return Set primary SIM slot
+     *   - Range: `0`-`1`
      * 
      */
     public Output<Optional<Integer>> primarySimSlot() {
@@ -202,14 +206,16 @@ public class TransportCellularControllerFeature extends com.pulumi.resources.Cus
         return Codegen.optional(this.primarySimSlotVariable);
     }
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     @Export(name="simFailoverRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> simFailoverRetries;
 
     /**
-     * @return Set SIM failover retries - Range: `0`-`65535`
+     * @return Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     public Output<Optional<Integer>> simFailoverRetries() {
@@ -230,14 +236,16 @@ public class TransportCellularControllerFeature extends com.pulumi.resources.Cus
         return Codegen.optional(this.simFailoverRetriesVariable);
     }
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     @Export(name="simFailoverTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> simFailoverTimeout;
 
     /**
-     * @return Set SIM failover timeout in minutes - Range: `3`-`7`
+     * @return Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     public Output<Optional<Integer>> simFailoverTimeout() {

@@ -51,119 +51,126 @@ export class ServiceMulticastFeature extends pulumi.CustomResource {
     /**
      * Enable or disable RP Announce
      */
-    public readonly autoRpAnnounces!: pulumi.Output<outputs.ServiceMulticastFeatureAutoRpAnnounce[] | undefined>;
+    declare public readonly autoRpAnnounces: pulumi.Output<outputs.ServiceMulticastFeatureAutoRpAnnounce[] | undefined>;
     /**
      * Enable or disable RP Discovery
      */
-    public readonly autoRpDiscoveries!: pulumi.Output<outputs.ServiceMulticastFeatureAutoRpDiscovery[] | undefined>;
+    declare public readonly autoRpDiscoveries: pulumi.Output<outputs.ServiceMulticastFeatureAutoRpDiscovery[] | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
-    public readonly enableAutoRp!: pulumi.Output<boolean | undefined>;
+    declare public readonly enableAutoRp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly enableAutoRpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enableAutoRpVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Set IGMP interface parameters
      */
-    public readonly igmpInterfaces!: pulumi.Output<outputs.ServiceMulticastFeatureIgmpInterface[] | undefined>;
+    declare public readonly igmpInterfaces: pulumi.Output<outputs.ServiceMulticastFeatureIgmpInterface[] | undefined>;
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      */
-    public readonly localReplicator!: pulumi.Output<boolean | undefined>;
+    declare public readonly localReplicator: pulumi.Output<boolean | undefined>;
     /**
-     * Set number of joins per group the router supports - Range: `0`-`131072`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      */
-    public readonly localReplicatorThreshold!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly localReplicatorThresholdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly localReplicatorThreshold: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly localReplicatorVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set MSDP refresh timer - Range: `1`-`60`
-     */
-    public readonly msdpConnectionRetryInterval!: pulumi.Output<number | undefined>;
+    declare public readonly localReplicatorThresholdVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly msdpConnectionRetryIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly localReplicatorVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set MSDP refresh timer
+     *   - Range: `1`-`60`
+     */
+    declare public readonly msdpConnectionRetryInterval: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly msdpConnectionRetryIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * multicast MSDP peer
      */
-    public readonly msdpGroups!: pulumi.Output<outputs.ServiceMulticastFeatureMsdpGroup[] | undefined>;
+    declare public readonly msdpGroups: pulumi.Output<outputs.ServiceMulticastFeatureMsdpGroup[] | undefined>;
     /**
      * Set MSDP originator ID
      */
-    public readonly msdpOriginatorId!: pulumi.Output<string | undefined>;
+    declare public readonly msdpOriginatorId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly msdpOriginatorIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly msdpOriginatorIdVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * bsr candidate Attributes
      */
-    public readonly pimBsrCandidates!: pulumi.Output<outputs.ServiceMulticastFeaturePimBsrCandidate[] | undefined>;
+    declare public readonly pimBsrCandidates: pulumi.Output<outputs.ServiceMulticastFeaturePimBsrCandidate[] | undefined>;
     /**
      * Set RP Discovery Scope
      */
-    public readonly pimBsrRpCandidates!: pulumi.Output<outputs.ServiceMulticastFeaturePimBsrRpCandidate[] | undefined>;
+    declare public readonly pimBsrRpCandidates: pulumi.Output<outputs.ServiceMulticastFeaturePimBsrRpCandidate[] | undefined>;
     /**
      * Set PIM interface parameters
      */
-    public readonly pimInterfaces!: pulumi.Output<outputs.ServiceMulticastFeaturePimInterface[] | undefined>;
+    declare public readonly pimInterfaces: pulumi.Output<outputs.ServiceMulticastFeaturePimInterface[] | undefined>;
     /**
      * Set Access List for PIM SSM
      */
-    public readonly pimSourceSpecificMulticastAccessList!: pulumi.Output<string | undefined>;
+    declare public readonly pimSourceSpecificMulticastAccessList: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly pimSourceSpecificMulticastAccessListVariable!: pulumi.Output<string | undefined>;
+    declare public readonly pimSourceSpecificMulticastAccessListVariable: pulumi.Output<string | undefined>;
     /**
      * turn SSM on/off
      */
-    public readonly pimSourceSpecificMulticastEnable!: pulumi.Output<boolean>;
+    declare public readonly pimSourceSpecificMulticastEnable: pulumi.Output<boolean>;
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      */
-    public readonly pimSptThreshold!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly pimSptThresholdVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
-     */
-    public readonly sptOnly!: pulumi.Output<boolean | undefined>;
+    declare public readonly pimSptThreshold: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sptOnlyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly pimSptThresholdVariable: pulumi.Output<string | undefined>;
+    /**
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
+     */
+    declare public readonly sptOnly: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly sptOnlyVariable: pulumi.Output<string | undefined>;
     /**
      * Set Static RP Address(es)
      */
-    public readonly staticRpAddresses!: pulumi.Output<outputs.ServiceMulticastFeatureStaticRpAddress[] | undefined>;
+    declare public readonly staticRpAddresses: pulumi.Output<outputs.ServiceMulticastFeatureStaticRpAddress[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceMulticastFeature resource with the given unique name, arguments, and options.
@@ -178,71 +185,71 @@ export class ServiceMulticastFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceMulticastFeatureState | undefined;
-            resourceInputs["autoRpAnnounces"] = state ? state.autoRpAnnounces : undefined;
-            resourceInputs["autoRpDiscoveries"] = state ? state.autoRpDiscoveries : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enableAutoRp"] = state ? state.enableAutoRp : undefined;
-            resourceInputs["enableAutoRpVariable"] = state ? state.enableAutoRpVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["igmpInterfaces"] = state ? state.igmpInterfaces : undefined;
-            resourceInputs["localReplicator"] = state ? state.localReplicator : undefined;
-            resourceInputs["localReplicatorThreshold"] = state ? state.localReplicatorThreshold : undefined;
-            resourceInputs["localReplicatorThresholdVariable"] = state ? state.localReplicatorThresholdVariable : undefined;
-            resourceInputs["localReplicatorVariable"] = state ? state.localReplicatorVariable : undefined;
-            resourceInputs["msdpConnectionRetryInterval"] = state ? state.msdpConnectionRetryInterval : undefined;
-            resourceInputs["msdpConnectionRetryIntervalVariable"] = state ? state.msdpConnectionRetryIntervalVariable : undefined;
-            resourceInputs["msdpGroups"] = state ? state.msdpGroups : undefined;
-            resourceInputs["msdpOriginatorId"] = state ? state.msdpOriginatorId : undefined;
-            resourceInputs["msdpOriginatorIdVariable"] = state ? state.msdpOriginatorIdVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["pimBsrCandidates"] = state ? state.pimBsrCandidates : undefined;
-            resourceInputs["pimBsrRpCandidates"] = state ? state.pimBsrRpCandidates : undefined;
-            resourceInputs["pimInterfaces"] = state ? state.pimInterfaces : undefined;
-            resourceInputs["pimSourceSpecificMulticastAccessList"] = state ? state.pimSourceSpecificMulticastAccessList : undefined;
-            resourceInputs["pimSourceSpecificMulticastAccessListVariable"] = state ? state.pimSourceSpecificMulticastAccessListVariable : undefined;
-            resourceInputs["pimSourceSpecificMulticastEnable"] = state ? state.pimSourceSpecificMulticastEnable : undefined;
-            resourceInputs["pimSptThreshold"] = state ? state.pimSptThreshold : undefined;
-            resourceInputs["pimSptThresholdVariable"] = state ? state.pimSptThresholdVariable : undefined;
-            resourceInputs["sptOnly"] = state ? state.sptOnly : undefined;
-            resourceInputs["sptOnlyVariable"] = state ? state.sptOnlyVariable : undefined;
-            resourceInputs["staticRpAddresses"] = state ? state.staticRpAddresses : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["autoRpAnnounces"] = state?.autoRpAnnounces;
+            resourceInputs["autoRpDiscoveries"] = state?.autoRpDiscoveries;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enableAutoRp"] = state?.enableAutoRp;
+            resourceInputs["enableAutoRpVariable"] = state?.enableAutoRpVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["igmpInterfaces"] = state?.igmpInterfaces;
+            resourceInputs["localReplicator"] = state?.localReplicator;
+            resourceInputs["localReplicatorThreshold"] = state?.localReplicatorThreshold;
+            resourceInputs["localReplicatorThresholdVariable"] = state?.localReplicatorThresholdVariable;
+            resourceInputs["localReplicatorVariable"] = state?.localReplicatorVariable;
+            resourceInputs["msdpConnectionRetryInterval"] = state?.msdpConnectionRetryInterval;
+            resourceInputs["msdpConnectionRetryIntervalVariable"] = state?.msdpConnectionRetryIntervalVariable;
+            resourceInputs["msdpGroups"] = state?.msdpGroups;
+            resourceInputs["msdpOriginatorId"] = state?.msdpOriginatorId;
+            resourceInputs["msdpOriginatorIdVariable"] = state?.msdpOriginatorIdVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["pimBsrCandidates"] = state?.pimBsrCandidates;
+            resourceInputs["pimBsrRpCandidates"] = state?.pimBsrRpCandidates;
+            resourceInputs["pimInterfaces"] = state?.pimInterfaces;
+            resourceInputs["pimSourceSpecificMulticastAccessList"] = state?.pimSourceSpecificMulticastAccessList;
+            resourceInputs["pimSourceSpecificMulticastAccessListVariable"] = state?.pimSourceSpecificMulticastAccessListVariable;
+            resourceInputs["pimSourceSpecificMulticastEnable"] = state?.pimSourceSpecificMulticastEnable;
+            resourceInputs["pimSptThreshold"] = state?.pimSptThreshold;
+            resourceInputs["pimSptThresholdVariable"] = state?.pimSptThresholdVariable;
+            resourceInputs["sptOnly"] = state?.sptOnly;
+            resourceInputs["sptOnlyVariable"] = state?.sptOnlyVariable;
+            resourceInputs["staticRpAddresses"] = state?.staticRpAddresses;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceMulticastFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.pimSourceSpecificMulticastEnable === undefined) && !opts.urn) {
+            if (args?.pimSourceSpecificMulticastEnable === undefined && !opts.urn) {
                 throw new Error("Missing required property 'pimSourceSpecificMulticastEnable'");
             }
-            resourceInputs["autoRpAnnounces"] = args ? args.autoRpAnnounces : undefined;
-            resourceInputs["autoRpDiscoveries"] = args ? args.autoRpDiscoveries : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enableAutoRp"] = args ? args.enableAutoRp : undefined;
-            resourceInputs["enableAutoRpVariable"] = args ? args.enableAutoRpVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["igmpInterfaces"] = args ? args.igmpInterfaces : undefined;
-            resourceInputs["localReplicator"] = args ? args.localReplicator : undefined;
-            resourceInputs["localReplicatorThreshold"] = args ? args.localReplicatorThreshold : undefined;
-            resourceInputs["localReplicatorThresholdVariable"] = args ? args.localReplicatorThresholdVariable : undefined;
-            resourceInputs["localReplicatorVariable"] = args ? args.localReplicatorVariable : undefined;
-            resourceInputs["msdpConnectionRetryInterval"] = args ? args.msdpConnectionRetryInterval : undefined;
-            resourceInputs["msdpConnectionRetryIntervalVariable"] = args ? args.msdpConnectionRetryIntervalVariable : undefined;
-            resourceInputs["msdpGroups"] = args ? args.msdpGroups : undefined;
-            resourceInputs["msdpOriginatorId"] = args ? args.msdpOriginatorId : undefined;
-            resourceInputs["msdpOriginatorIdVariable"] = args ? args.msdpOriginatorIdVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["pimBsrCandidates"] = args ? args.pimBsrCandidates : undefined;
-            resourceInputs["pimBsrRpCandidates"] = args ? args.pimBsrRpCandidates : undefined;
-            resourceInputs["pimInterfaces"] = args ? args.pimInterfaces : undefined;
-            resourceInputs["pimSourceSpecificMulticastAccessList"] = args ? args.pimSourceSpecificMulticastAccessList : undefined;
-            resourceInputs["pimSourceSpecificMulticastAccessListVariable"] = args ? args.pimSourceSpecificMulticastAccessListVariable : undefined;
-            resourceInputs["pimSourceSpecificMulticastEnable"] = args ? args.pimSourceSpecificMulticastEnable : undefined;
-            resourceInputs["pimSptThreshold"] = args ? args.pimSptThreshold : undefined;
-            resourceInputs["pimSptThresholdVariable"] = args ? args.pimSptThresholdVariable : undefined;
-            resourceInputs["sptOnly"] = args ? args.sptOnly : undefined;
-            resourceInputs["sptOnlyVariable"] = args ? args.sptOnlyVariable : undefined;
-            resourceInputs["staticRpAddresses"] = args ? args.staticRpAddresses : undefined;
+            resourceInputs["autoRpAnnounces"] = args?.autoRpAnnounces;
+            resourceInputs["autoRpDiscoveries"] = args?.autoRpDiscoveries;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enableAutoRp"] = args?.enableAutoRp;
+            resourceInputs["enableAutoRpVariable"] = args?.enableAutoRpVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["igmpInterfaces"] = args?.igmpInterfaces;
+            resourceInputs["localReplicator"] = args?.localReplicator;
+            resourceInputs["localReplicatorThreshold"] = args?.localReplicatorThreshold;
+            resourceInputs["localReplicatorThresholdVariable"] = args?.localReplicatorThresholdVariable;
+            resourceInputs["localReplicatorVariable"] = args?.localReplicatorVariable;
+            resourceInputs["msdpConnectionRetryInterval"] = args?.msdpConnectionRetryInterval;
+            resourceInputs["msdpConnectionRetryIntervalVariable"] = args?.msdpConnectionRetryIntervalVariable;
+            resourceInputs["msdpGroups"] = args?.msdpGroups;
+            resourceInputs["msdpOriginatorId"] = args?.msdpOriginatorId;
+            resourceInputs["msdpOriginatorIdVariable"] = args?.msdpOriginatorIdVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["pimBsrCandidates"] = args?.pimBsrCandidates;
+            resourceInputs["pimBsrRpCandidates"] = args?.pimBsrRpCandidates;
+            resourceInputs["pimInterfaces"] = args?.pimInterfaces;
+            resourceInputs["pimSourceSpecificMulticastAccessList"] = args?.pimSourceSpecificMulticastAccessList;
+            resourceInputs["pimSourceSpecificMulticastAccessListVariable"] = args?.pimSourceSpecificMulticastAccessListVariable;
+            resourceInputs["pimSourceSpecificMulticastEnable"] = args?.pimSourceSpecificMulticastEnable;
+            resourceInputs["pimSptThreshold"] = args?.pimSptThreshold;
+            resourceInputs["pimSptThresholdVariable"] = args?.pimSptThresholdVariable;
+            resourceInputs["sptOnly"] = args?.sptOnly;
+            resourceInputs["sptOnlyVariable"] = args?.sptOnlyVariable;
+            resourceInputs["staticRpAddresses"] = args?.staticRpAddresses;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -267,7 +274,8 @@ export interface ServiceMulticastFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
     enableAutoRp?: pulumi.Input<boolean>;
     /**
@@ -283,11 +291,13 @@ export interface ServiceMulticastFeatureState {
      */
     igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[]>;
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      */
     localReplicator?: pulumi.Input<boolean>;
     /**
-     * Set number of joins per group the router supports - Range: `0`-`131072`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      */
     localReplicatorThreshold?: pulumi.Input<number>;
     /**
@@ -299,7 +309,8 @@ export interface ServiceMulticastFeatureState {
      */
     localReplicatorVariable?: pulumi.Input<string>;
     /**
-     * Set MSDP refresh timer - Range: `1`-`60`
+     * Set MSDP refresh timer
+     *   - Range: `1`-`60`
      */
     msdpConnectionRetryInterval?: pulumi.Input<number>;
     /**
@@ -347,7 +358,9 @@ export interface ServiceMulticastFeatureState {
      */
     pimSourceSpecificMulticastEnable?: pulumi.Input<boolean>;
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      */
     pimSptThreshold?: pulumi.Input<string>;
     /**
@@ -355,7 +368,8 @@ export interface ServiceMulticastFeatureState {
      */
     pimSptThresholdVariable?: pulumi.Input<string>;
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      */
     sptOnly?: pulumi.Input<boolean>;
     /**
@@ -389,7 +403,8 @@ export interface ServiceMulticastFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable or disable auto-RP - Default value: `false`
+     * Enable or disable auto-RP
+     *   - Default value: `false`
      */
     enableAutoRp?: pulumi.Input<boolean>;
     /**
@@ -405,11 +420,13 @@ export interface ServiceMulticastFeatureArgs {
      */
     igmpInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceMulticastFeatureIgmpInterface>[]>;
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      */
     localReplicator?: pulumi.Input<boolean>;
     /**
-     * Set number of joins per group the router supports - Range: `0`-`131072`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`131072`
      */
     localReplicatorThreshold?: pulumi.Input<number>;
     /**
@@ -421,7 +438,8 @@ export interface ServiceMulticastFeatureArgs {
      */
     localReplicatorVariable?: pulumi.Input<string>;
     /**
-     * Set MSDP refresh timer - Range: `1`-`60`
+     * Set MSDP refresh timer
+     *   - Range: `1`-`60`
      */
     msdpConnectionRetryInterval?: pulumi.Input<number>;
     /**
@@ -469,7 +487,9 @@ export interface ServiceMulticastFeatureArgs {
      */
     pimSourceSpecificMulticastEnable: pulumi.Input<boolean>;
     /**
-     * Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+     * Set when PIM router joins the SPT (kbps)
+     *   - Choices: `0`, `infinity`
+     *   - Default value: `0`
      */
     pimSptThreshold?: pulumi.Input<string>;
     /**
@@ -477,7 +497,8 @@ export interface ServiceMulticastFeatureArgs {
      */
     pimSptThresholdVariable?: pulumi.Input<string>;
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      */
     sptOnly?: pulumi.Input<boolean>;
     /**

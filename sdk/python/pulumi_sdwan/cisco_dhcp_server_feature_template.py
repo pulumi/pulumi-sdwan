@@ -45,9 +45,8 @@ class CiscoDhcpServerFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoDhcpServerFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] address_pool: Configure IPv4 prefix range of the DHCP address pool
         :param pulumi.Input[_builtins.str] address_pool_variable: Variable name
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
@@ -58,9 +57,12 @@ class CiscoDhcpServerFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] domain_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] exclude_addresses: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] exclude_addresses_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]] options: Configure Options Code
@@ -125,9 +127,8 @@ class CiscoDhcpServerFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -259,7 +260,8 @@ class CiscoDhcpServerFeatureTemplateArgs:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -283,7 +285,9 @@ class CiscoDhcpServerFeatureTemplateArgs:
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 
@@ -397,18 +401,20 @@ class _CiscoDhcpServerFeatureTemplateState:
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
         :param pulumi.Input[_builtins.str] domain_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] exclude_addresses: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] exclude_addresses_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoDhcpServerFeatureTemplateOptionArgs']]] options: Configure Options Code
@@ -529,9 +535,8 @@ class _CiscoDhcpServerFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -615,7 +620,8 @@ class _CiscoDhcpServerFeatureTemplateState:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -639,7 +645,9 @@ class _CiscoDhcpServerFeatureTemplateState:
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 
@@ -791,18 +799,20 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
         :param pulumi.Input[_builtins.str] domain_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] exclude_addresses: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] exclude_addresses_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]] options: Configure Options Code
@@ -945,18 +955,20 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_gateway: Set IP address of default gateway
         :param pulumi.Input[_builtins.str] default_gateway_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_servers: Configure one or more DNS server IP addresses
         :param pulumi.Input[_builtins.str] dns_servers_variable: Variable name
         :param pulumi.Input[_builtins.str] domain_name: Set domain name client uses to resolve hostnames
         :param pulumi.Input[_builtins.str] domain_name_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] exclude_addresses: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] exclude_addresses_variable: Variable name
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoDhcpServerFeatureTemplateOptionArgs', 'CiscoDhcpServerFeatureTemplateOptionArgsDict']]]] options: Configure Options Code
@@ -1039,9 +1051,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1097,7 +1108,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -1113,7 +1125,9 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 

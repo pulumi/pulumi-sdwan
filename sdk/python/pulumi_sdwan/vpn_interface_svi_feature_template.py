@@ -64,18 +64,22 @@ class VpnInterfaceSviFeatureTemplateArgs:
         """
         The set of arguments for constructing a VpnInterfaceSviFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] if_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] if_name_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
@@ -87,23 +91,31 @@ class VpnInterfaceSviFeatureTemplateArgs:
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_client_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route
+                 - Range: `1`-`65536`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_rapid_commit_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]] ipv6_vrrps: Enable VRRP
-        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplatePolicerArgs']]] policers: Enable policer
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]] static_arp_entries: Configure static ARP entries
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -201,9 +213,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -215,7 +226,9 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -287,7 +300,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -311,7 +325,9 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -455,7 +471,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="ipv6DhcpClient")
     def ipv6_dhcp_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_client")
 
@@ -479,7 +496,9 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="ipv6DhcpDistance")
     def ipv6_dhcp_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        Set administrative distance for DHCP default route
+          - Range: `1`-`65536`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv6_dhcp_distance")
 
@@ -515,7 +534,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="ipv6DhcpRapidCommit")
     def ipv6_dhcp_rapid_commit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 rapid commit - Default value: `false`
+        Enable DHCPv6 rapid commit
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_rapid_commit")
 
@@ -563,7 +583,9 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "mtu")
 
@@ -611,7 +633,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -647,7 +670,8 @@ class VpnInterfaceSviFeatureTemplateArgs:
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 
@@ -715,19 +739,23 @@ class _VpnInterfaceSviFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering VpnInterfaceSviFeatureTemplate resources.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] if_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] if_name_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs']]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
@@ -739,23 +767,31 @@ class _VpnInterfaceSviFeatureTemplateState:
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs']]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_client_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route
+                 - Range: `1`-`65536`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs']]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_rapid_commit_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs']]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs']]] ipv6_vrrps: Enable VRRP
-        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplatePolicerArgs']]] policers: Enable policer
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs']]] static_arp_entries: Configure static ARP entries
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -849,7 +885,9 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -885,9 +923,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -947,7 +984,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -971,7 +1009,9 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1115,7 +1155,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="ipv6DhcpClient")
     def ipv6_dhcp_client(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_client")
 
@@ -1139,7 +1180,9 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="ipv6DhcpDistance")
     def ipv6_dhcp_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        Set administrative distance for DHCP default route
+          - Range: `1`-`65536`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv6_dhcp_distance")
 
@@ -1175,7 +1218,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="ipv6DhcpRapidCommit")
     def ipv6_dhcp_rapid_commit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable DHCPv6 rapid commit - Default value: `false`
+        Enable DHCPv6 rapid commit
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_rapid_commit")
 
@@ -1223,7 +1267,9 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter
     def mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "mtu")
 
@@ -1271,7 +1317,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1307,7 +1354,8 @@ class _VpnInterfaceSviFeatureTemplateState:
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 
@@ -1413,19 +1461,23 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] if_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] if_name_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
@@ -1437,23 +1489,31 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_client_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route
+                 - Range: `1`-`65536`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_rapid_commit_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
-        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]] static_arp_entries: Configure static ARP entries
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         """
         ...
@@ -1643,19 +1703,23 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        :param pulumi.Input[_builtins.int] arp_timeout: Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+                 - Range: `0`-`2678400`
+                 - Default value: `1200`
         :param pulumi.Input[_builtins.str] arp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] if_name: Interface name: VLAN 1 - VLAN 4094 when present
         :param pulumi.Input[_builtins.str] if_name_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: IP MTU <576..Interface MTU>, in bytes
+                 - Range: `576`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv4AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv4AccessListArgsDict']]]] ipv4_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv4_address: Assign IPv4 address
@@ -1667,23 +1731,31 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6AccessListArgs', 'VpnInterfaceSviFeatureTemplateIpv6AccessListArgsDict']]]] ipv6_access_lists: Apply ACL
         :param pulumi.Input[_builtins.str] ipv6_address: Assign IPv6 address
         :param pulumi.Input[_builtins.str] ipv6_address_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_client: Enable DHCPv6
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_client_variable: Variable name
-        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        :param pulumi.Input[_builtins.int] ipv6_dhcp_distance: Set administrative distance for DHCP default route
+                 - Range: `1`-`65536`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs', 'VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgsDict']]]] ipv6_dhcp_helpers: DHCPv6 Helper
-        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_dhcp_rapid_commit: Enable DHCPv6 rapid commit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_dhcp_rapid_commit_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs', 'VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgsDict']]]] ipv6_secondary_addresses: Assign secondary IPv6 addresses
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateIpv6VrrpArgs', 'VpnInterfaceSviFeatureTemplateIpv6VrrpArgsDict']]]] ipv6_vrrps: Enable VRRP
-        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] mtu: Interface MTU <1500..9216> in bytes
+                 - Range: `1500`-`9216`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplatePolicerArgs', 'VpnInterfaceSviFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceSviFeatureTemplateStaticArpEntryArgs', 'VpnInterfaceSviFeatureTemplateStaticArpEntryArgsDict']]]] static_arp_entries: Configure static ARP entries
-        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss_adjust: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_adjust_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -1740,7 +1812,9 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="arpTimeout")
     def arp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+        Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+          - Range: `0`-`2678400`
+          - Default value: `1200`
         """
         return pulumi.get(self, "arp_timeout")
 
@@ -1764,9 +1838,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1806,7 +1879,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -1822,7 +1896,9 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+        IP MTU <576..Interface MTU>, in bytes
+          - Range: `576`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1918,7 +1994,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipv6DhcpClient")
     def ipv6_dhcp_client(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable DHCPv6 - Default value: `false`
+        Enable DHCPv6
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_client")
 
@@ -1934,7 +2011,9 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipv6DhcpDistance")
     def ipv6_dhcp_distance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+        Set administrative distance for DHCP default route
+          - Range: `1`-`65536`
+          - Default value: `1`
         """
         return pulumi.get(self, "ipv6_dhcp_distance")
 
@@ -1958,7 +2037,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipv6DhcpRapidCommit")
     def ipv6_dhcp_rapid_commit(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable DHCPv6 rapid commit - Default value: `false`
+        Enable DHCPv6 rapid commit
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_dhcp_rapid_commit")
 
@@ -1990,7 +2070,9 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+        Interface MTU <1500..9216> in bytes
+          - Range: `1500`-`9216`
+          - Default value: `1500`
         """
         return pulumi.get(self, "mtu")
 
@@ -2022,7 +2104,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -2046,7 +2129,8 @@ class VpnInterfaceSviFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpMssAdjust")
     def tcp_mss_adjust(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss_adjust")
 

@@ -30,7 +30,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>> ApplyZonePairs { get; private set; } = null!;
 
         /// <summary>
-        /// Default Action - Choices: `pass`, `drop`
+        /// Default Action
+        ///   - Choices: `pass`, `drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string> DefaultAction { get; private set; } = null!;
@@ -42,7 +43,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Output("mode")]
         public Output<string> Mode { get; private set; } = null!;
@@ -121,7 +123,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Default Action - Choices: `pass`, `drop`
+        /// Default Action
+        ///   - Choices: `pass`, `drop`
         /// </summary>
         [Input("defaultAction", required: true)]
         public Input<string> DefaultAction { get; set; } = null!;
@@ -133,7 +136,8 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode", required: true)]
         public Input<string> Mode { get; set; } = null!;
@@ -173,7 +177,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Default Action - Choices: `pass`, `drop`
+        /// Default Action
+        ///   - Choices: `pass`, `drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -185,7 +190,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

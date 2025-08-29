@@ -55,14 +55,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="aclShapingRate")
     private @Nullable Output<Integer> aclShapingRate;
 
     /**
-     * @return Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * @return Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> aclShapingRate() {
@@ -85,14 +87,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Import(name="arpTimeout")
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Optional<Output<Integer>> arpTimeout() {
@@ -175,14 +181,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Import(name="duplex")
     private @Nullable Output<String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Optional<Output<String>> duplex() {
@@ -235,14 +243,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Import(name="icmpRedirectDisable")
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> icmpRedirectDisable() {
@@ -287,14 +297,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -339,14 +353,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -369,16 +385,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -431,14 +449,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * DHCP Distance
+     *   - Range: `1`-`65536`
      * 
      */
     @Import(name="ipv4DhcpDistance")
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance - Range: `1`-`65536`
+     * @return DHCP Distance
+     *   - Range: `1`-`65536`
      * 
      */
     public Optional<Output<Integer>> ipv4DhcpDistance() {
@@ -491,14 +511,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv4Nat")
     private @Nullable Output<Boolean> ipv4Nat;
 
     /**
-     * @return enable Network Address Translation on this interface - Default value: `false`
+     * @return enable Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv4Nat() {
@@ -536,14 +558,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload
+     *   - Default value: `true`
      * 
      */
     @Import(name="ipv4NatOverload")
     private @Nullable Output<Boolean> ipv4NatOverload;
 
     /**
-     * @return NAT Overload - Default value: `true`
+     * @return NAT Overload
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> ipv4NatOverload() {
@@ -566,14 +590,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      * 
      */
     @Import(name="ipv4NatPrefixLength")
     private @Nullable Output<Integer> ipv4NatPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length - Range: `1`-`32`
+     * @return NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      * 
      */
     public Optional<Output<Integer>> ipv4NatPrefixLength() {
@@ -656,14 +682,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     @Import(name="ipv4NatTcpTimeout")
     private @Nullable Output<Integer> ipv4NatTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> ipv4NatTcpTimeout() {
@@ -686,14 +716,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT Type - Choices: `pool`, `loopback`
+     * NAT Type
+     *   - Choices: `pool`, `loopback`
      * 
      */
     @Import(name="ipv4NatType")
     private @Nullable Output<String> ipv4NatType;
 
     /**
-     * @return NAT Type - Choices: `pool`, `loopback`
+     * @return NAT Type
+     *   - Choices: `pool`, `loopback`
      * 
      */
     public Optional<Output<String>> ipv4NatType() {
@@ -716,14 +748,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ipv4NatUdpTimeout")
     private @Nullable Output<Integer> ipv4NatUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ipv4NatUdpTimeout() {
@@ -761,22 +797,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -874,14 +904,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6Nat")
     private @Nullable Output<Boolean> ipv6Nat;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * @return enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6Nat() {
@@ -919,14 +951,18 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Import(name="loadInterval")
     private @Nullable Output<Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Optional<Output<Integer>> loadInterval() {
@@ -979,14 +1015,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Import(name="mediaType")
     private @Nullable Output<String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Optional<Output<String>> mediaType() {
@@ -1024,14 +1062,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="nat64")
     private @Nullable Output<Boolean> nat64;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nat64() {
@@ -1084,14 +1124,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Import(name="speed")
     private @Nullable Output<String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -1129,14 +1171,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -1204,14 +1248,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      * 
      */
     @Import(name="trustsecEnableSgtPropogation")
     private @Nullable Output<Boolean> trustsecEnableSgtPropogation;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * @return Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> trustsecEnableSgtPropogation() {
@@ -1219,14 +1265,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     @Import(name="trustsecEnforcedSecurityGroupTag")
     private @Nullable Output<Integer> trustsecEnforcedSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519 - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     public Optional<Output<Integer>> trustsecEnforcedSecurityGroupTag() {
@@ -1249,14 +1297,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      * 
      */
     @Import(name="trustsecPropogate")
     private @Nullable Output<Boolean> trustsecPropogate;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * @return Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> trustsecPropogate() {
@@ -1264,14 +1314,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     @Import(name="trustsecSecurityGroupTag")
     private @Nullable Output<Integer> trustsecSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519 - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     public Optional<Output<Integer>> trustsecSecurityGroupTag() {
@@ -1488,7 +1540,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRate Shaping Rate (Kbps) - Range: `8`-`100000000`
+         * @param aclShapingRate Shaping Rate (Kbps)
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -1499,7 +1552,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRate Shaping Rate (Kbps) - Range: `8`-`100000000`
+         * @param aclShapingRate Shaping Rate (Kbps)
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -1530,7 +1584,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -1541,7 +1597,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -1666,7 +1724,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -1677,7 +1736,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -1750,7 +1810,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1761,7 +1822,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1822,7 +1884,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtu Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1833,7 +1897,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtu Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1894,7 +1960,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1905,7 +1972,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1936,8 +2004,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1948,8 +2017,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -2022,7 +2092,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance
+         *   - Range: `1`-`65536`
          * 
          * @return builder
          * 
@@ -2033,7 +2104,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance
+         *   - Range: `1`-`65536`
          * 
          * @return builder
          * 
@@ -2116,7 +2188,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Nat enable Network Address Translation on this interface - Default value: `false`
+         * @param ipv4Nat enable Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2127,7 +2200,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Nat enable Network Address Translation on this interface - Default value: `false`
+         * @param ipv4Nat enable Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2179,7 +2253,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverload NAT Overload - Default value: `true`
+         * @param ipv4NatOverload NAT Overload
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2190,7 +2265,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatOverload NAT Overload - Default value: `true`
+         * @param ipv4NatOverload NAT Overload
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2221,7 +2297,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLength NAT Pool Prefix Length - Range: `1`-`32`
+         * @param ipv4NatPrefixLength NAT Pool Prefix Length
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -2232,7 +2309,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatPrefixLength NAT Pool Prefix Length - Range: `1`-`32`
+         * @param ipv4NatPrefixLength NAT Pool Prefix Length
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -2347,7 +2425,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -2358,7 +2438,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param ipv4NatTcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -2389,7 +2471,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatType NAT Type - Choices: `pool`, `loopback`
+         * @param ipv4NatType NAT Type
+         *   - Choices: `pool`, `loopback`
          * 
          * @return builder
          * 
@@ -2400,7 +2483,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatType NAT Type - Choices: `pool`, `loopback`
+         * @param ipv4NatType NAT Type
+         *   - Choices: `pool`, `loopback`
          * 
          * @return builder
          * 
@@ -2431,7 +2515,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2442,7 +2528,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2504,11 +2592,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2519,11 +2604,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2689,7 +2771,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Nat enable Network Address Translation ipv6 on this interface - Default value: `false`
+         * @param ipv6Nat enable Network Address Translation ipv6 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2700,7 +2783,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Nat enable Network Address Translation ipv6 on this interface - Default value: `false`
+         * @param ipv6Nat enable Network Address Translation ipv6 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2772,7 +2856,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -2783,7 +2869,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -2856,7 +2944,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -2867,7 +2956,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -2919,7 +3009,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param nat64 NAT64 on this interface - Default value: `false`
+         * @param nat64 NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2930,7 +3021,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param nat64 NAT64 on this interface - Default value: `false`
+         * @param nat64 NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3003,7 +3095,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -3014,7 +3107,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -3076,7 +3170,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -3087,7 +3182,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -3181,7 +3277,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS - Default value: `false`
+         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3192,7 +3289,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS - Default value: `false`
+         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3202,7 +3300,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519 - Range: `2`-`65519`
+         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -3213,7 +3312,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519 - Range: `2`-`65519`
+         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -3244,7 +3344,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3255,7 +3356,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3265,7 +3367,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTag SGT value between 2 and 65519 - Range: `2`-`65519`
+         * @param trustsecSecurityGroupTag SGT value between 2 and 65519
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -3276,7 +3379,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTag SGT value between 2 and 65519 - Range: `2`-`65519`
+         * @param trustsecSecurityGroupTag SGT value between 2 and 65519
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 

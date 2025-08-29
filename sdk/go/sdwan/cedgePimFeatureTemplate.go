@@ -25,7 +25,8 @@ import (
 type CedgePimFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	AutoRp pulumi.BoolPtrOutput `pulumi:"autoRp"`
 	// Variable name
 	AutoRpVariable pulumi.StringPtrOutput `pulumi:"autoRpVariable"`
@@ -33,15 +34,15 @@ type CedgePimFeatureTemplate struct {
 	BsrCandidate pulumi.StringPtrOutput `pulumi:"bsrCandidate"`
 	// Variable name
 	BsrCandidateVariable pulumi.StringPtrOutput `pulumi:"bsrCandidateVariable"`
-	// Turn SSM On / Off - Default value: `false`
+	// Turn SSM On / Off
+	//   - Default value: `false`
 	Default pulumi.BoolPtrOutput `pulumi:"default"`
 	// Variable name
 	DefaultVariable pulumi.StringPtrOutput `pulumi:"defaultVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Hash Mask length for RP selection
 	HashMaskLength pulumi.StringPtrOutput `pulumi:"hashMaskLength"`
@@ -55,7 +56,8 @@ type CedgePimFeatureTemplate struct {
 	Interfaces CedgePimFeatureTemplateInterfaceArrayOutput `pulumi:"interfaces"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set RP candidate priority - Range: `0`-`255`
+	// Set RP candidate priority
+	//   - Range: `0`-`255`
 	Priority pulumi.IntPtrOutput `pulumi:"priority"`
 	// Variable name
 	PriorityVariable pulumi.StringPtrOutput `pulumi:"priorityVariable"`
@@ -73,11 +75,13 @@ type CedgePimFeatureTemplate struct {
 	RpCandidateAccessListVariable pulumi.StringPtrOutput `pulumi:"rpCandidateAccessListVariable"`
 	// Set RP Discovery Scope
 	RpCandidates CedgePimFeatureTemplateRpCandidateArrayOutput `pulumi:"rpCandidates"`
-	// Set RP Discovery Scope - Range: `1`-`255`
+	// Set RP Discovery Scope
+	//   - Range: `1`-`255`
 	Scope pulumi.IntPtrOutput `pulumi:"scope"`
 	// Variable name
 	ScopeVariable pulumi.StringPtrOutput `pulumi:"scopeVariable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
 	SptThreshold pulumi.StringPtrOutput `pulumi:"sptThreshold"`
 	// Variable name
 	SptThresholdVariable pulumi.StringPtrOutput `pulumi:"sptThresholdVariable"`
@@ -123,7 +127,8 @@ func GetCedgePimFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CedgePimFeatureTemplate resources.
 type cedgePimFeatureTemplateState struct {
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	AutoRp *bool `pulumi:"autoRp"`
 	// Variable name
 	AutoRpVariable *string `pulumi:"autoRpVariable"`
@@ -131,15 +136,15 @@ type cedgePimFeatureTemplateState struct {
 	BsrCandidate *string `pulumi:"bsrCandidate"`
 	// Variable name
 	BsrCandidateVariable *string `pulumi:"bsrCandidateVariable"`
-	// Turn SSM On / Off - Default value: `false`
+	// Turn SSM On / Off
+	//   - Default value: `false`
 	Default *bool `pulumi:"default"`
 	// Variable name
 	DefaultVariable *string `pulumi:"defaultVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Hash Mask length for RP selection
 	HashMaskLength *string `pulumi:"hashMaskLength"`
@@ -153,7 +158,8 @@ type cedgePimFeatureTemplateState struct {
 	Interfaces []CedgePimFeatureTemplateInterface `pulumi:"interfaces"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set RP candidate priority - Range: `0`-`255`
+	// Set RP candidate priority
+	//   - Range: `0`-`255`
 	Priority *int `pulumi:"priority"`
 	// Variable name
 	PriorityVariable *string `pulumi:"priorityVariable"`
@@ -171,11 +177,13 @@ type cedgePimFeatureTemplateState struct {
 	RpCandidateAccessListVariable *string `pulumi:"rpCandidateAccessListVariable"`
 	// Set RP Discovery Scope
 	RpCandidates []CedgePimFeatureTemplateRpCandidate `pulumi:"rpCandidates"`
-	// Set RP Discovery Scope - Range: `1`-`255`
+	// Set RP Discovery Scope
+	//   - Range: `1`-`255`
 	Scope *int `pulumi:"scope"`
 	// Variable name
 	ScopeVariable *string `pulumi:"scopeVariable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
 	SptThreshold *string `pulumi:"sptThreshold"`
 	// Variable name
 	SptThresholdVariable *string `pulumi:"sptThresholdVariable"`
@@ -186,7 +194,8 @@ type cedgePimFeatureTemplateState struct {
 }
 
 type CedgePimFeatureTemplateState struct {
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	AutoRp pulumi.BoolPtrInput
 	// Variable name
 	AutoRpVariable pulumi.StringPtrInput
@@ -194,15 +203,15 @@ type CedgePimFeatureTemplateState struct {
 	BsrCandidate pulumi.StringPtrInput
 	// Variable name
 	BsrCandidateVariable pulumi.StringPtrInput
-	// Turn SSM On / Off - Default value: `false`
+	// Turn SSM On / Off
+	//   - Default value: `false`
 	Default pulumi.BoolPtrInput
 	// Variable name
 	DefaultVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Hash Mask length for RP selection
 	HashMaskLength pulumi.StringPtrInput
@@ -216,7 +225,8 @@ type CedgePimFeatureTemplateState struct {
 	Interfaces CedgePimFeatureTemplateInterfaceArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set RP candidate priority - Range: `0`-`255`
+	// Set RP candidate priority
+	//   - Range: `0`-`255`
 	Priority pulumi.IntPtrInput
 	// Variable name
 	PriorityVariable pulumi.StringPtrInput
@@ -234,11 +244,13 @@ type CedgePimFeatureTemplateState struct {
 	RpCandidateAccessListVariable pulumi.StringPtrInput
 	// Set RP Discovery Scope
 	RpCandidates CedgePimFeatureTemplateRpCandidateArrayInput
-	// Set RP Discovery Scope - Range: `1`-`255`
+	// Set RP Discovery Scope
+	//   - Range: `1`-`255`
 	Scope pulumi.IntPtrInput
 	// Variable name
 	ScopeVariable pulumi.StringPtrInput
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
 	SptThreshold pulumi.StringPtrInput
 	// Variable name
 	SptThresholdVariable pulumi.StringPtrInput
@@ -253,7 +265,8 @@ func (CedgePimFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type cedgePimFeatureTemplateArgs struct {
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	AutoRp *bool `pulumi:"autoRp"`
 	// Variable name
 	AutoRpVariable *string `pulumi:"autoRpVariable"`
@@ -261,15 +274,15 @@ type cedgePimFeatureTemplateArgs struct {
 	BsrCandidate *string `pulumi:"bsrCandidate"`
 	// Variable name
 	BsrCandidateVariable *string `pulumi:"bsrCandidateVariable"`
-	// Turn SSM On / Off - Default value: `false`
+	// Turn SSM On / Off
+	//   - Default value: `false`
 	Default *bool `pulumi:"default"`
 	// Variable name
 	DefaultVariable *string `pulumi:"defaultVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Hash Mask length for RP selection
 	HashMaskLength *string `pulumi:"hashMaskLength"`
@@ -283,7 +296,8 @@ type cedgePimFeatureTemplateArgs struct {
 	Interfaces []CedgePimFeatureTemplateInterface `pulumi:"interfaces"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set RP candidate priority - Range: `0`-`255`
+	// Set RP candidate priority
+	//   - Range: `0`-`255`
 	Priority *int `pulumi:"priority"`
 	// Variable name
 	PriorityVariable *string `pulumi:"priorityVariable"`
@@ -301,11 +315,13 @@ type cedgePimFeatureTemplateArgs struct {
 	RpCandidateAccessListVariable *string `pulumi:"rpCandidateAccessListVariable"`
 	// Set RP Discovery Scope
 	RpCandidates []CedgePimFeatureTemplateRpCandidate `pulumi:"rpCandidates"`
-	// Set RP Discovery Scope - Range: `1`-`255`
+	// Set RP Discovery Scope
+	//   - Range: `1`-`255`
 	Scope *int `pulumi:"scope"`
 	// Variable name
 	ScopeVariable *string `pulumi:"scopeVariable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
 	SptThreshold *string `pulumi:"sptThreshold"`
 	// Variable name
 	SptThresholdVariable *string `pulumi:"sptThresholdVariable"`
@@ -313,7 +329,8 @@ type cedgePimFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a CedgePimFeatureTemplate resource.
 type CedgePimFeatureTemplateArgs struct {
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	AutoRp pulumi.BoolPtrInput
 	// Variable name
 	AutoRpVariable pulumi.StringPtrInput
@@ -321,15 +338,15 @@ type CedgePimFeatureTemplateArgs struct {
 	BsrCandidate pulumi.StringPtrInput
 	// Variable name
 	BsrCandidateVariable pulumi.StringPtrInput
-	// Turn SSM On / Off - Default value: `false`
+	// Turn SSM On / Off
+	//   - Default value: `false`
 	Default pulumi.BoolPtrInput
 	// Variable name
 	DefaultVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Hash Mask length for RP selection
 	HashMaskLength pulumi.StringPtrInput
@@ -343,7 +360,8 @@ type CedgePimFeatureTemplateArgs struct {
 	Interfaces CedgePimFeatureTemplateInterfaceArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set RP candidate priority - Range: `0`-`255`
+	// Set RP candidate priority
+	//   - Range: `0`-`255`
 	Priority pulumi.IntPtrInput
 	// Variable name
 	PriorityVariable pulumi.StringPtrInput
@@ -361,11 +379,13 @@ type CedgePimFeatureTemplateArgs struct {
 	RpCandidateAccessListVariable pulumi.StringPtrInput
 	// Set RP Discovery Scope
 	RpCandidates CedgePimFeatureTemplateRpCandidateArrayInput
-	// Set RP Discovery Scope - Range: `1`-`255`
+	// Set RP Discovery Scope
+	//   - Range: `1`-`255`
 	Scope pulumi.IntPtrInput
 	// Variable name
 	ScopeVariable pulumi.StringPtrInput
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
 	SptThreshold pulumi.StringPtrInput
 	// Variable name
 	SptThresholdVariable pulumi.StringPtrInput
@@ -458,7 +478,8 @@ func (o CedgePimFeatureTemplateOutput) ToCedgePimFeatureTemplateOutputWithContex
 	return o
 }
 
-// Enable or disable auto-RP - Default value: `false`
+// Enable or disable auto-RP
+//   - Default value: `false`
 func (o CedgePimFeatureTemplateOutput) AutoRp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.BoolPtrOutput { return v.AutoRp }).(pulumi.BoolPtrOutput)
 }
@@ -478,7 +499,8 @@ func (o CedgePimFeatureTemplateOutput) BsrCandidateVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringPtrOutput { return v.BsrCandidateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Turn SSM On / Off - Default value: `false`
+// Turn SSM On / Off
+//   - Default value: `false`
 func (o CedgePimFeatureTemplateOutput) Default() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.BoolPtrOutput { return v.Default }).(pulumi.BoolPtrOutput)
 }
@@ -493,9 +515,8 @@ func (o CedgePimFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CedgePimFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -530,7 +551,8 @@ func (o CedgePimFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set RP candidate priority - Range: `0`-`255`
+// Set RP candidate priority
+//   - Range: `0`-`255`
 func (o CedgePimFeatureTemplateOutput) Priority() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.IntPtrOutput { return v.Priority }).(pulumi.IntPtrOutput)
 }
@@ -577,7 +599,8 @@ func (o CedgePimFeatureTemplateOutput) RpCandidates() CedgePimFeatureTemplateRpC
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) CedgePimFeatureTemplateRpCandidateArrayOutput { return v.RpCandidates }).(CedgePimFeatureTemplateRpCandidateArrayOutput)
 }
 
-// Set RP Discovery Scope - Range: `1`-`255`
+// Set RP Discovery Scope
+//   - Range: `1`-`255`
 func (o CedgePimFeatureTemplateOutput) Scope() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.IntPtrOutput { return v.Scope }).(pulumi.IntPtrOutput)
 }
@@ -587,7 +610,8 @@ func (o CedgePimFeatureTemplateOutput) ScopeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringPtrOutput { return v.ScopeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+// Set when PIM router joins the SPT (kbps)
+//   - Choices: `0`, `infinity`
 func (o CedgePimFeatureTemplateOutput) SptThreshold() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CedgePimFeatureTemplate) pulumi.StringPtrOutput { return v.SptThreshold }).(pulumi.StringPtrOutput)
 }

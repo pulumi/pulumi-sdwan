@@ -27,7 +27,9 @@ namespace Pulumi.Sdwan
     public partial class SystemIpv4DeviceAccessFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -109,7 +111,9 @@ namespace Pulumi.Sdwan
     public sealed class SystemIpv4DeviceAccessFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -153,7 +157,9 @@ namespace Pulumi.Sdwan
     public sealed class SystemIpv4DeviceAccessFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

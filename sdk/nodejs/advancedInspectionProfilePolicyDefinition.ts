@@ -60,51 +60,52 @@ export class AdvancedInspectionProfilePolicyDefinition extends pulumi.CustomReso
     /**
      * Advanced malware protection ID
      */
-    public readonly advancedMalwareProtectionId!: pulumi.Output<string | undefined>;
+    declare public readonly advancedMalwareProtectionId: pulumi.Output<string | undefined>;
     /**
      * Advanced malware protection version
      */
-    public readonly advancedMalwareProtectionVersion!: pulumi.Output<number | undefined>;
+    declare public readonly advancedMalwareProtectionVersion: pulumi.Output<number | undefined>;
     /**
      * The description of the policy definition.
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Intrusion prevention ID (unified mode)
      */
-    public readonly intrusionPreventionId!: pulumi.Output<string | undefined>;
+    declare public readonly intrusionPreventionId: pulumi.Output<string | undefined>;
     /**
      * Intrusion prevention version
      */
-    public readonly intrusionPreventionVersion!: pulumi.Output<number | undefined>;
+    declare public readonly intrusionPreventionVersion: pulumi.Output<number | undefined>;
     /**
      * The name of the policy definition.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      */
-    public readonly tlsAction!: pulumi.Output<string | undefined>;
+    declare public readonly tlsAction: pulumi.Output<string | undefined>;
     /**
      * TLS/SSL decryption ID
      */
-    public readonly tlsSslDecryptionId!: pulumi.Output<string | undefined>;
+    declare public readonly tlsSslDecryptionId: pulumi.Output<string | undefined>;
     /**
      * TLS/SSL decryption version
      */
-    public readonly tlsSslDecryptionVersion!: pulumi.Output<number | undefined>;
+    declare public readonly tlsSslDecryptionVersion: pulumi.Output<number | undefined>;
     /**
      * URL filtering ID (unified mode)
      */
-    public readonly urlFilteringId!: pulumi.Output<string | undefined>;
+    declare public readonly urlFilteringId: pulumi.Output<string | undefined>;
     /**
      * URL filtering version
      */
-    public readonly urlFilteringVersion!: pulumi.Output<number | undefined>;
+    declare public readonly urlFilteringVersion: pulumi.Output<number | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a AdvancedInspectionProfilePolicyDefinition resource with the given unique name, arguments, and options.
@@ -119,34 +120,34 @@ export class AdvancedInspectionProfilePolicyDefinition extends pulumi.CustomReso
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdvancedInspectionProfilePolicyDefinitionState | undefined;
-            resourceInputs["advancedMalwareProtectionId"] = state ? state.advancedMalwareProtectionId : undefined;
-            resourceInputs["advancedMalwareProtectionVersion"] = state ? state.advancedMalwareProtectionVersion : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["intrusionPreventionId"] = state ? state.intrusionPreventionId : undefined;
-            resourceInputs["intrusionPreventionVersion"] = state ? state.intrusionPreventionVersion : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["tlsAction"] = state ? state.tlsAction : undefined;
-            resourceInputs["tlsSslDecryptionId"] = state ? state.tlsSslDecryptionId : undefined;
-            resourceInputs["tlsSslDecryptionVersion"] = state ? state.tlsSslDecryptionVersion : undefined;
-            resourceInputs["urlFilteringId"] = state ? state.urlFilteringId : undefined;
-            resourceInputs["urlFilteringVersion"] = state ? state.urlFilteringVersion : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["advancedMalwareProtectionId"] = state?.advancedMalwareProtectionId;
+            resourceInputs["advancedMalwareProtectionVersion"] = state?.advancedMalwareProtectionVersion;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["intrusionPreventionId"] = state?.intrusionPreventionId;
+            resourceInputs["intrusionPreventionVersion"] = state?.intrusionPreventionVersion;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["tlsAction"] = state?.tlsAction;
+            resourceInputs["tlsSslDecryptionId"] = state?.tlsSslDecryptionId;
+            resourceInputs["tlsSslDecryptionVersion"] = state?.tlsSslDecryptionVersion;
+            resourceInputs["urlFilteringId"] = state?.urlFilteringId;
+            resourceInputs["urlFilteringVersion"] = state?.urlFilteringVersion;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as AdvancedInspectionProfilePolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["advancedMalwareProtectionId"] = args ? args.advancedMalwareProtectionId : undefined;
-            resourceInputs["advancedMalwareProtectionVersion"] = args ? args.advancedMalwareProtectionVersion : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["intrusionPreventionId"] = args ? args.intrusionPreventionId : undefined;
-            resourceInputs["intrusionPreventionVersion"] = args ? args.intrusionPreventionVersion : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["tlsAction"] = args ? args.tlsAction : undefined;
-            resourceInputs["tlsSslDecryptionId"] = args ? args.tlsSslDecryptionId : undefined;
-            resourceInputs["tlsSslDecryptionVersion"] = args ? args.tlsSslDecryptionVersion : undefined;
-            resourceInputs["urlFilteringId"] = args ? args.urlFilteringId : undefined;
-            resourceInputs["urlFilteringVersion"] = args ? args.urlFilteringVersion : undefined;
+            resourceInputs["advancedMalwareProtectionId"] = args?.advancedMalwareProtectionId;
+            resourceInputs["advancedMalwareProtectionVersion"] = args?.advancedMalwareProtectionVersion;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["intrusionPreventionId"] = args?.intrusionPreventionId;
+            resourceInputs["intrusionPreventionVersion"] = args?.intrusionPreventionVersion;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["tlsAction"] = args?.tlsAction;
+            resourceInputs["tlsSslDecryptionId"] = args?.tlsSslDecryptionId;
+            resourceInputs["tlsSslDecryptionVersion"] = args?.tlsSslDecryptionVersion;
+            resourceInputs["urlFilteringId"] = args?.urlFilteringId;
+            resourceInputs["urlFilteringVersion"] = args?.urlFilteringVersion;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -183,7 +184,8 @@ export interface AdvancedInspectionProfilePolicyDefinitionState {
      */
     name?: pulumi.Input<string>;
     /**
-     * TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      */
     tlsAction?: pulumi.Input<string>;
     /**
@@ -237,7 +239,8 @@ export interface AdvancedInspectionProfilePolicyDefinitionArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+     * TLS Action
+     *   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
      */
     tlsAction?: pulumi.Input<string>;
     /**

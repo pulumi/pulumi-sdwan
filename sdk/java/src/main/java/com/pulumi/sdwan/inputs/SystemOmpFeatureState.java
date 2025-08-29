@@ -19,14 +19,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     public static final SystemOmpFeatureState Empty = new SystemOmpFeatureState();
 
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4Bgp")
     private @Nullable Output<Boolean> advertiseIpv4Bgp;
 
     /**
-     * @return BGP - Default value: `false`
+     * @return BGP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Bgp() {
@@ -49,14 +51,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Connected - Default value: `true`
+     * Connected
+     *   - Default value: `true`
      * 
      */
     @Import(name="advertiseIpv4Connected")
     private @Nullable Output<Boolean> advertiseIpv4Connected;
 
     /**
-     * @return Connected - Default value: `true`
+     * @return Connected
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Connected() {
@@ -79,14 +83,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4Eigrp")
     private @Nullable Output<Boolean> advertiseIpv4Eigrp;
 
     /**
-     * @return EIGRP - Default value: `false`
+     * @return EIGRP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Eigrp() {
@@ -109,14 +115,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4Isis")
     private @Nullable Output<Boolean> advertiseIpv4Isis;
 
     /**
-     * @return ISIS - Default value: `false`
+     * @return ISIS
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Isis() {
@@ -139,14 +147,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4Lisp")
     private @Nullable Output<Boolean> advertiseIpv4Lisp;
 
     /**
-     * @return LISP - Default value: `false`
+     * @return LISP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Lisp() {
@@ -169,14 +179,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4Ospf")
     private @Nullable Output<Boolean> advertiseIpv4Ospf;
 
     /**
-     * @return OSPF - Default value: `false`
+     * @return OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Ospf() {
@@ -184,14 +196,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * OSPFV3 - Default value: `false`
+     * OSPFV3
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv4OspfV3")
     private @Nullable Output<Boolean> advertiseIpv4OspfV3;
 
     /**
-     * @return OSPFV3 - Default value: `false`
+     * @return OSPFV3
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4OspfV3() {
@@ -229,14 +243,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Static - Default value: `true`
+     * Static
+     *   - Default value: `true`
      * 
      */
     @Import(name="advertiseIpv4Static")
     private @Nullable Output<Boolean> advertiseIpv4Static;
 
     /**
-     * @return Static - Default value: `true`
+     * @return Static
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv4Static() {
@@ -259,14 +275,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Bgp")
     private @Nullable Output<Boolean> advertiseIpv6Bgp;
 
     /**
-     * @return BGP - Default value: `false`
+     * @return BGP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Bgp() {
@@ -289,14 +307,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Connected - Default value: `false`
+     * Connected
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Connected")
     private @Nullable Output<Boolean> advertiseIpv6Connected;
 
     /**
-     * @return Connected - Default value: `false`
+     * @return Connected
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Connected() {
@@ -319,14 +339,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Eigrp")
     private @Nullable Output<Boolean> advertiseIpv6Eigrp;
 
     /**
-     * @return EIGRP - Default value: `false`
+     * @return EIGRP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Eigrp() {
@@ -349,14 +371,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Isis")
     private @Nullable Output<Boolean> advertiseIpv6Isis;
 
     /**
-     * @return ISIS - Default value: `false`
+     * @return ISIS
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Isis() {
@@ -379,14 +403,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Lisp")
     private @Nullable Output<Boolean> advertiseIpv6Lisp;
 
     /**
-     * @return LISP - Default value: `false`
+     * @return LISP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Lisp() {
@@ -409,14 +435,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Ospf")
     private @Nullable Output<Boolean> advertiseIpv6Ospf;
 
     /**
-     * @return OSPF - Default value: `false`
+     * @return OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Ospf() {
@@ -439,14 +467,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Static - Default value: `false`
+     * Static
+     *   - Default value: `false`
      * 
      */
     @Import(name="advertiseIpv6Static")
     private @Nullable Output<Boolean> advertiseIpv6Static;
 
     /**
-     * @return Static - Default value: `false`
+     * @return Static
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> advertiseIpv6Static() {
@@ -469,14 +499,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     @Import(name="advertisementInterval")
     private @Nullable Output<Integer> advertisementInterval;
 
     /**
-     * @return Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * @return Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> advertisementInterval() {
@@ -514,14 +548,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      * 
      */
     @Import(name="ecmpLimit")
     private @Nullable Output<Integer> ecmpLimit;
 
     /**
-     * @return Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * @return Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      * 
      */
     public Optional<Output<Integer>> ecmpLimit() {
@@ -544,14 +582,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     @Import(name="eorTimer")
     private @Nullable Output<Integer> eorTimer;
 
     /**
-     * @return EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * @return EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> eorTimer() {
@@ -589,14 +631,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Graceful Restart for OMP - Default value: `true`
+     * Graceful Restart for OMP
+     *   - Default value: `true`
      * 
      */
     @Import(name="gracefulRestart")
     private @Nullable Output<Boolean> gracefulRestart;
 
     /**
-     * @return Graceful Restart for OMP - Default value: `true`
+     * @return Graceful Restart for OMP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> gracefulRestart() {
@@ -604,14 +648,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     @Import(name="gracefulRestartTimer")
     private @Nullable Output<Integer> gracefulRestartTimer;
 
     /**
-     * @return Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * @return Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     public Optional<Output<Integer>> gracefulRestartTimer() {
@@ -649,14 +697,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Hold Time (seconds) - Default value: `60`
+     * Hold Time (seconds)
+     *   - Default value: `60`
      * 
      */
     @Import(name="holdtime")
     private @Nullable Output<Integer> holdtime;
 
     /**
-     * @return Hold Time (seconds) - Default value: `60`
+     * @return Hold Time (seconds)
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> holdtime() {
@@ -679,14 +729,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      * 
      */
     @Import(name="ignoreRegionPathLength")
     private @Nullable Output<Boolean> ignoreRegionPathLength;
 
     /**
-     * @return Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * @return Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ignoreRegionPathLength() {
@@ -724,14 +776,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     @Import(name="ompAdminDistanceIpv4")
     private @Nullable Output<Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * @return OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv4() {
@@ -754,14 +810,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     @Import(name="ompAdminDistanceIpv6")
     private @Nullable Output<Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * @return OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv6() {
@@ -784,14 +844,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Overlay AS Number - Range: `1`-`4294967295`
+     * Overlay AS Number
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="overlayAs")
     private @Nullable Output<Integer> overlayAs;
 
     /**
-     * @return Overlay AS Number - Range: `1`-`4294967295`
+     * @return Overlay AS Number
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> overlayAs() {
@@ -814,14 +876,18 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     @Import(name="pathsAdvertisedPerPrefix")
     private @Nullable Output<Integer> pathsAdvertisedPerPrefix;
 
     /**
-     * @return Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * @return Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     public Optional<Output<Integer>> pathsAdvertisedPerPrefix() {
@@ -844,14 +910,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Shutdown - Default value: `false`
+     * Shutdown
+     *   - Default value: `false`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Shutdown - Default value: `false`
+     * @return Shutdown
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -904,14 +972,16 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     @Import(name="transportGateway")
     private @Nullable Output<String> transportGateway;
 
     /**
-     * @return Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * @return Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     public Optional<Output<String>> transportGateway() {
@@ -1034,7 +1104,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Bgp BGP - Default value: `false`
+         * @param advertiseIpv4Bgp BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1045,7 +1116,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Bgp BGP - Default value: `false`
+         * @param advertiseIpv4Bgp BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1076,7 +1148,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Connected Connected - Default value: `true`
+         * @param advertiseIpv4Connected Connected
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1087,7 +1160,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Connected Connected - Default value: `true`
+         * @param advertiseIpv4Connected Connected
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1118,7 +1192,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Eigrp EIGRP - Default value: `false`
+         * @param advertiseIpv4Eigrp EIGRP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1129,7 +1204,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Eigrp EIGRP - Default value: `false`
+         * @param advertiseIpv4Eigrp EIGRP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1160,7 +1236,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Isis ISIS - Default value: `false`
+         * @param advertiseIpv4Isis ISIS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1171,7 +1248,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Isis ISIS - Default value: `false`
+         * @param advertiseIpv4Isis ISIS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1202,7 +1280,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Lisp LISP - Default value: `false`
+         * @param advertiseIpv4Lisp LISP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1213,7 +1292,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Lisp LISP - Default value: `false`
+         * @param advertiseIpv4Lisp LISP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1244,7 +1324,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Ospf OSPF - Default value: `false`
+         * @param advertiseIpv4Ospf OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1255,7 +1336,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Ospf OSPF - Default value: `false`
+         * @param advertiseIpv4Ospf OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1265,7 +1347,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4OspfV3 OSPFV3 - Default value: `false`
+         * @param advertiseIpv4OspfV3 OSPFV3
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1276,7 +1359,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4OspfV3 OSPFV3 - Default value: `false`
+         * @param advertiseIpv4OspfV3 OSPFV3
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1328,7 +1412,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Static Static - Default value: `true`
+         * @param advertiseIpv4Static Static
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1339,7 +1424,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv4Static Static - Default value: `true`
+         * @param advertiseIpv4Static Static
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1370,7 +1456,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Bgp BGP - Default value: `false`
+         * @param advertiseIpv6Bgp BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1381,7 +1468,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Bgp BGP - Default value: `false`
+         * @param advertiseIpv6Bgp BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1412,7 +1500,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Connected Connected - Default value: `false`
+         * @param advertiseIpv6Connected Connected
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1423,7 +1512,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Connected Connected - Default value: `false`
+         * @param advertiseIpv6Connected Connected
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1454,7 +1544,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Eigrp EIGRP - Default value: `false`
+         * @param advertiseIpv6Eigrp EIGRP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1465,7 +1556,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Eigrp EIGRP - Default value: `false`
+         * @param advertiseIpv6Eigrp EIGRP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1496,7 +1588,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Isis ISIS - Default value: `false`
+         * @param advertiseIpv6Isis ISIS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1507,7 +1600,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Isis ISIS - Default value: `false`
+         * @param advertiseIpv6Isis ISIS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1538,7 +1632,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Lisp LISP - Default value: `false`
+         * @param advertiseIpv6Lisp LISP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1549,7 +1644,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Lisp LISP - Default value: `false`
+         * @param advertiseIpv6Lisp LISP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1580,7 +1676,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Ospf OSPF - Default value: `false`
+         * @param advertiseIpv6Ospf OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1591,7 +1688,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Ospf OSPF - Default value: `false`
+         * @param advertiseIpv6Ospf OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1622,7 +1720,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Static Static - Default value: `false`
+         * @param advertiseIpv6Static Static
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1633,7 +1732,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertiseIpv6Static Static - Default value: `false`
+         * @param advertiseIpv6Static Static
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1664,7 +1764,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertisementInterval Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+         * @param advertisementInterval Advertisement Interval (seconds)
+         *   - Range: `0`-`65535`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1675,7 +1777,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param advertisementInterval Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+         * @param advertisementInterval Advertisement Interval (seconds)
+         *   - Range: `0`-`65535`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1727,7 +1831,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+         * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
+         *   - Range: `1`-`0`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -1738,7 +1844,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+         * @param ecmpLimit Set maximum number of OMP paths to install in cEdge route table
+         *   - Range: `1`-`0`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -1769,7 +1877,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eorTimer EOR Timer - Range: `1`-`3600` - Default value: `300`
+         * @param eorTimer EOR Timer
+         *   - Range: `1`-`3600`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -1780,7 +1890,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param eorTimer EOR Timer - Range: `1`-`3600` - Default value: `300`
+         * @param eorTimer EOR Timer
+         *   - Range: `1`-`3600`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -1832,7 +1944,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param gracefulRestart Graceful Restart for OMP - Default value: `true`
+         * @param gracefulRestart Graceful Restart for OMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1843,7 +1956,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param gracefulRestart Graceful Restart for OMP - Default value: `true`
+         * @param gracefulRestart Graceful Restart for OMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1853,7 +1967,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param gracefulRestartTimer Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+         * @param gracefulRestartTimer Graceful Restart Timer (seconds)
+         *   - Range: `1`-`604800`
+         *   - Default value: `43200`
          * 
          * @return builder
          * 
@@ -1864,7 +1980,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param gracefulRestartTimer Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+         * @param gracefulRestartTimer Graceful Restart Timer (seconds)
+         *   - Range: `1`-`604800`
+         *   - Default value: `43200`
          * 
          * @return builder
          * 
@@ -1916,7 +2034,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param holdtime Hold Time (seconds) - Default value: `60`
+         * @param holdtime Hold Time (seconds)
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -1927,7 +2046,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param holdtime Hold Time (seconds) - Default value: `60`
+         * @param holdtime Hold Time (seconds)
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -1958,7 +2078,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ignoreRegionPathLength Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+         * @param ignoreRegionPathLength Treat hierarchical and direct (secondary region) paths equally
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1969,7 +2090,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ignoreRegionPathLength Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+         * @param ignoreRegionPathLength Treat hierarchical and direct (secondary region) paths equally
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2021,7 +2143,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4
+         *   - Range: `1`-`255`
+         *   - Default value: `251`
          * 
          * @return builder
          * 
@@ -2032,7 +2156,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4
+         *   - Range: `1`-`255`
+         *   - Default value: `251`
          * 
          * @return builder
          * 
@@ -2063,7 +2189,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6
+         *   - Range: `1`-`255`
+         *   - Default value: `251`
          * 
          * @return builder
          * 
@@ -2074,7 +2202,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6
+         *   - Range: `1`-`255`
+         *   - Default value: `251`
          * 
          * @return builder
          * 
@@ -2105,7 +2235,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param overlayAs Overlay AS Number - Range: `1`-`4294967295`
+         * @param overlayAs Overlay AS Number
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2116,7 +2247,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param overlayAs Overlay AS Number - Range: `1`-`4294967295`
+         * @param overlayAs Overlay AS Number
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2147,7 +2279,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param pathsAdvertisedPerPrefix Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+         * @param pathsAdvertisedPerPrefix Number of Paths Advertised per Prefix
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -2158,7 +2292,9 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param pathsAdvertisedPerPrefix Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+         * @param pathsAdvertisedPerPrefix Number of Paths Advertised per Prefix
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -2189,7 +2325,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param shutdown Shutdown - Default value: `false`
+         * @param shutdown Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2200,7 +2337,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param shutdown Shutdown - Default value: `false`
+         * @param shutdown Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2283,7 +2421,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param transportGateway Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+         * @param transportGateway Transport Gateway Path Behavior
+         *   - Choices: `prefer`, `ecmp-with-direct-path`
          * 
          * @return builder
          * 
@@ -2294,7 +2433,8 @@ public final class SystemOmpFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param transportGateway Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+         * @param transportGateway Transport Gateway Path Behavior
+         *   - Choices: `prefer`, `ecmp-with-direct-path`
          * 
          * @return builder
          * 

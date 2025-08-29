@@ -84,14 +84,16 @@ public class CliDeviceTemplate extends com.pulumi.resources.CustomResource {
         return this.cliConfiguration;
     }
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     @Export(name="cliType", refs={String.class}, tree="[0]")
     private Output<String> cliType;
 
     /**
-     * @return CLI type - Choices: `device`, `intend`
+     * @return CLI type
+     *   - Choices: `device`, `intend`
      * 
      */
     public Output<String> cliType() {

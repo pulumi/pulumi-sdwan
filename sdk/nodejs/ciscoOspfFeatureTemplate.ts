@@ -49,141 +49,159 @@ export class CiscoOspfFeatureTemplate extends pulumi.CustomResource {
     /**
      * Configure OSPF area
      */
-    public readonly areas!: pulumi.Output<outputs.CiscoOspfFeatureTemplateArea[] | undefined>;
+    declare public readonly areas: pulumi.Output<outputs.CiscoOspfFeatureTemplateArea[] | undefined>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
-    public readonly autoCostReferenceBandwidth!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly autoCostReferenceBandwidthVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
-     */
-    public readonly compatibleRfc1583!: pulumi.Output<boolean | undefined>;
+    declare public readonly autoCostReferenceBandwidth: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly compatibleRfc1583Variable!: pulumi.Output<string | undefined>;
+    declare public readonly autoCostReferenceBandwidthVariable: pulumi.Output<string | undefined>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      */
-    public readonly defaultInformationOriginate!: pulumi.Output<boolean | undefined>;
-    /**
-     * Always advertise default route - Default value: `false`
-     */
-    public readonly defaultInformationOriginateAlways!: pulumi.Output<boolean | undefined>;
+    declare public readonly compatibleRfc1583: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultInformationOriginateAlwaysVariable!: pulumi.Output<string | undefined>;
+    declare public readonly compatibleRfc1583Variable: pulumi.Output<string | undefined>;
     /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
-    public readonly defaultInformationOriginateMetric!: pulumi.Output<number | undefined>;
+    declare public readonly defaultInformationOriginate: pulumi.Output<boolean | undefined>;
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Always advertise default route
+     *   - Default value: `false`
      */
-    public readonly defaultInformationOriginateMetricType!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly defaultInformationOriginateMetricTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultInformationOriginateAlways: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultInformationOriginateMetricVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultInformationOriginateAlwaysVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
+     */
+    declare public readonly defaultInformationOriginateMetric: pulumi.Output<number | undefined>;
+    /**
+     * Set default route type
+     *   - Choices: `type1`, `type2`
+     */
+    declare public readonly defaultInformationOriginateMetricType: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly defaultInformationOriginateMetricTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly defaultInformationOriginateMetricVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
-    public readonly distanceExternal!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly distanceExternalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
-     */
-    public readonly distanceInterArea!: pulumi.Output<number | undefined>;
+    declare public readonly distanceExternal: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly distanceInterAreaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly distanceExternalVariable: pulumi.Output<string | undefined>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
-    public readonly distanceIntraArea!: pulumi.Output<number | undefined>;
+    declare public readonly distanceInterArea: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly distanceIntraAreaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly distanceInterAreaVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
+     */
+    declare public readonly distanceIntraArea: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly distanceIntraAreaVariable: pulumi.Output<string | undefined>;
     /**
      * Advertise own router LSA with infinite distance
      */
-    public readonly maxMetricRouterLsas!: pulumi.Output<outputs.CiscoOspfFeatureTemplateMaxMetricRouterLsa[] | undefined>;
+    declare public readonly maxMetricRouterLsas: pulumi.Output<outputs.CiscoOspfFeatureTemplateMaxMetricRouterLsa[] | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Redistribute routes
      */
-    public readonly redistributes!: pulumi.Output<outputs.CiscoOspfFeatureTemplateRedistribute[] | undefined>;
+    declare public readonly redistributes: pulumi.Output<outputs.CiscoOspfFeatureTemplateRedistribute[] | undefined>;
     /**
      * Set route policy to apply
      */
-    public readonly routePolicies!: pulumi.Output<outputs.CiscoOspfFeatureTemplateRoutePolicy[] | undefined>;
+    declare public readonly routePolicies: pulumi.Output<outputs.CiscoOspfFeatureTemplateRoutePolicy[] | undefined>;
     /**
      * Set OSPF router ID to override system IP address
      */
-    public readonly routerId!: pulumi.Output<string | undefined>;
+    declare public readonly routerId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routerIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routerIdVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
-    public readonly timersSpfDelay!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly timersSpfDelayVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
-     */
-    public readonly timersSpfInitialHold!: pulumi.Output<number | undefined>;
+    declare public readonly timersSpfDelay: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly timersSpfInitialHoldVariable!: pulumi.Output<string | undefined>;
+    declare public readonly timersSpfDelayVariable: pulumi.Output<string | undefined>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
-    public readonly timersSpfMaxHold!: pulumi.Output<number | undefined>;
+    declare public readonly timersSpfInitialHold: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly timersSpfMaxHoldVariable!: pulumi.Output<string | undefined>;
+    declare public readonly timersSpfInitialHoldVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
+     */
+    declare public readonly timersSpfMaxHold: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly timersSpfMaxHoldVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoOspfFeatureTemplate resource with the given unique name, arguments, and options.
@@ -198,80 +216,80 @@ export class CiscoOspfFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoOspfFeatureTemplateState | undefined;
-            resourceInputs["areas"] = state ? state.areas : undefined;
-            resourceInputs["autoCostReferenceBandwidth"] = state ? state.autoCostReferenceBandwidth : undefined;
-            resourceInputs["autoCostReferenceBandwidthVariable"] = state ? state.autoCostReferenceBandwidthVariable : undefined;
-            resourceInputs["compatibleRfc1583"] = state ? state.compatibleRfc1583 : undefined;
-            resourceInputs["compatibleRfc1583Variable"] = state ? state.compatibleRfc1583Variable : undefined;
-            resourceInputs["defaultInformationOriginate"] = state ? state.defaultInformationOriginate : undefined;
-            resourceInputs["defaultInformationOriginateAlways"] = state ? state.defaultInformationOriginateAlways : undefined;
-            resourceInputs["defaultInformationOriginateAlwaysVariable"] = state ? state.defaultInformationOriginateAlwaysVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetric"] = state ? state.defaultInformationOriginateMetric : undefined;
-            resourceInputs["defaultInformationOriginateMetricType"] = state ? state.defaultInformationOriginateMetricType : undefined;
-            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = state ? state.defaultInformationOriginateMetricTypeVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetricVariable"] = state ? state.defaultInformationOriginateMetricVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["distanceExternal"] = state ? state.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = state ? state.distanceExternalVariable : undefined;
-            resourceInputs["distanceInterArea"] = state ? state.distanceInterArea : undefined;
-            resourceInputs["distanceInterAreaVariable"] = state ? state.distanceInterAreaVariable : undefined;
-            resourceInputs["distanceIntraArea"] = state ? state.distanceIntraArea : undefined;
-            resourceInputs["distanceIntraAreaVariable"] = state ? state.distanceIntraAreaVariable : undefined;
-            resourceInputs["maxMetricRouterLsas"] = state ? state.maxMetricRouterLsas : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["redistributes"] = state ? state.redistributes : undefined;
-            resourceInputs["routePolicies"] = state ? state.routePolicies : undefined;
-            resourceInputs["routerId"] = state ? state.routerId : undefined;
-            resourceInputs["routerIdVariable"] = state ? state.routerIdVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["timersSpfDelay"] = state ? state.timersSpfDelay : undefined;
-            resourceInputs["timersSpfDelayVariable"] = state ? state.timersSpfDelayVariable : undefined;
-            resourceInputs["timersSpfInitialHold"] = state ? state.timersSpfInitialHold : undefined;
-            resourceInputs["timersSpfInitialHoldVariable"] = state ? state.timersSpfInitialHoldVariable : undefined;
-            resourceInputs["timersSpfMaxHold"] = state ? state.timersSpfMaxHold : undefined;
-            resourceInputs["timersSpfMaxHoldVariable"] = state ? state.timersSpfMaxHoldVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["areas"] = state?.areas;
+            resourceInputs["autoCostReferenceBandwidth"] = state?.autoCostReferenceBandwidth;
+            resourceInputs["autoCostReferenceBandwidthVariable"] = state?.autoCostReferenceBandwidthVariable;
+            resourceInputs["compatibleRfc1583"] = state?.compatibleRfc1583;
+            resourceInputs["compatibleRfc1583Variable"] = state?.compatibleRfc1583Variable;
+            resourceInputs["defaultInformationOriginate"] = state?.defaultInformationOriginate;
+            resourceInputs["defaultInformationOriginateAlways"] = state?.defaultInformationOriginateAlways;
+            resourceInputs["defaultInformationOriginateAlwaysVariable"] = state?.defaultInformationOriginateAlwaysVariable;
+            resourceInputs["defaultInformationOriginateMetric"] = state?.defaultInformationOriginateMetric;
+            resourceInputs["defaultInformationOriginateMetricType"] = state?.defaultInformationOriginateMetricType;
+            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = state?.defaultInformationOriginateMetricTypeVariable;
+            resourceInputs["defaultInformationOriginateMetricVariable"] = state?.defaultInformationOriginateMetricVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["distanceExternal"] = state?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = state?.distanceExternalVariable;
+            resourceInputs["distanceInterArea"] = state?.distanceInterArea;
+            resourceInputs["distanceInterAreaVariable"] = state?.distanceInterAreaVariable;
+            resourceInputs["distanceIntraArea"] = state?.distanceIntraArea;
+            resourceInputs["distanceIntraAreaVariable"] = state?.distanceIntraAreaVariable;
+            resourceInputs["maxMetricRouterLsas"] = state?.maxMetricRouterLsas;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["redistributes"] = state?.redistributes;
+            resourceInputs["routePolicies"] = state?.routePolicies;
+            resourceInputs["routerId"] = state?.routerId;
+            resourceInputs["routerIdVariable"] = state?.routerIdVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["timersSpfDelay"] = state?.timersSpfDelay;
+            resourceInputs["timersSpfDelayVariable"] = state?.timersSpfDelayVariable;
+            resourceInputs["timersSpfInitialHold"] = state?.timersSpfInitialHold;
+            resourceInputs["timersSpfInitialHoldVariable"] = state?.timersSpfInitialHoldVariable;
+            resourceInputs["timersSpfMaxHold"] = state?.timersSpfMaxHold;
+            resourceInputs["timersSpfMaxHoldVariable"] = state?.timersSpfMaxHoldVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoOspfFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["areas"] = args ? args.areas : undefined;
-            resourceInputs["autoCostReferenceBandwidth"] = args ? args.autoCostReferenceBandwidth : undefined;
-            resourceInputs["autoCostReferenceBandwidthVariable"] = args ? args.autoCostReferenceBandwidthVariable : undefined;
-            resourceInputs["compatibleRfc1583"] = args ? args.compatibleRfc1583 : undefined;
-            resourceInputs["compatibleRfc1583Variable"] = args ? args.compatibleRfc1583Variable : undefined;
-            resourceInputs["defaultInformationOriginate"] = args ? args.defaultInformationOriginate : undefined;
-            resourceInputs["defaultInformationOriginateAlways"] = args ? args.defaultInformationOriginateAlways : undefined;
-            resourceInputs["defaultInformationOriginateAlwaysVariable"] = args ? args.defaultInformationOriginateAlwaysVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetric"] = args ? args.defaultInformationOriginateMetric : undefined;
-            resourceInputs["defaultInformationOriginateMetricType"] = args ? args.defaultInformationOriginateMetricType : undefined;
-            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = args ? args.defaultInformationOriginateMetricTypeVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetricVariable"] = args ? args.defaultInformationOriginateMetricVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["distanceExternal"] = args ? args.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = args ? args.distanceExternalVariable : undefined;
-            resourceInputs["distanceInterArea"] = args ? args.distanceInterArea : undefined;
-            resourceInputs["distanceInterAreaVariable"] = args ? args.distanceInterAreaVariable : undefined;
-            resourceInputs["distanceIntraArea"] = args ? args.distanceIntraArea : undefined;
-            resourceInputs["distanceIntraAreaVariable"] = args ? args.distanceIntraAreaVariable : undefined;
-            resourceInputs["maxMetricRouterLsas"] = args ? args.maxMetricRouterLsas : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["redistributes"] = args ? args.redistributes : undefined;
-            resourceInputs["routePolicies"] = args ? args.routePolicies : undefined;
-            resourceInputs["routerId"] = args ? args.routerId : undefined;
-            resourceInputs["routerIdVariable"] = args ? args.routerIdVariable : undefined;
-            resourceInputs["timersSpfDelay"] = args ? args.timersSpfDelay : undefined;
-            resourceInputs["timersSpfDelayVariable"] = args ? args.timersSpfDelayVariable : undefined;
-            resourceInputs["timersSpfInitialHold"] = args ? args.timersSpfInitialHold : undefined;
-            resourceInputs["timersSpfInitialHoldVariable"] = args ? args.timersSpfInitialHoldVariable : undefined;
-            resourceInputs["timersSpfMaxHold"] = args ? args.timersSpfMaxHold : undefined;
-            resourceInputs["timersSpfMaxHoldVariable"] = args ? args.timersSpfMaxHoldVariable : undefined;
+            resourceInputs["areas"] = args?.areas;
+            resourceInputs["autoCostReferenceBandwidth"] = args?.autoCostReferenceBandwidth;
+            resourceInputs["autoCostReferenceBandwidthVariable"] = args?.autoCostReferenceBandwidthVariable;
+            resourceInputs["compatibleRfc1583"] = args?.compatibleRfc1583;
+            resourceInputs["compatibleRfc1583Variable"] = args?.compatibleRfc1583Variable;
+            resourceInputs["defaultInformationOriginate"] = args?.defaultInformationOriginate;
+            resourceInputs["defaultInformationOriginateAlways"] = args?.defaultInformationOriginateAlways;
+            resourceInputs["defaultInformationOriginateAlwaysVariable"] = args?.defaultInformationOriginateAlwaysVariable;
+            resourceInputs["defaultInformationOriginateMetric"] = args?.defaultInformationOriginateMetric;
+            resourceInputs["defaultInformationOriginateMetricType"] = args?.defaultInformationOriginateMetricType;
+            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = args?.defaultInformationOriginateMetricTypeVariable;
+            resourceInputs["defaultInformationOriginateMetricVariable"] = args?.defaultInformationOriginateMetricVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["distanceExternal"] = args?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = args?.distanceExternalVariable;
+            resourceInputs["distanceInterArea"] = args?.distanceInterArea;
+            resourceInputs["distanceInterAreaVariable"] = args?.distanceInterAreaVariable;
+            resourceInputs["distanceIntraArea"] = args?.distanceIntraArea;
+            resourceInputs["distanceIntraAreaVariable"] = args?.distanceIntraAreaVariable;
+            resourceInputs["maxMetricRouterLsas"] = args?.maxMetricRouterLsas;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["redistributes"] = args?.redistributes;
+            resourceInputs["routePolicies"] = args?.routePolicies;
+            resourceInputs["routerId"] = args?.routerId;
+            resourceInputs["routerIdVariable"] = args?.routerIdVariable;
+            resourceInputs["timersSpfDelay"] = args?.timersSpfDelay;
+            resourceInputs["timersSpfDelayVariable"] = args?.timersSpfDelayVariable;
+            resourceInputs["timersSpfInitialHold"] = args?.timersSpfInitialHold;
+            resourceInputs["timersSpfInitialHoldVariable"] = args?.timersSpfInitialHoldVariable;
+            resourceInputs["timersSpfMaxHold"] = args?.timersSpfMaxHold;
+            resourceInputs["timersSpfMaxHoldVariable"] = args?.timersSpfMaxHoldVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -289,7 +307,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     areas?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateArea>[]>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
     autoCostReferenceBandwidth?: pulumi.Input<number>;
     /**
@@ -297,7 +317,8 @@ export interface CiscoOspfFeatureTemplateState {
      */
     autoCostReferenceBandwidthVariable?: pulumi.Input<string>;
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      */
     compatibleRfc1583?: pulumi.Input<boolean>;
     /**
@@ -305,11 +326,13 @@ export interface CiscoOspfFeatureTemplateState {
      */
     compatibleRfc1583Variable?: pulumi.Input<string>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
     defaultInformationOriginate?: pulumi.Input<boolean>;
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      */
     defaultInformationOriginateAlways?: pulumi.Input<boolean>;
     /**
@@ -317,11 +340,13 @@ export interface CiscoOspfFeatureTemplateState {
      */
     defaultInformationOriginateAlwaysVariable?: pulumi.Input<string>;
     /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
      */
     defaultInformationOriginateMetric?: pulumi.Input<number>;
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      */
     defaultInformationOriginateMetricType?: pulumi.Input<string>;
     /**
@@ -337,13 +362,14 @@ export interface CiscoOspfFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -351,7 +377,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceInterArea?: pulumi.Input<number>;
     /**
@@ -359,7 +387,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     distanceInterAreaVariable?: pulumi.Input<string>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceIntraArea?: pulumi.Input<number>;
     /**
@@ -395,7 +425,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     templateType?: pulumi.Input<string>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
     timersSpfDelay?: pulumi.Input<number>;
     /**
@@ -403,7 +435,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     timersSpfDelayVariable?: pulumi.Input<string>;
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
     timersSpfInitialHold?: pulumi.Input<number>;
     /**
@@ -411,7 +445,9 @@ export interface CiscoOspfFeatureTemplateState {
      */
     timersSpfInitialHoldVariable?: pulumi.Input<string>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      */
     timersSpfMaxHold?: pulumi.Input<number>;
     /**
@@ -433,7 +469,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     areas?: pulumi.Input<pulumi.Input<inputs.CiscoOspfFeatureTemplateArea>[]>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
     autoCostReferenceBandwidth?: pulumi.Input<number>;
     /**
@@ -441,7 +479,8 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     autoCostReferenceBandwidthVariable?: pulumi.Input<string>;
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      */
     compatibleRfc1583?: pulumi.Input<boolean>;
     /**
@@ -449,11 +488,13 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     compatibleRfc1583Variable?: pulumi.Input<string>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
     defaultInformationOriginate?: pulumi.Input<boolean>;
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      */
     defaultInformationOriginateAlways?: pulumi.Input<boolean>;
     /**
@@ -461,11 +502,13 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     defaultInformationOriginateAlwaysVariable?: pulumi.Input<string>;
     /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
      */
     defaultInformationOriginateMetric?: pulumi.Input<number>;
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      */
     defaultInformationOriginateMetricType?: pulumi.Input<string>;
     /**
@@ -481,13 +524,14 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -495,7 +539,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceInterArea?: pulumi.Input<number>;
     /**
@@ -503,7 +549,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     distanceInterAreaVariable?: pulumi.Input<string>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceIntraArea?: pulumi.Input<number>;
     /**
@@ -535,7 +583,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     routerIdVariable?: pulumi.Input<string>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
     timersSpfDelay?: pulumi.Input<number>;
     /**
@@ -543,7 +593,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     timersSpfDelayVariable?: pulumi.Input<string>;
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
     timersSpfInitialHold?: pulumi.Input<number>;
     /**
@@ -551,7 +603,9 @@ export interface CiscoOspfFeatureTemplateArgs {
      */
     timersSpfInitialHoldVariable?: pulumi.Input<string>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      */
     timersSpfMaxHold?: pulumi.Input<number>;
     /**

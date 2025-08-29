@@ -60,21 +60,25 @@ type SlaClassPolicyObject struct {
 	AppProbeClassId pulumi.StringPtrOutput `pulumi:"appProbeClassId"`
 	// App Probe Class Policy Object version
 	AppProbeClassVersion pulumi.IntPtrOutput `pulumi:"appProbeClassVersion"`
-	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-	//   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-	//   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 	FallbackBestTunnelCriteria pulumi.StringPtrOutput `pulumi:"fallbackBestTunnelCriteria"`
-	// Jitter variance in ms - Range: `1`-`1000`
+	// Jitter variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelJitter pulumi.IntPtrOutput `pulumi:"fallbackBestTunnelJitter"`
-	// Latency variance in ms - Range: `1`-`1000`
+	// Latency variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelLatency pulumi.IntPtrOutput `pulumi:"fallbackBestTunnelLatency"`
-	// Loss variance in percent - Range: `1`-`100`
+	// Loss variance in percent
+	//   - Range: `1`-`100`
 	FallbackBestTunnelLoss pulumi.IntPtrOutput `pulumi:"fallbackBestTunnelLoss"`
-	// Jitter in ms - Range: `1`-`1000`
+	// Jitter in ms
+	//   - Range: `1`-`1000`
 	Jitter pulumi.IntPtrOutput `pulumi:"jitter"`
-	// Latency in ms - Range: `1`-`1000`
+	// Latency in ms
+	//   - Range: `1`-`1000`
 	Latency pulumi.IntPtrOutput `pulumi:"latency"`
-	// Loss in percent - Range: `1`-`100`
+	// Loss in percent
+	//   - Range: `1`-`100`
 	Loss pulumi.IntPtrOutput `pulumi:"loss"`
 	// The name of the policy object
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -116,21 +120,25 @@ type slaClassPolicyObjectState struct {
 	AppProbeClassId *string `pulumi:"appProbeClassId"`
 	// App Probe Class Policy Object version
 	AppProbeClassVersion *int `pulumi:"appProbeClassVersion"`
-	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-	//   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-	//   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 	FallbackBestTunnelCriteria *string `pulumi:"fallbackBestTunnelCriteria"`
-	// Jitter variance in ms - Range: `1`-`1000`
+	// Jitter variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelJitter *int `pulumi:"fallbackBestTunnelJitter"`
-	// Latency variance in ms - Range: `1`-`1000`
+	// Latency variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelLatency *int `pulumi:"fallbackBestTunnelLatency"`
-	// Loss variance in percent - Range: `1`-`100`
+	// Loss variance in percent
+	//   - Range: `1`-`100`
 	FallbackBestTunnelLoss *int `pulumi:"fallbackBestTunnelLoss"`
-	// Jitter in ms - Range: `1`-`1000`
+	// Jitter in ms
+	//   - Range: `1`-`1000`
 	Jitter *int `pulumi:"jitter"`
-	// Latency in ms - Range: `1`-`1000`
+	// Latency in ms
+	//   - Range: `1`-`1000`
 	Latency *int `pulumi:"latency"`
-	// Loss in percent - Range: `1`-`100`
+	// Loss in percent
+	//   - Range: `1`-`100`
 	Loss *int `pulumi:"loss"`
 	// The name of the policy object
 	Name *string `pulumi:"name"`
@@ -143,21 +151,25 @@ type SlaClassPolicyObjectState struct {
 	AppProbeClassId pulumi.StringPtrInput
 	// App Probe Class Policy Object version
 	AppProbeClassVersion pulumi.IntPtrInput
-	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-	//   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-	//   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 	FallbackBestTunnelCriteria pulumi.StringPtrInput
-	// Jitter variance in ms - Range: `1`-`1000`
+	// Jitter variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelJitter pulumi.IntPtrInput
-	// Latency variance in ms - Range: `1`-`1000`
+	// Latency variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelLatency pulumi.IntPtrInput
-	// Loss variance in percent - Range: `1`-`100`
+	// Loss variance in percent
+	//   - Range: `1`-`100`
 	FallbackBestTunnelLoss pulumi.IntPtrInput
-	// Jitter in ms - Range: `1`-`1000`
+	// Jitter in ms
+	//   - Range: `1`-`1000`
 	Jitter pulumi.IntPtrInput
-	// Latency in ms - Range: `1`-`1000`
+	// Latency in ms
+	//   - Range: `1`-`1000`
 	Latency pulumi.IntPtrInput
-	// Loss in percent - Range: `1`-`100`
+	// Loss in percent
+	//   - Range: `1`-`100`
 	Loss pulumi.IntPtrInput
 	// The name of the policy object
 	Name pulumi.StringPtrInput
@@ -174,21 +186,25 @@ type slaClassPolicyObjectArgs struct {
 	AppProbeClassId *string `pulumi:"appProbeClassId"`
 	// App Probe Class Policy Object version
 	AppProbeClassVersion *int `pulumi:"appProbeClassVersion"`
-	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-	//   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-	//   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 	FallbackBestTunnelCriteria *string `pulumi:"fallbackBestTunnelCriteria"`
-	// Jitter variance in ms - Range: `1`-`1000`
+	// Jitter variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelJitter *int `pulumi:"fallbackBestTunnelJitter"`
-	// Latency variance in ms - Range: `1`-`1000`
+	// Latency variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelLatency *int `pulumi:"fallbackBestTunnelLatency"`
-	// Loss variance in percent - Range: `1`-`100`
+	// Loss variance in percent
+	//   - Range: `1`-`100`
 	FallbackBestTunnelLoss *int `pulumi:"fallbackBestTunnelLoss"`
-	// Jitter in ms - Range: `1`-`1000`
+	// Jitter in ms
+	//   - Range: `1`-`1000`
 	Jitter *int `pulumi:"jitter"`
-	// Latency in ms - Range: `1`-`1000`
+	// Latency in ms
+	//   - Range: `1`-`1000`
 	Latency *int `pulumi:"latency"`
-	// Loss in percent - Range: `1`-`100`
+	// Loss in percent
+	//   - Range: `1`-`100`
 	Loss *int `pulumi:"loss"`
 	// The name of the policy object
 	Name *string `pulumi:"name"`
@@ -200,21 +216,25 @@ type SlaClassPolicyObjectArgs struct {
 	AppProbeClassId pulumi.StringPtrInput
 	// App Probe Class Policy Object version
 	AppProbeClassVersion pulumi.IntPtrInput
-	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-	//   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-	//   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+	// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 	FallbackBestTunnelCriteria pulumi.StringPtrInput
-	// Jitter variance in ms - Range: `1`-`1000`
+	// Jitter variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelJitter pulumi.IntPtrInput
-	// Latency variance in ms - Range: `1`-`1000`
+	// Latency variance in ms
+	//   - Range: `1`-`1000`
 	FallbackBestTunnelLatency pulumi.IntPtrInput
-	// Loss variance in percent - Range: `1`-`100`
+	// Loss variance in percent
+	//   - Range: `1`-`100`
 	FallbackBestTunnelLoss pulumi.IntPtrInput
-	// Jitter in ms - Range: `1`-`1000`
+	// Jitter in ms
+	//   - Range: `1`-`1000`
 	Jitter pulumi.IntPtrInput
-	// Latency in ms - Range: `1`-`1000`
+	// Latency in ms
+	//   - Range: `1`-`1000`
 	Latency pulumi.IntPtrInput
-	// Loss in percent - Range: `1`-`100`
+	// Loss in percent
+	//   - Range: `1`-`100`
 	Loss pulumi.IntPtrInput
 	// The name of the policy object
 	Name pulumi.StringPtrInput
@@ -317,39 +337,43 @@ func (o SlaClassPolicyObjectOutput) AppProbeClassVersion() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.AppProbeClassVersion }).(pulumi.IntPtrOutput)
 }
 
-//   - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-//     `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-//     `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
 func (o SlaClassPolicyObjectOutput) FallbackBestTunnelCriteria() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.StringPtrOutput { return v.FallbackBestTunnelCriteria }).(pulumi.StringPtrOutput)
 }
 
-// Jitter variance in ms - Range: `1`-`1000`
+// Jitter variance in ms
+//   - Range: `1`-`1000`
 func (o SlaClassPolicyObjectOutput) FallbackBestTunnelJitter() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.FallbackBestTunnelJitter }).(pulumi.IntPtrOutput)
 }
 
-// Latency variance in ms - Range: `1`-`1000`
+// Latency variance in ms
+//   - Range: `1`-`1000`
 func (o SlaClassPolicyObjectOutput) FallbackBestTunnelLatency() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.FallbackBestTunnelLatency }).(pulumi.IntPtrOutput)
 }
 
-// Loss variance in percent - Range: `1`-`100`
+// Loss variance in percent
+//   - Range: `1`-`100`
 func (o SlaClassPolicyObjectOutput) FallbackBestTunnelLoss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.FallbackBestTunnelLoss }).(pulumi.IntPtrOutput)
 }
 
-// Jitter in ms - Range: `1`-`1000`
+// Jitter in ms
+//   - Range: `1`-`1000`
 func (o SlaClassPolicyObjectOutput) Jitter() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.Jitter }).(pulumi.IntPtrOutput)
 }
 
-// Latency in ms - Range: `1`-`1000`
+// Latency in ms
+//   - Range: `1`-`1000`
 func (o SlaClassPolicyObjectOutput) Latency() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.Latency }).(pulumi.IntPtrOutput)
 }
 
-// Loss in percent - Range: `1`-`100`
+// Loss in percent
+//   - Range: `1`-`100`
 func (o SlaClassPolicyObjectOutput) Loss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SlaClassPolicyObject) pulumi.IntPtrOutput { return v.Loss }).(pulumi.IntPtrOutput)
 }

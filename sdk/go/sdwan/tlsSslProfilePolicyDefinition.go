@@ -74,13 +74,15 @@ type TlsSslProfilePolicyDefinition struct {
 	BlockUrlListVersion pulumi.IntPtrOutput `pulumi:"blockUrlListVersion"`
 	// Categories that should be decrypted
 	DecryptCategories pulumi.StringArrayOutput `pulumi:"decryptCategories"`
-	// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+	// Decrypt threshold
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrOutput `pulumi:"decryptThreshold"`
 	// The description of the policy definition.
 	Description pulumi.StringOutput `pulumi:"description"`
 	// Fail decrypt enabled
 	FailDecrypt pulumi.BoolPtrOutput `pulumi:"failDecrypt"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition.
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -137,13 +139,15 @@ type tlsSslProfilePolicyDefinitionState struct {
 	BlockUrlListVersion *int `pulumi:"blockUrlListVersion"`
 	// Categories that should be decrypted
 	DecryptCategories []string `pulumi:"decryptCategories"`
-	// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+	// Decrypt threshold
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	DecryptThreshold *string `pulumi:"decryptThreshold"`
 	// The description of the policy definition.
 	Description *string `pulumi:"description"`
 	// Fail decrypt enabled
 	FailDecrypt *bool `pulumi:"failDecrypt"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
@@ -168,13 +172,15 @@ type TlsSslProfilePolicyDefinitionState struct {
 	BlockUrlListVersion pulumi.IntPtrInput
 	// Categories that should be decrypted
 	DecryptCategories pulumi.StringArrayInput
-	// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+	// Decrypt threshold
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringPtrInput
 	// Fail decrypt enabled
 	FailDecrypt pulumi.BoolPtrInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
@@ -203,13 +209,15 @@ type tlsSslProfilePolicyDefinitionArgs struct {
 	BlockUrlListVersion *int `pulumi:"blockUrlListVersion"`
 	// Categories that should be decrypted
 	DecryptCategories []string `pulumi:"decryptCategories"`
-	// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+	// Decrypt threshold
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	DecryptThreshold *string `pulumi:"decryptThreshold"`
 	// The description of the policy definition.
 	Description string `pulumi:"description"`
 	// Fail decrypt enabled
 	FailDecrypt *bool `pulumi:"failDecrypt"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
@@ -233,13 +241,15 @@ type TlsSslProfilePolicyDefinitionArgs struct {
 	BlockUrlListVersion pulumi.IntPtrInput
 	// Categories that should be decrypted
 	DecryptCategories pulumi.StringArrayInput
-	// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+	// Decrypt threshold
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrInput
 	// The description of the policy definition.
 	Description pulumi.StringInput
 	// Fail decrypt enabled
 	FailDecrypt pulumi.BoolPtrInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
@@ -363,7 +373,8 @@ func (o TlsSslProfilePolicyDefinitionOutput) DecryptCategories() pulumi.StringAr
 	return o.ApplyT(func(v *TlsSslProfilePolicyDefinition) pulumi.StringArrayOutput { return v.DecryptCategories }).(pulumi.StringArrayOutput)
 }
 
-// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+// Decrypt threshold
+//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 func (o TlsSslProfilePolicyDefinitionOutput) DecryptThreshold() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslProfilePolicyDefinition) pulumi.StringPtrOutput { return v.DecryptThreshold }).(pulumi.StringPtrOutput)
 }
@@ -378,7 +389,8 @@ func (o TlsSslProfilePolicyDefinitionOutput) FailDecrypt() pulumi.BoolPtrOutput 
 	return o.ApplyT(func(v *TlsSslProfilePolicyDefinition) pulumi.BoolPtrOutput { return v.FailDecrypt }).(pulumi.BoolPtrOutput)
 }
 
-// The policy mode - Choices: `security`, `unified`
+// The policy mode
+//   - Choices: `security`, `unified`
 func (o TlsSslProfilePolicyDefinitionOutput) Mode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsSslProfilePolicyDefinition) pulumi.StringPtrOutput { return v.Mode }).(pulumi.StringPtrOutput)
 }

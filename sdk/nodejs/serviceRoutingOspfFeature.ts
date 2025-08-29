@@ -51,132 +51,151 @@ export class ServiceRoutingOspfFeature extends pulumi.CustomResource {
     /**
      * Configure OSPF area
      */
-    public readonly areas!: pulumi.Output<outputs.ServiceRoutingOspfFeatureArea[] | undefined>;
+    declare public readonly areas: pulumi.Output<outputs.ServiceRoutingOspfFeatureArea[] | undefined>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
-    public readonly defaultInformationOriginate!: pulumi.Output<boolean | undefined>;
+    declare public readonly defaultInformationOriginate: pulumi.Output<boolean | undefined>;
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      */
-    public readonly defaultInformationOriginateAlways!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly defaultInformationOriginateAlwaysVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
-     */
-    public readonly defaultInformationOriginateMetric!: pulumi.Output<number | undefined>;
-    /**
-     * Set default route type - Choices: `type1`, `type2`
-     */
-    public readonly defaultInformationOriginateMetricType!: pulumi.Output<string | undefined>;
+    declare public readonly defaultInformationOriginateAlways: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultInformationOriginateMetricTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultInformationOriginateAlwaysVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
+     */
+    declare public readonly defaultInformationOriginateMetric: pulumi.Output<number | undefined>;
+    /**
+     * Set default route type
+     *   - Choices: `type1`, `type2`
+     */
+    declare public readonly defaultInformationOriginateMetricType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultInformationOriginateMetricVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultInformationOriginateMetricTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly defaultInformationOriginateMetricVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
-    public readonly distanceExternal!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly distanceExternalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
-     */
-    public readonly distanceInterArea!: pulumi.Output<number | undefined>;
+    declare public readonly distanceExternal: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly distanceInterAreaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly distanceExternalVariable: pulumi.Output<string | undefined>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
-    public readonly distanceIntraArea!: pulumi.Output<number | undefined>;
+    declare public readonly distanceInterArea: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly distanceIntraAreaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly distanceInterAreaVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
+     */
+    declare public readonly distanceIntraArea: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly distanceIntraAreaVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Redistribute routes
      */
-    public readonly redistributes!: pulumi.Output<outputs.ServiceRoutingOspfFeatureRedistribute[] | undefined>;
+    declare public readonly redistributes: pulumi.Output<outputs.ServiceRoutingOspfFeatureRedistribute[] | undefined>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
-    public readonly referenceBandwidth!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly referenceBandwidthVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
-     */
-    public readonly rfc1583Compatible!: pulumi.Output<boolean | undefined>;
+    declare public readonly referenceBandwidth: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly rfc1583CompatibleVariable!: pulumi.Output<string | undefined>;
-    public readonly routePolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly referenceBandwidthVariable: pulumi.Output<string | undefined>;
+    /**
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
+     */
+    declare public readonly rfc1583Compatible: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly rfc1583CompatibleVariable: pulumi.Output<string | undefined>;
+    declare public readonly routePolicyId: pulumi.Output<string | undefined>;
     /**
      * Set OSPF router ID to override system IP address
      */
-    public readonly routerId!: pulumi.Output<string | undefined>;
+    declare public readonly routerId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routerIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routerIdVariable: pulumi.Output<string | undefined>;
     /**
      * Advertise own router LSA with infinite distance
      */
-    public readonly routerLsas!: pulumi.Output<outputs.ServiceRoutingOspfFeatureRouterLsa[] | undefined>;
+    declare public readonly routerLsas: pulumi.Output<outputs.ServiceRoutingOspfFeatureRouterLsa[] | undefined>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
-    public readonly spfCalculationDelay!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly spfCalculationDelayVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
-     */
-    public readonly spfInitialHoldTime!: pulumi.Output<number | undefined>;
+    declare public readonly spfCalculationDelay: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly spfInitialHoldTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly spfCalculationDelayVariable: pulumi.Output<string | undefined>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
-    public readonly spfMaximumHoldTime!: pulumi.Output<number | undefined>;
+    declare public readonly spfInitialHoldTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly spfMaximumHoldTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly spfInitialHoldTimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
+     */
+    declare public readonly spfMaximumHoldTime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly spfMaximumHoldTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceRoutingOspfFeature resource with the given unique name, arguments, and options.
@@ -191,76 +210,76 @@ export class ServiceRoutingOspfFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceRoutingOspfFeatureState | undefined;
-            resourceInputs["areas"] = state ? state.areas : undefined;
-            resourceInputs["defaultInformationOriginate"] = state ? state.defaultInformationOriginate : undefined;
-            resourceInputs["defaultInformationOriginateAlways"] = state ? state.defaultInformationOriginateAlways : undefined;
-            resourceInputs["defaultInformationOriginateAlwaysVariable"] = state ? state.defaultInformationOriginateAlwaysVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetric"] = state ? state.defaultInformationOriginateMetric : undefined;
-            resourceInputs["defaultInformationOriginateMetricType"] = state ? state.defaultInformationOriginateMetricType : undefined;
-            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = state ? state.defaultInformationOriginateMetricTypeVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetricVariable"] = state ? state.defaultInformationOriginateMetricVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["distanceExternal"] = state ? state.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = state ? state.distanceExternalVariable : undefined;
-            resourceInputs["distanceInterArea"] = state ? state.distanceInterArea : undefined;
-            resourceInputs["distanceInterAreaVariable"] = state ? state.distanceInterAreaVariable : undefined;
-            resourceInputs["distanceIntraArea"] = state ? state.distanceIntraArea : undefined;
-            resourceInputs["distanceIntraAreaVariable"] = state ? state.distanceIntraAreaVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["redistributes"] = state ? state.redistributes : undefined;
-            resourceInputs["referenceBandwidth"] = state ? state.referenceBandwidth : undefined;
-            resourceInputs["referenceBandwidthVariable"] = state ? state.referenceBandwidthVariable : undefined;
-            resourceInputs["rfc1583Compatible"] = state ? state.rfc1583Compatible : undefined;
-            resourceInputs["rfc1583CompatibleVariable"] = state ? state.rfc1583CompatibleVariable : undefined;
-            resourceInputs["routePolicyId"] = state ? state.routePolicyId : undefined;
-            resourceInputs["routerId"] = state ? state.routerId : undefined;
-            resourceInputs["routerIdVariable"] = state ? state.routerIdVariable : undefined;
-            resourceInputs["routerLsas"] = state ? state.routerLsas : undefined;
-            resourceInputs["spfCalculationDelay"] = state ? state.spfCalculationDelay : undefined;
-            resourceInputs["spfCalculationDelayVariable"] = state ? state.spfCalculationDelayVariable : undefined;
-            resourceInputs["spfInitialHoldTime"] = state ? state.spfInitialHoldTime : undefined;
-            resourceInputs["spfInitialHoldTimeVariable"] = state ? state.spfInitialHoldTimeVariable : undefined;
-            resourceInputs["spfMaximumHoldTime"] = state ? state.spfMaximumHoldTime : undefined;
-            resourceInputs["spfMaximumHoldTimeVariable"] = state ? state.spfMaximumHoldTimeVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["areas"] = state?.areas;
+            resourceInputs["defaultInformationOriginate"] = state?.defaultInformationOriginate;
+            resourceInputs["defaultInformationOriginateAlways"] = state?.defaultInformationOriginateAlways;
+            resourceInputs["defaultInformationOriginateAlwaysVariable"] = state?.defaultInformationOriginateAlwaysVariable;
+            resourceInputs["defaultInformationOriginateMetric"] = state?.defaultInformationOriginateMetric;
+            resourceInputs["defaultInformationOriginateMetricType"] = state?.defaultInformationOriginateMetricType;
+            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = state?.defaultInformationOriginateMetricTypeVariable;
+            resourceInputs["defaultInformationOriginateMetricVariable"] = state?.defaultInformationOriginateMetricVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["distanceExternal"] = state?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = state?.distanceExternalVariable;
+            resourceInputs["distanceInterArea"] = state?.distanceInterArea;
+            resourceInputs["distanceInterAreaVariable"] = state?.distanceInterAreaVariable;
+            resourceInputs["distanceIntraArea"] = state?.distanceIntraArea;
+            resourceInputs["distanceIntraAreaVariable"] = state?.distanceIntraAreaVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["redistributes"] = state?.redistributes;
+            resourceInputs["referenceBandwidth"] = state?.referenceBandwidth;
+            resourceInputs["referenceBandwidthVariable"] = state?.referenceBandwidthVariable;
+            resourceInputs["rfc1583Compatible"] = state?.rfc1583Compatible;
+            resourceInputs["rfc1583CompatibleVariable"] = state?.rfc1583CompatibleVariable;
+            resourceInputs["routePolicyId"] = state?.routePolicyId;
+            resourceInputs["routerId"] = state?.routerId;
+            resourceInputs["routerIdVariable"] = state?.routerIdVariable;
+            resourceInputs["routerLsas"] = state?.routerLsas;
+            resourceInputs["spfCalculationDelay"] = state?.spfCalculationDelay;
+            resourceInputs["spfCalculationDelayVariable"] = state?.spfCalculationDelayVariable;
+            resourceInputs["spfInitialHoldTime"] = state?.spfInitialHoldTime;
+            resourceInputs["spfInitialHoldTimeVariable"] = state?.spfInitialHoldTimeVariable;
+            resourceInputs["spfMaximumHoldTime"] = state?.spfMaximumHoldTime;
+            resourceInputs["spfMaximumHoldTimeVariable"] = state?.spfMaximumHoldTimeVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceRoutingOspfFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["areas"] = args ? args.areas : undefined;
-            resourceInputs["defaultInformationOriginate"] = args ? args.defaultInformationOriginate : undefined;
-            resourceInputs["defaultInformationOriginateAlways"] = args ? args.defaultInformationOriginateAlways : undefined;
-            resourceInputs["defaultInformationOriginateAlwaysVariable"] = args ? args.defaultInformationOriginateAlwaysVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetric"] = args ? args.defaultInformationOriginateMetric : undefined;
-            resourceInputs["defaultInformationOriginateMetricType"] = args ? args.defaultInformationOriginateMetricType : undefined;
-            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = args ? args.defaultInformationOriginateMetricTypeVariable : undefined;
-            resourceInputs["defaultInformationOriginateMetricVariable"] = args ? args.defaultInformationOriginateMetricVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["distanceExternal"] = args ? args.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = args ? args.distanceExternalVariable : undefined;
-            resourceInputs["distanceInterArea"] = args ? args.distanceInterArea : undefined;
-            resourceInputs["distanceInterAreaVariable"] = args ? args.distanceInterAreaVariable : undefined;
-            resourceInputs["distanceIntraArea"] = args ? args.distanceIntraArea : undefined;
-            resourceInputs["distanceIntraAreaVariable"] = args ? args.distanceIntraAreaVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["redistributes"] = args ? args.redistributes : undefined;
-            resourceInputs["referenceBandwidth"] = args ? args.referenceBandwidth : undefined;
-            resourceInputs["referenceBandwidthVariable"] = args ? args.referenceBandwidthVariable : undefined;
-            resourceInputs["rfc1583Compatible"] = args ? args.rfc1583Compatible : undefined;
-            resourceInputs["rfc1583CompatibleVariable"] = args ? args.rfc1583CompatibleVariable : undefined;
-            resourceInputs["routePolicyId"] = args ? args.routePolicyId : undefined;
-            resourceInputs["routerId"] = args ? args.routerId : undefined;
-            resourceInputs["routerIdVariable"] = args ? args.routerIdVariable : undefined;
-            resourceInputs["routerLsas"] = args ? args.routerLsas : undefined;
-            resourceInputs["spfCalculationDelay"] = args ? args.spfCalculationDelay : undefined;
-            resourceInputs["spfCalculationDelayVariable"] = args ? args.spfCalculationDelayVariable : undefined;
-            resourceInputs["spfInitialHoldTime"] = args ? args.spfInitialHoldTime : undefined;
-            resourceInputs["spfInitialHoldTimeVariable"] = args ? args.spfInitialHoldTimeVariable : undefined;
-            resourceInputs["spfMaximumHoldTime"] = args ? args.spfMaximumHoldTime : undefined;
-            resourceInputs["spfMaximumHoldTimeVariable"] = args ? args.spfMaximumHoldTimeVariable : undefined;
+            resourceInputs["areas"] = args?.areas;
+            resourceInputs["defaultInformationOriginate"] = args?.defaultInformationOriginate;
+            resourceInputs["defaultInformationOriginateAlways"] = args?.defaultInformationOriginateAlways;
+            resourceInputs["defaultInformationOriginateAlwaysVariable"] = args?.defaultInformationOriginateAlwaysVariable;
+            resourceInputs["defaultInformationOriginateMetric"] = args?.defaultInformationOriginateMetric;
+            resourceInputs["defaultInformationOriginateMetricType"] = args?.defaultInformationOriginateMetricType;
+            resourceInputs["defaultInformationOriginateMetricTypeVariable"] = args?.defaultInformationOriginateMetricTypeVariable;
+            resourceInputs["defaultInformationOriginateMetricVariable"] = args?.defaultInformationOriginateMetricVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["distanceExternal"] = args?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = args?.distanceExternalVariable;
+            resourceInputs["distanceInterArea"] = args?.distanceInterArea;
+            resourceInputs["distanceInterAreaVariable"] = args?.distanceInterAreaVariable;
+            resourceInputs["distanceIntraArea"] = args?.distanceIntraArea;
+            resourceInputs["distanceIntraAreaVariable"] = args?.distanceIntraAreaVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["redistributes"] = args?.redistributes;
+            resourceInputs["referenceBandwidth"] = args?.referenceBandwidth;
+            resourceInputs["referenceBandwidthVariable"] = args?.referenceBandwidthVariable;
+            resourceInputs["rfc1583Compatible"] = args?.rfc1583Compatible;
+            resourceInputs["rfc1583CompatibleVariable"] = args?.rfc1583CompatibleVariable;
+            resourceInputs["routePolicyId"] = args?.routePolicyId;
+            resourceInputs["routerId"] = args?.routerId;
+            resourceInputs["routerIdVariable"] = args?.routerIdVariable;
+            resourceInputs["routerLsas"] = args?.routerLsas;
+            resourceInputs["spfCalculationDelay"] = args?.spfCalculationDelay;
+            resourceInputs["spfCalculationDelayVariable"] = args?.spfCalculationDelayVariable;
+            resourceInputs["spfInitialHoldTime"] = args?.spfInitialHoldTime;
+            resourceInputs["spfInitialHoldTimeVariable"] = args?.spfInitialHoldTimeVariable;
+            resourceInputs["spfMaximumHoldTime"] = args?.spfMaximumHoldTime;
+            resourceInputs["spfMaximumHoldTimeVariable"] = args?.spfMaximumHoldTimeVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -277,11 +296,13 @@ export interface ServiceRoutingOspfFeatureState {
      */
     areas?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureArea>[]>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
     defaultInformationOriginate?: pulumi.Input<boolean>;
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      */
     defaultInformationOriginateAlways?: pulumi.Input<boolean>;
     /**
@@ -289,11 +310,13 @@ export interface ServiceRoutingOspfFeatureState {
      */
     defaultInformationOriginateAlwaysVariable?: pulumi.Input<string>;
     /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
      */
     defaultInformationOriginateMetric?: pulumi.Input<number>;
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      */
     defaultInformationOriginateMetricType?: pulumi.Input<string>;
     /**
@@ -309,7 +332,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -317,7 +342,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceInterArea?: pulumi.Input<number>;
     /**
@@ -325,7 +352,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     distanceInterAreaVariable?: pulumi.Input<string>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceIntraArea?: pulumi.Input<number>;
     /**
@@ -345,7 +374,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureRedistribute>[]>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
     referenceBandwidth?: pulumi.Input<number>;
     /**
@@ -353,7 +384,8 @@ export interface ServiceRoutingOspfFeatureState {
      */
     referenceBandwidthVariable?: pulumi.Input<string>;
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      */
     rfc1583Compatible?: pulumi.Input<boolean>;
     /**
@@ -374,7 +406,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     routerLsas?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureRouterLsa>[]>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
     spfCalculationDelay?: pulumi.Input<number>;
     /**
@@ -382,7 +416,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     spfCalculationDelayVariable?: pulumi.Input<string>;
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
     spfInitialHoldTime?: pulumi.Input<number>;
     /**
@@ -390,7 +426,9 @@ export interface ServiceRoutingOspfFeatureState {
      */
     spfInitialHoldTimeVariable?: pulumi.Input<string>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      */
     spfMaximumHoldTime?: pulumi.Input<number>;
     /**
@@ -412,11 +450,13 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     areas?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureArea>[]>;
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      */
     defaultInformationOriginate?: pulumi.Input<boolean>;
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      */
     defaultInformationOriginateAlways?: pulumi.Input<boolean>;
     /**
@@ -424,11 +464,13 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     defaultInformationOriginateAlwaysVariable?: pulumi.Input<string>;
     /**
-     * Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+     * Set metric used to generate default route <0..16777214>
+     *   - Range: `0`-`16777214`
      */
     defaultInformationOriginateMetric?: pulumi.Input<number>;
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      */
     defaultInformationOriginateMetricType?: pulumi.Input<string>;
     /**
@@ -444,7 +486,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -452,7 +496,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceInterArea?: pulumi.Input<number>;
     /**
@@ -460,7 +506,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     distanceInterAreaVariable?: pulumi.Input<string>;
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      */
     distanceIntraArea?: pulumi.Input<number>;
     /**
@@ -480,7 +528,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     redistributes?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureRedistribute>[]>;
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      */
     referenceBandwidth?: pulumi.Input<number>;
     /**
@@ -488,7 +538,8 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     referenceBandwidthVariable?: pulumi.Input<string>;
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      */
     rfc1583Compatible?: pulumi.Input<boolean>;
     /**
@@ -509,7 +560,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     routerLsas?: pulumi.Input<pulumi.Input<inputs.ServiceRoutingOspfFeatureRouterLsa>[]>;
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      */
     spfCalculationDelay?: pulumi.Input<number>;
     /**
@@ -517,7 +570,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     spfCalculationDelayVariable?: pulumi.Input<string>;
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      */
     spfInitialHoldTime?: pulumi.Input<number>;
     /**
@@ -525,7 +580,9 @@ export interface ServiceRoutingOspfFeatureArgs {
      */
     spfInitialHoldTimeVariable?: pulumi.Input<string>;
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      */
     spfMaximumHoldTime?: pulumi.Input<number>;
     /**

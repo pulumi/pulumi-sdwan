@@ -33,7 +33,8 @@ type ServiceMulticastFeature struct {
 	AutoRpDiscoveries ServiceMulticastFeatureAutoRpDiscoveryArrayOutput `pulumi:"autoRpDiscoveries"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	EnableAutoRp pulumi.BoolPtrOutput `pulumi:"enableAutoRp"`
 	// Variable name
 	EnableAutoRpVariable pulumi.StringPtrOutput `pulumi:"enableAutoRpVariable"`
@@ -41,15 +42,18 @@ type ServiceMulticastFeature struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// Set IGMP interface parameters
 	IgmpInterfaces ServiceMulticastFeatureIgmpInterfaceArrayOutput `pulumi:"igmpInterfaces"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrOutput `pulumi:"localReplicator"`
-	// Set number of joins per group the router supports - Range: `0`-`131072`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`131072`
 	LocalReplicatorThreshold pulumi.IntPtrOutput `pulumi:"localReplicatorThreshold"`
 	// Variable name
 	LocalReplicatorThresholdVariable pulumi.StringPtrOutput `pulumi:"localReplicatorThresholdVariable"`
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrOutput `pulumi:"localReplicatorVariable"`
-	// Set MSDP refresh timer - Range: `1`-`60`
+	// Set MSDP refresh timer
+	//   - Range: `1`-`60`
 	MsdpConnectionRetryInterval pulumi.IntPtrOutput `pulumi:"msdpConnectionRetryInterval"`
 	// Variable name
 	MsdpConnectionRetryIntervalVariable pulumi.StringPtrOutput `pulumi:"msdpConnectionRetryIntervalVariable"`
@@ -73,11 +77,14 @@ type ServiceMulticastFeature struct {
 	PimSourceSpecificMulticastAccessListVariable pulumi.StringPtrOutput `pulumi:"pimSourceSpecificMulticastAccessListVariable"`
 	// turn SSM on/off
 	PimSourceSpecificMulticastEnable pulumi.BoolOutput `pulumi:"pimSourceSpecificMulticastEnable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
+	//   - Default value: `0`
 	PimSptThreshold pulumi.StringPtrOutput `pulumi:"pimSptThreshold"`
 	// Variable name
 	PimSptThresholdVariable pulumi.StringPtrOutput `pulumi:"pimSptThresholdVariable"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrOutput `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrOutput `pulumi:"sptOnlyVariable"`
@@ -129,7 +136,8 @@ type serviceMulticastFeatureState struct {
 	AutoRpDiscoveries []ServiceMulticastFeatureAutoRpDiscovery `pulumi:"autoRpDiscoveries"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	EnableAutoRp *bool `pulumi:"enableAutoRp"`
 	// Variable name
 	EnableAutoRpVariable *string `pulumi:"enableAutoRpVariable"`
@@ -137,15 +145,18 @@ type serviceMulticastFeatureState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// Set IGMP interface parameters
 	IgmpInterfaces []ServiceMulticastFeatureIgmpInterface `pulumi:"igmpInterfaces"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator *bool `pulumi:"localReplicator"`
-	// Set number of joins per group the router supports - Range: `0`-`131072`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`131072`
 	LocalReplicatorThreshold *int `pulumi:"localReplicatorThreshold"`
 	// Variable name
 	LocalReplicatorThresholdVariable *string `pulumi:"localReplicatorThresholdVariable"`
 	// Variable name
 	LocalReplicatorVariable *string `pulumi:"localReplicatorVariable"`
-	// Set MSDP refresh timer - Range: `1`-`60`
+	// Set MSDP refresh timer
+	//   - Range: `1`-`60`
 	MsdpConnectionRetryInterval *int `pulumi:"msdpConnectionRetryInterval"`
 	// Variable name
 	MsdpConnectionRetryIntervalVariable *string `pulumi:"msdpConnectionRetryIntervalVariable"`
@@ -169,11 +180,14 @@ type serviceMulticastFeatureState struct {
 	PimSourceSpecificMulticastAccessListVariable *string `pulumi:"pimSourceSpecificMulticastAccessListVariable"`
 	// turn SSM on/off
 	PimSourceSpecificMulticastEnable *bool `pulumi:"pimSourceSpecificMulticastEnable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
+	//   - Default value: `0`
 	PimSptThreshold *string `pulumi:"pimSptThreshold"`
 	// Variable name
 	PimSptThresholdVariable *string `pulumi:"pimSptThresholdVariable"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly *bool `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable *string `pulumi:"sptOnlyVariable"`
@@ -190,7 +204,8 @@ type ServiceMulticastFeatureState struct {
 	AutoRpDiscoveries ServiceMulticastFeatureAutoRpDiscoveryArrayInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	EnableAutoRp pulumi.BoolPtrInput
 	// Variable name
 	EnableAutoRpVariable pulumi.StringPtrInput
@@ -198,15 +213,18 @@ type ServiceMulticastFeatureState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// Set IGMP interface parameters
 	IgmpInterfaces ServiceMulticastFeatureIgmpInterfaceArrayInput
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrInput
-	// Set number of joins per group the router supports - Range: `0`-`131072`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`131072`
 	LocalReplicatorThreshold pulumi.IntPtrInput
 	// Variable name
 	LocalReplicatorThresholdVariable pulumi.StringPtrInput
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrInput
-	// Set MSDP refresh timer - Range: `1`-`60`
+	// Set MSDP refresh timer
+	//   - Range: `1`-`60`
 	MsdpConnectionRetryInterval pulumi.IntPtrInput
 	// Variable name
 	MsdpConnectionRetryIntervalVariable pulumi.StringPtrInput
@@ -230,11 +248,14 @@ type ServiceMulticastFeatureState struct {
 	PimSourceSpecificMulticastAccessListVariable pulumi.StringPtrInput
 	// turn SSM on/off
 	PimSourceSpecificMulticastEnable pulumi.BoolPtrInput
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
+	//   - Default value: `0`
 	PimSptThreshold pulumi.StringPtrInput
 	// Variable name
 	PimSptThresholdVariable pulumi.StringPtrInput
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrInput
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrInput
@@ -255,7 +276,8 @@ type serviceMulticastFeatureArgs struct {
 	AutoRpDiscoveries []ServiceMulticastFeatureAutoRpDiscovery `pulumi:"autoRpDiscoveries"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	EnableAutoRp *bool `pulumi:"enableAutoRp"`
 	// Variable name
 	EnableAutoRpVariable *string `pulumi:"enableAutoRpVariable"`
@@ -263,15 +285,18 @@ type serviceMulticastFeatureArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// Set IGMP interface parameters
 	IgmpInterfaces []ServiceMulticastFeatureIgmpInterface `pulumi:"igmpInterfaces"`
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator *bool `pulumi:"localReplicator"`
-	// Set number of joins per group the router supports - Range: `0`-`131072`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`131072`
 	LocalReplicatorThreshold *int `pulumi:"localReplicatorThreshold"`
 	// Variable name
 	LocalReplicatorThresholdVariable *string `pulumi:"localReplicatorThresholdVariable"`
 	// Variable name
 	LocalReplicatorVariable *string `pulumi:"localReplicatorVariable"`
-	// Set MSDP refresh timer - Range: `1`-`60`
+	// Set MSDP refresh timer
+	//   - Range: `1`-`60`
 	MsdpConnectionRetryInterval *int `pulumi:"msdpConnectionRetryInterval"`
 	// Variable name
 	MsdpConnectionRetryIntervalVariable *string `pulumi:"msdpConnectionRetryIntervalVariable"`
@@ -295,11 +320,14 @@ type serviceMulticastFeatureArgs struct {
 	PimSourceSpecificMulticastAccessListVariable *string `pulumi:"pimSourceSpecificMulticastAccessListVariable"`
 	// turn SSM on/off
 	PimSourceSpecificMulticastEnable bool `pulumi:"pimSourceSpecificMulticastEnable"`
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
+	//   - Default value: `0`
 	PimSptThreshold *string `pulumi:"pimSptThreshold"`
 	// Variable name
 	PimSptThresholdVariable *string `pulumi:"pimSptThresholdVariable"`
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly *bool `pulumi:"sptOnly"`
 	// Variable name
 	SptOnlyVariable *string `pulumi:"sptOnlyVariable"`
@@ -315,7 +343,8 @@ type ServiceMulticastFeatureArgs struct {
 	AutoRpDiscoveries ServiceMulticastFeatureAutoRpDiscoveryArrayInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable or disable auto-RP - Default value: `false`
+	// Enable or disable auto-RP
+	//   - Default value: `false`
 	EnableAutoRp pulumi.BoolPtrInput
 	// Variable name
 	EnableAutoRpVariable pulumi.StringPtrInput
@@ -323,15 +352,18 @@ type ServiceMulticastFeatureArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// Set IGMP interface parameters
 	IgmpInterfaces ServiceMulticastFeatureIgmpInterfaceArrayInput
-	// Replicator is local to this device - Default value: `false`
+	// Replicator is local to this device
+	//   - Default value: `false`
 	LocalReplicator pulumi.BoolPtrInput
-	// Set number of joins per group the router supports - Range: `0`-`131072`
+	// Set number of joins per group the router supports
+	//   - Range: `0`-`131072`
 	LocalReplicatorThreshold pulumi.IntPtrInput
 	// Variable name
 	LocalReplicatorThresholdVariable pulumi.StringPtrInput
 	// Variable name
 	LocalReplicatorVariable pulumi.StringPtrInput
-	// Set MSDP refresh timer - Range: `1`-`60`
+	// Set MSDP refresh timer
+	//   - Range: `1`-`60`
 	MsdpConnectionRetryInterval pulumi.IntPtrInput
 	// Variable name
 	MsdpConnectionRetryIntervalVariable pulumi.StringPtrInput
@@ -355,11 +387,14 @@ type ServiceMulticastFeatureArgs struct {
 	PimSourceSpecificMulticastAccessListVariable pulumi.StringPtrInput
 	// turn SSM on/off
 	PimSourceSpecificMulticastEnable pulumi.BoolInput
-	// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+	// Set when PIM router joins the SPT (kbps)
+	//   - Choices: `0`, `infinity`
+	//   - Default value: `0`
 	PimSptThreshold pulumi.StringPtrInput
 	// Variable name
 	PimSptThresholdVariable pulumi.StringPtrInput
-	// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+	// Shortest Path Tree (SPT) Only Mode
+	//   - Default value: `false`
 	SptOnly pulumi.BoolPtrInput
 	// Variable name
 	SptOnlyVariable pulumi.StringPtrInput
@@ -473,7 +508,8 @@ func (o ServiceMulticastFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enable or disable auto-RP - Default value: `false`
+// Enable or disable auto-RP
+//   - Default value: `false`
 func (o ServiceMulticastFeatureOutput) EnableAutoRp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.BoolPtrOutput { return v.EnableAutoRp }).(pulumi.BoolPtrOutput)
 }
@@ -495,12 +531,14 @@ func (o ServiceMulticastFeatureOutput) IgmpInterfaces() ServiceMulticastFeatureI
 	}).(ServiceMulticastFeatureIgmpInterfaceArrayOutput)
 }
 
-// Replicator is local to this device - Default value: `false`
+// Replicator is local to this device
+//   - Default value: `false`
 func (o ServiceMulticastFeatureOutput) LocalReplicator() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.BoolPtrOutput { return v.LocalReplicator }).(pulumi.BoolPtrOutput)
 }
 
-// Set number of joins per group the router supports - Range: `0`-`131072`
+// Set number of joins per group the router supports
+//   - Range: `0`-`131072`
 func (o ServiceMulticastFeatureOutput) LocalReplicatorThreshold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.IntPtrOutput { return v.LocalReplicatorThreshold }).(pulumi.IntPtrOutput)
 }
@@ -515,7 +553,8 @@ func (o ServiceMulticastFeatureOutput) LocalReplicatorVariable() pulumi.StringPt
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringPtrOutput { return v.LocalReplicatorVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set MSDP refresh timer - Range: `1`-`60`
+// Set MSDP refresh timer
+//   - Range: `1`-`60`
 func (o ServiceMulticastFeatureOutput) MsdpConnectionRetryInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.IntPtrOutput { return v.MsdpConnectionRetryInterval }).(pulumi.IntPtrOutput)
 }
@@ -583,7 +622,9 @@ func (o ServiceMulticastFeatureOutput) PimSourceSpecificMulticastEnable() pulumi
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.BoolOutput { return v.PimSourceSpecificMulticastEnable }).(pulumi.BoolOutput)
 }
 
-// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+// Set when PIM router joins the SPT (kbps)
+//   - Choices: `0`, `infinity`
+//   - Default value: `0`
 func (o ServiceMulticastFeatureOutput) PimSptThreshold() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringPtrOutput { return v.PimSptThreshold }).(pulumi.StringPtrOutput)
 }
@@ -593,7 +634,8 @@ func (o ServiceMulticastFeatureOutput) PimSptThresholdVariable() pulumi.StringPt
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.StringPtrOutput { return v.PimSptThresholdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+// Shortest Path Tree (SPT) Only Mode
+//   - Default value: `false`
 func (o ServiceMulticastFeatureOutput) SptOnly() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceMulticastFeature) pulumi.BoolPtrOutput { return v.SptOnly }).(pulumi.BoolPtrOutput)
 }

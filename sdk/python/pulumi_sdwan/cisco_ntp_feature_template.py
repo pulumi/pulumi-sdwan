@@ -37,14 +37,15 @@ class CiscoNtpFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoNtpFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
-        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master - Default value: `false`
+        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] master_source_interface: Set interface for NTP Master
         :param pulumi.Input[_builtins.str] master_source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15> - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15>
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] master_stratum_variable: Variable name
         :param pulumi.Input[_builtins.str] master_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -93,9 +94,8 @@ class CiscoNtpFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -119,7 +119,8 @@ class CiscoNtpFeatureTemplateArgs:
     @pulumi.getter
     def master(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure device as NTP master - Default value: `false`
+        Configure device as NTP master
+          - Default value: `false`
         """
         return pulumi.get(self, "master")
 
@@ -155,7 +156,8 @@ class CiscoNtpFeatureTemplateArgs:
     @pulumi.getter(name="masterStratum")
     def master_stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Master Stratum <1..15> - Range: `1`-`15`
+        Master Stratum <1..15>
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "master_stratum")
 
@@ -258,13 +260,14 @@ class _CiscoNtpFeatureTemplateState:
         Input properties used for looking up and filtering CiscoNtpFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CiscoNtpFeatureTemplateAuthenticationKeyArgs']]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] master_source_interface: Set interface for NTP Master
         :param pulumi.Input[_builtins.str] master_source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15> - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15>
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] master_stratum_variable: Variable name
         :param pulumi.Input[_builtins.str] master_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -333,9 +336,8 @@ class _CiscoNtpFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -347,7 +349,8 @@ class _CiscoNtpFeatureTemplateState:
     @pulumi.getter
     def master(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Configure device as NTP master - Default value: `false`
+        Configure device as NTP master
+          - Default value: `false`
         """
         return pulumi.get(self, "master")
 
@@ -383,7 +386,8 @@ class _CiscoNtpFeatureTemplateState:
     @pulumi.getter(name="masterStratum")
     def master_stratum(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Master Stratum <1..15> - Range: `1`-`15`
+        Master Stratum <1..15>
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "master_stratum")
 
@@ -524,13 +528,14 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] master_source_interface: Set interface for NTP Master
         :param pulumi.Input[_builtins.str] master_source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15> - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15>
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] master_stratum_variable: Variable name
         :param pulumi.Input[_builtins.str] master_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -646,13 +651,14 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoNtpFeatureTemplateAuthenticationKeyArgs', 'CiscoNtpFeatureTemplateAuthenticationKeyArgsDict']]]] authentication_keys: Set MD5 authentication key
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] master: Configure device as NTP master
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] master_source_interface: Set interface for NTP Master
         :param pulumi.Input[_builtins.str] master_source_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15> - Range: `1`-`15`
+        :param pulumi.Input[_builtins.int] master_stratum: Master Stratum <1..15>
+                 - Range: `1`-`15`
         :param pulumi.Input[_builtins.str] master_stratum_variable: Variable name
         :param pulumi.Input[_builtins.str] master_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
@@ -703,9 +709,8 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -713,7 +718,8 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def master(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Configure device as NTP master - Default value: `false`
+        Configure device as NTP master
+          - Default value: `false`
         """
         return pulumi.get(self, "master")
 
@@ -737,7 +743,8 @@ class CiscoNtpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="masterStratum")
     def master_stratum(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Master Stratum <1..15> - Range: `1`-`15`
+        Master Stratum <1..15>
+          - Range: `1`-`15`
         """
         return pulumi.get(self, "master_stratum")
 

@@ -31,7 +31,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>> AccessLists { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
+        ///   - Default value: `none`
         /// </summary>
         [Output("application")]
         public Output<string?> Application { get; private set; } = null!;
@@ -43,7 +45,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ApplicationVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Output("clearDontFragment")]
         public Output<bool?> ClearDontFragment { get; private set; } = null!;
@@ -61,9 +64,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -81,8 +83,7 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceDescriptionVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-        /// present
+        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
         /// </summary>
         [Output("interfaceName")]
         public Output<string?> InterfaceName { get; private set; } = null!;
@@ -106,7 +107,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+        /// Interface MTU &lt;576..2000&gt;, in bytes
+        ///   - Range: `64`-`18000`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("ipMtu")]
         public Output<int?> IpMtu { get; private set; } = null!;
@@ -136,7 +139,8 @@ namespace Pulumi.Sdwan
         public Output<string?> RewriteRuleVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -148,7 +152,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tcpMssAdjust")]
         public Output<int?> TcpMssAdjust { get; private set; } = null!;
@@ -290,7 +295,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
+        ///   - Default value: `none`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -302,7 +309,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -323,9 +331,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -346,8 +353,7 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-        /// present
+        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
         /// </summary>
         [Input("interfaceName")]
         public Input<string>? InterfaceName { get; set; }
@@ -371,7 +377,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpAddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+        /// Interface MTU &lt;576..2000&gt;, in bytes
+        ///   - Range: `64`-`18000`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -401,7 +409,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RewriteRuleVariable { get; set; }
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -413,7 +422,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMssAdjust")]
         public Input<int>? TcpMssAdjust { get; set; }
@@ -511,7 +521,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
+        ///   - Default value: `none`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -523,7 +535,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -544,9 +557,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -567,8 +579,7 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-        /// present
+        /// Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
         /// </summary>
         [Input("interfaceName")]
         public Input<string>? InterfaceName { get; set; }
@@ -592,7 +603,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpAddressVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+        /// Interface MTU &lt;576..2000&gt;, in bytes
+        ///   - Range: `64`-`18000`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -622,7 +635,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RewriteRuleVariable { get; set; }
 
         /// <summary>
-        /// Administrative state - Default value: `true`
+        /// Administrative state
+        ///   - Default value: `true`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -634,7 +648,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMssAdjust")]
         public Input<int>? TcpMssAdjust { get; set; }

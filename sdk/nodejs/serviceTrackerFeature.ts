@@ -73,107 +73,117 @@ export class ServiceTrackerFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * API url of endpoint
      */
-    public readonly endpointApiUrl!: pulumi.Output<string | undefined>;
+    declare public readonly endpointApiUrl: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly endpointApiUrlVariable!: pulumi.Output<string | undefined>;
+    declare public readonly endpointApiUrlVariable: pulumi.Output<string | undefined>;
     /**
      * Endpoint DNS Name
      */
-    public readonly endpointDnsName!: pulumi.Output<string | undefined>;
+    declare public readonly endpointDnsName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly endpointDnsNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly endpointDnsNameVariable: pulumi.Output<string | undefined>;
     /**
      * Endpoint IP
      */
-    public readonly endpointIp!: pulumi.Output<string | undefined>;
+    declare public readonly endpointIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly endpointIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly endpointIpVariable: pulumi.Output<string | undefined>;
     /**
-     * Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+     * Endpoint Tracker Type
+     *   - Choices: `static-route`
+     *   - Default value: `static-route`
      */
-    public readonly endpointTrackerType!: pulumi.Output<string | undefined>;
+    declare public readonly endpointTrackerType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly endpointTrackerTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly endpointTrackerTypeVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Interval - Range: `20`-`600` - Default value: `60`
+     * Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      */
-    public readonly interval!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly intervalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Multiplier - Range: `1`-`10` - Default value: `3`
-     */
-    public readonly multiplier!: pulumi.Output<number | undefined>;
+    declare public readonly interval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly multiplierVariable!: pulumi.Output<string | undefined>;
+    declare public readonly intervalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
+     */
+    declare public readonly multiplier: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly multiplierVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * - Range: `1`-`65535`
      */
-    public readonly port!: pulumi.Output<number | undefined>;
+    declare public readonly port: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly portVariable!: pulumi.Output<string | undefined>;
+    declare public readonly portVariable: pulumi.Output<string | undefined>;
     /**
      * - Choices: `tcp`, `udp`
      */
-    public readonly protocol!: pulumi.Output<string | undefined>;
+    declare public readonly protocol: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly protocolVariable!: pulumi.Output<string | undefined>;
+    declare public readonly protocolVariable: pulumi.Output<string | undefined>;
     /**
-     * Threshold - Range: `100`-`1000` - Default value: `300`
+     * Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      */
-    public readonly threshold!: pulumi.Output<number | undefined>;
+    declare public readonly threshold: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly thresholdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly thresholdVariable: pulumi.Output<string | undefined>;
     /**
      * Tracker Name
      */
-    public readonly trackerName!: pulumi.Output<string | undefined>;
+    declare public readonly trackerName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+     * Tracker Type
+     *   - Choices: `endpoint`
+     *   - Default value: `endpoint`
      */
-    public readonly trackerType!: pulumi.Output<string | undefined>;
+    declare public readonly trackerType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceTrackerFeature resource with the given unique name, arguments, and options.
@@ -188,62 +198,62 @@ export class ServiceTrackerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceTrackerFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["endpointApiUrl"] = state ? state.endpointApiUrl : undefined;
-            resourceInputs["endpointApiUrlVariable"] = state ? state.endpointApiUrlVariable : undefined;
-            resourceInputs["endpointDnsName"] = state ? state.endpointDnsName : undefined;
-            resourceInputs["endpointDnsNameVariable"] = state ? state.endpointDnsNameVariable : undefined;
-            resourceInputs["endpointIp"] = state ? state.endpointIp : undefined;
-            resourceInputs["endpointIpVariable"] = state ? state.endpointIpVariable : undefined;
-            resourceInputs["endpointTrackerType"] = state ? state.endpointTrackerType : undefined;
-            resourceInputs["endpointTrackerTypeVariable"] = state ? state.endpointTrackerTypeVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interval"] = state ? state.interval : undefined;
-            resourceInputs["intervalVariable"] = state ? state.intervalVariable : undefined;
-            resourceInputs["multiplier"] = state ? state.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = state ? state.multiplierVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["port"] = state ? state.port : undefined;
-            resourceInputs["portVariable"] = state ? state.portVariable : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["protocolVariable"] = state ? state.protocolVariable : undefined;
-            resourceInputs["threshold"] = state ? state.threshold : undefined;
-            resourceInputs["thresholdVariable"] = state ? state.thresholdVariable : undefined;
-            resourceInputs["trackerName"] = state ? state.trackerName : undefined;
-            resourceInputs["trackerNameVariable"] = state ? state.trackerNameVariable : undefined;
-            resourceInputs["trackerType"] = state ? state.trackerType : undefined;
-            resourceInputs["trackerTypeVariable"] = state ? state.trackerTypeVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["endpointApiUrl"] = state?.endpointApiUrl;
+            resourceInputs["endpointApiUrlVariable"] = state?.endpointApiUrlVariable;
+            resourceInputs["endpointDnsName"] = state?.endpointDnsName;
+            resourceInputs["endpointDnsNameVariable"] = state?.endpointDnsNameVariable;
+            resourceInputs["endpointIp"] = state?.endpointIp;
+            resourceInputs["endpointIpVariable"] = state?.endpointIpVariable;
+            resourceInputs["endpointTrackerType"] = state?.endpointTrackerType;
+            resourceInputs["endpointTrackerTypeVariable"] = state?.endpointTrackerTypeVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interval"] = state?.interval;
+            resourceInputs["intervalVariable"] = state?.intervalVariable;
+            resourceInputs["multiplier"] = state?.multiplier;
+            resourceInputs["multiplierVariable"] = state?.multiplierVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["port"] = state?.port;
+            resourceInputs["portVariable"] = state?.portVariable;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["protocolVariable"] = state?.protocolVariable;
+            resourceInputs["threshold"] = state?.threshold;
+            resourceInputs["thresholdVariable"] = state?.thresholdVariable;
+            resourceInputs["trackerName"] = state?.trackerName;
+            resourceInputs["trackerNameVariable"] = state?.trackerNameVariable;
+            resourceInputs["trackerType"] = state?.trackerType;
+            resourceInputs["trackerTypeVariable"] = state?.trackerTypeVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceTrackerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["endpointApiUrl"] = args ? args.endpointApiUrl : undefined;
-            resourceInputs["endpointApiUrlVariable"] = args ? args.endpointApiUrlVariable : undefined;
-            resourceInputs["endpointDnsName"] = args ? args.endpointDnsName : undefined;
-            resourceInputs["endpointDnsNameVariable"] = args ? args.endpointDnsNameVariable : undefined;
-            resourceInputs["endpointIp"] = args ? args.endpointIp : undefined;
-            resourceInputs["endpointIpVariable"] = args ? args.endpointIpVariable : undefined;
-            resourceInputs["endpointTrackerType"] = args ? args.endpointTrackerType : undefined;
-            resourceInputs["endpointTrackerTypeVariable"] = args ? args.endpointTrackerTypeVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interval"] = args ? args.interval : undefined;
-            resourceInputs["intervalVariable"] = args ? args.intervalVariable : undefined;
-            resourceInputs["multiplier"] = args ? args.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = args ? args.multiplierVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["port"] = args ? args.port : undefined;
-            resourceInputs["portVariable"] = args ? args.portVariable : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["protocolVariable"] = args ? args.protocolVariable : undefined;
-            resourceInputs["threshold"] = args ? args.threshold : undefined;
-            resourceInputs["thresholdVariable"] = args ? args.thresholdVariable : undefined;
-            resourceInputs["trackerName"] = args ? args.trackerName : undefined;
-            resourceInputs["trackerNameVariable"] = args ? args.trackerNameVariable : undefined;
-            resourceInputs["trackerType"] = args ? args.trackerType : undefined;
-            resourceInputs["trackerTypeVariable"] = args ? args.trackerTypeVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["endpointApiUrl"] = args?.endpointApiUrl;
+            resourceInputs["endpointApiUrlVariable"] = args?.endpointApiUrlVariable;
+            resourceInputs["endpointDnsName"] = args?.endpointDnsName;
+            resourceInputs["endpointDnsNameVariable"] = args?.endpointDnsNameVariable;
+            resourceInputs["endpointIp"] = args?.endpointIp;
+            resourceInputs["endpointIpVariable"] = args?.endpointIpVariable;
+            resourceInputs["endpointTrackerType"] = args?.endpointTrackerType;
+            resourceInputs["endpointTrackerTypeVariable"] = args?.endpointTrackerTypeVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interval"] = args?.interval;
+            resourceInputs["intervalVariable"] = args?.intervalVariable;
+            resourceInputs["multiplier"] = args?.multiplier;
+            resourceInputs["multiplierVariable"] = args?.multiplierVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["port"] = args?.port;
+            resourceInputs["portVariable"] = args?.portVariable;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["protocolVariable"] = args?.protocolVariable;
+            resourceInputs["threshold"] = args?.threshold;
+            resourceInputs["thresholdVariable"] = args?.thresholdVariable;
+            resourceInputs["trackerName"] = args?.trackerName;
+            resourceInputs["trackerNameVariable"] = args?.trackerNameVariable;
+            resourceInputs["trackerType"] = args?.trackerType;
+            resourceInputs["trackerTypeVariable"] = args?.trackerTypeVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -284,7 +294,9 @@ export interface ServiceTrackerFeatureState {
      */
     endpointIpVariable?: pulumi.Input<string>;
     /**
-     * Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+     * Endpoint Tracker Type
+     *   - Choices: `static-route`
+     *   - Default value: `static-route`
      */
     endpointTrackerType?: pulumi.Input<string>;
     /**
@@ -296,7 +308,9 @@ export interface ServiceTrackerFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Interval - Range: `20`-`600` - Default value: `60`
+     * Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      */
     interval?: pulumi.Input<number>;
     /**
@@ -304,7 +318,9 @@ export interface ServiceTrackerFeatureState {
      */
     intervalVariable?: pulumi.Input<string>;
     /**
-     * Multiplier - Range: `1`-`10` - Default value: `3`
+     * Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -332,7 +348,9 @@ export interface ServiceTrackerFeatureState {
      */
     protocolVariable?: pulumi.Input<string>;
     /**
-     * Threshold - Range: `100`-`1000` - Default value: `300`
+     * Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      */
     threshold?: pulumi.Input<number>;
     /**
@@ -348,7 +366,9 @@ export interface ServiceTrackerFeatureState {
      */
     trackerNameVariable?: pulumi.Input<string>;
     /**
-     * Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+     * Tracker Type
+     *   - Choices: `endpoint`
+     *   - Default value: `endpoint`
      */
     trackerType?: pulumi.Input<string>;
     /**
@@ -394,7 +414,9 @@ export interface ServiceTrackerFeatureArgs {
      */
     endpointIpVariable?: pulumi.Input<string>;
     /**
-     * Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+     * Endpoint Tracker Type
+     *   - Choices: `static-route`
+     *   - Default value: `static-route`
      */
     endpointTrackerType?: pulumi.Input<string>;
     /**
@@ -406,7 +428,9 @@ export interface ServiceTrackerFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Interval - Range: `20`-`600` - Default value: `60`
+     * Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      */
     interval?: pulumi.Input<number>;
     /**
@@ -414,7 +438,9 @@ export interface ServiceTrackerFeatureArgs {
      */
     intervalVariable?: pulumi.Input<string>;
     /**
-     * Multiplier - Range: `1`-`10` - Default value: `3`
+     * Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -442,7 +468,9 @@ export interface ServiceTrackerFeatureArgs {
      */
     protocolVariable?: pulumi.Input<string>;
     /**
-     * Threshold - Range: `100`-`1000` - Default value: `300`
+     * Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      */
     threshold?: pulumi.Input<number>;
     /**
@@ -458,7 +486,9 @@ export interface ServiceTrackerFeatureArgs {
      */
     trackerNameVariable?: pulumi.Input<string>;
     /**
-     * Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+     * Tracker Type
+     *   - Choices: `endpoint`
+     *   - Default value: `endpoint`
      */
     trackerType?: pulumi.Input<string>;
     /**

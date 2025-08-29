@@ -51,47 +51,50 @@ export class SystemBfdFeature extends pulumi.CustomResource {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    public readonly colors!: pulumi.Output<outputs.SystemBfdFeatureColor[] | undefined>;
+    declare public readonly colors: pulumi.Output<outputs.SystemBfdFeatureColor[] | undefined>;
     /**
-     * - Range: `0`-`63` - Default value: `48`
+     * - Range: `0`-`63`
+     *   - Default value: `48`
      */
-    public readonly defaultDscp!: pulumi.Output<number | undefined>;
+    declare public readonly defaultDscp: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultDscpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultDscpVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * - Range: `1`-`6` - Default value: `6`
+     * - Range: `1`-`6`
+     *   - Default value: `6`
      */
-    public readonly multiplier!: pulumi.Output<number | undefined>;
+    declare public readonly multiplier: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly multiplierVariable!: pulumi.Output<string | undefined>;
+    declare public readonly multiplierVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * - Range: `1`-`4294967295` - Default value: `600000`
+     * - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
-    public readonly pollInterval!: pulumi.Output<number | undefined>;
+    declare public readonly pollInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly pollIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly pollIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemBfdFeature resource with the given unique name, arguments, and options.
@@ -106,32 +109,32 @@ export class SystemBfdFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemBfdFeatureState | undefined;
-            resourceInputs["colors"] = state ? state.colors : undefined;
-            resourceInputs["defaultDscp"] = state ? state.defaultDscp : undefined;
-            resourceInputs["defaultDscpVariable"] = state ? state.defaultDscpVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["multiplier"] = state ? state.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = state ? state.multiplierVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["pollInterval"] = state ? state.pollInterval : undefined;
-            resourceInputs["pollIntervalVariable"] = state ? state.pollIntervalVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["colors"] = state?.colors;
+            resourceInputs["defaultDscp"] = state?.defaultDscp;
+            resourceInputs["defaultDscpVariable"] = state?.defaultDscpVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["multiplier"] = state?.multiplier;
+            resourceInputs["multiplierVariable"] = state?.multiplierVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["pollInterval"] = state?.pollInterval;
+            resourceInputs["pollIntervalVariable"] = state?.pollIntervalVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemBfdFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["colors"] = args ? args.colors : undefined;
-            resourceInputs["defaultDscp"] = args ? args.defaultDscp : undefined;
-            resourceInputs["defaultDscpVariable"] = args ? args.defaultDscpVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["multiplier"] = args ? args.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = args ? args.multiplierVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["pollInterval"] = args ? args.pollInterval : undefined;
-            resourceInputs["pollIntervalVariable"] = args ? args.pollIntervalVariable : undefined;
+            resourceInputs["colors"] = args?.colors;
+            resourceInputs["defaultDscp"] = args?.defaultDscp;
+            resourceInputs["defaultDscpVariable"] = args?.defaultDscpVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["multiplier"] = args?.multiplier;
+            resourceInputs["multiplierVariable"] = args?.multiplierVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["pollInterval"] = args?.pollInterval;
+            resourceInputs["pollIntervalVariable"] = args?.pollIntervalVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -148,7 +151,8 @@ export interface SystemBfdFeatureState {
      */
     colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[]>;
     /**
-     * - Range: `0`-`63` - Default value: `48`
+     * - Range: `0`-`63`
+     *   - Default value: `48`
      */
     defaultDscp?: pulumi.Input<number>;
     /**
@@ -164,7 +168,8 @@ export interface SystemBfdFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * - Range: `1`-`6` - Default value: `6`
+     * - Range: `1`-`6`
+     *   - Default value: `6`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -176,7 +181,8 @@ export interface SystemBfdFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * - Range: `1`-`4294967295` - Default value: `600000`
+     * - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
     pollInterval?: pulumi.Input<number>;
     /**
@@ -198,7 +204,8 @@ export interface SystemBfdFeatureArgs {
      */
     colors?: pulumi.Input<pulumi.Input<inputs.SystemBfdFeatureColor>[]>;
     /**
-     * - Range: `0`-`63` - Default value: `48`
+     * - Range: `0`-`63`
+     *   - Default value: `48`
      */
     defaultDscp?: pulumi.Input<number>;
     /**
@@ -214,7 +221,8 @@ export interface SystemBfdFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * - Range: `1`-`6` - Default value: `6`
+     * - Range: `1`-`6`
+     *   - Default value: `6`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -226,7 +234,8 @@ export interface SystemBfdFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * - Range: `1`-`4294967295` - Default value: `600000`
+     * - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
     pollInterval?: pulumi.Input<number>;
     /**

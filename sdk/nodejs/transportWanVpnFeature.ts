@@ -51,80 +51,82 @@ export class TransportWanVpnFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Enhance ECMP Keying - Default value: `false`
+     * Enhance ECMP Keying
+     *   - Default value: `false`
      */
-    public readonly enhanceEcmpKeying!: pulumi.Output<boolean | undefined>;
+    declare public readonly enhanceEcmpKeying: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly enhanceEcmpKeyingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enhanceEcmpKeyingVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * IPv4 Static Route
      */
-    public readonly ipv4StaticRoutes!: pulumi.Output<outputs.TransportWanVpnFeatureIpv4StaticRoute[] | undefined>;
+    declare public readonly ipv4StaticRoutes: pulumi.Output<outputs.TransportWanVpnFeatureIpv4StaticRoute[] | undefined>;
     /**
      * IPv6 Static Route
      */
-    public readonly ipv6StaticRoutes!: pulumi.Output<outputs.TransportWanVpnFeatureIpv6StaticRoute[] | undefined>;
+    declare public readonly ipv6StaticRoutes: pulumi.Output<outputs.TransportWanVpnFeatureIpv6StaticRoute[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * NAT64 V4 Pool
      */
-    public readonly nat64V4Pools!: pulumi.Output<outputs.TransportWanVpnFeatureNat64V4Pool[] | undefined>;
-    public readonly newHostMappings!: pulumi.Output<outputs.TransportWanVpnFeatureNewHostMapping[] | undefined>;
+    declare public readonly nat64V4Pools: pulumi.Output<outputs.TransportWanVpnFeatureNat64V4Pool[] | undefined>;
+    declare public readonly newHostMappings: pulumi.Output<outputs.TransportWanVpnFeatureNewHostMapping[] | undefined>;
     /**
      * Primary DNS Address (IPv4)
      */
-    public readonly primaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Primary DNS Address (IPv6)
      */
-    public readonly primaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly primaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly primaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Secondary DNS Address (IPv4)
      */
-    public readonly secondaryDnsAddressIpv4!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv4Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv4Variable: pulumi.Output<string | undefined>;
     /**
      * Secondary DNS Address (IPv6)
      */
-    public readonly secondaryDnsAddressIpv6!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryDnsAddressIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryDnsAddressIpv6Variable: pulumi.Output<string | undefined>;
     /**
      * Service
      */
-    public readonly services!: pulumi.Output<outputs.TransportWanVpnFeatureService[] | undefined>;
+    declare public readonly services: pulumi.Output<outputs.TransportWanVpnFeatureService[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * VPN - Default value: `0`
+     * VPN
+     *   - Default value: `0`
      */
-    public readonly vpn!: pulumi.Output<number | undefined>;
+    declare public readonly vpn: pulumi.Output<number | undefined>;
 
     /**
      * Create a TransportWanVpnFeature resource with the given unique name, arguments, and options.
@@ -139,50 +141,50 @@ export class TransportWanVpnFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enhanceEcmpKeying"] = state ? state.enhanceEcmpKeying : undefined;
-            resourceInputs["enhanceEcmpKeyingVariable"] = state ? state.enhanceEcmpKeyingVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["ipv4StaticRoutes"] = state ? state.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = state ? state.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64V4Pools"] = state ? state.nat64V4Pools : undefined;
-            resourceInputs["newHostMappings"] = state ? state.newHostMappings : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = state ? state.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = state ? state.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = state ? state.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = state ? state.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = state ? state.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = state ? state.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = state ? state.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = state ? state.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["services"] = state ? state.services : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpn"] = state ? state.vpn : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enhanceEcmpKeying"] = state?.enhanceEcmpKeying;
+            resourceInputs["enhanceEcmpKeyingVariable"] = state?.enhanceEcmpKeyingVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["ipv4StaticRoutes"] = state?.ipv4StaticRoutes;
+            resourceInputs["ipv6StaticRoutes"] = state?.ipv6StaticRoutes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64V4Pools"] = state?.nat64V4Pools;
+            resourceInputs["newHostMappings"] = state?.newHostMappings;
+            resourceInputs["primaryDnsAddressIpv4"] = state?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = state?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = state?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = state?.primaryDnsAddressIpv6Variable;
+            resourceInputs["secondaryDnsAddressIpv4"] = state?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = state?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = state?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = state?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["services"] = state?.services;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpn"] = state?.vpn;
         } else {
             const args = argsOrState as TransportWanVpnFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enhanceEcmpKeying"] = args ? args.enhanceEcmpKeying : undefined;
-            resourceInputs["enhanceEcmpKeyingVariable"] = args ? args.enhanceEcmpKeyingVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["ipv4StaticRoutes"] = args ? args.ipv4StaticRoutes : undefined;
-            resourceInputs["ipv6StaticRoutes"] = args ? args.ipv6StaticRoutes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64V4Pools"] = args ? args.nat64V4Pools : undefined;
-            resourceInputs["newHostMappings"] = args ? args.newHostMappings : undefined;
-            resourceInputs["primaryDnsAddressIpv4"] = args ? args.primaryDnsAddressIpv4 : undefined;
-            resourceInputs["primaryDnsAddressIpv4Variable"] = args ? args.primaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["primaryDnsAddressIpv6"] = args ? args.primaryDnsAddressIpv6 : undefined;
-            resourceInputs["primaryDnsAddressIpv6Variable"] = args ? args.primaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv4"] = args ? args.secondaryDnsAddressIpv4 : undefined;
-            resourceInputs["secondaryDnsAddressIpv4Variable"] = args ? args.secondaryDnsAddressIpv4Variable : undefined;
-            resourceInputs["secondaryDnsAddressIpv6"] = args ? args.secondaryDnsAddressIpv6 : undefined;
-            resourceInputs["secondaryDnsAddressIpv6Variable"] = args ? args.secondaryDnsAddressIpv6Variable : undefined;
-            resourceInputs["services"] = args ? args.services : undefined;
-            resourceInputs["vpn"] = args ? args.vpn : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enhanceEcmpKeying"] = args?.enhanceEcmpKeying;
+            resourceInputs["enhanceEcmpKeyingVariable"] = args?.enhanceEcmpKeyingVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["ipv4StaticRoutes"] = args?.ipv4StaticRoutes;
+            resourceInputs["ipv6StaticRoutes"] = args?.ipv6StaticRoutes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64V4Pools"] = args?.nat64V4Pools;
+            resourceInputs["newHostMappings"] = args?.newHostMappings;
+            resourceInputs["primaryDnsAddressIpv4"] = args?.primaryDnsAddressIpv4;
+            resourceInputs["primaryDnsAddressIpv4Variable"] = args?.primaryDnsAddressIpv4Variable;
+            resourceInputs["primaryDnsAddressIpv6"] = args?.primaryDnsAddressIpv6;
+            resourceInputs["primaryDnsAddressIpv6Variable"] = args?.primaryDnsAddressIpv6Variable;
+            resourceInputs["secondaryDnsAddressIpv4"] = args?.secondaryDnsAddressIpv4;
+            resourceInputs["secondaryDnsAddressIpv4Variable"] = args?.secondaryDnsAddressIpv4Variable;
+            resourceInputs["secondaryDnsAddressIpv6"] = args?.secondaryDnsAddressIpv6;
+            resourceInputs["secondaryDnsAddressIpv6Variable"] = args?.secondaryDnsAddressIpv6Variable;
+            resourceInputs["services"] = args?.services;
+            resourceInputs["vpn"] = args?.vpn;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -199,7 +201,8 @@ export interface TransportWanVpnFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enhance ECMP Keying - Default value: `false`
+     * Enhance ECMP Keying
+     *   - Default value: `false`
      */
     enhanceEcmpKeying?: pulumi.Input<boolean>;
     /**
@@ -268,7 +271,8 @@ export interface TransportWanVpnFeatureState {
      */
     version?: pulumi.Input<number>;
     /**
-     * VPN - Default value: `0`
+     * VPN
+     *   - Default value: `0`
      */
     vpn?: pulumi.Input<number>;
 }
@@ -282,7 +286,8 @@ export interface TransportWanVpnFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enhance ECMP Keying - Default value: `false`
+     * Enhance ECMP Keying
+     *   - Default value: `false`
      */
     enhanceEcmpKeying?: pulumi.Input<boolean>;
     /**
@@ -347,7 +352,8 @@ export interface TransportWanVpnFeatureArgs {
      */
     services?: pulumi.Input<pulumi.Input<inputs.TransportWanVpnFeatureService>[]>;
     /**
-     * VPN - Default value: `0`
+     * VPN
+     *   - Default value: `0`
      */
     vpn?: pulumi.Input<number>;
 }

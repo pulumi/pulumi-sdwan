@@ -47,55 +47,61 @@ export class SwitchportFeatureTemplate extends pulumi.CustomResource {
     }
 
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
-    public readonly ageOutTime!: pulumi.Output<number | undefined>;
+    declare public readonly ageOutTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ageOutTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ageOutTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    public readonly interfaces!: pulumi.Output<outputs.SwitchportFeatureTemplateInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.SwitchportFeatureTemplateInterface[] | undefined>;
     /**
-     * Module type - Choices: `4`, `8`, `22`, `50`
+     * Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      */
-    public readonly moduleType!: pulumi.Output<string | undefined>;
+    declare public readonly moduleType: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Number of Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
-    public readonly slot!: pulumi.Output<number | undefined>;
+    declare public readonly slot: pulumi.Output<number | undefined>;
     /**
      * Add static MAC address entries for interface
      */
-    public readonly staticMacAddresses!: pulumi.Output<outputs.SwitchportFeatureTemplateStaticMacAddress[] | undefined>;
+    declare public readonly staticMacAddresses: pulumi.Output<outputs.SwitchportFeatureTemplateStaticMacAddress[] | undefined>;
     /**
-     * Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
-    public readonly subSlot!: pulumi.Output<number | undefined>;
+    declare public readonly subSlot: pulumi.Output<number | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SwitchportFeatureTemplate resource with the given unique name, arguments, and options.
@@ -110,36 +116,36 @@ export class SwitchportFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchportFeatureTemplateState | undefined;
-            resourceInputs["ageOutTime"] = state ? state.ageOutTime : undefined;
-            resourceInputs["ageOutTimeVariable"] = state ? state.ageOutTimeVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["moduleType"] = state ? state.moduleType : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["slot"] = state ? state.slot : undefined;
-            resourceInputs["staticMacAddresses"] = state ? state.staticMacAddresses : undefined;
-            resourceInputs["subSlot"] = state ? state.subSlot : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["ageOutTime"] = state?.ageOutTime;
+            resourceInputs["ageOutTimeVariable"] = state?.ageOutTimeVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["moduleType"] = state?.moduleType;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["slot"] = state?.slot;
+            resourceInputs["staticMacAddresses"] = state?.staticMacAddresses;
+            resourceInputs["subSlot"] = state?.subSlot;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SwitchportFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["ageOutTime"] = args ? args.ageOutTime : undefined;
-            resourceInputs["ageOutTimeVariable"] = args ? args.ageOutTimeVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["moduleType"] = args ? args.moduleType : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["slot"] = args ? args.slot : undefined;
-            resourceInputs["staticMacAddresses"] = args ? args.staticMacAddresses : undefined;
-            resourceInputs["subSlot"] = args ? args.subSlot : undefined;
+            resourceInputs["ageOutTime"] = args?.ageOutTime;
+            resourceInputs["ageOutTimeVariable"] = args?.ageOutTimeVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["moduleType"] = args?.moduleType;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["slot"] = args?.slot;
+            resourceInputs["staticMacAddresses"] = args?.staticMacAddresses;
+            resourceInputs["subSlot"] = args?.subSlot;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -153,7 +159,9 @@ export class SwitchportFeatureTemplate extends pulumi.CustomResource {
  */
 export interface SwitchportFeatureTemplateState {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
     ageOutTime?: pulumi.Input<number>;
     /**
@@ -165,9 +173,8 @@ export interface SwitchportFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -175,7 +182,8 @@ export interface SwitchportFeatureTemplateState {
      */
     interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[]>;
     /**
-     * Module type - Choices: `4`, `8`, `22`, `50`
+     * Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      */
     moduleType?: pulumi.Input<string>;
     /**
@@ -183,7 +191,9 @@ export interface SwitchportFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Number of Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
     slot?: pulumi.Input<number>;
     /**
@@ -191,7 +201,9 @@ export interface SwitchportFeatureTemplateState {
      */
     staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[]>;
     /**
-     * Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
     subSlot?: pulumi.Input<number>;
     /**
@@ -209,7 +221,9 @@ export interface SwitchportFeatureTemplateState {
  */
 export interface SwitchportFeatureTemplateArgs {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
     ageOutTime?: pulumi.Input<number>;
     /**
@@ -221,9 +235,8 @@ export interface SwitchportFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -231,7 +244,8 @@ export interface SwitchportFeatureTemplateArgs {
      */
     interfaces?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateInterface>[]>;
     /**
-     * Module type - Choices: `4`, `8`, `22`, `50`
+     * Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      */
     moduleType?: pulumi.Input<string>;
     /**
@@ -239,7 +253,9 @@ export interface SwitchportFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Number of Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
     slot?: pulumi.Input<number>;
     /**
@@ -247,7 +263,9 @@ export interface SwitchportFeatureTemplateArgs {
      */
     staticMacAddresses?: pulumi.Input<pulumi.Input<inputs.SwitchportFeatureTemplateStaticMacAddress>[]>;
     /**
-     * Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      */
     subSlot?: pulumi.Input<number>;
 }

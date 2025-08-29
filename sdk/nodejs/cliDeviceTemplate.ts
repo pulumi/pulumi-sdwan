@@ -62,27 +62,28 @@ export class CliDeviceTemplate extends pulumi.CustomResource {
     /**
      * CLI configuration
      */
-    public readonly cliConfiguration!: pulumi.Output<string>;
+    declare public readonly cliConfiguration: pulumi.Output<string>;
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      */
-    public readonly cliType!: pulumi.Output<string>;
+    declare public readonly cliType: pulumi.Output<string>;
     /**
      * The description of the device template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The device type (e.g., `vedge-ISR-4331`)
      */
-    public readonly deviceType!: pulumi.Output<string>;
+    declare public readonly deviceType: pulumi.Output<string>;
     /**
      * The name of the device template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CliDeviceTemplate resource with the given unique name, arguments, and options.
@@ -97,31 +98,31 @@ export class CliDeviceTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CliDeviceTemplateState | undefined;
-            resourceInputs["cliConfiguration"] = state ? state.cliConfiguration : undefined;
-            resourceInputs["cliType"] = state ? state.cliType : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceType"] = state ? state.deviceType : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["cliConfiguration"] = state?.cliConfiguration;
+            resourceInputs["cliType"] = state?.cliType;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceType"] = state?.deviceType;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CliDeviceTemplateArgs | undefined;
-            if ((!args || args.cliConfiguration === undefined) && !opts.urn) {
+            if (args?.cliConfiguration === undefined && !opts.urn) {
                 throw new Error("Missing required property 'cliConfiguration'");
             }
-            if ((!args || args.cliType === undefined) && !opts.urn) {
+            if (args?.cliType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'cliType'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceType === undefined) && !opts.urn) {
+            if (args?.deviceType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceType'");
             }
-            resourceInputs["cliConfiguration"] = args ? args.cliConfiguration : undefined;
-            resourceInputs["cliType"] = args ? args.cliType : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceType"] = args ? args.deviceType : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["cliConfiguration"] = args?.cliConfiguration;
+            resourceInputs["cliType"] = args?.cliType;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceType"] = args?.deviceType;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -138,7 +139,8 @@ export interface CliDeviceTemplateState {
      */
     cliConfiguration?: pulumi.Input<string>;
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      */
     cliType?: pulumi.Input<string>;
     /**
@@ -168,7 +170,8 @@ export interface CliDeviceTemplateArgs {
      */
     cliConfiguration: pulumi.Input<string>;
     /**
-     * CLI type - Choices: `device`, `intend`
+     * CLI type
+     *   - Choices: `device`, `intend`
      */
     cliType: pulumi.Input<string>;
     /**

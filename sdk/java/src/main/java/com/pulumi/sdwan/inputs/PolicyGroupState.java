@@ -93,14 +93,16 @@ public final class PolicyGroupState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Type of solution - Choices: `sdwan`
+     * Type of solution
+     *   - Choices: `sdwan`
      * 
      */
     @Import(name="solution")
     private @Nullable Output<String> solution;
 
     /**
-     * @return Type of solution - Choices: `sdwan`
+     * @return Type of solution
+     *   - Choices: `sdwan`
      * 
      */
     public Optional<Output<String>> solution() {
@@ -272,7 +274,8 @@ public final class PolicyGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param solution Type of solution - Choices: `sdwan`
+         * @param solution Type of solution
+         *   - Choices: `sdwan`
          * 
          * @return builder
          * 
@@ -283,7 +286,8 @@ public final class PolicyGroupState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param solution Type of solution - Choices: `sdwan`
+         * @param solution Type of solution
+         *   - Choices: `sdwan`
          * 
          * @return builder
          * 

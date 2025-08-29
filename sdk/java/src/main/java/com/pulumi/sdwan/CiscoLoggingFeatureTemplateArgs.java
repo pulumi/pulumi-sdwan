@@ -38,18 +38,16 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -57,14 +55,16 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
     }
 
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     @Import(name="diskLogging")
     private @Nullable Output<Boolean> diskLogging;
 
     /**
-     * @return Enable logging to local disk - Default value: `true`
+     * @return Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> diskLogging() {
@@ -117,14 +117,18 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
     }
 
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     @Import(name="logRotations")
     private @Nullable Output<Integer> logRotations;
 
     /**
-     * @return Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * @return Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> logRotations() {
@@ -147,14 +151,18 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
     }
 
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     @Import(name="maxSize")
     private @Nullable Output<Integer> maxSize;
 
     /**
-     * @return Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * @return Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> maxSize() {
@@ -263,9 +271,8 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -276,9 +283,8 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -288,9 +294,8 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -300,7 +305,8 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param diskLogging Enable logging to local disk - Default value: `true`
+         * @param diskLogging Enable logging to local disk
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -311,7 +317,8 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param diskLogging Enable logging to local disk - Default value: `true`
+         * @param diskLogging Enable logging to local disk
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -404,7 +411,9 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param logRotations Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+         * @param logRotations Set number of syslog files to create before discarding oldest files
+         *   - Range: `1`-`10`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -415,7 +424,9 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param logRotations Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+         * @param logRotations Set number of syslog files to create before discarding oldest files
+         *   - Range: `1`-`10`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -446,7 +457,9 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param maxSize Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+         * @param maxSize Set maximum size of file before it is rotated
+         *   - Range: `1`-`20`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -457,7 +470,9 @@ public final class CiscoLoggingFeatureTemplateArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param maxSize Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+         * @param maxSize Set maximum size of file before it is rotated
+         *   - Range: `1`-`20`
+         *   - Default value: `10`
          * 
          * @return builder
          * 

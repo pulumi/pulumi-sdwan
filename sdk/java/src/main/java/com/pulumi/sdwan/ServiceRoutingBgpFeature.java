@@ -48,14 +48,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/serviceRoutingBgpFeature:ServiceRoutingBgpFeature")
 public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="alwaysCompareMed", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> alwaysCompareMed;
 
     /**
-     * @return Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> alwaysCompareMed() {
@@ -104,14 +106,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.asNumberVariable);
     }
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="compareRouterId", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> compareRouterId;
 
     /**
-     * @return Compare router IDs when selecting active BGP paths - Default value: `false`
+     * @return Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> compareRouterId() {
@@ -146,14 +150,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.description);
     }
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="deterministicMed", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> deterministicMed;
 
     /**
-     * @return Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> deterministicMed() {
@@ -174,14 +180,18 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.deterministicMedVariable);
     }
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Export(name="externalRoutesDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> externalRoutesDistance;
 
     /**
-     * @return Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Output<Optional<Integer>> externalRoutesDistance() {
@@ -216,16 +226,18 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return this.featureProfileId;
     }
     /**
-     * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     @Export(name="holdTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> holdTime;
 
     /**
-     * @return Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * @return Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     public Output<Optional<Integer>> holdTime() {
@@ -246,14 +258,18 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.holdTimeVariable);
     }
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     @Export(name="internalRoutesDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> internalRoutesDistance;
 
     /**
-     * @return Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * @return Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> internalRoutesDistance() {
@@ -288,14 +304,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv4AggregateAddresses);
     }
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     @Export(name="ipv4EibgpMaximumPaths", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4EibgpMaximumPaths;
 
     /**
-     * @return Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * @return Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     public Output<Optional<Integer>> ipv4EibgpMaximumPaths() {
@@ -344,14 +362,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv4Networks);
     }
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4Originate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4Originate;
 
     /**
-     * @return BGP Default Information Originate - Default value: `false`
+     * @return BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4Originate() {
@@ -386,14 +406,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv4Redistributes);
     }
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4TableMapFilter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4TableMapFilter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4TableMapFilter() {
@@ -434,14 +456,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv6AggregateAddresses);
     }
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     @Export(name="ipv6EibgpMaximumPaths", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6EibgpMaximumPaths;
 
     /**
-     * @return Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * @return Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     public Output<Optional<Integer>> ipv6EibgpMaximumPaths() {
@@ -490,14 +514,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv6Networks);
     }
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6Originate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6Originate;
 
     /**
-     * @return BGP Default Information Originate - Default value: `false`
+     * @return BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6Originate() {
@@ -532,14 +558,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv6Redistributes);
     }
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6TableMapFilter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6TableMapFilter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6TableMapFilter() {
@@ -566,14 +594,18 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.ipv6TableMapRoutePolicyId);
     }
     /**
-     * Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     @Export(name="keepaliveTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> keepaliveTime;
 
     /**
-     * @return Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * @return Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> keepaliveTime() {
@@ -594,14 +626,18 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.keepaliveTimeVariable);
     }
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Export(name="localRoutesDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> localRoutesDistance;
 
     /**
-     * @return Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Output<Optional<Integer>> localRoutesDistance() {
@@ -622,14 +658,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.localRoutesDistanceVariable);
     }
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="missingMedAsWorst", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> missingMedAsWorst;
 
     /**
-     * @return If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * @return If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> missingMedAsWorst() {
@@ -650,14 +688,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.missingMedAsWorstVariable);
     }
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     @Export(name="multipathRelax", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> multipathRelax;
 
     /**
-     * @return Ignore AS for multipath selection - Default value: `false`
+     * @return Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> multipathRelax() {
@@ -692,14 +732,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return this.name;
     }
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     @Export(name="propagateAsPath", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> propagateAsPath;
 
     /**
-     * @return Propagate AS Path - Default value: `false`
+     * @return Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> propagateAsPath() {
@@ -720,14 +762,16 @@ public class ServiceRoutingBgpFeature extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.propagateAsPathVariable);
     }
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      * 
      */
     @Export(name="propagateCommunity", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> propagateCommunity;
 
     /**
-     * @return Propagate Community - Default value: `false`
+     * @return Propagate Community
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> propagateCommunity() {

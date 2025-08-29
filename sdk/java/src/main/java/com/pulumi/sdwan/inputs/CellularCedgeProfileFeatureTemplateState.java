@@ -49,14 +49,18 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
     }
 
     /**
-     * Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+     * Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Default value: `none`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+     * @return Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Default value: `none`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -94,18 +98,16 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -158,14 +160,18 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
     }
 
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     @Import(name="packetDataNetworkType")
     private @Nullable Output<String> packetDataNetworkType;
 
     /**
-     * @return Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * @return Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     public Optional<Output<String>> packetDataNetworkType() {
@@ -188,14 +194,16 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
     }
 
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     @Import(name="profileId")
     private @Nullable Output<Integer> profileId;
 
     /**
-     * @return Set Profile ID - Range: `1`-`16`
+     * @return Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     public Optional<Output<Integer>> profileId() {
@@ -392,7 +400,9 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param authenticationType Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+         * @param authenticationType Set authentication type
+         *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -403,7 +413,9 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param authenticationType Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+         * @param authenticationType Set authentication type
+         *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -455,9 +467,8 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -468,9 +479,8 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -480,9 +490,8 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -555,7 +564,9 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param packetDataNetworkType Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+         * @param packetDataNetworkType Set packet data network type
+         *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -566,7 +577,9 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param packetDataNetworkType Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+         * @param packetDataNetworkType Set packet data network type
+         *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -597,7 +610,8 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param profileId Set Profile ID - Range: `1`-`16`
+         * @param profileId Set Profile ID
+         *   - Range: `1`-`16`
          * 
          * @return builder
          * 
@@ -608,7 +622,8 @@ public final class CellularCedgeProfileFeatureTemplateState extends com.pulumi.r
         }
 
         /**
-         * @param profileId Set Profile ID - Range: `1`-`16`
+         * @param profileId Set Profile ID
+         *   - Range: `1`-`16`
          * 
          * @return builder
          * 

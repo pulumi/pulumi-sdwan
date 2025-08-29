@@ -29,7 +29,9 @@ class TransportRoutePolicyFeatureArgs:
         """
         The set of arguments for constructing a TransportRoutePolicyFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `reject`, `accept`
+                 - Default value: `reject`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutePolicyFeatureSequenceArgs']]] sequences: Route Policy List
@@ -60,7 +62,9 @@ class TransportRoutePolicyFeatureArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        Default Action
+          - Choices: `reject`, `accept`
+          - Default value: `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -116,7 +120,9 @@ class _TransportRoutePolicyFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportRoutePolicyFeature resources.
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `reject`, `accept`
+                 - Default value: `reject`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -140,7 +146,9 @@ class _TransportRoutePolicyFeatureState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        Default Action
+          - Choices: `reject`, `accept`
+          - Default value: `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -237,7 +245,9 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `reject`, `accept`
+                 - Default value: `reject`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -323,7 +333,9 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `reject`, `accept`
+                 - Default value: `reject`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
@@ -346,7 +358,9 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default Action - Choices: `reject`, `accept` - Default value: `reject`
+        Default Action
+          - Choices: `reject`, `accept`
+          - Default value: `reject`
         """
         return pulumi.get(self, "default_action")
 

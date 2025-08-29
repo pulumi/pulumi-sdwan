@@ -51,39 +51,42 @@ export class ServiceObjectTrackerGroupFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Object ID - Range: `1`-`1000`
+     * Object ID
+     *   - Range: `1`-`1000`
      */
-    public readonly objectTrackerId!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly objectTrackerIdVariable!: pulumi.Output<string | undefined>;
-    /**
-     * tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
-     */
-    public readonly reachable!: pulumi.Output<string | undefined>;
+    declare public readonly objectTrackerId: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly reachableVariable!: pulumi.Output<string | undefined>;
+    declare public readonly objectTrackerIdVariable: pulumi.Output<string | undefined>;
+    /**
+     * tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
+     */
+    declare public readonly reachable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly reachableVariable: pulumi.Output<string | undefined>;
     /**
      * Group Tracks ID Refs
      */
-    public readonly trackerElements!: pulumi.Output<outputs.ServiceObjectTrackerGroupFeatureTrackerElement[] | undefined>;
+    declare public readonly trackerElements: pulumi.Output<outputs.ServiceObjectTrackerGroupFeatureTrackerElement[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceObjectTrackerGroupFeature resource with the given unique name, arguments, and options.
@@ -98,28 +101,28 @@ export class ServiceObjectTrackerGroupFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceObjectTrackerGroupFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["objectTrackerId"] = state ? state.objectTrackerId : undefined;
-            resourceInputs["objectTrackerIdVariable"] = state ? state.objectTrackerIdVariable : undefined;
-            resourceInputs["reachable"] = state ? state.reachable : undefined;
-            resourceInputs["reachableVariable"] = state ? state.reachableVariable : undefined;
-            resourceInputs["trackerElements"] = state ? state.trackerElements : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["objectTrackerId"] = state?.objectTrackerId;
+            resourceInputs["objectTrackerIdVariable"] = state?.objectTrackerIdVariable;
+            resourceInputs["reachable"] = state?.reachable;
+            resourceInputs["reachableVariable"] = state?.reachableVariable;
+            resourceInputs["trackerElements"] = state?.trackerElements;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceObjectTrackerGroupFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["objectTrackerId"] = args ? args.objectTrackerId : undefined;
-            resourceInputs["objectTrackerIdVariable"] = args ? args.objectTrackerIdVariable : undefined;
-            resourceInputs["reachable"] = args ? args.reachable : undefined;
-            resourceInputs["reachableVariable"] = args ? args.reachableVariable : undefined;
-            resourceInputs["trackerElements"] = args ? args.trackerElements : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["objectTrackerId"] = args?.objectTrackerId;
+            resourceInputs["objectTrackerIdVariable"] = args?.objectTrackerIdVariable;
+            resourceInputs["reachable"] = args?.reachable;
+            resourceInputs["reachableVariable"] = args?.reachableVariable;
+            resourceInputs["trackerElements"] = args?.trackerElements;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -144,7 +147,8 @@ export interface ServiceObjectTrackerGroupFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Object ID - Range: `1`-`1000`
+     * Object ID
+     *   - Range: `1`-`1000`
      */
     objectTrackerId?: pulumi.Input<number>;
     /**
@@ -152,7 +156,9 @@ export interface ServiceObjectTrackerGroupFeatureState {
      */
     objectTrackerIdVariable?: pulumi.Input<string>;
     /**
-     * tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      */
     reachable?: pulumi.Input<string>;
     /**
@@ -186,7 +192,8 @@ export interface ServiceObjectTrackerGroupFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Object ID - Range: `1`-`1000`
+     * Object ID
+     *   - Range: `1`-`1000`
      */
     objectTrackerId?: pulumi.Input<number>;
     /**
@@ -194,7 +201,9 @@ export interface ServiceObjectTrackerGroupFeatureArgs {
      */
     objectTrackerIdVariable?: pulumi.Input<string>;
     /**
-     * tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      */
     reachable?: pulumi.Input<string>;
     /**

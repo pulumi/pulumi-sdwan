@@ -76,14 +76,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Import(name="arpTimeout")
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Optional<Output<Integer>> arpTimeout() {
@@ -106,14 +110,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     @Import(name="autoBandwidthDetect")
     private @Nullable Output<Boolean> autoBandwidthDetect;
 
     /**
-     * @return Interface auto detect bandwidth - Default value: `false`
+     * @return Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> autoBandwidthDetect() {
@@ -166,14 +172,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="bandwidthDownstream")
     private @Nullable Output<Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> bandwidthDownstream() {
@@ -196,14 +204,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="bandwidthUpstream")
     private @Nullable Output<Integer> bandwidthUpstream;
 
     /**
-     * @return Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> bandwidthUpstream() {
@@ -226,14 +236,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Block packets originating from IP address that is not from this source - Default value: `false`
+     * Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      * 
      */
     @Import(name="blockNonSourceIp")
     private @Nullable Output<Boolean> blockNonSourceIp;
 
     /**
-     * @return Block packets originating from IP address that is not from this source - Default value: `false`
+     * @return Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> blockNonSourceIp() {
@@ -256,14 +268,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+     * Enable core region
+     *   - Choices: `core`, `core-shared`
+     *   - Default value: `core`
      * 
      */
     @Import(name="coreRegion")
     private @Nullable Output<String> coreRegion;
 
     /**
-     * @return Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+     * @return Enable core region
+     *   - Choices: `core`, `core-shared`
+     *   - Default value: `core`
      * 
      */
     public Optional<Output<String>> coreRegion() {
@@ -301,18 +317,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -320,14 +334,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable DHCP - Default value: `false`
+     * Enable DHCP
+     *   - Default value: `false`
      * 
      */
     @Import(name="dhcp")
     private @Nullable Output<Boolean> dhcp;
 
     /**
-     * @return Enable DHCP - Default value: `false`
+     * @return Enable DHCP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> dhcp() {
@@ -335,14 +351,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Import(name="dhcpDistance")
     private @Nullable Output<Integer> dhcpDistance;
 
     /**
-     * @return Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * @return Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> dhcpDistance() {
@@ -380,14 +400,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Import(name="dhcpv6")
     private @Nullable Output<Boolean> dhcpv6;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> dhcpv6() {
@@ -410,14 +432,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Import(name="duplex")
     private @Nullable Output<String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Optional<Output<String>> duplex() {
@@ -440,14 +464,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable core region - Default value: `false`
+     * Enable core region
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableCoreRegion")
     private @Nullable Output<Boolean> enableCoreRegion;
 
     /**
-     * @return Enable core region - Default value: `false`
+     * @return Enable core region
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableCoreRegion() {
@@ -455,14 +481,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableSgt")
     private @Nullable Output<Boolean> enableSgt;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * @return Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableSgt() {
@@ -530,14 +558,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+     * Set this option to disable the icmp/icmpv6 redirect packets
+     *   - Default value: `true`
      * 
      */
     @Import(name="icmpRedirectDisable")
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+     * @return Set this option to disable the icmp/icmpv6 redirect packets
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> icmpRedirectDisable() {
@@ -590,16 +620,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -622,16 +654,14 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     @Import(name="interfaceName")
     private @Nullable Output<String> interfaceName;
 
     /**
-     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     public Optional<Output<String>> interfaceName() {
@@ -654,14 +684,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -684,16 +716,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -866,14 +900,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6Nat")
     private @Nullable Output<Boolean> ipv6Nat;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6Nat() {
@@ -926,14 +962,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Import(name="loadInterval")
     private @Nullable Output<Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Optional<Output<Integer>> loadInterval() {
@@ -986,14 +1026,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Import(name="mediaType")
     private @Nullable Output<String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Optional<Output<String>> mediaType() {
@@ -1031,14 +1073,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Network Address Translation on this interface - Default value: `false`
+     * Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="nat")
     private @Nullable Output<Boolean> nat;
 
     /**
-     * @return Network Address Translation on this interface - Default value: `false`
+     * @return Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nat() {
@@ -1046,14 +1090,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="nat64Interface")
     private @Nullable Output<Boolean> nat64Interface;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nat64Interface() {
@@ -1061,14 +1107,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * NAT66 on this interface - Default value: `false`
+     * NAT66 on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="nat66Interface")
     private @Nullable Output<Boolean> nat66Interface;
 
     /**
-     * @return NAT66 on this interface - Default value: `false`
+     * @return NAT66 on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nat66Interface() {
@@ -1106,14 +1154,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable port translation(PAT) - Default value: `true`
+     * Enable port translation(PAT)
+     *   - Default value: `true`
      * 
      */
     @Import(name="natOverload")
     private @Nullable Output<Boolean> natOverload;
 
     /**
-     * @return Enable port translation(PAT) - Default value: `true`
+     * @return Enable port translation(PAT)
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> natOverload() {
@@ -1226,14 +1276,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * NAT type
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      * 
      */
     @Import(name="natType")
     private @Nullable Output<String> natType;
 
     /**
-     * @return NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * @return NAT type
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      * 
      */
     public Optional<Output<String>> natType() {
@@ -1256,14 +1310,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Configure interface as Power-over-Ethernet source - Default value: `false`
+     * Configure interface as Power-over-Ethernet source
+     *   - Default value: `false`
      * 
      */
     @Import(name="poe")
     private @Nullable Output<Boolean> poe;
 
     /**
-     * @return Configure interface as Power-over-Ethernet source - Default value: `false`
+     * @return Configure interface as Power-over-Ethernet source
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> poe() {
@@ -1286,14 +1342,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+     * Enable/Disable CTS SGT propagation on an interface.
+     *   - Default value: `true`
      * 
      */
     @Import(name="propagateSgt")
     private @Nullable Output<Boolean> propagateSgt;
 
     /**
-     * @return Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+     * @return Enable/Disable CTS SGT propagation on an interface.
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> propagateSgt() {
@@ -1301,14 +1359,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveBandwidthDownstream")
     private @Nullable Output<Integer> qosAdaptiveBandwidthDownstream;
 
     /**
-     * @return Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveBandwidthDownstream() {
@@ -1331,14 +1391,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveBandwidthUpstream")
     private @Nullable Output<Integer> qosAdaptiveBandwidthUpstream;
 
     /**
-     * @return Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveBandwidthUpstream() {
@@ -1361,14 +1423,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Downstream max bandwidth limit - Range: `8`-`100000000`
+     * Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMaxDownstream")
     private @Nullable Output<Integer> qosAdaptiveMaxDownstream;
 
     /**
-     * @return Downstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMaxDownstream() {
@@ -1391,14 +1455,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Upstream max bandwidth limit - Range: `8`-`100000000`
+     * Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMaxUpstream")
     private @Nullable Output<Integer> qosAdaptiveMaxUpstream;
 
     /**
-     * @return Upstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMaxUpstream() {
@@ -1421,14 +1487,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Downstream min bandwidth limit - Range: `8`-`100000000`
+     * Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMinDownstream")
     private @Nullable Output<Integer> qosAdaptiveMinDownstream;
 
     /**
-     * @return Downstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMinDownstream() {
@@ -1451,14 +1519,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Upstream min bandwidth limit - Range: `8`-`100000000`
+     * Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMinUpstream")
     private @Nullable Output<Integer> qosAdaptiveMinUpstream;
 
     /**
-     * @return Upstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMinUpstream() {
@@ -1481,14 +1551,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     @Import(name="qosAdaptivePeriod")
     private @Nullable Output<Integer> qosAdaptivePeriod;
 
     /**
-     * @return Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * @return Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     public Optional<Output<Integer>> qosAdaptivePeriod() {
@@ -1601,14 +1675,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+     * Enable secondary region
+     *   - Choices: `off`, `secondary-only`, `secondary-shared`
+     *   - Default value: `off`
      * 
      */
     @Import(name="secondaryRegion")
     private @Nullable Output<String> secondaryRegion;
 
     /**
-     * @return Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+     * @return Enable secondary region
+     *   - Choices: `off`, `secondary-only`, `secondary-shared`
+     *   - Default value: `off`
      * 
      */
     public Optional<Output<String>> secondaryRegion() {
@@ -1631,14 +1709,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     @Import(name="sgtEnforcement")
     private @Nullable Output<Boolean> sgtEnforcement;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * @return Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> sgtEnforcement() {
@@ -1646,14 +1726,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * SGT value between 2 and 65519. - Range: `2`-`65519`
+     * SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     @Import(name="sgtEnforcementSgt")
     private @Nullable Output<Integer> sgtEnforcementSgt;
 
     /**
-     * @return SGT value between 2 and 65519. - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     public Optional<Output<Integer>> sgtEnforcementSgt() {
@@ -1676,14 +1758,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="shapingRate")
     private @Nullable Output<Integer> shapingRate;
 
     /**
-     * @return 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> shapingRate() {
@@ -1706,14 +1790,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -1736,14 +1822,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Import(name="speed")
     private @Nullable Output<String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -1826,14 +1914,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * SGT value between 2 and 65519. - Range: `2`-`65519`
+     * SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     @Import(name="staticSgt")
     private @Nullable Output<Integer> staticSgt;
 
     /**
-     * @return SGT value between 2 and 65519. - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     public Optional<Output<Integer>> staticSgt() {
@@ -1841,14 +1931,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Indicates that the interface is trustworthy for CTS. - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS.
+     *   - Default value: `false`
      * 
      */
     @Import(name="staticSgtTrusted")
     private @Nullable Output<Boolean> staticSgtTrusted;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS. - Default value: `false`
+     * @return Indicates that the interface is trustworthy for CTS.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> staticSgtTrusted() {
@@ -1871,14 +1963,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMssAdjust")
     private @Nullable Output<Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMssAdjust() {
@@ -1901,14 +1995,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     @Import(name="tcpTimeout")
     private @Nullable Output<Integer> tcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> tcpTimeout() {
@@ -2006,14 +2104,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+     * Tunnels Bandwidth Percent
+     *   - Range: `1`-`99`
+     *   - Default value: `50`
      * 
      */
     @Import(name="tunnelBandwidth")
     private @Nullable Output<Integer> tunnelBandwidth;
 
     /**
-     * @return Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+     * @return Tunnels Bandwidth Percent
+     *   - Range: `1`-`99`
+     *   - Default value: `50`
      * 
      */
     public Optional<Output<Integer>> tunnelBandwidth() {
@@ -2036,14 +2138,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowAll")
     private @Nullable Output<Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowAll() {
@@ -2066,14 +2170,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowBgp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP - Default value: `false`
+     * @return Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowBgp() {
@@ -2096,14 +2202,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDhcp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP - Default value: `true`
+     * @return Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDhcp() {
@@ -2126,14 +2234,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDns")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS - Default value: `true`
+     * @return Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDns() {
@@ -2156,14 +2266,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny Https - Default value: `true`
+     * Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowHttps")
     private @Nullable Output<Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny Https - Default value: `true`
+     * @return Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowHttps() {
@@ -2186,14 +2298,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowIcmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP - Default value: `true`
+     * @return Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowIcmp() {
@@ -2216,14 +2330,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNetconf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF - Default value: `false`
+     * @return Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNetconf() {
@@ -2246,14 +2362,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny NTP - Default value: `false`
+     * Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNtp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP - Default value: `false`
+     * @return Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNtp() {
@@ -2276,14 +2394,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowOspf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF - Default value: `false`
+     * @return Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowOspf() {
@@ -2306,14 +2426,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSnmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP - Default value: `false`
+     * @return Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSnmp() {
@@ -2336,14 +2458,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny SSH - Default value: `false`
+     * Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSsh")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH - Default value: `false`
+     * @return Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSsh() {
@@ -2366,14 +2490,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowStun")
     private @Nullable Output<Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN - Default value: `false`
+     * @return Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowStun() {
@@ -2426,14 +2552,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceBorder")
     private @Nullable Output<Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceBorder() {
@@ -2456,16 +2584,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceCarrier")
     private @Nullable Output<String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceCarrier() {
@@ -2488,14 +2618,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceClearDontFragment")
     private @Nullable Output<Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceClearDontFragment() {
@@ -2518,18 +2650,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceColor")
     private @Nullable Output<String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * @return Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceColor() {
@@ -2537,14 +2669,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceColorRestrict")
     private @Nullable Output<Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceColorRestrict() {
@@ -2582,14 +2716,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Allow Control Connection - Default value: `true`
+     * Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceControlConnections")
     private @Nullable Output<Boolean> tunnelInterfaceControlConnections;
 
     /**
-     * @return Allow Control Connection - Default value: `true`
+     * @return Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceControlConnections() {
@@ -2717,14 +2853,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Import(name="tunnelInterfaceHelloInterval")
     private @Nullable Output<Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloInterval() {
@@ -2747,14 +2887,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     @Import(name="tunnelInterfaceHelloTolerance")
     private @Nullable Output<Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloTolerance() {
@@ -2777,14 +2921,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLastResortCircuit")
     private @Nullable Output<Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLastResortCircuit() {
@@ -2807,14 +2953,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLowBandwidthLink")
     private @Nullable Output<Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLowBandwidthLink() {
@@ -2837,14 +2985,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     @Import(name="tunnelInterfaceMaxControlConnections")
     private @Nullable Output<Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * @return Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceMaxControlConnections() {
@@ -2867,14 +3017,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceNatRefreshInterval")
     private @Nullable Output<Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceNatRefreshInterval() {
@@ -2897,14 +3051,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceNetworkBroadcast")
     private @Nullable Output<Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceNetworkBroadcast() {
@@ -2927,14 +3083,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfacePortHop")
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfacePortHop() {
@@ -2957,14 +3115,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * CTS SGT Propagation configuration - Default value: `false`
+     * CTS SGT Propagation configuration
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfacePropagateSgt")
     private @Nullable Output<Boolean> tunnelInterfacePropagateSgt;
 
     /**
-     * @return CTS SGT Propagation configuration - Default value: `false`
+     * @return CTS SGT Propagation configuration
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfacePropagateSgt() {
@@ -2987,14 +3147,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tunnelInterfaceTunnelTcpMss")
     private @Nullable Output<Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceTunnelTcpMss() {
@@ -3017,14 +3179,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceVbondAsStunServer")
     private @Nullable Output<Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceVbondAsStunServer() {
@@ -3047,14 +3211,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceVmanageConnectionPreference")
     private @Nullable Output<Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceVmanageConnectionPreference() {
@@ -3077,14 +3245,16 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * Set tunnel QoS mode
+     *   - Choices: `hub`, `spoke`
      * 
      */
     @Import(name="tunnelQosMode")
     private @Nullable Output<String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * @return Set tunnel QoS mode
+     *   - Choices: `hub`, `spoke`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -3107,14 +3277,18 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
     }
 
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     @Import(name="udpTimeout")
     private @Nullable Output<Integer> udpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> udpTimeout() {
@@ -3455,7 +3629,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -3466,7 +3642,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -3497,7 +3675,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param autoBandwidthDetect Interface auto detect bandwidth - Default value: `false`
+         * @param autoBandwidthDetect Interface auto detect bandwidth
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3508,7 +3687,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param autoBandwidthDetect Interface auto detect bandwidth - Default value: `false`
+         * @param autoBandwidthDetect Interface auto detect bandwidth
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3581,7 +3761,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -3592,7 +3773,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -3623,7 +3805,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -3634,7 +3817,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -3665,7 +3849,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param blockNonSourceIp Block packets originating from IP address that is not from this source - Default value: `false`
+         * @param blockNonSourceIp Block packets originating from IP address that is not from this source
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3676,7 +3861,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param blockNonSourceIp Block packets originating from IP address that is not from this source - Default value: `false`
+         * @param blockNonSourceIp Block packets originating from IP address that is not from this source
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3707,7 +3893,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param coreRegion Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+         * @param coreRegion Enable core region
+         *   - Choices: `core`, `core-shared`
+         *   - Default value: `core`
          * 
          * @return builder
          * 
@@ -3718,7 +3906,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param coreRegion Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+         * @param coreRegion Enable core region
+         *   - Choices: `core`, `core-shared`
+         *   - Default value: `core`
          * 
          * @return builder
          * 
@@ -3770,9 +3960,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -3783,9 +3972,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -3795,9 +3983,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -3807,7 +3994,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcp Enable DHCP - Default value: `false`
+         * @param dhcp Enable DHCP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3818,7 +4006,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcp Enable DHCP - Default value: `false`
+         * @param dhcp Enable DHCP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3828,7 +4017,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param dhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3839,7 +4030,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param dhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3891,7 +4084,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcpv6 Enable DHCPv6 - Default value: `false`
+         * @param dhcpv6 Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3902,7 +4096,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param dhcpv6 Enable DHCPv6 - Default value: `false`
+         * @param dhcpv6 Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3933,7 +4128,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -3944,7 +4140,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -3975,7 +4172,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param enableCoreRegion Enable core region - Default value: `false`
+         * @param enableCoreRegion Enable core region
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3986,7 +4184,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param enableCoreRegion Enable core region - Default value: `false`
+         * @param enableCoreRegion Enable core region
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3996,7 +4195,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param enableSgt Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+         * @param enableSgt Enables the interface for CTS SGT authorization and forwarding.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4007,7 +4207,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param enableSgt Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+         * @param enableSgt Enables the interface for CTS SGT authorization and forwarding.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4101,7 +4302,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param icmpRedirectDisable Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+         * @param icmpRedirectDisable Set this option to disable the icmp/icmpv6 redirect packets
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4112,7 +4314,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param icmpRedirectDisable Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+         * @param icmpRedirectDisable Set this option to disable the icmp/icmpv6 redirect packets
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4185,8 +4388,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-         * Default value: `1500`
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -4197,8 +4401,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-         * Default value: `1500`
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -4229,8 +4434,7 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-         * present
+         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
          * 
          * @return builder
          * 
@@ -4241,8 +4445,7 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-         * present
+         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
          * 
          * @return builder
          * 
@@ -4273,7 +4476,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4284,7 +4488,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4315,8 +4520,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -4327,8 +4533,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -4619,7 +4826,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipv6Nat NAT64 on this interface - Default value: `false`
+         * @param ipv6Nat NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4630,7 +4838,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param ipv6Nat NAT64 on this interface - Default value: `false`
+         * @param ipv6Nat NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4723,7 +4932,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -4734,7 +4945,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -4807,7 +5020,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -4818,7 +5032,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -4870,7 +5085,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat Network Address Translation on this interface - Default value: `false`
+         * @param nat Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4881,7 +5097,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat Network Address Translation on this interface - Default value: `false`
+         * @param nat Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4891,7 +5108,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat64Interface NAT64 on this interface - Default value: `false`
+         * @param nat64Interface NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4902,7 +5120,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat64Interface NAT64 on this interface - Default value: `false`
+         * @param nat64Interface NAT64 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4912,7 +5131,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat66Interface NAT66 on this interface - Default value: `false`
+         * @param nat66Interface NAT66 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4923,7 +5143,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param nat66Interface NAT66 on this interface - Default value: `false`
+         * @param nat66Interface NAT66 on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4975,7 +5196,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param natOverload Enable port translation(PAT) - Default value: `true`
+         * @param natOverload Enable port translation(PAT)
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4986,7 +5208,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param natOverload Enable port translation(PAT) - Default value: `true`
+         * @param natOverload Enable port translation(PAT)
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5143,7 +5366,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param natType NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+         * @param natType NAT type
+         *   - Choices: `interface`, `pool`, `loopback`
+         *   - Default value: `interface`
          * 
          * @return builder
          * 
@@ -5154,7 +5379,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param natType NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+         * @param natType NAT type
+         *   - Choices: `interface`, `pool`, `loopback`
+         *   - Default value: `interface`
          * 
          * @return builder
          * 
@@ -5185,7 +5412,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param poe Configure interface as Power-over-Ethernet source - Default value: `false`
+         * @param poe Configure interface as Power-over-Ethernet source
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5196,7 +5424,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param poe Configure interface as Power-over-Ethernet source - Default value: `false`
+         * @param poe Configure interface as Power-over-Ethernet source
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5227,7 +5456,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param propagateSgt Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+         * @param propagateSgt Enable/Disable CTS SGT propagation on an interface.
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5238,7 +5468,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param propagateSgt Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+         * @param propagateSgt Enable/Disable CTS SGT propagation on an interface.
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5248,7 +5479,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5259,7 +5491,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5290,7 +5523,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5301,7 +5535,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5332,7 +5567,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5343,7 +5579,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5374,7 +5611,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5385,7 +5623,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5416,7 +5655,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5427,7 +5667,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5458,7 +5699,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5469,7 +5711,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5500,7 +5743,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes
+         *   - Range: `1`-`720`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -5511,7 +5756,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes
+         *   - Range: `1`-`720`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -5668,7 +5915,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param secondaryRegion Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+         * @param secondaryRegion Enable secondary region
+         *   - Choices: `off`, `secondary-only`, `secondary-shared`
+         *   - Default value: `off`
          * 
          * @return builder
          * 
@@ -5679,7 +5928,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param secondaryRegion Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+         * @param secondaryRegion Enable secondary region
+         *   - Choices: `off`, `secondary-only`, `secondary-shared`
+         *   - Default value: `off`
          * 
          * @return builder
          * 
@@ -5710,7 +5961,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param sgtEnforcement Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+         * @param sgtEnforcement Enables the interface for CTS SGT authorization and forwarding.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5721,7 +5973,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param sgtEnforcement Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+         * @param sgtEnforcement Enables the interface for CTS SGT authorization and forwarding.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5731,7 +5984,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param sgtEnforcementSgt SGT value between 2 and 65519. - Range: `2`-`65519`
+         * @param sgtEnforcementSgt SGT value between 2 and 65519.
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -5742,7 +5996,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param sgtEnforcementSgt SGT value between 2 and 65519. - Range: `2`-`65519`
+         * @param sgtEnforcementSgt SGT value between 2 and 65519.
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -5773,7 +6028,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param shapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param shapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5784,7 +6040,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param shapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param shapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -5815,7 +6072,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5826,7 +6084,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5857,7 +6116,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -5868,7 +6128,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -6023,7 +6284,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param staticSgt SGT value between 2 and 65519. - Range: `2`-`65519`
+         * @param staticSgt SGT value between 2 and 65519.
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -6034,7 +6296,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param staticSgt SGT value between 2 and 65519. - Range: `2`-`65519`
+         * @param staticSgt SGT value between 2 and 65519.
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -6044,7 +6307,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param staticSgtTrusted Indicates that the interface is trustworthy for CTS. - Default value: `false`
+         * @param staticSgtTrusted Indicates that the interface is trustworthy for CTS.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6055,7 +6319,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param staticSgtTrusted Indicates that the interface is trustworthy for CTS. - Default value: `false`
+         * @param staticSgtTrusted Indicates that the interface is trustworthy for CTS.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6086,7 +6351,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -6097,7 +6363,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -6128,7 +6395,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param tcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -6139,7 +6408,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param tcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -6285,7 +6556,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelBandwidth Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+         * @param tunnelBandwidth Tunnels Bandwidth Percent
+         *   - Range: `1`-`99`
+         *   - Default value: `50`
          * 
          * @return builder
          * 
@@ -6296,7 +6569,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelBandwidth Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+         * @param tunnelBandwidth Tunnels Bandwidth Percent
+         *   - Range: `1`-`99`
+         *   - Default value: `50`
          * 
          * @return builder
          * 
@@ -6327,7 +6602,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6338,7 +6614,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6369,7 +6646,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6380,7 +6658,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6411,7 +6690,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6422,7 +6702,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6453,7 +6734,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6464,7 +6746,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6495,7 +6778,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `true`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6506,7 +6790,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `true`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6537,7 +6822,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6548,7 +6834,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -6579,7 +6866,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6590,7 +6878,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6621,7 +6910,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6632,7 +6922,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6663,7 +6954,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6674,7 +6966,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6705,7 +6998,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6716,7 +7010,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6747,7 +7042,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6758,7 +7054,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6789,7 +7086,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6800,7 +7098,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6873,7 +7172,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6884,7 +7184,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6915,8 +7216,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -6927,8 +7229,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -6959,7 +7262,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6970,7 +7274,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7001,9 +7306,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -7014,9 +7319,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -7026,7 +7331,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7037,7 +7343,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7089,7 +7396,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceControlConnections Allow Control Connection - Default value: `true`
+         * @param tunnelInterfaceControlConnections Allow Control Connection
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -7100,7 +7408,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceControlConnections Allow Control Connection - Default value: `true`
+         * @param tunnelInterfaceControlConnections Allow Control Connection
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -7308,7 +7617,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -7319,7 +7630,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -7350,7 +7663,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -7361,7 +7676,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -7392,7 +7709,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7403,7 +7721,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7434,7 +7753,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7445,7 +7765,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7476,7 +7797,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`100`
          * 
          * @return builder
          * 
@@ -7487,7 +7809,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`100`
          * 
          * @return builder
          * 
@@ -7518,7 +7841,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -7529,7 +7854,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -7560,7 +7887,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7571,7 +7899,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7602,7 +7931,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -7613,7 +7943,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -7644,7 +7975,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfacePropagateSgt CTS SGT Propagation configuration - Default value: `false`
+         * @param tunnelInterfacePropagateSgt CTS SGT Propagation configuration
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7655,7 +7987,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfacePropagateSgt CTS SGT Propagation configuration - Default value: `false`
+         * @param tunnelInterfacePropagateSgt CTS SGT Propagation configuration
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7686,7 +8019,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -7697,7 +8031,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -7728,7 +8063,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7739,7 +8075,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -7770,7 +8107,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -7781,7 +8120,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -7812,7 +8153,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `hub`, `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `hub`, `spoke`
          * 
          * @return builder
          * 
@@ -7823,7 +8165,8 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `hub`, `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `hub`, `spoke`
          * 
          * @return builder
          * 
@@ -7854,7 +8197,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param udpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param udpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -7865,7 +8210,9 @@ public final class CiscoVpnInterfaceFeatureTemplateState extends com.pulumi.reso
         }
 
         /**
-         * @param udpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param udpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 

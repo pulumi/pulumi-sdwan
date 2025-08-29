@@ -105,14 +105,18 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.accessPointNameVariable);
     }
     /**
-     * Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+     * Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Default value: `none`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+     * @return Set authentication type
+     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Default value: `none`
      * 
      */
     public Output<Optional<String>> authenticationType() {
@@ -147,18 +151,16 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -207,14 +209,18 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.noOverwriteVariable);
     }
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     @Export(name="packetDataNetworkType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> packetDataNetworkType;
 
     /**
-     * @return Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * @return Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     public Output<Optional<String>> packetDataNetworkType() {
@@ -235,14 +241,16 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.packetDataNetworkTypeVariable);
     }
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     @Export(name="profileId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> profileId;
 
     /**
-     * @return Set Profile ID - Range: `1`-`16`
+     * @return Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     public Output<Optional<Integer>> profileId() {

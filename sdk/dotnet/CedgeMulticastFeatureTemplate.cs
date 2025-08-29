@@ -57,15 +57,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Output("localReplicator")]
         public Output<bool?> LocalReplicator { get; private set; } = null!;
@@ -83,7 +83,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Output("sptOnly")]
         public Output<bool?> SptOnly { get; private set; } = null!;
@@ -101,7 +102,8 @@ namespace Pulumi.Sdwan
         public Output<string> TemplateType { get; private set; } = null!;
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`1000`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`1000`
         /// </summary>
         [Output("threshold")]
         public Output<int?> Threshold { get; private set; } = null!;
@@ -174,9 +176,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -185,7 +186,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -203,7 +205,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -215,7 +218,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SptOnlyVariable { get; set; }
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`1000`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`1000`
         /// </summary>
         [Input("threshold")]
         public Input<int>? Threshold { get; set; }
@@ -244,9 +248,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -255,7 +258,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -273,7 +277,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -291,7 +296,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TemplateType { get; set; }
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`1000`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`1000`
         /// </summary>
         [Input("threshold")]
         public Input<int>? Threshold { get; set; }

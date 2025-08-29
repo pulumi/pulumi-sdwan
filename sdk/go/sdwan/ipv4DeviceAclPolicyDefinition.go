@@ -24,7 +24,8 @@ import (
 type Ipv4DeviceAclPolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
@@ -74,7 +75,8 @@ func GetIpv4DeviceAclPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Ipv4DeviceAclPolicyDefinition resources.
 type ipv4DeviceAclPolicyDefinitionState struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
@@ -89,7 +91,8 @@ type ipv4DeviceAclPolicyDefinitionState struct {
 }
 
 type Ipv4DeviceAclPolicyDefinitionState struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
@@ -108,7 +111,8 @@ func (Ipv4DeviceAclPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type ipv4DeviceAclPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
@@ -120,7 +124,8 @@ type ipv4DeviceAclPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a Ipv4DeviceAclPolicyDefinition resource.
 type Ipv4DeviceAclPolicyDefinitionArgs struct {
-	// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+	// Default action, either `accept` or `drop`
+	//   - Choices: `accept`, `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
@@ -217,7 +222,8 @@ func (o Ipv4DeviceAclPolicyDefinitionOutput) ToIpv4DeviceAclPolicyDefinitionOutp
 	return o
 }
 
-// Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+// Default action, either `accept` or `drop`
+//   - Choices: `accept`, `drop`
 func (o Ipv4DeviceAclPolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Ipv4DeviceAclPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

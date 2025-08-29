@@ -47,14 +47,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/vpnInterfaceSviFeatureTemplate:VpnInterfaceSviFeatureTemplate")
 public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     @Export(name="arpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     public Output<Optional<Integer>> arpTimeout() {
@@ -89,18 +93,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -163,14 +165,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipDirectedBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipDirectedBroadcast() {
@@ -191,14 +195,18 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -359,14 +367,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6DhcpClient", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6DhcpClient;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6DhcpClient() {
@@ -387,14 +397,18 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.ipv6DhcpClientVariable);
     }
     /**
-     * Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ipv6DhcpDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6DhcpDistance;
 
     /**
-     * @return Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * @return Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ipv6DhcpDistance() {
@@ -429,14 +443,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.ipv6DhcpHelpers);
     }
     /**
-     * Enable DHCPv6 rapid commit - Default value: `false`
+     * Enable DHCPv6 rapid commit
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6DhcpRapidCommit", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6DhcpRapidCommit;
 
     /**
-     * @return Enable DHCPv6 rapid commit - Default value: `false`
+     * @return Enable DHCPv6 rapid commit
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6DhcpRapidCommit() {
@@ -485,14 +501,18 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.ipv6Vrrps);
     }
     /**
-     * Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="mtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> mtu() {
@@ -541,14 +561,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.policers);
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -583,14 +605,16 @@ public class VpnInterfaceSviFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.staticArpEntries);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     @Export(name="tcpMssAdjust", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     public Output<Optional<Integer>> tcpMssAdjust() {

@@ -62,7 +62,7 @@ type PolicyObjectSecurityGeolocationList struct {
 
 	// The description of the Policy_object
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Geolocation List
+	// Geolocation  List
 	Entries PolicyObjectSecurityGeolocationListEntryArrayOutput `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
@@ -110,7 +110,7 @@ func GetPolicyObjectSecurityGeolocationList(ctx *pulumi.Context,
 type policyObjectSecurityGeolocationListState struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`
-	// Geolocation List
+	// Geolocation  List
 	Entries []PolicyObjectSecurityGeolocationListEntry `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
@@ -123,7 +123,7 @@ type policyObjectSecurityGeolocationListState struct {
 type PolicyObjectSecurityGeolocationListState struct {
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
-	// Geolocation List
+	// Geolocation  List
 	Entries PolicyObjectSecurityGeolocationListEntryArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
@@ -140,7 +140,7 @@ func (PolicyObjectSecurityGeolocationListState) ElementType() reflect.Type {
 type policyObjectSecurityGeolocationListArgs struct {
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`
-	// Geolocation List
+	// Geolocation  List
 	Entries []PolicyObjectSecurityGeolocationListEntry `pulumi:"entries"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
@@ -152,7 +152,7 @@ type policyObjectSecurityGeolocationListArgs struct {
 type PolicyObjectSecurityGeolocationListArgs struct {
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
-	// Geolocation List
+	// Geolocation  List
 	Entries PolicyObjectSecurityGeolocationListEntryArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
@@ -252,7 +252,7 @@ func (o PolicyObjectSecurityGeolocationListOutput) Description() pulumi.StringPt
 	return o.ApplyT(func(v *PolicyObjectSecurityGeolocationList) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Geolocation List
+// Geolocation  List
 func (o PolicyObjectSecurityGeolocationListOutput) Entries() PolicyObjectSecurityGeolocationListEntryArrayOutput {
 	return o.ApplyT(func(v *PolicyObjectSecurityGeolocationList) PolicyObjectSecurityGeolocationListEntryArrayOutput {
 		return v.Entries

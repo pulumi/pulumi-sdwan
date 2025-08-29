@@ -64,19 +64,19 @@ export class AppProbeClassPolicyObject extends pulumi.CustomResource {
     /**
      * Forwarding class name
      */
-    public readonly forwardingClass!: pulumi.Output<string>;
+    declare public readonly forwardingClass: pulumi.Output<string>;
     /**
      * Color mappings
      */
-    public readonly mappings!: pulumi.Output<outputs.AppProbeClassPolicyObjectMapping[]>;
+    declare public readonly mappings: pulumi.Output<outputs.AppProbeClassPolicyObjectMapping[]>;
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a AppProbeClassPolicyObject resource with the given unique name, arguments, and options.
@@ -91,21 +91,21 @@ export class AppProbeClassPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AppProbeClassPolicyObjectState | undefined;
-            resourceInputs["forwardingClass"] = state ? state.forwardingClass : undefined;
-            resourceInputs["mappings"] = state ? state.mappings : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["forwardingClass"] = state?.forwardingClass;
+            resourceInputs["mappings"] = state?.mappings;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as AppProbeClassPolicyObjectArgs | undefined;
-            if ((!args || args.forwardingClass === undefined) && !opts.urn) {
+            if (args?.forwardingClass === undefined && !opts.urn) {
                 throw new Error("Missing required property 'forwardingClass'");
             }
-            if ((!args || args.mappings === undefined) && !opts.urn) {
+            if (args?.mappings === undefined && !opts.urn) {
                 throw new Error("Missing required property 'mappings'");
             }
-            resourceInputs["forwardingClass"] = args ? args.forwardingClass : undefined;
-            resourceInputs["mappings"] = args ? args.mappings : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["forwardingClass"] = args?.forwardingClass;
+            resourceInputs["mappings"] = args?.mappings;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

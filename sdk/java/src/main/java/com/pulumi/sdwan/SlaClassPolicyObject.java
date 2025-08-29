@@ -100,102 +100,110 @@ public class SlaClassPolicyObject extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.appProbeClassVersion);
     }
     /**
-     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     *   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     *   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      * 
      */
     @Export(name="fallbackBestTunnelCriteria", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fallbackBestTunnelCriteria;
 
     /**
-     * @return - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * @return - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      * 
      */
     public Output<Optional<String>> fallbackBestTunnelCriteria() {
         return Codegen.optional(this.fallbackBestTunnelCriteria);
     }
     /**
-     * Jitter variance in ms - Range: `1`-`1000`
+     * Jitter variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="fallbackBestTunnelJitter", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> fallbackBestTunnelJitter;
 
     /**
-     * @return Jitter variance in ms - Range: `1`-`1000`
+     * @return Jitter variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> fallbackBestTunnelJitter() {
         return Codegen.optional(this.fallbackBestTunnelJitter);
     }
     /**
-     * Latency variance in ms - Range: `1`-`1000`
+     * Latency variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="fallbackBestTunnelLatency", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> fallbackBestTunnelLatency;
 
     /**
-     * @return Latency variance in ms - Range: `1`-`1000`
+     * @return Latency variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> fallbackBestTunnelLatency() {
         return Codegen.optional(this.fallbackBestTunnelLatency);
     }
     /**
-     * Loss variance in percent - Range: `1`-`100`
+     * Loss variance in percent
+     *   - Range: `1`-`100`
      * 
      */
     @Export(name="fallbackBestTunnelLoss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> fallbackBestTunnelLoss;
 
     /**
-     * @return Loss variance in percent - Range: `1`-`100`
+     * @return Loss variance in percent
+     *   - Range: `1`-`100`
      * 
      */
     public Output<Optional<Integer>> fallbackBestTunnelLoss() {
         return Codegen.optional(this.fallbackBestTunnelLoss);
     }
     /**
-     * Jitter in ms - Range: `1`-`1000`
+     * Jitter in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="jitter", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> jitter;
 
     /**
-     * @return Jitter in ms - Range: `1`-`1000`
+     * @return Jitter in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> jitter() {
         return Codegen.optional(this.jitter);
     }
     /**
-     * Latency in ms - Range: `1`-`1000`
+     * Latency in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="latency", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> latency;
 
     /**
-     * @return Latency in ms - Range: `1`-`1000`
+     * @return Latency in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> latency() {
         return Codegen.optional(this.latency);
     }
     /**
-     * Loss in percent - Range: `1`-`100`
+     * Loss in percent
+     *   - Range: `1`-`100`
      * 
      */
     @Export(name="loss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> loss;
 
     /**
-     * @return Loss in percent - Range: `1`-`100`
+     * @return Loss in percent
+     *   - Range: `1`-`100`
      * 
      */
     public Output<Optional<Integer>> loss() {

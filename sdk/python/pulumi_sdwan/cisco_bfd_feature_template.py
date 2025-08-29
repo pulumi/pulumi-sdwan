@@ -34,17 +34,21 @@ class CiscoBfdFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoBfdFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
+                 - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
-        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class
+                 - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-               value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+                 - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -82,9 +86,8 @@ class CiscoBfdFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -108,7 +111,9 @@ class CiscoBfdFeatureTemplateArgs:
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        Set default DSCP value for BFD packets
+          - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -132,7 +137,9 @@ class CiscoBfdFeatureTemplateArgs:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        Set the number of polling intervals used to determine tunnel SLA class
+          - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -168,8 +175,9 @@ class CiscoBfdFeatureTemplateArgs:
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        value: `600000`
+        Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+          - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 
@@ -208,17 +216,21 @@ class _CiscoBfdFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoBfdFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBfdFeatureTemplateColorArgs']]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
+                 - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class
+                 - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-               value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+                 - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -264,7 +276,9 @@ class _CiscoBfdFeatureTemplateState:
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        Set default DSCP value for BFD packets
+          - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -300,9 +314,8 @@ class _CiscoBfdFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -314,7 +327,9 @@ class _CiscoBfdFeatureTemplateState:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        Set the number of polling intervals used to determine tunnel SLA class
+          - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -350,8 +365,9 @@ class _CiscoBfdFeatureTemplateState:
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        value: `600000`
+        Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+          - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 
@@ -428,17 +444,21 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
+                 - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class
+                 - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-               value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+                 - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         """
         ...
@@ -539,17 +559,21 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBfdFeatureTemplateColorArgs', 'CiscoBfdFeatureTemplateColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: Set default DSCP value for BFD packets
+                 - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] multiplier: Set the number of polling intervals used to determine tunnel SLA class
+                 - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-               value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+                 - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -584,7 +608,9 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+        Set default DSCP value for BFD packets
+          - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -608,9 +634,8 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -618,7 +643,9 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def multiplier(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+        Set the number of polling intervals used to determine tunnel SLA class
+          - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -642,8 +669,9 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-        value: `600000`
+        Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+          - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 

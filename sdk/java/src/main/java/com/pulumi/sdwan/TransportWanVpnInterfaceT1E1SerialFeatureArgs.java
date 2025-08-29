@@ -49,14 +49,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+     * Interface bandwidth capacity, in kbps
+     *   - Range: `1`-`200000000`
      * 
      */
     @Import(name="bandwidth")
     private @Nullable Output<Integer> bandwidth;
 
     /**
-     * @return Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+     * @return Interface bandwidth capacity, in kbps
+     *   - Range: `1`-`200000000`
      * 
      */
     public Optional<Output<Integer>> bandwidth() {
@@ -64,14 +66,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="bandwidthDownstream")
     private @Nullable Output<Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> bandwidthDownstream() {
@@ -109,18 +113,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-     * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-     * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+     * Set preference for interface Clock speed
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
      * 
      */
     @Import(name="clockRate")
     private @Nullable Output<String> clockRate;
 
     /**
-     * @return Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-     * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-     * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+     * @return Set preference for interface Clock speed
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
      * 
      */
     public Optional<Output<String>> clockRate() {
@@ -158,14 +160,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+     * Configure Encapsulation for interface
+     *   - Choices: `hdlc`, `ppp`, `frame-relay`
      * 
      */
     @Import(name="encapsulation")
     private @Nullable Output<String> encapsulation;
 
     /**
-     * @return Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+     * @return Configure Encapsulation for interface
+     *   - Choices: `hdlc`, `ppp`, `frame-relay`
      * 
      */
     public Optional<Output<String>> encapsulation() {
@@ -233,14 +237,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+     * Set ip mtu
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+     * @return Set ip mtu
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -285,22 +293,14 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -353,14 +353,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68...2000&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68...2000&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> mtu() {
@@ -398,14 +402,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Per-tunnel Qos - Default value: `false`
+     * Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     @Import(name="perTunnelQos")
     private @Nullable Output<Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos - Default value: `false`
+     * @return Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> perTunnelQos() {
@@ -413,14 +419,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Per-tunnel QoS Aggregator - Default value: `false`
+     * Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     @Import(name="perTunnelQosAggregator")
     private @Nullable Output<Boolean> perTunnelQosAggregator;
 
     /**
-     * @return Per-tunnel QoS Aggregator - Default value: `false`
+     * @return Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> perTunnelQosAggregator() {
@@ -458,14 +466,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosShapingRate")
     private @Nullable Output<Integer> qosShapingRate;
 
     /**
-     * @return 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosShapingRate() {
@@ -488,14 +498,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -518,14 +530,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -593,14 +607,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Tunnel Interface - Default value: `false`
+     * Tunnel Interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterface")
     private @Nullable Output<Boolean> tunnelInterface;
 
     /**
-     * @return Tunnel Interface - Default value: `false`
+     * @return Tunnel Interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterface() {
@@ -608,14 +624,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowAll")
     private @Nullable Output<Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowAll() {
@@ -638,14 +656,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny BFD - Default value: `false`
+     * Allow/Deny BFD
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowBfd")
     private @Nullable Output<Boolean> tunnelInterfaceAllowBfd;
 
     /**
-     * @return Allow/Deny BFD - Default value: `false`
+     * @return Allow/Deny BFD
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowBfd() {
@@ -668,14 +688,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowBgp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP - Default value: `false`
+     * @return Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowBgp() {
@@ -698,14 +720,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDhcp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP - Default value: `true`
+     * @return Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDhcp() {
@@ -728,14 +752,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDns")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS - Default value: `true`
+     * @return Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDns() {
@@ -758,14 +784,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny Https - Default value: `true`
+     * Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowHttps")
     private @Nullable Output<Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny Https - Default value: `true`
+     * @return Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowHttps() {
@@ -788,14 +816,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowIcmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP - Default value: `true`
+     * @return Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowIcmp() {
@@ -818,14 +848,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNetconf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF - Default value: `false`
+     * @return Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNetconf() {
@@ -848,14 +880,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny NTP - Default value: `false`
+     * Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNtp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP - Default value: `false`
+     * @return Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNtp() {
@@ -878,14 +912,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowOspf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF - Default value: `false`
+     * @return Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowOspf() {
@@ -908,14 +944,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSnmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP - Default value: `false`
+     * @return Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSnmp() {
@@ -938,14 +976,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny SSH - Default value: `false`
+     * Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSsh")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH - Default value: `false`
+     * @return Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSsh() {
@@ -968,14 +1008,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowStun")
     private @Nullable Output<Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN - Default value: `false`
+     * @return Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowStun() {
@@ -1028,14 +1070,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceBorder")
     private @Nullable Output<Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceBorder() {
@@ -1058,16 +1102,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceCarrier")
     private @Nullable Output<String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceCarrier() {
@@ -1090,14 +1136,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceClearDontFragment")
     private @Nullable Output<Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceClearDontFragment() {
@@ -1120,14 +1168,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceClearNetworkBroadcast")
     private @Nullable Output<Boolean> tunnelInterfaceClearNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceClearNetworkBroadcast() {
@@ -1150,18 +1200,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceColor")
     private @Nullable Output<String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * @return Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceColor() {
@@ -1229,14 +1279,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * List of groups - Range: `1`-`4294967295`
+     * List of groups
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="tunnelInterfaceGroups")
     private @Nullable Output<Integer> tunnelInterfaceGroups;
 
     /**
-     * @return List of groups - Range: `1`-`4294967295`
+     * @return List of groups
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceGroups() {
@@ -1259,14 +1311,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Import(name="tunnelInterfaceHelloInterval")
     private @Nullable Output<Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloInterval() {
@@ -1289,14 +1345,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     @Import(name="tunnelInterfaceHelloTolerance")
     private @Nullable Output<Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloTolerance() {
@@ -1319,14 +1379,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLastResortCircuit")
     private @Nullable Output<Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLastResortCircuit() {
@@ -1349,14 +1411,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLowBandwidthLink")
     private @Nullable Output<Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLowBandwidthLink() {
@@ -1379,14 +1443,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     @Import(name="tunnelInterfaceMaxControlConnections")
     private @Nullable Output<Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * @return Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceMaxControlConnections() {
@@ -1409,14 +1475,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceNatRefreshInterval")
     private @Nullable Output<Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceNatRefreshInterval() {
@@ -1439,14 +1509,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfacePortHop")
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfacePortHop() {
@@ -1469,14 +1541,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceRestrict")
     private @Nullable Output<Boolean> tunnelInterfaceRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceRestrict() {
@@ -1499,14 +1573,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tunnelInterfaceTunnelTcpMss")
     private @Nullable Output<Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceTunnelTcpMss() {
@@ -1529,14 +1605,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceVbondAsStunServer")
     private @Nullable Output<Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceVbondAsStunServer() {
@@ -1559,14 +1637,18 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceVmanageConnectionPreference")
     private @Nullable Output<Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceVmanageConnectionPreference() {
@@ -1589,14 +1671,16 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
     }
 
     /**
-     * Set tunnel QoS mode - Choices: `spoke`, `hub`
+     * Set tunnel QoS mode
+     *   - Choices: `spoke`, `hub`
      * 
      */
     @Import(name="tunnelQosMode")
     private @Nullable Output<String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `spoke`, `hub`
+     * @return Set tunnel QoS mode
+     *   - Choices: `spoke`, `hub`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -1786,7 +1870,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param bandwidth Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+         * @param bandwidth Interface bandwidth capacity, in kbps
+         *   - Range: `1`-`200000000`
          * 
          * @return builder
          * 
@@ -1797,7 +1882,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param bandwidth Interface bandwidth capacity, in kbps - Range: `1`-`200000000`
+         * @param bandwidth Interface bandwidth capacity, in kbps
+         *   - Range: `1`-`200000000`
          * 
          * @return builder
          * 
@@ -1807,7 +1893,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -1818,7 +1905,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -1870,9 +1958,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param clockRate Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-         * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-         * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+         * @param clockRate Set preference for interface Clock speed
+         *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
          * 
          * @return builder
          * 
@@ -1883,9 +1970,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param clockRate Set preference for interface Clock speed - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`,
-         * `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`,
-         * `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
+         * @param clockRate Set preference for interface Clock speed
+         *   - Choices: `1200`, `2400`, `4800`, `9600`, `14400`, `19200`, `28800`, `32000`, `38400`, `48000`, `56000`, `57600`, `64000`, `72000`, `115200`, `125000`, `148000`, `192000`, `250000`, `256000`, `384000`, `500000`, `512000`, `768000`, `800000`, `1000000`, `2000000`, `4000000`, `5300000`, `8000000`
          * 
          * @return builder
          * 
@@ -1937,7 +2023,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param encapsulation Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+         * @param encapsulation Configure Encapsulation for interface
+         *   - Choices: `hdlc`, `ppp`, `frame-relay`
          * 
          * @return builder
          * 
@@ -1948,7 +2035,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param encapsulation Configure Encapsulation for interface - Choices: `hdlc`, `ppp`, `frame-relay`
+         * @param encapsulation Configure Encapsulation for interface
+         *   - Choices: `hdlc`, `ppp`, `frame-relay`
          * 
          * @return builder
          * 
@@ -2042,7 +2130,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipMtu Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu Set ip mtu
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -2053,7 +2143,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipMtu Set ip mtu - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu Set ip mtu
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -2114,11 +2206,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2129,11 +2217,7 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2206,7 +2290,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param mtu Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;68...2000&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -2217,7 +2303,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param mtu Interface MTU &lt;68...2000&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;68...2000&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -2269,7 +2357,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos - Default value: `false`
+         * @param perTunnelQos Per-tunnel Qos
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2280,7 +2369,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos - Default value: `false`
+         * @param perTunnelQos Per-tunnel Qos
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2290,7 +2380,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator - Default value: `false`
+         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2301,7 +2392,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator - Default value: `false`
+         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2353,7 +2445,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param qosShapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param qosShapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -2364,7 +2457,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param qosShapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param qosShapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -2395,7 +2489,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2406,7 +2501,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2437,7 +2533,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -2448,7 +2545,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -2542,7 +2640,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterface Tunnel Interface - Default value: `false`
+         * @param tunnelInterface Tunnel Interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2553,7 +2652,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterface Tunnel Interface - Default value: `false`
+         * @param tunnelInterface Tunnel Interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2563,7 +2663,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2574,7 +2675,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2605,7 +2707,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowBfd Allow/Deny BFD - Default value: `false`
+         * @param tunnelInterfaceAllowBfd Allow/Deny BFD
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2616,7 +2719,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowBfd Allow/Deny BFD - Default value: `false`
+         * @param tunnelInterfaceAllowBfd Allow/Deny BFD
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2647,7 +2751,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2658,7 +2763,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2689,7 +2795,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2700,7 +2807,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2731,7 +2839,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2742,7 +2851,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2773,7 +2883,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `true`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2784,7 +2895,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `true`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2815,7 +2927,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2826,7 +2939,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2857,7 +2971,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2868,7 +2983,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2899,7 +3015,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2910,7 +3027,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2941,7 +3059,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2952,7 +3071,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2983,7 +3103,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2994,7 +3115,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3025,7 +3147,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3036,7 +3159,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3067,7 +3191,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3078,7 +3203,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3151,7 +3277,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3162,7 +3289,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3193,8 +3321,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -3205,8 +3334,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -3237,7 +3367,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3248,7 +3379,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3279,7 +3411,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceClearNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceClearNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3290,7 +3423,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceClearNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceClearNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3321,9 +3455,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -3334,9 +3468,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -3450,7 +3584,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceGroups List of groups - Range: `1`-`4294967295`
+         * @param tunnelInterfaceGroups List of groups
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -3461,7 +3596,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceGroups List of groups - Range: `1`-`4294967295`
+         * @param tunnelInterfaceGroups List of groups
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -3492,7 +3628,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -3503,7 +3641,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -3534,7 +3674,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -3545,7 +3687,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -3576,7 +3720,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3587,7 +3732,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3618,7 +3764,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3629,7 +3776,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3660,7 +3808,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`100`
          * 
          * @return builder
          * 
@@ -3671,7 +3820,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`100`
          * 
          * @return builder
          * 
@@ -3702,7 +3852,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -3713,7 +3865,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -3744,7 +3898,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3755,7 +3910,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3786,7 +3942,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3797,7 +3954,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3828,7 +3986,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -3839,7 +3998,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -3870,7 +4030,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3881,7 +4042,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3912,7 +4074,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -3923,7 +4087,9 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -3954,7 +4120,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`, `hub`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `spoke`, `hub`
          * 
          * @return builder
          * 
@@ -3965,7 +4132,8 @@ public final class TransportWanVpnInterfaceT1E1SerialFeatureArgs extends com.pul
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`, `hub`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `spoke`, `hub`
          * 
          * @return builder
          * 

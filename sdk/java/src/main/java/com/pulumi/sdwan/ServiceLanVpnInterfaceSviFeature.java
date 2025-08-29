@@ -70,14 +70,18 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.aclIpv6IngressFeatureId);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     @Export(name="arpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     public Output<Optional<Integer>> arpTimeout() {
@@ -126,14 +130,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.description);
     }
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -168,14 +174,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return this.featureProfileId;
     }
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Export(name="icmpRedirectDisable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> icmpRedirectDisable() {
@@ -224,14 +232,18 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -280,14 +292,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipDirectedBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipDirectedBroadcast() {
@@ -308,14 +322,18 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -406,22 +424,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -554,14 +566,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return this.serviceLanVpnFeatureId;
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -582,14 +596,16 @@ public class ServiceLanVpnInterfaceSviFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {

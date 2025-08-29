@@ -58,14 +58,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.addressFamilies);
     }
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="alwaysCompareMed", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> alwaysCompareMed;
 
     /**
-     * @return Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> alwaysCompareMed() {
@@ -114,14 +116,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.asNumberVariable);
     }
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="compareRouterId", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> compareRouterId;
 
     /**
-     * @return Compare router IDs when selecting active BGP paths - Default value: `false`
+     * @return Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> compareRouterId() {
@@ -156,14 +160,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.description;
     }
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="deterministicMed", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> deterministicMed;
 
     /**
-     * @return Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> deterministicMed() {
@@ -184,32 +190,34 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.deterministicMedVariable);
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Export(name="distanceExternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceExternal;
 
     /**
-     * @return Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Output<Optional<Integer>> distanceExternal() {
@@ -230,14 +238,18 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.distanceExternalVariable);
     }
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     @Export(name="distanceInternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceInternal;
 
     /**
-     * @return Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * @return Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> distanceInternal() {
@@ -258,14 +270,18 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.distanceInternalVariable);
     }
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Export(name="distanceLocal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceLocal;
 
     /**
-     * @return Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Output<Optional<Integer>> distanceLocal() {
@@ -286,14 +302,18 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.distanceLocalVariable);
     }
     /**
-     * Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+     * Set the interval when BGP considers a neighbor to be down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     @Export(name="holdtime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> holdtime;
 
     /**
-     * @return Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+     * @return Set the interval when BGP considers a neighbor to be down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     public Output<Optional<Integer>> holdtime() {
@@ -370,14 +390,18 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.ipv6RouteTargets);
     }
     /**
-     * Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Set how often keepalive messages are sent to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     @Export(name="keepalive", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> keepalive;
 
     /**
-     * @return Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+     * @return Set how often keepalive messages are sent to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> keepalive() {
@@ -398,14 +422,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.keepaliveVariable);
     }
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Export(name="missingMedWorst", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> missingMedWorst;
 
     /**
-     * @return If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * @return If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> missingMedWorst() {
@@ -440,14 +466,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.mplsInterfaces);
     }
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     @Export(name="multipathRelax", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> multipathRelax;
 
     /**
-     * @return Ignore AS for multipath selection - Default value: `false`
+     * @return Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> multipathRelax() {
@@ -482,14 +510,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.name;
     }
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     @Export(name="propagateAspath", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> propagateAspath;
 
     /**
-     * @return Propagate AS Path - Default value: `false`
+     * @return Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> propagateAspath() {
@@ -510,14 +540,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.propagateAspathVariable);
     }
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      * 
      */
     @Export(name="propagateCommunity", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> propagateCommunity;
 
     /**
-     * @return Propagate Community - Default value: `false`
+     * @return Propagate Community
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> propagateCommunity() {
@@ -566,14 +598,16 @@ public class CiscoBgpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.routerIdVariable);
     }
     /**
-     * Enable or disable BGP - Default value: `false`
+     * Enable or disable BGP
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Enable or disable BGP - Default value: `false`
+     * @return Enable or disable BGP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {

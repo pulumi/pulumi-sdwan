@@ -48,353 +48,379 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
         return obj['__pulumiType'] === ServiceLanVpnInterfaceEthernetFeature.__pulumiType;
     }
 
-    public readonly aclIpv4EgressPolicyId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv4IngressPolicyId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv6EgressPolicyId!: pulumi.Output<string | undefined>;
-    public readonly aclIpv6IngressPolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv4EgressPolicyId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv4IngressPolicyId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv6EgressPolicyId: pulumi.Output<string | undefined>;
+    declare public readonly aclIpv6IngressPolicyId: pulumi.Output<string | undefined>;
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      */
-    public readonly aclShapingRate!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly aclShapingRateVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
-     */
-    public readonly arpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly aclShapingRate: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly arpTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly aclShapingRateVariable: pulumi.Output<string | undefined>;
+    /**
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
+     */
+    declare public readonly arpTimeout: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly arpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * Configure ARP entries
      */
-    public readonly arps!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureArp[] | undefined>;
+    declare public readonly arps: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureArp[] | undefined>;
     /**
      * Link autonegotiation
      */
-    public readonly autonegotiate!: pulumi.Output<boolean | undefined>;
+    declare public readonly autonegotiate: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly autonegotiateVariable!: pulumi.Output<string | undefined>;
+    declare public readonly autonegotiateVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
-    public readonly duplex!: pulumi.Output<string | undefined>;
+    declare public readonly duplex: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly duplexVariable!: pulumi.Output<string | undefined>;
+    declare public readonly duplexVariable: pulumi.Output<string | undefined>;
     /**
      * Enable DHCPv6
      */
-    public readonly enableDhcpv6!: pulumi.Output<boolean | undefined>;
+    declare public readonly enableDhcpv6: pulumi.Output<boolean | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
-    public readonly icmpRedirectDisable!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly icmpRedirectDisableVariable!: pulumi.Output<string | undefined>;
-    public readonly interfaceDescription!: pulumi.Output<string | undefined>;
+    declare public readonly icmpRedirectDisable: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceDescriptionVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
-     */
-    public readonly interfaceMtu!: pulumi.Output<number | undefined>;
+    declare public readonly icmpRedirectDisableVariable: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceMtuVariable!: pulumi.Output<string | undefined>;
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
+    /**
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
+     */
+    declare public readonly interfaceMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
-    /**
-     * IP Directed-Broadcast - Default value: `false`
-     */
-    public readonly ipDirectedBroadcast!: pulumi.Output<boolean | undefined>;
+    declare public readonly interfaceMtuVariable: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipDirectedBroadcastVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
-    public readonly ipMtu!: pulumi.Output<number | undefined>;
+    declare public readonly ipDirectedBroadcast: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipDirectedBroadcastVariable: pulumi.Output<string | undefined>;
+    /**
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
+     */
+    declare public readonly ipMtu: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
     /**
      * IP Address
      */
-    public readonly ipv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * DHCP Distance
+     *   - Range: `1`-`65536`
      */
-    public readonly ipv4DhcpDistance!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipv4DhcpDistanceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4DhcpDistance: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4DhcpHelperVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4DhcpDistanceVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4DhcpHelperVariable: pulumi.Output<string | undefined>;
     /**
      * List of DHCP IPv4 helper addresses (min 1, max 8)
      */
-    public readonly ipv4DhcpHelpers!: pulumi.Output<string[] | undefined>;
+    declare public readonly ipv4DhcpHelpers: pulumi.Output<string[] | undefined>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
-    public readonly ipv4Nat!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipv4Nat: pulumi.Output<boolean | undefined>;
     /**
      * NAT Inside Source Loopback Interface
      */
-    public readonly ipv4NatLoopback!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatLoopback: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatLoopbackVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatLoopbackVariable: pulumi.Output<string | undefined>;
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload
+     *   - Default value: `true`
      */
-    public readonly ipv4NatOverload!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipv4NatOverloadVariable!: pulumi.Output<string | undefined>;
-    /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
-     */
-    public readonly ipv4NatPrefixLength!: pulumi.Output<number | undefined>;
+    declare public readonly ipv4NatOverload: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatPrefixLengthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatOverloadVariable: pulumi.Output<string | undefined>;
+    /**
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
+     */
+    declare public readonly ipv4NatPrefixLength: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4NatPrefixLengthVariable: pulumi.Output<string | undefined>;
     /**
      * NAT Pool Range End
      */
-    public readonly ipv4NatRangeEnd!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatRangeEnd: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatRangeEndVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatRangeEndVariable: pulumi.Output<string | undefined>;
     /**
      * NAT Pool Range Start
      */
-    public readonly ipv4NatRangeStart!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatRangeStart: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatRangeStartVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatRangeStartVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
-    public readonly ipv4NatTcpTimeout!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipv4NatTcpTimeoutVariable!: pulumi.Output<string | undefined>;
-    /**
-     * NAT Type - Choices: `pool`, `loopback`
-     */
-    public readonly ipv4NatType!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatTcpTimeout: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatTcpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * NAT Type
+     *   - Choices: `pool`, `loopback`
      */
-    public readonly ipv4NatUdpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly ipv4NatType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4NatUdpTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4NatTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
+     */
+    declare public readonly ipv4NatUdpTimeout: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4NatUdpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
      * Secondary IpV4 Addresses
      */
-    public readonly ipv4SecondaryAddresses!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
+    declare public readonly ipv4SecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress[] | undefined>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * Enable VRRP
      */
-    public readonly ipv4Vrrps!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp[] | undefined>;
+    declare public readonly ipv4Vrrps: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp[] | undefined>;
     /**
      * IPv6 Address Secondary
      */
-    public readonly ipv6Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv6AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6AddressVariable: pulumi.Output<string | undefined>;
     /**
      * DHCPv6 Helper
      */
-    public readonly ipv6DhcpHelpers!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper[] | undefined>;
+    declare public readonly ipv6DhcpHelpers: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper[] | undefined>;
     /**
      * secondary IPv6 addresses
      */
-    public readonly ipv6DhcpSecondaryAddresses!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress[] | undefined>;
+    declare public readonly ipv6DhcpSecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress[] | undefined>;
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      */
-    public readonly ipv6Nat!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipv6Nat: pulumi.Output<boolean | undefined>;
     /**
      * Static secondary IPv6 addresses
      */
-    public readonly ipv6SecondaryAddresses!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress[] | undefined>;
+    declare public readonly ipv6SecondaryAddresses: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress[] | undefined>;
     /**
      * Enable VRRP Ipv6
      */
-    public readonly ipv6Vrrps!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp[] | undefined>;
+    declare public readonly ipv6Vrrps: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp[] | undefined>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
-    public readonly loadInterval!: pulumi.Output<number | undefined>;
+    declare public readonly loadInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly loadIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly loadIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * MAC Address
      */
-    public readonly macAddress!: pulumi.Output<string | undefined>;
+    declare public readonly macAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly macAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly macAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
-    public readonly mediaType!: pulumi.Output<string | undefined>;
+    declare public readonly mediaType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly mediaTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly mediaTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      */
-    public readonly nat64!: pulumi.Output<boolean | undefined>;
+    declare public readonly nat64: pulumi.Output<boolean | undefined>;
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnFeatureId: pulumi.Output<string>;
     /**
      * - Default value: `true`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
-    public readonly speed!: pulumi.Output<string | undefined>;
+    declare public readonly speed: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly speedVariable!: pulumi.Output<string | undefined>;
+    declare public readonly speedVariable: pulumi.Output<string | undefined>;
     /**
      * static NAT
      */
-    public readonly staticNats!: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat[] | undefined>;
+    declare public readonly staticNats: pulumi.Output<outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat[] | undefined>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
-    public readonly tcpMss!: pulumi.Output<number | undefined>;
+    declare public readonly tcpMss: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpMssVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tcpMssVariable: pulumi.Output<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    public readonly tracker!: pulumi.Output<string | undefined>;
+    declare public readonly tracker: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerVariable: pulumi.Output<string | undefined>;
     /**
      * Enable/Disable SGT Enforcement on an interface
      */
-    public readonly trustsecEnableEnforcedPropogation!: pulumi.Output<boolean | undefined>;
+    declare public readonly trustsecEnableEnforcedPropogation: pulumi.Output<boolean | undefined>;
     /**
-     * Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      */
-    public readonly trustsecEnableSgtPropogation!: pulumi.Output<boolean | undefined>;
+    declare public readonly trustsecEnableSgtPropogation: pulumi.Output<boolean | undefined>;
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      */
-    public readonly trustsecEnforcedSecurityGroupTag!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly trustsecEnforcedSecurityGroupTagVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
-     */
-    public readonly trustsecPropogate!: pulumi.Output<boolean | undefined>;
-    /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
-     */
-    public readonly trustsecSecurityGroupTag!: pulumi.Output<number | undefined>;
+    declare public readonly trustsecEnforcedSecurityGroupTag: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly trustsecSecurityGroupTagVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trustsecEnforcedSecurityGroupTagVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
+     */
+    declare public readonly trustsecPropogate: pulumi.Output<boolean | undefined>;
+    /**
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
+     */
+    declare public readonly trustsecSecurityGroupTag: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly trustsecSecurityGroupTagVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * Extend remote TLOC over a GRE tunnel to a local LAN interface
      */
-    public readonly xconnect!: pulumi.Output<string | undefined>;
+    declare public readonly xconnect: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly xconnectVariable!: pulumi.Output<string | undefined>;
+    declare public readonly xconnectVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a ServiceLanVpnInterfaceEthernetFeature resource with the given unique name, arguments, and options.
@@ -409,193 +435,193 @@ export class ServiceLanVpnInterfaceEthernetFeature extends pulumi.CustomResource
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnInterfaceEthernetFeatureState | undefined;
-            resourceInputs["aclIpv4EgressPolicyId"] = state ? state.aclIpv4EgressPolicyId : undefined;
-            resourceInputs["aclIpv4IngressPolicyId"] = state ? state.aclIpv4IngressPolicyId : undefined;
-            resourceInputs["aclIpv6EgressPolicyId"] = state ? state.aclIpv6EgressPolicyId : undefined;
-            resourceInputs["aclIpv6IngressPolicyId"] = state ? state.aclIpv6IngressPolicyId : undefined;
-            resourceInputs["aclShapingRate"] = state ? state.aclShapingRate : undefined;
-            resourceInputs["aclShapingRateVariable"] = state ? state.aclShapingRateVariable : undefined;
-            resourceInputs["arpTimeout"] = state ? state.arpTimeout : undefined;
-            resourceInputs["arpTimeoutVariable"] = state ? state.arpTimeoutVariable : undefined;
-            resourceInputs["arps"] = state ? state.arps : undefined;
-            resourceInputs["autonegotiate"] = state ? state.autonegotiate : undefined;
-            resourceInputs["autonegotiateVariable"] = state ? state.autonegotiateVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["duplex"] = state ? state.duplex : undefined;
-            resourceInputs["duplexVariable"] = state ? state.duplexVariable : undefined;
-            resourceInputs["enableDhcpv6"] = state ? state.enableDhcpv6 : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["icmpRedirectDisable"] = state ? state.icmpRedirectDisable : undefined;
-            resourceInputs["icmpRedirectDisableVariable"] = state ? state.icmpRedirectDisableVariable : undefined;
-            resourceInputs["interfaceDescription"] = state ? state.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = state ? state.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceMtu"] = state ? state.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = state ? state.interfaceMtuVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["ipDirectedBroadcast"] = state ? state.ipDirectedBroadcast : undefined;
-            resourceInputs["ipDirectedBroadcastVariable"] = state ? state.ipDirectedBroadcastVariable : undefined;
-            resourceInputs["ipMtu"] = state ? state.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = state ? state.ipMtuVariable : undefined;
-            resourceInputs["ipv4Address"] = state ? state.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4DhcpDistance"] = state ? state.ipv4DhcpDistance : undefined;
-            resourceInputs["ipv4DhcpDistanceVariable"] = state ? state.ipv4DhcpDistanceVariable : undefined;
-            resourceInputs["ipv4DhcpHelperVariable"] = state ? state.ipv4DhcpHelperVariable : undefined;
-            resourceInputs["ipv4DhcpHelpers"] = state ? state.ipv4DhcpHelpers : undefined;
-            resourceInputs["ipv4Nat"] = state ? state.ipv4Nat : undefined;
-            resourceInputs["ipv4NatLoopback"] = state ? state.ipv4NatLoopback : undefined;
-            resourceInputs["ipv4NatLoopbackVariable"] = state ? state.ipv4NatLoopbackVariable : undefined;
-            resourceInputs["ipv4NatOverload"] = state ? state.ipv4NatOverload : undefined;
-            resourceInputs["ipv4NatOverloadVariable"] = state ? state.ipv4NatOverloadVariable : undefined;
-            resourceInputs["ipv4NatPrefixLength"] = state ? state.ipv4NatPrefixLength : undefined;
-            resourceInputs["ipv4NatPrefixLengthVariable"] = state ? state.ipv4NatPrefixLengthVariable : undefined;
-            resourceInputs["ipv4NatRangeEnd"] = state ? state.ipv4NatRangeEnd : undefined;
-            resourceInputs["ipv4NatRangeEndVariable"] = state ? state.ipv4NatRangeEndVariable : undefined;
-            resourceInputs["ipv4NatRangeStart"] = state ? state.ipv4NatRangeStart : undefined;
-            resourceInputs["ipv4NatRangeStartVariable"] = state ? state.ipv4NatRangeStartVariable : undefined;
-            resourceInputs["ipv4NatTcpTimeout"] = state ? state.ipv4NatTcpTimeout : undefined;
-            resourceInputs["ipv4NatTcpTimeoutVariable"] = state ? state.ipv4NatTcpTimeoutVariable : undefined;
-            resourceInputs["ipv4NatType"] = state ? state.ipv4NatType : undefined;
-            resourceInputs["ipv4NatTypeVariable"] = state ? state.ipv4NatTypeVariable : undefined;
-            resourceInputs["ipv4NatUdpTimeout"] = state ? state.ipv4NatUdpTimeout : undefined;
-            resourceInputs["ipv4NatUdpTimeoutVariable"] = state ? state.ipv4NatUdpTimeoutVariable : undefined;
-            resourceInputs["ipv4SecondaryAddresses"] = state ? state.ipv4SecondaryAddresses : undefined;
-            resourceInputs["ipv4SubnetMask"] = state ? state.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = state ? state.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["ipv4Vrrps"] = state ? state.ipv4Vrrps : undefined;
-            resourceInputs["ipv6Address"] = state ? state.ipv6Address : undefined;
-            resourceInputs["ipv6AddressVariable"] = state ? state.ipv6AddressVariable : undefined;
-            resourceInputs["ipv6DhcpHelpers"] = state ? state.ipv6DhcpHelpers : undefined;
-            resourceInputs["ipv6DhcpSecondaryAddresses"] = state ? state.ipv6DhcpSecondaryAddresses : undefined;
-            resourceInputs["ipv6Nat"] = state ? state.ipv6Nat : undefined;
-            resourceInputs["ipv6SecondaryAddresses"] = state ? state.ipv6SecondaryAddresses : undefined;
-            resourceInputs["ipv6Vrrps"] = state ? state.ipv6Vrrps : undefined;
-            resourceInputs["loadInterval"] = state ? state.loadInterval : undefined;
-            resourceInputs["loadIntervalVariable"] = state ? state.loadIntervalVariable : undefined;
-            resourceInputs["macAddress"] = state ? state.macAddress : undefined;
-            resourceInputs["macAddressVariable"] = state ? state.macAddressVariable : undefined;
-            resourceInputs["mediaType"] = state ? state.mediaType : undefined;
-            resourceInputs["mediaTypeVariable"] = state ? state.mediaTypeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64"] = state ? state.nat64 : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["speed"] = state ? state.speed : undefined;
-            resourceInputs["speedVariable"] = state ? state.speedVariable : undefined;
-            resourceInputs["staticNats"] = state ? state.staticNats : undefined;
-            resourceInputs["tcpMss"] = state ? state.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = state ? state.tcpMssVariable : undefined;
-            resourceInputs["tracker"] = state ? state.tracker : undefined;
-            resourceInputs["trackerVariable"] = state ? state.trackerVariable : undefined;
-            resourceInputs["trustsecEnableEnforcedPropogation"] = state ? state.trustsecEnableEnforcedPropogation : undefined;
-            resourceInputs["trustsecEnableSgtPropogation"] = state ? state.trustsecEnableSgtPropogation : undefined;
-            resourceInputs["trustsecEnforcedSecurityGroupTag"] = state ? state.trustsecEnforcedSecurityGroupTag : undefined;
-            resourceInputs["trustsecEnforcedSecurityGroupTagVariable"] = state ? state.trustsecEnforcedSecurityGroupTagVariable : undefined;
-            resourceInputs["trustsecPropogate"] = state ? state.trustsecPropogate : undefined;
-            resourceInputs["trustsecSecurityGroupTag"] = state ? state.trustsecSecurityGroupTag : undefined;
-            resourceInputs["trustsecSecurityGroupTagVariable"] = state ? state.trustsecSecurityGroupTagVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["xconnect"] = state ? state.xconnect : undefined;
-            resourceInputs["xconnectVariable"] = state ? state.xconnectVariable : undefined;
+            resourceInputs["aclIpv4EgressPolicyId"] = state?.aclIpv4EgressPolicyId;
+            resourceInputs["aclIpv4IngressPolicyId"] = state?.aclIpv4IngressPolicyId;
+            resourceInputs["aclIpv6EgressPolicyId"] = state?.aclIpv6EgressPolicyId;
+            resourceInputs["aclIpv6IngressPolicyId"] = state?.aclIpv6IngressPolicyId;
+            resourceInputs["aclShapingRate"] = state?.aclShapingRate;
+            resourceInputs["aclShapingRateVariable"] = state?.aclShapingRateVariable;
+            resourceInputs["arpTimeout"] = state?.arpTimeout;
+            resourceInputs["arpTimeoutVariable"] = state?.arpTimeoutVariable;
+            resourceInputs["arps"] = state?.arps;
+            resourceInputs["autonegotiate"] = state?.autonegotiate;
+            resourceInputs["autonegotiateVariable"] = state?.autonegotiateVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["duplex"] = state?.duplex;
+            resourceInputs["duplexVariable"] = state?.duplexVariable;
+            resourceInputs["enableDhcpv6"] = state?.enableDhcpv6;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["icmpRedirectDisable"] = state?.icmpRedirectDisable;
+            resourceInputs["icmpRedirectDisableVariable"] = state?.icmpRedirectDisableVariable;
+            resourceInputs["interfaceDescription"] = state?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
+            resourceInputs["interfaceMtu"] = state?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = state?.interfaceMtuVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["ipDirectedBroadcast"] = state?.ipDirectedBroadcast;
+            resourceInputs["ipDirectedBroadcastVariable"] = state?.ipDirectedBroadcastVariable;
+            resourceInputs["ipMtu"] = state?.ipMtu;
+            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
+            resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["ipv4DhcpDistance"] = state?.ipv4DhcpDistance;
+            resourceInputs["ipv4DhcpDistanceVariable"] = state?.ipv4DhcpDistanceVariable;
+            resourceInputs["ipv4DhcpHelperVariable"] = state?.ipv4DhcpHelperVariable;
+            resourceInputs["ipv4DhcpHelpers"] = state?.ipv4DhcpHelpers;
+            resourceInputs["ipv4Nat"] = state?.ipv4Nat;
+            resourceInputs["ipv4NatLoopback"] = state?.ipv4NatLoopback;
+            resourceInputs["ipv4NatLoopbackVariable"] = state?.ipv4NatLoopbackVariable;
+            resourceInputs["ipv4NatOverload"] = state?.ipv4NatOverload;
+            resourceInputs["ipv4NatOverloadVariable"] = state?.ipv4NatOverloadVariable;
+            resourceInputs["ipv4NatPrefixLength"] = state?.ipv4NatPrefixLength;
+            resourceInputs["ipv4NatPrefixLengthVariable"] = state?.ipv4NatPrefixLengthVariable;
+            resourceInputs["ipv4NatRangeEnd"] = state?.ipv4NatRangeEnd;
+            resourceInputs["ipv4NatRangeEndVariable"] = state?.ipv4NatRangeEndVariable;
+            resourceInputs["ipv4NatRangeStart"] = state?.ipv4NatRangeStart;
+            resourceInputs["ipv4NatRangeStartVariable"] = state?.ipv4NatRangeStartVariable;
+            resourceInputs["ipv4NatTcpTimeout"] = state?.ipv4NatTcpTimeout;
+            resourceInputs["ipv4NatTcpTimeoutVariable"] = state?.ipv4NatTcpTimeoutVariable;
+            resourceInputs["ipv4NatType"] = state?.ipv4NatType;
+            resourceInputs["ipv4NatTypeVariable"] = state?.ipv4NatTypeVariable;
+            resourceInputs["ipv4NatUdpTimeout"] = state?.ipv4NatUdpTimeout;
+            resourceInputs["ipv4NatUdpTimeoutVariable"] = state?.ipv4NatUdpTimeoutVariable;
+            resourceInputs["ipv4SecondaryAddresses"] = state?.ipv4SecondaryAddresses;
+            resourceInputs["ipv4SubnetMask"] = state?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv4Vrrps"] = state?.ipv4Vrrps;
+            resourceInputs["ipv6Address"] = state?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = state?.ipv6AddressVariable;
+            resourceInputs["ipv6DhcpHelpers"] = state?.ipv6DhcpHelpers;
+            resourceInputs["ipv6DhcpSecondaryAddresses"] = state?.ipv6DhcpSecondaryAddresses;
+            resourceInputs["ipv6Nat"] = state?.ipv6Nat;
+            resourceInputs["ipv6SecondaryAddresses"] = state?.ipv6SecondaryAddresses;
+            resourceInputs["ipv6Vrrps"] = state?.ipv6Vrrps;
+            resourceInputs["loadInterval"] = state?.loadInterval;
+            resourceInputs["loadIntervalVariable"] = state?.loadIntervalVariable;
+            resourceInputs["macAddress"] = state?.macAddress;
+            resourceInputs["macAddressVariable"] = state?.macAddressVariable;
+            resourceInputs["mediaType"] = state?.mediaType;
+            resourceInputs["mediaTypeVariable"] = state?.mediaTypeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64"] = state?.nat64;
+            resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["speed"] = state?.speed;
+            resourceInputs["speedVariable"] = state?.speedVariable;
+            resourceInputs["staticNats"] = state?.staticNats;
+            resourceInputs["tcpMss"] = state?.tcpMss;
+            resourceInputs["tcpMssVariable"] = state?.tcpMssVariable;
+            resourceInputs["tracker"] = state?.tracker;
+            resourceInputs["trackerVariable"] = state?.trackerVariable;
+            resourceInputs["trustsecEnableEnforcedPropogation"] = state?.trustsecEnableEnforcedPropogation;
+            resourceInputs["trustsecEnableSgtPropogation"] = state?.trustsecEnableSgtPropogation;
+            resourceInputs["trustsecEnforcedSecurityGroupTag"] = state?.trustsecEnforcedSecurityGroupTag;
+            resourceInputs["trustsecEnforcedSecurityGroupTagVariable"] = state?.trustsecEnforcedSecurityGroupTagVariable;
+            resourceInputs["trustsecPropogate"] = state?.trustsecPropogate;
+            resourceInputs["trustsecSecurityGroupTag"] = state?.trustsecSecurityGroupTag;
+            resourceInputs["trustsecSecurityGroupTagVariable"] = state?.trustsecSecurityGroupTagVariable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["xconnect"] = state?.xconnect;
+            resourceInputs["xconnectVariable"] = state?.xconnectVariable;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceEthernetFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
-            resourceInputs["aclIpv4EgressPolicyId"] = args ? args.aclIpv4EgressPolicyId : undefined;
-            resourceInputs["aclIpv4IngressPolicyId"] = args ? args.aclIpv4IngressPolicyId : undefined;
-            resourceInputs["aclIpv6EgressPolicyId"] = args ? args.aclIpv6EgressPolicyId : undefined;
-            resourceInputs["aclIpv6IngressPolicyId"] = args ? args.aclIpv6IngressPolicyId : undefined;
-            resourceInputs["aclShapingRate"] = args ? args.aclShapingRate : undefined;
-            resourceInputs["aclShapingRateVariable"] = args ? args.aclShapingRateVariable : undefined;
-            resourceInputs["arpTimeout"] = args ? args.arpTimeout : undefined;
-            resourceInputs["arpTimeoutVariable"] = args ? args.arpTimeoutVariable : undefined;
-            resourceInputs["arps"] = args ? args.arps : undefined;
-            resourceInputs["autonegotiate"] = args ? args.autonegotiate : undefined;
-            resourceInputs["autonegotiateVariable"] = args ? args.autonegotiateVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["duplex"] = args ? args.duplex : undefined;
-            resourceInputs["duplexVariable"] = args ? args.duplexVariable : undefined;
-            resourceInputs["enableDhcpv6"] = args ? args.enableDhcpv6 : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["icmpRedirectDisable"] = args ? args.icmpRedirectDisable : undefined;
-            resourceInputs["icmpRedirectDisableVariable"] = args ? args.icmpRedirectDisableVariable : undefined;
-            resourceInputs["interfaceDescription"] = args ? args.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = args ? args.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceMtu"] = args ? args.interfaceMtu : undefined;
-            resourceInputs["interfaceMtuVariable"] = args ? args.interfaceMtuVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["ipDirectedBroadcast"] = args ? args.ipDirectedBroadcast : undefined;
-            resourceInputs["ipDirectedBroadcastVariable"] = args ? args.ipDirectedBroadcastVariable : undefined;
-            resourceInputs["ipMtu"] = args ? args.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = args ? args.ipMtuVariable : undefined;
-            resourceInputs["ipv4Address"] = args ? args.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4DhcpDistance"] = args ? args.ipv4DhcpDistance : undefined;
-            resourceInputs["ipv4DhcpDistanceVariable"] = args ? args.ipv4DhcpDistanceVariable : undefined;
-            resourceInputs["ipv4DhcpHelperVariable"] = args ? args.ipv4DhcpHelperVariable : undefined;
-            resourceInputs["ipv4DhcpHelpers"] = args ? args.ipv4DhcpHelpers : undefined;
-            resourceInputs["ipv4Nat"] = args ? args.ipv4Nat : undefined;
-            resourceInputs["ipv4NatLoopback"] = args ? args.ipv4NatLoopback : undefined;
-            resourceInputs["ipv4NatLoopbackVariable"] = args ? args.ipv4NatLoopbackVariable : undefined;
-            resourceInputs["ipv4NatOverload"] = args ? args.ipv4NatOverload : undefined;
-            resourceInputs["ipv4NatOverloadVariable"] = args ? args.ipv4NatOverloadVariable : undefined;
-            resourceInputs["ipv4NatPrefixLength"] = args ? args.ipv4NatPrefixLength : undefined;
-            resourceInputs["ipv4NatPrefixLengthVariable"] = args ? args.ipv4NatPrefixLengthVariable : undefined;
-            resourceInputs["ipv4NatRangeEnd"] = args ? args.ipv4NatRangeEnd : undefined;
-            resourceInputs["ipv4NatRangeEndVariable"] = args ? args.ipv4NatRangeEndVariable : undefined;
-            resourceInputs["ipv4NatRangeStart"] = args ? args.ipv4NatRangeStart : undefined;
-            resourceInputs["ipv4NatRangeStartVariable"] = args ? args.ipv4NatRangeStartVariable : undefined;
-            resourceInputs["ipv4NatTcpTimeout"] = args ? args.ipv4NatTcpTimeout : undefined;
-            resourceInputs["ipv4NatTcpTimeoutVariable"] = args ? args.ipv4NatTcpTimeoutVariable : undefined;
-            resourceInputs["ipv4NatType"] = args ? args.ipv4NatType : undefined;
-            resourceInputs["ipv4NatTypeVariable"] = args ? args.ipv4NatTypeVariable : undefined;
-            resourceInputs["ipv4NatUdpTimeout"] = args ? args.ipv4NatUdpTimeout : undefined;
-            resourceInputs["ipv4NatUdpTimeoutVariable"] = args ? args.ipv4NatUdpTimeoutVariable : undefined;
-            resourceInputs["ipv4SecondaryAddresses"] = args ? args.ipv4SecondaryAddresses : undefined;
-            resourceInputs["ipv4SubnetMask"] = args ? args.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = args ? args.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["ipv4Vrrps"] = args ? args.ipv4Vrrps : undefined;
-            resourceInputs["ipv6Address"] = args ? args.ipv6Address : undefined;
-            resourceInputs["ipv6AddressVariable"] = args ? args.ipv6AddressVariable : undefined;
-            resourceInputs["ipv6DhcpHelpers"] = args ? args.ipv6DhcpHelpers : undefined;
-            resourceInputs["ipv6DhcpSecondaryAddresses"] = args ? args.ipv6DhcpSecondaryAddresses : undefined;
-            resourceInputs["ipv6Nat"] = args ? args.ipv6Nat : undefined;
-            resourceInputs["ipv6SecondaryAddresses"] = args ? args.ipv6SecondaryAddresses : undefined;
-            resourceInputs["ipv6Vrrps"] = args ? args.ipv6Vrrps : undefined;
-            resourceInputs["loadInterval"] = args ? args.loadInterval : undefined;
-            resourceInputs["loadIntervalVariable"] = args ? args.loadIntervalVariable : undefined;
-            resourceInputs["macAddress"] = args ? args.macAddress : undefined;
-            resourceInputs["macAddressVariable"] = args ? args.macAddressVariable : undefined;
-            resourceInputs["mediaType"] = args ? args.mediaType : undefined;
-            resourceInputs["mediaTypeVariable"] = args ? args.mediaTypeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64"] = args ? args.nat64 : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["speed"] = args ? args.speed : undefined;
-            resourceInputs["speedVariable"] = args ? args.speedVariable : undefined;
-            resourceInputs["staticNats"] = args ? args.staticNats : undefined;
-            resourceInputs["tcpMss"] = args ? args.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = args ? args.tcpMssVariable : undefined;
-            resourceInputs["tracker"] = args ? args.tracker : undefined;
-            resourceInputs["trackerVariable"] = args ? args.trackerVariable : undefined;
-            resourceInputs["trustsecEnableEnforcedPropogation"] = args ? args.trustsecEnableEnforcedPropogation : undefined;
-            resourceInputs["trustsecEnableSgtPropogation"] = args ? args.trustsecEnableSgtPropogation : undefined;
-            resourceInputs["trustsecEnforcedSecurityGroupTag"] = args ? args.trustsecEnforcedSecurityGroupTag : undefined;
-            resourceInputs["trustsecEnforcedSecurityGroupTagVariable"] = args ? args.trustsecEnforcedSecurityGroupTagVariable : undefined;
-            resourceInputs["trustsecPropogate"] = args ? args.trustsecPropogate : undefined;
-            resourceInputs["trustsecSecurityGroupTag"] = args ? args.trustsecSecurityGroupTag : undefined;
-            resourceInputs["trustsecSecurityGroupTagVariable"] = args ? args.trustsecSecurityGroupTagVariable : undefined;
-            resourceInputs["xconnect"] = args ? args.xconnect : undefined;
-            resourceInputs["xconnectVariable"] = args ? args.xconnectVariable : undefined;
+            resourceInputs["aclIpv4EgressPolicyId"] = args?.aclIpv4EgressPolicyId;
+            resourceInputs["aclIpv4IngressPolicyId"] = args?.aclIpv4IngressPolicyId;
+            resourceInputs["aclIpv6EgressPolicyId"] = args?.aclIpv6EgressPolicyId;
+            resourceInputs["aclIpv6IngressPolicyId"] = args?.aclIpv6IngressPolicyId;
+            resourceInputs["aclShapingRate"] = args?.aclShapingRate;
+            resourceInputs["aclShapingRateVariable"] = args?.aclShapingRateVariable;
+            resourceInputs["arpTimeout"] = args?.arpTimeout;
+            resourceInputs["arpTimeoutVariable"] = args?.arpTimeoutVariable;
+            resourceInputs["arps"] = args?.arps;
+            resourceInputs["autonegotiate"] = args?.autonegotiate;
+            resourceInputs["autonegotiateVariable"] = args?.autonegotiateVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["duplex"] = args?.duplex;
+            resourceInputs["duplexVariable"] = args?.duplexVariable;
+            resourceInputs["enableDhcpv6"] = args?.enableDhcpv6;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["icmpRedirectDisable"] = args?.icmpRedirectDisable;
+            resourceInputs["icmpRedirectDisableVariable"] = args?.icmpRedirectDisableVariable;
+            resourceInputs["interfaceDescription"] = args?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
+            resourceInputs["interfaceMtu"] = args?.interfaceMtu;
+            resourceInputs["interfaceMtuVariable"] = args?.interfaceMtuVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["ipDirectedBroadcast"] = args?.ipDirectedBroadcast;
+            resourceInputs["ipDirectedBroadcastVariable"] = args?.ipDirectedBroadcastVariable;
+            resourceInputs["ipMtu"] = args?.ipMtu;
+            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
+            resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["ipv4DhcpDistance"] = args?.ipv4DhcpDistance;
+            resourceInputs["ipv4DhcpDistanceVariable"] = args?.ipv4DhcpDistanceVariable;
+            resourceInputs["ipv4DhcpHelperVariable"] = args?.ipv4DhcpHelperVariable;
+            resourceInputs["ipv4DhcpHelpers"] = args?.ipv4DhcpHelpers;
+            resourceInputs["ipv4Nat"] = args?.ipv4Nat;
+            resourceInputs["ipv4NatLoopback"] = args?.ipv4NatLoopback;
+            resourceInputs["ipv4NatLoopbackVariable"] = args?.ipv4NatLoopbackVariable;
+            resourceInputs["ipv4NatOverload"] = args?.ipv4NatOverload;
+            resourceInputs["ipv4NatOverloadVariable"] = args?.ipv4NatOverloadVariable;
+            resourceInputs["ipv4NatPrefixLength"] = args?.ipv4NatPrefixLength;
+            resourceInputs["ipv4NatPrefixLengthVariable"] = args?.ipv4NatPrefixLengthVariable;
+            resourceInputs["ipv4NatRangeEnd"] = args?.ipv4NatRangeEnd;
+            resourceInputs["ipv4NatRangeEndVariable"] = args?.ipv4NatRangeEndVariable;
+            resourceInputs["ipv4NatRangeStart"] = args?.ipv4NatRangeStart;
+            resourceInputs["ipv4NatRangeStartVariable"] = args?.ipv4NatRangeStartVariable;
+            resourceInputs["ipv4NatTcpTimeout"] = args?.ipv4NatTcpTimeout;
+            resourceInputs["ipv4NatTcpTimeoutVariable"] = args?.ipv4NatTcpTimeoutVariable;
+            resourceInputs["ipv4NatType"] = args?.ipv4NatType;
+            resourceInputs["ipv4NatTypeVariable"] = args?.ipv4NatTypeVariable;
+            resourceInputs["ipv4NatUdpTimeout"] = args?.ipv4NatUdpTimeout;
+            resourceInputs["ipv4NatUdpTimeoutVariable"] = args?.ipv4NatUdpTimeoutVariable;
+            resourceInputs["ipv4SecondaryAddresses"] = args?.ipv4SecondaryAddresses;
+            resourceInputs["ipv4SubnetMask"] = args?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv4Vrrps"] = args?.ipv4Vrrps;
+            resourceInputs["ipv6Address"] = args?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = args?.ipv6AddressVariable;
+            resourceInputs["ipv6DhcpHelpers"] = args?.ipv6DhcpHelpers;
+            resourceInputs["ipv6DhcpSecondaryAddresses"] = args?.ipv6DhcpSecondaryAddresses;
+            resourceInputs["ipv6Nat"] = args?.ipv6Nat;
+            resourceInputs["ipv6SecondaryAddresses"] = args?.ipv6SecondaryAddresses;
+            resourceInputs["ipv6Vrrps"] = args?.ipv6Vrrps;
+            resourceInputs["loadInterval"] = args?.loadInterval;
+            resourceInputs["loadIntervalVariable"] = args?.loadIntervalVariable;
+            resourceInputs["macAddress"] = args?.macAddress;
+            resourceInputs["macAddressVariable"] = args?.macAddressVariable;
+            resourceInputs["mediaType"] = args?.mediaType;
+            resourceInputs["mediaTypeVariable"] = args?.mediaTypeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64"] = args?.nat64;
+            resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["speed"] = args?.speed;
+            resourceInputs["speedVariable"] = args?.speedVariable;
+            resourceInputs["staticNats"] = args?.staticNats;
+            resourceInputs["tcpMss"] = args?.tcpMss;
+            resourceInputs["tcpMssVariable"] = args?.tcpMssVariable;
+            resourceInputs["tracker"] = args?.tracker;
+            resourceInputs["trackerVariable"] = args?.trackerVariable;
+            resourceInputs["trustsecEnableEnforcedPropogation"] = args?.trustsecEnableEnforcedPropogation;
+            resourceInputs["trustsecEnableSgtPropogation"] = args?.trustsecEnableSgtPropogation;
+            resourceInputs["trustsecEnforcedSecurityGroupTag"] = args?.trustsecEnforcedSecurityGroupTag;
+            resourceInputs["trustsecEnforcedSecurityGroupTagVariable"] = args?.trustsecEnforcedSecurityGroupTagVariable;
+            resourceInputs["trustsecPropogate"] = args?.trustsecPropogate;
+            resourceInputs["trustsecSecurityGroupTag"] = args?.trustsecSecurityGroupTag;
+            resourceInputs["trustsecSecurityGroupTagVariable"] = args?.trustsecSecurityGroupTagVariable;
+            resourceInputs["xconnect"] = args?.xconnect;
+            resourceInputs["xconnectVariable"] = args?.xconnectVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -612,7 +638,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
     aclIpv6EgressPolicyId?: pulumi.Input<string>;
     aclIpv6IngressPolicyId?: pulumi.Input<string>;
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      */
     aclShapingRate?: pulumi.Input<number>;
     /**
@@ -620,7 +647,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     aclShapingRateVariable?: pulumi.Input<string>;
     /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      */
     arpTimeout?: pulumi.Input<number>;
     /**
@@ -644,7 +673,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
     duplex?: pulumi.Input<string>;
     /**
@@ -660,7 +690,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
     icmpRedirectDisable?: pulumi.Input<boolean>;
     /**
@@ -673,7 +704,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -686,7 +719,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
     ipDirectedBroadcast?: pulumi.Input<boolean>;
     /**
@@ -694,8 +728,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipDirectedBroadcastVariable?: pulumi.Input<string>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -711,7 +746,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * DHCP Distance
+     *   - Range: `1`-`65536`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -727,7 +763,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
     ipv4Nat?: pulumi.Input<boolean>;
     /**
@@ -739,7 +776,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload
+     *   - Default value: `true`
      */
     ipv4NatOverload?: pulumi.Input<boolean>;
     /**
@@ -747,7 +785,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      */
     ipv4NatPrefixLength?: pulumi.Input<number>;
     /**
@@ -771,7 +810,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
     ipv4NatTcpTimeout?: pulumi.Input<number>;
     /**
@@ -779,7 +820,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * NAT Type - Choices: `pool`, `loopback`
+     * NAT Type
+     *   - Choices: `pool`, `loopback`
      */
     ipv4NatType?: pulumi.Input<string>;
     /**
@@ -787,7 +829,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4NatTypeVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      */
     ipv4NatUdpTimeout?: pulumi.Input<number>;
     /**
@@ -799,11 +843,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -831,7 +872,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv6DhcpSecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>[]>;
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      */
     ipv6Nat?: pulumi.Input<boolean>;
     /**
@@ -843,7 +885,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>[]>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
     loadInterval?: pulumi.Input<number>;
     /**
@@ -859,7 +903,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     macAddressVariable?: pulumi.Input<string>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
     mediaType?: pulumi.Input<string>;
     /**
@@ -871,7 +916,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      */
     nat64?: pulumi.Input<boolean>;
     /**
@@ -887,7 +933,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
     speed?: pulumi.Input<string>;
     /**
@@ -899,7 +946,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>[]>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -919,11 +967,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     trustsecEnableEnforcedPropogation?: pulumi.Input<boolean>;
     /**
-     * Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      */
     trustsecEnableSgtPropogation?: pulumi.Input<boolean>;
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      */
     trustsecEnforcedSecurityGroupTag?: pulumi.Input<number>;
     /**
@@ -931,11 +981,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureState {
      */
     trustsecEnforcedSecurityGroupTagVariable?: pulumi.Input<string>;
     /**
-     * Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      */
     trustsecPropogate?: pulumi.Input<boolean>;
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      */
     trustsecSecurityGroupTag?: pulumi.Input<number>;
     /**
@@ -965,7 +1017,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
     aclIpv6EgressPolicyId?: pulumi.Input<string>;
     aclIpv6IngressPolicyId?: pulumi.Input<string>;
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      */
     aclShapingRate?: pulumi.Input<number>;
     /**
@@ -973,7 +1026,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     aclShapingRateVariable?: pulumi.Input<string>;
     /**
-     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      */
     arpTimeout?: pulumi.Input<number>;
     /**
@@ -997,7 +1052,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      */
     duplex?: pulumi.Input<string>;
     /**
@@ -1013,7 +1069,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      */
     icmpRedirectDisable?: pulumi.Input<boolean>;
     /**
@@ -1026,7 +1083,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      */
     interfaceMtu?: pulumi.Input<number>;
     /**
@@ -1039,7 +1098,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      */
     ipDirectedBroadcast?: pulumi.Input<boolean>;
     /**
@@ -1047,8 +1107,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipDirectedBroadcastVariable?: pulumi.Input<string>;
     /**
-     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-     * <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -1064,7 +1125,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * DHCP Distance
+     *   - Range: `1`-`65536`
      */
     ipv4DhcpDistance?: pulumi.Input<number>;
     /**
@@ -1080,7 +1142,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4DhcpHelpers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      */
     ipv4Nat?: pulumi.Input<boolean>;
     /**
@@ -1092,7 +1155,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatLoopbackVariable?: pulumi.Input<string>;
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload
+     *   - Default value: `true`
      */
     ipv4NatOverload?: pulumi.Input<boolean>;
     /**
@@ -1100,7 +1164,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatOverloadVariable?: pulumi.Input<string>;
     /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      */
     ipv4NatPrefixLength?: pulumi.Input<number>;
     /**
@@ -1124,7 +1189,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatRangeStartVariable?: pulumi.Input<string>;
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      */
     ipv4NatTcpTimeout?: pulumi.Input<number>;
     /**
@@ -1132,7 +1199,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatTcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * NAT Type - Choices: `pool`, `loopback`
+     * NAT Type
+     *   - Choices: `pool`, `loopback`
      */
     ipv4NatType?: pulumi.Input<string>;
     /**
@@ -1140,7 +1208,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4NatTypeVariable?: pulumi.Input<string>;
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      */
     ipv4NatUdpTimeout?: pulumi.Input<number>;
     /**
@@ -1152,11 +1222,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv4SecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>[]>;
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -1184,7 +1251,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv6DhcpSecondaryAddresses?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>[]>;
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      */
     ipv6Nat?: pulumi.Input<boolean>;
     /**
@@ -1196,7 +1264,9 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     ipv6Vrrps?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>[]>;
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      */
     loadInterval?: pulumi.Input<number>;
     /**
@@ -1212,7 +1282,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     macAddressVariable?: pulumi.Input<string>;
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      */
     mediaType?: pulumi.Input<string>;
     /**
@@ -1224,7 +1295,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      */
     nat64?: pulumi.Input<boolean>;
     /**
@@ -1240,7 +1312,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      */
     speed?: pulumi.Input<string>;
     /**
@@ -1252,7 +1325,8 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     staticNats?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>[]>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -1272,11 +1346,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     trustsecEnableEnforcedPropogation?: pulumi.Input<boolean>;
     /**
-     * Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      */
     trustsecEnableSgtPropogation?: pulumi.Input<boolean>;
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      */
     trustsecEnforcedSecurityGroupTag?: pulumi.Input<number>;
     /**
@@ -1284,11 +1360,13 @@ export interface ServiceLanVpnInterfaceEthernetFeatureArgs {
      */
     trustsecEnforcedSecurityGroupTagVariable?: pulumi.Input<string>;
     /**
-     * Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      */
     trustsecPropogate?: pulumi.Input<boolean>;
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      */
     trustsecSecurityGroupTag?: pulumi.Input<number>;
     /**

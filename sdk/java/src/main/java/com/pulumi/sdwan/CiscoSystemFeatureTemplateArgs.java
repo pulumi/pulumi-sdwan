@@ -24,14 +24,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     public static final CiscoSystemFeatureTemplateArgs Empty = new CiscoSystemFeatureTemplateArgs();
 
     /**
-     * Collect admin-tech before reboot due to daemon failure - Default value: `true`
+     * Collect admin-tech before reboot due to daemon failure
+     *   - Default value: `true`
      * 
      */
     @Import(name="adminTechOnFailure")
     private @Nullable Output<Boolean> adminTechOnFailure;
 
     /**
-     * @return Collect admin-tech before reboot due to daemon failure - Default value: `true`
+     * @return Collect admin-tech before reboot due to daemon failure
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> adminTechOnFailure() {
@@ -54,14 +56,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the affinity group number for router - Range: `1`-`255`
+     * Set the affinity group number for router
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="affinityGroupNumber")
     private @Nullable Output<Integer> affinityGroupNumber;
 
     /**
-     * @return Set the affinity group number for router - Range: `1`-`255`
+     * @return Set the affinity group number for router
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> affinityGroupNumber() {
@@ -114,16 +118,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the console baud rate - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200` - Default
-     * value: `9600`
+     * Set the console baud rate
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
+     *   - Default value: `9600`
      * 
      */
     @Import(name="consoleBaudRate")
     private @Nullable Output<String> consoleBaudRate;
 
     /**
-     * @return Set the console baud rate - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200` - Default
-     * value: `9600`
+     * @return Set the console baud rate
+     *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
+     *   - Default value: `9600`
      * 
      */
     public Optional<Output<String>> consoleBaudRate() {
@@ -146,14 +152,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the policer rate for control sessions - Range: `1`-`65535` - Default value: `300`
+     * Set the policer rate for control sessions
+     *   - Range: `1`-`65535`
+     *   - Default value: `300`
      * 
      */
     @Import(name="controlSessionPps")
     private @Nullable Output<Integer> controlSessionPps;
 
     /**
-     * @return Set the policer rate for control sessions - Range: `1`-`65535` - Default value: `300`
+     * @return Set the policer rate for control sessions
+     *   - Range: `1`-`65535`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> controlSessionPps() {
@@ -251,18 +261,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -270,14 +278,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     @Import(name="enableMrfMigration")
     private @Nullable Output<String> enableMrfMigration;
 
     /**
-     * @return Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * @return Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     public Optional<Output<String>> enableMrfMigration() {
@@ -285,14 +295,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * Enhanced App Aware Routing
+     *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
+     *   - Default value: `disabled`
      * 
      */
     @Import(name="enhancedAppAwareRouting")
     private @Nullable Output<String> enhancedAppAwareRouting;
 
     /**
-     * @return Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+     * @return Enhanced App Aware Routing
+     *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
+     *   - Default value: `disabled`
      * 
      */
     public Optional<Output<String>> enhancedAppAwareRouting() {
@@ -315,14 +329,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable Geo fencing - Default value: `false`
+     * Enable Geo fencing
+     *   - Default value: `false`
      * 
      */
     @Import(name="geoFencing")
     private @Nullable Output<Boolean> geoFencing;
 
     /**
-     * @return Enable Geo fencing - Default value: `false`
+     * @return Enable Geo fencing
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> geoFencing() {
@@ -330,14 +346,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
+     * Set the device’s geo fencing range
+     *   - Range: `100`-`10000`
+     *   - Default value: `100`
      * 
      */
     @Import(name="geoFencingRange")
     private @Nullable Output<Integer> geoFencingRange;
 
     /**
-     * @return Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
+     * @return Set the device’s geo fencing range
+     *   - Range: `100`-`10000`
+     *   - Default value: `100`
      * 
      */
     public Optional<Output<Integer>> geoFencingRange() {
@@ -360,14 +380,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable Geo fencing - Default value: `false`
+     * Enable Geo fencing
+     *   - Default value: `false`
      * 
      */
     @Import(name="geoFencingSms")
     private @Nullable Output<Boolean> geoFencingSms;
 
     /**
-     * @return Enable Geo fencing - Default value: `false`
+     * @return Enable Geo fencing
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> geoFencingSms() {
@@ -420,14 +442,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Idle CLI timeout in minutes - Range: `0`-`300`
+     * Idle CLI timeout in minutes
+     *   - Range: `0`-`300`
      * 
      */
     @Import(name="idleTimeout")
     private @Nullable Output<Integer> idleTimeout;
 
     /**
-     * @return Idle CLI timeout in minutes - Range: `0`-`300`
+     * @return Idle CLI timeout in minutes
+     *   - Range: `0`-`300`
      * 
      */
     public Optional<Output<Integer>> idleTimeout() {
@@ -450,14 +474,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the device’s physical latitude - Range: `-90`-`90`
+     * Set the device’s physical latitude
+     *   - Range: `-90`-`90`
      * 
      */
     @Import(name="latitude")
     private @Nullable Output<Double> latitude;
 
     /**
-     * @return Set the device’s physical latitude - Range: `-90`-`90`
+     * @return Set the device’s physical latitude
+     *   - Range: `-90`-`90`
      * 
      */
     public Optional<Output<Double>> latitude() {
@@ -510,14 +536,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the device’s physical longitude - Range: `-180`-`180`
+     * Set the device’s physical longitude
+     *   - Range: `-180`-`180`
      * 
      */
     @Import(name="longitude")
     private @Nullable Output<Double> longitude;
 
     /**
-     * @return Set the device’s physical longitude - Range: `-180`-`180`
+     * @return Set the device’s physical longitude
+     *   - Range: `-180`-`180`
      * 
      */
     public Optional<Output<Double>> longitude() {
@@ -540,14 +568,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the maximum number of OMP sessions &lt;1..100&gt; the device can have - Range: `1`-`100`
+     * Set the maximum number of OMP sessions &lt;1..100&gt; the device can have
+     *   - Range: `1`-`100`
      * 
      */
     @Import(name="maxOmpSessions")
     private @Nullable Output<Integer> maxOmpSessions;
 
     /**
-     * @return Set the maximum number of OMP sessions &lt;1..100&gt; the device can have - Range: `1`-`100`
+     * @return Set the maximum number of OMP sessions &lt;1..100&gt; the device can have
+     *   - Range: `1`-`100`
      * 
      */
     public Optional<Output<Integer>> maxOmpSessions() {
@@ -570,14 +600,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="migrationBgpCommunity")
     private @Nullable Output<Integer> migrationBgpCommunity;
 
     /**
-     * @return Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * @return Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> migrationBgpCommunity() {
@@ -585,14 +617,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Device is multi-tenant - Default value: `false`
+     * Device is multi-tenant
+     *   - Default value: `false`
      * 
      */
     @Import(name="multiTenant")
     private @Nullable Output<Boolean> multiTenant;
 
     /**
-     * @return Device is multi-tenant - Default value: `false`
+     * @return Device is multi-tenant
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> multiTenant() {
@@ -645,14 +679,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable or disable On-demand Tunnel - Default value: `false`
+     * Enable or disable On-demand Tunnel
+     *   - Default value: `false`
      * 
      */
     @Import(name="onDemandTunnel")
     private @Nullable Output<Boolean> onDemandTunnel;
 
     /**
-     * @return Enable or disable On-demand Tunnel - Default value: `false`
+     * @return Enable or disable On-demand Tunnel
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> onDemandTunnel() {
@@ -660,14 +696,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Idle CLI timeout in minutes - Range: `0`-`300`
+     * Idle CLI timeout in minutes
+     *   - Range: `0`-`300`
      * 
      */
     @Import(name="onDemandTunnelIdleTimeout")
     private @Nullable Output<Integer> onDemandTunnelIdleTimeout;
 
     /**
-     * @return Idle CLI timeout in minutes - Range: `0`-`300`
+     * @return Idle CLI timeout in minutes
+     *   - Range: `0`-`300`
      * 
      */
     public Optional<Output<Integer>> onDemandTunnelIdleTimeout() {
@@ -705,14 +743,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the Overlay ID - Range: `1`-`4294967295` - Default value: `1`
+     * Set the Overlay ID
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `1`
      * 
      */
     @Import(name="overlayId")
     private @Nullable Output<Integer> overlayId;
 
     /**
-     * @return Set the Overlay ID - Range: `1`-`4294967295` - Default value: `1`
+     * @return Set the Overlay ID
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> overlayId() {
@@ -735,14 +777,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable port hopping - Default value: `true`
+     * Enable port hopping
+     *   - Default value: `true`
      * 
      */
     @Import(name="portHopping")
     private @Nullable Output<Boolean> portHopping;
 
     /**
-     * @return Enable port hopping - Default value: `true`
+     * @return Enable port hopping
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> portHopping() {
@@ -765,14 +809,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the TLOC port offset when multiple devices are behind a NAT - Range: `0`-`19` - Default value: `0`
+     * Set the TLOC port offset when multiple devices are behind a NAT
+     *   - Range: `0`-`19`
+     *   - Default value: `0`
      * 
      */
     @Import(name="portOffset")
     private @Nullable Output<Integer> portOffset;
 
     /**
-     * @return Set the TLOC port offset when multiple devices are behind a NAT - Range: `0`-`19` - Default value: `0`
+     * @return Set the TLOC port offset when multiple devices are behind a NAT
+     *   - Range: `0`-`19`
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<Integer>> portOffset() {
@@ -795,14 +843,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Import(name="regionId")
     private @Nullable Output<Integer> regionId;
 
     /**
-     * @return Set region ID - Range: `1`-`63`
+     * @return Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Optional<Output<Integer>> regionId() {
@@ -825,14 +875,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     @Import(name="role")
     private @Nullable Output<String> role;
 
     /**
-     * @return Set the role for router - Choices: `edge-router`, `border-router`
+     * @return Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     public Optional<Output<String>> role() {
@@ -855,14 +907,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set secondary region ID - Range: `1`-`63`
+     * Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Import(name="secondaryRegionId")
     private @Nullable Output<Integer> secondaryRegionId;
 
     /**
-     * @return Set secondary region ID - Range: `1`-`63`
+     * @return Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Optional<Output<Integer>> secondaryRegionId() {
@@ -885,14 +939,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the site identifier - Range: `1`-`4294967295`
+     * Set the site identifier
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="siteId")
     private @Nullable Output<Integer> siteId;
 
     /**
-     * @return Set the site identifier - Range: `1`-`4294967295`
+     * @return Set the site identifier
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> siteId() {
@@ -975,160 +1031,18 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set the timezone - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`,
-     * `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`,
-     * `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`,
-     * `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`,
-     * `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`,
-     * `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`,
-     * `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`,
-     * `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`,
-     * `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`,
-     * `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`,
-     * `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`,
-     * `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`,
-     * `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`,
-     * `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`,
-     * `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`,
-     * `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`,
-     * `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`,
-     * `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`,
-     * `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`,
-     * `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`,
-     * `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`,
-     * `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`,
-     * `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`,
-     * `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`,
-     * `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`,
-     * `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`,
-     * `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`,
-     * `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`,
-     * `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`,
-     * `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`,
-     * `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`,
-     * `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`,
-     * `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`,
-     * `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`,
-     * `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`,
-     * `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`,
-     * `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`,
-     * `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`,
-     * `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`,
-     * `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`,
-     * `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`,
-     * `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`,
-     * `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`,
-     * `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`,
-     * `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`,
-     * `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`,
-     * `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`,
-     * `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`,
-     * `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`,
-     * `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`,
-     * `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`,
-     * `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`,
-     * `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`,
-     * `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`,
-     * `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`,
-     * `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`,
-     * `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`,
-     * `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`,
-     * `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`,
-     * `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`,
-     * `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`,
-     * `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`,
-     * `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`,
-     * `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`,
-     * `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`,
-     * `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`,
-     * `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`,
-     * `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`,
-     * `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`,
-     * `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`,
-     * `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`,
-     * `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`,
-     * `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`,
-     * `Africa/Harare`, `UTC` - Default value: `UTC`
+     * Set the timezone
+     *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
+     *   - Default value: `UTC`
      * 
      */
     @Import(name="timezone")
     private @Nullable Output<String> timezone;
 
     /**
-     * @return Set the timezone - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`,
-     * `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`,
-     * `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`,
-     * `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`,
-     * `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`,
-     * `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`,
-     * `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`,
-     * `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`,
-     * `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`,
-     * `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`,
-     * `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`,
-     * `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`,
-     * `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`,
-     * `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`,
-     * `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`,
-     * `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`,
-     * `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`,
-     * `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`,
-     * `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`,
-     * `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`,
-     * `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`,
-     * `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`,
-     * `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`,
-     * `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`,
-     * `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`,
-     * `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`,
-     * `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`,
-     * `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`,
-     * `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`,
-     * `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`,
-     * `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`,
-     * `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`,
-     * `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`,
-     * `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`,
-     * `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`,
-     * `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`,
-     * `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`,
-     * `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`,
-     * `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`,
-     * `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`,
-     * `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`,
-     * `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`,
-     * `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`,
-     * `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`,
-     * `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`,
-     * `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`,
-     * `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`,
-     * `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`,
-     * `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`,
-     * `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`,
-     * `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`,
-     * `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`,
-     * `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`,
-     * `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`,
-     * `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`,
-     * `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`,
-     * `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`,
-     * `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`,
-     * `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`,
-     * `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`,
-     * `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`,
-     * `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`,
-     * `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`,
-     * `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`,
-     * `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`,
-     * `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`,
-     * `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`,
-     * `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`,
-     * `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`,
-     * `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`,
-     * `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`,
-     * `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`,
-     * `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`,
-     * `Africa/Harare`, `UTC` - Default value: `UTC`
+     * @return Set the timezone
+     *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
+     *   - Default value: `UTC`
      * 
      */
     public Optional<Output<String>> timezone() {
@@ -1151,14 +1065,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable or disable default gateway tracking - Default value: `true`
+     * Enable or disable default gateway tracking
+     *   - Default value: `true`
      * 
      */
     @Import(name="trackDefaultGateway")
     private @Nullable Output<Boolean> trackDefaultGateway;
 
     /**
-     * @return Enable or disable default gateway tracking - Default value: `true`
+     * @return Enable or disable default gateway tracking
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> trackDefaultGateway() {
@@ -1181,14 +1097,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * OMP Tag attached to routes based on interface tracking - Range: `1`-`4294967295`
+     * OMP Tag attached to routes based on interface tracking
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="trackInterfaceTag")
     private @Nullable Output<Integer> trackInterfaceTag;
 
     /**
-     * @return OMP Tag attached to routes based on interface tracking - Range: `1`-`4294967295`
+     * @return OMP Tag attached to routes based on interface tracking
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> trackInterfaceTag() {
@@ -1211,14 +1129,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Configure tracking of transport - Default value: `true`
+     * Configure tracking of transport
+     *   - Default value: `true`
      * 
      */
     @Import(name="trackTransport")
     private @Nullable Output<Boolean> trackTransport;
 
     /**
-     * @return Configure tracking of transport - Default value: `true`
+     * @return Configure tracking of transport
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> trackTransport() {
@@ -1256,14 +1176,16 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Enable transport gateway - Default value: `false`
+     * Enable transport gateway
+     *   - Default value: `false`
      * 
      */
     @Import(name="transportGateway")
     private @Nullable Output<Boolean> transportGateway;
 
     /**
-     * @return Enable transport gateway - Default value: `false`
+     * @return Enable transport gateway
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> transportGateway() {
@@ -1383,7 +1305,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param adminTechOnFailure Collect admin-tech before reboot due to daemon failure - Default value: `true`
+         * @param adminTechOnFailure Collect admin-tech before reboot due to daemon failure
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1394,7 +1317,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param adminTechOnFailure Collect admin-tech before reboot due to daemon failure - Default value: `true`
+         * @param adminTechOnFailure Collect admin-tech before reboot due to daemon failure
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1425,7 +1349,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param affinityGroupNumber Set the affinity group number for router - Range: `1`-`255`
+         * @param affinityGroupNumber Set the affinity group number for router
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1436,7 +1361,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param affinityGroupNumber Set the affinity group number for router - Range: `1`-`255`
+         * @param affinityGroupNumber Set the affinity group number for router
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1519,8 +1445,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param consoleBaudRate Set the console baud rate - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200` - Default
-         * value: `9600`
+         * @param consoleBaudRate Set the console baud rate
+         *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
+         *   - Default value: `9600`
          * 
          * @return builder
          * 
@@ -1531,8 +1458,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param consoleBaudRate Set the console baud rate - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200` - Default
-         * value: `9600`
+         * @param consoleBaudRate Set the console baud rate
+         *   - Choices: `1200`, `2400`, `4800`, `9600`, `19200`, `38400`, `57600`, `115200`
+         *   - Default value: `9600`
          * 
          * @return builder
          * 
@@ -1563,7 +1491,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param controlSessionPps Set the policer rate for control sessions - Range: `1`-`65535` - Default value: `300`
+         * @param controlSessionPps Set the policer rate for control sessions
+         *   - Range: `1`-`65535`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -1574,7 +1504,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param controlSessionPps Set the policer rate for control sessions - Range: `1`-`65535` - Default value: `300`
+         * @param controlSessionPps Set the policer rate for control sessions
+         *   - Range: `1`-`65535`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -1730,9 +1662,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1743,9 +1674,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1755,9 +1685,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -1767,7 +1696,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enableMrfMigration Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+         * @param enableMrfMigration Enable migration mode to Multi-Region Fabric
+         *   - Choices: `enabled`, `enabled-from-bgp-core`
          * 
          * @return builder
          * 
@@ -1778,7 +1708,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enableMrfMigration Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+         * @param enableMrfMigration Enable migration mode to Multi-Region Fabric
+         *   - Choices: `enabled`, `enabled-from-bgp-core`
          * 
          * @return builder
          * 
@@ -1788,7 +1719,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enhancedAppAwareRouting Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+         * @param enhancedAppAwareRouting Enhanced App Aware Routing
+         *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
+         *   - Default value: `disabled`
          * 
          * @return builder
          * 
@@ -1799,7 +1732,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param enhancedAppAwareRouting Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
+         * @param enhancedAppAwareRouting Enhanced App Aware Routing
+         *   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
+         *   - Default value: `disabled`
          * 
          * @return builder
          * 
@@ -1830,7 +1765,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencing Enable Geo fencing - Default value: `false`
+         * @param geoFencing Enable Geo fencing
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1841,7 +1777,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencing Enable Geo fencing - Default value: `false`
+         * @param geoFencing Enable Geo fencing
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1851,7 +1788,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencingRange Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
+         * @param geoFencingRange Set the device’s geo fencing range
+         *   - Range: `100`-`10000`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -1862,7 +1801,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencingRange Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
+         * @param geoFencingRange Set the device’s geo fencing range
+         *   - Range: `100`-`10000`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -1893,7 +1834,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencingSms Enable Geo fencing - Default value: `false`
+         * @param geoFencingSms Enable Geo fencing
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1904,7 +1846,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param geoFencingSms Enable Geo fencing - Default value: `false`
+         * @param geoFencingSms Enable Geo fencing
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1987,7 +1930,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param idleTimeout Idle CLI timeout in minutes - Range: `0`-`300`
+         * @param idleTimeout Idle CLI timeout in minutes
+         *   - Range: `0`-`300`
          * 
          * @return builder
          * 
@@ -1998,7 +1942,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param idleTimeout Idle CLI timeout in minutes - Range: `0`-`300`
+         * @param idleTimeout Idle CLI timeout in minutes
+         *   - Range: `0`-`300`
          * 
          * @return builder
          * 
@@ -2029,7 +1974,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param latitude Set the device’s physical latitude - Range: `-90`-`90`
+         * @param latitude Set the device’s physical latitude
+         *   - Range: `-90`-`90`
          * 
          * @return builder
          * 
@@ -2040,7 +1986,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param latitude Set the device’s physical latitude - Range: `-90`-`90`
+         * @param latitude Set the device’s physical latitude
+         *   - Range: `-90`-`90`
          * 
          * @return builder
          * 
@@ -2113,7 +2060,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param longitude Set the device’s physical longitude - Range: `-180`-`180`
+         * @param longitude Set the device’s physical longitude
+         *   - Range: `-180`-`180`
          * 
          * @return builder
          * 
@@ -2124,7 +2072,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param longitude Set the device’s physical longitude - Range: `-180`-`180`
+         * @param longitude Set the device’s physical longitude
+         *   - Range: `-180`-`180`
          * 
          * @return builder
          * 
@@ -2155,7 +2104,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param maxOmpSessions Set the maximum number of OMP sessions &lt;1..100&gt; the device can have - Range: `1`-`100`
+         * @param maxOmpSessions Set the maximum number of OMP sessions &lt;1..100&gt; the device can have
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 
@@ -2166,7 +2116,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param maxOmpSessions Set the maximum number of OMP sessions &lt;1..100&gt; the device can have - Range: `1`-`100`
+         * @param maxOmpSessions Set the maximum number of OMP sessions &lt;1..100&gt; the device can have
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 
@@ -2197,7 +2148,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2208,7 +2160,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2218,7 +2171,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param multiTenant Device is multi-tenant - Default value: `false`
+         * @param multiTenant Device is multi-tenant
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2229,7 +2183,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param multiTenant Device is multi-tenant - Default value: `false`
+         * @param multiTenant Device is multi-tenant
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2312,7 +2267,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param onDemandTunnel Enable or disable On-demand Tunnel - Default value: `false`
+         * @param onDemandTunnel Enable or disable On-demand Tunnel
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2323,7 +2279,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param onDemandTunnel Enable or disable On-demand Tunnel - Default value: `false`
+         * @param onDemandTunnel Enable or disable On-demand Tunnel
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2333,7 +2290,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param onDemandTunnelIdleTimeout Idle CLI timeout in minutes - Range: `0`-`300`
+         * @param onDemandTunnelIdleTimeout Idle CLI timeout in minutes
+         *   - Range: `0`-`300`
          * 
          * @return builder
          * 
@@ -2344,7 +2302,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param onDemandTunnelIdleTimeout Idle CLI timeout in minutes - Range: `0`-`300`
+         * @param onDemandTunnelIdleTimeout Idle CLI timeout in minutes
+         *   - Range: `0`-`300`
          * 
          * @return builder
          * 
@@ -2396,7 +2355,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param overlayId Set the Overlay ID - Range: `1`-`4294967295` - Default value: `1`
+         * @param overlayId Set the Overlay ID
+         *   - Range: `1`-`4294967295`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2407,7 +2368,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param overlayId Set the Overlay ID - Range: `1`-`4294967295` - Default value: `1`
+         * @param overlayId Set the Overlay ID
+         *   - Range: `1`-`4294967295`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2438,7 +2401,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param portHopping Enable port hopping - Default value: `true`
+         * @param portHopping Enable port hopping
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2449,7 +2413,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param portHopping Enable port hopping - Default value: `true`
+         * @param portHopping Enable port hopping
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2480,7 +2445,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param portOffset Set the TLOC port offset when multiple devices are behind a NAT - Range: `0`-`19` - Default value: `0`
+         * @param portOffset Set the TLOC port offset when multiple devices are behind a NAT
+         *   - Range: `0`-`19`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -2491,7 +2458,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param portOffset Set the TLOC port offset when multiple devices are behind a NAT - Range: `0`-`19` - Default value: `0`
+         * @param portOffset Set the TLOC port offset when multiple devices are behind a NAT
+         *   - Range: `0`-`19`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -2522,7 +2491,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param regionId Set region ID - Range: `1`-`63`
+         * @param regionId Set region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -2533,7 +2503,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param regionId Set region ID - Range: `1`-`63`
+         * @param regionId Set region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -2564,7 +2535,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param role Set the role for router - Choices: `edge-router`, `border-router`
+         * @param role Set the role for router
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -2575,7 +2547,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param role Set the role for router - Choices: `edge-router`, `border-router`
+         * @param role Set the role for router
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -2606,7 +2579,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param secondaryRegionId Set secondary region ID - Range: `1`-`63`
+         * @param secondaryRegionId Set secondary region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -2617,7 +2591,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param secondaryRegionId Set secondary region ID - Range: `1`-`63`
+         * @param secondaryRegionId Set secondary region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -2648,7 +2623,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param siteId Set the site identifier - Range: `1`-`4294967295`
+         * @param siteId Set the site identifier
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2659,7 +2635,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param siteId Set the site identifier - Range: `1`-`4294967295`
+         * @param siteId Set the site identifier
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -2774,80 +2751,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timezone Set the timezone - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`,
-         * `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`,
-         * `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`,
-         * `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`,
-         * `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`,
-         * `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`,
-         * `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`,
-         * `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`,
-         * `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`,
-         * `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`,
-         * `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`,
-         * `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`,
-         * `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`,
-         * `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`,
-         * `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`,
-         * `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`,
-         * `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`,
-         * `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`,
-         * `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`,
-         * `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`,
-         * `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`,
-         * `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`,
-         * `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`,
-         * `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`,
-         * `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`,
-         * `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`,
-         * `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`,
-         * `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`,
-         * `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`,
-         * `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`,
-         * `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`,
-         * `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`,
-         * `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`,
-         * `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`,
-         * `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`,
-         * `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`,
-         * `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`,
-         * `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`,
-         * `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`,
-         * `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`,
-         * `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`,
-         * `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`,
-         * `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`,
-         * `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`,
-         * `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`,
-         * `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`,
-         * `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`,
-         * `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`,
-         * `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`,
-         * `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`,
-         * `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`,
-         * `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`,
-         * `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`,
-         * `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`,
-         * `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`,
-         * `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`,
-         * `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`,
-         * `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`,
-         * `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`,
-         * `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`,
-         * `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`,
-         * `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`,
-         * `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`,
-         * `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`,
-         * `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`,
-         * `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`,
-         * `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`,
-         * `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`,
-         * `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`,
-         * `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`,
-         * `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`,
-         * `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`,
-         * `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`,
-         * `Africa/Harare`, `UTC` - Default value: `UTC`
+         * @param timezone Set the timezone
+         *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
+         *   - Default value: `UTC`
          * 
          * @return builder
          * 
@@ -2858,80 +2764,9 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timezone Set the timezone - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`,
-         * `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`,
-         * `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`,
-         * `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`,
-         * `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`,
-         * `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`,
-         * `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`,
-         * `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`,
-         * `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`,
-         * `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`,
-         * `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`,
-         * `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`,
-         * `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`,
-         * `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`,
-         * `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`,
-         * `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`,
-         * `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`,
-         * `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`,
-         * `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`,
-         * `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`,
-         * `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`,
-         * `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`,
-         * `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`,
-         * `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`,
-         * `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`,
-         * `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`,
-         * `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`,
-         * `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`,
-         * `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`,
-         * `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`,
-         * `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`,
-         * `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`,
-         * `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`,
-         * `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`,
-         * `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`,
-         * `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`,
-         * `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`,
-         * `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`,
-         * `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`,
-         * `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`,
-         * `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`,
-         * `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`,
-         * `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`,
-         * `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`,
-         * `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`,
-         * `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`,
-         * `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`,
-         * `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`,
-         * `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`,
-         * `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`,
-         * `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`,
-         * `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`,
-         * `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`,
-         * `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`,
-         * `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`,
-         * `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`,
-         * `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`,
-         * `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`,
-         * `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`,
-         * `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`,
-         * `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`,
-         * `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`,
-         * `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`,
-         * `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`,
-         * `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`,
-         * `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`,
-         * `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`,
-         * `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`,
-         * `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`,
-         * `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`,
-         * `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`,
-         * `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`,
-         * `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`,
-         * `Africa/Harare`, `UTC` - Default value: `UTC`
+         * @param timezone Set the timezone
+         *   - Choices: `Europe/Andorra`, `Asia/Dubai`, `Asia/Kabul`, `America/Antigua`, `America/Anguilla`, `Europe/Tirane`, `Asia/Yerevan`, `Africa/Luanda`, `Antarctica/McMurdo`, `Antarctica/Rothera`, `Antarctica/Palmer`, `Antarctica/Mawson`, `Antarctica/Davis`, `Antarctica/Casey`, `Antarctica/Vostok`, `Antarctica/DumontDUrville`, `Antarctica/Syowa`, `America/Argentina/Buenos_Aires`, `America/Argentina/Cordoba`, `America/Argentina/Salta`, `America/Argentina/Jujuy`, `America/Argentina/Tucuman`, `America/Argentina/Catamarca`, `America/Argentina/La_Rioja`, `America/Argentina/San_Juan`, `America/Argentina/Mendoza`, `America/Argentina/San_Luis`, `America/Argentina/Rio_Gallegos`, `America/Argentina/Ushuaia`, `Pacific/Pago_Pago`, `Europe/Vienna`, `Australia/Lord_Howe`, `Antarctica/Macquarie`, `Australia/Hobart`, `Australia/Currie`, `Australia/Melbourne`, `Australia/Sydney`, `Australia/Broken_Hill`, `Australia/Brisbane`, `Australia/Lindeman`, `Australia/Adelaide`, `Australia/Darwin`, `Australia/Perth`, `Australia/Eucla`, `America/Aruba`, `Europe/Mariehamn`, `Asia/Baku`, `Europe/Sarajevo`, `America/Barbados`, `Asia/Dhaka`, `Europe/Brussels`, `Africa/Ouagadougou`, `Europe/Sofia`, `Asia/Bahrain`, `Africa/Bujumbura`, `Africa/Porto-Novo`, `America/St_Barthelemy`, `Atlantic/Bermuda`, `Asia/Brunei`, `America/La_Paz`, `America/Kralendijk`, `America/Noronha`, `America/Belem`, `America/Fortaleza`, `America/Recife`, `America/Araguaina`, `America/Maceio`, `America/Bahia`, `America/Sao_Paulo`, `America/Campo_Grande`, `America/Cuiaba`, `America/Santarem`, `America/Porto_Velho`, `America/Boa_Vista`, `America/Manaus`, `America/Eirunepe`, `America/Rio_Branco`, `America/Nassau`, `Asia/Thimphu`, `Africa/Gaborone`, `Europe/Minsk`, `America/Belize`, `America/St_Johns`, `America/Halifax`, `America/Glace_Bay`, `America/Moncton`, `America/Goose_Bay`, `America/Blanc-Sablon`, `America/Toronto`, `America/Nipigon`, `America/Thunder_Bay`, `America/Iqaluit`, `America/Pangnirtung`, `America/Resolute`, `America/Atikokan`, `America/Rankin_Inlet`, `America/Winnipeg`, `America/Rainy_River`, `America/Regina`, `America/Swift_Current`, `America/Edmonton`, `America/Cambridge_Bay`, `America/Yellowknife`, `America/Inuvik`, `America/Creston`, `America/Dawson_Creek`, `America/Vancouver`, `America/Whitehorse`, `America/Dawson`, `Indian/Cocos`, `Africa/Kinshasa`, `Africa/Lubumbashi`, `Africa/Bangui`, `Africa/Brazzaville`, `Europe/Zurich`, `Africa/Abidjan`, `Pacific/Rarotonga`, `America/Santiago`, `Pacific/Easter`, `Africa/Douala`, `Asia/Shanghai`, `Asia/Harbin`, `Asia/Chongqing`, `Asia/Urumqi`, `Asia/Kashgar`, `America/Bogota`, `America/Costa_Rica`, `America/Havana`, `Atlantic/Cape_Verde`, `America/Curacao`, `Indian/Christmas`, `Asia/Nicosia`, `Europe/Prague`, `Europe/Berlin`, `Europe/Busingen`, `Africa/Djibouti`, `Europe/Copenhagen`, `America/Dominica`, `America/Santo_Domingo`, `Africa/Algiers`, `America/Guayaquil`, `Pacific/Galapagos`, `Europe/Tallinn`, `Africa/Cairo`, `Africa/El_Aaiun`, `Africa/Asmara`, `Europe/Madrid`, `Africa/Ceuta`, `Atlantic/Canary`, `Africa/Addis_Ababa`, `Europe/Helsinki`, `Pacific/Fiji`, `Atlantic/Stanley`, `Pacific/Chuuk`, `Pacific/Pohnpei`, `Pacific/Kosrae`, `Atlantic/Faroe`, `Europe/Paris`, `Africa/Libreville`, `Europe/London`, `America/Grenada`, `Asia/Tbilisi`, `America/Cayenne`, `Europe/Guernsey`, `Africa/Accra`, `Europe/Gibraltar`, `America/Godthab`, `America/Danmarkshavn`, `America/Scoresbysund`, `America/Thule`, `Africa/Banjul`, `Africa/Conakry`, `America/Guadeloupe`, `Africa/Malabo`, `Europe/Athens`, `Atlantic/South_Georgia`, `America/Guatemala`, `Pacific/Guam`, `Africa/Bissau`, `America/Guyana`, `Asia/Hong_Kong`, `America/Tegucigalpa`, `Europe/Zagreb`, `America/Port-au-Prince`, `Europe/Budapest`, `Asia/Jakarta`, `Asia/Pontianak`, `Asia/Makassar`, `Asia/Jayapura`, `Europe/Dublin`, `Asia/Jerusalem`, `Europe/Isle_of_Man`, `Asia/Kolkata`, `Indian/Chagos`, `Asia/Baghdad`, `Asia/Tehran`, `Atlantic/Reykjavik`, `Europe/Rome`, `Europe/Jersey`, `America/Jamaica`, `Asia/Amman`, `Asia/Tokyo`, `Africa/Nairobi`, `Asia/Bishkek`, `Asia/Phnom_Penh`, `Pacific/Tarawa`, `Pacific/Enderbury`, `Pacific/Kiritimati`, `Indian/Comoro`, `America/St_Kitts`, `Asia/Pyongyang`, `Asia/Seoul`, `Asia/Kuwait`, `America/Cayman`, `Asia/Almaty`, `Asia/Qyzylorda`, `Asia/Aqtobe`, `Asia/Aqtau`, `Asia/Oral`, `Asia/Vientiane`, `Asia/Beirut`, `America/St_Lucia`, `Europe/Vaduz`, `Asia/Colombo`, `Africa/Monrovia`, `Africa/Maseru`, `Europe/Vilnius`, `Europe/Luxembourg`, `Europe/Riga`, `Africa/Tripoli`, `Africa/Casablanca`, `Europe/Monaco`, `Europe/Chisinau`, `Europe/Podgorica`, `America/Marigot`, `Indian/Antananarivo`, `Pacific/Majuro`, `Pacific/Kwajalein`, `Europe/Skopje`, `Africa/Bamako`, `Asia/Rangoon`, `Asia/Ulaanbaatar`, `Asia/Hovd`, `Asia/Choibalsan`, `Asia/Macau`, `Pacific/Saipan`, `America/Martinique`, `Africa/Nouakchott`, `America/Montserrat`, `Europe/Malta`, `Indian/Mauritius`, `Indian/Maldives`, `Africa/Blantyre`, `America/Mexico_City`, `America/Cancun`, `America/Merida`, `America/Monterrey`, `America/Matamoros`, `America/Mazatlan`, `America/Chihuahua`, `America/Ojinaga`, `America/Hermosillo`, `America/Tijuana`, `America/Santa_Isabel`, `America/Bahia_Banderas`, `Asia/Kuala_Lumpur`, `Asia/Kuching`, `Africa/Maputo`, `Africa/Windhoek`, `Pacific/Noumea`, `Africa/Niamey`, `Pacific/Norfolk`, `Africa/Lagos`, `America/Managua`, `Europe/Amsterdam`, `Europe/Oslo`, `Asia/Kathmandu`, `Pacific/Nauru`, `Pacific/Niue`, `Pacific/Auckland`, `Pacific/Chatham`, `Asia/Muscat`, `America/Panama`, `America/Lima`, `Pacific/Tahiti`, `Pacific/Marquesas`, `Pacific/Gambier`, `Pacific/Port_Moresby`, `Asia/Manila`, `Asia/Karachi`, `Europe/Warsaw`, `America/Miquelon`, `Pacific/Pitcairn`, `America/Puerto_Rico`, `Asia/Gaza`, `Asia/Hebron`, `Europe/Lisbon`, `Atlantic/Madeira`, `Atlantic/Azores`, `Pacific/Palau`, `America/Asuncion`, `Asia/Qatar`, `Indian/Reunion`, `Europe/Bucharest`, `Europe/Belgrade`, `Europe/Kaliningrad`, `Europe/Moscow`, `Europe/Volgograd`, `Europe/Samara`, `Asia/Yekaterinburg`, `Asia/Omsk`, `Asia/Novosibirsk`, `Asia/Novokuznetsk`, `Asia/Krasnoyarsk`, `Asia/Irkutsk`, `Asia/Yakutsk`, `Asia/Khandyga`, `Asia/Vladivostok`, `Asia/Sakhalin`, `Asia/Ust-Nera`, `Asia/Magadan`, `Asia/Kamchatka`, `Asia/Anadyr`, `Africa/Kigali`, `Asia/Riyadh`, `Pacific/Guadalcanal`, `Indian/Mahe`, `Africa/Khartoum`, `Europe/Stockholm`, `Asia/Singapore`, `Atlantic/St_Helena`, `Europe/Ljubljana`, `Arctic/Longyearbyen`, `Europe/Bratislava`, `Africa/Freetown`, `Europe/San_Marino`, `Africa/Dakar`, `Africa/Mogadishu`, `America/Paramaribo`, `Africa/Juba`, `Africa/Sao_Tome`, `America/El_Salvador`, `America/Lower_Princes`, `Asia/Damascus`, `Africa/Mbabane`, `America/Grand_Turk`, `Africa/Ndjamena`, `Indian/Kerguelen`, `Africa/Lome`, `Asia/Bangkok`, `Asia/Dushanbe`, `Pacific/Fakaofo`, `Asia/Dili`, `Asia/Ashgabat`, `Africa/Tunis`, `Pacific/Tongatapu`, `Europe/Istanbul`, `America/Port_of_Spain`, `Pacific/Funafuti`, `Asia/Taipei`, `Africa/Dar_es_Salaam`, `Europe/Kiev`, `Europe/Uzhgorod`, `Europe/Zaporozhye`, `Europe/Simferopol`, `Africa/Kampala`, `Pacific/Johnston`, `Pacific/Midway`, `Pacific/Wake`, `America/New_York`, `America/Detroit`, `America/Kentucky/Louisville`, `America/Kentucky/Monticello`, `America/Indiana/Indianapolis`, `America/Indiana/Vincennes`, `America/Indiana/Winamac`, `America/Indiana/Marengo`, `America/Indiana/Petersburg`, `America/Indiana/Vevay`, `America/Chicago`, `America/Indiana/Tell_City`, `America/Indiana/Knox`, `America/Menominee`, `America/North_Dakota/Center`, `America/North_Dakota/New_Salem`, `America/North_Dakota/Beulah`, `America/Denver`, `America/Boise`, `America/Phoenix`, `America/Los_Angeles`, `America/Anchorage`, `America/Juneau`, `America/Sitka`, `America/Yakutat`, `America/Nome`, `America/Adak`, `America/Metlakatla`, `Pacific/Honolulu`, `America/Montevideo`, `Asia/Samarkand`, `Asia/Tashkent`, `Europe/Vatican`, `America/St_Vincent`, `America/Caracas`, `America/Tortola`, `America/St_Thomas`, `Asia/Ho_Chi_Minh`, `Pacific/Efate`, `Pacific/Wallis`, `Pacific/Apia`, `Asia/Aden`, `Indian/Mayotte`, `Africa/Johannesburg`, `Africa/Lusaka`, `Africa/Harare`, `UTC`
+         *   - Default value: `UTC`
          * 
          * @return builder
          * 
@@ -2962,7 +2797,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackDefaultGateway Enable or disable default gateway tracking - Default value: `true`
+         * @param trackDefaultGateway Enable or disable default gateway tracking
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2973,7 +2809,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackDefaultGateway Enable or disable default gateway tracking - Default value: `true`
+         * @param trackDefaultGateway Enable or disable default gateway tracking
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3004,7 +2841,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackInterfaceTag OMP Tag attached to routes based on interface tracking - Range: `1`-`4294967295`
+         * @param trackInterfaceTag OMP Tag attached to routes based on interface tracking
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -3015,7 +2853,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackInterfaceTag OMP Tag attached to routes based on interface tracking - Range: `1`-`4294967295`
+         * @param trackInterfaceTag OMP Tag attached to routes based on interface tracking
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -3046,7 +2885,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackTransport Configure tracking of transport - Default value: `true`
+         * @param trackTransport Configure tracking of transport
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3057,7 +2897,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackTransport Configure tracking of transport - Default value: `true`
+         * @param trackTransport Configure tracking of transport
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3119,7 +2960,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param transportGateway Enable transport gateway - Default value: `false`
+         * @param transportGateway Enable transport gateway
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3130,7 +2972,8 @@ public final class CiscoSystemFeatureTemplateArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param transportGateway Enable transport gateway - Default value: `false`
+         * @param transportGateway Enable transport gateway
+         *   - Default value: `false`
          * 
          * @return builder
          * 

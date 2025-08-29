@@ -59,7 +59,8 @@ namespace Pulumi.Sdwan
     public partial class ServiceLanVpnInterfaceGreFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Output("applicationTunnelType")]
         public Output<string?> ApplicationTunnelType { get; private set; } = null!;
@@ -71,7 +72,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ApplicationTunnelTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Output("clearDontFragment")]
         public Output<bool?> ClearDontFragment { get; private set; } = null!;
@@ -119,7 +121,9 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes - Range: `576`-`9976` - Default value: `1500`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
+        ///   - Range: `576`-`9976`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("ipMtu")]
         public Output<int?> IpMtu { get; private set; } = null!;
@@ -140,11 +144,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
@@ -168,7 +168,8 @@ namespace Pulumi.Sdwan
         public Output<string> ServiceLanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `false`
+        /// Administrative state
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -180,7 +181,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tcpMss")]
         public Output<int?> TcpMss { get; private set; } = null!;
@@ -304,7 +306,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceLanVpnInterfaceGreFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Input("applicationTunnelType")]
         public Input<string>? ApplicationTunnelType { get; set; }
@@ -316,7 +319,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationTunnelTypeVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -364,7 +368,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes - Range: `576`-`9976` - Default value: `1500`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
+        ///   - Range: `576`-`9976`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -385,11 +391,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -413,7 +415,8 @@ namespace Pulumi.Sdwan
         public Input<string> ServiceLanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Administrative state - Default value: `false`
+        /// Administrative state
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -425,7 +428,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
@@ -505,7 +509,8 @@ namespace Pulumi.Sdwan
     public sealed class ServiceLanVpnInterfaceGreFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable Application Tunnel Type - Choices: `none`, `sig`
+        /// Enable Application Tunnel Type
+        ///   - Choices: `none`, `sig`
         /// </summary>
         [Input("applicationTunnelType")]
         public Input<string>? ApplicationTunnelType { get; set; }
@@ -517,7 +522,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ApplicationTunnelTypeVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+        ///   - Default value: `false`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -565,7 +571,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU &lt;576..9976&gt;, in bytes - Range: `576`-`9976` - Default value: `1500`
+        /// Interface MTU &lt;576..9976&gt;, in bytes
+        ///   - Range: `576`-`9976`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -586,11 +594,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -614,7 +618,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ServiceLanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Administrative state - Default value: `false`
+        /// Administrative state
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -626,7 +631,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }

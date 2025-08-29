@@ -39,20 +39,26 @@ class SystemSecurityFeatureArgs:
         """
         The set of arguments for constructing a SystemSecurityFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -101,8 +107,9 @@ class SystemSecurityFeatureArgs:
     @pulumi.getter(name="antiReplayWindow")
     def anti_replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "anti_replay_window")
 
@@ -138,7 +145,9 @@ class SystemSecurityFeatureArgs:
     @pulumi.getter(name="extendedAntiReplayWindow")
     def extended_anti_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_anti_replay_window")
 
@@ -186,7 +195,8 @@ class SystemSecurityFeatureArgs:
     @pulumi.getter(name="ipsecPairwiseKeying")
     def ipsec_pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "ipsec_pairwise_keying")
 
@@ -246,7 +256,9 @@ class SystemSecurityFeatureArgs:
     @pulumi.getter
     def rekey(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey")
 
@@ -288,21 +300,27 @@ class _SystemSecurityFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemSecurityFeature resources.
-        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeychainArgs']]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input['SystemSecurityFeatureKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -343,8 +361,9 @@ class _SystemSecurityFeatureState:
     @pulumi.getter(name="antiReplayWindow")
     def anti_replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "anti_replay_window")
 
@@ -380,7 +399,9 @@ class _SystemSecurityFeatureState:
     @pulumi.getter(name="extendedAntiReplayWindow")
     def extended_anti_replay_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_anti_replay_window")
 
@@ -440,7 +461,8 @@ class _SystemSecurityFeatureState:
     @pulumi.getter(name="ipsecPairwiseKeying")
     def ipsec_pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "ipsec_pairwise_keying")
 
@@ -500,7 +522,9 @@ class _SystemSecurityFeatureState:
     @pulumi.getter
     def rekey(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey")
 
@@ -571,21 +595,27 @@ class SystemSecurityFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         """
         ...
@@ -698,21 +728,27 @@ class SystemSecurityFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] anti_replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[_builtins.int] extended_anti_replay_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_anti_replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipsec_pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipsec_pairwise_keying_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeychainArgs', 'SystemSecurityFeatureKeychainArgsDict']]]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSecurityFeatureKeyArgs', 'SystemSecurityFeatureKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -742,8 +778,9 @@ class SystemSecurityFeature(pulumi.CustomResource):
     @pulumi.getter(name="antiReplayWindow")
     def anti_replay_window(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "anti_replay_window")
 
@@ -767,7 +804,9 @@ class SystemSecurityFeature(pulumi.CustomResource):
     @pulumi.getter(name="extendedAntiReplayWindow")
     def extended_anti_replay_window(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_anti_replay_window")
 
@@ -807,7 +846,8 @@ class SystemSecurityFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecPairwiseKeying")
     def ipsec_pairwise_keying(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "ipsec_pairwise_keying")
 
@@ -847,7 +887,9 @@ class SystemSecurityFeature(pulumi.CustomResource):
     @pulumi.getter
     def rekey(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey")
 

@@ -51,31 +51,31 @@ export class ApplicationPriorityQosPolicy extends pulumi.CustomResource {
     /**
      * The description of the Policy
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * qosSchedulers
      */
-    public readonly qosSchedulers!: pulumi.Output<outputs.ApplicationPriorityQosPolicyQosScheduler[] | undefined>;
+    declare public readonly qosSchedulers: pulumi.Output<outputs.ApplicationPriorityQosPolicyQosScheduler[] | undefined>;
     /**
      * Variable name
      */
-    public readonly targetInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly targetInterfaceVariable: pulumi.Output<string | undefined>;
     /**
      * interfaces
      */
-    public readonly targetInterfaces!: pulumi.Output<string[] | undefined>;
+    declare public readonly targetInterfaces: pulumi.Output<string[] | undefined>;
     /**
      * The version of the Policy
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ApplicationPriorityQosPolicy resource with the given unique name, arguments, and options.
@@ -90,24 +90,24 @@ export class ApplicationPriorityQosPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationPriorityQosPolicyState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["qosSchedulers"] = state ? state.qosSchedulers : undefined;
-            resourceInputs["targetInterfaceVariable"] = state ? state.targetInterfaceVariable : undefined;
-            resourceInputs["targetInterfaces"] = state ? state.targetInterfaces : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["qosSchedulers"] = state?.qosSchedulers;
+            resourceInputs["targetInterfaceVariable"] = state?.targetInterfaceVariable;
+            resourceInputs["targetInterfaces"] = state?.targetInterfaces;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ApplicationPriorityQosPolicyArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["qosSchedulers"] = args ? args.qosSchedulers : undefined;
-            resourceInputs["targetInterfaceVariable"] = args ? args.targetInterfaceVariable : undefined;
-            resourceInputs["targetInterfaces"] = args ? args.targetInterfaces : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["qosSchedulers"] = args?.qosSchedulers;
+            resourceInputs["targetInterfaceVariable"] = args?.targetInterfaceVariable;
+            resourceInputs["targetInterfaces"] = args?.targetInterfaces;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

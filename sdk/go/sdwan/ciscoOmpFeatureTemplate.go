@@ -29,65 +29,82 @@ type CiscoOmpFeatureTemplate struct {
 	AdvertiseIpv4Routes CiscoOmpFeatureTemplateAdvertiseIpv4RouteArrayOutput `pulumi:"advertiseIpv4Routes"`
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv6Routes CiscoOmpFeatureTemplateAdvertiseIpv6RouteArrayOutput `pulumi:"advertiseIpv6Routes"`
-	// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+	// Set the time between OMP Update packets
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrOutput `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrOutput `pulumi:"advertisementIntervalVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+	// Set maximum number of OMP paths to install in vEdge route table
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrOutput `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrOutput `pulumi:"ecmpLimitVariable"`
-	// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+	// End of RIB timer <1..604800> seconds
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrOutput `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable pulumi.StringPtrOutput `pulumi:"eorTimerVariable"`
-	// Enable or disable OMP graceful restart - Default value: `true`
+	// Enable or disable OMP graceful restart
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrOutput `pulumi:"gracefulRestart"`
-	// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+	// Set the OMP graceful restart timer
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrOutput `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartVariable"`
-	// Set how long to wait before closing OMP peer connection - Default value: `60`
+	// Set how long to wait before closing OMP peer connection
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrOutput `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrOutput `pulumi:"holdtimeVariable"`
-	// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+	// Ignore Region-Path Length During Best-Path Algorithm
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrOutput `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrOutput `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+	// Set Overlay AS number <1..4294967295> or <XX.YY>
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrOutput `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrOutput `pulumi:"overlayAsVariable"`
-	// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+	// Set number of TLOC routes advertised between vSmart and vEdge
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	SendPathLimit pulumi.IntPtrOutput `pulumi:"sendPathLimit"`
 	// Variable name
 	SendPathLimitVariable pulumi.StringPtrOutput `pulumi:"sendPathLimitVariable"`
-	// Enable or disable OMP - Default value: `false`
+	// Enable or disable OMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
-	// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport gateway path computation
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrOutput `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrOutput `pulumi:"transportGatewayVariable"`
@@ -135,65 +152,82 @@ type ciscoOmpFeatureTemplateState struct {
 	AdvertiseIpv4Routes []CiscoOmpFeatureTemplateAdvertiseIpv4Route `pulumi:"advertiseIpv4Routes"`
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv6Routes []CiscoOmpFeatureTemplateAdvertiseIpv6Route `pulumi:"advertiseIpv6Routes"`
-	// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+	// Set the time between OMP Update packets
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+	// Set maximum number of OMP paths to install in vEdge route table
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable *string `pulumi:"ecmpLimitVariable"`
-	// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+	// End of RIB timer <1..604800> seconds
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer *int `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable *string `pulumi:"eorTimerVariable"`
-	// Enable or disable OMP graceful restart - Default value: `true`
+	// Enable or disable OMP graceful restart
+	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
-	// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+	// Set the OMP graceful restart timer
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable *string `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
-	// Set how long to wait before closing OMP peer connection - Default value: `60`
+	// Set how long to wait before closing OMP peer connection
+	//   - Default value: `60`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
-	// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+	// Ignore Region-Path Length During Best-Path Algorithm
+	//   - Default value: `false`
 	IgnoreRegionPathLength *bool `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable *string `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+	// Set Overlay AS number <1..4294967295> or <XX.YY>
+	//   - Range: `1`-`4294967295`
 	OverlayAs *int `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable *string `pulumi:"overlayAsVariable"`
-	// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+	// Set number of TLOC routes advertised between vSmart and vEdge
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	SendPathLimit *int `pulumi:"sendPathLimit"`
 	// Variable name
 	SendPathLimitVariable *string `pulumi:"sendPathLimitVariable"`
-	// Enable or disable OMP - Default value: `false`
+	// Enable or disable OMP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
-	// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport gateway path computation
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway *string `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable *string `pulumi:"transportGatewayVariable"`
@@ -206,65 +240,82 @@ type CiscoOmpFeatureTemplateState struct {
 	AdvertiseIpv4Routes CiscoOmpFeatureTemplateAdvertiseIpv4RouteArrayInput
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv6Routes CiscoOmpFeatureTemplateAdvertiseIpv6RouteArrayInput
-	// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+	// Set the time between OMP Update packets
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+	// Set maximum number of OMP paths to install in vEdge route table
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrInput
-	// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+	// End of RIB timer <1..604800> seconds
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrInput
 	// Variable name
 	EorTimerVariable pulumi.StringPtrInput
-	// Enable or disable OMP graceful restart - Default value: `true`
+	// Enable or disable OMP graceful restart
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
-	// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+	// Set the OMP graceful restart timer
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrInput
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
-	// Set how long to wait before closing OMP peer connection - Default value: `60`
+	// Set how long to wait before closing OMP peer connection
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
-	// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+	// Ignore Region-Path Length During Best-Path Algorithm
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrInput
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
-	// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+	// Set Overlay AS number <1..4294967295> or <XX.YY>
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrInput
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrInput
-	// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+	// Set number of TLOC routes advertised between vSmart and vEdge
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	SendPathLimit pulumi.IntPtrInput
 	// Variable name
 	SendPathLimitVariable pulumi.StringPtrInput
-	// Enable or disable OMP - Default value: `false`
+	// Enable or disable OMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
-	// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport gateway path computation
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrInput
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrInput
@@ -281,63 +332,80 @@ type ciscoOmpFeatureTemplateArgs struct {
 	AdvertiseIpv4Routes []CiscoOmpFeatureTemplateAdvertiseIpv4Route `pulumi:"advertiseIpv4Routes"`
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv6Routes []CiscoOmpFeatureTemplateAdvertiseIpv6Route `pulumi:"advertiseIpv6Routes"`
-	// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+	// Set the time between OMP Update packets
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+	// Set maximum number of OMP paths to install in vEdge route table
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable *string `pulumi:"ecmpLimitVariable"`
-	// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+	// End of RIB timer <1..604800> seconds
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer *int `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable *string `pulumi:"eorTimerVariable"`
-	// Enable or disable OMP graceful restart - Default value: `true`
+	// Enable or disable OMP graceful restart
+	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
-	// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+	// Set the OMP graceful restart timer
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable *string `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
-	// Set how long to wait before closing OMP peer connection - Default value: `60`
+	// Set how long to wait before closing OMP peer connection
+	//   - Default value: `60`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
-	// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+	// Ignore Region-Path Length During Best-Path Algorithm
+	//   - Default value: `false`
 	IgnoreRegionPathLength *bool `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable *string `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+	// Set Overlay AS number <1..4294967295> or <XX.YY>
+	//   - Range: `1`-`4294967295`
 	OverlayAs *int `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable *string `pulumi:"overlayAsVariable"`
-	// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+	// Set number of TLOC routes advertised between vSmart and vEdge
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	SendPathLimit *int `pulumi:"sendPathLimit"`
 	// Variable name
 	SendPathLimitVariable *string `pulumi:"sendPathLimitVariable"`
-	// Enable or disable OMP - Default value: `false`
+	// Enable or disable OMP
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport gateway path computation
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway *string `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable *string `pulumi:"transportGatewayVariable"`
@@ -349,63 +417,80 @@ type CiscoOmpFeatureTemplateArgs struct {
 	AdvertiseIpv4Routes CiscoOmpFeatureTemplateAdvertiseIpv4RouteArrayInput
 	// Advertise locally learned routes to OMP
 	AdvertiseIpv6Routes CiscoOmpFeatureTemplateAdvertiseIpv6RouteArrayInput
-	// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+	// Set the time between OMP Update packets
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+	// Set maximum number of OMP paths to install in vEdge route table
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrInput
-	// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+	// End of RIB timer <1..604800> seconds
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrInput
 	// Variable name
 	EorTimerVariable pulumi.StringPtrInput
-	// Enable or disable OMP graceful restart - Default value: `true`
+	// Enable or disable OMP graceful restart
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
-	// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+	// Set the OMP graceful restart timer
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrInput
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
-	// Set how long to wait before closing OMP peer connection - Default value: `60`
+	// Set how long to wait before closing OMP peer connection
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
-	// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+	// Ignore Region-Path Length During Best-Path Algorithm
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrInput
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
-	// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+	// Set Overlay AS number <1..4294967295> or <XX.YY>
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrInput
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrInput
-	// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+	// Set number of TLOC routes advertised between vSmart and vEdge
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	SendPathLimit pulumi.IntPtrInput
 	// Variable name
 	SendPathLimitVariable pulumi.StringPtrInput
-	// Enable or disable OMP - Default value: `false`
+	// Enable or disable OMP
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport gateway path computation
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrInput
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrInput
@@ -512,7 +597,9 @@ func (o CiscoOmpFeatureTemplateOutput) AdvertiseIpv6Routes() CiscoOmpFeatureTemp
 	}).(CiscoOmpFeatureTemplateAdvertiseIpv6RouteArrayOutput)
 }
 
-// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+// Set the time between OMP Update packets
+//   - Range: `0`-`65535`
+//   - Default value: `1`
 func (o CiscoOmpFeatureTemplateOutput) AdvertisementInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.AdvertisementInterval }).(pulumi.IntPtrOutput)
 }
@@ -527,14 +614,15 @@ func (o CiscoOmpFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoOmpFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+// Set maximum number of OMP paths to install in vEdge route table
+//   - Range: `1`-`16`
+//   - Default value: `4`
 func (o CiscoOmpFeatureTemplateOutput) EcmpLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.EcmpLimit }).(pulumi.IntPtrOutput)
 }
@@ -544,7 +632,9 @@ func (o CiscoOmpFeatureTemplateOutput) EcmpLimitVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.EcmpLimitVariable }).(pulumi.StringPtrOutput)
 }
 
-// End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+// End of RIB timer <1..604800> seconds
+//   - Range: `1`-`3600`
+//   - Default value: `300`
 func (o CiscoOmpFeatureTemplateOutput) EorTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.EorTimer }).(pulumi.IntPtrOutput)
 }
@@ -554,12 +644,15 @@ func (o CiscoOmpFeatureTemplateOutput) EorTimerVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.EorTimerVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable or disable OMP graceful restart - Default value: `true`
+// Enable or disable OMP graceful restart
+//   - Default value: `true`
 func (o CiscoOmpFeatureTemplateOutput) GracefulRestart() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.BoolPtrOutput { return v.GracefulRestart }).(pulumi.BoolPtrOutput)
 }
 
-// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+// Set the OMP graceful restart timer
+//   - Range: `1`-`604800`
+//   - Default value: `43200`
 func (o CiscoOmpFeatureTemplateOutput) GracefulRestartTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.GracefulRestartTimer }).(pulumi.IntPtrOutput)
 }
@@ -574,7 +667,8 @@ func (o CiscoOmpFeatureTemplateOutput) GracefulRestartVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.GracefulRestartVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set how long to wait before closing OMP peer connection - Default value: `60`
+// Set how long to wait before closing OMP peer connection
+//   - Default value: `60`
 func (o CiscoOmpFeatureTemplateOutput) Holdtime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.Holdtime }).(pulumi.IntPtrOutput)
 }
@@ -584,7 +678,8 @@ func (o CiscoOmpFeatureTemplateOutput) HoldtimeVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.HoldtimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+// Ignore Region-Path Length During Best-Path Algorithm
+//   - Default value: `false`
 func (o CiscoOmpFeatureTemplateOutput) IgnoreRegionPathLength() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.BoolPtrOutput { return v.IgnoreRegionPathLength }).(pulumi.BoolPtrOutput)
 }
@@ -599,7 +694,8 @@ func (o CiscoOmpFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// omp-admin-distance-ipv4 - Range: `1`-`255`
+// omp-admin-distance-ipv4
+//   - Range: `1`-`255`
 func (o CiscoOmpFeatureTemplateOutput) OmpAdminDistanceIpv4() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv4 }).(pulumi.IntPtrOutput)
 }
@@ -609,7 +705,8 @@ func (o CiscoOmpFeatureTemplateOutput) OmpAdminDistanceIpv4Variable() pulumi.Str
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv4Variable }).(pulumi.StringPtrOutput)
 }
 
-// omp-admin-distance-ipv6 - Range: `1`-`255`
+// omp-admin-distance-ipv6
+//   - Range: `1`-`255`
 func (o CiscoOmpFeatureTemplateOutput) OmpAdminDistanceIpv6() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv6 }).(pulumi.IntPtrOutput)
 }
@@ -619,7 +716,8 @@ func (o CiscoOmpFeatureTemplateOutput) OmpAdminDistanceIpv6Variable() pulumi.Str
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv6Variable }).(pulumi.StringPtrOutput)
 }
 
-// Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+// Set Overlay AS number <1..4294967295> or <XX.YY>
+//   - Range: `1`-`4294967295`
 func (o CiscoOmpFeatureTemplateOutput) OverlayAs() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.OverlayAs }).(pulumi.IntPtrOutput)
 }
@@ -629,7 +727,9 @@ func (o CiscoOmpFeatureTemplateOutput) OverlayAsVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.OverlayAsVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+// Set number of TLOC routes advertised between vSmart and vEdge
+//   - Range: `1`-`16`
+//   - Default value: `4`
 func (o CiscoOmpFeatureTemplateOutput) SendPathLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.IntPtrOutput { return v.SendPathLimit }).(pulumi.IntPtrOutput)
 }
@@ -639,7 +739,8 @@ func (o CiscoOmpFeatureTemplateOutput) SendPathLimitVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.SendPathLimitVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable or disable OMP - Default value: `false`
+// Enable or disable OMP
+//   - Default value: `false`
 func (o CiscoOmpFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -654,7 +755,8 @@ func (o CiscoOmpFeatureTemplateOutput) TemplateType() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringOutput { return v.TemplateType }).(pulumi.StringOutput)
 }
 
-// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+// Transport gateway path computation
+//   - Choices: `prefer`, `ecmp-with-direct-path`
 func (o CiscoOmpFeatureTemplateOutput) TransportGateway() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoOmpFeatureTemplate) pulumi.StringPtrOutput { return v.TransportGateway }).(pulumi.StringPtrOutput)
 }

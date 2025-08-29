@@ -107,16 +107,16 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.accessPointNameVariable);
     }
     /**
-     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `pap_chap`
+     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `pap_chap`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `pap_chap`
+     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `pap_chap`
      * 
      */
     public Output<Optional<String>> authenticationType() {
@@ -207,14 +207,18 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.noOverwriteVariable);
     }
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     @Export(name="packetDataNetworkType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> packetDataNetworkType;
 
     /**
-     * @return Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * @return Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     public Output<Optional<String>> packetDataNetworkType() {
@@ -235,14 +239,16 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.packetDataNetworkTypeVariable);
     }
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     @Export(name="profileId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> profileId;
 
     /**
-     * @return Set Profile ID - Range: `1`-`16`
+     * @return Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     public Output<Optional<Integer>> profileId() {
@@ -319,14 +325,16 @@ public class TransportCellularProfileFeature extends com.pulumi.resources.Custom
         return Codegen.optional(this.profileUsernameVariable);
     }
     /**
-     * Require authentication type - Default value: `false`
+     * Require authentication type
+     *   - Default value: `false`
      * 
      */
     @Export(name="requiresAuthentication", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> requiresAuthentication;
 
     /**
-     * @return Require authentication type - Default value: `false`
+     * @return Require authentication type
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> requiresAuthentication() {

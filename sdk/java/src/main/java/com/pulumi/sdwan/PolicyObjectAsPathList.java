@@ -40,14 +40,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/policyObjectAsPathList:PolicyObjectAsPathList")
 public class PolicyObjectAsPathList extends com.pulumi.resources.CustomResource {
     /**
-     * As path List Number - Range: `1`-`500`
+     * As path List Number
+     *   - Range: `1`-`500`
      * 
      */
     @Export(name="asPathListId", refs={Integer.class}, tree="[0]")
     private Output<Integer> asPathListId;
 
     /**
-     * @return As path List Number - Range: `1`-`500`
+     * @return As path List Number
+     *   - Range: `1`-`500`
      * 
      */
     public Output<Integer> asPathListId() {

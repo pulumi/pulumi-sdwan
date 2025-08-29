@@ -62,19 +62,19 @@ export class ServiceLanVpnFeatureAssociateRoutingEigrpFeature extends pulumi.Cus
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnFeatureId: pulumi.Output<string>;
     /**
      * Service Routing EIGRP Feature ID
      */
-    public readonly serviceRoutingEigrpFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceRoutingEigrpFeatureId: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnFeatureAssociateRoutingEigrpFeature resource with the given unique name, arguments, and options.
@@ -89,24 +89,24 @@ export class ServiceLanVpnFeatureAssociateRoutingEigrpFeature extends pulumi.Cus
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnFeatureAssociateRoutingEigrpFeatureState | undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceRoutingEigrpFeatureId"] = state ? state.serviceRoutingEigrpFeatureId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
+            resourceInputs["serviceRoutingEigrpFeatureId"] = state?.serviceRoutingEigrpFeatureId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceLanVpnFeatureAssociateRoutingEigrpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
-            if ((!args || args.serviceRoutingEigrpFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceRoutingEigrpFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceRoutingEigrpFeatureId'");
             }
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceRoutingEigrpFeatureId"] = args ? args.serviceRoutingEigrpFeatureId : undefined;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
+            resourceInputs["serviceRoutingEigrpFeatureId"] = args?.serviceRoutingEigrpFeatureId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

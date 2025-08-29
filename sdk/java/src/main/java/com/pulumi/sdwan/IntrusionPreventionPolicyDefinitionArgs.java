@@ -51,14 +51,16 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
     }
 
     /**
-     * The inspection mode - Choices: `protection`, `detection`
+     * The inspection mode
+     *   - Choices: `protection`, `detection`
      * 
      */
     @Import(name="inspectionMode")
     private @Nullable Output<String> inspectionMode;
 
     /**
-     * @return The inspection mode - Choices: `protection`, `detection`
+     * @return The inspection mode
+     *   - Choices: `protection`, `detection`
      * 
      */
     public Optional<Output<String>> inspectionMode() {
@@ -96,14 +98,16 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
     }
 
     /**
-     * Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      * 
      */
     @Import(name="logLevel")
     private @Nullable Output<String> logLevel;
 
     /**
-     * @return Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * @return Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      * 
      */
     public Optional<Output<String>> logLevel() {
@@ -118,14 +122,16 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Optional<Output<String>> mode() {
@@ -148,14 +154,16 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
     }
 
     /**
-     * Signature set - Choices: `balanced`, `connectivity`, `security`
+     * Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      * 
      */
     @Import(name="signatureSet")
     private @Nullable Output<String> signatureSet;
 
     /**
-     * @return Signature set - Choices: `balanced`, `connectivity`, `security`
+     * @return Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      * 
      */
     public Optional<Output<String>> signatureSet() {
@@ -254,7 +262,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param inspectionMode The inspection mode - Choices: `protection`, `detection`
+         * @param inspectionMode The inspection mode
+         *   - Choices: `protection`, `detection`
          * 
          * @return builder
          * 
@@ -265,7 +274,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param inspectionMode The inspection mode - Choices: `protection`, `detection`
+         * @param inspectionMode The inspection mode
+         *   - Choices: `protection`, `detection`
          * 
          * @return builder
          * 
@@ -317,7 +327,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param logLevel Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+         * @param logLevel Log level
+         *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
          * 
          * @return builder
          * 
@@ -328,7 +339,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param logLevel Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+         * @param logLevel Log level
+         *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
          * 
          * @return builder
          * 
@@ -351,7 +363,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -362,7 +375,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -393,7 +407,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param signatureSet Signature set - Choices: `balanced`, `connectivity`, `security`
+         * @param signatureSet Signature set
+         *   - Choices: `balanced`, `connectivity`, `security`
          * 
          * @return builder
          * 
@@ -404,7 +419,8 @@ public final class IntrusionPreventionPolicyDefinitionArgs extends com.pulumi.re
         }
 
         /**
-         * @param signatureSet Signature set - Choices: `balanced`, `connectivity`, `security`
+         * @param signatureSet Signature set
+         *   - Choices: `balanced`, `connectivity`, `security`
          * 
          * @return builder
          * 

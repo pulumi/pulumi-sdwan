@@ -45,18 +45,25 @@ class ServiceRoutingEigrpFeatureArgs:
         The set of arguments for constructing a ServiceRoutingEigrpFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureNetworkArgs']]] networks: Configure the networks for EIGRP to advertise
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] autonomous_system_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
@@ -130,7 +137,8 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -154,7 +162,8 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="autonomousSystemId")
     def autonomous_system_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "autonomous_system_id")
 
@@ -190,7 +199,8 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter
     def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -214,7 +224,9 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -262,7 +274,9 @@ class ServiceRoutingEigrpFeatureArgs:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 
@@ -366,19 +380,26 @@ class _ServiceRoutingEigrpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceRoutingEigrpFeature resources.
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] autonomous_system_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input['ServiceRoutingEigrpFeatureMd5KeyArgs']]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
@@ -434,7 +455,8 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -458,7 +480,8 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="autonomousSystemId")
     def autonomous_system_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "autonomous_system_id")
 
@@ -506,7 +529,8 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter
     def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -530,7 +554,9 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -578,7 +604,9 @@ class _ServiceRoutingEigrpFeatureState:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 
@@ -723,19 +751,26 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] autonomous_system_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
@@ -870,19 +905,26 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] autonomous_system_id: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] autonomous_system_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureInterfaceArgs', 'ServiceRoutingEigrpFeatureInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceRoutingEigrpFeatureMd5KeyArgs', 'ServiceRoutingEigrpFeatureMd5KeyArgsDict']]]] md5_keys: Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
@@ -922,7 +964,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -938,7 +981,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="autonomousSystemId")
     def autonomous_system_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "autonomous_system_id")
 
@@ -970,7 +1014,8 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter
     def filter(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -986,7 +1031,9 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -1018,7 +1065,9 @@ class ServiceRoutingEigrpFeature(pulumi.CustomResource):
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 

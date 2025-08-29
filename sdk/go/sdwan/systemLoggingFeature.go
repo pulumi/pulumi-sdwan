@@ -29,15 +29,20 @@ type SystemLoggingFeature struct {
 
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskEnable pulumi.BoolPtrOutput `pulumi:"diskEnable"`
 	// Variable name
 	DiskEnableVariable pulumi.StringPtrOutput `pulumi:"diskEnableVariable"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	DiskFileRotate pulumi.IntPtrOutput `pulumi:"diskFileRotate"`
 	// Variable name
 	DiskFileRotateVariable pulumi.StringPtrOutput `pulumi:"diskFileRotateVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	DiskFileSize pulumi.IntPtrOutput `pulumi:"diskFileSize"`
 	// Variable name
 	DiskFileSizeVariable pulumi.StringPtrOutput `pulumi:"diskFileSizeVariable"`
@@ -90,15 +95,20 @@ func GetSystemLoggingFeature(ctx *pulumi.Context,
 type systemLoggingFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskEnable *bool `pulumi:"diskEnable"`
 	// Variable name
 	DiskEnableVariable *string `pulumi:"diskEnableVariable"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	DiskFileRotate *int `pulumi:"diskFileRotate"`
 	// Variable name
 	DiskFileRotateVariable *string `pulumi:"diskFileRotateVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	DiskFileSize *int `pulumi:"diskFileSize"`
 	// Variable name
 	DiskFileSizeVariable *string `pulumi:"diskFileSizeVariable"`
@@ -119,15 +129,20 @@ type systemLoggingFeatureState struct {
 type SystemLoggingFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskEnable pulumi.BoolPtrInput
 	// Variable name
 	DiskEnableVariable pulumi.StringPtrInput
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	DiskFileRotate pulumi.IntPtrInput
 	// Variable name
 	DiskFileRotateVariable pulumi.StringPtrInput
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	DiskFileSize pulumi.IntPtrInput
 	// Variable name
 	DiskFileSizeVariable pulumi.StringPtrInput
@@ -152,15 +167,20 @@ func (SystemLoggingFeatureState) ElementType() reflect.Type {
 type systemLoggingFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskEnable *bool `pulumi:"diskEnable"`
 	// Variable name
 	DiskEnableVariable *string `pulumi:"diskEnableVariable"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	DiskFileRotate *int `pulumi:"diskFileRotate"`
 	// Variable name
 	DiskFileRotateVariable *string `pulumi:"diskFileRotateVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	DiskFileSize *int `pulumi:"diskFileSize"`
 	// Variable name
 	DiskFileSizeVariable *string `pulumi:"diskFileSizeVariable"`
@@ -180,15 +200,20 @@ type systemLoggingFeatureArgs struct {
 type SystemLoggingFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskEnable pulumi.BoolPtrInput
 	// Variable name
 	DiskEnableVariable pulumi.StringPtrInput
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	DiskFileRotate pulumi.IntPtrInput
 	// Variable name
 	DiskFileRotateVariable pulumi.StringPtrInput
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	DiskFileSize pulumi.IntPtrInput
 	// Variable name
 	DiskFileSizeVariable pulumi.StringPtrInput
@@ -296,7 +321,8 @@ func (o SystemLoggingFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enable logging to local disk - Default value: `true`
+// Enable logging to local disk
+//   - Default value: `true`
 func (o SystemLoggingFeatureOutput) DiskEnable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.BoolPtrOutput { return v.DiskEnable }).(pulumi.BoolPtrOutput)
 }
@@ -306,7 +332,9 @@ func (o SystemLoggingFeatureOutput) DiskEnableVariable() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.StringPtrOutput { return v.DiskEnableVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+// Set number of syslog files to create before discarding oldest files
+//   - Range: `1`-`10`
+//   - Default value: `10`
 func (o SystemLoggingFeatureOutput) DiskFileRotate() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.IntPtrOutput { return v.DiskFileRotate }).(pulumi.IntPtrOutput)
 }
@@ -316,7 +344,9 @@ func (o SystemLoggingFeatureOutput) DiskFileRotateVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.StringPtrOutput { return v.DiskFileRotateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+// Set maximum size of file before it is rotated
+//   - Range: `1`-`20`
+//   - Default value: `10`
 func (o SystemLoggingFeatureOutput) DiskFileSize() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemLoggingFeature) pulumi.IntPtrOutput { return v.DiskFileSize }).(pulumi.IntPtrOutput)
 }

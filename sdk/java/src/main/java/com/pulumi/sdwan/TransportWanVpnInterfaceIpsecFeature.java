@@ -101,14 +101,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/transportWanVpnInterfaceIpsecFeature:TransportWanVpnInterfaceIpsecFeature")
 public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     @Export(name="applicationTunnelType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> applicationTunnelType;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     public Output<Optional<String>> applicationTunnelType() {
@@ -129,14 +131,16 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.applicationTunnelTypeVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="clearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> clearDontFragment() {
@@ -171,14 +175,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.description);
     }
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     @Export(name="dpdInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> dpdInterval;
 
     /**
-     * @return IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * @return IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     public Output<Optional<Integer>> dpdInterval() {
@@ -199,14 +207,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.dpdIntervalVariable);
     }
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     @Export(name="dpdRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> dpdRetries;
 
     /**
-     * @return IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * @return IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     public Output<Optional<Integer>> dpdRetries() {
@@ -241,16 +253,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return this.featureProfileId;
     }
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     @Export(name="ikeCiphersuite", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeCiphersuite;
 
     /**
-     * @return IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * @return IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     public Output<Optional<String>> ikeCiphersuite() {
@@ -271,14 +285,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ikeCiphersuiteVariable);
     }
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     @Export(name="ikeDiffieHellmanGroup", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeDiffieHellmanGroup;
 
     /**
-     * @return IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * @return IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     public Output<Optional<String>> ikeDiffieHellmanGroup() {
@@ -355,14 +373,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ikeIdRemoteEndPointVariable);
     }
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     @Export(name="ikeIntegrityProtocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeIntegrityProtocol;
 
     /**
-     * @return IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * @return IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     public Output<Optional<String>> ikeIntegrityProtocol() {
@@ -411,14 +433,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ikePresharedKeyVariable);
     }
     /**
-     * IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     @Export(name="ikeRekeyInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikeRekeyInterval;
 
     /**
-     * @return IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * @return IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     public Output<Optional<Integer>> ikeRekeyInterval() {
@@ -439,14 +465,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ikeRekeyIntervalVariable);
     }
     /**
-     * IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ikeVersion", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikeVersion;
 
     /**
-     * @return IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * @return IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ikeVersion() {
@@ -509,14 +539,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -537,18 +571,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ipMtuVariable);
     }
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     @Export(name="ipsecCiphersuite", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecCiphersuite;
 
     /**
-     * @return IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * @return IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     public Output<Optional<String>> ipsecCiphersuite() {
@@ -569,14 +603,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ipsecCiphersuiteVariable);
     }
     /**
-     * IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     @Export(name="ipsecRekeyInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecRekeyInterval;
 
     /**
-     * @return IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * @return IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     public Output<Optional<Integer>> ipsecRekeyInterval() {
@@ -597,14 +635,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ipsecRekeyIntervalVariable);
     }
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     @Export(name="ipsecReplayWindow", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecReplayWindow;
 
     /**
-     * @return Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * @return Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     public Output<Optional<Integer>> ipsecReplayWindow() {
@@ -645,22 +687,14 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -695,16 +729,18 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return this.name;
     }
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     @Export(name="perfectForwardSecrecy", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> perfectForwardSecrecy;
 
     /**
-     * @return IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * @return IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     public Output<Optional<String>> perfectForwardSecrecy() {
@@ -725,14 +761,16 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.perfectForwardSecrecyVariable);
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -753,14 +791,16 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {
@@ -843,22 +883,14 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.tunnelDestinationIpv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="tunnelDestinationIpv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelDestinationIpv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> tunnelDestinationIpv4SubnetMask() {
@@ -955,22 +987,14 @@ public class TransportWanVpnInterfaceIpsecFeature extends com.pulumi.resources.C
         return Codegen.optional(this.tunnelSourceIpv4AddressVariable);
     }
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="tunnelSourceIpv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelSourceIpv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> tunnelSourceIpv4SubnetMask() {

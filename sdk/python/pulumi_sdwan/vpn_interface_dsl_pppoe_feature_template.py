@@ -182,162 +182,234 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
         """
         The set of arguments for constructing a VpnInterfaceDslPppoeFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateAccessListArgs']]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_hostname: CHAP Hostname
         :param pulumi.Input[_builtins.str] chap_hostname_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password: Specify ppp chap authentication Password
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] core_region: Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        :param pulumi.Input[_builtins.str] core_region: Enable core region
+                 - Choices: `core`, `core-shared`
+                 - Default value: `core`
         :param pulumi.Input[_builtins.str] core_region_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_description: Interface description
         :param pulumi.Input[_builtins.str] ethernet_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated - Default value: `false`
-        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number - Range: `1`-`255`
+        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] ethernet_dialer_pool_number_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_interface_name: Ethernet Interface/Sub Interface Name including sub interface number
         :param pulumi.Input[_builtins.str] ethernet_interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation
+                 - Range: `64`-`1792`
         :param pulumi.Input[_builtins.str] ethernet_ppp_maximum_payload_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface: Dialer IP Unnumbered Loopback interface name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id - Range: `1`-`4094`
+        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id
+                 - Range: `1`-`4094`
         :param pulumi.Input[_builtins.str] ethernet_vlan_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
+        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] nat_block_icmp_error_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs']]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
-        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode
+                 - Choices: `outbound`, `bi-directional`
+                 - Default value: `outbound`
         :param pulumi.Input[_builtins.str] nat_refresh_mode_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_response_to_ping_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp pap authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
         :param pulumi.Input[_builtins.str] pap_username: PAP outbound Sent Username
         :param pulumi.Input[_builtins.str] pap_username_variable: Variable name
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_aggregator_variable: Variable name
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplatePolicerArgs']]] policers: Enable policer
-        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol - Choices: `chap`, `pap`
-        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP - Default value: `false`
+        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol
+                 - Choices: `chap`, `pap`
+        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ppp_authentication_protocol_variable: Variable name
-        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only
+                 - Choices: `callin`, `false`
+                 - Default value: `callin`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes
+                 - Range: `1`-`720`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] qos_adaptive_period_variable: Variable name
         :param pulumi.Input[_builtins.str] qos_map: Name of QoS map
         :param pulumi.Input[_builtins.str] qos_map_variable: Variable name
-        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region
+                 - Choices: `off`, `secondary-only`, `secondary-shared`
+                 - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
-        :param pulumi.Input[_builtins.int] shaping_rate: 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dhcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dns_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_https_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_icmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_netconf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ntp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_snmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC
+                 - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+                 - Default value: `default`
         :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `default`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Default value: `default`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds
+                 - Range: `100`-`600000`
+                 - Default value: `1000`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds
+                 - Range: `12`-`6000`
+                 - Default value: `12`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC
+                 - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds
+                 - Range: `1`-`60`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>
+                 - Range: `0`-`8`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs']]] vdsl_configurations: vdsl
         :param pulumi.Input[_builtins.str] vpn_qos_map: Name of VPN QoS map
@@ -676,9 +748,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -702,7 +773,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="bandwidthDownstream")
     def bandwidth_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface downstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_downstream")
 
@@ -726,7 +798,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="bandwidthUpstream")
     def bandwidth_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface upstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_upstream")
 
@@ -798,7 +871,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="coreRegion")
     def core_region(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        Enable core region
+          - Choices: `core`, `core-shared`
+          - Default value: `core`
         """
         return pulumi.get(self, "core_region")
 
@@ -822,7 +897,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="enableCoreRegion")
     def enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable core region - Default value: `false`
+        Enable core region
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_core_region")
 
@@ -870,7 +946,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ethernetDialerAddressNegotiated")
     def ethernet_dialer_address_negotiated(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Dialer IP Negotiated - Default value: `false`
+        Dialer IP Negotiated
+          - Default value: `false`
         """
         return pulumi.get(self, "ethernet_dialer_address_negotiated")
 
@@ -882,7 +959,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ethernetDialerPoolNumber")
     def ethernet_dialer_pool_number(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Dialer pool number - Range: `1`-`255`
+        Dialer pool number
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "ethernet_dialer_pool_number")
 
@@ -930,7 +1008,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ethernetPppMaximumPayload")
     def ethernet_ppp_maximum_payload(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        Maximum MRU to be negotiated during PPP LCP negotiation
+          - Range: `64`-`1792`
         """
         return pulumi.get(self, "ethernet_ppp_maximum_payload")
 
@@ -978,7 +1057,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ethernetVlanId")
     def ethernet_vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Encapsulation VLAN id - Range: `1`-`4094`
+        Encapsulation VLAN id
+          - Range: `1`-`4094`
         """
         return pulumi.get(self, "ethernet_vlan_id")
 
@@ -1002,7 +1082,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -1026,7 +1107,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1062,7 +1145,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter
     def nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Network Address Translation on this interface - Default value: `false`
+        Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat")
 
@@ -1074,7 +1158,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="natBlockIcmpError")
     def nat_block_icmp_error(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Block inbound ICMP error messages - Default value: `true`
+        Block inbound ICMP error messages
+          - Default value: `true`
         """
         return pulumi.get(self, "nat_block_icmp_error")
 
@@ -1110,7 +1195,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="natRefreshMode")
     def nat_refresh_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        Set NAT refresh mode
+          - Choices: `outbound`, `bi-directional`
+          - Default value: `outbound`
         """
         return pulumi.get(self, "nat_refresh_mode")
 
@@ -1134,7 +1221,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="natResponseToPing")
     def nat_response_to_ping(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        Respond to ping requests to NAT interface ip address from the public side
+          - Default value: `false`
         """
         return pulumi.get(self, "nat_response_to_ping")
 
@@ -1158,7 +1246,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -1182,7 +1272,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -1266,7 +1358,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -1278,7 +1371,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="perTunnelQosAggregator")
     def per_tunnel_qos_aggregator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel QoS Aggregator - Default value: `false`
+        Per-tunnel QoS Aggregator
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos_aggregator")
 
@@ -1326,7 +1420,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="pppAuthenticationProtocol")
     def ppp_authentication_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PPP Link Authentication Protocol - Choices: `chap`, `pap`
+        PPP Link Authentication Protocol
+          - Choices: `chap`, `pap`
         """
         return pulumi.get(self, "ppp_authentication_protocol")
 
@@ -1338,7 +1433,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="pppAuthenticationProtocolPap")
     def ppp_authentication_protocol_pap(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        PPP Authentication Protocol PAP - Default value: `false`
+        PPP Authentication Protocol PAP
+          - Default value: `false`
         """
         return pulumi.get(self, "ppp_authentication_protocol_pap")
 
@@ -1362,7 +1458,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="pppAuthenticationType")
     def ppp_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+        Authenticate remote on incoming call only
+          - Choices: `callin`, `false`
+          - Default value: `callin`
         """
         return pulumi.get(self, "ppp_authentication_type")
 
@@ -1374,7 +1472,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveBandwidthDownstream")
     def qos_adaptive_bandwidth_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default downstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_downstream")
 
@@ -1398,7 +1497,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveBandwidthUpstream")
     def qos_adaptive_bandwidth_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default upstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_upstream")
 
@@ -1422,7 +1522,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveMaxDownstream")
     def qos_adaptive_max_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Downstream max bandwidth limit - Range: `8`-`100000000`
+        Downstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_downstream")
 
@@ -1446,7 +1547,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveMaxUpstream")
     def qos_adaptive_max_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Upstream max bandwidth limit - Range: `8`-`100000000`
+        Upstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_upstream")
 
@@ -1470,7 +1572,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveMinDownstream")
     def qos_adaptive_min_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Downstream min bandwidth limit - Range: `8`-`100000000`
+        Downstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_downstream")
 
@@ -1494,7 +1597,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptiveMinUpstream")
     def qos_adaptive_min_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Upstream min bandwidth limit - Range: `8`-`100000000`
+        Upstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_upstream")
 
@@ -1518,7 +1622,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="qosAdaptivePeriod")
     def qos_adaptive_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        Periodic timer for adaptive QoS in minutes
+          - Range: `1`-`720`
+          - Default value: `15`
         """
         return pulumi.get(self, "qos_adaptive_period")
 
@@ -1566,7 +1672,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="secondaryRegion")
     def secondary_region(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        Enable secondary region
+          - Choices: `off`, `secondary-only`, `secondary-shared`
+          - Default value: `off`
         """
         return pulumi.get(self, "secondary_region")
 
@@ -1590,7 +1698,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="shapingRate")
     def shaping_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "shaping_rate")
 
@@ -1614,7 +1723,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1638,7 +1748,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -1710,7 +1821,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowAll")
     def tunnel_interface_allow_all(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        Allow all traffic. Overrides all other allow-service options if allow-service all is set
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_all")
 
@@ -1734,7 +1846,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowBgp")
     def tunnel_interface_allow_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/deny BGP - Default value: `false`
+        Allow/deny BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_bgp")
 
@@ -1758,7 +1871,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowDhcp")
     def tunnel_interface_allow_dhcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny DHCP - Default value: `true`
+        Allow/Deny DHCP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dhcp")
 
@@ -1782,7 +1896,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowDns")
     def tunnel_interface_allow_dns(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny DNS - Default value: `true`
+        Allow/Deny DNS
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dns")
 
@@ -1806,7 +1921,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowHttps")
     def tunnel_interface_allow_https(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny Https - Default value: `false`
+        Allow/Deny Https
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_https")
 
@@ -1830,7 +1946,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowIcmp")
     def tunnel_interface_allow_icmp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny ICMP - Default value: `true`
+        Allow/Deny ICMP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_icmp")
 
@@ -1854,7 +1971,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowNetconf")
     def tunnel_interface_allow_netconf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny NETCONF - Default value: `false`
+        Allow/Deny NETCONF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_netconf")
 
@@ -1878,7 +1996,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowNtp")
     def tunnel_interface_allow_ntp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny NTP - Default value: `false`
+        Allow/Deny NTP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ntp")
 
@@ -1902,7 +2021,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowOspf")
     def tunnel_interface_allow_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny OSPF - Default value: `false`
+        Allow/Deny OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ospf")
 
@@ -1926,7 +2046,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowSnmp")
     def tunnel_interface_allow_snmp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny SNMP - Default value: `false`
+        Allow/Deny SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_snmp")
 
@@ -1950,7 +2071,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowSsh")
     def tunnel_interface_allow_ssh(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny SSH - Default value: `false`
+        Allow/Deny SSH
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ssh")
 
@@ -1974,7 +2096,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceAllowStun")
     def tunnel_interface_allow_stun(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny STUN - Default value: `false`
+        Allow/Deny STUN
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_stun")
 
@@ -2022,7 +2145,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -2046,8 +2170,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC
+          - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -2071,7 +2196,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -2095,9 +2221,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `default`
+        Set color for TLOC
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -2109,7 +2235,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -2133,7 +2260,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceControlConnections")
     def tunnel_interface_control_connections(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow Control Connection - Default value: `true`
+        Allow Control Connection
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_control_connections")
 
@@ -2217,7 +2345,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds
+          - Range: `100`-`600000`
+          - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -2241,7 +2371,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds
+          - Range: `12`-`6000`
+          - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -2265,7 +2397,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -2289,7 +2422,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -2313,7 +2447,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        Set the maximum number of control connections for this TLOC
+          - Range: `0`-`8`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -2337,7 +2472,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds
+          - Range: `1`-`60`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -2361,7 +2498,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -2385,7 +2523,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -2409,7 +2548,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -2433,7 +2573,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -2457,7 +2598,9 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>
+          - Range: `0`-`8`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -2481,7 +2624,8 @@ class VpnInterfaceDslPppoeFeatureTemplateArgs:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -2728,163 +2872,235 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
         """
         Input properties used for looking up and filtering VpnInterfaceDslPppoeFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateAccessListArgs']]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_hostname: CHAP Hostname
         :param pulumi.Input[_builtins.str] chap_hostname_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password: Specify ppp chap authentication Password
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] core_region: Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        :param pulumi.Input[_builtins.str] core_region: Enable core region
+                 - Choices: `core`, `core-shared`
+                 - Default value: `core`
         :param pulumi.Input[_builtins.str] core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_description: Interface description
         :param pulumi.Input[_builtins.str] ethernet_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated - Default value: `false`
-        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number - Range: `1`-`255`
+        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] ethernet_dialer_pool_number_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_interface_name: Ethernet Interface/Sub Interface Name including sub interface number
         :param pulumi.Input[_builtins.str] ethernet_interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation
+                 - Range: `64`-`1792`
         :param pulumi.Input[_builtins.str] ethernet_ppp_maximum_payload_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface: Dialer IP Unnumbered Loopback interface name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id - Range: `1`-`4094`
+        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id
+                 - Range: `1`-`4094`
         :param pulumi.Input[_builtins.str] ethernet_vlan_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
+        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] nat_block_icmp_error_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs']]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
-        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode
+                 - Choices: `outbound`, `bi-directional`
+                 - Default value: `outbound`
         :param pulumi.Input[_builtins.str] nat_refresh_mode_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_response_to_ping_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp pap authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
         :param pulumi.Input[_builtins.str] pap_username: PAP outbound Sent Username
         :param pulumi.Input[_builtins.str] pap_username_variable: Variable name
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_aggregator_variable: Variable name
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplatePolicerArgs']]] policers: Enable policer
-        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol - Choices: `chap`, `pap`
-        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP - Default value: `false`
+        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol
+                 - Choices: `chap`, `pap`
+        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ppp_authentication_protocol_variable: Variable name
-        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only
+                 - Choices: `callin`, `false`
+                 - Default value: `callin`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes
+                 - Range: `1`-`720`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] qos_adaptive_period_variable: Variable name
         :param pulumi.Input[_builtins.str] qos_map: Name of QoS map
         :param pulumi.Input[_builtins.str] qos_map_variable: Variable name
-        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region
+                 - Choices: `off`, `secondary-only`, `secondary-shared`
+                 - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
-        :param pulumi.Input[_builtins.int] shaping_rate: 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dhcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dns_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_https_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_icmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_netconf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ntp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_snmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC
+                 - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+                 - Default value: `default`
         :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `default`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Default value: `default`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs']]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds
+                 - Range: `100`-`600000`
+                 - Default value: `1000`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds
+                 - Range: `12`-`6000`
+                 - Default value: `12`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC
+                 - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds
+                 - Range: `1`-`60`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>
+                 - Range: `0`-`8`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs']]] vdsl_configurations: vdsl
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -3230,7 +3446,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="bandwidthDownstream")
     def bandwidth_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface downstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_downstream")
 
@@ -3254,7 +3471,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="bandwidthUpstream")
     def bandwidth_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface upstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_upstream")
 
@@ -3326,7 +3544,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="coreRegion")
     def core_region(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        Enable core region
+          - Choices: `core`, `core-shared`
+          - Default value: `core`
         """
         return pulumi.get(self, "core_region")
 
@@ -3362,9 +3582,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -3376,7 +3595,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="enableCoreRegion")
     def enable_core_region(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable core region - Default value: `false`
+        Enable core region
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_core_region")
 
@@ -3424,7 +3644,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ethernetDialerAddressNegotiated")
     def ethernet_dialer_address_negotiated(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Dialer IP Negotiated - Default value: `false`
+        Dialer IP Negotiated
+          - Default value: `false`
         """
         return pulumi.get(self, "ethernet_dialer_address_negotiated")
 
@@ -3436,7 +3657,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ethernetDialerPoolNumber")
     def ethernet_dialer_pool_number(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Dialer pool number - Range: `1`-`255`
+        Dialer pool number
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "ethernet_dialer_pool_number")
 
@@ -3484,7 +3706,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ethernetPppMaximumPayload")
     def ethernet_ppp_maximum_payload(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        Maximum MRU to be negotiated during PPP LCP negotiation
+          - Range: `64`-`1792`
         """
         return pulumi.get(self, "ethernet_ppp_maximum_payload")
 
@@ -3532,7 +3755,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ethernetVlanId")
     def ethernet_vlan_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Encapsulation VLAN id - Range: `1`-`4094`
+        Encapsulation VLAN id
+          - Range: `1`-`4094`
         """
         return pulumi.get(self, "ethernet_vlan_id")
 
@@ -3556,7 +3780,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -3580,7 +3805,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -3616,7 +3843,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter
     def nat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Network Address Translation on this interface - Default value: `false`
+        Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat")
 
@@ -3628,7 +3856,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="natBlockIcmpError")
     def nat_block_icmp_error(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Block inbound ICMP error messages - Default value: `true`
+        Block inbound ICMP error messages
+          - Default value: `true`
         """
         return pulumi.get(self, "nat_block_icmp_error")
 
@@ -3664,7 +3893,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="natRefreshMode")
     def nat_refresh_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        Set NAT refresh mode
+          - Choices: `outbound`, `bi-directional`
+          - Default value: `outbound`
         """
         return pulumi.get(self, "nat_refresh_mode")
 
@@ -3688,7 +3919,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="natResponseToPing")
     def nat_response_to_ping(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        Respond to ping requests to NAT interface ip address from the public side
+          - Default value: `false`
         """
         return pulumi.get(self, "nat_response_to_ping")
 
@@ -3712,7 +3944,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -3736,7 +3970,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -3820,7 +4056,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -3832,7 +4069,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="perTunnelQosAggregator")
     def per_tunnel_qos_aggregator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Per-tunnel QoS Aggregator - Default value: `false`
+        Per-tunnel QoS Aggregator
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos_aggregator")
 
@@ -3880,7 +4118,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="pppAuthenticationProtocol")
     def ppp_authentication_protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PPP Link Authentication Protocol - Choices: `chap`, `pap`
+        PPP Link Authentication Protocol
+          - Choices: `chap`, `pap`
         """
         return pulumi.get(self, "ppp_authentication_protocol")
 
@@ -3892,7 +4131,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="pppAuthenticationProtocolPap")
     def ppp_authentication_protocol_pap(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        PPP Authentication Protocol PAP - Default value: `false`
+        PPP Authentication Protocol PAP
+          - Default value: `false`
         """
         return pulumi.get(self, "ppp_authentication_protocol_pap")
 
@@ -3916,7 +4156,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="pppAuthenticationType")
     def ppp_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+        Authenticate remote on incoming call only
+          - Choices: `callin`, `false`
+          - Default value: `callin`
         """
         return pulumi.get(self, "ppp_authentication_type")
 
@@ -3928,7 +4170,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveBandwidthDownstream")
     def qos_adaptive_bandwidth_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default downstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_downstream")
 
@@ -3952,7 +4195,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveBandwidthUpstream")
     def qos_adaptive_bandwidth_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default upstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_upstream")
 
@@ -3976,7 +4220,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveMaxDownstream")
     def qos_adaptive_max_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Downstream max bandwidth limit - Range: `8`-`100000000`
+        Downstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_downstream")
 
@@ -4000,7 +4245,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveMaxUpstream")
     def qos_adaptive_max_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Upstream max bandwidth limit - Range: `8`-`100000000`
+        Upstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_upstream")
 
@@ -4024,7 +4270,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveMinDownstream")
     def qos_adaptive_min_downstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Downstream min bandwidth limit - Range: `8`-`100000000`
+        Downstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_downstream")
 
@@ -4048,7 +4295,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptiveMinUpstream")
     def qos_adaptive_min_upstream(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Upstream min bandwidth limit - Range: `8`-`100000000`
+        Upstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_upstream")
 
@@ -4072,7 +4320,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="qosAdaptivePeriod")
     def qos_adaptive_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        Periodic timer for adaptive QoS in minutes
+          - Range: `1`-`720`
+          - Default value: `15`
         """
         return pulumi.get(self, "qos_adaptive_period")
 
@@ -4120,7 +4370,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="secondaryRegion")
     def secondary_region(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        Enable secondary region
+          - Choices: `off`, `secondary-only`, `secondary-shared`
+          - Default value: `off`
         """
         return pulumi.get(self, "secondary_region")
 
@@ -4144,7 +4396,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="shapingRate")
     def shaping_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "shaping_rate")
 
@@ -4168,7 +4421,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -4192,7 +4446,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -4276,7 +4531,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowAll")
     def tunnel_interface_allow_all(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        Allow all traffic. Overrides all other allow-service options if allow-service all is set
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_all")
 
@@ -4300,7 +4556,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowBgp")
     def tunnel_interface_allow_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/deny BGP - Default value: `false`
+        Allow/deny BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_bgp")
 
@@ -4324,7 +4581,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowDhcp")
     def tunnel_interface_allow_dhcp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny DHCP - Default value: `true`
+        Allow/Deny DHCP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dhcp")
 
@@ -4348,7 +4606,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowDns")
     def tunnel_interface_allow_dns(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny DNS - Default value: `true`
+        Allow/Deny DNS
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dns")
 
@@ -4372,7 +4631,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowHttps")
     def tunnel_interface_allow_https(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny Https - Default value: `false`
+        Allow/Deny Https
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_https")
 
@@ -4396,7 +4656,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowIcmp")
     def tunnel_interface_allow_icmp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny ICMP - Default value: `true`
+        Allow/Deny ICMP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_icmp")
 
@@ -4420,7 +4681,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowNetconf")
     def tunnel_interface_allow_netconf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny NETCONF - Default value: `false`
+        Allow/Deny NETCONF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_netconf")
 
@@ -4444,7 +4706,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowNtp")
     def tunnel_interface_allow_ntp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny NTP - Default value: `false`
+        Allow/Deny NTP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ntp")
 
@@ -4468,7 +4731,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowOspf")
     def tunnel_interface_allow_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny OSPF - Default value: `false`
+        Allow/Deny OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ospf")
 
@@ -4492,7 +4756,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowSnmp")
     def tunnel_interface_allow_snmp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny SNMP - Default value: `false`
+        Allow/Deny SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_snmp")
 
@@ -4516,7 +4781,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowSsh")
     def tunnel_interface_allow_ssh(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny SSH - Default value: `false`
+        Allow/Deny SSH
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ssh")
 
@@ -4540,7 +4806,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceAllowStun")
     def tunnel_interface_allow_stun(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow/Deny STUN - Default value: `false`
+        Allow/Deny STUN
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_stun")
 
@@ -4588,7 +4855,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -4612,8 +4880,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC
+          - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -4637,7 +4906,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -4661,9 +4931,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `default`
+        Set color for TLOC
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -4675,7 +4945,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -4699,7 +4970,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceControlConnections")
     def tunnel_interface_control_connections(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Allow Control Connection - Default value: `true`
+        Allow Control Connection
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_control_connections")
 
@@ -4783,7 +5055,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds
+          - Range: `100`-`600000`
+          - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -4807,7 +5081,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds
+          - Range: `12`-`6000`
+          - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -4831,7 +5107,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -4855,7 +5132,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -4879,7 +5157,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        Set the maximum number of control connections for this TLOC
+          - Range: `0`-`8`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -4903,7 +5182,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds
+          - Range: `1`-`60`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -4927,7 +5208,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -4951,7 +5233,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -4975,7 +5258,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -4999,7 +5283,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -5023,7 +5308,9 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>
+          - Range: `0`-`8`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -5047,7 +5334,8 @@ class _VpnInterfaceDslPppoeFeatureTemplateState:
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 
@@ -5320,162 +5608,234 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateAccessListArgs', 'VpnInterfaceDslPppoeFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_hostname: CHAP Hostname
         :param pulumi.Input[_builtins.str] chap_hostname_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password: Specify ppp chap authentication Password
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] core_region: Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        :param pulumi.Input[_builtins.str] core_region: Enable core region
+                 - Choices: `core`, `core-shared`
+                 - Default value: `core`
         :param pulumi.Input[_builtins.str] core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_description: Interface description
         :param pulumi.Input[_builtins.str] ethernet_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated - Default value: `false`
-        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number - Range: `1`-`255`
+        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] ethernet_dialer_pool_number_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_interface_name: Ethernet Interface/Sub Interface Name including sub interface number
         :param pulumi.Input[_builtins.str] ethernet_interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation
+                 - Range: `64`-`1792`
         :param pulumi.Input[_builtins.str] ethernet_ppp_maximum_payload_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface: Dialer IP Unnumbered Loopback interface name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id - Range: `1`-`4094`
+        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id
+                 - Range: `1`-`4094`
         :param pulumi.Input[_builtins.str] ethernet_vlan_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
+        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] nat_block_icmp_error_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs', 'VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgsDict']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
-        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode
+                 - Choices: `outbound`, `bi-directional`
+                 - Default value: `outbound`
         :param pulumi.Input[_builtins.str] nat_refresh_mode_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_response_to_ping_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp pap authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
         :param pulumi.Input[_builtins.str] pap_username: PAP outbound Sent Username
         :param pulumi.Input[_builtins.str] pap_username_variable: Variable name
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_aggregator_variable: Variable name
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplatePolicerArgs', 'VpnInterfaceDslPppoeFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
-        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol - Choices: `chap`, `pap`
-        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP - Default value: `false`
+        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol
+                 - Choices: `chap`, `pap`
+        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ppp_authentication_protocol_variable: Variable name
-        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only
+                 - Choices: `callin`, `false`
+                 - Default value: `callin`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes
+                 - Range: `1`-`720`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] qos_adaptive_period_variable: Variable name
         :param pulumi.Input[_builtins.str] qos_map: Name of QoS map
         :param pulumi.Input[_builtins.str] qos_map_variable: Variable name
-        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region
+                 - Choices: `off`, `secondary-only`, `secondary-shared`
+                 - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
-        :param pulumi.Input[_builtins.int] shaping_rate: 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dhcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dns_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_https_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_icmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_netconf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ntp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_snmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC
+                 - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+                 - Default value: `default`
         :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `default`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Default value: `default`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds
+                 - Range: `100`-`600000`
+                 - Default value: `1000`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds
+                 - Range: `12`-`6000`
+                 - Default value: `12`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC
+                 - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds
+                 - Range: `1`-`60`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>
+                 - Range: `0`-`8`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs', 'VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgsDict']]]] vdsl_configurations: vdsl
         :param pulumi.Input[_builtins.str] vpn_qos_map: Name of VPN QoS map
@@ -6025,163 +6385,235 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateAccessListArgs', 'VpnInterfaceDslPppoeFeatureTemplateAccessListArgsDict']]]] access_lists: Apply ACL
-        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_downstream: Interface downstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        :param pulumi.Input[_builtins.int] bandwidth_upstream: Interface upstream bandwidth capacity, in kbps
+                 - Range: `1`-`2147483647`
         :param pulumi.Input[_builtins.str] bandwidth_upstream_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_hostname: CHAP Hostname
         :param pulumi.Input[_builtins.str] chap_hostname_variable: Variable name
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password: Specify ppp chap authentication Password
         :param pulumi.Input[_builtins.str] chap_ppp_auth_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] core_region: Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        :param pulumi.Input[_builtins.str] core_region: Enable core region
+                 - Choices: `core`, `core-shared`
+                 - Default value: `core`
         :param pulumi.Input[_builtins.str] core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_core_region: Enable core region
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_core_region_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_description: Interface description
         :param pulumi.Input[_builtins.str] ethernet_description_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated - Default value: `false`
-        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number - Range: `1`-`255`
+        :param pulumi.Input[_builtins.bool] ethernet_dialer_address_negotiated: Dialer IP Negotiated
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] ethernet_dialer_pool_number: Dialer pool number
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] ethernet_dialer_pool_number_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_interface_name: Ethernet Interface/Sub Interface Name including sub interface number
         :param pulumi.Input[_builtins.str] ethernet_interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        :param pulumi.Input[_builtins.int] ethernet_ppp_maximum_payload: Maximum MRU to be negotiated during PPP LCP negotiation
+                 - Range: `64`-`1792`
         :param pulumi.Input[_builtins.str] ethernet_ppp_maximum_payload_variable: Variable name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface: Dialer IP Unnumbered Loopback interface name
         :param pulumi.Input[_builtins.str] ethernet_unnumbered_loopback_interface_variable: Variable name
-        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id - Range: `1`-`4094`
+        :param pulumi.Input[_builtins.int] ethernet_vlan_id: Encapsulation VLAN id
+                 - Range: `1`-`4094`
         :param pulumi.Input[_builtins.str] ethernet_vlan_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ip_directed_broadcast: IP Directed-Broadcast
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ip_directed_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..2000>, in bytes
+                 - Range: `576`-`2000`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface - Default value: `false`
-        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages - Default value: `true`
+        :param pulumi.Input[_builtins.bool] nat: Network Address Translation on this interface
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_block_icmp_error: Block inbound ICMP error messages
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] nat_block_icmp_error_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs', 'VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgsDict']]]] nat_port_forwards: Set port-forwarding rules for NAT on this interface
-        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        :param pulumi.Input[_builtins.str] nat_refresh_mode: Set NAT refresh mode
+                 - Choices: `outbound`, `bi-directional`
+                 - Default value: `outbound`
         :param pulumi.Input[_builtins.str] nat_refresh_mode_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nat_response_to_ping: Respond to ping requests to NAT interface ip address from the public side
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nat_response_to_ping_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        :param pulumi.Input[_builtins.int] nat_tcp_timeout: Set NAT TCP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] nat_tcp_timeout_variable: Variable name
-        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        :param pulumi.Input[_builtins.int] nat_udp_timeout: Set NAT UDP session timeout, in minutes
+                 - Range: `1`-`8947`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] nat_udp_timeout_variable: Variable name
         :param pulumi.Input[_builtins.bool] pap_password: PAP outbound Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password: Specify ppp pap authentication Password
         :param pulumi.Input[_builtins.str] pap_ppp_auth_password_variable: Variable name
         :param pulumi.Input[_builtins.str] pap_username: PAP outbound Sent Username
         :param pulumi.Input[_builtins.str] pap_username_variable: Variable name
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos - Default value: `false`
-        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos: Per-tunnel Qos
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] per_tunnel_qos_aggregator: Per-tunnel QoS Aggregator
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] per_tunnel_qos_aggregator_variable: Variable name
         :param pulumi.Input[_builtins.str] per_tunnel_qos_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplatePolicerArgs', 'VpnInterfaceDslPppoeFeatureTemplatePolicerArgsDict']]]] policers: Enable policer
-        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol - Choices: `chap`, `pap`
-        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP - Default value: `false`
+        :param pulumi.Input[_builtins.str] ppp_authentication_protocol: PPP Link Authentication Protocol
+                 - Choices: `chap`, `pap`
+        :param pulumi.Input[_builtins.bool] ppp_authentication_protocol_pap: PPP Authentication Protocol PAP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ppp_authentication_protocol_variable: Variable name
-        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.str] ppp_authentication_type: Authenticate remote on incoming call only
+                 - Choices: `callin`, `false`
+                 - Default value: `callin`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_downstream: Adaptive QoS default downstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_bandwidth_upstream: Adaptive QoS default upstream bandwidth
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_bandwidth_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_downstream: Downstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_max_upstream: Upstream max bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_max_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_downstream: Downstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_downstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] qos_adaptive_min_upstream: Upstream min bandwidth limit
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] qos_adaptive_min_upstream_variable: Variable name
-        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        :param pulumi.Input[_builtins.int] qos_adaptive_period: Periodic timer for adaptive QoS in minutes
+                 - Range: `1`-`720`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] qos_adaptive_period_variable: Variable name
         :param pulumi.Input[_builtins.str] qos_map: Name of QoS map
         :param pulumi.Input[_builtins.str] qos_map_variable: Variable name
-        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        :param pulumi.Input[_builtins.str] secondary_region: Enable secondary region
+                 - Choices: `off`, `secondary-only`, `secondary-shared`
+                 - Default value: `off`
         :param pulumi.Input[_builtins.str] secondary_region_variable: Variable name
-        :param pulumi.Input[_builtins.int] shaping_rate: 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        :param pulumi.Input[_builtins.int] shaping_rate: 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+                 - Range: `8`-`100000000`
         :param pulumi.Input[_builtins.str] shaping_rate_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `true`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `552`-`1960`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.str] tloc_extension: Extends a local TLOC to a remote node only for vpn 0
         :param pulumi.Input[_builtins.str] tloc_extension_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] trackers: Enable tracker for this interface
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_all: Allow all traffic. Overrides all other allow-service options if allow-service all is set
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_all_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_bgp: Allow/deny BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dhcp: Allow/Deny DHCP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dhcp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_dns: Allow/Deny DNS
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_dns_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_https: Allow/Deny Https
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_https_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_icmp: Allow/Deny ICMP
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_icmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_netconf: Allow/Deny NETCONF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_netconf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ntp: Allow/Deny NTP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ntp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ospf: Allow/Deny OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_snmp: Allow/Deny SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_snmp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_ssh: Allow/Deny SSH
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_ssh_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_allow_stun: Allow/Deny STUN
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_allow_stun_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel: Bind loopback tunnel interface to a physical interface
         :param pulumi.Input[_builtins.str] tunnel_interface_bind_loopback_tunnel_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_border: Set TLOC as border TLOC
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_border_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-               `carrier7`, `carrier8` - Default value: `default`
+        :param pulumi.Input[_builtins.str] tunnel_interface_carrier: Set carrier for TLOC
+                 - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+                 - Default value: `default`
         :param pulumi.Input[_builtins.str] tunnel_interface_carrier_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_clear_dont_fragment_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-               `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-               `private4`, `private5`, `private6` - Default value: `default`
-        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior - Default value: `false`
+        :param pulumi.Input[_builtins.str] tunnel_interface_color: Set color for TLOC
+                 - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+                 - Default value: `default`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_color_restrict: Restrict this TLOC behavior
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_color_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_control_connections: Allow Control Connection
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_control_connections_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs', 'VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgsDict']]]] tunnel_interface_encapsulations: Encapsulation for TLOC
         :param pulumi.Input[_builtins.str] tunnel_interface_exclude_controller_group_list_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_exclude_controller_group_lists: Exclude the following controller groups defined in this list
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] tunnel_interface_groups: List of groups
         :param pulumi.Input[_builtins.str] tunnel_interface_groups_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_interval: Set time period of control hello packets <100..600000> milli seconds
+                 - Range: `100`-`600000`
+                 - Default value: `1000`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        :param pulumi.Input[_builtins.int] tunnel_interface_hello_tolerance: Set tolerance of control hello packets <12..6000> seconds
+                 - Range: `12`-`6000`
+                 - Default value: `12`
         :param pulumi.Input[_builtins.str] tunnel_interface_hello_tolerance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_last_resort_circuit: Set TLOC as last resort
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_last_resort_circuit_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_low_bandwidth_link: Set the interface as a low-bandwidth circuit
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_low_bandwidth_link_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        :param pulumi.Input[_builtins.int] tunnel_interface_max_control_connections: Set the maximum number of control connections for this TLOC
+                 - Range: `0`-`8`
         :param pulumi.Input[_builtins.str] tunnel_interface_max_control_connections_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_nat_refresh_interval: Set time period of nat refresh packets <1...60> seconds
+                 - Range: `1`-`60`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_nat_refresh_interval_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_network_broadcast: Accept and respond to network-prefix-directed broadcasts)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_network_broadcast_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface - Default value: `true`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_port_hop: Disallow port hopping on the tunnel interface
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] tunnel_interface_port_hop_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tunnel_interface_tunnel_tcp_mss: Tunnel TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tunnel_interface_tunnel_tcp_mss_variable: Variable name
-        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only - Default value: `false`
+        :param pulumi.Input[_builtins.bool] tunnel_interface_vbond_as_stun_server: Put this wan interface in STUN mode only
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] tunnel_interface_vbond_as_stun_server_variable: Variable name
-        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        :param pulumi.Input[_builtins.int] tunnel_interface_vmanage_connection_preference: Set interface preference for control connection to vManage <0..8>
+                 - Range: `0`-`8`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] tunnel_interface_vmanage_connection_preference_variable: Variable name
-        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode - Choices: `spoke`
+        :param pulumi.Input[_builtins.str] tunnel_qos_mode: Set tunnel QoS mode
+                 - Choices: `spoke`
         :param pulumi.Input[_builtins.str] tunnel_qos_mode_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs', 'VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgsDict']]]] vdsl_configurations: vdsl
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -6368,7 +6800,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="bandwidthDownstream")
     def bandwidth_downstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface downstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_downstream")
 
@@ -6384,7 +6817,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="bandwidthUpstream")
     def bandwidth_upstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+        Interface upstream bandwidth capacity, in kbps
+          - Range: `1`-`2147483647`
         """
         return pulumi.get(self, "bandwidth_upstream")
 
@@ -6432,7 +6866,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="coreRegion")
     def core_region(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+        Enable core region
+          - Choices: `core`, `core-shared`
+          - Default value: `core`
         """
         return pulumi.get(self, "core_region")
 
@@ -6456,9 +6892,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -6466,7 +6901,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="enableCoreRegion")
     def enable_core_region(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable core region - Default value: `false`
+        Enable core region
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_core_region")
 
@@ -6498,7 +6934,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ethernetDialerAddressNegotiated")
     def ethernet_dialer_address_negotiated(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Dialer IP Negotiated - Default value: `false`
+        Dialer IP Negotiated
+          - Default value: `false`
         """
         return pulumi.get(self, "ethernet_dialer_address_negotiated")
 
@@ -6506,7 +6943,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ethernetDialerPoolNumber")
     def ethernet_dialer_pool_number(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Dialer pool number - Range: `1`-`255`
+        Dialer pool number
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "ethernet_dialer_pool_number")
 
@@ -6538,7 +6976,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ethernetPppMaximumPayload")
     def ethernet_ppp_maximum_payload(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+        Maximum MRU to be negotiated during PPP LCP negotiation
+          - Range: `64`-`1792`
         """
         return pulumi.get(self, "ethernet_ppp_maximum_payload")
 
@@ -6570,7 +7009,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ethernetVlanId")
     def ethernet_vlan_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Encapsulation VLAN id - Range: `1`-`4094`
+        Encapsulation VLAN id
+          - Range: `1`-`4094`
         """
         return pulumi.get(self, "ethernet_vlan_id")
 
@@ -6586,7 +7026,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipDirectedBroadcast")
     def ip_directed_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        IP Directed-Broadcast - Default value: `false`
+        IP Directed-Broadcast
+          - Default value: `false`
         """
         return pulumi.get(self, "ip_directed_broadcast")
 
@@ -6602,7 +7043,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <576..2000>, in bytes - Range: `576`-`2000` - Default value: `1500`
+        Interface MTU <576..2000>, in bytes
+          - Range: `576`-`2000`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -6626,7 +7069,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def nat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Network Address Translation on this interface - Default value: `false`
+        Network Address Translation on this interface
+          - Default value: `false`
         """
         return pulumi.get(self, "nat")
 
@@ -6634,7 +7078,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="natBlockIcmpError")
     def nat_block_icmp_error(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Block inbound ICMP error messages - Default value: `true`
+        Block inbound ICMP error messages
+          - Default value: `true`
         """
         return pulumi.get(self, "nat_block_icmp_error")
 
@@ -6658,7 +7103,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="natRefreshMode")
     def nat_refresh_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+        Set NAT refresh mode
+          - Choices: `outbound`, `bi-directional`
+          - Default value: `outbound`
         """
         return pulumi.get(self, "nat_refresh_mode")
 
@@ -6674,7 +7121,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="natResponseToPing")
     def nat_response_to_ping(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+        Respond to ping requests to NAT interface ip address from the public side
+          - Default value: `false`
         """
         return pulumi.get(self, "nat_response_to_ping")
 
@@ -6690,7 +7138,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="natTcpTimeout")
     def nat_tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        Set NAT TCP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `60`
         """
         return pulumi.get(self, "nat_tcp_timeout")
 
@@ -6706,7 +7156,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        Set NAT UDP session timeout, in minutes
+          - Range: `1`-`8947`
+          - Default value: `1`
         """
         return pulumi.get(self, "nat_udp_timeout")
 
@@ -6762,7 +7214,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="perTunnelQos")
     def per_tunnel_qos(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Per-tunnel Qos - Default value: `false`
+        Per-tunnel Qos
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos")
 
@@ -6770,7 +7223,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="perTunnelQosAggregator")
     def per_tunnel_qos_aggregator(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Per-tunnel QoS Aggregator - Default value: `false`
+        Per-tunnel QoS Aggregator
+          - Default value: `false`
         """
         return pulumi.get(self, "per_tunnel_qos_aggregator")
 
@@ -6802,7 +7256,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="pppAuthenticationProtocol")
     def ppp_authentication_protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        PPP Link Authentication Protocol - Choices: `chap`, `pap`
+        PPP Link Authentication Protocol
+          - Choices: `chap`, `pap`
         """
         return pulumi.get(self, "ppp_authentication_protocol")
 
@@ -6810,7 +7265,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="pppAuthenticationProtocolPap")
     def ppp_authentication_protocol_pap(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        PPP Authentication Protocol PAP - Default value: `false`
+        PPP Authentication Protocol PAP
+          - Default value: `false`
         """
         return pulumi.get(self, "ppp_authentication_protocol_pap")
 
@@ -6826,7 +7282,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="pppAuthenticationType")
     def ppp_authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Authenticate remote on incoming call only - Choices: `callin`, `false` - Default value: `callin`
+        Authenticate remote on incoming call only
+          - Choices: `callin`, `false`
+          - Default value: `callin`
         """
         return pulumi.get(self, "ppp_authentication_type")
 
@@ -6834,7 +7292,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveBandwidthDownstream")
     def qos_adaptive_bandwidth_downstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default downstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_downstream")
 
@@ -6850,7 +7309,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveBandwidthUpstream")
     def qos_adaptive_bandwidth_upstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+        Adaptive QoS default upstream bandwidth
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_bandwidth_upstream")
 
@@ -6866,7 +7326,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveMaxDownstream")
     def qos_adaptive_max_downstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Downstream max bandwidth limit - Range: `8`-`100000000`
+        Downstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_downstream")
 
@@ -6882,7 +7343,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveMaxUpstream")
     def qos_adaptive_max_upstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Upstream max bandwidth limit - Range: `8`-`100000000`
+        Upstream max bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_max_upstream")
 
@@ -6898,7 +7360,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveMinDownstream")
     def qos_adaptive_min_downstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Downstream min bandwidth limit - Range: `8`-`100000000`
+        Downstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_downstream")
 
@@ -6914,7 +7377,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptiveMinUpstream")
     def qos_adaptive_min_upstream(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Upstream min bandwidth limit - Range: `8`-`100000000`
+        Upstream min bandwidth limit
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "qos_adaptive_min_upstream")
 
@@ -6930,7 +7394,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="qosAdaptivePeriod")
     def qos_adaptive_period(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+        Periodic timer for adaptive QoS in minutes
+          - Range: `1`-`720`
+          - Default value: `15`
         """
         return pulumi.get(self, "qos_adaptive_period")
 
@@ -6962,7 +7428,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="secondaryRegion")
     def secondary_region(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+        Enable secondary region
+          - Choices: `off`, `secondary-only`, `secondary-shared`
+          - Default value: `off`
         """
         return pulumi.get(self, "secondary_region")
 
@@ -6978,7 +7446,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="shapingRate")
     def shaping_rate(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+        1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+          - Range: `8`-`100000000`
         """
         return pulumi.get(self, "shaping_rate")
 
@@ -6994,7 +7463,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `true`
+        Administrative state
+          - Default value: `true`
         """
         return pulumi.get(self, "shutdown")
 
@@ -7010,7 +7480,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+        TCP MSS on SYN packets, in bytes
+          - Range: `552`-`1960`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -7066,7 +7537,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowAll")
     def tunnel_interface_allow_all(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+        Allow all traffic. Overrides all other allow-service options if allow-service all is set
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_all")
 
@@ -7082,7 +7554,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowBgp")
     def tunnel_interface_allow_bgp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/deny BGP - Default value: `false`
+        Allow/deny BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_bgp")
 
@@ -7098,7 +7571,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowDhcp")
     def tunnel_interface_allow_dhcp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny DHCP - Default value: `true`
+        Allow/Deny DHCP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dhcp")
 
@@ -7114,7 +7588,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowDns")
     def tunnel_interface_allow_dns(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny DNS - Default value: `true`
+        Allow/Deny DNS
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_dns")
 
@@ -7130,7 +7605,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowHttps")
     def tunnel_interface_allow_https(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny Https - Default value: `false`
+        Allow/Deny Https
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_https")
 
@@ -7146,7 +7622,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowIcmp")
     def tunnel_interface_allow_icmp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny ICMP - Default value: `true`
+        Allow/Deny ICMP
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_allow_icmp")
 
@@ -7162,7 +7639,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowNetconf")
     def tunnel_interface_allow_netconf(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny NETCONF - Default value: `false`
+        Allow/Deny NETCONF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_netconf")
 
@@ -7178,7 +7656,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowNtp")
     def tunnel_interface_allow_ntp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny NTP - Default value: `false`
+        Allow/Deny NTP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ntp")
 
@@ -7194,7 +7673,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowOspf")
     def tunnel_interface_allow_ospf(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny OSPF - Default value: `false`
+        Allow/Deny OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ospf")
 
@@ -7210,7 +7690,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowSnmp")
     def tunnel_interface_allow_snmp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny SNMP - Default value: `false`
+        Allow/Deny SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_snmp")
 
@@ -7226,7 +7707,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowSsh")
     def tunnel_interface_allow_ssh(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny SSH - Default value: `false`
+        Allow/Deny SSH
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_ssh")
 
@@ -7242,7 +7724,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceAllowStun")
     def tunnel_interface_allow_stun(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow/Deny STUN - Default value: `false`
+        Allow/Deny STUN
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_allow_stun")
 
@@ -7274,7 +7757,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceBorder")
     def tunnel_interface_border(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set TLOC as border TLOC - Default value: `false`
+        Set TLOC as border TLOC
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_border")
 
@@ -7290,8 +7774,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceCarrier")
     def tunnel_interface_carrier(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-        `carrier7`, `carrier8` - Default value: `default`
+        Set carrier for TLOC
+          - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_carrier")
 
@@ -7307,7 +7792,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceClearDontFragment")
     def tunnel_interface_clear_dont_fragment(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_clear_dont_fragment")
 
@@ -7323,9 +7809,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColor")
     def tunnel_interface_color(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-        `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-        `private4`, `private5`, `private6` - Default value: `default`
+        Set color for TLOC
+          - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+          - Default value: `default`
         """
         return pulumi.get(self, "tunnel_interface_color")
 
@@ -7333,7 +7819,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceColorRestrict")
     def tunnel_interface_color_restrict(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Restrict this TLOC behavior - Default value: `false`
+        Restrict this TLOC behavior
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_color_restrict")
 
@@ -7349,7 +7836,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceControlConnections")
     def tunnel_interface_control_connections(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Allow Control Connection - Default value: `true`
+        Allow Control Connection
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_control_connections")
 
@@ -7405,7 +7893,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloInterval")
     def tunnel_interface_hello_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+        Set time period of control hello packets <100..600000> milli seconds
+          - Range: `100`-`600000`
+          - Default value: `1000`
         """
         return pulumi.get(self, "tunnel_interface_hello_interval")
 
@@ -7421,7 +7911,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceHelloTolerance")
     def tunnel_interface_hello_tolerance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+        Set tolerance of control hello packets <12..6000> seconds
+          - Range: `12`-`6000`
+          - Default value: `12`
         """
         return pulumi.get(self, "tunnel_interface_hello_tolerance")
 
@@ -7437,7 +7929,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLastResortCircuit")
     def tunnel_interface_last_resort_circuit(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set TLOC as last resort - Default value: `false`
+        Set TLOC as last resort
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_last_resort_circuit")
 
@@ -7453,7 +7946,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceLowBandwidthLink")
     def tunnel_interface_low_bandwidth_link(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Set the interface as a low-bandwidth circuit - Default value: `false`
+        Set the interface as a low-bandwidth circuit
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_low_bandwidth_link")
 
@@ -7469,7 +7963,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceMaxControlConnections")
     def tunnel_interface_max_control_connections(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+        Set the maximum number of control connections for this TLOC
+          - Range: `0`-`8`
         """
         return pulumi.get(self, "tunnel_interface_max_control_connections")
 
@@ -7485,7 +7980,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNatRefreshInterval")
     def tunnel_interface_nat_refresh_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+        Set time period of nat refresh packets <1...60> seconds
+          - Range: `1`-`60`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_nat_refresh_interval")
 
@@ -7501,7 +7998,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceNetworkBroadcast")
     def tunnel_interface_network_broadcast(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+        Accept and respond to network-prefix-directed broadcasts)
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_network_broadcast")
 
@@ -7517,7 +8015,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfacePortHop")
     def tunnel_interface_port_hop(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Disallow port hopping on the tunnel interface - Default value: `true`
+        Disallow port hopping on the tunnel interface
+          - Default value: `true`
         """
         return pulumi.get(self, "tunnel_interface_port_hop")
 
@@ -7533,7 +8032,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        Tunnel TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tunnel_interface_tunnel_tcp_mss")
 
@@ -7549,7 +8049,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVbondAsStunServer")
     def tunnel_interface_vbond_as_stun_server(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Put this wan interface in STUN mode only - Default value: `false`
+        Put this wan interface in STUN mode only
+          - Default value: `false`
         """
         return pulumi.get(self, "tunnel_interface_vbond_as_stun_server")
 
@@ -7565,7 +8066,9 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelInterfaceVmanageConnectionPreference")
     def tunnel_interface_vmanage_connection_preference(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+        Set interface preference for control connection to vManage <0..8>
+          - Range: `0`-`8`
+          - Default value: `5`
         """
         return pulumi.get(self, "tunnel_interface_vmanage_connection_preference")
 
@@ -7581,7 +8084,8 @@ class VpnInterfaceDslPppoeFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="tunnelQosMode")
     def tunnel_qos_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set tunnel QoS mode - Choices: `spoke`
+        Set tunnel QoS mode
+          - Choices: `spoke`
         """
         return pulumi.get(self, "tunnel_qos_mode")
 

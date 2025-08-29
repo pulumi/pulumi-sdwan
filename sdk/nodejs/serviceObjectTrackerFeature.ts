@@ -65,67 +65,68 @@ export class ServiceObjectTrackerFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * interface name
      */
-    public readonly interface!: pulumi.Output<string | undefined>;
+    declare public readonly interface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Object tracker ID - Range: `1`-`1000`
+     * Object tracker ID
+     *   - Range: `1`-`1000`
      */
-    public readonly objectTrackerId!: pulumi.Output<number | undefined>;
+    declare public readonly objectTrackerId: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly objectTrackerIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly objectTrackerIdVariable: pulumi.Output<string | undefined>;
     /**
-     * objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      */
-    public readonly objectTrackerType!: pulumi.Output<string>;
+    declare public readonly objectTrackerType: pulumi.Output<string>;
     /**
      * IP address
      */
-    public readonly routeIp!: pulumi.Output<string | undefined>;
+    declare public readonly routeIp: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routeIpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routeIpVariable: pulumi.Output<string | undefined>;
     /**
-     * IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      */
-    public readonly routeMask!: pulumi.Output<string | undefined>;
+    declare public readonly routeMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routeMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routeMaskVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * VPN - Range: `0`-`65530`
+     * VPN
+     *   - Range: `0`-`65530`
      */
-    public readonly vpn!: pulumi.Output<number | undefined>;
+    declare public readonly vpn: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly vpnVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vpnVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a ServiceObjectTrackerFeature resource with the given unique name, arguments, and options.
@@ -140,43 +141,43 @@ export class ServiceObjectTrackerFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceObjectTrackerFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interface"] = state ? state.interface : undefined;
-            resourceInputs["interfaceVariable"] = state ? state.interfaceVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["objectTrackerId"] = state ? state.objectTrackerId : undefined;
-            resourceInputs["objectTrackerIdVariable"] = state ? state.objectTrackerIdVariable : undefined;
-            resourceInputs["objectTrackerType"] = state ? state.objectTrackerType : undefined;
-            resourceInputs["routeIp"] = state ? state.routeIp : undefined;
-            resourceInputs["routeIpVariable"] = state ? state.routeIpVariable : undefined;
-            resourceInputs["routeMask"] = state ? state.routeMask : undefined;
-            resourceInputs["routeMaskVariable"] = state ? state.routeMaskVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpn"] = state ? state.vpn : undefined;
-            resourceInputs["vpnVariable"] = state ? state.vpnVariable : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interface"] = state?.interface;
+            resourceInputs["interfaceVariable"] = state?.interfaceVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["objectTrackerId"] = state?.objectTrackerId;
+            resourceInputs["objectTrackerIdVariable"] = state?.objectTrackerIdVariable;
+            resourceInputs["objectTrackerType"] = state?.objectTrackerType;
+            resourceInputs["routeIp"] = state?.routeIp;
+            resourceInputs["routeIpVariable"] = state?.routeIpVariable;
+            resourceInputs["routeMask"] = state?.routeMask;
+            resourceInputs["routeMaskVariable"] = state?.routeMaskVariable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpn"] = state?.vpn;
+            resourceInputs["vpnVariable"] = state?.vpnVariable;
         } else {
             const args = argsOrState as ServiceObjectTrackerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.objectTrackerType === undefined) && !opts.urn) {
+            if (args?.objectTrackerType === undefined && !opts.urn) {
                 throw new Error("Missing required property 'objectTrackerType'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interface"] = args ? args.interface : undefined;
-            resourceInputs["interfaceVariable"] = args ? args.interfaceVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["objectTrackerId"] = args ? args.objectTrackerId : undefined;
-            resourceInputs["objectTrackerIdVariable"] = args ? args.objectTrackerIdVariable : undefined;
-            resourceInputs["objectTrackerType"] = args ? args.objectTrackerType : undefined;
-            resourceInputs["routeIp"] = args ? args.routeIp : undefined;
-            resourceInputs["routeIpVariable"] = args ? args.routeIpVariable : undefined;
-            resourceInputs["routeMask"] = args ? args.routeMask : undefined;
-            resourceInputs["routeMaskVariable"] = args ? args.routeMaskVariable : undefined;
-            resourceInputs["vpn"] = args ? args.vpn : undefined;
-            resourceInputs["vpnVariable"] = args ? args.vpnVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interface"] = args?.interface;
+            resourceInputs["interfaceVariable"] = args?.interfaceVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["objectTrackerId"] = args?.objectTrackerId;
+            resourceInputs["objectTrackerIdVariable"] = args?.objectTrackerIdVariable;
+            resourceInputs["objectTrackerType"] = args?.objectTrackerType;
+            resourceInputs["routeIp"] = args?.routeIp;
+            resourceInputs["routeIpVariable"] = args?.routeIpVariable;
+            resourceInputs["routeMask"] = args?.routeMask;
+            resourceInputs["routeMaskVariable"] = args?.routeMaskVariable;
+            resourceInputs["vpn"] = args?.vpn;
+            resourceInputs["vpnVariable"] = args?.vpnVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -209,7 +210,8 @@ export interface ServiceObjectTrackerFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Object tracker ID - Range: `1`-`1000`
+     * Object tracker ID
+     *   - Range: `1`-`1000`
      */
     objectTrackerId?: pulumi.Input<number>;
     /**
@@ -217,7 +219,8 @@ export interface ServiceObjectTrackerFeatureState {
      */
     objectTrackerIdVariable?: pulumi.Input<string>;
     /**
-     * objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      */
     objectTrackerType?: pulumi.Input<string>;
     /**
@@ -229,11 +232,9 @@ export interface ServiceObjectTrackerFeatureState {
      */
     routeIpVariable?: pulumi.Input<string>;
     /**
-     * IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      */
     routeMask?: pulumi.Input<string>;
     /**
@@ -245,7 +246,8 @@ export interface ServiceObjectTrackerFeatureState {
      */
     version?: pulumi.Input<number>;
     /**
-     * VPN - Range: `0`-`65530`
+     * VPN
+     *   - Range: `0`-`65530`
      */
     vpn?: pulumi.Input<number>;
     /**
@@ -279,7 +281,8 @@ export interface ServiceObjectTrackerFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Object tracker ID - Range: `1`-`1000`
+     * Object tracker ID
+     *   - Range: `1`-`1000`
      */
     objectTrackerId?: pulumi.Input<number>;
     /**
@@ -287,7 +290,8 @@ export interface ServiceObjectTrackerFeatureArgs {
      */
     objectTrackerIdVariable?: pulumi.Input<string>;
     /**
-     * objectTrackerType:Interface SIG Route - Choices: `Interface`, `SIG`, `Route`
+     * objectTrackerType:Interface SIG Route
+     *   - Choices: `Interface`, `SIG`, `Route`
      */
     objectTrackerType: pulumi.Input<string>;
     /**
@@ -299,11 +303,9 @@ export interface ServiceObjectTrackerFeatureArgs {
      */
     routeIpVariable?: pulumi.Input<string>;
     /**
-     * IP mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0` - Default value: `0.0.0.0`
+     * IP mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     *   - Default value: `0.0.0.0`
      */
     routeMask?: pulumi.Input<string>;
     /**
@@ -311,7 +313,8 @@ export interface ServiceObjectTrackerFeatureArgs {
      */
     routeMaskVariable?: pulumi.Input<string>;
     /**
-     * VPN - Range: `0`-`65530`
+     * VPN
+     *   - Range: `0`-`65530`
      */
     vpn?: pulumi.Input<number>;
     /**

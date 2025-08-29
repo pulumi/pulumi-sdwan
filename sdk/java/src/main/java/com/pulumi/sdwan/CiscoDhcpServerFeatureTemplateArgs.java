@@ -96,18 +96,16 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -205,14 +203,16 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
     }
 
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * @return Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -235,14 +235,18 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
     }
 
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     @Import(name="leaseTime")
     private @Nullable Output<Integer> leaseTime;
 
     /**
-     * @return Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * @return Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     public Optional<Output<Integer>> leaseTime() {
@@ -489,9 +493,8 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -502,9 +505,8 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -514,9 +516,8 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -672,7 +673,8 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param interfaceMtu Set MTU on interface to DHCP client - Range: `68`-`65535`
+         * @param interfaceMtu Set MTU on interface to DHCP client
+         *   - Range: `68`-`65535`
          * 
          * @return builder
          * 
@@ -683,7 +685,8 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param interfaceMtu Set MTU on interface to DHCP client - Range: `68`-`65535`
+         * @param interfaceMtu Set MTU on interface to DHCP client
+         *   - Range: `68`-`65535`
          * 
          * @return builder
          * 
@@ -714,7 +717,9 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param leaseTime Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+         * @param leaseTime Configure how long a DHCP-assigned IP address is valid
+         *   - Range: `60`-`31536000`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 
@@ -725,7 +730,9 @@ public final class CiscoDhcpServerFeatureTemplateArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param leaseTime Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+         * @param leaseTime Configure how long a DHCP-assigned IP address is valid
+         *   - Range: `60`-`31536000`
+         *   - Default value: `86400`
          * 
          * @return builder
          * 

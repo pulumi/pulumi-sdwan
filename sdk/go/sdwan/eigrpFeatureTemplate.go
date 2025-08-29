@@ -27,25 +27,29 @@ type EigrpFeatureTemplate struct {
 
 	// Set EIGRP address family
 	AddressFamilies EigrpFeatureTemplateAddressFamilyArrayOutput `pulumi:"addressFamilies"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AsNumber pulumi.IntPtrOutput `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable pulumi.StringPtrOutput `pulumi:"asNumberVariable"`
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrOutput `pulumi:"filter"`
 	// Variable name
 	FilterVariable pulumi.StringPtrOutput `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrOutput `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrOutput `pulumi:"helloIntervalVariable"`
@@ -53,7 +57,9 @@ type EigrpFeatureTemplate struct {
 	HmacAuthenticationKey pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKey"`
 	// Variable name
 	HmacAuthenticationKeyVariable pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrOutput `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrOutput `pulumi:"holdTimeVariable"`
@@ -111,25 +117,29 @@ func GetEigrpFeatureTemplate(ctx *pulumi.Context,
 type eigrpFeatureTemplateState struct {
 	// Set EIGRP address family
 	AddressFamilies []EigrpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AsNumber *int `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter *bool `pulumi:"filter"`
 	// Variable name
 	FilterVariable *string `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
@@ -137,7 +147,9 @@ type eigrpFeatureTemplateState struct {
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
@@ -160,25 +172,29 @@ type eigrpFeatureTemplateState struct {
 type EigrpFeatureTemplateState struct {
 	// Set EIGRP address family
 	AddressFamilies EigrpFeatureTemplateAddressFamilyArrayInput
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AsNumber pulumi.IntPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrInput
 	// Variable name
 	FilterVariable pulumi.StringPtrInput
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
@@ -186,7 +202,9 @@ type EigrpFeatureTemplateState struct {
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
@@ -213,25 +231,29 @@ func (EigrpFeatureTemplateState) ElementType() reflect.Type {
 type eigrpFeatureTemplateArgs struct {
 	// Set EIGRP address family
 	AddressFamilies []EigrpFeatureTemplateAddressFamily `pulumi:"addressFamilies"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AsNumber *int `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter *bool `pulumi:"filter"`
 	// Variable name
 	FilterVariable *string `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
@@ -239,7 +261,9 @@ type eigrpFeatureTemplateArgs struct {
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
@@ -259,25 +283,29 @@ type eigrpFeatureTemplateArgs struct {
 type EigrpFeatureTemplateArgs struct {
 	// Set EIGRP address family
 	AddressFamilies EigrpFeatureTemplateAddressFamilyArrayInput
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AsNumber pulumi.IntPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrInput
 	// Variable name
 	FilterVariable pulumi.StringPtrInput
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
@@ -285,7 +313,9 @@ type EigrpFeatureTemplateArgs struct {
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
@@ -393,7 +423,8 @@ func (o EigrpFeatureTemplateOutput) AddressFamilies() EigrpFeatureTemplateAddres
 	return o.ApplyT(func(v *EigrpFeatureTemplate) EigrpFeatureTemplateAddressFamilyArrayOutput { return v.AddressFamilies }).(EigrpFeatureTemplateAddressFamilyArrayOutput)
 }
 
-// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+// Set autonomous system ID <1..65535>
+//   - Range: `1`-`65535`
 func (o EigrpFeatureTemplateOutput) AsNumber() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.IntPtrOutput { return v.AsNumber }).(pulumi.IntPtrOutput)
 }
@@ -403,7 +434,8 @@ func (o EigrpFeatureTemplateOutput) AsNumberVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringPtrOutput { return v.AsNumberVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+// Set EIGRP router authentication type
+//   - Choices: `md5`, `hmac-sha-256`
 func (o EigrpFeatureTemplateOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -418,14 +450,14 @@ func (o EigrpFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o EigrpFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Selective route download - Default value: `false`
+// Selective route download
+//   - Default value: `false`
 func (o EigrpFeatureTemplateOutput) Filter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.BoolPtrOutput { return v.Filter }).(pulumi.BoolPtrOutput)
 }
@@ -435,7 +467,9 @@ func (o EigrpFeatureTemplateOutput) FilterVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringPtrOutput { return v.FilterVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+// Set EIGRP hello interval
+//   - Range: `0`-`65535`
+//   - Default value: `5`
 func (o EigrpFeatureTemplateOutput) HelloInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.IntPtrOutput { return v.HelloInterval }).(pulumi.IntPtrOutput)
 }
@@ -455,7 +489,9 @@ func (o EigrpFeatureTemplateOutput) HmacAuthenticationKeyVariable() pulumi.Strin
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+// Set EIGRP hold time
+//   - Range: `0`-`65535`
+//   - Default value: `15`
 func (o EigrpFeatureTemplateOutput) HoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EigrpFeatureTemplate) pulumi.IntPtrOutput { return v.HoldTime }).(pulumi.IntPtrOutput)
 }

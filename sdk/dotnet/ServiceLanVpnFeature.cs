@@ -57,7 +57,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Enable SDWAN Remote Access - Default value: `false`
+        /// Enable SDWAN Remote Access
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableSdwanRemoteAccess")]
         public Output<bool?> EnableSdwanRemoteAccess { get; private set; } = null!;
@@ -132,7 +133,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnFeatureNatPortForward>> NatPortForwards { get; private set; } = null!;
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv4")]
         public Output<int?> OmpAdminDistanceIpv4 { get; private set; } = null!;
@@ -144,7 +146,8 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv4Variable { get; private set; } = null!;
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv6")]
         public Output<int?> OmpAdminDistanceIpv6 { get; private set; } = null!;
@@ -246,7 +249,9 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// VPN - Range: `1`-`65527` - Default value: `0`
+        /// VPN
+        ///   - Range: `1`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Output("vpn")]
         public Output<int?> Vpn { get; private set; } = null!;
@@ -346,7 +351,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable SDWAN Remote Access - Default value: `false`
+        /// Enable SDWAN Remote Access
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableSdwanRemoteAccess")]
         public Input<bool>? EnableSdwanRemoteAccess { get; set; }
@@ -488,7 +494,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -500,7 +507,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -632,7 +640,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// VPN - Range: `1`-`65527` - Default value: `0`
+        /// VPN
+        ///   - Range: `1`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }
@@ -694,7 +704,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable SDWAN Remote Access - Default value: `false`
+        /// Enable SDWAN Remote Access
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableSdwanRemoteAccess")]
         public Input<bool>? EnableSdwanRemoteAccess { get; set; }
@@ -836,7 +847,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// OMP Admin Distance IPv4 - Range: `1`-`255`
+        /// OMP Admin Distance IPv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -848,7 +860,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// OMP Admin Distance IPv6 - Range: `1`-`255`
+        /// OMP Admin Distance IPv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -986,7 +999,9 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// VPN - Range: `1`-`65527` - Default value: `0`
+        /// VPN
+        ///   - Range: `1`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }

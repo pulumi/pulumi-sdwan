@@ -89,253 +89,288 @@ export class SystemOmpFeature extends pulumi.CustomResource {
     }
 
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv4Bgp!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Bgp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv4BgpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4BgpVariable: pulumi.Output<string | undefined>;
     /**
-     * Connected - Default value: `true`
+     * Connected
+     *   - Default value: `true`
      */
-    public readonly advertiseIpv4Connected!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly advertiseIpv4ConnectedVariable!: pulumi.Output<string | undefined>;
-    /**
-     * EIGRP - Default value: `false`
-     */
-    public readonly advertiseIpv4Eigrp!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Connected: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv4EigrpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4ConnectedVariable: pulumi.Output<string | undefined>;
     /**
-     * ISIS - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv4Isis!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly advertiseIpv4IsisVariable!: pulumi.Output<string | undefined>;
-    /**
-     * LISP - Default value: `false`
-     */
-    public readonly advertiseIpv4Lisp!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Eigrp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv4LispVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4EigrpVariable: pulumi.Output<string | undefined>;
     /**
-     * OSPF - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv4Ospf!: pulumi.Output<boolean | undefined>;
-    /**
-     * OSPFV3 - Default value: `false`
-     */
-    public readonly advertiseIpv4OspfV3!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Isis: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv4OspfV3Variable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4IsisVariable: pulumi.Output<string | undefined>;
+    /**
+     * LISP
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv4Lisp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv4OspfVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4LispVariable: pulumi.Output<string | undefined>;
     /**
-     * Static - Default value: `true`
+     * OSPF
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv4Static!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Ospf: pulumi.Output<boolean | undefined>;
     /**
-     * Variable name
+     * OSPFV3
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv4StaticVariable!: pulumi.Output<string | undefined>;
-    /**
-     * BGP - Default value: `false`
-     */
-    public readonly advertiseIpv6Bgp!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4OspfV3: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv6BgpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Connected - Default value: `false`
-     */
-    public readonly advertiseIpv6Connected!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4OspfV3Variable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv6ConnectedVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4OspfVariable: pulumi.Output<string | undefined>;
     /**
-     * EIGRP - Default value: `false`
+     * Static
+     *   - Default value: `true`
      */
-    public readonly advertiseIpv6Eigrp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly advertiseIpv6EigrpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * ISIS - Default value: `false`
-     */
-    public readonly advertiseIpv6Isis!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv4Static: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv6IsisVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv4StaticVariable: pulumi.Output<string | undefined>;
     /**
-     * LISP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv6Lisp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly advertiseIpv6LispVariable!: pulumi.Output<string | undefined>;
-    /**
-     * OSPF - Default value: `false`
-     */
-    public readonly advertiseIpv6Ospf!: pulumi.Output<boolean | undefined>;
+    declare public readonly advertiseIpv6Bgp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertiseIpv6OspfVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv6BgpVariable: pulumi.Output<string | undefined>;
     /**
-     * Static - Default value: `false`
+     * Connected
+     *   - Default value: `false`
      */
-    public readonly advertiseIpv6Static!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly advertiseIpv6StaticVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
-     */
-    public readonly advertisementInterval!: pulumi.Output<number | undefined>;
+    declare public readonly advertiseIpv6Connected: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly advertisementIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertiseIpv6ConnectedVariable: pulumi.Output<string | undefined>;
+    /**
+     * EIGRP
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv6Eigrp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertiseIpv6EigrpVariable: pulumi.Output<string | undefined>;
+    /**
+     * ISIS
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv6Isis: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertiseIpv6IsisVariable: pulumi.Output<string | undefined>;
+    /**
+     * LISP
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv6Lisp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertiseIpv6LispVariable: pulumi.Output<string | undefined>;
+    /**
+     * OSPF
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv6Ospf: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertiseIpv6OspfVariable: pulumi.Output<string | undefined>;
+    /**
+     * Static
+     *   - Default value: `false`
+     */
+    declare public readonly advertiseIpv6Static: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertiseIpv6StaticVariable: pulumi.Output<string | undefined>;
+    /**
+     * Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
+     */
+    declare public readonly advertisementInterval: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly advertisementIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      */
-    public readonly ecmpLimit!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ecmpLimitVariable!: pulumi.Output<string | undefined>;
-    /**
-     * EOR Timer - Range: `1`-`3600` - Default value: `300`
-     */
-    public readonly eorTimer!: pulumi.Output<number | undefined>;
+    declare public readonly ecmpLimit: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly eorTimerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ecmpLimitVariable: pulumi.Output<string | undefined>;
+    /**
+     * EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
+     */
+    declare public readonly eorTimer: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly eorTimerVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Graceful Restart for OMP - Default value: `true`
+     * Graceful Restart for OMP
+     *   - Default value: `true`
      */
-    public readonly gracefulRestart!: pulumi.Output<boolean | undefined>;
+    declare public readonly gracefulRestart: pulumi.Output<boolean | undefined>;
     /**
-     * Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      */
-    public readonly gracefulRestartTimer!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly gracefulRestartTimerVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly gracefulRestartVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Hold Time (seconds) - Default value: `60`
-     */
-    public readonly holdtime!: pulumi.Output<number | undefined>;
+    declare public readonly gracefulRestartTimer: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly holdtimeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
-     */
-    public readonly ignoreRegionPathLength!: pulumi.Output<boolean | undefined>;
+    declare public readonly gracefulRestartTimerVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ignoreRegionPathLengthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly gracefulRestartVariable: pulumi.Output<string | undefined>;
+    /**
+     * Hold Time (seconds)
+     *   - Default value: `60`
+     */
+    declare public readonly holdtime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly holdtimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
+     */
+    declare public readonly ignoreRegionPathLength: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ignoreRegionPathLengthVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
-    public readonly ompAdminDistanceIpv4!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ompAdminDistanceIpv4Variable!: pulumi.Output<string | undefined>;
-    /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
-     */
-    public readonly ompAdminDistanceIpv6!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv4: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ompAdminDistanceIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv4Variable: pulumi.Output<string | undefined>;
     /**
-     * Overlay AS Number - Range: `1`-`4294967295`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
-    public readonly overlayAs!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly overlayAsVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
-     */
-    public readonly pathsAdvertisedPerPrefix!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv6: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly pathsAdvertisedPerPrefixVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv6Variable: pulumi.Output<string | undefined>;
     /**
-     * Shutdown - Default value: `false`
+     * Overlay AS Number
+     *   - Range: `1`-`4294967295`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly overlayAs: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly overlayAsVariable: pulumi.Output<string | undefined>;
+    /**
+     * Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
+     */
+    declare public readonly pathsAdvertisedPerPrefix: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly pathsAdvertisedPerPrefixVariable: pulumi.Output<string | undefined>;
+    /**
+     * Shutdown
+     *   - Default value: `false`
+     */
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
      * Site Types
      */
-    public readonly siteTypes!: pulumi.Output<string[] | undefined>;
+    declare public readonly siteTypes: pulumi.Output<string[] | undefined>;
     /**
      * Variable name
      */
-    public readonly siteTypesVariable!: pulumi.Output<string | undefined>;
+    declare public readonly siteTypesVariable: pulumi.Output<string | undefined>;
     /**
-     * Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
-    public readonly transportGateway!: pulumi.Output<string | undefined>;
+    declare public readonly transportGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly transportGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly transportGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemOmpFeature resource with the given unique name, arguments, and options.
@@ -350,134 +385,134 @@ export class SystemOmpFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemOmpFeatureState | undefined;
-            resourceInputs["advertiseIpv4Bgp"] = state ? state.advertiseIpv4Bgp : undefined;
-            resourceInputs["advertiseIpv4BgpVariable"] = state ? state.advertiseIpv4BgpVariable : undefined;
-            resourceInputs["advertiseIpv4Connected"] = state ? state.advertiseIpv4Connected : undefined;
-            resourceInputs["advertiseIpv4ConnectedVariable"] = state ? state.advertiseIpv4ConnectedVariable : undefined;
-            resourceInputs["advertiseIpv4Eigrp"] = state ? state.advertiseIpv4Eigrp : undefined;
-            resourceInputs["advertiseIpv4EigrpVariable"] = state ? state.advertiseIpv4EigrpVariable : undefined;
-            resourceInputs["advertiseIpv4Isis"] = state ? state.advertiseIpv4Isis : undefined;
-            resourceInputs["advertiseIpv4IsisVariable"] = state ? state.advertiseIpv4IsisVariable : undefined;
-            resourceInputs["advertiseIpv4Lisp"] = state ? state.advertiseIpv4Lisp : undefined;
-            resourceInputs["advertiseIpv4LispVariable"] = state ? state.advertiseIpv4LispVariable : undefined;
-            resourceInputs["advertiseIpv4Ospf"] = state ? state.advertiseIpv4Ospf : undefined;
-            resourceInputs["advertiseIpv4OspfV3"] = state ? state.advertiseIpv4OspfV3 : undefined;
-            resourceInputs["advertiseIpv4OspfV3Variable"] = state ? state.advertiseIpv4OspfV3Variable : undefined;
-            resourceInputs["advertiseIpv4OspfVariable"] = state ? state.advertiseIpv4OspfVariable : undefined;
-            resourceInputs["advertiseIpv4Static"] = state ? state.advertiseIpv4Static : undefined;
-            resourceInputs["advertiseIpv4StaticVariable"] = state ? state.advertiseIpv4StaticVariable : undefined;
-            resourceInputs["advertiseIpv6Bgp"] = state ? state.advertiseIpv6Bgp : undefined;
-            resourceInputs["advertiseIpv6BgpVariable"] = state ? state.advertiseIpv6BgpVariable : undefined;
-            resourceInputs["advertiseIpv6Connected"] = state ? state.advertiseIpv6Connected : undefined;
-            resourceInputs["advertiseIpv6ConnectedVariable"] = state ? state.advertiseIpv6ConnectedVariable : undefined;
-            resourceInputs["advertiseIpv6Eigrp"] = state ? state.advertiseIpv6Eigrp : undefined;
-            resourceInputs["advertiseIpv6EigrpVariable"] = state ? state.advertiseIpv6EigrpVariable : undefined;
-            resourceInputs["advertiseIpv6Isis"] = state ? state.advertiseIpv6Isis : undefined;
-            resourceInputs["advertiseIpv6IsisVariable"] = state ? state.advertiseIpv6IsisVariable : undefined;
-            resourceInputs["advertiseIpv6Lisp"] = state ? state.advertiseIpv6Lisp : undefined;
-            resourceInputs["advertiseIpv6LispVariable"] = state ? state.advertiseIpv6LispVariable : undefined;
-            resourceInputs["advertiseIpv6Ospf"] = state ? state.advertiseIpv6Ospf : undefined;
-            resourceInputs["advertiseIpv6OspfVariable"] = state ? state.advertiseIpv6OspfVariable : undefined;
-            resourceInputs["advertiseIpv6Static"] = state ? state.advertiseIpv6Static : undefined;
-            resourceInputs["advertiseIpv6StaticVariable"] = state ? state.advertiseIpv6StaticVariable : undefined;
-            resourceInputs["advertisementInterval"] = state ? state.advertisementInterval : undefined;
-            resourceInputs["advertisementIntervalVariable"] = state ? state.advertisementIntervalVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["ecmpLimit"] = state ? state.ecmpLimit : undefined;
-            resourceInputs["ecmpLimitVariable"] = state ? state.ecmpLimitVariable : undefined;
-            resourceInputs["eorTimer"] = state ? state.eorTimer : undefined;
-            resourceInputs["eorTimerVariable"] = state ? state.eorTimerVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["gracefulRestart"] = state ? state.gracefulRestart : undefined;
-            resourceInputs["gracefulRestartTimer"] = state ? state.gracefulRestartTimer : undefined;
-            resourceInputs["gracefulRestartTimerVariable"] = state ? state.gracefulRestartTimerVariable : undefined;
-            resourceInputs["gracefulRestartVariable"] = state ? state.gracefulRestartVariable : undefined;
-            resourceInputs["holdtime"] = state ? state.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = state ? state.holdtimeVariable : undefined;
-            resourceInputs["ignoreRegionPathLength"] = state ? state.ignoreRegionPathLength : undefined;
-            resourceInputs["ignoreRegionPathLengthVariable"] = state ? state.ignoreRegionPathLengthVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = state ? state.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = state ? state.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = state ? state.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = state ? state.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["overlayAs"] = state ? state.overlayAs : undefined;
-            resourceInputs["overlayAsVariable"] = state ? state.overlayAsVariable : undefined;
-            resourceInputs["pathsAdvertisedPerPrefix"] = state ? state.pathsAdvertisedPerPrefix : undefined;
-            resourceInputs["pathsAdvertisedPerPrefixVariable"] = state ? state.pathsAdvertisedPerPrefixVariable : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["siteTypes"] = state ? state.siteTypes : undefined;
-            resourceInputs["siteTypesVariable"] = state ? state.siteTypesVariable : undefined;
-            resourceInputs["transportGateway"] = state ? state.transportGateway : undefined;
-            resourceInputs["transportGatewayVariable"] = state ? state.transportGatewayVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["advertiseIpv4Bgp"] = state?.advertiseIpv4Bgp;
+            resourceInputs["advertiseIpv4BgpVariable"] = state?.advertiseIpv4BgpVariable;
+            resourceInputs["advertiseIpv4Connected"] = state?.advertiseIpv4Connected;
+            resourceInputs["advertiseIpv4ConnectedVariable"] = state?.advertiseIpv4ConnectedVariable;
+            resourceInputs["advertiseIpv4Eigrp"] = state?.advertiseIpv4Eigrp;
+            resourceInputs["advertiseIpv4EigrpVariable"] = state?.advertiseIpv4EigrpVariable;
+            resourceInputs["advertiseIpv4Isis"] = state?.advertiseIpv4Isis;
+            resourceInputs["advertiseIpv4IsisVariable"] = state?.advertiseIpv4IsisVariable;
+            resourceInputs["advertiseIpv4Lisp"] = state?.advertiseIpv4Lisp;
+            resourceInputs["advertiseIpv4LispVariable"] = state?.advertiseIpv4LispVariable;
+            resourceInputs["advertiseIpv4Ospf"] = state?.advertiseIpv4Ospf;
+            resourceInputs["advertiseIpv4OspfV3"] = state?.advertiseIpv4OspfV3;
+            resourceInputs["advertiseIpv4OspfV3Variable"] = state?.advertiseIpv4OspfV3Variable;
+            resourceInputs["advertiseIpv4OspfVariable"] = state?.advertiseIpv4OspfVariable;
+            resourceInputs["advertiseIpv4Static"] = state?.advertiseIpv4Static;
+            resourceInputs["advertiseIpv4StaticVariable"] = state?.advertiseIpv4StaticVariable;
+            resourceInputs["advertiseIpv6Bgp"] = state?.advertiseIpv6Bgp;
+            resourceInputs["advertiseIpv6BgpVariable"] = state?.advertiseIpv6BgpVariable;
+            resourceInputs["advertiseIpv6Connected"] = state?.advertiseIpv6Connected;
+            resourceInputs["advertiseIpv6ConnectedVariable"] = state?.advertiseIpv6ConnectedVariable;
+            resourceInputs["advertiseIpv6Eigrp"] = state?.advertiseIpv6Eigrp;
+            resourceInputs["advertiseIpv6EigrpVariable"] = state?.advertiseIpv6EigrpVariable;
+            resourceInputs["advertiseIpv6Isis"] = state?.advertiseIpv6Isis;
+            resourceInputs["advertiseIpv6IsisVariable"] = state?.advertiseIpv6IsisVariable;
+            resourceInputs["advertiseIpv6Lisp"] = state?.advertiseIpv6Lisp;
+            resourceInputs["advertiseIpv6LispVariable"] = state?.advertiseIpv6LispVariable;
+            resourceInputs["advertiseIpv6Ospf"] = state?.advertiseIpv6Ospf;
+            resourceInputs["advertiseIpv6OspfVariable"] = state?.advertiseIpv6OspfVariable;
+            resourceInputs["advertiseIpv6Static"] = state?.advertiseIpv6Static;
+            resourceInputs["advertiseIpv6StaticVariable"] = state?.advertiseIpv6StaticVariable;
+            resourceInputs["advertisementInterval"] = state?.advertisementInterval;
+            resourceInputs["advertisementIntervalVariable"] = state?.advertisementIntervalVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["ecmpLimit"] = state?.ecmpLimit;
+            resourceInputs["ecmpLimitVariable"] = state?.ecmpLimitVariable;
+            resourceInputs["eorTimer"] = state?.eorTimer;
+            resourceInputs["eorTimerVariable"] = state?.eorTimerVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["gracefulRestart"] = state?.gracefulRestart;
+            resourceInputs["gracefulRestartTimer"] = state?.gracefulRestartTimer;
+            resourceInputs["gracefulRestartTimerVariable"] = state?.gracefulRestartTimerVariable;
+            resourceInputs["gracefulRestartVariable"] = state?.gracefulRestartVariable;
+            resourceInputs["holdtime"] = state?.holdtime;
+            resourceInputs["holdtimeVariable"] = state?.holdtimeVariable;
+            resourceInputs["ignoreRegionPathLength"] = state?.ignoreRegionPathLength;
+            resourceInputs["ignoreRegionPathLengthVariable"] = state?.ignoreRegionPathLengthVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["ompAdminDistanceIpv4"] = state?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = state?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = state?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = state?.ompAdminDistanceIpv6Variable;
+            resourceInputs["overlayAs"] = state?.overlayAs;
+            resourceInputs["overlayAsVariable"] = state?.overlayAsVariable;
+            resourceInputs["pathsAdvertisedPerPrefix"] = state?.pathsAdvertisedPerPrefix;
+            resourceInputs["pathsAdvertisedPerPrefixVariable"] = state?.pathsAdvertisedPerPrefixVariable;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["siteTypes"] = state?.siteTypes;
+            resourceInputs["siteTypesVariable"] = state?.siteTypesVariable;
+            resourceInputs["transportGateway"] = state?.transportGateway;
+            resourceInputs["transportGatewayVariable"] = state?.transportGatewayVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemOmpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["advertiseIpv4Bgp"] = args ? args.advertiseIpv4Bgp : undefined;
-            resourceInputs["advertiseIpv4BgpVariable"] = args ? args.advertiseIpv4BgpVariable : undefined;
-            resourceInputs["advertiseIpv4Connected"] = args ? args.advertiseIpv4Connected : undefined;
-            resourceInputs["advertiseIpv4ConnectedVariable"] = args ? args.advertiseIpv4ConnectedVariable : undefined;
-            resourceInputs["advertiseIpv4Eigrp"] = args ? args.advertiseIpv4Eigrp : undefined;
-            resourceInputs["advertiseIpv4EigrpVariable"] = args ? args.advertiseIpv4EigrpVariable : undefined;
-            resourceInputs["advertiseIpv4Isis"] = args ? args.advertiseIpv4Isis : undefined;
-            resourceInputs["advertiseIpv4IsisVariable"] = args ? args.advertiseIpv4IsisVariable : undefined;
-            resourceInputs["advertiseIpv4Lisp"] = args ? args.advertiseIpv4Lisp : undefined;
-            resourceInputs["advertiseIpv4LispVariable"] = args ? args.advertiseIpv4LispVariable : undefined;
-            resourceInputs["advertiseIpv4Ospf"] = args ? args.advertiseIpv4Ospf : undefined;
-            resourceInputs["advertiseIpv4OspfV3"] = args ? args.advertiseIpv4OspfV3 : undefined;
-            resourceInputs["advertiseIpv4OspfV3Variable"] = args ? args.advertiseIpv4OspfV3Variable : undefined;
-            resourceInputs["advertiseIpv4OspfVariable"] = args ? args.advertiseIpv4OspfVariable : undefined;
-            resourceInputs["advertiseIpv4Static"] = args ? args.advertiseIpv4Static : undefined;
-            resourceInputs["advertiseIpv4StaticVariable"] = args ? args.advertiseIpv4StaticVariable : undefined;
-            resourceInputs["advertiseIpv6Bgp"] = args ? args.advertiseIpv6Bgp : undefined;
-            resourceInputs["advertiseIpv6BgpVariable"] = args ? args.advertiseIpv6BgpVariable : undefined;
-            resourceInputs["advertiseIpv6Connected"] = args ? args.advertiseIpv6Connected : undefined;
-            resourceInputs["advertiseIpv6ConnectedVariable"] = args ? args.advertiseIpv6ConnectedVariable : undefined;
-            resourceInputs["advertiseIpv6Eigrp"] = args ? args.advertiseIpv6Eigrp : undefined;
-            resourceInputs["advertiseIpv6EigrpVariable"] = args ? args.advertiseIpv6EigrpVariable : undefined;
-            resourceInputs["advertiseIpv6Isis"] = args ? args.advertiseIpv6Isis : undefined;
-            resourceInputs["advertiseIpv6IsisVariable"] = args ? args.advertiseIpv6IsisVariable : undefined;
-            resourceInputs["advertiseIpv6Lisp"] = args ? args.advertiseIpv6Lisp : undefined;
-            resourceInputs["advertiseIpv6LispVariable"] = args ? args.advertiseIpv6LispVariable : undefined;
-            resourceInputs["advertiseIpv6Ospf"] = args ? args.advertiseIpv6Ospf : undefined;
-            resourceInputs["advertiseIpv6OspfVariable"] = args ? args.advertiseIpv6OspfVariable : undefined;
-            resourceInputs["advertiseIpv6Static"] = args ? args.advertiseIpv6Static : undefined;
-            resourceInputs["advertiseIpv6StaticVariable"] = args ? args.advertiseIpv6StaticVariable : undefined;
-            resourceInputs["advertisementInterval"] = args ? args.advertisementInterval : undefined;
-            resourceInputs["advertisementIntervalVariable"] = args ? args.advertisementIntervalVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["ecmpLimit"] = args ? args.ecmpLimit : undefined;
-            resourceInputs["ecmpLimitVariable"] = args ? args.ecmpLimitVariable : undefined;
-            resourceInputs["eorTimer"] = args ? args.eorTimer : undefined;
-            resourceInputs["eorTimerVariable"] = args ? args.eorTimerVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["gracefulRestart"] = args ? args.gracefulRestart : undefined;
-            resourceInputs["gracefulRestartTimer"] = args ? args.gracefulRestartTimer : undefined;
-            resourceInputs["gracefulRestartTimerVariable"] = args ? args.gracefulRestartTimerVariable : undefined;
-            resourceInputs["gracefulRestartVariable"] = args ? args.gracefulRestartVariable : undefined;
-            resourceInputs["holdtime"] = args ? args.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = args ? args.holdtimeVariable : undefined;
-            resourceInputs["ignoreRegionPathLength"] = args ? args.ignoreRegionPathLength : undefined;
-            resourceInputs["ignoreRegionPathLengthVariable"] = args ? args.ignoreRegionPathLengthVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = args ? args.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = args ? args.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = args ? args.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = args ? args.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["overlayAs"] = args ? args.overlayAs : undefined;
-            resourceInputs["overlayAsVariable"] = args ? args.overlayAsVariable : undefined;
-            resourceInputs["pathsAdvertisedPerPrefix"] = args ? args.pathsAdvertisedPerPrefix : undefined;
-            resourceInputs["pathsAdvertisedPerPrefixVariable"] = args ? args.pathsAdvertisedPerPrefixVariable : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["siteTypes"] = args ? args.siteTypes : undefined;
-            resourceInputs["siteTypesVariable"] = args ? args.siteTypesVariable : undefined;
-            resourceInputs["transportGateway"] = args ? args.transportGateway : undefined;
-            resourceInputs["transportGatewayVariable"] = args ? args.transportGatewayVariable : undefined;
+            resourceInputs["advertiseIpv4Bgp"] = args?.advertiseIpv4Bgp;
+            resourceInputs["advertiseIpv4BgpVariable"] = args?.advertiseIpv4BgpVariable;
+            resourceInputs["advertiseIpv4Connected"] = args?.advertiseIpv4Connected;
+            resourceInputs["advertiseIpv4ConnectedVariable"] = args?.advertiseIpv4ConnectedVariable;
+            resourceInputs["advertiseIpv4Eigrp"] = args?.advertiseIpv4Eigrp;
+            resourceInputs["advertiseIpv4EigrpVariable"] = args?.advertiseIpv4EigrpVariable;
+            resourceInputs["advertiseIpv4Isis"] = args?.advertiseIpv4Isis;
+            resourceInputs["advertiseIpv4IsisVariable"] = args?.advertiseIpv4IsisVariable;
+            resourceInputs["advertiseIpv4Lisp"] = args?.advertiseIpv4Lisp;
+            resourceInputs["advertiseIpv4LispVariable"] = args?.advertiseIpv4LispVariable;
+            resourceInputs["advertiseIpv4Ospf"] = args?.advertiseIpv4Ospf;
+            resourceInputs["advertiseIpv4OspfV3"] = args?.advertiseIpv4OspfV3;
+            resourceInputs["advertiseIpv4OspfV3Variable"] = args?.advertiseIpv4OspfV3Variable;
+            resourceInputs["advertiseIpv4OspfVariable"] = args?.advertiseIpv4OspfVariable;
+            resourceInputs["advertiseIpv4Static"] = args?.advertiseIpv4Static;
+            resourceInputs["advertiseIpv4StaticVariable"] = args?.advertiseIpv4StaticVariable;
+            resourceInputs["advertiseIpv6Bgp"] = args?.advertiseIpv6Bgp;
+            resourceInputs["advertiseIpv6BgpVariable"] = args?.advertiseIpv6BgpVariable;
+            resourceInputs["advertiseIpv6Connected"] = args?.advertiseIpv6Connected;
+            resourceInputs["advertiseIpv6ConnectedVariable"] = args?.advertiseIpv6ConnectedVariable;
+            resourceInputs["advertiseIpv6Eigrp"] = args?.advertiseIpv6Eigrp;
+            resourceInputs["advertiseIpv6EigrpVariable"] = args?.advertiseIpv6EigrpVariable;
+            resourceInputs["advertiseIpv6Isis"] = args?.advertiseIpv6Isis;
+            resourceInputs["advertiseIpv6IsisVariable"] = args?.advertiseIpv6IsisVariable;
+            resourceInputs["advertiseIpv6Lisp"] = args?.advertiseIpv6Lisp;
+            resourceInputs["advertiseIpv6LispVariable"] = args?.advertiseIpv6LispVariable;
+            resourceInputs["advertiseIpv6Ospf"] = args?.advertiseIpv6Ospf;
+            resourceInputs["advertiseIpv6OspfVariable"] = args?.advertiseIpv6OspfVariable;
+            resourceInputs["advertiseIpv6Static"] = args?.advertiseIpv6Static;
+            resourceInputs["advertiseIpv6StaticVariable"] = args?.advertiseIpv6StaticVariable;
+            resourceInputs["advertisementInterval"] = args?.advertisementInterval;
+            resourceInputs["advertisementIntervalVariable"] = args?.advertisementIntervalVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["ecmpLimit"] = args?.ecmpLimit;
+            resourceInputs["ecmpLimitVariable"] = args?.ecmpLimitVariable;
+            resourceInputs["eorTimer"] = args?.eorTimer;
+            resourceInputs["eorTimerVariable"] = args?.eorTimerVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["gracefulRestart"] = args?.gracefulRestart;
+            resourceInputs["gracefulRestartTimer"] = args?.gracefulRestartTimer;
+            resourceInputs["gracefulRestartTimerVariable"] = args?.gracefulRestartTimerVariable;
+            resourceInputs["gracefulRestartVariable"] = args?.gracefulRestartVariable;
+            resourceInputs["holdtime"] = args?.holdtime;
+            resourceInputs["holdtimeVariable"] = args?.holdtimeVariable;
+            resourceInputs["ignoreRegionPathLength"] = args?.ignoreRegionPathLength;
+            resourceInputs["ignoreRegionPathLengthVariable"] = args?.ignoreRegionPathLengthVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["ompAdminDistanceIpv4"] = args?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = args?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = args?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = args?.ompAdminDistanceIpv6Variable;
+            resourceInputs["overlayAs"] = args?.overlayAs;
+            resourceInputs["overlayAsVariable"] = args?.overlayAsVariable;
+            resourceInputs["pathsAdvertisedPerPrefix"] = args?.pathsAdvertisedPerPrefix;
+            resourceInputs["pathsAdvertisedPerPrefixVariable"] = args?.pathsAdvertisedPerPrefixVariable;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["siteTypes"] = args?.siteTypes;
+            resourceInputs["siteTypesVariable"] = args?.siteTypesVariable;
+            resourceInputs["transportGateway"] = args?.transportGateway;
+            resourceInputs["transportGatewayVariable"] = args?.transportGatewayVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -490,7 +525,8 @@ export class SystemOmpFeature extends pulumi.CustomResource {
  */
 export interface SystemOmpFeatureState {
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
     advertiseIpv4Bgp?: pulumi.Input<boolean>;
     /**
@@ -498,7 +534,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4BgpVariable?: pulumi.Input<string>;
     /**
-     * Connected - Default value: `true`
+     * Connected
+     *   - Default value: `true`
      */
     advertiseIpv4Connected?: pulumi.Input<boolean>;
     /**
@@ -506,7 +543,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4ConnectedVariable?: pulumi.Input<string>;
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      */
     advertiseIpv4Eigrp?: pulumi.Input<boolean>;
     /**
@@ -514,7 +552,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4EigrpVariable?: pulumi.Input<string>;
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      */
     advertiseIpv4Isis?: pulumi.Input<boolean>;
     /**
@@ -522,7 +561,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4IsisVariable?: pulumi.Input<string>;
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      */
     advertiseIpv4Lisp?: pulumi.Input<boolean>;
     /**
@@ -530,11 +570,13 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4LispVariable?: pulumi.Input<string>;
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      */
     advertiseIpv4Ospf?: pulumi.Input<boolean>;
     /**
-     * OSPFV3 - Default value: `false`
+     * OSPFV3
+     *   - Default value: `false`
      */
     advertiseIpv4OspfV3?: pulumi.Input<boolean>;
     /**
@@ -546,7 +588,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4OspfVariable?: pulumi.Input<string>;
     /**
-     * Static - Default value: `true`
+     * Static
+     *   - Default value: `true`
      */
     advertiseIpv4Static?: pulumi.Input<boolean>;
     /**
@@ -554,7 +597,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv4StaticVariable?: pulumi.Input<string>;
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
     advertiseIpv6Bgp?: pulumi.Input<boolean>;
     /**
@@ -562,7 +606,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6BgpVariable?: pulumi.Input<string>;
     /**
-     * Connected - Default value: `false`
+     * Connected
+     *   - Default value: `false`
      */
     advertiseIpv6Connected?: pulumi.Input<boolean>;
     /**
@@ -570,7 +615,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6ConnectedVariable?: pulumi.Input<string>;
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      */
     advertiseIpv6Eigrp?: pulumi.Input<boolean>;
     /**
@@ -578,7 +624,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6EigrpVariable?: pulumi.Input<string>;
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      */
     advertiseIpv6Isis?: pulumi.Input<boolean>;
     /**
@@ -586,7 +633,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6IsisVariable?: pulumi.Input<string>;
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      */
     advertiseIpv6Lisp?: pulumi.Input<boolean>;
     /**
@@ -594,7 +642,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6LispVariable?: pulumi.Input<string>;
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      */
     advertiseIpv6Ospf?: pulumi.Input<boolean>;
     /**
@@ -602,7 +651,8 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6OspfVariable?: pulumi.Input<string>;
     /**
-     * Static - Default value: `false`
+     * Static
+     *   - Default value: `false`
      */
     advertiseIpv6Static?: pulumi.Input<boolean>;
     /**
@@ -610,7 +660,9 @@ export interface SystemOmpFeatureState {
      */
     advertiseIpv6StaticVariable?: pulumi.Input<string>;
     /**
-     * Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      */
     advertisementInterval?: pulumi.Input<number>;
     /**
@@ -622,7 +674,9 @@ export interface SystemOmpFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number>;
     /**
@@ -630,7 +684,9 @@ export interface SystemOmpFeatureState {
      */
     ecmpLimitVariable?: pulumi.Input<string>;
     /**
-     * EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      */
     eorTimer?: pulumi.Input<number>;
     /**
@@ -642,11 +698,14 @@ export interface SystemOmpFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Graceful Restart for OMP - Default value: `true`
+     * Graceful Restart for OMP
+     *   - Default value: `true`
      */
     gracefulRestart?: pulumi.Input<boolean>;
     /**
-     * Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number>;
     /**
@@ -658,7 +717,8 @@ export interface SystemOmpFeatureState {
      */
     gracefulRestartVariable?: pulumi.Input<string>;
     /**
-     * Hold Time (seconds) - Default value: `60`
+     * Hold Time (seconds)
+     *   - Default value: `60`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -666,7 +726,8 @@ export interface SystemOmpFeatureState {
      */
     holdtimeVariable?: pulumi.Input<string>;
     /**
-     * Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      */
     ignoreRegionPathLength?: pulumi.Input<boolean>;
     /**
@@ -678,7 +739,9 @@ export interface SystemOmpFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -686,7 +749,9 @@ export interface SystemOmpFeatureState {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -694,7 +759,8 @@ export interface SystemOmpFeatureState {
      */
     ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
     /**
-     * Overlay AS Number - Range: `1`-`4294967295`
+     * Overlay AS Number
+     *   - Range: `1`-`4294967295`
      */
     overlayAs?: pulumi.Input<number>;
     /**
@@ -702,7 +768,9 @@ export interface SystemOmpFeatureState {
      */
     overlayAsVariable?: pulumi.Input<string>;
     /**
-     * Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     pathsAdvertisedPerPrefix?: pulumi.Input<number>;
     /**
@@ -710,7 +778,8 @@ export interface SystemOmpFeatureState {
      */
     pathsAdvertisedPerPrefixVariable?: pulumi.Input<string>;
     /**
-     * Shutdown - Default value: `false`
+     * Shutdown
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -726,7 +795,8 @@ export interface SystemOmpFeatureState {
      */
     siteTypesVariable?: pulumi.Input<string>;
     /**
-     * Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
     transportGateway?: pulumi.Input<string>;
     /**
@@ -744,7 +814,8 @@ export interface SystemOmpFeatureState {
  */
 export interface SystemOmpFeatureArgs {
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
     advertiseIpv4Bgp?: pulumi.Input<boolean>;
     /**
@@ -752,7 +823,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4BgpVariable?: pulumi.Input<string>;
     /**
-     * Connected - Default value: `true`
+     * Connected
+     *   - Default value: `true`
      */
     advertiseIpv4Connected?: pulumi.Input<boolean>;
     /**
@@ -760,7 +832,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4ConnectedVariable?: pulumi.Input<string>;
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      */
     advertiseIpv4Eigrp?: pulumi.Input<boolean>;
     /**
@@ -768,7 +841,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4EigrpVariable?: pulumi.Input<string>;
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      */
     advertiseIpv4Isis?: pulumi.Input<boolean>;
     /**
@@ -776,7 +850,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4IsisVariable?: pulumi.Input<string>;
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      */
     advertiseIpv4Lisp?: pulumi.Input<boolean>;
     /**
@@ -784,11 +859,13 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4LispVariable?: pulumi.Input<string>;
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      */
     advertiseIpv4Ospf?: pulumi.Input<boolean>;
     /**
-     * OSPFV3 - Default value: `false`
+     * OSPFV3
+     *   - Default value: `false`
      */
     advertiseIpv4OspfV3?: pulumi.Input<boolean>;
     /**
@@ -800,7 +877,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4OspfVariable?: pulumi.Input<string>;
     /**
-     * Static - Default value: `true`
+     * Static
+     *   - Default value: `true`
      */
     advertiseIpv4Static?: pulumi.Input<boolean>;
     /**
@@ -808,7 +886,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv4StaticVariable?: pulumi.Input<string>;
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      */
     advertiseIpv6Bgp?: pulumi.Input<boolean>;
     /**
@@ -816,7 +895,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6BgpVariable?: pulumi.Input<string>;
     /**
-     * Connected - Default value: `false`
+     * Connected
+     *   - Default value: `false`
      */
     advertiseIpv6Connected?: pulumi.Input<boolean>;
     /**
@@ -824,7 +904,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6ConnectedVariable?: pulumi.Input<string>;
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      */
     advertiseIpv6Eigrp?: pulumi.Input<boolean>;
     /**
@@ -832,7 +913,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6EigrpVariable?: pulumi.Input<string>;
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      */
     advertiseIpv6Isis?: pulumi.Input<boolean>;
     /**
@@ -840,7 +922,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6IsisVariable?: pulumi.Input<string>;
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      */
     advertiseIpv6Lisp?: pulumi.Input<boolean>;
     /**
@@ -848,7 +931,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6LispVariable?: pulumi.Input<string>;
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      */
     advertiseIpv6Ospf?: pulumi.Input<boolean>;
     /**
@@ -856,7 +940,8 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6OspfVariable?: pulumi.Input<string>;
     /**
-     * Static - Default value: `false`
+     * Static
+     *   - Default value: `false`
      */
     advertiseIpv6Static?: pulumi.Input<boolean>;
     /**
@@ -864,7 +949,9 @@ export interface SystemOmpFeatureArgs {
      */
     advertiseIpv6StaticVariable?: pulumi.Input<string>;
     /**
-     * Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      */
     advertisementInterval?: pulumi.Input<number>;
     /**
@@ -876,7 +963,9 @@ export interface SystemOmpFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number>;
     /**
@@ -884,7 +973,9 @@ export interface SystemOmpFeatureArgs {
      */
     ecmpLimitVariable?: pulumi.Input<string>;
     /**
-     * EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      */
     eorTimer?: pulumi.Input<number>;
     /**
@@ -896,11 +987,14 @@ export interface SystemOmpFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Graceful Restart for OMP - Default value: `true`
+     * Graceful Restart for OMP
+     *   - Default value: `true`
      */
     gracefulRestart?: pulumi.Input<boolean>;
     /**
-     * Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number>;
     /**
@@ -912,7 +1006,8 @@ export interface SystemOmpFeatureArgs {
      */
     gracefulRestartVariable?: pulumi.Input<string>;
     /**
-     * Hold Time (seconds) - Default value: `60`
+     * Hold Time (seconds)
+     *   - Default value: `60`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -920,7 +1015,8 @@ export interface SystemOmpFeatureArgs {
      */
     holdtimeVariable?: pulumi.Input<string>;
     /**
-     * Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      */
     ignoreRegionPathLength?: pulumi.Input<boolean>;
     /**
@@ -932,7 +1028,9 @@ export interface SystemOmpFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -940,7 +1038,9 @@ export interface SystemOmpFeatureArgs {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -948,7 +1048,8 @@ export interface SystemOmpFeatureArgs {
      */
     ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
     /**
-     * Overlay AS Number - Range: `1`-`4294967295`
+     * Overlay AS Number
+     *   - Range: `1`-`4294967295`
      */
     overlayAs?: pulumi.Input<number>;
     /**
@@ -956,7 +1057,9 @@ export interface SystemOmpFeatureArgs {
      */
     overlayAsVariable?: pulumi.Input<string>;
     /**
-     * Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     pathsAdvertisedPerPrefix?: pulumi.Input<number>;
     /**
@@ -964,7 +1067,8 @@ export interface SystemOmpFeatureArgs {
      */
     pathsAdvertisedPerPrefixVariable?: pulumi.Input<string>;
     /**
-     * Shutdown - Default value: `false`
+     * Shutdown
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -980,7 +1084,8 @@ export interface SystemOmpFeatureArgs {
      */
     siteTypesVariable?: pulumi.Input<string>;
     /**
-     * Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
     transportGateway?: pulumi.Input<string>;
     /**

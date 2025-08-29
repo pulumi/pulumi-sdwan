@@ -67,25 +67,29 @@ type GpsFeatureTemplate struct {
 	DestinationAddress pulumi.StringPtrOutput `pulumi:"destinationAddress"`
 	// Variable name
 	DestinationAddressVariable pulumi.StringPtrOutput `pulumi:"destinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	DestinationPort pulumi.IntPtrOutput `pulumi:"destinationPort"`
 	// Variable name
 	DestinationPortVariable pulumi.StringPtrOutput `pulumi:"destinationPortVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	Enable pulumi.BoolPtrOutput `pulumi:"enable"`
 	// Variable name
 	EnableVariable pulumi.StringPtrOutput `pulumi:"enableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrOutput `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable pulumi.StringPtrOutput `pulumi:"gpsModeVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	Nmea pulumi.BoolPtrOutput `pulumi:"nmea"`
 	// Variable name
 	NmeaVariable pulumi.StringPtrOutput `pulumi:"nmeaVariable"`
@@ -141,25 +145,29 @@ type gpsFeatureTemplateState struct {
 	DestinationAddress *string `pulumi:"destinationAddress"`
 	// Variable name
 	DestinationAddressVariable *string `pulumi:"destinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	DestinationPort *int `pulumi:"destinationPort"`
 	// Variable name
 	DestinationPortVariable *string `pulumi:"destinationPortVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	Enable *bool `pulumi:"enable"`
 	// Variable name
 	EnableVariable *string `pulumi:"enableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode *string `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable *string `pulumi:"gpsModeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	Nmea *bool `pulumi:"nmea"`
 	// Variable name
 	NmeaVariable *string `pulumi:"nmeaVariable"`
@@ -180,25 +188,29 @@ type GpsFeatureTemplateState struct {
 	DestinationAddress pulumi.StringPtrInput
 	// Variable name
 	DestinationAddressVariable pulumi.StringPtrInput
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	DestinationPort pulumi.IntPtrInput
 	// Variable name
 	DestinationPortVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	Enable pulumi.BoolPtrInput
 	// Variable name
 	EnableVariable pulumi.StringPtrInput
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrInput
 	// Variable name
 	GpsModeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	Nmea pulumi.BoolPtrInput
 	// Variable name
 	NmeaVariable pulumi.StringPtrInput
@@ -223,25 +235,29 @@ type gpsFeatureTemplateArgs struct {
 	DestinationAddress *string `pulumi:"destinationAddress"`
 	// Variable name
 	DestinationAddressVariable *string `pulumi:"destinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	DestinationPort *int `pulumi:"destinationPort"`
 	// Variable name
 	DestinationPortVariable *string `pulumi:"destinationPortVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	Enable *bool `pulumi:"enable"`
 	// Variable name
 	EnableVariable *string `pulumi:"enableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode *string `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable *string `pulumi:"gpsModeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	Nmea *bool `pulumi:"nmea"`
 	// Variable name
 	NmeaVariable *string `pulumi:"nmeaVariable"`
@@ -259,25 +275,29 @@ type GpsFeatureTemplateArgs struct {
 	DestinationAddress pulumi.StringPtrInput
 	// Variable name
 	DestinationAddressVariable pulumi.StringPtrInput
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	DestinationPort pulumi.IntPtrInput
 	// Variable name
 	DestinationPortVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	Enable pulumi.BoolPtrInput
 	// Variable name
 	EnableVariable pulumi.StringPtrInput
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrInput
 	// Variable name
 	GpsModeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	Nmea pulumi.BoolPtrInput
 	// Variable name
 	NmeaVariable pulumi.StringPtrInput
@@ -389,7 +409,8 @@ func (o GpsFeatureTemplateOutput) DestinationAddressVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringPtrOutput { return v.DestinationAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Destination port - Range: `1`-`65535`
+// Destination port
+//   - Range: `1`-`65535`
 func (o GpsFeatureTemplateOutput) DestinationPort() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.IntPtrOutput { return v.DestinationPort }).(pulumi.IntPtrOutput)
 }
@@ -399,14 +420,14 @@ func (o GpsFeatureTemplateOutput) DestinationPortVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringPtrOutput { return v.DestinationPortVariable }).(pulumi.StringPtrOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o GpsFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable/disable GPS - Default value: `false`
+// Enable/disable GPS
+//   - Default value: `false`
 func (o GpsFeatureTemplateOutput) Enable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.BoolPtrOutput { return v.Enable }).(pulumi.BoolPtrOutput)
 }
@@ -416,7 +437,9 @@ func (o GpsFeatureTemplateOutput) EnableVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringPtrOutput { return v.EnableVariable }).(pulumi.StringPtrOutput)
 }
 
-// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+// Select GPS mode
+//   - Choices: `ms-based`, `standalone`
+//   - Default value: `ms-based`
 func (o GpsFeatureTemplateOutput) GpsMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringPtrOutput { return v.GpsMode }).(pulumi.StringPtrOutput)
 }
@@ -431,7 +454,8 @@ func (o GpsFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Enable/disable NMEA data - Default value: `false`
+// Enable/disable NMEA data
+//   - Default value: `false`
 func (o GpsFeatureTemplateOutput) Nmea() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *GpsFeatureTemplate) pulumi.BoolPtrOutput { return v.Nmea }).(pulumi.BoolPtrOutput)
 }

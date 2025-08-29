@@ -31,11 +31,14 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	AclIpv4IngressPolicyId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressPolicyId"`
 	AclIpv6EgressPolicyId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressPolicyId"`
 	AclIpv6IngressPolicyId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressPolicyId"`
-	// Shaping Rate (Kbps) - Range: `8`-`100000000`
+	// Shaping Rate (Kbps)
+	//   - Range: `8`-`100000000`
 	AclShapingRate pulumi.IntPtrOutput `pulumi:"aclShapingRate"`
 	// Variable name
 	AclShapingRateVariable pulumi.StringPtrOutput `pulumi:"aclShapingRateVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
@@ -47,7 +50,8 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	AutonegotiateVariable pulumi.StringPtrOutput `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
@@ -55,26 +59,31 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrOutput `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
 	InterfaceName        pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -82,7 +91,8 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance - Range: `1`-`65536`
+	// DHCP Distance
+	//   - Range: `1`-`65536`
 	Ipv4DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv4DhcpDistance"`
 	// Variable name
 	Ipv4DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpDistanceVariable"`
@@ -90,17 +100,20 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Ipv4DhcpHelperVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpHelperVariable"`
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers pulumi.StringArrayOutput `pulumi:"ipv4DhcpHelpers"`
-	// enable Network Address Translation on this interface - Default value: `false`
+	// enable Network Address Translation on this interface
+	//   - Default value: `false`
 	Ipv4Nat pulumi.BoolPtrOutput `pulumi:"ipv4Nat"`
 	// NAT Inside Source Loopback Interface
 	Ipv4NatLoopback pulumi.StringPtrOutput `pulumi:"ipv4NatLoopback"`
 	// Variable name
 	Ipv4NatLoopbackVariable pulumi.StringPtrOutput `pulumi:"ipv4NatLoopbackVariable"`
-	// NAT Overload - Default value: `true`
+	// NAT Overload
+	//   - Default value: `true`
 	Ipv4NatOverload pulumi.BoolPtrOutput `pulumi:"ipv4NatOverload"`
 	// Variable name
 	Ipv4NatOverloadVariable pulumi.StringPtrOutput `pulumi:"ipv4NatOverloadVariable"`
-	// NAT Pool Prefix Length - Range: `1`-`32`
+	// NAT Pool Prefix Length
+	//   - Range: `1`-`32`
 	Ipv4NatPrefixLength pulumi.IntPtrOutput `pulumi:"ipv4NatPrefixLength"`
 	// Variable name
 	Ipv4NatPrefixLengthVariable pulumi.StringPtrOutput `pulumi:"ipv4NatPrefixLengthVariable"`
@@ -112,25 +125,27 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Ipv4NatRangeStart pulumi.StringPtrOutput `pulumi:"ipv4NatRangeStart"`
 	// Variable name
 	Ipv4NatRangeStartVariable pulumi.StringPtrOutput `pulumi:"ipv4NatRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	Ipv4NatTcpTimeout pulumi.IntPtrOutput `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type - Choices: `pool`, `loopback`
+	// NAT Type
+	//   - Choices: `pool`, `loopback`
 	Ipv4NatType pulumi.StringPtrOutput `pulumi:"ipv4NatType"`
 	// Variable name
 	Ipv4NatTypeVariable pulumi.StringPtrOutput `pulumi:"ipv4NatTypeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrOutput `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"ipv4NatUdpTimeoutVariable"`
 	// Secondary IpV4 Addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
@@ -144,13 +159,16 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayOutput `pulumi:"ipv6DhcpHelpers"`
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// enable Network Address Translation ipv6 on this interface - Default value: `false`
+	// enable Network Address Translation ipv6 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrOutput `pulumi:"ipv6Nat"`
 	// Static secondary IPv6 addresses
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayOutput `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrOutput `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrOutput `pulumi:"loadIntervalVariable"`
@@ -158,13 +176,15 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	MacAddress pulumi.StringPtrOutput `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable pulumi.StringPtrOutput `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrOutput `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrOutput `pulumi:"mediaTypeVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrOutput `pulumi:"nat64"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
@@ -172,13 +192,15 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrOutput `pulumi:"speed"`
 	// Variable name
 	SpeedVariable pulumi.StringPtrOutput `pulumi:"speedVariable"`
 	// static NAT
 	StaticNats ServiceLanVpnInterfaceEthernetFeatureStaticNatArrayOutput `pulumi:"staticNats"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -188,15 +210,19 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	TrackerVariable pulumi.StringPtrOutput `pulumi:"trackerVariable"`
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation pulumi.BoolPtrOutput `pulumi:"trustsecEnableEnforcedPropogation"`
-	// Indicates that the interface is trustworthy for CTS - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS
+	//   - Default value: `false`
 	TrustsecEnableSgtPropogation pulumi.BoolPtrOutput `pulumi:"trustsecEnableSgtPropogation"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecEnforcedSecurityGroupTag pulumi.IntPtrOutput `pulumi:"trustsecEnforcedSecurityGroupTag"`
 	// Variable name
 	TrustsecEnforcedSecurityGroupTagVariable pulumi.StringPtrOutput `pulumi:"trustsecEnforcedSecurityGroupTagVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+	// Enables the interface for CTS SGT authorization and forwarding
+	//   - Default value: `true`
 	TrustsecPropogate pulumi.BoolPtrOutput `pulumi:"trustsecPropogate"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecSecurityGroupTag pulumi.IntPtrOutput `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrOutput `pulumi:"trustsecSecurityGroupTagVariable"`
@@ -248,11 +274,14 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	AclIpv4IngressPolicyId *string `pulumi:"aclIpv4IngressPolicyId"`
 	AclIpv6EgressPolicyId  *string `pulumi:"aclIpv6EgressPolicyId"`
 	AclIpv6IngressPolicyId *string `pulumi:"aclIpv6IngressPolicyId"`
-	// Shaping Rate (Kbps) - Range: `8`-`100000000`
+	// Shaping Rate (Kbps)
+	//   - Range: `8`-`100000000`
 	AclShapingRate *int `pulumi:"aclShapingRate"`
 	// Variable name
 	AclShapingRateVariable *string `pulumi:"aclShapingRateVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -264,7 +293,8 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
@@ -272,26 +302,31 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -299,7 +334,8 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance - Range: `1`-`65536`
+	// DHCP Distance
+	//   - Range: `1`-`65536`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
@@ -307,17 +343,20 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers []string `pulumi:"ipv4DhcpHelpers"`
-	// enable Network Address Translation on this interface - Default value: `false`
+	// enable Network Address Translation on this interface
+	//   - Default value: `false`
 	Ipv4Nat *bool `pulumi:"ipv4Nat"`
 	// NAT Inside Source Loopback Interface
 	Ipv4NatLoopback *string `pulumi:"ipv4NatLoopback"`
 	// Variable name
 	Ipv4NatLoopbackVariable *string `pulumi:"ipv4NatLoopbackVariable"`
-	// NAT Overload - Default value: `true`
+	// NAT Overload
+	//   - Default value: `true`
 	Ipv4NatOverload *bool `pulumi:"ipv4NatOverload"`
 	// Variable name
 	Ipv4NatOverloadVariable *string `pulumi:"ipv4NatOverloadVariable"`
-	// NAT Pool Prefix Length - Range: `1`-`32`
+	// NAT Pool Prefix Length
+	//   - Range: `1`-`32`
 	Ipv4NatPrefixLength *int `pulumi:"ipv4NatPrefixLength"`
 	// Variable name
 	Ipv4NatPrefixLengthVariable *string `pulumi:"ipv4NatPrefixLengthVariable"`
@@ -329,25 +368,27 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4NatRangeStart *string `pulumi:"ipv4NatRangeStart"`
 	// Variable name
 	Ipv4NatRangeStartVariable *string `pulumi:"ipv4NatRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	Ipv4NatTcpTimeout *int `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable *string `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type - Choices: `pool`, `loopback`
+	// NAT Type
+	//   - Choices: `pool`, `loopback`
 	Ipv4NatType *string `pulumi:"ipv4NatType"`
 	// Variable name
 	Ipv4NatTypeVariable *string `pulumi:"ipv4NatTypeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	Ipv4NatUdpTimeout *int `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable *string `pulumi:"ipv4NatUdpTimeoutVariable"`
 	// Secondary IpV4 Addresses
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -361,13 +402,16 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv6DhcpHelpers []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// enable Network Address Translation ipv6 on this interface - Default value: `false`
+	// enable Network Address Translation ipv6 on this interface
+	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
 	// Static secondary IPv6 addresses
 	Ipv6SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -375,13 +419,15 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64 *bool `pulumi:"nat64"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
@@ -389,13 +435,15 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
 	// static NAT
 	StaticNats []ServiceLanVpnInterfaceEthernetFeatureStaticNat `pulumi:"staticNats"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -405,15 +453,19 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation *bool `pulumi:"trustsecEnableEnforcedPropogation"`
-	// Indicates that the interface is trustworthy for CTS - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS
+	//   - Default value: `false`
 	TrustsecEnableSgtPropogation *bool `pulumi:"trustsecEnableSgtPropogation"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecEnforcedSecurityGroupTag *int `pulumi:"trustsecEnforcedSecurityGroupTag"`
 	// Variable name
 	TrustsecEnforcedSecurityGroupTagVariable *string `pulumi:"trustsecEnforcedSecurityGroupTagVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+	// Enables the interface for CTS SGT authorization and forwarding
+	//   - Default value: `true`
 	TrustsecPropogate *bool `pulumi:"trustsecPropogate"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecSecurityGroupTag *int `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name
 	TrustsecSecurityGroupTagVariable *string `pulumi:"trustsecSecurityGroupTagVariable"`
@@ -430,11 +482,14 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	AclIpv4IngressPolicyId pulumi.StringPtrInput
 	AclIpv6EgressPolicyId  pulumi.StringPtrInput
 	AclIpv6IngressPolicyId pulumi.StringPtrInput
-	// Shaping Rate (Kbps) - Range: `8`-`100000000`
+	// Shaping Rate (Kbps)
+	//   - Range: `8`-`100000000`
 	AclShapingRate pulumi.IntPtrInput
 	// Variable name
 	AclShapingRateVariable pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -446,7 +501,8 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	AutonegotiateVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
@@ -454,26 +510,31 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -481,7 +542,8 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4Address pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// DHCP Distance - Range: `1`-`65536`
+	// DHCP Distance
+	//   - Range: `1`-`65536`
 	Ipv4DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
@@ -489,17 +551,20 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers pulumi.StringArrayInput
-	// enable Network Address Translation on this interface - Default value: `false`
+	// enable Network Address Translation on this interface
+	//   - Default value: `false`
 	Ipv4Nat pulumi.BoolPtrInput
 	// NAT Inside Source Loopback Interface
 	Ipv4NatLoopback pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatLoopbackVariable pulumi.StringPtrInput
-	// NAT Overload - Default value: `true`
+	// NAT Overload
+	//   - Default value: `true`
 	Ipv4NatOverload pulumi.BoolPtrInput
 	// Variable name
 	Ipv4NatOverloadVariable pulumi.StringPtrInput
-	// NAT Pool Prefix Length - Range: `1`-`32`
+	// NAT Pool Prefix Length
+	//   - Range: `1`-`32`
 	Ipv4NatPrefixLength pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatPrefixLengthVariable pulumi.StringPtrInput
@@ -511,25 +576,27 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4NatRangeStart pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatRangeStartVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	Ipv4NatTcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type - Choices: `pool`, `loopback`
+	// NAT Type
+	//   - Choices: `pool`, `loopback`
 	Ipv4NatType pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatTypeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrInput
 	// Secondary IpV4 Addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -543,13 +610,16 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayInput
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
-	// enable Network Address Translation ipv6 on this interface - Default value: `false`
+	// enable Network Address Translation ipv6 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
 	// Static secondary IPv6 addresses
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -557,13 +627,15 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
@@ -571,13 +643,15 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
 	// static NAT
 	StaticNats ServiceLanVpnInterfaceEthernetFeatureStaticNatArrayInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -587,15 +661,19 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation pulumi.BoolPtrInput
-	// Indicates that the interface is trustworthy for CTS - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS
+	//   - Default value: `false`
 	TrustsecEnableSgtPropogation pulumi.BoolPtrInput
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecEnforcedSecurityGroupTag pulumi.IntPtrInput
 	// Variable name
 	TrustsecEnforcedSecurityGroupTagVariable pulumi.StringPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+	// Enables the interface for CTS SGT authorization and forwarding
+	//   - Default value: `true`
 	TrustsecPropogate pulumi.BoolPtrInput
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecSecurityGroupTag pulumi.IntPtrInput
 	// Variable name
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrInput
@@ -616,11 +694,14 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	AclIpv4IngressPolicyId *string `pulumi:"aclIpv4IngressPolicyId"`
 	AclIpv6EgressPolicyId  *string `pulumi:"aclIpv6EgressPolicyId"`
 	AclIpv6IngressPolicyId *string `pulumi:"aclIpv6IngressPolicyId"`
-	// Shaping Rate (Kbps) - Range: `8`-`100000000`
+	// Shaping Rate (Kbps)
+	//   - Range: `8`-`100000000`
 	AclShapingRate *int `pulumi:"aclShapingRate"`
 	// Variable name
 	AclShapingRateVariable *string `pulumi:"aclShapingRateVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -632,7 +713,8 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
@@ -640,26 +722,31 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
 	InterfaceDescription        *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
 	InterfaceName        *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -667,7 +754,8 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4Address *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance - Range: `1`-`65536`
+	// DHCP Distance
+	//   - Range: `1`-`65536`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
@@ -675,17 +763,20 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers []string `pulumi:"ipv4DhcpHelpers"`
-	// enable Network Address Translation on this interface - Default value: `false`
+	// enable Network Address Translation on this interface
+	//   - Default value: `false`
 	Ipv4Nat *bool `pulumi:"ipv4Nat"`
 	// NAT Inside Source Loopback Interface
 	Ipv4NatLoopback *string `pulumi:"ipv4NatLoopback"`
 	// Variable name
 	Ipv4NatLoopbackVariable *string `pulumi:"ipv4NatLoopbackVariable"`
-	// NAT Overload - Default value: `true`
+	// NAT Overload
+	//   - Default value: `true`
 	Ipv4NatOverload *bool `pulumi:"ipv4NatOverload"`
 	// Variable name
 	Ipv4NatOverloadVariable *string `pulumi:"ipv4NatOverloadVariable"`
-	// NAT Pool Prefix Length - Range: `1`-`32`
+	// NAT Pool Prefix Length
+	//   - Range: `1`-`32`
 	Ipv4NatPrefixLength *int `pulumi:"ipv4NatPrefixLength"`
 	// Variable name
 	Ipv4NatPrefixLengthVariable *string `pulumi:"ipv4NatPrefixLengthVariable"`
@@ -697,25 +788,27 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4NatRangeStart *string `pulumi:"ipv4NatRangeStart"`
 	// Variable name
 	Ipv4NatRangeStartVariable *string `pulumi:"ipv4NatRangeStartVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	Ipv4NatTcpTimeout *int `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable *string `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type - Choices: `pool`, `loopback`
+	// NAT Type
+	//   - Choices: `pool`, `loopback`
 	Ipv4NatType *string `pulumi:"ipv4NatType"`
 	// Variable name
 	Ipv4NatTypeVariable *string `pulumi:"ipv4NatTypeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	Ipv4NatUdpTimeout *int `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable *string `pulumi:"ipv4NatUdpTimeoutVariable"`
 	// Secondary IpV4 Addresses
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -729,13 +822,16 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv6DhcpHelpers []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
-	// enable Network Address Translation ipv6 on this interface - Default value: `false`
+	// enable Network Address Translation ipv6 on this interface
+	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
 	// Static secondary IPv6 addresses
 	Ipv6SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -743,13 +839,15 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64 *bool `pulumi:"nat64"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
@@ -757,13 +855,15 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
 	// static NAT
 	StaticNats []ServiceLanVpnInterfaceEthernetFeatureStaticNat `pulumi:"staticNats"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -773,15 +873,19 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation *bool `pulumi:"trustsecEnableEnforcedPropogation"`
-	// Indicates that the interface is trustworthy for CTS - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS
+	//   - Default value: `false`
 	TrustsecEnableSgtPropogation *bool `pulumi:"trustsecEnableSgtPropogation"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecEnforcedSecurityGroupTag *int `pulumi:"trustsecEnforcedSecurityGroupTag"`
 	// Variable name
 	TrustsecEnforcedSecurityGroupTagVariable *string `pulumi:"trustsecEnforcedSecurityGroupTagVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+	// Enables the interface for CTS SGT authorization and forwarding
+	//   - Default value: `true`
 	TrustsecPropogate *bool `pulumi:"trustsecPropogate"`
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecSecurityGroupTag *int `pulumi:"trustsecSecurityGroupTag"`
 	// Variable name
 	TrustsecSecurityGroupTagVariable *string `pulumi:"trustsecSecurityGroupTagVariable"`
@@ -797,11 +901,14 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	AclIpv4IngressPolicyId pulumi.StringPtrInput
 	AclIpv6EgressPolicyId  pulumi.StringPtrInput
 	AclIpv6IngressPolicyId pulumi.StringPtrInput
-	// Shaping Rate (Kbps) - Range: `8`-`100000000`
+	// Shaping Rate (Kbps)
+	//   - Range: `8`-`100000000`
 	AclShapingRate pulumi.IntPtrInput
 	// Variable name
 	AclShapingRateVariable pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -813,7 +920,8 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	AutonegotiateVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
@@ -821,26 +929,31 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
 	InterfaceDescription        pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
 	InterfaceName        pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -848,7 +961,8 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4Address pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// DHCP Distance - Range: `1`-`65536`
+	// DHCP Distance
+	//   - Range: `1`-`65536`
 	Ipv4DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
@@ -856,17 +970,20 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
 	// List of DHCP IPv4 helper addresses (min 1, max 8)
 	Ipv4DhcpHelpers pulumi.StringArrayInput
-	// enable Network Address Translation on this interface - Default value: `false`
+	// enable Network Address Translation on this interface
+	//   - Default value: `false`
 	Ipv4Nat pulumi.BoolPtrInput
 	// NAT Inside Source Loopback Interface
 	Ipv4NatLoopback pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatLoopbackVariable pulumi.StringPtrInput
-	// NAT Overload - Default value: `true`
+	// NAT Overload
+	//   - Default value: `true`
 	Ipv4NatOverload pulumi.BoolPtrInput
 	// Variable name
 	Ipv4NatOverloadVariable pulumi.StringPtrInput
-	// NAT Pool Prefix Length - Range: `1`-`32`
+	// NAT Pool Prefix Length
+	//   - Range: `1`-`32`
 	Ipv4NatPrefixLength pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatPrefixLengthVariable pulumi.StringPtrInput
@@ -878,25 +995,27 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4NatRangeStart pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatRangeStartVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	Ipv4NatTcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type - Choices: `pool`, `loopback`
+	// NAT Type
+	//   - Choices: `pool`, `loopback`
 	Ipv4NatType pulumi.StringPtrInput
 	// Variable name
 	Ipv4NatTypeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrInput
 	// Secondary IpV4 Addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -910,13 +1029,16 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayInput
 	// secondary IPv6 addresses
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
-	// enable Network Address Translation ipv6 on this interface - Default value: `false`
+	// enable Network Address Translation ipv6 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
 	// Static secondary IPv6 addresses
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -924,13 +1046,15 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64 pulumi.BoolPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringInput
@@ -938,13 +1062,15 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
 	// static NAT
 	StaticNats ServiceLanVpnInterfaceEthernetFeatureStaticNatArrayInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -954,15 +1080,19 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation pulumi.BoolPtrInput
-	// Indicates that the interface is trustworthy for CTS - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS
+	//   - Default value: `false`
 	TrustsecEnableSgtPropogation pulumi.BoolPtrInput
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecEnforcedSecurityGroupTag pulumi.IntPtrInput
 	// Variable name
 	TrustsecEnforcedSecurityGroupTagVariable pulumi.StringPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+	// Enables the interface for CTS SGT authorization and forwarding
+	//   - Default value: `true`
 	TrustsecPropogate pulumi.BoolPtrInput
-	// SGT value between 2 and 65519 - Range: `2`-`65519`
+	// SGT value between 2 and 65519
+	//   - Range: `2`-`65519`
 	TrustsecSecurityGroupTag pulumi.IntPtrInput
 	// Variable name
 	TrustsecSecurityGroupTagVariable pulumi.StringPtrInput
@@ -1075,7 +1205,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) AclIpv6IngressPolicyId() pu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.AclIpv6IngressPolicyId }).(pulumi.StringPtrOutput)
 }
 
-// Shaping Rate (Kbps) - Range: `8`-`100000000`
+// Shaping Rate (Kbps)
+//   - Range: `8`-`100000000`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) AclShapingRate() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.AclShapingRate }).(pulumi.IntPtrOutput)
 }
@@ -1085,7 +1216,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) AclShapingRateVariable() pu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.AclShapingRateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+//   - Range: `0`-`2147483`
+//   - Default value: `1200`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -1117,7 +1250,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Description() pulumi.String
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Duplex mode - Choices: `full`, `half`, `auto`
+// Duplex mode
+//   - Choices: `full`, `half`, `auto`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Duplex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Duplex }).(pulumi.StringPtrOutput)
 }
@@ -1137,7 +1271,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) FeatureProfileId() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+// ICMP/ICMPv6 Redirect Disable
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) IcmpRedirectDisable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.IcmpRedirectDisable }).(pulumi.BoolPtrOutput)
 }
@@ -1160,7 +1295,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) InterfaceDescriptionVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+// Interface MTU
+//   - Range: `1500`-`9216`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -1179,7 +1316,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) InterfaceNameVariable() pul
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast - Default value: `false`
+// IP Directed-Broadcast
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.IpDirectedBroadcast }).(pulumi.BoolPtrOutput)
 }
@@ -1191,8 +1329,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) IpDirectedBroadcastVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+//   - Range: `576`-`9216`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -1212,7 +1351,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4AddressVariable() pulum
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// DHCP Distance - Range: `1`-`65536`
+// DHCP Distance
+//   - Range: `1`-`65536`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4DhcpDistance }).(pulumi.IntPtrOutput)
 }
@@ -1234,7 +1374,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpHelpers() pulumi.St
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringArrayOutput { return v.Ipv4DhcpHelpers }).(pulumi.StringArrayOutput)
 }
 
-// enable Network Address Translation on this interface - Default value: `false`
+// enable Network Address Translation on this interface
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4Nat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Ipv4Nat }).(pulumi.BoolPtrOutput)
 }
@@ -1251,7 +1392,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatLoopbackVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Overload - Default value: `true`
+// NAT Overload
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatOverload() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Ipv4NatOverload }).(pulumi.BoolPtrOutput)
 }
@@ -1263,7 +1405,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatOverloadVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Pool Prefix Length - Range: `1`-`32`
+// NAT Pool Prefix Length
+//   - Range: `1`-`32`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatPrefixLength() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4NatPrefixLength }).(pulumi.IntPtrOutput)
 }
@@ -1299,7 +1442,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatRangeStartVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+// Set NAT TCP session timeout, in minutes
+//   - Range: `1`-`8947`
+//   - Default value: `60`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatTcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4NatTcpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -1311,7 +1456,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatTcpTimeoutVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Type - Choices: `pool`, `loopback`
+// NAT Type
+//   - Choices: `pool`, `loopback`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4NatType }).(pulumi.StringPtrOutput)
 }
@@ -1321,7 +1467,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatTypeVariable() pulum
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4NatTypeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+// Set NAT UDP session timeout, in minutes
+//   - Range: `1`-`8947`
+//   - Default value: `1`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatUdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4NatUdpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -1340,11 +1488,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4SecondaryAddresses() Se
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -1385,7 +1530,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6DhcpSecondaryAddresses(
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput)
 }
 
-// enable Network Address Translation ipv6 on this interface - Default value: `false`
+// enable Network Address Translation ipv6 on this interface
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6Nat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Ipv6Nat }).(pulumi.BoolPtrOutput)
 }
@@ -1404,7 +1550,9 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6Vrrps() ServiceLanVpnIn
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayOutput)
 }
 
-// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+// Interval for interface load calculation
+//   - Range: `30`-`600`
+//   - Default value: `30`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) LoadInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.LoadInterval }).(pulumi.IntPtrOutput)
 }
@@ -1424,7 +1572,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) MacAddressVariable() pulumi
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Media type - Choices: `auto-select`, `rj45`, `sfp`
+// Media type
+//   - Choices: `auto-select`, `rj45`, `sfp`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) MediaType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.MediaType }).(pulumi.StringPtrOutput)
 }
@@ -1439,7 +1588,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Name() pulumi.StringOutput 
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// NAT64 on this interface - Default value: `false`
+// NAT64 on this interface
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Nat64() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Nat64 }).(pulumi.BoolPtrOutput)
 }
@@ -1459,7 +1609,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) ShutdownVariable() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+// Set interface speed
+//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Speed }).(pulumi.StringPtrOutput)
 }
@@ -1476,7 +1627,8 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) StaticNats() ServiceLanVpnI
 	}).(ServiceLanVpnInterfaceEthernetFeatureStaticNatArrayOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }
@@ -1503,14 +1655,16 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecEnableEnforcedPropo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Indicates that the interface is trustworthy for CTS - Default value: `false`
+// Indicates that the interface is trustworthy for CTS
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecEnableSgtPropogation() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput {
 		return v.TrustsecEnableSgtPropogation
 	}).(pulumi.BoolPtrOutput)
 }
 
-// SGT value between 2 and 65519 - Range: `2`-`65519`
+// SGT value between 2 and 65519
+//   - Range: `2`-`65519`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecEnforcedSecurityGroupTag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput {
 		return v.TrustsecEnforcedSecurityGroupTag
@@ -1524,12 +1678,14 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecEnforcedSecurityGro
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+// Enables the interface for CTS SGT authorization and forwarding
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecPropogate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.TrustsecPropogate }).(pulumi.BoolPtrOutput)
 }
 
-// SGT value between 2 and 65519 - Range: `2`-`65519`
+// SGT value between 2 and 65519
+//   - Range: `2`-`65519`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) TrustsecSecurityGroupTag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.TrustsecSecurityGroupTag }).(pulumi.IntPtrOutput)
 }

@@ -34,9 +34,12 @@ class ServiceObjectTrackerGroupFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID
+                 - Range: `1`-`1000`
         :param pulumi.Input[_builtins.str] object_tracker_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceObjectTrackerGroupFeatureTrackerElementArgs']]] tracker_elements: Group Tracks ID Refs
         """
@@ -96,7 +99,8 @@ class ServiceObjectTrackerGroupFeatureArgs:
     @pulumi.getter(name="objectTrackerId")
     def object_tracker_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Object ID - Range: `1`-`1000`
+        Object ID
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "object_tracker_id")
 
@@ -120,7 +124,9 @@ class ServiceObjectTrackerGroupFeatureArgs:
     @pulumi.getter
     def reachable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list criteria boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "reachable")
 
@@ -170,9 +176,12 @@ class _ServiceObjectTrackerGroupFeatureState:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID
+                 - Range: `1`-`1000`
         :param pulumi.Input[_builtins.str] object_tracker_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceObjectTrackerGroupFeatureTrackerElementArgs']]] tracker_elements: Group Tracks ID Refs
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -236,7 +245,8 @@ class _ServiceObjectTrackerGroupFeatureState:
     @pulumi.getter(name="objectTrackerId")
     def object_tracker_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Object ID - Range: `1`-`1000`
+        Object ID
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "object_tracker_id")
 
@@ -260,7 +270,9 @@ class _ServiceObjectTrackerGroupFeatureState:
     @pulumi.getter
     def reachable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list criteria boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "reachable")
 
@@ -339,9 +351,12 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID
+                 - Range: `1`-`1000`
         :param pulumi.Input[_builtins.str] object_tracker_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: Group Tracks ID Refs
         """
@@ -437,9 +452,12 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID - Range: `1`-`1000`
+        :param pulumi.Input[_builtins.int] object_tracker_id: Object ID
+                 - Range: `1`-`1000`
         :param pulumi.Input[_builtins.str] object_tracker_id_variable: Variable name
-        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] reachable: tracker ref list criteria boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] reachable_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceObjectTrackerGroupFeatureTrackerElementArgs', 'ServiceObjectTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: Group Tracks ID Refs
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -487,7 +505,8 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
     @pulumi.getter(name="objectTrackerId")
     def object_tracker_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Object ID - Range: `1`-`1000`
+        Object ID
+          - Range: `1`-`1000`
         """
         return pulumi.get(self, "object_tracker_id")
 
@@ -503,7 +522,9 @@ class ServiceObjectTrackerGroupFeature(pulumi.CustomResource):
     @pulumi.getter
     def reachable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list criteria boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "reachable")
 

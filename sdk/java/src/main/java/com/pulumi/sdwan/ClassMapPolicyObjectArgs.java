@@ -33,14 +33,16 @@ public final class ClassMapPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Queue - Range: `0`-`7`
+     * Queue
+     *   - Range: `0`-`7`
      * 
      */
     @Import(name="queue", required=true)
     private Output<Integer> queue;
 
     /**
-     * @return Queue - Range: `0`-`7`
+     * @return Queue
+     *   - Range: `0`-`7`
      * 
      */
     public Output<Integer> queue() {
@@ -94,7 +96,8 @@ public final class ClassMapPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param queue Queue - Range: `0`-`7`
+         * @param queue Queue
+         *   - Range: `0`-`7`
          * 
          * @return builder
          * 
@@ -105,7 +108,8 @@ public final class ClassMapPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param queue Queue - Range: `0`-`7`
+         * @param queue Queue
+         *   - Range: `0`-`7`
          * 
          * @return builder
          * 

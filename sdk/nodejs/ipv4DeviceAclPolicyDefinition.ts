@@ -46,29 +46,30 @@ export class Ipv4DeviceAclPolicyDefinition extends pulumi.CustomResource {
     }
 
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      */
-    public readonly defaultAction!: pulumi.Output<string | undefined>;
+    declare public readonly defaultAction: pulumi.Output<string | undefined>;
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of ACL sequences
      */
-    public readonly sequences!: pulumi.Output<outputs.Ipv4DeviceAclPolicyDefinitionSequence[]>;
+    declare public readonly sequences: pulumi.Output<outputs.Ipv4DeviceAclPolicyDefinitionSequence[]>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a Ipv4DeviceAclPolicyDefinition resource with the given unique name, arguments, and options.
@@ -83,24 +84,24 @@ export class Ipv4DeviceAclPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as Ipv4DeviceAclPolicyDefinitionState | undefined;
-            resourceInputs["defaultAction"] = state ? state.defaultAction : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sequences"] = state ? state.sequences : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sequences"] = state?.sequences;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as Ipv4DeviceAclPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.sequences === undefined) && !opts.urn) {
+            if (args?.sequences === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sequences'");
             }
-            resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sequences"] = args ? args.sequences : undefined;
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sequences"] = args?.sequences;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -114,7 +115,8 @@ export class Ipv4DeviceAclPolicyDefinition extends pulumi.CustomResource {
  */
 export interface Ipv4DeviceAclPolicyDefinitionState {
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      */
     defaultAction?: pulumi.Input<string>;
     /**
@@ -144,7 +146,8 @@ export interface Ipv4DeviceAclPolicyDefinitionState {
  */
 export interface Ipv4DeviceAclPolicyDefinitionArgs {
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      */
     defaultAction?: pulumi.Input<string>;
     /**

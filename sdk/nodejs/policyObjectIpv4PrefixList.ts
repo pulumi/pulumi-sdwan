@@ -51,23 +51,23 @@ export class PolicyObjectIpv4PrefixList extends pulumi.CustomResource {
     /**
      * The description of the Policy_object
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * IPv4 Prefix List
      */
-    public readonly entries!: pulumi.Output<outputs.PolicyObjectIpv4PrefixListEntry[]>;
+    declare public readonly entries: pulumi.Output<outputs.PolicyObjectIpv4PrefixListEntry[]>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Policy_object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the Policy_object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a PolicyObjectIpv4PrefixList resource with the given unique name, arguments, and options.
@@ -82,23 +82,23 @@ export class PolicyObjectIpv4PrefixList extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyObjectIpv4PrefixListState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["entries"] = state ? state.entries : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["entries"] = state?.entries;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PolicyObjectIpv4PrefixListArgs | undefined;
-            if ((!args || args.entries === undefined) && !opts.urn) {
+            if (args?.entries === undefined && !opts.urn) {
                 throw new Error("Missing required property 'entries'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["entries"] = args ? args.entries : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["entries"] = args?.entries;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -65,7 +65,8 @@ type AdvancedInspectionProfilePolicyDefinition struct {
 	IntrusionPreventionVersion pulumi.IntPtrOutput `pulumi:"intrusionPreventionVersion"`
 	// The name of the policy definition.
 	Name pulumi.StringOutput `pulumi:"name"`
-	// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+	// TLS Action
+	//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 	TlsAction pulumi.StringPtrOutput `pulumi:"tlsAction"`
 	// TLS/SSL decryption ID
 	TlsSslDecryptionId pulumi.StringPtrOutput `pulumi:"tlsSslDecryptionId"`
@@ -124,7 +125,8 @@ type advancedInspectionProfilePolicyDefinitionState struct {
 	IntrusionPreventionVersion *int `pulumi:"intrusionPreventionVersion"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
-	// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+	// TLS Action
+	//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 	TlsAction *string `pulumi:"tlsAction"`
 	// TLS/SSL decryption ID
 	TlsSslDecryptionId *string `pulumi:"tlsSslDecryptionId"`
@@ -151,7 +153,8 @@ type AdvancedInspectionProfilePolicyDefinitionState struct {
 	IntrusionPreventionVersion pulumi.IntPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
-	// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+	// TLS Action
+	//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 	TlsAction pulumi.StringPtrInput
 	// TLS/SSL decryption ID
 	TlsSslDecryptionId pulumi.StringPtrInput
@@ -182,7 +185,8 @@ type advancedInspectionProfilePolicyDefinitionArgs struct {
 	IntrusionPreventionVersion *int `pulumi:"intrusionPreventionVersion"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
-	// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+	// TLS Action
+	//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 	TlsAction *string `pulumi:"tlsAction"`
 	// TLS/SSL decryption ID
 	TlsSslDecryptionId *string `pulumi:"tlsSslDecryptionId"`
@@ -208,7 +212,8 @@ type AdvancedInspectionProfilePolicyDefinitionArgs struct {
 	IntrusionPreventionVersion pulumi.IntPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
-	// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+	// TLS Action
+	//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 	TlsAction pulumi.StringPtrInput
 	// TLS/SSL decryption ID
 	TlsSslDecryptionId pulumi.StringPtrInput
@@ -345,7 +350,8 @@ func (o AdvancedInspectionProfilePolicyDefinitionOutput) Name() pulumi.StringOut
 	return o.ApplyT(func(v *AdvancedInspectionProfilePolicyDefinition) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// TLS Action - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+// TLS Action
+//   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
 func (o AdvancedInspectionProfilePolicyDefinitionOutput) TlsAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AdvancedInspectionProfilePolicyDefinition) pulumi.StringPtrOutput { return v.TlsAction }).(pulumi.StringPtrOutput)
 }

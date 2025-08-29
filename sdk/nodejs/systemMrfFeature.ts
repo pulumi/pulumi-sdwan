@@ -67,47 +67,52 @@ export class SystemMrfFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
-    public readonly enableMigrationToMrf!: pulumi.Output<string | undefined>;
+    declare public readonly enableMigrationToMrf: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      */
-    public readonly migrationBgpCommunity!: pulumi.Output<number | undefined>;
+    declare public readonly migrationBgpCommunity: pulumi.Output<number | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      */
-    public readonly regionId!: pulumi.Output<number | undefined>;
+    declare public readonly regionId: pulumi.Output<number | undefined>;
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      */
-    public readonly role!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly roleVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set secondary region ID - Range: `1`-`63`
-     */
-    public readonly secondaryRegionId!: pulumi.Output<number | undefined>;
+    declare public readonly role: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly secondaryRegionIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly roleVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set secondary region ID
+     *   - Range: `1`-`63`
+     */
+    declare public readonly secondaryRegionId: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly secondaryRegionIdVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemMrfFeature resource with the given unique name, arguments, and options.
@@ -122,32 +127,32 @@ export class SystemMrfFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemMrfFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enableMigrationToMrf"] = state ? state.enableMigrationToMrf : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["migrationBgpCommunity"] = state ? state.migrationBgpCommunity : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["regionId"] = state ? state.regionId : undefined;
-            resourceInputs["role"] = state ? state.role : undefined;
-            resourceInputs["roleVariable"] = state ? state.roleVariable : undefined;
-            resourceInputs["secondaryRegionId"] = state ? state.secondaryRegionId : undefined;
-            resourceInputs["secondaryRegionIdVariable"] = state ? state.secondaryRegionIdVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enableMigrationToMrf"] = state?.enableMigrationToMrf;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["migrationBgpCommunity"] = state?.migrationBgpCommunity;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["regionId"] = state?.regionId;
+            resourceInputs["role"] = state?.role;
+            resourceInputs["roleVariable"] = state?.roleVariable;
+            resourceInputs["secondaryRegionId"] = state?.secondaryRegionId;
+            resourceInputs["secondaryRegionIdVariable"] = state?.secondaryRegionIdVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemMrfFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enableMigrationToMrf"] = args ? args.enableMigrationToMrf : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["migrationBgpCommunity"] = args ? args.migrationBgpCommunity : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["regionId"] = args ? args.regionId : undefined;
-            resourceInputs["role"] = args ? args.role : undefined;
-            resourceInputs["roleVariable"] = args ? args.roleVariable : undefined;
-            resourceInputs["secondaryRegionId"] = args ? args.secondaryRegionId : undefined;
-            resourceInputs["secondaryRegionIdVariable"] = args ? args.secondaryRegionIdVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enableMigrationToMrf"] = args?.enableMigrationToMrf;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["migrationBgpCommunity"] = args?.migrationBgpCommunity;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["regionId"] = args?.regionId;
+            resourceInputs["role"] = args?.role;
+            resourceInputs["roleVariable"] = args?.roleVariable;
+            resourceInputs["secondaryRegionId"] = args?.secondaryRegionId;
+            resourceInputs["secondaryRegionIdVariable"] = args?.secondaryRegionIdVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -164,7 +169,8 @@ export interface SystemMrfFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
     enableMigrationToMrf?: pulumi.Input<string>;
     /**
@@ -172,7 +178,8 @@ export interface SystemMrfFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      */
     migrationBgpCommunity?: pulumi.Input<number>;
     /**
@@ -180,11 +187,13 @@ export interface SystemMrfFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      */
     regionId?: pulumi.Input<number>;
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      */
     role?: pulumi.Input<string>;
     /**
@@ -192,7 +201,8 @@ export interface SystemMrfFeatureState {
      */
     roleVariable?: pulumi.Input<string>;
     /**
-     * Set secondary region ID - Range: `1`-`63`
+     * Set secondary region ID
+     *   - Range: `1`-`63`
      */
     secondaryRegionId?: pulumi.Input<number>;
     /**
@@ -214,7 +224,8 @@ export interface SystemMrfFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      */
     enableMigrationToMrf?: pulumi.Input<string>;
     /**
@@ -222,7 +233,8 @@ export interface SystemMrfFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      */
     migrationBgpCommunity?: pulumi.Input<number>;
     /**
@@ -230,11 +242,13 @@ export interface SystemMrfFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      */
     regionId?: pulumi.Input<number>;
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      */
     role?: pulumi.Input<string>;
     /**
@@ -242,7 +256,8 @@ export interface SystemMrfFeatureArgs {
      */
     roleVariable?: pulumi.Input<string>;
     /**
-     * Set secondary region ID - Range: `1`-`63`
+     * Set secondary region ID
+     *   - Range: `1`-`63`
      */
     secondaryRegionId?: pulumi.Input<number>;
     /**

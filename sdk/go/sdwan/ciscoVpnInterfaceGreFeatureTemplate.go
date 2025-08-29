@@ -27,26 +27,27 @@ type CiscoVpnInterfaceGreFeatureTemplate struct {
 
 	// Apply ACL
 	AccessLists CiscoVpnInterfaceGreFeatureTemplateAccessListArrayOutput `pulumi:"accessLists"`
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrOutput `pulumi:"application"`
 	// Variable name
 	ApplicationVariable pulumi.StringPtrOutput `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrOutput `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"clearDontFragmentVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Interface description
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
@@ -54,7 +55,9 @@ type CiscoVpnInterfaceGreFeatureTemplate struct {
 	IpAddress pulumi.StringPtrOutput `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable pulumi.StringPtrOutput `pulumi:"ipAddressVariable"`
-	// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `64`-`18000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -64,11 +67,13 @@ type CiscoVpnInterfaceGreFeatureTemplate struct {
 	RewriteRule pulumi.StringPtrOutput `pulumi:"rewriteRule"`
 	// Variable name
 	RewriteRuleVariable pulumi.StringPtrOutput `pulumi:"rewriteRuleVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrOutput `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrOutput `pulumi:"tcpMssAdjustVariable"`
@@ -136,26 +141,27 @@ func GetCiscoVpnInterfaceGreFeatureTemplate(ctx *pulumi.Context,
 type ciscoVpnInterfaceGreFeatureTemplateState struct {
 	// Apply ACL
 	AccessLists []CiscoVpnInterfaceGreFeatureTemplateAccessList `pulumi:"accessLists"`
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application *string `pulumi:"application"`
 	// Variable name
 	ApplicationVariable *string `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
@@ -163,7 +169,9 @@ type ciscoVpnInterfaceGreFeatureTemplateState struct {
 	IpAddress *string `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `64`-`18000`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -173,11 +181,13 @@ type ciscoVpnInterfaceGreFeatureTemplateState struct {
 	RewriteRule *string `pulumi:"rewriteRule"`
 	// Variable name
 	RewriteRuleVariable *string `pulumi:"rewriteRuleVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -210,26 +220,27 @@ type ciscoVpnInterfaceGreFeatureTemplateState struct {
 type CiscoVpnInterfaceGreFeatureTemplateState struct {
 	// Apply ACL
 	AccessLists CiscoVpnInterfaceGreFeatureTemplateAccessListArrayInput
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrInput
 	// Variable name
 	ApplicationVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
@@ -237,7 +248,9 @@ type CiscoVpnInterfaceGreFeatureTemplateState struct {
 	IpAddress pulumi.StringPtrInput
 	// Variable name
 	IpAddressVariable pulumi.StringPtrInput
-	// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `64`-`18000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -247,11 +260,13 @@ type CiscoVpnInterfaceGreFeatureTemplateState struct {
 	RewriteRule pulumi.StringPtrInput
 	// Variable name
 	RewriteRuleVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -288,26 +303,27 @@ func (CiscoVpnInterfaceGreFeatureTemplateState) ElementType() reflect.Type {
 type ciscoVpnInterfaceGreFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists []CiscoVpnInterfaceGreFeatureTemplateAccessList `pulumi:"accessLists"`
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application *string `pulumi:"application"`
 	// Variable name
 	ApplicationVariable *string `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
@@ -315,7 +331,9 @@ type ciscoVpnInterfaceGreFeatureTemplateArgs struct {
 	IpAddress *string `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `64`-`18000`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -325,11 +343,13 @@ type ciscoVpnInterfaceGreFeatureTemplateArgs struct {
 	RewriteRule *string `pulumi:"rewriteRule"`
 	// Variable name
 	RewriteRuleVariable *string `pulumi:"rewriteRuleVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -359,26 +379,27 @@ type ciscoVpnInterfaceGreFeatureTemplateArgs struct {
 type CiscoVpnInterfaceGreFeatureTemplateArgs struct {
 	// Apply ACL
 	AccessLists CiscoVpnInterfaceGreFeatureTemplateAccessListArrayInput
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrInput
 	// Variable name
 	ApplicationVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
@@ -386,7 +407,9 @@ type CiscoVpnInterfaceGreFeatureTemplateArgs struct {
 	IpAddress pulumi.StringPtrInput
 	// Variable name
 	IpAddressVariable pulumi.StringPtrInput
-	// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+	// Interface MTU <576..2000>, in bytes
+	//   - Range: `64`-`18000`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -396,11 +419,13 @@ type CiscoVpnInterfaceGreFeatureTemplateArgs struct {
 	RewriteRule pulumi.StringPtrInput
 	// Variable name
 	RewriteRuleVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -520,7 +545,9 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) AccessLists() CiscoVpnInterfa
 	}).(CiscoVpnInterfaceGreFeatureTemplateAccessListArrayOutput)
 }
 
-// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+// Enable Application Tunnel Type
+//   - Choices: `none`, `sig`
+//   - Default value: `none`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) Application() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.Application }).(pulumi.StringPtrOutput)
 }
@@ -530,7 +557,8 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) ApplicationVariable() pulumi.
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.ApplicationVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) ClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.BoolPtrOutput { return v.ClearDontFragment }).(pulumi.BoolPtrOutput)
 }
@@ -547,9 +575,8 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) Description() pulumi.StringOu
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -566,8 +593,7 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) InterfaceDescriptionVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-// present
+// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) InterfaceName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceName }).(pulumi.StringPtrOutput)
 }
@@ -587,7 +613,9 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) IpAddressVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+// Interface MTU <576..2000>, in bytes
+//   - Range: `64`-`18000`
+//   - Default value: `1500`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -612,7 +640,8 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) RewriteRuleVariable() pulumi.
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.RewriteRuleVariable }).(pulumi.StringPtrOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -622,7 +651,8 @@ func (o CiscoVpnInterfaceGreFeatureTemplateOutput) ShutdownVariable() pulumi.Str
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o CiscoVpnInterfaceGreFeatureTemplateOutput) TcpMssAdjust() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceGreFeatureTemplate) pulumi.IntPtrOutput { return v.TcpMssAdjust }).(pulumi.IntPtrOutput)
 }

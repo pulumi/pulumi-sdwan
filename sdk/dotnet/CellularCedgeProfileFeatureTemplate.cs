@@ -67,7 +67,9 @@ namespace Pulumi.Sdwan
         public Output<string?> AccessPointNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        /// Set authentication type
+        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
+        ///   - Default value: `none`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -85,9 +87,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -111,7 +112,9 @@ namespace Pulumi.Sdwan
         public Output<string?> NoOverwriteVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Output("packetDataNetworkType")]
         public Output<string?> PacketDataNetworkType { get; private set; } = null!;
@@ -123,7 +126,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PacketDataNetworkTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Output("profileId")]
         public Output<int?> ProfileId { get; private set; } = null!;
@@ -229,7 +233,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        /// Set authentication type
+        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
+        ///   - Default value: `none`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -250,9 +256,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -279,7 +284,9 @@ namespace Pulumi.Sdwan
         public Input<string>? NoOverwriteVariable { get; set; }
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -291,7 +298,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PacketDataNetworkTypeVariable { get; set; }
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Input("profileId")]
         public Input<int>? ProfileId { get; set; }
@@ -347,7 +355,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        /// Set authentication type
+        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
+        ///   - Default value: `none`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -368,9 +378,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -397,7 +406,9 @@ namespace Pulumi.Sdwan
         public Input<string>? NoOverwriteVariable { get; set; }
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -409,7 +420,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PacketDataNetworkTypeVariable { get; set; }
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Input("profileId")]
         public Input<int>? ProfileId { get; set; }

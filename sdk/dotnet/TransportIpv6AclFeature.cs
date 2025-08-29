@@ -27,7 +27,9 @@ namespace Pulumi.Sdwan
     public partial class TransportIpv6AclFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -109,7 +111,9 @@ namespace Pulumi.Sdwan
     public sealed class TransportIpv6AclFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -153,7 +157,9 @@ namespace Pulumi.Sdwan
     public sealed class TransportIpv6AclFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+        /// Default Action
+        ///   - Choices: `drop`, `accept`
+        ///   - Default value: `drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

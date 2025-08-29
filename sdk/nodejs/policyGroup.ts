@@ -66,27 +66,28 @@ export class PolicyGroup extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * List of devices
      */
-    public readonly devices!: pulumi.Output<outputs.PolicyGroupDevice[] | undefined>;
+    declare public readonly devices: pulumi.Output<outputs.PolicyGroupDevice[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    public readonly featureProfileIds!: pulumi.Output<string[] | undefined>;
+    declare public readonly featureProfileIds: pulumi.Output<string[] | undefined>;
     /**
      * The name of the policy group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of all associated policy versions
      */
-    public readonly policyVersions!: pulumi.Output<string[] | undefined>;
+    declare public readonly policyVersions: pulumi.Output<string[] | undefined>;
     /**
-     * Type of solution - Choices: `sdwan`
+     * Type of solution
+     *   - Choices: `sdwan`
      */
-    public readonly solution!: pulumi.Output<string>;
+    declare public readonly solution: pulumi.Output<string>;
 
     /**
      * Create a PolicyGroup resource with the given unique name, arguments, and options.
@@ -101,26 +102,26 @@ export class PolicyGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyGroupState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["featureProfileIds"] = state ? state.featureProfileIds : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["policyVersions"] = state ? state.policyVersions : undefined;
-            resourceInputs["solution"] = state ? state.solution : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["devices"] = state?.devices;
+            resourceInputs["featureProfileIds"] = state?.featureProfileIds;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["policyVersions"] = state?.policyVersions;
+            resourceInputs["solution"] = state?.solution;
         } else {
             const args = argsOrState as PolicyGroupArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.solution === undefined) && !opts.urn) {
+            if (args?.solution === undefined && !opts.urn) {
                 throw new Error("Missing required property 'solution'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["devices"] = args ? args.devices : undefined;
-            resourceInputs["featureProfileIds"] = args ? args.featureProfileIds : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["policyVersions"] = args ? args.policyVersions : undefined;
-            resourceInputs["solution"] = args ? args.solution : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["devices"] = args?.devices;
+            resourceInputs["featureProfileIds"] = args?.featureProfileIds;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["policyVersions"] = args?.policyVersions;
+            resourceInputs["solution"] = args?.solution;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PolicyGroup.__pulumiType, name, resourceInputs, opts);
@@ -152,7 +153,8 @@ export interface PolicyGroupState {
      */
     policyVersions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Type of solution - Choices: `sdwan`
+     * Type of solution
+     *   - Choices: `sdwan`
      */
     solution?: pulumi.Input<string>;
 }
@@ -182,7 +184,8 @@ export interface PolicyGroupArgs {
      */
     policyVersions?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Type of solution - Choices: `sdwan`
+     * Type of solution
+     *   - Choices: `sdwan`
      */
     solution: pulumi.Input<string>;
 }

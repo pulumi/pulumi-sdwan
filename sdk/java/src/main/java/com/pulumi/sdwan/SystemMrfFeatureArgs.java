@@ -33,14 +33,16 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     @Import(name="enableMigrationToMrf")
     private @Nullable Output<String> enableMigrationToMrf;
 
     /**
-     * @return Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * @return Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     public Optional<Output<String>> enableMigrationToMrf() {
@@ -63,14 +65,16 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="migrationBgpCommunity")
     private @Nullable Output<Integer> migrationBgpCommunity;
 
     /**
-     * @return Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * @return Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> migrationBgpCommunity() {
@@ -93,14 +97,16 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Import(name="regionId")
     private @Nullable Output<Integer> regionId;
 
     /**
-     * @return Set region ID - Range: `1`-`63`
+     * @return Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Optional<Output<Integer>> regionId() {
@@ -108,14 +114,16 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     @Import(name="role")
     private @Nullable Output<String> role;
 
     /**
-     * @return Set the role for router - Choices: `edge-router`, `border-router`
+     * @return Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     public Optional<Output<String>> role() {
@@ -138,14 +146,16 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Set secondary region ID - Range: `1`-`63`
+     * Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Import(name="secondaryRegionId")
     private @Nullable Output<Integer> secondaryRegionId;
 
     /**
-     * @return Set secondary region ID - Range: `1`-`63`
+     * @return Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Optional<Output<Integer>> secondaryRegionId() {
@@ -222,7 +232,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param enableMigrationToMrf Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+         * @param enableMigrationToMrf Enable migration mode to Multi-Region Fabric
+         *   - Choices: `enabled`, `enabled-from-bgp-core`
          * 
          * @return builder
          * 
@@ -233,7 +244,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param enableMigrationToMrf Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+         * @param enableMigrationToMrf Enable migration mode to Multi-Region Fabric
+         *   - Choices: `enabled`, `enabled-from-bgp-core`
          * 
          * @return builder
          * 
@@ -264,7 +276,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -275,7 +288,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+         * @param migrationBgpCommunity Set BGP community during migration from BGP-core based network
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -306,7 +320,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param regionId Set region ID - Range: `1`-`63`
+         * @param regionId Set region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -317,7 +332,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param regionId Set region ID - Range: `1`-`63`
+         * @param regionId Set region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -327,7 +343,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param role Set the role for router - Choices: `edge-router`, `border-router`
+         * @param role Set the role for router
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -338,7 +355,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param role Set the role for router - Choices: `edge-router`, `border-router`
+         * @param role Set the role for router
+         *   - Choices: `edge-router`, `border-router`
          * 
          * @return builder
          * 
@@ -369,7 +387,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param secondaryRegionId Set secondary region ID - Range: `1`-`63`
+         * @param secondaryRegionId Set secondary region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 
@@ -380,7 +399,8 @@ public final class SystemMrfFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param secondaryRegionId Set secondary region ID - Range: `1`-`63`
+         * @param secondaryRegionId Set secondary region ID
+         *   - Range: `1`-`63`
          * 
          * @return builder
          * 

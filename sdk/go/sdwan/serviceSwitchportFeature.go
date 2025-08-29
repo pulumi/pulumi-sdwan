@@ -27,7 +27,9 @@ import (
 type ServiceSwitchportFeature struct {
 	pulumi.CustomResourceState
 
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrOutput `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrOutput `pulumi:"ageOutTimeVariable"`
@@ -78,7 +80,9 @@ func GetServiceSwitchportFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceSwitchportFeature resources.
 type serviceSwitchportFeatureState struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime *int `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable *string `pulumi:"ageOutTimeVariable"`
@@ -97,7 +101,9 @@ type serviceSwitchportFeatureState struct {
 }
 
 type ServiceSwitchportFeatureState struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrInput
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrInput
@@ -120,7 +126,9 @@ func (ServiceSwitchportFeatureState) ElementType() reflect.Type {
 }
 
 type serviceSwitchportFeatureArgs struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime *int `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable *string `pulumi:"ageOutTimeVariable"`
@@ -138,7 +146,9 @@ type serviceSwitchportFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceSwitchportFeature resource.
 type ServiceSwitchportFeatureArgs struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrInput
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrInput
@@ -241,7 +251,9 @@ func (o ServiceSwitchportFeatureOutput) ToServiceSwitchportFeatureOutputWithCont
 	return o
 }
 
-// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+//   - Range: `0`-`1000000`
+//   - Default value: `300`
 func (o ServiceSwitchportFeatureOutput) AgeOutTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceSwitchportFeature) pulumi.IntPtrOutput { return v.AgeOutTime }).(pulumi.IntPtrOutput)
 }

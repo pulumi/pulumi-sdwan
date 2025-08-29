@@ -40,14 +40,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/systemIpv4DeviceAccessFeature:SystemIpv4DeviceAccessFeature")
 public class SystemIpv4DeviceAccessFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * @return Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     public Output<Optional<String>> defaultAction() {

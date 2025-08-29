@@ -78,55 +78,77 @@ class TransportRoutingBgpFeatureArgs:
         """
         The set of arguments for constructing a TransportRoutingBgpFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] external_routes_distance_variable: Variable name
-        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-               `180`
+        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4AggregateAddressArgs']]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NeighborArgs']]] ipv4_neighbors: Set BGP IPv4 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NetworkArgs']]] ipv4_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4RedistributeArgs']]] ipv4_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6AggregateAddressArgs']]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NeighborArgs']]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NetworkArgs']]] ipv6_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6RedistributeArgs']]] ipv6_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] local_routes_distance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureMplsInterfaceArgs']]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_as_path_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
@@ -255,7 +277,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -303,7 +326,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -339,7 +363,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -363,7 +388,9 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="externalRoutesDistance")
     def external_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "external_routes_distance")
 
@@ -387,8 +414,9 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        `180`
+        Interval (seconds) not receiving a keepalive message declares a BGP peer down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "hold_time")
 
@@ -412,7 +440,9 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="internalRoutesDistance")
     def internal_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "internal_routes_distance")
 
@@ -448,7 +478,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv4EibgpMaximumPaths")
     def ipv4_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_eibgp_maximum_paths")
 
@@ -496,7 +527,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv4Originate")
     def ipv4_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_originate")
 
@@ -532,7 +564,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv4TableMapFilter")
     def ipv4_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_table_map_filter")
 
@@ -577,7 +610,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv6EibgpMaximumPaths")
     def ipv6_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv6_eibgp_maximum_paths")
 
@@ -625,7 +659,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv6Originate")
     def ipv6_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_originate")
 
@@ -661,7 +696,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="ipv6TableMapFilter")
     def ipv6_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_table_map_filter")
 
@@ -694,7 +730,9 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="keepaliveTime")
     def keepalive_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        Interval (seconds) of keepalive messages sent to its BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive_time")
 
@@ -718,7 +756,9 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="localRoutesDistance")
     def local_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "local_routes_distance")
 
@@ -742,7 +782,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="missingMedAsWorst")
     def missing_med_as_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_as_worst")
 
@@ -778,7 +819,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -814,7 +856,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="propagateAsPath")
     def propagate_as_path(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_as_path")
 
@@ -838,7 +881,8 @@ class TransportRoutingBgpFeatureArgs:
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 
@@ -943,56 +987,78 @@ class _TransportRoutingBgpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering TransportRoutingBgpFeature resources.
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] external_routes_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-               `180`
+        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4AggregateAddressArgs']]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NeighborArgs']]] ipv4_neighbors: Set BGP IPv4 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4NetworkArgs']]] ipv4_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv4RedistributeArgs']]] ipv4_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6AggregateAddressArgs']]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NeighborArgs']]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6NetworkArgs']]] ipv6_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureIpv6RedistributeArgs']]] ipv6_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] local_routes_distance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportRoutingBgpFeatureMplsInterfaceArgs']]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_as_path_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
@@ -1113,7 +1179,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -1161,7 +1228,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -1197,7 +1265,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -1221,7 +1290,9 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="externalRoutesDistance")
     def external_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "external_routes_distance")
 
@@ -1257,8 +1328,9 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        `180`
+        Interval (seconds) not receiving a keepalive message declares a BGP peer down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "hold_time")
 
@@ -1282,7 +1354,9 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="internalRoutesDistance")
     def internal_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "internal_routes_distance")
 
@@ -1318,7 +1392,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv4EibgpMaximumPaths")
     def ipv4_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_eibgp_maximum_paths")
 
@@ -1366,7 +1441,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv4Originate")
     def ipv4_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_originate")
 
@@ -1402,7 +1478,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv4TableMapFilter")
     def ipv4_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_table_map_filter")
 
@@ -1447,7 +1524,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv6EibgpMaximumPaths")
     def ipv6_eibgp_maximum_paths(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv6_eibgp_maximum_paths")
 
@@ -1495,7 +1573,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv6Originate")
     def ipv6_originate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_originate")
 
@@ -1531,7 +1610,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="ipv6TableMapFilter")
     def ipv6_table_map_filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_table_map_filter")
 
@@ -1564,7 +1644,9 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="keepaliveTime")
     def keepalive_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        Interval (seconds) of keepalive messages sent to its BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive_time")
 
@@ -1588,7 +1670,9 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="localRoutesDistance")
     def local_routes_distance(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "local_routes_distance")
 
@@ -1612,7 +1696,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="missingMedAsWorst")
     def missing_med_as_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_as_worst")
 
@@ -1648,7 +1733,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -1684,7 +1770,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="propagateAsPath")
     def propagate_as_path(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_as_path")
 
@@ -1708,7 +1795,8 @@ class _TransportRoutingBgpFeatureState:
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 
@@ -1842,56 +1930,78 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] external_routes_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-               `180`
+        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP IPv4 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]] ipv4_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]] ipv6_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] local_routes_distance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_as_path_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
@@ -2123,56 +2233,78 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.int] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] external_routes_distance: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] external_routes_distance_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-               `180`
+        :param pulumi.Input[_builtins.int] hold_time: Interval (seconds) not receiving a keepalive message declares a BGP peer down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] internal_routes_distance: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] internal_routes_distance_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv4AggregateAddressArgsDict']]]] ipv4_aggregate_addresses: Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv4_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv4_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NeighborArgs', 'TransportRoutingBgpFeatureIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP IPv4 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4NetworkArgs', 'TransportRoutingBgpFeatureIpv4NetworkArgsDict']]]] ipv4_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv4RedistributeArgs', 'TransportRoutingBgpFeatureIpv4RedistributeArgsDict']]]] ipv4_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv4_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv4_table_map_filter_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6AggregateAddressArgs', 'TransportRoutingBgpFeatureIpv6AggregateAddressArgsDict']]]] ipv6_aggregate_addresses: IPv6 Aggregate prefixes in specific range
-        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        :param pulumi.Input[_builtins.int] ipv6_eibgp_maximum_paths: Set maximum number of parallel IBGP paths for multipath load sharing
+                 - Range: `1`-`32`
         :param pulumi.Input[_builtins.str] ipv6_eibgp_maximum_paths_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NeighborArgs', 'TransportRoutingBgpFeatureIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6NetworkArgs', 'TransportRoutingBgpFeatureIpv6NetworkArgsDict']]]] ipv6_networks: Configure the networks for BGP to advertise
-        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_originate: BGP Default Information Originate
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_originate_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureIpv6RedistributeArgs', 'TransportRoutingBgpFeatureIpv6RedistributeArgsDict']]]] ipv6_redistributes: Redistribute routes into BGP
-        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ipv6_table_map_filter: Table map filtered or not
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ipv6_table_map_filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive_time: Interval (seconds) of keepalive messages sent to its BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] local_routes_distance: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] local_routes_distance_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_as_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_as_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportRoutingBgpFeatureMplsInterfaceArgs', 'TransportRoutingBgpFeatureMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_as_path: Propagate AS Path
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_as_path_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
@@ -2243,7 +2375,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -2275,7 +2408,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -2299,7 +2433,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -2315,7 +2450,9 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="externalRoutesDistance")
     def external_routes_distance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "external_routes_distance")
 
@@ -2339,8 +2476,9 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        `180`
+        Interval (seconds) not receiving a keepalive message declares a BGP peer down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "hold_time")
 
@@ -2356,7 +2494,9 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="internalRoutesDistance")
     def internal_routes_distance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "internal_routes_distance")
 
@@ -2380,7 +2520,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4EibgpMaximumPaths")
     def ipv4_eibgp_maximum_paths(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv4_eibgp_maximum_paths")
 
@@ -2412,7 +2553,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4Originate")
     def ipv4_originate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_originate")
 
@@ -2436,7 +2578,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4TableMapFilter")
     def ipv4_table_map_filter(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv4_table_map_filter")
 
@@ -2465,7 +2608,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv6EibgpMaximumPaths")
     def ipv6_eibgp_maximum_paths(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        Set maximum number of parallel IBGP paths for multipath load sharing
+          - Range: `1`-`32`
         """
         return pulumi.get(self, "ipv6_eibgp_maximum_paths")
 
@@ -2497,7 +2641,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv6Originate")
     def ipv6_originate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        BGP Default Information Originate - Default value: `false`
+        BGP Default Information Originate
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_originate")
 
@@ -2521,7 +2666,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv6TableMapFilter")
     def ipv6_table_map_filter(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Table map filtered or not - Default value: `false`
+        Table map filtered or not
+          - Default value: `false`
         """
         return pulumi.get(self, "ipv6_table_map_filter")
 
@@ -2542,7 +2688,9 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="keepaliveTime")
     def keepalive_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        Interval (seconds) of keepalive messages sent to its BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive_time")
 
@@ -2558,7 +2706,9 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="localRoutesDistance")
     def local_routes_distance(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "local_routes_distance")
 
@@ -2574,7 +2724,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="missingMedAsWorst")
     def missing_med_as_worst(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_as_worst")
 
@@ -2598,7 +2749,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -2622,7 +2774,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="propagateAsPath")
     def propagate_as_path(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_as_path")
 
@@ -2638,7 +2791,8 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 

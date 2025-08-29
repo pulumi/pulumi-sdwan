@@ -36,13 +36,17 @@ class IntrusionPreventionPolicyDefinitionArgs:
         The set of arguments for constructing a IntrusionPreventionPolicyDefinition resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.bool] custom_signature: Custom signature
-        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
+        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode
+                 - Choices: `protection`, `detection`
         :param pulumi.Input[_builtins.str] ips_signature_list_id: IPS signature list ID
         :param pulumi.Input[_builtins.int] ips_signature_list_version: IPS signature list version
-        :param pulumi.Input[_builtins.str] log_level: Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] log_level: Log level
+                 - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] signature_set: Signature set - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Signature set
+                 - Choices: `balanced`, `connectivity`, `security`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         """
         pulumi.set(__self__, "description", description)
@@ -95,7 +99,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @pulumi.getter(name="inspectionMode")
     def inspection_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The inspection mode - Choices: `protection`, `detection`
+        The inspection mode
+          - Choices: `protection`, `detection`
         """
         return pulumi.get(self, "inspection_mode")
 
@@ -131,7 +136,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @pulumi.getter(name="logLevel")
     def log_level(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        Log level
+          - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         """
         return pulumi.get(self, "log_level")
 
@@ -152,7 +158,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -176,7 +183,8 @@ class IntrusionPreventionPolicyDefinitionArgs:
     @pulumi.getter(name="signatureSet")
     def signature_set(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Signature set - Choices: `balanced`, `connectivity`, `security`
+        Signature set
+          - Choices: `balanced`, `connectivity`, `security`
         """
         return pulumi.get(self, "signature_set")
 
@@ -216,13 +224,17 @@ class _IntrusionPreventionPolicyDefinitionState:
         Input properties used for looking up and filtering IntrusionPreventionPolicyDefinition resources.
         :param pulumi.Input[_builtins.bool] custom_signature: Custom signature
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
+        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode
+                 - Choices: `protection`, `detection`
         :param pulumi.Input[_builtins.str] ips_signature_list_id: IPS signature list ID
         :param pulumi.Input[_builtins.int] ips_signature_list_version: IPS signature list version
-        :param pulumi.Input[_builtins.str] log_level: Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] log_level: Log level
+                 - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] signature_set: Signature set - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Signature set
+                 - Choices: `balanced`, `connectivity`, `security`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -279,7 +291,8 @@ class _IntrusionPreventionPolicyDefinitionState:
     @pulumi.getter(name="inspectionMode")
     def inspection_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The inspection mode - Choices: `protection`, `detection`
+        The inspection mode
+          - Choices: `protection`, `detection`
         """
         return pulumi.get(self, "inspection_mode")
 
@@ -315,7 +328,8 @@ class _IntrusionPreventionPolicyDefinitionState:
     @pulumi.getter(name="logLevel")
     def log_level(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        Log level
+          - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         """
         return pulumi.get(self, "log_level")
 
@@ -336,7 +350,8 @@ class _IntrusionPreventionPolicyDefinitionState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -360,7 +375,8 @@ class _IntrusionPreventionPolicyDefinitionState:
     @pulumi.getter(name="signatureSet")
     def signature_set(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Signature set - Choices: `balanced`, `connectivity`, `security`
+        Signature set
+          - Choices: `balanced`, `connectivity`, `security`
         """
         return pulumi.get(self, "signature_set")
 
@@ -426,13 +442,17 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] custom_signature: Custom signature
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
+        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode
+                 - Choices: `protection`, `detection`
         :param pulumi.Input[_builtins.str] ips_signature_list_id: IPS signature list ID
         :param pulumi.Input[_builtins.int] ips_signature_list_version: IPS signature list version
-        :param pulumi.Input[_builtins.str] log_level: Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] log_level: Log level
+                 - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] signature_set: Signature set - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Signature set
+                 - Choices: `balanced`, `connectivity`, `security`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         """
         ...
@@ -532,13 +552,17 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] custom_signature: Custom signature
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode - Choices: `protection`, `detection`
+        :param pulumi.Input[_builtins.str] inspection_mode: The inspection mode
+                 - Choices: `protection`, `detection`
         :param pulumi.Input[_builtins.str] ips_signature_list_id: IPS signature list ID
         :param pulumi.Input[_builtins.int] ips_signature_list_version: IPS signature list version
-        :param pulumi.Input[_builtins.str] log_level: Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] log_level: Log level
+                 - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] signature_set: Signature set - Choices: `balanced`, `connectivity`, `security`
+        :param pulumi.Input[_builtins.str] signature_set: Signature set
+                 - Choices: `balanced`, `connectivity`, `security`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -580,7 +604,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="inspectionMode")
     def inspection_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The inspection mode - Choices: `protection`, `detection`
+        The inspection mode
+          - Choices: `protection`, `detection`
         """
         return pulumi.get(self, "inspection_mode")
 
@@ -604,7 +629,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="logLevel")
     def log_level(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        Log level
+          - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         """
         return pulumi.get(self, "log_level")
 
@@ -617,7 +643,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -633,7 +660,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="signatureSet")
     def signature_set(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Signature set - Choices: `balanced`, `connectivity`, `security`
+        Signature set
+          - Choices: `balanced`, `connectivity`, `security`
         """
         return pulumi.get(self, "signature_set")
 

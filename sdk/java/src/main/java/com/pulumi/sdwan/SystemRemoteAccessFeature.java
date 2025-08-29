@@ -143,14 +143,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.aaaDeriveNameFromPeerIdentityVariable);
     }
     /**
-     * Enable Accounting - Default value: `true`
+     * Enable Accounting
+     *   - Default value: `true`
      * 
      */
     @Export(name="aaaEnableAccounting", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> aaaEnableAccounting;
 
     /**
-     * @return Enable Accounting - Default value: `true`
+     * @return Enable Accounting
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> aaaEnableAccounting() {
@@ -211,28 +213,32 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.aaaSpecifyNamePolicyPasswordVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
+     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `user`, `device`
      * 
      */
     @Export(name="anyConnectEapAuthenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> anyConnectEapAuthenticationType;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `user`, `device`
+     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `user`, `device`
      * 
      */
     public Output<Optional<String>> anyConnectEapAuthenticationType() {
         return Codegen.optional(this.anyConnectEapAuthenticationType);
     }
     /**
-     * Enabled SSL VPN - Default value: `false`
+     * Enabled SSL VPN
+     *   - Default value: `false`
      * 
      */
     @Export(name="connectionTypeSsl", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> connectionTypeSsl;
 
     /**
-     * @return Enabled SSL VPN - Default value: `false`
+     * @return Enabled SSL VPN
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> connectionTypeSsl() {
@@ -295,16 +301,18 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return this.featureProfileId;
     }
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default
-     * value: `100`
+     * Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `10`-`1000`
+     *   - Default value: `100`
      * 
      */
     @Export(name="ikev2AntiDosThreshold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikev2AntiDosThreshold;
 
     /**
-     * @return Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false` - Range: `10`-`1000` - Default
-     * value: `100`
+     * @return Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `10`-`1000`
+     *   - Default value: `100`
      * 
      */
     public Output<Optional<Integer>> ikev2AntiDosThreshold() {
@@ -325,16 +333,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2AntiDosThresholdVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4
-     * ADDRESS`, `IPv6 ADDRESS`
+     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      * 
      */
     @Export(name="ikev2LocalIkeIdentityType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2LocalIkeIdentityType;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4
-     * ADDRESS`, `IPv6 ADDRESS`
+     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      * 
      */
     public Output<Optional<String>> ikev2LocalIkeIdentityType() {
@@ -383,16 +391,18 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2LocalIkeIdentityValueVariable);
     }
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `86400`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `86400`
      * 
      */
     @Export(name="ikev2SecurityAssociationLifetime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikev2SecurityAssociationLifetime;
 
     /**
-     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `86400`
+     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `86400`
      * 
      */
     public Output<Optional<Integer>> ikev2SecurityAssociationLifetime() {
@@ -413,16 +423,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2SecurityAssociationLifetimeVariable);
     }
     /**
-     * security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true` - Default
-     * value: `64`
+     * security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     *   - Default value: `64`
      * 
      */
     @Export(name="ipsecAntiReplayWindowSize", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecAntiReplayWindowSize;
 
     /**
-     * @return security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true` - Default
-     * value: `64`
+     * @return security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     *   - Default value: `64`
      * 
      */
     public Output<Optional<Integer>> ipsecAntiReplayWindowSize() {
@@ -443,14 +453,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecAntiReplayWindowSizeVariable);
     }
     /**
-     * Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false` - Default value: `true`
+     * Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Default value: `true`
      * 
      */
     @Export(name="ipsecEnableAntiReplay", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipsecEnableAntiReplay;
 
     /**
-     * @return Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false` - Default value: `true`
+     * @return Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> ipsecEnableAntiReplay() {
@@ -471,16 +483,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecEnableAntiReplayVariable);
     }
     /**
-     * security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false` - Default value:
-     * `false`
+     * security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipsecEnablePerfectFowardSecrecy", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipsecEnablePerfectFowardSecrecy;
 
     /**
-     * @return security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false` - Default value:
-     * `false`
+     * @return security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipsecEnablePerfectFowardSecrecy() {
@@ -501,16 +513,18 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecEnablePerfectFowardSecrecyVariable);
     }
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `3600`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `3600`
      * 
      */
     @Export(name="ipsecSecurityAssociationLifetime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecSecurityAssociationLifetime;
 
     /**
-     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `3600`
+     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `3600`
      * 
      */
     public Output<Optional<Integer>> ipsecSecurityAssociationLifetime() {
@@ -531,14 +545,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecSecurityAssociationLifetimeVariable);
     }
     /**
-     * IPv4 Pool Size - Default value: `1000`
+     * IPv4 Pool Size
+     *   - Default value: `1000`
      * 
      */
     @Export(name="ipv4PoolSize", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4PoolSize;
 
     /**
-     * @return IPv4 Pool Size - Default value: `1000`
+     * @return IPv4 Pool Size
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> ipv4PoolSize() {
@@ -559,14 +575,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipv4PoolSizeVariable);
     }
     /**
-     * IPv6 Pool Size - Default value: `1024`
+     * IPv6 Pool Size
+     *   - Default value: `1024`
      * 
      */
     @Export(name="ipv6PoolSize", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6PoolSize;
 
     /**
-     * @return IPv6 Pool Size - Default value: `1024`
+     * @return IPv6 Pool Size
+     *   - Default value: `1024`
      * 
      */
     public Output<Optional<Integer>> ipv6PoolSize() {
@@ -629,14 +647,16 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.pskAuthenticationPreSharedKeyVariable);
     }
     /**
-     * PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `aaa`, `group`
+     * PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `aaa`, `group`
      * 
      */
     @Export(name="pskAuthenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> pskAuthenticationType;
 
     /**
-     * @return PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false` - Choices: `aaa`, `group`
+     * @return PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+     *   - Choices: `aaa`, `group`
      * 
      */
     public Output<Optional<String>> pskAuthenticationType() {

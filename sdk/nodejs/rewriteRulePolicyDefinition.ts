@@ -48,23 +48,23 @@ export class RewriteRulePolicyDefinition extends pulumi.CustomResource {
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of rules
      */
-    public readonly rules!: pulumi.Output<outputs.RewriteRulePolicyDefinitionRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.RewriteRulePolicyDefinitionRule[]>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a RewriteRulePolicyDefinition resource with the given unique name, arguments, and options.
@@ -79,22 +79,22 @@ export class RewriteRulePolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as RewriteRulePolicyDefinitionState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as RewriteRulePolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.rules === undefined) && !opts.urn) {
+            if (args?.rules === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rules'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rules"] = args?.rules;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }

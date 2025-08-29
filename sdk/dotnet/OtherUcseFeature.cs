@@ -27,26 +27,29 @@ namespace Pulumi.Sdwan
     public partial class OtherUcseFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Dedicated - Default value: `true`
+        /// Dedicated
+        ///   - Default value: `true`
         /// </summary>
         [Output("accessPortDedicated")]
         public Output<bool?> AccessPortDedicated { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge2`, `te2`
         /// </summary>
         [Output("accessPortSharedFailoverType")]
         public Output<string?> AccessPortSharedFailoverType { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        /// `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         /// </summary>
         [Output("accessPortSharedType")]
         public Output<string?> AccessPortSharedType { get; private set; } = null!;
 
         /// <summary>
-        /// Assign priority - Range: `0`-`7`
+        /// Assign priority
+        ///   - Range: `0`-`7`
         /// </summary>
         [Output("assignPriority")]
         public Output<int?> AssignPriority { get; private set; } = null!;
@@ -58,7 +61,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AssignPriorityVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Bay - Range: `0`-`2`
+        /// Bay
+        ///   - Range: `0`-`2`
         /// </summary>
         [Output("bay")]
         public Output<int> Bay { get; private set; } = null!;
@@ -112,7 +116,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Slot - Range: `0`-`3`
+        /// Slot
+        ///   - Range: `0`-`3`
         /// </summary>
         [Output("slot")]
         public Output<int> Slot { get; private set; } = null!;
@@ -124,7 +129,8 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// Assign Vlan Id - Range: `2`-`4095`
+        /// Assign Vlan Id
+        ///   - Range: `2`-`4095`
         /// </summary>
         [Output("vlanId")]
         public Output<int?> VlanId { get; private set; } = null!;
@@ -182,26 +188,29 @@ namespace Pulumi.Sdwan
     public sealed class OtherUcseFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Dedicated - Default value: `true`
+        /// Dedicated
+        ///   - Default value: `true`
         /// </summary>
         [Input("accessPortDedicated")]
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge2`, `te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        /// `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         /// </summary>
         [Input("accessPortSharedType")]
         public Input<string>? AccessPortSharedType { get; set; }
 
         /// <summary>
-        /// Assign priority - Range: `0`-`7`
+        /// Assign priority
+        ///   - Range: `0`-`7`
         /// </summary>
         [Input("assignPriority")]
         public Input<int>? AssignPriority { get; set; }
@@ -213,7 +222,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AssignPriorityVariable { get; set; }
 
         /// <summary>
-        /// Bay - Range: `0`-`2`
+        /// Bay
+        ///   - Range: `0`-`2`
         /// </summary>
         [Input("bay", required: true)]
         public Input<int> Bay { get; set; } = null!;
@@ -273,13 +283,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Slot - Range: `0`-`3`
+        /// Slot
+        ///   - Range: `0`-`3`
         /// </summary>
         [Input("slot", required: true)]
         public Input<int> Slot { get; set; } = null!;
 
         /// <summary>
-        /// Assign Vlan Id - Range: `2`-`4095`
+        /// Assign Vlan Id
+        ///   - Range: `2`-`4095`
         /// </summary>
         [Input("vlanId")]
         public Input<int>? VlanId { get; set; }
@@ -299,26 +311,29 @@ namespace Pulumi.Sdwan
     public sealed class OtherUcseFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Dedicated - Default value: `true`
+        /// Dedicated
+        ///   - Default value: `true`
         /// </summary>
         [Input("accessPortDedicated")]
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge2`, `te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-        /// `console`, `failover`
+        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
+        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
         /// </summary>
         [Input("accessPortSharedType")]
         public Input<string>? AccessPortSharedType { get; set; }
 
         /// <summary>
-        /// Assign priority - Range: `0`-`7`
+        /// Assign priority
+        ///   - Range: `0`-`7`
         /// </summary>
         [Input("assignPriority")]
         public Input<int>? AssignPriority { get; set; }
@@ -330,7 +345,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AssignPriorityVariable { get; set; }
 
         /// <summary>
-        /// Bay - Range: `0`-`2`
+        /// Bay
+        ///   - Range: `0`-`2`
         /// </summary>
         [Input("bay")]
         public Input<int>? Bay { get; set; }
@@ -390,7 +406,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Slot - Range: `0`-`3`
+        /// Slot
+        ///   - Range: `0`-`3`
         /// </summary>
         [Input("slot")]
         public Input<int>? Slot { get; set; }
@@ -402,7 +419,8 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// Assign Vlan Id - Range: `2`-`4095`
+        /// Assign Vlan Id
+        ///   - Range: `2`-`4095`
         /// </summary>
         [Input("vlanId")]
         public Input<int>? VlanId { get; set; }

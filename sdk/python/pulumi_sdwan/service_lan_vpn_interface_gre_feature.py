@@ -55,28 +55,30 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
         The set of arguments for constructing a ServiceLanVpnInterfaceGreFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] interface_description: Interface description
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name (1..255)
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes
+                 - Range: `576`-`9976`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address: Tunnel destination IP Address
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
@@ -180,7 +182,8 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -204,7 +207,8 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -288,7 +292,9 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        Interface MTU <576..9976>, in bytes
+          - Range: `576`-`9976`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -333,11 +339,7 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -373,7 +375,8 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `false`
+        Administrative state
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -397,7 +400,8 @@ class ServiceLanVpnInterfaceGreFeatureArgs:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -576,9 +580,11 @@ class _ServiceLanVpnInterfaceGreFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ServiceLanVpnInterfaceGreFeature resources.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -586,20 +592,20 @@ class _ServiceLanVpnInterfaceGreFeatureState:
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name (1..255)
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes
+                 - Range: `576`-`9976`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address: Tunnel destination IP Address
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
@@ -684,7 +690,8 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -708,7 +715,8 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -804,7 +812,9 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        Interface MTU <576..9976>, in bytes
+          - Range: `576`-`9976`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -849,11 +859,7 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -901,7 +907,8 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Administrative state - Default value: `false`
+        Administrative state
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -925,7 +932,8 @@ class _ServiceLanVpnInterfaceGreFeatureState:
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 
@@ -1157,9 +1165,11 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -1167,20 +1177,20 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name (1..255)
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes
+                 - Range: `576`-`9976`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address: Tunnel destination IP Address
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
@@ -1380,9 +1390,11 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type - Choices: `none`, `sig`
+        :param pulumi.Input[_builtins.str] application_tunnel_type: Enable Application Tunnel Type
+                 - Choices: `none`, `sig`
         :param pulumi.Input[_builtins.str] application_tunnel_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        :param pulumi.Input[_builtins.bool] clear_dont_fragment: Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] clear_dont_fragment_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
@@ -1390,20 +1402,20 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] interface_description_variable: Variable name
         :param pulumi.Input[_builtins.str] interface_name: Interface name (1..255)
         :param pulumi.Input[_builtins.str] interface_name_variable: Variable name
-        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        :param pulumi.Input[_builtins.int] ip_mtu: Interface MTU <576..9976>, in bytes
+                 - Range: `576`-`9976`
+                 - Default value: `1500`
         :param pulumi.Input[_builtins.str] ip_mtu_variable: Variable name
         :param pulumi.Input[_builtins.str] ipv4_address_variable: Variable name
-        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] ipv4_subnet_mask: - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] ipv4_subnet_mask_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] service_lan_vpn_feature_id: Service LAN VPN Feature ID
-        :param pulumi.Input[_builtins.bool] shutdown: Administrative state - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Administrative state
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
-        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        :param pulumi.Input[_builtins.int] tcp_mss: TCP MSS on SYN packets, in bytes
+                 - Range: `500`-`1460`
         :param pulumi.Input[_builtins.str] tcp_mss_variable: Variable name
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address: Tunnel destination IP Address
         :param pulumi.Input[_builtins.str] tunnel_destination_ipv4_address_variable: Variable name
@@ -1460,7 +1472,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter(name="applicationTunnelType")
     def application_tunnel_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Enable Application Tunnel Type - Choices: `none`, `sig`
+        Enable Application Tunnel Type
+          - Choices: `none`, `sig`
         """
         return pulumi.get(self, "application_tunnel_type")
 
@@ -1476,7 +1489,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter(name="clearDontFragment")
     def clear_dont_fragment(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+        Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+          - Default value: `false`
         """
         return pulumi.get(self, "clear_dont_fragment")
 
@@ -1540,7 +1554,9 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipMtu")
     def ip_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+        Interface MTU <576..9976>, in bytes
+          - Range: `576`-`9976`
+          - Default value: `1500`
         """
         return pulumi.get(self, "ip_mtu")
 
@@ -1569,11 +1585,7 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "ipv4_subnet_mask")
 
@@ -1605,7 +1617,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Administrative state - Default value: `false`
+        Administrative state
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1621,7 +1634,8 @@ class ServiceLanVpnInterfaceGreFeature(pulumi.CustomResource):
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        TCP MSS on SYN packets, in bytes
+          - Range: `500`-`1460`
         """
         return pulumi.get(self, "tcp_mss")
 

@@ -34,14 +34,16 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * - Range: `0`-`63` - Default value: `48`
+     * - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     @Import(name="defaultDscp")
     private @Nullable Output<Integer> defaultDscp;
 
     /**
-     * @return - Range: `0`-`63` - Default value: `48`
+     * @return - Range: `0`-`63`
+     *   - Default value: `48`
      * 
      */
     public Optional<Output<Integer>> defaultDscp() {
@@ -94,14 +96,16 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * - Range: `1`-`6` - Default value: `6`
+     * - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     @Import(name="multiplier")
     private @Nullable Output<Integer> multiplier;
 
     /**
-     * @return - Range: `1`-`6` - Default value: `6`
+     * @return - Range: `1`-`6`
+     *   - Default value: `6`
      * 
      */
     public Optional<Output<Integer>> multiplier() {
@@ -139,14 +143,16 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * - Range: `1`-`4294967295` - Default value: `600000`
+     * - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     @Import(name="pollInterval")
     private @Nullable Output<Integer> pollInterval;
 
     /**
-     * @return - Range: `1`-`4294967295` - Default value: `600000`
+     * @return - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      * 
      */
     public Optional<Output<Integer>> pollInterval() {
@@ -249,7 +255,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultDscp - Range: `0`-`63` - Default value: `48`
+         * @param defaultDscp - Range: `0`-`63`
+         *   - Default value: `48`
          * 
          * @return builder
          * 
@@ -260,7 +267,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param defaultDscp - Range: `0`-`63` - Default value: `48`
+         * @param defaultDscp - Range: `0`-`63`
+         *   - Default value: `48`
          * 
          * @return builder
          * 
@@ -333,7 +341,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param multiplier - Range: `1`-`6` - Default value: `6`
+         * @param multiplier - Range: `1`-`6`
+         *   - Default value: `6`
          * 
          * @return builder
          * 
@@ -344,7 +353,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param multiplier - Range: `1`-`6` - Default value: `6`
+         * @param multiplier - Range: `1`-`6`
+         *   - Default value: `6`
          * 
          * @return builder
          * 
@@ -396,7 +406,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param pollInterval - Range: `1`-`4294967295` - Default value: `600000`
+         * @param pollInterval - Range: `1`-`4294967295`
+         *   - Default value: `600000`
          * 
          * @return builder
          * 
@@ -407,7 +418,8 @@ public final class SystemBfdFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param pollInterval - Range: `1`-`4294967295` - Default value: `600000`
+         * @param pollInterval - Range: `1`-`4294967295`
+         *   - Default value: `600000`
          * 
          * @return builder
          * 

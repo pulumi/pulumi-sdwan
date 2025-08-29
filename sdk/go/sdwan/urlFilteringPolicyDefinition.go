@@ -30,7 +30,8 @@ type UrlFilteringPolicyDefinition struct {
 	AllowUrlListId pulumi.StringPtrOutput `pulumi:"allowUrlListId"`
 	// Allow URL list version
 	AllowUrlListVersion pulumi.IntPtrOutput `pulumi:"allowUrlListVersion"`
-	// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+	// Redirect to a URL or display a message when a blocked page is accessed.
+	//   - Choices: `text`, `redirectUrl`
 	BlockPageAction pulumi.StringPtrOutput `pulumi:"blockPageAction"`
 	// The message displayed or URL redirected to when a blocked page is accessed.
 	BlockPageContents pulumi.StringPtrOutput `pulumi:"blockPageContents"`
@@ -41,7 +42,8 @@ type UrlFilteringPolicyDefinition struct {
 	// The description of the policy definition.
 	Description pulumi.StringOutput                            `pulumi:"description"`
 	Loggings    UrlFilteringPolicyDefinitionLoggingArrayOutput `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition.
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -51,10 +53,11 @@ type UrlFilteringPolicyDefinition struct {
 	Version pulumi.IntOutput `pulumi:"version"`
 	// List of categories to block or allow
 	WebCategories pulumi.StringArrayOutput `pulumi:"webCategories"`
-	// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+	// whether the selected web categories should be blocked or allowed.
+	//   - Choices: `block`, `allow`
 	WebCategoriesAction pulumi.StringPtrOutput `pulumi:"webCategoriesAction"`
-	// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-	// `trustworthy`
+	// The web reputation of the policy definition
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	WebReputation pulumi.StringPtrOutput `pulumi:"webReputation"`
 }
 
@@ -97,7 +100,8 @@ type urlFilteringPolicyDefinitionState struct {
 	AllowUrlListId *string `pulumi:"allowUrlListId"`
 	// Allow URL list version
 	AllowUrlListVersion *int `pulumi:"allowUrlListVersion"`
-	// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+	// Redirect to a URL or display a message when a blocked page is accessed.
+	//   - Choices: `text`, `redirectUrl`
 	BlockPageAction *string `pulumi:"blockPageAction"`
 	// The message displayed or URL redirected to when a blocked page is accessed.
 	BlockPageContents *string `pulumi:"blockPageContents"`
@@ -108,7 +112,8 @@ type urlFilteringPolicyDefinitionState struct {
 	// The description of the policy definition.
 	Description *string                               `pulumi:"description"`
 	Loggings    []UrlFilteringPolicyDefinitionLogging `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
@@ -118,10 +123,11 @@ type urlFilteringPolicyDefinitionState struct {
 	Version *int `pulumi:"version"`
 	// List of categories to block or allow
 	WebCategories []string `pulumi:"webCategories"`
-	// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+	// whether the selected web categories should be blocked or allowed.
+	//   - Choices: `block`, `allow`
 	WebCategoriesAction *string `pulumi:"webCategoriesAction"`
-	// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-	// `trustworthy`
+	// The web reputation of the policy definition
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	WebReputation *string `pulumi:"webReputation"`
 }
 
@@ -132,7 +138,8 @@ type UrlFilteringPolicyDefinitionState struct {
 	AllowUrlListId pulumi.StringPtrInput
 	// Allow URL list version
 	AllowUrlListVersion pulumi.IntPtrInput
-	// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+	// Redirect to a URL or display a message when a blocked page is accessed.
+	//   - Choices: `text`, `redirectUrl`
 	BlockPageAction pulumi.StringPtrInput
 	// The message displayed or URL redirected to when a blocked page is accessed.
 	BlockPageContents pulumi.StringPtrInput
@@ -143,7 +150,8 @@ type UrlFilteringPolicyDefinitionState struct {
 	// The description of the policy definition.
 	Description pulumi.StringPtrInput
 	Loggings    UrlFilteringPolicyDefinitionLoggingArrayInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
@@ -153,10 +161,11 @@ type UrlFilteringPolicyDefinitionState struct {
 	Version pulumi.IntPtrInput
 	// List of categories to block or allow
 	WebCategories pulumi.StringArrayInput
-	// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+	// whether the selected web categories should be blocked or allowed.
+	//   - Choices: `block`, `allow`
 	WebCategoriesAction pulumi.StringPtrInput
-	// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-	// `trustworthy`
+	// The web reputation of the policy definition
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	WebReputation pulumi.StringPtrInput
 }
 
@@ -171,7 +180,8 @@ type urlFilteringPolicyDefinitionArgs struct {
 	AllowUrlListId *string `pulumi:"allowUrlListId"`
 	// Allow URL list version
 	AllowUrlListVersion *int `pulumi:"allowUrlListVersion"`
-	// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+	// Redirect to a URL or display a message when a blocked page is accessed.
+	//   - Choices: `text`, `redirectUrl`
 	BlockPageAction *string `pulumi:"blockPageAction"`
 	// The message displayed or URL redirected to when a blocked page is accessed.
 	BlockPageContents *string `pulumi:"blockPageContents"`
@@ -182,7 +192,8 @@ type urlFilteringPolicyDefinitionArgs struct {
 	// The description of the policy definition.
 	Description string                                `pulumi:"description"`
 	Loggings    []UrlFilteringPolicyDefinitionLogging `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition.
 	Name *string `pulumi:"name"`
@@ -190,10 +201,11 @@ type urlFilteringPolicyDefinitionArgs struct {
 	TargetVpns []string `pulumi:"targetVpns"`
 	// List of categories to block or allow
 	WebCategories []string `pulumi:"webCategories"`
-	// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+	// whether the selected web categories should be blocked or allowed.
+	//   - Choices: `block`, `allow`
 	WebCategoriesAction *string `pulumi:"webCategoriesAction"`
-	// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-	// `trustworthy`
+	// The web reputation of the policy definition
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	WebReputation *string `pulumi:"webReputation"`
 }
 
@@ -205,7 +217,8 @@ type UrlFilteringPolicyDefinitionArgs struct {
 	AllowUrlListId pulumi.StringPtrInput
 	// Allow URL list version
 	AllowUrlListVersion pulumi.IntPtrInput
-	// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+	// Redirect to a URL or display a message when a blocked page is accessed.
+	//   - Choices: `text`, `redirectUrl`
 	BlockPageAction pulumi.StringPtrInput
 	// The message displayed or URL redirected to when a blocked page is accessed.
 	BlockPageContents pulumi.StringPtrInput
@@ -216,7 +229,8 @@ type UrlFilteringPolicyDefinitionArgs struct {
 	// The description of the policy definition.
 	Description pulumi.StringInput
 	Loggings    UrlFilteringPolicyDefinitionLoggingArrayInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition.
 	Name pulumi.StringPtrInput
@@ -224,10 +238,11 @@ type UrlFilteringPolicyDefinitionArgs struct {
 	TargetVpns pulumi.StringArrayInput
 	// List of categories to block or allow
 	WebCategories pulumi.StringArrayInput
-	// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+	// whether the selected web categories should be blocked or allowed.
+	//   - Choices: `block`, `allow`
 	WebCategoriesAction pulumi.StringPtrInput
-	// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-	// `trustworthy`
+	// The web reputation of the policy definition
+	//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 	WebReputation pulumi.StringPtrInput
 }
 
@@ -333,7 +348,8 @@ func (o UrlFilteringPolicyDefinitionOutput) AllowUrlListVersion() pulumi.IntPtrO
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.IntPtrOutput { return v.AllowUrlListVersion }).(pulumi.IntPtrOutput)
 }
 
-// Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+// Redirect to a URL or display a message when a blocked page is accessed.
+//   - Choices: `text`, `redirectUrl`
 func (o UrlFilteringPolicyDefinitionOutput) BlockPageAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringPtrOutput { return v.BlockPageAction }).(pulumi.StringPtrOutput)
 }
@@ -364,7 +380,8 @@ func (o UrlFilteringPolicyDefinitionOutput) Loggings() UrlFilteringPolicyDefinit
 	}).(UrlFilteringPolicyDefinitionLoggingArrayOutput)
 }
 
-// The policy mode - Choices: `security`, `unified`
+// The policy mode
+//   - Choices: `security`, `unified`
 func (o UrlFilteringPolicyDefinitionOutput) Mode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringPtrOutput { return v.Mode }).(pulumi.StringPtrOutput)
 }
@@ -389,13 +406,14 @@ func (o UrlFilteringPolicyDefinitionOutput) WebCategories() pulumi.StringArrayOu
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringArrayOutput { return v.WebCategories }).(pulumi.StringArrayOutput)
 }
 
-// whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+// whether the selected web categories should be blocked or allowed.
+//   - Choices: `block`, `allow`
 func (o UrlFilteringPolicyDefinitionOutput) WebCategoriesAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringPtrOutput { return v.WebCategoriesAction }).(pulumi.StringPtrOutput)
 }
 
-// The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-// `trustworthy`
+// The web reputation of the policy definition
+//   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
 func (o UrlFilteringPolicyDefinitionOutput) WebReputation() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlFilteringPolicyDefinition) pulumi.StringPtrOutput { return v.WebReputation }).(pulumi.StringPtrOutput)
 }

@@ -62,41 +62,40 @@ export class CiscoBannerFeatureTemplate extends pulumi.CustomResource {
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Set message to display before login prompt
      */
-    public readonly login!: pulumi.Output<string | undefined>;
+    declare public readonly login: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly loginVariable!: pulumi.Output<string | undefined>;
+    declare public readonly loginVariable: pulumi.Output<string | undefined>;
     /**
      * Set message to display after a user logs in
      */
-    public readonly motd!: pulumi.Output<string | undefined>;
+    declare public readonly motd: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly motdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly motdVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoBannerFeatureTemplate resource with the given unique name, arguments, and options.
@@ -111,30 +110,30 @@ export class CiscoBannerFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoBannerFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["login"] = state ? state.login : undefined;
-            resourceInputs["loginVariable"] = state ? state.loginVariable : undefined;
-            resourceInputs["motd"] = state ? state.motd : undefined;
-            resourceInputs["motdVariable"] = state ? state.motdVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["login"] = state?.login;
+            resourceInputs["loginVariable"] = state?.loginVariable;
+            resourceInputs["motd"] = state?.motd;
+            resourceInputs["motdVariable"] = state?.motdVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoBannerFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["login"] = args ? args.login : undefined;
-            resourceInputs["loginVariable"] = args ? args.loginVariable : undefined;
-            resourceInputs["motd"] = args ? args.motd : undefined;
-            resourceInputs["motdVariable"] = args ? args.motdVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["login"] = args?.login;
+            resourceInputs["loginVariable"] = args?.loginVariable;
+            resourceInputs["motd"] = args?.motd;
+            resourceInputs["motdVariable"] = args?.motdVariable;
+            resourceInputs["name"] = args?.name;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -152,9 +151,8 @@ export interface CiscoBannerFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -196,9 +194,8 @@ export interface CiscoBannerFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**

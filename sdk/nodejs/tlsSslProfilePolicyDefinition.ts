@@ -65,59 +65,61 @@ export class TlsSslProfilePolicyDefinition extends pulumi.CustomResource {
     /**
      * Allow URL list ID
      */
-    public readonly allowUrlListId!: pulumi.Output<string | undefined>;
+    declare public readonly allowUrlListId: pulumi.Output<string | undefined>;
     /**
      * Allow URL list version
      */
-    public readonly allowUrlListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly allowUrlListVersion: pulumi.Output<number | undefined>;
     /**
      * Block URL list ID
      */
-    public readonly blockUrlListId!: pulumi.Output<string | undefined>;
+    declare public readonly blockUrlListId: pulumi.Output<string | undefined>;
     /**
      * Block URL list version
      */
-    public readonly blockUrlListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly blockUrlListVersion: pulumi.Output<number | undefined>;
     /**
      * Categories that should be decrypted
      */
-    public readonly decryptCategories!: pulumi.Output<string[] | undefined>;
+    declare public readonly decryptCategories: pulumi.Output<string[] | undefined>;
     /**
-     * Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    public readonly decryptThreshold!: pulumi.Output<string | undefined>;
+    declare public readonly decryptThreshold: pulumi.Output<string | undefined>;
     /**
      * The description of the policy definition.
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Fail decrypt enabled
      */
-    public readonly failDecrypt!: pulumi.Output<boolean | undefined>;
+    declare public readonly failDecrypt: pulumi.Output<boolean | undefined>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
-    public readonly mode!: pulumi.Output<string | undefined>;
+    declare public readonly mode: pulumi.Output<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Categories that should never be decrypted
      */
-    public readonly neverDecryptCategories!: pulumi.Output<string[] | undefined>;
+    declare public readonly neverDecryptCategories: pulumi.Output<string[] | undefined>;
     /**
      * Reputation enabled
      */
-    public readonly reputation!: pulumi.Output<boolean | undefined>;
+    declare public readonly reputation: pulumi.Output<boolean | undefined>;
     /**
      * Categories that should skipped
      */
-    public readonly skipDecryptCategories!: pulumi.Output<string[] | undefined>;
+    declare public readonly skipDecryptCategories: pulumi.Output<string[] | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TlsSslProfilePolicyDefinition resource with the given unique name, arguments, and options.
@@ -132,38 +134,38 @@ export class TlsSslProfilePolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TlsSslProfilePolicyDefinitionState | undefined;
-            resourceInputs["allowUrlListId"] = state ? state.allowUrlListId : undefined;
-            resourceInputs["allowUrlListVersion"] = state ? state.allowUrlListVersion : undefined;
-            resourceInputs["blockUrlListId"] = state ? state.blockUrlListId : undefined;
-            resourceInputs["blockUrlListVersion"] = state ? state.blockUrlListVersion : undefined;
-            resourceInputs["decryptCategories"] = state ? state.decryptCategories : undefined;
-            resourceInputs["decryptThreshold"] = state ? state.decryptThreshold : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["failDecrypt"] = state ? state.failDecrypt : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["neverDecryptCategories"] = state ? state.neverDecryptCategories : undefined;
-            resourceInputs["reputation"] = state ? state.reputation : undefined;
-            resourceInputs["skipDecryptCategories"] = state ? state.skipDecryptCategories : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["allowUrlListId"] = state?.allowUrlListId;
+            resourceInputs["allowUrlListVersion"] = state?.allowUrlListVersion;
+            resourceInputs["blockUrlListId"] = state?.blockUrlListId;
+            resourceInputs["blockUrlListVersion"] = state?.blockUrlListVersion;
+            resourceInputs["decryptCategories"] = state?.decryptCategories;
+            resourceInputs["decryptThreshold"] = state?.decryptThreshold;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["failDecrypt"] = state?.failDecrypt;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["neverDecryptCategories"] = state?.neverDecryptCategories;
+            resourceInputs["reputation"] = state?.reputation;
+            resourceInputs["skipDecryptCategories"] = state?.skipDecryptCategories;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TlsSslProfilePolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["allowUrlListId"] = args ? args.allowUrlListId : undefined;
-            resourceInputs["allowUrlListVersion"] = args ? args.allowUrlListVersion : undefined;
-            resourceInputs["blockUrlListId"] = args ? args.blockUrlListId : undefined;
-            resourceInputs["blockUrlListVersion"] = args ? args.blockUrlListVersion : undefined;
-            resourceInputs["decryptCategories"] = args ? args.decryptCategories : undefined;
-            resourceInputs["decryptThreshold"] = args ? args.decryptThreshold : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["failDecrypt"] = args ? args.failDecrypt : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["neverDecryptCategories"] = args ? args.neverDecryptCategories : undefined;
-            resourceInputs["reputation"] = args ? args.reputation : undefined;
-            resourceInputs["skipDecryptCategories"] = args ? args.skipDecryptCategories : undefined;
+            resourceInputs["allowUrlListId"] = args?.allowUrlListId;
+            resourceInputs["allowUrlListVersion"] = args?.allowUrlListVersion;
+            resourceInputs["blockUrlListId"] = args?.blockUrlListId;
+            resourceInputs["blockUrlListVersion"] = args?.blockUrlListVersion;
+            resourceInputs["decryptCategories"] = args?.decryptCategories;
+            resourceInputs["decryptThreshold"] = args?.decryptThreshold;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["failDecrypt"] = args?.failDecrypt;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["neverDecryptCategories"] = args?.neverDecryptCategories;
+            resourceInputs["reputation"] = args?.reputation;
+            resourceInputs["skipDecryptCategories"] = args?.skipDecryptCategories;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -196,7 +198,8 @@ export interface TlsSslProfilePolicyDefinitionState {
      */
     decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
     decryptThreshold?: pulumi.Input<string>;
     /**
@@ -208,7 +211,8 @@ export interface TlsSslProfilePolicyDefinitionState {
      */
     failDecrypt?: pulumi.Input<boolean>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -258,7 +262,8 @@ export interface TlsSslProfilePolicyDefinitionArgs {
      */
     decryptCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
     decryptThreshold?: pulumi.Input<string>;
     /**
@@ -270,7 +275,8 @@ export interface TlsSslProfilePolicyDefinitionArgs {
      */
     failDecrypt?: pulumi.Input<boolean>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**

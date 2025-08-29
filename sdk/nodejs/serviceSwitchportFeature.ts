@@ -49,37 +49,39 @@ export class ServiceSwitchportFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
-    public readonly ageOutTime!: pulumi.Output<number | undefined>;
+    declare public readonly ageOutTime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ageOutTimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ageOutTimeVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Interface name: GigabitEthernet0/<>/<> when present
      */
-    public readonly interfaces!: pulumi.Output<outputs.ServiceSwitchportFeatureInterface[] | undefined>;
+    declare public readonly interfaces: pulumi.Output<outputs.ServiceSwitchportFeatureInterface[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Add static MAC address entries for interface
      */
-    public readonly staticMacAddresses!: pulumi.Output<outputs.ServiceSwitchportFeatureStaticMacAddress[] | undefined>;
+    declare public readonly staticMacAddresses: pulumi.Output<outputs.ServiceSwitchportFeatureStaticMacAddress[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceSwitchportFeature resource with the given unique name, arguments, and options.
@@ -94,26 +96,26 @@ export class ServiceSwitchportFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceSwitchportFeatureState | undefined;
-            resourceInputs["ageOutTime"] = state ? state.ageOutTime : undefined;
-            resourceInputs["ageOutTimeVariable"] = state ? state.ageOutTimeVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["staticMacAddresses"] = state ? state.staticMacAddresses : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["ageOutTime"] = state?.ageOutTime;
+            resourceInputs["ageOutTimeVariable"] = state?.ageOutTimeVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["staticMacAddresses"] = state?.staticMacAddresses;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceSwitchportFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["ageOutTime"] = args ? args.ageOutTime : undefined;
-            resourceInputs["ageOutTimeVariable"] = args ? args.ageOutTimeVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["staticMacAddresses"] = args ? args.staticMacAddresses : undefined;
+            resourceInputs["ageOutTime"] = args?.ageOutTime;
+            resourceInputs["ageOutTimeVariable"] = args?.ageOutTimeVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["staticMacAddresses"] = args?.staticMacAddresses;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -126,7 +128,9 @@ export class ServiceSwitchportFeature extends pulumi.CustomResource {
  */
 export interface ServiceSwitchportFeatureState {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
     ageOutTime?: pulumi.Input<number>;
     /**
@@ -164,7 +168,9 @@ export interface ServiceSwitchportFeatureState {
  */
 export interface ServiceSwitchportFeatureArgs {
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      */
     ageOutTime?: pulumi.Input<number>;
     /**

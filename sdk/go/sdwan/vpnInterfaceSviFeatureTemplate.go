@@ -25,15 +25,16 @@ import (
 type VpnInterfaceSviFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Interface name: VLAN 1 - VLAN 4094 when present
 	IfName pulumi.StringPtrOutput `pulumi:"ifName"`
@@ -43,11 +44,14 @@ type VpnInterfaceSviFeatureTemplate struct {
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -71,17 +75,21 @@ type VpnInterfaceSviFeatureTemplate struct {
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Ipv6DhcpClient pulumi.BoolPtrOutput `pulumi:"ipv6DhcpClient"`
 	// Variable name
 	Ipv6DhcpClientVariable pulumi.StringPtrOutput `pulumi:"ipv6DhcpClientVariable"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv6DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv6DhcpDistance"`
 	// Variable name
 	Ipv6DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv6DhcpDistanceVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArrayOutput `pulumi:"ipv6DhcpHelpers"`
-	// Enable DHCPv6 rapid commit - Default value: `false`
+	// Enable DHCPv6 rapid commit
+	//   - Default value: `false`
 	Ipv6DhcpRapidCommit pulumi.BoolPtrOutput `pulumi:"ipv6DhcpRapidCommit"`
 	// Variable name
 	Ipv6DhcpRapidCommitVariable pulumi.StringPtrOutput `pulumi:"ipv6DhcpRapidCommitVariable"`
@@ -89,7 +97,9 @@ type VpnInterfaceSviFeatureTemplate struct {
 	Ipv6SecondaryAddresses VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArrayOutput `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps VpnInterfaceSviFeatureTemplateIpv6VrrpArrayOutput `pulumi:"ipv6Vrrps"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// Variable name
 	MtuVariable pulumi.StringPtrOutput `pulumi:"mtuVariable"`
@@ -97,13 +107,15 @@ type VpnInterfaceSviFeatureTemplate struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Enable policer
 	Policers VpnInterfaceSviFeatureTemplatePolicerArrayOutput `pulumi:"policers"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
 	// Configure static ARP entries
 	StaticArpEntries VpnInterfaceSviFeatureTemplateStaticArpEntryArrayOutput `pulumi:"staticArpEntries"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMssAdjust pulumi.IntPtrOutput `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrOutput `pulumi:"tcpMssAdjustVariable"`
@@ -149,15 +161,16 @@ func GetVpnInterfaceSviFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering VpnInterfaceSviFeatureTemplate resources.
 type vpnInterfaceSviFeatureTemplateState struct {
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: VLAN 1 - VLAN 4094 when present
 	IfName *string `pulumi:"ifName"`
@@ -167,11 +180,14 @@ type vpnInterfaceSviFeatureTemplateState struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -195,17 +211,21 @@ type vpnInterfaceSviFeatureTemplateState struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Ipv6DhcpClient *bool `pulumi:"ipv6DhcpClient"`
 	// Variable name
 	Ipv6DhcpClientVariable *string `pulumi:"ipv6DhcpClientVariable"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv6DhcpDistance *int `pulumi:"ipv6DhcpDistance"`
 	// Variable name
 	Ipv6DhcpDistanceVariable *string `pulumi:"ipv6DhcpDistanceVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers []VpnInterfaceSviFeatureTemplateIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// Enable DHCPv6 rapid commit - Default value: `false`
+	// Enable DHCPv6 rapid commit
+	//   - Default value: `false`
 	Ipv6DhcpRapidCommit *bool `pulumi:"ipv6DhcpRapidCommit"`
 	// Variable name
 	Ipv6DhcpRapidCommitVariable *string `pulumi:"ipv6DhcpRapidCommitVariable"`
@@ -213,7 +233,9 @@ type vpnInterfaceSviFeatureTemplateState struct {
 	Ipv6SecondaryAddresses []VpnInterfaceSviFeatureTemplateIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps []VpnInterfaceSviFeatureTemplateIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	Mtu *int `pulumi:"mtu"`
 	// Variable name
 	MtuVariable *string `pulumi:"mtuVariable"`
@@ -221,13 +243,15 @@ type vpnInterfaceSviFeatureTemplateState struct {
 	Name *string `pulumi:"name"`
 	// Enable policer
 	Policers []VpnInterfaceSviFeatureTemplatePolicer `pulumi:"policers"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// Configure static ARP entries
 	StaticArpEntries []VpnInterfaceSviFeatureTemplateStaticArpEntry `pulumi:"staticArpEntries"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -238,15 +262,16 @@ type vpnInterfaceSviFeatureTemplateState struct {
 }
 
 type VpnInterfaceSviFeatureTemplateState struct {
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: VLAN 1 - VLAN 4094 when present
 	IfName pulumi.StringPtrInput
@@ -256,11 +281,14 @@ type VpnInterfaceSviFeatureTemplateState struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -284,17 +312,21 @@ type VpnInterfaceSviFeatureTemplateState struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Ipv6DhcpClient pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DhcpClientVariable pulumi.StringPtrInput
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv6DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	Ipv6DhcpDistanceVariable pulumi.StringPtrInput
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArrayInput
-	// Enable DHCPv6 rapid commit - Default value: `false`
+	// Enable DHCPv6 rapid commit
+	//   - Default value: `false`
 	Ipv6DhcpRapidCommit pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DhcpRapidCommitVariable pulumi.StringPtrInput
@@ -302,7 +334,9 @@ type VpnInterfaceSviFeatureTemplateState struct {
 	Ipv6SecondaryAddresses VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArrayInput
 	// Enable VRRP
 	Ipv6Vrrps VpnInterfaceSviFeatureTemplateIpv6VrrpArrayInput
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrInput
 	// Variable name
 	MtuVariable pulumi.StringPtrInput
@@ -310,13 +344,15 @@ type VpnInterfaceSviFeatureTemplateState struct {
 	Name pulumi.StringPtrInput
 	// Enable policer
 	Policers VpnInterfaceSviFeatureTemplatePolicerArrayInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
 	// Configure static ARP entries
 	StaticArpEntries VpnInterfaceSviFeatureTemplateStaticArpEntryArrayInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -331,15 +367,16 @@ func (VpnInterfaceSviFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type vpnInterfaceSviFeatureTemplateArgs struct {
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: VLAN 1 - VLAN 4094 when present
 	IfName *string `pulumi:"ifName"`
@@ -349,11 +386,14 @@ type vpnInterfaceSviFeatureTemplateArgs struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -377,17 +417,21 @@ type vpnInterfaceSviFeatureTemplateArgs struct {
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Ipv6DhcpClient *bool `pulumi:"ipv6DhcpClient"`
 	// Variable name
 	Ipv6DhcpClientVariable *string `pulumi:"ipv6DhcpClientVariable"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv6DhcpDistance *int `pulumi:"ipv6DhcpDistance"`
 	// Variable name
 	Ipv6DhcpDistanceVariable *string `pulumi:"ipv6DhcpDistanceVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers []VpnInterfaceSviFeatureTemplateIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// Enable DHCPv6 rapid commit - Default value: `false`
+	// Enable DHCPv6 rapid commit
+	//   - Default value: `false`
 	Ipv6DhcpRapidCommit *bool `pulumi:"ipv6DhcpRapidCommit"`
 	// Variable name
 	Ipv6DhcpRapidCommitVariable *string `pulumi:"ipv6DhcpRapidCommitVariable"`
@@ -395,7 +439,9 @@ type vpnInterfaceSviFeatureTemplateArgs struct {
 	Ipv6SecondaryAddresses []VpnInterfaceSviFeatureTemplateIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps []VpnInterfaceSviFeatureTemplateIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	Mtu *int `pulumi:"mtu"`
 	// Variable name
 	MtuVariable *string `pulumi:"mtuVariable"`
@@ -403,13 +449,15 @@ type vpnInterfaceSviFeatureTemplateArgs struct {
 	Name *string `pulumi:"name"`
 	// Enable policer
 	Policers []VpnInterfaceSviFeatureTemplatePolicer `pulumi:"policers"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
 	// Configure static ARP entries
 	StaticArpEntries []VpnInterfaceSviFeatureTemplateStaticArpEntry `pulumi:"staticArpEntries"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -417,15 +465,16 @@ type vpnInterfaceSviFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a VpnInterfaceSviFeatureTemplate resource.
 type VpnInterfaceSviFeatureTemplateArgs struct {
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: VLAN 1 - VLAN 4094 when present
 	IfName pulumi.StringPtrInput
@@ -435,11 +484,14 @@ type VpnInterfaceSviFeatureTemplateArgs struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -463,17 +515,21 @@ type VpnInterfaceSviFeatureTemplateArgs struct {
 	Ipv6Address pulumi.StringPtrInput
 	// Variable name
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Ipv6DhcpClient pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DhcpClientVariable pulumi.StringPtrInput
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv6DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	Ipv6DhcpDistanceVariable pulumi.StringPtrInput
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArrayInput
-	// Enable DHCPv6 rapid commit - Default value: `false`
+	// Enable DHCPv6 rapid commit
+	//   - Default value: `false`
 	Ipv6DhcpRapidCommit pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DhcpRapidCommitVariable pulumi.StringPtrInput
@@ -481,7 +537,9 @@ type VpnInterfaceSviFeatureTemplateArgs struct {
 	Ipv6SecondaryAddresses VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArrayInput
 	// Enable VRRP
 	Ipv6Vrrps VpnInterfaceSviFeatureTemplateIpv6VrrpArrayInput
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrInput
 	// Variable name
 	MtuVariable pulumi.StringPtrInput
@@ -489,13 +547,15 @@ type VpnInterfaceSviFeatureTemplateArgs struct {
 	Name pulumi.StringPtrInput
 	// Enable policer
 	Policers VpnInterfaceSviFeatureTemplatePolicerArrayInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
 	// Configure static ARP entries
 	StaticArpEntries VpnInterfaceSviFeatureTemplateStaticArpEntryArrayInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -588,7 +648,9 @@ func (o VpnInterfaceSviFeatureTemplateOutput) ToVpnInterfaceSviFeatureTemplateOu
 	return o
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+//   - Range: `0`-`2678400`
+//   - Default value: `1200`
 func (o VpnInterfaceSviFeatureTemplateOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -603,9 +665,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Description() pulumi.StringOutput 
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o VpnInterfaceSviFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -630,7 +691,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) InterfaceDescriptionVariable() pul
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceDescriptionVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast - Default value: `false`
+// IP Directed-Broadcast
+//   - Default value: `false`
 func (o VpnInterfaceSviFeatureTemplateOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.BoolPtrOutput { return v.IpDirectedBroadcast }).(pulumi.BoolPtrOutput)
 }
@@ -640,7 +702,9 @@ func (o VpnInterfaceSviFeatureTemplateOutput) IpDirectedBroadcastVariable() pulu
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringPtrOutput { return v.IpDirectedBroadcastVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+// IP MTU <576..Interface MTU>, in bytes
+//   - Range: `576`-`9216`
+//   - Default value: `1500`
 func (o VpnInterfaceSviFeatureTemplateOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -708,7 +772,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6AddressVariable() pulumi.Strin
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6 - Default value: `false`
+// Enable DHCPv6
+//   - Default value: `false`
 func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6DhcpClient() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6DhcpClient }).(pulumi.BoolPtrOutput)
 }
@@ -718,7 +783,9 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6DhcpClientVariable() pulumi.St
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6DhcpClientVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+// Set administrative distance for DHCP default route
+//   - Range: `1`-`65536`
+//   - Default value: `1`
 func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6DhcpDistance }).(pulumi.IntPtrOutput)
 }
@@ -735,7 +802,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6DhcpHelpers() VpnInterfaceSviF
 	}).(VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArrayOutput)
 }
 
-// Enable DHCPv6 rapid commit - Default value: `false`
+// Enable DHCPv6 rapid commit
+//   - Default value: `false`
 func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6DhcpRapidCommit() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6DhcpRapidCommit }).(pulumi.BoolPtrOutput)
 }
@@ -759,7 +827,9 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Ipv6Vrrps() VpnInterfaceSviFeature
 	}).(VpnInterfaceSviFeatureTemplateIpv6VrrpArrayOutput)
 }
 
-// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+// Interface MTU <1500..9216> in bytes
+//   - Range: `1500`-`9216`
+//   - Default value: `1500`
 func (o VpnInterfaceSviFeatureTemplateOutput) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
 }
@@ -781,7 +851,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) Policers() VpnInterfaceSviFeatureT
 	}).(VpnInterfaceSviFeatureTemplatePolicerArrayOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o VpnInterfaceSviFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -798,7 +869,8 @@ func (o VpnInterfaceSviFeatureTemplateOutput) StaticArpEntries() VpnInterfaceSvi
 	}).(VpnInterfaceSviFeatureTemplateStaticArpEntryArrayOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `552`-`1960`
 func (o VpnInterfaceSviFeatureTemplateOutput) TcpMssAdjust() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *VpnInterfaceSviFeatureTemplate) pulumi.IntPtrOutput { return v.TcpMssAdjust }).(pulumi.IntPtrOutput)
 }

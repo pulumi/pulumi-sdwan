@@ -45,13 +45,15 @@ namespace Pulumi.Sdwan
     public partial class PolicerPolicyObject : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Burst in bytes - Range: `15000`-`10000000`
+        /// Burst in bytes
+        ///   - Range: `15000`-`10000000`
         /// </summary>
         [Output("burst")]
         public Output<int> Burst { get; private set; } = null!;
 
         /// <summary>
-        /// Exceed action - Choices: `drop`, `remark`
+        /// Exceed action
+        ///   - Choices: `drop`, `remark`
         /// </summary>
         [Output("exceedAction")]
         public Output<string> ExceedAction { get; private set; } = null!;
@@ -63,7 +65,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Rate in bps - Range: `8`-`100000000000`
+        /// Rate in bps
+        ///   - Range: `8`-`100000000000`
         /// </summary>
         [Output("rate")]
         public Output<int> Rate { get; private set; } = null!;
@@ -121,13 +124,15 @@ namespace Pulumi.Sdwan
     public sealed class PolicerPolicyObjectArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Burst in bytes - Range: `15000`-`10000000`
+        /// Burst in bytes
+        ///   - Range: `15000`-`10000000`
         /// </summary>
         [Input("burst", required: true)]
         public Input<int> Burst { get; set; } = null!;
 
         /// <summary>
-        /// Exceed action - Choices: `drop`, `remark`
+        /// Exceed action
+        ///   - Choices: `drop`, `remark`
         /// </summary>
         [Input("exceedAction", required: true)]
         public Input<string> ExceedAction { get; set; } = null!;
@@ -139,7 +144,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Rate in bps - Range: `8`-`100000000000`
+        /// Rate in bps
+        ///   - Range: `8`-`100000000000`
         /// </summary>
         [Input("rate", required: true)]
         public Input<int> Rate { get; set; } = null!;
@@ -153,13 +159,15 @@ namespace Pulumi.Sdwan
     public sealed class PolicerPolicyObjectState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Burst in bytes - Range: `15000`-`10000000`
+        /// Burst in bytes
+        ///   - Range: `15000`-`10000000`
         /// </summary>
         [Input("burst")]
         public Input<int>? Burst { get; set; }
 
         /// <summary>
-        /// Exceed action - Choices: `drop`, `remark`
+        /// Exceed action
+        ///   - Choices: `drop`, `remark`
         /// </summary>
         [Input("exceedAction")]
         public Input<string>? ExceedAction { get; set; }
@@ -171,7 +179,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Rate in bps - Range: `8`-`100000000000`
+        /// Rate in bps
+        ///   - Range: `8`-`100000000000`
         /// </summary>
         [Input("rate")]
         public Input<int>? Rate { get; set; }

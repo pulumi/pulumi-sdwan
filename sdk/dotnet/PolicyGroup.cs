@@ -86,7 +86,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> PolicyVersions { get; private set; } = null!;
 
         /// <summary>
-        /// Type of solution - Choices: `sdwan`
+        /// Type of solution
+        ///   - Choices: `sdwan`
         /// </summary>
         [Output("solution")]
         public Output<string> Solution { get; private set; } = null!;
@@ -186,7 +187,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Type of solution - Choices: `sdwan`
+        /// Type of solution
+        ///   - Choices: `sdwan`
         /// </summary>
         [Input("solution", required: true)]
         public Input<string> Solution { get; set; } = null!;
@@ -248,7 +250,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Type of solution - Choices: `sdwan`
+        /// Type of solution
+        ///   - Choices: `sdwan`
         /// </summary>
         [Input("solution")]
         public Input<string>? Solution { get; set; }

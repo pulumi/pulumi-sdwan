@@ -24,14 +24,16 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
     public static final SystemAaaFeatureState Empty = new SystemAaaFeatureState();
 
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Import(name="accountingGroup")
     private @Nullable Output<Boolean> accountingGroup;
 
     /**
-     * @return Accounting configurations parameters - Default value: `false`
+     * @return Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> accountingGroup() {
@@ -69,14 +71,16 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Import(name="authenticationGroup")
     private @Nullable Output<Boolean> authenticationGroup;
 
     /**
-     * @return Authentication configurations parameters - Default value: `false`
+     * @return Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authenticationGroup() {
@@ -99,14 +103,16 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     @Import(name="authorizationConfigCommands")
     private @Nullable Output<Boolean> authorizationConfigCommands;
 
     /**
-     * @return For configuration mode commands. - Default value: `false`
+     * @return For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authorizationConfigCommands() {
@@ -129,14 +135,16 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     @Import(name="authorizationConsole")
     private @Nullable Output<Boolean> authorizationConsole;
 
     /**
-     * @return For enabling console authorization - Default value: `false`
+     * @return For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authorizationConsole() {
@@ -335,7 +343,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accountingGroup Accounting configurations parameters - Default value: `false`
+         * @param accountingGroup Accounting configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -346,7 +355,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accountingGroup Accounting configurations parameters - Default value: `false`
+         * @param accountingGroup Accounting configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -408,7 +418,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authenticationGroup Authentication configurations parameters - Default value: `false`
+         * @param authenticationGroup Authentication configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -419,7 +430,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authenticationGroup Authentication configurations parameters - Default value: `false`
+         * @param authenticationGroup Authentication configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -450,7 +462,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authorizationConfigCommands For configuration mode commands. - Default value: `false`
+         * @param authorizationConfigCommands For configuration mode commands.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -461,7 +474,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authorizationConfigCommands For configuration mode commands. - Default value: `false`
+         * @param authorizationConfigCommands For configuration mode commands.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -492,7 +506,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authorizationConsole For enabling console authorization - Default value: `false`
+         * @param authorizationConsole For enabling console authorization
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -503,7 +518,8 @@ public final class SystemAaaFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authorizationConsole For enabling console authorization - Default value: `false`
+         * @param authorizationConsole For enabling console authorization
+         *   - Default value: `false`
          * 
          * @return builder
          * 

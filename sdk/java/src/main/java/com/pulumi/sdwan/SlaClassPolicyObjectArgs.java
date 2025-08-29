@@ -47,18 +47,14 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     *   `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     *   `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      * 
      */
     @Import(name="fallbackBestTunnelCriteria")
     private @Nullable Output<String> fallbackBestTunnelCriteria;
 
     /**
-     * @return - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * @return - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      * 
      */
     public Optional<Output<String>> fallbackBestTunnelCriteria() {
@@ -66,14 +62,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Jitter variance in ms - Range: `1`-`1000`
+     * Jitter variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="fallbackBestTunnelJitter")
     private @Nullable Output<Integer> fallbackBestTunnelJitter;
 
     /**
-     * @return Jitter variance in ms - Range: `1`-`1000`
+     * @return Jitter variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> fallbackBestTunnelJitter() {
@@ -81,14 +79,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Latency variance in ms - Range: `1`-`1000`
+     * Latency variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="fallbackBestTunnelLatency")
     private @Nullable Output<Integer> fallbackBestTunnelLatency;
 
     /**
-     * @return Latency variance in ms - Range: `1`-`1000`
+     * @return Latency variance in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> fallbackBestTunnelLatency() {
@@ -96,14 +96,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Loss variance in percent - Range: `1`-`100`
+     * Loss variance in percent
+     *   - Range: `1`-`100`
      * 
      */
     @Import(name="fallbackBestTunnelLoss")
     private @Nullable Output<Integer> fallbackBestTunnelLoss;
 
     /**
-     * @return Loss variance in percent - Range: `1`-`100`
+     * @return Loss variance in percent
+     *   - Range: `1`-`100`
      * 
      */
     public Optional<Output<Integer>> fallbackBestTunnelLoss() {
@@ -111,14 +113,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Jitter in ms - Range: `1`-`1000`
+     * Jitter in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="jitter")
     private @Nullable Output<Integer> jitter;
 
     /**
-     * @return Jitter in ms - Range: `1`-`1000`
+     * @return Jitter in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> jitter() {
@@ -126,14 +130,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Latency in ms - Range: `1`-`1000`
+     * Latency in ms
+     *   - Range: `1`-`1000`
      * 
      */
     @Import(name="latency")
     private @Nullable Output<Integer> latency;
 
     /**
-     * @return Latency in ms - Range: `1`-`1000`
+     * @return Latency in ms
+     *   - Range: `1`-`1000`
      * 
      */
     public Optional<Output<Integer>> latency() {
@@ -141,14 +147,16 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Loss in percent - Range: `1`-`100`
+     * Loss in percent
+     *   - Range: `1`-`100`
      * 
      */
     @Import(name="loss")
     private @Nullable Output<Integer> loss;
 
     /**
-     * @return Loss in percent - Range: `1`-`100`
+     * @return Loss in percent
+     *   - Range: `1`-`100`
      * 
      */
     public Optional<Output<Integer>> loss() {
@@ -246,9 +254,7 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelCriteria - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-         * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-         * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+         * @param fallbackBestTunnelCriteria - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
          * 
          * @return builder
          * 
@@ -259,9 +265,7 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelCriteria - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-         * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-         * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+         * @param fallbackBestTunnelCriteria - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
          * 
          * @return builder
          * 
@@ -271,7 +275,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelJitter Jitter variance in ms - Range: `1`-`1000`
+         * @param fallbackBestTunnelJitter Jitter variance in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -282,7 +287,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelJitter Jitter variance in ms - Range: `1`-`1000`
+         * @param fallbackBestTunnelJitter Jitter variance in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -292,7 +298,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelLatency Latency variance in ms - Range: `1`-`1000`
+         * @param fallbackBestTunnelLatency Latency variance in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -303,7 +310,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelLatency Latency variance in ms - Range: `1`-`1000`
+         * @param fallbackBestTunnelLatency Latency variance in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -313,7 +321,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelLoss Loss variance in percent - Range: `1`-`100`
+         * @param fallbackBestTunnelLoss Loss variance in percent
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 
@@ -324,7 +333,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param fallbackBestTunnelLoss Loss variance in percent - Range: `1`-`100`
+         * @param fallbackBestTunnelLoss Loss variance in percent
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 
@@ -334,7 +344,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param jitter Jitter in ms - Range: `1`-`1000`
+         * @param jitter Jitter in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -345,7 +356,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param jitter Jitter in ms - Range: `1`-`1000`
+         * @param jitter Jitter in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -355,7 +367,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param latency Latency in ms - Range: `1`-`1000`
+         * @param latency Latency in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -366,7 +379,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param latency Latency in ms - Range: `1`-`1000`
+         * @param latency Latency in ms
+         *   - Range: `1`-`1000`
          * 
          * @return builder
          * 
@@ -376,7 +390,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param loss Loss in percent - Range: `1`-`100`
+         * @param loss Loss in percent
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 
@@ -387,7 +402,8 @@ public final class SlaClassPolicyObjectArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param loss Loss in percent - Range: `1`-`100`
+         * @param loss Loss in percent
+         *   - Range: `1`-`100`
          * 
          * @return builder
          * 

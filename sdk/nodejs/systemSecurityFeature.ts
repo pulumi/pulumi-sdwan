@@ -49,70 +49,76 @@ export class SystemSecurityFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      */
-    public readonly antiReplayWindow!: pulumi.Output<string | undefined>;
+    declare public readonly antiReplayWindow: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly antiReplayWindowVariable!: pulumi.Output<string | undefined>;
+    declare public readonly antiReplayWindowVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      */
-    public readonly extendedAntiReplayWindow!: pulumi.Output<number | undefined>;
+    declare public readonly extendedAntiReplayWindow: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly extendedAntiReplayWindowVariable!: pulumi.Output<string | undefined>;
+    declare public readonly extendedAntiReplayWindowVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly integrityTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly integrityTypeVariable: pulumi.Output<string | undefined>;
     /**
      * Set the authentication type for DTLS connections
      */
-    public readonly integrityTypes!: pulumi.Output<string[] | undefined>;
+    declare public readonly integrityTypes: pulumi.Output<string[] | undefined>;
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      */
-    public readonly ipsecPairwiseKeying!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipsecPairwiseKeying: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ipsecPairwiseKeyingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecPairwiseKeyingVariable: pulumi.Output<string | undefined>;
     /**
      * Configure a Keychain
      */
-    public readonly keychains!: pulumi.Output<outputs.SystemSecurityFeatureKeychain[] | undefined>;
+    declare public readonly keychains: pulumi.Output<outputs.SystemSecurityFeatureKeychain[] | undefined>;
     /**
      * Configure a Key
      */
-    public readonly keys!: pulumi.Output<outputs.SystemSecurityFeatureKey[] | undefined>;
+    declare public readonly keys: pulumi.Output<outputs.SystemSecurityFeatureKey[] | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      */
-    public readonly rekey!: pulumi.Output<number | undefined>;
+    declare public readonly rekey: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly rekeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly rekeyVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemSecurityFeature resource with the given unique name, arguments, and options.
@@ -127,42 +133,42 @@ export class SystemSecurityFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemSecurityFeatureState | undefined;
-            resourceInputs["antiReplayWindow"] = state ? state.antiReplayWindow : undefined;
-            resourceInputs["antiReplayWindowVariable"] = state ? state.antiReplayWindowVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["extendedAntiReplayWindow"] = state ? state.extendedAntiReplayWindow : undefined;
-            resourceInputs["extendedAntiReplayWindowVariable"] = state ? state.extendedAntiReplayWindowVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["integrityTypeVariable"] = state ? state.integrityTypeVariable : undefined;
-            resourceInputs["integrityTypes"] = state ? state.integrityTypes : undefined;
-            resourceInputs["ipsecPairwiseKeying"] = state ? state.ipsecPairwiseKeying : undefined;
-            resourceInputs["ipsecPairwiseKeyingVariable"] = state ? state.ipsecPairwiseKeyingVariable : undefined;
-            resourceInputs["keychains"] = state ? state.keychains : undefined;
-            resourceInputs["keys"] = state ? state.keys : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rekey"] = state ? state.rekey : undefined;
-            resourceInputs["rekeyVariable"] = state ? state.rekeyVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["antiReplayWindow"] = state?.antiReplayWindow;
+            resourceInputs["antiReplayWindowVariable"] = state?.antiReplayWindowVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["extendedAntiReplayWindow"] = state?.extendedAntiReplayWindow;
+            resourceInputs["extendedAntiReplayWindowVariable"] = state?.extendedAntiReplayWindowVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["integrityTypeVariable"] = state?.integrityTypeVariable;
+            resourceInputs["integrityTypes"] = state?.integrityTypes;
+            resourceInputs["ipsecPairwiseKeying"] = state?.ipsecPairwiseKeying;
+            resourceInputs["ipsecPairwiseKeyingVariable"] = state?.ipsecPairwiseKeyingVariable;
+            resourceInputs["keychains"] = state?.keychains;
+            resourceInputs["keys"] = state?.keys;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rekey"] = state?.rekey;
+            resourceInputs["rekeyVariable"] = state?.rekeyVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemSecurityFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["antiReplayWindow"] = args ? args.antiReplayWindow : undefined;
-            resourceInputs["antiReplayWindowVariable"] = args ? args.antiReplayWindowVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["extendedAntiReplayWindow"] = args ? args.extendedAntiReplayWindow : undefined;
-            resourceInputs["extendedAntiReplayWindowVariable"] = args ? args.extendedAntiReplayWindowVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["integrityTypeVariable"] = args ? args.integrityTypeVariable : undefined;
-            resourceInputs["integrityTypes"] = args ? args.integrityTypes : undefined;
-            resourceInputs["ipsecPairwiseKeying"] = args ? args.ipsecPairwiseKeying : undefined;
-            resourceInputs["ipsecPairwiseKeyingVariable"] = args ? args.ipsecPairwiseKeyingVariable : undefined;
-            resourceInputs["keychains"] = args ? args.keychains : undefined;
-            resourceInputs["keys"] = args ? args.keys : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rekey"] = args ? args.rekey : undefined;
-            resourceInputs["rekeyVariable"] = args ? args.rekeyVariable : undefined;
+            resourceInputs["antiReplayWindow"] = args?.antiReplayWindow;
+            resourceInputs["antiReplayWindowVariable"] = args?.antiReplayWindowVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["extendedAntiReplayWindow"] = args?.extendedAntiReplayWindow;
+            resourceInputs["extendedAntiReplayWindowVariable"] = args?.extendedAntiReplayWindowVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["integrityTypeVariable"] = args?.integrityTypeVariable;
+            resourceInputs["integrityTypes"] = args?.integrityTypes;
+            resourceInputs["ipsecPairwiseKeying"] = args?.ipsecPairwiseKeying;
+            resourceInputs["ipsecPairwiseKeyingVariable"] = args?.ipsecPairwiseKeyingVariable;
+            resourceInputs["keychains"] = args?.keychains;
+            resourceInputs["keys"] = args?.keys;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rekey"] = args?.rekey;
+            resourceInputs["rekeyVariable"] = args?.rekeyVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -175,8 +181,9 @@ export class SystemSecurityFeature extends pulumi.CustomResource {
  */
 export interface SystemSecurityFeatureState {
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      */
     antiReplayWindow?: pulumi.Input<string>;
     /**
@@ -188,7 +195,9 @@ export interface SystemSecurityFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      */
     extendedAntiReplayWindow?: pulumi.Input<number>;
     /**
@@ -208,7 +217,8 @@ export interface SystemSecurityFeatureState {
      */
     integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      */
     ipsecPairwiseKeying?: pulumi.Input<boolean>;
     /**
@@ -228,7 +238,9 @@ export interface SystemSecurityFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      */
     rekey?: pulumi.Input<number>;
     /**
@@ -246,8 +258,9 @@ export interface SystemSecurityFeatureState {
  */
 export interface SystemSecurityFeatureArgs {
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      */
     antiReplayWindow?: pulumi.Input<string>;
     /**
@@ -259,7 +272,9 @@ export interface SystemSecurityFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      */
     extendedAntiReplayWindow?: pulumi.Input<number>;
     /**
@@ -279,7 +294,8 @@ export interface SystemSecurityFeatureArgs {
      */
     integrityTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      */
     ipsecPairwiseKeying?: pulumi.Input<boolean>;
     /**
@@ -299,7 +315,9 @@ export interface SystemSecurityFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      */
     rekey?: pulumi.Input<number>;
     /**

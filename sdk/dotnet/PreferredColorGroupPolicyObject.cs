@@ -60,7 +60,8 @@ namespace Pulumi.Sdwan
         public Output<string> PrimaryColorPreference { get; private set; } = null!;
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Output("primaryPathPreference")]
         public Output<string?> PrimaryPathPreference { get; private set; } = null!;
@@ -72,7 +73,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SecondaryColorPreference { get; private set; } = null!;
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Output("secondaryPathPreference")]
         public Output<string?> SecondaryPathPreference { get; private set; } = null!;
@@ -84,7 +86,8 @@ namespace Pulumi.Sdwan
         public Output<string?> TertiaryColorPreference { get; private set; } = null!;
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Output("tertiaryPathPreference")]
         public Output<string?> TertiaryPathPreference { get; private set; } = null!;
@@ -154,7 +157,8 @@ namespace Pulumi.Sdwan
         public Input<string> PrimaryColorPreference { get; set; } = null!;
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("primaryPathPreference")]
         public Input<string>? PrimaryPathPreference { get; set; }
@@ -166,7 +170,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SecondaryColorPreference { get; set; }
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("secondaryPathPreference")]
         public Input<string>? SecondaryPathPreference { get; set; }
@@ -178,7 +183,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TertiaryColorPreference { get; set; }
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("tertiaryPathPreference")]
         public Input<string>? TertiaryPathPreference { get; set; }
@@ -204,7 +210,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PrimaryColorPreference { get; set; }
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("primaryPathPreference")]
         public Input<string>? PrimaryPathPreference { get; set; }
@@ -216,7 +223,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SecondaryColorPreference { get; set; }
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("secondaryPathPreference")]
         public Input<string>? SecondaryPathPreference { get; set; }
@@ -228,7 +236,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TertiaryColorPreference { get; set; }
 
         /// <summary>
-        /// Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        /// Path preference
+        ///   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         /// </summary>
         [Input("tertiaryPathPreference")]
         public Input<string>? TertiaryPathPreference { get; set; }

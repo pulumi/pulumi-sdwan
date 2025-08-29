@@ -145,14 +145,16 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
         return Codegen.optional(this.decryptCategories);
     }
     /**
-     * Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     @Export(name="decryptThreshold", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> decryptThreshold;
 
     /**
-     * @return Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * @return Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     public Output<Optional<String>> decryptThreshold() {
@@ -187,14 +189,16 @@ public class TlsSslProfilePolicyDefinition extends com.pulumi.resources.CustomRe
         return Codegen.optional(this.failDecrypt);
     }
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<Optional<String>> mode() {

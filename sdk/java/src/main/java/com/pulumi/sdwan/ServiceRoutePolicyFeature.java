@@ -40,14 +40,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/serviceRoutePolicyFeature:ServiceRoutePolicyFeature")
 public class ServiceRoutePolicyFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * @return Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      * 
      */
     public Output<Optional<String>> defaultAction() {

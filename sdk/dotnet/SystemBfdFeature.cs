@@ -33,7 +33,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SystemBfdFeatureColor>> Colors { get; private set; } = null!;
 
         /// <summary>
-        /// - Range: `0`-`63` - Default value: `48`
+        /// - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Output("defaultDscp")]
         public Output<int?> DefaultDscp { get; private set; } = null!;
@@ -57,7 +58,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// - Range: `1`-`6` - Default value: `6`
+        /// - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Output("multiplier")]
         public Output<int?> Multiplier { get; private set; } = null!;
@@ -75,7 +77,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// - Range: `1`-`4294967295` - Default value: `600000`
+        /// - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Output("pollInterval")]
         public Output<int?> PollInterval { get; private set; } = null!;
@@ -151,7 +154,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// - Range: `0`-`63` - Default value: `48`
+        /// - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Input("defaultDscp")]
         public Input<int>? DefaultDscp { get; set; }
@@ -175,7 +179,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// - Range: `1`-`6` - Default value: `6`
+        /// - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -193,7 +198,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// - Range: `1`-`4294967295` - Default value: `600000`
+        /// - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Input("pollInterval")]
         public Input<int>? PollInterval { get; set; }
@@ -225,7 +231,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// - Range: `0`-`63` - Default value: `48`
+        /// - Range: `0`-`63`
+        ///   - Default value: `48`
         /// </summary>
         [Input("defaultDscp")]
         public Input<int>? DefaultDscp { get; set; }
@@ -249,7 +256,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// - Range: `1`-`6` - Default value: `6`
+        /// - Range: `1`-`6`
+        ///   - Default value: `6`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -267,7 +275,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// - Range: `1`-`4294967295` - Default value: `600000`
+        /// - Range: `1`-`4294967295`
+        ///   - Default value: `600000`
         /// </summary>
         [Input("pollInterval")]
         public Input<int>? PollInterval { get; set; }

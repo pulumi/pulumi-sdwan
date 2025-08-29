@@ -72,138 +72,140 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
-    public readonly applicationTunnelType!: pulumi.Output<string | undefined>;
+    declare public readonly applicationTunnelType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly applicationTunnelTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly applicationTunnelTypeVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
-    public readonly clearDontFragment!: pulumi.Output<boolean | undefined>;
+    declare public readonly clearDontFragment: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly clearDontFragmentVariable!: pulumi.Output<string | undefined>;
+    declare public readonly clearDontFragmentVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Interface description
      */
-    public readonly interfaceDescription!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceDescriptionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
     /**
      * Interface name (1..255)
      */
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+     * Interface MTU <576..9976>, in bytes
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
      */
-    public readonly ipMtu!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
-    public readonly ipv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly ipMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4AddressVariable!: pulumi.Output<string | undefined>;
-    /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
-     */
-    public readonly ipv4SubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
+    declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4SubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
+    /**
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     */
+    declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Administrative state - Default value: `false`
+     * Administrative state
+     *   - Default value: `false`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
-    /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-     */
-    public readonly tcpMss!: pulumi.Output<number | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpMssVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    declare public readonly tcpMss: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tcpMssVariable: pulumi.Output<string | undefined>;
     /**
      * Transport WAN VPN Feature ID
      */
-    public readonly transportWanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly transportWanVpnFeatureId: pulumi.Output<string>;
     /**
      * Tunnel destination IP Address
      */
-    public readonly tunnelDestinationIpv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelDestinationIpv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name, can't be Loopback interface
      */
-    public readonly tunnelRouteViaLoopback!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteViaLoopback: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelRouteViaLoopbackVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteViaLoopbackVariable: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name
      */
-    public readonly tunnelSourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterface: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name
      */
-    public readonly tunnelSourceInterfaceLoopback!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterfaceLoopback: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceInterfaceLoopbackVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterfaceLoopbackVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterfaceVariable: pulumi.Output<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    public readonly tunnelSourceIpv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceIpv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportWanVpnInterfaceGreFeature resource with the given unique name, arguments, and options.
@@ -218,79 +220,79 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportWanVpnInterfaceGreFeatureState | undefined;
-            resourceInputs["applicationTunnelType"] = state ? state.applicationTunnelType : undefined;
-            resourceInputs["applicationTunnelTypeVariable"] = state ? state.applicationTunnelTypeVariable : undefined;
-            resourceInputs["clearDontFragment"] = state ? state.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = state ? state.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["interfaceDescription"] = state ? state.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = state ? state.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["ipMtu"] = state ? state.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = state ? state.ipMtuVariable : undefined;
-            resourceInputs["ipv4Address"] = state ? state.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = state ? state.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4SubnetMask"] = state ? state.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = state ? state.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["tcpMss"] = state ? state.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = state ? state.tcpMssVariable : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = state ? state.transportWanVpnFeatureId : undefined;
-            resourceInputs["tunnelDestinationIpv4Address"] = state ? state.tunnelDestinationIpv4Address : undefined;
-            resourceInputs["tunnelDestinationIpv4AddressVariable"] = state ? state.tunnelDestinationIpv4AddressVariable : undefined;
-            resourceInputs["tunnelRouteViaLoopback"] = state ? state.tunnelRouteViaLoopback : undefined;
-            resourceInputs["tunnelRouteViaLoopbackVariable"] = state ? state.tunnelRouteViaLoopbackVariable : undefined;
-            resourceInputs["tunnelSourceInterface"] = state ? state.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceLoopback"] = state ? state.tunnelSourceInterfaceLoopback : undefined;
-            resourceInputs["tunnelSourceInterfaceLoopbackVariable"] = state ? state.tunnelSourceInterfaceLoopbackVariable : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = state ? state.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceIpv4Address"] = state ? state.tunnelSourceIpv4Address : undefined;
-            resourceInputs["tunnelSourceIpv4AddressVariable"] = state ? state.tunnelSourceIpv4AddressVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["applicationTunnelType"] = state?.applicationTunnelType;
+            resourceInputs["applicationTunnelTypeVariable"] = state?.applicationTunnelTypeVariable;
+            resourceInputs["clearDontFragment"] = state?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = state?.clearDontFragmentVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["interfaceDescription"] = state?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["ipMtu"] = state?.ipMtu;
+            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
+            resourceInputs["ipv4Address"] = state?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["ipv4SubnetMask"] = state?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["tcpMss"] = state?.tcpMss;
+            resourceInputs["tcpMssVariable"] = state?.tcpMssVariable;
+            resourceInputs["transportWanVpnFeatureId"] = state?.transportWanVpnFeatureId;
+            resourceInputs["tunnelDestinationIpv4Address"] = state?.tunnelDestinationIpv4Address;
+            resourceInputs["tunnelDestinationIpv4AddressVariable"] = state?.tunnelDestinationIpv4AddressVariable;
+            resourceInputs["tunnelRouteViaLoopback"] = state?.tunnelRouteViaLoopback;
+            resourceInputs["tunnelRouteViaLoopbackVariable"] = state?.tunnelRouteViaLoopbackVariable;
+            resourceInputs["tunnelSourceInterface"] = state?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceLoopback"] = state?.tunnelSourceInterfaceLoopback;
+            resourceInputs["tunnelSourceInterfaceLoopbackVariable"] = state?.tunnelSourceInterfaceLoopbackVariable;
+            resourceInputs["tunnelSourceInterfaceVariable"] = state?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceIpv4Address"] = state?.tunnelSourceIpv4Address;
+            resourceInputs["tunnelSourceIpv4AddressVariable"] = state?.tunnelSourceIpv4AddressVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportWanVpnInterfaceGreFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.transportWanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.transportWanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'transportWanVpnFeatureId'");
             }
-            resourceInputs["applicationTunnelType"] = args ? args.applicationTunnelType : undefined;
-            resourceInputs["applicationTunnelTypeVariable"] = args ? args.applicationTunnelTypeVariable : undefined;
-            resourceInputs["clearDontFragment"] = args ? args.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = args ? args.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["interfaceDescription"] = args ? args.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = args ? args.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["ipMtu"] = args ? args.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = args ? args.ipMtuVariable : undefined;
-            resourceInputs["ipv4Address"] = args ? args.ipv4Address : undefined;
-            resourceInputs["ipv4AddressVariable"] = args ? args.ipv4AddressVariable : undefined;
-            resourceInputs["ipv4SubnetMask"] = args ? args.ipv4SubnetMask : undefined;
-            resourceInputs["ipv4SubnetMaskVariable"] = args ? args.ipv4SubnetMaskVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["tcpMss"] = args ? args.tcpMss : undefined;
-            resourceInputs["tcpMssVariable"] = args ? args.tcpMssVariable : undefined;
-            resourceInputs["transportWanVpnFeatureId"] = args ? args.transportWanVpnFeatureId : undefined;
-            resourceInputs["tunnelDestinationIpv4Address"] = args ? args.tunnelDestinationIpv4Address : undefined;
-            resourceInputs["tunnelDestinationIpv4AddressVariable"] = args ? args.tunnelDestinationIpv4AddressVariable : undefined;
-            resourceInputs["tunnelRouteViaLoopback"] = args ? args.tunnelRouteViaLoopback : undefined;
-            resourceInputs["tunnelRouteViaLoopbackVariable"] = args ? args.tunnelRouteViaLoopbackVariable : undefined;
-            resourceInputs["tunnelSourceInterface"] = args ? args.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceLoopback"] = args ? args.tunnelSourceInterfaceLoopback : undefined;
-            resourceInputs["tunnelSourceInterfaceLoopbackVariable"] = args ? args.tunnelSourceInterfaceLoopbackVariable : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = args ? args.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceIpv4Address"] = args ? args.tunnelSourceIpv4Address : undefined;
-            resourceInputs["tunnelSourceIpv4AddressVariable"] = args ? args.tunnelSourceIpv4AddressVariable : undefined;
+            resourceInputs["applicationTunnelType"] = args?.applicationTunnelType;
+            resourceInputs["applicationTunnelTypeVariable"] = args?.applicationTunnelTypeVariable;
+            resourceInputs["clearDontFragment"] = args?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = args?.clearDontFragmentVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["interfaceDescription"] = args?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["ipMtu"] = args?.ipMtu;
+            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
+            resourceInputs["ipv4Address"] = args?.ipv4Address;
+            resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["ipv4SubnetMask"] = args?.ipv4SubnetMask;
+            resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["tcpMss"] = args?.tcpMss;
+            resourceInputs["tcpMssVariable"] = args?.tcpMssVariable;
+            resourceInputs["transportWanVpnFeatureId"] = args?.transportWanVpnFeatureId;
+            resourceInputs["tunnelDestinationIpv4Address"] = args?.tunnelDestinationIpv4Address;
+            resourceInputs["tunnelDestinationIpv4AddressVariable"] = args?.tunnelDestinationIpv4AddressVariable;
+            resourceInputs["tunnelRouteViaLoopback"] = args?.tunnelRouteViaLoopback;
+            resourceInputs["tunnelRouteViaLoopbackVariable"] = args?.tunnelRouteViaLoopbackVariable;
+            resourceInputs["tunnelSourceInterface"] = args?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceLoopback"] = args?.tunnelSourceInterfaceLoopback;
+            resourceInputs["tunnelSourceInterfaceLoopbackVariable"] = args?.tunnelSourceInterfaceLoopbackVariable;
+            resourceInputs["tunnelSourceInterfaceVariable"] = args?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceIpv4Address"] = args?.tunnelSourceIpv4Address;
+            resourceInputs["tunnelSourceIpv4AddressVariable"] = args?.tunnelSourceIpv4AddressVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -303,7 +305,8 @@ export class TransportWanVpnInterfaceGreFeature extends pulumi.CustomResource {
  */
 export interface TransportWanVpnInterfaceGreFeatureState {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
     applicationTunnelType?: pulumi.Input<string>;
     /**
@@ -311,7 +314,8 @@ export interface TransportWanVpnInterfaceGreFeatureState {
      */
     applicationTunnelTypeVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -343,7 +347,9 @@ export interface TransportWanVpnInterfaceGreFeatureState {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+     * Interface MTU <576..9976>, in bytes
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -356,11 +362,7 @@ export interface TransportWanVpnInterfaceGreFeatureState {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -372,7 +374,8 @@ export interface TransportWanVpnInterfaceGreFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `false`
+     * Administrative state
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -380,7 +383,8 @@ export interface TransportWanVpnInterfaceGreFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**
@@ -442,7 +446,8 @@ export interface TransportWanVpnInterfaceGreFeatureState {
  */
 export interface TransportWanVpnInterfaceGreFeatureArgs {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      */
     applicationTunnelType?: pulumi.Input<string>;
     /**
@@ -450,7 +455,8 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
      */
     applicationTunnelTypeVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -482,7 +488,9 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <576..9976>, in bytes - Range: `576`-`9976` - Default value: `1500`
+     * Interface MTU <576..9976>, in bytes
+     *   - Range: `576`-`9976`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -495,11 +503,7 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
@@ -511,7 +515,8 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `false`
+     * Administrative state
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -519,7 +524,8 @@ export interface TransportWanVpnInterfaceGreFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMss?: pulumi.Input<number>;
     /**

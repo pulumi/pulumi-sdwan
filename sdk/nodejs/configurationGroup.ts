@@ -70,35 +70,37 @@ export class ConfigurationGroup extends pulumi.CustomResource {
     /**
      * Description
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * List of devices
      */
-    public readonly devices!: pulumi.Output<outputs.ConfigurationGroupDevice[] | undefined>;
+    declare public readonly devices: pulumi.Output<outputs.ConfigurationGroupDevice[] | undefined>;
     /**
      * List of feature profile IDs
      */
-    public readonly featureProfileIds!: pulumi.Output<string[] | undefined>;
+    declare public readonly featureProfileIds: pulumi.Output<string[] | undefined>;
     /**
      * List of all associated feature versions
      */
-    public readonly featureVersions!: pulumi.Output<string[] | undefined>;
+    declare public readonly featureVersions: pulumi.Output<string[] | undefined>;
     /**
      * The name of the configuration group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      */
-    public readonly solution!: pulumi.Output<string>;
+    declare public readonly solution: pulumi.Output<string>;
     /**
      * List of topology device types
      */
-    public readonly topologyDevices!: pulumi.Output<outputs.ConfigurationGroupTopologyDevice[] | undefined>;
+    declare public readonly topologyDevices: pulumi.Output<outputs.ConfigurationGroupTopologyDevice[] | undefined>;
     /**
-     * Number of devices per site - Range: `1`-`20`
+     * Number of devices per site
+     *   - Range: `1`-`20`
      */
-    public readonly topologySiteDevices!: pulumi.Output<number | undefined>;
+    declare public readonly topologySiteDevices: pulumi.Output<number | undefined>;
 
     /**
      * Create a ConfigurationGroup resource with the given unique name, arguments, and options.
@@ -113,30 +115,30 @@ export class ConfigurationGroup extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ConfigurationGroupState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["featureProfileIds"] = state ? state.featureProfileIds : undefined;
-            resourceInputs["featureVersions"] = state ? state.featureVersions : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["solution"] = state ? state.solution : undefined;
-            resourceInputs["topologyDevices"] = state ? state.topologyDevices : undefined;
-            resourceInputs["topologySiteDevices"] = state ? state.topologySiteDevices : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["devices"] = state?.devices;
+            resourceInputs["featureProfileIds"] = state?.featureProfileIds;
+            resourceInputs["featureVersions"] = state?.featureVersions;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["solution"] = state?.solution;
+            resourceInputs["topologyDevices"] = state?.topologyDevices;
+            resourceInputs["topologySiteDevices"] = state?.topologySiteDevices;
         } else {
             const args = argsOrState as ConfigurationGroupArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.solution === undefined) && !opts.urn) {
+            if (args?.solution === undefined && !opts.urn) {
                 throw new Error("Missing required property 'solution'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["devices"] = args ? args.devices : undefined;
-            resourceInputs["featureProfileIds"] = args ? args.featureProfileIds : undefined;
-            resourceInputs["featureVersions"] = args ? args.featureVersions : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["solution"] = args ? args.solution : undefined;
-            resourceInputs["topologyDevices"] = args ? args.topologyDevices : undefined;
-            resourceInputs["topologySiteDevices"] = args ? args.topologySiteDevices : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["devices"] = args?.devices;
+            resourceInputs["featureProfileIds"] = args?.featureProfileIds;
+            resourceInputs["featureVersions"] = args?.featureVersions;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["solution"] = args?.solution;
+            resourceInputs["topologyDevices"] = args?.topologyDevices;
+            resourceInputs["topologySiteDevices"] = args?.topologySiteDevices;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ConfigurationGroup.__pulumiType, name, resourceInputs, opts);
@@ -168,7 +170,8 @@ export interface ConfigurationGroupState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      */
     solution?: pulumi.Input<string>;
     /**
@@ -176,7 +179,8 @@ export interface ConfigurationGroupState {
      */
     topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[]>;
     /**
-     * Number of devices per site - Range: `1`-`20`
+     * Number of devices per site
+     *   - Range: `1`-`20`
      */
     topologySiteDevices?: pulumi.Input<number>;
 }
@@ -206,7 +210,8 @@ export interface ConfigurationGroupArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      */
     solution: pulumi.Input<string>;
     /**
@@ -214,7 +219,8 @@ export interface ConfigurationGroupArgs {
      */
     topologyDevices?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupTopologyDevice>[]>;
     /**
-     * Number of devices per site - Range: `1`-`20`
+     * Number of devices per site
+     *   - Range: `1`-`20`
      */
     topologySiteDevices?: pulumi.Input<number>;
 }

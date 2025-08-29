@@ -92,14 +92,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.addressVariable);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Export(name="arpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Output<Optional<Integer>> arpTimeout() {
@@ -120,14 +124,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.arpTimeoutVariable);
     }
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     @Export(name="autoBandwidthDetect", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> autoBandwidthDetect;
 
     /**
-     * @return Interface auto detect bandwidth - Default value: `false`
+     * @return Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> autoBandwidthDetect() {
@@ -176,14 +182,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.autonegotiateVariable);
     }
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Export(name="bandwidthDownstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Output<Optional<Integer>> bandwidthDownstream() {
@@ -204,14 +212,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.bandwidthDownstreamVariable);
     }
     /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Export(name="bandwidthUpstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> bandwidthUpstream;
 
     /**
-     * @return Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Output<Optional<Integer>> bandwidthUpstream() {
@@ -232,14 +242,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.bandwidthUpstreamVariable);
     }
     /**
-     * Block packets originating from IP address that is not from this source - Default value: `false`
+     * Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      * 
      */
     @Export(name="blockNonSourceIp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> blockNonSourceIp;
 
     /**
-     * @return Block packets originating from IP address that is not from this source - Default value: `false`
+     * @return Block packets originating from IP address that is not from this source
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> blockNonSourceIp() {
@@ -260,14 +272,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.blockNonSourceIpVariable);
     }
     /**
-     * Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+     * Enable core region
+     *   - Choices: `core`, `core-shared`
+     *   - Default value: `core`
      * 
      */
     @Export(name="coreRegion", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> coreRegion;
 
     /**
-     * @return Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+     * @return Enable core region
+     *   - Choices: `core`, `core-shared`
+     *   - Default value: `core`
      * 
      */
     public Output<Optional<String>> coreRegion() {
@@ -302,46 +318,50 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Enable DHCP - Default value: `false`
+     * Enable DHCP
+     *   - Default value: `false`
      * 
      */
     @Export(name="dhcp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> dhcp;
 
     /**
-     * @return Enable DHCP - Default value: `false`
+     * @return Enable DHCP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> dhcp() {
         return Codegen.optional(this.dhcp);
     }
     /**
-     * Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Export(name="dhcpDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> dhcpDistance;
 
     /**
-     * @return Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * @return Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> dhcpDistance() {
@@ -376,14 +396,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.dhcpVariable);
     }
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Export(name="dhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> dhcpv6;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> dhcpv6() {
@@ -404,14 +426,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.dhcpv6Variable);
     }
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Export(name="duplex", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Output<Optional<String>> duplex() {
@@ -432,28 +456,32 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable core region - Default value: `false`
+     * Enable core region
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableCoreRegion", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableCoreRegion;
 
     /**
-     * @return Enable core region - Default value: `false`
+     * @return Enable core region
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableCoreRegion() {
         return Codegen.optional(this.enableCoreRegion);
     }
     /**
-     * Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableSgt", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableSgt;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * @return Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableSgt() {
@@ -516,14 +544,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.greTunnelXconnectVariable);
     }
     /**
-     * Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+     * Set this option to disable the icmp/icmpv6 redirect packets
+     *   - Default value: `true`
      * 
      */
     @Export(name="icmpRedirectDisable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+     * @return Set this option to disable the icmp/icmpv6 redirect packets
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> icmpRedirectDisable() {
@@ -572,16 +602,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` -
-     * Default value: `1500`
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -602,16 +634,14 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceMtuVariable);
     }
     /**
-     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     @Export(name="interfaceName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceName;
 
     /**
-     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     public Output<Optional<String>> interfaceName() {
@@ -632,14 +662,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipDirectedBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipDirectedBroadcast() {
@@ -660,16 +692,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -830,14 +864,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv6DhcpHelpers);
     }
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6Nat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6Nat;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6Nat() {
@@ -886,14 +922,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.ipv6Vrrps);
     }
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Export(name="loadInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Output<Optional<Integer>> loadInterval() {
@@ -942,14 +982,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.macAddressVariable);
     }
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Export(name="mediaType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Output<Optional<String>> mediaType() {
@@ -984,42 +1026,48 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return this.name;
     }
     /**
-     * Network Address Translation on this interface - Default value: `false`
+     * Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="nat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat;
 
     /**
-     * @return Network Address Translation on this interface - Default value: `false`
+     * @return Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat() {
         return Codegen.optional(this.nat);
     }
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="nat64Interface", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat64Interface;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat64Interface() {
         return Codegen.optional(this.nat64Interface);
     }
     /**
-     * NAT66 on this interface - Default value: `false`
+     * NAT66 on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="nat66Interface", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat66Interface;
 
     /**
-     * @return NAT66 on this interface - Default value: `false`
+     * @return NAT66 on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat66Interface() {
@@ -1054,14 +1102,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.natInsideSourceLoopbackInterfaceVariable);
     }
     /**
-     * Enable port translation(PAT) - Default value: `true`
+     * Enable port translation(PAT)
+     *   - Default value: `true`
      * 
      */
     @Export(name="natOverload", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> natOverload;
 
     /**
-     * @return Enable port translation(PAT) - Default value: `true`
+     * @return Enable port translation(PAT)
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> natOverload() {
@@ -1166,14 +1216,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.natPoolRangeStartVariable);
     }
     /**
-     * NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * NAT type
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      * 
      */
     @Export(name="natType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natType;
 
     /**
-     * @return NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+     * @return NAT type
+     *   - Choices: `interface`, `pool`, `loopback`
+     *   - Default value: `interface`
      * 
      */
     public Output<Optional<String>> natType() {
@@ -1194,14 +1248,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.natTypeVariable);
     }
     /**
-     * Configure interface as Power-over-Ethernet source - Default value: `false`
+     * Configure interface as Power-over-Ethernet source
+     *   - Default value: `false`
      * 
      */
     @Export(name="poe", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> poe;
 
     /**
-     * @return Configure interface as Power-over-Ethernet source - Default value: `false`
+     * @return Configure interface as Power-over-Ethernet source
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> poe() {
@@ -1222,28 +1278,32 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.poeVariable);
     }
     /**
-     * Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+     * Enable/Disable CTS SGT propagation on an interface.
+     *   - Default value: `true`
      * 
      */
     @Export(name="propagateSgt", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> propagateSgt;
 
     /**
-     * @return Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+     * @return Enable/Disable CTS SGT propagation on an interface.
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> propagateSgt() {
         return Codegen.optional(this.propagateSgt);
     }
     /**
-     * Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveBandwidthDownstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveBandwidthDownstream;
 
     /**
-     * @return Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveBandwidthDownstream() {
@@ -1264,14 +1324,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveBandwidthDownstreamVariable);
     }
     /**
-     * Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveBandwidthUpstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveBandwidthUpstream;
 
     /**
-     * @return Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveBandwidthUpstream() {
@@ -1292,14 +1354,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveBandwidthUpstreamVariable);
     }
     /**
-     * Downstream max bandwidth limit - Range: `8`-`100000000`
+     * Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveMaxDownstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveMaxDownstream;
 
     /**
-     * @return Downstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveMaxDownstream() {
@@ -1320,14 +1384,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveMaxDownstreamVariable);
     }
     /**
-     * Upstream max bandwidth limit - Range: `8`-`100000000`
+     * Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveMaxUpstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveMaxUpstream;
 
     /**
-     * @return Upstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveMaxUpstream() {
@@ -1348,14 +1414,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveMaxUpstreamVariable);
     }
     /**
-     * Downstream min bandwidth limit - Range: `8`-`100000000`
+     * Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveMinDownstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveMinDownstream;
 
     /**
-     * @return Downstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveMinDownstream() {
@@ -1376,14 +1444,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveMinDownstreamVariable);
     }
     /**
-     * Upstream min bandwidth limit - Range: `8`-`100000000`
+     * Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="qosAdaptiveMinUpstream", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptiveMinUpstream;
 
     /**
-     * @return Upstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> qosAdaptiveMinUpstream() {
@@ -1404,14 +1474,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.qosAdaptiveMinUpstreamVariable);
     }
     /**
-     * Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     @Export(name="qosAdaptivePeriod", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> qosAdaptivePeriod;
 
     /**
-     * @return Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * @return Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     public Output<Optional<Integer>> qosAdaptivePeriod() {
@@ -1516,14 +1590,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.rewriteRuleNameVariable);
     }
     /**
-     * Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+     * Enable secondary region
+     *   - Choices: `off`, `secondary-only`, `secondary-shared`
+     *   - Default value: `off`
      * 
      */
     @Export(name="secondaryRegion", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> secondaryRegion;
 
     /**
-     * @return Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+     * @return Enable secondary region
+     *   - Choices: `off`, `secondary-only`, `secondary-shared`
+     *   - Default value: `off`
      * 
      */
     public Output<Optional<String>> secondaryRegion() {
@@ -1544,28 +1622,32 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.secondaryRegionVariable);
     }
     /**
-     * Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     @Export(name="sgtEnforcement", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> sgtEnforcement;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+     * @return Enables the interface for CTS SGT authorization and forwarding.
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> sgtEnforcement() {
         return Codegen.optional(this.sgtEnforcement);
     }
     /**
-     * SGT value between 2 and 65519. - Range: `2`-`65519`
+     * SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     @Export(name="sgtEnforcementSgt", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> sgtEnforcementSgt;
 
     /**
-     * @return SGT value between 2 and 65519. - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     public Output<Optional<Integer>> sgtEnforcementSgt() {
@@ -1586,14 +1668,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.sgtEnforcementSgtVariable);
     }
     /**
-     * 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="shapingRate", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> shapingRate;
 
     /**
-     * @return 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> shapingRate() {
@@ -1614,14 +1698,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.shapingRateVariable);
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -1642,14 +1728,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Output<Optional<String>> speed() {
@@ -1726,28 +1814,32 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.staticPortForwardEntries);
     }
     /**
-     * SGT value between 2 and 65519. - Range: `2`-`65519`
+     * SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     @Export(name="staticSgt", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> staticSgt;
 
     /**
-     * @return SGT value between 2 and 65519. - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519.
+     *   - Range: `2`-`65519`
      * 
      */
     public Output<Optional<Integer>> staticSgt() {
         return Codegen.optional(this.staticSgt);
     }
     /**
-     * Indicates that the interface is trustworthy for CTS. - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS.
+     *   - Default value: `false`
      * 
      */
     @Export(name="staticSgtTrusted", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> staticSgtTrusted;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS. - Default value: `false`
+     * @return Indicates that the interface is trustworthy for CTS.
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> staticSgtTrusted() {
@@ -1768,14 +1860,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.staticSgtVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMssAdjust", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMssAdjust() {
@@ -1796,14 +1890,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tcpMssAdjustVariable);
     }
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     @Export(name="tcpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> tcpTimeout() {
@@ -1894,14 +1992,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.trackers);
     }
     /**
-     * Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+     * Tunnels Bandwidth Percent
+     *   - Range: `1`-`99`
+     *   - Default value: `50`
      * 
      */
     @Export(name="tunnelBandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelBandwidth;
 
     /**
-     * @return Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+     * @return Tunnels Bandwidth Percent
+     *   - Range: `1`-`99`
+     *   - Default value: `50`
      * 
      */
     public Output<Optional<Integer>> tunnelBandwidth() {
@@ -1922,14 +2024,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelBandwidthVariable);
     }
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowAll", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowAll() {
@@ -1950,14 +2054,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowAllVariable);
     }
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowBgp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP - Default value: `false`
+     * @return Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowBgp() {
@@ -1978,14 +2084,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowBgpVariable);
     }
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDhcp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP - Default value: `true`
+     * @return Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowDhcp() {
@@ -2006,14 +2114,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowDhcpVariable);
     }
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDns", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS - Default value: `true`
+     * @return Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowDns() {
@@ -2034,14 +2144,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowDnsVariable);
     }
     /**
-     * Allow/Deny Https - Default value: `true`
+     * Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowHttps", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny Https - Default value: `true`
+     * @return Allow/Deny Https
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowHttps() {
@@ -2062,14 +2174,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowHttpsVariable);
     }
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowIcmp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP - Default value: `true`
+     * @return Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowIcmp() {
@@ -2090,14 +2204,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowIcmpVariable);
     }
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowNetconf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF - Default value: `false`
+     * @return Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowNetconf() {
@@ -2118,14 +2234,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowNetconfVariable);
     }
     /**
-     * Allow/Deny NTP - Default value: `false`
+     * Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowNtp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP - Default value: `false`
+     * @return Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowNtp() {
@@ -2146,14 +2264,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowNtpVariable);
     }
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowOspf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF - Default value: `false`
+     * @return Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowOspf() {
@@ -2174,14 +2294,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowOspfVariable);
     }
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowSnmp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP - Default value: `false`
+     * @return Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowSnmp() {
@@ -2202,14 +2324,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowSnmpVariable);
     }
     /**
-     * Allow/Deny SSH - Default value: `false`
+     * Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowSsh", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH - Default value: `false`
+     * @return Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowSsh() {
@@ -2230,14 +2354,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceAllowSshVariable);
     }
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowStun", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN - Default value: `false`
+     * @return Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowStun() {
@@ -2286,14 +2412,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnelVariable);
     }
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceBorder", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceBorder() {
@@ -2314,16 +2442,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceBorderVariable);
     }
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     @Export(name="tunnelInterfaceCarrier", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCarrier() {
@@ -2344,14 +2474,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceCarrierVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceClearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceClearDontFragment() {
@@ -2372,32 +2504,34 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceClearDontFragmentVariable);
     }
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     @Export(name="tunnelInterfaceColor", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * @return Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColor() {
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceColorRestrict", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceColorRestrict() {
@@ -2432,14 +2566,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceColorVariable);
     }
     /**
-     * Allow Control Connection - Default value: `true`
+     * Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfaceControlConnections", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceControlConnections;
 
     /**
-     * @return Allow Control Connection - Default value: `true`
+     * @return Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceControlConnections() {
@@ -2558,14 +2694,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceGroupsVariable);
     }
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="tunnelInterfaceHelloInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloInterval() {
@@ -2586,14 +2726,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceHelloIntervalVariable);
     }
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     @Export(name="tunnelInterfaceHelloTolerance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceHelloTolerance() {
@@ -2614,14 +2758,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceHelloToleranceVariable);
     }
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLastResortCircuit", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLastResortCircuit() {
@@ -2642,14 +2788,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceLastResortCircuitVariable);
     }
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceLowBandwidthLink", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceLowBandwidthLink() {
@@ -2670,14 +2818,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLinkVariable);
     }
     /**
-     * Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     @Export(name="tunnelInterfaceMaxControlConnections", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+     * @return Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`100`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceMaxControlConnections() {
@@ -2698,14 +2848,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceMaxControlConnectionsVariable);
     }
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceNatRefreshInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceNatRefreshInterval() {
@@ -2726,14 +2880,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceNatRefreshIntervalVariable);
     }
     /**
-     * Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceNetworkBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceNetworkBroadcast() {
@@ -2754,14 +2910,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcastVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     @Export(name="tunnelInterfacePortHop", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfacePortHop() {
@@ -2782,14 +2940,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfacePortHopVariable);
     }
     /**
-     * CTS SGT Propagation configuration - Default value: `false`
+     * CTS SGT Propagation configuration
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfacePropagateSgt", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfacePropagateSgt;
 
     /**
-     * @return CTS SGT Propagation configuration - Default value: `false`
+     * @return CTS SGT Propagation configuration
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfacePropagateSgt() {
@@ -2810,14 +2970,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfacePropagateSgtVariable);
     }
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tunnelInterfaceTunnelTcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceTunnelTcpMss() {
@@ -2838,14 +3000,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMssVariable);
     }
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceVbondAsStunServer", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceVbondAsStunServer() {
@@ -2866,14 +3030,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServerVariable);
     }
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     @Export(name="tunnelInterfaceVmanageConnectionPreference", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> tunnelInterfaceVmanageConnectionPreference() {
@@ -2894,14 +3062,16 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreferenceVariable);
     }
     /**
-     * Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * Set tunnel QoS mode
+     *   - Choices: `hub`, `spoke`
      * 
      */
     @Export(name="tunnelQosMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `hub`, `spoke`
+     * @return Set tunnel QoS mode
+     *   - Choices: `hub`, `spoke`
      * 
      */
     public Output<Optional<String>> tunnelQosMode() {
@@ -2922,14 +3092,18 @@ public class CiscoVpnInterfaceFeatureTemplate extends com.pulumi.resources.Custo
         return Codegen.optional(this.tunnelQosModeVariable);
     }
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     @Export(name="udpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> udpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> udpTimeout() {

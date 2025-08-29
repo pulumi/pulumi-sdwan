@@ -63,23 +63,23 @@ export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extend
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Service LAN VPN Feature ID
      */
-    public readonly serviceLanVpnFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnFeatureId: pulumi.Output<string>;
     /**
      * Service LAN VPN Interface Ethernet Feature ID
      */
-    public readonly serviceLanVpnInterfaceEthernetFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceLanVpnInterfaceEthernetFeatureId: pulumi.Output<string>;
     /**
      * Service Tracker Feature ID
      */
-    public readonly serviceTrackerFeatureId!: pulumi.Output<string>;
+    declare public readonly serviceTrackerFeatureId: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature resource with the given unique name, arguments, and options.
@@ -94,29 +94,29 @@ export class ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeature extend
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureState | undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = state ? state.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = state ? state.serviceLanVpnInterfaceEthernetFeatureId : undefined;
-            resourceInputs["serviceTrackerFeatureId"] = state ? state.serviceTrackerFeatureId : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
+            resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = state?.serviceLanVpnInterfaceEthernetFeatureId;
+            resourceInputs["serviceTrackerFeatureId"] = state?.serviceTrackerFeatureId;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceEthernetFeatureAssociateTrackerFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serviceLanVpnFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
             }
-            if ((!args || args.serviceLanVpnInterfaceEthernetFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceLanVpnInterfaceEthernetFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnInterfaceEthernetFeatureId'");
             }
-            if ((!args || args.serviceTrackerFeatureId === undefined) && !opts.urn) {
+            if (args?.serviceTrackerFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceTrackerFeatureId'");
             }
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["serviceLanVpnFeatureId"] = args ? args.serviceLanVpnFeatureId : undefined;
-            resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = args ? args.serviceLanVpnInterfaceEthernetFeatureId : undefined;
-            resourceInputs["serviceTrackerFeatureId"] = args ? args.serviceTrackerFeatureId : undefined;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
+            resourceInputs["serviceLanVpnInterfaceEthernetFeatureId"] = args?.serviceLanVpnInterfaceEthernetFeatureId;
+            resourceInputs["serviceTrackerFeatureId"] = args?.serviceTrackerFeatureId;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

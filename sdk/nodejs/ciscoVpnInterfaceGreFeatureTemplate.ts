@@ -49,142 +49,147 @@ export class CiscoVpnInterfaceGreFeatureTemplate extends pulumi.CustomResource {
     /**
      * Apply ACL
      */
-    public readonly accessLists!: pulumi.Output<outputs.CiscoVpnInterfaceGreFeatureTemplateAccessList[] | undefined>;
+    declare public readonly accessLists: pulumi.Output<outputs.CiscoVpnInterfaceGreFeatureTemplateAccessList[] | undefined>;
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      */
-    public readonly application!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly applicationVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
-     */
-    public readonly clearDontFragment!: pulumi.Output<boolean | undefined>;
+    declare public readonly application: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly clearDontFragmentVariable!: pulumi.Output<string | undefined>;
+    declare public readonly applicationVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
+     */
+    declare public readonly clearDontFragment: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly clearDontFragmentVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * Interface description
      */
-    public readonly interfaceDescription!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescription: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceDescriptionVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceDescriptionVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-     * present
+     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
      */
-    public readonly interfaceName!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly interfaceNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
      * Assign IPv4 address
      */
-    public readonly ipAddress!: pulumi.Output<string | undefined>;
+    declare public readonly ipAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      */
-    public readonly ipMtu!: pulumi.Output<number | undefined>;
+    declare public readonly ipMtu: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipMtuVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Name of rewrite rule
      */
-    public readonly rewriteRule!: pulumi.Output<string | undefined>;
+    declare public readonly rewriteRule: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly rewriteRuleVariable!: pulumi.Output<string | undefined>;
+    declare public readonly rewriteRuleVariable: pulumi.Output<string | undefined>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
-    /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
-     */
-    public readonly tcpMssAdjust!: pulumi.Output<number | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpMssAdjustVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
+     */
+    declare public readonly tcpMssAdjust: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tcpMssAdjustVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly trackerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerVariable: pulumi.Output<string | undefined>;
     /**
      * Enable tracker for this interface
      */
-    public readonly trackers!: pulumi.Output<string[] | undefined>;
+    declare public readonly trackers: pulumi.Output<string[] | undefined>;
     /**
      * Tunnel destination IP Address
      */
-    public readonly tunnelDestination!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestination: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelDestinationVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationVariable: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    public readonly tunnelRouteVia!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteVia: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelRouteViaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelRouteViaVariable: pulumi.Output<string | undefined>;
     /**
      * Tunnel source IP Address
      */
-    public readonly tunnelSource!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSource: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
-    public readonly tunnelSourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceInterfaceVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly tunnelSourceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoVpnInterfaceGreFeatureTemplate resource with the given unique name, arguments, and options.
@@ -199,80 +204,80 @@ export class CiscoVpnInterfaceGreFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoVpnInterfaceGreFeatureTemplateState | undefined;
-            resourceInputs["accessLists"] = state ? state.accessLists : undefined;
-            resourceInputs["application"] = state ? state.application : undefined;
-            resourceInputs["applicationVariable"] = state ? state.applicationVariable : undefined;
-            resourceInputs["clearDontFragment"] = state ? state.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = state ? state.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["interfaceDescription"] = state ? state.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = state ? state.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = state ? state.interfaceNameVariable : undefined;
-            resourceInputs["ipAddress"] = state ? state.ipAddress : undefined;
-            resourceInputs["ipAddressVariable"] = state ? state.ipAddressVariable : undefined;
-            resourceInputs["ipMtu"] = state ? state.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = state ? state.ipMtuVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rewriteRule"] = state ? state.rewriteRule : undefined;
-            resourceInputs["rewriteRuleVariable"] = state ? state.rewriteRuleVariable : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["tcpMssAdjust"] = state ? state.tcpMssAdjust : undefined;
-            resourceInputs["tcpMssAdjustVariable"] = state ? state.tcpMssAdjustVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["trackerVariable"] = state ? state.trackerVariable : undefined;
-            resourceInputs["trackers"] = state ? state.trackers : undefined;
-            resourceInputs["tunnelDestination"] = state ? state.tunnelDestination : undefined;
-            resourceInputs["tunnelDestinationVariable"] = state ? state.tunnelDestinationVariable : undefined;
-            resourceInputs["tunnelRouteVia"] = state ? state.tunnelRouteVia : undefined;
-            resourceInputs["tunnelRouteViaVariable"] = state ? state.tunnelRouteViaVariable : undefined;
-            resourceInputs["tunnelSource"] = state ? state.tunnelSource : undefined;
-            resourceInputs["tunnelSourceInterface"] = state ? state.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = state ? state.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceVariable"] = state ? state.tunnelSourceVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["accessLists"] = state?.accessLists;
+            resourceInputs["application"] = state?.application;
+            resourceInputs["applicationVariable"] = state?.applicationVariable;
+            resourceInputs["clearDontFragment"] = state?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = state?.clearDontFragmentVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["interfaceDescription"] = state?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
+            resourceInputs["ipAddress"] = state?.ipAddress;
+            resourceInputs["ipAddressVariable"] = state?.ipAddressVariable;
+            resourceInputs["ipMtu"] = state?.ipMtu;
+            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rewriteRule"] = state?.rewriteRule;
+            resourceInputs["rewriteRuleVariable"] = state?.rewriteRuleVariable;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["tcpMssAdjust"] = state?.tcpMssAdjust;
+            resourceInputs["tcpMssAdjustVariable"] = state?.tcpMssAdjustVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["trackerVariable"] = state?.trackerVariable;
+            resourceInputs["trackers"] = state?.trackers;
+            resourceInputs["tunnelDestination"] = state?.tunnelDestination;
+            resourceInputs["tunnelDestinationVariable"] = state?.tunnelDestinationVariable;
+            resourceInputs["tunnelRouteVia"] = state?.tunnelRouteVia;
+            resourceInputs["tunnelRouteViaVariable"] = state?.tunnelRouteViaVariable;
+            resourceInputs["tunnelSource"] = state?.tunnelSource;
+            resourceInputs["tunnelSourceInterface"] = state?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceVariable"] = state?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceVariable"] = state?.tunnelSourceVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoVpnInterfaceGreFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["accessLists"] = args ? args.accessLists : undefined;
-            resourceInputs["application"] = args ? args.application : undefined;
-            resourceInputs["applicationVariable"] = args ? args.applicationVariable : undefined;
-            resourceInputs["clearDontFragment"] = args ? args.clearDontFragment : undefined;
-            resourceInputs["clearDontFragmentVariable"] = args ? args.clearDontFragmentVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["interfaceDescription"] = args ? args.interfaceDescription : undefined;
-            resourceInputs["interfaceDescriptionVariable"] = args ? args.interfaceDescriptionVariable : undefined;
-            resourceInputs["interfaceName"] = args ? args.interfaceName : undefined;
-            resourceInputs["interfaceNameVariable"] = args ? args.interfaceNameVariable : undefined;
-            resourceInputs["ipAddress"] = args ? args.ipAddress : undefined;
-            resourceInputs["ipAddressVariable"] = args ? args.ipAddressVariable : undefined;
-            resourceInputs["ipMtu"] = args ? args.ipMtu : undefined;
-            resourceInputs["ipMtuVariable"] = args ? args.ipMtuVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rewriteRule"] = args ? args.rewriteRule : undefined;
-            resourceInputs["rewriteRuleVariable"] = args ? args.rewriteRuleVariable : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["tcpMssAdjust"] = args ? args.tcpMssAdjust : undefined;
-            resourceInputs["tcpMssAdjustVariable"] = args ? args.tcpMssAdjustVariable : undefined;
-            resourceInputs["trackerVariable"] = args ? args.trackerVariable : undefined;
-            resourceInputs["trackers"] = args ? args.trackers : undefined;
-            resourceInputs["tunnelDestination"] = args ? args.tunnelDestination : undefined;
-            resourceInputs["tunnelDestinationVariable"] = args ? args.tunnelDestinationVariable : undefined;
-            resourceInputs["tunnelRouteVia"] = args ? args.tunnelRouteVia : undefined;
-            resourceInputs["tunnelRouteViaVariable"] = args ? args.tunnelRouteViaVariable : undefined;
-            resourceInputs["tunnelSource"] = args ? args.tunnelSource : undefined;
-            resourceInputs["tunnelSourceInterface"] = args ? args.tunnelSourceInterface : undefined;
-            resourceInputs["tunnelSourceInterfaceVariable"] = args ? args.tunnelSourceInterfaceVariable : undefined;
-            resourceInputs["tunnelSourceVariable"] = args ? args.tunnelSourceVariable : undefined;
+            resourceInputs["accessLists"] = args?.accessLists;
+            resourceInputs["application"] = args?.application;
+            resourceInputs["applicationVariable"] = args?.applicationVariable;
+            resourceInputs["clearDontFragment"] = args?.clearDontFragment;
+            resourceInputs["clearDontFragmentVariable"] = args?.clearDontFragmentVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["interfaceDescription"] = args?.interfaceDescription;
+            resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
+            resourceInputs["interfaceName"] = args?.interfaceName;
+            resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
+            resourceInputs["ipAddress"] = args?.ipAddress;
+            resourceInputs["ipAddressVariable"] = args?.ipAddressVariable;
+            resourceInputs["ipMtu"] = args?.ipMtu;
+            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rewriteRule"] = args?.rewriteRule;
+            resourceInputs["rewriteRuleVariable"] = args?.rewriteRuleVariable;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["tcpMssAdjust"] = args?.tcpMssAdjust;
+            resourceInputs["tcpMssAdjustVariable"] = args?.tcpMssAdjustVariable;
+            resourceInputs["trackerVariable"] = args?.trackerVariable;
+            resourceInputs["trackers"] = args?.trackers;
+            resourceInputs["tunnelDestination"] = args?.tunnelDestination;
+            resourceInputs["tunnelDestinationVariable"] = args?.tunnelDestinationVariable;
+            resourceInputs["tunnelRouteVia"] = args?.tunnelRouteVia;
+            resourceInputs["tunnelRouteViaVariable"] = args?.tunnelRouteViaVariable;
+            resourceInputs["tunnelSource"] = args?.tunnelSource;
+            resourceInputs["tunnelSourceInterface"] = args?.tunnelSourceInterface;
+            resourceInputs["tunnelSourceInterfaceVariable"] = args?.tunnelSourceInterfaceVariable;
+            resourceInputs["tunnelSourceVariable"] = args?.tunnelSourceVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -290,7 +295,9 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[]>;
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      */
     application?: pulumi.Input<string>;
     /**
@@ -298,7 +305,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     applicationVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -310,9 +318,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -324,8 +331,7 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-     * present
+     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
      */
     interfaceName?: pulumi.Input<string>;
     /**
@@ -341,7 +347,9 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     ipAddressVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -361,7 +369,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     rewriteRuleVariable?: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -369,7 +378,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMssAdjust?: pulumi.Input<number>;
     /**
@@ -435,7 +445,9 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     accessLists?: pulumi.Input<pulumi.Input<inputs.CiscoVpnInterfaceGreFeatureTemplateAccessList>[]>;
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      */
     application?: pulumi.Input<string>;
     /**
@@ -443,7 +455,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     applicationVariable?: pulumi.Input<string>;
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      */
     clearDontFragment?: pulumi.Input<boolean>;
     /**
@@ -455,9 +468,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -469,8 +481,7 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     interfaceDescriptionVariable?: pulumi.Input<string>;
     /**
-     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-     * present
+     * Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
      */
     interfaceName?: pulumi.Input<string>;
     /**
@@ -486,7 +497,9 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     ipAddressVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <576..2000>, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * Interface MTU <576..2000>, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      */
     ipMtu?: pulumi.Input<number>;
     /**
@@ -506,7 +519,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     rewriteRuleVariable?: pulumi.Input<string>;
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -514,7 +528,8 @@ export interface CiscoVpnInterfaceGreFeatureTemplateArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      */
     tcpMssAdjust?: pulumi.Input<number>;
     /**

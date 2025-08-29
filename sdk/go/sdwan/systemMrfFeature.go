@@ -62,21 +62,26 @@ type SystemMrfFeature struct {
 
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+	// Enable migration mode to Multi-Region Fabric
+	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrOutput `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+	// Set BGP community during migration from BGP-core based network
+	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrOutput `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set region ID - Range: `1`-`63`
+	// Set region ID
+	//   - Range: `1`-`63`
 	RegionId pulumi.IntPtrOutput `pulumi:"regionId"`
-	// Set the role for router - Choices: `edge-router`, `border-router`
+	// Set the role for router
+	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrOutput `pulumi:"role"`
 	// Variable name
 	RoleVariable pulumi.StringPtrOutput `pulumi:"roleVariable"`
-	// Set secondary region ID - Range: `1`-`63`
+	// Set secondary region ID
+	//   - Range: `1`-`63`
 	SecondaryRegionId pulumi.IntPtrOutput `pulumi:"secondaryRegionId"`
 	// Variable name
 	SecondaryRegionIdVariable pulumi.StringPtrOutput `pulumi:"secondaryRegionIdVariable"`
@@ -119,21 +124,26 @@ func GetSystemMrfFeature(ctx *pulumi.Context,
 type systemMrfFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+	// Enable migration mode to Multi-Region Fabric
+	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf *string `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+	// Set BGP community during migration from BGP-core based network
+	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity *int `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set region ID - Range: `1`-`63`
+	// Set region ID
+	//   - Range: `1`-`63`
 	RegionId *int `pulumi:"regionId"`
-	// Set the role for router - Choices: `edge-router`, `border-router`
+	// Set the role for router
+	//   - Choices: `edge-router`, `border-router`
 	Role *string `pulumi:"role"`
 	// Variable name
 	RoleVariable *string `pulumi:"roleVariable"`
-	// Set secondary region ID - Range: `1`-`63`
+	// Set secondary region ID
+	//   - Range: `1`-`63`
 	SecondaryRegionId *int `pulumi:"secondaryRegionId"`
 	// Variable name
 	SecondaryRegionIdVariable *string `pulumi:"secondaryRegionIdVariable"`
@@ -144,21 +154,26 @@ type systemMrfFeatureState struct {
 type SystemMrfFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+	// Enable migration mode to Multi-Region Fabric
+	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+	// Set BGP community during migration from BGP-core based network
+	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set region ID - Range: `1`-`63`
+	// Set region ID
+	//   - Range: `1`-`63`
 	RegionId pulumi.IntPtrInput
-	// Set the role for router - Choices: `edge-router`, `border-router`
+	// Set the role for router
+	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrInput
 	// Variable name
 	RoleVariable pulumi.StringPtrInput
-	// Set secondary region ID - Range: `1`-`63`
+	// Set secondary region ID
+	//   - Range: `1`-`63`
 	SecondaryRegionId pulumi.IntPtrInput
 	// Variable name
 	SecondaryRegionIdVariable pulumi.StringPtrInput
@@ -173,21 +188,26 @@ func (SystemMrfFeatureState) ElementType() reflect.Type {
 type systemMrfFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+	// Enable migration mode to Multi-Region Fabric
+	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf *string `pulumi:"enableMigrationToMrf"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+	// Set BGP community during migration from BGP-core based network
+	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity *int `pulumi:"migrationBgpCommunity"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set region ID - Range: `1`-`63`
+	// Set region ID
+	//   - Range: `1`-`63`
 	RegionId *int `pulumi:"regionId"`
-	// Set the role for router - Choices: `edge-router`, `border-router`
+	// Set the role for router
+	//   - Choices: `edge-router`, `border-router`
 	Role *string `pulumi:"role"`
 	// Variable name
 	RoleVariable *string `pulumi:"roleVariable"`
-	// Set secondary region ID - Range: `1`-`63`
+	// Set secondary region ID
+	//   - Range: `1`-`63`
 	SecondaryRegionId *int `pulumi:"secondaryRegionId"`
 	// Variable name
 	SecondaryRegionIdVariable *string `pulumi:"secondaryRegionIdVariable"`
@@ -197,21 +217,26 @@ type systemMrfFeatureArgs struct {
 type SystemMrfFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+	// Enable migration mode to Multi-Region Fabric
+	//   - Choices: `enabled`, `enabled-from-bgp-core`
 	EnableMigrationToMrf pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+	// Set BGP community during migration from BGP-core based network
+	//   - Range: `1`-`4294967295`
 	MigrationBgpCommunity pulumi.IntPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set region ID - Range: `1`-`63`
+	// Set region ID
+	//   - Range: `1`-`63`
 	RegionId pulumi.IntPtrInput
-	// Set the role for router - Choices: `edge-router`, `border-router`
+	// Set the role for router
+	//   - Choices: `edge-router`, `border-router`
 	Role pulumi.StringPtrInput
 	// Variable name
 	RoleVariable pulumi.StringPtrInput
-	// Set secondary region ID - Range: `1`-`63`
+	// Set secondary region ID
+	//   - Range: `1`-`63`
 	SecondaryRegionId pulumi.IntPtrInput
 	// Variable name
 	SecondaryRegionIdVariable pulumi.StringPtrInput
@@ -309,7 +334,8 @@ func (o SystemMrfFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+// Enable migration mode to Multi-Region Fabric
+//   - Choices: `enabled`, `enabled-from-bgp-core`
 func (o SystemMrfFeatureOutput) EnableMigrationToMrf() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.EnableMigrationToMrf }).(pulumi.StringPtrOutput)
 }
@@ -319,7 +345,8 @@ func (o SystemMrfFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+// Set BGP community during migration from BGP-core based network
+//   - Range: `1`-`4294967295`
 func (o SystemMrfFeatureOutput) MigrationBgpCommunity() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntPtrOutput { return v.MigrationBgpCommunity }).(pulumi.IntPtrOutput)
 }
@@ -329,12 +356,14 @@ func (o SystemMrfFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set region ID - Range: `1`-`63`
+// Set region ID
+//   - Range: `1`-`63`
 func (o SystemMrfFeatureOutput) RegionId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntPtrOutput { return v.RegionId }).(pulumi.IntPtrOutput)
 }
 
-// Set the role for router - Choices: `edge-router`, `border-router`
+// Set the role for router
+//   - Choices: `edge-router`, `border-router`
 func (o SystemMrfFeatureOutput) Role() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.Role }).(pulumi.StringPtrOutput)
 }
@@ -344,7 +373,8 @@ func (o SystemMrfFeatureOutput) RoleVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.StringPtrOutput { return v.RoleVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set secondary region ID - Range: `1`-`63`
+// Set secondary region ID
+//   - Range: `1`-`63`
 func (o SystemMrfFeatureOutput) SecondaryRegionId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemMrfFeature) pulumi.IntPtrOutput { return v.SecondaryRegionId }).(pulumi.IntPtrOutput)
 }

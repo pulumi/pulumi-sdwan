@@ -25,27 +25,33 @@ import (
 type SwitchportFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrOutput `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrOutput `pulumi:"ageOutTimeVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces SwitchportFeatureTemplateInterfaceArrayOutput `pulumi:"interfaces"`
-	// Module type - Choices: `4`, `8`, `22`, `50`
+	// Module type
+	//   - Choices: `4`, `8`, `22`, `50`
 	ModuleType pulumi.StringPtrOutput `pulumi:"moduleType"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Number of Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	Slot pulumi.IntPtrOutput `pulumi:"slot"`
 	// Add static MAC address entries for interface
 	StaticMacAddresses SwitchportFeatureTemplateStaticMacAddressArrayOutput `pulumi:"staticMacAddresses"`
-	// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Sub-Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	SubSlot pulumi.IntPtrOutput `pulumi:"subSlot"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
@@ -89,27 +95,33 @@ func GetSwitchportFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SwitchportFeatureTemplate resources.
 type switchportFeatureTemplateState struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime *int `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable *string `pulumi:"ageOutTimeVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces []SwitchportFeatureTemplateInterface `pulumi:"interfaces"`
-	// Module type - Choices: `4`, `8`, `22`, `50`
+	// Module type
+	//   - Choices: `4`, `8`, `22`, `50`
 	ModuleType *string `pulumi:"moduleType"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Number of Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	Slot *int `pulumi:"slot"`
 	// Add static MAC address entries for interface
 	StaticMacAddresses []SwitchportFeatureTemplateStaticMacAddress `pulumi:"staticMacAddresses"`
-	// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Sub-Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	SubSlot *int `pulumi:"subSlot"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
@@ -118,27 +130,33 @@ type switchportFeatureTemplateState struct {
 }
 
 type SwitchportFeatureTemplateState struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrInput
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces SwitchportFeatureTemplateInterfaceArrayInput
-	// Module type - Choices: `4`, `8`, `22`, `50`
+	// Module type
+	//   - Choices: `4`, `8`, `22`, `50`
 	ModuleType pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Number of Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	Slot pulumi.IntPtrInput
 	// Add static MAC address entries for interface
 	StaticMacAddresses SwitchportFeatureTemplateStaticMacAddressArrayInput
-	// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Sub-Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	SubSlot pulumi.IntPtrInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
@@ -151,53 +169,65 @@ func (SwitchportFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type switchportFeatureTemplateArgs struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime *int `pulumi:"ageOutTime"`
 	// Variable name
 	AgeOutTimeVariable *string `pulumi:"ageOutTimeVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces []SwitchportFeatureTemplateInterface `pulumi:"interfaces"`
-	// Module type - Choices: `4`, `8`, `22`, `50`
+	// Module type
+	//   - Choices: `4`, `8`, `22`, `50`
 	ModuleType *string `pulumi:"moduleType"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Number of Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	Slot *int `pulumi:"slot"`
 	// Add static MAC address entries for interface
 	StaticMacAddresses []SwitchportFeatureTemplateStaticMacAddress `pulumi:"staticMacAddresses"`
-	// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Sub-Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	SubSlot *int `pulumi:"subSlot"`
 }
 
 // The set of arguments for constructing a SwitchportFeatureTemplate resource.
 type SwitchportFeatureTemplateArgs struct {
-	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+	// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+	//   - Range: `0`-`1000000`
+	//   - Default value: `300`
 	AgeOutTime pulumi.IntPtrInput
 	// Variable name
 	AgeOutTimeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Interface name: GigabitEthernet0/<>/<> when present
 	Interfaces SwitchportFeatureTemplateInterfaceArrayInput
-	// Module type - Choices: `4`, `8`, `22`, `50`
+	// Module type
+	//   - Choices: `4`, `8`, `22`, `50`
 	ModuleType pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Number of Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	Slot pulumi.IntPtrInput
 	// Add static MAC address entries for interface
 	StaticMacAddresses SwitchportFeatureTemplateStaticMacAddressArrayInput
-	// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+	// Number of Sub-Slots
+	//   - Range: `0`-`31`
+	//   - Default value: `0`
 	SubSlot pulumi.IntPtrInput
 }
 
@@ -288,7 +318,9 @@ func (o SwitchportFeatureTemplateOutput) ToSwitchportFeatureTemplateOutputWithCo
 	return o
 }
 
-// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+//   - Range: `0`-`1000000`
+//   - Default value: `300`
 func (o SwitchportFeatureTemplateOutput) AgeOutTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.IntPtrOutput { return v.AgeOutTime }).(pulumi.IntPtrOutput)
 }
@@ -303,9 +335,8 @@ func (o SwitchportFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o SwitchportFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -315,7 +346,8 @@ func (o SwitchportFeatureTemplateOutput) Interfaces() SwitchportFeatureTemplateI
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) SwitchportFeatureTemplateInterfaceArrayOutput { return v.Interfaces }).(SwitchportFeatureTemplateInterfaceArrayOutput)
 }
 
-// Module type - Choices: `4`, `8`, `22`, `50`
+// Module type
+//   - Choices: `4`, `8`, `22`, `50`
 func (o SwitchportFeatureTemplateOutput) ModuleType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.StringPtrOutput { return v.ModuleType }).(pulumi.StringPtrOutput)
 }
@@ -325,7 +357,9 @@ func (o SwitchportFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Number of Slots - Range: `0`-`31` - Default value: `0`
+// Number of Slots
+//   - Range: `0`-`31`
+//   - Default value: `0`
 func (o SwitchportFeatureTemplateOutput) Slot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.IntPtrOutput { return v.Slot }).(pulumi.IntPtrOutput)
 }
@@ -337,7 +371,9 @@ func (o SwitchportFeatureTemplateOutput) StaticMacAddresses() SwitchportFeatureT
 	}).(SwitchportFeatureTemplateStaticMacAddressArrayOutput)
 }
 
-// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+// Number of Sub-Slots
+//   - Range: `0`-`31`
+//   - Default value: `0`
 func (o SwitchportFeatureTemplateOutput) SubSlot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SwitchportFeatureTemplate) pulumi.IntPtrOutput { return v.SubSlot }).(pulumi.IntPtrOutput)
 }

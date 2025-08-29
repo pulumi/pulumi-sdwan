@@ -36,16 +36,20 @@ class CiscoLoggingFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoLoggingFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]] ipv6_servers: Enable logging to remote IPv6 server
-        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] log_rotations_variable: Variable name
-        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateTlsProfileArgs']]] tls_profiles: Configure a TLS profile
@@ -89,9 +93,8 @@ class CiscoLoggingFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -103,7 +106,8 @@ class CiscoLoggingFeatureTemplateArgs:
     @pulumi.getter(name="diskLogging")
     def disk_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_logging")
 
@@ -151,7 +155,9 @@ class CiscoLoggingFeatureTemplateArgs:
     @pulumi.getter(name="logRotations")
     def log_rotations(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "log_rotations")
 
@@ -175,7 +181,9 @@ class CiscoLoggingFeatureTemplateArgs:
     @pulumi.getter(name="maxSize")
     def max_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "max_size")
 
@@ -240,16 +248,20 @@ class _CiscoLoggingFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoLoggingFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv4ServerArgs']]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input['CiscoLoggingFeatureTemplateIpv6ServerArgs']]] ipv6_servers: Enable logging to remote IPv6 server
-        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] log_rotations_variable: Variable name
-        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
@@ -301,9 +313,8 @@ class _CiscoLoggingFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -315,7 +326,8 @@ class _CiscoLoggingFeatureTemplateState:
     @pulumi.getter(name="diskLogging")
     def disk_logging(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_logging")
 
@@ -363,7 +375,9 @@ class _CiscoLoggingFeatureTemplateState:
     @pulumi.getter(name="logRotations")
     def log_rotations(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "log_rotations")
 
@@ -387,7 +401,9 @@ class _CiscoLoggingFeatureTemplateState:
     @pulumi.getter(name="maxSize")
     def max_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "max_size")
 
@@ -490,16 +506,20 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote IPv6 server
-        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] log_rotations_variable: Variable name
-        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateTlsProfileArgs', 'CiscoLoggingFeatureTemplateTlsProfileArgsDict']]]] tls_profiles: Configure a TLS profile
@@ -608,16 +628,20 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] disk_logging: Enable logging to local disk
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] disk_logging_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv4ServerArgs', 'CiscoLoggingFeatureTemplateIpv4ServerArgsDict']]]] ipv4_servers: Enable logging to remote server
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoLoggingFeatureTemplateIpv6ServerArgs', 'CiscoLoggingFeatureTemplateIpv6ServerArgsDict']]]] ipv6_servers: Enable logging to remote IPv6 server
-        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        :param pulumi.Input[_builtins.int] log_rotations: Set number of syslog files to create before discarding oldest files
+                 - Range: `1`-`10`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] log_rotations_variable: Variable name
-        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        :param pulumi.Input[_builtins.int] max_size: Set maximum size of file before it is rotated
+                 - Range: `1`-`20`
+                 - Default value: `10`
         :param pulumi.Input[_builtins.str] max_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.str] template_type: The template type
@@ -656,9 +680,8 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -666,7 +689,8 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="diskLogging")
     def disk_logging(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable logging to local disk - Default value: `true`
+        Enable logging to local disk
+          - Default value: `true`
         """
         return pulumi.get(self, "disk_logging")
 
@@ -698,7 +722,9 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="logRotations")
     def log_rotations(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        Set number of syslog files to create before discarding oldest files
+          - Range: `1`-`10`
+          - Default value: `10`
         """
         return pulumi.get(self, "log_rotations")
 
@@ -714,7 +740,9 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="maxSize")
     def max_size(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        Set maximum size of file before it is rotated
+          - Range: `1`-`20`
+          - Default value: `10`
         """
         return pulumi.get(self, "max_size")
 

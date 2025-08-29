@@ -30,13 +30,15 @@ namespace Pulumi.Sdwan
         public Output<int?> CertificateLifetimeInDays { get; private set; } = null!;
 
         /// <summary>
-        /// Certificate revocation status - Choices: `ocsp`, `none`
+        /// Certificate revocation status
+        ///   - Choices: `ocsp`, `none`
         /// </summary>
         [Output("certificateRevocationStatus")]
         public Output<string?> CertificateRevocationStatus { get; private set; } = null!;
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `mode` set to `security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -48,31 +50,36 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// EC Key Type - Choices: `P256`, `P384`, `P521`
+        /// EC Key Type
+        ///   - Choices: `P256`, `P384`, `P521`
         /// </summary>
         [Output("ecKeyType")]
         public Output<string?> EcKeyType { get; private set; } = null!;
 
         /// <summary>
-        /// Expired certificate action - Choices: `drop`, `decrypt`
+        /// Expired certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Output("expiredCertificate")]
         public Output<string?> ExpiredCertificate { get; private set; } = null!;
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Output("failureMode")]
         public Output<string?> FailureMode { get; private set; } = null!;
 
         /// <summary>
-        /// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        /// Minimal TLS Version
+        ///   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         /// </summary>
         [Output("minimalTlsVersion")]
         public Output<string?> MinimalTlsVersion { get; private set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -90,7 +97,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TlsSslDecryptionPolicyDefinitionNetworkRule>> NetworkRules { get; private set; } = null!;
 
         /// <summary>
-        /// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        /// RSA key pair modules
+        ///   - Choices: `1024`, `2048`, `4096`
         /// </summary>
         [Output("rsaKeyPairModulus")]
         public Output<string?> RsaKeyPairModulus { get; private set; } = null!;
@@ -102,25 +110,29 @@ namespace Pulumi.Sdwan
         public Output<string?> SslDecryptionEnabled { get; private set; } = null!;
 
         /// <summary>
-        /// Unknown revocation status action - Choices: `drop`, `decrypt`
+        /// Unknown revocation status action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Output("unknownRevocationStatus")]
         public Output<string?> UnknownRevocationStatus { get; private set; } = null!;
 
         /// <summary>
-        /// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        /// Unsupported cipher suites action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Output("unsupportedCipherSuites")]
         public Output<string?> UnsupportedCipherSuites { get; private set; } = null!;
 
         /// <summary>
-        /// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        /// Unsupported protocol versions action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Output("unsupportedProtocolVersions")]
         public Output<string?> UnsupportedProtocolVersions { get; private set; } = null!;
 
         /// <summary>
-        /// Untrusted certificate action - Choices: `drop`, `decrypt`
+        /// Untrusted certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Output("untrustedCertificate")]
         public Output<string?> UntrustedCertificate { get; private set; } = null!;
@@ -196,13 +208,15 @@ namespace Pulumi.Sdwan
         public Input<int>? CertificateLifetimeInDays { get; set; }
 
         /// <summary>
-        /// Certificate revocation status - Choices: `ocsp`, `none`
+        /// Certificate revocation status
+        ///   - Choices: `ocsp`, `none`
         /// </summary>
         [Input("certificateRevocationStatus")]
         public Input<string>? CertificateRevocationStatus { get; set; }
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `mode` set to `security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -214,31 +228,36 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// EC Key Type - Choices: `P256`, `P384`, `P521`
+        /// EC Key Type
+        ///   - Choices: `P256`, `P384`, `P521`
         /// </summary>
         [Input("ecKeyType")]
         public Input<string>? EcKeyType { get; set; }
 
         /// <summary>
-        /// Expired certificate action - Choices: `drop`, `decrypt`
+        /// Expired certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("expiredCertificate")]
         public Input<string>? ExpiredCertificate { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
 
         /// <summary>
-        /// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        /// Minimal TLS Version
+        ///   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         /// </summary>
         [Input("minimalTlsVersion")]
         public Input<string>? MinimalTlsVersion { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -262,7 +281,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        /// RSA key pair modules
+        ///   - Choices: `1024`, `2048`, `4096`
         /// </summary>
         [Input("rsaKeyPairModulus")]
         public Input<string>? RsaKeyPairModulus { get; set; }
@@ -274,25 +294,29 @@ namespace Pulumi.Sdwan
         public Input<string>? SslDecryptionEnabled { get; set; }
 
         /// <summary>
-        /// Unknown revocation status action - Choices: `drop`, `decrypt`
+        /// Unknown revocation status action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("unknownRevocationStatus")]
         public Input<string>? UnknownRevocationStatus { get; set; }
 
         /// <summary>
-        /// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        /// Unsupported cipher suites action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedCipherSuites")]
         public Input<string>? UnsupportedCipherSuites { get; set; }
 
         /// <summary>
-        /// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        /// Unsupported protocol versions action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedProtocolVersions")]
         public Input<string>? UnsupportedProtocolVersions { get; set; }
 
         /// <summary>
-        /// Untrusted certificate action - Choices: `drop`, `decrypt`
+        /// Untrusted certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("untrustedCertificate")]
         public Input<string>? UntrustedCertificate { get; set; }
@@ -330,13 +354,15 @@ namespace Pulumi.Sdwan
         public Input<int>? CertificateLifetimeInDays { get; set; }
 
         /// <summary>
-        /// Certificate revocation status - Choices: `ocsp`, `none`
+        /// Certificate revocation status
+        ///   - Choices: `ocsp`, `none`
         /// </summary>
         [Input("certificateRevocationStatus")]
         public Input<string>? CertificateRevocationStatus { get; set; }
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `mode` set to `security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -348,31 +374,36 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// EC Key Type - Choices: `P256`, `P384`, `P521`
+        /// EC Key Type
+        ///   - Choices: `P256`, `P384`, `P521`
         /// </summary>
         [Input("ecKeyType")]
         public Input<string>? EcKeyType { get; set; }
 
         /// <summary>
-        /// Expired certificate action - Choices: `drop`, `decrypt`
+        /// Expired certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("expiredCertificate")]
         public Input<string>? ExpiredCertificate { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
 
         /// <summary>
-        /// Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        /// Minimal TLS Version
+        ///   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         /// </summary>
         [Input("minimalTlsVersion")]
         public Input<string>? MinimalTlsVersion { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -396,7 +427,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        /// RSA key pair modules
+        ///   - Choices: `1024`, `2048`, `4096`
         /// </summary>
         [Input("rsaKeyPairModulus")]
         public Input<string>? RsaKeyPairModulus { get; set; }
@@ -408,25 +440,29 @@ namespace Pulumi.Sdwan
         public Input<string>? SslDecryptionEnabled { get; set; }
 
         /// <summary>
-        /// Unknown revocation status action - Choices: `drop`, `decrypt`
+        /// Unknown revocation status action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("unknownRevocationStatus")]
         public Input<string>? UnknownRevocationStatus { get; set; }
 
         /// <summary>
-        /// Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        /// Unsupported cipher suites action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedCipherSuites")]
         public Input<string>? UnsupportedCipherSuites { get; set; }
 
         /// <summary>
-        /// Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        /// Unsupported protocol versions action
+        ///   - Choices: `drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedProtocolVersions")]
         public Input<string>? UnsupportedProtocolVersions { get; set; }
 
         /// <summary>
-        /// Untrusted certificate action - Choices: `drop`, `decrypt`
+        /// Untrusted certificate action
+        ///   - Choices: `drop`, `decrypt`
         /// </summary>
         [Input("untrustedCertificate")]
         public Input<string>? UntrustedCertificate { get; set; }

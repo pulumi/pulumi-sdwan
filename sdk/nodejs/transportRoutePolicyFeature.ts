@@ -49,29 +49,31 @@ export class TransportRoutePolicyFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      */
-    public readonly defaultAction!: pulumi.Output<string | undefined>;
+    declare public readonly defaultAction: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Route Policy List
      */
-    public readonly sequences!: pulumi.Output<outputs.TransportRoutePolicyFeatureSequence[] | undefined>;
+    declare public readonly sequences: pulumi.Output<outputs.TransportRoutePolicyFeatureSequence[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportRoutePolicyFeature resource with the given unique name, arguments, and options.
@@ -86,22 +88,22 @@ export class TransportRoutePolicyFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportRoutePolicyFeatureState | undefined;
-            resourceInputs["defaultAction"] = state ? state.defaultAction : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sequences"] = state ? state.sequences : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sequences"] = state?.sequences;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportRoutePolicyFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sequences"] = args ? args.sequences : undefined;
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sequences"] = args?.sequences;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -114,7 +116,9 @@ export class TransportRoutePolicyFeature extends pulumi.CustomResource {
  */
 export interface TransportRoutePolicyFeatureState {
     /**
-     * Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      */
     defaultAction?: pulumi.Input<string>;
     /**
@@ -144,7 +148,9 @@ export interface TransportRoutePolicyFeatureState {
  */
 export interface TransportRoutePolicyFeatureArgs {
     /**
-     * Default Action - Choices: `reject`, `accept` - Default value: `reject`
+     * Default Action
+     *   - Choices: `reject`, `accept`
+     *   - Default value: `reject`
      */
     defaultAction?: pulumi.Input<string>;
     /**

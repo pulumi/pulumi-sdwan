@@ -52,14 +52,16 @@ public class ZoneBasedFirewallPolicyDefinition extends com.pulumi.resources.Cust
         return Codegen.optional(this.applyZonePairs);
     }
     /**
-     * Default Action - Choices: `pass`, `drop`
+     * Default Action
+     *   - Choices: `pass`, `drop`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `pass`, `drop`
+     * @return Default Action
+     *   - Choices: `pass`, `drop`
      * 
      */
     public Output<String> defaultAction() {
@@ -80,14 +82,16 @@ public class ZoneBasedFirewallPolicyDefinition extends com.pulumi.resources.Cust
         return this.description;
     }
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Export(name="mode", refs={String.class}, tree="[0]")
     private Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Output<String> mode() {

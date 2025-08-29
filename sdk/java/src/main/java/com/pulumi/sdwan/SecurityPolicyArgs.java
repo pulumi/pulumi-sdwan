@@ -22,14 +22,16 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     public static final SecurityPolicyArgs Empty = new SecurityPolicyArgs();
 
     /**
-     * Audit trail - Choices: `on`, `off`
+     * Audit trail
+     *   - Choices: `on`, `off`
      * 
      */
     @Import(name="auditTrail")
     private @Nullable Output<String> auditTrail;
 
     /**
-     * @return Audit trail - Choices: `on`, `off`
+     * @return Audit trail
+     *   - Choices: `on`, `off`
      * 
      */
     public Optional<Output<String>> auditTrail() {
@@ -67,14 +69,16 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      * 
      */
     @Import(name="directInternetApplications")
     private @Nullable Output<String> directInternetApplications;
 
     /**
-     * @return Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * @return Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      * 
      */
     public Optional<Output<String>> directInternetApplications() {
@@ -82,14 +86,16 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     @Import(name="failureMode")
     private @Nullable Output<String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close`
+     * @return Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     public Optional<Output<String>> failureMode() {
@@ -179,14 +185,16 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Match Statistics per-filter - Choices: `on`, `off`
+     * Match Statistics per-filter
+     *   - Choices: `on`, `off`
      * 
      */
     @Import(name="matchStatisticsPerFilter")
     private @Nullable Output<String> matchStatisticsPerFilter;
 
     /**
-     * @return Match Statistics per-filter - Choices: `on`, `off`
+     * @return Match Statistics per-filter
+     *   - Choices: `on`, `off`
      * 
      */
     public Optional<Output<String>> matchStatisticsPerFilter() {
@@ -239,14 +247,18 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      * 
      */
     public Optional<Output<String>> mode() {
@@ -314,16 +326,18 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      * 
      */
     @Import(name="useCase")
     private @Nullable Output<String> useCase;
 
     /**
-     * @return The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * @return The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      * 
      */
     public Optional<Output<String>> useCase() {
@@ -375,7 +389,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param auditTrail Audit trail - Choices: `on`, `off`
+         * @param auditTrail Audit trail
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
@@ -386,7 +401,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param auditTrail Audit trail - Choices: `on`, `off`
+         * @param auditTrail Audit trail
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
@@ -448,7 +464,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param directInternetApplications Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+         * @param directInternetApplications Bypass firewall policy and allow all Internet traffic to/from VPN 0
+         *   - Choices: `allow`, `deny`
          * 
          * @return builder
          * 
@@ -459,7 +476,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param directInternetApplications Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+         * @param directInternetApplications Bypass firewall policy and allow all Internet traffic to/from VPN 0
+         *   - Choices: `allow`, `deny`
          * 
          * @return builder
          * 
@@ -469,7 +487,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close`
+         * @param failureMode Failure mode
+         *   - Choices: `open`, `close`
          * 
          * @return builder
          * 
@@ -480,7 +499,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close`
+         * @param failureMode Failure mode
+         *   - Choices: `open`, `close`
          * 
          * @return builder
          * 
@@ -608,7 +628,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param matchStatisticsPerFilter Match Statistics per-filter - Choices: `on`, `off`
+         * @param matchStatisticsPerFilter Match Statistics per-filter
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
@@ -619,7 +640,8 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param matchStatisticsPerFilter Match Statistics per-filter - Choices: `on`, `off`
+         * @param matchStatisticsPerFilter Match Statistics per-filter
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
@@ -692,7 +714,9 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified` - Default value: `security`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
+         *   - Default value: `security`
          * 
          * @return builder
          * 
@@ -703,7 +727,9 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified` - Default value: `security`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
+         *   - Default value: `security`
          * 
          * @return builder
          * 
@@ -797,8 +823,9 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param useCase The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-         * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+         * @param useCase The use case of the security policy
+         *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+         *   - Default value: `custom`
          * 
          * @return builder
          * 
@@ -809,8 +836,9 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param useCase The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-         * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+         * @param useCase The use case of the security policy
+         *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+         *   - Default value: `custom`
          * 
          * @return builder
          * 

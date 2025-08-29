@@ -41,24 +41,29 @@ class CiscoSecurityFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoSecurityFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_types: Set the authentication type for DTLS connections
-        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] pairwise_keying_variable: Variable name
-        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] replay_window_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -110,9 +115,8 @@ class CiscoSecurityFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -148,7 +152,9 @@ class CiscoSecurityFeatureTemplateArgs:
     @pulumi.getter(name="extendedArWindow")
     def extended_ar_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_ar_window")
 
@@ -232,7 +238,8 @@ class CiscoSecurityFeatureTemplateArgs:
     @pulumi.getter(name="pairwiseKeying")
     def pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "pairwise_keying")
 
@@ -256,7 +263,9 @@ class CiscoSecurityFeatureTemplateArgs:
     @pulumi.getter(name="rekeyInterval")
     def rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey_interval")
 
@@ -280,8 +289,9 @@ class CiscoSecurityFeatureTemplateArgs:
     @pulumi.getter(name="replayWindow")
     def replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "replay_window")
 
@@ -329,22 +339,27 @@ class _CiscoSecurityFeatureTemplateState:
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_types: Set the authentication type for DTLS connections
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeychainArgs']]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecurityFeatureTemplateKeyArgs']]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] pairwise_keying_variable: Variable name
-        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -428,9 +443,8 @@ class _CiscoSecurityFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -442,7 +456,9 @@ class _CiscoSecurityFeatureTemplateState:
     @pulumi.getter(name="extendedArWindow")
     def extended_ar_window(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_ar_window")
 
@@ -526,7 +542,8 @@ class _CiscoSecurityFeatureTemplateState:
     @pulumi.getter(name="pairwiseKeying")
     def pairwise_keying(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "pairwise_keying")
 
@@ -550,7 +567,9 @@ class _CiscoSecurityFeatureTemplateState:
     @pulumi.getter(name="rekeyInterval")
     def rekey_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey_interval")
 
@@ -574,8 +593,9 @@ class _CiscoSecurityFeatureTemplateState:
     @pulumi.getter(name="replayWindow")
     def replay_window(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "replay_window")
 
@@ -661,22 +681,27 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_types: Set the authentication type for DTLS connections
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] pairwise_keying_variable: Variable name
-        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] replay_window_variable: Variable name
         """
         ...
@@ -800,22 +825,27 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_types: Set the authentication type for DTLS connections
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] extended_ar_window: Extended Anti-Replay Window
+                 - Range: `10`-`2048`
+                 - Default value: `256`
         :param pulumi.Input[_builtins.str] extended_ar_window_variable: Variable name
         :param pulumi.Input[_builtins.str] integrity_type_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] integrity_types: Set the authentication type for DTLS connections
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeychainArgs', 'CiscoSecurityFeatureTemplateKeychainArgsDict']]]] keychains: Configure a Keychain
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecurityFeatureTemplateKeyArgs', 'CiscoSecurityFeatureTemplateKeyArgsDict']]]] keys: Configure a Key
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying - Default value: `false`
+        :param pulumi.Input[_builtins.bool] pairwise_keying: Enable or disable IPsec pairwise-keying
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] pairwise_keying_variable: Variable name
-        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] rekey_interval: Set how often to change the AES key for DTLS connections
+                 - Range: `10`-`1209600`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] rekey_interval_variable: Variable name
-        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-               `512`
+        :param pulumi.Input[_builtins.str] replay_window: Set the sliding replay window size
+                 - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+                 - Default value: `512`
         :param pulumi.Input[_builtins.str] replay_window_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -873,9 +903,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -883,7 +912,9 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="extendedArWindow")
     def extended_ar_window(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+        Extended Anti-Replay Window
+          - Range: `10`-`2048`
+          - Default value: `256`
         """
         return pulumi.get(self, "extended_ar_window")
 
@@ -939,7 +970,8 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="pairwiseKeying")
     def pairwise_keying(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable IPsec pairwise-keying - Default value: `false`
+        Enable or disable IPsec pairwise-keying
+          - Default value: `false`
         """
         return pulumi.get(self, "pairwise_keying")
 
@@ -955,7 +987,9 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="rekeyInterval")
     def rekey_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+        Set how often to change the AES key for DTLS connections
+          - Range: `10`-`1209600`
+          - Default value: `86400`
         """
         return pulumi.get(self, "rekey_interval")
 
@@ -971,8 +1005,9 @@ class CiscoSecurityFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="replayWindow")
     def replay_window(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-        `512`
+        Set the sliding replay window size
+          - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+          - Default value: `512`
         """
         return pulumi.get(self, "replay_window")
 

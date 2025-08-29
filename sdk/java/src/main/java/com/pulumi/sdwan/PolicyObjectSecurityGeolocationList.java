@@ -90,14 +90,14 @@ public class PolicyObjectSecurityGeolocationList extends com.pulumi.resources.Cu
         return Codegen.optional(this.description);
     }
     /**
-     * Geolocation List
+     * Geolocation  List
      * 
      */
     @Export(name="entries", refs={List.class,PolicyObjectSecurityGeolocationListEntry.class}, tree="[0,1]")
     private Output<List<PolicyObjectSecurityGeolocationListEntry>> entries;
 
     /**
-     * @return Geolocation List
+     * @return Geolocation  List
      * 
      */
     public Output<List<PolicyObjectSecurityGeolocationListEntry>> entries() {

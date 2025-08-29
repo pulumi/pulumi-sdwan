@@ -46,7 +46,8 @@ class SystemSnmpFeatureArgs:
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureTrapTargetServerArgs']]] trap_target_servers: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureUserArgs']]] users: Configure an SNMP user
@@ -192,7 +193,8 @@ class SystemSnmpFeatureArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `false`
+        Enable or disable SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -278,7 +280,8 @@ class _SystemSnmpFeatureState:
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureTrapTargetServerArgs']]] trap_target_servers: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input['SystemSnmpFeatureUserArgs']]] users: Configure an SNMP user
@@ -428,7 +431,8 @@ class _SystemSnmpFeatureState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `false`
+        Enable or disable SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -543,7 +547,8 @@ class SystemSnmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]] users: Configure an SNMP user
@@ -665,7 +670,8 @@ class SystemSnmpFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] location_of_device: Set the physical location of this managed node
         :param pulumi.Input[_builtins.str] location_of_device_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable SNMP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureTrapTargetServerArgs', 'SystemSnmpFeatureTrapTargetServerArgsDict']]]] trap_target_servers: Configure SNMP server to receive SNMP traps
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemSnmpFeatureUserArgs', 'SystemSnmpFeatureUserArgsDict']]]] users: Configure an SNMP user
@@ -769,7 +775,8 @@ class SystemSnmpFeature(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable SNMP - Default value: `false`
+        Enable or disable SNMP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 

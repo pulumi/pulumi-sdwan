@@ -65,14 +65,16 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="destinationPort")
     private @Nullable Output<Integer> destinationPort;
 
     /**
-     * @return Destination port - Range: `1`-`65535`
+     * @return Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     public Optional<Output<Integer>> destinationPort() {
@@ -95,18 +97,16 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -114,14 +114,16 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return Enable/disable GPS - Default value: `false`
+     * @return Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -144,14 +146,18 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     @Import(name="gpsMode")
     private @Nullable Output<String> gpsMode;
 
     /**
-     * @return Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * @return Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     public Optional<Output<String>> gpsMode() {
@@ -189,14 +195,16 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     @Import(name="nmea")
     private @Nullable Output<Boolean> nmea;
 
     /**
-     * @return Enable/disable NMEA data - Default value: `false`
+     * @return Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nmea() {
@@ -350,7 +358,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinationPort Destination port - Range: `1`-`65535`
+         * @param destinationPort Destination port
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -361,7 +370,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param destinationPort Destination port - Range: `1`-`65535`
+         * @param destinationPort Destination port
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -392,9 +402,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -405,9 +414,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -417,9 +425,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -429,7 +436,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param enable Enable/disable GPS - Default value: `false`
+         * @param enable Enable/disable GPS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -440,7 +448,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param enable Enable/disable GPS - Default value: `false`
+         * @param enable Enable/disable GPS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -471,7 +480,9 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param gpsMode Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+         * @param gpsMode Select GPS mode
+         *   - Choices: `ms-based`, `standalone`
+         *   - Default value: `ms-based`
          * 
          * @return builder
          * 
@@ -482,7 +493,9 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param gpsMode Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+         * @param gpsMode Select GPS mode
+         *   - Choices: `ms-based`, `standalone`
+         *   - Default value: `ms-based`
          * 
          * @return builder
          * 
@@ -534,7 +547,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param nmea Enable/disable NMEA data - Default value: `false`
+         * @param nmea Enable/disable NMEA data
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -545,7 +559,8 @@ public final class GpsFeatureTemplateArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param nmea Enable/disable NMEA data - Default value: `false`
+         * @param nmea Enable/disable NMEA data
+         *   - Default value: `false`
          * 
          * @return builder
          * 

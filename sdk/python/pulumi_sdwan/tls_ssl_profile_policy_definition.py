@@ -40,9 +40,11 @@ class TlsSslProfilePolicyDefinitionArgs:
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] decrypt_categories: Categories that should be decrypted
-        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         :param pulumi.Input[_builtins.bool] fail_decrypt: Fail decrypt enabled
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] never_decrypt_categories: Categories that should never be decrypted
         :param pulumi.Input[_builtins.bool] reputation: Reputation enabled
@@ -150,7 +152,8 @@ class TlsSslProfilePolicyDefinitionArgs:
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        Decrypt threshold
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
 
@@ -174,7 +177,8 @@ class TlsSslProfilePolicyDefinitionArgs:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -255,10 +259,12 @@ class _TlsSslProfilePolicyDefinitionState:
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] decrypt_categories: Categories that should be decrypted
-        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.bool] fail_decrypt: Fail decrypt enabled
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] never_decrypt_categories: Categories that should never be decrypted
         :param pulumi.Input[_builtins.bool] reputation: Reputation enabled
@@ -358,7 +364,8 @@ class _TlsSslProfilePolicyDefinitionState:
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        Decrypt threshold
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
 
@@ -394,7 +401,8 @@ class _TlsSslProfilePolicyDefinitionState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -519,10 +527,12 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] decrypt_categories: Categories that should be decrypted
-        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.bool] fail_decrypt: Fail decrypt enabled
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] never_decrypt_categories: Categories that should never be decrypted
         :param pulumi.Input[_builtins.bool] reputation: Reputation enabled
@@ -652,10 +662,12 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] decrypt_categories: Categories that should be decrypted
-        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        :param pulumi.Input[_builtins.str] decrypt_threshold: Decrypt threshold
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.bool] fail_decrypt: Fail decrypt enabled
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] never_decrypt_categories: Categories that should never be decrypted
         :param pulumi.Input[_builtins.bool] reputation: Reputation enabled
@@ -726,7 +738,8 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="decryptThreshold")
     def decrypt_threshold(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        Decrypt threshold
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "decrypt_threshold")
 
@@ -750,7 +763,8 @@ class TlsSslProfilePolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 

@@ -144,14 +144,16 @@ public class PolicyGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.policyVersions);
     }
     /**
-     * Type of solution - Choices: `sdwan`
+     * Type of solution
+     *   - Choices: `sdwan`
      * 
      */
     @Export(name="solution", refs={String.class}, tree="[0]")
     private Output<String> solution;
 
     /**
-     * @return Type of solution - Choices: `sdwan`
+     * @return Type of solution
+     *   - Choices: `sdwan`
      * 
      */
     public Output<String> solution() {

@@ -46,91 +46,98 @@ export class SecurityPolicy extends pulumi.CustomResource {
     }
 
     /**
-     * Audit trail - Choices: `on`, `off`
+     * Audit trail
+     *   - Choices: `on`, `off`
      */
-    public readonly auditTrail!: pulumi.Output<string | undefined>;
+    declare public readonly auditTrail: pulumi.Output<string | undefined>;
     /**
      * List of policy definitions
      */
-    public readonly definitions!: pulumi.Output<outputs.SecurityPolicyDefinition[]>;
+    declare public readonly definitions: pulumi.Output<outputs.SecurityPolicyDefinition[]>;
     /**
      * The description of the security policy
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      */
-    public readonly directInternetApplications!: pulumi.Output<string | undefined>;
+    declare public readonly directInternetApplications: pulumi.Output<string | undefined>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
-    public readonly failureMode!: pulumi.Output<string | undefined>;
+    declare public readonly failureMode: pulumi.Output<string | undefined>;
     /**
      * High Speed Logging Server IP
      */
-    public readonly highSpeedLoggingServerIp!: pulumi.Output<string | undefined>;
+    declare public readonly highSpeedLoggingServerIp: pulumi.Output<string | undefined>;
     /**
      * High Speed Logging Port
      */
-    public readonly highSpeedLoggingServerPort!: pulumi.Output<string | undefined>;
+    declare public readonly highSpeedLoggingServerPort: pulumi.Output<string | undefined>;
     /**
      * High Speed Logging Source Interface
      */
-    public readonly highSpeedLoggingServerSourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly highSpeedLoggingServerSourceInterface: pulumi.Output<string | undefined>;
     /**
      * High Speed Logging VPN
      */
-    public readonly highSpeedLoggingVpn!: pulumi.Output<string | undefined>;
+    declare public readonly highSpeedLoggingVpn: pulumi.Output<string | undefined>;
     /**
      * ICMP Unreachable Allow
      */
-    public readonly imcpUnreachableAllow!: pulumi.Output<boolean | undefined>;
-    public readonly loggings!: pulumi.Output<outputs.SecurityPolicyLogging[] | undefined>;
+    declare public readonly imcpUnreachableAllow: pulumi.Output<boolean | undefined>;
+    declare public readonly loggings: pulumi.Output<outputs.SecurityPolicyLogging[] | undefined>;
     /**
-     * Match Statistics per-filter - Choices: `on`, `off`
+     * Match Statistics per-filter
+     *   - Choices: `on`, `off`
      */
-    public readonly matchStatisticsPerFilter!: pulumi.Output<string | undefined>;
+    declare public readonly matchStatisticsPerFilter: pulumi.Output<string | undefined>;
     /**
      * Max Incomplete ICMP Limit
      */
-    public readonly maxIncompleteIcmpLimit!: pulumi.Output<number | undefined>;
+    declare public readonly maxIncompleteIcmpLimit: pulumi.Output<number | undefined>;
     /**
      * Max Incomplete TCP Limit
      */
-    public readonly maxIncompleteTcpLimit!: pulumi.Output<number | undefined>;
+    declare public readonly maxIncompleteTcpLimit: pulumi.Output<number | undefined>;
     /**
      * Max Incomplete UDP Limit
      */
-    public readonly maxIncompleteUdpLimit!: pulumi.Output<number | undefined>;
+    declare public readonly maxIncompleteUdpLimit: pulumi.Output<number | undefined>;
     /**
-     * The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      */
-    public readonly mode!: pulumi.Output<string>;
+    declare public readonly mode: pulumi.Output<string>;
     /**
      * The name of the security policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Session Reclassify Allow
      */
-    public readonly sessionReclassifyAllow!: pulumi.Output<boolean | undefined>;
+    declare public readonly sessionReclassifyAllow: pulumi.Output<boolean | undefined>;
     /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
-    public readonly tcpSynFloodLimit!: pulumi.Output<string | undefined>;
+    declare public readonly tcpSynFloodLimit: pulumi.Output<string | undefined>;
     /**
      * Unified Logging
      */
-    public readonly unifiedLogging!: pulumi.Output<boolean | undefined>;
+    declare public readonly unifiedLogging: pulumi.Output<boolean | undefined>;
     /**
-     * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      */
-    public readonly useCase!: pulumi.Output<string>;
+    declare public readonly useCase: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SecurityPolicy resource with the given unique name, arguments, and options.
@@ -145,57 +152,57 @@ export class SecurityPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SecurityPolicyState | undefined;
-            resourceInputs["auditTrail"] = state ? state.auditTrail : undefined;
-            resourceInputs["definitions"] = state ? state.definitions : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["directInternetApplications"] = state ? state.directInternetApplications : undefined;
-            resourceInputs["failureMode"] = state ? state.failureMode : undefined;
-            resourceInputs["highSpeedLoggingServerIp"] = state ? state.highSpeedLoggingServerIp : undefined;
-            resourceInputs["highSpeedLoggingServerPort"] = state ? state.highSpeedLoggingServerPort : undefined;
-            resourceInputs["highSpeedLoggingServerSourceInterface"] = state ? state.highSpeedLoggingServerSourceInterface : undefined;
-            resourceInputs["highSpeedLoggingVpn"] = state ? state.highSpeedLoggingVpn : undefined;
-            resourceInputs["imcpUnreachableAllow"] = state ? state.imcpUnreachableAllow : undefined;
-            resourceInputs["loggings"] = state ? state.loggings : undefined;
-            resourceInputs["matchStatisticsPerFilter"] = state ? state.matchStatisticsPerFilter : undefined;
-            resourceInputs["maxIncompleteIcmpLimit"] = state ? state.maxIncompleteIcmpLimit : undefined;
-            resourceInputs["maxIncompleteTcpLimit"] = state ? state.maxIncompleteTcpLimit : undefined;
-            resourceInputs["maxIncompleteUdpLimit"] = state ? state.maxIncompleteUdpLimit : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sessionReclassifyAllow"] = state ? state.sessionReclassifyAllow : undefined;
-            resourceInputs["tcpSynFloodLimit"] = state ? state.tcpSynFloodLimit : undefined;
-            resourceInputs["unifiedLogging"] = state ? state.unifiedLogging : undefined;
-            resourceInputs["useCase"] = state ? state.useCase : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["auditTrail"] = state?.auditTrail;
+            resourceInputs["definitions"] = state?.definitions;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["directInternetApplications"] = state?.directInternetApplications;
+            resourceInputs["failureMode"] = state?.failureMode;
+            resourceInputs["highSpeedLoggingServerIp"] = state?.highSpeedLoggingServerIp;
+            resourceInputs["highSpeedLoggingServerPort"] = state?.highSpeedLoggingServerPort;
+            resourceInputs["highSpeedLoggingServerSourceInterface"] = state?.highSpeedLoggingServerSourceInterface;
+            resourceInputs["highSpeedLoggingVpn"] = state?.highSpeedLoggingVpn;
+            resourceInputs["imcpUnreachableAllow"] = state?.imcpUnreachableAllow;
+            resourceInputs["loggings"] = state?.loggings;
+            resourceInputs["matchStatisticsPerFilter"] = state?.matchStatisticsPerFilter;
+            resourceInputs["maxIncompleteIcmpLimit"] = state?.maxIncompleteIcmpLimit;
+            resourceInputs["maxIncompleteTcpLimit"] = state?.maxIncompleteTcpLimit;
+            resourceInputs["maxIncompleteUdpLimit"] = state?.maxIncompleteUdpLimit;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sessionReclassifyAllow"] = state?.sessionReclassifyAllow;
+            resourceInputs["tcpSynFloodLimit"] = state?.tcpSynFloodLimit;
+            resourceInputs["unifiedLogging"] = state?.unifiedLogging;
+            resourceInputs["useCase"] = state?.useCase;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SecurityPolicyArgs | undefined;
-            if ((!args || args.definitions === undefined) && !opts.urn) {
+            if (args?.definitions === undefined && !opts.urn) {
                 throw new Error("Missing required property 'definitions'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["auditTrail"] = args ? args.auditTrail : undefined;
-            resourceInputs["definitions"] = args ? args.definitions : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["directInternetApplications"] = args ? args.directInternetApplications : undefined;
-            resourceInputs["failureMode"] = args ? args.failureMode : undefined;
-            resourceInputs["highSpeedLoggingServerIp"] = args ? args.highSpeedLoggingServerIp : undefined;
-            resourceInputs["highSpeedLoggingServerPort"] = args ? args.highSpeedLoggingServerPort : undefined;
-            resourceInputs["highSpeedLoggingServerSourceInterface"] = args ? args.highSpeedLoggingServerSourceInterface : undefined;
-            resourceInputs["highSpeedLoggingVpn"] = args ? args.highSpeedLoggingVpn : undefined;
-            resourceInputs["imcpUnreachableAllow"] = args ? args.imcpUnreachableAllow : undefined;
-            resourceInputs["loggings"] = args ? args.loggings : undefined;
-            resourceInputs["matchStatisticsPerFilter"] = args ? args.matchStatisticsPerFilter : undefined;
-            resourceInputs["maxIncompleteIcmpLimit"] = args ? args.maxIncompleteIcmpLimit : undefined;
-            resourceInputs["maxIncompleteTcpLimit"] = args ? args.maxIncompleteTcpLimit : undefined;
-            resourceInputs["maxIncompleteUdpLimit"] = args ? args.maxIncompleteUdpLimit : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sessionReclassifyAllow"] = args ? args.sessionReclassifyAllow : undefined;
-            resourceInputs["tcpSynFloodLimit"] = args ? args.tcpSynFloodLimit : undefined;
-            resourceInputs["unifiedLogging"] = args ? args.unifiedLogging : undefined;
-            resourceInputs["useCase"] = args ? args.useCase : undefined;
+            resourceInputs["auditTrail"] = args?.auditTrail;
+            resourceInputs["definitions"] = args?.definitions;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["directInternetApplications"] = args?.directInternetApplications;
+            resourceInputs["failureMode"] = args?.failureMode;
+            resourceInputs["highSpeedLoggingServerIp"] = args?.highSpeedLoggingServerIp;
+            resourceInputs["highSpeedLoggingServerPort"] = args?.highSpeedLoggingServerPort;
+            resourceInputs["highSpeedLoggingServerSourceInterface"] = args?.highSpeedLoggingServerSourceInterface;
+            resourceInputs["highSpeedLoggingVpn"] = args?.highSpeedLoggingVpn;
+            resourceInputs["imcpUnreachableAllow"] = args?.imcpUnreachableAllow;
+            resourceInputs["loggings"] = args?.loggings;
+            resourceInputs["matchStatisticsPerFilter"] = args?.matchStatisticsPerFilter;
+            resourceInputs["maxIncompleteIcmpLimit"] = args?.maxIncompleteIcmpLimit;
+            resourceInputs["maxIncompleteTcpLimit"] = args?.maxIncompleteTcpLimit;
+            resourceInputs["maxIncompleteUdpLimit"] = args?.maxIncompleteUdpLimit;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sessionReclassifyAllow"] = args?.sessionReclassifyAllow;
+            resourceInputs["tcpSynFloodLimit"] = args?.tcpSynFloodLimit;
+            resourceInputs["unifiedLogging"] = args?.unifiedLogging;
+            resourceInputs["useCase"] = args?.useCase;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -208,7 +215,8 @@ export class SecurityPolicy extends pulumi.CustomResource {
  */
 export interface SecurityPolicyState {
     /**
-     * Audit trail - Choices: `on`, `off`
+     * Audit trail
+     *   - Choices: `on`, `off`
      */
     auditTrail?: pulumi.Input<string>;
     /**
@@ -220,11 +228,13 @@ export interface SecurityPolicyState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      */
     directInternetApplications?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**
@@ -249,7 +259,8 @@ export interface SecurityPolicyState {
     imcpUnreachableAllow?: pulumi.Input<boolean>;
     loggings?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyLogging>[]>;
     /**
-     * Match Statistics per-filter - Choices: `on`, `off`
+     * Match Statistics per-filter
+     *   - Choices: `on`, `off`
      */
     matchStatisticsPerFilter?: pulumi.Input<string>;
     /**
@@ -265,7 +276,9 @@ export interface SecurityPolicyState {
      */
     maxIncompleteUdpLimit?: pulumi.Input<number>;
     /**
-     * The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -285,8 +298,9 @@ export interface SecurityPolicyState {
      */
     unifiedLogging?: pulumi.Input<boolean>;
     /**
-     * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      */
     useCase?: pulumi.Input<string>;
     /**
@@ -300,7 +314,8 @@ export interface SecurityPolicyState {
  */
 export interface SecurityPolicyArgs {
     /**
-     * Audit trail - Choices: `on`, `off`
+     * Audit trail
+     *   - Choices: `on`, `off`
      */
     auditTrail?: pulumi.Input<string>;
     /**
@@ -312,11 +327,13 @@ export interface SecurityPolicyArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+     * Bypass firewall policy and allow all Internet traffic to/from VPN 0
+     *   - Choices: `allow`, `deny`
      */
     directInternetApplications?: pulumi.Input<string>;
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      */
     failureMode?: pulumi.Input<string>;
     /**
@@ -341,7 +358,8 @@ export interface SecurityPolicyArgs {
     imcpUnreachableAllow?: pulumi.Input<boolean>;
     loggings?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyLogging>[]>;
     /**
-     * Match Statistics per-filter - Choices: `on`, `off`
+     * Match Statistics per-filter
+     *   - Choices: `on`, `off`
      */
     matchStatisticsPerFilter?: pulumi.Input<string>;
     /**
@@ -357,7 +375,9 @@ export interface SecurityPolicyArgs {
      */
     maxIncompleteUdpLimit?: pulumi.Input<number>;
     /**
-     * The policy mode - Choices: `security`, `unified` - Default value: `security`
+     * The policy mode
+     *   - Choices: `security`, `unified`
+     *   - Default value: `security`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -377,8 +397,9 @@ export interface SecurityPolicyArgs {
      */
     unifiedLogging?: pulumi.Input<boolean>;
     /**
-     * The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-     * `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+     * The use case of the security policy
+     *   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+     *   - Default value: `custom`
      */
     useCase?: pulumi.Input<string>;
 }

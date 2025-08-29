@@ -56,14 +56,18 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.arpEntries);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Export(name="arpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Output<Optional<Integer>> arpTimeout() {
@@ -126,14 +130,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.description);
     }
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Export(name="duplex", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Output<Optional<String>> duplex() {
@@ -182,14 +188,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return this.featureProfileId;
     }
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Export(name="icmpRedirectDisable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> icmpRedirectDisable() {
@@ -230,14 +238,18 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -278,14 +290,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipDirectedBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipDirectedBroadcast() {
@@ -306,16 +320,18 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -364,14 +380,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4AutoDetectBandwidth", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4AutoDetectBandwidth;
 
     /**
-     * @return Interface auto detect bandwidth - Default value: `false`
+     * @return Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4AutoDetectBandwidth() {
@@ -392,30 +410,36 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4AutoDetectBandwidthVariable);
     }
     /**
-     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      * 
      */
     @Export(name="ipv4ConfigurationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * @return IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4ConfigurationType() {
         return Codegen.optional(this.ipv4ConfigurationType);
     }
     /**
-     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-     * Default value: `1`
+     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ipv4DhcpDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-     * Default value: `1`
+     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ipv4DhcpDistance() {
@@ -506,24 +530,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -572,28 +588,36 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      * 
      */
     @Export(name="ipv6ConfigurationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * @return IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      * 
      */
     public Output<Optional<String>> ipv6ConfigurationType() {
         return Codegen.optional(this.ipv6ConfigurationType);
     }
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Export(name="loadInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Output<Optional<Integer>> loadInterval() {
@@ -642,14 +666,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.macAddressVariable);
     }
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Export(name="mediaType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Output<Optional<String>> mediaType() {
@@ -712,14 +738,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Output<Optional<String>> speed() {
@@ -740,14 +768,16 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.speedVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {

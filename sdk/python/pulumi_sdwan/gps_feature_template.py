@@ -37,19 +37,23 @@ class GpsFeatureTemplateArgs:
         """
         The set of arguments for constructing a GpsFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] destination_address: Destination address
         :param pulumi.Input[_builtins.str] destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] destination_port_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_variable: Variable name
         :param pulumi.Input[_builtins.str] source_address: Source address
         :param pulumi.Input[_builtins.str] source_address_variable: Variable name
@@ -99,9 +103,8 @@ class GpsFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -137,7 +140,8 @@ class GpsFeatureTemplateArgs:
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "destination_port")
 
@@ -161,7 +165,8 @@ class GpsFeatureTemplateArgs:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "enable")
 
@@ -185,7 +190,9 @@ class GpsFeatureTemplateArgs:
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -221,7 +228,8 @@ class GpsFeatureTemplateArgs:
     @pulumi.getter
     def nmea(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea")
 
@@ -291,17 +299,21 @@ class _GpsFeatureTemplateState:
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[_builtins.str] destination_address: Destination address
         :param pulumi.Input[_builtins.str] destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] destination_port_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_variable: Variable name
         :param pulumi.Input[_builtins.str] source_address: Source address
         :param pulumi.Input[_builtins.str] source_address_variable: Variable name
@@ -383,7 +395,8 @@ class _GpsFeatureTemplateState:
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "destination_port")
 
@@ -407,9 +420,8 @@ class _GpsFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -421,7 +433,8 @@ class _GpsFeatureTemplateState:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "enable")
 
@@ -445,7 +458,9 @@ class _GpsFeatureTemplateState:
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -481,7 +496,8 @@ class _GpsFeatureTemplateState:
     @pulumi.getter
     def nmea(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea")
 
@@ -607,17 +623,21 @@ class GpsFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[_builtins.str] destination_address: Destination address
         :param pulumi.Input[_builtins.str] destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] destination_port_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_variable: Variable name
         :param pulumi.Input[_builtins.str] source_address: Source address
         :param pulumi.Input[_builtins.str] source_address_variable: Variable name
@@ -755,17 +775,21 @@ class GpsFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the feature template
         :param pulumi.Input[_builtins.str] destination_address: Destination address
         :param pulumi.Input[_builtins.str] destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] destination_port_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_variable: Variable name
         :param pulumi.Input[_builtins.str] source_address: Source address
         :param pulumi.Input[_builtins.str] source_address_variable: Variable name
@@ -823,7 +847,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="destinationPort")
     def destination_port(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "destination_port")
 
@@ -839,9 +864,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -849,7 +873,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def enable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "enable")
 
@@ -865,7 +890,9 @@ class GpsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -889,7 +916,8 @@ class GpsFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def nmea(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea")
 

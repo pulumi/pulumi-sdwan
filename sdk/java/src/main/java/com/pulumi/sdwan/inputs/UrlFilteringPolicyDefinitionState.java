@@ -64,14 +64,16 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
     }
 
     /**
-     * Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      * 
      */
     @Import(name="blockPageAction")
     private @Nullable Output<String> blockPageAction;
 
     /**
-     * @return Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * @return Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      * 
      */
     public Optional<Output<String>> blockPageAction() {
@@ -146,14 +148,16 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Optional<Output<String>> mode() {
@@ -221,14 +225,16 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
     }
 
     /**
-     * whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      * 
      */
     @Import(name="webCategoriesAction")
     private @Nullable Output<String> webCategoriesAction;
 
     /**
-     * @return whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * @return whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      * 
      */
     public Optional<Output<String>> webCategoriesAction() {
@@ -236,16 +242,16 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
     }
 
     /**
-     * The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     @Import(name="webReputation")
     private @Nullable Output<String> webReputation;
 
     /**
-     * @return The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * @return The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     public Optional<Output<String>> webReputation() {
@@ -365,7 +371,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param blockPageAction Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+         * @param blockPageAction Redirect to a URL or display a message when a blocked page is accessed.
+         *   - Choices: `text`, `redirectUrl`
          * 
          * @return builder
          * 
@@ -376,7 +383,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param blockPageAction Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+         * @param blockPageAction Redirect to a URL or display a message when a blocked page is accessed.
+         *   - Choices: `text`, `redirectUrl`
          * 
          * @return builder
          * 
@@ -483,7 +491,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -494,7 +503,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -608,7 +618,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param webCategoriesAction whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+         * @param webCategoriesAction whether the selected web categories should be blocked or allowed.
+         *   - Choices: `block`, `allow`
          * 
          * @return builder
          * 
@@ -619,7 +630,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param webCategoriesAction whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+         * @param webCategoriesAction whether the selected web categories should be blocked or allowed.
+         *   - Choices: `block`, `allow`
          * 
          * @return builder
          * 
@@ -629,8 +641,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param webReputation The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-         * `trustworthy`
+         * @param webReputation The web reputation of the policy definition
+         *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
          * 
          * @return builder
          * 
@@ -641,8 +653,8 @@ public final class UrlFilteringPolicyDefinitionState extends com.pulumi.resource
         }
 
         /**
-         * @param webReputation The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-         * `trustworthy`
+         * @param webReputation The web reputation of the policy definition
+         *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
          * 
          * @return builder
          * 

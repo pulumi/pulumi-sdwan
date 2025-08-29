@@ -19,14 +19,18 @@ public final class SystemIpv6DeviceAccessFeatureArgs extends com.pulumi.resource
     public static final SystemIpv6DeviceAccessFeatureArgs Empty = new SystemIpv6DeviceAccessFeatureArgs();
 
     /**
-     * Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * @return Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -122,7 +126,9 @@ public final class SystemIpv6DeviceAccessFeatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 
@@ -133,7 +139,9 @@ public final class SystemIpv6DeviceAccessFeatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 

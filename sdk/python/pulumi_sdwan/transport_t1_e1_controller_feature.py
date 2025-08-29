@@ -32,7 +32,8 @@ class TransportT1E1ControllerFeatureArgs:
         The set of arguments for constructing a TransportT1E1ControllerFeature resource.
         :param pulumi.Input[Sequence[pulumi.Input['TransportT1E1ControllerFeatureEntryArgs']]] entries: Controller tx-ex List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] type: Card Type - Choices: `e1`, `t1`
+        :param pulumi.Input[_builtins.str] type: Card Type
+                 - Choices: `e1`, `t1`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number
@@ -78,7 +79,8 @@ class TransportT1E1ControllerFeatureArgs:
     @pulumi.getter
     def type(self) -> pulumi.Input[_builtins.str]:
         """
-        Card Type - Choices: `e1`, `t1`
+        Card Type
+          - Choices: `e1`, `t1`
         """
         return pulumi.get(self, "type")
 
@@ -154,7 +156,8 @@ class _TransportT1E1ControllerFeatureState:
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number
         :param pulumi.Input[_builtins.str] slot_variable: Variable name
-        :param pulumi.Input[_builtins.str] type: Card Type - Choices: `e1`, `t1`
+        :param pulumi.Input[_builtins.str] type: Card Type
+                 - Choices: `e1`, `t1`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         if description is not None:
@@ -250,7 +253,8 @@ class _TransportT1E1ControllerFeatureState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Card Type - Choices: `e1`, `t1`
+        Card Type
+          - Choices: `e1`, `t1`
         """
         return pulumi.get(self, "type")
 
@@ -307,7 +311,8 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number
         :param pulumi.Input[_builtins.str] slot_variable: Variable name
-        :param pulumi.Input[_builtins.str] type: Card Type - Choices: `e1`, `t1`
+        :param pulumi.Input[_builtins.str] type: Card Type
+                 - Choices: `e1`, `t1`
         """
         ...
     @overload
@@ -405,7 +410,8 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] slot: Slot number
         :param pulumi.Input[_builtins.str] slot_variable: Variable name
-        :param pulumi.Input[_builtins.str] type: Card Type - Choices: `e1`, `t1`
+        :param pulumi.Input[_builtins.str] type: Card Type
+                 - Choices: `e1`, `t1`
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -474,7 +480,8 @@ class TransportT1E1ControllerFeature(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        Card Type - Choices: `e1`, `t1`
+        Card Type
+          - Choices: `e1`, `t1`
         """
         return pulumi.get(self, "type")
 

@@ -32,7 +32,9 @@ class TransportTrackerGroupFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportTrackerGroupFeatureTrackerElementArgs']]] tracker_elements: tracker parcel ref list
         """
@@ -88,7 +90,9 @@ class TransportTrackerGroupFeatureArgs:
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 
@@ -136,7 +140,9 @@ class _TransportTrackerGroupFeatureState:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportTrackerGroupFeatureTrackerElementArgs']]] tracker_elements: tracker parcel ref list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -196,7 +202,9 @@ class _TransportTrackerGroupFeatureState:
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 
@@ -273,7 +281,9 @@ class TransportTrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportTrackerGroupFeatureTrackerElementArgs', 'TransportTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: tracker parcel ref list
         """
@@ -363,7 +373,9 @@ class TransportTrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportTrackerGroupFeatureTrackerElementArgs', 'TransportTrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: tracker parcel ref list
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -409,7 +421,9 @@ class TransportTrackerGroupFeature(pulumi.CustomResource):
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 

@@ -33,7 +33,9 @@ type TransportIpv6TrackerGroupFeature struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list combine boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	TrackerBoolean pulumi.StringPtrOutput `pulumi:"trackerBoolean"`
 	// Variable name
 	TrackerBooleanVariable pulumi.StringPtrOutput `pulumi:"trackerBooleanVariable"`
@@ -89,7 +91,9 @@ type transportIpv6TrackerGroupFeatureState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list combine boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	TrackerBoolean *string `pulumi:"trackerBoolean"`
 	// Variable name
 	TrackerBooleanVariable *string `pulumi:"trackerBooleanVariable"`
@@ -110,7 +114,9 @@ type TransportIpv6TrackerGroupFeatureState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list combine boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	TrackerBoolean pulumi.StringPtrInput
 	// Variable name
 	TrackerBooleanVariable pulumi.StringPtrInput
@@ -135,7 +141,9 @@ type transportIpv6TrackerGroupFeatureArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list combine boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	TrackerBoolean *string `pulumi:"trackerBoolean"`
 	// Variable name
 	TrackerBooleanVariable *string `pulumi:"trackerBooleanVariable"`
@@ -155,7 +163,9 @@ type TransportIpv6TrackerGroupFeatureArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+	// tracker ref list combine boolean and or
+	//   - Choices: `and`, `or`
+	//   - Default value: `or`
 	TrackerBoolean pulumi.StringPtrInput
 	// Variable name
 	TrackerBooleanVariable pulumi.StringPtrInput
@@ -269,7 +279,9 @@ func (o TransportIpv6TrackerGroupFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportIpv6TrackerGroupFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+// tracker ref list combine boolean and or
+//   - Choices: `and`, `or`
+//   - Default value: `or`
 func (o TransportIpv6TrackerGroupFeatureOutput) TrackerBoolean() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportIpv6TrackerGroupFeature) pulumi.StringPtrOutput { return v.TrackerBoolean }).(pulumi.StringPtrOutput)
 }

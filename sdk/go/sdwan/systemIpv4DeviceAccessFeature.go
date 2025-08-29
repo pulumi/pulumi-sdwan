@@ -27,7 +27,9 @@ import (
 type SystemIpv4DeviceAccessFeature struct {
 	pulumi.CustomResourceState
 
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -74,7 +76,9 @@ func GetSystemIpv4DeviceAccessFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SystemIpv4DeviceAccessFeature resources.
 type systemIpv4DeviceAccessFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -89,7 +93,9 @@ type systemIpv4DeviceAccessFeatureState struct {
 }
 
 type SystemIpv4DeviceAccessFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -108,7 +114,9 @@ func (SystemIpv4DeviceAccessFeatureState) ElementType() reflect.Type {
 }
 
 type systemIpv4DeviceAccessFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -122,7 +130,9 @@ type systemIpv4DeviceAccessFeatureArgs struct {
 
 // The set of arguments for constructing a SystemIpv4DeviceAccessFeature resource.
 type SystemIpv4DeviceAccessFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -221,7 +231,9 @@ func (o SystemIpv4DeviceAccessFeatureOutput) ToSystemIpv4DeviceAccessFeatureOutp
 	return o
 }
 
-// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+// Default Action
+//   - Choices: `drop`, `accept`
+//   - Default value: `drop`
 func (o SystemIpv4DeviceAccessFeatureOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemIpv4DeviceAccessFeature) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

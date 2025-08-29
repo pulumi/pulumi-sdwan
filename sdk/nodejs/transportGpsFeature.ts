@@ -68,67 +68,72 @@ export class TransportGpsFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      */
-    public readonly gpsEnable!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly gpsEnableVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
-     */
-    public readonly gpsMode!: pulumi.Output<string | undefined>;
+    declare public readonly gpsEnable: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly gpsModeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly gpsEnableVariable: pulumi.Output<string | undefined>;
+    /**
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
+     */
+    declare public readonly gpsMode: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly gpsModeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Destination address
      */
-    public readonly nmeaDestinationAddress!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaDestinationAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly nmeaDestinationAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaDestinationAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
-    public readonly nmeaDestinationPort!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly nmeaDestinationPortVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Enable/disable NMEA data - Default value: `false`
-     */
-    public readonly nmeaEnable!: pulumi.Output<boolean | undefined>;
+    declare public readonly nmeaDestinationPort: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly nmeaEnableVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaDestinationPortVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable/disable NMEA data
+     *   - Default value: `false`
+     */
+    declare public readonly nmeaEnable: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly nmeaEnableVariable: pulumi.Output<string | undefined>;
     /**
      * Source address
      */
-    public readonly nmeaSourceAddress!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaSourceAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly nmeaSourceAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaSourceAddressVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportGpsFeature resource with the given unique name, arguments, and options.
@@ -143,42 +148,42 @@ export class TransportGpsFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportGpsFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["gpsEnable"] = state ? state.gpsEnable : undefined;
-            resourceInputs["gpsEnableVariable"] = state ? state.gpsEnableVariable : undefined;
-            resourceInputs["gpsMode"] = state ? state.gpsMode : undefined;
-            resourceInputs["gpsModeVariable"] = state ? state.gpsModeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nmeaDestinationAddress"] = state ? state.nmeaDestinationAddress : undefined;
-            resourceInputs["nmeaDestinationAddressVariable"] = state ? state.nmeaDestinationAddressVariable : undefined;
-            resourceInputs["nmeaDestinationPort"] = state ? state.nmeaDestinationPort : undefined;
-            resourceInputs["nmeaDestinationPortVariable"] = state ? state.nmeaDestinationPortVariable : undefined;
-            resourceInputs["nmeaEnable"] = state ? state.nmeaEnable : undefined;
-            resourceInputs["nmeaEnableVariable"] = state ? state.nmeaEnableVariable : undefined;
-            resourceInputs["nmeaSourceAddress"] = state ? state.nmeaSourceAddress : undefined;
-            resourceInputs["nmeaSourceAddressVariable"] = state ? state.nmeaSourceAddressVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["gpsEnable"] = state?.gpsEnable;
+            resourceInputs["gpsEnableVariable"] = state?.gpsEnableVariable;
+            resourceInputs["gpsMode"] = state?.gpsMode;
+            resourceInputs["gpsModeVariable"] = state?.gpsModeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nmeaDestinationAddress"] = state?.nmeaDestinationAddress;
+            resourceInputs["nmeaDestinationAddressVariable"] = state?.nmeaDestinationAddressVariable;
+            resourceInputs["nmeaDestinationPort"] = state?.nmeaDestinationPort;
+            resourceInputs["nmeaDestinationPortVariable"] = state?.nmeaDestinationPortVariable;
+            resourceInputs["nmeaEnable"] = state?.nmeaEnable;
+            resourceInputs["nmeaEnableVariable"] = state?.nmeaEnableVariable;
+            resourceInputs["nmeaSourceAddress"] = state?.nmeaSourceAddress;
+            resourceInputs["nmeaSourceAddressVariable"] = state?.nmeaSourceAddressVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportGpsFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["gpsEnable"] = args ? args.gpsEnable : undefined;
-            resourceInputs["gpsEnableVariable"] = args ? args.gpsEnableVariable : undefined;
-            resourceInputs["gpsMode"] = args ? args.gpsMode : undefined;
-            resourceInputs["gpsModeVariable"] = args ? args.gpsModeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nmeaDestinationAddress"] = args ? args.nmeaDestinationAddress : undefined;
-            resourceInputs["nmeaDestinationAddressVariable"] = args ? args.nmeaDestinationAddressVariable : undefined;
-            resourceInputs["nmeaDestinationPort"] = args ? args.nmeaDestinationPort : undefined;
-            resourceInputs["nmeaDestinationPortVariable"] = args ? args.nmeaDestinationPortVariable : undefined;
-            resourceInputs["nmeaEnable"] = args ? args.nmeaEnable : undefined;
-            resourceInputs["nmeaEnableVariable"] = args ? args.nmeaEnableVariable : undefined;
-            resourceInputs["nmeaSourceAddress"] = args ? args.nmeaSourceAddress : undefined;
-            resourceInputs["nmeaSourceAddressVariable"] = args ? args.nmeaSourceAddressVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["gpsEnable"] = args?.gpsEnable;
+            resourceInputs["gpsEnableVariable"] = args?.gpsEnableVariable;
+            resourceInputs["gpsMode"] = args?.gpsMode;
+            resourceInputs["gpsModeVariable"] = args?.gpsModeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nmeaDestinationAddress"] = args?.nmeaDestinationAddress;
+            resourceInputs["nmeaDestinationAddressVariable"] = args?.nmeaDestinationAddressVariable;
+            resourceInputs["nmeaDestinationPort"] = args?.nmeaDestinationPort;
+            resourceInputs["nmeaDestinationPortVariable"] = args?.nmeaDestinationPortVariable;
+            resourceInputs["nmeaEnable"] = args?.nmeaEnable;
+            resourceInputs["nmeaEnableVariable"] = args?.nmeaEnableVariable;
+            resourceInputs["nmeaSourceAddress"] = args?.nmeaSourceAddress;
+            resourceInputs["nmeaSourceAddressVariable"] = args?.nmeaSourceAddressVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -199,7 +204,8 @@ export interface TransportGpsFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      */
     gpsEnable?: pulumi.Input<boolean>;
     /**
@@ -207,7 +213,9 @@ export interface TransportGpsFeatureState {
      */
     gpsEnableVariable?: pulumi.Input<string>;
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      */
     gpsMode?: pulumi.Input<string>;
     /**
@@ -227,7 +235,8 @@ export interface TransportGpsFeatureState {
      */
     nmeaDestinationAddressVariable?: pulumi.Input<string>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
     nmeaDestinationPort?: pulumi.Input<number>;
     /**
@@ -235,7 +244,8 @@ export interface TransportGpsFeatureState {
      */
     nmeaDestinationPortVariable?: pulumi.Input<string>;
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      */
     nmeaEnable?: pulumi.Input<boolean>;
     /**
@@ -269,7 +279,8 @@ export interface TransportGpsFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      */
     gpsEnable?: pulumi.Input<boolean>;
     /**
@@ -277,7 +288,9 @@ export interface TransportGpsFeatureArgs {
      */
     gpsEnableVariable?: pulumi.Input<string>;
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      */
     gpsMode?: pulumi.Input<string>;
     /**
@@ -297,7 +310,8 @@ export interface TransportGpsFeatureArgs {
      */
     nmeaDestinationAddressVariable?: pulumi.Input<string>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
     nmeaDestinationPort?: pulumi.Input<number>;
     /**
@@ -305,7 +319,8 @@ export interface TransportGpsFeatureArgs {
      */
     nmeaDestinationPortVariable?: pulumi.Input<string>;
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      */
     nmeaEnable?: pulumi.Input<boolean>;
     /**

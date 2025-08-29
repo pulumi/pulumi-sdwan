@@ -25,8 +25,7 @@ import (
 type CiscoTrustsecFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-	// char)
+	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId pulumi.StringPtrOutput `pulumi:"credentialsId"`
 	// Variable name
 	CredentialsIdVariable pulumi.StringPtrOutput `pulumi:"credentialsIdVariable"`
@@ -36,31 +35,39 @@ type CiscoTrustsecFeatureTemplate struct {
 	CredentialsPasswordVariable pulumi.StringPtrOutput `pulumi:"credentialsPasswordVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// Configure Local device security group <2..65519> - Range: `2`-`65519`
+	// Configure Local device security group <2..65519>
+	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrOutput `pulumi:"deviceSgt"`
 	// Variable name
 	DeviceSgtVariable pulumi.StringPtrOutput `pulumi:"deviceSgtVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Enable Role-based Access Control enforcement - Default value: `false`
+	// Enable Role-based Access Control enforcement
+	//   - Default value: `false`
 	EnableEnforcement pulumi.BoolPtrOutput `pulumi:"enableEnforcement"`
 	// Variable name
 	EnableEnforcementVariable pulumi.StringPtrOutput `pulumi:"enableEnforcementVariable"`
-	// Enable CTS SXP support - Default value: `false`
+	// Enable CTS SXP support
+	//   - Default value: `false`
 	EnableSxp pulumi.BoolPtrOutput `pulumi:"enableSxp"`
-	// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+	// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `180`
 	MaximumListenerHoldTime pulumi.IntPtrOutput `pulumi:"maximumListenerHoldTime"`
 	// Variable name
 	MaximumListenerHoldTimeVariable pulumi.StringPtrOutput `pulumi:"maximumListenerHoldTimeVariable"`
-	// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+	// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `90`
 	MinimumListenerHoldTime pulumi.IntPtrOutput `pulumi:"minimumListenerHoldTime"`
 	// Variable name
 	MinimumListenerHoldTimeVariable pulumi.StringPtrOutput `pulumi:"minimumListenerHoldTimeVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+	// Configure Speaker hold-time in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `120`
 	SpeakerHoldTime pulumi.IntPtrOutput `pulumi:"speakerHoldTime"`
 	// Variable name
 	SpeakerHoldTimeVariable pulumi.StringPtrOutput `pulumi:"speakerHoldTimeVariable"`
@@ -74,22 +81,28 @@ type CiscoTrustsecFeatureTemplate struct {
 	SxpKeyChain pulumi.StringPtrOutput `pulumi:"sxpKeyChain"`
 	// Variable name
 	SxpKeyChainVariable pulumi.StringPtrOutput `pulumi:"sxpKeyChainVariable"`
-	// Enables logging for IP-to-SGT binding changes - Default value: `false`
+	// Enables logging for IP-to-SGT binding changes
+	//   - Default value: `false`
 	SxpLogBindingChanges pulumi.BoolPtrOutput `pulumi:"sxpLogBindingChanges"`
 	// Variable name
 	SxpLogBindingChangesVariable pulumi.StringPtrOutput `pulumi:"sxpLogBindingChangesVariable"`
 	// Configure SXP Node ID <IP, 8 char string or interface name>
 	SxpNodeId pulumi.StringPtrOutput `pulumi:"sxpNodeId"`
-	// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-	// Default value: `ip`
+	// Define SXP Node ID type <IP, 8 char string or interface name>
+	//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+	//   - Default value: `ip`
 	SxpNodeIdType pulumi.StringPtrOutput `pulumi:"sxpNodeIdType"`
 	// Variable name
 	SxpNodeIdVariable pulumi.StringPtrOutput `pulumi:"sxpNodeIdVariable"`
-	// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure the SXP reconciliation period in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpReconciliationPeriod pulumi.IntPtrOutput `pulumi:"sxpReconciliationPeriod"`
 	// Variable name
 	SxpReconciliationPeriodVariable pulumi.StringPtrOutput `pulumi:"sxpReconciliationPeriodVariable"`
-	// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure Retry period for SXP connection in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpRetryPeriod pulumi.IntPtrOutput `pulumi:"sxpRetryPeriod"`
 	// Variable name
 	SxpRetryPeriodVariable pulumi.StringPtrOutput `pulumi:"sxpRetryPeriodVariable"`
@@ -139,8 +152,7 @@ func GetCiscoTrustsecFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CiscoTrustsecFeatureTemplate resources.
 type ciscoTrustsecFeatureTemplateState struct {
-	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-	// char)
+	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId *string `pulumi:"credentialsId"`
 	// Variable name
 	CredentialsIdVariable *string `pulumi:"credentialsIdVariable"`
@@ -150,31 +162,39 @@ type ciscoTrustsecFeatureTemplateState struct {
 	CredentialsPasswordVariable *string `pulumi:"credentialsPasswordVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// Configure Local device security group <2..65519> - Range: `2`-`65519`
+	// Configure Local device security group <2..65519>
+	//   - Range: `2`-`65519`
 	DeviceSgt *int `pulumi:"deviceSgt"`
 	// Variable name
 	DeviceSgtVariable *string `pulumi:"deviceSgtVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable Role-based Access Control enforcement - Default value: `false`
+	// Enable Role-based Access Control enforcement
+	//   - Default value: `false`
 	EnableEnforcement *bool `pulumi:"enableEnforcement"`
 	// Variable name
 	EnableEnforcementVariable *string `pulumi:"enableEnforcementVariable"`
-	// Enable CTS SXP support - Default value: `false`
+	// Enable CTS SXP support
+	//   - Default value: `false`
 	EnableSxp *bool `pulumi:"enableSxp"`
-	// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+	// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `180`
 	MaximumListenerHoldTime *int `pulumi:"maximumListenerHoldTime"`
 	// Variable name
 	MaximumListenerHoldTimeVariable *string `pulumi:"maximumListenerHoldTimeVariable"`
-	// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+	// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `90`
 	MinimumListenerHoldTime *int `pulumi:"minimumListenerHoldTime"`
 	// Variable name
 	MinimumListenerHoldTimeVariable *string `pulumi:"minimumListenerHoldTimeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+	// Configure Speaker hold-time in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `120`
 	SpeakerHoldTime *int `pulumi:"speakerHoldTime"`
 	// Variable name
 	SpeakerHoldTimeVariable *string `pulumi:"speakerHoldTimeVariable"`
@@ -188,22 +208,28 @@ type ciscoTrustsecFeatureTemplateState struct {
 	SxpKeyChain *string `pulumi:"sxpKeyChain"`
 	// Variable name
 	SxpKeyChainVariable *string `pulumi:"sxpKeyChainVariable"`
-	// Enables logging for IP-to-SGT binding changes - Default value: `false`
+	// Enables logging for IP-to-SGT binding changes
+	//   - Default value: `false`
 	SxpLogBindingChanges *bool `pulumi:"sxpLogBindingChanges"`
 	// Variable name
 	SxpLogBindingChangesVariable *string `pulumi:"sxpLogBindingChangesVariable"`
 	// Configure SXP Node ID <IP, 8 char string or interface name>
 	SxpNodeId *string `pulumi:"sxpNodeId"`
-	// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-	// Default value: `ip`
+	// Define SXP Node ID type <IP, 8 char string or interface name>
+	//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+	//   - Default value: `ip`
 	SxpNodeIdType *string `pulumi:"sxpNodeIdType"`
 	// Variable name
 	SxpNodeIdVariable *string `pulumi:"sxpNodeIdVariable"`
-	// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure the SXP reconciliation period in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpReconciliationPeriod *int `pulumi:"sxpReconciliationPeriod"`
 	// Variable name
 	SxpReconciliationPeriodVariable *string `pulumi:"sxpReconciliationPeriodVariable"`
-	// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure Retry period for SXP connection in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpRetryPeriod *int `pulumi:"sxpRetryPeriod"`
 	// Variable name
 	SxpRetryPeriodVariable *string `pulumi:"sxpRetryPeriodVariable"`
@@ -218,8 +244,7 @@ type ciscoTrustsecFeatureTemplateState struct {
 }
 
 type CiscoTrustsecFeatureTemplateState struct {
-	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-	// char)
+	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId pulumi.StringPtrInput
 	// Variable name
 	CredentialsIdVariable pulumi.StringPtrInput
@@ -229,31 +254,39 @@ type CiscoTrustsecFeatureTemplateState struct {
 	CredentialsPasswordVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// Configure Local device security group <2..65519> - Range: `2`-`65519`
+	// Configure Local device security group <2..65519>
+	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrInput
 	// Variable name
 	DeviceSgtVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable Role-based Access Control enforcement - Default value: `false`
+	// Enable Role-based Access Control enforcement
+	//   - Default value: `false`
 	EnableEnforcement pulumi.BoolPtrInput
 	// Variable name
 	EnableEnforcementVariable pulumi.StringPtrInput
-	// Enable CTS SXP support - Default value: `false`
+	// Enable CTS SXP support
+	//   - Default value: `false`
 	EnableSxp pulumi.BoolPtrInput
-	// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+	// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `180`
 	MaximumListenerHoldTime pulumi.IntPtrInput
 	// Variable name
 	MaximumListenerHoldTimeVariable pulumi.StringPtrInput
-	// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+	// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `90`
 	MinimumListenerHoldTime pulumi.IntPtrInput
 	// Variable name
 	MinimumListenerHoldTimeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+	// Configure Speaker hold-time in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `120`
 	SpeakerHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpeakerHoldTimeVariable pulumi.StringPtrInput
@@ -267,22 +300,28 @@ type CiscoTrustsecFeatureTemplateState struct {
 	SxpKeyChain pulumi.StringPtrInput
 	// Variable name
 	SxpKeyChainVariable pulumi.StringPtrInput
-	// Enables logging for IP-to-SGT binding changes - Default value: `false`
+	// Enables logging for IP-to-SGT binding changes
+	//   - Default value: `false`
 	SxpLogBindingChanges pulumi.BoolPtrInput
 	// Variable name
 	SxpLogBindingChangesVariable pulumi.StringPtrInput
 	// Configure SXP Node ID <IP, 8 char string or interface name>
 	SxpNodeId pulumi.StringPtrInput
-	// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-	// Default value: `ip`
+	// Define SXP Node ID type <IP, 8 char string or interface name>
+	//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+	//   - Default value: `ip`
 	SxpNodeIdType pulumi.StringPtrInput
 	// Variable name
 	SxpNodeIdVariable pulumi.StringPtrInput
-	// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure the SXP reconciliation period in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpReconciliationPeriod pulumi.IntPtrInput
 	// Variable name
 	SxpReconciliationPeriodVariable pulumi.StringPtrInput
-	// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure Retry period for SXP connection in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpRetryPeriod pulumi.IntPtrInput
 	// Variable name
 	SxpRetryPeriodVariable pulumi.StringPtrInput
@@ -301,8 +340,7 @@ func (CiscoTrustsecFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type ciscoTrustsecFeatureTemplateArgs struct {
-	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-	// char)
+	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId *string `pulumi:"credentialsId"`
 	// Variable name
 	CredentialsIdVariable *string `pulumi:"credentialsIdVariable"`
@@ -312,31 +350,39 @@ type ciscoTrustsecFeatureTemplateArgs struct {
 	CredentialsPasswordVariable *string `pulumi:"credentialsPasswordVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// Configure Local device security group <2..65519> - Range: `2`-`65519`
+	// Configure Local device security group <2..65519>
+	//   - Range: `2`-`65519`
 	DeviceSgt *int `pulumi:"deviceSgt"`
 	// Variable name
 	DeviceSgtVariable *string `pulumi:"deviceSgtVariable"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable Role-based Access Control enforcement - Default value: `false`
+	// Enable Role-based Access Control enforcement
+	//   - Default value: `false`
 	EnableEnforcement *bool `pulumi:"enableEnforcement"`
 	// Variable name
 	EnableEnforcementVariable *string `pulumi:"enableEnforcementVariable"`
-	// Enable CTS SXP support - Default value: `false`
+	// Enable CTS SXP support
+	//   - Default value: `false`
 	EnableSxp *bool `pulumi:"enableSxp"`
-	// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+	// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `180`
 	MaximumListenerHoldTime *int `pulumi:"maximumListenerHoldTime"`
 	// Variable name
 	MaximumListenerHoldTimeVariable *string `pulumi:"maximumListenerHoldTimeVariable"`
-	// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+	// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `90`
 	MinimumListenerHoldTime *int `pulumi:"minimumListenerHoldTime"`
 	// Variable name
 	MinimumListenerHoldTimeVariable *string `pulumi:"minimumListenerHoldTimeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+	// Configure Speaker hold-time in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `120`
 	SpeakerHoldTime *int `pulumi:"speakerHoldTime"`
 	// Variable name
 	SpeakerHoldTimeVariable *string `pulumi:"speakerHoldTimeVariable"`
@@ -350,22 +396,28 @@ type ciscoTrustsecFeatureTemplateArgs struct {
 	SxpKeyChain *string `pulumi:"sxpKeyChain"`
 	// Variable name
 	SxpKeyChainVariable *string `pulumi:"sxpKeyChainVariable"`
-	// Enables logging for IP-to-SGT binding changes - Default value: `false`
+	// Enables logging for IP-to-SGT binding changes
+	//   - Default value: `false`
 	SxpLogBindingChanges *bool `pulumi:"sxpLogBindingChanges"`
 	// Variable name
 	SxpLogBindingChangesVariable *string `pulumi:"sxpLogBindingChangesVariable"`
 	// Configure SXP Node ID <IP, 8 char string or interface name>
 	SxpNodeId *string `pulumi:"sxpNodeId"`
-	// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-	// Default value: `ip`
+	// Define SXP Node ID type <IP, 8 char string or interface name>
+	//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+	//   - Default value: `ip`
 	SxpNodeIdType *string `pulumi:"sxpNodeIdType"`
 	// Variable name
 	SxpNodeIdVariable *string `pulumi:"sxpNodeIdVariable"`
-	// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure the SXP reconciliation period in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpReconciliationPeriod *int `pulumi:"sxpReconciliationPeriod"`
 	// Variable name
 	SxpReconciliationPeriodVariable *string `pulumi:"sxpReconciliationPeriodVariable"`
-	// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure Retry period for SXP connection in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpRetryPeriod *int `pulumi:"sxpRetryPeriod"`
 	// Variable name
 	SxpRetryPeriodVariable *string `pulumi:"sxpRetryPeriodVariable"`
@@ -377,8 +429,7 @@ type ciscoTrustsecFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a CiscoTrustsecFeatureTemplate resource.
 type CiscoTrustsecFeatureTemplateArgs struct {
-	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-	// char)
+	// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 	CredentialsId pulumi.StringPtrInput
 	// Variable name
 	CredentialsIdVariable pulumi.StringPtrInput
@@ -388,31 +439,39 @@ type CiscoTrustsecFeatureTemplateArgs struct {
 	CredentialsPasswordVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// Configure Local device security group <2..65519> - Range: `2`-`65519`
+	// Configure Local device security group <2..65519>
+	//   - Range: `2`-`65519`
 	DeviceSgt pulumi.IntPtrInput
 	// Variable name
 	DeviceSgtVariable pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable Role-based Access Control enforcement - Default value: `false`
+	// Enable Role-based Access Control enforcement
+	//   - Default value: `false`
 	EnableEnforcement pulumi.BoolPtrInput
 	// Variable name
 	EnableEnforcementVariable pulumi.StringPtrInput
-	// Enable CTS SXP support - Default value: `false`
+	// Enable CTS SXP support
+	//   - Default value: `false`
 	EnableSxp pulumi.BoolPtrInput
-	// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+	// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `180`
 	MaximumListenerHoldTime pulumi.IntPtrInput
 	// Variable name
 	MaximumListenerHoldTimeVariable pulumi.StringPtrInput
-	// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+	// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `90`
 	MinimumListenerHoldTime pulumi.IntPtrInput
 	// Variable name
 	MinimumListenerHoldTimeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+	// Configure Speaker hold-time in seconds <1..65534>
+	//   - Range: `1`-`65534`
+	//   - Default value: `120`
 	SpeakerHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpeakerHoldTimeVariable pulumi.StringPtrInput
@@ -426,22 +485,28 @@ type CiscoTrustsecFeatureTemplateArgs struct {
 	SxpKeyChain pulumi.StringPtrInput
 	// Variable name
 	SxpKeyChainVariable pulumi.StringPtrInput
-	// Enables logging for IP-to-SGT binding changes - Default value: `false`
+	// Enables logging for IP-to-SGT binding changes
+	//   - Default value: `false`
 	SxpLogBindingChanges pulumi.BoolPtrInput
 	// Variable name
 	SxpLogBindingChangesVariable pulumi.StringPtrInput
 	// Configure SXP Node ID <IP, 8 char string or interface name>
 	SxpNodeId pulumi.StringPtrInput
-	// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-	// Default value: `ip`
+	// Define SXP Node ID type <IP, 8 char string or interface name>
+	//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+	//   - Default value: `ip`
 	SxpNodeIdType pulumi.StringPtrInput
 	// Variable name
 	SxpNodeIdVariable pulumi.StringPtrInput
-	// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure the SXP reconciliation period in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpReconciliationPeriod pulumi.IntPtrInput
 	// Variable name
 	SxpReconciliationPeriodVariable pulumi.StringPtrInput
-	// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+	// Configure Retry period for SXP connection in seconds <0..64000>
+	//   - Range: `0`-`64000`
+	//   - Default value: `120`
 	SxpRetryPeriod pulumi.IntPtrInput
 	// Variable name
 	SxpRetryPeriodVariable pulumi.StringPtrInput
@@ -538,8 +603,7 @@ func (o CiscoTrustsecFeatureTemplateOutput) ToCiscoTrustsecFeatureTemplateOutput
 	return o
 }
 
-// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-// char)
+// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
 func (o CiscoTrustsecFeatureTemplateOutput) CredentialsId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.CredentialsId }).(pulumi.StringPtrOutput)
 }
@@ -564,7 +628,8 @@ func (o CiscoTrustsecFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// Configure Local device security group <2..65519> - Range: `2`-`65519`
+// Configure Local device security group <2..65519>
+//   - Range: `2`-`65519`
 func (o CiscoTrustsecFeatureTemplateOutput) DeviceSgt() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.DeviceSgt }).(pulumi.IntPtrOutput)
 }
@@ -574,14 +639,14 @@ func (o CiscoTrustsecFeatureTemplateOutput) DeviceSgtVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.DeviceSgtVariable }).(pulumi.StringPtrOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoTrustsecFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable Role-based Access Control enforcement - Default value: `false`
+// Enable Role-based Access Control enforcement
+//   - Default value: `false`
 func (o CiscoTrustsecFeatureTemplateOutput) EnableEnforcement() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.BoolPtrOutput { return v.EnableEnforcement }).(pulumi.BoolPtrOutput)
 }
@@ -591,12 +656,15 @@ func (o CiscoTrustsecFeatureTemplateOutput) EnableEnforcementVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.EnableEnforcementVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable CTS SXP support - Default value: `false`
+// Enable CTS SXP support
+//   - Default value: `false`
 func (o CiscoTrustsecFeatureTemplateOutput) EnableSxp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.BoolPtrOutput { return v.EnableSxp }).(pulumi.BoolPtrOutput)
 }
 
-// Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+// Configure Maximum allowed hold-time for listener in seconds <1..65534>
+//   - Range: `1`-`65534`
+//   - Default value: `180`
 func (o CiscoTrustsecFeatureTemplateOutput) MaximumListenerHoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.MaximumListenerHoldTime }).(pulumi.IntPtrOutput)
 }
@@ -606,7 +674,9 @@ func (o CiscoTrustsecFeatureTemplateOutput) MaximumListenerHoldTimeVariable() pu
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.MaximumListenerHoldTimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+// Configure Minimum allowed hold-time for listener in seconds <1..65534>
+//   - Range: `1`-`65534`
+//   - Default value: `90`
 func (o CiscoTrustsecFeatureTemplateOutput) MinimumListenerHoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.MinimumListenerHoldTime }).(pulumi.IntPtrOutput)
 }
@@ -621,7 +691,9 @@ func (o CiscoTrustsecFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+// Configure Speaker hold-time in seconds <1..65534>
+//   - Range: `1`-`65534`
+//   - Default value: `120`
 func (o CiscoTrustsecFeatureTemplateOutput) SpeakerHoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.SpeakerHoldTime }).(pulumi.IntPtrOutput)
 }
@@ -658,7 +730,8 @@ func (o CiscoTrustsecFeatureTemplateOutput) SxpKeyChainVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.SxpKeyChainVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enables logging for IP-to-SGT binding changes - Default value: `false`
+// Enables logging for IP-to-SGT binding changes
+//   - Default value: `false`
 func (o CiscoTrustsecFeatureTemplateOutput) SxpLogBindingChanges() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.BoolPtrOutput { return v.SxpLogBindingChanges }).(pulumi.BoolPtrOutput)
 }
@@ -673,8 +746,9 @@ func (o CiscoTrustsecFeatureTemplateOutput) SxpNodeId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.SxpNodeId }).(pulumi.StringPtrOutput)
 }
 
-// Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-// Default value: `ip`
+// Define SXP Node ID type <IP, 8 char string or interface name>
+//   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+//   - Default value: `ip`
 func (o CiscoTrustsecFeatureTemplateOutput) SxpNodeIdType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.SxpNodeIdType }).(pulumi.StringPtrOutput)
 }
@@ -684,7 +758,9 @@ func (o CiscoTrustsecFeatureTemplateOutput) SxpNodeIdVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.SxpNodeIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+// Configure the SXP reconciliation period in seconds <0..64000>
+//   - Range: `0`-`64000`
+//   - Default value: `120`
 func (o CiscoTrustsecFeatureTemplateOutput) SxpReconciliationPeriod() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.SxpReconciliationPeriod }).(pulumi.IntPtrOutput)
 }
@@ -694,7 +770,9 @@ func (o CiscoTrustsecFeatureTemplateOutput) SxpReconciliationPeriodVariable() pu
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.StringPtrOutput { return v.SxpReconciliationPeriodVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+// Configure Retry period for SXP connection in seconds <0..64000>
+//   - Range: `0`-`64000`
+//   - Default value: `120`
 func (o CiscoTrustsecFeatureTemplateOutput) SxpRetryPeriod() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoTrustsecFeatureTemplate) pulumi.IntPtrOutput { return v.SxpRetryPeriod }).(pulumi.IntPtrOutput)
 }

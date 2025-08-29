@@ -28,7 +28,8 @@ class CustomControlTopologyPolicyDefinitionArgs:
         """
         The set of arguments for constructing a CustomControlTopologyPolicyDefinition resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         """
@@ -56,7 +57,8 @@ class CustomControlTopologyPolicyDefinitionArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -100,7 +102,8 @@ class _CustomControlTopologyPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CustomControlTopologyPolicyDefinition resources.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['CustomControlTopologyPolicyDefinitionSequenceArgs']]] sequences: List of sequences
@@ -124,7 +127,8 @@ class _CustomControlTopologyPolicyDefinitionState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -217,7 +221,8 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
@@ -298,7 +303,8 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['CustomControlTopologyPolicyDefinitionSequenceArgs', 'CustomControlTopologyPolicyDefinitionSequenceArgsDict']]]] sequences: List of sequences
@@ -321,7 +327,8 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 

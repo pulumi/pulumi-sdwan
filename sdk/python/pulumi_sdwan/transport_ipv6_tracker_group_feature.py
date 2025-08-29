@@ -35,7 +35,9 @@ class TransportIpv6TrackerGroupFeatureArgs:
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6TrackerGroupFeatureTrackerElementArgs']]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
@@ -107,7 +109,9 @@ class TransportIpv6TrackerGroupFeatureArgs:
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 
@@ -169,7 +173,9 @@ class _TransportIpv6TrackerGroupFeatureState:
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['TransportIpv6TrackerGroupFeatureTrackerElementArgs']]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
@@ -235,7 +241,9 @@ class _TransportIpv6TrackerGroupFeatureState:
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 
@@ -338,7 +346,9 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
@@ -438,7 +448,9 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        :param pulumi.Input[_builtins.str] tracker_boolean: tracker ref list combine boolean and or
+                 - Choices: `and`, `or`
+                 - Default value: `or`
         :param pulumi.Input[_builtins.str] tracker_boolean_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['TransportIpv6TrackerGroupFeatureTrackerElementArgs', 'TransportIpv6TrackerGroupFeatureTrackerElementArgsDict']]]] tracker_elements: trackers ref list
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
@@ -488,7 +500,9 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
     @pulumi.getter(name="trackerBoolean")
     def tracker_boolean(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+        tracker ref list combine boolean and or
+          - Choices: `and`, `or`
+          - Default value: `or`
         """
         return pulumi.get(self, "tracker_boolean")
 

@@ -19,14 +19,16 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
     public static final CustomControlTopologyPolicyDefinitionArgs Empty = new CustomControlTopologyPolicyDefinitionArgs();
 
     /**
-     * Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+     * Default action, either `accept` or `reject`
+     *   - Choices: `accept`, `reject`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+     * @return Default action, either `accept` or `reject`
+     *   - Choices: `accept`, `reject`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -106,7 +108,8 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+         * @param defaultAction Default action, either `accept` or `reject`
+         *   - Choices: `accept`, `reject`
          * 
          * @return builder
          * 
@@ -117,7 +120,8 @@ public final class CustomControlTopologyPolicyDefinitionArgs extends com.pulumi.
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+         * @param defaultAction Default action, either `accept` or `reject`
+         *   - Choices: `accept`, `reject`
          * 
          * @return builder
          * 

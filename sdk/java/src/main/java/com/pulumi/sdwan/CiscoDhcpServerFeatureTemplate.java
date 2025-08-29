@@ -109,18 +109,16 @@ public class CiscoDhcpServerFeatureTemplate extends com.pulumi.resources.CustomR
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -211,14 +209,16 @@ public class CiscoDhcpServerFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.excludeAddressesVariable);
     }
     /**
-     * Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Set MTU on interface to DHCP client - Range: `68`-`65535`
+     * @return Set MTU on interface to DHCP client
+     *   - Range: `68`-`65535`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -239,14 +239,18 @@ public class CiscoDhcpServerFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.interfaceMtuVariable);
     }
     /**
-     * Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     @Export(name="leaseTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> leaseTime;
 
     /**
-     * @return Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+     * @return Configure how long a DHCP-assigned IP address is valid
+     *   - Range: `60`-`31536000`
+     *   - Default value: `86400`
      * 
      */
     public Output<Optional<Integer>> leaseTime() {

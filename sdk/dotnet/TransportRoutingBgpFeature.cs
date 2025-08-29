@@ -27,7 +27,8 @@ namespace Pulumi.Sdwan
     public partial class TransportRoutingBgpFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("alwaysCompareMed")]
         public Output<bool?> AlwaysCompareMed { get; private set; } = null!;
@@ -51,7 +52,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AsNumberVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("compareRouterId")]
         public Output<bool?> CompareRouterId { get; private set; } = null!;
@@ -69,7 +71,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("deterministicMed")]
         public Output<bool?> DeterministicMed { get; private set; } = null!;
@@ -81,7 +84,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DeterministicMedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Output("externalRoutesDistance")]
         public Output<int?> ExternalRoutesDistance { get; private set; } = null!;
@@ -99,8 +104,9 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        /// `180`
+        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Output("holdTime")]
         public Output<int?> HoldTime { get; private set; } = null!;
@@ -112,7 +118,9 @@ namespace Pulumi.Sdwan
         public Output<string?> HoldTimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Output("internalRoutesDistance")]
         public Output<int?> InternalRoutesDistance { get; private set; } = null!;
@@ -130,7 +138,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv4AggregateAddress>> Ipv4AggregateAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Output("ipv4EibgpMaximumPaths")]
         public Output<int?> Ipv4EibgpMaximumPaths { get; private set; } = null!;
@@ -154,7 +163,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv4Network>> Ipv4Networks { get; private set; } = null!;
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4Originate")]
         public Output<bool?> Ipv4Originate { get; private set; } = null!;
@@ -172,7 +182,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv4Redistribute>> Ipv4Redistributes { get; private set; } = null!;
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4TableMapFilter")]
         public Output<bool?> Ipv4TableMapFilter { get; private set; } = null!;
@@ -193,7 +204,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv6AggregateAddress>> Ipv6AggregateAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Output("ipv6EibgpMaximumPaths")]
         public Output<int?> Ipv6EibgpMaximumPaths { get; private set; } = null!;
@@ -217,7 +229,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv6Network>> Ipv6Networks { get; private set; } = null!;
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6Originate")]
         public Output<bool?> Ipv6Originate { get; private set; } = null!;
@@ -235,7 +248,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureIpv6Redistribute>> Ipv6Redistributes { get; private set; } = null!;
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6TableMapFilter")]
         public Output<bool?> Ipv6TableMapFilter { get; private set; } = null!;
@@ -250,7 +264,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6TableMapRoutePolicyId { get; private set; } = null!;
 
         /// <summary>
-        /// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Interval (seconds) of keepalive messages sent to its BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Output("keepaliveTime")]
         public Output<int?> KeepaliveTime { get; private set; } = null!;
@@ -262,7 +278,9 @@ namespace Pulumi.Sdwan
         public Output<string?> KeepaliveTimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Output("localRoutesDistance")]
         public Output<int?> LocalRoutesDistance { get; private set; } = null!;
@@ -274,7 +292,8 @@ namespace Pulumi.Sdwan
         public Output<string?> LocalRoutesDistanceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("missingMedAsWorst")]
         public Output<bool?> MissingMedAsWorst { get; private set; } = null!;
@@ -292,7 +311,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportRoutingBgpFeatureMplsInterface>> MplsInterfaces { get; private set; } = null!;
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Output("multipathRelax")]
         public Output<bool?> MultipathRelax { get; private set; } = null!;
@@ -310,7 +330,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path
+        ///   - Default value: `false`
         /// </summary>
         [Output("propagateAsPath")]
         public Output<bool?> PropagateAsPath { get; private set; } = null!;
@@ -322,7 +343,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PropagateAsPathVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Output("propagateCommunity")]
         public Output<bool?> PropagateCommunity { get; private set; } = null!;
@@ -398,7 +420,8 @@ namespace Pulumi.Sdwan
     public sealed class TransportRoutingBgpFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -422,7 +445,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -440,7 +464,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -452,7 +477,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DeterministicMedVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("externalRoutesDistance")]
         public Input<int>? ExternalRoutesDistance { get; set; }
@@ -470,8 +497,9 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        /// `180`
+        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }
@@ -483,7 +511,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Input("internalRoutesDistance")]
         public Input<int>? InternalRoutesDistance { get; set; }
@@ -507,7 +537,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4EibgpMaximumPaths")]
         public Input<int>? Ipv4EibgpMaximumPaths { get; set; }
@@ -543,7 +574,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Originate")]
         public Input<bool>? Ipv4Originate { get; set; }
@@ -567,7 +599,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4TableMapFilter")]
         public Input<bool>? Ipv4TableMapFilter { get; set; }
@@ -594,7 +627,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv6EibgpMaximumPaths")]
         public Input<int>? Ipv6EibgpMaximumPaths { get; set; }
@@ -630,7 +664,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Originate")]
         public Input<bool>? Ipv6Originate { get; set; }
@@ -654,7 +689,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6TableMapFilter")]
         public Input<bool>? Ipv6TableMapFilter { get; set; }
@@ -669,7 +705,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TableMapRoutePolicyId { get; set; }
 
         /// <summary>
-        /// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Interval (seconds) of keepalive messages sent to its BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Input("keepaliveTime")]
         public Input<int>? KeepaliveTime { get; set; }
@@ -681,7 +719,9 @@ namespace Pulumi.Sdwan
         public Input<string>? KeepaliveTimeVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("localRoutesDistance")]
         public Input<int>? LocalRoutesDistance { get; set; }
@@ -693,7 +733,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LocalRoutesDistanceVariable { get; set; }
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("missingMedAsWorst")]
         public Input<bool>? MissingMedAsWorst { get; set; }
@@ -717,7 +758,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -735,7 +777,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateAsPath")]
         public Input<bool>? PropagateAsPath { get; set; }
@@ -747,7 +790,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PropagateAsPathVariable { get; set; }
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -779,7 +823,8 @@ namespace Pulumi.Sdwan
     public sealed class TransportRoutingBgpFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -803,7 +848,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -821,7 +867,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -833,7 +880,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DeterministicMedVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("externalRoutesDistance")]
         public Input<int>? ExternalRoutesDistance { get; set; }
@@ -851,8 +900,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-        /// `180`
+        /// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }
@@ -864,7 +914,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Input("internalRoutesDistance")]
         public Input<int>? InternalRoutesDistance { get; set; }
@@ -888,7 +940,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4EibgpMaximumPaths")]
         public Input<int>? Ipv4EibgpMaximumPaths { get; set; }
@@ -924,7 +977,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Originate")]
         public Input<bool>? Ipv4Originate { get; set; }
@@ -948,7 +1002,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4TableMapFilter")]
         public Input<bool>? Ipv4TableMapFilter { get; set; }
@@ -975,7 +1030,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+        /// Set maximum number of parallel IBGP paths for multipath load sharing
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv6EibgpMaximumPaths")]
         public Input<int>? Ipv6EibgpMaximumPaths { get; set; }
@@ -1011,7 +1067,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// BGP Default Information Originate - Default value: `false`
+        /// BGP Default Information Originate
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Originate")]
         public Input<bool>? Ipv6Originate { get; set; }
@@ -1035,7 +1092,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Table map filtered or not - Default value: `false`
+        /// Table map filtered or not
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6TableMapFilter")]
         public Input<bool>? Ipv6TableMapFilter { get; set; }
@@ -1050,7 +1108,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv6TableMapRoutePolicyId { get; set; }
 
         /// <summary>
-        /// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Interval (seconds) of keepalive messages sent to its BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Input("keepaliveTime")]
         public Input<int>? KeepaliveTime { get; set; }
@@ -1062,7 +1122,9 @@ namespace Pulumi.Sdwan
         public Input<string>? KeepaliveTimeVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("localRoutesDistance")]
         public Input<int>? LocalRoutesDistance { get; set; }
@@ -1074,7 +1136,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LocalRoutesDistanceVariable { get; set; }
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("missingMedAsWorst")]
         public Input<bool>? MissingMedAsWorst { get; set; }
@@ -1098,7 +1161,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -1116,7 +1180,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateAsPath")]
         public Input<bool>? PropagateAsPath { get; set; }
@@ -1128,7 +1193,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PropagateAsPathVariable { get; set; }
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }

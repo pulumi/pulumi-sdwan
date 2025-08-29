@@ -44,21 +44,33 @@ class TlsSslDecryptionPolicyDefinitionArgs:
         The set of arguments for constructing a TlsSslDecryptionPolicyDefinition resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
-        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status - Choices: `ocsp`, `none`
-        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
-        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type - Choices: `P256`, `P384`, `P521`
-        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
-        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
+                 - Choices: `ocsp`, `none`
+        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`)
+                 - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type
+                 - Choices: `P256`, `P384`, `P521`
+        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version
+                 - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]] network_rules: List of network rules (applies when `mode` set to `security`)
-        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules
+                 - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[_builtins.str] ssl_decryption_enabled: SSL decryption enabled
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action
+                 - Choices: `drop`, `decrypt`
         :param pulumi.Input[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[_builtins.bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         """
@@ -128,7 +140,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="certificateRevocationStatus")
     def certificate_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Certificate revocation status - Choices: `ocsp`, `none`
+        Certificate revocation status
+          - Choices: `ocsp`, `none`
         """
         return pulumi.get(self, "certificate_revocation_status")
 
@@ -140,7 +153,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        Default action (applies when `mode` set to `security`)
+          - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         """
         return pulumi.get(self, "default_action")
 
@@ -152,7 +166,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="ecKeyType")
     def ec_key_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        EC Key Type - Choices: `P256`, `P384`, `P521`
+        EC Key Type
+          - Choices: `P256`, `P384`, `P521`
         """
         return pulumi.get(self, "ec_key_type")
 
@@ -164,7 +179,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="expiredCertificate")
     def expired_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Expired certificate action - Choices: `drop`, `decrypt`
+        Expired certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "expired_certificate")
 
@@ -176,7 +192,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -188,7 +205,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="minimalTlsVersion")
     def minimal_tls_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        Minimal TLS Version
+          - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         """
         return pulumi.get(self, "minimal_tls_version")
 
@@ -200,7 +218,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -236,7 +255,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="rsaKeyPairModulus")
     def rsa_key_pair_modulus(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        RSA key pair modules
+          - Choices: `1024`, `2048`, `4096`
         """
         return pulumi.get(self, "rsa_key_pair_modulus")
 
@@ -260,7 +280,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unknown revocation status action - Choices: `drop`, `decrypt`
+        Unknown revocation status action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "unknown_revocation_status")
 
@@ -272,7 +293,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="unsupportedCipherSuites")
     def unsupported_cipher_suites(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        Unsupported cipher suites action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_cipher_suites")
 
@@ -284,7 +306,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="unsupportedProtocolVersions")
     def unsupported_protocol_versions(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        Unsupported protocol versions action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_protocol_versions")
 
@@ -296,7 +319,8 @@ class TlsSslDecryptionPolicyDefinitionArgs:
     @pulumi.getter(name="untrustedCertificate")
     def untrusted_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Untrusted certificate action - Choices: `drop`, `decrypt`
+        Untrusted certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "untrusted_certificate")
 
@@ -355,22 +379,34 @@ class _TlsSslDecryptionPolicyDefinitionState:
         """
         Input properties used for looking up and filtering TlsSslDecryptionPolicyDefinition resources.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
-        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status - Choices: `ocsp`, `none`
-        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
+                 - Choices: `ocsp`, `none`
+        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`)
+                 - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type - Choices: `P256`, `P384`, `P521`
-        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
-        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type
+                 - Choices: `P256`, `P384`, `P521`
+        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version
+                 - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs']]] network_rules: List of network rules (applies when `mode` set to `security`)
-        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules
+                 - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[_builtins.str] ssl_decryption_enabled: SSL decryption enabled
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action
+                 - Choices: `drop`, `decrypt`
         :param pulumi.Input[Sequence[pulumi.Input['TlsSslDecryptionPolicyDefinitionUrlRuleArgs']]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[_builtins.bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -432,7 +468,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="certificateRevocationStatus")
     def certificate_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Certificate revocation status - Choices: `ocsp`, `none`
+        Certificate revocation status
+          - Choices: `ocsp`, `none`
         """
         return pulumi.get(self, "certificate_revocation_status")
 
@@ -444,7 +481,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        Default action (applies when `mode` set to `security`)
+          - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         """
         return pulumi.get(self, "default_action")
 
@@ -468,7 +506,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="ecKeyType")
     def ec_key_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        EC Key Type - Choices: `P256`, `P384`, `P521`
+        EC Key Type
+          - Choices: `P256`, `P384`, `P521`
         """
         return pulumi.get(self, "ec_key_type")
 
@@ -480,7 +519,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="expiredCertificate")
     def expired_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Expired certificate action - Choices: `drop`, `decrypt`
+        Expired certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "expired_certificate")
 
@@ -492,7 +532,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -504,7 +545,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="minimalTlsVersion")
     def minimal_tls_version(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        Minimal TLS Version
+          - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         """
         return pulumi.get(self, "minimal_tls_version")
 
@@ -516,7 +558,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -552,7 +595,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="rsaKeyPairModulus")
     def rsa_key_pair_modulus(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        RSA key pair modules
+          - Choices: `1024`, `2048`, `4096`
         """
         return pulumi.get(self, "rsa_key_pair_modulus")
 
@@ -576,7 +620,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unknown revocation status action - Choices: `drop`, `decrypt`
+        Unknown revocation status action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "unknown_revocation_status")
 
@@ -588,7 +633,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="unsupportedCipherSuites")
     def unsupported_cipher_suites(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        Unsupported cipher suites action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_cipher_suites")
 
@@ -600,7 +646,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="unsupportedProtocolVersions")
     def unsupported_protocol_versions(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        Unsupported protocol versions action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_protocol_versions")
 
@@ -612,7 +659,8 @@ class _TlsSslDecryptionPolicyDefinitionState:
     @pulumi.getter(name="untrustedCertificate")
     def untrusted_certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Untrusted certificate action - Choices: `drop`, `decrypt`
+        Untrusted certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "untrusted_certificate")
 
@@ -697,22 +745,34 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
-        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status - Choices: `ocsp`, `none`
-        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
+                 - Choices: `ocsp`, `none`
+        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`)
+                 - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type - Choices: `P256`, `P384`, `P521`
-        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
-        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type
+                 - Choices: `P256`, `P384`, `P521`
+        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version
+                 - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]] network_rules: List of network rules (applies when `mode` set to `security`)
-        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules
+                 - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[_builtins.str] ssl_decryption_enabled: SSL decryption enabled
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action
+                 - Choices: `drop`, `decrypt`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[_builtins.bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         """
@@ -836,22 +896,34 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] certificate_lifetime_in_days: Certificate Lifetime(in Days)
-        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status - Choices: `ocsp`, `none`
-        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        :param pulumi.Input[_builtins.str] certificate_revocation_status: Certificate revocation status
+                 - Choices: `ocsp`, `none`
+        :param pulumi.Input[_builtins.str] default_action: Default action (applies when `mode` set to `security`)
+                 - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type - Choices: `P256`, `P384`, `P521`
-        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
-        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] ec_key_type: EC Key Type
+                 - Choices: `P256`, `P384`, `P521`
+        :param pulumi.Input[_builtins.str] expired_certificate: Expired certificate action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] minimal_tls_version: Minimal TLS Version
+                 - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionNetworkRuleArgs', 'TlsSslDecryptionPolicyDefinitionNetworkRuleArgsDict']]]] network_rules: List of network rules (applies when `mode` set to `security`)
-        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        :param pulumi.Input[_builtins.str] rsa_key_pair_modulus: RSA key pair modules
+                 - Choices: `1024`, `2048`, `4096`
         :param pulumi.Input[_builtins.str] ssl_decryption_enabled: SSL decryption enabled
-        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action - Choices: `drop`, `decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
-        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unknown_revocation_status: Unknown revocation status action
+                 - Choices: `drop`, `decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_cipher_suites: Unsupported cipher suites action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] unsupported_protocol_versions: Unsupported protocol versions action
+                 - Choices: `drop`, `no-decrypt`
+        :param pulumi.Input[_builtins.str] untrusted_certificate: Untrusted certificate action
+                 - Choices: `drop`, `decrypt`
         :param pulumi.Input[Sequence[pulumi.Input[Union['TlsSslDecryptionPolicyDefinitionUrlRuleArgs', 'TlsSslDecryptionPolicyDefinitionUrlRuleArgsDict']]]] url_rules: List of url rules (applies when `mode` set to `security`)
         :param pulumi.Input[_builtins.bool] use_default_ca_cert_bundle: Use default CA certificate bundle
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -894,7 +966,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="certificateRevocationStatus")
     def certificate_revocation_status(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Certificate revocation status - Choices: `ocsp`, `none`
+        Certificate revocation status
+          - Choices: `ocsp`, `none`
         """
         return pulumi.get(self, "certificate_revocation_status")
 
@@ -902,7 +975,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        Default action (applies when `mode` set to `security`)
+          - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
         """
         return pulumi.get(self, "default_action")
 
@@ -918,7 +992,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="ecKeyType")
     def ec_key_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        EC Key Type - Choices: `P256`, `P384`, `P521`
+        EC Key Type
+          - Choices: `P256`, `P384`, `P521`
         """
         return pulumi.get(self, "ec_key_type")
 
@@ -926,7 +1001,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="expiredCertificate")
     def expired_certificate(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Expired certificate action - Choices: `drop`, `decrypt`
+        Expired certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "expired_certificate")
 
@@ -934,7 +1010,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -942,7 +1019,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="minimalTlsVersion")
     def minimal_tls_version(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+        Minimal TLS Version
+          - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
         """
         return pulumi.get(self, "minimal_tls_version")
 
@@ -950,7 +1028,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -974,7 +1053,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="rsaKeyPairModulus")
     def rsa_key_pair_modulus(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        RSA key pair modules - Choices: `1024`, `2048`, `4096`
+        RSA key pair modules
+          - Choices: `1024`, `2048`, `4096`
         """
         return pulumi.get(self, "rsa_key_pair_modulus")
 
@@ -990,7 +1070,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="unknownRevocationStatus")
     def unknown_revocation_status(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Unknown revocation status action - Choices: `drop`, `decrypt`
+        Unknown revocation status action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "unknown_revocation_status")
 
@@ -998,7 +1079,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="unsupportedCipherSuites")
     def unsupported_cipher_suites(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+        Unsupported cipher suites action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_cipher_suites")
 
@@ -1006,7 +1088,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="unsupportedProtocolVersions")
     def unsupported_protocol_versions(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+        Unsupported protocol versions action
+          - Choices: `drop`, `no-decrypt`
         """
         return pulumi.get(self, "unsupported_protocol_versions")
 
@@ -1014,7 +1097,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="untrustedCertificate")
     def untrusted_certificate(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Untrusted certificate action - Choices: `drop`, `decrypt`
+        Untrusted certificate action
+          - Choices: `drop`, `decrypt`
         """
         return pulumi.get(self, "untrusted_certificate")
 

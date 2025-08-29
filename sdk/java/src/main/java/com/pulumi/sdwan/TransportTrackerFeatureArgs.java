@@ -123,14 +123,18 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Endpoint Tracker Type - Choices: `interface` - Default value: `interface`
+     * Endpoint Tracker Type
+     *   - Choices: `interface`
+     *   - Default value: `interface`
      * 
      */
     @Import(name="endpointTrackerType")
     private @Nullable Output<String> endpointTrackerType;
 
     /**
-     * @return Endpoint Tracker Type - Choices: `interface` - Default value: `interface`
+     * @return Endpoint Tracker Type
+     *   - Choices: `interface`
+     *   - Default value: `interface`
      * 
      */
     public Optional<Output<String>> endpointTrackerType() {
@@ -168,14 +172,18 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Interval - Range: `20`-`600` - Default value: `60`
+     * Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      * 
      */
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
     /**
-     * @return Interval - Range: `20`-`600` - Default value: `60`
+     * @return Interval
+     *   - Range: `20`-`600`
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> interval() {
@@ -198,14 +206,18 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Multiplier - Range: `1`-`10` - Default value: `3`
+     * Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      * 
      */
     @Import(name="multiplier")
     private @Nullable Output<Integer> multiplier;
 
     /**
-     * @return Multiplier - Range: `1`-`10` - Default value: `3`
+     * @return Multiplier
+     *   - Range: `1`-`10`
+     *   - Default value: `3`
      * 
      */
     public Optional<Output<Integer>> multiplier() {
@@ -243,14 +255,18 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Threshold - Range: `100`-`1000` - Default value: `300`
+     * Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      * 
      */
     @Import(name="threshold")
     private @Nullable Output<Integer> threshold;
 
     /**
-     * @return Threshold - Range: `100`-`1000` - Default value: `300`
+     * @return Threshold
+     *   - Range: `100`-`1000`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> threshold() {
@@ -303,14 +319,18 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Tracker Type - Choices: `endpoint`, `object` - Default value: `endpoint`
+     * Tracker Type
+     *   - Choices: `endpoint`, `object`
+     *   - Default value: `endpoint`
      * 
      */
     @Import(name="trackerType")
     private @Nullable Output<String> trackerType;
 
     /**
-     * @return Tracker Type - Choices: `endpoint`, `object` - Default value: `endpoint`
+     * @return Tracker Type
+     *   - Choices: `endpoint`, `object`
+     *   - Default value: `endpoint`
      * 
      */
     public Optional<Output<String>> trackerType() {
@@ -524,7 +544,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param endpointTrackerType Endpoint Tracker Type - Choices: `interface` - Default value: `interface`
+         * @param endpointTrackerType Endpoint Tracker Type
+         *   - Choices: `interface`
+         *   - Default value: `interface`
          * 
          * @return builder
          * 
@@ -535,7 +557,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param endpointTrackerType Endpoint Tracker Type - Choices: `interface` - Default value: `interface`
+         * @param endpointTrackerType Endpoint Tracker Type
+         *   - Choices: `interface`
+         *   - Default value: `interface`
          * 
          * @return builder
          * 
@@ -587,7 +611,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param interval Interval - Range: `20`-`600` - Default value: `60`
+         * @param interval Interval
+         *   - Range: `20`-`600`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -598,7 +624,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param interval Interval - Range: `20`-`600` - Default value: `60`
+         * @param interval Interval
+         *   - Range: `20`-`600`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -629,7 +657,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param multiplier Multiplier - Range: `1`-`10` - Default value: `3`
+         * @param multiplier Multiplier
+         *   - Range: `1`-`10`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -640,7 +670,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param multiplier Multiplier - Range: `1`-`10` - Default value: `3`
+         * @param multiplier Multiplier
+         *   - Range: `1`-`10`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -692,7 +724,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param threshold Threshold - Range: `100`-`1000` - Default value: `300`
+         * @param threshold Threshold
+         *   - Range: `100`-`1000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -703,7 +737,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param threshold Threshold - Range: `100`-`1000` - Default value: `300`
+         * @param threshold Threshold
+         *   - Range: `100`-`1000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -776,7 +812,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param trackerType Tracker Type - Choices: `endpoint`, `object` - Default value: `endpoint`
+         * @param trackerType Tracker Type
+         *   - Choices: `endpoint`, `object`
+         *   - Default value: `endpoint`
          * 
          * @return builder
          * 
@@ -787,7 +825,9 @@ public final class TransportTrackerFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param trackerType Tracker Type - Choices: `endpoint`, `object` - Default value: `endpoint`
+         * @param trackerType Tracker Type
+         *   - Choices: `endpoint`, `object`
+         *   - Default value: `endpoint`
          * 
          * @return builder
          * 

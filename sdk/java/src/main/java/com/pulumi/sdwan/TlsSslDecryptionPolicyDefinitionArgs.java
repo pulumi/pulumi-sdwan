@@ -37,14 +37,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Certificate revocation status - Choices: `ocsp`, `none`
+     * Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      * 
      */
     @Import(name="certificateRevocationStatus")
     private @Nullable Output<String> certificateRevocationStatus;
 
     /**
-     * @return Certificate revocation status - Choices: `ocsp`, `none`
+     * @return Certificate revocation status
+     *   - Choices: `ocsp`, `none`
      * 
      */
     public Optional<Output<String>> certificateRevocationStatus() {
@@ -52,14 +54,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+     * @return Default action (applies when `mode` set to `security`)
+     *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -82,14 +86,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * EC Key Type - Choices: `P256`, `P384`, `P521`
+     * EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      * 
      */
     @Import(name="ecKeyType")
     private @Nullable Output<String> ecKeyType;
 
     /**
-     * @return EC Key Type - Choices: `P256`, `P384`, `P521`
+     * @return EC Key Type
+     *   - Choices: `P256`, `P384`, `P521`
      * 
      */
     public Optional<Output<String>> ecKeyType() {
@@ -97,14 +103,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Expired certificate action - Choices: `drop`, `decrypt`
+     * Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Import(name="expiredCertificate")
     private @Nullable Output<String> expiredCertificate;
 
     /**
-     * @return Expired certificate action - Choices: `drop`, `decrypt`
+     * @return Expired certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Optional<Output<String>> expiredCertificate() {
@@ -112,14 +120,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Failure mode - Choices: `open`, `close`
+     * Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     @Import(name="failureMode")
     private @Nullable Output<String> failureMode;
 
     /**
-     * @return Failure mode - Choices: `open`, `close`
+     * @return Failure mode
+     *   - Choices: `open`, `close`
      * 
      */
     public Optional<Output<String>> failureMode() {
@@ -127,14 +137,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      * 
      */
     @Import(name="minimalTlsVersion")
     private @Nullable Output<String> minimalTlsVersion;
 
     /**
-     * @return Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+     * @return Minimal TLS Version
+     *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
      * 
      */
     public Optional<Output<String>> minimalTlsVersion() {
@@ -142,14 +154,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Optional<Output<String>> mode() {
@@ -187,14 +201,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      * 
      */
     @Import(name="rsaKeyPairModulus")
     private @Nullable Output<String> rsaKeyPairModulus;
 
     /**
-     * @return RSA key pair modules - Choices: `1024`, `2048`, `4096`
+     * @return RSA key pair modules
+     *   - Choices: `1024`, `2048`, `4096`
      * 
      */
     public Optional<Output<String>> rsaKeyPairModulus() {
@@ -217,14 +233,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Unknown revocation status action - Choices: `drop`, `decrypt`
+     * Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Import(name="unknownRevocationStatus")
     private @Nullable Output<String> unknownRevocationStatus;
 
     /**
-     * @return Unknown revocation status action - Choices: `drop`, `decrypt`
+     * @return Unknown revocation status action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Optional<Output<String>> unknownRevocationStatus() {
@@ -232,14 +250,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     @Import(name="unsupportedCipherSuites")
     private @Nullable Output<String> unsupportedCipherSuites;
 
     /**
-     * @return Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+     * @return Unsupported cipher suites action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     public Optional<Output<String>> unsupportedCipherSuites() {
@@ -247,14 +267,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     @Import(name="unsupportedProtocolVersions")
     private @Nullable Output<String> unsupportedProtocolVersions;
 
     /**
-     * @return Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+     * @return Unsupported protocol versions action
+     *   - Choices: `drop`, `no-decrypt`
      * 
      */
     public Optional<Output<String>> unsupportedProtocolVersions() {
@@ -262,14 +284,16 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
     }
 
     /**
-     * Untrusted certificate action - Choices: `drop`, `decrypt`
+     * Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     @Import(name="untrustedCertificate")
     private @Nullable Output<String> untrustedCertificate;
 
     /**
-     * @return Untrusted certificate action - Choices: `drop`, `decrypt`
+     * @return Untrusted certificate action
+     *   - Choices: `drop`, `decrypt`
      * 
      */
     public Optional<Output<String>> untrustedCertificate() {
@@ -370,7 +394,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateRevocationStatus Certificate revocation status - Choices: `ocsp`, `none`
+         * @param certificateRevocationStatus Certificate revocation status
+         *   - Choices: `ocsp`, `none`
          * 
          * @return builder
          * 
@@ -381,7 +406,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param certificateRevocationStatus Certificate revocation status - Choices: `ocsp`, `none`
+         * @param certificateRevocationStatus Certificate revocation status
+         *   - Choices: `ocsp`, `none`
          * 
          * @return builder
          * 
@@ -391,7 +417,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param defaultAction Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+         * @param defaultAction Default action (applies when `mode` set to `security`)
+         *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
          * 
          * @return builder
          * 
@@ -402,7 +429,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param defaultAction Default action (applies when `mode` set to `security`) - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+         * @param defaultAction Default action (applies when `mode` set to `security`)
+         *   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
          * 
          * @return builder
          * 
@@ -433,7 +461,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ecKeyType EC Key Type - Choices: `P256`, `P384`, `P521`
+         * @param ecKeyType EC Key Type
+         *   - Choices: `P256`, `P384`, `P521`
          * 
          * @return builder
          * 
@@ -444,7 +473,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ecKeyType EC Key Type - Choices: `P256`, `P384`, `P521`
+         * @param ecKeyType EC Key Type
+         *   - Choices: `P256`, `P384`, `P521`
          * 
          * @return builder
          * 
@@ -454,7 +484,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param expiredCertificate Expired certificate action - Choices: `drop`, `decrypt`
+         * @param expiredCertificate Expired certificate action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 
@@ -465,7 +496,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param expiredCertificate Expired certificate action - Choices: `drop`, `decrypt`
+         * @param expiredCertificate Expired certificate action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 
@@ -475,7 +507,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close`
+         * @param failureMode Failure mode
+         *   - Choices: `open`, `close`
          * 
          * @return builder
          * 
@@ -486,7 +519,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param failureMode Failure mode - Choices: `open`, `close`
+         * @param failureMode Failure mode
+         *   - Choices: `open`, `close`
          * 
          * @return builder
          * 
@@ -496,7 +530,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param minimalTlsVersion Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+         * @param minimalTlsVersion Minimal TLS Version
+         *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
          * 
          * @return builder
          * 
@@ -507,7 +542,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param minimalTlsVersion Minimal TLS Version - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
+         * @param minimalTlsVersion Minimal TLS Version
+         *   - Choices: `TLSv1.0`, `TLSv1.1`, `TLSv1.2`
          * 
          * @return builder
          * 
@@ -517,7 +553,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -528,7 +565,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -590,7 +628,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param rsaKeyPairModulus RSA key pair modules - Choices: `1024`, `2048`, `4096`
+         * @param rsaKeyPairModulus RSA key pair modules
+         *   - Choices: `1024`, `2048`, `4096`
          * 
          * @return builder
          * 
@@ -601,7 +640,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param rsaKeyPairModulus RSA key pair modules - Choices: `1024`, `2048`, `4096`
+         * @param rsaKeyPairModulus RSA key pair modules
+         *   - Choices: `1024`, `2048`, `4096`
          * 
          * @return builder
          * 
@@ -632,7 +672,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unknownRevocationStatus Unknown revocation status action - Choices: `drop`, `decrypt`
+         * @param unknownRevocationStatus Unknown revocation status action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 
@@ -643,7 +684,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unknownRevocationStatus Unknown revocation status action - Choices: `drop`, `decrypt`
+         * @param unknownRevocationStatus Unknown revocation status action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 
@@ -653,7 +695,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unsupportedCipherSuites Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+         * @param unsupportedCipherSuites Unsupported cipher suites action
+         *   - Choices: `drop`, `no-decrypt`
          * 
          * @return builder
          * 
@@ -664,7 +707,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unsupportedCipherSuites Unsupported cipher suites action - Choices: `drop`, `no-decrypt`
+         * @param unsupportedCipherSuites Unsupported cipher suites action
+         *   - Choices: `drop`, `no-decrypt`
          * 
          * @return builder
          * 
@@ -674,7 +718,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unsupportedProtocolVersions Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+         * @param unsupportedProtocolVersions Unsupported protocol versions action
+         *   - Choices: `drop`, `no-decrypt`
          * 
          * @return builder
          * 
@@ -685,7 +730,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param unsupportedProtocolVersions Unsupported protocol versions action - Choices: `drop`, `no-decrypt`
+         * @param unsupportedProtocolVersions Unsupported protocol versions action
+         *   - Choices: `drop`, `no-decrypt`
          * 
          * @return builder
          * 
@@ -695,7 +741,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param untrustedCertificate Untrusted certificate action - Choices: `drop`, `decrypt`
+         * @param untrustedCertificate Untrusted certificate action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 
@@ -706,7 +753,8 @@ public final class TlsSslDecryptionPolicyDefinitionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param untrustedCertificate Untrusted certificate action - Choices: `drop`, `decrypt`
+         * @param untrustedCertificate Untrusted certificate action
+         *   - Choices: `drop`, `decrypt`
          * 
          * @return builder
          * 

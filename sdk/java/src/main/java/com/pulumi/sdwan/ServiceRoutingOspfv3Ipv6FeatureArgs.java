@@ -82,14 +82,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Import(name="defaultInformationOriginateMetric")
     private @Nullable Output<Integer> defaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Optional<Output<Integer>> defaultInformationOriginateMetric() {
@@ -97,14 +99,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set default route metric type - Choices: `type1`, `type2`
+     * Set default route metric type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Import(name="defaultInformationOriginateMetricType")
     private @Nullable Output<String> defaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route metric type - Choices: `type1`, `type2`
+     * @return Set default route metric type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Optional<Output<String>> defaultInformationOriginateMetricType() {
@@ -157,14 +161,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Distance - Range: `1`-`254` - Default value: `110`
+     * Distance
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distance")
     private @Nullable Output<Integer> distance;
 
     /**
-     * @return Distance - Range: `1`-`254` - Default value: `110`
+     * @return Distance
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distance() {
@@ -172,14 +180,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceExternal")
     private @Nullable Output<Integer> distanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceExternal() {
@@ -202,14 +214,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceInterArea")
     private @Nullable Output<Integer> distanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceInterArea() {
@@ -232,14 +248,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     @Import(name="distanceIntraArea")
     private @Nullable Output<Integer> distanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`254`
+     *   - Default value: `110`
      * 
      */
     public Optional<Output<Integer>> distanceIntraArea() {
@@ -292,14 +312,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Import(name="filter")
     private @Nullable Output<Boolean> filter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> filter() {
@@ -352,14 +374,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Import(name="referenceBandwidth")
     private @Nullable Output<Integer> referenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Optional<Output<Integer>> referenceBandwidth() {
@@ -382,14 +408,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Import(name="rfc1583Compatible")
     private @Nullable Output<Boolean> rfc1583Compatible;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> rfc1583Compatible() {
@@ -464,14 +492,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+     * Set how long to advertise maximum metric after router boot up
+     *   - Range: `5`-`86400`
      * 
      */
     @Import(name="routerLsaOnStartupTime")
     private @Nullable Output<Integer> routerLsaOnStartupTime;
 
     /**
-     * @return Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+     * @return Set how long to advertise maximum metric after router boot up
+     *   - Range: `5`-`86400`
      * 
      */
     public Optional<Output<Integer>> routerLsaOnStartupTime() {
@@ -494,14 +524,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Import(name="spfCalculationDelay")
     private @Nullable Output<Integer> spfCalculationDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Optional<Output<Integer>> spfCalculationDelay() {
@@ -524,14 +558,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Import(name="spfInitialHoldTime")
     private @Nullable Output<Integer> spfInitialHoldTime;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Optional<Output<Integer>> spfInitialHoldTime() {
@@ -554,14 +592,18 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Import(name="spfMaximumHoldTime")
     private @Nullable Output<Integer> spfMaximumHoldTime;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Optional<Output<Integer>> spfMaximumHoldTime() {
@@ -739,7 +781,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt;
+         *   - Range: `0`-`16777214`
          * 
          * @return builder
          * 
@@ -750,7 +793,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+         * @param defaultInformationOriginateMetric Set metric used to generate default route &lt;0..16777214&gt;
+         *   - Range: `0`-`16777214`
          * 
          * @return builder
          * 
@@ -760,7 +804,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultInformationOriginateMetricType Set default route metric type - Choices: `type1`, `type2`
+         * @param defaultInformationOriginateMetricType Set default route metric type
+         *   - Choices: `type1`, `type2`
          * 
          * @return builder
          * 
@@ -771,7 +816,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param defaultInformationOriginateMetricType Set default route metric type - Choices: `type1`, `type2`
+         * @param defaultInformationOriginateMetricType Set default route metric type
+         *   - Choices: `type1`, `type2`
          * 
          * @return builder
          * 
@@ -844,7 +890,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distance Distance - Range: `1`-`254` - Default value: `110`
+         * @param distance Distance
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -855,7 +903,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distance Distance - Range: `1`-`254` - Default value: `110`
+         * @param distance Distance
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -865,7 +915,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceExternal Set distance for external routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceExternal Set distance for external routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -876,7 +928,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceExternal Set distance for external routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceExternal Set distance for external routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -907,7 +961,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceInterArea Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceInterArea Set distance for inter-area routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -918,7 +974,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceInterArea Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceInterArea Set distance for inter-area routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -949,7 +1007,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceIntraArea Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceIntraArea Set distance for intra-area routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -960,7 +1020,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param distanceIntraArea Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+         * @param distanceIntraArea Set distance for intra-area routes
+         *   - Range: `1`-`254`
+         *   - Default value: `110`
          * 
          * @return builder
          * 
@@ -1033,7 +1095,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param filter Table map filtered or not - Default value: `false`
+         * @param filter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1044,7 +1107,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param filter Table map filtered or not - Default value: `false`
+         * @param filter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1127,7 +1191,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param referenceBandwidth Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+         * @param referenceBandwidth Set reference bandwidth method to assign OSPF cost
+         *   - Range: `1`-`4294967`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -1138,7 +1204,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param referenceBandwidth Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+         * @param referenceBandwidth Set reference bandwidth method to assign OSPF cost
+         *   - Range: `1`-`4294967`
+         *   - Default value: `100`
          * 
          * @return builder
          * 
@@ -1169,7 +1237,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param rfc1583Compatible Calculate summary route cost based on RFC 1583 - Default value: `true`
+         * @param rfc1583Compatible Calculate summary route cost based on RFC 1583
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1180,7 +1249,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param rfc1583Compatible Calculate summary route cost based on RFC 1583 - Default value: `true`
+         * @param rfc1583Compatible Calculate summary route cost based on RFC 1583
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1283,7 +1353,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param routerLsaOnStartupTime Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+         * @param routerLsaOnStartupTime Set how long to advertise maximum metric after router boot up
+         *   - Range: `5`-`86400`
          * 
          * @return builder
          * 
@@ -1294,7 +1365,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param routerLsaOnStartupTime Set how long to advertise maximum metric after router boot up - Range: `5`-`86400`
+         * @param routerLsaOnStartupTime Set how long to advertise maximum metric after router boot up
+         *   - Range: `5`-`86400`
          * 
          * @return builder
          * 
@@ -1325,7 +1397,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfCalculationDelay Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+         * @param spfCalculationDelay Set delay from first change received until performing SPF calculation
+         *   - Range: `1`-`600000`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1336,7 +1410,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfCalculationDelay Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+         * @param spfCalculationDelay Set delay from first change received until performing SPF calculation
+         *   - Range: `1`-`600000`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1367,7 +1443,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfInitialHoldTime Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+         * @param spfInitialHoldTime Set initial hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -1378,7 +1456,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfInitialHoldTime Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+         * @param spfInitialHoldTime Set initial hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -1409,7 +1489,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfMaximumHoldTime Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+         * @param spfMaximumHoldTime Set maximum hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `10000`
          * 
          * @return builder
          * 
@@ -1420,7 +1502,9 @@ public final class ServiceRoutingOspfv3Ipv6FeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param spfMaximumHoldTime Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+         * @param spfMaximumHoldTime Set maximum hold time between consecutive SPF calculations
+         *   - Range: `1`-`600000`
+         *   - Default value: `10000`
          * 
          * @return builder
          * 

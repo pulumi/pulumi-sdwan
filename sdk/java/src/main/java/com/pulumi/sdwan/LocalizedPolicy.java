@@ -84,28 +84,32 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/localizedPolicy:LocalizedPolicy")
 public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
     /**
-     * IPv4 application visibility - Default value: `false`
+     * IPv4 application visibility
+     *   - Default value: `false`
      * 
      */
     @Export(name="applicationVisibilityIpv4", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> applicationVisibilityIpv4;
 
     /**
-     * @return IPv4 application visibility - Default value: `false`
+     * @return IPv4 application visibility
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> applicationVisibilityIpv4() {
         return this.applicationVisibilityIpv4;
     }
     /**
-     * IPv6 application visibility - Default value: `false`
+     * IPv6 application visibility
+     *   - Default value: `false`
      * 
      */
     @Export(name="applicationVisibilityIpv6", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> applicationVisibilityIpv6;
 
     /**
-     * @return IPv6 application visibility - Default value: `false`
+     * @return IPv6 application visibility
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> applicationVisibilityIpv6() {
@@ -168,84 +172,96 @@ public class LocalizedPolicy extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * IPv4 flow visibility - Default value: `false`
+     * IPv4 flow visibility
+     *   - Default value: `false`
      * 
      */
     @Export(name="flowVisibilityIpv4", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> flowVisibilityIpv4;
 
     /**
-     * @return IPv4 flow visibility - Default value: `false`
+     * @return IPv4 flow visibility
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> flowVisibilityIpv4() {
         return this.flowVisibilityIpv4;
     }
     /**
-     * IPv6 flow visibility - Default value: `false`
+     * IPv6 flow visibility
+     *   - Default value: `false`
      * 
      */
     @Export(name="flowVisibilityIpv6", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> flowVisibilityIpv6;
 
     /**
-     * @return IPv6 flow visibility - Default value: `false`
+     * @return IPv6 flow visibility
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> flowVisibilityIpv6() {
         return this.flowVisibilityIpv6;
     }
     /**
-     * Implicit ACL logging - Default value: `false`
+     * Implicit ACL logging
+     *   - Default value: `false`
      * 
      */
     @Export(name="implicitAclLogging", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> implicitAclLogging;
 
     /**
-     * @return Implicit ACL logging - Default value: `false`
+     * @return Implicit ACL logging
+     *   - Default value: `false`
      * 
      */
     public Output<Boolean> implicitAclLogging() {
         return this.implicitAclLogging;
     }
     /**
-     * IPv4 visibility cache entries - Range: `16`-`2000000`
+     * IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Export(name="ipv4VisibilityCacheEntries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4VisibilityCacheEntries;
 
     /**
-     * @return IPv4 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv4 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Output<Optional<Integer>> ipv4VisibilityCacheEntries() {
         return Codegen.optional(this.ipv4VisibilityCacheEntries);
     }
     /**
-     * IPv6 visibility cache entries - Range: `16`-`2000000`
+     * IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     @Export(name="ipv6VisibilityCacheEntries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv6VisibilityCacheEntries;
 
     /**
-     * @return IPv6 visibility cache entries - Range: `16`-`2000000`
+     * @return IPv6 visibility cache entries
+     *   - Range: `16`-`2000000`
      * 
      */
     public Output<Optional<Integer>> ipv6VisibilityCacheEntries() {
         return Codegen.optional(this.ipv6VisibilityCacheEntries);
     }
     /**
-     * Log frequency - Range: `1`-`2147483647`
+     * Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Export(name="logFrequency", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> logFrequency;
 
     /**
-     * @return Log frequency - Range: `1`-`2147483647`
+     * @return Log frequency
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Output<Optional<Integer>> logFrequency() {

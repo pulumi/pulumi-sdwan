@@ -49,65 +49,66 @@ export class CiscoNtpFeatureTemplate extends pulumi.CustomResource {
     /**
      * Set MD5 authentication key
      */
-    public readonly authenticationKeys!: pulumi.Output<outputs.CiscoNtpFeatureTemplateAuthenticationKey[] | undefined>;
+    declare public readonly authenticationKeys: pulumi.Output<outputs.CiscoNtpFeatureTemplateAuthenticationKey[] | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Configure device as NTP master - Default value: `false`
+     * Configure device as NTP master
+     *   - Default value: `false`
      */
-    public readonly master!: pulumi.Output<boolean | undefined>;
+    declare public readonly master: pulumi.Output<boolean | undefined>;
     /**
      * Set interface for NTP Master
      */
-    public readonly masterSourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly masterSourceInterface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly masterSourceInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly masterSourceInterfaceVariable: pulumi.Output<string | undefined>;
     /**
-     * Master Stratum <1..15> - Range: `1`-`15`
+     * Master Stratum <1..15>
+     *   - Range: `1`-`15`
      */
-    public readonly masterStratum!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly masterStratumVariable!: pulumi.Output<string | undefined>;
+    declare public readonly masterStratum: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly masterVariable!: pulumi.Output<string | undefined>;
+    declare public readonly masterStratumVariable: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly masterVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure NTP servers
      */
-    public readonly servers!: pulumi.Output<outputs.CiscoNtpFeatureTemplateServer[] | undefined>;
+    declare public readonly servers: pulumi.Output<outputs.CiscoNtpFeatureTemplateServer[] | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Designate authentication key as trustworthy
      */
-    public readonly trustedKeys!: pulumi.Output<number[] | undefined>;
+    declare public readonly trustedKeys: pulumi.Output<number[] | undefined>;
     /**
      * Variable name
      */
-    public readonly trustedKeysVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trustedKeysVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoNtpFeatureTemplate resource with the given unique name, arguments, and options.
@@ -122,42 +123,42 @@ export class CiscoNtpFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoNtpFeatureTemplateState | undefined;
-            resourceInputs["authenticationKeys"] = state ? state.authenticationKeys : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["master"] = state ? state.master : undefined;
-            resourceInputs["masterSourceInterface"] = state ? state.masterSourceInterface : undefined;
-            resourceInputs["masterSourceInterfaceVariable"] = state ? state.masterSourceInterfaceVariable : undefined;
-            resourceInputs["masterStratum"] = state ? state.masterStratum : undefined;
-            resourceInputs["masterStratumVariable"] = state ? state.masterStratumVariable : undefined;
-            resourceInputs["masterVariable"] = state ? state.masterVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["trustedKeys"] = state ? state.trustedKeys : undefined;
-            resourceInputs["trustedKeysVariable"] = state ? state.trustedKeysVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["authenticationKeys"] = state?.authenticationKeys;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["master"] = state?.master;
+            resourceInputs["masterSourceInterface"] = state?.masterSourceInterface;
+            resourceInputs["masterSourceInterfaceVariable"] = state?.masterSourceInterfaceVariable;
+            resourceInputs["masterStratum"] = state?.masterStratum;
+            resourceInputs["masterStratumVariable"] = state?.masterStratumVariable;
+            resourceInputs["masterVariable"] = state?.masterVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["servers"] = state?.servers;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["trustedKeys"] = state?.trustedKeys;
+            resourceInputs["trustedKeysVariable"] = state?.trustedKeysVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoNtpFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["authenticationKeys"] = args ? args.authenticationKeys : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["master"] = args ? args.master : undefined;
-            resourceInputs["masterSourceInterface"] = args ? args.masterSourceInterface : undefined;
-            resourceInputs["masterSourceInterfaceVariable"] = args ? args.masterSourceInterfaceVariable : undefined;
-            resourceInputs["masterStratum"] = args ? args.masterStratum : undefined;
-            resourceInputs["masterStratumVariable"] = args ? args.masterStratumVariable : undefined;
-            resourceInputs["masterVariable"] = args ? args.masterVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
-            resourceInputs["trustedKeys"] = args ? args.trustedKeys : undefined;
-            resourceInputs["trustedKeysVariable"] = args ? args.trustedKeysVariable : undefined;
+            resourceInputs["authenticationKeys"] = args?.authenticationKeys;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["master"] = args?.master;
+            resourceInputs["masterSourceInterface"] = args?.masterSourceInterface;
+            resourceInputs["masterSourceInterfaceVariable"] = args?.masterSourceInterfaceVariable;
+            resourceInputs["masterStratum"] = args?.masterStratum;
+            resourceInputs["masterStratumVariable"] = args?.masterStratumVariable;
+            resourceInputs["masterVariable"] = args?.masterVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["servers"] = args?.servers;
+            resourceInputs["trustedKeys"] = args?.trustedKeys;
+            resourceInputs["trustedKeysVariable"] = args?.trustedKeysVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -179,13 +180,13 @@ export interface CiscoNtpFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Configure device as NTP master - Default value: `false`
+     * Configure device as NTP master
+     *   - Default value: `false`
      */
     master?: pulumi.Input<boolean>;
     /**
@@ -197,7 +198,8 @@ export interface CiscoNtpFeatureTemplateState {
      */
     masterSourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Master Stratum <1..15> - Range: `1`-`15`
+     * Master Stratum <1..15>
+     *   - Range: `1`-`15`
      */
     masterStratum?: pulumi.Input<number>;
     /**
@@ -247,13 +249,13 @@ export interface CiscoNtpFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Configure device as NTP master - Default value: `false`
+     * Configure device as NTP master
+     *   - Default value: `false`
      */
     master?: pulumi.Input<boolean>;
     /**
@@ -265,7 +267,8 @@ export interface CiscoNtpFeatureTemplateArgs {
      */
     masterSourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Master Stratum <1..15> - Range: `1`-`15`
+     * Master Stratum <1..15>
+     *   - Range: `1`-`15`
      */
     masterStratum?: pulumi.Input<number>;
     /**

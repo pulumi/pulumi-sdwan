@@ -36,14 +36,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Import(name="arpTimeout")
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Optional<Output<Integer>> arpTimeout() {
@@ -111,14 +115,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Import(name="duplex")
     private @Nullable Output<String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Optional<Output<String>> duplex() {
@@ -171,14 +177,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Import(name="icmpRedirectDisable")
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> icmpRedirectDisable() {
@@ -223,14 +231,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -275,14 +287,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -305,16 +319,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -367,14 +383,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Interface auto detect bandwidth - Default value: `false`
+     * Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv4AutoDetectBandwidth")
     private @Nullable Output<Boolean> ipv4AutoDetectBandwidth;
 
     /**
-     * @return Interface auto detect bandwidth - Default value: `false`
+     * @return Interface auto detect bandwidth
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv4AutoDetectBandwidth() {
@@ -397,14 +415,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      * 
      */
     @Import(name="ipv4ConfigurationType")
     private @Nullable Output<String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+     * @return IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4ConfigurationType() {
@@ -412,16 +434,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-     * Default value: `1`
+     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ipv4DhcpDistance")
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-     * Default value: `1`
+     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ipv4DhcpDistance() {
@@ -519,24 +543,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-     * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-     * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-     * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-     * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-     * `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -589,14 +605,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      * 
      */
     @Import(name="ipv6ConfigurationType")
     private @Nullable Output<String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+     * @return IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
      * 
      */
     public Optional<Output<String>> ipv6ConfigurationType() {
@@ -604,14 +624,18 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Import(name="loadInterval")
     private @Nullable Output<Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Optional<Output<Integer>> loadInterval() {
@@ -664,14 +688,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Import(name="mediaType")
     private @Nullable Output<String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Optional<Output<String>> mediaType() {
@@ -739,14 +765,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Import(name="speed")
     private @Nullable Output<String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -769,14 +797,16 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -937,7 +967,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -948,7 +980,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2147483`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -1042,7 +1076,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -1053,7 +1088,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param duplex Duplex mode - Choices: `full`, `half`, `auto`
+         * @param duplex Duplex mode
+         *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
          * 
@@ -1126,7 +1162,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1137,7 +1174,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1198,7 +1236,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param interfaceMtu Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1209,7 +1249,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param interfaceMtu Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1270,7 +1312,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1281,7 +1324,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1312,8 +1356,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1324,8 +1369,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-         * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1398,7 +1444,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4AutoDetectBandwidth Interface auto detect bandwidth - Default value: `false`
+         * @param ipv4AutoDetectBandwidth Interface auto detect bandwidth
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1409,7 +1456,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4AutoDetectBandwidth Interface auto detect bandwidth - Default value: `false`
+         * @param ipv4AutoDetectBandwidth Interface auto detect bandwidth
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1440,7 +1488,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+         * @param ipv4ConfigurationType IPv4 Configuration Type
+         *   - Choices: `dynamic`, `static`
+         *   - Default value: `dynamic`
          * 
          * @return builder
          * 
@@ -1451,7 +1501,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type - Choices: `dynamic`, `static` - Default value: `dynamic`
+         * @param ipv4ConfigurationType IPv4 Configuration Type
+         *   - Choices: `dynamic`, `static`
+         *   - Default value: `dynamic`
          * 
          * @return builder
          * 
@@ -1461,8 +1513,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-         * Default value: `1`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1473,8 +1526,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic` - Range: `1`-`65536` -
-         * Default value: `1`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1630,12 +1684,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-         * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-         * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-         * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-         * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-         * `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1646,12 +1696,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static` - Choices: `255.255.255.255`,
-         * `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`,
-         * `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`,
-         * `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`,
-         * `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`,
-         * `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1724,7 +1770,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+         * @param ipv6ConfigurationType IPv6 Configuration Type
+         *   - Choices: `dynamic`, `static`, `none`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -1735,7 +1783,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type - Choices: `dynamic`, `static`, `none` - Default value: `none`
+         * @param ipv6ConfigurationType IPv6 Configuration Type
+         *   - Choices: `dynamic`, `static`, `none`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -1745,7 +1795,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -1756,7 +1808,9 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param loadInterval Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+         * @param loadInterval Interval for interface load calculation
+         *   - Range: `30`-`600`
+         *   - Default value: `30`
          * 
          * @return builder
          * 
@@ -1829,7 +1883,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -1840,7 +1895,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param mediaType Media type - Choices: `auto-select`, `rj45`, `sfp`
+         * @param mediaType Media type
+         *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
          * 
@@ -1934,7 +1990,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -1945,7 +2002,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param speed Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
          * 
          * @return builder
          * 
@@ -1976,7 +2034,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -1987,7 +2046,8 @@ public final class TransportManagementVpnInterfaceEthernetFeatureState extends c
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 

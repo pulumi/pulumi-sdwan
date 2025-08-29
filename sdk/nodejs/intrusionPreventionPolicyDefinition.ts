@@ -48,48 +48,52 @@ export class IntrusionPreventionPolicyDefinition extends pulumi.CustomResource {
     /**
      * Custom signature
      */
-    public readonly customSignature!: pulumi.Output<boolean | undefined>;
+    declare public readonly customSignature: pulumi.Output<boolean | undefined>;
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * The inspection mode - Choices: `protection`, `detection`
+     * The inspection mode
+     *   - Choices: `protection`, `detection`
      */
-    public readonly inspectionMode!: pulumi.Output<string | undefined>;
+    declare public readonly inspectionMode: pulumi.Output<string | undefined>;
     /**
      * IPS signature list ID
      */
-    public readonly ipsSignatureListId!: pulumi.Output<string | undefined>;
+    declare public readonly ipsSignatureListId: pulumi.Output<string | undefined>;
     /**
      * IPS signature list version
      */
-    public readonly ipsSignatureListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly ipsSignatureListVersion: pulumi.Output<number | undefined>;
     /**
-     * Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
-    public readonly logLevel!: pulumi.Output<string | undefined>;
-    public readonly loggings!: pulumi.Output<outputs.IntrusionPreventionPolicyDefinitionLogging[] | undefined>;
+    declare public readonly logLevel: pulumi.Output<string | undefined>;
+    declare public readonly loggings: pulumi.Output<outputs.IntrusionPreventionPolicyDefinitionLogging[] | undefined>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
-    public readonly mode!: pulumi.Output<string | undefined>;
+    declare public readonly mode: pulumi.Output<string | undefined>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Signature set - Choices: `balanced`, `connectivity`, `security`
+     * Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      */
-    public readonly signatureSet!: pulumi.Output<string | undefined>;
+    declare public readonly signatureSet: pulumi.Output<string | undefined>;
     /**
      * List of VPN IDs
      */
-    public readonly targetVpns!: pulumi.Output<string[] | undefined>;
+    declare public readonly targetVpns: pulumi.Output<string[] | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a IntrusionPreventionPolicyDefinition resource with the given unique name, arguments, and options.
@@ -104,34 +108,34 @@ export class IntrusionPreventionPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as IntrusionPreventionPolicyDefinitionState | undefined;
-            resourceInputs["customSignature"] = state ? state.customSignature : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["inspectionMode"] = state ? state.inspectionMode : undefined;
-            resourceInputs["ipsSignatureListId"] = state ? state.ipsSignatureListId : undefined;
-            resourceInputs["ipsSignatureListVersion"] = state ? state.ipsSignatureListVersion : undefined;
-            resourceInputs["logLevel"] = state ? state.logLevel : undefined;
-            resourceInputs["loggings"] = state ? state.loggings : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["signatureSet"] = state ? state.signatureSet : undefined;
-            resourceInputs["targetVpns"] = state ? state.targetVpns : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["customSignature"] = state?.customSignature;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["inspectionMode"] = state?.inspectionMode;
+            resourceInputs["ipsSignatureListId"] = state?.ipsSignatureListId;
+            resourceInputs["ipsSignatureListVersion"] = state?.ipsSignatureListVersion;
+            resourceInputs["logLevel"] = state?.logLevel;
+            resourceInputs["loggings"] = state?.loggings;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["signatureSet"] = state?.signatureSet;
+            resourceInputs["targetVpns"] = state?.targetVpns;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as IntrusionPreventionPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["customSignature"] = args ? args.customSignature : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["inspectionMode"] = args ? args.inspectionMode : undefined;
-            resourceInputs["ipsSignatureListId"] = args ? args.ipsSignatureListId : undefined;
-            resourceInputs["ipsSignatureListVersion"] = args ? args.ipsSignatureListVersion : undefined;
-            resourceInputs["logLevel"] = args ? args.logLevel : undefined;
-            resourceInputs["loggings"] = args ? args.loggings : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["signatureSet"] = args ? args.signatureSet : undefined;
-            resourceInputs["targetVpns"] = args ? args.targetVpns : undefined;
+            resourceInputs["customSignature"] = args?.customSignature;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["inspectionMode"] = args?.inspectionMode;
+            resourceInputs["ipsSignatureListId"] = args?.ipsSignatureListId;
+            resourceInputs["ipsSignatureListVersion"] = args?.ipsSignatureListVersion;
+            resourceInputs["logLevel"] = args?.logLevel;
+            resourceInputs["loggings"] = args?.loggings;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["signatureSet"] = args?.signatureSet;
+            resourceInputs["targetVpns"] = args?.targetVpns;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -152,7 +156,8 @@ export interface IntrusionPreventionPolicyDefinitionState {
      */
     description?: pulumi.Input<string>;
     /**
-     * The inspection mode - Choices: `protection`, `detection`
+     * The inspection mode
+     *   - Choices: `protection`, `detection`
      */
     inspectionMode?: pulumi.Input<string>;
     /**
@@ -164,12 +169,14 @@ export interface IntrusionPreventionPolicyDefinitionState {
      */
     ipsSignatureListVersion?: pulumi.Input<number>;
     /**
-     * Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
     logLevel?: pulumi.Input<string>;
     loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[]>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -177,7 +184,8 @@ export interface IntrusionPreventionPolicyDefinitionState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Signature set - Choices: `balanced`, `connectivity`, `security`
+     * Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      */
     signatureSet?: pulumi.Input<string>;
     /**
@@ -203,7 +211,8 @@ export interface IntrusionPreventionPolicyDefinitionArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * The inspection mode - Choices: `protection`, `detection`
+     * The inspection mode
+     *   - Choices: `protection`, `detection`
      */
     inspectionMode?: pulumi.Input<string>;
     /**
@@ -215,12 +224,14 @@ export interface IntrusionPreventionPolicyDefinitionArgs {
      */
     ipsSignatureListVersion?: pulumi.Input<number>;
     /**
-     * Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+     * Log level
+     *   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
      */
     logLevel?: pulumi.Input<string>;
     loggings?: pulumi.Input<pulumi.Input<inputs.IntrusionPreventionPolicyDefinitionLogging>[]>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -228,7 +239,8 @@ export interface IntrusionPreventionPolicyDefinitionArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Signature set - Choices: `balanced`, `connectivity`, `security`
+     * Signature set
+     *   - Choices: `balanced`, `connectivity`, `security`
      */
     signatureSet?: pulumi.Input<string>;
     /**

@@ -37,14 +37,16 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Enable device as NTP Leader - Default value: `false`
+     * Enable device as NTP Leader
+     *   - Default value: `false`
      * 
      */
     @Import(name="authoritativeNtpServer")
     private @Nullable Output<Boolean> authoritativeNtpServer;
 
     /**
-     * @return Enable device as NTP Leader - Default value: `false`
+     * @return Enable device as NTP Leader
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authoritativeNtpServer() {
@@ -157,14 +159,16 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Enable device as NTP Leader - Range: `1`-`15`
+     * Enable device as NTP Leader
+     *   - Range: `1`-`15`
      * 
      */
     @Import(name="stratum")
     private @Nullable Output<Integer> stratum;
 
     /**
-     * @return Enable device as NTP Leader - Range: `1`-`15`
+     * @return Enable device as NTP Leader
+     *   - Range: `1`-`15`
      * 
      */
     public Optional<Output<Integer>> stratum() {
@@ -284,7 +288,8 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param authoritativeNtpServer Enable device as NTP Leader - Default value: `false`
+         * @param authoritativeNtpServer Enable device as NTP Leader
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -295,7 +300,8 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param authoritativeNtpServer Enable device as NTP Leader - Default value: `false`
+         * @param authoritativeNtpServer Enable device as NTP Leader
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -462,7 +468,8 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param stratum Enable device as NTP Leader - Range: `1`-`15`
+         * @param stratum Enable device as NTP Leader
+         *   - Range: `1`-`15`
          * 
          * @return builder
          * 
@@ -473,7 +480,8 @@ public final class SystemNtpFeatureArgs extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param stratum Enable device as NTP Leader - Range: `1`-`15`
+         * @param stratum Enable device as NTP Leader
+         *   - Range: `1`-`15`
          * 
          * @return builder
          * 

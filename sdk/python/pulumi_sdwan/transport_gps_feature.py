@@ -38,16 +38,21 @@ class TransportGpsFeatureArgs:
         The set of arguments for constructing a TransportGpsFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] gps_enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] nmea_destination_address: Destination address
         :param pulumi.Input[_builtins.str] nmea_destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] nmea_destination_port_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_enable_variable: Variable name
         :param pulumi.Input[_builtins.str] nmea_source_address: Source address
         :param pulumi.Input[_builtins.str] nmea_source_address_variable: Variable name
@@ -110,7 +115,8 @@ class TransportGpsFeatureArgs:
     @pulumi.getter(name="gpsEnable")
     def gps_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "gps_enable")
 
@@ -134,7 +140,9 @@ class TransportGpsFeatureArgs:
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -194,7 +202,8 @@ class TransportGpsFeatureArgs:
     @pulumi.getter(name="nmeaDestinationPort")
     def nmea_destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "nmea_destination_port")
 
@@ -218,7 +227,8 @@ class TransportGpsFeatureArgs:
     @pulumi.getter(name="nmeaEnable")
     def nmea_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea_enable")
 
@@ -286,16 +296,21 @@ class _TransportGpsFeatureState:
         Input properties used for looking up and filtering TransportGpsFeature resources.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] gps_enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] nmea_destination_address: Destination address
         :param pulumi.Input[_builtins.str] nmea_destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] nmea_destination_port_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_enable_variable: Variable name
         :param pulumi.Input[_builtins.str] nmea_source_address: Source address
         :param pulumi.Input[_builtins.str] nmea_source_address_variable: Variable name
@@ -362,7 +377,8 @@ class _TransportGpsFeatureState:
     @pulumi.getter(name="gpsEnable")
     def gps_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "gps_enable")
 
@@ -386,7 +402,9 @@ class _TransportGpsFeatureState:
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -446,7 +464,8 @@ class _TransportGpsFeatureState:
     @pulumi.getter(name="nmeaDestinationPort")
     def nmea_destination_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "nmea_destination_port")
 
@@ -470,7 +489,8 @@ class _TransportGpsFeatureState:
     @pulumi.getter(name="nmeaEnable")
     def nmea_enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea_enable")
 
@@ -585,16 +605,21 @@ class TransportGpsFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] gps_enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] nmea_destination_address: Destination address
         :param pulumi.Input[_builtins.str] nmea_destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] nmea_destination_port_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_enable_variable: Variable name
         :param pulumi.Input[_builtins.str] nmea_source_address: Source address
         :param pulumi.Input[_builtins.str] nmea_source_address_variable: Variable name
@@ -729,16 +754,21 @@ class TransportGpsFeature(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] gps_enable: Enable/disable GPS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] gps_enable_variable: Variable name
-        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        :param pulumi.Input[_builtins.str] gps_mode: Select GPS mode
+                 - Choices: `ms-based`, `standalone`
+                 - Default value: `ms-based`
         :param pulumi.Input[_builtins.str] gps_mode_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] nmea_destination_address: Destination address
         :param pulumi.Input[_builtins.str] nmea_destination_address_variable: Variable name
-        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] nmea_destination_port: Destination port
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] nmea_destination_port_variable: Variable name
-        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data - Default value: `false`
+        :param pulumi.Input[_builtins.bool] nmea_enable: Enable/disable NMEA data
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] nmea_enable_variable: Variable name
         :param pulumi.Input[_builtins.str] nmea_source_address: Source address
         :param pulumi.Input[_builtins.str] nmea_source_address_variable: Variable name
@@ -786,7 +816,8 @@ class TransportGpsFeature(pulumi.CustomResource):
     @pulumi.getter(name="gpsEnable")
     def gps_enable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/disable GPS - Default value: `false`
+        Enable/disable GPS
+          - Default value: `false`
         """
         return pulumi.get(self, "gps_enable")
 
@@ -802,7 +833,9 @@ class TransportGpsFeature(pulumi.CustomResource):
     @pulumi.getter(name="gpsMode")
     def gps_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+        Select GPS mode
+          - Choices: `ms-based`, `standalone`
+          - Default value: `ms-based`
         """
         return pulumi.get(self, "gps_mode")
 
@@ -842,7 +875,8 @@ class TransportGpsFeature(pulumi.CustomResource):
     @pulumi.getter(name="nmeaDestinationPort")
     def nmea_destination_port(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Destination port - Range: `1`-`65535`
+        Destination port
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "nmea_destination_port")
 
@@ -858,7 +892,8 @@ class TransportGpsFeature(pulumi.CustomResource):
     @pulumi.getter(name="nmeaEnable")
     def nmea_enable(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/disable NMEA data - Default value: `false`
+        Enable/disable NMEA data
+          - Default value: `false`
         """
         return pulumi.get(self, "nmea_enable")
 

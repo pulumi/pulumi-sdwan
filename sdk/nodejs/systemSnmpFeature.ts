@@ -51,63 +51,64 @@ export class SystemSnmpFeature extends pulumi.CustomResource {
     /**
      * Configure SNMP community
      */
-    public readonly communities!: pulumi.Output<outputs.SystemSnmpFeatureCommunity[] | undefined>;
+    declare public readonly communities: pulumi.Output<outputs.SystemSnmpFeatureCommunity[] | undefined>;
     /**
      * Set the contact for this managed node
      */
-    public readonly contactPerson!: pulumi.Output<string | undefined>;
+    declare public readonly contactPerson: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly contactPersonVariable!: pulumi.Output<string | undefined>;
+    declare public readonly contactPersonVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Configure an SNMP group
      */
-    public readonly groups!: pulumi.Output<outputs.SystemSnmpFeatureGroup[] | undefined>;
+    declare public readonly groups: pulumi.Output<outputs.SystemSnmpFeatureGroup[] | undefined>;
     /**
      * Set the physical location of this managed node
      */
-    public readonly locationOfDevice!: pulumi.Output<string | undefined>;
+    declare public readonly locationOfDevice: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly locationOfDeviceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly locationOfDeviceVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Enable or disable SNMP - Default value: `false`
+     * Enable or disable SNMP
+     *   - Default value: `false`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
      * Configure SNMP server to receive SNMP traps
      */
-    public readonly trapTargetServers!: pulumi.Output<outputs.SystemSnmpFeatureTrapTargetServer[] | undefined>;
+    declare public readonly trapTargetServers: pulumi.Output<outputs.SystemSnmpFeatureTrapTargetServer[] | undefined>;
     /**
      * Configure an SNMP user
      */
-    public readonly users!: pulumi.Output<outputs.SystemSnmpFeatureUser[] | undefined>;
+    declare public readonly users: pulumi.Output<outputs.SystemSnmpFeatureUser[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * Configure a view record
      */
-    public readonly views!: pulumi.Output<outputs.SystemSnmpFeatureView[] | undefined>;
+    declare public readonly views: pulumi.Output<outputs.SystemSnmpFeatureView[] | undefined>;
 
     /**
      * Create a SystemSnmpFeature resource with the given unique name, arguments, and options.
@@ -122,40 +123,40 @@ export class SystemSnmpFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemSnmpFeatureState | undefined;
-            resourceInputs["communities"] = state ? state.communities : undefined;
-            resourceInputs["contactPerson"] = state ? state.contactPerson : undefined;
-            resourceInputs["contactPersonVariable"] = state ? state.contactPersonVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["groups"] = state ? state.groups : undefined;
-            resourceInputs["locationOfDevice"] = state ? state.locationOfDevice : undefined;
-            resourceInputs["locationOfDeviceVariable"] = state ? state.locationOfDeviceVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["trapTargetServers"] = state ? state.trapTargetServers : undefined;
-            resourceInputs["users"] = state ? state.users : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["views"] = state ? state.views : undefined;
+            resourceInputs["communities"] = state?.communities;
+            resourceInputs["contactPerson"] = state?.contactPerson;
+            resourceInputs["contactPersonVariable"] = state?.contactPersonVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["groups"] = state?.groups;
+            resourceInputs["locationOfDevice"] = state?.locationOfDevice;
+            resourceInputs["locationOfDeviceVariable"] = state?.locationOfDeviceVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["trapTargetServers"] = state?.trapTargetServers;
+            resourceInputs["users"] = state?.users;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["views"] = state?.views;
         } else {
             const args = argsOrState as SystemSnmpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["communities"] = args ? args.communities : undefined;
-            resourceInputs["contactPerson"] = args ? args.contactPerson : undefined;
-            resourceInputs["contactPersonVariable"] = args ? args.contactPersonVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["groups"] = args ? args.groups : undefined;
-            resourceInputs["locationOfDevice"] = args ? args.locationOfDevice : undefined;
-            resourceInputs["locationOfDeviceVariable"] = args ? args.locationOfDeviceVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["trapTargetServers"] = args ? args.trapTargetServers : undefined;
-            resourceInputs["users"] = args ? args.users : undefined;
-            resourceInputs["views"] = args ? args.views : undefined;
+            resourceInputs["communities"] = args?.communities;
+            resourceInputs["contactPerson"] = args?.contactPerson;
+            resourceInputs["contactPersonVariable"] = args?.contactPersonVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["groups"] = args?.groups;
+            resourceInputs["locationOfDevice"] = args?.locationOfDevice;
+            resourceInputs["locationOfDeviceVariable"] = args?.locationOfDeviceVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["trapTargetServers"] = args?.trapTargetServers;
+            resourceInputs["users"] = args?.users;
+            resourceInputs["views"] = args?.views;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -204,7 +205,8 @@ export interface SystemSnmpFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Enable or disable SNMP - Default value: `false`
+     * Enable or disable SNMP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -270,7 +272,8 @@ export interface SystemSnmpFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Enable or disable SNMP - Default value: `false`
+     * Enable or disable SNMP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**

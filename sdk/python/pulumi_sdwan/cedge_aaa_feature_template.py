@@ -53,26 +53,35 @@ class CedgeAaaFeatureTemplateArgs:
         """
         The set of arguments for constructing a CedgeAaaFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]] authorization_rules: Configure the Authorization Rules
-        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_accounting_variable: Variable name
-        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_authentication_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]] radius_clients: Specify a RADIUS client
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type
+                 - Choices: `any`, `all`, `session-key`
+                 - Default value: `any`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping
+                 - Choices: `yes`, `no`, `right-to-left`
+                 - Default value: `no`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping_variable: Variable name
-        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port
+                 - Range: `0`-`65535`
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_port_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key: Specify a radius dynamic author server-key
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key_variable: Variable name
@@ -80,7 +89,8 @@ class CedgeAaaFeatureTemplateArgs:
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list: CTS Authorization List
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_trustsec_group: RADIUS trustsec group
-        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order - Default value: `local`
+        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order
+                 - Default value: `local`
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]] tacacs_server_groups: Configure the TACACS serverGroup
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]] users: Create local login account
         """
@@ -157,9 +167,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -183,7 +192,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -207,7 +217,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 
@@ -243,7 +254,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="dot1xAccounting")
     def dot1x_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_accounting")
 
@@ -267,7 +279,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="dot1xAuthentication")
     def dot1x_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_authentication")
 
@@ -315,7 +328,9 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationType")
     def radius_dynamic_author_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        Authentication Type
+          - Choices: `any`, `all`, `session-key`
+          - Default value: `any`
         """
         return pulumi.get(self, "radius_dynamic_author_authentication_type")
 
@@ -339,7 +354,9 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="radiusDynamicAuthorDomainStripping")
     def radius_dynamic_author_domain_stripping(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        Domain Stripping
+          - Choices: `yes`, `no`, `right-to-left`
+          - Default value: `no`
         """
         return pulumi.get(self, "radius_dynamic_author_domain_stripping")
 
@@ -363,7 +380,9 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="radiusDynamicAuthorPort")
     def radius_dynamic_author_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        Specify Radius Dynamic Author Port
+          - Range: `0`-`65535`
+          - Default value: `1700`
         """
         return pulumi.get(self, "radius_dynamic_author_port")
 
@@ -459,7 +478,8 @@ class CedgeAaaFeatureTemplateArgs:
     @pulumi.getter(name="serverGroupsPriorityOrder")
     def server_groups_priority_order(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        ServerGroups priority order - Default value: `local`
+        ServerGroups priority order
+          - Default value: `local`
         """
         return pulumi.get(self, "server_groups_priority_order")
 
@@ -529,26 +549,35 @@ class _CedgeAaaFeatureTemplateState:
         """
         Input properties used for looking up and filtering CedgeAaaFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAccountingRuleArgs']]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateAuthorizationRuleArgs']]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_accounting_variable: Variable name
-        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_authentication_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateRadiusClientArgs']]] radius_clients: Specify a RADIUS client
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type
+                 - Choices: `any`, `all`, `session-key`
+                 - Default value: `any`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping
+                 - Choices: `yes`, `no`, `right-to-left`
+                 - Default value: `no`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping_variable: Variable name
-        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port
+                 - Range: `0`-`65535`
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_port_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key: Specify a radius dynamic author server-key
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key_variable: Variable name
@@ -556,7 +585,8 @@ class _CedgeAaaFeatureTemplateState:
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list: CTS Authorization List
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_trustsec_group: RADIUS trustsec group
-        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order - Default value: `local`
+        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order
+                 - Default value: `local`
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateTacacsServerGroupArgs']]] tacacs_server_groups: Configure the TACACS serverGroup
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input['CedgeAaaFeatureTemplateUserArgs']]] users: Create local login account
@@ -641,7 +671,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -665,7 +696,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 
@@ -713,9 +745,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -727,7 +758,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="dot1xAccounting")
     def dot1x_accounting(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_accounting")
 
@@ -751,7 +783,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="dot1xAuthentication")
     def dot1x_authentication(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_authentication")
 
@@ -799,7 +832,9 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationType")
     def radius_dynamic_author_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        Authentication Type
+          - Choices: `any`, `all`, `session-key`
+          - Default value: `any`
         """
         return pulumi.get(self, "radius_dynamic_author_authentication_type")
 
@@ -823,7 +858,9 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="radiusDynamicAuthorDomainStripping")
     def radius_dynamic_author_domain_stripping(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        Domain Stripping
+          - Choices: `yes`, `no`, `right-to-left`
+          - Default value: `no`
         """
         return pulumi.get(self, "radius_dynamic_author_domain_stripping")
 
@@ -847,7 +884,9 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="radiusDynamicAuthorPort")
     def radius_dynamic_author_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        Specify Radius Dynamic Author Port
+          - Range: `0`-`65535`
+          - Default value: `1700`
         """
         return pulumi.get(self, "radius_dynamic_author_port")
 
@@ -943,7 +982,8 @@ class _CedgeAaaFeatureTemplateState:
     @pulumi.getter(name="serverGroupsPriorityOrder")
     def server_groups_priority_order(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        ServerGroups priority order - Default value: `local`
+        ServerGroups priority order
+          - Default value: `local`
         """
         return pulumi.get(self, "server_groups_priority_order")
 
@@ -1051,26 +1091,35 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_accounting_variable: Variable name
-        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_authentication_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]] radius_clients: Specify a RADIUS client
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type
+                 - Choices: `any`, `all`, `session-key`
+                 - Default value: `any`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping
+                 - Choices: `yes`, `no`, `right-to-left`
+                 - Default value: `no`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping_variable: Variable name
-        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port
+                 - Range: `0`-`65535`
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_port_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key: Specify a radius dynamic author server-key
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key_variable: Variable name
@@ -1078,7 +1127,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list: CTS Authorization List
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_trustsec_group: RADIUS trustsec group
-        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order - Default value: `local`
+        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order
+                 - Default value: `local`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]] tacacs_server_groups: Configure the TACACS serverGroup
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]] users: Create local login account
         """
@@ -1237,26 +1287,35 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAccountingRuleArgs', 'CedgeAaaFeatureTemplateAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateAuthorizationRuleArgs', 'CedgeAaaFeatureTemplateAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] dot1x_accounting: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_accounting_variable: Variable name
-        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] dot1x_authentication: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] dot1x_authentication_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateRadiusClientArgs', 'CedgeAaaFeatureTemplateRadiusClientArgsDict']]]] radius_clients: Specify a RADIUS client
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type: Authentication Type
+                 - Choices: `any`, `all`, `session-key`
+                 - Default value: `any`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping: Domain Stripping
+                 - Choices: `yes`, `no`, `right-to-left`
+                 - Default value: `no`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_domain_stripping_variable: Variable name
-        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        :param pulumi.Input[_builtins.int] radius_dynamic_author_port: Specify Radius Dynamic Author Port
+                 - Range: `0`-`65535`
+                 - Default value: `1700`
         :param pulumi.Input[_builtins.str] radius_dynamic_author_port_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key: Specify a radius dynamic author server-key
         :param pulumi.Input[_builtins.str] radius_dynamic_author_server_key_variable: Variable name
@@ -1264,7 +1323,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list: CTS Authorization List
         :param pulumi.Input[_builtins.str] radius_trustsec_cts_authorization_list_variable: Variable name
         :param pulumi.Input[_builtins.str] radius_trustsec_group: RADIUS trustsec group
-        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order - Default value: `local`
+        :param pulumi.Input[_builtins.str] server_groups_priority_order: ServerGroups priority order
+                 - Default value: `local`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateTacacsServerGroupArgs', 'CedgeAaaFeatureTemplateTacacsServerGroupArgsDict']]]] tacacs_server_groups: Configure the TACACS serverGroup
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[Sequence[pulumi.Input[Union['CedgeAaaFeatureTemplateUserArgs', 'CedgeAaaFeatureTemplateUserArgsDict']]]] users: Create local login account
@@ -1319,7 +1379,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -1335,7 +1396,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 
@@ -1367,9 +1429,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1377,7 +1438,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="dot1xAccounting")
     def dot1x_accounting(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_accounting")
 
@@ -1393,7 +1455,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="dot1xAuthentication")
     def dot1x_authentication(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "dot1x_authentication")
 
@@ -1425,7 +1488,9 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="radiusDynamicAuthorAuthenticationType")
     def radius_dynamic_author_authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+        Authentication Type
+          - Choices: `any`, `all`, `session-key`
+          - Default value: `any`
         """
         return pulumi.get(self, "radius_dynamic_author_authentication_type")
 
@@ -1441,7 +1506,9 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="radiusDynamicAuthorDomainStripping")
     def radius_dynamic_author_domain_stripping(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+        Domain Stripping
+          - Choices: `yes`, `no`, `right-to-left`
+          - Default value: `no`
         """
         return pulumi.get(self, "radius_dynamic_author_domain_stripping")
 
@@ -1457,7 +1524,9 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="radiusDynamicAuthorPort")
     def radius_dynamic_author_port(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+        Specify Radius Dynamic Author Port
+          - Range: `0`-`65535`
+          - Default value: `1700`
         """
         return pulumi.get(self, "radius_dynamic_author_port")
 
@@ -1521,7 +1590,8 @@ class CedgeAaaFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="serverGroupsPriorityOrder")
     def server_groups_priority_order(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        ServerGroups priority order - Default value: `local`
+        ServerGroups priority order
+          - Default value: `local`
         """
         return pulumi.get(self, "server_groups_priority_order")
 

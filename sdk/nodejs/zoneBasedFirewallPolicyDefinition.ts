@@ -48,28 +48,30 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
     /**
      * , Attribute conditional on `mode` being equal to `security`
      */
-    public readonly applyZonePairs!: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair[] | undefined>;
+    declare public readonly applyZonePairs: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair[] | undefined>;
     /**
-     * Default Action - Choices: `pass`, `drop`
+     * Default Action
+     *   - Choices: `pass`, `drop`
      */
-    public readonly defaultAction!: pulumi.Output<string>;
+    declare public readonly defaultAction: pulumi.Output<string>;
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
-    public readonly mode!: pulumi.Output<string>;
+    declare public readonly mode: pulumi.Output<string>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
-    public readonly rules!: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionRule[]>;
+    declare public readonly name: pulumi.Output<string>;
+    declare public readonly rules: pulumi.Output<outputs.ZoneBasedFirewallPolicyDefinitionRule[]>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ZoneBasedFirewallPolicyDefinition resource with the given unique name, arguments, and options.
@@ -84,33 +86,33 @@ export class ZoneBasedFirewallPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ZoneBasedFirewallPolicyDefinitionState | undefined;
-            resourceInputs["applyZonePairs"] = state ? state.applyZonePairs : undefined;
-            resourceInputs["defaultAction"] = state ? state.defaultAction : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["applyZonePairs"] = state?.applyZonePairs;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ZoneBasedFirewallPolicyDefinitionArgs | undefined;
-            if ((!args || args.defaultAction === undefined) && !opts.urn) {
+            if (args?.defaultAction === undefined && !opts.urn) {
                 throw new Error("Missing required property 'defaultAction'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.mode === undefined) && !opts.urn) {
+            if (args?.mode === undefined && !opts.urn) {
                 throw new Error("Missing required property 'mode'");
             }
-            if ((!args || args.rules === undefined) && !opts.urn) {
+            if (args?.rules === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rules'");
             }
-            resourceInputs["applyZonePairs"] = args ? args.applyZonePairs : undefined;
-            resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["applyZonePairs"] = args?.applyZonePairs;
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rules"] = args?.rules;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -127,7 +129,8 @@ export interface ZoneBasedFirewallPolicyDefinitionState {
      */
     applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**
-     * Default Action - Choices: `pass`, `drop`
+     * Default Action
+     *   - Choices: `pass`, `drop`
      */
     defaultAction?: pulumi.Input<string>;
     /**
@@ -135,7 +138,8 @@ export interface ZoneBasedFirewallPolicyDefinitionState {
      */
     description?: pulumi.Input<string>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -158,7 +162,8 @@ export interface ZoneBasedFirewallPolicyDefinitionArgs {
      */
     applyZonePairs?: pulumi.Input<pulumi.Input<inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>[]>;
     /**
-     * Default Action - Choices: `pass`, `drop`
+     * Default Action
+     *   - Choices: `pass`, `drop`
      */
     defaultAction: pulumi.Input<string>;
     /**
@@ -166,7 +171,8 @@ export interface ZoneBasedFirewallPolicyDefinitionArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode: pulumi.Input<string>;
     /**

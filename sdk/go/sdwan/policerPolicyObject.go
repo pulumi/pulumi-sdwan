@@ -53,13 +53,16 @@ import (
 type PolicerPolicyObject struct {
 	pulumi.CustomResourceState
 
-	// Burst in bytes - Range: `15000`-`10000000`
+	// Burst in bytes
+	//   - Range: `15000`-`10000000`
 	Burst pulumi.IntOutput `pulumi:"burst"`
-	// Exceed action - Choices: `drop`, `remark`
+	// Exceed action
+	//   - Choices: `drop`, `remark`
 	ExceedAction pulumi.StringOutput `pulumi:"exceedAction"`
 	// The name of the policy object
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Rate in bps - Range: `8`-`100000000000`
+	// Rate in bps
+	//   - Range: `8`-`100000000000`
 	Rate pulumi.IntOutput `pulumi:"rate"`
 	// The version of the object
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -104,26 +107,32 @@ func GetPolicerPolicyObject(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering PolicerPolicyObject resources.
 type policerPolicyObjectState struct {
-	// Burst in bytes - Range: `15000`-`10000000`
+	// Burst in bytes
+	//   - Range: `15000`-`10000000`
 	Burst *int `pulumi:"burst"`
-	// Exceed action - Choices: `drop`, `remark`
+	// Exceed action
+	//   - Choices: `drop`, `remark`
 	ExceedAction *string `pulumi:"exceedAction"`
 	// The name of the policy object
 	Name *string `pulumi:"name"`
-	// Rate in bps - Range: `8`-`100000000000`
+	// Rate in bps
+	//   - Range: `8`-`100000000000`
 	Rate *int `pulumi:"rate"`
 	// The version of the object
 	Version *int `pulumi:"version"`
 }
 
 type PolicerPolicyObjectState struct {
-	// Burst in bytes - Range: `15000`-`10000000`
+	// Burst in bytes
+	//   - Range: `15000`-`10000000`
 	Burst pulumi.IntPtrInput
-	// Exceed action - Choices: `drop`, `remark`
+	// Exceed action
+	//   - Choices: `drop`, `remark`
 	ExceedAction pulumi.StringPtrInput
 	// The name of the policy object
 	Name pulumi.StringPtrInput
-	// Rate in bps - Range: `8`-`100000000000`
+	// Rate in bps
+	//   - Range: `8`-`100000000000`
 	Rate pulumi.IntPtrInput
 	// The version of the object
 	Version pulumi.IntPtrInput
@@ -134,25 +143,31 @@ func (PolicerPolicyObjectState) ElementType() reflect.Type {
 }
 
 type policerPolicyObjectArgs struct {
-	// Burst in bytes - Range: `15000`-`10000000`
+	// Burst in bytes
+	//   - Range: `15000`-`10000000`
 	Burst int `pulumi:"burst"`
-	// Exceed action - Choices: `drop`, `remark`
+	// Exceed action
+	//   - Choices: `drop`, `remark`
 	ExceedAction string `pulumi:"exceedAction"`
 	// The name of the policy object
 	Name *string `pulumi:"name"`
-	// Rate in bps - Range: `8`-`100000000000`
+	// Rate in bps
+	//   - Range: `8`-`100000000000`
 	Rate int `pulumi:"rate"`
 }
 
 // The set of arguments for constructing a PolicerPolicyObject resource.
 type PolicerPolicyObjectArgs struct {
-	// Burst in bytes - Range: `15000`-`10000000`
+	// Burst in bytes
+	//   - Range: `15000`-`10000000`
 	Burst pulumi.IntInput
-	// Exceed action - Choices: `drop`, `remark`
+	// Exceed action
+	//   - Choices: `drop`, `remark`
 	ExceedAction pulumi.StringInput
 	// The name of the policy object
 	Name pulumi.StringPtrInput
-	// Rate in bps - Range: `8`-`100000000000`
+	// Rate in bps
+	//   - Range: `8`-`100000000000`
 	Rate pulumi.IntInput
 }
 
@@ -243,12 +258,14 @@ func (o PolicerPolicyObjectOutput) ToPolicerPolicyObjectOutputWithContext(ctx co
 	return o
 }
 
-// Burst in bytes - Range: `15000`-`10000000`
+// Burst in bytes
+//   - Range: `15000`-`10000000`
 func (o PolicerPolicyObjectOutput) Burst() pulumi.IntOutput {
 	return o.ApplyT(func(v *PolicerPolicyObject) pulumi.IntOutput { return v.Burst }).(pulumi.IntOutput)
 }
 
-// Exceed action - Choices: `drop`, `remark`
+// Exceed action
+//   - Choices: `drop`, `remark`
 func (o PolicerPolicyObjectOutput) ExceedAction() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicerPolicyObject) pulumi.StringOutput { return v.ExceedAction }).(pulumi.StringOutput)
 }
@@ -258,7 +275,8 @@ func (o PolicerPolicyObjectOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *PolicerPolicyObject) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Rate in bps - Range: `8`-`100000000000`
+// Rate in bps
+//   - Range: `8`-`100000000000`
 func (o PolicerPolicyObjectOutput) Rate() pulumi.IntOutput {
 	return o.ApplyT(func(v *PolicerPolicyObject) pulumi.IntOutput { return v.Rate }).(pulumi.IntOutput)
 }

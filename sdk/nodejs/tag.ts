@@ -60,15 +60,15 @@ export class Tag extends pulumi.CustomResource {
     /**
      * Tag description
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * List of associated devices
      */
-    public readonly devices!: pulumi.Output<string[] | undefined>;
+    declare public readonly devices: pulumi.Output<string[] | undefined>;
     /**
      * Tag name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
 
     /**
      * Create a Tag resource with the given unique name, arguments, and options.
@@ -83,17 +83,17 @@ export class Tag extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TagState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["devices"] = state?.devices;
+            resourceInputs["name"] = state?.name;
         } else {
             const args = argsOrState as TagArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["devices"] = args ? args.devices : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["devices"] = args?.devices;
+            resourceInputs["name"] = args?.name;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Tag.__pulumiType, name, resourceInputs, opts);

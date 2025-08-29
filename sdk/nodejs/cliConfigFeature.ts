@@ -65,23 +65,23 @@ export class CliConfigFeature extends pulumi.CustomResource {
     /**
      * CLI configuration
      */
-    public readonly cliConfiguration!: pulumi.Output<string>;
+    declare public readonly cliConfiguration: pulumi.Output<string>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CliConfigFeature resource with the given unique name, arguments, and options.
@@ -96,26 +96,26 @@ export class CliConfigFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CliConfigFeatureState | undefined;
-            resourceInputs["cliConfiguration"] = state ? state.cliConfiguration : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["cliConfiguration"] = state?.cliConfiguration;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CliConfigFeatureArgs | undefined;
-            if ((!args || args.cliConfiguration === undefined) && !opts.urn) {
+            if (args?.cliConfiguration === undefined && !opts.urn) {
                 throw new Error("Missing required property 'cliConfiguration'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["cliConfiguration"] = args ? args.cliConfiguration : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["cliConfiguration"] = args?.cliConfiguration;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -61,13 +61,15 @@ namespace Pulumi.Sdwan
     public partial class LocalizedPolicy : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// IPv4 application visibility - Default value: `false`
+        /// IPv4 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Output("applicationVisibilityIpv4")]
         public Output<bool> ApplicationVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 application visibility - Default value: `false`
+        /// IPv6 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Output("applicationVisibilityIpv6")]
         public Output<bool> ApplicationVisibilityIpv6 { get; private set; } = null!;
@@ -97,37 +99,43 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// IPv4 flow visibility - Default value: `false`
+        /// IPv4 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Output("flowVisibilityIpv4")]
         public Output<bool> FlowVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 flow visibility - Default value: `false`
+        /// IPv6 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Output("flowVisibilityIpv6")]
         public Output<bool> FlowVisibilityIpv6 { get; private set; } = null!;
 
         /// <summary>
-        /// Implicit ACL logging - Default value: `false`
+        /// Implicit ACL logging
+        ///   - Default value: `false`
         /// </summary>
         [Output("implicitAclLogging")]
         public Output<bool> ImplicitAclLogging { get; private set; } = null!;
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Output("ipv4VisibilityCacheEntries")]
         public Output<int?> Ipv4VisibilityCacheEntries { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Output("ipv6VisibilityCacheEntries")]
         public Output<int?> Ipv6VisibilityCacheEntries { get; private set; } = null!;
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Output("logFrequency")]
         public Output<int?> LogFrequency { get; private set; } = null!;
@@ -191,13 +199,15 @@ namespace Pulumi.Sdwan
     public sealed class LocalizedPolicyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IPv4 application visibility - Default value: `false`
+        /// IPv4 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 application visibility - Default value: `false`
+        /// IPv6 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -233,37 +243,43 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// IPv4 flow visibility - Default value: `false`
+        /// IPv4 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 flow visibility - Default value: `false`
+        /// IPv6 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
-        /// Implicit ACL logging - Default value: `false`
+        /// Implicit ACL logging
+        ///   - Default value: `false`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv4VisibilityCacheEntries")]
         public Input<int>? Ipv4VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv6VisibilityCacheEntries")]
         public Input<int>? Ipv6VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Input("logFrequency")]
         public Input<int>? LogFrequency { get; set; }
@@ -283,13 +299,15 @@ namespace Pulumi.Sdwan
     public sealed class LocalizedPolicyState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// IPv4 application visibility - Default value: `false`
+        /// IPv4 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 application visibility - Default value: `false`
+        /// IPv6 application visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -325,37 +343,43 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// IPv4 flow visibility - Default value: `false`
+        /// IPv4 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
-        /// IPv6 flow visibility - Default value: `false`
+        /// IPv6 flow visibility
+        ///   - Default value: `false`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
-        /// Implicit ACL logging - Default value: `false`
+        /// Implicit ACL logging
+        ///   - Default value: `false`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }
 
         /// <summary>
-        /// IPv4 visibility cache entries - Range: `16`-`2000000`
+        /// IPv4 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv4VisibilityCacheEntries")]
         public Input<int>? Ipv4VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// IPv6 visibility cache entries - Range: `16`-`2000000`
+        /// IPv6 visibility cache entries
+        ///   - Range: `16`-`2000000`
         /// </summary>
         [Input("ipv6VisibilityCacheEntries")]
         public Input<int>? Ipv6VisibilityCacheEntries { get; set; }
 
         /// <summary>
-        /// Log frequency - Range: `1`-`2147483647`
+        /// Log frequency
+        ///   - Range: `1`-`2147483647`
         /// </summary>
         [Input("logFrequency")]
         public Input<int>? LogFrequency { get; set; }

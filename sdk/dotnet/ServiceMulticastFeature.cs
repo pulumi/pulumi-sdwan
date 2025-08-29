@@ -45,7 +45,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableAutoRp")]
         public Output<bool?> EnableAutoRp { get; private set; } = null!;
@@ -69,13 +70,15 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceMulticastFeatureIgmpInterface>> IgmpInterfaces { get; private set; } = null!;
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Output("localReplicator")]
         public Output<bool?> LocalReplicator { get; private set; } = null!;
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`131072`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`131072`
         /// </summary>
         [Output("localReplicatorThreshold")]
         public Output<int?> LocalReplicatorThreshold { get; private set; } = null!;
@@ -93,7 +96,8 @@ namespace Pulumi.Sdwan
         public Output<string?> LocalReplicatorVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set MSDP refresh timer - Range: `1`-`60`
+        /// Set MSDP refresh timer
+        ///   - Range: `1`-`60`
         /// </summary>
         [Output("msdpConnectionRetryInterval")]
         public Output<int?> MsdpConnectionRetryInterval { get; private set; } = null!;
@@ -165,7 +169,9 @@ namespace Pulumi.Sdwan
         public Output<bool> PimSourceSpecificMulticastEnable { get; private set; } = null!;
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
+        ///   - Default value: `0`
         /// </summary>
         [Output("pimSptThreshold")]
         public Output<string?> PimSptThreshold { get; private set; } = null!;
@@ -177,7 +183,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PimSptThresholdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Output("sptOnly")]
         public Output<bool?> SptOnly { get; private set; } = null!;
@@ -277,7 +284,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -307,13 +315,15 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`131072`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`131072`
         /// </summary>
         [Input("localReplicatorThreshold")]
         public Input<int>? LocalReplicatorThreshold { get; set; }
@@ -331,7 +341,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LocalReplicatorVariable { get; set; }
 
         /// <summary>
-        /// Set MSDP refresh timer - Range: `1`-`60`
+        /// Set MSDP refresh timer
+        ///   - Range: `1`-`60`
         /// </summary>
         [Input("msdpConnectionRetryInterval")]
         public Input<int>? MsdpConnectionRetryInterval { get; set; }
@@ -427,7 +438,9 @@ namespace Pulumi.Sdwan
         public Input<bool> PimSourceSpecificMulticastEnable { get; set; } = null!;
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
+        ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
         public Input<string>? PimSptThreshold { get; set; }
@@ -439,7 +452,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PimSptThresholdVariable { get; set; }
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -501,7 +515,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -531,13 +546,15 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Replicator is local to this device - Default value: `false`
+        /// Replicator is local to this device
+        ///   - Default value: `false`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
 
         /// <summary>
-        /// Set number of joins per group the router supports - Range: `0`-`131072`
+        /// Set number of joins per group the router supports
+        ///   - Range: `0`-`131072`
         /// </summary>
         [Input("localReplicatorThreshold")]
         public Input<int>? LocalReplicatorThreshold { get; set; }
@@ -555,7 +572,8 @@ namespace Pulumi.Sdwan
         public Input<string>? LocalReplicatorVariable { get; set; }
 
         /// <summary>
-        /// Set MSDP refresh timer - Range: `1`-`60`
+        /// Set MSDP refresh timer
+        ///   - Range: `1`-`60`
         /// </summary>
         [Input("msdpConnectionRetryInterval")]
         public Input<int>? MsdpConnectionRetryInterval { get; set; }
@@ -651,7 +669,9 @@ namespace Pulumi.Sdwan
         public Input<bool>? PimSourceSpecificMulticastEnable { get; set; }
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
+        ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
         public Input<string>? PimSptThreshold { get; set; }
@@ -663,7 +683,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PimSptThresholdVariable { get; set; }
 
         /// <summary>
-        /// Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        /// Shortest Path Tree (SPT) Only Mode
+        ///   - Default value: `false`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }

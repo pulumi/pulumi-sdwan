@@ -27,7 +27,8 @@ import (
 type PolicyObjectAsPathList struct {
 	pulumi.CustomResourceState
 
-	// As path List Number - Range: `1`-`500`
+	// As path List Number
+	//   - Range: `1`-`500`
 	AsPathListId pulumi.IntOutput `pulumi:"asPathListId"`
 	// The description of the Policy_object
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -80,7 +81,8 @@ func GetPolicyObjectAsPathList(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering PolicyObjectAsPathList resources.
 type policyObjectAsPathListState struct {
-	// As path List Number - Range: `1`-`500`
+	// As path List Number
+	//   - Range: `1`-`500`
 	AsPathListId *int `pulumi:"asPathListId"`
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`
@@ -95,7 +97,8 @@ type policyObjectAsPathListState struct {
 }
 
 type PolicyObjectAsPathListState struct {
-	// As path List Number - Range: `1`-`500`
+	// As path List Number
+	//   - Range: `1`-`500`
 	AsPathListId pulumi.IntPtrInput
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
@@ -114,7 +117,8 @@ func (PolicyObjectAsPathListState) ElementType() reflect.Type {
 }
 
 type policyObjectAsPathListArgs struct {
-	// As path List Number - Range: `1`-`500`
+	// As path List Number
+	//   - Range: `1`-`500`
 	AsPathListId int `pulumi:"asPathListId"`
 	// The description of the Policy_object
 	Description *string `pulumi:"description"`
@@ -128,7 +132,8 @@ type policyObjectAsPathListArgs struct {
 
 // The set of arguments for constructing a PolicyObjectAsPathList resource.
 type PolicyObjectAsPathListArgs struct {
-	// As path List Number - Range: `1`-`500`
+	// As path List Number
+	//   - Range: `1`-`500`
 	AsPathListId pulumi.IntInput
 	// The description of the Policy_object
 	Description pulumi.StringPtrInput
@@ -227,7 +232,8 @@ func (o PolicyObjectAsPathListOutput) ToPolicyObjectAsPathListOutputWithContext(
 	return o
 }
 
-// As path List Number - Range: `1`-`500`
+// As path List Number
+//   - Range: `1`-`500`
 func (o PolicyObjectAsPathListOutput) AsPathListId() pulumi.IntOutput {
 	return o.ApplyT(func(v *PolicyObjectAsPathList) pulumi.IntOutput { return v.AsPathListId }).(pulumi.IntOutput)
 }

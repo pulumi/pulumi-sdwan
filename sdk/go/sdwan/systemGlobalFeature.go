@@ -78,73 +78,91 @@ import (
 type SystemGlobalFeature struct {
 	pulumi.CustomResourceState
 
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrOutput `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrOutput `pulumi:"arpProxyVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrOutput `pulumi:"cdp"`
 	// Variable name
 	CdpVariable pulumi.StringPtrOutput `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrOutput `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrOutput `pulumi:"consoleLoggingVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrOutput `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrOutput `pulumi:"domainLookupVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrOutput `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrOutput `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrOutput `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrOutput `pulumi:"httpAuthenticationVariable"`
-	// Set a HTTP Server - Default value: `false`
+	// Set a HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrOutput `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable pulumi.StringPtrOutput `pulumi:"httpServerVariable"`
-	// Set a HTTPS Server - Default value: `false`
+	// Set a HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrOutput `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrOutput `pulumi:"httpsServerVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	IgnoreBootp pulumi.BoolPtrOutput `pulumi:"ignoreBootp"`
 	// Variable name
 	IgnoreBootpVariable pulumi.StringPtrOutput `pulumi:"ignoreBootpVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrOutput `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrOutput `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrOutput `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable pulumi.StringPtrOutput `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrOutput `pulumi:"lldp"`
 	// Variable name
 	LldpVariable pulumi.StringPtrOutput `pulumi:"lldpVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrOutput `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrOutput `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrOutput `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable pulumi.StringPtrOutput `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrOutput `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrOutput `pulumi:"snmpIfindexPersistVariable"`
@@ -152,29 +170,35 @@ type SystemGlobalFeature struct {
 	SourceInterface pulumi.StringPtrOutput `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Choices: `2`
+	// Set SSH version
+	//   - Choices: `2`
 	SshVersion pulumi.StringPtrOutput `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable pulumi.StringPtrOutput `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrOutput `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrOutput `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrOutput `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrOutput `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrOutput `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrOutput `pulumi:"tcpSmallServersVariable"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrOutput `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrOutput `pulumi:"udpSmallServersVariable"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLineLogging pulumi.BoolPtrOutput `pulumi:"vtyLineLogging"`
 	// Variable name
 	VtyLineLoggingVariable pulumi.StringPtrOutput `pulumi:"vtyLineLoggingVariable"`
@@ -213,73 +237,91 @@ func GetSystemGlobalFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SystemGlobalFeature resources.
 type systemGlobalFeatureState struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
 	// Variable name
 	CdpVariable *string `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging *bool `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable *string `pulumi:"consoleLoggingVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive *bool `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable *string `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication *string `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable *string `pulumi:"httpAuthenticationVariable"`
-	// Set a HTTP Server - Default value: `false`
+	// Set a HTTP Server
+	//   - Default value: `false`
 	HttpServer *bool `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable *string `pulumi:"httpServerVariable"`
-	// Set a HTTPS Server - Default value: `false`
+	// Set a HTTPS Server
+	//   - Default value: `false`
 	HttpsServer *bool `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable *string `pulumi:"httpsServerVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	IgnoreBootp *bool `pulumi:"ignoreBootp"`
 	// Variable name
 	IgnoreBootpVariable *string `pulumi:"ignoreBootpVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable *string `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp *bool `pulumi:"lldp"`
 	// Variable name
 	LldpVariable *string `pulumi:"lldpVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout *int `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable *string `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout *int `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable *string `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp *bool `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable *string `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist *bool `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable *string `pulumi:"snmpIfindexPersistVariable"`
@@ -287,102 +329,126 @@ type systemGlobalFeatureState struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Choices: `2`
+	// Set SSH version
+	//   - Choices: `2`
 	SshVersion *string `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable *string `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn *bool `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable *string `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut *bool `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable *string `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers *bool `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable *string `pulumi:"tcpSmallServersVariable"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers *bool `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable *string `pulumi:"udpSmallServersVariable"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLineLogging *bool `pulumi:"vtyLineLogging"`
 	// Variable name
 	VtyLineLoggingVariable *string `pulumi:"vtyLineLoggingVariable"`
 }
 
 type SystemGlobalFeatureState struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
 	// Variable name
 	CdpVariable pulumi.StringPtrInput
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrInput
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrInput
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrInput
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrInput
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrInput
-	// Set a HTTP Server - Default value: `false`
+	// Set a HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrInput
 	// Variable name
 	HttpServerVariable pulumi.StringPtrInput
-	// Set a HTTPS Server - Default value: `false`
+	// Set a HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrInput
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrInput
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	IgnoreBootp pulumi.BoolPtrInput
 	// Variable name
 	IgnoreBootpVariable pulumi.StringPtrInput
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
 	// Variable name
 	LineVtyVariable pulumi.StringPtrInput
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrInput
 	// Variable name
 	LldpVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrInput
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrInput
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrInput
 	// Variable name
 	RshRcpVariable pulumi.StringPtrInput
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrInput
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrInput
@@ -390,29 +456,35 @@ type SystemGlobalFeatureState struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Set SSH version - Choices: `2`
+	// Set SSH version
+	//   - Choices: `2`
 	SshVersion pulumi.StringPtrInput
 	// Variable name
 	SshVersionVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrInput
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrInput
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLineLogging pulumi.BoolPtrInput
 	// Variable name
 	VtyLineLoggingVariable pulumi.StringPtrInput
@@ -423,73 +495,91 @@ func (SystemGlobalFeatureState) ElementType() reflect.Type {
 }
 
 type systemGlobalFeatureArgs struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy *bool `pulumi:"arpProxy"`
 	// Variable name
 	ArpProxyVariable *string `pulumi:"arpProxyVariable"`
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp *bool `pulumi:"cdp"`
 	// Variable name
 	CdpVariable *string `pulumi:"cdpVariable"`
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging *bool `pulumi:"consoleLogging"`
 	// Variable name
 	ConsoleLoggingVariable *string `pulumi:"consoleLoggingVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup *bool `pulumi:"domainLookup"`
 	// Variable name
 	DomainLookupVariable *string `pulumi:"domainLookupVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive *bool `pulumi:"ftpPassive"`
 	// Variable name
 	FtpPassiveVariable *string `pulumi:"ftpPassiveVariable"`
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication *string `pulumi:"httpAuthentication"`
 	// Variable name
 	HttpAuthenticationVariable *string `pulumi:"httpAuthenticationVariable"`
-	// Set a HTTP Server - Default value: `false`
+	// Set a HTTP Server
+	//   - Default value: `false`
 	HttpServer *bool `pulumi:"httpServer"`
 	// Variable name
 	HttpServerVariable *string `pulumi:"httpServerVariable"`
-	// Set a HTTPS Server - Default value: `false`
+	// Set a HTTPS Server
+	//   - Default value: `false`
 	HttpsServer *bool `pulumi:"httpsServer"`
 	// Variable name
 	HttpsServerVariable *string `pulumi:"httpsServerVariable"`
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	IgnoreBootp *bool `pulumi:"ignoreBootp"`
 	// Variable name
 	IgnoreBootpVariable *string `pulumi:"ignoreBootpVariable"`
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting *bool `pulumi:"ipSourceRouting"`
 	// Variable name
 	IpSourceRoutingVariable *string `pulumi:"ipSourceRoutingVariable"`
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty *bool `pulumi:"lineVty"`
 	// Variable name
 	LineVtyVariable *string `pulumi:"lineVtyVariable"`
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp *bool `pulumi:"lldp"`
 	// Variable name
 	LldpVariable *string `pulumi:"lldpVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout *int `pulumi:"nat64TcpTimeout"`
 	// Variable name
 	Nat64TcpTimeoutVariable *string `pulumi:"nat64TcpTimeoutVariable"`
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout *int `pulumi:"nat64UdpTimeout"`
 	// Variable name
 	Nat64UdpTimeoutVariable *string `pulumi:"nat64UdpTimeoutVariable"`
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp *bool `pulumi:"rshRcp"`
 	// Variable name
 	RshRcpVariable *string `pulumi:"rshRcpVariable"`
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist *bool `pulumi:"snmpIfindexPersist"`
 	// Variable name
 	SnmpIfindexPersistVariable *string `pulumi:"snmpIfindexPersistVariable"`
@@ -497,27 +587,33 @@ type systemGlobalFeatureArgs struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Set SSH version - Choices: `2`
+	// Set SSH version
+	//   - Choices: `2`
 	SshVersion *string `pulumi:"sshVersion"`
 	// Variable name
 	SshVersionVariable *string `pulumi:"sshVersionVariable"`
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn *bool `pulumi:"tcpKeepalivesIn"`
 	// Variable name
 	TcpKeepalivesInVariable *string `pulumi:"tcpKeepalivesInVariable"`
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut *bool `pulumi:"tcpKeepalivesOut"`
 	// Variable name
 	TcpKeepalivesOutVariable *string `pulumi:"tcpKeepalivesOutVariable"`
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers *bool `pulumi:"tcpSmallServers"`
 	// Variable name
 	TcpSmallServersVariable *string `pulumi:"tcpSmallServersVariable"`
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers *bool `pulumi:"udpSmallServers"`
 	// Variable name
 	UdpSmallServersVariable *string `pulumi:"udpSmallServersVariable"`
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLineLogging *bool `pulumi:"vtyLineLogging"`
 	// Variable name
 	VtyLineLoggingVariable *string `pulumi:"vtyLineLoggingVariable"`
@@ -525,73 +621,91 @@ type systemGlobalFeatureArgs struct {
 
 // The set of arguments for constructing a SystemGlobalFeature resource.
 type SystemGlobalFeatureArgs struct {
-	// Set ARP Proxy - Default value: `false`
+	// Set ARP Proxy
+	//   - Default value: `false`
 	ArpProxy pulumi.BoolPtrInput
 	// Variable name
 	ArpProxyVariable pulumi.StringPtrInput
-	// Configure CDP - Default value: `true`
+	// Configure CDP
+	//   - Default value: `true`
 	Cdp pulumi.BoolPtrInput
 	// Variable name
 	CdpVariable pulumi.StringPtrInput
-	// Configure Console Logging - Default value: `true`
+	// Configure Console Logging
+	//   - Default value: `true`
 	ConsoleLogging pulumi.BoolPtrInput
 	// Variable name
 	ConsoleLoggingVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Configure Domain-Lookup - Default value: `false`
+	// Configure Domain-Lookup
+	//   - Default value: `false`
 	DomainLookup pulumi.BoolPtrInput
 	// Variable name
 	DomainLookupVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Set Passive FTP - Default value: `false`
+	// Set Passive FTP
+	//   - Default value: `false`
 	FtpPassive pulumi.BoolPtrInput
 	// Variable name
 	FtpPassiveVariable pulumi.StringPtrInput
-	// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+	// Set preference for HTTP Authentication
+	//   - Choices: `local`, `aaa`
 	HttpAuthentication pulumi.StringPtrInput
 	// Variable name
 	HttpAuthenticationVariable pulumi.StringPtrInput
-	// Set a HTTP Server - Default value: `false`
+	// Set a HTTP Server
+	//   - Default value: `false`
 	HttpServer pulumi.BoolPtrInput
 	// Variable name
 	HttpServerVariable pulumi.StringPtrInput
-	// Set a HTTPS Server - Default value: `false`
+	// Set a HTTPS Server
+	//   - Default value: `false`
 	HttpsServer pulumi.BoolPtrInput
 	// Variable name
 	HttpsServerVariable pulumi.StringPtrInput
-	// Configure Ignore BOOTP - Default value: `true`
+	// Configure Ignore BOOTP
+	//   - Default value: `true`
 	IgnoreBootp pulumi.BoolPtrInput
 	// Variable name
 	IgnoreBootpVariable pulumi.StringPtrInput
-	// Set Source Route - Default value: `false`
+	// Set Source Route
+	//   - Default value: `false`
 	IpSourceRouting pulumi.BoolPtrInput
 	// Variable name
 	IpSourceRoutingVariable pulumi.StringPtrInput
-	// Configure Telnet (Outbound) - Default value: `false`
+	// Configure Telnet (Outbound)
+	//   - Default value: `false`
 	LineVty pulumi.BoolPtrInput
 	// Variable name
 	LineVtyVariable pulumi.StringPtrInput
-	// Configure LLDP - Default value: `true`
+	// Configure LLDP
+	//   - Default value: `true`
 	Lldp pulumi.BoolPtrInput
 	// Variable name
 	LldpVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+	// Set NAT64 TCP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `3600`
 	Nat64TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64TcpTimeoutVariable pulumi.StringPtrInput
-	// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+	// Set NAT64 UDP session timeout, in seconds
+	//   - Range: `1`-`536870`
+	//   - Default value: `300`
 	Nat64UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Nat64UdpTimeoutVariable pulumi.StringPtrInput
-	// Set RSH/RCP - Default value: `false`
+	// Set RSH/RCP
+	//   - Default value: `false`
 	RshRcp pulumi.BoolPtrInput
 	// Variable name
 	RshRcpVariable pulumi.StringPtrInput
-	// Configure SNMP Ifindex Persist - Default value: `true`
+	// Configure SNMP Ifindex Persist
+	//   - Default value: `true`
 	SnmpIfindexPersist pulumi.BoolPtrInput
 	// Variable name
 	SnmpIfindexPersistVariable pulumi.StringPtrInput
@@ -599,27 +713,33 @@ type SystemGlobalFeatureArgs struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Set SSH version - Choices: `2`
+	// Set SSH version
+	//   - Choices: `2`
 	SshVersion pulumi.StringPtrInput
 	// Variable name
 	SshVersionVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-in - Default value: `true`
+	// Configure tcp-keepalives-in
+	//   - Default value: `true`
 	TcpKeepalivesIn pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesInVariable pulumi.StringPtrInput
-	// Configure tcp-keepalives-out - Default value: `true`
+	// Configure tcp-keepalives-out
+	//   - Default value: `true`
 	TcpKeepalivesOut pulumi.BoolPtrInput
 	// Variable name
 	TcpKeepalivesOutVariable pulumi.StringPtrInput
-	// Configure tcp-small-servers - Default value: `false`
+	// Configure tcp-small-servers
+	//   - Default value: `false`
 	TcpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	TcpSmallServersVariable pulumi.StringPtrInput
-	// Configure udp-small-servers - Default value: `false`
+	// Configure udp-small-servers
+	//   - Default value: `false`
 	UdpSmallServers pulumi.BoolPtrInput
 	// Variable name
 	UdpSmallServersVariable pulumi.StringPtrInput
-	// Configure VTY Line Logging - Default value: `false`
+	// Configure VTY Line Logging
+	//   - Default value: `false`
 	VtyLineLogging pulumi.BoolPtrInput
 	// Variable name
 	VtyLineLoggingVariable pulumi.StringPtrInput
@@ -712,7 +832,8 @@ func (o SystemGlobalFeatureOutput) ToSystemGlobalFeatureOutputWithContext(ctx co
 	return o
 }
 
-// Set ARP Proxy - Default value: `false`
+// Set ARP Proxy
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) ArpProxy() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.ArpProxy }).(pulumi.BoolPtrOutput)
 }
@@ -722,7 +843,8 @@ func (o SystemGlobalFeatureOutput) ArpProxyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.ArpProxyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure CDP - Default value: `true`
+// Configure CDP
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) Cdp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.Cdp }).(pulumi.BoolPtrOutput)
 }
@@ -732,7 +854,8 @@ func (o SystemGlobalFeatureOutput) CdpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.CdpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Console Logging - Default value: `true`
+// Configure Console Logging
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) ConsoleLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.ConsoleLogging }).(pulumi.BoolPtrOutput)
 }
@@ -747,7 +870,8 @@ func (o SystemGlobalFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Configure Domain-Lookup - Default value: `false`
+// Configure Domain-Lookup
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) DomainLookup() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.DomainLookup }).(pulumi.BoolPtrOutput)
 }
@@ -762,7 +886,8 @@ func (o SystemGlobalFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Set Passive FTP - Default value: `false`
+// Set Passive FTP
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) FtpPassive() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.FtpPassive }).(pulumi.BoolPtrOutput)
 }
@@ -772,7 +897,8 @@ func (o SystemGlobalFeatureOutput) FtpPassiveVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.FtpPassiveVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set preference for HTTP Authentication - Choices: `local`, `aaa`
+// Set preference for HTTP Authentication
+//   - Choices: `local`, `aaa`
 func (o SystemGlobalFeatureOutput) HttpAuthentication() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.HttpAuthentication }).(pulumi.StringPtrOutput)
 }
@@ -782,7 +908,8 @@ func (o SystemGlobalFeatureOutput) HttpAuthenticationVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.HttpAuthenticationVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set a HTTP Server - Default value: `false`
+// Set a HTTP Server
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) HttpServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.HttpServer }).(pulumi.BoolPtrOutput)
 }
@@ -792,7 +919,8 @@ func (o SystemGlobalFeatureOutput) HttpServerVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.HttpServerVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set a HTTPS Server - Default value: `false`
+// Set a HTTPS Server
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) HttpsServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.HttpsServer }).(pulumi.BoolPtrOutput)
 }
@@ -802,7 +930,8 @@ func (o SystemGlobalFeatureOutput) HttpsServerVariable() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.HttpsServerVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Ignore BOOTP - Default value: `true`
+// Configure Ignore BOOTP
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) IgnoreBootp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.IgnoreBootp }).(pulumi.BoolPtrOutput)
 }
@@ -812,7 +941,8 @@ func (o SystemGlobalFeatureOutput) IgnoreBootpVariable() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.IgnoreBootpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set Source Route - Default value: `false`
+// Set Source Route
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) IpSourceRouting() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.IpSourceRouting }).(pulumi.BoolPtrOutput)
 }
@@ -822,7 +952,8 @@ func (o SystemGlobalFeatureOutput) IpSourceRoutingVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.IpSourceRoutingVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure Telnet (Outbound) - Default value: `false`
+// Configure Telnet (Outbound)
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) LineVty() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.LineVty }).(pulumi.BoolPtrOutput)
 }
@@ -832,7 +963,8 @@ func (o SystemGlobalFeatureOutput) LineVtyVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.LineVtyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure LLDP - Default value: `true`
+// Configure LLDP
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) Lldp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.Lldp }).(pulumi.BoolPtrOutput)
 }
@@ -847,7 +979,9 @@ func (o SystemGlobalFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+// Set NAT64 TCP session timeout, in seconds
+//   - Range: `1`-`536870`
+//   - Default value: `3600`
 func (o SystemGlobalFeatureOutput) Nat64TcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.IntPtrOutput { return v.Nat64TcpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -857,7 +991,9 @@ func (o SystemGlobalFeatureOutput) Nat64TcpTimeoutVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.Nat64TcpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+// Set NAT64 UDP session timeout, in seconds
+//   - Range: `1`-`536870`
+//   - Default value: `300`
 func (o SystemGlobalFeatureOutput) Nat64UdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.IntPtrOutput { return v.Nat64UdpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -867,7 +1003,8 @@ func (o SystemGlobalFeatureOutput) Nat64UdpTimeoutVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.Nat64UdpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set RSH/RCP - Default value: `false`
+// Set RSH/RCP
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) RshRcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.RshRcp }).(pulumi.BoolPtrOutput)
 }
@@ -877,7 +1014,8 @@ func (o SystemGlobalFeatureOutput) RshRcpVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.RshRcpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure SNMP Ifindex Persist - Default value: `true`
+// Configure SNMP Ifindex Persist
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) SnmpIfindexPersist() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.SnmpIfindexPersist }).(pulumi.BoolPtrOutput)
 }
@@ -897,7 +1035,8 @@ func (o SystemGlobalFeatureOutput) SourceInterfaceVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.SourceInterfaceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set SSH version - Choices: `2`
+// Set SSH version
+//   - Choices: `2`
 func (o SystemGlobalFeatureOutput) SshVersion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.SshVersion }).(pulumi.StringPtrOutput)
 }
@@ -907,7 +1046,8 @@ func (o SystemGlobalFeatureOutput) SshVersionVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.SshVersionVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-keepalives-in - Default value: `true`
+// Configure tcp-keepalives-in
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) TcpKeepalivesIn() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.TcpKeepalivesIn }).(pulumi.BoolPtrOutput)
 }
@@ -917,7 +1057,8 @@ func (o SystemGlobalFeatureOutput) TcpKeepalivesInVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.TcpKeepalivesInVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-keepalives-out - Default value: `true`
+// Configure tcp-keepalives-out
+//   - Default value: `true`
 func (o SystemGlobalFeatureOutput) TcpKeepalivesOut() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.TcpKeepalivesOut }).(pulumi.BoolPtrOutput)
 }
@@ -927,7 +1068,8 @@ func (o SystemGlobalFeatureOutput) TcpKeepalivesOutVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.TcpKeepalivesOutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure tcp-small-servers - Default value: `false`
+// Configure tcp-small-servers
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) TcpSmallServers() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.TcpSmallServers }).(pulumi.BoolPtrOutput)
 }
@@ -937,7 +1079,8 @@ func (o SystemGlobalFeatureOutput) TcpSmallServersVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.StringPtrOutput { return v.TcpSmallServersVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure udp-small-servers - Default value: `false`
+// Configure udp-small-servers
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) UdpSmallServers() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.UdpSmallServers }).(pulumi.BoolPtrOutput)
 }
@@ -952,7 +1095,8 @@ func (o SystemGlobalFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// Configure VTY Line Logging - Default value: `false`
+// Configure VTY Line Logging
+//   - Default value: `false`
 func (o SystemGlobalFeatureOutput) VtyLineLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemGlobalFeature) pulumi.BoolPtrOutput { return v.VtyLineLogging }).(pulumi.BoolPtrOutput)
 }

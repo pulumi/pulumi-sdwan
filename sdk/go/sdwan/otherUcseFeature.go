@@ -27,18 +27,22 @@ import (
 type OtherUcseFeature struct {
 	pulumi.CustomResourceState
 
-	// Dedicated - Default value: `true`
+	// Dedicated
+	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrOutput `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrOutput `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-	// `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrOutput `pulumi:"accessPortSharedType"`
-	// Assign priority - Range: `0`-`7`
+	// Assign priority
+	//   - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrOutput `pulumi:"assignPriority"`
 	// Variable name
 	AssignPriorityVariable pulumi.StringPtrOutput `pulumi:"assignPriorityVariable"`
-	// Bay - Range: `0`-`2`
+	// Bay
+	//   - Range: `0`-`2`
 	Bay pulumi.IntOutput `pulumi:"bay"`
 	// Assign default gateway
 	DefaultGateway pulumi.StringPtrOutput `pulumi:"defaultGateway"`
@@ -56,11 +60,13 @@ type OtherUcseFeature struct {
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Slot - Range: `0`-`3`
+	// Slot
+	//   - Range: `0`-`3`
 	Slot pulumi.IntOutput `pulumi:"slot"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// Assign Vlan Id - Range: `2`-`4095`
+	// Assign Vlan Id
+	//   - Range: `2`-`4095`
 	VlanId pulumi.IntPtrOutput `pulumi:"vlanId"`
 	// Variable name
 	VlanIdVariable pulumi.StringPtrOutput `pulumi:"vlanIdVariable"`
@@ -105,18 +111,22 @@ func GetOtherUcseFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering OtherUcseFeature resources.
 type otherUcseFeatureState struct {
-	// Dedicated - Default value: `true`
+	// Dedicated
+	//   - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-	// `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
-	// Assign priority - Range: `0`-`7`
+	// Assign priority
+	//   - Range: `0`-`7`
 	AssignPriority *int `pulumi:"assignPriority"`
 	// Variable name
 	AssignPriorityVariable *string `pulumi:"assignPriorityVariable"`
-	// Bay - Range: `0`-`2`
+	// Bay
+	//   - Range: `0`-`2`
 	Bay *int `pulumi:"bay"`
 	// Assign default gateway
 	DefaultGateway *string `pulumi:"defaultGateway"`
@@ -134,29 +144,35 @@ type otherUcseFeatureState struct {
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Slot - Range: `0`-`3`
+	// Slot
+	//   - Range: `0`-`3`
 	Slot *int `pulumi:"slot"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// Assign Vlan Id - Range: `2`-`4095`
+	// Assign Vlan Id
+	//   - Range: `2`-`4095`
 	VlanId *int `pulumi:"vlanId"`
 	// Variable name
 	VlanIdVariable *string `pulumi:"vlanIdVariable"`
 }
 
 type OtherUcseFeatureState struct {
-	// Dedicated - Default value: `true`
+	// Dedicated
+	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-	// `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrInput
-	// Assign priority - Range: `0`-`7`
+	// Assign priority
+	//   - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrInput
 	// Variable name
 	AssignPriorityVariable pulumi.StringPtrInput
-	// Bay - Range: `0`-`2`
+	// Bay
+	//   - Range: `0`-`2`
 	Bay pulumi.IntPtrInput
 	// Assign default gateway
 	DefaultGateway pulumi.StringPtrInput
@@ -174,11 +190,13 @@ type OtherUcseFeatureState struct {
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Slot - Range: `0`-`3`
+	// Slot
+	//   - Range: `0`-`3`
 	Slot pulumi.IntPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// Assign Vlan Id - Range: `2`-`4095`
+	// Assign Vlan Id
+	//   - Range: `2`-`4095`
 	VlanId pulumi.IntPtrInput
 	// Variable name
 	VlanIdVariable pulumi.StringPtrInput
@@ -189,18 +207,22 @@ func (OtherUcseFeatureState) ElementType() reflect.Type {
 }
 
 type otherUcseFeatureArgs struct {
-	// Dedicated - Default value: `true`
+	// Dedicated
+	//   - Default value: `true`
 	AccessPortDedicated *bool `pulumi:"accessPortDedicated"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType *string `pulumi:"accessPortSharedFailoverType"`
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-	// `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType *string `pulumi:"accessPortSharedType"`
-	// Assign priority - Range: `0`-`7`
+	// Assign priority
+	//   - Range: `0`-`7`
 	AssignPriority *int `pulumi:"assignPriority"`
 	// Variable name
 	AssignPriorityVariable *string `pulumi:"assignPriorityVariable"`
-	// Bay - Range: `0`-`2`
+	// Bay
+	//   - Range: `0`-`2`
 	Bay int `pulumi:"bay"`
 	// Assign default gateway
 	DefaultGateway *string `pulumi:"defaultGateway"`
@@ -218,9 +240,11 @@ type otherUcseFeatureArgs struct {
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Slot - Range: `0`-`3`
+	// Slot
+	//   - Range: `0`-`3`
 	Slot int `pulumi:"slot"`
-	// Assign Vlan Id - Range: `2`-`4095`
+	// Assign Vlan Id
+	//   - Range: `2`-`4095`
 	VlanId *int `pulumi:"vlanId"`
 	// Variable name
 	VlanIdVariable *string `pulumi:"vlanIdVariable"`
@@ -228,18 +252,22 @@ type otherUcseFeatureArgs struct {
 
 // The set of arguments for constructing a OtherUcseFeature resource.
 type OtherUcseFeatureArgs struct {
-	// Dedicated - Default value: `true`
+	// Dedicated
+	//   - Default value: `true`
 	AccessPortDedicated pulumi.BoolPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge2`, `te2`
 	AccessPortSharedFailoverType pulumi.StringPtrInput
-	// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-	// `console`, `failover`
+	// , Attribute conditional on `accessPortDedicated` being equal to `false`
+	//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 	AccessPortSharedType pulumi.StringPtrInput
-	// Assign priority - Range: `0`-`7`
+	// Assign priority
+	//   - Range: `0`-`7`
 	AssignPriority pulumi.IntPtrInput
 	// Variable name
 	AssignPriorityVariable pulumi.StringPtrInput
-	// Bay - Range: `0`-`2`
+	// Bay
+	//   - Range: `0`-`2`
 	Bay pulumi.IntInput
 	// Assign default gateway
 	DefaultGateway pulumi.StringPtrInput
@@ -257,9 +285,11 @@ type OtherUcseFeatureArgs struct {
 	Ipv4AddressVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Slot - Range: `0`-`3`
+	// Slot
+	//   - Range: `0`-`3`
 	Slot pulumi.IntInput
-	// Assign Vlan Id - Range: `2`-`4095`
+	// Assign Vlan Id
+	//   - Range: `2`-`4095`
 	VlanId pulumi.IntPtrInput
 	// Variable name
 	VlanIdVariable pulumi.StringPtrInput
@@ -352,23 +382,26 @@ func (o OtherUcseFeatureOutput) ToOtherUcseFeatureOutputWithContext(ctx context.
 	return o
 }
 
-// Dedicated - Default value: `true`
+// Dedicated
+//   - Default value: `true`
 func (o OtherUcseFeatureOutput) AccessPortDedicated() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.BoolPtrOutput { return v.AccessPortDedicated }).(pulumi.BoolPtrOutput)
 }
 
-// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge2`, `te2`
+// , Attribute conditional on `accessPortDedicated` being equal to `false`
+//   - Choices: `ge2`, `te2`
 func (o OtherUcseFeatureOutput) AccessPortSharedFailoverType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedFailoverType }).(pulumi.StringPtrOutput)
 }
 
-// , Attribute conditional on `accessPortDedicated` being equal to `false` - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`,
-// `console`, `failover`
+// , Attribute conditional on `accessPortDedicated` being equal to `false`
+//   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
 func (o OtherUcseFeatureOutput) AccessPortSharedType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AccessPortSharedType }).(pulumi.StringPtrOutput)
 }
 
-// Assign priority - Range: `0`-`7`
+// Assign priority
+//   - Range: `0`-`7`
 func (o OtherUcseFeatureOutput) AssignPriority() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.IntPtrOutput { return v.AssignPriority }).(pulumi.IntPtrOutput)
 }
@@ -378,7 +411,8 @@ func (o OtherUcseFeatureOutput) AssignPriorityVariable() pulumi.StringPtrOutput 
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringPtrOutput { return v.AssignPriorityVariable }).(pulumi.StringPtrOutput)
 }
 
-// Bay - Range: `0`-`2`
+// Bay
+//   - Range: `0`-`2`
 func (o OtherUcseFeatureOutput) Bay() pulumi.IntOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.IntOutput { return v.Bay }).(pulumi.IntOutput)
 }
@@ -423,7 +457,8 @@ func (o OtherUcseFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Slot - Range: `0`-`3`
+// Slot
+//   - Range: `0`-`3`
 func (o OtherUcseFeatureOutput) Slot() pulumi.IntOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.IntOutput { return v.Slot }).(pulumi.IntOutput)
 }
@@ -433,7 +468,8 @@ func (o OtherUcseFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// Assign Vlan Id - Range: `2`-`4095`
+// Assign Vlan Id
+//   - Range: `2`-`4095`
 func (o OtherUcseFeatureOutput) VlanId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *OtherUcseFeature) pulumi.IntPtrOutput { return v.VlanId }).(pulumi.IntPtrOutput)
 }

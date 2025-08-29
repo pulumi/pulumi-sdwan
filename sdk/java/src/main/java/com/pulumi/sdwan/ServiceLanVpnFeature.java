@@ -130,14 +130,16 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Enable SDWAN Remote Access - Default value: `false`
+     * Enable SDWAN Remote Access
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableSdwanRemoteAccess", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableSdwanRemoteAccess;
 
     /**
-     * @return Enable SDWAN Remote Access - Default value: `false`
+     * @return Enable SDWAN Remote Access
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableSdwanRemoteAccess() {
@@ -300,14 +302,16 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.natPortForwards);
     }
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      * 
      */
     @Export(name="ompAdminDistanceIpv4", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return OMP Admin Distance IPv4 - Range: `1`-`255`
+     * @return OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv4() {
@@ -328,14 +332,16 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ompAdminDistanceIpv4Variable);
     }
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      * 
      */
     @Export(name="ompAdminDistanceIpv6", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return OMP Admin Distance IPv6 - Range: `1`-`255`
+     * @return OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv6() {
@@ -566,14 +572,18 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
         return this.version;
     }
     /**
-     * VPN - Range: `1`-`65527` - Default value: `0`
+     * VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      * 
      */
     @Export(name="vpn", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> vpn;
 
     /**
-     * @return VPN - Range: `1`-`65527` - Default value: `0`
+     * @return VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      * 
      */
     public Output<Optional<Integer>> vpn() {

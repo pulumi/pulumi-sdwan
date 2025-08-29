@@ -69,19 +69,19 @@ export class CentralizedPolicy extends pulumi.CustomResource {
     /**
      * List of policy definitions
      */
-    public readonly definitions!: pulumi.Output<outputs.CentralizedPolicyDefinition[] | undefined>;
+    declare public readonly definitions: pulumi.Output<outputs.CentralizedPolicyDefinition[] | undefined>;
     /**
      * The description of the centralized policy
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * The name of the centralized policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CentralizedPolicy resource with the given unique name, arguments, and options.
@@ -96,18 +96,18 @@ export class CentralizedPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CentralizedPolicyState | undefined;
-            resourceInputs["definitions"] = state ? state.definitions : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["definitions"] = state?.definitions;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CentralizedPolicyArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["definitions"] = args ? args.definitions : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["definitions"] = args?.definitions;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

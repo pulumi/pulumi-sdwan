@@ -31,7 +31,9 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  pulumi.StringPtrOutput `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId pulumi.StringPtrOutput `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
@@ -39,13 +41,15 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	Arps ServiceLanVpnInterfaceSviFeatureArpArrayOutput `pulumi:"arps"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Variable name
 	EnableDhcpv6Variable pulumi.StringPtrOutput `pulumi:"enableDhcpv6Variable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrOutput `pulumi:"icmpRedirectDisableVariable"`
@@ -53,7 +57,9 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
@@ -61,11 +67,14 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -79,11 +88,8 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	Ipv4DhcpHelpersVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpHelpersVariable"`
 	// Assign secondary IP addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
@@ -103,11 +109,13 @@ type ServiceLanVpnInterfaceSviFeature struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -155,7 +163,9 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -163,13 +173,15 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	Arps []ServiceLanVpnInterfaceSviFeatureArp `pulumi:"arps"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Variable name
 	EnableDhcpv6Variable *string `pulumi:"enableDhcpv6Variable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
@@ -177,7 +189,9 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
@@ -185,11 +199,14 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -203,11 +220,8 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	Ipv4DhcpHelpersVariable *string `pulumi:"ipv4DhcpHelpersVariable"`
 	// Assign secondary IP addresses
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -227,11 +241,13 @@ type serviceLanVpnInterfaceSviFeatureState struct {
 	Name *string `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -244,7 +260,9 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrInput
 	AclIpv6EgressFeatureId  pulumi.StringPtrInput
 	AclIpv6IngressFeatureId pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -252,13 +270,15 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	Arps ServiceLanVpnInterfaceSviFeatureArpArrayInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Variable name
 	EnableDhcpv6Variable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
@@ -266,7 +286,9 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
@@ -274,11 +296,14 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -292,11 +317,8 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	Ipv4DhcpHelpersVariable pulumi.StringPtrInput
 	// Assign secondary IP addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -316,11 +338,13 @@ type ServiceLanVpnInterfaceSviFeatureState struct {
 	Name pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -337,7 +361,9 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	AclIpv4IngressFeatureId *string `pulumi:"aclIpv4IngressFeatureId"`
 	AclIpv6EgressFeatureId  *string `pulumi:"aclIpv6EgressFeatureId"`
 	AclIpv6IngressFeatureId *string `pulumi:"aclIpv6IngressFeatureId"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
@@ -345,13 +371,15 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	Arps []ServiceLanVpnInterfaceSviFeatureArp `pulumi:"arps"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Variable name
 	EnableDhcpv6Variable *string `pulumi:"enableDhcpv6Variable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
@@ -359,7 +387,9 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
@@ -367,11 +397,14 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -385,11 +418,8 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	Ipv4DhcpHelpersVariable *string `pulumi:"ipv4DhcpHelpersVariable"`
 	// Assign secondary IP addresses
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
@@ -409,11 +439,13 @@ type serviceLanVpnInterfaceSviFeatureArgs struct {
 	Name *string `pulumi:"name"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -425,7 +457,9 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	AclIpv4IngressFeatureId pulumi.StringPtrInput
 	AclIpv6EgressFeatureId  pulumi.StringPtrInput
 	AclIpv6IngressFeatureId pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2678400`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
@@ -433,13 +467,15 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	Arps ServiceLanVpnInterfaceSviFeatureArpArrayInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Variable name
 	EnableDhcpv6Variable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+	// ICMP/ICMPv6 Redirect Disable
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
@@ -447,7 +483,9 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+	// Interface MTU <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
@@ -455,11 +493,14 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU <576..Interface MTU>, in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -473,11 +514,8 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	Ipv4DhcpHelpersVariable pulumi.StringPtrInput
 	// Assign secondary IP addresses
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
@@ -497,11 +535,13 @@ type ServiceLanVpnInterfaceSviFeatureArgs struct {
 	Name pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `552`-`1960`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -610,7 +650,9 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) AclIpv6IngressFeatureId() pulumi
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.AclIpv6IngressFeatureId }).(pulumi.StringPtrOutput)
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2678400` - Default value: `1200`
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+//   - Range: `0`-`2678400`
+//   - Default value: `1200`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -632,7 +674,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) Description() pulumi.StringPtrOu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6 - Default value: `false`
+// Enable DHCPv6
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) EnableDhcpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.BoolPtrOutput { return v.EnableDhcpv6 }).(pulumi.BoolPtrOutput)
 }
@@ -647,7 +690,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) FeatureProfileId() pulumi.String
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+// ICMP/ICMPv6 Redirect Disable
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) IcmpRedirectDisable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.BoolPtrOutput { return v.IcmpRedirectDisable }).(pulumi.BoolPtrOutput)
 }
@@ -669,7 +713,9 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceDescriptionVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <1500..9216> in bytes - Range: `1500`-`9216` - Default value: `1500`
+// Interface MTU <1500..9216> in bytes
+//   - Range: `1500`-`9216`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -689,7 +735,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) InterfaceNameVariable() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast - Default value: `false`
+// IP Directed-Broadcast
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.BoolPtrOutput { return v.IpDirectedBroadcast }).(pulumi.BoolPtrOutput)
 }
@@ -699,7 +746,9 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) IpDirectedBroadcastVariable() pu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.IpDirectedBroadcastVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP MTU <576..Interface MTU>, in bytes - Range: `576`-`9216` - Default value: `1500`
+// IP MTU <576..Interface MTU>, in bytes
+//   - Range: `576`-`9216`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -736,11 +785,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4SecondaryAddresses() Service
 	}).(ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -798,7 +844,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) ServiceLanVpnFeatureId() pulumi.
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -808,7 +855,8 @@ func (o ServiceLanVpnInterfaceSviFeatureOutput) ShutdownVariable() pulumi.String
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `552`-`1960`
 func (o ServiceLanVpnInterfaceSviFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceSviFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }

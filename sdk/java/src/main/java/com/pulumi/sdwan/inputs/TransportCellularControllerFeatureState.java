@@ -78,14 +78,16 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
     }
 
     /**
-     * Enable/Disable Firmware Auto Sim - Default value: `true`
+     * Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     @Import(name="firmwareAutoSim")
     private @Nullable Output<Boolean> firmwareAutoSim;
 
     /**
-     * @return Enable/Disable Firmware Auto Sim - Default value: `true`
+     * @return Enable/Disable Firmware Auto Sim
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> firmwareAutoSim() {
@@ -123,14 +125,16 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
     }
 
     /**
-     * Set primary SIM slot - Range: `0`-`1`
+     * Set primary SIM slot
+     *   - Range: `0`-`1`
      * 
      */
     @Import(name="primarySimSlot")
     private @Nullable Output<Integer> primarySimSlot;
 
     /**
-     * @return Set primary SIM slot - Range: `0`-`1`
+     * @return Set primary SIM slot
+     *   - Range: `0`-`1`
      * 
      */
     public Optional<Output<Integer>> primarySimSlot() {
@@ -153,14 +157,16 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
     }
 
     /**
-     * Set SIM failover retries - Range: `0`-`65535`
+     * Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     @Import(name="simFailoverRetries")
     private @Nullable Output<Integer> simFailoverRetries;
 
     /**
-     * @return Set SIM failover retries - Range: `0`-`65535`
+     * @return Set SIM failover retries
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Output<Integer>> simFailoverRetries() {
@@ -183,14 +189,16 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
     }
 
     /**
-     * Set SIM failover timeout in minutes - Range: `3`-`7`
+     * Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     @Import(name="simFailoverTimeout")
     private @Nullable Output<Integer> simFailoverTimeout;
 
     /**
-     * @return Set SIM failover timeout in minutes - Range: `3`-`7`
+     * @return Set SIM failover timeout in minutes
+     *   - Range: `3`-`7`
      * 
      */
     public Optional<Output<Integer>> simFailoverTimeout() {
@@ -349,7 +357,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim - Default value: `true`
+         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -360,7 +369,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim - Default value: `true`
+         * @param firmwareAutoSim Enable/Disable Firmware Auto Sim
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -412,7 +422,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param primarySimSlot Set primary SIM slot - Range: `0`-`1`
+         * @param primarySimSlot Set primary SIM slot
+         *   - Range: `0`-`1`
          * 
          * @return builder
          * 
@@ -423,7 +434,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param primarySimSlot Set primary SIM slot - Range: `0`-`1`
+         * @param primarySimSlot Set primary SIM slot
+         *   - Range: `0`-`1`
          * 
          * @return builder
          * 
@@ -454,7 +466,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param simFailoverRetries Set SIM failover retries - Range: `0`-`65535`
+         * @param simFailoverRetries Set SIM failover retries
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -465,7 +478,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param simFailoverRetries Set SIM failover retries - Range: `0`-`65535`
+         * @param simFailoverRetries Set SIM failover retries
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -496,7 +510,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param simFailoverTimeout Set SIM failover timeout in minutes - Range: `3`-`7`
+         * @param simFailoverTimeout Set SIM failover timeout in minutes
+         *   - Range: `3`-`7`
          * 
          * @return builder
          * 
@@ -507,7 +522,8 @@ public final class TransportCellularControllerFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param simFailoverTimeout Set SIM failover timeout in minutes - Range: `3`-`7`
+         * @param simFailoverTimeout Set SIM failover timeout in minutes
+         *   - Range: `3`-`7`
          * 
          * @return builder
          * 

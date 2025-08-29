@@ -29,17 +29,18 @@ type CiscoNtpFeatureTemplate struct {
 	AuthenticationKeys CiscoNtpFeatureTemplateAuthenticationKeyArrayOutput `pulumi:"authenticationKeys"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Configure device as NTP master - Default value: `false`
+	// Configure device as NTP master
+	//   - Default value: `false`
 	Master pulumi.BoolPtrOutput `pulumi:"master"`
 	// Set interface for NTP Master
 	MasterSourceInterface pulumi.StringPtrOutput `pulumi:"masterSourceInterface"`
 	// Variable name
 	MasterSourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"masterSourceInterfaceVariable"`
-	// Master Stratum <1..15> - Range: `1`-`15`
+	// Master Stratum <1..15>
+	//   - Range: `1`-`15`
 	MasterStratum pulumi.IntPtrOutput `pulumi:"masterStratum"`
 	// Variable name
 	MasterStratumVariable pulumi.StringPtrOutput `pulumi:"masterStratumVariable"`
@@ -99,17 +100,18 @@ type ciscoNtpFeatureTemplateState struct {
 	AuthenticationKeys []CiscoNtpFeatureTemplateAuthenticationKey `pulumi:"authenticationKeys"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Configure device as NTP master - Default value: `false`
+	// Configure device as NTP master
+	//   - Default value: `false`
 	Master *bool `pulumi:"master"`
 	// Set interface for NTP Master
 	MasterSourceInterface *string `pulumi:"masterSourceInterface"`
 	// Variable name
 	MasterSourceInterfaceVariable *string `pulumi:"masterSourceInterfaceVariable"`
-	// Master Stratum <1..15> - Range: `1`-`15`
+	// Master Stratum <1..15>
+	//   - Range: `1`-`15`
 	MasterStratum *int `pulumi:"masterStratum"`
 	// Variable name
 	MasterStratumVariable *string `pulumi:"masterStratumVariable"`
@@ -134,17 +136,18 @@ type CiscoNtpFeatureTemplateState struct {
 	AuthenticationKeys CiscoNtpFeatureTemplateAuthenticationKeyArrayInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Configure device as NTP master - Default value: `false`
+	// Configure device as NTP master
+	//   - Default value: `false`
 	Master pulumi.BoolPtrInput
 	// Set interface for NTP Master
 	MasterSourceInterface pulumi.StringPtrInput
 	// Variable name
 	MasterSourceInterfaceVariable pulumi.StringPtrInput
-	// Master Stratum <1..15> - Range: `1`-`15`
+	// Master Stratum <1..15>
+	//   - Range: `1`-`15`
 	MasterStratum pulumi.IntPtrInput
 	// Variable name
 	MasterStratumVariable pulumi.StringPtrInput
@@ -173,17 +176,18 @@ type ciscoNtpFeatureTemplateArgs struct {
 	AuthenticationKeys []CiscoNtpFeatureTemplateAuthenticationKey `pulumi:"authenticationKeys"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Configure device as NTP master - Default value: `false`
+	// Configure device as NTP master
+	//   - Default value: `false`
 	Master *bool `pulumi:"master"`
 	// Set interface for NTP Master
 	MasterSourceInterface *string `pulumi:"masterSourceInterface"`
 	// Variable name
 	MasterSourceInterfaceVariable *string `pulumi:"masterSourceInterfaceVariable"`
-	// Master Stratum <1..15> - Range: `1`-`15`
+	// Master Stratum <1..15>
+	//   - Range: `1`-`15`
 	MasterStratum *int `pulumi:"masterStratum"`
 	// Variable name
 	MasterStratumVariable *string `pulumi:"masterStratumVariable"`
@@ -205,17 +209,18 @@ type CiscoNtpFeatureTemplateArgs struct {
 	AuthenticationKeys CiscoNtpFeatureTemplateAuthenticationKeyArrayInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Configure device as NTP master - Default value: `false`
+	// Configure device as NTP master
+	//   - Default value: `false`
 	Master pulumi.BoolPtrInput
 	// Set interface for NTP Master
 	MasterSourceInterface pulumi.StringPtrInput
 	// Variable name
 	MasterSourceInterfaceVariable pulumi.StringPtrInput
-	// Master Stratum <1..15> - Range: `1`-`15`
+	// Master Stratum <1..15>
+	//   - Range: `1`-`15`
 	MasterStratum pulumi.IntPtrInput
 	// Variable name
 	MasterStratumVariable pulumi.StringPtrInput
@@ -330,14 +335,14 @@ func (o CiscoNtpFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoNtpFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoNtpFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoNtpFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Configure device as NTP master - Default value: `false`
+// Configure device as NTP master
+//   - Default value: `false`
 func (o CiscoNtpFeatureTemplateOutput) Master() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoNtpFeatureTemplate) pulumi.BoolPtrOutput { return v.Master }).(pulumi.BoolPtrOutput)
 }
@@ -352,7 +357,8 @@ func (o CiscoNtpFeatureTemplateOutput) MasterSourceInterfaceVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoNtpFeatureTemplate) pulumi.StringPtrOutput { return v.MasterSourceInterfaceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Master Stratum <1..15> - Range: `1`-`15`
+// Master Stratum <1..15>
+//   - Range: `1`-`15`
 func (o CiscoNtpFeatureTemplateOutput) MasterStratum() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoNtpFeatureTemplate) pulumi.IntPtrOutput { return v.MasterStratum }).(pulumi.IntPtrOutput)
 }

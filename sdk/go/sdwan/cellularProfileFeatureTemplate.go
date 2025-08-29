@@ -70,15 +70,16 @@ type CellularProfileFeatureTemplate struct {
 	AccessPointName pulumi.StringPtrOutput `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrOutput `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+	// Set authentication type
+	//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+	//   - Default value: `None`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Set interface name
 	IfName pulumi.StringPtrOutput `pulumi:"ifName"`
@@ -90,7 +91,8 @@ type CellularProfileFeatureTemplate struct {
 	IpAddressVariable pulumi.StringPtrOutput `pulumi:"ipAddressVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv6`, `ipv46`
 	PacketDataNetworkType pulumi.StringPtrOutput `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrOutput `pulumi:"packetDataNetworkTypeVariable"`
@@ -98,7 +100,8 @@ type CellularProfileFeatureTemplate struct {
 	PrimaryDnsAddress pulumi.StringPtrOutput `pulumi:"primaryDnsAddress"`
 	// Variable name
 	PrimaryDnsAddressVariable pulumi.StringPtrOutput `pulumi:"primaryDnsAddressVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
@@ -164,15 +167,16 @@ type cellularProfileFeatureTemplateState struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+	// Set authentication type
+	//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+	//   - Default value: `None`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Set interface name
 	IfName *string `pulumi:"ifName"`
@@ -184,7 +188,8 @@ type cellularProfileFeatureTemplateState struct {
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv6`, `ipv46`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
@@ -192,7 +197,8 @@ type cellularProfileFeatureTemplateState struct {
 	PrimaryDnsAddress *string `pulumi:"primaryDnsAddress"`
 	// Variable name
 	PrimaryDnsAddressVariable *string `pulumi:"primaryDnsAddressVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -223,15 +229,16 @@ type CellularProfileFeatureTemplateState struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+	// Set authentication type
+	//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+	//   - Default value: `None`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Set interface name
 	IfName pulumi.StringPtrInput
@@ -243,7 +250,8 @@ type CellularProfileFeatureTemplateState struct {
 	IpAddressVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv6`, `ipv46`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
@@ -251,7 +259,8 @@ type CellularProfileFeatureTemplateState struct {
 	PrimaryDnsAddress pulumi.StringPtrInput
 	// Variable name
 	PrimaryDnsAddressVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -286,15 +295,16 @@ type cellularProfileFeatureTemplateArgs struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+	// Set authentication type
+	//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+	//   - Default value: `None`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Set interface name
 	IfName *string `pulumi:"ifName"`
@@ -306,7 +316,8 @@ type cellularProfileFeatureTemplateArgs struct {
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv6`, `ipv46`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
@@ -314,7 +325,8 @@ type cellularProfileFeatureTemplateArgs struct {
 	PrimaryDnsAddress *string `pulumi:"primaryDnsAddress"`
 	// Variable name
 	PrimaryDnsAddressVariable *string `pulumi:"primaryDnsAddressVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -342,15 +354,16 @@ type CellularProfileFeatureTemplateArgs struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+	// Set authentication type
+	//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+	//   - Default value: `None`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Set interface name
 	IfName pulumi.StringPtrInput
@@ -362,7 +375,8 @@ type CellularProfileFeatureTemplateArgs struct {
 	IpAddressVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv6`, `ipv46`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
@@ -370,7 +384,8 @@ type CellularProfileFeatureTemplateArgs struct {
 	PrimaryDnsAddress pulumi.StringPtrInput
 	// Variable name
 	PrimaryDnsAddressVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -489,7 +504,9 @@ func (o CellularProfileFeatureTemplateOutput) AccessPointNameVariable() pulumi.S
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringPtrOutput { return v.AccessPointNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+// Set authentication type
+//   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+//   - Default value: `None`
 func (o CellularProfileFeatureTemplateOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -504,9 +521,8 @@ func (o CellularProfileFeatureTemplateOutput) Description() pulumi.StringOutput 
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CellularProfileFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -536,7 +552,8 @@ func (o CellularProfileFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+// Set packet data network type
+//   - Choices: `ipv4`, `ipv6`, `ipv46`
 func (o CellularProfileFeatureTemplateOutput) PacketDataNetworkType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringPtrOutput { return v.PacketDataNetworkType }).(pulumi.StringPtrOutput)
 }
@@ -556,7 +573,8 @@ func (o CellularProfileFeatureTemplateOutput) PrimaryDnsAddressVariable() pulumi
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.StringPtrOutput { return v.PrimaryDnsAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set Profile ID - Range: `1`-`16`
+// Set Profile ID
+//   - Range: `1`-`16`
 func (o CellularProfileFeatureTemplateOutput) ProfileId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CellularProfileFeatureTemplate) pulumi.IntPtrOutput { return v.ProfileId }).(pulumi.IntPtrOutput)
 }

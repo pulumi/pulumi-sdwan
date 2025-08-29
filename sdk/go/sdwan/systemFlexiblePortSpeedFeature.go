@@ -62,9 +62,9 @@ type SystemFlexiblePortSpeedFeature struct {
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-	// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-	// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+	// port Type
+	//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+	//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 	PortType pulumi.StringPtrOutput `pulumi:"portType"`
 	// Variable name
 	PortTypeVariable pulumi.StringPtrOutput `pulumi:"portTypeVariable"`
@@ -111,9 +111,9 @@ type systemFlexiblePortSpeedFeatureState struct {
 	FeatureProfileId *string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-	// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-	// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+	// port Type
+	//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+	//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 	PortType *string `pulumi:"portType"`
 	// Variable name
 	PortTypeVariable *string `pulumi:"portTypeVariable"`
@@ -128,9 +128,9 @@ type SystemFlexiblePortSpeedFeatureState struct {
 	FeatureProfileId pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-	// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-	// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+	// port Type
+	//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+	//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 	PortType pulumi.StringPtrInput
 	// Variable name
 	PortTypeVariable pulumi.StringPtrInput
@@ -149,9 +149,9 @@ type systemFlexiblePortSpeedFeatureArgs struct {
 	FeatureProfileId string `pulumi:"featureProfileId"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-	// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-	// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+	// port Type
+	//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+	//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 	PortType *string `pulumi:"portType"`
 	// Variable name
 	PortTypeVariable *string `pulumi:"portTypeVariable"`
@@ -165,9 +165,9 @@ type SystemFlexiblePortSpeedFeatureArgs struct {
 	FeatureProfileId pulumi.StringInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-	// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-	// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+	// port Type
+	//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+	//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 	PortType pulumi.StringPtrInput
 	// Variable name
 	PortTypeVariable pulumi.StringPtrInput
@@ -275,9 +275,9 @@ func (o SystemFlexiblePortSpeedFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemFlexiblePortSpeedFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-// `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-// of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+// port Type
+//   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+//   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
 func (o SystemFlexiblePortSpeedFeatureOutput) PortType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemFlexiblePortSpeedFeature) pulumi.StringPtrOutput { return v.PortType }).(pulumi.StringPtrOutput)
 }

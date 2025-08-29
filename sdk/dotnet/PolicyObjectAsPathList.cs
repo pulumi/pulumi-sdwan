@@ -27,7 +27,8 @@ namespace Pulumi.Sdwan
     public partial class PolicyObjectAsPathList : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// As path List Number - Range: `1`-`500`
+        /// As path List Number
+        ///   - Range: `1`-`500`
         /// </summary>
         [Output("asPathListId")]
         public Output<int> AsPathListId { get; private set; } = null!;
@@ -109,7 +110,8 @@ namespace Pulumi.Sdwan
     public sealed class PolicyObjectAsPathListArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// As path List Number - Range: `1`-`500`
+        /// As path List Number
+        ///   - Range: `1`-`500`
         /// </summary>
         [Input("asPathListId", required: true)]
         public Input<int> AsPathListId { get; set; } = null!;
@@ -153,7 +155,8 @@ namespace Pulumi.Sdwan
     public sealed class PolicyObjectAsPathListState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// As path List Number - Range: `1`-`500`
+        /// As path List Number
+        ///   - Range: `1`-`500`
         /// </summary>
         [Input("asPathListId")]
         public Input<int>? AsPathListId { get; set; }

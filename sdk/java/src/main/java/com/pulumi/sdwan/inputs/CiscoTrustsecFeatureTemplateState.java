@@ -20,16 +20,14 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     public static final CiscoTrustsecFeatureTemplateState Empty = new CiscoTrustsecFeatureTemplateState();
 
     /**
-     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      * 
      */
     @Import(name="credentialsId")
     private @Nullable Output<String> credentialsId;
 
     /**
-     * @return Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * @return Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      * 
      */
     public Optional<Output<String>> credentialsId() {
@@ -97,14 +95,16 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+     * Configure Local device security group &lt;2..65519&gt;
+     *   - Range: `2`-`65519`
      * 
      */
     @Import(name="deviceSgt")
     private @Nullable Output<Integer> deviceSgt;
 
     /**
-     * @return Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+     * @return Configure Local device security group &lt;2..65519&gt;
+     *   - Range: `2`-`65519`
      * 
      */
     public Optional<Output<Integer>> deviceSgt() {
@@ -127,18 +127,16 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -146,14 +144,16 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Enable Role-based Access Control enforcement - Default value: `false`
+     * Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableEnforcement")
     private @Nullable Output<Boolean> enableEnforcement;
 
     /**
-     * @return Enable Role-based Access Control enforcement - Default value: `false`
+     * @return Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableEnforcement() {
@@ -176,14 +176,16 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Enable CTS SXP support - Default value: `false`
+     * Enable CTS SXP support
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableSxp")
     private @Nullable Output<Boolean> enableSxp;
 
     /**
-     * @return Enable CTS SXP support - Default value: `false`
+     * @return Enable CTS SXP support
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableSxp() {
@@ -191,14 +193,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+     * Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      * 
      */
     @Import(name="maximumListenerHoldTime")
     private @Nullable Output<Integer> maximumListenerHoldTime;
 
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+     * @return Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      * 
      */
     public Optional<Output<Integer>> maximumListenerHoldTime() {
@@ -221,14 +227,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+     * Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      * 
      */
     @Import(name="minimumListenerHoldTime")
     private @Nullable Output<Integer> minimumListenerHoldTime;
 
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+     * @return Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      * 
      */
     public Optional<Output<Integer>> minimumListenerHoldTime() {
@@ -266,14 +276,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+     * Configure Speaker hold-time in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      * 
      */
     @Import(name="speakerHoldTime")
     private @Nullable Output<Integer> speakerHoldTime;
 
     /**
-     * @return Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+     * @return Configure Speaker hold-time in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      * 
      */
     public Optional<Output<Integer>> speakerHoldTime() {
@@ -371,14 +385,16 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      * 
      */
     @Import(name="sxpLogBindingChanges")
     private @Nullable Output<Boolean> sxpLogBindingChanges;
 
     /**
-     * @return Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * @return Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> sxpLogBindingChanges() {
@@ -416,16 +432,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      * 
      */
     @Import(name="sxpNodeIdType")
     private @Nullable Output<String> sxpNodeIdType;
 
     /**
-     * @return Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * @return Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      * 
      */
     public Optional<Output<String>> sxpNodeIdType() {
@@ -448,14 +466,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     @Import(name="sxpReconciliationPeriod")
     private @Nullable Output<Integer> sxpReconciliationPeriod;
 
     /**
-     * @return Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * @return Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     public Optional<Output<Integer>> sxpReconciliationPeriod() {
@@ -478,14 +500,18 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
     }
 
     /**
-     * Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     @Import(name="sxpRetryPeriod")
     private @Nullable Output<Integer> sxpRetryPeriod;
 
     /**
-     * @return Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * @return Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     public Optional<Output<Integer>> sxpRetryPeriod() {
@@ -627,8 +653,7 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param credentialsId Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-         * char)
+         * @param credentialsId Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
          * 
          * @return builder
          * 
@@ -639,8 +664,7 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param credentialsId Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-         * char)
+         * @param credentialsId Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
          * 
          * @return builder
          * 
@@ -734,7 +758,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceSgt Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+         * @param deviceSgt Configure Local device security group &lt;2..65519&gt;
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -745,7 +770,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceSgt Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+         * @param deviceSgt Configure Local device security group &lt;2..65519&gt;
+         *   - Range: `2`-`65519`
          * 
          * @return builder
          * 
@@ -776,9 +802,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -789,9 +814,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -801,9 +825,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -813,7 +836,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param enableEnforcement Enable Role-based Access Control enforcement - Default value: `false`
+         * @param enableEnforcement Enable Role-based Access Control enforcement
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -824,7 +848,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param enableEnforcement Enable Role-based Access Control enforcement - Default value: `false`
+         * @param enableEnforcement Enable Role-based Access Control enforcement
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -855,7 +880,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param enableSxp Enable CTS SXP support - Default value: `false`
+         * @param enableSxp Enable CTS SXP support
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -866,7 +892,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param enableSxp Enable CTS SXP support - Default value: `false`
+         * @param enableSxp Enable CTS SXP support
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -876,7 +903,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param maximumListenerHoldTime Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+         * @param maximumListenerHoldTime Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `180`
          * 
          * @return builder
          * 
@@ -887,7 +916,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param maximumListenerHoldTime Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+         * @param maximumListenerHoldTime Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `180`
          * 
          * @return builder
          * 
@@ -918,7 +949,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param minimumListenerHoldTime Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+         * @param minimumListenerHoldTime Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `90`
          * 
          * @return builder
          * 
@@ -929,7 +962,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param minimumListenerHoldTime Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+         * @param minimumListenerHoldTime Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `90`
          * 
          * @return builder
          * 
@@ -981,7 +1016,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param speakerHoldTime Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+         * @param speakerHoldTime Configure Speaker hold-time in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `120`
          * 
          * @return builder
          * 
@@ -992,7 +1029,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param speakerHoldTime Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+         * @param speakerHoldTime Configure Speaker hold-time in seconds &lt;1..65534&gt;
+         *   - Range: `1`-`65534`
+         *   - Default value: `120`
          * 
          * @return builder
          * 
@@ -1138,7 +1177,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpLogBindingChanges Enables logging for IP-to-SGT binding changes - Default value: `false`
+         * @param sxpLogBindingChanges Enables logging for IP-to-SGT binding changes
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1149,7 +1189,8 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpLogBindingChanges Enables logging for IP-to-SGT binding changes - Default value: `false`
+         * @param sxpLogBindingChanges Enables logging for IP-to-SGT binding changes
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1201,8 +1242,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpNodeIdType Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-         * Default value: `ip`
+         * @param sxpNodeIdType Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+         *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+         *   - Default value: `ip`
          * 
          * @return builder
          * 
@@ -1213,8 +1255,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpNodeIdType Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-         * Default value: `ip`
+         * @param sxpNodeIdType Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+         *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+         *   - Default value: `ip`
          * 
          * @return builder
          * 
@@ -1245,7 +1288,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpReconciliationPeriod Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+         * @param sxpReconciliationPeriod Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+         *   - Range: `0`-`64000`
+         *   - Default value: `120`
          * 
          * @return builder
          * 
@@ -1256,7 +1301,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpReconciliationPeriod Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+         * @param sxpReconciliationPeriod Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+         *   - Range: `0`-`64000`
+         *   - Default value: `120`
          * 
          * @return builder
          * 
@@ -1287,7 +1334,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpRetryPeriod Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+         * @param sxpRetryPeriod Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+         *   - Range: `0`-`64000`
+         *   - Default value: `120`
          * 
          * @return builder
          * 
@@ -1298,7 +1347,9 @@ public final class CiscoTrustsecFeatureTemplateState extends com.pulumi.resource
         }
 
         /**
-         * @param sxpRetryPeriod Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+         * @param sxpRetryPeriod Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+         *   - Range: `0`-`64000`
+         *   - Default value: `120`
          * 
          * @return builder
          * 

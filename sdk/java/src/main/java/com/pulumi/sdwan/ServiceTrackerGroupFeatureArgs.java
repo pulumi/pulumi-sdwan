@@ -64,14 +64,18 @@ public final class ServiceTrackerGroupFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     @Import(name="trackerBoolean")
     private @Nullable Output<String> trackerBoolean;
 
     /**
-     * @return tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * @return tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     public Optional<Output<String>> trackerBoolean() {
@@ -201,7 +205,9 @@ public final class ServiceTrackerGroupFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackerBoolean tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+         * @param trackerBoolean tracker ref list combine boolean and or
+         *   - Choices: `and`, `or`
+         *   - Default value: `or`
          * 
          * @return builder
          * 
@@ -212,7 +218,9 @@ public final class ServiceTrackerGroupFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param trackerBoolean tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+         * @param trackerBoolean tracker ref list combine boolean and or
+         *   - Choices: `and`, `or`
+         *   - Default value: `or`
          * 
          * @return builder
          * 

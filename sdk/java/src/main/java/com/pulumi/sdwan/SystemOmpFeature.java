@@ -101,14 +101,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/systemOmpFeature:SystemOmpFeature")
 public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4Bgp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Bgp;
 
     /**
-     * @return BGP - Default value: `false`
+     * @return BGP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Bgp() {
@@ -129,14 +131,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4BgpVariable);
     }
     /**
-     * Connected - Default value: `true`
+     * Connected
+     *   - Default value: `true`
      * 
      */
     @Export(name="advertiseIpv4Connected", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Connected;
 
     /**
-     * @return Connected - Default value: `true`
+     * @return Connected
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Connected() {
@@ -157,14 +161,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4ConnectedVariable);
     }
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4Eigrp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Eigrp;
 
     /**
-     * @return EIGRP - Default value: `false`
+     * @return EIGRP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Eigrp() {
@@ -185,14 +191,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4EigrpVariable);
     }
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4Isis", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Isis;
 
     /**
-     * @return ISIS - Default value: `false`
+     * @return ISIS
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Isis() {
@@ -213,14 +221,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4IsisVariable);
     }
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4Lisp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Lisp;
 
     /**
-     * @return LISP - Default value: `false`
+     * @return LISP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Lisp() {
@@ -241,28 +251,32 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4LispVariable);
     }
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4Ospf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Ospf;
 
     /**
-     * @return OSPF - Default value: `false`
+     * @return OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Ospf() {
         return Codegen.optional(this.advertiseIpv4Ospf);
     }
     /**
-     * OSPFV3 - Default value: `false`
+     * OSPFV3
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv4OspfV3", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4OspfV3;
 
     /**
-     * @return OSPFV3 - Default value: `false`
+     * @return OSPFV3
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4OspfV3() {
@@ -297,14 +311,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4OspfVariable);
     }
     /**
-     * Static - Default value: `true`
+     * Static
+     *   - Default value: `true`
      * 
      */
     @Export(name="advertiseIpv4Static", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv4Static;
 
     /**
-     * @return Static - Default value: `true`
+     * @return Static
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv4Static() {
@@ -325,14 +341,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv4StaticVariable);
     }
     /**
-     * BGP - Default value: `false`
+     * BGP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Bgp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Bgp;
 
     /**
-     * @return BGP - Default value: `false`
+     * @return BGP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Bgp() {
@@ -353,14 +371,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6BgpVariable);
     }
     /**
-     * Connected - Default value: `false`
+     * Connected
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Connected", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Connected;
 
     /**
-     * @return Connected - Default value: `false`
+     * @return Connected
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Connected() {
@@ -381,14 +401,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6ConnectedVariable);
     }
     /**
-     * EIGRP - Default value: `false`
+     * EIGRP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Eigrp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Eigrp;
 
     /**
-     * @return EIGRP - Default value: `false`
+     * @return EIGRP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Eigrp() {
@@ -409,14 +431,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6EigrpVariable);
     }
     /**
-     * ISIS - Default value: `false`
+     * ISIS
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Isis", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Isis;
 
     /**
-     * @return ISIS - Default value: `false`
+     * @return ISIS
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Isis() {
@@ -437,14 +461,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6IsisVariable);
     }
     /**
-     * LISP - Default value: `false`
+     * LISP
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Lisp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Lisp;
 
     /**
-     * @return LISP - Default value: `false`
+     * @return LISP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Lisp() {
@@ -465,14 +491,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6LispVariable);
     }
     /**
-     * OSPF - Default value: `false`
+     * OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Ospf", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Ospf;
 
     /**
-     * @return OSPF - Default value: `false`
+     * @return OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Ospf() {
@@ -493,14 +521,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6OspfVariable);
     }
     /**
-     * Static - Default value: `false`
+     * Static
+     *   - Default value: `false`
      * 
      */
     @Export(name="advertiseIpv6Static", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> advertiseIpv6Static;
 
     /**
-     * @return Static - Default value: `false`
+     * @return Static
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> advertiseIpv6Static() {
@@ -521,14 +551,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.advertiseIpv6StaticVariable);
     }
     /**
-     * Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     @Export(name="advertisementInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> advertisementInterval;
 
     /**
-     * @return Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+     * @return Advertisement Interval (seconds)
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> advertisementInterval() {
@@ -563,14 +597,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      * 
      */
     @Export(name="ecmpLimit", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ecmpLimit;
 
     /**
-     * @return Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+     * @return Set maximum number of OMP paths to install in cEdge route table
+     *   - Range: `1`-`0`
+     *   - Default value: `4`
      * 
      */
     public Output<Optional<Integer>> ecmpLimit() {
@@ -591,14 +629,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ecmpLimitVariable);
     }
     /**
-     * EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     @Export(name="eorTimer", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> eorTimer;
 
     /**
-     * @return EOR Timer - Range: `1`-`3600` - Default value: `300`
+     * @return EOR Timer
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     public Output<Optional<Integer>> eorTimer() {
@@ -633,28 +675,34 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
-     * Graceful Restart for OMP - Default value: `true`
+     * Graceful Restart for OMP
+     *   - Default value: `true`
      * 
      */
     @Export(name="gracefulRestart", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> gracefulRestart;
 
     /**
-     * @return Graceful Restart for OMP - Default value: `true`
+     * @return Graceful Restart for OMP
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> gracefulRestart() {
         return Codegen.optional(this.gracefulRestart);
     }
     /**
-     * Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     @Export(name="gracefulRestartTimer", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> gracefulRestartTimer;
 
     /**
-     * @return Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+     * @return Graceful Restart Timer (seconds)
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     public Output<Optional<Integer>> gracefulRestartTimer() {
@@ -689,14 +737,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.gracefulRestartVariable);
     }
     /**
-     * Hold Time (seconds) - Default value: `60`
+     * Hold Time (seconds)
+     *   - Default value: `60`
      * 
      */
     @Export(name="holdtime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> holdtime;
 
     /**
-     * @return Hold Time (seconds) - Default value: `60`
+     * @return Hold Time (seconds)
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> holdtime() {
@@ -717,14 +767,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.holdtimeVariable);
     }
     /**
-     * Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      * 
      */
     @Export(name="ignoreRegionPathLength", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ignoreRegionPathLength;
 
     /**
-     * @return Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+     * @return Treat hierarchical and direct (secondary region) paths equally
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ignoreRegionPathLength() {
@@ -759,14 +811,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     @Export(name="ompAdminDistanceIpv4", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+     * @return OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv4() {
@@ -787,14 +843,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ompAdminDistanceIpv4Variable);
     }
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     @Export(name="ompAdminDistanceIpv6", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+     * @return OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
+     *   - Default value: `251`
      * 
      */
     public Output<Optional<Integer>> ompAdminDistanceIpv6() {
@@ -815,14 +875,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ompAdminDistanceIpv6Variable);
     }
     /**
-     * Overlay AS Number - Range: `1`-`4294967295`
+     * Overlay AS Number
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Export(name="overlayAs", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> overlayAs;
 
     /**
-     * @return Overlay AS Number - Range: `1`-`4294967295`
+     * @return Overlay AS Number
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Output<Optional<Integer>> overlayAs() {
@@ -843,14 +905,18 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.overlayAsVariable);
     }
     /**
-     * Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     @Export(name="pathsAdvertisedPerPrefix", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> pathsAdvertisedPerPrefix;
 
     /**
-     * @return Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+     * @return Number of Paths Advertised per Prefix
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     public Output<Optional<Integer>> pathsAdvertisedPerPrefix() {
@@ -871,14 +937,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.pathsAdvertisedPerPrefixVariable);
     }
     /**
-     * Shutdown - Default value: `false`
+     * Shutdown
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Shutdown - Default value: `false`
+     * @return Shutdown
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -927,14 +995,16 @@ public class SystemOmpFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.siteTypesVariable);
     }
     /**
-     * Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     @Export(name="transportGateway", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> transportGateway;
 
     /**
-     * @return Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+     * @return Transport Gateway Path Behavior
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     public Output<Optional<String>> transportGateway() {

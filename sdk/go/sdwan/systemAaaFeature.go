@@ -27,21 +27,25 @@ import (
 type SystemAaaFeature struct {
 	pulumi.CustomResourceState
 
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	AccountingGroup pulumi.BoolPtrOutput `pulumi:"accountingGroup"`
 	// Variable name
 	AccountingGroupVariable pulumi.StringPtrOutput `pulumi:"accountingGroupVariable"`
 	// Configure the accounting rules
 	AccountingRules SystemAaaFeatureAccountingRuleArrayOutput `pulumi:"accountingRules"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	AuthenticationGroup pulumi.BoolPtrOutput `pulumi:"authenticationGroup"`
 	// Variable name
 	AuthenticationGroupVariable pulumi.StringPtrOutput `pulumi:"authenticationGroupVariable"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrOutput `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrOutput `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrOutput `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrOutput `pulumi:"authorizationConsoleVariable"`
@@ -101,21 +105,25 @@ func GetSystemAaaFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SystemAaaFeature resources.
 type systemAaaFeatureState struct {
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	AccountingGroup *bool `pulumi:"accountingGroup"`
 	// Variable name
 	AccountingGroupVariable *string `pulumi:"accountingGroupVariable"`
 	// Configure the accounting rules
 	AccountingRules []SystemAaaFeatureAccountingRule `pulumi:"accountingRules"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	AuthenticationGroup *bool `pulumi:"authenticationGroup"`
 	// Variable name
 	AuthenticationGroupVariable *string `pulumi:"authenticationGroupVariable"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands *bool `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable *string `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole *bool `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable *string `pulumi:"authorizationConsoleVariable"`
@@ -140,21 +148,25 @@ type systemAaaFeatureState struct {
 }
 
 type SystemAaaFeatureState struct {
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	AccountingGroup pulumi.BoolPtrInput
 	// Variable name
 	AccountingGroupVariable pulumi.StringPtrInput
 	// Configure the accounting rules
 	AccountingRules SystemAaaFeatureAccountingRuleArrayInput
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	AuthenticationGroup pulumi.BoolPtrInput
 	// Variable name
 	AuthenticationGroupVariable pulumi.StringPtrInput
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrInput
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrInput
@@ -183,21 +195,25 @@ func (SystemAaaFeatureState) ElementType() reflect.Type {
 }
 
 type systemAaaFeatureArgs struct {
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	AccountingGroup *bool `pulumi:"accountingGroup"`
 	// Variable name
 	AccountingGroupVariable *string `pulumi:"accountingGroupVariable"`
 	// Configure the accounting rules
 	AccountingRules []SystemAaaFeatureAccountingRule `pulumi:"accountingRules"`
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	AuthenticationGroup *bool `pulumi:"authenticationGroup"`
 	// Variable name
 	AuthenticationGroupVariable *string `pulumi:"authenticationGroupVariable"`
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands *bool `pulumi:"authorizationConfigCommands"`
 	// Variable name
 	AuthorizationConfigCommandsVariable *string `pulumi:"authorizationConfigCommandsVariable"`
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole *bool `pulumi:"authorizationConsole"`
 	// Variable name
 	AuthorizationConsoleVariable *string `pulumi:"authorizationConsoleVariable"`
@@ -221,21 +237,25 @@ type systemAaaFeatureArgs struct {
 
 // The set of arguments for constructing a SystemAaaFeature resource.
 type SystemAaaFeatureArgs struct {
-	// Accounting configurations parameters - Default value: `false`
+	// Accounting configurations parameters
+	//   - Default value: `false`
 	AccountingGroup pulumi.BoolPtrInput
 	// Variable name
 	AccountingGroupVariable pulumi.StringPtrInput
 	// Configure the accounting rules
 	AccountingRules SystemAaaFeatureAccountingRuleArrayInput
-	// Authentication configurations parameters - Default value: `false`
+	// Authentication configurations parameters
+	//   - Default value: `false`
 	AuthenticationGroup pulumi.BoolPtrInput
 	// Variable name
 	AuthenticationGroupVariable pulumi.StringPtrInput
-	// For configuration mode commands. - Default value: `false`
+	// For configuration mode commands.
+	//   - Default value: `false`
 	AuthorizationConfigCommands pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConfigCommandsVariable pulumi.StringPtrInput
-	// For enabling console authorization - Default value: `false`
+	// For enabling console authorization
+	//   - Default value: `false`
 	AuthorizationConsole pulumi.BoolPtrInput
 	// Variable name
 	AuthorizationConsoleVariable pulumi.StringPtrInput
@@ -344,7 +364,8 @@ func (o SystemAaaFeatureOutput) ToSystemAaaFeatureOutputWithContext(ctx context.
 	return o
 }
 
-// Accounting configurations parameters - Default value: `false`
+// Accounting configurations parameters
+//   - Default value: `false`
 func (o SystemAaaFeatureOutput) AccountingGroup() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.BoolPtrOutput { return v.AccountingGroup }).(pulumi.BoolPtrOutput)
 }
@@ -359,7 +380,8 @@ func (o SystemAaaFeatureOutput) AccountingRules() SystemAaaFeatureAccountingRule
 	return o.ApplyT(func(v *SystemAaaFeature) SystemAaaFeatureAccountingRuleArrayOutput { return v.AccountingRules }).(SystemAaaFeatureAccountingRuleArrayOutput)
 }
 
-// Authentication configurations parameters - Default value: `false`
+// Authentication configurations parameters
+//   - Default value: `false`
 func (o SystemAaaFeatureOutput) AuthenticationGroup() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.BoolPtrOutput { return v.AuthenticationGroup }).(pulumi.BoolPtrOutput)
 }
@@ -369,7 +391,8 @@ func (o SystemAaaFeatureOutput) AuthenticationGroupVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.StringPtrOutput { return v.AuthenticationGroupVariable }).(pulumi.StringPtrOutput)
 }
 
-// For configuration mode commands. - Default value: `false`
+// For configuration mode commands.
+//   - Default value: `false`
 func (o SystemAaaFeatureOutput) AuthorizationConfigCommands() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.BoolPtrOutput { return v.AuthorizationConfigCommands }).(pulumi.BoolPtrOutput)
 }
@@ -379,7 +402,8 @@ func (o SystemAaaFeatureOutput) AuthorizationConfigCommandsVariable() pulumi.Str
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.StringPtrOutput { return v.AuthorizationConfigCommandsVariable }).(pulumi.StringPtrOutput)
 }
 
-// For enabling console authorization - Default value: `false`
+// For enabling console authorization
+//   - Default value: `false`
 func (o SystemAaaFeatureOutput) AuthorizationConsole() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemAaaFeature) pulumi.BoolPtrOutput { return v.AuthorizationConsole }).(pulumi.BoolPtrOutput)
 }

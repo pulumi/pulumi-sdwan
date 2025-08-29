@@ -24,7 +24,8 @@ namespace Pulumi.Sdwan
     public partial class SecurityPolicy : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Audit trail - Choices: `on`, `off`
+        /// Audit trail
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Output("auditTrail")]
         public Output<string?> AuditTrail { get; private set; } = null!;
@@ -42,13 +43,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+        ///   - Choices: `allow`, `deny`
         /// </summary>
         [Output("directInternetApplications")]
         public Output<string?> DirectInternetApplications { get; private set; } = null!;
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Output("failureMode")]
         public Output<string?> FailureMode { get; private set; } = null!;
@@ -87,7 +90,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SecurityPolicyLogging>> Loggings { get; private set; } = null!;
 
         /// <summary>
-        /// Match Statistics per-filter - Choices: `on`, `off`
+        /// Match Statistics per-filter
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Output("matchStatisticsPerFilter")]
         public Output<string?> MatchStatisticsPerFilter { get; private set; } = null!;
@@ -111,7 +115,9 @@ namespace Pulumi.Sdwan
         public Output<int?> MaxIncompleteUdpLimit { get; private set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified` - Default value: `security`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
+        ///   - Default value: `security`
         /// </summary>
         [Output("mode")]
         public Output<string> Mode { get; private set; } = null!;
@@ -141,8 +147,9 @@ namespace Pulumi.Sdwan
         public Output<bool?> UnifiedLogging { get; private set; } = null!;
 
         /// <summary>
-        /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        /// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        /// The use case of the security policy
+        ///   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+        ///   - Default value: `custom`
         /// </summary>
         [Output("useCase")]
         public Output<string> UseCase { get; private set; } = null!;
@@ -200,7 +207,8 @@ namespace Pulumi.Sdwan
     public sealed class SecurityPolicyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Audit trail - Choices: `on`, `off`
+        /// Audit trail
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Input("auditTrail")]
         public Input<string>? AuditTrail { get; set; }
@@ -224,13 +232,15 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+        ///   - Choices: `allow`, `deny`
         /// </summary>
         [Input("directInternetApplications")]
         public Input<string>? DirectInternetApplications { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
@@ -274,7 +284,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Match Statistics per-filter - Choices: `on`, `off`
+        /// Match Statistics per-filter
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Input("matchStatisticsPerFilter")]
         public Input<string>? MatchStatisticsPerFilter { get; set; }
@@ -298,7 +309,9 @@ namespace Pulumi.Sdwan
         public Input<int>? MaxIncompleteUdpLimit { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified` - Default value: `security`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
+        ///   - Default value: `security`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -328,8 +341,9 @@ namespace Pulumi.Sdwan
         public Input<bool>? UnifiedLogging { get; set; }
 
         /// <summary>
-        /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        /// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        /// The use case of the security policy
+        ///   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+        ///   - Default value: `custom`
         /// </summary>
         [Input("useCase")]
         public Input<string>? UseCase { get; set; }
@@ -343,7 +357,8 @@ namespace Pulumi.Sdwan
     public sealed class SecurityPolicyState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Audit trail - Choices: `on`, `off`
+        /// Audit trail
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Input("auditTrail")]
         public Input<string>? AuditTrail { get; set; }
@@ -367,13 +382,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        /// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+        ///   - Choices: `allow`, `deny`
         /// </summary>
         [Input("directInternetApplications")]
         public Input<string>? DirectInternetApplications { get; set; }
 
         /// <summary>
-        /// Failure mode - Choices: `open`, `close`
+        /// Failure mode
+        ///   - Choices: `open`, `close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
@@ -417,7 +434,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Match Statistics per-filter - Choices: `on`, `off`
+        /// Match Statistics per-filter
+        ///   - Choices: `on`, `off`
         /// </summary>
         [Input("matchStatisticsPerFilter")]
         public Input<string>? MatchStatisticsPerFilter { get; set; }
@@ -441,7 +459,9 @@ namespace Pulumi.Sdwan
         public Input<int>? MaxIncompleteUdpLimit { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified` - Default value: `security`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
+        ///   - Default value: `security`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -471,8 +491,9 @@ namespace Pulumi.Sdwan
         public Input<bool>? UnifiedLogging { get; set; }
 
         /// <summary>
-        /// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        /// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        /// The use case of the security policy
+        ///   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+        ///   - Default value: `custom`
         /// </summary>
         [Input("useCase")]
         public Input<string>? UseCase { get; set; }

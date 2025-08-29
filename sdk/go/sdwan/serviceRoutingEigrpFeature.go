@@ -27,11 +27,13 @@ import (
 type ServiceRoutingEigrpFeature struct {
 	pulumi.CustomResourceState
 
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AutonomousSystemId pulumi.IntPtrOutput `pulumi:"autonomousSystemId"`
 	// Variable name
 	AutonomousSystemIdVariable pulumi.StringPtrOutput `pulumi:"autonomousSystemIdVariable"`
@@ -39,11 +41,14 @@ type ServiceRoutingEigrpFeature struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrOutput `pulumi:"filter"`
 	// Variable name
 	FilterVariable pulumi.StringPtrOutput `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrOutput `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrOutput `pulumi:"helloIntervalVariable"`
@@ -51,7 +56,9 @@ type ServiceRoutingEigrpFeature struct {
 	HmacAuthenticationKey pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrOutput `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrOutput `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrOutput `pulumi:"holdTimeVariable"`
@@ -106,11 +113,13 @@ func GetServiceRoutingEigrpFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceRoutingEigrpFeature resources.
 type serviceRoutingEigrpFeatureState struct {
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AutonomousSystemId *int `pulumi:"autonomousSystemId"`
 	// Variable name
 	AutonomousSystemIdVariable *string `pulumi:"autonomousSystemIdVariable"`
@@ -118,11 +127,14 @@ type serviceRoutingEigrpFeatureState struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter *bool `pulumi:"filter"`
 	// Variable name
 	FilterVariable *string `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
@@ -130,7 +142,9 @@ type serviceRoutingEigrpFeatureState struct {
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
@@ -150,11 +164,13 @@ type serviceRoutingEigrpFeatureState struct {
 }
 
 type ServiceRoutingEigrpFeatureState struct {
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AutonomousSystemId pulumi.IntPtrInput
 	// Variable name
 	AutonomousSystemIdVariable pulumi.StringPtrInput
@@ -162,11 +178,14 @@ type ServiceRoutingEigrpFeatureState struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrInput
 	// Variable name
 	FilterVariable pulumi.StringPtrInput
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
@@ -174,7 +193,9 @@ type ServiceRoutingEigrpFeatureState struct {
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
@@ -198,11 +219,13 @@ func (ServiceRoutingEigrpFeatureState) ElementType() reflect.Type {
 }
 
 type serviceRoutingEigrpFeatureArgs struct {
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AutonomousSystemId *int `pulumi:"autonomousSystemId"`
 	// Variable name
 	AutonomousSystemIdVariable *string `pulumi:"autonomousSystemIdVariable"`
@@ -210,11 +233,14 @@ type serviceRoutingEigrpFeatureArgs struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter *bool `pulumi:"filter"`
 	// Variable name
 	FilterVariable *string `pulumi:"filterVariable"`
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval *int `pulumi:"helloInterval"`
 	// Variable name
 	HelloIntervalVariable *string `pulumi:"helloIntervalVariable"`
@@ -222,7 +248,9 @@ type serviceRoutingEigrpFeatureArgs struct {
 	HmacAuthenticationKey *string `pulumi:"hmacAuthenticationKey"`
 	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable *string `pulumi:"hmacAuthenticationKeyVariable"`
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
@@ -241,11 +269,13 @@ type serviceRoutingEigrpFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceRoutingEigrpFeature resource.
 type ServiceRoutingEigrpFeatureArgs struct {
-	// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+	// Set EIGRP router authentication type
+	//   - Choices: `md5`, `hmac-sha-256`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name
 	AuthenticationTypeVariable pulumi.StringPtrInput
-	// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+	// Set autonomous system ID <1..65535>
+	//   - Range: `1`-`65535`
 	AutonomousSystemId pulumi.IntPtrInput
 	// Variable name
 	AutonomousSystemIdVariable pulumi.StringPtrInput
@@ -253,11 +283,14 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Selective route download - Default value: `false`
+	// Selective route download
+	//   - Default value: `false`
 	Filter pulumi.BoolPtrInput
 	// Variable name
 	FilterVariable pulumi.StringPtrInput
-	// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+	// Set EIGRP hello interval
+	//   - Range: `0`-`65535`
+	//   - Default value: `5`
 	HelloInterval pulumi.IntPtrInput
 	// Variable name
 	HelloIntervalVariable pulumi.StringPtrInput
@@ -265,7 +298,9 @@ type ServiceRoutingEigrpFeatureArgs struct {
 	HmacAuthenticationKey pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
 	HmacAuthenticationKeyVariable pulumi.StringPtrInput
-	// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+	// Set EIGRP hold time
+	//   - Range: `0`-`65535`
+	//   - Default value: `15`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
@@ -369,7 +404,8 @@ func (o ServiceRoutingEigrpFeatureOutput) ToServiceRoutingEigrpFeatureOutputWith
 	return o
 }
 
-// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+// Set EIGRP router authentication type
+//   - Choices: `md5`, `hmac-sha-256`
 func (o ServiceRoutingEigrpFeatureOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -379,7 +415,8 @@ func (o ServiceRoutingEigrpFeatureOutput) AuthenticationTypeVariable() pulumi.St
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.AuthenticationTypeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set autonomous system ID <1..65535> - Range: `1`-`65535`
+// Set autonomous system ID <1..65535>
+//   - Range: `1`-`65535`
 func (o ServiceRoutingEigrpFeatureOutput) AutonomousSystemId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.IntPtrOutput { return v.AutonomousSystemId }).(pulumi.IntPtrOutput)
 }
@@ -399,7 +436,8 @@ func (o ServiceRoutingEigrpFeatureOutput) FeatureProfileId() pulumi.StringOutput
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Selective route download - Default value: `false`
+// Selective route download
+//   - Default value: `false`
 func (o ServiceRoutingEigrpFeatureOutput) Filter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.BoolPtrOutput { return v.Filter }).(pulumi.BoolPtrOutput)
 }
@@ -409,7 +447,9 @@ func (o ServiceRoutingEigrpFeatureOutput) FilterVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.FilterVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+// Set EIGRP hello interval
+//   - Range: `0`-`65535`
+//   - Default value: `5`
 func (o ServiceRoutingEigrpFeatureOutput) HelloInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.IntPtrOutput { return v.HelloInterval }).(pulumi.IntPtrOutput)
 }
@@ -429,7 +469,9 @@ func (o ServiceRoutingEigrpFeatureOutput) HmacAuthenticationKeyVariable() pulumi
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.StringPtrOutput { return v.HmacAuthenticationKeyVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+// Set EIGRP hold time
+//   - Range: `0`-`65535`
+//   - Default value: `15`
 func (o ServiceRoutingEigrpFeatureOutput) HoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingEigrpFeature) pulumi.IntPtrOutput { return v.HoldTime }).(pulumi.IntPtrOutput)
 }

@@ -42,14 +42,18 @@ class SystemAaaFeatureArgs:
         The set of arguments for constructing a SystemAaaFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] server_auth_orders: ServerGroups priority order
-        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -119,7 +123,8 @@ class SystemAaaFeatureArgs:
     @pulumi.getter(name="accountingGroup")
     def accounting_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "accounting_group")
 
@@ -155,7 +160,8 @@ class SystemAaaFeatureArgs:
     @pulumi.getter(name="authenticationGroup")
     def authentication_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "authentication_group")
 
@@ -179,7 +185,8 @@ class SystemAaaFeatureArgs:
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -203,7 +210,8 @@ class SystemAaaFeatureArgs:
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 
@@ -319,14 +327,18 @@ class _SystemAaaFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemAaaFeature resources.
-        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAccountingRuleArgs']]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['SystemAaaFeatureAuthorizationRuleArgs']]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -379,7 +391,8 @@ class _SystemAaaFeatureState:
     @pulumi.getter(name="accountingGroup")
     def accounting_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "accounting_group")
 
@@ -415,7 +428,8 @@ class _SystemAaaFeatureState:
     @pulumi.getter(name="authenticationGroup")
     def authentication_group(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "authentication_group")
 
@@ -439,7 +453,8 @@ class _SystemAaaFeatureState:
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -463,7 +478,8 @@ class _SystemAaaFeatureState:
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 
@@ -632,14 +648,18 @@ class SystemAaaFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -768,14 +788,18 @@ class SystemAaaFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] accounting_group: Accounting configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] accounting_group_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAccountingRuleArgs', 'SystemAaaFeatureAccountingRuleArgsDict']]]] accounting_rules: Configure the accounting rules
-        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authentication_group: Authentication configurations parameters
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authentication_group_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands. - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_config_commands: For configuration mode commands.
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_config_commands_variable: Variable name
-        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization - Default value: `false`
+        :param pulumi.Input[_builtins.bool] authorization_console: For enabling console authorization
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] authorization_console_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemAaaFeatureAuthorizationRuleArgs', 'SystemAaaFeatureAuthorizationRuleArgsDict']]]] authorization_rules: Configure the Authorization Rules
         :param pulumi.Input[_builtins.str] description: The description of the Feature
@@ -815,7 +839,8 @@ class SystemAaaFeature(pulumi.CustomResource):
     @pulumi.getter(name="accountingGroup")
     def accounting_group(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Accounting configurations parameters - Default value: `false`
+        Accounting configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "accounting_group")
 
@@ -839,7 +864,8 @@ class SystemAaaFeature(pulumi.CustomResource):
     @pulumi.getter(name="authenticationGroup")
     def authentication_group(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Authentication configurations parameters - Default value: `false`
+        Authentication configurations parameters
+          - Default value: `false`
         """
         return pulumi.get(self, "authentication_group")
 
@@ -855,7 +881,8 @@ class SystemAaaFeature(pulumi.CustomResource):
     @pulumi.getter(name="authorizationConfigCommands")
     def authorization_config_commands(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        For configuration mode commands. - Default value: `false`
+        For configuration mode commands.
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_config_commands")
 
@@ -871,7 +898,8 @@ class SystemAaaFeature(pulumi.CustomResource):
     @pulumi.getter(name="authorizationConsole")
     def authorization_console(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        For enabling console authorization - Default value: `false`
+        For enabling console authorization
+          - Default value: `false`
         """
         return pulumi.get(self, "authorization_console")
 

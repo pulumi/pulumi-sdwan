@@ -67,19 +67,23 @@ type SystemPerformanceMonitoringFeature struct {
 
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups pulumi.StringArrayOutput `pulumi:"appPerfMonitorAppGroups"`
-	// Application performance monitoring enable or disable - Default value: `false`
+	// Application performance monitoring enable or disable
+	//   - Default value: `false`
 	AppPerfMonitorEnabled pulumi.BoolPtrOutput `pulumi:"appPerfMonitorEnabled"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// UMTS event driven monitoring enable or disable - Default value: `false`
+	// UMTS event driven monitoring enable or disable
+	//   - Default value: `false`
 	EventDrivenConfigEnabled pulumi.BoolPtrOutput `pulumi:"eventDrivenConfigEnabled"`
 	// UMTS events
 	EventDrivenEvents pulumi.StringArrayOutput `pulumi:"eventDrivenEvents"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// UMTS monitoring enable or disable - Default value: `false`
+	// UMTS monitoring enable or disable
+	//   - Default value: `false`
 	MonitoringConfigEnabled pulumi.BoolPtrOutput `pulumi:"monitoringConfigEnabled"`
-	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+	// UMTS monitoring interval(Minutes)
+	//   - Choices: `30`, `60`
 	MonitoringConfigInterval pulumi.StringPtrOutput `pulumi:"monitoringConfigInterval"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -122,19 +126,23 @@ func GetSystemPerformanceMonitoringFeature(ctx *pulumi.Context,
 type systemPerformanceMonitoringFeatureState struct {
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups []string `pulumi:"appPerfMonitorAppGroups"`
-	// Application performance monitoring enable or disable - Default value: `false`
+	// Application performance monitoring enable or disable
+	//   - Default value: `false`
 	AppPerfMonitorEnabled *bool `pulumi:"appPerfMonitorEnabled"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// UMTS event driven monitoring enable or disable - Default value: `false`
+	// UMTS event driven monitoring enable or disable
+	//   - Default value: `false`
 	EventDrivenConfigEnabled *bool `pulumi:"eventDrivenConfigEnabled"`
 	// UMTS events
 	EventDrivenEvents []string `pulumi:"eventDrivenEvents"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// UMTS monitoring enable or disable - Default value: `false`
+	// UMTS monitoring enable or disable
+	//   - Default value: `false`
 	MonitoringConfigEnabled *bool `pulumi:"monitoringConfigEnabled"`
-	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+	// UMTS monitoring interval(Minutes)
+	//   - Choices: `30`, `60`
 	MonitoringConfigInterval *string `pulumi:"monitoringConfigInterval"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
@@ -145,19 +153,23 @@ type systemPerformanceMonitoringFeatureState struct {
 type SystemPerformanceMonitoringFeatureState struct {
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups pulumi.StringArrayInput
-	// Application performance monitoring enable or disable - Default value: `false`
+	// Application performance monitoring enable or disable
+	//   - Default value: `false`
 	AppPerfMonitorEnabled pulumi.BoolPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// UMTS event driven monitoring enable or disable - Default value: `false`
+	// UMTS event driven monitoring enable or disable
+	//   - Default value: `false`
 	EventDrivenConfigEnabled pulumi.BoolPtrInput
 	// UMTS events
 	EventDrivenEvents pulumi.StringArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// UMTS monitoring enable or disable - Default value: `false`
+	// UMTS monitoring enable or disable
+	//   - Default value: `false`
 	MonitoringConfigEnabled pulumi.BoolPtrInput
-	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+	// UMTS monitoring interval(Minutes)
+	//   - Choices: `30`, `60`
 	MonitoringConfigInterval pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
@@ -172,19 +184,23 @@ func (SystemPerformanceMonitoringFeatureState) ElementType() reflect.Type {
 type systemPerformanceMonitoringFeatureArgs struct {
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups []string `pulumi:"appPerfMonitorAppGroups"`
-	// Application performance monitoring enable or disable - Default value: `false`
+	// Application performance monitoring enable or disable
+	//   - Default value: `false`
 	AppPerfMonitorEnabled *bool `pulumi:"appPerfMonitorEnabled"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// UMTS event driven monitoring enable or disable - Default value: `false`
+	// UMTS event driven monitoring enable or disable
+	//   - Default value: `false`
 	EventDrivenConfigEnabled *bool `pulumi:"eventDrivenConfigEnabled"`
 	// UMTS events
 	EventDrivenEvents []string `pulumi:"eventDrivenEvents"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// UMTS monitoring enable or disable - Default value: `false`
+	// UMTS monitoring enable or disable
+	//   - Default value: `false`
 	MonitoringConfigEnabled *bool `pulumi:"monitoringConfigEnabled"`
-	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+	// UMTS monitoring interval(Minutes)
+	//   - Choices: `30`, `60`
 	MonitoringConfigInterval *string `pulumi:"monitoringConfigInterval"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
@@ -194,19 +210,23 @@ type systemPerformanceMonitoringFeatureArgs struct {
 type SystemPerformanceMonitoringFeatureArgs struct {
 	// Application groups to be monitored
 	AppPerfMonitorAppGroups pulumi.StringArrayInput
-	// Application performance monitoring enable or disable - Default value: `false`
+	// Application performance monitoring enable or disable
+	//   - Default value: `false`
 	AppPerfMonitorEnabled pulumi.BoolPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// UMTS event driven monitoring enable or disable - Default value: `false`
+	// UMTS event driven monitoring enable or disable
+	//   - Default value: `false`
 	EventDrivenConfigEnabled pulumi.BoolPtrInput
 	// UMTS events
 	EventDrivenEvents pulumi.StringArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// UMTS monitoring enable or disable - Default value: `false`
+	// UMTS monitoring enable or disable
+	//   - Default value: `false`
 	MonitoringConfigEnabled pulumi.BoolPtrInput
-	// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+	// UMTS monitoring interval(Minutes)
+	//   - Choices: `30`, `60`
 	MonitoringConfigInterval pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
@@ -304,7 +324,8 @@ func (o SystemPerformanceMonitoringFeatureOutput) AppPerfMonitorAppGroups() pulu
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringArrayOutput { return v.AppPerfMonitorAppGroups }).(pulumi.StringArrayOutput)
 }
 
-// Application performance monitoring enable or disable - Default value: `false`
+// Application performance monitoring enable or disable
+//   - Default value: `false`
 func (o SystemPerformanceMonitoringFeatureOutput) AppPerfMonitorEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.BoolPtrOutput { return v.AppPerfMonitorEnabled }).(pulumi.BoolPtrOutput)
 }
@@ -314,7 +335,8 @@ func (o SystemPerformanceMonitoringFeatureOutput) Description() pulumi.StringPtr
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// UMTS event driven monitoring enable or disable - Default value: `false`
+// UMTS event driven monitoring enable or disable
+//   - Default value: `false`
 func (o SystemPerformanceMonitoringFeatureOutput) EventDrivenConfigEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.BoolPtrOutput { return v.EventDrivenConfigEnabled }).(pulumi.BoolPtrOutput)
 }
@@ -329,12 +351,14 @@ func (o SystemPerformanceMonitoringFeatureOutput) FeatureProfileId() pulumi.Stri
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// UMTS monitoring enable or disable - Default value: `false`
+// UMTS monitoring enable or disable
+//   - Default value: `false`
 func (o SystemPerformanceMonitoringFeatureOutput) MonitoringConfigEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.BoolPtrOutput { return v.MonitoringConfigEnabled }).(pulumi.BoolPtrOutput)
 }
 
-// UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+// UMTS monitoring interval(Minutes)
+//   - Choices: `30`, `60`
 func (o SystemPerformanceMonitoringFeatureOutput) MonitoringConfigInterval() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemPerformanceMonitoringFeature) pulumi.StringPtrOutput { return v.MonitoringConfigInterval }).(pulumi.StringPtrOutput)
 }

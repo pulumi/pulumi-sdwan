@@ -31,15 +31,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Output("diskLogging")]
         public Output<bool?> DiskLogging { get; private set; } = null!;
@@ -63,7 +63,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoLoggingFeatureTemplateIpv6Server>> Ipv6Servers { get; private set; } = null!;
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Output("logRotations")]
         public Output<int?> LogRotations { get; private set; } = null!;
@@ -75,7 +77,9 @@ namespace Pulumi.Sdwan
         public Output<string?> LogRotationsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Output("maxSize")]
         public Output<int?> MaxSize { get; private set; } = null!;
@@ -166,9 +170,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -177,7 +180,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }
@@ -213,7 +217,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Input("logRotations")]
         public Input<int>? LogRotations { get; set; }
@@ -225,7 +231,9 @@ namespace Pulumi.Sdwan
         public Input<string>? LogRotationsVariable { get; set; }
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Input("maxSize")]
         public Input<int>? MaxSize { get; set; }
@@ -272,9 +280,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -283,7 +290,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }
@@ -319,7 +327,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Input("logRotations")]
         public Input<int>? LogRotations { get; set; }
@@ -331,7 +341,9 @@ namespace Pulumi.Sdwan
         public Input<string>? LogRotationsVariable { get; set; }
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Input("maxSize")]
         public Input<int>? MaxSize { get; set; }
