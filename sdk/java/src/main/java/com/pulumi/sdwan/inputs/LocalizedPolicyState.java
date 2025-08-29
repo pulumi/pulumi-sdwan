@@ -20,14 +20,14 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     public static final LocalizedPolicyState Empty = new LocalizedPolicyState();
 
     /**
-     * IPv4 application visibility
+     * IPv4 application visibility - Default value: `false`
      * 
      */
     @Import(name="applicationVisibilityIpv4")
     private @Nullable Output<Boolean> applicationVisibilityIpv4;
 
     /**
-     * @return IPv4 application visibility
+     * @return IPv4 application visibility - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> applicationVisibilityIpv4() {
@@ -35,14 +35,14 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * IPv6 application visibility
+     * IPv6 application visibility - Default value: `false`
      * 
      */
     @Import(name="applicationVisibilityIpv6")
     private @Nullable Output<Boolean> applicationVisibilityIpv6;
 
     /**
-     * @return IPv6 application visibility
+     * @return IPv6 application visibility - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> applicationVisibilityIpv6() {
@@ -110,14 +110,14 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * IPv4 flow visibility
+     * IPv4 flow visibility - Default value: `false`
      * 
      */
     @Import(name="flowVisibilityIpv4")
     private @Nullable Output<Boolean> flowVisibilityIpv4;
 
     /**
-     * @return IPv4 flow visibility
+     * @return IPv4 flow visibility - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> flowVisibilityIpv4() {
@@ -125,14 +125,14 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * IPv6 flow visibility
+     * IPv6 flow visibility - Default value: `false`
      * 
      */
     @Import(name="flowVisibilityIpv6")
     private @Nullable Output<Boolean> flowVisibilityIpv6;
 
     /**
-     * @return IPv6 flow visibility
+     * @return IPv6 flow visibility - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> flowVisibilityIpv6() {
@@ -140,14 +140,14 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Implicit ACL logging
+     * Implicit ACL logging - Default value: `false`
      * 
      */
     @Import(name="implicitAclLogging")
     private @Nullable Output<Boolean> implicitAclLogging;
 
     /**
-     * @return Implicit ACL logging
+     * @return Implicit ACL logging - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> implicitAclLogging() {
@@ -267,7 +267,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param applicationVisibilityIpv4 IPv4 application visibility
+         * @param applicationVisibilityIpv4 IPv4 application visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param applicationVisibilityIpv4 IPv4 application visibility
+         * @param applicationVisibilityIpv4 IPv4 application visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param applicationVisibilityIpv6 IPv6 application visibility
+         * @param applicationVisibilityIpv6 IPv6 application visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -299,7 +299,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param applicationVisibilityIpv6 IPv6 application visibility
+         * @param applicationVisibilityIpv6 IPv6 application visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param flowVisibilityIpv4 IPv4 flow visibility
+         * @param flowVisibilityIpv4 IPv4 flow visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -414,7 +414,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param flowVisibilityIpv4 IPv4 flow visibility
+         * @param flowVisibilityIpv4 IPv4 flow visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -424,7 +424,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param flowVisibilityIpv6 IPv6 flow visibility
+         * @param flowVisibilityIpv6 IPv6 flow visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param flowVisibilityIpv6 IPv6 flow visibility
+         * @param flowVisibilityIpv6 IPv6 flow visibility - Default value: `false`
          * 
          * @return builder
          * 
@@ -445,7 +445,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param implicitAclLogging Implicit ACL logging
+         * @param implicitAclLogging Implicit ACL logging - Default value: `false`
          * 
          * @return builder
          * 
@@ -456,7 +456,7 @@ public final class LocalizedPolicyState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param implicitAclLogging Implicit ACL logging
+         * @param implicitAclLogging Implicit ACL logging - Default value: `false`
          * 
          * @return builder
          * 

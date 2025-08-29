@@ -35,6 +35,12 @@ public final class ServiceRoutingOspfFeatureRedistribute {
      */
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean translateRibMetric;
 
     private ServiceRoutingOspfFeatureRedistribute() {}
     /**
@@ -70,6 +76,14 @@ public final class ServiceRoutingOspfFeatureRedistribute {
     public Optional<String> routePolicyId() {
         return Optional.ofNullable(this.routePolicyId);
     }
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> translateRibMetric() {
+        return Optional.ofNullable(this.translateRibMetric);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -85,6 +99,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
         private @Nullable String protocol;
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
+        private @Nullable Boolean translateRibMetric;
         public Builder() {}
         public Builder(ServiceRoutingOspfFeatureRedistribute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -93,6 +108,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.translateRibMetric = defaults.translateRibMetric;
         }
 
         @CustomType.Setter
@@ -125,6 +141,12 @@ public final class ServiceRoutingOspfFeatureRedistribute {
             this.routePolicyId = routePolicyId;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetric(@Nullable Boolean translateRibMetric) {
+
+            this.translateRibMetric = translateRibMetric;
+            return this;
+        }
         public ServiceRoutingOspfFeatureRedistribute build() {
             final var _resultValue = new ServiceRoutingOspfFeatureRedistribute();
             _resultValue.natDia = natDia;
@@ -132,6 +154,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.translateRibMetric = translateRibMetric;
             return _resultValue;
         }
     }

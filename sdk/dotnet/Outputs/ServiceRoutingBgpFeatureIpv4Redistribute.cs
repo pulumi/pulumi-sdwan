@@ -23,6 +23,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? ProtocolVariable;
         public readonly string? RoutePolicyId;
+        /// <summary>
+        /// Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+        ///   - Default value: `false`
+        /// </summary>
+        public readonly bool? TranslateRibMetric;
 
         [OutputConstructor]
         private ServiceRoutingBgpFeatureIpv4Redistribute(
@@ -30,11 +35,14 @@ namespace Pulumi.Sdwan.Outputs
 
             string? protocolVariable,
 
-            string? routePolicyId)
+            string? routePolicyId,
+
+            bool? translateRibMetric)
         {
             Protocol = protocol;
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;
+            TranslateRibMetric = translateRibMetric;
         }
     }
 }

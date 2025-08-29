@@ -51184,6 +51184,11 @@ if not MYPY:
         Variable name
         """
         route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+        translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
 elif False:
     ServiceRoutingBgpFeatureIpv4RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -51192,11 +51197,14 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     def __init__(__self__, *,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+                 - Default value: `false`
         """
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
@@ -51204,6 +51212,8 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if translate_rib_metric is not None:
+            pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
 
     @_builtins.property
     @pulumi.getter
@@ -51238,6 +51248,19 @@ class ServiceRoutingBgpFeatureIpv4RedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetric")
+    def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "translate_rib_metric")
+
+    @translate_rib_metric.setter
+    def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "translate_rib_metric", value)
 
 
 if not MYPY:
@@ -52320,6 +52343,11 @@ if not MYPY:
         Variable name
         """
         route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+        translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
 elif False:
     ServiceRoutingBgpFeatureIpv6RedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -52328,11 +52356,14 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     def __init__(__self__, *,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] protocol: Set the protocol to redistribute routes from
                  - Choices: `static`, `connected`, `ospf`, `omp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+                 - Default value: `false`
         """
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
@@ -52340,6 +52371,8 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if translate_rib_metric is not None:
+            pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
 
     @_builtins.property
     @pulumi.getter
@@ -52374,6 +52407,19 @@ class ServiceRoutingBgpFeatureIpv6RedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetric")
+    def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "translate_rib_metric")
+
+    @translate_rib_metric.setter
+    def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "translate_rib_metric", value)
 
 
 if not MYPY:
@@ -53681,6 +53727,11 @@ if not MYPY:
         Variable name
         """
         route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+        translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
 elif False:
     ServiceRoutingOspfFeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -53691,7 +53742,8 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
                  nat_dia_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes
                  - Default value: `true`
@@ -53699,6 +53751,8 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+                 - Default value: `false`
         """
         if nat_dia is not None:
             pulumi.set(__self__, "nat_dia", nat_dia)
@@ -53710,6 +53764,8 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if translate_rib_metric is not None:
+            pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
 
     @_builtins.property
     @pulumi.getter(name="natDia")
@@ -53769,6 +53825,19 @@ class ServiceRoutingOspfFeatureRedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetric")
+    def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "translate_rib_metric")
+
+    @translate_rib_metric.setter
+    def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "translate_rib_metric", value)
 
 
 if not MYPY:
@@ -54664,6 +54733,11 @@ if not MYPY:
         Variable name
         """
         route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+        translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
 elif False:
     ServiceRoutingOspfv3Ipv4FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -54674,7 +54748,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
                  nat_dia_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] nat_dia: Enable NAT DIA for redistributed routes
                  - Default value: `true`
@@ -54682,6 +54757,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `nat-route`, `bgp`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+                 - Default value: `false`
         """
         if nat_dia is not None:
             pulumi.set(__self__, "nat_dia", nat_dia)
@@ -54693,6 +54770,8 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if translate_rib_metric is not None:
+            pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
 
     @_builtins.property
     @pulumi.getter(name="natDia")
@@ -54752,6 +54831,19 @@ class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetric")
+    def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "translate_rib_metric")
+
+    @translate_rib_metric.setter
+    def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "translate_rib_metric", value)
 
 
 if not MYPY:
@@ -55527,6 +55619,11 @@ if not MYPY:
         Variable name
         """
         route_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+        translate_rib_metric: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
 elif False:
     ServiceRoutingOspfv3Ipv6FeatureRedistributeArgsDict: TypeAlias = Mapping[str, Any]
 
@@ -55535,11 +55632,14 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs:
     def __init__(__self__, *,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
+                 route_policy_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 translate_rib_metric: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] protocol: Set the protocol
                  - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
+        :param pulumi.Input[_builtins.bool] translate_rib_metric: Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+                 - Default value: `false`
         """
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
@@ -55547,6 +55647,8 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs:
             pulumi.set(__self__, "protocol_variable", protocol_variable)
         if route_policy_id is not None:
             pulumi.set(__self__, "route_policy_id", route_policy_id)
+        if translate_rib_metric is not None:
+            pulumi.set(__self__, "translate_rib_metric", translate_rib_metric)
 
     @_builtins.property
     @pulumi.getter
@@ -55581,6 +55683,19 @@ class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs:
     @route_policy_id.setter
     def route_policy_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "route_policy_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translateRibMetric")
+    def translate_rib_metric(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+          - Default value: `false`
+        """
+        return pulumi.get(self, "translate_rib_metric")
+
+    @translate_rib_metric.setter
+    def translate_rib_metric(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "translate_rib_metric", value)
 
 
 if not MYPY:

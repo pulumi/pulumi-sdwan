@@ -32,6 +32,11 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
      */
     private String protocolVariable;
     private String routePolicyId;
+    /**
+     * @return Translate Rib Metric
+     * 
+     */
+    private Boolean translateRibMetric;
 
     private GetServiceRoutingOspfv3Ipv4FeatureRedistribute() {}
     /**
@@ -65,6 +70,13 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
     public String routePolicyId() {
         return this.routePolicyId;
     }
+    /**
+     * @return Translate Rib Metric
+     * 
+     */
+    public Boolean translateRibMetric() {
+        return this.translateRibMetric;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -80,6 +92,7 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
         private String protocol;
         private String protocolVariable;
         private String routePolicyId;
+        private Boolean translateRibMetric;
         public Builder() {}
         public Builder(GetServiceRoutingOspfv3Ipv4FeatureRedistribute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -88,6 +101,7 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.translateRibMetric = defaults.translateRibMetric;
         }
 
         @CustomType.Setter
@@ -130,6 +144,14 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
             this.routePolicyId = routePolicyId;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetric(Boolean translateRibMetric) {
+            if (translateRibMetric == null) {
+              throw new MissingRequiredPropertyException("GetServiceRoutingOspfv3Ipv4FeatureRedistribute", "translateRibMetric");
+            }
+            this.translateRibMetric = translateRibMetric;
+            return this;
+        }
         public GetServiceRoutingOspfv3Ipv4FeatureRedistribute build() {
             final var _resultValue = new GetServiceRoutingOspfv3Ipv4FeatureRedistribute();
             _resultValue.natDia = natDia;
@@ -137,6 +159,7 @@ public final class GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.translateRibMetric = translateRibMetric;
             return _resultValue;
         }
     }

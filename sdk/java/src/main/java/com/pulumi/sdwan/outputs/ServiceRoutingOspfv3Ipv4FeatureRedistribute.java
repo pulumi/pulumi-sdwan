@@ -35,6 +35,12 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      */
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean translateRibMetric;
 
     private ServiceRoutingOspfv3Ipv4FeatureRedistribute() {}
     /**
@@ -70,6 +76,14 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     public Optional<String> routePolicyId() {
         return Optional.ofNullable(this.routePolicyId);
     }
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> translateRibMetric() {
+        return Optional.ofNullable(this.translateRibMetric);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -85,6 +99,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
         private @Nullable String protocol;
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
+        private @Nullable Boolean translateRibMetric;
         public Builder() {}
         public Builder(ServiceRoutingOspfv3Ipv4FeatureRedistribute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -93,6 +108,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.translateRibMetric = defaults.translateRibMetric;
         }
 
         @CustomType.Setter
@@ -125,6 +141,12 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
             this.routePolicyId = routePolicyId;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetric(@Nullable Boolean translateRibMetric) {
+
+            this.translateRibMetric = translateRibMetric;
+            return this;
+        }
         public ServiceRoutingOspfv3Ipv4FeatureRedistribute build() {
             final var _resultValue = new ServiceRoutingOspfv3Ipv4FeatureRedistribute();
             _resultValue.natDia = natDia;
@@ -132,6 +154,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistribute {
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.translateRibMetric = translateRibMetric;
             return _resultValue;
         }
     }

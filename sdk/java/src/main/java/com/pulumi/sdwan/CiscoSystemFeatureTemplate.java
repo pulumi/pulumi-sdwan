@@ -300,6 +300,20 @@ public class CiscoSystemFeatureTemplate extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.enhancedAppAwareRouting);
     }
     /**
+     * Variable name
+     * 
+     */
+    @Export(name="enhancedAppAwareRoutingVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> enhancedAppAwareRoutingVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> enhancedAppAwareRoutingVariable() {
+        return Codegen.optional(this.enhancedAppAwareRoutingVariable);
+    }
+    /**
      * Enable Geo fencing - Default value: `false`
      * 
      */

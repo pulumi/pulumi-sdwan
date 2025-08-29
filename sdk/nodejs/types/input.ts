@@ -10364,6 +10364,11 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -10597,6 +10602,11 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
 }
 
 export interface ServiceRoutingEigrpFeatureInterface {
@@ -10885,6 +10895,11 @@ export interface ServiceRoutingOspfFeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
 }
 
 export interface ServiceRoutingOspfFeatureRouterLsa {
@@ -11089,6 +11104,11 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureArea {
@@ -11262,6 +11282,11 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
 }
 
 export interface ServiceSwitchportFeatureInterface {

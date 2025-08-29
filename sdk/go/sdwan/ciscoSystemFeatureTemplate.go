@@ -64,6 +64,8 @@ type CiscoSystemFeatureTemplate struct {
 	EnableMrfMigration pulumi.StringPtrOutput `pulumi:"enableMrfMigration"`
 	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 	EnhancedAppAwareRouting pulumi.StringPtrOutput `pulumi:"enhancedAppAwareRouting"`
+	// Variable name
+	EnhancedAppAwareRoutingVariable pulumi.StringPtrOutput `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrOutput `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -328,6 +330,8 @@ type ciscoSystemFeatureTemplateState struct {
 	EnableMrfMigration *string `pulumi:"enableMrfMigration"`
 	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 	EnhancedAppAwareRouting *string `pulumi:"enhancedAppAwareRouting"`
+	// Variable name
+	EnhancedAppAwareRoutingVariable *string `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing *bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -557,6 +561,8 @@ type CiscoSystemFeatureTemplateState struct {
 	EnableMrfMigration pulumi.StringPtrInput
 	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 	EnhancedAppAwareRouting pulumi.StringPtrInput
+	// Variable name
+	EnhancedAppAwareRoutingVariable pulumi.StringPtrInput
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrInput
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -790,6 +796,8 @@ type ciscoSystemFeatureTemplateArgs struct {
 	EnableMrfMigration *string `pulumi:"enableMrfMigration"`
 	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 	EnhancedAppAwareRouting *string `pulumi:"enhancedAppAwareRouting"`
+	// Variable name
+	EnhancedAppAwareRoutingVariable *string `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing *bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -1016,6 +1024,8 @@ type CiscoSystemFeatureTemplateArgs struct {
 	EnableMrfMigration pulumi.StringPtrInput
 	// Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 	EnhancedAppAwareRouting pulumi.StringPtrInput
+	// Variable name
+	EnhancedAppAwareRoutingVariable pulumi.StringPtrInput
 	// Enable Geo fencing - Default value: `false`
 	GeoFencing pulumi.BoolPtrInput
 	// Set the device’s geo fencing range - Range: `100`-`10000` - Default value: `100`
@@ -1379,6 +1389,11 @@ func (o CiscoSystemFeatureTemplateOutput) EnableMrfMigration() pulumi.StringPtrO
 // Enhanced App Aware Routing - Choices: `disabled`, `aggressive`, `moderate`, `conservative` - Default value: `disabled`
 func (o CiscoSystemFeatureTemplateOutput) EnhancedAppAwareRouting() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoSystemFeatureTemplate) pulumi.StringPtrOutput { return v.EnhancedAppAwareRouting }).(pulumi.StringPtrOutput)
+}
+
+// Variable name
+func (o CiscoSystemFeatureTemplateOutput) EnhancedAppAwareRoutingVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *CiscoSystemFeatureTemplate) pulumi.StringPtrOutput { return v.EnhancedAppAwareRoutingVariable }).(pulumi.StringPtrOutput)
 }
 
 // Enable Geo fencing - Default value: `false`

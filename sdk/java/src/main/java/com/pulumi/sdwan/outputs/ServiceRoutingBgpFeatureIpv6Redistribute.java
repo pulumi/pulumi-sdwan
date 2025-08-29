@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,6 +24,12 @@ public final class ServiceRoutingBgpFeatureIpv6Redistribute {
      */
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean translateRibMetric;
 
     private ServiceRoutingBgpFeatureIpv6Redistribute() {}
     /**
@@ -43,6 +50,14 @@ public final class ServiceRoutingBgpFeatureIpv6Redistribute {
     public Optional<String> routePolicyId() {
         return Optional.ofNullable(this.routePolicyId);
     }
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> translateRibMetric() {
+        return Optional.ofNullable(this.translateRibMetric);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -56,12 +71,14 @@ public final class ServiceRoutingBgpFeatureIpv6Redistribute {
         private @Nullable String protocol;
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
+        private @Nullable Boolean translateRibMetric;
         public Builder() {}
         public Builder(ServiceRoutingBgpFeatureIpv6Redistribute defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.protocol = defaults.protocol;
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
+    	      this.translateRibMetric = defaults.translateRibMetric;
         }
 
         @CustomType.Setter
@@ -82,11 +99,18 @@ public final class ServiceRoutingBgpFeatureIpv6Redistribute {
             this.routePolicyId = routePolicyId;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetric(@Nullable Boolean translateRibMetric) {
+
+            this.translateRibMetric = translateRibMetric;
+            return this;
+        }
         public ServiceRoutingBgpFeatureIpv6Redistribute build() {
             final var _resultValue = new ServiceRoutingBgpFeatureIpv6Redistribute();
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
+            _resultValue.translateRibMetric = translateRibMetric;
             return _resultValue;
         }
     }

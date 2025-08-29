@@ -94,6 +94,8 @@ type LookupCiscoSystemFeatureTemplateResult struct {
 	EnableMrfMigration string `pulumi:"enableMrfMigration"`
 	// Enhanced App Aware Routing
 	EnhancedAppAwareRouting string `pulumi:"enhancedAppAwareRouting"`
+	// Variable name
+	EnhancedAppAwareRoutingVariable string `pulumi:"enhancedAppAwareRoutingVariable"`
 	// Enable Geo fencing
 	GeoFencing bool `pulumi:"geoFencing"`
 	// Set the device’s geo fencing range
@@ -336,6 +338,11 @@ func (o LookupCiscoSystemFeatureTemplateResultOutput) EnableMrfMigration() pulum
 // Enhanced App Aware Routing
 func (o LookupCiscoSystemFeatureTemplateResultOutput) EnhancedAppAwareRouting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCiscoSystemFeatureTemplateResult) string { return v.EnhancedAppAwareRouting }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupCiscoSystemFeatureTemplateResultOutput) EnhancedAppAwareRoutingVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCiscoSystemFeatureTemplateResult) string { return v.EnhancedAppAwareRoutingVariable }).(pulumi.StringOutput)
 }
 
 // Enable Geo fencing

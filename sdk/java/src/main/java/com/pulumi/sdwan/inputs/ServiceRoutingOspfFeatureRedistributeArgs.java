@@ -87,6 +87,23 @@ public final class ServiceRoutingOspfFeatureRedistributeArgs extends com.pulumi.
         return Optional.ofNullable(this.routePolicyId);
     }
 
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="translateRibMetric")
+    private @Nullable Output<Boolean> translateRibMetric;
+
+    /**
+     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> translateRibMetric() {
+        return Optional.ofNullable(this.translateRibMetric);
+    }
+
     private ServiceRoutingOspfFeatureRedistributeArgs() {}
 
     private ServiceRoutingOspfFeatureRedistributeArgs(ServiceRoutingOspfFeatureRedistributeArgs $) {
@@ -95,6 +112,7 @@ public final class ServiceRoutingOspfFeatureRedistributeArgs extends com.pulumi.
         this.protocol = $.protocol;
         this.protocolVariable = $.protocolVariable;
         this.routePolicyId = $.routePolicyId;
+        this.translateRibMetric = $.translateRibMetric;
     }
 
     public static Builder builder() {
@@ -210,6 +228,29 @@ public final class ServiceRoutingOspfFeatureRedistributeArgs extends com.pulumi.
 
         public Builder routePolicyId(String routePolicyId) {
             return routePolicyId(Output.of(routePolicyId));
+        }
+
+        /**
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetric(@Nullable Output<Boolean> translateRibMetric) {
+            $.translateRibMetric = translateRibMetric;
+            return this;
+        }
+
+        /**
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetric(Boolean translateRibMetric) {
+            return translateRibMetric(Output.of(translateRibMetric));
         }
 
         public ServiceRoutingOspfFeatureRedistributeArgs build() {

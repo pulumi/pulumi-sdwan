@@ -120,6 +120,10 @@ export interface GetCiscoSystemFeatureTemplateResult {
      */
     readonly enhancedAppAwareRouting: string;
     /**
+     * Variable name
+     */
+    readonly enhancedAppAwareRoutingVariable: string;
+    /**
      * Enable Geo fencing
      */
     readonly geoFencing: boolean;

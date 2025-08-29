@@ -15989,6 +15989,10 @@ export interface GetServiceRoutingBgpFeatureIpv4Redistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Translate Rib Metric
+     */
+    translateRibMetric: boolean;
 }
 
 export interface GetServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -16203,6 +16207,10 @@ export interface GetServiceRoutingBgpFeatureIpv6Redistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Translate Rib Metric
+     */
+    translateRibMetric: boolean;
 }
 
 export interface GetServiceRoutingEigrpFeatureInterface {
@@ -16460,6 +16468,10 @@ export interface GetServiceRoutingOspfFeatureRedistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Translate Rib Metric
+     */
+    translateRibMetric: boolean;
 }
 
 export interface GetServiceRoutingOspfFeatureRouterLsa {
@@ -16642,6 +16654,10 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Translate Rib Metric
+     */
+    translateRibMetric: boolean;
 }
 
 export interface GetServiceRoutingOspfv3Ipv6FeatureArea {
@@ -16799,6 +16815,10 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Translate Rib Metric
+     */
+    translateRibMetric: boolean;
 }
 
 export interface GetServiceSwitchportFeatureInterface {
@@ -26040,6 +26060,11 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6AggregateAddress {
@@ -26273,6 +26298,11 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
 }
 
 export interface ServiceRoutingEigrpFeatureInterface {
@@ -26561,6 +26591,11 @@ export interface ServiceRoutingOspfFeatureRedistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
 }
 
 export interface ServiceRoutingOspfFeatureRouterLsa {
@@ -26765,6 +26800,11 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureArea {
@@ -26938,6 +26978,11 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
 }
 
 export interface ServiceSwitchportFeatureInterface {
