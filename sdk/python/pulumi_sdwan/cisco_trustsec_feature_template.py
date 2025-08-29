@@ -58,40 +58,53 @@ class CiscoTrustsecFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoTrustsecFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-               char)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] credentials_id_variable: Variable name
         :param pulumi.Input[_builtins.str] credentials_password: Set the password for the device
         :param pulumi.Input[_builtins.str] credentials_password_variable: Variable name
-        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519> - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_enforcement_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support - Default value: `false`
-        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] maximum_listener_hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `90`
         :param pulumi.Input[_builtins.str] minimum_listener_hold_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
-        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes - Default value: `false`
+        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] sxp_log_binding_changes_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_node_id: Configure SXP Node ID <IP, 8 char string or interface name>
-        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-               Default value: `ip`
+        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name>
+                 - Choices: `ip`, `interface-name`, `8-char-hex-string`
+                 - Default value: `ip`
         :param pulumi.Input[_builtins.str] sxp_node_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_reconciliation_period_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_retry_period_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_source_ip: SXP Source IP
         :param pulumi.Input[_builtins.str] sxp_source_ip_variable: Variable name
@@ -179,9 +192,8 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -193,8 +205,7 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="credentialsId")
     def credentials_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        char)
+        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         """
         return pulumi.get(self, "credentials_id")
 
@@ -242,7 +253,8 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="deviceSgt")
     def device_sgt(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Local device security group <2..65519> - Range: `2`-`65519`
+        Configure Local device security group <2..65519>
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "device_sgt")
 
@@ -266,7 +278,8 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="enableEnforcement")
     def enable_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Role-based Access Control enforcement - Default value: `false`
+        Enable Role-based Access Control enforcement
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_enforcement")
 
@@ -290,7 +303,8 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="enableSxp")
     def enable_sxp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable CTS SXP support - Default value: `false`
+        Enable CTS SXP support
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sxp")
 
@@ -302,7 +316,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="maximumListenerHoldTime")
     def maximum_listener_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        Configure Maximum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `180`
         """
         return pulumi.get(self, "maximum_listener_hold_time")
 
@@ -326,7 +342,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="minimumListenerHoldTime")
     def minimum_listener_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        Configure Minimum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `90`
         """
         return pulumi.get(self, "minimum_listener_hold_time")
 
@@ -362,7 +380,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="speakerHoldTime")
     def speaker_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        Configure Speaker hold-time in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `120`
         """
         return pulumi.get(self, "speaker_hold_time")
 
@@ -446,7 +466,8 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="sxpLogBindingChanges")
     def sxp_log_binding_changes(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enables logging for IP-to-SGT binding changes - Default value: `false`
+        Enables logging for IP-to-SGT binding changes
+          - Default value: `false`
         """
         return pulumi.get(self, "sxp_log_binding_changes")
 
@@ -482,8 +503,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="sxpNodeIdType")
     def sxp_node_id_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        Default value: `ip`
+        Define SXP Node ID type <IP, 8 char string or interface name>
+          - Choices: `ip`, `interface-name`, `8-char-hex-string`
+          - Default value: `ip`
         """
         return pulumi.get(self, "sxp_node_id_type")
 
@@ -507,7 +529,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="sxpReconciliationPeriod")
     def sxp_reconciliation_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure the SXP reconciliation period in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_reconciliation_period")
 
@@ -531,7 +555,9 @@ class CiscoTrustsecFeatureTemplateArgs:
     @pulumi.getter(name="sxpRetryPeriod")
     def sxp_retry_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure Retry period for SXP connection in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_retry_period")
 
@@ -617,41 +643,54 @@ class _CiscoTrustsecFeatureTemplateState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CiscoTrustsecFeatureTemplate resources.
-        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-               char)
+        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] credentials_id_variable: Variable name
         :param pulumi.Input[_builtins.str] credentials_password: Set the password for the device
         :param pulumi.Input[_builtins.str] credentials_password_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519> - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_enforcement_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support - Default value: `false`
-        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] maximum_listener_hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `90`
         :param pulumi.Input[_builtins.str] minimum_listener_hold_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoTrustsecFeatureTemplateSxpConnectionArgs']]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
-        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes - Default value: `false`
+        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] sxp_log_binding_changes_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_node_id: Configure SXP Node ID <IP, 8 char string or interface name>
-        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-               Default value: `ip`
+        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name>
+                 - Choices: `ip`, `interface-name`, `8-char-hex-string`
+                 - Default value: `ip`
         :param pulumi.Input[_builtins.str] sxp_node_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_reconciliation_period_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_retry_period_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_source_ip: SXP Source IP
         :param pulumi.Input[_builtins.str] sxp_source_ip_variable: Variable name
@@ -735,8 +774,7 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="credentialsId")
     def credentials_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        char)
+        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         """
         return pulumi.get(self, "credentials_id")
 
@@ -796,7 +834,8 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="deviceSgt")
     def device_sgt(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Local device security group <2..65519> - Range: `2`-`65519`
+        Configure Local device security group <2..65519>
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "device_sgt")
 
@@ -820,9 +859,8 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -834,7 +872,8 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="enableEnforcement")
     def enable_enforcement(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Role-based Access Control enforcement - Default value: `false`
+        Enable Role-based Access Control enforcement
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_enforcement")
 
@@ -858,7 +897,8 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="enableSxp")
     def enable_sxp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable CTS SXP support - Default value: `false`
+        Enable CTS SXP support
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sxp")
 
@@ -870,7 +910,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="maximumListenerHoldTime")
     def maximum_listener_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        Configure Maximum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `180`
         """
         return pulumi.get(self, "maximum_listener_hold_time")
 
@@ -894,7 +936,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="minimumListenerHoldTime")
     def minimum_listener_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        Configure Minimum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `90`
         """
         return pulumi.get(self, "minimum_listener_hold_time")
 
@@ -930,7 +974,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="speakerHoldTime")
     def speaker_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        Configure Speaker hold-time in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `120`
         """
         return pulumi.get(self, "speaker_hold_time")
 
@@ -1014,7 +1060,8 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="sxpLogBindingChanges")
     def sxp_log_binding_changes(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enables logging for IP-to-SGT binding changes - Default value: `false`
+        Enables logging for IP-to-SGT binding changes
+          - Default value: `false`
         """
         return pulumi.get(self, "sxp_log_binding_changes")
 
@@ -1050,8 +1097,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="sxpNodeIdType")
     def sxp_node_id_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        Default value: `ip`
+        Define SXP Node ID type <IP, 8 char string or interface name>
+          - Choices: `ip`, `interface-name`, `8-char-hex-string`
+          - Default value: `ip`
         """
         return pulumi.get(self, "sxp_node_id_type")
 
@@ -1075,7 +1123,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="sxpReconciliationPeriod")
     def sxp_reconciliation_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure the SXP reconciliation period in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_reconciliation_period")
 
@@ -1099,7 +1149,9 @@ class _CiscoTrustsecFeatureTemplateState:
     @pulumi.getter(name="sxpRetryPeriod")
     def sxp_retry_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure Retry period for SXP connection in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_retry_period")
 
@@ -1223,41 +1275,54 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-               char)
+        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] credentials_id_variable: Variable name
         :param pulumi.Input[_builtins.str] credentials_password: Set the password for the device
         :param pulumi.Input[_builtins.str] credentials_password_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519> - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_enforcement_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support - Default value: `false`
-        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] maximum_listener_hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `90`
         :param pulumi.Input[_builtins.str] minimum_listener_hold_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
-        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes - Default value: `false`
+        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] sxp_log_binding_changes_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_node_id: Configure SXP Node ID <IP, 8 char string or interface name>
-        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-               Default value: `ip`
+        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name>
+                 - Choices: `ip`, `interface-name`, `8-char-hex-string`
+                 - Default value: `ip`
         :param pulumi.Input[_builtins.str] sxp_node_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_reconciliation_period_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_retry_period_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_source_ip: SXP Source IP
         :param pulumi.Input[_builtins.str] sxp_source_ip_variable: Variable name
@@ -1431,41 +1496,54 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-               char)
+        :param pulumi.Input[_builtins.str] credentials_id: Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         :param pulumi.Input[_builtins.str] credentials_id_variable: Variable name
         :param pulumi.Input[_builtins.str] credentials_password: Set the password for the device
         :param pulumi.Input[_builtins.str] credentials_password_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519> - Range: `2`-`65519`
+        :param pulumi.Input[_builtins.int] device_sgt: Configure Local device security group <2..65519>
+                 - Range: `2`-`65519`
         :param pulumi.Input[_builtins.str] device_sgt_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] enable_enforcement: Enable Role-based Access Control enforcement
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_enforcement_variable: Variable name
-        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support - Default value: `false`
-        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        :param pulumi.Input[_builtins.bool] enable_sxp: Enable CTS SXP support
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] maximum_listener_hold_time: Configure Maximum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] maximum_listener_hold_time_variable: Variable name
-        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        :param pulumi.Input[_builtins.int] minimum_listener_hold_time: Configure Minimum allowed hold-time for listener in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `90`
         :param pulumi.Input[_builtins.str] minimum_listener_hold_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        :param pulumi.Input[_builtins.int] speaker_hold_time: Configure Speaker hold-time in seconds <1..65534>
+                 - Range: `1`-`65534`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] speaker_hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoTrustsecFeatureTemplateSxpConnectionArgs', 'CiscoTrustsecFeatureTemplateSxpConnectionArgsDict']]]] sxp_connections: Configure SXP Connections
         :param pulumi.Input[_builtins.str] sxp_default_password: Configure SXP default password
         :param pulumi.Input[_builtins.str] sxp_default_password_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_key_chain: Configure SXP key-chain
         :param pulumi.Input[_builtins.str] sxp_key_chain_variable: Variable name
-        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes - Default value: `false`
+        :param pulumi.Input[_builtins.bool] sxp_log_binding_changes: Enables logging for IP-to-SGT binding changes
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] sxp_log_binding_changes_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_node_id: Configure SXP Node ID <IP, 8 char string or interface name>
-        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-               Default value: `ip`
+        :param pulumi.Input[_builtins.str] sxp_node_id_type: Define SXP Node ID type <IP, 8 char string or interface name>
+                 - Choices: `ip`, `interface-name`, `8-char-hex-string`
+                 - Default value: `ip`
         :param pulumi.Input[_builtins.str] sxp_node_id_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_reconciliation_period: Configure the SXP reconciliation period in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_reconciliation_period_variable: Variable name
-        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        :param pulumi.Input[_builtins.int] sxp_retry_period: Configure Retry period for SXP connection in seconds <0..64000>
+                 - Range: `0`-`64000`
+                 - Default value: `120`
         :param pulumi.Input[_builtins.str] sxp_retry_period_variable: Variable name
         :param pulumi.Input[_builtins.str] sxp_source_ip: SXP Source IP
         :param pulumi.Input[_builtins.str] sxp_source_ip_variable: Variable name
@@ -1518,8 +1596,7 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="credentialsId")
     def credentials_id(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        char)
+        Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         """
         return pulumi.get(self, "credentials_id")
 
@@ -1559,7 +1636,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceSgt")
     def device_sgt(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure Local device security group <2..65519> - Range: `2`-`65519`
+        Configure Local device security group <2..65519>
+          - Range: `2`-`65519`
         """
         return pulumi.get(self, "device_sgt")
 
@@ -1575,9 +1653,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1585,7 +1662,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="enableEnforcement")
     def enable_enforcement(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable Role-based Access Control enforcement - Default value: `false`
+        Enable Role-based Access Control enforcement
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_enforcement")
 
@@ -1601,7 +1679,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="enableSxp")
     def enable_sxp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable CTS SXP support - Default value: `false`
+        Enable CTS SXP support
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sxp")
 
@@ -1609,7 +1688,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="maximumListenerHoldTime")
     def maximum_listener_hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure Maximum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `180`
+        Configure Maximum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `180`
         """
         return pulumi.get(self, "maximum_listener_hold_time")
 
@@ -1625,7 +1706,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="minimumListenerHoldTime")
     def minimum_listener_hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure Minimum allowed hold-time for listener in seconds <1..65534> - Range: `1`-`65534` - Default value: `90`
+        Configure Minimum allowed hold-time for listener in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `90`
         """
         return pulumi.get(self, "minimum_listener_hold_time")
 
@@ -1649,7 +1732,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="speakerHoldTime")
     def speaker_hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure Speaker hold-time in seconds <1..65534> - Range: `1`-`65534` - Default value: `120`
+        Configure Speaker hold-time in seconds <1..65534>
+          - Range: `1`-`65534`
+          - Default value: `120`
         """
         return pulumi.get(self, "speaker_hold_time")
 
@@ -1705,7 +1790,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sxpLogBindingChanges")
     def sxp_log_binding_changes(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enables logging for IP-to-SGT binding changes - Default value: `false`
+        Enables logging for IP-to-SGT binding changes
+          - Default value: `false`
         """
         return pulumi.get(self, "sxp_log_binding_changes")
 
@@ -1729,8 +1815,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sxpNodeIdType")
     def sxp_node_id_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Define SXP Node ID type <IP, 8 char string or interface name> - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        Default value: `ip`
+        Define SXP Node ID type <IP, 8 char string or interface name>
+          - Choices: `ip`, `interface-name`, `8-char-hex-string`
+          - Default value: `ip`
         """
         return pulumi.get(self, "sxp_node_id_type")
 
@@ -1746,7 +1833,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sxpReconciliationPeriod")
     def sxp_reconciliation_period(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure the SXP reconciliation period in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure the SXP reconciliation period in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_reconciliation_period")
 
@@ -1762,7 +1851,9 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="sxpRetryPeriod")
     def sxp_retry_period(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure Retry period for SXP connection in seconds <0..64000> - Range: `0`-`64000` - Default value: `120`
+        Configure Retry period for SXP connection in seconds <0..64000>
+          - Range: `0`-`64000`
+          - Default value: `120`
         """
         return pulumi.get(self, "sxp_retry_period")
 

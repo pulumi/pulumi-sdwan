@@ -27,24 +27,28 @@ type CiscoBfdFeatureTemplate struct {
 
 	// Set color that identifies the WAN transport tunnel
 	Colors CiscoBfdFeatureTemplateColorArrayOutput `pulumi:"colors"`
-	// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+	// Set default DSCP value for BFD packets
+	//   - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrOutput `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrOutput `pulumi:"defaultDscpVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+	// Set the number of polling intervals used to determine tunnel SLA class
+	//   - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrOutput `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable pulumi.StringPtrOutput `pulumi:"multiplierVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-	// value: `600000`
+	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+	//   - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrOutput `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrOutput `pulumi:"pollIntervalVariable"`
@@ -92,24 +96,28 @@ func GetCiscoBfdFeatureTemplate(ctx *pulumi.Context,
 type ciscoBfdFeatureTemplateState struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []CiscoBfdFeatureTemplateColor `pulumi:"colors"`
-	// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+	// Set default DSCP value for BFD packets
+	//   - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp *int `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable *string `pulumi:"defaultDscpVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+	// Set the number of polling intervals used to determine tunnel SLA class
+	//   - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-	// value: `600000`
+	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+	//   - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval *int `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable *string `pulumi:"pollIntervalVariable"`
@@ -122,24 +130,28 @@ type ciscoBfdFeatureTemplateState struct {
 type CiscoBfdFeatureTemplateState struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors CiscoBfdFeatureTemplateColorArrayInput
-	// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+	// Set default DSCP value for BFD packets
+	//   - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrInput
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+	// Set the number of polling intervals used to determine tunnel SLA class
+	//   - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-	// value: `600000`
+	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+	//   - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrInput
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrInput
@@ -156,24 +168,28 @@ func (CiscoBfdFeatureTemplateState) ElementType() reflect.Type {
 type ciscoBfdFeatureTemplateArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []CiscoBfdFeatureTemplateColor `pulumi:"colors"`
-	// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+	// Set default DSCP value for BFD packets
+	//   - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp *int `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable *string `pulumi:"defaultDscpVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+	// Set the number of polling intervals used to determine tunnel SLA class
+	//   - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-	// value: `600000`
+	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+	//   - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval *int `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable *string `pulumi:"pollIntervalVariable"`
@@ -183,24 +199,28 @@ type ciscoBfdFeatureTemplateArgs struct {
 type CiscoBfdFeatureTemplateArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors CiscoBfdFeatureTemplateColorArrayInput
-	// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+	// Set default DSCP value for BFD packets
+	//   - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrInput
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+	// Set the number of polling intervals used to determine tunnel SLA class
+	//   - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-	// value: `600000`
+	// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+	//   - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrInput
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrInput
@@ -298,7 +318,9 @@ func (o CiscoBfdFeatureTemplateOutput) Colors() CiscoBfdFeatureTemplateColorArra
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) CiscoBfdFeatureTemplateColorArrayOutput { return v.Colors }).(CiscoBfdFeatureTemplateColorArrayOutput)
 }
 
-// Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+// Set default DSCP value for BFD packets
+//   - Range: `0`-`63`
+//   - Default value: `48`
 func (o CiscoBfdFeatureTemplateOutput) DefaultDscp() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.IntPtrOutput { return v.DefaultDscp }).(pulumi.IntPtrOutput)
 }
@@ -313,14 +335,15 @@ func (o CiscoBfdFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoBfdFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+// Set the number of polling intervals used to determine tunnel SLA class
+//   - Range: `1`-`6`
+//   - Default value: `6`
 func (o CiscoBfdFeatureTemplateOutput) Multiplier() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.IntPtrOutput { return v.Multiplier }).(pulumi.IntPtrOutput)
 }
@@ -335,8 +358,9 @@ func (o CiscoBfdFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-// value: `600000`
+// Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+//   - Range: `1`-`4294967295`
+//   - Default value: `600000`
 func (o CiscoBfdFeatureTemplateOutput) PollInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoBfdFeatureTemplate) pulumi.IntPtrOutput { return v.PollInterval }).(pulumi.IntPtrOutput)
 }

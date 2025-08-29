@@ -21,14 +21,18 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
     public static final SwitchportFeatureTemplateArgs Empty = new SwitchportFeatureTemplateArgs();
 
     /**
-     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     @Import(name="ageOutTime")
     private @Nullable Output<Integer> ageOutTime;
 
     /**
-     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+     * @return Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+     *   - Range: `0`-`1000000`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> ageOutTime() {
@@ -66,18 +70,16 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -100,14 +102,16 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Module type - Choices: `4`, `8`, `22`, `50`
+     * Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      * 
      */
     @Import(name="moduleType")
     private @Nullable Output<String> moduleType;
 
     /**
-     * @return Module type - Choices: `4`, `8`, `22`, `50`
+     * @return Module type
+     *   - Choices: `4`, `8`, `22`, `50`
      * 
      */
     public Optional<Output<String>> moduleType() {
@@ -130,14 +134,18 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Number of Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     @Import(name="slot")
     private @Nullable Output<Integer> slot;
 
     /**
-     * @return Number of Slots - Range: `0`-`31` - Default value: `0`
+     * @return Number of Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<Integer>> slot() {
@@ -160,14 +168,18 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     @Import(name="subSlot")
     private @Nullable Output<Integer> subSlot;
 
     /**
-     * @return Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+     * @return Number of Sub-Slots
+     *   - Range: `0`-`31`
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<Integer>> subSlot() {
@@ -208,7 +220,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+         *   - Range: `0`-`1000000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -219,7 +233,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+         * @param ageOutTime Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+         *   - Range: `0`-`1000000`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -271,9 +287,8 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -284,9 +299,8 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -296,9 +310,8 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -339,7 +352,8 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param moduleType Module type - Choices: `4`, `8`, `22`, `50`
+         * @param moduleType Module type
+         *   - Choices: `4`, `8`, `22`, `50`
          * 
          * @return builder
          * 
@@ -350,7 +364,8 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param moduleType Module type - Choices: `4`, `8`, `22`, `50`
+         * @param moduleType Module type
+         *   - Choices: `4`, `8`, `22`, `50`
          * 
          * @return builder
          * 
@@ -381,7 +396,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param slot Number of Slots - Range: `0`-`31` - Default value: `0`
+         * @param slot Number of Slots
+         *   - Range: `0`-`31`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -392,7 +409,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param slot Number of Slots - Range: `0`-`31` - Default value: `0`
+         * @param slot Number of Slots
+         *   - Range: `0`-`31`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -433,7 +452,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param subSlot Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+         * @param subSlot Number of Sub-Slots
+         *   - Range: `0`-`31`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -444,7 +465,9 @@ public final class SwitchportFeatureTemplateArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param subSlot Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+         * @param subSlot Number of Sub-Slots
+         *   - Range: `0`-`31`
+         *   - Default value: `0`
          * 
          * @return builder
          * 

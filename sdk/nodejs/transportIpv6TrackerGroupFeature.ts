@@ -51,39 +51,41 @@ export class TransportIpv6TrackerGroupFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      */
-    public readonly trackerBoolean!: pulumi.Output<string | undefined>;
+    declare public readonly trackerBoolean: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly trackerBooleanVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerBooleanVariable: pulumi.Output<string | undefined>;
     /**
      * trackers ref list
      */
-    public readonly trackerElements!: pulumi.Output<outputs.TransportIpv6TrackerGroupFeatureTrackerElement[] | undefined>;
+    declare public readonly trackerElements: pulumi.Output<outputs.TransportIpv6TrackerGroupFeatureTrackerElement[] | undefined>;
     /**
      * Tracker Name
      */
-    public readonly trackerName!: pulumi.Output<string>;
+    declare public readonly trackerName: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly trackerNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trackerNameVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportIpv6TrackerGroupFeature resource with the given unique name, arguments, and options.
@@ -98,31 +100,31 @@ export class TransportIpv6TrackerGroupFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportIpv6TrackerGroupFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["trackerBoolean"] = state ? state.trackerBoolean : undefined;
-            resourceInputs["trackerBooleanVariable"] = state ? state.trackerBooleanVariable : undefined;
-            resourceInputs["trackerElements"] = state ? state.trackerElements : undefined;
-            resourceInputs["trackerName"] = state ? state.trackerName : undefined;
-            resourceInputs["trackerNameVariable"] = state ? state.trackerNameVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["trackerBoolean"] = state?.trackerBoolean;
+            resourceInputs["trackerBooleanVariable"] = state?.trackerBooleanVariable;
+            resourceInputs["trackerElements"] = state?.trackerElements;
+            resourceInputs["trackerName"] = state?.trackerName;
+            resourceInputs["trackerNameVariable"] = state?.trackerNameVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportIpv6TrackerGroupFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.trackerName === undefined) && !opts.urn) {
+            if (args?.trackerName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'trackerName'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["trackerBoolean"] = args ? args.trackerBoolean : undefined;
-            resourceInputs["trackerBooleanVariable"] = args ? args.trackerBooleanVariable : undefined;
-            resourceInputs["trackerElements"] = args ? args.trackerElements : undefined;
-            resourceInputs["trackerName"] = args ? args.trackerName : undefined;
-            resourceInputs["trackerNameVariable"] = args ? args.trackerNameVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["trackerBoolean"] = args?.trackerBoolean;
+            resourceInputs["trackerBooleanVariable"] = args?.trackerBooleanVariable;
+            resourceInputs["trackerElements"] = args?.trackerElements;
+            resourceInputs["trackerName"] = args?.trackerName;
+            resourceInputs["trackerNameVariable"] = args?.trackerNameVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -147,7 +149,9 @@ export interface TransportIpv6TrackerGroupFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      */
     trackerBoolean?: pulumi.Input<string>;
     /**
@@ -189,7 +193,9 @@ export interface TransportIpv6TrackerGroupFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * tracker ref list combine boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list combine boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      */
     trackerBoolean?: pulumi.Input<string>;
     /**

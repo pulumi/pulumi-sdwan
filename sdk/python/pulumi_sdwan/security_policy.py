@@ -46,25 +46,32 @@ class SecurityPolicyArgs:
         The set of arguments for constructing a SecurityPolicy resource.
         :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
-        :param pulumi.Input[_builtins.str] audit_trail: Audit trail - Choices: `on`, `off`
-        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] audit_trail: Audit trail
+                 - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
+                 - Choices: `allow`, `deny`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[_builtins.str] high_speed_logging_server_source_interface: High Speed Logging Source Interface
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN
         :param pulumi.Input[_builtins.bool] imcp_unreachable_allow: ICMP Unreachable Allow
-        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter
+                 - Choices: `on`, `off`
         :param pulumi.Input[_builtins.int] max_incomplete_icmp_limit: Max Incomplete ICMP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_tcp_limit: Max Incomplete TCP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_udp_limit: Max Incomplete UDP Limit
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified` - Default value: `security`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
+                 - Default value: `security`
         :param pulumi.Input[_builtins.str] name: The name of the security policy
         :param pulumi.Input[_builtins.bool] session_reclassify_allow: Session Reclassify Allow
         :param pulumi.Input[_builtins.str] tcp_syn_flood_limit: TCP SYN Flood Limit, value from 1 to 4294967295
         :param pulumi.Input[_builtins.bool] unified_logging: Unified Logging
-        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-               `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy
+                 - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+                 - Default value: `custom`
         """
         pulumi.set(__self__, "definitions", definitions)
         pulumi.set(__self__, "description", description)
@@ -135,7 +142,8 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="auditTrail")
     def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Audit trail - Choices: `on`, `off`
+        Audit trail
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "audit_trail")
 
@@ -147,7 +155,8 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="directInternetApplications")
     def direct_internet_applications(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        Bypass firewall policy and allow all Internet traffic to/from VPN 0
+          - Choices: `allow`, `deny`
         """
         return pulumi.get(self, "direct_internet_applications")
 
@@ -159,7 +168,8 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -240,7 +250,8 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="matchStatisticsPerFilter")
     def match_statistics_per_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Match Statistics per-filter - Choices: `on`, `off`
+        Match Statistics per-filter
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "match_statistics_per_filter")
 
@@ -288,7 +299,9 @@ class SecurityPolicyArgs:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified` - Default value: `security`
+        The policy mode
+          - Choices: `security`, `unified`
+          - Default value: `security`
         """
         return pulumi.get(self, "mode")
 
@@ -348,8 +361,9 @@ class SecurityPolicyArgs:
     @pulumi.getter(name="useCase")
     def use_case(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        The use case of the security policy
+          - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+          - Default value: `custom`
         """
         return pulumi.get(self, "use_case")
 
@@ -385,27 +399,34 @@ class _SecurityPolicyState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SecurityPolicy resources.
-        :param pulumi.Input[_builtins.str] audit_trail: Audit trail - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] audit_trail: Audit trail
+                 - Choices: `on`, `off`
         :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionArgs']]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
-        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
+                 - Choices: `allow`, `deny`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[_builtins.str] high_speed_logging_server_source_interface: High Speed Logging Source Interface
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN
         :param pulumi.Input[_builtins.bool] imcp_unreachable_allow: ICMP Unreachable Allow
-        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter
+                 - Choices: `on`, `off`
         :param pulumi.Input[_builtins.int] max_incomplete_icmp_limit: Max Incomplete ICMP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_tcp_limit: Max Incomplete TCP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_udp_limit: Max Incomplete UDP Limit
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified` - Default value: `security`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
+                 - Default value: `security`
         :param pulumi.Input[_builtins.str] name: The name of the security policy
         :param pulumi.Input[_builtins.bool] session_reclassify_allow: Session Reclassify Allow
         :param pulumi.Input[_builtins.str] tcp_syn_flood_limit: TCP SYN Flood Limit, value from 1 to 4294967295
         :param pulumi.Input[_builtins.bool] unified_logging: Unified Logging
-        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-               `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy
+                 - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+                 - Default value: `custom`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         if audit_trail is not None:
@@ -457,7 +478,8 @@ class _SecurityPolicyState:
     @pulumi.getter(name="auditTrail")
     def audit_trail(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Audit trail - Choices: `on`, `off`
+        Audit trail
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "audit_trail")
 
@@ -493,7 +515,8 @@ class _SecurityPolicyState:
     @pulumi.getter(name="directInternetApplications")
     def direct_internet_applications(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        Bypass firewall policy and allow all Internet traffic to/from VPN 0
+          - Choices: `allow`, `deny`
         """
         return pulumi.get(self, "direct_internet_applications")
 
@@ -505,7 +528,8 @@ class _SecurityPolicyState:
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -586,7 +610,8 @@ class _SecurityPolicyState:
     @pulumi.getter(name="matchStatisticsPerFilter")
     def match_statistics_per_filter(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Match Statistics per-filter - Choices: `on`, `off`
+        Match Statistics per-filter
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "match_statistics_per_filter")
 
@@ -634,7 +659,9 @@ class _SecurityPolicyState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified` - Default value: `security`
+        The policy mode
+          - Choices: `security`, `unified`
+          - Default value: `security`
         """
         return pulumi.get(self, "mode")
 
@@ -694,8 +721,9 @@ class _SecurityPolicyState:
     @pulumi.getter(name="useCase")
     def use_case(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        The use case of the security policy
+          - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+          - Default value: `custom`
         """
         return pulumi.get(self, "use_case")
 
@@ -757,27 +785,34 @@ class SecurityPolicy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] audit_trail: Audit trail - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] audit_trail: Audit trail
+                 - Choices: `on`, `off`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
-        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
+                 - Choices: `allow`, `deny`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[_builtins.str] high_speed_logging_server_source_interface: High Speed Logging Source Interface
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN
         :param pulumi.Input[_builtins.bool] imcp_unreachable_allow: ICMP Unreachable Allow
-        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter
+                 - Choices: `on`, `off`
         :param pulumi.Input[_builtins.int] max_incomplete_icmp_limit: Max Incomplete ICMP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_tcp_limit: Max Incomplete TCP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_udp_limit: Max Incomplete UDP Limit
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified` - Default value: `security`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
+                 - Default value: `security`
         :param pulumi.Input[_builtins.str] name: The name of the security policy
         :param pulumi.Input[_builtins.bool] session_reclassify_allow: Session Reclassify Allow
         :param pulumi.Input[_builtins.str] tcp_syn_flood_limit: TCP SYN Flood Limit, value from 1 to 4294967295
         :param pulumi.Input[_builtins.bool] unified_logging: Unified Logging
-        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-               `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy
+                 - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+                 - Default value: `custom`
         """
         ...
     @overload
@@ -906,27 +941,34 @@ class SecurityPolicy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] audit_trail: Audit trail - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] audit_trail: Audit trail
+                 - Choices: `on`, `off`
         :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityPolicyDefinitionArgs', 'SecurityPolicyDefinitionArgsDict']]]] definitions: List of policy definitions
         :param pulumi.Input[_builtins.str] description: The description of the security policy
-        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
-        :param pulumi.Input[_builtins.str] failure_mode: Failure mode - Choices: `open`, `close`
+        :param pulumi.Input[_builtins.str] direct_internet_applications: Bypass firewall policy and allow all Internet traffic to/from VPN 0
+                 - Choices: `allow`, `deny`
+        :param pulumi.Input[_builtins.str] failure_mode: Failure mode
+                 - Choices: `open`, `close`
         :param pulumi.Input[_builtins.str] high_speed_logging_server_ip: High Speed Logging Server IP
         :param pulumi.Input[_builtins.str] high_speed_logging_server_port: High Speed Logging Port
         :param pulumi.Input[_builtins.str] high_speed_logging_server_source_interface: High Speed Logging Source Interface
         :param pulumi.Input[_builtins.str] high_speed_logging_vpn: High Speed Logging VPN
         :param pulumi.Input[_builtins.bool] imcp_unreachable_allow: ICMP Unreachable Allow
-        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter - Choices: `on`, `off`
+        :param pulumi.Input[_builtins.str] match_statistics_per_filter: Match Statistics per-filter
+                 - Choices: `on`, `off`
         :param pulumi.Input[_builtins.int] max_incomplete_icmp_limit: Max Incomplete ICMP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_tcp_limit: Max Incomplete TCP Limit
         :param pulumi.Input[_builtins.int] max_incomplete_udp_limit: Max Incomplete UDP Limit
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified` - Default value: `security`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
+                 - Default value: `security`
         :param pulumi.Input[_builtins.str] name: The name of the security policy
         :param pulumi.Input[_builtins.bool] session_reclassify_allow: Session Reclassify Allow
         :param pulumi.Input[_builtins.str] tcp_syn_flood_limit: TCP SYN Flood Limit, value from 1 to 4294967295
         :param pulumi.Input[_builtins.bool] unified_logging: Unified Logging
-        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-               `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        :param pulumi.Input[_builtins.str] use_case: The use case of the security policy
+                 - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+                 - Default value: `custom`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -961,7 +1003,8 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="auditTrail")
     def audit_trail(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Audit trail - Choices: `on`, `off`
+        Audit trail
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "audit_trail")
 
@@ -985,7 +1028,8 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="directInternetApplications")
     def direct_internet_applications(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+        Bypass firewall policy and allow all Internet traffic to/from VPN 0
+          - Choices: `allow`, `deny`
         """
         return pulumi.get(self, "direct_internet_applications")
 
@@ -993,7 +1037,8 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="failureMode")
     def failure_mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Failure mode - Choices: `open`, `close`
+        Failure mode
+          - Choices: `open`, `close`
         """
         return pulumi.get(self, "failure_mode")
 
@@ -1046,7 +1091,8 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="matchStatisticsPerFilter")
     def match_statistics_per_filter(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Match Statistics per-filter - Choices: `on`, `off`
+        Match Statistics per-filter
+          - Choices: `on`, `off`
         """
         return pulumi.get(self, "match_statistics_per_filter")
 
@@ -1078,7 +1124,9 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[_builtins.str]:
         """
-        The policy mode - Choices: `security`, `unified` - Default value: `security`
+        The policy mode
+          - Choices: `security`, `unified`
+          - Default value: `security`
         """
         return pulumi.get(self, "mode")
 
@@ -1118,8 +1166,9 @@ class SecurityPolicy(pulumi.CustomResource):
     @pulumi.getter(name="useCase")
     def use_case(self) -> pulumi.Output[_builtins.str]:
         """
-        The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-        `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+        The use case of the security policy
+          - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+          - Default value: `custom`
         """
         return pulumi.get(self, "use_case")
 

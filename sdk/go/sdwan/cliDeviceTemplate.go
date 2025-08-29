@@ -56,7 +56,8 @@ type CliDeviceTemplate struct {
 
 	// CLI configuration
 	CliConfiguration pulumi.StringOutput `pulumi:"cliConfiguration"`
-	// CLI type - Choices: `device`, `intend`
+	// CLI type
+	//   - Choices: `device`, `intend`
 	CliType pulumi.StringOutput `pulumi:"cliType"`
 	// The description of the device template
 	Description pulumi.StringOutput `pulumi:"description"`
@@ -112,7 +113,8 @@ func GetCliDeviceTemplate(ctx *pulumi.Context,
 type cliDeviceTemplateState struct {
 	// CLI configuration
 	CliConfiguration *string `pulumi:"cliConfiguration"`
-	// CLI type - Choices: `device`, `intend`
+	// CLI type
+	//   - Choices: `device`, `intend`
 	CliType *string `pulumi:"cliType"`
 	// The description of the device template
 	Description *string `pulumi:"description"`
@@ -127,7 +129,8 @@ type cliDeviceTemplateState struct {
 type CliDeviceTemplateState struct {
 	// CLI configuration
 	CliConfiguration pulumi.StringPtrInput
-	// CLI type - Choices: `device`, `intend`
+	// CLI type
+	//   - Choices: `device`, `intend`
 	CliType pulumi.StringPtrInput
 	// The description of the device template
 	Description pulumi.StringPtrInput
@@ -146,7 +149,8 @@ func (CliDeviceTemplateState) ElementType() reflect.Type {
 type cliDeviceTemplateArgs struct {
 	// CLI configuration
 	CliConfiguration string `pulumi:"cliConfiguration"`
-	// CLI type - Choices: `device`, `intend`
+	// CLI type
+	//   - Choices: `device`, `intend`
 	CliType string `pulumi:"cliType"`
 	// The description of the device template
 	Description string `pulumi:"description"`
@@ -160,7 +164,8 @@ type cliDeviceTemplateArgs struct {
 type CliDeviceTemplateArgs struct {
 	// CLI configuration
 	CliConfiguration pulumi.StringInput
-	// CLI type - Choices: `device`, `intend`
+	// CLI type
+	//   - Choices: `device`, `intend`
 	CliType pulumi.StringInput
 	// The description of the device template
 	Description pulumi.StringInput
@@ -262,7 +267,8 @@ func (o CliDeviceTemplateOutput) CliConfiguration() pulumi.StringOutput {
 	return o.ApplyT(func(v *CliDeviceTemplate) pulumi.StringOutput { return v.CliConfiguration }).(pulumi.StringOutput)
 }
 
-// CLI type - Choices: `device`, `intend`
+// CLI type
+//   - Choices: `device`, `intend`
 func (o CliDeviceTemplateOutput) CliType() pulumi.StringOutput {
 	return o.ApplyT(func(v *CliDeviceTemplate) pulumi.StringOutput { return v.CliType }).(pulumi.StringOutput)
 }

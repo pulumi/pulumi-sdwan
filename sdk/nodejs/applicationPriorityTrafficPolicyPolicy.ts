@@ -51,32 +51,32 @@ export class ApplicationPriorityTrafficPolicyPolicy extends pulumi.CustomResourc
     /**
      * - Choices: `drop`, `accept`
      */
-    public readonly defaultAction!: pulumi.Output<string>;
+    declare public readonly defaultAction: pulumi.Output<string>;
     /**
      * The description of the Policy
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * - Choices: `service`, `tunnel`, `all`
      */
-    public readonly direction!: pulumi.Output<string>;
+    declare public readonly direction: pulumi.Output<string>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Traffic policy sequence list
      */
-    public readonly sequences!: pulumi.Output<outputs.ApplicationPriorityTrafficPolicyPolicySequence[] | undefined>;
+    declare public readonly sequences: pulumi.Output<outputs.ApplicationPriorityTrafficPolicyPolicySequence[] | undefined>;
     /**
      * The version of the Policy
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
-    public readonly vpns!: pulumi.Output<string[]>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
+    declare public readonly vpns: pulumi.Output<string[]>;
 
     /**
      * Create a ApplicationPriorityTrafficPolicyPolicy resource with the given unique name, arguments, and options.
@@ -91,35 +91,35 @@ export class ApplicationPriorityTrafficPolicyPolicy extends pulumi.CustomResourc
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationPriorityTrafficPolicyPolicyState | undefined;
-            resourceInputs["defaultAction"] = state ? state.defaultAction : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["direction"] = state ? state.direction : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["sequences"] = state ? state.sequences : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vpns"] = state ? state.vpns : undefined;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["direction"] = state?.direction;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["sequences"] = state?.sequences;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vpns"] = state?.vpns;
         } else {
             const args = argsOrState as ApplicationPriorityTrafficPolicyPolicyArgs | undefined;
-            if ((!args || args.defaultAction === undefined) && !opts.urn) {
+            if (args?.defaultAction === undefined && !opts.urn) {
                 throw new Error("Missing required property 'defaultAction'");
             }
-            if ((!args || args.direction === undefined) && !opts.urn) {
+            if (args?.direction === undefined && !opts.urn) {
                 throw new Error("Missing required property 'direction'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.vpns === undefined) && !opts.urn) {
+            if (args?.vpns === undefined && !opts.urn) {
                 throw new Error("Missing required property 'vpns'");
             }
-            resourceInputs["defaultAction"] = args ? args.defaultAction : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["direction"] = args ? args.direction : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["sequences"] = args ? args.sequences : undefined;
-            resourceInputs["vpns"] = args ? args.vpns : undefined;
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["direction"] = args?.direction;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["sequences"] = args?.sequences;
+            resourceInputs["vpns"] = args?.vpns;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

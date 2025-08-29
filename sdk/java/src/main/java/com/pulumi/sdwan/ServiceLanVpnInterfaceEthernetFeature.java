@@ -72,14 +72,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.aclIpv6IngressPolicyId);
     }
     /**
-     * Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      * 
      */
     @Export(name="aclShapingRate", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> aclShapingRate;
 
     /**
-     * @return Shaping Rate (Kbps) - Range: `8`-`100000000`
+     * @return Shaping Rate (Kbps)
+     *   - Range: `8`-`100000000`
      * 
      */
     public Output<Optional<Integer>> aclShapingRate() {
@@ -100,14 +102,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.aclShapingRateVariable);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     @Export(name="arpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2147483`
+     *   - Default value: `1200`
      * 
      */
     public Output<Optional<Integer>> arpTimeout() {
@@ -184,14 +190,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.description);
     }
     /**
-     * Duplex mode - Choices: `full`, `half`, `auto`
+     * Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     @Export(name="duplex", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> duplex;
 
     /**
-     * @return Duplex mode - Choices: `full`, `half`, `auto`
+     * @return Duplex mode
+     *   - Choices: `full`, `half`, `auto`
      * 
      */
     public Output<Optional<String>> duplex() {
@@ -240,14 +248,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return this.featureProfileId;
     }
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Export(name="icmpRedirectDisable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> icmpRedirectDisable() {
@@ -288,14 +298,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="interfaceMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> interfaceMtu() {
@@ -336,14 +350,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipDirectedBroadcast", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipDirectedBroadcast() {
@@ -364,16 +380,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-     * &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -422,14 +440,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * DHCP Distance - Range: `1`-`65536`
+     * DHCP Distance
+     *   - Range: `1`-`65536`
      * 
      */
     @Export(name="ipv4DhcpDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance - Range: `1`-`65536`
+     * @return DHCP Distance
+     *   - Range: `1`-`65536`
      * 
      */
     public Output<Optional<Integer>> ipv4DhcpDistance() {
@@ -478,14 +498,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4DhcpHelpers);
     }
     /**
-     * enable Network Address Translation on this interface - Default value: `false`
+     * enable Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv4Nat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4Nat;
 
     /**
-     * @return enable Network Address Translation on this interface - Default value: `false`
+     * @return enable Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv4Nat() {
@@ -520,14 +542,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatLoopbackVariable);
     }
     /**
-     * NAT Overload - Default value: `true`
+     * NAT Overload
+     *   - Default value: `true`
      * 
      */
     @Export(name="ipv4NatOverload", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv4NatOverload;
 
     /**
-     * @return NAT Overload - Default value: `true`
+     * @return NAT Overload
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> ipv4NatOverload() {
@@ -548,14 +572,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatOverloadVariable);
     }
     /**
-     * NAT Pool Prefix Length - Range: `1`-`32`
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      * 
      */
     @Export(name="ipv4NatPrefixLength", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4NatPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length - Range: `1`-`32`
+     * @return NAT Pool Prefix Length
+     *   - Range: `1`-`32`
      * 
      */
     public Output<Optional<Integer>> ipv4NatPrefixLength() {
@@ -632,14 +658,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatRangeStartVariable);
     }
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     @Export(name="ipv4NatTcpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4NatTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     public Output<Optional<Integer>> ipv4NatTcpTimeout() {
@@ -660,14 +690,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatTcpTimeoutVariable);
     }
     /**
-     * NAT Type - Choices: `pool`, `loopback`
+     * NAT Type
+     *   - Choices: `pool`, `loopback`
      * 
      */
     @Export(name="ipv4NatType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4NatType;
 
     /**
-     * @return NAT Type - Choices: `pool`, `loopback`
+     * @return NAT Type
+     *   - Choices: `pool`, `loopback`
      * 
      */
     public Output<Optional<String>> ipv4NatType() {
@@ -688,14 +720,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatTypeVariable);
     }
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ipv4NatUdpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4NatUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ipv4NatUdpTimeout() {
@@ -730,22 +766,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Export(name="ipv4SubnetMask", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMask() {
@@ -836,14 +866,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv6DhcpSecondaryAddresses);
     }
     /**
-     * enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipv6Nat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipv6Nat;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface - Default value: `false`
+     * @return enable Network Address Translation ipv6 on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipv6Nat() {
@@ -878,14 +910,18 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv6Vrrps);
     }
     /**
-     * Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     @Export(name="loadInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> loadInterval;
 
     /**
-     * @return Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+     * @return Interval for interface load calculation
+     *   - Range: `30`-`600`
+     *   - Default value: `30`
      * 
      */
     public Output<Optional<Integer>> loadInterval() {
@@ -934,14 +970,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.macAddressVariable);
     }
     /**
-     * Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     @Export(name="mediaType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mediaType;
 
     /**
-     * @return Media type - Choices: `auto-select`, `rj45`, `sfp`
+     * @return Media type
+     *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
     public Output<Optional<String>> mediaType() {
@@ -976,14 +1014,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return this.name;
     }
     /**
-     * NAT64 on this interface - Default value: `false`
+     * NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     @Export(name="nat64", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> nat64;
 
     /**
-     * @return NAT64 on this interface - Default value: `false`
+     * @return NAT64 on this interface
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> nat64() {
@@ -1032,14 +1072,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speed;
 
     /**
-     * @return Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
      * 
      */
     public Output<Optional<String>> speed() {
@@ -1074,14 +1116,16 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.staticNats);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMss", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMss() {
@@ -1144,28 +1188,32 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecEnableEnforcedPropogation);
     }
     /**
-     * Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      * 
      */
     @Export(name="trustsecEnableSgtPropogation", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> trustsecEnableSgtPropogation;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS - Default value: `false`
+     * @return Indicates that the interface is trustworthy for CTS
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> trustsecEnableSgtPropogation() {
         return Codegen.optional(this.trustsecEnableSgtPropogation);
     }
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     @Export(name="trustsecEnforcedSecurityGroupTag", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> trustsecEnforcedSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519 - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     public Output<Optional<Integer>> trustsecEnforcedSecurityGroupTag() {
@@ -1186,28 +1234,32 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.trustsecEnforcedSecurityGroupTagVariable);
     }
     /**
-     * Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      * 
      */
     @Export(name="trustsecPropogate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> trustsecPropogate;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+     * @return Enables the interface for CTS SGT authorization and forwarding
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> trustsecPropogate() {
         return Codegen.optional(this.trustsecPropogate);
     }
     /**
-     * SGT value between 2 and 65519 - Range: `2`-`65519`
+     * SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     @Export(name="trustsecSecurityGroupTag", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> trustsecSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519 - Range: `2`-`65519`
+     * @return SGT value between 2 and 65519
+     *   - Range: `2`-`65519`
      * 
      */
     public Output<Optional<Integer>> trustsecSecurityGroupTag() {

@@ -24,7 +24,8 @@ namespace Pulumi.Sdwan
     public partial class CustomControlTopologyPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        /// Default action, either `accept` or `reject`
+        ///   - Choices: `accept`, `reject`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -106,7 +107,8 @@ namespace Pulumi.Sdwan
     public sealed class CustomControlTopologyPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        /// Default action, either `accept` or `reject`
+        ///   - Choices: `accept`, `reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -144,7 +146,8 @@ namespace Pulumi.Sdwan
     public sealed class CustomControlTopologyPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        /// Default action, either `accept` or `reject`
+        ///   - Choices: `accept`, `reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

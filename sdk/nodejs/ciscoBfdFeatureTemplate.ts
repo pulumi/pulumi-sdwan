@@ -49,54 +49,58 @@ export class CiscoBfdFeatureTemplate extends pulumi.CustomResource {
     /**
      * Set color that identifies the WAN transport tunnel
      */
-    public readonly colors!: pulumi.Output<outputs.CiscoBfdFeatureTemplateColor[] | undefined>;
+    declare public readonly colors: pulumi.Output<outputs.CiscoBfdFeatureTemplateColor[] | undefined>;
     /**
-     * Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+     * Set default DSCP value for BFD packets
+     *   - Range: `0`-`63`
+     *   - Default value: `48`
      */
-    public readonly defaultDscp!: pulumi.Output<number | undefined>;
+    declare public readonly defaultDscp: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly defaultDscpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly defaultDscpVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+     * Set the number of polling intervals used to determine tunnel SLA class
+     *   - Range: `1`-`6`
+     *   - Default value: `6`
      */
-    public readonly multiplier!: pulumi.Output<number | undefined>;
+    declare public readonly multiplier: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly multiplierVariable!: pulumi.Output<string | undefined>;
+    declare public readonly multiplierVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-     * value: `600000`
+     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
-    public readonly pollInterval!: pulumi.Output<number | undefined>;
+    declare public readonly pollInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly pollIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly pollIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoBfdFeatureTemplate resource with the given unique name, arguments, and options.
@@ -111,36 +115,36 @@ export class CiscoBfdFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoBfdFeatureTemplateState | undefined;
-            resourceInputs["colors"] = state ? state.colors : undefined;
-            resourceInputs["defaultDscp"] = state ? state.defaultDscp : undefined;
-            resourceInputs["defaultDscpVariable"] = state ? state.defaultDscpVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["multiplier"] = state ? state.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = state ? state.multiplierVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["pollInterval"] = state ? state.pollInterval : undefined;
-            resourceInputs["pollIntervalVariable"] = state ? state.pollIntervalVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["colors"] = state?.colors;
+            resourceInputs["defaultDscp"] = state?.defaultDscp;
+            resourceInputs["defaultDscpVariable"] = state?.defaultDscpVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["multiplier"] = state?.multiplier;
+            resourceInputs["multiplierVariable"] = state?.multiplierVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["pollInterval"] = state?.pollInterval;
+            resourceInputs["pollIntervalVariable"] = state?.pollIntervalVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoBfdFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["colors"] = args ? args.colors : undefined;
-            resourceInputs["defaultDscp"] = args ? args.defaultDscp : undefined;
-            resourceInputs["defaultDscpVariable"] = args ? args.defaultDscpVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["multiplier"] = args ? args.multiplier : undefined;
-            resourceInputs["multiplierVariable"] = args ? args.multiplierVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["pollInterval"] = args ? args.pollInterval : undefined;
-            resourceInputs["pollIntervalVariable"] = args ? args.pollIntervalVariable : undefined;
+            resourceInputs["colors"] = args?.colors;
+            resourceInputs["defaultDscp"] = args?.defaultDscp;
+            resourceInputs["defaultDscpVariable"] = args?.defaultDscpVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["multiplier"] = args?.multiplier;
+            resourceInputs["multiplierVariable"] = args?.multiplierVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["pollInterval"] = args?.pollInterval;
+            resourceInputs["pollIntervalVariable"] = args?.pollIntervalVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -158,7 +162,9 @@ export interface CiscoBfdFeatureTemplateState {
      */
     colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[]>;
     /**
-     * Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+     * Set default DSCP value for BFD packets
+     *   - Range: `0`-`63`
+     *   - Default value: `48`
      */
     defaultDscp?: pulumi.Input<number>;
     /**
@@ -170,13 +176,14 @@ export interface CiscoBfdFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+     * Set the number of polling intervals used to determine tunnel SLA class
+     *   - Range: `1`-`6`
+     *   - Default value: `6`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -188,8 +195,9 @@ export interface CiscoBfdFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-     * value: `600000`
+     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
     pollInterval?: pulumi.Input<number>;
     /**
@@ -215,7 +223,9 @@ export interface CiscoBfdFeatureTemplateArgs {
      */
     colors?: pulumi.Input<pulumi.Input<inputs.CiscoBfdFeatureTemplateColor>[]>;
     /**
-     * Set default DSCP value for BFD packets - Range: `0`-`63` - Default value: `48`
+     * Set default DSCP value for BFD packets
+     *   - Range: `0`-`63`
+     *   - Default value: `48`
      */
     defaultDscp?: pulumi.Input<number>;
     /**
@@ -227,13 +237,14 @@ export interface CiscoBfdFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set the number of polling intervals used to determine tunnel SLA class - Range: `1`-`6` - Default value: `6`
+     * Set the number of polling intervals used to determine tunnel SLA class
+     *   - Range: `1`-`6`
+     *   - Default value: `6`
      */
     multiplier?: pulumi.Input<number>;
     /**
@@ -245,8 +256,9 @@ export interface CiscoBfdFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics - Range: `1`-`4294967295` - Default
-     * value: `600000`
+     * Set how often BFD polls tunnels to collect packet latency, loss, and statistics
+     *   - Range: `1`-`4294967295`
+     *   - Default value: `600000`
      */
     pollInterval?: pulumi.Input<number>;
     /**

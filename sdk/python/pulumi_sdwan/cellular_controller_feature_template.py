@@ -38,20 +38,23 @@ class CellularControllerFeatureTemplateArgs:
         """
         The set of arguments for constructing a CellularControllerFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] cellular_interface_id: Cellular interface name
         :param pulumi.Input[_builtins.str] cellular_interface_id_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]] data_profiles: Data Profile List
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -97,9 +100,8 @@ class CellularControllerFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -147,7 +149,8 @@ class CellularControllerFeatureTemplateArgs:
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -183,7 +186,8 @@ class CellularControllerFeatureTemplateArgs:
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`255`
+        Set primary SIM slot
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -207,7 +211,8 @@ class CellularControllerFeatureTemplateArgs:
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -231,7 +236,8 @@ class CellularControllerFeatureTemplateArgs:
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 
@@ -277,17 +283,20 @@ class _CellularControllerFeatureTemplateState:
         :param pulumi.Input[_builtins.str] cellular_interface_id_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CellularControllerFeatureTemplateDataProfileArgs']]] data_profiles: Data Profile List
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -377,9 +386,8 @@ class _CellularControllerFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -391,7 +399,8 @@ class _CellularControllerFeatureTemplateState:
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -427,7 +436,8 @@ class _CellularControllerFeatureTemplateState:
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`255`
+        Set primary SIM slot
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -451,7 +461,8 @@ class _CellularControllerFeatureTemplateState:
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -475,7 +486,8 @@ class _CellularControllerFeatureTemplateState:
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 
@@ -559,17 +571,20 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cellular_interface_id_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]] data_profiles: Data Profile List
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         """
         ...
@@ -685,17 +700,20 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cellular_interface_id_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CellularControllerFeatureTemplateDataProfileArgs', 'CellularControllerFeatureTemplateDataProfileArgsDict']]]] data_profiles: Data Profile List
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`255`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`255`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -758,9 +776,8 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -768,7 +785,8 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -792,7 +810,8 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`255`
+        Set primary SIM slot
+          - Range: `0`-`255`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -808,7 +827,8 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -824,7 +844,8 @@ class CellularControllerFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 

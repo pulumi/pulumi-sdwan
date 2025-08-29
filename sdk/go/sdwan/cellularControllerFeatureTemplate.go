@@ -33,25 +33,28 @@ type CellularControllerFeatureTemplate struct {
 	DataProfiles CellularControllerFeatureTemplateDataProfileArrayOutput `pulumi:"dataProfiles"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrOutput `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrOutput `pulumi:"firmwareAutoSimVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`255`
+	// Set primary SIM slot
+	//   - Range: `0`-`255`
 	PrimarySimSlot pulumi.IntPtrOutput `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrOutput `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrOutput `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrOutput `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrOutput `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrOutput `pulumi:"simFailoverTimeoutVariable"`
@@ -105,25 +108,28 @@ type cellularControllerFeatureTemplateState struct {
 	DataProfiles []CellularControllerFeatureTemplateDataProfile `pulumi:"dataProfiles"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim *bool `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable *string `pulumi:"firmwareAutoSimVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`255`
+	// Set primary SIM slot
+	//   - Range: `0`-`255`
 	PrimarySimSlot *int `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable *string `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries *int `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable *string `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout *int `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable *string `pulumi:"simFailoverTimeoutVariable"`
@@ -142,25 +148,28 @@ type CellularControllerFeatureTemplateState struct {
 	DataProfiles CellularControllerFeatureTemplateDataProfileArrayInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrInput
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set primary SIM slot - Range: `0`-`255`
+	// Set primary SIM slot
+	//   - Range: `0`-`255`
 	PrimarySimSlot pulumi.IntPtrInput
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrInput
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrInput
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrInput
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrInput
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrInput
@@ -183,25 +192,28 @@ type cellularControllerFeatureTemplateArgs struct {
 	DataProfiles []CellularControllerFeatureTemplateDataProfile `pulumi:"dataProfiles"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim *bool `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable *string `pulumi:"firmwareAutoSimVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`255`
+	// Set primary SIM slot
+	//   - Range: `0`-`255`
 	PrimarySimSlot *int `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable *string `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries *int `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable *string `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout *int `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable *string `pulumi:"simFailoverTimeoutVariable"`
@@ -217,25 +229,28 @@ type CellularControllerFeatureTemplateArgs struct {
 	DataProfiles CellularControllerFeatureTemplateDataProfileArrayInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrInput
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Set primary SIM slot - Range: `0`-`255`
+	// Set primary SIM slot
+	//   - Range: `0`-`255`
 	PrimarySimSlot pulumi.IntPtrInput
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrInput
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrInput
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrInput
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrInput
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrInput
@@ -352,14 +367,14 @@ func (o CellularControllerFeatureTemplateOutput) Description() pulumi.StringOutp
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CellularControllerFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable/Disable Firmware Auto Sim - Default value: `true`
+// Enable/Disable Firmware Auto Sim
+//   - Default value: `true`
 func (o CellularControllerFeatureTemplateOutput) FirmwareAutoSim() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.BoolPtrOutput { return v.FirmwareAutoSim }).(pulumi.BoolPtrOutput)
 }
@@ -374,7 +389,8 @@ func (o CellularControllerFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set primary SIM slot - Range: `0`-`255`
+// Set primary SIM slot
+//   - Range: `0`-`255`
 func (o CellularControllerFeatureTemplateOutput) PrimarySimSlot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.IntPtrOutput { return v.PrimarySimSlot }).(pulumi.IntPtrOutput)
 }
@@ -384,7 +400,8 @@ func (o CellularControllerFeatureTemplateOutput) PrimarySimSlotVariable() pulumi
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.StringPtrOutput { return v.PrimarySimSlotVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set SIM failover retries - Range: `0`-`65535`
+// Set SIM failover retries
+//   - Range: `0`-`65535`
 func (o CellularControllerFeatureTemplateOutput) SimFailoverRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.IntPtrOutput { return v.SimFailoverRetries }).(pulumi.IntPtrOutput)
 }
@@ -394,7 +411,8 @@ func (o CellularControllerFeatureTemplateOutput) SimFailoverRetriesVariable() pu
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.StringPtrOutput { return v.SimFailoverRetriesVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set SIM failover timeout in minutes - Range: `3`-`7`
+// Set SIM failover timeout in minutes
+//   - Range: `3`-`7`
 func (o CellularControllerFeatureTemplateOutput) SimFailoverTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CellularControllerFeatureTemplate) pulumi.IntPtrOutput { return v.SimFailoverTimeout }).(pulumi.IntPtrOutput)
 }

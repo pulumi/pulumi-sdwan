@@ -32,13 +32,15 @@ class ConfigurationGroupArgs:
         """
         The set of arguments for constructing a ConfigurationGroup resource.
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupDeviceArgs']]] devices: List of devices
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]] topology_devices: List of topology device types
-        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site - Range: `1`-`20`
+        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
+                 - Range: `1`-`20`
         """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "solution", solution)
@@ -71,7 +73,8 @@ class ConfigurationGroupArgs:
     @pulumi.getter
     def solution(self) -> pulumi.Input[_builtins.str]:
         """
-        Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        Type of solution
+          - Choices: `mobility`, `sdwan`, `nfvirtual`
         """
         return pulumi.get(self, "solution")
 
@@ -143,7 +146,8 @@ class ConfigurationGroupArgs:
     @pulumi.getter(name="topologySiteDevices")
     def topology_site_devices(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of devices per site - Range: `1`-`20`
+        Number of devices per site
+          - Range: `1`-`20`
         """
         return pulumi.get(self, "topology_site_devices")
 
@@ -170,9 +174,11 @@ class _ConfigurationGroupState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input['ConfigurationGroupTopologyDeviceArgs']]] topology_devices: List of topology device types
-        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site - Range: `1`-`20`
+        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
+                 - Range: `1`-`20`
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -255,7 +261,8 @@ class _ConfigurationGroupState:
     @pulumi.getter
     def solution(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        Type of solution
+          - Choices: `mobility`, `sdwan`, `nfvirtual`
         """
         return pulumi.get(self, "solution")
 
@@ -279,7 +286,8 @@ class _ConfigurationGroupState:
     @pulumi.getter(name="topologySiteDevices")
     def topology_site_devices(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of devices per site - Range: `1`-`20`
+        Number of devices per site
+          - Range: `1`-`20`
         """
         return pulumi.get(self, "topology_site_devices")
 
@@ -342,9 +350,11 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
-        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site - Range: `1`-`20`
+        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
+                 - Range: `1`-`20`
         """
         ...
     @overload
@@ -458,9 +468,11 @@ class ConfigurationGroup(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_profile_ids: List of feature profile IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] feature_versions: List of all associated feature versions
         :param pulumi.Input[_builtins.str] name: The name of the configuration group
-        :param pulumi.Input[_builtins.str] solution: Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        :param pulumi.Input[_builtins.str] solution: Type of solution
+                 - Choices: `mobility`, `sdwan`, `nfvirtual`
         :param pulumi.Input[Sequence[pulumi.Input[Union['ConfigurationGroupTopologyDeviceArgs', 'ConfigurationGroupTopologyDeviceArgsDict']]]] topology_devices: List of topology device types
-        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site - Range: `1`-`20`
+        :param pulumi.Input[_builtins.int] topology_site_devices: Number of devices per site
+                 - Range: `1`-`20`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -520,7 +532,8 @@ class ConfigurationGroup(pulumi.CustomResource):
     @pulumi.getter
     def solution(self) -> pulumi.Output[_builtins.str]:
         """
-        Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+        Type of solution
+          - Choices: `mobility`, `sdwan`, `nfvirtual`
         """
         return pulumi.get(self, "solution")
 
@@ -536,7 +549,8 @@ class ConfigurationGroup(pulumi.CustomResource):
     @pulumi.getter(name="topologySiteDevices")
     def topology_site_devices(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Number of devices per site - Range: `1`-`20`
+        Number of devices per site
+          - Range: `1`-`20`
         """
         return pulumi.get(self, "topology_site_devices")
 

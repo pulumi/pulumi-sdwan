@@ -67,8 +67,8 @@ type TransportCellularProfileFeature struct {
 	AccessPointName pulumi.StringPtrOutput `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrOutput `pulumi:"accessPointNameVariable"`
-	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-	// `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+	//   - Choices: `pap`, `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrOutput `pulumi:"authenticationType"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrOutput `pulumi:"authenticationTypeVariable"`
@@ -82,11 +82,14 @@ type TransportCellularProfileFeature struct {
 	NoOverwrite pulumi.BoolPtrOutput `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrOutput `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrOutput `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrOutput `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrOutput `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrOutput `pulumi:"profileIdVariable"`
@@ -98,7 +101,8 @@ type TransportCellularProfileFeature struct {
 	ProfileUsername pulumi.StringPtrOutput `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrOutput `pulumi:"profileUsernameVariable"`
-	// Require authentication type - Default value: `false`
+	// Require authentication type
+	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrOutput `pulumi:"requiresAuthentication"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -141,8 +145,8 @@ type transportCellularProfileFeatureState struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-	// `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+	//   - Choices: `pap`, `chap`, `papChap`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
@@ -156,11 +160,14 @@ type transportCellularProfileFeatureState struct {
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable *string `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -172,7 +179,8 @@ type transportCellularProfileFeatureState struct {
 	ProfileUsername *string `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable *string `pulumi:"profileUsernameVariable"`
-	// Require authentication type - Default value: `false`
+	// Require authentication type
+	//   - Default value: `false`
 	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
@@ -183,8 +191,8 @@ type TransportCellularProfileFeatureState struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-	// `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+	//   - Choices: `pap`, `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrInput
@@ -198,11 +206,14 @@ type TransportCellularProfileFeatureState struct {
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -214,7 +225,8 @@ type TransportCellularProfileFeatureState struct {
 	ProfileUsername pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrInput
-	// Require authentication type - Default value: `false`
+	// Require authentication type
+	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
@@ -229,8 +241,8 @@ type transportCellularProfileFeatureArgs struct {
 	AccessPointName *string `pulumi:"accessPointName"`
 	// Variable name
 	AccessPointNameVariable *string `pulumi:"accessPointNameVariable"`
-	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-	// `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+	//   - Choices: `pap`, `chap`, `papChap`
 	AuthenticationType *string `pulumi:"authenticationType"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable *string `pulumi:"authenticationTypeVariable"`
@@ -244,11 +256,14 @@ type transportCellularProfileFeatureArgs struct {
 	NoOverwrite *bool `pulumi:"noOverwrite"`
 	// Variable name
 	NoOverwriteVariable *string `pulumi:"noOverwriteVariable"`
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType *string `pulumi:"packetDataNetworkType"`
 	// Variable name
 	PacketDataNetworkTypeVariable *string `pulumi:"packetDataNetworkTypeVariable"`
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId *int `pulumi:"profileId"`
 	// Variable name
 	ProfileIdVariable *string `pulumi:"profileIdVariable"`
@@ -260,7 +275,8 @@ type transportCellularProfileFeatureArgs struct {
 	ProfileUsername *string `pulumi:"profileUsername"`
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable *string `pulumi:"profileUsernameVariable"`
-	// Require authentication type - Default value: `false`
+	// Require authentication type
+	//   - Default value: `false`
 	RequiresAuthentication *bool `pulumi:"requiresAuthentication"`
 }
 
@@ -270,8 +286,8 @@ type TransportCellularProfileFeatureArgs struct {
 	AccessPointName pulumi.StringPtrInput
 	// Variable name
 	AccessPointNameVariable pulumi.StringPtrInput
-	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-	// `chap`, `papChap`
+	// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+	//   - Choices: `pap`, `chap`, `papChap`
 	AuthenticationType pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	AuthenticationTypeVariable pulumi.StringPtrInput
@@ -285,11 +301,14 @@ type TransportCellularProfileFeatureArgs struct {
 	NoOverwrite pulumi.BoolPtrInput
 	// Variable name
 	NoOverwriteVariable pulumi.StringPtrInput
-	// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+	// Set packet data network type
+	//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+	//   - Default value: `ipv4`
 	PacketDataNetworkType pulumi.StringPtrInput
 	// Variable name
 	PacketDataNetworkTypeVariable pulumi.StringPtrInput
-	// Set Profile ID - Range: `1`-`16`
+	// Set Profile ID
+	//   - Range: `1`-`16`
 	ProfileId pulumi.IntPtrInput
 	// Variable name
 	ProfileIdVariable pulumi.StringPtrInput
@@ -301,7 +320,8 @@ type TransportCellularProfileFeatureArgs struct {
 	ProfileUsername pulumi.StringPtrInput
 	// Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
 	ProfileUsernameVariable pulumi.StringPtrInput
-	// Require authentication type - Default value: `false`
+	// Require authentication type
+	//   - Default value: `false`
 	RequiresAuthentication pulumi.BoolPtrInput
 }
 
@@ -402,8 +422,8 @@ func (o TransportCellularProfileFeatureOutput) AccessPointNameVariable() pulumi.
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AccessPointNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-// `chap`, `papChap`
+// Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+//   - Choices: `pap`, `chap`, `papChap`
 func (o TransportCellularProfileFeatureOutput) AuthenticationType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.AuthenticationType }).(pulumi.StringPtrOutput)
 }
@@ -438,7 +458,9 @@ func (o TransportCellularProfileFeatureOutput) NoOverwriteVariable() pulumi.Stri
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.NoOverwriteVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+// Set packet data network type
+//   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+//   - Default value: `ipv4`
 func (o TransportCellularProfileFeatureOutput) PacketDataNetworkType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.PacketDataNetworkType }).(pulumi.StringPtrOutput)
 }
@@ -450,7 +472,8 @@ func (o TransportCellularProfileFeatureOutput) PacketDataNetworkTypeVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set Profile ID - Range: `1`-`16`
+// Set Profile ID
+//   - Range: `1`-`16`
 func (o TransportCellularProfileFeatureOutput) ProfileId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.IntPtrOutput { return v.ProfileId }).(pulumi.IntPtrOutput)
 }
@@ -480,7 +503,8 @@ func (o TransportCellularProfileFeatureOutput) ProfileUsernameVariable() pulumi.
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.StringPtrOutput { return v.ProfileUsernameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Require authentication type - Default value: `false`
+// Require authentication type
+//   - Default value: `false`
 func (o TransportCellularProfileFeatureOutput) RequiresAuthentication() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportCellularProfileFeature) pulumi.BoolPtrOutput { return v.RequiresAuthentication }).(pulumi.BoolPtrOutput)
 }

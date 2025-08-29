@@ -31,7 +31,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoBgpFeatureTemplateAddressFamily>> AddressFamilies { get; private set; } = null!;
 
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("alwaysCompareMed")]
         public Output<bool?> AlwaysCompareMed { get; private set; } = null!;
@@ -55,7 +56,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AsNumberVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("compareRouterId")]
         public Output<bool?> CompareRouterId { get; private set; } = null!;
@@ -73,7 +75,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("deterministicMed")]
         public Output<bool?> DeterministicMed { get; private set; } = null!;
@@ -85,15 +88,16 @@ namespace Pulumi.Sdwan
         public Output<string?> DeterministicMedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Output("distanceExternal")]
         public Output<int?> DistanceExternal { get; private set; } = null!;
@@ -105,7 +109,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DistanceExternalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Output("distanceInternal")]
         public Output<int?> DistanceInternal { get; private set; } = null!;
@@ -117,7 +123,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DistanceInternalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Output("distanceLocal")]
         public Output<int?> DistanceLocal { get; private set; } = null!;
@@ -129,7 +137,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DistanceLocalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        /// Set the interval when BGP considers a neighbor to be down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Output("holdtime")]
         public Output<int?> Holdtime { get; private set; } = null!;
@@ -165,7 +175,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoBgpFeatureTemplateIpv6RouteTarget>> Ipv6RouteTargets { get; private set; } = null!;
 
         /// <summary>
-        /// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Set how often keepalive messages are sent to BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Output("keepalive")]
         public Output<int?> Keepalive { get; private set; } = null!;
@@ -177,7 +189,8 @@ namespace Pulumi.Sdwan
         public Output<string?> KeepaliveVariable { get; private set; } = null!;
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Output("missingMedWorst")]
         public Output<bool?> MissingMedWorst { get; private set; } = null!;
@@ -195,7 +208,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoBgpFeatureTemplateMplsInterface>> MplsInterfaces { get; private set; } = null!;
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Output("multipathRelax")]
         public Output<bool?> MultipathRelax { get; private set; } = null!;
@@ -213,7 +227,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path 
+        ///   - Default value: `false`
         /// </summary>
         [Output("propagateAspath")]
         public Output<bool?> PropagateAspath { get; private set; } = null!;
@@ -225,7 +240,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PropagateAspathVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Output("propagateCommunity")]
         public Output<bool?> PropagateCommunity { get; private set; } = null!;
@@ -249,7 +265,8 @@ namespace Pulumi.Sdwan
         public Output<string?> RouterIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable BGP - Default value: `false`
+        /// Enable or disable BGP
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -331,7 +348,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -355,7 +373,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -373,7 +392,8 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -388,9 +408,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -399,7 +418,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("distanceExternal")]
         public Input<int>? DistanceExternal { get; set; }
@@ -411,7 +432,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Input("distanceInternal")]
         public Input<int>? DistanceInternal { get; set; }
@@ -423,7 +446,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceInternalVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("distanceLocal")]
         public Input<int>? DistanceLocal { get; set; }
@@ -435,7 +460,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceLocalVariable { get; set; }
 
         /// <summary>
-        /// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        /// Set the interval when BGP considers a neighbor to be down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -495,7 +522,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Set how often keepalive messages are sent to BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Input("keepalive")]
         public Input<int>? Keepalive { get; set; }
@@ -507,7 +536,8 @@ namespace Pulumi.Sdwan
         public Input<string>? KeepaliveVariable { get; set; }
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("missingMedWorst")]
         public Input<bool>? MissingMedWorst { get; set; }
@@ -531,7 +561,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -549,7 +580,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path 
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateAspath")]
         public Input<bool>? PropagateAspath { get; set; }
@@ -561,7 +593,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PropagateAspathVariable { get; set; }
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -585,7 +618,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable BGP - Default value: `false`
+        /// Enable or disable BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -617,7 +651,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all ASs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -641,7 +676,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Compare router IDs when selecting active BGP paths - Default value: `false`
+        /// Compare router IDs when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -659,7 +695,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        /// Compare MEDs from all routes from same AS when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -674,9 +711,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -685,7 +721,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for external BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("distanceExternal")]
         public Input<int>? DistanceExternal { get; set; }
@@ -697,7 +735,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceExternalVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        /// Set administrative distance for internal BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `200`
         /// </summary>
         [Input("distanceInternal")]
         public Input<int>? DistanceInternal { get; set; }
@@ -709,7 +749,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceInternalVariable { get; set; }
 
         /// <summary>
-        /// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        /// Set administrative distance for local BGP routes
+        ///   - Range: `1`-`255`
+        ///   - Default value: `20`
         /// </summary>
         [Input("distanceLocal")]
         public Input<int>? DistanceLocal { get; set; }
@@ -721,7 +763,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DistanceLocalVariable { get; set; }
 
         /// <summary>
-        /// Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        /// Set the interval when BGP considers a neighbor to be down
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `180`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -781,7 +825,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        /// Set how often keepalive messages are sent to BGP peer
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `60`
         /// </summary>
         [Input("keepalive")]
         public Input<int>? Keepalive { get; set; }
@@ -793,7 +839,8 @@ namespace Pulumi.Sdwan
         public Input<string>? KeepaliveVariable { get; set; }
 
         /// <summary>
-        /// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        /// If path has no MED, consider it to be worst path when selecting active BGP paths
+        ///   - Default value: `false`
         /// </summary>
         [Input("missingMedWorst")]
         public Input<bool>? MissingMedWorst { get; set; }
@@ -817,7 +864,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Ignore AS for multipath selection - Default value: `false`
+        /// Ignore AS for multipath selection
+        ///   - Default value: `false`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -835,7 +883,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Propagate AS Path - Default value: `false`
+        /// Propagate AS Path 
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateAspath")]
         public Input<bool>? PropagateAspath { get; set; }
@@ -847,7 +896,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PropagateAspathVariable { get; set; }
 
         /// <summary>
-        /// Propagate Community - Default value: `false`
+        /// Propagate Community
+        ///   - Default value: `false`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -871,7 +921,8 @@ namespace Pulumi.Sdwan
         public Input<string>? RouterIdVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable BGP - Default value: `false`
+        /// Enable or disable BGP
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

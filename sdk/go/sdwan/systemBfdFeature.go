@@ -29,7 +29,8 @@ type SystemBfdFeature struct {
 
 	// Set color that identifies the WAN transport tunnel
 	Colors SystemBfdFeatureColorArrayOutput `pulumi:"colors"`
-	// - Range: `0`-`63` - Default value: `48`
+	// - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrOutput `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrOutput `pulumi:"defaultDscpVariable"`
@@ -37,13 +38,15 @@ type SystemBfdFeature struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// - Range: `1`-`6` - Default value: `6`
+	// - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrOutput `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable pulumi.StringPtrOutput `pulumi:"multiplierVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// - Range: `1`-`4294967295` - Default value: `600000`
+	// - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrOutput `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrOutput `pulumi:"pollIntervalVariable"`
@@ -86,7 +89,8 @@ func GetSystemBfdFeature(ctx *pulumi.Context,
 type systemBfdFeatureState struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []SystemBfdFeatureColor `pulumi:"colors"`
-	// - Range: `0`-`63` - Default value: `48`
+	// - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp *int `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable *string `pulumi:"defaultDscpVariable"`
@@ -94,13 +98,15 @@ type systemBfdFeatureState struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// - Range: `1`-`6` - Default value: `6`
+	// - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// - Range: `1`-`4294967295` - Default value: `600000`
+	// - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval *int `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable *string `pulumi:"pollIntervalVariable"`
@@ -111,7 +117,8 @@ type systemBfdFeatureState struct {
 type SystemBfdFeatureState struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors SystemBfdFeatureColorArrayInput
-	// - Range: `0`-`63` - Default value: `48`
+	// - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrInput
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrInput
@@ -119,13 +126,15 @@ type SystemBfdFeatureState struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// - Range: `1`-`6` - Default value: `6`
+	// - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// - Range: `1`-`4294967295` - Default value: `600000`
+	// - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrInput
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrInput
@@ -140,7 +149,8 @@ func (SystemBfdFeatureState) ElementType() reflect.Type {
 type systemBfdFeatureArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors []SystemBfdFeatureColor `pulumi:"colors"`
-	// - Range: `0`-`63` - Default value: `48`
+	// - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp *int `pulumi:"defaultDscp"`
 	// Variable name
 	DefaultDscpVariable *string `pulumi:"defaultDscpVariable"`
@@ -148,13 +158,15 @@ type systemBfdFeatureArgs struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// - Range: `1`-`6` - Default value: `6`
+	// - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// - Range: `1`-`4294967295` - Default value: `600000`
+	// - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval *int `pulumi:"pollInterval"`
 	// Variable name
 	PollIntervalVariable *string `pulumi:"pollIntervalVariable"`
@@ -164,7 +176,8 @@ type systemBfdFeatureArgs struct {
 type SystemBfdFeatureArgs struct {
 	// Set color that identifies the WAN transport tunnel
 	Colors SystemBfdFeatureColorArrayInput
-	// - Range: `0`-`63` - Default value: `48`
+	// - Range: `0`-`63`
+	//   - Default value: `48`
 	DefaultDscp pulumi.IntPtrInput
 	// Variable name
 	DefaultDscpVariable pulumi.StringPtrInput
@@ -172,13 +185,15 @@ type SystemBfdFeatureArgs struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// - Range: `1`-`6` - Default value: `6`
+	// - Range: `1`-`6`
+	//   - Default value: `6`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// - Range: `1`-`4294967295` - Default value: `600000`
+	// - Range: `1`-`4294967295`
+	//   - Default value: `600000`
 	PollInterval pulumi.IntPtrInput
 	// Variable name
 	PollIntervalVariable pulumi.StringPtrInput
@@ -276,7 +291,8 @@ func (o SystemBfdFeatureOutput) Colors() SystemBfdFeatureColorArrayOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) SystemBfdFeatureColorArrayOutput { return v.Colors }).(SystemBfdFeatureColorArrayOutput)
 }
 
-// - Range: `0`-`63` - Default value: `48`
+// - Range: `0`-`63`
+//   - Default value: `48`
 func (o SystemBfdFeatureOutput) DefaultDscp() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) pulumi.IntPtrOutput { return v.DefaultDscp }).(pulumi.IntPtrOutput)
 }
@@ -296,7 +312,8 @@ func (o SystemBfdFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// - Range: `1`-`6` - Default value: `6`
+// - Range: `1`-`6`
+//   - Default value: `6`
 func (o SystemBfdFeatureOutput) Multiplier() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) pulumi.IntPtrOutput { return v.Multiplier }).(pulumi.IntPtrOutput)
 }
@@ -311,7 +328,8 @@ func (o SystemBfdFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// - Range: `1`-`4294967295` - Default value: `600000`
+// - Range: `1`-`4294967295`
+//   - Default value: `600000`
 func (o SystemBfdFeatureOutput) PollInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemBfdFeature) pulumi.IntPtrOutput { return v.PollInterval }).(pulumi.IntPtrOutput)
 }

@@ -52,14 +52,18 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+     * Set the time between OMP Update packets
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     @Import(name="advertisementInterval")
     private @Nullable Output<Integer> advertisementInterval;
 
     /**
-     * @return Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+     * @return Set the time between OMP Update packets
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> advertisementInterval() {
@@ -97,18 +101,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -116,14 +118,18 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+     * Set maximum number of OMP paths to install in vEdge route table
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     @Import(name="ecmpLimit")
     private @Nullable Output<Integer> ecmpLimit;
 
     /**
-     * @return Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+     * @return Set maximum number of OMP paths to install in vEdge route table
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     public Optional<Output<Integer>> ecmpLimit() {
@@ -146,14 +152,18 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+     * End of RIB timer &lt;1..604800&gt; seconds
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     @Import(name="eorTimer")
     private @Nullable Output<Integer> eorTimer;
 
     /**
-     * @return End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+     * @return End of RIB timer &lt;1..604800&gt; seconds
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      * 
      */
     public Optional<Output<Integer>> eorTimer() {
@@ -176,14 +186,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Enable or disable OMP graceful restart - Default value: `true`
+     * Enable or disable OMP graceful restart
+     *   - Default value: `true`
      * 
      */
     @Import(name="gracefulRestart")
     private @Nullable Output<Boolean> gracefulRestart;
 
     /**
-     * @return Enable or disable OMP graceful restart - Default value: `true`
+     * @return Enable or disable OMP graceful restart
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> gracefulRestart() {
@@ -191,14 +203,18 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+     * Set the OMP graceful restart timer
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     @Import(name="gracefulRestartTimer")
     private @Nullable Output<Integer> gracefulRestartTimer;
 
     /**
-     * @return Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+     * @return Set the OMP graceful restart timer
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      * 
      */
     public Optional<Output<Integer>> gracefulRestartTimer() {
@@ -236,14 +252,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set how long to wait before closing OMP peer connection - Default value: `60`
+     * Set how long to wait before closing OMP peer connection
+     *   - Default value: `60`
      * 
      */
     @Import(name="holdtime")
     private @Nullable Output<Integer> holdtime;
 
     /**
-     * @return Set how long to wait before closing OMP peer connection - Default value: `60`
+     * @return Set how long to wait before closing OMP peer connection
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> holdtime() {
@@ -266,14 +284,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+     * Ignore Region-Path Length During Best-Path Algorithm
+     *   - Default value: `false`
      * 
      */
     @Import(name="ignoreRegionPathLength")
     private @Nullable Output<Boolean> ignoreRegionPathLength;
 
     /**
-     * @return Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+     * @return Ignore Region-Path Length During Best-Path Algorithm
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ignoreRegionPathLength() {
@@ -311,14 +331,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="ompAdminDistanceIpv4")
     private @Nullable Output<Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return omp-admin-distance-ipv4 - Range: `1`-`255`
+     * @return omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv4() {
@@ -341,14 +363,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="ompAdminDistanceIpv6")
     private @Nullable Output<Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return omp-admin-distance-ipv6 - Range: `1`-`255`
+     * @return omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv6() {
@@ -371,14 +395,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+     * Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Import(name="overlayAs")
     private @Nullable Output<Integer> overlayAs;
 
     /**
-     * @return Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+     * @return Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Optional<Output<Integer>> overlayAs() {
@@ -401,14 +427,18 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+     * Set number of TLOC routes advertised between vSmart and vEdge
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     @Import(name="sendPathLimit")
     private @Nullable Output<Integer> sendPathLimit;
 
     /**
-     * @return Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+     * @return Set number of TLOC routes advertised between vSmart and vEdge
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      * 
      */
     public Optional<Output<Integer>> sendPathLimit() {
@@ -431,14 +461,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Enable or disable OMP - Default value: `false`
+     * Enable or disable OMP
+     *   - Default value: `false`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Enable or disable OMP - Default value: `false`
+     * @return Enable or disable OMP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -461,14 +493,16 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport gateway path computation
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     @Import(name="transportGateway")
     private @Nullable Output<String> transportGateway;
 
     /**
-     * @return Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+     * @return Transport gateway path computation
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      * 
      */
     public Optional<Output<String>> transportGateway() {
@@ -607,7 +641,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param advertisementInterval Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+         * @param advertisementInterval Set the time between OMP Update packets
+         *   - Range: `0`-`65535`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -618,7 +654,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param advertisementInterval Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+         * @param advertisementInterval Set the time between OMP Update packets
+         *   - Range: `0`-`65535`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -670,9 +708,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -683,9 +720,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -695,9 +731,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -707,7 +742,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ecmpLimit Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+         * @param ecmpLimit Set maximum number of OMP paths to install in vEdge route table
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -718,7 +755,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ecmpLimit Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+         * @param ecmpLimit Set maximum number of OMP paths to install in vEdge route table
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -749,7 +788,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param eorTimer End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+         * @param eorTimer End of RIB timer &lt;1..604800&gt; seconds
+         *   - Range: `1`-`3600`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -760,7 +801,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param eorTimer End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+         * @param eorTimer End of RIB timer &lt;1..604800&gt; seconds
+         *   - Range: `1`-`3600`
+         *   - Default value: `300`
          * 
          * @return builder
          * 
@@ -791,7 +834,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param gracefulRestart Enable or disable OMP graceful restart - Default value: `true`
+         * @param gracefulRestart Enable or disable OMP graceful restart
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -802,7 +846,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param gracefulRestart Enable or disable OMP graceful restart - Default value: `true`
+         * @param gracefulRestart Enable or disable OMP graceful restart
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -812,7 +857,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param gracefulRestartTimer Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+         * @param gracefulRestartTimer Set the OMP graceful restart timer
+         *   - Range: `1`-`604800`
+         *   - Default value: `43200`
          * 
          * @return builder
          * 
@@ -823,7 +870,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param gracefulRestartTimer Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+         * @param gracefulRestartTimer Set the OMP graceful restart timer
+         *   - Range: `1`-`604800`
+         *   - Default value: `43200`
          * 
          * @return builder
          * 
@@ -875,7 +924,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param holdtime Set how long to wait before closing OMP peer connection - Default value: `60`
+         * @param holdtime Set how long to wait before closing OMP peer connection
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -886,7 +936,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param holdtime Set how long to wait before closing OMP peer connection - Default value: `60`
+         * @param holdtime Set how long to wait before closing OMP peer connection
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -917,7 +968,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ignoreRegionPathLength Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+         * @param ignoreRegionPathLength Ignore Region-Path Length During Best-Path Algorithm
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -928,7 +980,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ignoreRegionPathLength Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+         * @param ignoreRegionPathLength Ignore Region-Path Length During Best-Path Algorithm
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -980,7 +1033,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ompAdminDistanceIpv4 omp-admin-distance-ipv4 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv4 omp-admin-distance-ipv4
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -991,7 +1045,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ompAdminDistanceIpv4 omp-admin-distance-ipv4 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv4 omp-admin-distance-ipv4
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1022,7 +1077,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ompAdminDistanceIpv6 omp-admin-distance-ipv6 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv6 omp-admin-distance-ipv6
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1033,7 +1089,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ompAdminDistanceIpv6 omp-admin-distance-ipv6 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv6 omp-admin-distance-ipv6
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1064,7 +1121,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param overlayAs Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+         * @param overlayAs Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -1075,7 +1133,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param overlayAs Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+         * @param overlayAs Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+         *   - Range: `1`-`4294967295`
          * 
          * @return builder
          * 
@@ -1106,7 +1165,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sendPathLimit Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+         * @param sendPathLimit Set number of TLOC routes advertised between vSmart and vEdge
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -1117,7 +1178,9 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param sendPathLimit Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+         * @param sendPathLimit Set number of TLOC routes advertised between vSmart and vEdge
+         *   - Range: `1`-`16`
+         *   - Default value: `4`
          * 
          * @return builder
          * 
@@ -1148,7 +1211,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param shutdown Enable or disable OMP - Default value: `false`
+         * @param shutdown Enable or disable OMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1159,7 +1223,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param shutdown Enable or disable OMP - Default value: `false`
+         * @param shutdown Enable or disable OMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1190,7 +1255,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param transportGateway Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+         * @param transportGateway Transport gateway path computation
+         *   - Choices: `prefer`, `ecmp-with-direct-path`
          * 
          * @return builder
          * 
@@ -1201,7 +1267,8 @@ public final class CiscoOmpFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param transportGateway Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+         * @param transportGateway Transport gateway path computation
+         *   - Choices: `prefer`, `ecmp-with-direct-path`
          * 
          * @return builder
          * 

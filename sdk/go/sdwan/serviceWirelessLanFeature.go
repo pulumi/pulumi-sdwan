@@ -27,22 +27,20 @@ import (
 type ServiceWirelessLanFeature struct {
 	pulumi.CustomResourceState
 
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrOutput `pulumi:"country"`
 	// Variable name
 	CountryVariable pulumi.StringPtrOutput `pulumi:"countryVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// 2.4GHz Enabled - Default value: `true`
+	// 2.4GHz Enabled
+	//   - Default value: `true`
 	Enable24g pulumi.BoolPtrOutput `pulumi:"enable24g"`
 	// Variable name
 	Enable24gVariable pulumi.StringPtrOutput `pulumi:"enable24gVariable"`
-	// 5GHz Enabled - Default value: `true`
+	// 5GHz Enabled
+	//   - Default value: `true`
 	Enable5g pulumi.BoolPtrOutput `pulumi:"enable5g"`
 	// Variable name
 	Enable5gVariable pulumi.StringPtrOutput `pulumi:"enable5gVariable"`
@@ -58,21 +56,14 @@ type ServiceWirelessLanFeature struct {
 	MeIpv4Address pulumi.StringPtrOutput `pulumi:"meIpv4Address"`
 	// Variable name
 	MeIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"meIpv4AddressVariable"`
-	// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-	// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-	// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-	// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-	// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	MeSubnetMask pulumi.StringPtrOutput `pulumi:"meSubnetMask"`
 	// Variable name
 	MeSubnetMaskVariable pulumi.StringPtrOutput `pulumi:"meSubnetMaskVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set management password,the password must contains characters from all of the following classes,lowercase
-	// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-	// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-	// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-	// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrOutput `pulumi:"passwordVariable"`
@@ -125,22 +116,20 @@ func GetServiceWirelessLanFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceWirelessLanFeature resources.
 type serviceWirelessLanFeatureState struct {
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country *string `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// 2.4GHz Enabled - Default value: `true`
+	// 2.4GHz Enabled
+	//   - Default value: `true`
 	Enable24g *bool `pulumi:"enable24g"`
 	// Variable name
 	Enable24gVariable *string `pulumi:"enable24gVariable"`
-	// 5GHz Enabled - Default value: `true`
+	// 5GHz Enabled
+	//   - Default value: `true`
 	Enable5g *bool `pulumi:"enable5g"`
 	// Variable name
 	Enable5gVariable *string `pulumi:"enable5gVariable"`
@@ -156,21 +145,14 @@ type serviceWirelessLanFeatureState struct {
 	MeIpv4Address *string `pulumi:"meIpv4Address"`
 	// Variable name
 	MeIpv4AddressVariable *string `pulumi:"meIpv4AddressVariable"`
-	// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-	// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-	// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-	// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-	// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	MeSubnetMask *string `pulumi:"meSubnetMask"`
 	// Variable name
 	MeSubnetMaskVariable *string `pulumi:"meSubnetMaskVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set management password,the password must contains characters from all of the following classes,lowercase
-	// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-	// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-	// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-	// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
@@ -185,22 +167,20 @@ type serviceWirelessLanFeatureState struct {
 }
 
 type ServiceWirelessLanFeatureState struct {
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// 2.4GHz Enabled - Default value: `true`
+	// 2.4GHz Enabled
+	//   - Default value: `true`
 	Enable24g pulumi.BoolPtrInput
 	// Variable name
 	Enable24gVariable pulumi.StringPtrInput
-	// 5GHz Enabled - Default value: `true`
+	// 5GHz Enabled
+	//   - Default value: `true`
 	Enable5g pulumi.BoolPtrInput
 	// Variable name
 	Enable5gVariable pulumi.StringPtrInput
@@ -216,21 +196,14 @@ type ServiceWirelessLanFeatureState struct {
 	MeIpv4Address pulumi.StringPtrInput
 	// Variable name
 	MeIpv4AddressVariable pulumi.StringPtrInput
-	// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-	// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-	// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-	// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-	// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	MeSubnetMask pulumi.StringPtrInput
 	// Variable name
 	MeSubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set management password,the password must contains characters from all of the following classes,lowercase
-	// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-	// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-	// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-	// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
@@ -249,22 +222,20 @@ func (ServiceWirelessLanFeatureState) ElementType() reflect.Type {
 }
 
 type serviceWirelessLanFeatureArgs struct {
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country *string `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// 2.4GHz Enabled - Default value: `true`
+	// 2.4GHz Enabled
+	//   - Default value: `true`
 	Enable24g *bool `pulumi:"enable24g"`
 	// Variable name
 	Enable24gVariable *string `pulumi:"enable24gVariable"`
-	// 5GHz Enabled - Default value: `true`
+	// 5GHz Enabled
+	//   - Default value: `true`
 	Enable5g *bool `pulumi:"enable5g"`
 	// Variable name
 	Enable5gVariable *string `pulumi:"enable5gVariable"`
@@ -280,21 +251,14 @@ type serviceWirelessLanFeatureArgs struct {
 	MeIpv4Address *string `pulumi:"meIpv4Address"`
 	// Variable name
 	MeIpv4AddressVariable *string `pulumi:"meIpv4AddressVariable"`
-	// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-	// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-	// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-	// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-	// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	MeSubnetMask *string `pulumi:"meSubnetMask"`
 	// Variable name
 	MeSubnetMaskVariable *string `pulumi:"meSubnetMaskVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set management password,the password must contains characters from all of the following classes,lowercase
-	// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-	// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-	// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-	// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
@@ -308,22 +272,20 @@ type serviceWirelessLanFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceWirelessLanFeature resource.
 type ServiceWirelessLanFeatureArgs struct {
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// 2.4GHz Enabled - Default value: `true`
+	// 2.4GHz Enabled
+	//   - Default value: `true`
 	Enable24g pulumi.BoolPtrInput
 	// Variable name
 	Enable24gVariable pulumi.StringPtrInput
-	// 5GHz Enabled - Default value: `true`
+	// 5GHz Enabled
+	//   - Default value: `true`
 	Enable5g pulumi.BoolPtrInput
 	// Variable name
 	Enable5gVariable pulumi.StringPtrInput
@@ -339,21 +301,14 @@ type ServiceWirelessLanFeatureArgs struct {
 	MeIpv4Address pulumi.StringPtrInput
 	// Variable name
 	MeIpv4AddressVariable pulumi.StringPtrInput
-	// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-	// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-	// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-	// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-	// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	MeSubnetMask pulumi.StringPtrInput
 	// Variable name
 	MeSubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set management password,the password must contains characters from all of the following classes,lowercase
-	// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-	// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-	// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-	// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+	// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
@@ -452,12 +407,8 @@ func (o ServiceWirelessLanFeatureOutput) ToServiceWirelessLanFeatureOutputWithCo
 	return o
 }
 
-// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+// Select country
+//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 func (o ServiceWirelessLanFeatureOutput) Country() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.Country }).(pulumi.StringPtrOutput)
 }
@@ -472,7 +423,8 @@ func (o ServiceWirelessLanFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// 2.4GHz Enabled - Default value: `true`
+// 2.4GHz Enabled
+//   - Default value: `true`
 func (o ServiceWirelessLanFeatureOutput) Enable24g() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.BoolPtrOutput { return v.Enable24g }).(pulumi.BoolPtrOutput)
 }
@@ -482,7 +434,8 @@ func (o ServiceWirelessLanFeatureOutput) Enable24gVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.Enable24gVariable }).(pulumi.StringPtrOutput)
 }
 
-// 5GHz Enabled - Default value: `true`
+// 5GHz Enabled
+//   - Default value: `true`
 func (o ServiceWirelessLanFeatureOutput) Enable5g() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.BoolPtrOutput { return v.Enable5g }).(pulumi.BoolPtrOutput)
 }
@@ -522,11 +475,8 @@ func (o ServiceWirelessLanFeatureOutput) MeIpv4AddressVariable() pulumi.StringPt
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.MeIpv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-// `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-// `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-// `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-// `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Set mobile express controller subnet mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceWirelessLanFeatureOutput) MeSubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.MeSubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -541,11 +491,7 @@ func (o ServiceWirelessLanFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set management password,the password must contains characters from all of the following classes,lowercase
-// letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-// times consecutively. The password must not be the same as the associated username or the username reversed. The password
-// must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-// addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+// Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
 func (o ServiceWirelessLanFeatureOutput) Password() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceWirelessLanFeature) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
 }

@@ -19,14 +19,16 @@ public final class TrafficDataPolicyDefinitionArgs extends com.pulumi.resources.
     public static final TrafficDataPolicyDefinitionArgs Empty = new TrafficDataPolicyDefinitionArgs();
 
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * @return Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -106,7 +108,8 @@ public final class TrafficDataPolicyDefinitionArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 
@@ -117,7 +120,8 @@ public final class TrafficDataPolicyDefinitionArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 

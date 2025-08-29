@@ -29,9 +29,11 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ZoneBasedFirewallPolicyDefinition resource.
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `pass`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         """
@@ -48,7 +50,8 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Input[_builtins.str]:
         """
-        Default Action - Choices: `pass`, `drop`
+        Default Action
+          - Choices: `pass`, `drop`
         """
         return pulumi.get(self, "default_action")
 
@@ -72,7 +75,8 @@ class ZoneBasedFirewallPolicyDefinitionArgs:
     @pulumi.getter
     def mode(self) -> pulumi.Input[_builtins.str]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -127,9 +131,11 @@ class _ZoneBasedFirewallPolicyDefinitionState:
         """
         Input properties used for looking up and filtering ZoneBasedFirewallPolicyDefinition resources.
         :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs']]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `pass`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -164,7 +170,8 @@ class _ZoneBasedFirewallPolicyDefinitionState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default Action - Choices: `pass`, `drop`
+        Default Action
+          - Choices: `pass`, `drop`
         """
         return pulumi.get(self, "default_action")
 
@@ -188,7 +195,8 @@ class _ZoneBasedFirewallPolicyDefinitionState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -257,9 +265,11 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `pass`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         """
         ...
@@ -349,9 +359,11 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs', 'ZoneBasedFirewallPolicyDefinitionApplyZonePairArgsDict']]]] apply_zone_pairs: , Attribute conditional on `mode` being equal to `security`
-        :param pulumi.Input[_builtins.str] default_action: Default Action - Choices: `pass`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default Action
+                 - Choices: `pass`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
@@ -380,7 +392,8 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[_builtins.str]:
         """
-        Default Action - Choices: `pass`, `drop`
+        Default Action
+          - Choices: `pass`, `drop`
         """
         return pulumi.get(self, "default_action")
 
@@ -396,7 +409,8 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[_builtins.str]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 

@@ -29,15 +29,19 @@ type ServiceRoutingOspfFeature struct {
 
 	// Configure OSPF area
 	Areas ServiceRoutingOspfFeatureAreaArrayOutput `pulumi:"areas"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrOutput `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrOutput `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrOutput `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -45,15 +49,21 @@ type ServiceRoutingOspfFeature struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrOutput `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrOutput `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrOutput `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrOutput `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrOutput `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrOutput `pulumi:"distanceIntraAreaVariable"`
@@ -63,11 +73,14 @@ type ServiceRoutingOspfFeature struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Redistribute routes
 	Redistributes ServiceRoutingOspfFeatureRedistributeArrayOutput `pulumi:"redistributes"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	ReferenceBandwidth pulumi.IntPtrOutput `pulumi:"referenceBandwidth"`
 	// Variable name
 	ReferenceBandwidthVariable pulumi.StringPtrOutput `pulumi:"referenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Rfc1583Compatible pulumi.BoolPtrOutput `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrOutput `pulumi:"rfc1583CompatibleVariable"`
@@ -78,15 +91,21 @@ type ServiceRoutingOspfFeature struct {
 	RouterIdVariable pulumi.StringPtrOutput `pulumi:"routerIdVariable"`
 	// Advertise own router LSA with infinite distance
 	RouterLsas ServiceRoutingOspfFeatureRouterLsaArrayOutput `pulumi:"routerLsas"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	SpfCalculationDelay pulumi.IntPtrOutput `pulumi:"spfCalculationDelay"`
 	// Variable name
 	SpfCalculationDelayVariable pulumi.StringPtrOutput `pulumi:"spfCalculationDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	SpfInitialHoldTime pulumi.IntPtrOutput `pulumi:"spfInitialHoldTime"`
 	// Variable name
 	SpfInitialHoldTimeVariable pulumi.StringPtrOutput `pulumi:"spfInitialHoldTimeVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	SpfMaximumHoldTime pulumi.IntPtrOutput `pulumi:"spfMaximumHoldTime"`
 	// Variable name
 	SpfMaximumHoldTimeVariable pulumi.StringPtrOutput `pulumi:"spfMaximumHoldTimeVariable"`
@@ -129,15 +148,19 @@ func GetServiceRoutingOspfFeature(ctx *pulumi.Context,
 type serviceRoutingOspfFeatureState struct {
 	// Configure OSPF area
 	Areas []ServiceRoutingOspfFeatureArea `pulumi:"areas"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate *bool `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways *bool `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable *string `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric *int `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType *string `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable *string `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -145,15 +168,21 @@ type serviceRoutingOspfFeatureState struct {
 	DefaultInformationOriginateMetricVariable *string `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea *int `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable *string `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea *int `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable *string `pulumi:"distanceIntraAreaVariable"`
@@ -163,11 +192,14 @@ type serviceRoutingOspfFeatureState struct {
 	Name *string `pulumi:"name"`
 	// Redistribute routes
 	Redistributes []ServiceRoutingOspfFeatureRedistribute `pulumi:"redistributes"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	ReferenceBandwidth *int `pulumi:"referenceBandwidth"`
 	// Variable name
 	ReferenceBandwidthVariable *string `pulumi:"referenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Rfc1583Compatible *bool `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable *string `pulumi:"rfc1583CompatibleVariable"`
@@ -178,15 +210,21 @@ type serviceRoutingOspfFeatureState struct {
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
 	// Advertise own router LSA with infinite distance
 	RouterLsas []ServiceRoutingOspfFeatureRouterLsa `pulumi:"routerLsas"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	SpfCalculationDelay *int `pulumi:"spfCalculationDelay"`
 	// Variable name
 	SpfCalculationDelayVariable *string `pulumi:"spfCalculationDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	SpfInitialHoldTime *int `pulumi:"spfInitialHoldTime"`
 	// Variable name
 	SpfInitialHoldTimeVariable *string `pulumi:"spfInitialHoldTimeVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	SpfMaximumHoldTime *int `pulumi:"spfMaximumHoldTime"`
 	// Variable name
 	SpfMaximumHoldTimeVariable *string `pulumi:"spfMaximumHoldTimeVariable"`
@@ -197,15 +235,19 @@ type serviceRoutingOspfFeatureState struct {
 type ServiceRoutingOspfFeatureState struct {
 	// Configure OSPF area
 	Areas ServiceRoutingOspfFeatureAreaArrayInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
@@ -213,15 +255,21 @@ type ServiceRoutingOspfFeatureState struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrInput
@@ -231,11 +279,14 @@ type ServiceRoutingOspfFeatureState struct {
 	Name pulumi.StringPtrInput
 	// Redistribute routes
 	Redistributes ServiceRoutingOspfFeatureRedistributeArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	ReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	ReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Rfc1583Compatible pulumi.BoolPtrInput
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrInput
@@ -246,15 +297,21 @@ type ServiceRoutingOspfFeatureState struct {
 	RouterIdVariable pulumi.StringPtrInput
 	// Advertise own router LSA with infinite distance
 	RouterLsas ServiceRoutingOspfFeatureRouterLsaArrayInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	SpfCalculationDelay pulumi.IntPtrInput
 	// Variable name
 	SpfCalculationDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	SpfInitialHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpfInitialHoldTimeVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	SpfMaximumHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpfMaximumHoldTimeVariable pulumi.StringPtrInput
@@ -269,15 +326,19 @@ func (ServiceRoutingOspfFeatureState) ElementType() reflect.Type {
 type serviceRoutingOspfFeatureArgs struct {
 	// Configure OSPF area
 	Areas []ServiceRoutingOspfFeatureArea `pulumi:"areas"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate *bool `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways *bool `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable *string `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric *int `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType *string `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable *string `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -285,15 +346,21 @@ type serviceRoutingOspfFeatureArgs struct {
 	DefaultInformationOriginateMetricVariable *string `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea *int `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable *string `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea *int `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable *string `pulumi:"distanceIntraAreaVariable"`
@@ -303,11 +370,14 @@ type serviceRoutingOspfFeatureArgs struct {
 	Name *string `pulumi:"name"`
 	// Redistribute routes
 	Redistributes []ServiceRoutingOspfFeatureRedistribute `pulumi:"redistributes"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	ReferenceBandwidth *int `pulumi:"referenceBandwidth"`
 	// Variable name
 	ReferenceBandwidthVariable *string `pulumi:"referenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Rfc1583Compatible *bool `pulumi:"rfc1583Compatible"`
 	// Variable name
 	Rfc1583CompatibleVariable *string `pulumi:"rfc1583CompatibleVariable"`
@@ -318,15 +388,21 @@ type serviceRoutingOspfFeatureArgs struct {
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
 	// Advertise own router LSA with infinite distance
 	RouterLsas []ServiceRoutingOspfFeatureRouterLsa `pulumi:"routerLsas"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	SpfCalculationDelay *int `pulumi:"spfCalculationDelay"`
 	// Variable name
 	SpfCalculationDelayVariable *string `pulumi:"spfCalculationDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	SpfInitialHoldTime *int `pulumi:"spfInitialHoldTime"`
 	// Variable name
 	SpfInitialHoldTimeVariable *string `pulumi:"spfInitialHoldTimeVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	SpfMaximumHoldTime *int `pulumi:"spfMaximumHoldTime"`
 	// Variable name
 	SpfMaximumHoldTimeVariable *string `pulumi:"spfMaximumHoldTimeVariable"`
@@ -336,15 +412,19 @@ type serviceRoutingOspfFeatureArgs struct {
 type ServiceRoutingOspfFeatureArgs struct {
 	// Configure OSPF area
 	Areas ServiceRoutingOspfFeatureAreaArrayInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
@@ -352,15 +432,21 @@ type ServiceRoutingOspfFeatureArgs struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrInput
@@ -370,11 +456,14 @@ type ServiceRoutingOspfFeatureArgs struct {
 	Name pulumi.StringPtrInput
 	// Redistribute routes
 	Redistributes ServiceRoutingOspfFeatureRedistributeArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	ReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	ReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Rfc1583Compatible pulumi.BoolPtrInput
 	// Variable name
 	Rfc1583CompatibleVariable pulumi.StringPtrInput
@@ -385,15 +474,21 @@ type ServiceRoutingOspfFeatureArgs struct {
 	RouterIdVariable pulumi.StringPtrInput
 	// Advertise own router LSA with infinite distance
 	RouterLsas ServiceRoutingOspfFeatureRouterLsaArrayInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	SpfCalculationDelay pulumi.IntPtrInput
 	// Variable name
 	SpfCalculationDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	SpfInitialHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpfInitialHoldTimeVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	SpfMaximumHoldTime pulumi.IntPtrInput
 	// Variable name
 	SpfMaximumHoldTimeVariable pulumi.StringPtrInput
@@ -491,12 +586,14 @@ func (o ServiceRoutingOspfFeatureOutput) Areas() ServiceRoutingOspfFeatureAreaAr
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) ServiceRoutingOspfFeatureAreaArrayOutput { return v.Areas }).(ServiceRoutingOspfFeatureAreaArrayOutput)
 }
 
-// Distribute default external route into OSPF - Default value: `false`
+// Distribute default external route into OSPF
+//   - Default value: `false`
 func (o ServiceRoutingOspfFeatureOutput) DefaultInformationOriginate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.BoolPtrOutput { return v.DefaultInformationOriginate }).(pulumi.BoolPtrOutput)
 }
 
-// Always advertise default route - Default value: `false`
+// Always advertise default route
+//   - Default value: `false`
 func (o ServiceRoutingOspfFeatureOutput) DefaultInformationOriginateAlways() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.BoolPtrOutput { return v.DefaultInformationOriginateAlways }).(pulumi.BoolPtrOutput)
 }
@@ -508,12 +605,14 @@ func (o ServiceRoutingOspfFeatureOutput) DefaultInformationOriginateAlwaysVariab
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+// Set metric used to generate default route <0..16777214>
+//   - Range: `0`-`16777214`
 func (o ServiceRoutingOspfFeatureOutput) DefaultInformationOriginateMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.DefaultInformationOriginateMetric }).(pulumi.IntPtrOutput)
 }
 
-// Set default route type - Choices: `type1`, `type2`
+// Set default route type
+//   - Choices: `type1`, `type2`
 func (o ServiceRoutingOspfFeatureOutput) DefaultInformationOriginateMetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput {
 		return v.DefaultInformationOriginateMetricType
@@ -539,7 +638,9 @@ func (o ServiceRoutingOspfFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+// Set distance for external routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o ServiceRoutingOspfFeatureOutput) DistanceExternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.DistanceExternal }).(pulumi.IntPtrOutput)
 }
@@ -549,7 +650,9 @@ func (o ServiceRoutingOspfFeatureOutput) DistanceExternalVariable() pulumi.Strin
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.DistanceExternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+// Set distance for inter-area routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o ServiceRoutingOspfFeatureOutput) DistanceInterArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.DistanceInterArea }).(pulumi.IntPtrOutput)
 }
@@ -559,7 +662,9 @@ func (o ServiceRoutingOspfFeatureOutput) DistanceInterAreaVariable() pulumi.Stri
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.DistanceInterAreaVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+// Set distance for intra-area routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o ServiceRoutingOspfFeatureOutput) DistanceIntraArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.DistanceIntraArea }).(pulumi.IntPtrOutput)
 }
@@ -586,7 +691,9 @@ func (o ServiceRoutingOspfFeatureOutput) Redistributes() ServiceRoutingOspfFeatu
 	}).(ServiceRoutingOspfFeatureRedistributeArrayOutput)
 }
 
-// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+// Set reference bandwidth method to assign OSPF cost
+//   - Range: `1`-`4294967`
+//   - Default value: `100`
 func (o ServiceRoutingOspfFeatureOutput) ReferenceBandwidth() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.ReferenceBandwidth }).(pulumi.IntPtrOutput)
 }
@@ -596,7 +703,8 @@ func (o ServiceRoutingOspfFeatureOutput) ReferenceBandwidthVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.ReferenceBandwidthVariable }).(pulumi.StringPtrOutput)
 }
 
-// Calculate summary route cost based on RFC 1583 - Default value: `true`
+// Calculate summary route cost based on RFC 1583
+//   - Default value: `true`
 func (o ServiceRoutingOspfFeatureOutput) Rfc1583Compatible() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.BoolPtrOutput { return v.Rfc1583Compatible }).(pulumi.BoolPtrOutput)
 }
@@ -625,7 +733,9 @@ func (o ServiceRoutingOspfFeatureOutput) RouterLsas() ServiceRoutingOspfFeatureR
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) ServiceRoutingOspfFeatureRouterLsaArrayOutput { return v.RouterLsas }).(ServiceRoutingOspfFeatureRouterLsaArrayOutput)
 }
 
-// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+// Set delay from first change received until performing SPF calculation
+//   - Range: `1`-`600000`
+//   - Default value: `200`
 func (o ServiceRoutingOspfFeatureOutput) SpfCalculationDelay() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.SpfCalculationDelay }).(pulumi.IntPtrOutput)
 }
@@ -635,7 +745,9 @@ func (o ServiceRoutingOspfFeatureOutput) SpfCalculationDelayVariable() pulumi.St
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.SpfCalculationDelayVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+// Set initial hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `1000`
 func (o ServiceRoutingOspfFeatureOutput) SpfInitialHoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.SpfInitialHoldTime }).(pulumi.IntPtrOutput)
 }
@@ -645,7 +757,9 @@ func (o ServiceRoutingOspfFeatureOutput) SpfInitialHoldTimeVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.StringPtrOutput { return v.SpfInitialHoldTimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+// Set maximum hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `10000`
 func (o ServiceRoutingOspfFeatureOutput) SpfMaximumHoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingOspfFeature) pulumi.IntPtrOutput { return v.SpfMaximumHoldTime }).(pulumi.IntPtrOutput)
 }

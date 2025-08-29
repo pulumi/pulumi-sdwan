@@ -56,14 +56,18 @@ class ServiceMulticastFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpAnnounceArgs']]] auto_rp_announces: Enable or disable RP Announce
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpDiscoveryArgs']]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceArgs']]] igmp_interfaces: Set IGMP interface parameters
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
-        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports - Range: `0`-`131072`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
+                 - Range: `0`-`131072`
         :param pulumi.Input[_builtins.str] local_replicator_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
-        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer - Range: `1`-`60`
+        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
+                 - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupArgs']]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
@@ -74,9 +78,12 @@ class ServiceMulticastFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeaturePimInterfaceArgs']]] pim_interfaces: Set PIM interface parameters
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
-        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] pim_spt_threshold_variable: Variable name
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureStaticRpAddressArgs']]] static_rp_addresses: Set Static RP Address(es)
         """
@@ -199,7 +206,8 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="enableAutoRp")
     def enable_auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_auto_rp")
 
@@ -235,7 +243,8 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -247,7 +256,8 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="localReplicatorThreshold")
     def local_replicator_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`131072`
+        Set number of joins per group the router supports
+          - Range: `0`-`131072`
         """
         return pulumi.get(self, "local_replicator_threshold")
 
@@ -283,7 +293,8 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="msdpConnectionRetryInterval")
     def msdp_connection_retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MSDP refresh timer - Range: `1`-`60`
+        Set MSDP refresh timer
+          - Range: `1`-`60`
         """
         return pulumi.get(self, "msdp_connection_retry_interval")
 
@@ -415,7 +426,9 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="pimSptThreshold")
     def pim_spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
+          - Default value: `0`
         """
         return pulumi.get(self, "pim_spt_threshold")
 
@@ -439,7 +452,8 @@ class ServiceMulticastFeatureArgs:
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 
@@ -509,15 +523,19 @@ class _ServiceMulticastFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpAnnounceArgs']]] auto_rp_announces: Enable or disable RP Announce
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureAutoRpDiscoveryArgs']]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureIgmpInterfaceArgs']]] igmp_interfaces: Set IGMP interface parameters
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
-        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports - Range: `0`-`131072`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
+                 - Range: `0`-`131072`
         :param pulumi.Input[_builtins.str] local_replicator_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
-        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer - Range: `1`-`60`
+        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
+                 - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureMsdpGroupArgs']]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
@@ -529,9 +547,12 @@ class _ServiceMulticastFeatureState:
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
         :param pulumi.Input[_builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
-        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] pim_spt_threshold_variable: Variable name
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceMulticastFeatureStaticRpAddressArgs']]] static_rp_addresses: Set Static RP Address(es)
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -635,7 +656,8 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="enableAutoRp")
     def enable_auto_rp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_auto_rp")
 
@@ -683,7 +705,8 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -695,7 +718,8 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="localReplicatorThreshold")
     def local_replicator_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`131072`
+        Set number of joins per group the router supports
+          - Range: `0`-`131072`
         """
         return pulumi.get(self, "local_replicator_threshold")
 
@@ -731,7 +755,8 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="msdpConnectionRetryInterval")
     def msdp_connection_retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MSDP refresh timer - Range: `1`-`60`
+        Set MSDP refresh timer
+          - Range: `1`-`60`
         """
         return pulumi.get(self, "msdp_connection_retry_interval")
 
@@ -875,7 +900,9 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="pimSptThreshold")
     def pim_spt_threshold(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
+          - Default value: `0`
         """
         return pulumi.get(self, "pim_spt_threshold")
 
@@ -899,7 +926,8 @@ class _ServiceMulticastFeatureState:
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 
@@ -998,15 +1026,19 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]] auto_rp_announces: Enable or disable RP Announce
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]] igmp_interfaces: Set IGMP interface parameters
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
-        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports - Range: `0`-`131072`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
+                 - Range: `0`-`131072`
         :param pulumi.Input[_builtins.str] local_replicator_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
-        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer - Range: `1`-`60`
+        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
+                 - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
@@ -1018,9 +1050,12 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
         :param pulumi.Input[_builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
-        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] pim_spt_threshold_variable: Variable name
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]] static_rp_addresses: Set Static RP Address(es)
         """
@@ -1178,15 +1213,19 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpAnnounceArgs', 'ServiceMulticastFeatureAutoRpAnnounceArgsDict']]]] auto_rp_announces: Enable or disable RP Announce
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureAutoRpDiscoveryArgs', 'ServiceMulticastFeatureAutoRpDiscoveryArgsDict']]]] auto_rp_discoveries: Enable or disable RP Discovery
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_auto_rp: Enable or disable auto-RP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_auto_rp_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureIgmpInterfaceArgs', 'ServiceMulticastFeatureIgmpInterfaceArgsDict']]]] igmp_interfaces: Set IGMP interface parameters
-        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device - Default value: `false`
-        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports - Range: `0`-`131072`
+        :param pulumi.Input[_builtins.bool] local_replicator: Replicator is local to this device
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.int] local_replicator_threshold: Set number of joins per group the router supports
+                 - Range: `0`-`131072`
         :param pulumi.Input[_builtins.str] local_replicator_threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] local_replicator_variable: Variable name
-        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer - Range: `1`-`60`
+        :param pulumi.Input[_builtins.int] msdp_connection_retry_interval: Set MSDP refresh timer
+                 - Range: `1`-`60`
         :param pulumi.Input[_builtins.str] msdp_connection_retry_interval_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureMsdpGroupArgs', 'ServiceMulticastFeatureMsdpGroupArgsDict']]]] msdp_groups: multicast MSDP peer
         :param pulumi.Input[_builtins.str] msdp_originator_id: Set MSDP originator ID
@@ -1198,9 +1237,12 @@ class ServiceMulticastFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list: Set Access List for PIM SSM
         :param pulumi.Input[_builtins.str] pim_source_specific_multicast_access_list_variable: Variable name
         :param pulumi.Input[_builtins.bool] pim_source_specific_multicast_enable: turn SSM on/off
-        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        :param pulumi.Input[_builtins.str] pim_spt_threshold: Set when PIM router joins the SPT (kbps)
+                 - Choices: `0`, `infinity`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] pim_spt_threshold_variable: Variable name
-        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        :param pulumi.Input[_builtins.bool] spt_only: Shortest Path Tree (SPT) Only Mode
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] spt_only_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceMulticastFeatureStaticRpAddressArgs', 'ServiceMulticastFeatureStaticRpAddressArgsDict']]]] static_rp_addresses: Set Static RP Address(es)
         :param pulumi.Input[_builtins.int] version: The version of the Feature
@@ -1268,7 +1310,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="enableAutoRp")
     def enable_auto_rp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable auto-RP - Default value: `false`
+        Enable or disable auto-RP
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_auto_rp")
 
@@ -1300,7 +1343,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="localReplicator")
     def local_replicator(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Replicator is local to this device - Default value: `false`
+        Replicator is local to this device
+          - Default value: `false`
         """
         return pulumi.get(self, "local_replicator")
 
@@ -1308,7 +1352,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="localReplicatorThreshold")
     def local_replicator_threshold(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set number of joins per group the router supports - Range: `0`-`131072`
+        Set number of joins per group the router supports
+          - Range: `0`-`131072`
         """
         return pulumi.get(self, "local_replicator_threshold")
 
@@ -1332,7 +1377,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="msdpConnectionRetryInterval")
     def msdp_connection_retry_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set MSDP refresh timer - Range: `1`-`60`
+        Set MSDP refresh timer
+          - Range: `1`-`60`
         """
         return pulumi.get(self, "msdp_connection_retry_interval")
 
@@ -1428,7 +1474,9 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="pimSptThreshold")
     def pim_spt_threshold(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity` - Default value: `0`
+        Set when PIM router joins the SPT (kbps)
+          - Choices: `0`, `infinity`
+          - Default value: `0`
         """
         return pulumi.get(self, "pim_spt_threshold")
 
@@ -1444,7 +1492,8 @@ class ServiceMulticastFeature(pulumi.CustomResource):
     @pulumi.getter(name="sptOnly")
     def spt_only(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Shortest Path Tree (SPT) Only Mode - Default value: `false`
+        Shortest Path Tree (SPT) Only Mode
+          - Default value: `false`
         """
         return pulumi.get(self, "spt_only")
 

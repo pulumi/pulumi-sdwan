@@ -54,22 +54,32 @@ class ServiceTrackerFeatureArgs:
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
+                 - Choices: `static-route`
+                 - Default value: `static-route`
         :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] interval: Interval - Range: `20`-`600` - Default value: `60`
+        :param pulumi.Input[_builtins.int] interval: Interval
+                 - Range: `20`-`600`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] multiplier: Multiplier - Range: `1`-`10` - Default value: `3`
+        :param pulumi.Input[_builtins.int] multiplier: Multiplier
+                 - Range: `1`-`10`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] port: - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] port_variable: Variable name
         :param pulumi.Input[_builtins.str] protocol: - Choices: `tcp`, `udp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Threshold - Range: `100`-`1000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] threshold: Threshold
+                 - Range: `100`-`1000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type
+                 - Choices: `endpoint`
+                 - Default value: `endpoint`
         :param pulumi.Input[_builtins.str] tracker_type_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -222,7 +232,9 @@ class ServiceTrackerFeatureArgs:
     @pulumi.getter(name="endpointTrackerType")
     def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        Endpoint Tracker Type
+          - Choices: `static-route`
+          - Default value: `static-route`
         """
         return pulumi.get(self, "endpoint_tracker_type")
 
@@ -246,7 +258,9 @@ class ServiceTrackerFeatureArgs:
     @pulumi.getter
     def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval - Range: `20`-`600` - Default value: `60`
+        Interval
+          - Range: `20`-`600`
+          - Default value: `60`
         """
         return pulumi.get(self, "interval")
 
@@ -270,7 +284,9 @@ class ServiceTrackerFeatureArgs:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Multiplier - Range: `1`-`10` - Default value: `3`
+        Multiplier
+          - Range: `1`-`10`
+          - Default value: `3`
         """
         return pulumi.get(self, "multiplier")
 
@@ -354,7 +370,9 @@ class ServiceTrackerFeatureArgs:
     @pulumi.getter
     def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Threshold - Range: `100`-`1000` - Default value: `300`
+        Threshold
+          - Range: `100`-`1000`
+          - Default value: `300`
         """
         return pulumi.get(self, "threshold")
 
@@ -402,7 +420,9 @@ class ServiceTrackerFeatureArgs:
     @pulumi.getter(name="trackerType")
     def tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        Tracker Type
+          - Choices: `endpoint`
+          - Default value: `endpoint`
         """
         return pulumi.get(self, "tracker_type")
 
@@ -461,23 +481,33 @@ class _ServiceTrackerFeatureState:
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
+                 - Choices: `static-route`
+                 - Default value: `static-route`
         :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval - Range: `20`-`600` - Default value: `60`
+        :param pulumi.Input[_builtins.int] interval: Interval
+                 - Range: `20`-`600`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] multiplier: Multiplier - Range: `1`-`10` - Default value: `3`
+        :param pulumi.Input[_builtins.int] multiplier: Multiplier
+                 - Range: `1`-`10`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] port: - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] port_variable: Variable name
         :param pulumi.Input[_builtins.str] protocol: - Choices: `tcp`, `udp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Threshold - Range: `100`-`1000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] threshold: Threshold
+                 - Range: `100`-`1000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type
+                 - Choices: `endpoint`
+                 - Default value: `endpoint`
         :param pulumi.Input[_builtins.str] tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -622,7 +652,9 @@ class _ServiceTrackerFeatureState:
     @pulumi.getter(name="endpointTrackerType")
     def endpoint_tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        Endpoint Tracker Type
+          - Choices: `static-route`
+          - Default value: `static-route`
         """
         return pulumi.get(self, "endpoint_tracker_type")
 
@@ -658,7 +690,9 @@ class _ServiceTrackerFeatureState:
     @pulumi.getter
     def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval - Range: `20`-`600` - Default value: `60`
+        Interval
+          - Range: `20`-`600`
+          - Default value: `60`
         """
         return pulumi.get(self, "interval")
 
@@ -682,7 +716,9 @@ class _ServiceTrackerFeatureState:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Multiplier - Range: `1`-`10` - Default value: `3`
+        Multiplier
+          - Range: `1`-`10`
+          - Default value: `3`
         """
         return pulumi.get(self, "multiplier")
 
@@ -766,7 +802,9 @@ class _ServiceTrackerFeatureState:
     @pulumi.getter
     def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Threshold - Range: `100`-`1000` - Default value: `300`
+        Threshold
+          - Range: `100`-`1000`
+          - Default value: `300`
         """
         return pulumi.get(self, "threshold")
 
@@ -814,7 +852,9 @@ class _ServiceTrackerFeatureState:
     @pulumi.getter(name="trackerType")
     def tracker_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        Tracker Type
+          - Choices: `endpoint`
+          - Default value: `endpoint`
         """
         return pulumi.get(self, "tracker_type")
 
@@ -925,23 +965,33 @@ class ServiceTrackerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
+                 - Choices: `static-route`
+                 - Default value: `static-route`
         :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval - Range: `20`-`600` - Default value: `60`
+        :param pulumi.Input[_builtins.int] interval: Interval
+                 - Range: `20`-`600`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] multiplier: Multiplier - Range: `1`-`10` - Default value: `3`
+        :param pulumi.Input[_builtins.int] multiplier: Multiplier
+                 - Range: `1`-`10`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] port: - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] port_variable: Variable name
         :param pulumi.Input[_builtins.str] protocol: - Choices: `tcp`, `udp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Threshold - Range: `100`-`1000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] threshold: Threshold
+                 - Range: `100`-`1000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type
+                 - Choices: `endpoint`
+                 - Default value: `endpoint`
         :param pulumi.Input[_builtins.str] tracker_type_variable: Variable name
         """
         ...
@@ -1114,23 +1164,33 @@ class ServiceTrackerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] endpoint_dns_name_variable: Variable name
         :param pulumi.Input[_builtins.str] endpoint_ip: Endpoint IP
         :param pulumi.Input[_builtins.str] endpoint_ip_variable: Variable name
-        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        :param pulumi.Input[_builtins.str] endpoint_tracker_type: Endpoint Tracker Type
+                 - Choices: `static-route`
+                 - Default value: `static-route`
         :param pulumi.Input[_builtins.str] endpoint_tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interval: Interval - Range: `20`-`600` - Default value: `60`
+        :param pulumi.Input[_builtins.int] interval: Interval
+                 - Range: `20`-`600`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] interval_variable: Variable name
-        :param pulumi.Input[_builtins.int] multiplier: Multiplier - Range: `1`-`10` - Default value: `3`
+        :param pulumi.Input[_builtins.int] multiplier: Multiplier
+                 - Range: `1`-`10`
+                 - Default value: `3`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.int] port: - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] port_variable: Variable name
         :param pulumi.Input[_builtins.str] protocol: - Choices: `tcp`, `udp`
         :param pulumi.Input[_builtins.str] protocol_variable: Variable name
-        :param pulumi.Input[_builtins.int] threshold: Threshold - Range: `100`-`1000` - Default value: `300`
+        :param pulumi.Input[_builtins.int] threshold: Threshold
+                 - Range: `100`-`1000`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] threshold_variable: Variable name
         :param pulumi.Input[_builtins.str] tracker_name: Tracker Name
         :param pulumi.Input[_builtins.str] tracker_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        :param pulumi.Input[_builtins.str] tracker_type: Tracker Type
+                 - Choices: `endpoint`
+                 - Default value: `endpoint`
         :param pulumi.Input[_builtins.str] tracker_type_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -1226,7 +1286,9 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     @pulumi.getter(name="endpointTrackerType")
     def endpoint_tracker_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        Endpoint Tracker Type
+          - Choices: `static-route`
+          - Default value: `static-route`
         """
         return pulumi.get(self, "endpoint_tracker_type")
 
@@ -1250,7 +1312,9 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     @pulumi.getter
     def interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Interval - Range: `20`-`600` - Default value: `60`
+        Interval
+          - Range: `20`-`600`
+          - Default value: `60`
         """
         return pulumi.get(self, "interval")
 
@@ -1266,7 +1330,9 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     @pulumi.getter
     def multiplier(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Multiplier - Range: `1`-`10` - Default value: `3`
+        Multiplier
+          - Range: `1`-`10`
+          - Default value: `3`
         """
         return pulumi.get(self, "multiplier")
 
@@ -1322,7 +1388,9 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     @pulumi.getter
     def threshold(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Threshold - Range: `100`-`1000` - Default value: `300`
+        Threshold
+          - Range: `100`-`1000`
+          - Default value: `300`
         """
         return pulumi.get(self, "threshold")
 
@@ -1354,7 +1422,9 @@ class ServiceTrackerFeature(pulumi.CustomResource):
     @pulumi.getter(name="trackerType")
     def tracker_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        Tracker Type
+          - Choices: `endpoint`
+          - Default value: `endpoint`
         """
         return pulumi.get(self, "tracker_type")
 

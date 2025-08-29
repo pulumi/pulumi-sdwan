@@ -33,7 +33,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SystemNtpFeatureAuthenticationKey>> AuthenticationKeys { get; private set; } = null!;
 
         /// <summary>
-        /// Enable device as NTP Leader - Default value: `false`
+        /// Enable device as NTP Leader
+        ///   - Default value: `false`
         /// </summary>
         [Output("authoritativeNtpServer")]
         public Output<bool?> AuthoritativeNtpServer { get; private set; } = null!;
@@ -81,7 +82,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SourceInterfaceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable device as NTP Leader - Range: `1`-`15`
+        /// Enable device as NTP Leader
+        ///   - Range: `1`-`15`
         /// </summary>
         [Output("stratum")]
         public Output<int?> Stratum { get; private set; } = null!;
@@ -169,7 +171,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable device as NTP Leader - Default value: `false`
+        /// Enable device as NTP Leader
+        ///   - Default value: `false`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }
@@ -223,7 +226,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Enable device as NTP Leader - Range: `1`-`15`
+        /// Enable device as NTP Leader
+        ///   - Range: `1`-`15`
         /// </summary>
         [Input("stratum")]
         public Input<int>? Stratum { get; set; }
@@ -273,7 +277,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable device as NTP Leader - Default value: `false`
+        /// Enable device as NTP Leader
+        ///   - Default value: `false`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }
@@ -327,7 +332,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Enable device as NTP Leader - Range: `1`-`15`
+        /// Enable device as NTP Leader
+        ///   - Range: `1`-`15`
         /// </summary>
         [Input("stratum")]
         public Input<int>? Stratum { get; set; }

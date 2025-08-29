@@ -31,11 +31,14 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	Address pulumi.StringPtrOutput `pulumi:"address"`
 	// Variable name
 	AddressVariable pulumi.StringPtrOutput `pulumi:"addressVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrOutput `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrOutput `pulumi:"arpTimeoutVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	AutoBandwidthDetect pulumi.BoolPtrOutput `pulumi:"autoBandwidthDetect"`
 	// Variable name
 	AutoBandwidthDetectVariable pulumi.StringPtrOutput `pulumi:"autoBandwidthDetectVariable"`
@@ -43,47 +46,58 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	Autonegotiate pulumi.BoolPtrOutput `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrOutput `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrOutput `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrOutput `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrOutput `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source - Default value: `false`
+	// Block packets originating from IP address that is not from this source
+	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrOutput `pulumi:"blockNonSourceIp"`
 	// Variable name
 	BlockNonSourceIpVariable pulumi.StringPtrOutput `pulumi:"blockNonSourceIpVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrOutput `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrOutput `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Enable DHCP - Default value: `false`
+	// Enable DHCP
+	//   - Default value: `false`
 	Dhcp pulumi.BoolPtrOutput `pulumi:"dhcp"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	DhcpDistance pulumi.IntPtrOutput `pulumi:"dhcpDistance"`
 	// Variable name
 	DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"dhcpDistanceVariable"`
 	// Variable name
 	DhcpVariable pulumi.StringPtrOutput `pulumi:"dhcpVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Dhcpv6 pulumi.BoolPtrOutput `pulumi:"dhcpv6"`
 	// Variable name
 	Dhcpv6Variable pulumi.StringPtrOutput `pulumi:"dhcpv6Variable"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrOutput `pulumi:"enableCoreRegion"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	EnableSgt pulumi.BoolPtrOutput `pulumi:"enableSgt"`
 	// Extend remote TLOC over a GRE tunnel to a local WAN interface
 	GreTunnelSourceIp pulumi.StringPtrOutput `pulumi:"greTunnelSourceIp"`
@@ -93,7 +107,8 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	GreTunnelXconnect pulumi.StringPtrOutput `pulumi:"greTunnelXconnect"`
 	// Variable name
 	GreTunnelXconnectVariable pulumi.StringPtrOutput `pulumi:"greTunnelXconnectVariable"`
-	// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+	// Set this option to disable the icmp/icmpv6 redirect packets
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrOutput `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrOutput `pulumi:"icmpRedirectDisableVariable"`
@@ -101,22 +116,24 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrOutput `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-	// Default value: `1500`
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrOutput `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrOutput `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
@@ -140,7 +157,8 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArrayOutput `pulumi:"ipv6DhcpHelpers"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrOutput `pulumi:"ipv6Nat"`
 	// Variable name
 	Ipv6NatVariable pulumi.StringPtrOutput `pulumi:"ipv6NatVariable"`
@@ -148,7 +166,9 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	Ipv6SecondaryAddresses CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArrayOutput `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps CiscoVpnInterfaceFeatureTemplateIpv6VrrpArrayOutput `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrOutput `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrOutput `pulumi:"loadIntervalVariable"`
@@ -156,23 +176,28 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	MacAddress pulumi.StringPtrOutput `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable pulumi.StringPtrOutput `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrOutput `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrOutput `pulumi:"mediaTypeVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Network Address Translation on this interface - Default value: `false`
+	// Network Address Translation on this interface
+	//   - Default value: `false`
 	Nat pulumi.BoolPtrOutput `pulumi:"nat"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64Interface pulumi.BoolPtrOutput `pulumi:"nat64Interface"`
-	// NAT66 on this interface - Default value: `false`
+	// NAT66 on this interface
+	//   - Default value: `false`
 	Nat66Interface pulumi.BoolPtrOutput `pulumi:"nat66Interface"`
 	// Configure NAT Inside Loopback Interface
 	NatInsideSourceLoopbackInterface pulumi.StringPtrOutput `pulumi:"natInsideSourceLoopbackInterface"`
 	// Variable name
 	NatInsideSourceLoopbackInterfaceVariable pulumi.StringPtrOutput `pulumi:"natInsideSourceLoopbackInterfaceVariable"`
-	// Enable port translation(PAT) - Default value: `true`
+	// Enable port translation(PAT)
+	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrOutput `pulumi:"natOverload"`
 	// Variable name
 	NatOverloadVariable pulumi.StringPtrOutput `pulumi:"natOverloadVariable"`
@@ -188,41 +213,53 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	NatPoolRangeStart pulumi.StringPtrOutput `pulumi:"natPoolRangeStart"`
 	// Variable name
 	NatPoolRangeStartVariable pulumi.StringPtrOutput `pulumi:"natPoolRangeStartVariable"`
-	// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+	// NAT type
+	//   - Choices: `interface`, `pool`, `loopback`
+	//   - Default value: `interface`
 	NatType pulumi.StringPtrOutput `pulumi:"natType"`
 	// Variable name
 	NatTypeVariable pulumi.StringPtrOutput `pulumi:"natTypeVariable"`
-	// Configure interface as Power-over-Ethernet source - Default value: `false`
+	// Configure interface as Power-over-Ethernet source
+	//   - Default value: `false`
 	Poe pulumi.BoolPtrOutput `pulumi:"poe"`
 	// Variable name
 	PoeVariable pulumi.StringPtrOutput `pulumi:"poeVariable"`
-	// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+	// Enable/Disable CTS SGT propagation on an interface.
+	//   - Default value: `true`
 	PropagateSgt pulumi.BoolPtrOutput `pulumi:"propagateSgt"`
-	// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default downstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthDownstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveBandwidthDownstream"`
 	// Variable name
 	QosAdaptiveBandwidthDownstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveBandwidthDownstreamVariable"`
-	// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default upstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthUpstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveBandwidthUpstream"`
 	// Variable name
 	QosAdaptiveBandwidthUpstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveBandwidthUpstreamVariable"`
-	// Downstream max bandwidth limit - Range: `8`-`100000000`
+	// Downstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxDownstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveMaxDownstream"`
 	// Variable name
 	QosAdaptiveMaxDownstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveMaxDownstreamVariable"`
-	// Upstream max bandwidth limit - Range: `8`-`100000000`
+	// Upstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxUpstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveMaxUpstream"`
 	// Variable name
 	QosAdaptiveMaxUpstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveMaxUpstreamVariable"`
-	// Downstream min bandwidth limit - Range: `8`-`100000000`
+	// Downstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinDownstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveMinDownstream"`
 	// Variable name
 	QosAdaptiveMinDownstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveMinDownstreamVariable"`
-	// Upstream min bandwidth limit - Range: `8`-`100000000`
+	// Upstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinUpstream pulumi.IntPtrOutput `pulumi:"qosAdaptiveMinUpstream"`
 	// Variable name
 	QosAdaptiveMinUpstreamVariable pulumi.StringPtrOutput `pulumi:"qosAdaptiveMinUpstreamVariable"`
-	// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+	// Periodic timer for adaptive QoS in minutes
+	//   - Range: `1`-`720`
+	//   - Default value: `15`
 	QosAdaptivePeriod pulumi.IntPtrOutput `pulumi:"qosAdaptivePeriod"`
 	// Variable name
 	QosAdaptivePeriodVariable pulumi.StringPtrOutput `pulumi:"qosAdaptivePeriodVariable"`
@@ -238,25 +275,32 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	RewriteRuleName pulumi.StringPtrOutput `pulumi:"rewriteRuleName"`
 	// Variable name
 	RewriteRuleNameVariable pulumi.StringPtrOutput `pulumi:"rewriteRuleNameVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrOutput `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrOutput `pulumi:"secondaryRegionVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	SgtEnforcement pulumi.BoolPtrOutput `pulumi:"sgtEnforcement"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	SgtEnforcementSgt pulumi.IntPtrOutput `pulumi:"sgtEnforcementSgt"`
 	// Variable name
 	SgtEnforcementSgtVariable pulumi.StringPtrOutput `pulumi:"sgtEnforcementSgtVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrOutput `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrOutput `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrOutput `pulumi:"speed"`
 	// Variable name
 	SpeedVariable pulumi.StringPtrOutput `pulumi:"speedVariable"`
@@ -268,17 +312,22 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	StaticNatEntries CiscoVpnInterfaceFeatureTemplateStaticNatEntryArrayOutput `pulumi:"staticNatEntries"`
 	// Configure Port Forward entries
 	StaticPortForwardEntries CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArrayOutput `pulumi:"staticPortForwardEntries"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	StaticSgt pulumi.IntPtrOutput `pulumi:"staticSgt"`
-	// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS.
+	//   - Default value: `false`
 	StaticSgtTrusted pulumi.BoolPtrOutput `pulumi:"staticSgtTrusted"`
 	// Variable name
 	StaticSgtVariable pulumi.StringPtrOutput `pulumi:"staticSgtVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrOutput `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrOutput `pulumi:"tcpMssAdjustVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	TcpTimeout pulumi.IntPtrOutput `pulumi:"tcpTimeout"`
 	// Variable name
 	TcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"tcpTimeoutVariable"`
@@ -292,55 +341,69 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	TrackerVariable pulumi.StringPtrOutput `pulumi:"trackerVariable"`
 	// Enable tracker for this interface
 	Trackers pulumi.StringArrayOutput `pulumi:"trackers"`
-	// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+	// Tunnels Bandwidth Percent
+	//   - Range: `1`-`99`
+	//   - Default value: `50`
 	TunnelBandwidth pulumi.IntPtrOutput `pulumi:"tunnelBandwidth"`
 	// Variable name
 	TunnelBandwidthVariable pulumi.StringPtrOutput `pulumi:"tunnelBandwidthVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -348,30 +411,35 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorRestrictVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -389,59 +457,78 @@ type CiscoVpnInterfaceFeatureTemplate struct {
 	TunnelInterfaceGroups pulumi.IntArrayOutput `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrOutput `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrOutput `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrOutput `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfacePortHopVariable"`
-	// CTS SGT Propagation configuration - Default value: `false`
+	// CTS SGT Propagation configuration
+	//   - Default value: `false`
 	TunnelInterfacePropagateSgt pulumi.BoolPtrOutput `pulumi:"tunnelInterfacePropagateSgt"`
 	// Variable name
 	TunnelInterfacePropagateSgtVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfacePropagateSgtVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrOutput `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `hub`, `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrOutput `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrOutput `pulumi:"tunnelQosModeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	UdpTimeout pulumi.IntPtrOutput `pulumi:"udpTimeout"`
 	// Variable name
 	UdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"udpTimeoutVariable"`
@@ -491,11 +578,14 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	Address *string `pulumi:"address"`
 	// Variable name
 	AddressVariable *string `pulumi:"addressVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	AutoBandwidthDetect *bool `pulumi:"autoBandwidthDetect"`
 	// Variable name
 	AutoBandwidthDetectVariable *string `pulumi:"autoBandwidthDetectVariable"`
@@ -503,47 +593,58 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source - Default value: `false`
+	// Block packets originating from IP address that is not from this source
+	//   - Default value: `false`
 	BlockNonSourceIp *bool `pulumi:"blockNonSourceIp"`
 	// Variable name
 	BlockNonSourceIpVariable *string `pulumi:"blockNonSourceIpVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion *string `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable *string `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable DHCP - Default value: `false`
+	// Enable DHCP
+	//   - Default value: `false`
 	Dhcp *bool `pulumi:"dhcp"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	DhcpDistance *int `pulumi:"dhcpDistance"`
 	// Variable name
 	DhcpDistanceVariable *string `pulumi:"dhcpDistanceVariable"`
 	// Variable name
 	DhcpVariable *string `pulumi:"dhcpVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Dhcpv6 *bool `pulumi:"dhcpv6"`
 	// Variable name
 	Dhcpv6Variable *string `pulumi:"dhcpv6Variable"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion *bool `pulumi:"enableCoreRegion"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	EnableSgt *bool `pulumi:"enableSgt"`
 	// Extend remote TLOC over a GRE tunnel to a local WAN interface
 	GreTunnelSourceIp *string `pulumi:"greTunnelSourceIp"`
@@ -553,7 +654,8 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	GreTunnelXconnect *string `pulumi:"greTunnelXconnect"`
 	// Variable name
 	GreTunnelXconnectVariable *string `pulumi:"greTunnelXconnectVariable"`
-	// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+	// Set this option to disable the icmp/icmpv6 redirect packets
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
@@ -561,22 +663,24 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-	// Default value: `1500`
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -600,7 +704,8 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers []CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
 	// Variable name
 	Ipv6NatVariable *string `pulumi:"ipv6NatVariable"`
@@ -608,7 +713,9 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	Ipv6SecondaryAddresses []CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps []CiscoVpnInterfaceFeatureTemplateIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -616,23 +723,28 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Network Address Translation on this interface - Default value: `false`
+	// Network Address Translation on this interface
+	//   - Default value: `false`
 	Nat *bool `pulumi:"nat"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64Interface *bool `pulumi:"nat64Interface"`
-	// NAT66 on this interface - Default value: `false`
+	// NAT66 on this interface
+	//   - Default value: `false`
 	Nat66Interface *bool `pulumi:"nat66Interface"`
 	// Configure NAT Inside Loopback Interface
 	NatInsideSourceLoopbackInterface *string `pulumi:"natInsideSourceLoopbackInterface"`
 	// Variable name
 	NatInsideSourceLoopbackInterfaceVariable *string `pulumi:"natInsideSourceLoopbackInterfaceVariable"`
-	// Enable port translation(PAT) - Default value: `true`
+	// Enable port translation(PAT)
+	//   - Default value: `true`
 	NatOverload *bool `pulumi:"natOverload"`
 	// Variable name
 	NatOverloadVariable *string `pulumi:"natOverloadVariable"`
@@ -648,41 +760,53 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	NatPoolRangeStart *string `pulumi:"natPoolRangeStart"`
 	// Variable name
 	NatPoolRangeStartVariable *string `pulumi:"natPoolRangeStartVariable"`
-	// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+	// NAT type
+	//   - Choices: `interface`, `pool`, `loopback`
+	//   - Default value: `interface`
 	NatType *string `pulumi:"natType"`
 	// Variable name
 	NatTypeVariable *string `pulumi:"natTypeVariable"`
-	// Configure interface as Power-over-Ethernet source - Default value: `false`
+	// Configure interface as Power-over-Ethernet source
+	//   - Default value: `false`
 	Poe *bool `pulumi:"poe"`
 	// Variable name
 	PoeVariable *string `pulumi:"poeVariable"`
-	// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+	// Enable/Disable CTS SGT propagation on an interface.
+	//   - Default value: `true`
 	PropagateSgt *bool `pulumi:"propagateSgt"`
-	// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default downstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthDownstream *int `pulumi:"qosAdaptiveBandwidthDownstream"`
 	// Variable name
 	QosAdaptiveBandwidthDownstreamVariable *string `pulumi:"qosAdaptiveBandwidthDownstreamVariable"`
-	// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default upstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthUpstream *int `pulumi:"qosAdaptiveBandwidthUpstream"`
 	// Variable name
 	QosAdaptiveBandwidthUpstreamVariable *string `pulumi:"qosAdaptiveBandwidthUpstreamVariable"`
-	// Downstream max bandwidth limit - Range: `8`-`100000000`
+	// Downstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxDownstream *int `pulumi:"qosAdaptiveMaxDownstream"`
 	// Variable name
 	QosAdaptiveMaxDownstreamVariable *string `pulumi:"qosAdaptiveMaxDownstreamVariable"`
-	// Upstream max bandwidth limit - Range: `8`-`100000000`
+	// Upstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxUpstream *int `pulumi:"qosAdaptiveMaxUpstream"`
 	// Variable name
 	QosAdaptiveMaxUpstreamVariable *string `pulumi:"qosAdaptiveMaxUpstreamVariable"`
-	// Downstream min bandwidth limit - Range: `8`-`100000000`
+	// Downstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinDownstream *int `pulumi:"qosAdaptiveMinDownstream"`
 	// Variable name
 	QosAdaptiveMinDownstreamVariable *string `pulumi:"qosAdaptiveMinDownstreamVariable"`
-	// Upstream min bandwidth limit - Range: `8`-`100000000`
+	// Upstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinUpstream *int `pulumi:"qosAdaptiveMinUpstream"`
 	// Variable name
 	QosAdaptiveMinUpstreamVariable *string `pulumi:"qosAdaptiveMinUpstreamVariable"`
-	// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+	// Periodic timer for adaptive QoS in minutes
+	//   - Range: `1`-`720`
+	//   - Default value: `15`
 	QosAdaptivePeriod *int `pulumi:"qosAdaptivePeriod"`
 	// Variable name
 	QosAdaptivePeriodVariable *string `pulumi:"qosAdaptivePeriodVariable"`
@@ -698,25 +822,32 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	RewriteRuleName *string `pulumi:"rewriteRuleName"`
 	// Variable name
 	RewriteRuleNameVariable *string `pulumi:"rewriteRuleNameVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	SgtEnforcement *bool `pulumi:"sgtEnforcement"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	SgtEnforcementSgt *int `pulumi:"sgtEnforcementSgt"`
 	// Variable name
 	SgtEnforcementSgtVariable *string `pulumi:"sgtEnforcementSgtVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable *string `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
@@ -728,17 +859,22 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	StaticNatEntries []CiscoVpnInterfaceFeatureTemplateStaticNatEntry `pulumi:"staticNatEntries"`
 	// Configure Port Forward entries
 	StaticPortForwardEntries []CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry `pulumi:"staticPortForwardEntries"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	StaticSgt *int `pulumi:"staticSgt"`
-	// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS.
+	//   - Default value: `false`
 	StaticSgtTrusted *bool `pulumi:"staticSgtTrusted"`
 	// Variable name
 	StaticSgtVariable *string `pulumi:"staticSgtVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	TcpTimeout *int `pulumi:"tcpTimeout"`
 	// Variable name
 	TcpTimeoutVariable *string `pulumi:"tcpTimeoutVariable"`
@@ -752,55 +888,69 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Enable tracker for this interface
 	Trackers []string `pulumi:"trackers"`
-	// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+	// Tunnels Bandwidth Percent
+	//   - Range: `1`-`99`
+	//   - Default value: `50`
 	TunnelBandwidth *int `pulumi:"tunnelBandwidth"`
 	// Variable name
 	TunnelBandwidthVariable *string `pulumi:"tunnelBandwidthVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -808,30 +958,35 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorRestrictVariable *string `pulumi:"tunnelInterfaceColorRestrictVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections *bool `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable *string `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -849,59 +1004,78 @@ type ciscoVpnInterfaceFeatureTemplateState struct {
 	TunnelInterfaceGroups []int `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// CTS SGT Propagation configuration - Default value: `false`
+	// CTS SGT Propagation configuration
+	//   - Default value: `false`
 	TunnelInterfacePropagateSgt *bool `pulumi:"tunnelInterfacePropagateSgt"`
 	// Variable name
 	TunnelInterfacePropagateSgtVariable *string `pulumi:"tunnelInterfacePropagateSgtVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `hub`, `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	UdpTimeout *int `pulumi:"udpTimeout"`
 	// Variable name
 	UdpTimeoutVariable *string `pulumi:"udpTimeoutVariable"`
@@ -916,11 +1090,14 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	Address pulumi.StringPtrInput
 	// Variable name
 	AddressVariable pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	AutoBandwidthDetect pulumi.BoolPtrInput
 	// Variable name
 	AutoBandwidthDetectVariable pulumi.StringPtrInput
@@ -928,47 +1105,58 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrInput
-	// Block packets originating from IP address that is not from this source - Default value: `false`
+	// Block packets originating from IP address that is not from this source
+	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrInput
 	// Variable name
 	BlockNonSourceIpVariable pulumi.StringPtrInput
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrInput
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable DHCP - Default value: `false`
+	// Enable DHCP
+	//   - Default value: `false`
 	Dhcp pulumi.BoolPtrInput
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	DhcpVariable pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Dhcpv6 pulumi.BoolPtrInput
 	// Variable name
 	Dhcpv6Variable pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	EnableSgt pulumi.BoolPtrInput
 	// Extend remote TLOC over a GRE tunnel to a local WAN interface
 	GreTunnelSourceIp pulumi.StringPtrInput
@@ -978,7 +1166,8 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	GreTunnelXconnect pulumi.StringPtrInput
 	// Variable name
 	GreTunnelXconnectVariable pulumi.StringPtrInput
-	// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+	// Set this option to disable the icmp/icmpv6 redirect packets
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
@@ -986,22 +1175,24 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-	// Default value: `1500`
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -1025,7 +1216,8 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	Ipv6AddressVariable pulumi.StringPtrInput
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArrayInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
 	// Variable name
 	Ipv6NatVariable pulumi.StringPtrInput
@@ -1033,7 +1225,9 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	Ipv6SecondaryAddresses CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArrayInput
 	// Enable VRRP
 	Ipv6Vrrps CiscoVpnInterfaceFeatureTemplateIpv6VrrpArrayInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -1041,23 +1235,28 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Network Address Translation on this interface - Default value: `false`
+	// Network Address Translation on this interface
+	//   - Default value: `false`
 	Nat pulumi.BoolPtrInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64Interface pulumi.BoolPtrInput
-	// NAT66 on this interface - Default value: `false`
+	// NAT66 on this interface
+	//   - Default value: `false`
 	Nat66Interface pulumi.BoolPtrInput
 	// Configure NAT Inside Loopback Interface
 	NatInsideSourceLoopbackInterface pulumi.StringPtrInput
 	// Variable name
 	NatInsideSourceLoopbackInterfaceVariable pulumi.StringPtrInput
-	// Enable port translation(PAT) - Default value: `true`
+	// Enable port translation(PAT)
+	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrInput
 	// Variable name
 	NatOverloadVariable pulumi.StringPtrInput
@@ -1073,41 +1272,53 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	NatPoolRangeStart pulumi.StringPtrInput
 	// Variable name
 	NatPoolRangeStartVariable pulumi.StringPtrInput
-	// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+	// NAT type
+	//   - Choices: `interface`, `pool`, `loopback`
+	//   - Default value: `interface`
 	NatType pulumi.StringPtrInput
 	// Variable name
 	NatTypeVariable pulumi.StringPtrInput
-	// Configure interface as Power-over-Ethernet source - Default value: `false`
+	// Configure interface as Power-over-Ethernet source
+	//   - Default value: `false`
 	Poe pulumi.BoolPtrInput
 	// Variable name
 	PoeVariable pulumi.StringPtrInput
-	// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+	// Enable/Disable CTS SGT propagation on an interface.
+	//   - Default value: `true`
 	PropagateSgt pulumi.BoolPtrInput
-	// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default downstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveBandwidthDownstreamVariable pulumi.StringPtrInput
-	// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default upstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveBandwidthUpstreamVariable pulumi.StringPtrInput
-	// Downstream max bandwidth limit - Range: `8`-`100000000`
+	// Downstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMaxDownstreamVariable pulumi.StringPtrInput
-	// Upstream max bandwidth limit - Range: `8`-`100000000`
+	// Upstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMaxUpstreamVariable pulumi.StringPtrInput
-	// Downstream min bandwidth limit - Range: `8`-`100000000`
+	// Downstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMinDownstreamVariable pulumi.StringPtrInput
-	// Upstream min bandwidth limit - Range: `8`-`100000000`
+	// Upstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMinUpstreamVariable pulumi.StringPtrInput
-	// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+	// Periodic timer for adaptive QoS in minutes
+	//   - Range: `1`-`720`
+	//   - Default value: `15`
 	QosAdaptivePeriod pulumi.IntPtrInput
 	// Variable name
 	QosAdaptivePeriodVariable pulumi.StringPtrInput
@@ -1123,25 +1334,32 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	RewriteRuleName pulumi.StringPtrInput
 	// Variable name
 	RewriteRuleNameVariable pulumi.StringPtrInput
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	SgtEnforcement pulumi.BoolPtrInput
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	SgtEnforcementSgt pulumi.IntPtrInput
 	// Variable name
 	SgtEnforcementSgtVariable pulumi.StringPtrInput
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
@@ -1153,17 +1371,22 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	StaticNatEntries CiscoVpnInterfaceFeatureTemplateStaticNatEntryArrayInput
 	// Configure Port Forward entries
 	StaticPortForwardEntries CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArrayInput
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	StaticSgt pulumi.IntPtrInput
-	// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS.
+	//   - Default value: `false`
 	StaticSgtTrusted pulumi.BoolPtrInput
 	// Variable name
 	StaticSgtVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	TcpTimeoutVariable pulumi.StringPtrInput
@@ -1177,55 +1400,69 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Enable tracker for this interface
 	Trackers pulumi.StringArrayInput
-	// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+	// Tunnels Bandwidth Percent
+	//   - Range: `1`-`99`
+	//   - Default value: `50`
 	TunnelBandwidth pulumi.IntPtrInput
 	// Variable name
 	TunnelBandwidthVariable pulumi.StringPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
@@ -1233,30 +1470,35 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrInput
@@ -1274,59 +1516,78 @@ type CiscoVpnInterfaceFeatureTemplateState struct {
 	TunnelInterfaceGroups pulumi.IntArrayInput
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// CTS SGT Propagation configuration - Default value: `false`
+	// CTS SGT Propagation configuration
+	//   - Default value: `false`
 	TunnelInterfacePropagateSgt pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePropagateSgtVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `hub`, `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	UdpTimeoutVariable pulumi.StringPtrInput
@@ -1345,11 +1606,14 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	Address *string `pulumi:"address"`
 	// Variable name
 	AddressVariable *string `pulumi:"addressVariable"`
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout *int `pulumi:"arpTimeout"`
 	// Variable name
 	ArpTimeoutVariable *string `pulumi:"arpTimeoutVariable"`
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	AutoBandwidthDetect *bool `pulumi:"autoBandwidthDetect"`
 	// Variable name
 	AutoBandwidthDetectVariable *string `pulumi:"autoBandwidthDetectVariable"`
@@ -1357,47 +1621,58 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	Autonegotiate *bool `pulumi:"autonegotiate"`
 	// Variable name
 	AutonegotiateVariable *string `pulumi:"autonegotiateVariable"`
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream *int `pulumi:"bandwidthDownstream"`
 	// Variable name
 	BandwidthDownstreamVariable *string `pulumi:"bandwidthDownstreamVariable"`
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream *int `pulumi:"bandwidthUpstream"`
 	// Variable name
 	BandwidthUpstreamVariable *string `pulumi:"bandwidthUpstreamVariable"`
-	// Block packets originating from IP address that is not from this source - Default value: `false`
+	// Block packets originating from IP address that is not from this source
+	//   - Default value: `false`
 	BlockNonSourceIp *bool `pulumi:"blockNonSourceIp"`
 	// Variable name
 	BlockNonSourceIpVariable *string `pulumi:"blockNonSourceIpVariable"`
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion *string `pulumi:"coreRegion"`
 	// Variable name
 	CoreRegionVariable *string `pulumi:"coreRegionVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable DHCP - Default value: `false`
+	// Enable DHCP
+	//   - Default value: `false`
 	Dhcp *bool `pulumi:"dhcp"`
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	DhcpDistance *int `pulumi:"dhcpDistance"`
 	// Variable name
 	DhcpDistanceVariable *string `pulumi:"dhcpDistanceVariable"`
 	// Variable name
 	DhcpVariable *string `pulumi:"dhcpVariable"`
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Dhcpv6 *bool `pulumi:"dhcpv6"`
 	// Variable name
 	Dhcpv6Variable *string `pulumi:"dhcpv6Variable"`
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion *bool `pulumi:"enableCoreRegion"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	EnableSgt *bool `pulumi:"enableSgt"`
 	// Extend remote TLOC over a GRE tunnel to a local WAN interface
 	GreTunnelSourceIp *string `pulumi:"greTunnelSourceIp"`
@@ -1407,7 +1682,8 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	GreTunnelXconnect *string `pulumi:"greTunnelXconnect"`
 	// Variable name
 	GreTunnelXconnectVariable *string `pulumi:"greTunnelXconnectVariable"`
-	// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+	// Set this option to disable the icmp/icmpv6 redirect packets
+	//   - Default value: `true`
 	IcmpRedirectDisable *bool `pulumi:"icmpRedirectDisable"`
 	// Variable name
 	IcmpRedirectDisableVariable *string `pulumi:"icmpRedirectDisableVariable"`
@@ -1415,22 +1691,24 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
 	// Variable name
 	InterfaceDescriptionVariable *string `pulumi:"interfaceDescriptionVariable"`
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-	// Default value: `1500`
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast *bool `pulumi:"ipDirectedBroadcast"`
 	// Variable name
 	IpDirectedBroadcastVariable *string `pulumi:"ipDirectedBroadcastVariable"`
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
@@ -1454,7 +1732,8 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers []CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
 	// Variable name
 	Ipv6NatVariable *string `pulumi:"ipv6NatVariable"`
@@ -1462,7 +1741,9 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	Ipv6SecondaryAddresses []CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP
 	Ipv6Vrrps []CiscoVpnInterfaceFeatureTemplateIpv6Vrrp `pulumi:"ipv6Vrrps"`
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval *int `pulumi:"loadInterval"`
 	// Variable name
 	LoadIntervalVariable *string `pulumi:"loadIntervalVariable"`
@@ -1470,23 +1751,28 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	MacAddress *string `pulumi:"macAddress"`
 	// Variable name
 	MacAddressVariable *string `pulumi:"macAddressVariable"`
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType *string `pulumi:"mediaType"`
 	// Variable name
 	MediaTypeVariable *string `pulumi:"mediaTypeVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Network Address Translation on this interface - Default value: `false`
+	// Network Address Translation on this interface
+	//   - Default value: `false`
 	Nat *bool `pulumi:"nat"`
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64Interface *bool `pulumi:"nat64Interface"`
-	// NAT66 on this interface - Default value: `false`
+	// NAT66 on this interface
+	//   - Default value: `false`
 	Nat66Interface *bool `pulumi:"nat66Interface"`
 	// Configure NAT Inside Loopback Interface
 	NatInsideSourceLoopbackInterface *string `pulumi:"natInsideSourceLoopbackInterface"`
 	// Variable name
 	NatInsideSourceLoopbackInterfaceVariable *string `pulumi:"natInsideSourceLoopbackInterfaceVariable"`
-	// Enable port translation(PAT) - Default value: `true`
+	// Enable port translation(PAT)
+	//   - Default value: `true`
 	NatOverload *bool `pulumi:"natOverload"`
 	// Variable name
 	NatOverloadVariable *string `pulumi:"natOverloadVariable"`
@@ -1502,41 +1788,53 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	NatPoolRangeStart *string `pulumi:"natPoolRangeStart"`
 	// Variable name
 	NatPoolRangeStartVariable *string `pulumi:"natPoolRangeStartVariable"`
-	// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+	// NAT type
+	//   - Choices: `interface`, `pool`, `loopback`
+	//   - Default value: `interface`
 	NatType *string `pulumi:"natType"`
 	// Variable name
 	NatTypeVariable *string `pulumi:"natTypeVariable"`
-	// Configure interface as Power-over-Ethernet source - Default value: `false`
+	// Configure interface as Power-over-Ethernet source
+	//   - Default value: `false`
 	Poe *bool `pulumi:"poe"`
 	// Variable name
 	PoeVariable *string `pulumi:"poeVariable"`
-	// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+	// Enable/Disable CTS SGT propagation on an interface.
+	//   - Default value: `true`
 	PropagateSgt *bool `pulumi:"propagateSgt"`
-	// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default downstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthDownstream *int `pulumi:"qosAdaptiveBandwidthDownstream"`
 	// Variable name
 	QosAdaptiveBandwidthDownstreamVariable *string `pulumi:"qosAdaptiveBandwidthDownstreamVariable"`
-	// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default upstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthUpstream *int `pulumi:"qosAdaptiveBandwidthUpstream"`
 	// Variable name
 	QosAdaptiveBandwidthUpstreamVariable *string `pulumi:"qosAdaptiveBandwidthUpstreamVariable"`
-	// Downstream max bandwidth limit - Range: `8`-`100000000`
+	// Downstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxDownstream *int `pulumi:"qosAdaptiveMaxDownstream"`
 	// Variable name
 	QosAdaptiveMaxDownstreamVariable *string `pulumi:"qosAdaptiveMaxDownstreamVariable"`
-	// Upstream max bandwidth limit - Range: `8`-`100000000`
+	// Upstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxUpstream *int `pulumi:"qosAdaptiveMaxUpstream"`
 	// Variable name
 	QosAdaptiveMaxUpstreamVariable *string `pulumi:"qosAdaptiveMaxUpstreamVariable"`
-	// Downstream min bandwidth limit - Range: `8`-`100000000`
+	// Downstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinDownstream *int `pulumi:"qosAdaptiveMinDownstream"`
 	// Variable name
 	QosAdaptiveMinDownstreamVariable *string `pulumi:"qosAdaptiveMinDownstreamVariable"`
-	// Upstream min bandwidth limit - Range: `8`-`100000000`
+	// Upstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinUpstream *int `pulumi:"qosAdaptiveMinUpstream"`
 	// Variable name
 	QosAdaptiveMinUpstreamVariable *string `pulumi:"qosAdaptiveMinUpstreamVariable"`
-	// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+	// Periodic timer for adaptive QoS in minutes
+	//   - Range: `1`-`720`
+	//   - Default value: `15`
 	QosAdaptivePeriod *int `pulumi:"qosAdaptivePeriod"`
 	// Variable name
 	QosAdaptivePeriodVariable *string `pulumi:"qosAdaptivePeriodVariable"`
@@ -1552,25 +1850,32 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	RewriteRuleName *string `pulumi:"rewriteRuleName"`
 	// Variable name
 	RewriteRuleNameVariable *string `pulumi:"rewriteRuleNameVariable"`
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion *string `pulumi:"secondaryRegion"`
 	// Variable name
 	SecondaryRegionVariable *string `pulumi:"secondaryRegionVariable"`
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	SgtEnforcement *bool `pulumi:"sgtEnforcement"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	SgtEnforcementSgt *int `pulumi:"sgtEnforcementSgt"`
 	// Variable name
 	SgtEnforcementSgtVariable *string `pulumi:"sgtEnforcementSgtVariable"`
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate *int `pulumi:"shapingRate"`
 	// Variable name
 	ShapingRateVariable *string `pulumi:"shapingRateVariable"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed *string `pulumi:"speed"`
 	// Variable name
 	SpeedVariable *string `pulumi:"speedVariable"`
@@ -1582,17 +1887,22 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	StaticNatEntries []CiscoVpnInterfaceFeatureTemplateStaticNatEntry `pulumi:"staticNatEntries"`
 	// Configure Port Forward entries
 	StaticPortForwardEntries []CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntry `pulumi:"staticPortForwardEntries"`
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	StaticSgt *int `pulumi:"staticSgt"`
-	// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS.
+	//   - Default value: `false`
 	StaticSgtTrusted *bool `pulumi:"staticSgtTrusted"`
 	// Variable name
 	StaticSgtVariable *string `pulumi:"staticSgtVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	TcpTimeout *int `pulumi:"tcpTimeout"`
 	// Variable name
 	TcpTimeoutVariable *string `pulumi:"tcpTimeoutVariable"`
@@ -1604,55 +1914,69 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	TrackerVariable *string `pulumi:"trackerVariable"`
 	// Enable tracker for this interface
 	Trackers []string `pulumi:"trackers"`
-	// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+	// Tunnels Bandwidth Percent
+	//   - Range: `1`-`99`
+	//   - Default value: `50`
 	TunnelBandwidth *int `pulumi:"tunnelBandwidth"`
 	// Variable name
 	TunnelBandwidthVariable *string `pulumi:"tunnelBandwidthVariable"`
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll *bool `pulumi:"tunnelInterfaceAllowAll"`
 	// Variable name
 	TunnelInterfaceAllowAllVariable *string `pulumi:"tunnelInterfaceAllowAllVariable"`
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp *bool `pulumi:"tunnelInterfaceAllowBgp"`
 	// Variable name
 	TunnelInterfaceAllowBgpVariable *string `pulumi:"tunnelInterfaceAllowBgpVariable"`
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp *bool `pulumi:"tunnelInterfaceAllowDhcp"`
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable *string `pulumi:"tunnelInterfaceAllowDhcpVariable"`
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns *bool `pulumi:"tunnelInterfaceAllowDns"`
 	// Variable name
 	TunnelInterfaceAllowDnsVariable *string `pulumi:"tunnelInterfaceAllowDnsVariable"`
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps *bool `pulumi:"tunnelInterfaceAllowHttps"`
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable *string `pulumi:"tunnelInterfaceAllowHttpsVariable"`
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp *bool `pulumi:"tunnelInterfaceAllowIcmp"`
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable *string `pulumi:"tunnelInterfaceAllowIcmpVariable"`
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf *bool `pulumi:"tunnelInterfaceAllowNetconf"`
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable *string `pulumi:"tunnelInterfaceAllowNetconfVariable"`
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp *bool `pulumi:"tunnelInterfaceAllowNtp"`
 	// Variable name
 	TunnelInterfaceAllowNtpVariable *string `pulumi:"tunnelInterfaceAllowNtpVariable"`
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf *bool `pulumi:"tunnelInterfaceAllowOspf"`
 	// Variable name
 	TunnelInterfaceAllowOspfVariable *string `pulumi:"tunnelInterfaceAllowOspfVariable"`
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp *bool `pulumi:"tunnelInterfaceAllowSnmp"`
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable *string `pulumi:"tunnelInterfaceAllowSnmpVariable"`
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh *bool `pulumi:"tunnelInterfaceAllowSsh"`
 	// Variable name
 	TunnelInterfaceAllowSshVariable *string `pulumi:"tunnelInterfaceAllowSshVariable"`
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun *bool `pulumi:"tunnelInterfaceAllowStun"`
 	// Variable name
 	TunnelInterfaceAllowStunVariable *string `pulumi:"tunnelInterfaceAllowStunVariable"`
@@ -1660,30 +1984,35 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	TunnelInterfaceBindLoopbackTunnel *string `pulumi:"tunnelInterfaceBindLoopbackTunnel"`
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable *string `pulumi:"tunnelInterfaceBindLoopbackTunnelVariable"`
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder *bool `pulumi:"tunnelInterfaceBorder"`
 	// Variable name
 	TunnelInterfaceBorderVariable *string `pulumi:"tunnelInterfaceBorderVariable"`
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier *string `pulumi:"tunnelInterfaceCarrier"`
 	// Variable name
 	TunnelInterfaceCarrierVariable *string `pulumi:"tunnelInterfaceCarrierVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment *bool `pulumi:"tunnelInterfaceClearDontFragment"`
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable *string `pulumi:"tunnelInterfaceClearDontFragmentVariable"`
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor *string `pulumi:"tunnelInterfaceColor"`
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict *bool `pulumi:"tunnelInterfaceColorRestrict"`
 	// Variable name
 	TunnelInterfaceColorRestrictVariable *string `pulumi:"tunnelInterfaceColorRestrictVariable"`
 	// Variable name
 	TunnelInterfaceColorVariable *string `pulumi:"tunnelInterfaceColorVariable"`
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections *bool `pulumi:"tunnelInterfaceControlConnections"`
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable *string `pulumi:"tunnelInterfaceControlConnectionsVariable"`
@@ -1701,59 +2030,78 @@ type ciscoVpnInterfaceFeatureTemplateArgs struct {
 	TunnelInterfaceGroups []int `pulumi:"tunnelInterfaceGroups"`
 	// Variable name
 	TunnelInterfaceGroupsVariable *string `pulumi:"tunnelInterfaceGroupsVariable"`
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval *int `pulumi:"tunnelInterfaceHelloInterval"`
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable *string `pulumi:"tunnelInterfaceHelloIntervalVariable"`
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance *int `pulumi:"tunnelInterfaceHelloTolerance"`
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable *string `pulumi:"tunnelInterfaceHelloToleranceVariable"`
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit *bool `pulumi:"tunnelInterfaceLastResortCircuit"`
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable *string `pulumi:"tunnelInterfaceLastResortCircuitVariable"`
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink *bool `pulumi:"tunnelInterfaceLowBandwidthLink"`
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable *string `pulumi:"tunnelInterfaceLowBandwidthLinkVariable"`
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections *int `pulumi:"tunnelInterfaceMaxControlConnections"`
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable *string `pulumi:"tunnelInterfaceMaxControlConnectionsVariable"`
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval *int `pulumi:"tunnelInterfaceNatRefreshInterval"`
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable *string `pulumi:"tunnelInterfaceNatRefreshIntervalVariable"`
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast *bool `pulumi:"tunnelInterfaceNetworkBroadcast"`
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable *string `pulumi:"tunnelInterfaceNetworkBroadcastVariable"`
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop *bool `pulumi:"tunnelInterfacePortHop"`
 	// Variable name
 	TunnelInterfacePortHopVariable *string `pulumi:"tunnelInterfacePortHopVariable"`
-	// CTS SGT Propagation configuration - Default value: `false`
+	// CTS SGT Propagation configuration
+	//   - Default value: `false`
 	TunnelInterfacePropagateSgt *bool `pulumi:"tunnelInterfacePropagateSgt"`
 	// Variable name
 	TunnelInterfacePropagateSgtVariable *string `pulumi:"tunnelInterfacePropagateSgtVariable"`
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss *int `pulumi:"tunnelInterfaceTunnelTcpMss"`
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable *string `pulumi:"tunnelInterfaceTunnelTcpMssVariable"`
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer *bool `pulumi:"tunnelInterfaceVbondAsStunServer"`
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable *string `pulumi:"tunnelInterfaceVbondAsStunServerVariable"`
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference *int `pulumi:"tunnelInterfaceVmanageConnectionPreference"`
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable *string `pulumi:"tunnelInterfaceVmanageConnectionPreferenceVariable"`
-	// Set tunnel QoS mode - Choices: `hub`, `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `hub`, `spoke`
 	TunnelQosMode *string `pulumi:"tunnelQosMode"`
 	// Variable name
 	TunnelQosModeVariable *string `pulumi:"tunnelQosModeVariable"`
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	UdpTimeout *int `pulumi:"udpTimeout"`
 	// Variable name
 	UdpTimeoutVariable *string `pulumi:"udpTimeoutVariable"`
@@ -1767,11 +2115,14 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	Address pulumi.StringPtrInput
 	// Variable name
 	AddressVariable pulumi.StringPtrInput
-	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+	// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+	//   - Range: `0`-`2147483`
+	//   - Default value: `1200`
 	ArpTimeout pulumi.IntPtrInput
 	// Variable name
 	ArpTimeoutVariable pulumi.StringPtrInput
-	// Interface auto detect bandwidth - Default value: `false`
+	// Interface auto detect bandwidth
+	//   - Default value: `false`
 	AutoBandwidthDetect pulumi.BoolPtrInput
 	// Variable name
 	AutoBandwidthDetectVariable pulumi.StringPtrInput
@@ -1779,47 +2130,58 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	Autonegotiate pulumi.BoolPtrInput
 	// Variable name
 	AutonegotiateVariable pulumi.StringPtrInput
-	// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface downstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthDownstreamVariable pulumi.StringPtrInput
-	// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+	// Interface upstream bandwidth capacity, in kbps
+	//   - Range: `1`-`2147483647`
 	BandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	BandwidthUpstreamVariable pulumi.StringPtrInput
-	// Block packets originating from IP address that is not from this source - Default value: `false`
+	// Block packets originating from IP address that is not from this source
+	//   - Default value: `false`
 	BlockNonSourceIp pulumi.BoolPtrInput
 	// Variable name
 	BlockNonSourceIpVariable pulumi.StringPtrInput
-	// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+	// Enable core region
+	//   - Choices: `core`, `core-shared`
+	//   - Default value: `core`
 	CoreRegion pulumi.StringPtrInput
 	// Variable name
 	CoreRegionVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable DHCP - Default value: `false`
+	// Enable DHCP
+	//   - Default value: `false`
 	Dhcp pulumi.BoolPtrInput
-	// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+	// Set administrative distance for DHCP default route
+	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	DhcpDistance pulumi.IntPtrInput
 	// Variable name
 	DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	DhcpVariable pulumi.StringPtrInput
-	// Enable DHCPv6 - Default value: `false`
+	// Enable DHCPv6
+	//   - Default value: `false`
 	Dhcpv6 pulumi.BoolPtrInput
 	// Variable name
 	Dhcpv6Variable pulumi.StringPtrInput
-	// Duplex mode - Choices: `full`, `half`, `auto`
+	// Duplex mode
+	//   - Choices: `full`, `half`, `auto`
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable core region - Default value: `false`
+	// Enable core region
+	//   - Default value: `false`
 	EnableCoreRegion pulumi.BoolPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	EnableSgt pulumi.BoolPtrInput
 	// Extend remote TLOC over a GRE tunnel to a local WAN interface
 	GreTunnelSourceIp pulumi.StringPtrInput
@@ -1829,7 +2191,8 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	GreTunnelXconnect pulumi.StringPtrInput
 	// Variable name
 	GreTunnelXconnectVariable pulumi.StringPtrInput
-	// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+	// Set this option to disable the icmp/icmpv6 redirect packets
+	//   - Default value: `true`
 	IcmpRedirectDisable pulumi.BoolPtrInput
 	// Variable name
 	IcmpRedirectDisableVariable pulumi.StringPtrInput
@@ -1837,22 +2200,24 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	InterfaceDescription pulumi.StringPtrInput
 	// Variable name
 	InterfaceDescriptionVariable pulumi.StringPtrInput
-	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-	// Default value: `1500`
+	// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+	//   - Range: `1500`-`9216`
+	//   - Default value: `1500`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-	// present
+	// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// IP Directed-Broadcast - Default value: `false`
+	// IP Directed-Broadcast
+	//   - Default value: `false`
 	IpDirectedBroadcast pulumi.BoolPtrInput
 	// Variable name
 	IpDirectedBroadcastVariable pulumi.StringPtrInput
-	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-	// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+	// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+	//   - Range: `576`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
@@ -1876,7 +2241,8 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	Ipv6AddressVariable pulumi.StringPtrInput
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArrayInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
 	// Variable name
 	Ipv6NatVariable pulumi.StringPtrInput
@@ -1884,7 +2250,9 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	Ipv6SecondaryAddresses CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArrayInput
 	// Enable VRRP
 	Ipv6Vrrps CiscoVpnInterfaceFeatureTemplateIpv6VrrpArrayInput
-	// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+	// Interval for interface load calculation
+	//   - Range: `30`-`600`
+	//   - Default value: `30`
 	LoadInterval pulumi.IntPtrInput
 	// Variable name
 	LoadIntervalVariable pulumi.StringPtrInput
@@ -1892,23 +2260,28 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	MacAddress pulumi.StringPtrInput
 	// Variable name
 	MacAddressVariable pulumi.StringPtrInput
-	// Media type - Choices: `auto-select`, `rj45`, `sfp`
+	// Media type
+	//   - Choices: `auto-select`, `rj45`, `sfp`
 	MediaType pulumi.StringPtrInput
 	// Variable name
 	MediaTypeVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Network Address Translation on this interface - Default value: `false`
+	// Network Address Translation on this interface
+	//   - Default value: `false`
 	Nat pulumi.BoolPtrInput
-	// NAT64 on this interface - Default value: `false`
+	// NAT64 on this interface
+	//   - Default value: `false`
 	Nat64Interface pulumi.BoolPtrInput
-	// NAT66 on this interface - Default value: `false`
+	// NAT66 on this interface
+	//   - Default value: `false`
 	Nat66Interface pulumi.BoolPtrInput
 	// Configure NAT Inside Loopback Interface
 	NatInsideSourceLoopbackInterface pulumi.StringPtrInput
 	// Variable name
 	NatInsideSourceLoopbackInterfaceVariable pulumi.StringPtrInput
-	// Enable port translation(PAT) - Default value: `true`
+	// Enable port translation(PAT)
+	//   - Default value: `true`
 	NatOverload pulumi.BoolPtrInput
 	// Variable name
 	NatOverloadVariable pulumi.StringPtrInput
@@ -1924,41 +2297,53 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	NatPoolRangeStart pulumi.StringPtrInput
 	// Variable name
 	NatPoolRangeStartVariable pulumi.StringPtrInput
-	// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+	// NAT type
+	//   - Choices: `interface`, `pool`, `loopback`
+	//   - Default value: `interface`
 	NatType pulumi.StringPtrInput
 	// Variable name
 	NatTypeVariable pulumi.StringPtrInput
-	// Configure interface as Power-over-Ethernet source - Default value: `false`
+	// Configure interface as Power-over-Ethernet source
+	//   - Default value: `false`
 	Poe pulumi.BoolPtrInput
 	// Variable name
 	PoeVariable pulumi.StringPtrInput
-	// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+	// Enable/Disable CTS SGT propagation on an interface.
+	//   - Default value: `true`
 	PropagateSgt pulumi.BoolPtrInput
-	// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default downstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveBandwidthDownstreamVariable pulumi.StringPtrInput
-	// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+	// Adaptive QoS default upstream bandwidth
+	//   - Range: `8`-`100000000`
 	QosAdaptiveBandwidthUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveBandwidthUpstreamVariable pulumi.StringPtrInput
-	// Downstream max bandwidth limit - Range: `8`-`100000000`
+	// Downstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMaxDownstreamVariable pulumi.StringPtrInput
-	// Upstream max bandwidth limit - Range: `8`-`100000000`
+	// Upstream max bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMaxUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMaxUpstreamVariable pulumi.StringPtrInput
-	// Downstream min bandwidth limit - Range: `8`-`100000000`
+	// Downstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinDownstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMinDownstreamVariable pulumi.StringPtrInput
-	// Upstream min bandwidth limit - Range: `8`-`100000000`
+	// Upstream min bandwidth limit
+	//   - Range: `8`-`100000000`
 	QosAdaptiveMinUpstream pulumi.IntPtrInput
 	// Variable name
 	QosAdaptiveMinUpstreamVariable pulumi.StringPtrInput
-	// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+	// Periodic timer for adaptive QoS in minutes
+	//   - Range: `1`-`720`
+	//   - Default value: `15`
 	QosAdaptivePeriod pulumi.IntPtrInput
 	// Variable name
 	QosAdaptivePeriodVariable pulumi.StringPtrInput
@@ -1974,25 +2359,32 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	RewriteRuleName pulumi.StringPtrInput
 	// Variable name
 	RewriteRuleNameVariable pulumi.StringPtrInput
-	// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+	// Enable secondary region
+	//   - Choices: `off`, `secondary-only`, `secondary-shared`
+	//   - Default value: `off`
 	SecondaryRegion pulumi.StringPtrInput
 	// Variable name
 	SecondaryRegionVariable pulumi.StringPtrInput
-	// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+	// Enables the interface for CTS SGT authorization and forwarding.
+	//   - Default value: `false`
 	SgtEnforcement pulumi.BoolPtrInput
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	SgtEnforcementSgt pulumi.IntPtrInput
 	// Variable name
 	SgtEnforcementSgtVariable pulumi.StringPtrInput
-	// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+	// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+	//   - Range: `8`-`100000000`
 	ShapingRate pulumi.IntPtrInput
 	// Variable name
 	ShapingRateVariable pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+	// Set interface speed
+	//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 	Speed pulumi.StringPtrInput
 	// Variable name
 	SpeedVariable pulumi.StringPtrInput
@@ -2004,17 +2396,22 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	StaticNatEntries CiscoVpnInterfaceFeatureTemplateStaticNatEntryArrayInput
 	// Configure Port Forward entries
 	StaticPortForwardEntries CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArrayInput
-	// SGT value between 2 and 65519. - Range: `2`-`65519`
+	// SGT value between 2 and 65519.
+	//   - Range: `2`-`65519`
 	StaticSgt pulumi.IntPtrInput
-	// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+	// Indicates that the interface is trustworthy for CTS.
+	//   - Default value: `false`
 	StaticSgtTrusted pulumi.BoolPtrInput
 	// Variable name
 	StaticSgtVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
-	// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+	// Set NAT TCP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `60`
 	TcpTimeout pulumi.IntPtrInput
 	// Variable name
 	TcpTimeoutVariable pulumi.StringPtrInput
@@ -2026,55 +2423,69 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	TrackerVariable pulumi.StringPtrInput
 	// Enable tracker for this interface
 	Trackers pulumi.StringArrayInput
-	// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+	// Tunnels Bandwidth Percent
+	//   - Range: `1`-`99`
+	//   - Default value: `50`
 	TunnelBandwidth pulumi.IntPtrInput
 	// Variable name
 	TunnelBandwidthVariable pulumi.StringPtrInput
-	// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+	// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+	//   - Default value: `false`
 	TunnelInterfaceAllowAll pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowAllVariable pulumi.StringPtrInput
-	// Allow/deny BGP - Default value: `false`
+	// Allow/deny BGP
+	//   - Default value: `false`
 	TunnelInterfaceAllowBgp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowBgpVariable pulumi.StringPtrInput
-	// Allow/Deny DHCP - Default value: `true`
+	// Allow/Deny DHCP
+	//   - Default value: `true`
 	TunnelInterfaceAllowDhcp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDhcpVariable pulumi.StringPtrInput
-	// Allow/Deny DNS - Default value: `true`
+	// Allow/Deny DNS
+	//   - Default value: `true`
 	TunnelInterfaceAllowDns pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowDnsVariable pulumi.StringPtrInput
-	// Allow/Deny Https - Default value: `true`
+	// Allow/Deny Https
+	//   - Default value: `true`
 	TunnelInterfaceAllowHttps pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowHttpsVariable pulumi.StringPtrInput
-	// Allow/Deny ICMP - Default value: `true`
+	// Allow/Deny ICMP
+	//   - Default value: `true`
 	TunnelInterfaceAllowIcmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowIcmpVariable pulumi.StringPtrInput
-	// Allow/Deny NETCONF - Default value: `false`
+	// Allow/Deny NETCONF
+	//   - Default value: `false`
 	TunnelInterfaceAllowNetconf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNetconfVariable pulumi.StringPtrInput
-	// Allow/Deny NTP - Default value: `false`
+	// Allow/Deny NTP
+	//   - Default value: `false`
 	TunnelInterfaceAllowNtp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowNtpVariable pulumi.StringPtrInput
-	// Allow/Deny OSPF - Default value: `false`
+	// Allow/Deny OSPF
+	//   - Default value: `false`
 	TunnelInterfaceAllowOspf pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowOspfVariable pulumi.StringPtrInput
-	// Allow/Deny SNMP - Default value: `false`
+	// Allow/Deny SNMP
+	//   - Default value: `false`
 	TunnelInterfaceAllowSnmp pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSnmpVariable pulumi.StringPtrInput
-	// Allow/Deny SSH - Default value: `false`
+	// Allow/Deny SSH
+	//   - Default value: `false`
 	TunnelInterfaceAllowSsh pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowSshVariable pulumi.StringPtrInput
-	// Allow/Deny STUN - Default value: `false`
+	// Allow/Deny STUN
+	//   - Default value: `false`
 	TunnelInterfaceAllowStun pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceAllowStunVariable pulumi.StringPtrInput
@@ -2082,30 +2493,35 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	TunnelInterfaceBindLoopbackTunnel pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceBindLoopbackTunnelVariable pulumi.StringPtrInput
-	// Set TLOC as border TLOC - Default value: `false`
+	// Set TLOC as border TLOC
+	//   - Default value: `false`
 	TunnelInterfaceBorder pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceBorderVariable pulumi.StringPtrInput
-	// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-	// `carrier7`, `carrier8` - Default value: `default`
+	// Set carrier for TLOC
+	//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+	//   - Default value: `default`
 	TunnelInterfaceCarrier pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceCarrierVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	TunnelInterfaceClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceClearDontFragmentVariable pulumi.StringPtrInput
-	// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-	// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-	// `private4`, `private5`, `private6` - Default value: `default`
+	// Set color for TLOC
+	//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+	//   - Default value: `default`
 	TunnelInterfaceColor pulumi.StringPtrInput
-	// Restrict this TLOC behavior - Default value: `false`
+	// Restrict this TLOC behavior
+	//   - Default value: `false`
 	TunnelInterfaceColorRestrict pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceColorRestrictVariable pulumi.StringPtrInput
 	// Variable name
 	TunnelInterfaceColorVariable pulumi.StringPtrInput
-	// Allow Control Connection - Default value: `true`
+	// Allow Control Connection
+	//   - Default value: `true`
 	TunnelInterfaceControlConnections pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceControlConnectionsVariable pulumi.StringPtrInput
@@ -2123,59 +2539,78 @@ type CiscoVpnInterfaceFeatureTemplateArgs struct {
 	TunnelInterfaceGroups pulumi.IntArrayInput
 	// Variable name
 	TunnelInterfaceGroupsVariable pulumi.StringPtrInput
-	// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+	// Set time period of control hello packets <100..600000> milli seconds
+	//   - Range: `100`-`600000`
+	//   - Default value: `1000`
 	TunnelInterfaceHelloInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloIntervalVariable pulumi.StringPtrInput
-	// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+	// Set tolerance of control hello packets <12..6000> seconds
+	//   - Range: `12`-`6000`
+	//   - Default value: `12`
 	TunnelInterfaceHelloTolerance pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceHelloToleranceVariable pulumi.StringPtrInput
-	// Set TLOC as last resort - Default value: `false`
+	// Set TLOC as last resort
+	//   - Default value: `false`
 	TunnelInterfaceLastResortCircuit pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLastResortCircuitVariable pulumi.StringPtrInput
-	// Set the interface as a low-bandwidth circuit - Default value: `false`
+	// Set the interface as a low-bandwidth circuit
+	//   - Default value: `false`
 	TunnelInterfaceLowBandwidthLink pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceLowBandwidthLinkVariable pulumi.StringPtrInput
-	// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+	// Set the maximum number of control connections for this TLOC
+	//   - Range: `0`-`100`
 	TunnelInterfaceMaxControlConnections pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceMaxControlConnectionsVariable pulumi.StringPtrInput
-	// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+	// Set time period of nat refresh packets <1...60> seconds
+	//   - Range: `1`-`60`
+	//   - Default value: `5`
 	TunnelInterfaceNatRefreshInterval pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceNatRefreshIntervalVariable pulumi.StringPtrInput
-	// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+	// Accept and respond to network-prefix-directed broadcasts)
+	//   - Default value: `false`
 	TunnelInterfaceNetworkBroadcast pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceNetworkBroadcastVariable pulumi.StringPtrInput
-	// Disallow port hopping on the tunnel interface - Default value: `true`
+	// Disallow port hopping on the tunnel interface
+	//   - Default value: `true`
 	TunnelInterfacePortHop pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePortHopVariable pulumi.StringPtrInput
-	// CTS SGT Propagation configuration - Default value: `false`
+	// CTS SGT Propagation configuration
+	//   - Default value: `false`
 	TunnelInterfacePropagateSgt pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfacePropagateSgtVariable pulumi.StringPtrInput
-	// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// Tunnel TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TunnelInterfaceTunnelTcpMss pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceTunnelTcpMssVariable pulumi.StringPtrInput
-	// Put this wan interface in STUN mode only - Default value: `false`
+	// Put this wan interface in STUN mode only
+	//   - Default value: `false`
 	TunnelInterfaceVbondAsStunServer pulumi.BoolPtrInput
 	// Variable name
 	TunnelInterfaceVbondAsStunServerVariable pulumi.StringPtrInput
-	// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+	// Set interface preference for control connection to vManage <0..8>
+	//   - Range: `0`-`8`
+	//   - Default value: `5`
 	TunnelInterfaceVmanageConnectionPreference pulumi.IntPtrInput
 	// Variable name
 	TunnelInterfaceVmanageConnectionPreferenceVariable pulumi.StringPtrInput
-	// Set tunnel QoS mode - Choices: `hub`, `spoke`
+	// Set tunnel QoS mode
+	//   - Choices: `hub`, `spoke`
 	TunnelQosMode pulumi.StringPtrInput
 	// Variable name
 	TunnelQosModeVariable pulumi.StringPtrInput
-	// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+	// Set NAT UDP session timeout, in minutes
+	//   - Range: `1`-`8947`
+	//   - Default value: `1`
 	UdpTimeout pulumi.IntPtrInput
 	// Variable name
 	UdpTimeoutVariable pulumi.StringPtrInput
@@ -2285,7 +2720,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) AddressVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Timeout value for dynamically learned ARP entries, <0..2678400> seconds - Range: `0`-`2147483` - Default value: `1200`
+// Timeout value for dynamically learned ARP entries, <0..2678400> seconds
+//   - Range: `0`-`2147483`
+//   - Default value: `1200`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) ArpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.ArpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -2295,7 +2732,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) ArpTimeoutVariable() pulumi.Stri
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.ArpTimeoutVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface auto detect bandwidth - Default value: `false`
+// Interface auto detect bandwidth
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) AutoBandwidthDetect() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.AutoBandwidthDetect }).(pulumi.BoolPtrOutput)
 }
@@ -2315,7 +2753,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) AutonegotiateVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.AutonegotiateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+// Interface downstream bandwidth capacity, in kbps
+//   - Range: `1`-`2147483647`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) BandwidthDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.BandwidthDownstream }).(pulumi.IntPtrOutput)
 }
@@ -2325,7 +2764,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) BandwidthDownstreamVariable() pu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.BandwidthDownstreamVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+// Interface upstream bandwidth capacity, in kbps
+//   - Range: `1`-`2147483647`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) BandwidthUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.BandwidthUpstream }).(pulumi.IntPtrOutput)
 }
@@ -2335,7 +2775,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) BandwidthUpstreamVariable() pulu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.BandwidthUpstreamVariable }).(pulumi.StringPtrOutput)
 }
 
-// Block packets originating from IP address that is not from this source - Default value: `false`
+// Block packets originating from IP address that is not from this source
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) BlockNonSourceIp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.BlockNonSourceIp }).(pulumi.BoolPtrOutput)
 }
@@ -2345,7 +2786,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) BlockNonSourceIpVariable() pulum
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.BlockNonSourceIpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable core region - Choices: `core`, `core-shared` - Default value: `core`
+// Enable core region
+//   - Choices: `core`, `core-shared`
+//   - Default value: `core`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) CoreRegion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.CoreRegion }).(pulumi.StringPtrOutput)
 }
@@ -2360,19 +2803,21 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Description() pulumi.StringOutpu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable DHCP - Default value: `false`
+// Enable DHCP
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Dhcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Dhcp }).(pulumi.BoolPtrOutput)
 }
 
-// Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+// Set administrative distance for DHCP default route
+//   - Range: `1`-`65536`
+//   - Default value: `1`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.DhcpDistance }).(pulumi.IntPtrOutput)
 }
@@ -2387,7 +2832,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) DhcpVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.DhcpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6 - Default value: `false`
+// Enable DHCPv6
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Dhcpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Dhcpv6 }).(pulumi.BoolPtrOutput)
 }
@@ -2397,7 +2843,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Dhcpv6Variable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.Dhcpv6Variable }).(pulumi.StringPtrOutput)
 }
 
-// Duplex mode - Choices: `full`, `half`, `auto`
+// Duplex mode
+//   - Choices: `full`, `half`, `auto`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Duplex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.Duplex }).(pulumi.StringPtrOutput)
 }
@@ -2407,12 +2854,14 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) DuplexVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.DuplexVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable core region - Default value: `false`
+// Enable core region
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) EnableCoreRegion() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.EnableCoreRegion }).(pulumi.BoolPtrOutput)
 }
 
-// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+// Enables the interface for CTS SGT authorization and forwarding.
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) EnableSgt() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.EnableSgt }).(pulumi.BoolPtrOutput)
 }
@@ -2437,7 +2886,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) GreTunnelXconnectVariable() pulu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.GreTunnelXconnectVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set this option to disable the icmp/icmpv6 redirect packets - Default value: `true`
+// Set this option to disable the icmp/icmpv6 redirect packets
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) IcmpRedirectDisable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.IcmpRedirectDisable }).(pulumi.BoolPtrOutput)
 }
@@ -2459,8 +2909,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) InterfaceDescriptionVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes - Range: `1500`-`9216` -
-// Default value: `1500`
+// Interface MTU GigabitEthernet0 <1500..1518>, Other GigabitEthernet <1500..9216> in bytes
+//   - Range: `1500`-`9216`
+//   - Default value: `1500`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -2470,8 +2921,7 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) InterfaceMtuVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when
-// present
+// Interface name: ge0/<0-..> or ge0/<0-..>.vlanid or irb<bridgeid:1-63> or loopback<string> or natpool-<1..31> when present
 func (o CiscoVpnInterfaceFeatureTemplateOutput) InterfaceName() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceName }).(pulumi.StringPtrOutput)
 }
@@ -2481,7 +2931,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) InterfaceNameVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Directed-Broadcast - Default value: `false`
+// IP Directed-Broadcast
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) IpDirectedBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.IpDirectedBroadcast }).(pulumi.BoolPtrOutput)
 }
@@ -2491,8 +2942,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) IpDirectedBroadcastVariable() pu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.IpDirectedBroadcastVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces
-// <576..2000> in bytes - Range: `576`-`9216` - Default value: `1500`
+// IP MTU for GigabitEthernet main <576..Interface MTU>, GigabitEthernet subinterface <576..9216>, Other Interfaces <576..2000> in bytes
+//   - Range: `576`-`9216`
+//   - Default value: `1500`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -2560,7 +3012,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Ipv6DhcpHelpers() CiscoVpnInterf
 	}).(CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArrayOutput)
 }
 
-// NAT64 on this interface - Default value: `false`
+// NAT64 on this interface
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Ipv6Nat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6Nat }).(pulumi.BoolPtrOutput)
 }
@@ -2584,7 +3037,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Ipv6Vrrps() CiscoVpnInterfaceFea
 	}).(CiscoVpnInterfaceFeatureTemplateIpv6VrrpArrayOutput)
 }
 
-// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+// Interval for interface load calculation
+//   - Range: `30`-`600`
+//   - Default value: `30`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) LoadInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.LoadInterval }).(pulumi.IntPtrOutput)
 }
@@ -2604,7 +3059,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) MacAddressVariable() pulumi.Stri
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.MacAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Media type - Choices: `auto-select`, `rj45`, `sfp`
+// Media type
+//   - Choices: `auto-select`, `rj45`, `sfp`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) MediaType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.MediaType }).(pulumi.StringPtrOutput)
 }
@@ -2619,17 +3075,20 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Network Address Translation on this interface - Default value: `false`
+// Network Address Translation on this interface
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Nat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Nat }).(pulumi.BoolPtrOutput)
 }
 
-// NAT64 on this interface - Default value: `false`
+// NAT64 on this interface
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Nat64Interface() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Nat64Interface }).(pulumi.BoolPtrOutput)
 }
 
-// NAT66 on this interface - Default value: `false`
+// NAT66 on this interface
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Nat66Interface() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Nat66Interface }).(pulumi.BoolPtrOutput)
 }
@@ -2648,7 +3107,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) NatInsideSourceLoopbackInterface
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable port translation(PAT) - Default value: `true`
+// Enable port translation(PAT)
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) NatOverload() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.NatOverload }).(pulumi.BoolPtrOutput)
 }
@@ -2688,7 +3148,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) NatPoolRangeStartVariable() pulu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.NatPoolRangeStartVariable }).(pulumi.StringPtrOutput)
 }
 
-// NAT type - Choices: `interface`, `pool`, `loopback` - Default value: `interface`
+// NAT type
+//   - Choices: `interface`, `pool`, `loopback`
+//   - Default value: `interface`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) NatType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.NatType }).(pulumi.StringPtrOutput)
 }
@@ -2698,7 +3160,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) NatTypeVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.NatTypeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure interface as Power-over-Ethernet source - Default value: `false`
+// Configure interface as Power-over-Ethernet source
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Poe() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Poe }).(pulumi.BoolPtrOutput)
 }
@@ -2708,12 +3171,14 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) PoeVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.PoeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable/Disable CTS SGT propagation on an interface. - Default value: `true`
+// Enable/Disable CTS SGT propagation on an interface.
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) PropagateSgt() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.PropagateSgt }).(pulumi.BoolPtrOutput)
 }
 
-// Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+// Adaptive QoS default downstream bandwidth
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveBandwidthDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveBandwidthDownstream }).(pulumi.IntPtrOutput)
 }
@@ -2725,7 +3190,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveBandwidthDownstreamVa
 	}).(pulumi.StringPtrOutput)
 }
 
-// Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+// Adaptive QoS default upstream bandwidth
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveBandwidthUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveBandwidthUpstream }).(pulumi.IntPtrOutput)
 }
@@ -2737,7 +3203,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveBandwidthUpstreamVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Downstream max bandwidth limit - Range: `8`-`100000000`
+// Downstream max bandwidth limit
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMaxDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveMaxDownstream }).(pulumi.IntPtrOutput)
 }
@@ -2749,7 +3216,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMaxDownstreamVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Upstream max bandwidth limit - Range: `8`-`100000000`
+// Upstream max bandwidth limit
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMaxUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveMaxUpstream }).(pulumi.IntPtrOutput)
 }
@@ -2761,7 +3229,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMaxUpstreamVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Downstream min bandwidth limit - Range: `8`-`100000000`
+// Downstream min bandwidth limit
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMinDownstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveMinDownstream }).(pulumi.IntPtrOutput)
 }
@@ -2773,7 +3242,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMinDownstreamVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Upstream min bandwidth limit - Range: `8`-`100000000`
+// Upstream min bandwidth limit
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMinUpstream() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptiveMinUpstream }).(pulumi.IntPtrOutput)
 }
@@ -2785,7 +3255,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptiveMinUpstreamVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+// Periodic timer for adaptive QoS in minutes
+//   - Range: `1`-`720`
+//   - Default value: `15`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) QosAdaptivePeriod() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.QosAdaptivePeriod }).(pulumi.IntPtrOutput)
 }
@@ -2825,7 +3297,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) RewriteRuleNameVariable() pulumi
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.RewriteRuleNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable secondary region - Choices: `off`, `secondary-only`, `secondary-shared` - Default value: `off`
+// Enable secondary region
+//   - Choices: `off`, `secondary-only`, `secondary-shared`
+//   - Default value: `off`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) SecondaryRegion() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.SecondaryRegion }).(pulumi.StringPtrOutput)
 }
@@ -2835,12 +3309,14 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) SecondaryRegionVariable() pulumi
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.SecondaryRegionVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enables the interface for CTS SGT authorization and forwarding. - Default value: `false`
+// Enables the interface for CTS SGT authorization and forwarding.
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) SgtEnforcement() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.SgtEnforcement }).(pulumi.BoolPtrOutput)
 }
 
-// SGT value between 2 and 65519. - Range: `2`-`65519`
+// SGT value between 2 and 65519.
+//   - Range: `2`-`65519`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) SgtEnforcementSgt() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.SgtEnforcementSgt }).(pulumi.IntPtrOutput)
 }
@@ -2850,7 +3326,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) SgtEnforcementSgtVariable() pulu
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.SgtEnforcementSgtVariable }).(pulumi.StringPtrOutput)
 }
 
-// 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+// 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+//   - Range: `8`-`100000000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) ShapingRate() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.ShapingRate }).(pulumi.IntPtrOutput)
 }
@@ -2860,7 +3337,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) ShapingRateVariable() pulumi.Str
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.ShapingRateVariable }).(pulumi.StringPtrOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -2870,7 +3348,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) ShutdownVariable() pulumi.String
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+// Set interface speed
+//   - Choices: `10`, `100`, `1000`, `2500`, `10000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) Speed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.Speed }).(pulumi.StringPtrOutput)
 }
@@ -2908,12 +3387,14 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) StaticPortForwardEntries() Cisco
 	}).(CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArrayOutput)
 }
 
-// SGT value between 2 and 65519. - Range: `2`-`65519`
+// SGT value between 2 and 65519.
+//   - Range: `2`-`65519`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) StaticSgt() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.StaticSgt }).(pulumi.IntPtrOutput)
 }
 
-// Indicates that the interface is trustworthy for CTS. - Default value: `false`
+// Indicates that the interface is trustworthy for CTS.
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) StaticSgtTrusted() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.StaticSgtTrusted }).(pulumi.BoolPtrOutput)
 }
@@ -2923,7 +3404,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) StaticSgtVariable() pulumi.Strin
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.StaticSgtVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TcpMssAdjust() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TcpMssAdjust }).(pulumi.IntPtrOutput)
 }
@@ -2933,7 +3415,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TcpMssAdjustVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TcpMssAdjustVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+// Set NAT TCP session timeout, in minutes
+//   - Range: `1`-`8947`
+//   - Default value: `60`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TcpTimeout }).(pulumi.IntPtrOutput)
 }
@@ -2968,7 +3452,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) Trackers() pulumi.StringArrayOut
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringArrayOutput { return v.Trackers }).(pulumi.StringArrayOutput)
 }
 
-// Tunnels Bandwidth Percent - Range: `1`-`99` - Default value: `50`
+// Tunnels Bandwidth Percent
+//   - Range: `1`-`99`
+//   - Default value: `50`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelBandwidth() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TunnelBandwidth }).(pulumi.IntPtrOutput)
 }
@@ -2978,7 +3464,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelBandwidthVariable() pulumi
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelBandwidthVariable }).(pulumi.StringPtrOutput)
 }
 
-// Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+// Allow all traffic. Overrides all other allow-service options if allow-service all is set
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowAll() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowAll }).(pulumi.BoolPtrOutput)
 }
@@ -2990,7 +3477,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowAllVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/deny BGP - Default value: `false`
+// Allow/deny BGP
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowBgp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowBgp }).(pulumi.BoolPtrOutput)
 }
@@ -3002,7 +3490,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowBgpVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DHCP - Default value: `true`
+// Allow/Deny DHCP
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowDhcp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowDhcp }).(pulumi.BoolPtrOutput)
 }
@@ -3014,7 +3503,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowDhcpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny DNS - Default value: `true`
+// Allow/Deny DNS
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowDns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowDns }).(pulumi.BoolPtrOutput)
 }
@@ -3026,7 +3516,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowDnsVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny Https - Default value: `true`
+// Allow/Deny Https
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowHttps() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowHttps }).(pulumi.BoolPtrOutput)
 }
@@ -3038,7 +3529,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowHttpsVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny ICMP - Default value: `true`
+// Allow/Deny ICMP
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowIcmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowIcmp }).(pulumi.BoolPtrOutput)
 }
@@ -3050,7 +3542,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowIcmpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NETCONF - Default value: `false`
+// Allow/Deny NETCONF
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowNetconf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowNetconf }).(pulumi.BoolPtrOutput)
 }
@@ -3062,7 +3555,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowNetconfVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny NTP - Default value: `false`
+// Allow/Deny NTP
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowNtp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowNtp }).(pulumi.BoolPtrOutput)
 }
@@ -3074,7 +3568,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowNtpVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny OSPF - Default value: `false`
+// Allow/Deny OSPF
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowOspf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowOspf }).(pulumi.BoolPtrOutput)
 }
@@ -3086,7 +3581,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowOspfVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SNMP - Default value: `false`
+// Allow/Deny SNMP
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowSnmp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowSnmp }).(pulumi.BoolPtrOutput)
 }
@@ -3098,7 +3594,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowSnmpVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny SSH - Default value: `false`
+// Allow/Deny SSH
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowSsh() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowSsh }).(pulumi.BoolPtrOutput)
 }
@@ -3110,7 +3607,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowSshVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow/Deny STUN - Default value: `false`
+// Allow/Deny STUN
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceAllowStun() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceAllowStun }).(pulumi.BoolPtrOutput)
 }
@@ -3136,7 +3634,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceBindLoopbackTunne
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as border TLOC - Default value: `false`
+// Set TLOC as border TLOC
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceBorder() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceBorder }).(pulumi.BoolPtrOutput)
 }
@@ -3148,8 +3647,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceBorderVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-// `carrier7`, `carrier8` - Default value: `default`
+// Set carrier for TLOC
+//   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+//   - Default value: `default`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceCarrier() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelInterfaceCarrier }).(pulumi.StringPtrOutput)
 }
@@ -3161,7 +3661,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceCarrierVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceClearDontFragment
@@ -3175,14 +3676,15 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceClearDontFragment
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-// `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-// `private4`, `private5`, `private6` - Default value: `default`
+// Set color for TLOC
+//   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+//   - Default value: `default`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceColor() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelInterfaceColor }).(pulumi.StringPtrOutput)
 }
 
-// Restrict this TLOC behavior - Default value: `false`
+// Restrict this TLOC behavior
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceColorRestrict() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfaceColorRestrict }).(pulumi.BoolPtrOutput)
 }
@@ -3201,7 +3703,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceColorVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Allow Control Connection - Default value: `true`
+// Allow Control Connection
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceControlConnections() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceControlConnections
@@ -3262,7 +3765,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceGroupsVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of control hello packets <100..600000> milli seconds - Range: `100`-`600000` - Default value: `1000`
+// Set time period of control hello packets <100..600000> milli seconds
+//   - Range: `100`-`600000`
+//   - Default value: `1000`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceHelloInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TunnelInterfaceHelloInterval }).(pulumi.IntPtrOutput)
 }
@@ -3274,7 +3779,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceHelloIntervalVari
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tolerance of control hello packets <12..6000> seconds - Range: `12`-`6000` - Default value: `12`
+// Set tolerance of control hello packets <12..6000> seconds
+//   - Range: `12`-`6000`
+//   - Default value: `12`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceHelloTolerance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TunnelInterfaceHelloTolerance }).(pulumi.IntPtrOutput)
 }
@@ -3286,7 +3793,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceHelloToleranceVar
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set TLOC as last resort - Default value: `false`
+// Set TLOC as last resort
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceLastResortCircuit() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceLastResortCircuit
@@ -3300,7 +3808,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceLastResortCircuit
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set the interface as a low-bandwidth circuit - Default value: `false`
+// Set the interface as a low-bandwidth circuit
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceLowBandwidthLink() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceLowBandwidthLink
@@ -3314,7 +3823,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceLowBandwidthLinkV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set the maximum number of control connections for this TLOC - Range: `0`-`100`
+// Set the maximum number of control connections for this TLOC
+//   - Range: `0`-`100`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceMaxControlConnections() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceMaxControlConnections
@@ -3328,7 +3838,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceMaxControlConnect
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set time period of nat refresh packets <1...60> seconds - Range: `1`-`60` - Default value: `5`
+// Set time period of nat refresh packets <1...60> seconds
+//   - Range: `1`-`60`
+//   - Default value: `5`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceNatRefreshInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceNatRefreshInterval
@@ -3342,7 +3854,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceNatRefreshInterva
 	}).(pulumi.StringPtrOutput)
 }
 
-// Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+// Accept and respond to network-prefix-directed broadcasts)
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceNetworkBroadcast() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceNetworkBroadcast
@@ -3356,7 +3869,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceNetworkBroadcastV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Disallow port hopping on the tunnel interface - Default value: `true`
+// Disallow port hopping on the tunnel interface
+//   - Default value: `true`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfacePortHop() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfacePortHop }).(pulumi.BoolPtrOutput)
 }
@@ -3368,7 +3882,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfacePortHopVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// CTS SGT Propagation configuration - Default value: `false`
+// CTS SGT Propagation configuration
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfacePropagateSgt() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput { return v.TunnelInterfacePropagateSgt }).(pulumi.BoolPtrOutput)
 }
@@ -3380,7 +3895,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfacePropagateSgtVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// Tunnel TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceTunnelTcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.TunnelInterfaceTunnelTcpMss }).(pulumi.IntPtrOutput)
 }
@@ -3392,7 +3908,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceTunnelTcpMssVaria
 	}).(pulumi.StringPtrOutput)
 }
 
-// Put this wan interface in STUN mode only - Default value: `false`
+// Put this wan interface in STUN mode only
+//   - Default value: `false`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceVbondAsStunServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.BoolPtrOutput {
 		return v.TunnelInterfaceVbondAsStunServer
@@ -3406,7 +3923,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceVbondAsStunServer
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set interface preference for control connection to vManage <0..8> - Range: `0`-`8` - Default value: `5`
+// Set interface preference for control connection to vManage <0..8>
+//   - Range: `0`-`8`
+//   - Default value: `5`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceVmanageConnectionPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput {
 		return v.TunnelInterfaceVmanageConnectionPreference
@@ -3420,7 +3939,8 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelInterfaceVmanageConnection
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set tunnel QoS mode - Choices: `hub`, `spoke`
+// Set tunnel QoS mode
+//   - Choices: `hub`, `spoke`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelQosMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelQosMode }).(pulumi.StringPtrOutput)
 }
@@ -3430,7 +3950,9 @@ func (o CiscoVpnInterfaceFeatureTemplateOutput) TunnelQosModeVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.StringPtrOutput { return v.TunnelQosModeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+// Set NAT UDP session timeout, in minutes
+//   - Range: `1`-`8947`
+//   - Default value: `1`
 func (o CiscoVpnInterfaceFeatureTemplateOutput) UdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceFeatureTemplate) pulumi.IntPtrOutput { return v.UdpTimeout }).(pulumi.IntPtrOutput)
 }

@@ -27,51 +27,66 @@ type CiscoOspfv3FeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Configure OSPF area
 	Ipv4Areas CiscoOspfv3FeatureTemplateIpv4AreaArrayOutput `pulumi:"ipv4Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv4AutoCostReferenceBandwidth pulumi.IntPtrOutput `pulumi:"ipv4AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv4AutoCostReferenceBandwidthVariable pulumi.StringPtrOutput `pulumi:"ipv4AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv4CompatibleRfc1583 pulumi.BoolPtrOutput `pulumi:"ipv4CompatibleRfc1583"`
 	// Variable name
 	Ipv4CompatibleRfc1583Variable pulumi.StringPtrOutput `pulumi:"ipv4CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginate pulumi.BoolPtrOutput `pulumi:"ipv4DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginateAlways pulumi.BoolPtrOutput `pulumi:"ipv4DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv4DefaultInformationOriginateAlwaysVariable pulumi.StringPtrOutput `pulumi:"ipv4DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv4DefaultInformationOriginateMetric pulumi.IntPtrOutput `pulumi:"ipv4DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv4DefaultInformationOriginateMetricType pulumi.StringPtrOutput `pulumi:"ipv4DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrOutput `pulumi:"ipv4DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricVariable pulumi.StringPtrOutput `pulumi:"ipv4DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`255` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	Ipv4Distance pulumi.IntPtrOutput `pulumi:"ipv4Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceExternal pulumi.IntPtrOutput `pulumi:"ipv4DistanceExternal"`
 	// Variable name
 	Ipv4DistanceExternalVariable pulumi.StringPtrOutput `pulumi:"ipv4DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceInterArea pulumi.IntPtrOutput `pulumi:"ipv4DistanceInterArea"`
 	// Variable name
 	Ipv4DistanceInterAreaVariable pulumi.StringPtrOutput `pulumi:"ipv4DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceIntraArea pulumi.IntPtrOutput `pulumi:"ipv4DistanceIntraArea"`
 	// Variable name
 	Ipv4DistanceIntraAreaVariable pulumi.StringPtrOutput `pulumi:"ipv4DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv4DistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv4Filter pulumi.BoolPtrOutput `pulumi:"ipv4Filter"`
 	// Variable name
 	Ipv4FilterVariable pulumi.StringPtrOutput `pulumi:"ipv4FilterVariable"`
@@ -87,59 +102,81 @@ type CiscoOspfv3FeatureTemplate struct {
 	Ipv4RouterId pulumi.StringPtrOutput `pulumi:"ipv4RouterId"`
 	// Variable name
 	Ipv4RouterIdVariable pulumi.StringPtrOutput `pulumi:"ipv4RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	Ipv4TimersSpfDelay pulumi.IntPtrOutput `pulumi:"ipv4TimersSpfDelay"`
 	// Variable name
 	Ipv4TimersSpfDelayVariable pulumi.StringPtrOutput `pulumi:"ipv4TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	Ipv4TimersSpfInitialHold pulumi.IntPtrOutput `pulumi:"ipv4TimersSpfInitialHold"`
 	// Variable name
 	Ipv4TimersSpfInitialHoldVariable pulumi.StringPtrOutput `pulumi:"ipv4TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	Ipv4TimersSpfMaxHold pulumi.IntPtrOutput `pulumi:"ipv4TimersSpfMaxHold"`
 	// Variable name
 	Ipv4TimersSpfMaxHoldVariable pulumi.StringPtrOutput `pulumi:"ipv4TimersSpfMaxHoldVariable"`
 	// Configure OSPF area
 	Ipv6Areas CiscoOspfv3FeatureTemplateIpv6AreaArrayOutput `pulumi:"ipv6Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv6AutoCostReferenceBandwidth pulumi.IntPtrOutput `pulumi:"ipv6AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv6AutoCostReferenceBandwidthVariable pulumi.StringPtrOutput `pulumi:"ipv6AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv6CompatibleRfc1583 pulumi.BoolPtrOutput `pulumi:"ipv6CompatibleRfc1583"`
 	// Variable name
 	Ipv6CompatibleRfc1583Variable pulumi.StringPtrOutput `pulumi:"ipv6CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginate pulumi.BoolPtrOutput `pulumi:"ipv6DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginateAlways pulumi.BoolPtrOutput `pulumi:"ipv6DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv6DefaultInformationOriginateAlwaysVariable pulumi.StringPtrOutput `pulumi:"ipv6DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv6DefaultInformationOriginateMetric pulumi.IntPtrOutput `pulumi:"ipv6DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv6DefaultInformationOriginateMetricType pulumi.StringPtrOutput `pulumi:"ipv6DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrOutput `pulumi:"ipv6DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricVariable pulumi.StringPtrOutput `pulumi:"ipv6DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`254` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6Distance pulumi.IntPtrOutput `pulumi:"ipv6Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceExternal pulumi.IntPtrOutput `pulumi:"ipv6DistanceExternal"`
 	// Variable name
 	Ipv6DistanceExternalVariable pulumi.StringPtrOutput `pulumi:"ipv6DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceInterArea pulumi.IntPtrOutput `pulumi:"ipv6DistanceInterArea"`
 	// Variable name
 	Ipv6DistanceInterAreaVariable pulumi.StringPtrOutput `pulumi:"ipv6DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceIntraArea pulumi.IntPtrOutput `pulumi:"ipv6DistanceIntraArea"`
 	// Variable name
 	Ipv6DistanceIntraAreaVariable pulumi.StringPtrOutput `pulumi:"ipv6DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv6DistanceVariable pulumi.StringPtrOutput `pulumi:"ipv6DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv6Filter pulumi.BoolPtrOutput `pulumi:"ipv6Filter"`
 	// Variable name
 	Ipv6FilterVariable pulumi.StringPtrOutput `pulumi:"ipv6FilterVariable"`
@@ -155,15 +192,21 @@ type CiscoOspfv3FeatureTemplate struct {
 	Ipv6RouterId pulumi.StringPtrOutput `pulumi:"ipv6RouterId"`
 	// Variable name
 	Ipv6RouterIdVariable pulumi.StringPtrOutput `pulumi:"ipv6RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `0`-`600000`
+	//   - Default value: `200`
 	Ipv6TimersSpfDelay pulumi.IntPtrOutput `pulumi:"ipv6TimersSpfDelay"`
 	// Variable name
 	Ipv6TimersSpfDelayVariable pulumi.StringPtrOutput `pulumi:"ipv6TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `1000`
 	Ipv6TimersSpfInitialHold pulumi.IntPtrOutput `pulumi:"ipv6TimersSpfInitialHold"`
 	// Variable name
 	Ipv6TimersSpfInitialHoldVariable pulumi.StringPtrOutput `pulumi:"ipv6TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `10000`
 	Ipv6TimersSpfMaxHold pulumi.IntPtrOutput `pulumi:"ipv6TimersSpfMaxHold"`
 	// Variable name
 	Ipv6TimersSpfMaxHoldVariable pulumi.StringPtrOutput `pulumi:"ipv6TimersSpfMaxHoldVariable"`
@@ -213,51 +256,66 @@ func GetCiscoOspfv3FeatureTemplate(ctx *pulumi.Context,
 type ciscoOspfv3FeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Configure OSPF area
 	Ipv4Areas []CiscoOspfv3FeatureTemplateIpv4Area `pulumi:"ipv4Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv4AutoCostReferenceBandwidth *int `pulumi:"ipv4AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv4AutoCostReferenceBandwidthVariable *string `pulumi:"ipv4AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv4CompatibleRfc1583 *bool `pulumi:"ipv4CompatibleRfc1583"`
 	// Variable name
 	Ipv4CompatibleRfc1583Variable *string `pulumi:"ipv4CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginate *bool `pulumi:"ipv4DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginateAlways *bool `pulumi:"ipv4DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv4DefaultInformationOriginateAlwaysVariable *string `pulumi:"ipv4DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv4DefaultInformationOriginateMetric *int `pulumi:"ipv4DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv4DefaultInformationOriginateMetricType *string `pulumi:"ipv4DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricTypeVariable *string `pulumi:"ipv4DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricVariable *string `pulumi:"ipv4DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`255` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	Ipv4Distance *int `pulumi:"ipv4Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceExternal *int `pulumi:"ipv4DistanceExternal"`
 	// Variable name
 	Ipv4DistanceExternalVariable *string `pulumi:"ipv4DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceInterArea *int `pulumi:"ipv4DistanceInterArea"`
 	// Variable name
 	Ipv4DistanceInterAreaVariable *string `pulumi:"ipv4DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceIntraArea *int `pulumi:"ipv4DistanceIntraArea"`
 	// Variable name
 	Ipv4DistanceIntraAreaVariable *string `pulumi:"ipv4DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv4DistanceVariable *string `pulumi:"ipv4DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv4Filter *bool `pulumi:"ipv4Filter"`
 	// Variable name
 	Ipv4FilterVariable *string `pulumi:"ipv4FilterVariable"`
@@ -273,59 +331,81 @@ type ciscoOspfv3FeatureTemplateState struct {
 	Ipv4RouterId *string `pulumi:"ipv4RouterId"`
 	// Variable name
 	Ipv4RouterIdVariable *string `pulumi:"ipv4RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	Ipv4TimersSpfDelay *int `pulumi:"ipv4TimersSpfDelay"`
 	// Variable name
 	Ipv4TimersSpfDelayVariable *string `pulumi:"ipv4TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	Ipv4TimersSpfInitialHold *int `pulumi:"ipv4TimersSpfInitialHold"`
 	// Variable name
 	Ipv4TimersSpfInitialHoldVariable *string `pulumi:"ipv4TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	Ipv4TimersSpfMaxHold *int `pulumi:"ipv4TimersSpfMaxHold"`
 	// Variable name
 	Ipv4TimersSpfMaxHoldVariable *string `pulumi:"ipv4TimersSpfMaxHoldVariable"`
 	// Configure OSPF area
 	Ipv6Areas []CiscoOspfv3FeatureTemplateIpv6Area `pulumi:"ipv6Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv6AutoCostReferenceBandwidth *int `pulumi:"ipv6AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv6AutoCostReferenceBandwidthVariable *string `pulumi:"ipv6AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv6CompatibleRfc1583 *bool `pulumi:"ipv6CompatibleRfc1583"`
 	// Variable name
 	Ipv6CompatibleRfc1583Variable *string `pulumi:"ipv6CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginate *bool `pulumi:"ipv6DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginateAlways *bool `pulumi:"ipv6DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv6DefaultInformationOriginateAlwaysVariable *string `pulumi:"ipv6DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv6DefaultInformationOriginateMetric *int `pulumi:"ipv6DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv6DefaultInformationOriginateMetricType *string `pulumi:"ipv6DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricTypeVariable *string `pulumi:"ipv6DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricVariable *string `pulumi:"ipv6DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`254` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6Distance *int `pulumi:"ipv6Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceExternal *int `pulumi:"ipv6DistanceExternal"`
 	// Variable name
 	Ipv6DistanceExternalVariable *string `pulumi:"ipv6DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceInterArea *int `pulumi:"ipv6DistanceInterArea"`
 	// Variable name
 	Ipv6DistanceInterAreaVariable *string `pulumi:"ipv6DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceIntraArea *int `pulumi:"ipv6DistanceIntraArea"`
 	// Variable name
 	Ipv6DistanceIntraAreaVariable *string `pulumi:"ipv6DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv6DistanceVariable *string `pulumi:"ipv6DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv6Filter *bool `pulumi:"ipv6Filter"`
 	// Variable name
 	Ipv6FilterVariable *string `pulumi:"ipv6FilterVariable"`
@@ -341,15 +421,21 @@ type ciscoOspfv3FeatureTemplateState struct {
 	Ipv6RouterId *string `pulumi:"ipv6RouterId"`
 	// Variable name
 	Ipv6RouterIdVariable *string `pulumi:"ipv6RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `0`-`600000`
+	//   - Default value: `200`
 	Ipv6TimersSpfDelay *int `pulumi:"ipv6TimersSpfDelay"`
 	// Variable name
 	Ipv6TimersSpfDelayVariable *string `pulumi:"ipv6TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `1000`
 	Ipv6TimersSpfInitialHold *int `pulumi:"ipv6TimersSpfInitialHold"`
 	// Variable name
 	Ipv6TimersSpfInitialHoldVariable *string `pulumi:"ipv6TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `10000`
 	Ipv6TimersSpfMaxHold *int `pulumi:"ipv6TimersSpfMaxHold"`
 	// Variable name
 	Ipv6TimersSpfMaxHoldVariable *string `pulumi:"ipv6TimersSpfMaxHoldVariable"`
@@ -364,51 +450,66 @@ type ciscoOspfv3FeatureTemplateState struct {
 type CiscoOspfv3FeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Configure OSPF area
 	Ipv4Areas CiscoOspfv3FeatureTemplateIpv4AreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv4AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	Ipv4AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv4CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	Ipv4CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv4DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv4DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
-	// Distance - Range: `1`-`255` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	Ipv4Distance pulumi.IntPtrInput
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceIntraAreaVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DistanceVariable pulumi.StringPtrInput
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv4Filter pulumi.BoolPtrInput
 	// Variable name
 	Ipv4FilterVariable pulumi.StringPtrInput
@@ -424,59 +525,81 @@ type CiscoOspfv3FeatureTemplateState struct {
 	Ipv4RouterId pulumi.StringPtrInput
 	// Variable name
 	Ipv4RouterIdVariable pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	Ipv4TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	Ipv4TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	Ipv4TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfMaxHoldVariable pulumi.StringPtrInput
 	// Configure OSPF area
 	Ipv6Areas CiscoOspfv3FeatureTemplateIpv6AreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv6AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	Ipv6AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv6CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	Ipv6CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv6DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv6DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
-	// Distance - Range: `1`-`254` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6Distance pulumi.IntPtrInput
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceIntraAreaVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv6DistanceVariable pulumi.StringPtrInput
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv6Filter pulumi.BoolPtrInput
 	// Variable name
 	Ipv6FilterVariable pulumi.StringPtrInput
@@ -492,15 +615,21 @@ type CiscoOspfv3FeatureTemplateState struct {
 	Ipv6RouterId pulumi.StringPtrInput
 	// Variable name
 	Ipv6RouterIdVariable pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `0`-`600000`
+	//   - Default value: `200`
 	Ipv6TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `1000`
 	Ipv6TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `10000`
 	Ipv6TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfMaxHoldVariable pulumi.StringPtrInput
@@ -519,51 +648,66 @@ func (CiscoOspfv3FeatureTemplateState) ElementType() reflect.Type {
 type ciscoOspfv3FeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Configure OSPF area
 	Ipv4Areas []CiscoOspfv3FeatureTemplateIpv4Area `pulumi:"ipv4Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv4AutoCostReferenceBandwidth *int `pulumi:"ipv4AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv4AutoCostReferenceBandwidthVariable *string `pulumi:"ipv4AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv4CompatibleRfc1583 *bool `pulumi:"ipv4CompatibleRfc1583"`
 	// Variable name
 	Ipv4CompatibleRfc1583Variable *string `pulumi:"ipv4CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginate *bool `pulumi:"ipv4DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginateAlways *bool `pulumi:"ipv4DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv4DefaultInformationOriginateAlwaysVariable *string `pulumi:"ipv4DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv4DefaultInformationOriginateMetric *int `pulumi:"ipv4DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv4DefaultInformationOriginateMetricType *string `pulumi:"ipv4DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricTypeVariable *string `pulumi:"ipv4DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricVariable *string `pulumi:"ipv4DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`255` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	Ipv4Distance *int `pulumi:"ipv4Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceExternal *int `pulumi:"ipv4DistanceExternal"`
 	// Variable name
 	Ipv4DistanceExternalVariable *string `pulumi:"ipv4DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceInterArea *int `pulumi:"ipv4DistanceInterArea"`
 	// Variable name
 	Ipv4DistanceInterAreaVariable *string `pulumi:"ipv4DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceIntraArea *int `pulumi:"ipv4DistanceIntraArea"`
 	// Variable name
 	Ipv4DistanceIntraAreaVariable *string `pulumi:"ipv4DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv4DistanceVariable *string `pulumi:"ipv4DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv4Filter *bool `pulumi:"ipv4Filter"`
 	// Variable name
 	Ipv4FilterVariable *string `pulumi:"ipv4FilterVariable"`
@@ -579,59 +723,81 @@ type ciscoOspfv3FeatureTemplateArgs struct {
 	Ipv4RouterId *string `pulumi:"ipv4RouterId"`
 	// Variable name
 	Ipv4RouterIdVariable *string `pulumi:"ipv4RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	Ipv4TimersSpfDelay *int `pulumi:"ipv4TimersSpfDelay"`
 	// Variable name
 	Ipv4TimersSpfDelayVariable *string `pulumi:"ipv4TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	Ipv4TimersSpfInitialHold *int `pulumi:"ipv4TimersSpfInitialHold"`
 	// Variable name
 	Ipv4TimersSpfInitialHoldVariable *string `pulumi:"ipv4TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	Ipv4TimersSpfMaxHold *int `pulumi:"ipv4TimersSpfMaxHold"`
 	// Variable name
 	Ipv4TimersSpfMaxHoldVariable *string `pulumi:"ipv4TimersSpfMaxHoldVariable"`
 	// Configure OSPF area
 	Ipv6Areas []CiscoOspfv3FeatureTemplateIpv6Area `pulumi:"ipv6Areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv6AutoCostReferenceBandwidth *int `pulumi:"ipv6AutoCostReferenceBandwidth"`
 	// Variable name
 	Ipv6AutoCostReferenceBandwidthVariable *string `pulumi:"ipv6AutoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv6CompatibleRfc1583 *bool `pulumi:"ipv6CompatibleRfc1583"`
 	// Variable name
 	Ipv6CompatibleRfc1583Variable *string `pulumi:"ipv6CompatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginate *bool `pulumi:"ipv6DefaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginateAlways *bool `pulumi:"ipv6DefaultInformationOriginateAlways"`
 	// Variable name
 	Ipv6DefaultInformationOriginateAlwaysVariable *string `pulumi:"ipv6DefaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv6DefaultInformationOriginateMetric *int `pulumi:"ipv6DefaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv6DefaultInformationOriginateMetricType *string `pulumi:"ipv6DefaultInformationOriginateMetricType"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricTypeVariable *string `pulumi:"ipv6DefaultInformationOriginateMetricTypeVariable"`
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricVariable *string `pulumi:"ipv6DefaultInformationOriginateMetricVariable"`
-	// Distance - Range: `1`-`254` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6Distance *int `pulumi:"ipv6Distance"`
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceExternal *int `pulumi:"ipv6DistanceExternal"`
 	// Variable name
 	Ipv6DistanceExternalVariable *string `pulumi:"ipv6DistanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceInterArea *int `pulumi:"ipv6DistanceInterArea"`
 	// Variable name
 	Ipv6DistanceInterAreaVariable *string `pulumi:"ipv6DistanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceIntraArea *int `pulumi:"ipv6DistanceIntraArea"`
 	// Variable name
 	Ipv6DistanceIntraAreaVariable *string `pulumi:"ipv6DistanceIntraAreaVariable"`
 	// Variable name
 	Ipv6DistanceVariable *string `pulumi:"ipv6DistanceVariable"`
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv6Filter *bool `pulumi:"ipv6Filter"`
 	// Variable name
 	Ipv6FilterVariable *string `pulumi:"ipv6FilterVariable"`
@@ -647,15 +813,21 @@ type ciscoOspfv3FeatureTemplateArgs struct {
 	Ipv6RouterId *string `pulumi:"ipv6RouterId"`
 	// Variable name
 	Ipv6RouterIdVariable *string `pulumi:"ipv6RouterIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `0`-`600000`
+	//   - Default value: `200`
 	Ipv6TimersSpfDelay *int `pulumi:"ipv6TimersSpfDelay"`
 	// Variable name
 	Ipv6TimersSpfDelayVariable *string `pulumi:"ipv6TimersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `1000`
 	Ipv6TimersSpfInitialHold *int `pulumi:"ipv6TimersSpfInitialHold"`
 	// Variable name
 	Ipv6TimersSpfInitialHoldVariable *string `pulumi:"ipv6TimersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `10000`
 	Ipv6TimersSpfMaxHold *int `pulumi:"ipv6TimersSpfMaxHold"`
 	// Variable name
 	Ipv6TimersSpfMaxHoldVariable *string `pulumi:"ipv6TimersSpfMaxHoldVariable"`
@@ -667,51 +839,66 @@ type ciscoOspfv3FeatureTemplateArgs struct {
 type CiscoOspfv3FeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Configure OSPF area
 	Ipv4Areas CiscoOspfv3FeatureTemplateIpv4AreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv4AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	Ipv4AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv4CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	Ipv4CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv4DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv4DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv4DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
-	// Distance - Range: `1`-`255` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	Ipv4Distance pulumi.IntPtrInput
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv4DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	Ipv4DistanceIntraAreaVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DistanceVariable pulumi.StringPtrInput
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv4Filter pulumi.BoolPtrInput
 	// Variable name
 	Ipv4FilterVariable pulumi.StringPtrInput
@@ -727,59 +914,81 @@ type CiscoOspfv3FeatureTemplateArgs struct {
 	Ipv4RouterId pulumi.StringPtrInput
 	// Variable name
 	Ipv4RouterIdVariable pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	Ipv4TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	Ipv4TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	Ipv4TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	Ipv4TimersSpfMaxHoldVariable pulumi.StringPtrInput
 	// Configure OSPF area
 	Ipv6Areas CiscoOspfv3FeatureTemplateIpv6AreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	Ipv6AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	Ipv6AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	Ipv6CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	Ipv6CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	Ipv6DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	Ipv6DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	Ipv6DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv6DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
-	// Distance - Range: `1`-`254` - Default value: `110`
+	// Distance
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6Distance pulumi.IntPtrInput
-	// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`254`
+	//   - Default value: `110`
 	Ipv6DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	Ipv6DistanceIntraAreaVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv6DistanceVariable pulumi.StringPtrInput
-	// Filter - Default value: `false`
+	// Filter
+	//   - Default value: `false`
 	Ipv6Filter pulumi.BoolPtrInput
 	// Variable name
 	Ipv6FilterVariable pulumi.StringPtrInput
@@ -795,15 +1004,21 @@ type CiscoOspfv3FeatureTemplateArgs struct {
 	Ipv6RouterId pulumi.StringPtrInput
 	// Variable name
 	Ipv6RouterIdVariable pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `0`-`600000`
+	//   - Default value: `200`
 	Ipv6TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `1000`
 	Ipv6TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `0`-`600000`
+	//   - Default value: `10000`
 	Ipv6TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	Ipv6TimersSpfMaxHoldVariable pulumi.StringPtrInput
@@ -903,9 +1118,8 @@ func (o CiscoOspfv3FeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoOspfv3FeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -915,7 +1129,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4Areas() CiscoOspfv3FeatureTemplate
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) CiscoOspfv3FeatureTemplateIpv4AreaArrayOutput { return v.Ipv4Areas }).(CiscoOspfv3FeatureTemplateIpv4AreaArrayOutput)
 }
 
-// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+// Set reference bandwidth method to assign OSPF cost
+//   - Range: `1`-`4294967`
+//   - Default value: `100`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4AutoCostReferenceBandwidth() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4AutoCostReferenceBandwidth }).(pulumi.IntPtrOutput)
 }
@@ -927,7 +1143,8 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4AutoCostReferenceBandwidthVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Calculate summary route cost based on RFC 1583 - Default value: `true`
+// Calculate summary route cost based on RFC 1583
+//   - Default value: `true`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4CompatibleRfc1583() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv4CompatibleRfc1583 }).(pulumi.BoolPtrOutput)
 }
@@ -937,12 +1154,14 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4CompatibleRfc1583Variable() pulumi
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4CompatibleRfc1583Variable }).(pulumi.StringPtrOutput)
 }
 
-// Distribute default external route into OSPF - Default value: `false`
+// Distribute default external route into OSPF
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv4DefaultInformationOriginate }).(pulumi.BoolPtrOutput)
 }
 
-// Always advertise default route - Default value: `false`
+// Always advertise default route
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginateAlways() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput {
 		return v.Ipv4DefaultInformationOriginateAlways
@@ -956,14 +1175,16 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginateAlwaysV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+// Set metric used to generate default route <0..16777214>
+//   - Range: `0`-`16777214`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginateMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput {
 		return v.Ipv4DefaultInformationOriginateMetric
 	}).(pulumi.IntPtrOutput)
 }
 
-// Set default route type - Choices: `type1`, `type2`
+// Set default route type
+//   - Choices: `type1`, `type2`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginateMetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput {
 		return v.Ipv4DefaultInformationOriginateMetricType
@@ -984,12 +1205,16 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DefaultInformationOriginateMetricV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Distance - Range: `1`-`255` - Default value: `110`
+// Distance
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4Distance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4Distance }).(pulumi.IntPtrOutput)
 }
 
-// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+// Set distance for external routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceExternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4DistanceExternal }).(pulumi.IntPtrOutput)
 }
@@ -999,7 +1224,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceExternalVariable() pulumi.
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4DistanceExternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+// Set distance for inter-area routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceInterArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4DistanceInterArea }).(pulumi.IntPtrOutput)
 }
@@ -1009,7 +1236,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceInterAreaVariable() pulumi
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4DistanceInterAreaVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+// Set distance for intra-area routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceIntraArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4DistanceIntraArea }).(pulumi.IntPtrOutput)
 }
@@ -1024,7 +1253,8 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4DistanceVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4DistanceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Filter - Default value: `false`
+// Filter
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4Filter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv4Filter }).(pulumi.BoolPtrOutput)
 }
@@ -1068,7 +1298,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4RouterIdVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4RouterIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+// Set delay from first change received until performing SPF calculation
+//   - Range: `1`-`600000`
+//   - Default value: `200`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4TimersSpfDelay() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4TimersSpfDelay }).(pulumi.IntPtrOutput)
 }
@@ -1078,7 +1310,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4TimersSpfDelayVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4TimersSpfDelayVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+// Set initial hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `1000`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4TimersSpfInitialHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4TimersSpfInitialHold }).(pulumi.IntPtrOutput)
 }
@@ -1088,7 +1322,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv4TimersSpfInitialHoldVariable() pul
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv4TimersSpfInitialHoldVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+// Set maximum hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `10000`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv4TimersSpfMaxHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv4TimersSpfMaxHold }).(pulumi.IntPtrOutput)
 }
@@ -1103,7 +1339,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6Areas() CiscoOspfv3FeatureTemplate
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) CiscoOspfv3FeatureTemplateIpv6AreaArrayOutput { return v.Ipv6Areas }).(CiscoOspfv3FeatureTemplateIpv6AreaArrayOutput)
 }
 
-// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+// Set reference bandwidth method to assign OSPF cost
+//   - Range: `1`-`4294967`
+//   - Default value: `100`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6AutoCostReferenceBandwidth() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6AutoCostReferenceBandwidth }).(pulumi.IntPtrOutput)
 }
@@ -1115,7 +1353,8 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6AutoCostReferenceBandwidthVariable
 	}).(pulumi.StringPtrOutput)
 }
 
-// Calculate summary route cost based on RFC 1583 - Default value: `true`
+// Calculate summary route cost based on RFC 1583
+//   - Default value: `true`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6CompatibleRfc1583() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6CompatibleRfc1583 }).(pulumi.BoolPtrOutput)
 }
@@ -1125,12 +1364,14 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6CompatibleRfc1583Variable() pulumi
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6CompatibleRfc1583Variable }).(pulumi.StringPtrOutput)
 }
 
-// Distribute default external route into OSPF - Default value: `false`
+// Distribute default external route into OSPF
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6DefaultInformationOriginate }).(pulumi.BoolPtrOutput)
 }
 
-// Always advertise default route - Default value: `false`
+// Always advertise default route
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginateAlways() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput {
 		return v.Ipv6DefaultInformationOriginateAlways
@@ -1144,14 +1385,16 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginateAlwaysV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+// Set metric used to generate default route <0..16777214>
+//   - Range: `0`-`16777214`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginateMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput {
 		return v.Ipv6DefaultInformationOriginateMetric
 	}).(pulumi.IntPtrOutput)
 }
 
-// Set default route type - Choices: `type1`, `type2`
+// Set default route type
+//   - Choices: `type1`, `type2`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginateMetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput {
 		return v.Ipv6DefaultInformationOriginateMetricType
@@ -1172,12 +1415,16 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DefaultInformationOriginateMetricV
 	}).(pulumi.StringPtrOutput)
 }
 
-// Distance - Range: `1`-`254` - Default value: `110`
+// Distance
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6Distance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6Distance }).(pulumi.IntPtrOutput)
 }
 
-// Set distance for external routes - Range: `1`-`254` - Default value: `110`
+// Set distance for external routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceExternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6DistanceExternal }).(pulumi.IntPtrOutput)
 }
@@ -1187,7 +1434,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceExternalVariable() pulumi.
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6DistanceExternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for inter-area routes - Range: `1`-`254` - Default value: `110`
+// Set distance for inter-area routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceInterArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6DistanceInterArea }).(pulumi.IntPtrOutput)
 }
@@ -1197,7 +1446,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceInterAreaVariable() pulumi
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6DistanceInterAreaVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for intra-area routes - Range: `1`-`254` - Default value: `110`
+// Set distance for intra-area routes
+//   - Range: `1`-`254`
+//   - Default value: `110`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceIntraArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6DistanceIntraArea }).(pulumi.IntPtrOutput)
 }
@@ -1212,7 +1463,8 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6DistanceVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6DistanceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Filter - Default value: `false`
+// Filter
+//   - Default value: `false`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6Filter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.BoolPtrOutput { return v.Ipv6Filter }).(pulumi.BoolPtrOutput)
 }
@@ -1256,7 +1508,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6RouterIdVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6RouterIdVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set delay from first change received until performing SPF calculation - Range: `0`-`600000` - Default value: `200`
+// Set delay from first change received until performing SPF calculation
+//   - Range: `0`-`600000`
+//   - Default value: `200`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6TimersSpfDelay() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6TimersSpfDelay }).(pulumi.IntPtrOutput)
 }
@@ -1266,7 +1520,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6TimersSpfDelayVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6TimersSpfDelayVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set initial hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `1000`
+// Set initial hold time between consecutive SPF calculations
+//   - Range: `0`-`600000`
+//   - Default value: `1000`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6TimersSpfInitialHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6TimersSpfInitialHold }).(pulumi.IntPtrOutput)
 }
@@ -1276,7 +1532,9 @@ func (o CiscoOspfv3FeatureTemplateOutput) Ipv6TimersSpfInitialHoldVariable() pul
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.StringPtrOutput { return v.Ipv6TimersSpfInitialHoldVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum hold time between consecutive SPF calculations - Range: `0`-`600000` - Default value: `10000`
+// Set maximum hold time between consecutive SPF calculations
+//   - Range: `0`-`600000`
+//   - Default value: `10000`
 func (o CiscoOspfv3FeatureTemplateOutput) Ipv6TimersSpfMaxHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfv3FeatureTemplate) pulumi.IntPtrOutput { return v.Ipv6TimersSpfMaxHold }).(pulumi.IntPtrOutput)
 }

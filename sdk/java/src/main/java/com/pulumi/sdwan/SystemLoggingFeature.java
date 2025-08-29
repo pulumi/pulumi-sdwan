@@ -57,14 +57,16 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     @Export(name="diskEnable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> diskEnable;
 
     /**
-     * @return Enable logging to local disk - Default value: `true`
+     * @return Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> diskEnable() {
@@ -85,14 +87,18 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.diskEnableVariable);
     }
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     @Export(name="diskFileRotate", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> diskFileRotate;
 
     /**
-     * @return Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * @return Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     public Output<Optional<Integer>> diskFileRotate() {
@@ -113,14 +119,18 @@ public class SystemLoggingFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.diskFileRotateVariable);
     }
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     @Export(name="diskFileSize", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> diskFileSize;
 
     /**
-     * @return Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * @return Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     public Output<Optional<Integer>> diskFileSize() {

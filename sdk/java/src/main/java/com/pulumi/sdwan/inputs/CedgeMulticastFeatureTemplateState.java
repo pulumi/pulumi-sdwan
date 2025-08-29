@@ -34,18 +34,16 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -53,14 +51,16 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
     }
 
     /**
-     * Replicator is local to this device - Default value: `false`
+     * Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     @Import(name="localReplicator")
     private @Nullable Output<Boolean> localReplicator;
 
     /**
-     * @return Replicator is local to this device - Default value: `false`
+     * @return Replicator is local to this device
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> localReplicator() {
@@ -98,14 +98,16 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
     }
 
     /**
-     * Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     @Import(name="sptOnly")
     private @Nullable Output<Boolean> sptOnly;
 
     /**
-     * @return Shortest Path Tree (SPT) Only Mode - Default value: `false`
+     * @return Shortest Path Tree (SPT) Only Mode
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> sptOnly() {
@@ -143,14 +145,16 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
     }
 
     /**
-     * Set number of joins per group the router supports - Range: `0`-`1000`
+     * Set number of joins per group the router supports
+     *   - Range: `0`-`1000`
      * 
      */
     @Import(name="threshold")
     private @Nullable Output<Integer> threshold;
 
     /**
-     * @return Set number of joins per group the router supports - Range: `0`-`1000`
+     * @return Set number of joins per group the router supports
+     *   - Range: `0`-`1000`
      * 
      */
     public Optional<Output<Integer>> threshold() {
@@ -243,9 +247,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -256,9 +259,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -268,9 +270,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -280,7 +281,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param localReplicator Replicator is local to this device - Default value: `false`
+         * @param localReplicator Replicator is local to this device
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -291,7 +293,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param localReplicator Replicator is local to this device - Default value: `false`
+         * @param localReplicator Replicator is local to this device
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -343,7 +346,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param sptOnly Shortest Path Tree (SPT) Only Mode - Default value: `false`
+         * @param sptOnly Shortest Path Tree (SPT) Only Mode
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -354,7 +358,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param sptOnly Shortest Path Tree (SPT) Only Mode - Default value: `false`
+         * @param sptOnly Shortest Path Tree (SPT) Only Mode
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -406,7 +411,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param threshold Set number of joins per group the router supports - Range: `0`-`1000`
+         * @param threshold Set number of joins per group the router supports
+         *   - Range: `0`-`1000`
          * 
          * @return builder
          * 
@@ -417,7 +423,8 @@ public final class CedgeMulticastFeatureTemplateState extends com.pulumi.resourc
         }
 
         /**
-         * @param threshold Set number of joins per group the router supports - Range: `0`-`1000`
+         * @param threshold Set number of joins per group the router supports
+         *   - Range: `0`-`1000`
          * 
          * @return builder
          * 

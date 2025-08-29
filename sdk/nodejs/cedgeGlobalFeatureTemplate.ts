@@ -81,211 +81,234 @@ export class CedgeGlobalFeatureTemplate extends pulumi.CustomResource {
     }
 
     /**
-     * Set ARP Proxy - Default value: `false`
+     * Set ARP Proxy
+     *   - Default value: `false`
      */
-    public readonly arpProxy!: pulumi.Output<boolean | undefined>;
+    declare public readonly arpProxy: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly arpProxyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly arpProxyVariable: pulumi.Output<string | undefined>;
     /**
-     * Configure Ignore BOOTP - Default value: `true`
+     * Configure Ignore BOOTP
+     *   - Default value: `true`
      */
-    public readonly bootp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly bootpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure CDP - Default value: `true`
-     */
-    public readonly cdp!: pulumi.Output<boolean | undefined>;
+    declare public readonly bootp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly cdpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly bootpVariable: pulumi.Output<string | undefined>;
     /**
-     * Configure Console Logging - Default value: `true`
+     * Configure CDP
+     *   - Default value: `true`
      */
-    public readonly consoleLogging!: pulumi.Output<boolean | undefined>;
+    declare public readonly cdp: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly consoleLoggingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly cdpVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure Console Logging
+     *   - Default value: `true`
+     */
+    declare public readonly consoleLogging: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly consoleLoggingVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Configure Domain-Lookup - Default value: `false`
+     * Configure Domain-Lookup
+     *   - Default value: `false`
      */
-    public readonly domainLookup!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly domainLookupVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set Passive FTP - Default value: `false`
-     */
-    public readonly ftpPassive!: pulumi.Output<boolean | undefined>;
+    declare public readonly domainLookup: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly ftpPassiveVariable!: pulumi.Output<string | undefined>;
+    declare public readonly domainLookupVariable: pulumi.Output<string | undefined>;
     /**
-     * Set preference for HTTP Authentication - Choices: `local`, `aaa`
+     * Set Passive FTP
+     *   - Default value: `false`
      */
-    public readonly httpAuthentication!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly httpAuthenticationVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set HTTP Server - Default value: `false`
-     */
-    public readonly httpServer!: pulumi.Output<boolean | undefined>;
+    declare public readonly ftpPassive: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly httpServerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ftpPassiveVariable: pulumi.Output<string | undefined>;
     /**
-     * Set HTTPS Server - Default value: `false`
+     * Set preference for HTTP Authentication
+     *   - Choices: `local`, `aaa`
      */
-    public readonly httpsServer!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly httpsServerVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set Source Route - Default value: `false`
-     */
-    public readonly ipSourceRouting!: pulumi.Output<boolean | undefined>;
+    declare public readonly httpAuthentication: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly ipSourceRoutingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly httpAuthenticationVariable: pulumi.Output<string | undefined>;
     /**
-     * Configure Telnet (Outbound) - Default value: `false`
+     * Set HTTP Server
+     *   - Default value: `false`
      */
-    public readonly lineVty!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly lineVtyVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure LLDP - Default value: `true`
-     */
-    public readonly lldp!: pulumi.Output<boolean | undefined>;
+    declare public readonly httpServer: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly lldpVariable!: pulumi.Output<string | undefined>;
+    declare public readonly httpServerVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set HTTPS Server
+     *   - Default value: `false`
+     */
+    declare public readonly httpsServer: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly httpsServerVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set Source Route
+     *   - Default value: `false`
+     */
+    declare public readonly ipSourceRouting: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ipSourceRoutingVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure Telnet (Outbound)
+     *   - Default value: `false`
+     */
+    declare public readonly lineVty: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly lineVtyVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure LLDP
+     *   - Default value: `true`
+     */
+    declare public readonly lldp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly lldpVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+     * Set NAT64 TCP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `3600`
      */
-    public readonly nat64TcpTimeout!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly nat64TcpTimeoutVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
-     */
-    public readonly nat64UdpTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly nat64TcpTimeout: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly nat64UdpTimeoutVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nat64TcpTimeoutVariable: pulumi.Output<string | undefined>;
     /**
-     * Set RSH/RCP - Default value: `false`
+     * Set NAT64 UDP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `300`
      */
-    public readonly rshRcp!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly rshRcpVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure SNMP Ifindex Persist - Default value: `true`
-     */
-    public readonly snmpIfindexPersist!: pulumi.Output<boolean | undefined>;
+    declare public readonly nat64UdpTimeout: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly snmpIfindexPersistVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nat64UdpTimeoutVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set RSH/RCP
+     *   - Default value: `false`
+     */
+    declare public readonly rshRcp: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly rshRcpVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure SNMP Ifindex Persist
+     *   - Default value: `true`
+     */
+    declare public readonly snmpIfindexPersist: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly snmpIfindexPersistVariable: pulumi.Output<string | undefined>;
     /**
      * Specify interface for source address in all HTTP(S) client connections
      */
-    public readonly sourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly sourceInterface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sourceInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sourceInterfaceVariable: pulumi.Output<string | undefined>;
     /**
-     * Set SSH version - Range: `1`-`2`
+     * Set SSH version
+     *   - Range: `1`-`2`
      */
-    public readonly sshVersion!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly sshVersionVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure tcp-keepalives-in - Default value: `true`
-     */
-    public readonly tcpKeepalivesIn!: pulumi.Output<boolean | undefined>;
+    declare public readonly sshVersion: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpKeepalivesInVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sshVersionVariable: pulumi.Output<string | undefined>;
     /**
-     * Configure tcp-keepalives-out - Default value: `true`
+     * Configure tcp-keepalives-in
+     *   - Default value: `true`
      */
-    public readonly tcpKeepalivesOut!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly tcpKeepalivesOutVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Configure tcp-small-servers - Default value: `false`
-     */
-    public readonly tcpSmallServers!: pulumi.Output<boolean | undefined>;
+    declare public readonly tcpKeepalivesIn: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly tcpSmallServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly tcpKeepalivesInVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure tcp-keepalives-out
+     *   - Default value: `true`
+     */
+    declare public readonly tcpKeepalivesOut: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tcpKeepalivesOutVariable: pulumi.Output<string | undefined>;
+    /**
+     * Configure tcp-small-servers
+     *   - Default value: `false`
+     */
+    declare public readonly tcpSmallServers: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly tcpSmallServersVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
-     * Configure udp-small-servers - Default value: `false`
+     * Configure udp-small-servers
+     *   - Default value: `false`
      */
-    public readonly udpSmallServers!: pulumi.Output<boolean | undefined>;
+    declare public readonly udpSmallServers: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly udpSmallServersVariable!: pulumi.Output<string | undefined>;
+    declare public readonly udpSmallServersVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * Configure VTY Line Logging - Default value: `false`
+     * Configure VTY Line Logging
+     *   - Default value: `false`
      */
-    public readonly vtyLogging!: pulumi.Output<boolean | undefined>;
+    declare public readonly vtyLogging: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly vtyLoggingVariable!: pulumi.Output<string | undefined>;
+    declare public readonly vtyLoggingVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a CedgeGlobalFeatureTemplate resource with the given unique name, arguments, and options.
@@ -300,114 +323,114 @@ export class CedgeGlobalFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CedgeGlobalFeatureTemplateState | undefined;
-            resourceInputs["arpProxy"] = state ? state.arpProxy : undefined;
-            resourceInputs["arpProxyVariable"] = state ? state.arpProxyVariable : undefined;
-            resourceInputs["bootp"] = state ? state.bootp : undefined;
-            resourceInputs["bootpVariable"] = state ? state.bootpVariable : undefined;
-            resourceInputs["cdp"] = state ? state.cdp : undefined;
-            resourceInputs["cdpVariable"] = state ? state.cdpVariable : undefined;
-            resourceInputs["consoleLogging"] = state ? state.consoleLogging : undefined;
-            resourceInputs["consoleLoggingVariable"] = state ? state.consoleLoggingVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["domainLookup"] = state ? state.domainLookup : undefined;
-            resourceInputs["domainLookupVariable"] = state ? state.domainLookupVariable : undefined;
-            resourceInputs["ftpPassive"] = state ? state.ftpPassive : undefined;
-            resourceInputs["ftpPassiveVariable"] = state ? state.ftpPassiveVariable : undefined;
-            resourceInputs["httpAuthentication"] = state ? state.httpAuthentication : undefined;
-            resourceInputs["httpAuthenticationVariable"] = state ? state.httpAuthenticationVariable : undefined;
-            resourceInputs["httpServer"] = state ? state.httpServer : undefined;
-            resourceInputs["httpServerVariable"] = state ? state.httpServerVariable : undefined;
-            resourceInputs["httpsServer"] = state ? state.httpsServer : undefined;
-            resourceInputs["httpsServerVariable"] = state ? state.httpsServerVariable : undefined;
-            resourceInputs["ipSourceRouting"] = state ? state.ipSourceRouting : undefined;
-            resourceInputs["ipSourceRoutingVariable"] = state ? state.ipSourceRoutingVariable : undefined;
-            resourceInputs["lineVty"] = state ? state.lineVty : undefined;
-            resourceInputs["lineVtyVariable"] = state ? state.lineVtyVariable : undefined;
-            resourceInputs["lldp"] = state ? state.lldp : undefined;
-            resourceInputs["lldpVariable"] = state ? state.lldpVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nat64TcpTimeout"] = state ? state.nat64TcpTimeout : undefined;
-            resourceInputs["nat64TcpTimeoutVariable"] = state ? state.nat64TcpTimeoutVariable : undefined;
-            resourceInputs["nat64UdpTimeout"] = state ? state.nat64UdpTimeout : undefined;
-            resourceInputs["nat64UdpTimeoutVariable"] = state ? state.nat64UdpTimeoutVariable : undefined;
-            resourceInputs["rshRcp"] = state ? state.rshRcp : undefined;
-            resourceInputs["rshRcpVariable"] = state ? state.rshRcpVariable : undefined;
-            resourceInputs["snmpIfindexPersist"] = state ? state.snmpIfindexPersist : undefined;
-            resourceInputs["snmpIfindexPersistVariable"] = state ? state.snmpIfindexPersistVariable : undefined;
-            resourceInputs["sourceInterface"] = state ? state.sourceInterface : undefined;
-            resourceInputs["sourceInterfaceVariable"] = state ? state.sourceInterfaceVariable : undefined;
-            resourceInputs["sshVersion"] = state ? state.sshVersion : undefined;
-            resourceInputs["sshVersionVariable"] = state ? state.sshVersionVariable : undefined;
-            resourceInputs["tcpKeepalivesIn"] = state ? state.tcpKeepalivesIn : undefined;
-            resourceInputs["tcpKeepalivesInVariable"] = state ? state.tcpKeepalivesInVariable : undefined;
-            resourceInputs["tcpKeepalivesOut"] = state ? state.tcpKeepalivesOut : undefined;
-            resourceInputs["tcpKeepalivesOutVariable"] = state ? state.tcpKeepalivesOutVariable : undefined;
-            resourceInputs["tcpSmallServers"] = state ? state.tcpSmallServers : undefined;
-            resourceInputs["tcpSmallServersVariable"] = state ? state.tcpSmallServersVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["udpSmallServers"] = state ? state.udpSmallServers : undefined;
-            resourceInputs["udpSmallServersVariable"] = state ? state.udpSmallServersVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["vtyLogging"] = state ? state.vtyLogging : undefined;
-            resourceInputs["vtyLoggingVariable"] = state ? state.vtyLoggingVariable : undefined;
+            resourceInputs["arpProxy"] = state?.arpProxy;
+            resourceInputs["arpProxyVariable"] = state?.arpProxyVariable;
+            resourceInputs["bootp"] = state?.bootp;
+            resourceInputs["bootpVariable"] = state?.bootpVariable;
+            resourceInputs["cdp"] = state?.cdp;
+            resourceInputs["cdpVariable"] = state?.cdpVariable;
+            resourceInputs["consoleLogging"] = state?.consoleLogging;
+            resourceInputs["consoleLoggingVariable"] = state?.consoleLoggingVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["domainLookup"] = state?.domainLookup;
+            resourceInputs["domainLookupVariable"] = state?.domainLookupVariable;
+            resourceInputs["ftpPassive"] = state?.ftpPassive;
+            resourceInputs["ftpPassiveVariable"] = state?.ftpPassiveVariable;
+            resourceInputs["httpAuthentication"] = state?.httpAuthentication;
+            resourceInputs["httpAuthenticationVariable"] = state?.httpAuthenticationVariable;
+            resourceInputs["httpServer"] = state?.httpServer;
+            resourceInputs["httpServerVariable"] = state?.httpServerVariable;
+            resourceInputs["httpsServer"] = state?.httpsServer;
+            resourceInputs["httpsServerVariable"] = state?.httpsServerVariable;
+            resourceInputs["ipSourceRouting"] = state?.ipSourceRouting;
+            resourceInputs["ipSourceRoutingVariable"] = state?.ipSourceRoutingVariable;
+            resourceInputs["lineVty"] = state?.lineVty;
+            resourceInputs["lineVtyVariable"] = state?.lineVtyVariable;
+            resourceInputs["lldp"] = state?.lldp;
+            resourceInputs["lldpVariable"] = state?.lldpVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nat64TcpTimeout"] = state?.nat64TcpTimeout;
+            resourceInputs["nat64TcpTimeoutVariable"] = state?.nat64TcpTimeoutVariable;
+            resourceInputs["nat64UdpTimeout"] = state?.nat64UdpTimeout;
+            resourceInputs["nat64UdpTimeoutVariable"] = state?.nat64UdpTimeoutVariable;
+            resourceInputs["rshRcp"] = state?.rshRcp;
+            resourceInputs["rshRcpVariable"] = state?.rshRcpVariable;
+            resourceInputs["snmpIfindexPersist"] = state?.snmpIfindexPersist;
+            resourceInputs["snmpIfindexPersistVariable"] = state?.snmpIfindexPersistVariable;
+            resourceInputs["sourceInterface"] = state?.sourceInterface;
+            resourceInputs["sourceInterfaceVariable"] = state?.sourceInterfaceVariable;
+            resourceInputs["sshVersion"] = state?.sshVersion;
+            resourceInputs["sshVersionVariable"] = state?.sshVersionVariable;
+            resourceInputs["tcpKeepalivesIn"] = state?.tcpKeepalivesIn;
+            resourceInputs["tcpKeepalivesInVariable"] = state?.tcpKeepalivesInVariable;
+            resourceInputs["tcpKeepalivesOut"] = state?.tcpKeepalivesOut;
+            resourceInputs["tcpKeepalivesOutVariable"] = state?.tcpKeepalivesOutVariable;
+            resourceInputs["tcpSmallServers"] = state?.tcpSmallServers;
+            resourceInputs["tcpSmallServersVariable"] = state?.tcpSmallServersVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["udpSmallServers"] = state?.udpSmallServers;
+            resourceInputs["udpSmallServersVariable"] = state?.udpSmallServersVariable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["vtyLogging"] = state?.vtyLogging;
+            resourceInputs["vtyLoggingVariable"] = state?.vtyLoggingVariable;
         } else {
             const args = argsOrState as CedgeGlobalFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["arpProxy"] = args ? args.arpProxy : undefined;
-            resourceInputs["arpProxyVariable"] = args ? args.arpProxyVariable : undefined;
-            resourceInputs["bootp"] = args ? args.bootp : undefined;
-            resourceInputs["bootpVariable"] = args ? args.bootpVariable : undefined;
-            resourceInputs["cdp"] = args ? args.cdp : undefined;
-            resourceInputs["cdpVariable"] = args ? args.cdpVariable : undefined;
-            resourceInputs["consoleLogging"] = args ? args.consoleLogging : undefined;
-            resourceInputs["consoleLoggingVariable"] = args ? args.consoleLoggingVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["domainLookup"] = args ? args.domainLookup : undefined;
-            resourceInputs["domainLookupVariable"] = args ? args.domainLookupVariable : undefined;
-            resourceInputs["ftpPassive"] = args ? args.ftpPassive : undefined;
-            resourceInputs["ftpPassiveVariable"] = args ? args.ftpPassiveVariable : undefined;
-            resourceInputs["httpAuthentication"] = args ? args.httpAuthentication : undefined;
-            resourceInputs["httpAuthenticationVariable"] = args ? args.httpAuthenticationVariable : undefined;
-            resourceInputs["httpServer"] = args ? args.httpServer : undefined;
-            resourceInputs["httpServerVariable"] = args ? args.httpServerVariable : undefined;
-            resourceInputs["httpsServer"] = args ? args.httpsServer : undefined;
-            resourceInputs["httpsServerVariable"] = args ? args.httpsServerVariable : undefined;
-            resourceInputs["ipSourceRouting"] = args ? args.ipSourceRouting : undefined;
-            resourceInputs["ipSourceRoutingVariable"] = args ? args.ipSourceRoutingVariable : undefined;
-            resourceInputs["lineVty"] = args ? args.lineVty : undefined;
-            resourceInputs["lineVtyVariable"] = args ? args.lineVtyVariable : undefined;
-            resourceInputs["lldp"] = args ? args.lldp : undefined;
-            resourceInputs["lldpVariable"] = args ? args.lldpVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nat64TcpTimeout"] = args ? args.nat64TcpTimeout : undefined;
-            resourceInputs["nat64TcpTimeoutVariable"] = args ? args.nat64TcpTimeoutVariable : undefined;
-            resourceInputs["nat64UdpTimeout"] = args ? args.nat64UdpTimeout : undefined;
-            resourceInputs["nat64UdpTimeoutVariable"] = args ? args.nat64UdpTimeoutVariable : undefined;
-            resourceInputs["rshRcp"] = args ? args.rshRcp : undefined;
-            resourceInputs["rshRcpVariable"] = args ? args.rshRcpVariable : undefined;
-            resourceInputs["snmpIfindexPersist"] = args ? args.snmpIfindexPersist : undefined;
-            resourceInputs["snmpIfindexPersistVariable"] = args ? args.snmpIfindexPersistVariable : undefined;
-            resourceInputs["sourceInterface"] = args ? args.sourceInterface : undefined;
-            resourceInputs["sourceInterfaceVariable"] = args ? args.sourceInterfaceVariable : undefined;
-            resourceInputs["sshVersion"] = args ? args.sshVersion : undefined;
-            resourceInputs["sshVersionVariable"] = args ? args.sshVersionVariable : undefined;
-            resourceInputs["tcpKeepalivesIn"] = args ? args.tcpKeepalivesIn : undefined;
-            resourceInputs["tcpKeepalivesInVariable"] = args ? args.tcpKeepalivesInVariable : undefined;
-            resourceInputs["tcpKeepalivesOut"] = args ? args.tcpKeepalivesOut : undefined;
-            resourceInputs["tcpKeepalivesOutVariable"] = args ? args.tcpKeepalivesOutVariable : undefined;
-            resourceInputs["tcpSmallServers"] = args ? args.tcpSmallServers : undefined;
-            resourceInputs["tcpSmallServersVariable"] = args ? args.tcpSmallServersVariable : undefined;
-            resourceInputs["udpSmallServers"] = args ? args.udpSmallServers : undefined;
-            resourceInputs["udpSmallServersVariable"] = args ? args.udpSmallServersVariable : undefined;
-            resourceInputs["vtyLogging"] = args ? args.vtyLogging : undefined;
-            resourceInputs["vtyLoggingVariable"] = args ? args.vtyLoggingVariable : undefined;
+            resourceInputs["arpProxy"] = args?.arpProxy;
+            resourceInputs["arpProxyVariable"] = args?.arpProxyVariable;
+            resourceInputs["bootp"] = args?.bootp;
+            resourceInputs["bootpVariable"] = args?.bootpVariable;
+            resourceInputs["cdp"] = args?.cdp;
+            resourceInputs["cdpVariable"] = args?.cdpVariable;
+            resourceInputs["consoleLogging"] = args?.consoleLogging;
+            resourceInputs["consoleLoggingVariable"] = args?.consoleLoggingVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["domainLookup"] = args?.domainLookup;
+            resourceInputs["domainLookupVariable"] = args?.domainLookupVariable;
+            resourceInputs["ftpPassive"] = args?.ftpPassive;
+            resourceInputs["ftpPassiveVariable"] = args?.ftpPassiveVariable;
+            resourceInputs["httpAuthentication"] = args?.httpAuthentication;
+            resourceInputs["httpAuthenticationVariable"] = args?.httpAuthenticationVariable;
+            resourceInputs["httpServer"] = args?.httpServer;
+            resourceInputs["httpServerVariable"] = args?.httpServerVariable;
+            resourceInputs["httpsServer"] = args?.httpsServer;
+            resourceInputs["httpsServerVariable"] = args?.httpsServerVariable;
+            resourceInputs["ipSourceRouting"] = args?.ipSourceRouting;
+            resourceInputs["ipSourceRoutingVariable"] = args?.ipSourceRoutingVariable;
+            resourceInputs["lineVty"] = args?.lineVty;
+            resourceInputs["lineVtyVariable"] = args?.lineVtyVariable;
+            resourceInputs["lldp"] = args?.lldp;
+            resourceInputs["lldpVariable"] = args?.lldpVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nat64TcpTimeout"] = args?.nat64TcpTimeout;
+            resourceInputs["nat64TcpTimeoutVariable"] = args?.nat64TcpTimeoutVariable;
+            resourceInputs["nat64UdpTimeout"] = args?.nat64UdpTimeout;
+            resourceInputs["nat64UdpTimeoutVariable"] = args?.nat64UdpTimeoutVariable;
+            resourceInputs["rshRcp"] = args?.rshRcp;
+            resourceInputs["rshRcpVariable"] = args?.rshRcpVariable;
+            resourceInputs["snmpIfindexPersist"] = args?.snmpIfindexPersist;
+            resourceInputs["snmpIfindexPersistVariable"] = args?.snmpIfindexPersistVariable;
+            resourceInputs["sourceInterface"] = args?.sourceInterface;
+            resourceInputs["sourceInterfaceVariable"] = args?.sourceInterfaceVariable;
+            resourceInputs["sshVersion"] = args?.sshVersion;
+            resourceInputs["sshVersionVariable"] = args?.sshVersionVariable;
+            resourceInputs["tcpKeepalivesIn"] = args?.tcpKeepalivesIn;
+            resourceInputs["tcpKeepalivesInVariable"] = args?.tcpKeepalivesInVariable;
+            resourceInputs["tcpKeepalivesOut"] = args?.tcpKeepalivesOut;
+            resourceInputs["tcpKeepalivesOutVariable"] = args?.tcpKeepalivesOutVariable;
+            resourceInputs["tcpSmallServers"] = args?.tcpSmallServers;
+            resourceInputs["tcpSmallServersVariable"] = args?.tcpSmallServersVariable;
+            resourceInputs["udpSmallServers"] = args?.udpSmallServers;
+            resourceInputs["udpSmallServersVariable"] = args?.udpSmallServersVariable;
+            resourceInputs["vtyLogging"] = args?.vtyLogging;
+            resourceInputs["vtyLoggingVariable"] = args?.vtyLoggingVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -421,7 +444,8 @@ export class CedgeGlobalFeatureTemplate extends pulumi.CustomResource {
  */
 export interface CedgeGlobalFeatureTemplateState {
     /**
-     * Set ARP Proxy - Default value: `false`
+     * Set ARP Proxy
+     *   - Default value: `false`
      */
     arpProxy?: pulumi.Input<boolean>;
     /**
@@ -429,7 +453,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     arpProxyVariable?: pulumi.Input<string>;
     /**
-     * Configure Ignore BOOTP - Default value: `true`
+     * Configure Ignore BOOTP
+     *   - Default value: `true`
      */
     bootp?: pulumi.Input<boolean>;
     /**
@@ -437,7 +462,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     bootpVariable?: pulumi.Input<string>;
     /**
-     * Configure CDP - Default value: `true`
+     * Configure CDP
+     *   - Default value: `true`
      */
     cdp?: pulumi.Input<boolean>;
     /**
@@ -445,7 +471,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     cdpVariable?: pulumi.Input<string>;
     /**
-     * Configure Console Logging - Default value: `true`
+     * Configure Console Logging
+     *   - Default value: `true`
      */
     consoleLogging?: pulumi.Input<boolean>;
     /**
@@ -457,13 +484,13 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Configure Domain-Lookup - Default value: `false`
+     * Configure Domain-Lookup
+     *   - Default value: `false`
      */
     domainLookup?: pulumi.Input<boolean>;
     /**
@@ -471,7 +498,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     domainLookupVariable?: pulumi.Input<string>;
     /**
-     * Set Passive FTP - Default value: `false`
+     * Set Passive FTP
+     *   - Default value: `false`
      */
     ftpPassive?: pulumi.Input<boolean>;
     /**
@@ -479,7 +507,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     ftpPassiveVariable?: pulumi.Input<string>;
     /**
-     * Set preference for HTTP Authentication - Choices: `local`, `aaa`
+     * Set preference for HTTP Authentication
+     *   - Choices: `local`, `aaa`
      */
     httpAuthentication?: pulumi.Input<string>;
     /**
@@ -487,7 +516,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     httpAuthenticationVariable?: pulumi.Input<string>;
     /**
-     * Set HTTP Server - Default value: `false`
+     * Set HTTP Server
+     *   - Default value: `false`
      */
     httpServer?: pulumi.Input<boolean>;
     /**
@@ -495,7 +525,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     httpServerVariable?: pulumi.Input<string>;
     /**
-     * Set HTTPS Server - Default value: `false`
+     * Set HTTPS Server
+     *   - Default value: `false`
      */
     httpsServer?: pulumi.Input<boolean>;
     /**
@@ -503,7 +534,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     httpsServerVariable?: pulumi.Input<string>;
     /**
-     * Set Source Route - Default value: `false`
+     * Set Source Route
+     *   - Default value: `false`
      */
     ipSourceRouting?: pulumi.Input<boolean>;
     /**
@@ -511,7 +543,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     ipSourceRoutingVariable?: pulumi.Input<string>;
     /**
-     * Configure Telnet (Outbound) - Default value: `false`
+     * Configure Telnet (Outbound)
+     *   - Default value: `false`
      */
     lineVty?: pulumi.Input<boolean>;
     /**
@@ -519,7 +552,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     lineVtyVariable?: pulumi.Input<string>;
     /**
-     * Configure LLDP - Default value: `true`
+     * Configure LLDP
+     *   - Default value: `true`
      */
     lldp?: pulumi.Input<boolean>;
     /**
@@ -531,7 +565,9 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+     * Set NAT64 TCP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `3600`
      */
     nat64TcpTimeout?: pulumi.Input<number>;
     /**
@@ -539,7 +575,9 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     nat64TcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+     * Set NAT64 UDP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `300`
      */
     nat64UdpTimeout?: pulumi.Input<number>;
     /**
@@ -547,7 +585,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     nat64UdpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set RSH/RCP - Default value: `false`
+     * Set RSH/RCP
+     *   - Default value: `false`
      */
     rshRcp?: pulumi.Input<boolean>;
     /**
@@ -555,7 +594,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     rshRcpVariable?: pulumi.Input<string>;
     /**
-     * Configure SNMP Ifindex Persist - Default value: `true`
+     * Configure SNMP Ifindex Persist
+     *   - Default value: `true`
      */
     snmpIfindexPersist?: pulumi.Input<boolean>;
     /**
@@ -571,7 +611,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     sourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Set SSH version - Range: `1`-`2`
+     * Set SSH version
+     *   - Range: `1`-`2`
      */
     sshVersion?: pulumi.Input<number>;
     /**
@@ -579,7 +620,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     sshVersionVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-keepalives-in - Default value: `true`
+     * Configure tcp-keepalives-in
+     *   - Default value: `true`
      */
     tcpKeepalivesIn?: pulumi.Input<boolean>;
     /**
@@ -587,7 +629,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     tcpKeepalivesInVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-keepalives-out - Default value: `true`
+     * Configure tcp-keepalives-out
+     *   - Default value: `true`
      */
     tcpKeepalivesOut?: pulumi.Input<boolean>;
     /**
@@ -595,7 +638,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     tcpKeepalivesOutVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-small-servers - Default value: `false`
+     * Configure tcp-small-servers
+     *   - Default value: `false`
      */
     tcpSmallServers?: pulumi.Input<boolean>;
     /**
@@ -607,7 +651,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     templateType?: pulumi.Input<string>;
     /**
-     * Configure udp-small-servers - Default value: `false`
+     * Configure udp-small-servers
+     *   - Default value: `false`
      */
     udpSmallServers?: pulumi.Input<boolean>;
     /**
@@ -619,7 +664,8 @@ export interface CedgeGlobalFeatureTemplateState {
      */
     version?: pulumi.Input<number>;
     /**
-     * Configure VTY Line Logging - Default value: `false`
+     * Configure VTY Line Logging
+     *   - Default value: `false`
      */
     vtyLogging?: pulumi.Input<boolean>;
     /**
@@ -633,7 +679,8 @@ export interface CedgeGlobalFeatureTemplateState {
  */
 export interface CedgeGlobalFeatureTemplateArgs {
     /**
-     * Set ARP Proxy - Default value: `false`
+     * Set ARP Proxy
+     *   - Default value: `false`
      */
     arpProxy?: pulumi.Input<boolean>;
     /**
@@ -641,7 +688,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     arpProxyVariable?: pulumi.Input<string>;
     /**
-     * Configure Ignore BOOTP - Default value: `true`
+     * Configure Ignore BOOTP
+     *   - Default value: `true`
      */
     bootp?: pulumi.Input<boolean>;
     /**
@@ -649,7 +697,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     bootpVariable?: pulumi.Input<string>;
     /**
-     * Configure CDP - Default value: `true`
+     * Configure CDP
+     *   - Default value: `true`
      */
     cdp?: pulumi.Input<boolean>;
     /**
@@ -657,7 +706,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     cdpVariable?: pulumi.Input<string>;
     /**
-     * Configure Console Logging - Default value: `true`
+     * Configure Console Logging
+     *   - Default value: `true`
      */
     consoleLogging?: pulumi.Input<boolean>;
     /**
@@ -669,13 +719,13 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Configure Domain-Lookup - Default value: `false`
+     * Configure Domain-Lookup
+     *   - Default value: `false`
      */
     domainLookup?: pulumi.Input<boolean>;
     /**
@@ -683,7 +733,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     domainLookupVariable?: pulumi.Input<string>;
     /**
-     * Set Passive FTP - Default value: `false`
+     * Set Passive FTP
+     *   - Default value: `false`
      */
     ftpPassive?: pulumi.Input<boolean>;
     /**
@@ -691,7 +742,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     ftpPassiveVariable?: pulumi.Input<string>;
     /**
-     * Set preference for HTTP Authentication - Choices: `local`, `aaa`
+     * Set preference for HTTP Authentication
+     *   - Choices: `local`, `aaa`
      */
     httpAuthentication?: pulumi.Input<string>;
     /**
@@ -699,7 +751,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     httpAuthenticationVariable?: pulumi.Input<string>;
     /**
-     * Set HTTP Server - Default value: `false`
+     * Set HTTP Server
+     *   - Default value: `false`
      */
     httpServer?: pulumi.Input<boolean>;
     /**
@@ -707,7 +760,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     httpServerVariable?: pulumi.Input<string>;
     /**
-     * Set HTTPS Server - Default value: `false`
+     * Set HTTPS Server
+     *   - Default value: `false`
      */
     httpsServer?: pulumi.Input<boolean>;
     /**
@@ -715,7 +769,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     httpsServerVariable?: pulumi.Input<string>;
     /**
-     * Set Source Route - Default value: `false`
+     * Set Source Route
+     *   - Default value: `false`
      */
     ipSourceRouting?: pulumi.Input<boolean>;
     /**
@@ -723,7 +778,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     ipSourceRoutingVariable?: pulumi.Input<string>;
     /**
-     * Configure Telnet (Outbound) - Default value: `false`
+     * Configure Telnet (Outbound)
+     *   - Default value: `false`
      */
     lineVty?: pulumi.Input<boolean>;
     /**
@@ -731,7 +787,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     lineVtyVariable?: pulumi.Input<string>;
     /**
-     * Configure LLDP - Default value: `true`
+     * Configure LLDP
+     *   - Default value: `true`
      */
     lldp?: pulumi.Input<boolean>;
     /**
@@ -743,7 +800,9 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set NAT64 TCP session timeout, in seconds - Range: `1`-`536870` - Default value: `3600`
+     * Set NAT64 TCP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `3600`
      */
     nat64TcpTimeout?: pulumi.Input<number>;
     /**
@@ -751,7 +810,9 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     nat64TcpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set NAT64 UDP session timeout, in seconds - Range: `1`-`536870` - Default value: `300`
+     * Set NAT64 UDP session timeout, in seconds
+     *   - Range: `1`-`536870`
+     *   - Default value: `300`
      */
     nat64UdpTimeout?: pulumi.Input<number>;
     /**
@@ -759,7 +820,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     nat64UdpTimeoutVariable?: pulumi.Input<string>;
     /**
-     * Set RSH/RCP - Default value: `false`
+     * Set RSH/RCP
+     *   - Default value: `false`
      */
     rshRcp?: pulumi.Input<boolean>;
     /**
@@ -767,7 +829,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     rshRcpVariable?: pulumi.Input<string>;
     /**
-     * Configure SNMP Ifindex Persist - Default value: `true`
+     * Configure SNMP Ifindex Persist
+     *   - Default value: `true`
      */
     snmpIfindexPersist?: pulumi.Input<boolean>;
     /**
@@ -783,7 +846,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     sourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Set SSH version - Range: `1`-`2`
+     * Set SSH version
+     *   - Range: `1`-`2`
      */
     sshVersion?: pulumi.Input<number>;
     /**
@@ -791,7 +855,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     sshVersionVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-keepalives-in - Default value: `true`
+     * Configure tcp-keepalives-in
+     *   - Default value: `true`
      */
     tcpKeepalivesIn?: pulumi.Input<boolean>;
     /**
@@ -799,7 +864,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     tcpKeepalivesInVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-keepalives-out - Default value: `true`
+     * Configure tcp-keepalives-out
+     *   - Default value: `true`
      */
     tcpKeepalivesOut?: pulumi.Input<boolean>;
     /**
@@ -807,7 +873,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     tcpKeepalivesOutVariable?: pulumi.Input<string>;
     /**
-     * Configure tcp-small-servers - Default value: `false`
+     * Configure tcp-small-servers
+     *   - Default value: `false`
      */
     tcpSmallServers?: pulumi.Input<boolean>;
     /**
@@ -815,7 +882,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     tcpSmallServersVariable?: pulumi.Input<string>;
     /**
-     * Configure udp-small-servers - Default value: `false`
+     * Configure udp-small-servers
+     *   - Default value: `false`
      */
     udpSmallServers?: pulumi.Input<boolean>;
     /**
@@ -823,7 +891,8 @@ export interface CedgeGlobalFeatureTemplateArgs {
      */
     udpSmallServersVariable?: pulumi.Input<string>;
     /**
-     * Configure VTY Line Logging - Default value: `false`
+     * Configure VTY Line Logging
+     *   - Default value: `false`
      */
     vtyLogging?: pulumi.Input<boolean>;
     /**

@@ -47,100 +47,100 @@ export class CiscoWirelessLanFeatureTemplate extends pulumi.CustomResource {
     }
 
     /**
-     * Set mobile express default gateway - Default value: `0.0.0.0`
+     * Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      */
-    public readonly controllerDefaultGateway!: pulumi.Output<string | undefined>;
+    declare public readonly controllerDefaultGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly controllerDefaultGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly controllerDefaultGatewayVariable: pulumi.Output<string | undefined>;
     /**
-     * Set mobile express controller address - Default value: `0.0.0.0`
+     * Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      */
-    public readonly controllerIpAddress!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly controllerIpAddressVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set mobile express controller subnet mask - Default value: `0.0.0.0`
-     */
-    public readonly controllerSubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly controllerIpAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly controllerSubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly controllerIpAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      */
-    public readonly country!: pulumi.Output<string | undefined>;
+    declare public readonly controllerSubnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly countryVariable!: pulumi.Output<string | undefined>;
+    declare public readonly controllerSubnetMaskVariable: pulumi.Output<string | undefined>;
+    /**
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     */
+    declare public readonly country: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly countryVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Set management password
      */
-    public readonly password!: pulumi.Output<string | undefined>;
+    declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly passwordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly passwordVariable: pulumi.Output<string | undefined>;
     /**
-     * 2.4GHz Shutdown - Default value: `false`
+     * 2.4GHz Shutdown
+     *   - Default value: `false`
      */
-    public readonly shutdown24ghz!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly shutdown24ghzVariable!: pulumi.Output<string | undefined>;
-    /**
-     * 5GHz Shutdown - Default value: `false`
-     */
-    public readonly shutdown5ghz!: pulumi.Output<boolean | undefined>;
+    declare public readonly shutdown24ghz: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdown5ghzVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdown24ghzVariable: pulumi.Output<string | undefined>;
+    /**
+     * 5GHz Shutdown
+     *   - Default value: `false`
+     */
+    declare public readonly shutdown5ghz: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly shutdown5ghzVariable: pulumi.Output<string | undefined>;
     /**
      * Configure Wi-Fi SSID
      */
-    public readonly ssids!: pulumi.Output<outputs.CiscoWirelessLanFeatureTemplateSsid[] | undefined>;
+    declare public readonly ssids: pulumi.Output<outputs.CiscoWirelessLanFeatureTemplateSsid[] | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * Set management username
      */
-    public readonly username!: pulumi.Output<string | undefined>;
+    declare public readonly username: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly usernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly usernameVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoWirelessLanFeatureTemplate resource with the given unique name, arguments, and options.
@@ -155,56 +155,56 @@ export class CiscoWirelessLanFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoWirelessLanFeatureTemplateState | undefined;
-            resourceInputs["controllerDefaultGateway"] = state ? state.controllerDefaultGateway : undefined;
-            resourceInputs["controllerDefaultGatewayVariable"] = state ? state.controllerDefaultGatewayVariable : undefined;
-            resourceInputs["controllerIpAddress"] = state ? state.controllerIpAddress : undefined;
-            resourceInputs["controllerIpAddressVariable"] = state ? state.controllerIpAddressVariable : undefined;
-            resourceInputs["controllerSubnetMask"] = state ? state.controllerSubnetMask : undefined;
-            resourceInputs["controllerSubnetMaskVariable"] = state ? state.controllerSubnetMaskVariable : undefined;
-            resourceInputs["country"] = state ? state.country : undefined;
-            resourceInputs["countryVariable"] = state ? state.countryVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["password"] = state ? state.password : undefined;
-            resourceInputs["passwordVariable"] = state ? state.passwordVariable : undefined;
-            resourceInputs["shutdown24ghz"] = state ? state.shutdown24ghz : undefined;
-            resourceInputs["shutdown24ghzVariable"] = state ? state.shutdown24ghzVariable : undefined;
-            resourceInputs["shutdown5ghz"] = state ? state.shutdown5ghz : undefined;
-            resourceInputs["shutdown5ghzVariable"] = state ? state.shutdown5ghzVariable : undefined;
-            resourceInputs["ssids"] = state ? state.ssids : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["username"] = state ? state.username : undefined;
-            resourceInputs["usernameVariable"] = state ? state.usernameVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["controllerDefaultGateway"] = state?.controllerDefaultGateway;
+            resourceInputs["controllerDefaultGatewayVariable"] = state?.controllerDefaultGatewayVariable;
+            resourceInputs["controllerIpAddress"] = state?.controllerIpAddress;
+            resourceInputs["controllerIpAddressVariable"] = state?.controllerIpAddressVariable;
+            resourceInputs["controllerSubnetMask"] = state?.controllerSubnetMask;
+            resourceInputs["controllerSubnetMaskVariable"] = state?.controllerSubnetMaskVariable;
+            resourceInputs["country"] = state?.country;
+            resourceInputs["countryVariable"] = state?.countryVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["password"] = state?.password;
+            resourceInputs["passwordVariable"] = state?.passwordVariable;
+            resourceInputs["shutdown24ghz"] = state?.shutdown24ghz;
+            resourceInputs["shutdown24ghzVariable"] = state?.shutdown24ghzVariable;
+            resourceInputs["shutdown5ghz"] = state?.shutdown5ghz;
+            resourceInputs["shutdown5ghzVariable"] = state?.shutdown5ghzVariable;
+            resourceInputs["ssids"] = state?.ssids;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["username"] = state?.username;
+            resourceInputs["usernameVariable"] = state?.usernameVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoWirelessLanFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["controllerDefaultGateway"] = args ? args.controllerDefaultGateway : undefined;
-            resourceInputs["controllerDefaultGatewayVariable"] = args ? args.controllerDefaultGatewayVariable : undefined;
-            resourceInputs["controllerIpAddress"] = args ? args.controllerIpAddress : undefined;
-            resourceInputs["controllerIpAddressVariable"] = args ? args.controllerIpAddressVariable : undefined;
-            resourceInputs["controllerSubnetMask"] = args ? args.controllerSubnetMask : undefined;
-            resourceInputs["controllerSubnetMaskVariable"] = args ? args.controllerSubnetMaskVariable : undefined;
-            resourceInputs["country"] = args ? args.country : undefined;
-            resourceInputs["countryVariable"] = args ? args.countryVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["password"] = args ? args.password : undefined;
-            resourceInputs["passwordVariable"] = args ? args.passwordVariable : undefined;
-            resourceInputs["shutdown24ghz"] = args ? args.shutdown24ghz : undefined;
-            resourceInputs["shutdown24ghzVariable"] = args ? args.shutdown24ghzVariable : undefined;
-            resourceInputs["shutdown5ghz"] = args ? args.shutdown5ghz : undefined;
-            resourceInputs["shutdown5ghzVariable"] = args ? args.shutdown5ghzVariable : undefined;
-            resourceInputs["ssids"] = args ? args.ssids : undefined;
-            resourceInputs["username"] = args ? args.username : undefined;
-            resourceInputs["usernameVariable"] = args ? args.usernameVariable : undefined;
+            resourceInputs["controllerDefaultGateway"] = args?.controllerDefaultGateway;
+            resourceInputs["controllerDefaultGatewayVariable"] = args?.controllerDefaultGatewayVariable;
+            resourceInputs["controllerIpAddress"] = args?.controllerIpAddress;
+            resourceInputs["controllerIpAddressVariable"] = args?.controllerIpAddressVariable;
+            resourceInputs["controllerSubnetMask"] = args?.controllerSubnetMask;
+            resourceInputs["controllerSubnetMaskVariable"] = args?.controllerSubnetMaskVariable;
+            resourceInputs["country"] = args?.country;
+            resourceInputs["countryVariable"] = args?.countryVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["password"] = args?.password;
+            resourceInputs["passwordVariable"] = args?.passwordVariable;
+            resourceInputs["shutdown24ghz"] = args?.shutdown24ghz;
+            resourceInputs["shutdown24ghzVariable"] = args?.shutdown24ghzVariable;
+            resourceInputs["shutdown5ghz"] = args?.shutdown5ghz;
+            resourceInputs["shutdown5ghzVariable"] = args?.shutdown5ghzVariable;
+            resourceInputs["ssids"] = args?.ssids;
+            resourceInputs["username"] = args?.username;
+            resourceInputs["usernameVariable"] = args?.usernameVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -218,7 +218,8 @@ export class CiscoWirelessLanFeatureTemplate extends pulumi.CustomResource {
  */
 export interface CiscoWirelessLanFeatureTemplateState {
     /**
-     * Set mobile express default gateway - Default value: `0.0.0.0`
+     * Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      */
     controllerDefaultGateway?: pulumi.Input<string>;
     /**
@@ -226,7 +227,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     controllerDefaultGatewayVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller address - Default value: `0.0.0.0`
+     * Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      */
     controllerIpAddress?: pulumi.Input<string>;
     /**
@@ -234,7 +236,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     controllerIpAddressVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      */
     controllerSubnetMask?: pulumi.Input<string>;
     /**
@@ -242,12 +245,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     controllerSubnetMaskVariable?: pulumi.Input<string>;
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
     country?: pulumi.Input<string>;
     /**
@@ -259,9 +258,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -277,7 +275,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     passwordVariable?: pulumi.Input<string>;
     /**
-     * 2.4GHz Shutdown - Default value: `false`
+     * 2.4GHz Shutdown
+     *   - Default value: `false`
      */
     shutdown24ghz?: pulumi.Input<boolean>;
     /**
@@ -285,7 +284,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
      */
     shutdown24ghzVariable?: pulumi.Input<string>;
     /**
-     * 5GHz Shutdown - Default value: `false`
+     * 5GHz Shutdown
+     *   - Default value: `false`
      */
     shutdown5ghz?: pulumi.Input<boolean>;
     /**
@@ -319,7 +319,8 @@ export interface CiscoWirelessLanFeatureTemplateState {
  */
 export interface CiscoWirelessLanFeatureTemplateArgs {
     /**
-     * Set mobile express default gateway - Default value: `0.0.0.0`
+     * Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      */
     controllerDefaultGateway?: pulumi.Input<string>;
     /**
@@ -327,7 +328,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     controllerDefaultGatewayVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller address - Default value: `0.0.0.0`
+     * Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      */
     controllerIpAddress?: pulumi.Input<string>;
     /**
@@ -335,7 +337,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     controllerIpAddressVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      */
     controllerSubnetMask?: pulumi.Input<string>;
     /**
@@ -343,12 +346,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     controllerSubnetMaskVariable?: pulumi.Input<string>;
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
     country?: pulumi.Input<string>;
     /**
@@ -360,9 +359,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -378,7 +376,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     passwordVariable?: pulumi.Input<string>;
     /**
-     * 2.4GHz Shutdown - Default value: `false`
+     * 2.4GHz Shutdown
+     *   - Default value: `false`
      */
     shutdown24ghz?: pulumi.Input<boolean>;
     /**
@@ -386,7 +385,8 @@ export interface CiscoWirelessLanFeatureTemplateArgs {
      */
     shutdown24ghzVariable?: pulumi.Input<string>;
     /**
-     * 5GHz Shutdown - Default value: `false`
+     * 5GHz Shutdown
+     *   - Default value: `false`
      */
     shutdown5ghz?: pulumi.Input<boolean>;
     /**

@@ -25,8 +25,7 @@ namespace Pulumi.Sdwan
     public partial class CiscoTrustsecFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        /// char)
+        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         /// </summary>
         [Output("credentialsId")]
         public Output<string?> CredentialsId { get; private set; } = null!;
@@ -56,7 +55,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+        /// Configure Local device security group &lt;2..65519&gt;
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Output("deviceSgt")]
         public Output<int?> DeviceSgt { get; private set; } = null!;
@@ -68,15 +68,15 @@ namespace Pulumi.Sdwan
         public Output<string?> DeviceSgtVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Role-based Access Control enforcement - Default value: `false`
+        /// Enable Role-based Access Control enforcement
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableEnforcement")]
         public Output<bool?> EnableEnforcement { get; private set; } = null!;
@@ -88,13 +88,16 @@ namespace Pulumi.Sdwan
         public Output<string?> EnableEnforcementVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable CTS SXP support - Default value: `false`
+        /// Enable CTS SXP support
+        ///   - Default value: `false`
         /// </summary>
         [Output("enableSxp")]
         public Output<bool?> EnableSxp { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `180`
         /// </summary>
         [Output("maximumListenerHoldTime")]
         public Output<int?> MaximumListenerHoldTime { get; private set; } = null!;
@@ -106,7 +109,9 @@ namespace Pulumi.Sdwan
         public Output<string?> MaximumListenerHoldTimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `90`
         /// </summary>
         [Output("minimumListenerHoldTime")]
         public Output<int?> MinimumListenerHoldTime { get; private set; } = null!;
@@ -124,7 +129,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+        /// Configure Speaker hold-time in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `120`
         /// </summary>
         [Output("speakerHoldTime")]
         public Output<int?> SpeakerHoldTime { get; private set; } = null!;
@@ -166,7 +173,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SxpKeyChainVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enables logging for IP-to-SGT binding changes - Default value: `false`
+        /// Enables logging for IP-to-SGT binding changes
+        ///   - Default value: `false`
         /// </summary>
         [Output("sxpLogBindingChanges")]
         public Output<bool?> SxpLogBindingChanges { get; private set; } = null!;
@@ -184,8 +192,9 @@ namespace Pulumi.Sdwan
         public Output<string?> SxpNodeId { get; private set; } = null!;
 
         /// <summary>
-        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        /// Default value: `ip`
+        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `ip`
         /// </summary>
         [Output("sxpNodeIdType")]
         public Output<string?> SxpNodeIdType { get; private set; } = null!;
@@ -197,7 +206,9 @@ namespace Pulumi.Sdwan
         public Output<string?> SxpNodeIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Output("sxpReconciliationPeriod")]
         public Output<int?> SxpReconciliationPeriod { get; private set; } = null!;
@@ -209,7 +220,9 @@ namespace Pulumi.Sdwan
         public Output<string?> SxpReconciliationPeriodVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Output("sxpRetryPeriod")]
         public Output<int?> SxpRetryPeriod { get; private set; } = null!;
@@ -291,8 +304,7 @@ namespace Pulumi.Sdwan
     public sealed class CiscoTrustsecFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        /// char)
+        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         /// </summary>
         [Input("credentialsId")]
         public Input<string>? CredentialsId { get; set; }
@@ -322,7 +334,8 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+        /// Configure Local device security group &lt;2..65519&gt;
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("deviceSgt")]
         public Input<int>? DeviceSgt { get; set; }
@@ -337,9 +350,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -348,7 +360,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable Role-based Access Control enforcement - Default value: `false`
+        /// Enable Role-based Access Control enforcement
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableEnforcement")]
         public Input<bool>? EnableEnforcement { get; set; }
@@ -360,13 +373,16 @@ namespace Pulumi.Sdwan
         public Input<string>? EnableEnforcementVariable { get; set; }
 
         /// <summary>
-        /// Enable CTS SXP support - Default value: `false`
+        /// Enable CTS SXP support
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableSxp")]
         public Input<bool>? EnableSxp { get; set; }
 
         /// <summary>
-        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `180`
         /// </summary>
         [Input("maximumListenerHoldTime")]
         public Input<int>? MaximumListenerHoldTime { get; set; }
@@ -378,7 +394,9 @@ namespace Pulumi.Sdwan
         public Input<string>? MaximumListenerHoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `90`
         /// </summary>
         [Input("minimumListenerHoldTime")]
         public Input<int>? MinimumListenerHoldTime { get; set; }
@@ -396,7 +414,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+        /// Configure Speaker hold-time in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `120`
         /// </summary>
         [Input("speakerHoldTime")]
         public Input<int>? SpeakerHoldTime { get; set; }
@@ -444,7 +464,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpKeyChainVariable { get; set; }
 
         /// <summary>
-        /// Enables logging for IP-to-SGT binding changes - Default value: `false`
+        /// Enables logging for IP-to-SGT binding changes
+        ///   - Default value: `false`
         /// </summary>
         [Input("sxpLogBindingChanges")]
         public Input<bool>? SxpLogBindingChanges { get; set; }
@@ -462,8 +483,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpNodeId { get; set; }
 
         /// <summary>
-        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        /// Default value: `ip`
+        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `ip`
         /// </summary>
         [Input("sxpNodeIdType")]
         public Input<string>? SxpNodeIdType { get; set; }
@@ -475,7 +497,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpNodeIdVariable { get; set; }
 
         /// <summary>
-        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Input("sxpReconciliationPeriod")]
         public Input<int>? SxpReconciliationPeriod { get; set; }
@@ -487,7 +511,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpReconciliationPeriodVariable { get; set; }
 
         /// <summary>
-        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Input("sxpRetryPeriod")]
         public Input<int>? SxpRetryPeriod { get; set; }
@@ -519,8 +545,7 @@ namespace Pulumi.Sdwan
     public sealed class CiscoTrustsecFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-        /// char)
+        /// Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
         /// </summary>
         [Input("credentialsId")]
         public Input<string>? CredentialsId { get; set; }
@@ -550,7 +575,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+        /// Configure Local device security group &lt;2..65519&gt;
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("deviceSgt")]
         public Input<int>? DeviceSgt { get; set; }
@@ -565,9 +591,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -576,7 +601,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Enable Role-based Access Control enforcement - Default value: `false`
+        /// Enable Role-based Access Control enforcement
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableEnforcement")]
         public Input<bool>? EnableEnforcement { get; set; }
@@ -588,13 +614,16 @@ namespace Pulumi.Sdwan
         public Input<string>? EnableEnforcementVariable { get; set; }
 
         /// <summary>
-        /// Enable CTS SXP support - Default value: `false`
+        /// Enable CTS SXP support
+        ///   - Default value: `false`
         /// </summary>
         [Input("enableSxp")]
         public Input<bool>? EnableSxp { get; set; }
 
         /// <summary>
-        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+        /// Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `180`
         /// </summary>
         [Input("maximumListenerHoldTime")]
         public Input<int>? MaximumListenerHoldTime { get; set; }
@@ -606,7 +635,9 @@ namespace Pulumi.Sdwan
         public Input<string>? MaximumListenerHoldTimeVariable { get; set; }
 
         /// <summary>
-        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+        /// Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `90`
         /// </summary>
         [Input("minimumListenerHoldTime")]
         public Input<int>? MinimumListenerHoldTime { get; set; }
@@ -624,7 +655,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+        /// Configure Speaker hold-time in seconds &lt;1..65534&gt;
+        ///   - Range: `1`-`65534`
+        ///   - Default value: `120`
         /// </summary>
         [Input("speakerHoldTime")]
         public Input<int>? SpeakerHoldTime { get; set; }
@@ -672,7 +705,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpKeyChainVariable { get; set; }
 
         /// <summary>
-        /// Enables logging for IP-to-SGT binding changes - Default value: `false`
+        /// Enables logging for IP-to-SGT binding changes
+        ///   - Default value: `false`
         /// </summary>
         [Input("sxpLogBindingChanges")]
         public Input<bool>? SxpLogBindingChanges { get; set; }
@@ -690,8 +724,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpNodeId { get; set; }
 
         /// <summary>
-        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-        /// Default value: `ip`
+        /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `ip`
         /// </summary>
         [Input("sxpNodeIdType")]
         public Input<string>? SxpNodeIdType { get; set; }
@@ -703,7 +738,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpNodeIdVariable { get; set; }
 
         /// <summary>
-        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Input("sxpReconciliationPeriod")]
         public Input<int>? SxpReconciliationPeriod { get; set; }
@@ -715,7 +752,9 @@ namespace Pulumi.Sdwan
         public Input<string>? SxpReconciliationPeriodVariable { get; set; }
 
         /// <summary>
-        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+        /// Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+        ///   - Range: `0`-`64000`
+        ///   - Default value: `120`
         /// </summary>
         [Input("sxpRetryPeriod")]
         public Input<int>? SxpRetryPeriod { get; set; }

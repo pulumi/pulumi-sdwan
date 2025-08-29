@@ -69,7 +69,8 @@ class ServiceLanVpnFeatureArgs:
         :param pulumi.Input[_builtins.str] config_description: Name
         :param pulumi.Input[_builtins.str] config_description_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access
+                 - Default value: `false`
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureGreRouteArgs']]] gre_routes: IPv4 Static GRE Route
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpsecRouteArgs']]] ipsec_routes: IPv4 Static IPSEC Route
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpv4StaticRouteArgs']]] ipv4_static_routes: IPv4 Static Route
@@ -78,9 +79,11 @@ class ServiceLanVpnFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNat64V4PoolArgs']]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNatPoolArgs']]] nat_pools: NAT Pool
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNatPortForwardArgs']]] nat_port_forwards: NAT Port Forward
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4_variable: Variable name
@@ -96,7 +99,9 @@ class ServiceLanVpnFeatureArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceRouteArgs']]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
-        :param pulumi.Input[_builtins.int] vpn: VPN - Range: `1`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Range: `1`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -255,7 +260,8 @@ class ServiceLanVpnFeatureArgs:
     @pulumi.getter(name="enableSdwanRemoteAccess")
     def enable_sdwan_remote_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable SDWAN Remote Access - Default value: `false`
+        Enable SDWAN Remote Access
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sdwan_remote_access")
 
@@ -408,7 +414,8 @@ class ServiceLanVpnFeatureArgs:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -432,7 +439,8 @@ class ServiceLanVpnFeatureArgs:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -624,7 +632,9 @@ class ServiceLanVpnFeatureArgs:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        VPN - Range: `1`-`65527` - Default value: `0`
+        VPN
+          - Range: `1`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 
@@ -696,7 +706,8 @@ class _ServiceLanVpnFeatureState:
         :param pulumi.Input[_builtins.str] config_description: Name
         :param pulumi.Input[_builtins.str] config_description_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureGreRouteArgs']]] gre_routes: IPv4 Static GRE Route
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureIpsecRouteArgs']]] ipsec_routes: IPv4 Static IPSEC Route
@@ -706,9 +717,11 @@ class _ServiceLanVpnFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNat64V4PoolArgs']]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNatPoolArgs']]] nat_pools: NAT Pool
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureNatPortForwardArgs']]] nat_port_forwards: NAT Port Forward
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4_variable: Variable name
@@ -725,7 +738,9 @@ class _ServiceLanVpnFeatureState:
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vpn: VPN - Range: `1`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Range: `1`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         if advertise_omp_ipv4s is not None:
@@ -875,7 +890,8 @@ class _ServiceLanVpnFeatureState:
     @pulumi.getter(name="enableSdwanRemoteAccess")
     def enable_sdwan_remote_access(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable SDWAN Remote Access - Default value: `false`
+        Enable SDWAN Remote Access
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sdwan_remote_access")
 
@@ -1040,7 +1056,8 @@ class _ServiceLanVpnFeatureState:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -1064,7 +1081,8 @@ class _ServiceLanVpnFeatureState:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1268,7 +1286,9 @@ class _ServiceLanVpnFeatureState:
     @pulumi.getter
     def vpn(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        VPN - Range: `1`-`65527` - Default value: `0`
+        VPN
+          - Range: `1`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 
@@ -1357,7 +1377,8 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] config_description: Name
         :param pulumi.Input[_builtins.str] config_description_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureGreRouteArgs', 'ServiceLanVpnFeatureGreRouteArgsDict']]]] gre_routes: IPv4 Static GRE Route
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpsecRouteArgs', 'ServiceLanVpnFeatureIpsecRouteArgsDict']]]] ipsec_routes: IPv4 Static IPSEC Route
@@ -1367,9 +1388,11 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNat64V4PoolArgs', 'ServiceLanVpnFeatureNat64V4PoolArgsDict']]]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPoolArgs', 'ServiceLanVpnFeatureNatPoolArgsDict']]]] nat_pools: NAT Pool
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPortForwardArgs', 'ServiceLanVpnFeatureNatPortForwardArgsDict']]]] nat_port_forwards: NAT Port Forward
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4_variable: Variable name
@@ -1385,7 +1408,9 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
-        :param pulumi.Input[_builtins.int] vpn: VPN - Range: `1`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Range: `1`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         ...
@@ -1578,7 +1603,8 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] config_description: Name
         :param pulumi.Input[_builtins.str] config_description_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access - Default value: `false`
+        :param pulumi.Input[_builtins.bool] enable_sdwan_remote_access: Enable SDWAN Remote Access
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureGreRouteArgs', 'ServiceLanVpnFeatureGreRouteArgsDict']]]] gre_routes: IPv4 Static GRE Route
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureIpsecRouteArgs', 'ServiceLanVpnFeatureIpsecRouteArgsDict']]]] ipsec_routes: IPv4 Static IPSEC Route
@@ -1588,9 +1614,11 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNat64V4PoolArgs', 'ServiceLanVpnFeatureNat64V4PoolArgsDict']]]] nat64_v4_pools: NAT64 V4 Pool
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPoolArgs', 'ServiceLanVpnFeatureNatPoolArgsDict']]]] nat_pools: NAT Pool
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureNatPortForwardArgs', 'ServiceLanVpnFeatureNatPortForwardArgsDict']]]] nat_port_forwards: NAT Port Forward
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4: Primary DNS Address (IPv4)
         :param pulumi.Input[_builtins.str] primary_dns_address_ipv4_variable: Variable name
@@ -1607,7 +1635,9 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]] services: Service
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
-        :param pulumi.Input[_builtins.int] vpn: VPN - Range: `1`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn: VPN
+                 - Range: `1`-`65527`
+                 - Default value: `0`
         :param pulumi.Input[_builtins.str] vpn_variable: Variable name
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -1701,7 +1731,8 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
     @pulumi.getter(name="enableSdwanRemoteAccess")
     def enable_sdwan_remote_access(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable SDWAN Remote Access - Default value: `false`
+        Enable SDWAN Remote Access
+          - Default value: `false`
         """
         return pulumi.get(self, "enable_sdwan_remote_access")
 
@@ -1806,7 +1837,8 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -1822,7 +1854,8 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1958,7 +1991,9 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
     @pulumi.getter
     def vpn(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        VPN - Range: `1`-`65527` - Default value: `0`
+        VPN
+          - Range: `1`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn")
 

@@ -64,49 +64,53 @@ export class SlaClassPolicyObject extends pulumi.CustomResource {
     /**
      * App Probe Class Policy Object ID
      */
-    public readonly appProbeClassId!: pulumi.Output<string | undefined>;
+    declare public readonly appProbeClassId: pulumi.Output<string | undefined>;
     /**
      * App Probe Class Policy Object version
      */
-    public readonly appProbeClassVersion!: pulumi.Output<number | undefined>;
+    declare public readonly appProbeClassVersion: pulumi.Output<number | undefined>;
     /**
-     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
-    public readonly fallbackBestTunnelCriteria!: pulumi.Output<string | undefined>;
+    declare public readonly fallbackBestTunnelCriteria: pulumi.Output<string | undefined>;
     /**
-     * Jitter variance in ms - Range: `1`-`1000`
+     * Jitter variance in ms
+     *   - Range: `1`-`1000`
      */
-    public readonly fallbackBestTunnelJitter!: pulumi.Output<number | undefined>;
+    declare public readonly fallbackBestTunnelJitter: pulumi.Output<number | undefined>;
     /**
-     * Latency variance in ms - Range: `1`-`1000`
+     * Latency variance in ms
+     *   - Range: `1`-`1000`
      */
-    public readonly fallbackBestTunnelLatency!: pulumi.Output<number | undefined>;
+    declare public readonly fallbackBestTunnelLatency: pulumi.Output<number | undefined>;
     /**
-     * Loss variance in percent - Range: `1`-`100`
+     * Loss variance in percent
+     *   - Range: `1`-`100`
      */
-    public readonly fallbackBestTunnelLoss!: pulumi.Output<number | undefined>;
+    declare public readonly fallbackBestTunnelLoss: pulumi.Output<number | undefined>;
     /**
-     * Jitter in ms - Range: `1`-`1000`
+     * Jitter in ms
+     *   - Range: `1`-`1000`
      */
-    public readonly jitter!: pulumi.Output<number | undefined>;
+    declare public readonly jitter: pulumi.Output<number | undefined>;
     /**
-     * Latency in ms - Range: `1`-`1000`
+     * Latency in ms
+     *   - Range: `1`-`1000`
      */
-    public readonly latency!: pulumi.Output<number | undefined>;
+    declare public readonly latency: pulumi.Output<number | undefined>;
     /**
-     * Loss in percent - Range: `1`-`100`
+     * Loss in percent
+     *   - Range: `1`-`100`
      */
-    public readonly loss!: pulumi.Output<number | undefined>;
+    declare public readonly loss: pulumi.Output<number | undefined>;
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SlaClassPolicyObject resource with the given unique name, arguments, and options.
@@ -121,29 +125,29 @@ export class SlaClassPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SlaClassPolicyObjectState | undefined;
-            resourceInputs["appProbeClassId"] = state ? state.appProbeClassId : undefined;
-            resourceInputs["appProbeClassVersion"] = state ? state.appProbeClassVersion : undefined;
-            resourceInputs["fallbackBestTunnelCriteria"] = state ? state.fallbackBestTunnelCriteria : undefined;
-            resourceInputs["fallbackBestTunnelJitter"] = state ? state.fallbackBestTunnelJitter : undefined;
-            resourceInputs["fallbackBestTunnelLatency"] = state ? state.fallbackBestTunnelLatency : undefined;
-            resourceInputs["fallbackBestTunnelLoss"] = state ? state.fallbackBestTunnelLoss : undefined;
-            resourceInputs["jitter"] = state ? state.jitter : undefined;
-            resourceInputs["latency"] = state ? state.latency : undefined;
-            resourceInputs["loss"] = state ? state.loss : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["appProbeClassId"] = state?.appProbeClassId;
+            resourceInputs["appProbeClassVersion"] = state?.appProbeClassVersion;
+            resourceInputs["fallbackBestTunnelCriteria"] = state?.fallbackBestTunnelCriteria;
+            resourceInputs["fallbackBestTunnelJitter"] = state?.fallbackBestTunnelJitter;
+            resourceInputs["fallbackBestTunnelLatency"] = state?.fallbackBestTunnelLatency;
+            resourceInputs["fallbackBestTunnelLoss"] = state?.fallbackBestTunnelLoss;
+            resourceInputs["jitter"] = state?.jitter;
+            resourceInputs["latency"] = state?.latency;
+            resourceInputs["loss"] = state?.loss;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SlaClassPolicyObjectArgs | undefined;
-            resourceInputs["appProbeClassId"] = args ? args.appProbeClassId : undefined;
-            resourceInputs["appProbeClassVersion"] = args ? args.appProbeClassVersion : undefined;
-            resourceInputs["fallbackBestTunnelCriteria"] = args ? args.fallbackBestTunnelCriteria : undefined;
-            resourceInputs["fallbackBestTunnelJitter"] = args ? args.fallbackBestTunnelJitter : undefined;
-            resourceInputs["fallbackBestTunnelLatency"] = args ? args.fallbackBestTunnelLatency : undefined;
-            resourceInputs["fallbackBestTunnelLoss"] = args ? args.fallbackBestTunnelLoss : undefined;
-            resourceInputs["jitter"] = args ? args.jitter : undefined;
-            resourceInputs["latency"] = args ? args.latency : undefined;
-            resourceInputs["loss"] = args ? args.loss : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["appProbeClassId"] = args?.appProbeClassId;
+            resourceInputs["appProbeClassVersion"] = args?.appProbeClassVersion;
+            resourceInputs["fallbackBestTunnelCriteria"] = args?.fallbackBestTunnelCriteria;
+            resourceInputs["fallbackBestTunnelJitter"] = args?.fallbackBestTunnelJitter;
+            resourceInputs["fallbackBestTunnelLatency"] = args?.fallbackBestTunnelLatency;
+            resourceInputs["fallbackBestTunnelLoss"] = args?.fallbackBestTunnelLoss;
+            resourceInputs["jitter"] = args?.jitter;
+            resourceInputs["latency"] = args?.latency;
+            resourceInputs["loss"] = args?.loss;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -164,33 +168,37 @@ export interface SlaClassPolicyObjectState {
      */
     appProbeClassVersion?: pulumi.Input<number>;
     /**
-     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
     fallbackBestTunnelCriteria?: pulumi.Input<string>;
     /**
-     * Jitter variance in ms - Range: `1`-`1000`
+     * Jitter variance in ms
+     *   - Range: `1`-`1000`
      */
     fallbackBestTunnelJitter?: pulumi.Input<number>;
     /**
-     * Latency variance in ms - Range: `1`-`1000`
+     * Latency variance in ms
+     *   - Range: `1`-`1000`
      */
     fallbackBestTunnelLatency?: pulumi.Input<number>;
     /**
-     * Loss variance in percent - Range: `1`-`100`
+     * Loss variance in percent
+     *   - Range: `1`-`100`
      */
     fallbackBestTunnelLoss?: pulumi.Input<number>;
     /**
-     * Jitter in ms - Range: `1`-`1000`
+     * Jitter in ms
+     *   - Range: `1`-`1000`
      */
     jitter?: pulumi.Input<number>;
     /**
-     * Latency in ms - Range: `1`-`1000`
+     * Latency in ms
+     *   - Range: `1`-`1000`
      */
     latency?: pulumi.Input<number>;
     /**
-     * Loss in percent - Range: `1`-`100`
+     * Loss in percent
+     *   - Range: `1`-`100`
      */
     loss?: pulumi.Input<number>;
     /**
@@ -216,33 +224,37 @@ export interface SlaClassPolicyObjectArgs {
      */
     appProbeClassVersion?: pulumi.Input<number>;
     /**
-     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-     * `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-     * `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+     * - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
      */
     fallbackBestTunnelCriteria?: pulumi.Input<string>;
     /**
-     * Jitter variance in ms - Range: `1`-`1000`
+     * Jitter variance in ms
+     *   - Range: `1`-`1000`
      */
     fallbackBestTunnelJitter?: pulumi.Input<number>;
     /**
-     * Latency variance in ms - Range: `1`-`1000`
+     * Latency variance in ms
+     *   - Range: `1`-`1000`
      */
     fallbackBestTunnelLatency?: pulumi.Input<number>;
     /**
-     * Loss variance in percent - Range: `1`-`100`
+     * Loss variance in percent
+     *   - Range: `1`-`100`
      */
     fallbackBestTunnelLoss?: pulumi.Input<number>;
     /**
-     * Jitter in ms - Range: `1`-`1000`
+     * Jitter in ms
+     *   - Range: `1`-`1000`
      */
     jitter?: pulumi.Input<number>;
     /**
-     * Latency in ms - Range: `1`-`1000`
+     * Latency in ms
+     *   - Range: `1`-`1000`
      */
     latency?: pulumi.Input<number>;
     /**
-     * Loss in percent - Range: `1`-`100`
+     * Loss in percent
+     *   - Range: `1`-`100`
      */
     loss?: pulumi.Input<number>;
     /**

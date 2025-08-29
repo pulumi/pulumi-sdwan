@@ -38,14 +38,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/cflowdPolicyDefinition:CflowdPolicyDefinition")
 public class CflowdPolicyDefinition extends com.pulumi.resources.CustomResource {
     /**
-     * Active flow timeout in seconds - Range: `30`-`3600`
+     * Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      * 
      */
     @Export(name="activeFlowTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> activeFlowTimeout;
 
     /**
-     * @return Active flow timeout in seconds - Range: `30`-`3600`
+     * @return Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      * 
      */
     public Output<Optional<Integer>> activeFlowTimeout() {
@@ -80,28 +82,32 @@ public class CflowdPolicyDefinition extends com.pulumi.resources.CustomResource 
         return this.description;
     }
     /**
-     * Flow refresh in seconds - Range: `60`-`86400`
+     * Flow refresh in seconds
+     *   - Range: `60`-`86400`
      * 
      */
     @Export(name="flowRefresh", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> flowRefresh;
 
     /**
-     * @return Flow refresh in seconds - Range: `60`-`86400`
+     * @return Flow refresh in seconds
+     *   - Range: `60`-`86400`
      * 
      */
     public Output<Optional<Integer>> flowRefresh() {
         return Codegen.optional(this.flowRefresh);
     }
     /**
-     * Inactive flow timeout in seconds - Range: `1`-`3600`
+     * Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      * 
      */
     @Export(name="inactiveFlowTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> inactiveFlowTimeout;
 
     /**
-     * @return Inactive flow timeout in seconds - Range: `1`-`3600`
+     * @return Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      * 
      */
     public Output<Optional<Integer>> inactiveFlowTimeout() {
@@ -122,14 +128,16 @@ public class CflowdPolicyDefinition extends com.pulumi.resources.CustomResource 
         return this.name;
     }
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> protocol;
 
     /**
-     * @return Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * @return Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      * 
      */
     public Output<Optional<String>> protocol() {
@@ -150,14 +158,16 @@ public class CflowdPolicyDefinition extends com.pulumi.resources.CustomResource 
         return Codegen.optional(this.remarkedDscp);
     }
     /**
-     * Flow sampling interval - Range: `1`-`65536`
+     * Flow sampling interval
+     *   - Range: `1`-`65536`
      * 
      */
     @Export(name="samplingInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> samplingInterval;
 
     /**
-     * @return Flow sampling interval - Range: `1`-`65536`
+     * @return Flow sampling interval
+     *   - Range: `1`-`65536`
      * 
      */
     public Output<Optional<Integer>> samplingInterval() {

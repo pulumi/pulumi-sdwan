@@ -28,14 +28,18 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     public static final VpnInterfaceSviFeatureTemplateState Empty = new VpnInterfaceSviFeatureTemplateState();
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     @Import(name="arpTimeout")
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     public Optional<Output<Integer>> arpTimeout() {
@@ -73,18 +77,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -152,14 +154,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -182,14 +186,18 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -362,14 +370,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6DhcpClient")
     private @Nullable Output<Boolean> ipv6DhcpClient;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6DhcpClient() {
@@ -392,14 +402,18 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ipv6DhcpDistance")
     private @Nullable Output<Integer> ipv6DhcpDistance;
 
     /**
-     * @return Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * @return Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ipv6DhcpDistance() {
@@ -437,14 +451,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * Enable DHCPv6 rapid commit - Default value: `false`
+     * Enable DHCPv6 rapid commit
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6DhcpRapidCommit")
     private @Nullable Output<Boolean> ipv6DhcpRapidCommit;
 
     /**
-     * @return Enable DHCPv6 rapid commit - Default value: `false`
+     * @return Enable DHCPv6 rapid commit
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6DhcpRapidCommit() {
@@ -497,14 +513,18 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="mtu")
     private @Nullable Output<Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> mtu() {
@@ -557,14 +577,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -602,14 +624,16 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     @Import(name="tcpMssAdjust")
     private @Nullable Output<Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     public Optional<Output<Integer>> tcpMssAdjust() {
@@ -727,7 +751,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2678400`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -738,7 +764,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2678400`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -790,9 +818,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -803,9 +830,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -815,9 +841,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -911,7 +936,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -922,7 +948,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -953,7 +980,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -964,7 +993,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1255,7 +1286,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpClient Enable DHCPv6 - Default value: `false`
+         * @param ipv6DhcpClient Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1266,7 +1298,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpClient Enable DHCPv6 - Default value: `false`
+         * @param ipv6DhcpClient Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1297,7 +1330,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param ipv6DhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1308,7 +1343,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param ipv6DhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1370,7 +1407,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpRapidCommit Enable DHCPv6 rapid commit - Default value: `false`
+         * @param ipv6DhcpRapidCommit Enable DHCPv6 rapid commit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1381,7 +1419,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param ipv6DhcpRapidCommit Enable DHCPv6 rapid commit - Default value: `false`
+         * @param ipv6DhcpRapidCommit Enable DHCPv6 rapid commit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1474,7 +1513,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param mtu Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1485,7 +1526,9 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param mtu Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+         * @param mtu Interface MTU &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1568,7 +1611,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1579,7 +1623,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1641,7 +1686,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 
@@ -1652,7 +1698,8 @@ public final class VpnInterfaceSviFeatureTemplateState extends com.pulumi.resour
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 

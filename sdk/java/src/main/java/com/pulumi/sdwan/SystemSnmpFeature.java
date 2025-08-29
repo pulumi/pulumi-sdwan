@@ -171,14 +171,16 @@ public class SystemSnmpFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Enable or disable SNMP - Default value: `false`
+     * Enable or disable SNMP
+     *   - Default value: `false`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Enable or disable SNMP - Default value: `false`
+     * @return Enable or disable SNMP
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {

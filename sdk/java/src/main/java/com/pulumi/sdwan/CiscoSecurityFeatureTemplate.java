@@ -82,32 +82,34 @@ public class CiscoSecurityFeatureTemplate extends com.pulumi.resources.CustomRes
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     @Export(name="extendedArWindow", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> extendedArWindow;
 
     /**
-     * @return Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * @return Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     public Output<Optional<Integer>> extendedArWindow() {
@@ -198,14 +200,16 @@ public class CiscoSecurityFeatureTemplate extends com.pulumi.resources.CustomRes
         return this.name;
     }
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     @Export(name="pairwiseKeying", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> pairwiseKeying;
 
     /**
-     * @return Enable or disable IPsec pairwise-keying - Default value: `false`
+     * @return Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> pairwiseKeying() {
@@ -226,14 +230,18 @@ public class CiscoSecurityFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.pairwiseKeyingVariable);
     }
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     @Export(name="rekeyInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> rekeyInterval;
 
     /**
-     * @return Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * @return Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     public Output<Optional<Integer>> rekeyInterval() {
@@ -254,16 +262,18 @@ public class CiscoSecurityFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.rekeyIntervalVariable);
     }
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     @Export(name="replayWindow", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> replayWindow;
 
     /**
-     * @return Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * @return Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     public Output<Optional<String>> replayWindow() {

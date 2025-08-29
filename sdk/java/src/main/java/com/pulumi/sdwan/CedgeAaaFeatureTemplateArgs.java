@@ -41,14 +41,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     @Import(name="authorizationConfigCommands")
     private @Nullable Output<Boolean> authorizationConfigCommands;
 
     /**
-     * @return For configuration mode commands. - Default value: `false`
+     * @return For configuration mode commands.
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authorizationConfigCommands() {
@@ -71,14 +73,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     @Import(name="authorizationConsole")
     private @Nullable Output<Boolean> authorizationConsole;
 
     /**
-     * @return For enabling console authorization - Default value: `false`
+     * @return For enabling console authorization
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> authorizationConsole() {
@@ -131,18 +135,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -150,14 +152,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Import(name="dot1xAccounting")
     private @Nullable Output<Boolean> dot1xAccounting;
 
     /**
-     * @return Accounting configurations parameters - Default value: `false`
+     * @return Accounting configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> dot1xAccounting() {
@@ -180,14 +184,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     @Import(name="dot1xAuthentication")
     private @Nullable Output<Boolean> dot1xAuthentication;
 
     /**
-     * @return Authentication configurations parameters - Default value: `false`
+     * @return Authentication configurations parameters
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> dot1xAuthentication() {
@@ -240,14 +246,18 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+     * Authentication Type
+     *   - Choices: `any`, `all`, `session-key`
+     *   - Default value: `any`
      * 
      */
     @Import(name="radiusDynamicAuthorAuthenticationType")
     private @Nullable Output<String> radiusDynamicAuthorAuthenticationType;
 
     /**
-     * @return Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+     * @return Authentication Type
+     *   - Choices: `any`, `all`, `session-key`
+     *   - Default value: `any`
      * 
      */
     public Optional<Output<String>> radiusDynamicAuthorAuthenticationType() {
@@ -270,14 +280,18 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+     * Domain Stripping
+     *   - Choices: `yes`, `no`, `right-to-left`
+     *   - Default value: `no`
      * 
      */
     @Import(name="radiusDynamicAuthorDomainStripping")
     private @Nullable Output<String> radiusDynamicAuthorDomainStripping;
 
     /**
-     * @return Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+     * @return Domain Stripping
+     *   - Choices: `yes`, `no`, `right-to-left`
+     *   - Default value: `no`
      * 
      */
     public Optional<Output<String>> radiusDynamicAuthorDomainStripping() {
@@ -300,14 +314,18 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+     * Specify Radius Dynamic Author Port
+     *   - Range: `0`-`65535`
+     *   - Default value: `1700`
      * 
      */
     @Import(name="radiusDynamicAuthorPort")
     private @Nullable Output<Integer> radiusDynamicAuthorPort;
 
     /**
-     * @return Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+     * @return Specify Radius Dynamic Author Port
+     *   - Range: `0`-`65535`
+     *   - Default value: `1700`
      * 
      */
     public Optional<Output<Integer>> radiusDynamicAuthorPort() {
@@ -420,14 +438,16 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * ServerGroups priority order - Default value: `local`
+     * ServerGroups priority order
+     *   - Default value: `local`
      * 
      */
     @Import(name="serverGroupsPriorityOrder")
     private @Nullable Output<String> serverGroupsPriorityOrder;
 
     /**
-     * @return ServerGroups priority order - Default value: `local`
+     * @return ServerGroups priority order
+     *   - Default value: `local`
      * 
      */
     public Optional<Output<String>> serverGroupsPriorityOrder() {
@@ -548,7 +568,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authorizationConfigCommands For configuration mode commands. - Default value: `false`
+         * @param authorizationConfigCommands For configuration mode commands.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -559,7 +580,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authorizationConfigCommands For configuration mode commands. - Default value: `false`
+         * @param authorizationConfigCommands For configuration mode commands.
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -590,7 +612,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authorizationConsole For enabling console authorization - Default value: `false`
+         * @param authorizationConsole For enabling console authorization
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -601,7 +624,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authorizationConsole For enabling console authorization - Default value: `false`
+         * @param authorizationConsole For enabling console authorization
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -684,9 +708,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -697,9 +720,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -709,9 +731,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -721,7 +742,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dot1xAccounting Accounting configurations parameters - Default value: `false`
+         * @param dot1xAccounting Accounting configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -732,7 +754,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dot1xAccounting Accounting configurations parameters - Default value: `false`
+         * @param dot1xAccounting Accounting configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -763,7 +786,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dot1xAuthentication Authentication configurations parameters - Default value: `false`
+         * @param dot1xAuthentication Authentication configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -774,7 +798,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dot1xAuthentication Authentication configurations parameters - Default value: `false`
+         * @param dot1xAuthentication Authentication configurations parameters
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -857,7 +882,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorAuthenticationType Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+         * @param radiusDynamicAuthorAuthenticationType Authentication Type
+         *   - Choices: `any`, `all`, `session-key`
+         *   - Default value: `any`
          * 
          * @return builder
          * 
@@ -868,7 +895,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorAuthenticationType Authentication Type - Choices: `any`, `all`, `session-key` - Default value: `any`
+         * @param radiusDynamicAuthorAuthenticationType Authentication Type
+         *   - Choices: `any`, `all`, `session-key`
+         *   - Default value: `any`
          * 
          * @return builder
          * 
@@ -899,7 +928,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorDomainStripping Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+         * @param radiusDynamicAuthorDomainStripping Domain Stripping
+         *   - Choices: `yes`, `no`, `right-to-left`
+         *   - Default value: `no`
          * 
          * @return builder
          * 
@@ -910,7 +941,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorDomainStripping Domain Stripping - Choices: `yes`, `no`, `right-to-left` - Default value: `no`
+         * @param radiusDynamicAuthorDomainStripping Domain Stripping
+         *   - Choices: `yes`, `no`, `right-to-left`
+         *   - Default value: `no`
          * 
          * @return builder
          * 
@@ -941,7 +974,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorPort Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+         * @param radiusDynamicAuthorPort Specify Radius Dynamic Author Port
+         *   - Range: `0`-`65535`
+         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -952,7 +987,9 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param radiusDynamicAuthorPort Specify Radius Dynamic Author Port - Range: `0`-`65535` - Default value: `1700`
+         * @param radiusDynamicAuthorPort Specify Radius Dynamic Author Port
+         *   - Range: `0`-`65535`
+         *   - Default value: `1700`
          * 
          * @return builder
          * 
@@ -1119,7 +1156,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param serverGroupsPriorityOrder ServerGroups priority order - Default value: `local`
+         * @param serverGroupsPriorityOrder ServerGroups priority order
+         *   - Default value: `local`
          * 
          * @return builder
          * 
@@ -1130,7 +1168,8 @@ public final class CedgeAaaFeatureTemplateArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param serverGroupsPriorityOrder ServerGroups priority order - Default value: `local`
+         * @param serverGroupsPriorityOrder ServerGroups priority order
+         *   - Default value: `local`
          * 
          * @return builder
          * 

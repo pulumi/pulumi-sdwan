@@ -25,7 +25,8 @@ namespace Pulumi.Sdwan
     public partial class CedgePimFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Output("autoRp")]
         public Output<bool?> AutoRp { get; private set; } = null!;
@@ -49,7 +50,8 @@ namespace Pulumi.Sdwan
         public Output<string?> BsrCandidateVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Turn SSM On / Off - Default value: `false`
+        /// Turn SSM On / Off
+        ///   - Default value: `false`
         /// </summary>
         [Output("default")]
         public Output<bool?> Default { get; private set; } = null!;
@@ -67,9 +69,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -111,7 +112,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set RP candidate priority - Range: `0`-`255`
+        /// Set RP candidate priority
+        ///   - Range: `0`-`255`
         /// </summary>
         [Output("priority")]
         public Output<int?> Priority { get; private set; } = null!;
@@ -165,7 +167,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CedgePimFeatureTemplateRpCandidate>> RpCandidates { get; private set; } = null!;
 
         /// <summary>
-        /// Set RP Discovery Scope - Range: `1`-`255`
+        /// Set RP Discovery Scope
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("scope")]
         public Output<int?> Scope { get; private set; } = null!;
@@ -177,7 +180,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ScopeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
         /// </summary>
         [Output("sptThreshold")]
         public Output<string?> SptThreshold { get; private set; } = null!;
@@ -247,7 +251,8 @@ namespace Pulumi.Sdwan
     public sealed class CedgePimFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Input("autoRp")]
         public Input<bool>? AutoRp { get; set; }
@@ -271,7 +276,8 @@ namespace Pulumi.Sdwan
         public Input<string>? BsrCandidateVariable { get; set; }
 
         /// <summary>
-        /// Turn SSM On / Off - Default value: `false`
+        /// Turn SSM On / Off
+        ///   - Default value: `false`
         /// </summary>
         [Input("default")]
         public Input<bool>? Default { get; set; }
@@ -292,9 +298,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -345,7 +350,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set RP candidate priority - Range: `0`-`255`
+        /// Set RP candidate priority
+        ///   - Range: `0`-`255`
         /// </summary>
         [Input("priority")]
         public Input<int>? Priority { get; set; }
@@ -417,7 +423,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set RP Discovery Scope - Range: `1`-`255`
+        /// Set RP Discovery Scope
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("scope")]
         public Input<int>? Scope { get; set; }
@@ -429,7 +436,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ScopeVariable { get; set; }
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
         /// </summary>
         [Input("sptThreshold")]
         public Input<string>? SptThreshold { get; set; }
@@ -449,7 +457,8 @@ namespace Pulumi.Sdwan
     public sealed class CedgePimFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable or disable auto-RP - Default value: `false`
+        /// Enable or disable auto-RP
+        ///   - Default value: `false`
         /// </summary>
         [Input("autoRp")]
         public Input<bool>? AutoRp { get; set; }
@@ -473,7 +482,8 @@ namespace Pulumi.Sdwan
         public Input<string>? BsrCandidateVariable { get; set; }
 
         /// <summary>
-        /// Turn SSM On / Off - Default value: `false`
+        /// Turn SSM On / Off
+        ///   - Default value: `false`
         /// </summary>
         [Input("default")]
         public Input<bool>? Default { get; set; }
@@ -494,9 +504,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -547,7 +556,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set RP candidate priority - Range: `0`-`255`
+        /// Set RP candidate priority
+        ///   - Range: `0`-`255`
         /// </summary>
         [Input("priority")]
         public Input<int>? Priority { get; set; }
@@ -619,7 +629,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set RP Discovery Scope - Range: `1`-`255`
+        /// Set RP Discovery Scope
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("scope")]
         public Input<int>? Scope { get; set; }
@@ -631,7 +642,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ScopeVariable { get; set; }
 
         /// <summary>
-        /// Set when PIM router joins the SPT (kbps) - Choices: `0`, `infinity`
+        /// Set when PIM router joins the SPT (kbps)
+        ///   - Choices: `0`, `infinity`
         /// </summary>
         [Input("sptThreshold")]
         public Input<string>? SptThreshold { get; set; }

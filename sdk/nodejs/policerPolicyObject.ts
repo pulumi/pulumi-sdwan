@@ -58,25 +58,28 @@ export class PolicerPolicyObject extends pulumi.CustomResource {
     }
 
     /**
-     * Burst in bytes - Range: `15000`-`10000000`
+     * Burst in bytes
+     *   - Range: `15000`-`10000000`
      */
-    public readonly burst!: pulumi.Output<number>;
+    declare public readonly burst: pulumi.Output<number>;
     /**
-     * Exceed action - Choices: `drop`, `remark`
+     * Exceed action
+     *   - Choices: `drop`, `remark`
      */
-    public readonly exceedAction!: pulumi.Output<string>;
+    declare public readonly exceedAction: pulumi.Output<string>;
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Rate in bps - Range: `8`-`100000000000`
+     * Rate in bps
+     *   - Range: `8`-`100000000000`
      */
-    public readonly rate!: pulumi.Output<number>;
+    declare public readonly rate: pulumi.Output<number>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a PolicerPolicyObject resource with the given unique name, arguments, and options.
@@ -91,26 +94,26 @@ export class PolicerPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicerPolicyObjectState | undefined;
-            resourceInputs["burst"] = state ? state.burst : undefined;
-            resourceInputs["exceedAction"] = state ? state.exceedAction : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["rate"] = state ? state.rate : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["burst"] = state?.burst;
+            resourceInputs["exceedAction"] = state?.exceedAction;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["rate"] = state?.rate;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PolicerPolicyObjectArgs | undefined;
-            if ((!args || args.burst === undefined) && !opts.urn) {
+            if (args?.burst === undefined && !opts.urn) {
                 throw new Error("Missing required property 'burst'");
             }
-            if ((!args || args.exceedAction === undefined) && !opts.urn) {
+            if (args?.exceedAction === undefined && !opts.urn) {
                 throw new Error("Missing required property 'exceedAction'");
             }
-            if ((!args || args.rate === undefined) && !opts.urn) {
+            if (args?.rate === undefined && !opts.urn) {
                 throw new Error("Missing required property 'rate'");
             }
-            resourceInputs["burst"] = args ? args.burst : undefined;
-            resourceInputs["exceedAction"] = args ? args.exceedAction : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["rate"] = args ? args.rate : undefined;
+            resourceInputs["burst"] = args?.burst;
+            resourceInputs["exceedAction"] = args?.exceedAction;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["rate"] = args?.rate;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -123,11 +126,13 @@ export class PolicerPolicyObject extends pulumi.CustomResource {
  */
 export interface PolicerPolicyObjectState {
     /**
-     * Burst in bytes - Range: `15000`-`10000000`
+     * Burst in bytes
+     *   - Range: `15000`-`10000000`
      */
     burst?: pulumi.Input<number>;
     /**
-     * Exceed action - Choices: `drop`, `remark`
+     * Exceed action
+     *   - Choices: `drop`, `remark`
      */
     exceedAction?: pulumi.Input<string>;
     /**
@@ -135,7 +140,8 @@ export interface PolicerPolicyObjectState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Rate in bps - Range: `8`-`100000000000`
+     * Rate in bps
+     *   - Range: `8`-`100000000000`
      */
     rate?: pulumi.Input<number>;
     /**
@@ -149,11 +155,13 @@ export interface PolicerPolicyObjectState {
  */
 export interface PolicerPolicyObjectArgs {
     /**
-     * Burst in bytes - Range: `15000`-`10000000`
+     * Burst in bytes
+     *   - Range: `15000`-`10000000`
      */
     burst: pulumi.Input<number>;
     /**
-     * Exceed action - Choices: `drop`, `remark`
+     * Exceed action
+     *   - Choices: `drop`, `remark`
      */
     exceedAction: pulumi.Input<string>;
     /**
@@ -161,7 +169,8 @@ export interface PolicerPolicyObjectArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Rate in bps - Range: `8`-`100000000000`
+     * Rate in bps
+     *   - Range: `8`-`100000000000`
      */
     rate: pulumi.Input<number>;
 }

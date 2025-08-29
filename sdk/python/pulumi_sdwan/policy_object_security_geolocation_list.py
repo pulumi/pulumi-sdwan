@@ -27,7 +27,7 @@ class PolicyObjectSecurityGeolocationListArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectSecurityGeolocationList resource.
-        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]] entries: Geolocation List
+        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]] entries: Geolocation  List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
@@ -43,7 +43,7 @@ class PolicyObjectSecurityGeolocationListArgs:
     @pulumi.getter
     def entries(self) -> pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]]:
         """
-        Geolocation List
+        Geolocation  List
         """
         return pulumi.get(self, "entries")
 
@@ -99,7 +99,7 @@ class _PolicyObjectSecurityGeolocationListState:
         """
         Input properties used for looking up and filtering PolicyObjectSecurityGeolocationList resources.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]] entries: Geolocation List
+        :param pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]] entries: Geolocation  List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
@@ -131,7 +131,7 @@ class _PolicyObjectSecurityGeolocationListState:
     @pulumi.getter
     def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['PolicyObjectSecurityGeolocationListEntryArgs']]]]:
         """
-        Geolocation List
+        Geolocation  List
         """
         return pulumi.get(self, "entries")
 
@@ -219,7 +219,7 @@ class PolicyObjectSecurityGeolocationList(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityGeolocationListEntryArgs', 'PolicyObjectSecurityGeolocationListEntryArgsDict']]]] entries: Geolocation List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityGeolocationListEntryArgs', 'PolicyObjectSecurityGeolocationListEntryArgsDict']]]] entries: Geolocation  List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         """
@@ -318,7 +318,7 @@ class PolicyObjectSecurityGeolocationList(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the Policy_object
-        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityGeolocationListEntryArgs', 'PolicyObjectSecurityGeolocationListEntryArgsDict']]]] entries: Geolocation List
+        :param pulumi.Input[Sequence[pulumi.Input[Union['PolicyObjectSecurityGeolocationListEntryArgs', 'PolicyObjectSecurityGeolocationListEntryArgsDict']]]] entries: Geolocation  List
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy_object
         :param pulumi.Input[_builtins.int] version: The version of the Policy_object
@@ -346,7 +346,7 @@ class PolicyObjectSecurityGeolocationList(pulumi.CustomResource):
     @pulumi.getter
     def entries(self) -> pulumi.Output[Sequence['outputs.PolicyObjectSecurityGeolocationListEntry']]:
         """
-        Geolocation List
+        Geolocation  List
         """
         return pulumi.get(self, "entries")
 

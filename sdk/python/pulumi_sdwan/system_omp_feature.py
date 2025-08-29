@@ -83,65 +83,100 @@ class SystemOmpFeatureArgs:
         """
         The set of arguments for constructing a SystemOmpFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF - Default value: `false`
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_v3_variable: Variable name
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_static_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
-        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
+                 - Range: `1`-`0`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
-        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds) - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] paths_advertised_per_prefix_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -282,7 +317,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Bgp")
     def advertise_ipv4_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_bgp")
 
@@ -306,7 +342,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Connected")
     def advertise_ipv4_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Connected - Default value: `true`
+        Connected
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_connected")
 
@@ -330,7 +367,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Eigrp")
     def advertise_ipv4_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_eigrp")
 
@@ -354,7 +392,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Isis")
     def advertise_ipv4_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_isis")
 
@@ -378,7 +417,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Lisp")
     def advertise_ipv4_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_lisp")
 
@@ -402,7 +442,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Ospf")
     def advertise_ipv4_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf")
 
@@ -414,7 +455,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4OspfV3")
     def advertise_ipv4_ospf_v3(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPFV3 - Default value: `false`
+        OSPFV3
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf_v3")
 
@@ -450,7 +492,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv4Static")
     def advertise_ipv4_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static - Default value: `true`
+        Static
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_static")
 
@@ -474,7 +517,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Bgp")
     def advertise_ipv6_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_bgp")
 
@@ -498,7 +542,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Connected")
     def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Connected - Default value: `false`
+        Connected
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -522,7 +567,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Eigrp")
     def advertise_ipv6_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_eigrp")
 
@@ -546,7 +592,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Isis")
     def advertise_ipv6_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_isis")
 
@@ -570,7 +617,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Lisp")
     def advertise_ipv6_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_lisp")
 
@@ -594,7 +642,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Ospf")
     def advertise_ipv6_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_ospf")
 
@@ -618,7 +667,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertiseIpv6Static")
     def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static - Default value: `false`
+        Static
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -642,7 +692,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        Advertisement Interval (seconds)
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -678,7 +730,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        Set maximum number of OMP paths to install in cEdge route table
+          - Range: `1`-`0`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -702,7 +756,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EOR Timer - Range: `1`-`3600` - Default value: `300`
+        EOR Timer
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -726,7 +782,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Graceful Restart for OMP - Default value: `true`
+        Graceful Restart for OMP
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -738,7 +795,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        Graceful Restart Timer (seconds)
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -774,7 +833,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Hold Time (seconds) - Default value: `60`
+        Hold Time (seconds)
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -798,7 +858,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        Treat hierarchical and direct (secondary region) paths equally
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -834,7 +895,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -858,7 +921,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -882,7 +947,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Overlay AS Number - Range: `1`-`4294967295`
+        Overlay AS Number
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -906,7 +972,9 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="pathsAdvertisedPerPrefix")
     def paths_advertised_per_prefix(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        Number of Paths Advertised per Prefix
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "paths_advertised_per_prefix")
 
@@ -930,7 +998,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shutdown - Default value: `false`
+        Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -978,7 +1047,8 @@ class SystemOmpFeatureArgs:
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport Gateway Path Behavior
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 
@@ -1066,66 +1136,101 @@ class _SystemOmpFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemOmpFeature resources.
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF - Default value: `false`
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_v3_variable: Variable name
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_static_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
-        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
+                 - Range: `1`-`0`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds) - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] paths_advertised_per_prefix_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -1258,7 +1363,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Bgp")
     def advertise_ipv4_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_bgp")
 
@@ -1282,7 +1388,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Connected")
     def advertise_ipv4_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Connected - Default value: `true`
+        Connected
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_connected")
 
@@ -1306,7 +1413,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Eigrp")
     def advertise_ipv4_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_eigrp")
 
@@ -1330,7 +1438,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Isis")
     def advertise_ipv4_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_isis")
 
@@ -1354,7 +1463,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Lisp")
     def advertise_ipv4_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_lisp")
 
@@ -1378,7 +1488,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Ospf")
     def advertise_ipv4_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf")
 
@@ -1390,7 +1501,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4OspfV3")
     def advertise_ipv4_ospf_v3(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPFV3 - Default value: `false`
+        OSPFV3
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf_v3")
 
@@ -1426,7 +1538,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv4Static")
     def advertise_ipv4_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static - Default value: `true`
+        Static
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_static")
 
@@ -1450,7 +1563,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Bgp")
     def advertise_ipv6_bgp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_bgp")
 
@@ -1474,7 +1588,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Connected")
     def advertise_ipv6_connected(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Connected - Default value: `false`
+        Connected
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -1498,7 +1613,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Eigrp")
     def advertise_ipv6_eigrp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_eigrp")
 
@@ -1522,7 +1638,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Isis")
     def advertise_ipv6_isis(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_isis")
 
@@ -1546,7 +1663,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Lisp")
     def advertise_ipv6_lisp(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_lisp")
 
@@ -1570,7 +1688,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Ospf")
     def advertise_ipv6_ospf(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_ospf")
 
@@ -1594,7 +1713,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertiseIpv6Static")
     def advertise_ipv6_static(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Static - Default value: `false`
+        Static
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -1618,7 +1738,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        Advertisement Interval (seconds)
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -1654,7 +1776,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        Set maximum number of OMP paths to install in cEdge route table
+          - Range: `1`-`0`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -1678,7 +1802,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        EOR Timer - Range: `1`-`3600` - Default value: `300`
+        EOR Timer
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -1714,7 +1840,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Graceful Restart for OMP - Default value: `true`
+        Graceful Restart for OMP
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -1726,7 +1853,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        Graceful Restart Timer (seconds)
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -1762,7 +1891,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Hold Time (seconds) - Default value: `60`
+        Hold Time (seconds)
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -1786,7 +1916,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        Treat hierarchical and direct (secondary region) paths equally
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -1822,7 +1953,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -1846,7 +1979,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -1870,7 +2005,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Overlay AS Number - Range: `1`-`4294967295`
+        Overlay AS Number
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -1894,7 +2030,9 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="pathsAdvertisedPerPrefix")
     def paths_advertised_per_prefix(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        Number of Paths Advertised per Prefix
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "paths_advertised_per_prefix")
 
@@ -1918,7 +2056,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Shutdown - Default value: `false`
+        Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1966,7 +2105,8 @@ class _SystemOmpFeatureState:
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport Gateway Path Behavior
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 
@@ -2124,66 +2264,101 @@ class SystemOmpFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF - Default value: `false`
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_v3_variable: Variable name
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_static_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
-        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
+                 - Range: `1`-`0`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds) - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] paths_advertised_per_prefix_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         """
         ...
@@ -2475,66 +2650,101 @@ class SystemOmpFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_connected: Connected
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF - Default value: `false`
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf: OSPF
+                 - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_ospf_v3: OSPFV3
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_v3_variable: Variable name
         :param pulumi.Input[_builtins.str] advertise_ipv4_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static - Default value: `true`
+        :param pulumi.Input[_builtins.bool] advertise_ipv4_static: Static
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] advertise_ipv4_static_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_bgp: BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_bgp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_connected: Connected
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_connected_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_eigrp: EIGRP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_eigrp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_isis: ISIS
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_isis_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_lisp: LISP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_lisp_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_ospf: OSPF
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_ospf_variable: Variable name
-        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static - Default value: `false`
+        :param pulumi.Input[_builtins.bool] advertise_ipv6_static: Static
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] advertise_ipv6_static_variable: Variable name
-        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement Interval (seconds)
+                 - Range: `0`-`65535`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] advertisement_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        :param pulumi.Input[_builtins.int] ecmp_limit: Set maximum number of OMP paths to install in cEdge route table
+                 - Range: `1`-`0`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] ecmp_limit_variable: Variable name
-        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer - Range: `1`-`3600` - Default value: `300`
+        :param pulumi.Input[_builtins.int] eor_timer: EOR Timer
+                 - Range: `1`-`3600`
+                 - Default value: `300`
         :param pulumi.Input[_builtins.str] eor_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP - Default value: `true`
-        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        :param pulumi.Input[_builtins.bool] graceful_restart: Graceful Restart for OMP
+                 - Default value: `true`
+        :param pulumi.Input[_builtins.int] graceful_restart_timer: Graceful Restart Timer (seconds)
+                 - Range: `1`-`604800`
+                 - Default value: `43200`
         :param pulumi.Input[_builtins.str] graceful_restart_timer_variable: Variable name
         :param pulumi.Input[_builtins.str] graceful_restart_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds) - Default value: `60`
+        :param pulumi.Input[_builtins.int] holdtime: Hold Time (seconds)
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
-        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        :param pulumi.Input[_builtins.bool] ignore_region_path_length: Treat hierarchical and direct (secondary region) paths equally
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] ignore_region_path_length_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv4: OMP Admin Distance IPv4
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv4_variable: Variable name
-        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        :param pulumi.Input[_builtins.int] omp_admin_distance_ipv6: OMP Admin Distance IPv6
+                 - Range: `1`-`255`
+                 - Default value: `251`
         :param pulumi.Input[_builtins.str] omp_admin_distance_ipv6_variable: Variable name
-        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number - Range: `1`-`4294967295`
+        :param pulumi.Input[_builtins.int] overlay_as: Overlay AS Number
+                 - Range: `1`-`4294967295`
         :param pulumi.Input[_builtins.str] overlay_as_variable: Variable name
-        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        :param pulumi.Input[_builtins.int] paths_advertised_per_prefix: Number of Paths Advertised per Prefix
+                 - Range: `1`-`16`
+                 - Default value: `4`
         :param pulumi.Input[_builtins.str] paths_advertised_per_prefix_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Shutdown - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Shutdown
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] site_types: Site Types
         :param pulumi.Input[_builtins.str] site_types_variable: Variable name
-        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        :param pulumi.Input[_builtins.str] transport_gateway: Transport Gateway Path Behavior
+                 - Choices: `prefer`, `ecmp-with-direct-path`
         :param pulumi.Input[_builtins.str] transport_gateway_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -2610,7 +2820,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Bgp")
     def advertise_ipv4_bgp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_bgp")
 
@@ -2626,7 +2837,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Connected")
     def advertise_ipv4_connected(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Connected - Default value: `true`
+        Connected
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_connected")
 
@@ -2642,7 +2854,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Eigrp")
     def advertise_ipv4_eigrp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_eigrp")
 
@@ -2658,7 +2871,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Isis")
     def advertise_ipv4_isis(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_isis")
 
@@ -2674,7 +2888,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Lisp")
     def advertise_ipv4_lisp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_lisp")
 
@@ -2690,7 +2905,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Ospf")
     def advertise_ipv4_ospf(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf")
 
@@ -2698,7 +2914,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4OspfV3")
     def advertise_ipv4_ospf_v3(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        OSPFV3 - Default value: `false`
+        OSPFV3
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv4_ospf_v3")
 
@@ -2722,7 +2939,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv4Static")
     def advertise_ipv4_static(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Static - Default value: `true`
+        Static
+          - Default value: `true`
         """
         return pulumi.get(self, "advertise_ipv4_static")
 
@@ -2738,7 +2956,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Bgp")
     def advertise_ipv6_bgp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        BGP - Default value: `false`
+        BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_bgp")
 
@@ -2754,7 +2973,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Connected")
     def advertise_ipv6_connected(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Connected - Default value: `false`
+        Connected
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_connected")
 
@@ -2770,7 +2990,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Eigrp")
     def advertise_ipv6_eigrp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        EIGRP - Default value: `false`
+        EIGRP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_eigrp")
 
@@ -2786,7 +3007,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Isis")
     def advertise_ipv6_isis(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        ISIS - Default value: `false`
+        ISIS
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_isis")
 
@@ -2802,7 +3024,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Lisp")
     def advertise_ipv6_lisp(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        LISP - Default value: `false`
+        LISP
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_lisp")
 
@@ -2818,7 +3041,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Ospf")
     def advertise_ipv6_ospf(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        OSPF - Default value: `false`
+        OSPF
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_ospf")
 
@@ -2834,7 +3058,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertiseIpv6Static")
     def advertise_ipv6_static(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Static - Default value: `false`
+        Static
+          - Default value: `false`
         """
         return pulumi.get(self, "advertise_ipv6_static")
 
@@ -2850,7 +3075,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="advertisementInterval")
     def advertisement_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+        Advertisement Interval (seconds)
+          - Range: `0`-`65535`
+          - Default value: `1`
         """
         return pulumi.get(self, "advertisement_interval")
 
@@ -2874,7 +3101,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ecmpLimit")
     def ecmp_limit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+        Set maximum number of OMP paths to install in cEdge route table
+          - Range: `1`-`0`
+          - Default value: `4`
         """
         return pulumi.get(self, "ecmp_limit")
 
@@ -2890,7 +3119,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="eorTimer")
     def eor_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        EOR Timer - Range: `1`-`3600` - Default value: `300`
+        EOR Timer
+          - Range: `1`-`3600`
+          - Default value: `300`
         """
         return pulumi.get(self, "eor_timer")
 
@@ -2914,7 +3145,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="gracefulRestart")
     def graceful_restart(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Graceful Restart for OMP - Default value: `true`
+        Graceful Restart for OMP
+          - Default value: `true`
         """
         return pulumi.get(self, "graceful_restart")
 
@@ -2922,7 +3154,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="gracefulRestartTimer")
     def graceful_restart_timer(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+        Graceful Restart Timer (seconds)
+          - Range: `1`-`604800`
+          - Default value: `43200`
         """
         return pulumi.get(self, "graceful_restart_timer")
 
@@ -2946,7 +3180,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter
     def holdtime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Hold Time (seconds) - Default value: `60`
+        Hold Time (seconds)
+          - Default value: `60`
         """
         return pulumi.get(self, "holdtime")
 
@@ -2962,7 +3197,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ignoreRegionPathLength")
     def ignore_region_path_length(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+        Treat hierarchical and direct (secondary region) paths equally
+          - Default value: `false`
         """
         return pulumi.get(self, "ignore_region_path_length")
 
@@ -2986,7 +3222,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv4")
     def omp_admin_distance_ipv4(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv4
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv4")
 
@@ -3002,7 +3240,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="ompAdminDistanceIpv6")
     def omp_admin_distance_ipv6(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+        OMP Admin Distance IPv6
+          - Range: `1`-`255`
+          - Default value: `251`
         """
         return pulumi.get(self, "omp_admin_distance_ipv6")
 
@@ -3018,7 +3258,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="overlayAs")
     def overlay_as(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Overlay AS Number - Range: `1`-`4294967295`
+        Overlay AS Number
+          - Range: `1`-`4294967295`
         """
         return pulumi.get(self, "overlay_as")
 
@@ -3034,7 +3275,9 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="pathsAdvertisedPerPrefix")
     def paths_advertised_per_prefix(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+        Number of Paths Advertised per Prefix
+          - Range: `1`-`16`
+          - Default value: `4`
         """
         return pulumi.get(self, "paths_advertised_per_prefix")
 
@@ -3050,7 +3293,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Shutdown - Default value: `false`
+        Shutdown
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -3082,7 +3326,8 @@ class SystemOmpFeature(pulumi.CustomResource):
     @pulumi.getter(name="transportGateway")
     def transport_gateway(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+        Transport Gateway Path Behavior
+          - Choices: `prefer`, `ecmp-with-direct-path`
         """
         return pulumi.get(self, "transport_gateway")
 

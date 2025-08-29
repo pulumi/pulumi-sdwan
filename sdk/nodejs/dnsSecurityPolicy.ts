@@ -71,48 +71,48 @@ export class DnsSecurityPolicy extends pulumi.CustomResource {
     /**
      * String that is a number that corresponds to Umbrella Multi Org, can be empty if not using Umbrella Multi Org
      */
-    public readonly childOrgId!: pulumi.Output<string>;
+    declare public readonly childOrgId: pulumi.Output<string>;
     /**
      * The description of the Policy
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
      */
-    public readonly dnsCrypt!: pulumi.Output<boolean>;
+    declare public readonly dnsCrypt: pulumi.Output<boolean>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
      */
-    public readonly dnsServerIp!: pulumi.Output<string>;
+    declare public readonly dnsServerIp: pulumi.Output<string>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    public readonly localDomainBypassEnabled!: pulumi.Output<boolean>;
-    public readonly localDomainBypassListId!: pulumi.Output<string>;
+    declare public readonly localDomainBypassEnabled: pulumi.Output<boolean>;
+    declare public readonly localDomainBypassListId: pulumi.Output<string>;
     /**
      * If this is true, there shouldn't be a targetVpns field, if false then targetVpns field should be there
      */
-    public readonly matchAllVpn!: pulumi.Output<boolean>;
+    declare public readonly matchAllVpn: pulumi.Output<boolean>;
     /**
      * The name of the Policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
      */
-    public readonly targetVpns!: pulumi.Output<outputs.DnsSecurityPolicyTargetVpn[] | undefined>;
+    declare public readonly targetVpns: pulumi.Output<outputs.DnsSecurityPolicyTargetVpn[] | undefined>;
     /**
      * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
      */
-    public readonly umbrellaDefault!: pulumi.Output<boolean>;
+    declare public readonly umbrellaDefault: pulumi.Output<boolean>;
     /**
      * The version of the Policy
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a DnsSecurityPolicy resource with the given unique name, arguments, and options.
@@ -127,55 +127,55 @@ export class DnsSecurityPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DnsSecurityPolicyState | undefined;
-            resourceInputs["childOrgId"] = state ? state.childOrgId : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["dnsCrypt"] = state ? state.dnsCrypt : undefined;
-            resourceInputs["dnsServerIp"] = state ? state.dnsServerIp : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["localDomainBypassEnabled"] = state ? state.localDomainBypassEnabled : undefined;
-            resourceInputs["localDomainBypassListId"] = state ? state.localDomainBypassListId : undefined;
-            resourceInputs["matchAllVpn"] = state ? state.matchAllVpn : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["targetVpns"] = state ? state.targetVpns : undefined;
-            resourceInputs["umbrellaDefault"] = state ? state.umbrellaDefault : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["childOrgId"] = state?.childOrgId;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["dnsCrypt"] = state?.dnsCrypt;
+            resourceInputs["dnsServerIp"] = state?.dnsServerIp;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["localDomainBypassEnabled"] = state?.localDomainBypassEnabled;
+            resourceInputs["localDomainBypassListId"] = state?.localDomainBypassListId;
+            resourceInputs["matchAllVpn"] = state?.matchAllVpn;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["targetVpns"] = state?.targetVpns;
+            resourceInputs["umbrellaDefault"] = state?.umbrellaDefault;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as DnsSecurityPolicyArgs | undefined;
-            if ((!args || args.childOrgId === undefined) && !opts.urn) {
+            if (args?.childOrgId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'childOrgId'");
             }
-            if ((!args || args.dnsCrypt === undefined) && !opts.urn) {
+            if (args?.dnsCrypt === undefined && !opts.urn) {
                 throw new Error("Missing required property 'dnsCrypt'");
             }
-            if ((!args || args.dnsServerIp === undefined) && !opts.urn) {
+            if (args?.dnsServerIp === undefined && !opts.urn) {
                 throw new Error("Missing required property 'dnsServerIp'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.localDomainBypassEnabled === undefined) && !opts.urn) {
+            if (args?.localDomainBypassEnabled === undefined && !opts.urn) {
                 throw new Error("Missing required property 'localDomainBypassEnabled'");
             }
-            if ((!args || args.localDomainBypassListId === undefined) && !opts.urn) {
+            if (args?.localDomainBypassListId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'localDomainBypassListId'");
             }
-            if ((!args || args.matchAllVpn === undefined) && !opts.urn) {
+            if (args?.matchAllVpn === undefined && !opts.urn) {
                 throw new Error("Missing required property 'matchAllVpn'");
             }
-            if ((!args || args.umbrellaDefault === undefined) && !opts.urn) {
+            if (args?.umbrellaDefault === undefined && !opts.urn) {
                 throw new Error("Missing required property 'umbrellaDefault'");
             }
-            resourceInputs["childOrgId"] = args ? args.childOrgId : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["dnsCrypt"] = args ? args.dnsCrypt : undefined;
-            resourceInputs["dnsServerIp"] = args ? args.dnsServerIp : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["localDomainBypassEnabled"] = args ? args.localDomainBypassEnabled : undefined;
-            resourceInputs["localDomainBypassListId"] = args ? args.localDomainBypassListId : undefined;
-            resourceInputs["matchAllVpn"] = args ? args.matchAllVpn : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["targetVpns"] = args ? args.targetVpns : undefined;
-            resourceInputs["umbrellaDefault"] = args ? args.umbrellaDefault : undefined;
+            resourceInputs["childOrgId"] = args?.childOrgId;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["dnsCrypt"] = args?.dnsCrypt;
+            resourceInputs["dnsServerIp"] = args?.dnsServerIp;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["localDomainBypassEnabled"] = args?.localDomainBypassEnabled;
+            resourceInputs["localDomainBypassListId"] = args?.localDomainBypassListId;
+            resourceInputs["matchAllVpn"] = args?.matchAllVpn;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["targetVpns"] = args?.targetVpns;
+            resourceInputs["umbrellaDefault"] = args?.umbrellaDefault;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -55,14 +55,16 @@ public class EigrpFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.addressFamilies);
     }
     /**
-     * Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     @Export(name="asNumber", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> asNumber;
 
     /**
-     * @return Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * @return Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     public Output<Optional<Integer>> asNumber() {
@@ -83,14 +85,16 @@ public class EigrpFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.asNumberVariable);
     }
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * @return Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     public Output<Optional<String>> authenticationType() {
@@ -125,32 +129,32 @@ public class EigrpFeatureTemplate extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      * 
      */
     @Export(name="filter", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> filter;
 
     /**
-     * @return Selective route download - Default value: `false`
+     * @return Selective route download
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> filter() {
@@ -171,14 +175,18 @@ public class EigrpFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.filterVariable);
     }
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     @Export(name="helloInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> helloInterval;
 
     /**
-     * @return Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * @return Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     public Output<Optional<Integer>> helloInterval() {
@@ -227,14 +235,18 @@ public class EigrpFeatureTemplate extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.hmacAuthenticationKeyVariable);
     }
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     @Export(name="holdTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> holdTime;
 
     /**
-     * @return Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * @return Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     public Output<Optional<Integer>> holdTime() {

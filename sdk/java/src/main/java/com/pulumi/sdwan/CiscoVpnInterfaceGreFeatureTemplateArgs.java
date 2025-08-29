@@ -36,14 +36,18 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     @Import(name="application")
     private @Nullable Output<String> application;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     public Optional<Output<String>> application() {
@@ -66,14 +70,16 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="clearDontFragment")
     private @Nullable Output<Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> clearDontFragment() {
@@ -111,18 +117,16 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -160,16 +164,14 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     @Import(name="interfaceName")
     private @Nullable Output<String> interfaceName;
 
     /**
-     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     public Optional<Output<String>> interfaceName() {
@@ -222,14 +224,18 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * @return Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -297,14 +303,16 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -327,14 +335,16 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMssAdjust")
     private @Nullable Output<Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMssAdjust() {
@@ -593,7 +603,9 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param application Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+         * @param application Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -604,7 +616,9 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param application Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+         * @param application Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
+         *   - Default value: `none`
          * 
          * @return builder
          * 
@@ -635,7 +649,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -646,7 +661,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -698,9 +714,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -711,9 +726,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -723,9 +737,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -777,8 +790,7 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-         * present
+         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
          * 
          * @return builder
          * 
@@ -789,8 +801,7 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-         * present
+         * @param interfaceName Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
          * 
          * @return builder
          * 
@@ -863,7 +874,9 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes
+         *   - Range: `64`-`18000`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -874,7 +887,9 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes
+         *   - Range: `64`-`18000`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -968,7 +983,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -979,7 +995,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1010,7 +1027,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -1021,7 +1039,8 @@ public final class CiscoVpnInterfaceGreFeatureTemplateArgs extends com.pulumi.re
         }
 
         /**
-         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMssAdjust TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 

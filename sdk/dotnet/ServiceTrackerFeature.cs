@@ -100,7 +100,9 @@ namespace Pulumi.Sdwan
         public Output<string?> EndpointIpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        /// Endpoint Tracker Type
+        ///   - Choices: `static-route`
+        ///   - Default value: `static-route`
         /// </summary>
         [Output("endpointTrackerType")]
         public Output<string?> EndpointTrackerType { get; private set; } = null!;
@@ -118,7 +120,9 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Interval - Range: `20`-`600` - Default value: `60`
+        /// Interval
+        ///   - Range: `20`-`600`
+        ///   - Default value: `60`
         /// </summary>
         [Output("interval")]
         public Output<int?> Interval { get; private set; } = null!;
@@ -130,7 +134,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Multiplier - Range: `1`-`10` - Default value: `3`
+        /// Multiplier
+        ///   - Range: `1`-`10`
+        ///   - Default value: `3`
         /// </summary>
         [Output("multiplier")]
         public Output<int?> Multiplier { get; private set; } = null!;
@@ -172,7 +178,9 @@ namespace Pulumi.Sdwan
         public Output<string?> ProtocolVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Threshold - Range: `100`-`1000` - Default value: `300`
+        /// Threshold
+        ///   - Range: `100`-`1000`
+        ///   - Default value: `300`
         /// </summary>
         [Output("threshold")]
         public Output<int?> Threshold { get; private set; } = null!;
@@ -196,7 +204,9 @@ namespace Pulumi.Sdwan
         public Output<string?> TrackerNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        /// Tracker Type
+        ///   - Choices: `endpoint`
+        ///   - Default value: `endpoint`
         /// </summary>
         [Output("trackerType")]
         public Output<string?> TrackerType { get; private set; } = null!;
@@ -302,7 +312,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointIpVariable { get; set; }
 
         /// <summary>
-        /// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        /// Endpoint Tracker Type
+        ///   - Choices: `static-route`
+        ///   - Default value: `static-route`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
@@ -320,7 +332,9 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Interval - Range: `20`-`600` - Default value: `60`
+        /// Interval
+        ///   - Range: `20`-`600`
+        ///   - Default value: `60`
         /// </summary>
         [Input("interval")]
         public Input<int>? Interval { get; set; }
@@ -332,7 +346,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IntervalVariable { get; set; }
 
         /// <summary>
-        /// Multiplier - Range: `1`-`10` - Default value: `3`
+        /// Multiplier
+        ///   - Range: `1`-`10`
+        ///   - Default value: `3`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -374,7 +390,9 @@ namespace Pulumi.Sdwan
         public Input<string>? ProtocolVariable { get; set; }
 
         /// <summary>
-        /// Threshold - Range: `100`-`1000` - Default value: `300`
+        /// Threshold
+        ///   - Range: `100`-`1000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("threshold")]
         public Input<int>? Threshold { get; set; }
@@ -398,7 +416,9 @@ namespace Pulumi.Sdwan
         public Input<string>? TrackerNameVariable { get; set; }
 
         /// <summary>
-        /// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        /// Tracker Type
+        ///   - Choices: `endpoint`
+        ///   - Default value: `endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }
@@ -460,7 +480,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EndpointIpVariable { get; set; }
 
         /// <summary>
-        /// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+        /// Endpoint Tracker Type
+        ///   - Choices: `static-route`
+        ///   - Default value: `static-route`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
@@ -478,7 +500,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Interval - Range: `20`-`600` - Default value: `60`
+        /// Interval
+        ///   - Range: `20`-`600`
+        ///   - Default value: `60`
         /// </summary>
         [Input("interval")]
         public Input<int>? Interval { get; set; }
@@ -490,7 +514,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IntervalVariable { get; set; }
 
         /// <summary>
-        /// Multiplier - Range: `1`-`10` - Default value: `3`
+        /// Multiplier
+        ///   - Range: `1`-`10`
+        ///   - Default value: `3`
         /// </summary>
         [Input("multiplier")]
         public Input<int>? Multiplier { get; set; }
@@ -532,7 +558,9 @@ namespace Pulumi.Sdwan
         public Input<string>? ProtocolVariable { get; set; }
 
         /// <summary>
-        /// Threshold - Range: `100`-`1000` - Default value: `300`
+        /// Threshold
+        ///   - Range: `100`-`1000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("threshold")]
         public Input<int>? Threshold { get; set; }
@@ -556,7 +584,9 @@ namespace Pulumi.Sdwan
         public Input<string>? TrackerNameVariable { get; set; }
 
         /// <summary>
-        /// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+        /// Tracker Type
+        ///   - Choices: `endpoint`
+        ///   - Default value: `endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }

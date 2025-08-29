@@ -33,7 +33,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Enhance ECMP Keying - Default value: `false`
+        /// Enhance ECMP Keying
+        ///   - Default value: `false`
         /// </summary>
         [Output("enhanceEcmpKeying")]
         public Output<bool?> EnhanceEcmpKeying { get; private set; } = null!;
@@ -138,7 +139,8 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// VPN - Default value: `0`
+        /// VPN
+        ///   - Default value: `0`
         /// </summary>
         [Output("vpn")]
         public Output<int?> Vpn { get; private set; } = null!;
@@ -196,7 +198,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enhance ECMP Keying - Default value: `false`
+        /// Enhance ECMP Keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -324,7 +327,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// VPN - Default value: `0`
+        /// VPN
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }
@@ -344,7 +348,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enhance ECMP Keying - Default value: `false`
+        /// Enhance ECMP Keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -478,7 +483,8 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// VPN - Default value: `0`
+        /// VPN
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpn")]
         public Input<int>? Vpn { get; set; }

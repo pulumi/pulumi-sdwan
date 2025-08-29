@@ -42,17 +42,20 @@ class UrlFilteringPolicyDefinitionArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: List of alerts options that will be exported as syslog messages
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
-        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed.
+                 - Choices: `text`, `redirectUrl`
         :param pulumi.Input[_builtins.str] block_page_contents: The message displayed or URL redirected to when a blocked page is accessed.
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] web_categories: List of categories to block or allow
-        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
-        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-               `trustworthy`
+        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed.
+                 - Choices: `block`, `allow`
+        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         pulumi.set(__self__, "description", description)
         if alerts is not None:
@@ -136,7 +139,8 @@ class UrlFilteringPolicyDefinitionArgs:
     @pulumi.getter(name="blockPageAction")
     def block_page_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        Redirect to a URL or display a message when a blocked page is accessed.
+          - Choices: `text`, `redirectUrl`
         """
         return pulumi.get(self, "block_page_action")
 
@@ -193,7 +197,8 @@ class UrlFilteringPolicyDefinitionArgs:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -241,7 +246,8 @@ class UrlFilteringPolicyDefinitionArgs:
     @pulumi.getter(name="webCategoriesAction")
     def web_categories_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+        whether the selected web categories should be blocked or allowed.
+          - Choices: `block`, `allow`
         """
         return pulumi.get(self, "web_categories_action")
 
@@ -253,8 +259,8 @@ class UrlFilteringPolicyDefinitionArgs:
     @pulumi.getter(name="webReputation")
     def web_reputation(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-        `trustworthy`
+        The web reputation of the policy definition
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "web_reputation")
 
@@ -287,19 +293,22 @@ class _UrlFilteringPolicyDefinitionState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: List of alerts options that will be exported as syslog messages
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
-        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed.
+                 - Choices: `text`, `redirectUrl`
         :param pulumi.Input[_builtins.str] block_page_contents: The message displayed or URL redirected to when a blocked page is accessed.
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[_builtins.int] version: The version of the object
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] web_categories: List of categories to block or allow
-        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
-        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-               `trustworthy`
+        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed.
+                 - Choices: `block`, `allow`
+        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         if alerts is not None:
             pulumi.set(__self__, "alerts", alerts)
@@ -374,7 +383,8 @@ class _UrlFilteringPolicyDefinitionState:
     @pulumi.getter(name="blockPageAction")
     def block_page_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        Redirect to a URL or display a message when a blocked page is accessed.
+          - Choices: `text`, `redirectUrl`
         """
         return pulumi.get(self, "block_page_action")
 
@@ -443,7 +453,8 @@ class _UrlFilteringPolicyDefinitionState:
     @pulumi.getter
     def mode(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -503,7 +514,8 @@ class _UrlFilteringPolicyDefinitionState:
     @pulumi.getter(name="webCategoriesAction")
     def web_categories_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+        whether the selected web categories should be blocked or allowed.
+          - Choices: `block`, `allow`
         """
         return pulumi.get(self, "web_categories_action")
 
@@ -515,8 +527,8 @@ class _UrlFilteringPolicyDefinitionState:
     @pulumi.getter(name="webReputation")
     def web_reputation(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-        `trustworthy`
+        The web reputation of the policy definition
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "web_reputation")
 
@@ -563,18 +575,21 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: List of alerts options that will be exported as syslog messages
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
-        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed.
+                 - Choices: `text`, `redirectUrl`
         :param pulumi.Input[_builtins.str] block_page_contents: The message displayed or URL redirected to when a blocked page is accessed.
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] web_categories: List of categories to block or allow
-        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
-        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-               `trustworthy`
+        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed.
+                 - Choices: `block`, `allow`
+        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         ...
     @overload
@@ -686,19 +701,22 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] alerts: List of alerts options that will be exported as syslog messages
         :param pulumi.Input[_builtins.str] allow_url_list_id: Allow URL list ID
         :param pulumi.Input[_builtins.int] allow_url_list_version: Allow URL list version
-        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        :param pulumi.Input[_builtins.str] block_page_action: Redirect to a URL or display a message when a blocked page is accessed.
+                 - Choices: `text`, `redirectUrl`
         :param pulumi.Input[_builtins.str] block_page_contents: The message displayed or URL redirected to when a blocked page is accessed.
         :param pulumi.Input[_builtins.str] block_url_list_id: Block URL list ID
         :param pulumi.Input[_builtins.int] block_url_list_version: Block URL list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition.
-        :param pulumi.Input[_builtins.str] mode: The policy mode - Choices: `security`, `unified`
+        :param pulumi.Input[_builtins.str] mode: The policy mode
+                 - Choices: `security`, `unified`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_vpns: List of VPN IDs
         :param pulumi.Input[_builtins.int] version: The version of the object
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] web_categories: List of categories to block or allow
-        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
-        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-               `trustworthy`
+        :param pulumi.Input[_builtins.str] web_categories_action: whether the selected web categories should be blocked or allowed.
+                 - Choices: `block`, `allow`
+        :param pulumi.Input[_builtins.str] web_reputation: The web reputation of the policy definition
+                 - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -750,7 +768,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="blockPageAction")
     def block_page_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+        Redirect to a URL or display a message when a blocked page is accessed.
+          - Choices: `text`, `redirectUrl`
         """
         return pulumi.get(self, "block_page_action")
 
@@ -795,7 +814,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def mode(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The policy mode - Choices: `security`, `unified`
+        The policy mode
+          - Choices: `security`, `unified`
         """
         return pulumi.get(self, "mode")
 
@@ -835,7 +855,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="webCategoriesAction")
     def web_categories_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+        whether the selected web categories should be blocked or allowed.
+          - Choices: `block`, `allow`
         """
         return pulumi.get(self, "web_categories_action")
 
@@ -843,8 +864,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="webReputation")
     def web_reputation(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-        `trustworthy`
+        The web reputation of the policy definition
+          - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         """
         return pulumi.get(self, "web_reputation")
 

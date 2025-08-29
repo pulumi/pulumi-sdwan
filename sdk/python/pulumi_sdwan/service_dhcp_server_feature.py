@@ -56,20 +56,20 @@ class ServiceDhcpServerFeatureArgs:
         :param pulumi.Input[_builtins.str] domain_name_variable: Variable name
         :param pulumi.Input[_builtins.str] exclude_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Configure IPv4 address to exclude from DHCP address pool
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]] static_leases: Configure static IP addresses
-        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -244,7 +244,8 @@ class ServiceDhcpServerFeatureArgs:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -268,7 +269,9 @@ class ServiceDhcpServerFeatureArgs:
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 
@@ -352,11 +355,8 @@ class ServiceDhcpServerFeatureArgs:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -440,20 +440,20 @@ class _ServiceDhcpServerFeatureState:
         :param pulumi.Input[_builtins.str] exclude_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureOptionCodeArgs']]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input['ServiceDhcpServerFeatureStaticLeaseArgs']]] static_leases: Configure static IP addresses
-        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -632,7 +632,8 @@ class _ServiceDhcpServerFeatureState:
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -656,7 +657,9 @@ class _ServiceDhcpServerFeatureState:
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 
@@ -740,11 +743,8 @@ class _ServiceDhcpServerFeatureState:
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 
@@ -857,20 +857,20 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] exclude_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
-        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -1019,20 +1019,20 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] exclude_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] excludes: Configure IPv4 address to exclude from DHCP address pool
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client - Range: `68`-`65535`
+        :param pulumi.Input[_builtins.int] interface_mtu: Set MTU on interface to DHCP client
+                 - Range: `68`-`65535`
         :param pulumi.Input[_builtins.str] interface_mtu_variable: Variable name
-        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        :param pulumi.Input[_builtins.int] lease_time: Configure how long a DHCP-assigned IP address is valid
+                 - Range: `60`-`31536000`
+                 - Default value: `86400`
         :param pulumi.Input[_builtins.str] lease_time_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
         :param pulumi.Input[_builtins.str] network_address: Network Address
         :param pulumi.Input[_builtins.str] network_address_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureOptionCodeArgs', 'ServiceDhcpServerFeatureOptionCodeArgsDict']]]] option_codes: Configure Options Code
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceDhcpServerFeatureStaticLeaseArgs', 'ServiceDhcpServerFeatureStaticLeaseArgsDict']]]] static_leases: Configure static IP addresses
-        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-               `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-               `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-               `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-               `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        :param pulumi.Input[_builtins.str] subnet_mask: Subnet Mask
+                 - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         :param pulumi.Input[_builtins.str] subnet_mask_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tftp_servers: Configure TFTP server IP addresses
         :param pulumi.Input[_builtins.str] tftp_servers_variable: Variable name
@@ -1152,7 +1152,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     @pulumi.getter(name="interfaceMtu")
     def interface_mtu(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set MTU on interface to DHCP client - Range: `68`-`65535`
+        Set MTU on interface to DHCP client
+          - Range: `68`-`65535`
         """
         return pulumi.get(self, "interface_mtu")
 
@@ -1168,7 +1169,9 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     @pulumi.getter(name="leaseTime")
     def lease_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        Configure how long a DHCP-assigned IP address is valid
+          - Range: `60`-`31536000`
+          - Default value: `86400`
         """
         return pulumi.get(self, "lease_time")
 
@@ -1224,11 +1227,8 @@ class ServiceDhcpServerFeature(pulumi.CustomResource):
     @pulumi.getter(name="subnetMask")
     def subnet_mask(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        Subnet Mask
+          - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         """
         return pulumi.get(self, "subnet_mask")
 

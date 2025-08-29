@@ -40,14 +40,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="bandwidthDownstream")
     private @Nullable Output<Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface downstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> bandwidthDownstream() {
@@ -70,14 +72,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     @Import(name="bandwidthUpstream")
     private @Nullable Output<Integer> bandwidthUpstream;
 
     /**
-     * @return Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+     * @return Interface upstream bandwidth capacity, in kbps
+     *   - Range: `1`-`2147483647`
      * 
      */
     public Optional<Output<Integer>> bandwidthUpstream() {
@@ -175,18 +179,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -194,14 +196,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Dialer IP Negotiated - Default value: `false`
+     * Dialer IP Negotiated
+     *   - Default value: `false`
      * 
      */
     @Import(name="dialerAddressNegotiated")
     private @Nullable Output<Boolean> dialerAddressNegotiated;
 
     /**
-     * @return Dialer IP Negotiated - Default value: `false`
+     * @return Dialer IP Negotiated
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> dialerAddressNegotiated() {
@@ -224,14 +228,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Dialer pool number - Range: `1`-`255`
+     * Dialer pool number
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="dialerPoolNumber")
     private @Nullable Output<Integer> dialerPoolNumber;
 
     /**
-     * @return Dialer pool number - Range: `1`-`255`
+     * @return Dialer pool number
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> dialerPoolNumber() {
@@ -254,14 +260,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Encapsulation VLAN id - Range: `1`-`4094`
+     * Encapsulation VLAN id
+     *   - Range: `1`-`4094`
      * 
      */
     @Import(name="encap")
     private @Nullable Output<Integer> encap;
 
     /**
-     * @return Encapsulation VLAN id - Range: `1`-`4094`
+     * @return Encapsulation VLAN id
+     *   - Range: `1`-`4094`
      * 
      */
     public Optional<Output<Integer>> encap() {
@@ -314,14 +322,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ethernetDhcpDistance")
     private @Nullable Output<Integer> ethernetDhcpDistance;
 
     /**
-     * @return Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+     * @return Set administrative distance for DHCP default route
+     *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ethernetDhcpDistance() {
@@ -374,14 +386,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Enable DHCP - Default value: `false`
+     * Enable DHCP
+     *   - Default value: `false`
      * 
      */
     @Import(name="ethernetEnableDhcp")
     private @Nullable Output<Boolean> ethernetEnableDhcp;
 
     /**
-     * @return Enable DHCP - Default value: `false`
+     * @return Enable DHCP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ethernetEnableDhcp() {
@@ -464,14 +478,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * internal controller-type - Choices: `ipoe` - Default value: `ipoe`
+     * internal controller-type
+     *   - Choices: `ipoe`
+     *   - Default value: `ipoe`
      * 
      */
     @Import(name="internalControllerType")
     private @Nullable Output<String> internalControllerType;
 
     /**
-     * @return internal controller-type - Choices: `ipoe` - Default value: `ipoe`
+     * @return internal controller-type
+     *   - Choices: `ipoe`
+     *   - Default value: `ipoe`
      * 
      */
     public Optional<Output<String>> internalControllerType() {
@@ -479,14 +497,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -509,14 +529,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Interface MTU &lt;576..2000&gt;, in bytes - Range: `576`-`2000` - Default value: `1500`
+     * Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;576..2000&gt;, in bytes - Range: `576`-`2000` - Default value: `1500`
+     * @return Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `576`-`2000`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -554,14 +578,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Network Address Translation on this interface - Default value: `false`
+     * Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     @Import(name="nat")
     private @Nullable Output<Boolean> nat;
 
     /**
-     * @return Network Address Translation on this interface - Default value: `false`
+     * @return Network Address Translation on this interface
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nat() {
@@ -569,14 +595,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Block inbound ICMP error messages - Default value: `true`
+     * Block inbound ICMP error messages
+     *   - Default value: `true`
      * 
      */
     @Import(name="natBlockIcmpError")
     private @Nullable Output<Boolean> natBlockIcmpError;
 
     /**
-     * @return Block inbound ICMP error messages - Default value: `true`
+     * @return Block inbound ICMP error messages
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> natBlockIcmpError() {
@@ -614,14 +642,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+     * Set NAT refresh mode
+     *   - Choices: `outbound`, `bi-directional`
+     *   - Default value: `outbound`
      * 
      */
     @Import(name="natRefreshMode")
     private @Nullable Output<String> natRefreshMode;
 
     /**
-     * @return Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+     * @return Set NAT refresh mode
+     *   - Choices: `outbound`, `bi-directional`
+     *   - Default value: `outbound`
      * 
      */
     public Optional<Output<String>> natRefreshMode() {
@@ -644,14 +676,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+     * Respond to ping requests to NAT interface ip address from the public side
+     *   - Default value: `false`
      * 
      */
     @Import(name="natResponseToPing")
     private @Nullable Output<Boolean> natResponseToPing;
 
     /**
-     * @return Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+     * @return Respond to ping requests to NAT interface ip address from the public side
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> natResponseToPing() {
@@ -674,14 +708,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     @Import(name="natTcpTimeout")
     private @Nullable Output<Integer> natTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+     * @return Set NAT TCP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> natTcpTimeout() {
@@ -704,14 +742,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     @Import(name="natUdpTimeout")
     private @Nullable Output<Integer> natUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+     * @return Set NAT UDP session timeout, in minutes
+     *   - Range: `1`-`8947`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> natUdpTimeout() {
@@ -809,14 +851,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Per-tunnel Qos - Default value: `false`
+     * Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     @Import(name="perTunnelQos")
     private @Nullable Output<Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos - Default value: `false`
+     * @return Per-tunnel Qos
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> perTunnelQos() {
@@ -824,14 +868,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Per-tunnel QoS Aggregator - Default value: `false`
+     * Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     @Import(name="perTunnelQosAggregator")
     private @Nullable Output<Boolean> perTunnelQosAggregator;
 
     /**
-     * @return Per-tunnel QoS Aggregator - Default value: `false`
+     * @return Per-tunnel QoS Aggregator
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> perTunnelQosAggregator() {
@@ -884,14 +930,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * PPP Link Authentication Protocol - Choices: `chap`, `pap`
+     * PPP Link Authentication Protocol
+     *   - Choices: `chap`, `pap`
      * 
      */
     @Import(name="pppAuthenticationProtocol")
     private @Nullable Output<String> pppAuthenticationProtocol;
 
     /**
-     * @return PPP Link Authentication Protocol - Choices: `chap`, `pap`
+     * @return PPP Link Authentication Protocol
+     *   - Choices: `chap`, `pap`
      * 
      */
     public Optional<Output<String>> pppAuthenticationProtocol() {
@@ -899,14 +947,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * PPP Authentication Protocol PAP - Default value: `false`
+     * PPP Authentication Protocol PAP
+     *   - Default value: `false`
      * 
      */
     @Import(name="pppAuthenticationProtocolPap")
     private @Nullable Output<Boolean> pppAuthenticationProtocolPap;
 
     /**
-     * @return PPP Authentication Protocol PAP - Default value: `false`
+     * @return PPP Authentication Protocol PAP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> pppAuthenticationProtocolPap() {
@@ -929,14 +979,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+     * Maximum MRU to be negotiated during PPP LCP negotiation
+     *   - Range: `64`-`1792`
      * 
      */
     @Import(name="pppMaximumPayload")
     private @Nullable Output<Integer> pppMaximumPayload;
 
     /**
-     * @return Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+     * @return Maximum MRU to be negotiated during PPP LCP negotiation
+     *   - Range: `64`-`1792`
      * 
      */
     public Optional<Output<Integer>> pppMaximumPayload() {
@@ -959,14 +1011,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveBandwidthDownstream")
     private @Nullable Output<Integer> qosAdaptiveBandwidthDownstream;
 
     /**
-     * @return Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default downstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveBandwidthDownstream() {
@@ -989,14 +1043,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveBandwidthUpstream")
     private @Nullable Output<Integer> qosAdaptiveBandwidthUpstream;
 
     /**
-     * @return Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+     * @return Adaptive QoS default upstream bandwidth
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveBandwidthUpstream() {
@@ -1019,14 +1075,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Downstream max bandwidth limit - Range: `8`-`100000000`
+     * Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMaxDownstream")
     private @Nullable Output<Integer> qosAdaptiveMaxDownstream;
 
     /**
-     * @return Downstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMaxDownstream() {
@@ -1049,14 +1107,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Upstream max bandwidth limit - Range: `8`-`100000000`
+     * Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMaxUpstream")
     private @Nullable Output<Integer> qosAdaptiveMaxUpstream;
 
     /**
-     * @return Upstream max bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream max bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMaxUpstream() {
@@ -1079,14 +1139,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Downstream min bandwidth limit - Range: `8`-`100000000`
+     * Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMinDownstream")
     private @Nullable Output<Integer> qosAdaptiveMinDownstream;
 
     /**
-     * @return Downstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Downstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMinDownstream() {
@@ -1109,14 +1171,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Upstream min bandwidth limit - Range: `8`-`100000000`
+     * Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="qosAdaptiveMinUpstream")
     private @Nullable Output<Integer> qosAdaptiveMinUpstream;
 
     /**
-     * @return Upstream min bandwidth limit - Range: `8`-`100000000`
+     * @return Upstream min bandwidth limit
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> qosAdaptiveMinUpstream() {
@@ -1139,14 +1203,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     @Import(name="qosAdaptivePeriod")
     private @Nullable Output<Integer> qosAdaptivePeriod;
 
     /**
-     * @return Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+     * @return Periodic timer for adaptive QoS in minutes
+     *   - Range: `1`-`720`
+     *   - Default value: `15`
      * 
      */
     public Optional<Output<Integer>> qosAdaptivePeriod() {
@@ -1229,14 +1297,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     @Import(name="shapingRate")
     private @Nullable Output<Integer> shapingRate;
 
     /**
-     * @return 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+     * @return 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+     *   - Range: `8`-`100000000`
      * 
      */
     public Optional<Output<Integer>> shapingRate() {
@@ -1259,14 +1329,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -1289,14 +1361,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -1379,14 +1453,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowAll")
     private @Nullable Output<Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowAll() {
@@ -1409,14 +1485,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/deny BGP - Default value: `false`
+     * Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowBgp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP - Default value: `false`
+     * @return Allow/deny BGP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowBgp() {
@@ -1439,14 +1517,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny DHCP - Default value: `true`
+     * Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDhcp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP - Default value: `true`
+     * @return Allow/Deny DHCP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDhcp() {
@@ -1469,14 +1549,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny DNS - Default value: `true`
+     * Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDns")
     private @Nullable Output<Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS - Default value: `true`
+     * @return Allow/Deny DNS
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowDns() {
@@ -1499,14 +1581,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny Https - Default value: `false`
+     * Allow/Deny Https
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowHttps")
     private @Nullable Output<Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny Https - Default value: `false`
+     * @return Allow/Deny Https
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowHttps() {
@@ -1529,14 +1613,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny ICMP - Default value: `true`
+     * Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowIcmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP - Default value: `true`
+     * @return Allow/Deny ICMP
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowIcmp() {
@@ -1559,14 +1645,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny NETCONF - Default value: `false`
+     * Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNetconf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF - Default value: `false`
+     * @return Allow/Deny NETCONF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNetconf() {
@@ -1589,14 +1677,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny NTP - Default value: `false`
+     * Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNtp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP - Default value: `false`
+     * @return Allow/Deny NTP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNtp() {
@@ -1619,14 +1709,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny OSPF - Default value: `false`
+     * Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowOspf")
     private @Nullable Output<Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF - Default value: `false`
+     * @return Allow/Deny OSPF
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowOspf() {
@@ -1649,14 +1741,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny SNMP - Default value: `false`
+     * Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSnmp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP - Default value: `false`
+     * @return Allow/Deny SNMP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSnmp() {
@@ -1679,14 +1773,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny SSH - Default value: `false`
+     * Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSsh")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH - Default value: `false`
+     * @return Allow/Deny SSH
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSsh() {
@@ -1709,14 +1805,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow/Deny STUN - Default value: `false`
+     * Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowStun")
     private @Nullable Output<Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN - Default value: `false`
+     * @return Allow/Deny STUN
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowStun() {
@@ -1769,14 +1867,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set TLOC as border TLOC - Default value: `false`
+     * Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceBorder")
     private @Nullable Output<Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC - Default value: `false`
+     * @return Set TLOC as border TLOC
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceBorder() {
@@ -1799,16 +1899,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceCarrier")
     private @Nullable Output<String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-     * `carrier7`, `carrier8` - Default value: `default`
+     * @return Set carrier for TLOC
+     *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceCarrier() {
@@ -1831,14 +1933,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceClearDontFragment")
     private @Nullable Output<Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceClearDontFragment() {
@@ -1861,18 +1965,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     @Import(name="tunnelInterfaceColor")
     private @Nullable Output<String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-     * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-     * `private4`, `private5`, `private6` - Default value: `default`
+     * @return Set color for TLOC
+     *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+     *   - Default value: `default`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceColor() {
@@ -1880,14 +1984,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Restrict this TLOC behavior - Default value: `false`
+     * Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceColorRestrict")
     private @Nullable Output<Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior - Default value: `false`
+     * @return Restrict this TLOC behavior
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceColorRestrict() {
@@ -1910,14 +2016,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Allow Control Connection - Default value: `true`
+     * Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfaceControlConnections")
     private @Nullable Output<Boolean> tunnelInterfaceControlConnections;
 
     /**
-     * @return Allow Control Connection - Default value: `true`
+     * @return Allow Control Connection
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceControlConnections() {
@@ -2015,14 +2123,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Import(name="tunnelInterfaceHelloInterval")
     private @Nullable Output<Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds
+     *   - Range: `100`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloInterval() {
@@ -2045,14 +2157,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     @Import(name="tunnelInterfaceHelloTolerance")
     private @Nullable Output<Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds
+     *   - Range: `12`-`6000`
+     *   - Default value: `12`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceHelloTolerance() {
@@ -2075,14 +2191,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set TLOC as last resort - Default value: `false`
+     * Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLastResortCircuit")
     private @Nullable Output<Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort - Default value: `false`
+     * @return Set TLOC as last resort
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLastResortCircuit() {
@@ -2105,14 +2223,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set the interface as a low-bandwidth circuit - Default value: `false`
+     * Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceLowBandwidthLink")
     private @Nullable Output<Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit - Default value: `false`
+     * @return Set the interface as a low-bandwidth circuit
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceLowBandwidthLink() {
@@ -2135,14 +2255,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+     * Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`8`
      * 
      */
     @Import(name="tunnelInterfaceMaxControlConnections")
     private @Nullable Output<Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+     * @return Set the maximum number of control connections for this TLOC
+     *   - Range: `0`-`8`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceMaxControlConnections() {
@@ -2165,14 +2287,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceNatRefreshInterval")
     private @Nullable Output<Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds
+     *   - Range: `1`-`60`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceNatRefreshInterval() {
@@ -2195,14 +2321,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceNetworkBroadcast")
     private @Nullable Output<Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+     * @return Accept and respond to network-prefix-directed broadcasts)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceNetworkBroadcast() {
@@ -2225,14 +2353,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Disallow port hopping on the tunnel interface - Default value: `true`
+     * Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     @Import(name="tunnelInterfacePortHop")
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface - Default value: `true`
+     * @return Disallow port hopping on the tunnel interface
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfacePortHop() {
@@ -2255,14 +2385,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tunnelInterfaceTunnelTcpMss")
     private @Nullable Output<Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return Tunnel TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceTunnelTcpMss() {
@@ -2285,14 +2417,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Put this wan interface in STUN mode only - Default value: `false`
+     * Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceVbondAsStunServer")
     private @Nullable Output<Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only - Default value: `false`
+     * @return Put this wan interface in STUN mode only
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceVbondAsStunServer() {
@@ -2315,14 +2449,18 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     @Import(name="tunnelInterfaceVmanageConnectionPreference")
     private @Nullable Output<Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;
+     *   - Range: `0`-`8`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> tunnelInterfaceVmanageConnectionPreference() {
@@ -2345,14 +2483,16 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
     }
 
     /**
-     * Set tunnel QoS mode - Choices: `spoke`
+     * Set tunnel QoS mode
+     *   - Choices: `spoke`
      * 
      */
     @Import(name="tunnelQosMode")
     private @Nullable Output<String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode - Choices: `spoke`
+     * @return Set tunnel QoS mode
+     *   - Choices: `spoke`
      * 
      */
     public Optional<Output<String>> tunnelQosMode() {
@@ -2665,7 +2805,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -2676,7 +2817,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -2707,7 +2849,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -2718,7 +2861,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps - Range: `1`-`2147483647`
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         *   - Range: `1`-`2147483647`
          * 
          * @return builder
          * 
@@ -2854,9 +2998,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -2867,9 +3010,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -2879,9 +3021,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -2891,7 +3032,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param dialerAddressNegotiated Dialer IP Negotiated - Default value: `false`
+         * @param dialerAddressNegotiated Dialer IP Negotiated
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2902,7 +3044,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param dialerAddressNegotiated Dialer IP Negotiated - Default value: `false`
+         * @param dialerAddressNegotiated Dialer IP Negotiated
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2933,7 +3076,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param dialerPoolNumber Dialer pool number - Range: `1`-`255`
+         * @param dialerPoolNumber Dialer pool number
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -2944,7 +3088,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param dialerPoolNumber Dialer pool number - Range: `1`-`255`
+         * @param dialerPoolNumber Dialer pool number
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -2975,7 +3120,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param encap Encapsulation VLAN id - Range: `1`-`4094`
+         * @param encap Encapsulation VLAN id
+         *   - Range: `1`-`4094`
          * 
          * @return builder
          * 
@@ -2986,7 +3132,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param encap Encapsulation VLAN id - Range: `1`-`4094`
+         * @param encap Encapsulation VLAN id
+         *   - Range: `1`-`4094`
          * 
          * @return builder
          * 
@@ -3059,7 +3206,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ethernetDhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param ethernetDhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3070,7 +3219,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ethernetDhcpDistance Set administrative distance for DHCP default route - Range: `1`-`65536` - Default value: `1`
+         * @param ethernetDhcpDistance Set administrative distance for DHCP default route
+         *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3153,7 +3304,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ethernetEnableDhcp Enable DHCP - Default value: `false`
+         * @param ethernetEnableDhcp Enable DHCP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3164,7 +3316,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ethernetEnableDhcp Enable DHCP - Default value: `false`
+         * @param ethernetEnableDhcp Enable DHCP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3279,7 +3432,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param internalControllerType internal controller-type - Choices: `ipoe` - Default value: `ipoe`
+         * @param internalControllerType internal controller-type
+         *   - Choices: `ipoe`
+         *   - Default value: `ipoe`
          * 
          * @return builder
          * 
@@ -3290,7 +3445,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param internalControllerType internal controller-type - Choices: `ipoe` - Default value: `ipoe`
+         * @param internalControllerType internal controller-type
+         *   - Choices: `ipoe`
+         *   - Default value: `ipoe`
          * 
          * @return builder
          * 
@@ -3300,7 +3457,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3311,7 +3469,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3342,7 +3501,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes - Range: `576`-`2000` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes
+         *   - Range: `576`-`2000`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -3353,7 +3514,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes - Range: `576`-`2000` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;576..2000&gt;, in bytes
+         *   - Range: `576`-`2000`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -3405,7 +3568,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param nat Network Address Translation on this interface - Default value: `false`
+         * @param nat Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3416,7 +3580,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param nat Network Address Translation on this interface - Default value: `false`
+         * @param nat Network Address Translation on this interface
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3426,7 +3591,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natBlockIcmpError Block inbound ICMP error messages - Default value: `true`
+         * @param natBlockIcmpError Block inbound ICMP error messages
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3437,7 +3603,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natBlockIcmpError Block inbound ICMP error messages - Default value: `true`
+         * @param natBlockIcmpError Block inbound ICMP error messages
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -3499,7 +3666,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natRefreshMode Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+         * @param natRefreshMode Set NAT refresh mode
+         *   - Choices: `outbound`, `bi-directional`
+         *   - Default value: `outbound`
          * 
          * @return builder
          * 
@@ -3510,7 +3679,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natRefreshMode Set NAT refresh mode - Choices: `outbound`, `bi-directional` - Default value: `outbound`
+         * @param natRefreshMode Set NAT refresh mode
+         *   - Choices: `outbound`, `bi-directional`
+         *   - Default value: `outbound`
          * 
          * @return builder
          * 
@@ -3541,7 +3712,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natResponseToPing Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+         * @param natResponseToPing Respond to ping requests to NAT interface ip address from the public side
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3552,7 +3724,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natResponseToPing Respond to ping requests to NAT interface ip address from the public side - Default value: `false`
+         * @param natResponseToPing Respond to ping requests to NAT interface ip address from the public side
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3583,7 +3756,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natTcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param natTcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -3594,7 +3769,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natTcpTimeout Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+         * @param natTcpTimeout Set NAT TCP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -3625,7 +3802,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natUdpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param natUdpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3636,7 +3815,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param natUdpTimeout Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+         * @param natUdpTimeout Set NAT UDP session timeout, in minutes
+         *   - Range: `1`-`8947`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -3772,7 +3953,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos - Default value: `false`
+         * @param perTunnelQos Per-tunnel Qos
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3783,7 +3965,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos - Default value: `false`
+         * @param perTunnelQos Per-tunnel Qos
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3793,7 +3976,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator - Default value: `false`
+         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3804,7 +3988,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator - Default value: `false`
+         * @param perTunnelQosAggregator Per-tunnel QoS Aggregator
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3887,7 +4072,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppAuthenticationProtocol PPP Link Authentication Protocol - Choices: `chap`, `pap`
+         * @param pppAuthenticationProtocol PPP Link Authentication Protocol
+         *   - Choices: `chap`, `pap`
          * 
          * @return builder
          * 
@@ -3898,7 +4084,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppAuthenticationProtocol PPP Link Authentication Protocol - Choices: `chap`, `pap`
+         * @param pppAuthenticationProtocol PPP Link Authentication Protocol
+         *   - Choices: `chap`, `pap`
          * 
          * @return builder
          * 
@@ -3908,7 +4095,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppAuthenticationProtocolPap PPP Authentication Protocol PAP - Default value: `false`
+         * @param pppAuthenticationProtocolPap PPP Authentication Protocol PAP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3919,7 +4107,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppAuthenticationProtocolPap PPP Authentication Protocol PAP - Default value: `false`
+         * @param pppAuthenticationProtocolPap PPP Authentication Protocol PAP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -3950,7 +4139,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppMaximumPayload Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+         * @param pppMaximumPayload Maximum MRU to be negotiated during PPP LCP negotiation
+         *   - Range: `64`-`1792`
          * 
          * @return builder
          * 
@@ -3961,7 +4151,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param pppMaximumPayload Maximum MRU to be negotiated during PPP LCP negotiation - Range: `64`-`1792`
+         * @param pppMaximumPayload Maximum MRU to be negotiated during PPP LCP negotiation
+         *   - Range: `64`-`1792`
          * 
          * @return builder
          * 
@@ -3992,7 +4183,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4003,7 +4195,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthDownstream Adaptive QoS default downstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4034,7 +4227,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4045,7 +4239,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth - Range: `8`-`100000000`
+         * @param qosAdaptiveBandwidthUpstream Adaptive QoS default upstream bandwidth
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4076,7 +4271,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4087,7 +4283,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxDownstream Downstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4118,7 +4315,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4129,7 +4327,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMaxUpstream Upstream max bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4160,7 +4359,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4171,7 +4371,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinDownstream Downstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4202,7 +4403,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4213,7 +4415,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit - Range: `8`-`100000000`
+         * @param qosAdaptiveMinUpstream Upstream min bandwidth limit
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4244,7 +4447,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes
+         *   - Range: `1`-`720`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -4255,7 +4460,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes - Range: `1`-`720` - Default value: `15`
+         * @param qosAdaptivePeriod Periodic timer for adaptive QoS in minutes
+         *   - Range: `1`-`720`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -4370,7 +4577,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param shapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param shapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4381,7 +4589,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param shapingRate 1ge interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps - Range: `8`-`100000000`
+         * @param shapingRate 1ge  interfaces: [0..1000000]kbps; 10ge interfaces: [0..10000000]kbps
+         *   - Range: `8`-`100000000`
          * 
          * @return builder
          * 
@@ -4412,7 +4621,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4423,7 +4633,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4454,7 +4665,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 
@@ -4465,7 +4677,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 
@@ -4590,7 +4803,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4601,7 +4815,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set - Default value: `false`
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4632,7 +4847,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4643,7 +4859,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP - Default value: `false`
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4674,7 +4891,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4685,7 +4903,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP - Default value: `true`
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4716,7 +4935,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4727,7 +4947,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS - Default value: `true`
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4758,7 +4979,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `false`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4769,7 +4991,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny Https - Default value: `false`
+         * @param tunnelInterfaceAllowHttps Allow/Deny Https
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4800,7 +5023,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4811,7 +5035,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP - Default value: `true`
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -4842,7 +5067,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4853,7 +5079,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF - Default value: `false`
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4884,7 +5111,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4895,7 +5123,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP - Default value: `false`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4926,7 +5155,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4937,7 +5167,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF - Default value: `false`
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4968,7 +5199,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -4979,7 +5211,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP - Default value: `false`
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5010,7 +5243,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5021,7 +5255,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH - Default value: `false`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5052,7 +5287,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5063,7 +5299,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN - Default value: `false`
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5136,7 +5373,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5147,7 +5385,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC - Default value: `false`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5178,8 +5417,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -5190,8 +5430,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`,
-         * `carrier7`, `carrier8` - Default value: `default`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC
+         *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -5222,7 +5463,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5233,7 +5475,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5264,9 +5507,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -5277,9 +5520,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`,
-         * `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`,
-         * `private4`, `private5`, `private6` - Default value: `default`
+         * @param tunnelInterfaceColor Set color for TLOC
+         *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+         *   - Default value: `default`
          * 
          * @return builder
          * 
@@ -5289,7 +5532,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5300,7 +5544,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior - Default value: `false`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5331,7 +5576,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceControlConnections Allow Control Connection - Default value: `true`
+         * @param tunnelInterfaceControlConnections Allow Control Connection
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5342,7 +5588,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceControlConnections Allow Control Connection - Default value: `true`
+         * @param tunnelInterfaceControlConnections Allow Control Connection
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5508,7 +5755,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -5519,7 +5768,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds - Range: `100`-`600000` - Default value: `1000`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds
+         *   - Range: `100`-`600000`
+         *   - Default value: `1000`
          * 
          * @return builder
          * 
@@ -5550,7 +5801,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -5561,7 +5814,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds - Range: `12`-`6000` - Default value: `12`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds
+         *   - Range: `12`-`6000`
+         *   - Default value: `12`
          * 
          * @return builder
          * 
@@ -5592,7 +5847,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5603,7 +5859,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort - Default value: `false`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5634,7 +5891,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5645,7 +5903,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit - Default value: `false`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5676,7 +5935,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`8`
          * 
          * @return builder
          * 
@@ -5687,7 +5947,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC - Range: `0`-`8`
+         * @param tunnelInterfaceMaxControlConnections Set the maximum number of control connections for this TLOC
+         *   - Range: `0`-`8`
          * 
          * @return builder
          * 
@@ -5718,7 +5979,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -5729,7 +5992,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds - Range: `1`-`60` - Default value: `5`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds
+         *   - Range: `1`-`60`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -5760,7 +6025,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5771,7 +6037,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts) - Default value: `false`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5802,7 +6069,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5813,7 +6081,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface - Default value: `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -5844,7 +6113,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -5855,7 +6125,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -5886,7 +6157,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5897,7 +6169,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only - Default value: `false`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -5928,7 +6201,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -5939,7 +6214,9 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt; - Range: `0`-`8` - Default value: `5`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;
+         *   - Range: `0`-`8`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -5970,7 +6247,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 
@@ -5981,7 +6259,8 @@ public final class VpnInterfaceDslIpoeFeatureTemplateArgs extends com.pulumi.res
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode - Choices: `spoke`
+         * @param tunnelQosMode Set tunnel QoS mode
+         *   - Choices: `spoke`
          * 
          * @return builder
          * 

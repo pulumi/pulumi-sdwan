@@ -77,11 +77,13 @@ type ConfigurationGroup struct {
 	FeatureVersions pulumi.StringArrayOutput `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+	// Type of solution
+	//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 	Solution pulumi.StringOutput `pulumi:"solution"`
 	// List of topology device types
 	TopologyDevices ConfigurationGroupTopologyDeviceArrayOutput `pulumi:"topologyDevices"`
-	// Number of devices per site - Range: `1`-`20`
+	// Number of devices per site
+	//   - Range: `1`-`20`
 	TopologySiteDevices pulumi.IntPtrOutput `pulumi:"topologySiteDevices"`
 }
 
@@ -131,11 +133,13 @@ type configurationGroupState struct {
 	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name *string `pulumi:"name"`
-	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+	// Type of solution
+	//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 	Solution *string `pulumi:"solution"`
 	// List of topology device types
 	TopologyDevices []ConfigurationGroupTopologyDevice `pulumi:"topologyDevices"`
-	// Number of devices per site - Range: `1`-`20`
+	// Number of devices per site
+	//   - Range: `1`-`20`
 	TopologySiteDevices *int `pulumi:"topologySiteDevices"`
 }
 
@@ -150,11 +154,13 @@ type ConfigurationGroupState struct {
 	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
 	Name pulumi.StringPtrInput
-	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+	// Type of solution
+	//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 	Solution pulumi.StringPtrInput
 	// List of topology device types
 	TopologyDevices ConfigurationGroupTopologyDeviceArrayInput
-	// Number of devices per site - Range: `1`-`20`
+	// Number of devices per site
+	//   - Range: `1`-`20`
 	TopologySiteDevices pulumi.IntPtrInput
 }
 
@@ -173,11 +179,13 @@ type configurationGroupArgs struct {
 	FeatureVersions []string `pulumi:"featureVersions"`
 	// The name of the configuration group
 	Name *string `pulumi:"name"`
-	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+	// Type of solution
+	//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 	Solution string `pulumi:"solution"`
 	// List of topology device types
 	TopologyDevices []ConfigurationGroupTopologyDevice `pulumi:"topologyDevices"`
-	// Number of devices per site - Range: `1`-`20`
+	// Number of devices per site
+	//   - Range: `1`-`20`
 	TopologySiteDevices *int `pulumi:"topologySiteDevices"`
 }
 
@@ -193,11 +201,13 @@ type ConfigurationGroupArgs struct {
 	FeatureVersions pulumi.StringArrayInput
 	// The name of the configuration group
 	Name pulumi.StringPtrInput
-	// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+	// Type of solution
+	//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 	Solution pulumi.StringInput
 	// List of topology device types
 	TopologyDevices ConfigurationGroupTopologyDeviceArrayInput
-	// Number of devices per site - Range: `1`-`20`
+	// Number of devices per site
+	//   - Range: `1`-`20`
 	TopologySiteDevices pulumi.IntPtrInput
 }
 
@@ -313,7 +323,8 @@ func (o ConfigurationGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+// Type of solution
+//   - Choices: `mobility`, `sdwan`, `nfvirtual`
 func (o ConfigurationGroupOutput) Solution() pulumi.StringOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.StringOutput { return v.Solution }).(pulumi.StringOutput)
 }
@@ -323,7 +334,8 @@ func (o ConfigurationGroupOutput) TopologyDevices() ConfigurationGroupTopologyDe
 	return o.ApplyT(func(v *ConfigurationGroup) ConfigurationGroupTopologyDeviceArrayOutput { return v.TopologyDevices }).(ConfigurationGroupTopologyDeviceArrayOutput)
 }
 
-// Number of devices per site - Range: `1`-`20`
+// Number of devices per site
+//   - Range: `1`-`20`
 func (o ConfigurationGroupOutput) TopologySiteDevices() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ConfigurationGroup) pulumi.IntPtrOutput { return v.TopologySiteDevices }).(pulumi.IntPtrOutput)
 }

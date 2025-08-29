@@ -39,7 +39,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AclIpv6IngressPolicyId { get; private set; } = null!;
 
         /// <summary>
-        /// Shaping Rate (Kbps) - Range: `8`-`100000000`
+        /// Shaping Rate (Kbps)
+        ///   - Range: `8`-`100000000`
         /// </summary>
         [Output("aclShapingRate")]
         public Output<int?> AclShapingRate { get; private set; } = null!;
@@ -51,7 +52,9 @@ namespace Pulumi.Sdwan
         public Output<string?> AclShapingRateVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2147483`
+        ///   - Default value: `1200`
         /// </summary>
         [Output("arpTimeout")]
         public Output<int?> ArpTimeout { get; private set; } = null!;
@@ -87,7 +90,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Duplex mode - Choices: `full`, `half`, `auto`
+        /// Duplex mode
+        ///   - Choices: `full`, `half`, `auto`
         /// </summary>
         [Output("duplex")]
         public Output<string?> Duplex { get; private set; } = null!;
@@ -111,7 +115,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        /// ICMP/ICMPv6 Redirect Disable
+        ///   - Default value: `true`
         /// </summary>
         [Output("icmpRedirectDisable")]
         public Output<bool?> IcmpRedirectDisable { get; private set; } = null!;
@@ -132,7 +137,9 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceDescriptionVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("interfaceMtu")]
         public Output<int?> InterfaceMtu { get; private set; } = null!;
@@ -153,7 +160,8 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -165,8 +173,9 @@ namespace Pulumi.Sdwan
         public Output<string?> IpDirectedBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-        /// &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Output("ipMtu")]
         public Output<int?> IpMtu { get; private set; } = null!;
@@ -190,7 +199,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// DHCP Distance - Range: `1`-`65536`
+        /// DHCP Distance
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Output("ipv4DhcpDistance")]
         public Output<int?> Ipv4DhcpDistance { get; private set; } = null!;
@@ -214,7 +224,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> Ipv4DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// enable Network Address Translation on this interface - Default value: `false`
+        /// enable Network Address Translation on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv4Nat")]
         public Output<bool?> Ipv4Nat { get; private set; } = null!;
@@ -232,7 +243,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload
+        ///   - Default value: `true`
         /// </summary>
         [Output("ipv4NatOverload")]
         public Output<bool?> Ipv4NatOverload { get; private set; } = null!;
@@ -244,7 +256,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatOverloadVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length
+        ///   - Range: `1`-`32`
         /// </summary>
         [Output("ipv4NatPrefixLength")]
         public Output<int?> Ipv4NatPrefixLength { get; private set; } = null!;
@@ -280,7 +293,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatRangeStartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `60`
         /// </summary>
         [Output("ipv4NatTcpTimeout")]
         public Output<int?> Ipv4NatTcpTimeout { get; private set; } = null!;
@@ -292,7 +307,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatTcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Type - Choices: `pool`, `loopback`
+        /// NAT Type
+        ///   - Choices: `pool`, `loopback`
         /// </summary>
         [Output("ipv4NatType")]
         public Output<string?> Ipv4NatType { get; private set; } = null!;
@@ -304,7 +320,9 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `1`
         /// </summary>
         [Output("ipv4NatUdpTimeout")]
         public Output<int?> Ipv4NatUdpTimeout { get; private set; } = null!;
@@ -322,11 +340,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> Ipv4SecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
@@ -368,7 +383,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> Ipv6DhcpSecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface - Default value: `false`
+        /// enable Network Address Translation ipv6 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Output("ipv6Nat")]
         public Output<bool?> Ipv6Nat { get; private set; } = null!;
@@ -386,7 +402,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>> Ipv6Vrrps { get; private set; } = null!;
 
         /// <summary>
-        /// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        /// Interval for interface load calculation
+        ///   - Range: `30`-`600`
+        ///   - Default value: `30`
         /// </summary>
         [Output("loadInterval")]
         public Output<int?> LoadInterval { get; private set; } = null!;
@@ -410,7 +428,8 @@ namespace Pulumi.Sdwan
         public Output<string?> MacAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Media type - Choices: `auto-select`, `rj45`, `sfp`
+        /// Media type
+        ///   - Choices: `auto-select`, `rj45`, `sfp`
         /// </summary>
         [Output("mediaType")]
         public Output<string?> MediaType { get; private set; } = null!;
@@ -428,7 +447,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Output("nat64")]
         public Output<bool?> Nat64 { get; private set; } = null!;
@@ -452,7 +472,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
         /// </summary>
         [Output("speed")]
         public Output<string?> Speed { get; private set; } = null!;
@@ -470,7 +491,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>> StaticNats { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tcpMss")]
         public Output<int?> TcpMss { get; private set; } = null!;
@@ -500,13 +522,15 @@ namespace Pulumi.Sdwan
         public Output<bool?> TrustsecEnableEnforcedPropogation { get; private set; } = null!;
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS - Default value: `false`
+        /// Indicates that the interface is trustworthy for CTS
+        ///   - Default value: `false`
         /// </summary>
         [Output("trustsecEnableSgtPropogation")]
         public Output<bool?> TrustsecEnableSgtPropogation { get; private set; } = null!;
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Output("trustsecEnforcedSecurityGroupTag")]
         public Output<int?> TrustsecEnforcedSecurityGroupTag { get; private set; } = null!;
@@ -518,13 +542,15 @@ namespace Pulumi.Sdwan
         public Output<string?> TrustsecEnforcedSecurityGroupTagVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        /// Enables the interface for CTS SGT authorization and forwarding
+        ///   - Default value: `true`
         /// </summary>
         [Output("trustsecPropogate")]
         public Output<bool?> TrustsecPropogate { get; private set; } = null!;
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Output("trustsecSecurityGroupTag")]
         public Output<int?> TrustsecSecurityGroupTag { get; private set; } = null!;
@@ -612,7 +638,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AclIpv6IngressPolicyId { get; set; }
 
         /// <summary>
-        /// Shaping Rate (Kbps) - Range: `8`-`100000000`
+        /// Shaping Rate (Kbps)
+        ///   - Range: `8`-`100000000`
         /// </summary>
         [Input("aclShapingRate")]
         public Input<int>? AclShapingRate { get; set; }
@@ -624,7 +651,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AclShapingRateVariable { get; set; }
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2147483`
+        ///   - Default value: `1200`
         /// </summary>
         [Input("arpTimeout")]
         public Input<int>? ArpTimeout { get; set; }
@@ -666,7 +695,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Duplex mode - Choices: `full`, `half`, `auto`
+        /// Duplex mode
+        ///   - Choices: `full`, `half`, `auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -690,7 +720,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        /// ICMP/ICMPv6 Redirect Disable
+        ///   - Default value: `true`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -711,7 +742,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -732,7 +765,8 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -744,8 +778,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-        /// &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -769,7 +804,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// DHCP Distance - Range: `1`-`65536`
+        /// DHCP Distance
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
@@ -799,7 +835,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation on this interface - Default value: `false`
+        /// enable Network Address Translation on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Nat")]
         public Input<bool>? Ipv4Nat { get; set; }
@@ -817,7 +854,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
@@ -829,7 +867,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4NatPrefixLength")]
         public Input<int>? Ipv4NatPrefixLength { get; set; }
@@ -865,7 +904,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `60`
         /// </summary>
         [Input("ipv4NatTcpTimeout")]
         public Input<int>? Ipv4NatTcpTimeout { get; set; }
@@ -877,7 +918,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type - Choices: `pool`, `loopback`
+        /// NAT Type
+        ///   - Choices: `pool`, `loopback`
         /// </summary>
         [Input("ipv4NatType")]
         public Input<string>? Ipv4NatType { get; set; }
@@ -889,7 +931,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv4NatUdpTimeout")]
         public Input<int>? Ipv4NatUdpTimeout { get; set; }
@@ -913,11 +957,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -977,7 +1018,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface - Default value: `false`
+        /// enable Network Address Translation ipv6 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Nat")]
         public Input<bool>? Ipv6Nat { get; set; }
@@ -1007,7 +1049,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        /// Interval for interface load calculation
+        ///   - Range: `30`-`600`
+        ///   - Default value: `30`
         /// </summary>
         [Input("loadInterval")]
         public Input<int>? LoadInterval { get; set; }
@@ -1031,7 +1075,8 @@ namespace Pulumi.Sdwan
         public Input<string>? MacAddressVariable { get; set; }
 
         /// <summary>
-        /// Media type - Choices: `auto-select`, `rj45`, `sfp`
+        /// Media type
+        ///   - Choices: `auto-select`, `rj45`, `sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -1049,7 +1094,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
@@ -1073,7 +1119,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }
@@ -1097,7 +1144,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
@@ -1127,13 +1175,15 @@ namespace Pulumi.Sdwan
         public Input<bool>? TrustsecEnableEnforcedPropogation { get; set; }
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS - Default value: `false`
+        /// Indicates that the interface is trustworthy for CTS
+        ///   - Default value: `false`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTag")]
         public Input<int>? TrustsecEnforcedSecurityGroupTag { get; set; }
@@ -1145,13 +1195,15 @@ namespace Pulumi.Sdwan
         public Input<string>? TrustsecEnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        /// Enables the interface for CTS SGT authorization and forwarding
+        ///   - Default value: `true`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecSecurityGroupTag")]
         public Input<int>? TrustsecSecurityGroupTag { get; set; }
@@ -1195,7 +1247,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AclIpv6IngressPolicyId { get; set; }
 
         /// <summary>
-        /// Shaping Rate (Kbps) - Range: `8`-`100000000`
+        /// Shaping Rate (Kbps)
+        ///   - Range: `8`-`100000000`
         /// </summary>
         [Input("aclShapingRate")]
         public Input<int>? AclShapingRate { get; set; }
@@ -1207,7 +1260,9 @@ namespace Pulumi.Sdwan
         public Input<string>? AclShapingRateVariable { get; set; }
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2147483` - Default value: `1200`
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        ///   - Range: `0`-`2147483`
+        ///   - Default value: `1200`
         /// </summary>
         [Input("arpTimeout")]
         public Input<int>? ArpTimeout { get; set; }
@@ -1249,7 +1304,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Duplex mode - Choices: `full`, `half`, `auto`
+        /// Duplex mode
+        ///   - Choices: `full`, `half`, `auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -1273,7 +1329,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable - Default value: `true`
+        /// ICMP/ICMPv6 Redirect Disable
+        ///   - Default value: `true`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -1294,7 +1351,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU - Range: `1500`-`9216` - Default value: `1500`
+        /// Interface MTU
+        ///   - Range: `1500`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -1315,7 +1374,8 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast - Default value: `false`
+        /// IP Directed-Broadcast
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -1327,8 +1387,9 @@ namespace Pulumi.Sdwan
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces
-        /// &lt;576..2000&gt; in bytes - Range: `576`-`9216` - Default value: `1500`
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        ///   - Range: `576`-`9216`
+        ///   - Default value: `1500`
         /// </summary>
         [Input("ipMtu")]
         public Input<int>? IpMtu { get; set; }
@@ -1352,7 +1413,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// DHCP Distance - Range: `1`-`65536`
+        /// DHCP Distance
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
@@ -1382,7 +1444,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation on this interface - Default value: `false`
+        /// enable Network Address Translation on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv4Nat")]
         public Input<bool>? Ipv4Nat { get; set; }
@@ -1400,7 +1463,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload - Default value: `true`
+        /// NAT Overload
+        ///   - Default value: `true`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
@@ -1412,7 +1476,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length - Range: `1`-`32`
+        /// NAT Pool Prefix Length
+        ///   - Range: `1`-`32`
         /// </summary>
         [Input("ipv4NatPrefixLength")]
         public Input<int>? Ipv4NatPrefixLength { get; set; }
@@ -1448,7 +1513,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes - Range: `1`-`8947` - Default value: `60`
+        /// Set NAT TCP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `60`
         /// </summary>
         [Input("ipv4NatTcpTimeout")]
         public Input<int>? Ipv4NatTcpTimeout { get; set; }
@@ -1460,7 +1527,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type - Choices: `pool`, `loopback`
+        /// NAT Type
+        ///   - Choices: `pool`, `loopback`
         /// </summary>
         [Input("ipv4NatType")]
         public Input<string>? Ipv4NatType { get; set; }
@@ -1472,7 +1540,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes - Range: `1`-`8947` - Default value: `1`
+        /// Set NAT UDP session timeout, in minutes
+        ///   - Range: `1`-`8947`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv4NatUdpTimeout")]
         public Input<int>? Ipv4NatUdpTimeout { get; set; }
@@ -1496,11 +1566,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
@@ -1560,7 +1627,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface - Default value: `false`
+        /// enable Network Address Translation ipv6 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("ipv6Nat")]
         public Input<bool>? Ipv6Nat { get; set; }
@@ -1590,7 +1658,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Interval for interface load calculation - Range: `30`-`600` - Default value: `30`
+        /// Interval for interface load calculation
+        ///   - Range: `30`-`600`
+        ///   - Default value: `30`
         /// </summary>
         [Input("loadInterval")]
         public Input<int>? LoadInterval { get; set; }
@@ -1614,7 +1684,8 @@ namespace Pulumi.Sdwan
         public Input<string>? MacAddressVariable { get; set; }
 
         /// <summary>
-        /// Media type - Choices: `auto-select`, `rj45`, `sfp`
+        /// Media type
+        ///   - Choices: `auto-select`, `rj45`, `sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -1632,7 +1703,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface - Default value: `false`
+        /// NAT64 on this interface
+        ///   - Default value: `false`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
@@ -1656,7 +1728,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// Set interface speed - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }
@@ -1680,7 +1753,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+        /// TCP MSS on SYN packets, in bytes
+        ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
@@ -1710,13 +1784,15 @@ namespace Pulumi.Sdwan
         public Input<bool>? TrustsecEnableEnforcedPropogation { get; set; }
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS - Default value: `false`
+        /// Indicates that the interface is trustworthy for CTS
+        ///   - Default value: `false`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTag")]
         public Input<int>? TrustsecEnforcedSecurityGroupTag { get; set; }
@@ -1728,13 +1804,15 @@ namespace Pulumi.Sdwan
         public Input<string>? TrustsecEnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding - Default value: `true`
+        /// Enables the interface for CTS SGT authorization and forwarding
+        ///   - Default value: `true`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519 - Range: `2`-`65519`
+        /// SGT value between 2 and 65519
+        ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecSecurityGroupTag")]
         public Input<int>? TrustsecSecurityGroupTag { get; set; }

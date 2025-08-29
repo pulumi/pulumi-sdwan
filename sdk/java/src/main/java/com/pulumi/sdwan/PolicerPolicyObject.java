@@ -67,28 +67,32 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/policerPolicyObject:PolicerPolicyObject")
 public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
     /**
-     * Burst in bytes - Range: `15000`-`10000000`
+     * Burst in bytes
+     *   - Range: `15000`-`10000000`
      * 
      */
     @Export(name="burst", refs={Integer.class}, tree="[0]")
     private Output<Integer> burst;
 
     /**
-     * @return Burst in bytes - Range: `15000`-`10000000`
+     * @return Burst in bytes
+     *   - Range: `15000`-`10000000`
      * 
      */
     public Output<Integer> burst() {
         return this.burst;
     }
     /**
-     * Exceed action - Choices: `drop`, `remark`
+     * Exceed action
+     *   - Choices: `drop`, `remark`
      * 
      */
     @Export(name="exceedAction", refs={String.class}, tree="[0]")
     private Output<String> exceedAction;
 
     /**
-     * @return Exceed action - Choices: `drop`, `remark`
+     * @return Exceed action
+     *   - Choices: `drop`, `remark`
      * 
      */
     public Output<String> exceedAction() {
@@ -109,14 +113,16 @@ public class PolicerPolicyObject extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Rate in bps - Range: `8`-`100000000000`
+     * Rate in bps
+     *   - Range: `8`-`100000000000`
      * 
      */
     @Export(name="rate", refs={Integer.class}, tree="[0]")
     private Output<Integer> rate;
 
     /**
-     * @return Rate in bps - Range: `8`-`100000000000`
+     * @return Rate in bps
+     *   - Range: `8`-`100000000000`
      * 
      */
     public Output<Integer> rate() {

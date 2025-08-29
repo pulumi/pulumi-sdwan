@@ -37,15 +37,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Configure device as NTP master - Default value: `false`
+        /// Configure device as NTP master
+        ///   - Default value: `false`
         /// </summary>
         [Output("master")]
         public Output<bool?> Master { get; private set; } = null!;
@@ -63,7 +63,8 @@ namespace Pulumi.Sdwan
         public Output<string?> MasterSourceInterfaceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+        /// Master Stratum &lt;1..15&gt;
+        ///   - Range: `1`-`15`
         /// </summary>
         [Output("masterStratum")]
         public Output<int?> MasterStratum { get; private set; } = null!;
@@ -184,9 +185,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -195,7 +195,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Configure device as NTP master - Default value: `false`
+        /// Configure device as NTP master
+        ///   - Default value: `false`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }
@@ -213,7 +214,8 @@ namespace Pulumi.Sdwan
         public Input<string>? MasterSourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+        /// Master Stratum &lt;1..15&gt;
+        ///   - Range: `1`-`15`
         /// </summary>
         [Input("masterStratum")]
         public Input<int>? MasterStratum { get; set; }
@@ -296,9 +298,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -307,7 +308,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Configure device as NTP master - Default value: `false`
+        /// Configure device as NTP master
+        ///   - Default value: `false`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }
@@ -325,7 +327,8 @@ namespace Pulumi.Sdwan
         public Input<string>? MasterSourceInterfaceVariable { get; set; }
 
         /// <summary>
-        /// Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+        /// Master Stratum &lt;1..15&gt;
+        ///   - Range: `1`-`15`
         /// </summary>
         [Input("masterStratum")]
         public Input<int>? MasterStratum { get; set; }

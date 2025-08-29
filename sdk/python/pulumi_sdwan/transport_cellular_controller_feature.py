@@ -38,14 +38,18 @@ class TransportCellularControllerFeatureArgs:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] cellular_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`1`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`1`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         """
         pulumi.set(__self__, "cellular_id", cellular_id)
@@ -125,7 +129,8 @@ class TransportCellularControllerFeatureArgs:
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -161,7 +166,8 @@ class TransportCellularControllerFeatureArgs:
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`1`
+        Set primary SIM slot
+          - Range: `0`-`1`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -185,7 +191,8 @@ class TransportCellularControllerFeatureArgs:
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -209,7 +216,8 @@ class TransportCellularControllerFeatureArgs:
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 
@@ -253,14 +261,18 @@ class _TransportCellularControllerFeatureState:
         :param pulumi.Input[_builtins.str] cellular_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`1`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`1`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -345,7 +357,8 @@ class _TransportCellularControllerFeatureState:
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -381,7 +394,8 @@ class _TransportCellularControllerFeatureState:
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`1`
+        Set primary SIM slot
+          - Range: `0`-`1`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -405,7 +419,8 @@ class _TransportCellularControllerFeatureState:
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -429,7 +444,8 @@ class _TransportCellularControllerFeatureState:
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 
@@ -519,14 +535,18 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cellular_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`1`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`1`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         """
         ...
@@ -656,14 +676,18 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] cellular_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim - Default value: `true`
+        :param pulumi.Input[_builtins.bool] firmware_auto_sim: Enable/Disable Firmware Auto Sim
+                 - Default value: `true`
         :param pulumi.Input[_builtins.str] firmware_auto_sim_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot - Range: `0`-`1`
+        :param pulumi.Input[_builtins.int] primary_sim_slot: Set primary SIM slot
+                 - Range: `0`-`1`
         :param pulumi.Input[_builtins.str] primary_sim_slot_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries - Range: `0`-`65535`
+        :param pulumi.Input[_builtins.int] sim_failover_retries: Set SIM failover retries
+                 - Range: `0`-`65535`
         :param pulumi.Input[_builtins.str] sim_failover_retries_variable: Variable name
-        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes - Range: `3`-`7`
+        :param pulumi.Input[_builtins.int] sim_failover_timeout: Set SIM failover timeout in minutes
+                 - Range: `3`-`7`
         :param pulumi.Input[_builtins.str] sim_failover_timeout_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -723,7 +747,8 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
     @pulumi.getter(name="firmwareAutoSim")
     def firmware_auto_sim(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable/Disable Firmware Auto Sim - Default value: `true`
+        Enable/Disable Firmware Auto Sim
+          - Default value: `true`
         """
         return pulumi.get(self, "firmware_auto_sim")
 
@@ -747,7 +772,8 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
     @pulumi.getter(name="primarySimSlot")
     def primary_sim_slot(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set primary SIM slot - Range: `0`-`1`
+        Set primary SIM slot
+          - Range: `0`-`1`
         """
         return pulumi.get(self, "primary_sim_slot")
 
@@ -763,7 +789,8 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
     @pulumi.getter(name="simFailoverRetries")
     def sim_failover_retries(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set SIM failover retries - Range: `0`-`65535`
+        Set SIM failover retries
+          - Range: `0`-`65535`
         """
         return pulumi.get(self, "sim_failover_retries")
 
@@ -779,7 +806,8 @@ class TransportCellularControllerFeature(pulumi.CustomResource):
     @pulumi.getter(name="simFailoverTimeout")
     def sim_failover_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set SIM failover timeout in minutes - Range: `3`-`7`
+        Set SIM failover timeout in minutes
+          - Range: `3`-`7`
         """
         return pulumi.get(self, "sim_failover_timeout")
 

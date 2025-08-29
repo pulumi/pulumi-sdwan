@@ -53,7 +53,8 @@ namespace Pulumi.Sdwan
         public Output<string> CliConfiguration { get; private set; } = null!;
 
         /// <summary>
-        /// CLI type - Choices: `device`, `intend`
+        /// CLI type
+        ///   - Choices: `device`, `intend`
         /// </summary>
         [Output("cliType")]
         public Output<string> CliType { get; private set; } = null!;
@@ -135,7 +136,8 @@ namespace Pulumi.Sdwan
         public Input<string> CliConfiguration { get; set; } = null!;
 
         /// <summary>
-        /// CLI type - Choices: `device`, `intend`
+        /// CLI type
+        ///   - Choices: `device`, `intend`
         /// </summary>
         [Input("cliType", required: true)]
         public Input<string> CliType { get; set; } = null!;
@@ -173,7 +175,8 @@ namespace Pulumi.Sdwan
         public Input<string>? CliConfiguration { get; set; }
 
         /// <summary>
-        /// CLI type - Choices: `device`, `intend`
+        /// CLI type
+        ///   - Choices: `device`, `intend`
         /// </summary>
         [Input("cliType")]
         public Input<string>? CliType { get; set; }

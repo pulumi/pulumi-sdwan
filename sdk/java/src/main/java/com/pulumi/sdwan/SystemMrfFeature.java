@@ -89,14 +89,16 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     @Export(name="enableMigrationToMrf", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> enableMigrationToMrf;
 
     /**
-     * @return Enable migration mode to Multi-Region Fabric - Choices: `enabled`, `enabled-from-bgp-core`
+     * @return Enable migration mode to Multi-Region Fabric
+     *   - Choices: `enabled`, `enabled-from-bgp-core`
      * 
      */
     public Output<Optional<String>> enableMigrationToMrf() {
@@ -117,14 +119,16 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return this.featureProfileId;
     }
     /**
-     * Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     @Export(name="migrationBgpCommunity", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> migrationBgpCommunity;
 
     /**
-     * @return Set BGP community during migration from BGP-core based network - Range: `1`-`4294967295`
+     * @return Set BGP community during migration from BGP-core based network
+     *   - Range: `1`-`4294967295`
      * 
      */
     public Output<Optional<Integer>> migrationBgpCommunity() {
@@ -145,28 +149,32 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Set region ID - Range: `1`-`63`
+     * Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Export(name="regionId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> regionId;
 
     /**
-     * @return Set region ID - Range: `1`-`63`
+     * @return Set region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Output<Optional<Integer>> regionId() {
         return Codegen.optional(this.regionId);
     }
     /**
-     * Set the role for router - Choices: `edge-router`, `border-router`
+     * Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     @Export(name="role", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> role;
 
     /**
-     * @return Set the role for router - Choices: `edge-router`, `border-router`
+     * @return Set the role for router
+     *   - Choices: `edge-router`, `border-router`
      * 
      */
     public Output<Optional<String>> role() {
@@ -187,14 +195,16 @@ public class SystemMrfFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.roleVariable);
     }
     /**
-     * Set secondary region ID - Range: `1`-`63`
+     * Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     @Export(name="secondaryRegionId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> secondaryRegionId;
 
     /**
-     * @return Set secondary region ID - Range: `1`-`63`
+     * @return Set secondary region ID
+     *   - Range: `1`-`63`
      * 
      */
     public Output<Optional<Integer>> secondaryRegionId() {

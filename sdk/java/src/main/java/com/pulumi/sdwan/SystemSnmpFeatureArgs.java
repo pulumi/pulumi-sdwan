@@ -159,14 +159,16 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Enable or disable SNMP - Default value: `false`
+     * Enable or disable SNMP
+     *   - Default value: `false`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Enable or disable SNMP - Default value: `false`
+     * @return Enable or disable SNMP
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -480,7 +482,8 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param shutdown Enable or disable SNMP - Default value: `false`
+         * @param shutdown Enable or disable SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -491,7 +494,8 @@ public final class SystemSnmpFeatureArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param shutdown Enable or disable SNMP - Default value: `false`
+         * @param shutdown Enable or disable SNMP
+         *   - Default value: `false`
          * 
          * @return builder
          * 

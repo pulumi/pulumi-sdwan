@@ -49,14 +49,16 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     @Import(name="gpsEnable")
     private @Nullable Output<Boolean> gpsEnable;
 
     /**
-     * @return Enable/disable GPS - Default value: `false`
+     * @return Enable/disable GPS
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> gpsEnable() {
@@ -79,14 +81,18 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     @Import(name="gpsMode")
     private @Nullable Output<String> gpsMode;
 
     /**
-     * @return Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * @return Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      * 
      */
     public Optional<Output<String>> gpsMode() {
@@ -154,14 +160,16 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="nmeaDestinationPort")
     private @Nullable Output<Integer> nmeaDestinationPort;
 
     /**
-     * @return Destination port - Range: `1`-`65535`
+     * @return Destination port
+     *   - Range: `1`-`65535`
      * 
      */
     public Optional<Output<Integer>> nmeaDestinationPort() {
@@ -184,14 +192,16 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     @Import(name="nmeaEnable")
     private @Nullable Output<Boolean> nmeaEnable;
 
     /**
-     * @return Enable/disable NMEA data - Default value: `false`
+     * @return Enable/disable NMEA data
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> nmeaEnable() {
@@ -324,7 +334,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param gpsEnable Enable/disable GPS - Default value: `false`
+         * @param gpsEnable Enable/disable GPS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -335,7 +346,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param gpsEnable Enable/disable GPS - Default value: `false`
+         * @param gpsEnable Enable/disable GPS
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -366,7 +378,9 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param gpsMode Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+         * @param gpsMode Select GPS mode
+         *   - Choices: `ms-based`, `standalone`
+         *   - Default value: `ms-based`
          * 
          * @return builder
          * 
@@ -377,7 +391,9 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param gpsMode Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+         * @param gpsMode Select GPS mode
+         *   - Choices: `ms-based`, `standalone`
+         *   - Default value: `ms-based`
          * 
          * @return builder
          * 
@@ -471,7 +487,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param nmeaDestinationPort Destination port - Range: `1`-`65535`
+         * @param nmeaDestinationPort Destination port
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -482,7 +499,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param nmeaDestinationPort Destination port - Range: `1`-`65535`
+         * @param nmeaDestinationPort Destination port
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -513,7 +531,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param nmeaEnable Enable/disable NMEA data - Default value: `false`
+         * @param nmeaEnable Enable/disable NMEA data
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -524,7 +543,8 @@ public final class TransportGpsFeatureArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param nmeaEnable Enable/disable NMEA data - Default value: `false`
+         * @param nmeaEnable Enable/disable NMEA data
+         *   - Default value: `false`
          * 
          * @return builder
          * 

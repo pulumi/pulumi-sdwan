@@ -31,7 +31,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.EigrpFeatureTemplateAddressFamily>> AddressFamilies { get; private set; } = null!;
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Output("asNumber")]
         public Output<int?> AsNumber { get; private set; } = null!;
@@ -43,7 +44,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AsNumberVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -61,15 +63,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -81,7 +83,9 @@ namespace Pulumi.Sdwan
         public Output<string?> FilterVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Output("helloInterval")]
         public Output<int?> HelloInterval { get; private set; } = null!;
@@ -105,7 +109,9 @@ namespace Pulumi.Sdwan
         public Output<string?> HmacAuthenticationKeyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Output("holdTime")]
         public Output<int?> HoldTime { get; private set; } = null!;
@@ -217,7 +223,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("asNumber")]
         public Input<int>? AsNumber { get; set; }
@@ -229,7 +236,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -250,9 +258,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -261,7 +268,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -273,7 +281,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FilterVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Input("helloInterval")]
         public Input<int>? HelloInterval { get; set; }
@@ -297,7 +307,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }
@@ -371,7 +383,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+        /// Set autonomous system ID &lt;1..65535&gt;
+        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("asNumber")]
         public Input<int>? AsNumber { get; set; }
@@ -383,7 +396,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AsNumberVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        /// Set EIGRP router authentication type
+        ///   - Choices: `md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -404,9 +418,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -415,7 +428,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Selective route download - Default value: `false`
+        /// Selective route download
+        ///   - Default value: `false`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -427,7 +441,9 @@ namespace Pulumi.Sdwan
         public Input<string>? FilterVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        /// Set EIGRP hello interval
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `5`
         /// </summary>
         [Input("helloInterval")]
         public Input<int>? HelloInterval { get; set; }
@@ -451,7 +467,9 @@ namespace Pulumi.Sdwan
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
 
         /// <summary>
-        /// Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        /// Set EIGRP hold time
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `15`
         /// </summary>
         [Input("holdTime")]
         public Input<int>? HoldTime { get; set; }

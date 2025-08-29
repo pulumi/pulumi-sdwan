@@ -59,19 +59,19 @@ export class MirrorPolicyObject extends pulumi.CustomResource {
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Remote destination IP
      */
-    public readonly remoteDestinationIp!: pulumi.Output<string>;
+    declare public readonly remoteDestinationIp: pulumi.Output<string>;
     /**
      * Source IP
      */
-    public readonly sourceIp!: pulumi.Output<string>;
+    declare public readonly sourceIp: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a MirrorPolicyObject resource with the given unique name, arguments, and options.
@@ -86,21 +86,21 @@ export class MirrorPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as MirrorPolicyObjectState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["remoteDestinationIp"] = state ? state.remoteDestinationIp : undefined;
-            resourceInputs["sourceIp"] = state ? state.sourceIp : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["remoteDestinationIp"] = state?.remoteDestinationIp;
+            resourceInputs["sourceIp"] = state?.sourceIp;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as MirrorPolicyObjectArgs | undefined;
-            if ((!args || args.remoteDestinationIp === undefined) && !opts.urn) {
+            if (args?.remoteDestinationIp === undefined && !opts.urn) {
                 throw new Error("Missing required property 'remoteDestinationIp'");
             }
-            if ((!args || args.sourceIp === undefined) && !opts.urn) {
+            if (args?.sourceIp === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sourceIp'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["remoteDestinationIp"] = args ? args.remoteDestinationIp : undefined;
-            resourceInputs["sourceIp"] = args ? args.sourceIp : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["remoteDestinationIp"] = args?.remoteDestinationIp;
+            resourceInputs["sourceIp"] = args?.sourceIp;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

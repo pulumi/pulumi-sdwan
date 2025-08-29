@@ -88,14 +88,16 @@ public class FeatureDeviceTemplate extends com.pulumi.resources.CustomResource {
         return this.description;
     }
     /**
-     * The device role - Choices: `sdwan-edge`, `service-node`
+     * The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      * 
      */
     @Export(name="deviceRole", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> deviceRole;
 
     /**
-     * @return The device role - Choices: `sdwan-edge`, `service-node`
+     * @return The device role
+     *   - Choices: `sdwan-edge`, `service-node`
      * 
      */
     public Output<Optional<String>> deviceRole() {

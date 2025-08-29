@@ -35,13 +35,18 @@ class CflowdPolicyDefinitionArgs:
         The set of arguments for constructing a CflowdPolicyDefinition resource.
         :param pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
-        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
-        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`
+        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
+                 - Range: `30`-`3600`
+        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
+                 - Range: `60`-`86400`
+        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
+                 - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
+                 - Choices: `ipv4`, `ipv6`, `all`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
-        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.bool] tos: Collect TOS record field
         """
         pulumi.set(__self__, "collectors", collectors)
@@ -91,7 +96,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter(name="activeFlowTimeout")
     def active_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Active flow timeout in seconds - Range: `30`-`3600`
+        Active flow timeout in seconds
+          - Range: `30`-`3600`
         """
         return pulumi.get(self, "active_flow_timeout")
 
@@ -103,7 +109,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter(name="flowRefresh")
     def flow_refresh(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Flow refresh in seconds - Range: `60`-`86400`
+        Flow refresh in seconds
+          - Range: `60`-`86400`
         """
         return pulumi.get(self, "flow_refresh")
 
@@ -115,7 +122,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter(name="inactiveFlowTimeout")
     def inactive_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Inactive flow timeout in seconds - Range: `1`-`3600`
+        Inactive flow timeout in seconds
+          - Range: `1`-`3600`
         """
         return pulumi.get(self, "inactive_flow_timeout")
 
@@ -139,7 +147,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
         """
         return pulumi.get(self, "protocol")
 
@@ -163,7 +172,8 @@ class CflowdPolicyDefinitionArgs:
     @pulumi.getter(name="samplingInterval")
     def sampling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Flow sampling interval - Range: `1`-`65536`
+        Flow sampling interval
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "sampling_interval")
 
@@ -201,15 +211,20 @@ class _CflowdPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering CflowdPolicyDefinition resources.
-        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
+        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
+                 - Range: `30`-`3600`
         :param pulumi.Input[Sequence[pulumi.Input['CflowdPolicyDefinitionCollectorArgs']]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
-        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`
+        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
+                 - Range: `60`-`86400`
+        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
+                 - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
+                 - Choices: `ipv4`, `ipv6`, `all`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
-        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.bool] tos: Collect TOS record field
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -243,7 +258,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter(name="activeFlowTimeout")
     def active_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Active flow timeout in seconds - Range: `30`-`3600`
+        Active flow timeout in seconds
+          - Range: `30`-`3600`
         """
         return pulumi.get(self, "active_flow_timeout")
 
@@ -279,7 +295,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter(name="flowRefresh")
     def flow_refresh(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Flow refresh in seconds - Range: `60`-`86400`
+        Flow refresh in seconds
+          - Range: `60`-`86400`
         """
         return pulumi.get(self, "flow_refresh")
 
@@ -291,7 +308,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter(name="inactiveFlowTimeout")
     def inactive_flow_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Inactive flow timeout in seconds - Range: `1`-`3600`
+        Inactive flow timeout in seconds
+          - Range: `1`-`3600`
         """
         return pulumi.get(self, "inactive_flow_timeout")
 
@@ -315,7 +333,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter
     def protocol(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
         """
         return pulumi.get(self, "protocol")
 
@@ -339,7 +358,8 @@ class _CflowdPolicyDefinitionState:
     @pulumi.getter(name="samplingInterval")
     def sampling_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Flow sampling interval - Range: `1`-`65536`
+        Flow sampling interval
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "sampling_interval")
 
@@ -414,15 +434,20 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
+        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
+                 - Range: `30`-`3600`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
-        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`
+        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
+                 - Range: `60`-`86400`
+        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
+                 - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
+                 - Choices: `ipv4`, `ipv6`, `all`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
-        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.bool] tos: Collect TOS record field
         """
         ...
@@ -521,15 +546,20 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds - Range: `30`-`3600`
+        :param pulumi.Input[_builtins.int] active_flow_timeout: Active flow timeout in seconds
+                 - Range: `30`-`3600`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CflowdPolicyDefinitionCollectorArgs', 'CflowdPolicyDefinitionCollectorArgsDict']]]] collectors: List of collectors
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds - Range: `60`-`86400`
-        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds - Range: `1`-`3600`
+        :param pulumi.Input[_builtins.int] flow_refresh: Flow refresh in seconds
+                 - Range: `60`-`86400`
+        :param pulumi.Input[_builtins.int] inactive_flow_timeout: Inactive flow timeout in seconds
+                 - Range: `1`-`3600`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
-        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        :param pulumi.Input[_builtins.str] protocol: Protocol, either `ipv4`, `ipv6` or `all`
+                 - Choices: `ipv4`, `ipv6`, `all`
         :param pulumi.Input[_builtins.bool] remarked_dscp: Collect remarked DSCP
-        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval - Range: `1`-`65536`
+        :param pulumi.Input[_builtins.int] sampling_interval: Flow sampling interval
+                 - Range: `1`-`65536`
         :param pulumi.Input[_builtins.bool] tos: Collect TOS record field
         :param pulumi.Input[_builtins.str] type: Type
         :param pulumi.Input[_builtins.int] version: The version of the object
@@ -556,7 +586,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="activeFlowTimeout")
     def active_flow_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Active flow timeout in seconds - Range: `30`-`3600`
+        Active flow timeout in seconds
+          - Range: `30`-`3600`
         """
         return pulumi.get(self, "active_flow_timeout")
 
@@ -580,7 +611,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="flowRefresh")
     def flow_refresh(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Flow refresh in seconds - Range: `60`-`86400`
+        Flow refresh in seconds
+          - Range: `60`-`86400`
         """
         return pulumi.get(self, "flow_refresh")
 
@@ -588,7 +620,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="inactiveFlowTimeout")
     def inactive_flow_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Inactive flow timeout in seconds - Range: `1`-`3600`
+        Inactive flow timeout in seconds
+          - Range: `1`-`3600`
         """
         return pulumi.get(self, "inactive_flow_timeout")
 
@@ -604,7 +637,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter
     def protocol(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        Protocol, either `ipv4`, `ipv6` or `all`
+          - Choices: `ipv4`, `ipv6`, `all`
         """
         return pulumi.get(self, "protocol")
 
@@ -620,7 +654,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="samplingInterval")
     def sampling_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Flow sampling interval - Range: `1`-`65536`
+        Flow sampling interval
+          - Range: `1`-`65536`
         """
         return pulumi.get(self, "sampling_interval")
 

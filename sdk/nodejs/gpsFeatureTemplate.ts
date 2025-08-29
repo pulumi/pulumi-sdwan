@@ -66,73 +66,77 @@ export class GpsFeatureTemplate extends pulumi.CustomResource {
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Destination address
      */
-    public readonly destinationAddress!: pulumi.Output<string | undefined>;
+    declare public readonly destinationAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly destinationAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly destinationAddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
-    public readonly destinationPort!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly destinationPortVariable!: pulumi.Output<string | undefined>;
-    /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-     */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
-    /**
-     * Enable/disable GPS - Default value: `false`
-     */
-    public readonly enable!: pulumi.Output<boolean | undefined>;
+    declare public readonly destinationPort: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly enableVariable!: pulumi.Output<string | undefined>;
+    declare public readonly destinationPortVariable: pulumi.Output<string | undefined>;
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly gpsMode!: pulumi.Output<string | undefined>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
+    /**
+     * Enable/disable GPS
+     *   - Default value: `false`
+     */
+    declare public readonly enable: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly gpsModeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enableVariable: pulumi.Output<string | undefined>;
+    /**
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
+     */
+    declare public readonly gpsMode: pulumi.Output<string | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly gpsModeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      */
-    public readonly nmea!: pulumi.Output<boolean | undefined>;
+    declare public readonly nmea: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly nmeaVariable!: pulumi.Output<string | undefined>;
+    declare public readonly nmeaVariable: pulumi.Output<string | undefined>;
     /**
      * Source address
      */
-    public readonly sourceAddress!: pulumi.Output<string | undefined>;
+    declare public readonly sourceAddress: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sourceAddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sourceAddressVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a GpsFeatureTemplate resource with the given unique name, arguments, and options.
@@ -147,46 +151,46 @@ export class GpsFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as GpsFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["destinationAddress"] = state ? state.destinationAddress : undefined;
-            resourceInputs["destinationAddressVariable"] = state ? state.destinationAddressVariable : undefined;
-            resourceInputs["destinationPort"] = state ? state.destinationPort : undefined;
-            resourceInputs["destinationPortVariable"] = state ? state.destinationPortVariable : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["enable"] = state ? state.enable : undefined;
-            resourceInputs["enableVariable"] = state ? state.enableVariable : undefined;
-            resourceInputs["gpsMode"] = state ? state.gpsMode : undefined;
-            resourceInputs["gpsModeVariable"] = state ? state.gpsModeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nmea"] = state ? state.nmea : undefined;
-            resourceInputs["nmeaVariable"] = state ? state.nmeaVariable : undefined;
-            resourceInputs["sourceAddress"] = state ? state.sourceAddress : undefined;
-            resourceInputs["sourceAddressVariable"] = state ? state.sourceAddressVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["destinationAddress"] = state?.destinationAddress;
+            resourceInputs["destinationAddressVariable"] = state?.destinationAddressVariable;
+            resourceInputs["destinationPort"] = state?.destinationPort;
+            resourceInputs["destinationPortVariable"] = state?.destinationPortVariable;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["enable"] = state?.enable;
+            resourceInputs["enableVariable"] = state?.enableVariable;
+            resourceInputs["gpsMode"] = state?.gpsMode;
+            resourceInputs["gpsModeVariable"] = state?.gpsModeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nmea"] = state?.nmea;
+            resourceInputs["nmeaVariable"] = state?.nmeaVariable;
+            resourceInputs["sourceAddress"] = state?.sourceAddress;
+            resourceInputs["sourceAddressVariable"] = state?.sourceAddressVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as GpsFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["destinationAddress"] = args ? args.destinationAddress : undefined;
-            resourceInputs["destinationAddressVariable"] = args ? args.destinationAddressVariable : undefined;
-            resourceInputs["destinationPort"] = args ? args.destinationPort : undefined;
-            resourceInputs["destinationPortVariable"] = args ? args.destinationPortVariable : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["enable"] = args ? args.enable : undefined;
-            resourceInputs["enableVariable"] = args ? args.enableVariable : undefined;
-            resourceInputs["gpsMode"] = args ? args.gpsMode : undefined;
-            resourceInputs["gpsModeVariable"] = args ? args.gpsModeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nmea"] = args ? args.nmea : undefined;
-            resourceInputs["nmeaVariable"] = args ? args.nmeaVariable : undefined;
-            resourceInputs["sourceAddress"] = args ? args.sourceAddress : undefined;
-            resourceInputs["sourceAddressVariable"] = args ? args.sourceAddressVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["destinationAddress"] = args?.destinationAddress;
+            resourceInputs["destinationAddressVariable"] = args?.destinationAddressVariable;
+            resourceInputs["destinationPort"] = args?.destinationPort;
+            resourceInputs["destinationPortVariable"] = args?.destinationPortVariable;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["enable"] = args?.enable;
+            resourceInputs["enableVariable"] = args?.enableVariable;
+            resourceInputs["gpsMode"] = args?.gpsMode;
+            resourceInputs["gpsModeVariable"] = args?.gpsModeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nmea"] = args?.nmea;
+            resourceInputs["nmeaVariable"] = args?.nmeaVariable;
+            resourceInputs["sourceAddress"] = args?.sourceAddress;
+            resourceInputs["sourceAddressVariable"] = args?.sourceAddressVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -212,7 +216,8 @@ export interface GpsFeatureTemplateState {
      */
     destinationAddressVariable?: pulumi.Input<string>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
     destinationPort?: pulumi.Input<number>;
     /**
@@ -220,13 +225,13 @@ export interface GpsFeatureTemplateState {
      */
     destinationPortVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      */
     enable?: pulumi.Input<boolean>;
     /**
@@ -234,7 +239,9 @@ export interface GpsFeatureTemplateState {
      */
     enableVariable?: pulumi.Input<string>;
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      */
     gpsMode?: pulumi.Input<string>;
     /**
@@ -246,7 +253,8 @@ export interface GpsFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      */
     nmea?: pulumi.Input<boolean>;
     /**
@@ -288,7 +296,8 @@ export interface GpsFeatureTemplateArgs {
      */
     destinationAddressVariable?: pulumi.Input<string>;
     /**
-     * Destination port - Range: `1`-`65535`
+     * Destination port
+     *   - Range: `1`-`65535`
      */
     destinationPort?: pulumi.Input<number>;
     /**
@@ -296,13 +305,13 @@ export interface GpsFeatureTemplateArgs {
      */
     destinationPortVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Enable/disable GPS - Default value: `false`
+     * Enable/disable GPS
+     *   - Default value: `false`
      */
     enable?: pulumi.Input<boolean>;
     /**
@@ -310,7 +319,9 @@ export interface GpsFeatureTemplateArgs {
      */
     enableVariable?: pulumi.Input<string>;
     /**
-     * Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+     * Select GPS mode
+     *   - Choices: `ms-based`, `standalone`
+     *   - Default value: `ms-based`
      */
     gpsMode?: pulumi.Input<string>;
     /**
@@ -322,7 +333,8 @@ export interface GpsFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Enable/disable NMEA data - Default value: `false`
+     * Enable/disable NMEA data
+     *   - Default value: `false`
      */
     nmea?: pulumi.Input<boolean>;
     /**

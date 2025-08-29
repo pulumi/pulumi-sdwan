@@ -150,14 +150,16 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      * 
      */
     @Export(name="solution", refs={String.class}, tree="[0]")
     private Output<String> solution;
 
     /**
-     * @return Type of solution - Choices: `mobility`, `sdwan`, `nfvirtual`
+     * @return Type of solution
+     *   - Choices: `mobility`, `sdwan`, `nfvirtual`
      * 
      */
     public Output<String> solution() {
@@ -178,14 +180,16 @@ public class ConfigurationGroup extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.topologyDevices);
     }
     /**
-     * Number of devices per site - Range: `1`-`20`
+     * Number of devices per site
+     *   - Range: `1`-`20`
      * 
      */
     @Export(name="topologySiteDevices", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> topologySiteDevices;
 
     /**
-     * @return Number of devices per site - Range: `1`-`20`
+     * @return Number of devices per site
+     *   - Range: `1`-`20`
      * 
      */
     public Output<Optional<Integer>> topologySiteDevices() {

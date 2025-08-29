@@ -30,11 +30,14 @@ class PreferredColorGroupPolicyObjectArgs:
         The set of arguments for constructing a PreferredColorGroupPolicyObject resource.
         :param pulumi.Input[_builtins.str] primary_color_preference: Color or space separated list of colors
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] secondary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] tertiary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         pulumi.set(__self__, "primary_color_preference", primary_color_preference)
         if name is not None:
@@ -78,7 +81,8 @@ class PreferredColorGroupPolicyObjectArgs:
     @pulumi.getter(name="primaryPathPreference")
     def primary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "primary_path_preference")
 
@@ -102,7 +106,8 @@ class PreferredColorGroupPolicyObjectArgs:
     @pulumi.getter(name="secondaryPathPreference")
     def secondary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "secondary_path_preference")
 
@@ -126,7 +131,8 @@ class PreferredColorGroupPolicyObjectArgs:
     @pulumi.getter(name="tertiaryPathPreference")
     def tertiary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "tertiary_path_preference")
 
@@ -150,11 +156,14 @@ class _PreferredColorGroupPolicyObjectState:
         Input properties used for looking up and filtering PreferredColorGroupPolicyObject resources.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.str] primary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] secondary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] tertiary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         if name is not None:
@@ -202,7 +211,8 @@ class _PreferredColorGroupPolicyObjectState:
     @pulumi.getter(name="primaryPathPreference")
     def primary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "primary_path_preference")
 
@@ -226,7 +236,8 @@ class _PreferredColorGroupPolicyObjectState:
     @pulumi.getter(name="secondaryPathPreference")
     def secondary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "secondary_path_preference")
 
@@ -250,7 +261,8 @@ class _PreferredColorGroupPolicyObjectState:
     @pulumi.getter(name="tertiaryPathPreference")
     def tertiary_path_preference(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "tertiary_path_preference")
 
@@ -316,11 +328,14 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.str] primary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] secondary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] tertiary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         ...
     @overload
@@ -423,11 +438,14 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         :param pulumi.Input[_builtins.str] primary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] primary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] secondary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] secondary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.str] tertiary_color_preference: Color or space separated list of colors
-        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        :param pulumi.Input[_builtins.str] tertiary_path_preference: Path preference
+                 - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -464,7 +482,8 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="primaryPathPreference")
     def primary_path_preference(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "primary_path_preference")
 
@@ -480,7 +499,8 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="secondaryPathPreference")
     def secondary_path_preference(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "secondary_path_preference")
 
@@ -496,7 +516,8 @@ class PreferredColorGroupPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="tertiaryPathPreference")
     def tertiary_path_preference(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+        Path preference
+          - Choices: `direct-path`, `multi-hop-path`, `all-paths`
         """
         return pulumi.get(self, "tertiary_path_preference")
 

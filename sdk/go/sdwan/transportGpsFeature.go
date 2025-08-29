@@ -65,11 +65,14 @@ type TransportGpsFeature struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	GpsEnable pulumi.BoolPtrOutput `pulumi:"gpsEnable"`
 	// Variable name
 	GpsEnableVariable pulumi.StringPtrOutput `pulumi:"gpsEnableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrOutput `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable pulumi.StringPtrOutput `pulumi:"gpsModeVariable"`
@@ -79,11 +82,13 @@ type TransportGpsFeature struct {
 	NmeaDestinationAddress pulumi.StringPtrOutput `pulumi:"nmeaDestinationAddress"`
 	// Variable name
 	NmeaDestinationAddressVariable pulumi.StringPtrOutput `pulumi:"nmeaDestinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	NmeaDestinationPort pulumi.IntPtrOutput `pulumi:"nmeaDestinationPort"`
 	// Variable name
 	NmeaDestinationPortVariable pulumi.StringPtrOutput `pulumi:"nmeaDestinationPortVariable"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	NmeaEnable pulumi.BoolPtrOutput `pulumi:"nmeaEnable"`
 	// Variable name
 	NmeaEnableVariable pulumi.StringPtrOutput `pulumi:"nmeaEnableVariable"`
@@ -132,11 +137,14 @@ type transportGpsFeatureState struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	GpsEnable *bool `pulumi:"gpsEnable"`
 	// Variable name
 	GpsEnableVariable *string `pulumi:"gpsEnableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode *string `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable *string `pulumi:"gpsModeVariable"`
@@ -146,11 +154,13 @@ type transportGpsFeatureState struct {
 	NmeaDestinationAddress *string `pulumi:"nmeaDestinationAddress"`
 	// Variable name
 	NmeaDestinationAddressVariable *string `pulumi:"nmeaDestinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	NmeaDestinationPort *int `pulumi:"nmeaDestinationPort"`
 	// Variable name
 	NmeaDestinationPortVariable *string `pulumi:"nmeaDestinationPortVariable"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	NmeaEnable *bool `pulumi:"nmeaEnable"`
 	// Variable name
 	NmeaEnableVariable *string `pulumi:"nmeaEnableVariable"`
@@ -167,11 +177,14 @@ type TransportGpsFeatureState struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	GpsEnable pulumi.BoolPtrInput
 	// Variable name
 	GpsEnableVariable pulumi.StringPtrInput
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrInput
 	// Variable name
 	GpsModeVariable pulumi.StringPtrInput
@@ -181,11 +194,13 @@ type TransportGpsFeatureState struct {
 	NmeaDestinationAddress pulumi.StringPtrInput
 	// Variable name
 	NmeaDestinationAddressVariable pulumi.StringPtrInput
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	NmeaDestinationPort pulumi.IntPtrInput
 	// Variable name
 	NmeaDestinationPortVariable pulumi.StringPtrInput
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	NmeaEnable pulumi.BoolPtrInput
 	// Variable name
 	NmeaEnableVariable pulumi.StringPtrInput
@@ -206,11 +221,14 @@ type transportGpsFeatureArgs struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	GpsEnable *bool `pulumi:"gpsEnable"`
 	// Variable name
 	GpsEnableVariable *string `pulumi:"gpsEnableVariable"`
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode *string `pulumi:"gpsMode"`
 	// Variable name
 	GpsModeVariable *string `pulumi:"gpsModeVariable"`
@@ -220,11 +238,13 @@ type transportGpsFeatureArgs struct {
 	NmeaDestinationAddress *string `pulumi:"nmeaDestinationAddress"`
 	// Variable name
 	NmeaDestinationAddressVariable *string `pulumi:"nmeaDestinationAddressVariable"`
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	NmeaDestinationPort *int `pulumi:"nmeaDestinationPort"`
 	// Variable name
 	NmeaDestinationPortVariable *string `pulumi:"nmeaDestinationPortVariable"`
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	NmeaEnable *bool `pulumi:"nmeaEnable"`
 	// Variable name
 	NmeaEnableVariable *string `pulumi:"nmeaEnableVariable"`
@@ -240,11 +260,14 @@ type TransportGpsFeatureArgs struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Enable/disable GPS - Default value: `false`
+	// Enable/disable GPS
+	//   - Default value: `false`
 	GpsEnable pulumi.BoolPtrInput
 	// Variable name
 	GpsEnableVariable pulumi.StringPtrInput
-	// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+	// Select GPS mode
+	//   - Choices: `ms-based`, `standalone`
+	//   - Default value: `ms-based`
 	GpsMode pulumi.StringPtrInput
 	// Variable name
 	GpsModeVariable pulumi.StringPtrInput
@@ -254,11 +277,13 @@ type TransportGpsFeatureArgs struct {
 	NmeaDestinationAddress pulumi.StringPtrInput
 	// Variable name
 	NmeaDestinationAddressVariable pulumi.StringPtrInput
-	// Destination port - Range: `1`-`65535`
+	// Destination port
+	//   - Range: `1`-`65535`
 	NmeaDestinationPort pulumi.IntPtrInput
 	// Variable name
 	NmeaDestinationPortVariable pulumi.StringPtrInput
-	// Enable/disable NMEA data - Default value: `false`
+	// Enable/disable NMEA data
+	//   - Default value: `false`
 	NmeaEnable pulumi.BoolPtrInput
 	// Variable name
 	NmeaEnableVariable pulumi.StringPtrInput
@@ -365,7 +390,8 @@ func (o TransportGpsFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Enable/disable GPS - Default value: `false`
+// Enable/disable GPS
+//   - Default value: `false`
 func (o TransportGpsFeatureOutput) GpsEnable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.BoolPtrOutput { return v.GpsEnable }).(pulumi.BoolPtrOutput)
 }
@@ -375,7 +401,9 @@ func (o TransportGpsFeatureOutput) GpsEnableVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.StringPtrOutput { return v.GpsEnableVariable }).(pulumi.StringPtrOutput)
 }
 
-// Select GPS mode - Choices: `ms-based`, `standalone` - Default value: `ms-based`
+// Select GPS mode
+//   - Choices: `ms-based`, `standalone`
+//   - Default value: `ms-based`
 func (o TransportGpsFeatureOutput) GpsMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.StringPtrOutput { return v.GpsMode }).(pulumi.StringPtrOutput)
 }
@@ -400,7 +428,8 @@ func (o TransportGpsFeatureOutput) NmeaDestinationAddressVariable() pulumi.Strin
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.StringPtrOutput { return v.NmeaDestinationAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Destination port - Range: `1`-`65535`
+// Destination port
+//   - Range: `1`-`65535`
 func (o TransportGpsFeatureOutput) NmeaDestinationPort() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.IntPtrOutput { return v.NmeaDestinationPort }).(pulumi.IntPtrOutput)
 }
@@ -410,7 +439,8 @@ func (o TransportGpsFeatureOutput) NmeaDestinationPortVariable() pulumi.StringPt
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.StringPtrOutput { return v.NmeaDestinationPortVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable/disable NMEA data - Default value: `false`
+// Enable/disable NMEA data
+//   - Default value: `false`
 func (o TransportGpsFeatureOutput) NmeaEnable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportGpsFeature) pulumi.BoolPtrOutput { return v.NmeaEnable }).(pulumi.BoolPtrOutput)
 }

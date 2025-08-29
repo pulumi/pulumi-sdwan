@@ -68,32 +68,32 @@ public class CiscoNtpFeatureTemplate extends com.pulumi.resources.CustomResource
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Configure device as NTP master - Default value: `false`
+     * Configure device as NTP master
+     *   - Default value: `false`
      * 
      */
     @Export(name="master", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> master;
 
     /**
-     * @return Configure device as NTP master - Default value: `false`
+     * @return Configure device as NTP master
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> master() {
@@ -128,14 +128,16 @@ public class CiscoNtpFeatureTemplate extends com.pulumi.resources.CustomResource
         return Codegen.optional(this.masterSourceInterfaceVariable);
     }
     /**
-     * Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+     * Master Stratum &lt;1..15&gt;
+     *   - Range: `1`-`15`
      * 
      */
     @Export(name="masterStratum", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> masterStratum;
 
     /**
-     * @return Master Stratum &lt;1..15&gt; - Range: `1`-`15`
+     * @return Master Stratum &lt;1..15&gt;
+     *   - Range: `1`-`15`
      * 
      */
     public Output<Optional<Integer>> masterStratum() {

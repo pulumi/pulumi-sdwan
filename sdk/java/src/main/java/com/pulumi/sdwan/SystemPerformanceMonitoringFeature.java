@@ -92,14 +92,16 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
         return Codegen.optional(this.appPerfMonitorAppGroups);
     }
     /**
-     * Application performance monitoring enable or disable - Default value: `false`
+     * Application performance monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Export(name="appPerfMonitorEnabled", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> appPerfMonitorEnabled;
 
     /**
-     * @return Application performance monitoring enable or disable - Default value: `false`
+     * @return Application performance monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> appPerfMonitorEnabled() {
@@ -120,14 +122,16 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
         return Codegen.optional(this.description);
     }
     /**
-     * UMTS event driven monitoring enable or disable - Default value: `false`
+     * UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Export(name="eventDrivenConfigEnabled", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> eventDrivenConfigEnabled;
 
     /**
-     * @return UMTS event driven monitoring enable or disable - Default value: `false`
+     * @return UMTS event driven monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> eventDrivenConfigEnabled() {
@@ -162,28 +166,32 @@ public class SystemPerformanceMonitoringFeature extends com.pulumi.resources.Cus
         return this.featureProfileId;
     }
     /**
-     * UMTS monitoring enable or disable - Default value: `false`
+     * UMTS monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     @Export(name="monitoringConfigEnabled", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> monitoringConfigEnabled;
 
     /**
-     * @return UMTS monitoring enable or disable - Default value: `false`
+     * @return UMTS monitoring enable or disable
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> monitoringConfigEnabled() {
         return Codegen.optional(this.monitoringConfigEnabled);
     }
     /**
-     * UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      * 
      */
     @Export(name="monitoringConfigInterval", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> monitoringConfigInterval;
 
     /**
-     * @return UMTS monitoring interval(Minutes) - Choices: `30`, `60`
+     * @return UMTS monitoring interval(Minutes)
+     *   - Choices: `30`, `60`
      * 
      */
     public Output<Optional<String>> monitoringConfigInterval() {

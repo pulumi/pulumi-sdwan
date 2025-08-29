@@ -27,7 +27,9 @@ import (
 type TransportIpv6AclFeature struct {
 	pulumi.CustomResourceState
 
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
@@ -74,7 +76,9 @@ func GetTransportIpv6AclFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TransportIpv6AclFeature resources.
 type transportIpv6AclFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -89,7 +93,9 @@ type transportIpv6AclFeatureState struct {
 }
 
 type TransportIpv6AclFeatureState struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -108,7 +114,9 @@ func (TransportIpv6AclFeatureState) ElementType() reflect.Type {
 }
 
 type transportIpv6AclFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
@@ -122,7 +130,9 @@ type transportIpv6AclFeatureArgs struct {
 
 // The set of arguments for constructing a TransportIpv6AclFeature resource.
 type TransportIpv6AclFeatureArgs struct {
-	// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+	// Default Action
+	//   - Choices: `drop`, `accept`
+	//   - Default value: `drop`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
@@ -221,7 +231,9 @@ func (o TransportIpv6AclFeatureOutput) ToTransportIpv6AclFeatureOutputWithContex
 	return o
 }
 
-// Default Action - Choices: `drop`, `accept` - Default value: `drop`
+// Default Action
+//   - Choices: `drop`, `accept`
+//   - Default value: `drop`
 func (o TransportIpv6AclFeatureOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportIpv6AclFeature) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

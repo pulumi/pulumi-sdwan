@@ -28,20 +28,24 @@ type IntrusionPreventionPolicyDefinition struct {
 	CustomSignature pulumi.BoolPtrOutput `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
-	// The inspection mode - Choices: `protection`, `detection`
+	// The inspection mode
+	//   - Choices: `protection`, `detection`
 	InspectionMode pulumi.StringPtrOutput `pulumi:"inspectionMode"`
 	// IPS signature list ID
 	IpsSignatureListId pulumi.StringPtrOutput `pulumi:"ipsSignatureListId"`
 	// IPS signature list version
 	IpsSignatureListVersion pulumi.IntPtrOutput `pulumi:"ipsSignatureListVersion"`
-	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+	// Log level
+	//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel pulumi.StringPtrOutput                                `pulumi:"logLevel"`
 	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayOutput `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrOutput `pulumi:"mode"`
 	// The name of the policy definition
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Signature set - Choices: `balanced`, `connectivity`, `security`
+	// Signature set
+	//   - Choices: `balanced`, `connectivity`, `security`
 	SignatureSet pulumi.StringPtrOutput `pulumi:"signatureSet"`
 	// List of VPN IDs
 	TargetVpns pulumi.StringArrayOutput `pulumi:"targetVpns"`
@@ -86,20 +90,24 @@ type intrusionPreventionPolicyDefinitionState struct {
 	CustomSignature *bool `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
-	// The inspection mode - Choices: `protection`, `detection`
+	// The inspection mode
+	//   - Choices: `protection`, `detection`
 	InspectionMode *string `pulumi:"inspectionMode"`
 	// IPS signature list ID
 	IpsSignatureListId *string `pulumi:"ipsSignatureListId"`
 	// IPS signature list version
 	IpsSignatureListVersion *int `pulumi:"ipsSignatureListVersion"`
-	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+	// Log level
+	//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel *string                                      `pulumi:"logLevel"`
 	Loggings []IntrusionPreventionPolicyDefinitionLogging `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Signature set - Choices: `balanced`, `connectivity`, `security`
+	// Signature set
+	//   - Choices: `balanced`, `connectivity`, `security`
 	SignatureSet *string `pulumi:"signatureSet"`
 	// List of VPN IDs
 	TargetVpns []string `pulumi:"targetVpns"`
@@ -112,20 +120,24 @@ type IntrusionPreventionPolicyDefinitionState struct {
 	CustomSignature pulumi.BoolPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
-	// The inspection mode - Choices: `protection`, `detection`
+	// The inspection mode
+	//   - Choices: `protection`, `detection`
 	InspectionMode pulumi.StringPtrInput
 	// IPS signature list ID
 	IpsSignatureListId pulumi.StringPtrInput
 	// IPS signature list version
 	IpsSignatureListVersion pulumi.IntPtrInput
-	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+	// Log level
+	//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel pulumi.StringPtrInput
 	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Signature set - Choices: `balanced`, `connectivity`, `security`
+	// Signature set
+	//   - Choices: `balanced`, `connectivity`, `security`
 	SignatureSet pulumi.StringPtrInput
 	// List of VPN IDs
 	TargetVpns pulumi.StringArrayInput
@@ -142,20 +154,24 @@ type intrusionPreventionPolicyDefinitionArgs struct {
 	CustomSignature *bool `pulumi:"customSignature"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
-	// The inspection mode - Choices: `protection`, `detection`
+	// The inspection mode
+	//   - Choices: `protection`, `detection`
 	InspectionMode *string `pulumi:"inspectionMode"`
 	// IPS signature list ID
 	IpsSignatureListId *string `pulumi:"ipsSignatureListId"`
 	// IPS signature list version
 	IpsSignatureListVersion *int `pulumi:"ipsSignatureListVersion"`
-	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+	// Log level
+	//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel *string                                      `pulumi:"logLevel"`
 	Loggings []IntrusionPreventionPolicyDefinitionLogging `pulumi:"loggings"`
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode *string `pulumi:"mode"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Signature set - Choices: `balanced`, `connectivity`, `security`
+	// Signature set
+	//   - Choices: `balanced`, `connectivity`, `security`
 	SignatureSet *string `pulumi:"signatureSet"`
 	// List of VPN IDs
 	TargetVpns []string `pulumi:"targetVpns"`
@@ -167,20 +183,24 @@ type IntrusionPreventionPolicyDefinitionArgs struct {
 	CustomSignature pulumi.BoolPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
-	// The inspection mode - Choices: `protection`, `detection`
+	// The inspection mode
+	//   - Choices: `protection`, `detection`
 	InspectionMode pulumi.StringPtrInput
 	// IPS signature list ID
 	IpsSignatureListId pulumi.StringPtrInput
 	// IPS signature list version
 	IpsSignatureListVersion pulumi.IntPtrInput
-	// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+	// Log level
+	//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 	LogLevel pulumi.StringPtrInput
 	Loggings IntrusionPreventionPolicyDefinitionLoggingArrayInput
-	// The policy mode - Choices: `security`, `unified`
+	// The policy mode
+	//   - Choices: `security`, `unified`
 	Mode pulumi.StringPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Signature set - Choices: `balanced`, `connectivity`, `security`
+	// Signature set
+	//   - Choices: `balanced`, `connectivity`, `security`
 	SignatureSet pulumi.StringPtrInput
 	// List of VPN IDs
 	TargetVpns pulumi.StringArrayInput
@@ -283,7 +303,8 @@ func (o IntrusionPreventionPolicyDefinitionOutput) Description() pulumi.StringOu
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// The inspection mode - Choices: `protection`, `detection`
+// The inspection mode
+//   - Choices: `protection`, `detection`
 func (o IntrusionPreventionPolicyDefinitionOutput) InspectionMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringPtrOutput { return v.InspectionMode }).(pulumi.StringPtrOutput)
 }
@@ -298,7 +319,8 @@ func (o IntrusionPreventionPolicyDefinitionOutput) IpsSignatureListVersion() pul
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.IntPtrOutput { return v.IpsSignatureListVersion }).(pulumi.IntPtrOutput)
 }
 
-// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+// Log level
+//   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
 func (o IntrusionPreventionPolicyDefinitionOutput) LogLevel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringPtrOutput { return v.LogLevel }).(pulumi.StringPtrOutput)
 }
@@ -309,7 +331,8 @@ func (o IntrusionPreventionPolicyDefinitionOutput) Loggings() IntrusionPreventio
 	}).(IntrusionPreventionPolicyDefinitionLoggingArrayOutput)
 }
 
-// The policy mode - Choices: `security`, `unified`
+// The policy mode
+//   - Choices: `security`, `unified`
 func (o IntrusionPreventionPolicyDefinitionOutput) Mode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringPtrOutput { return v.Mode }).(pulumi.StringPtrOutput)
 }
@@ -319,7 +342,8 @@ func (o IntrusionPreventionPolicyDefinitionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Signature set - Choices: `balanced`, `connectivity`, `security`
+// Signature set
+//   - Choices: `balanced`, `connectivity`, `security`
 func (o IntrusionPreventionPolicyDefinitionOutput) SignatureSet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IntrusionPreventionPolicyDefinition) pulumi.StringPtrOutput { return v.SignatureSet }).(pulumi.StringPtrOutput)
 }

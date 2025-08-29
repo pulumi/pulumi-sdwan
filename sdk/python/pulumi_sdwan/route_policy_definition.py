@@ -28,7 +28,8 @@ class RoutePolicyDefinitionArgs:
         """
         The set of arguments for constructing a RoutePolicyDefinition resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]] sequences: List of ACL sequences
         """
@@ -56,7 +57,8 @@ class RoutePolicyDefinitionArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -100,7 +102,8 @@ class _RoutePolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering RoutePolicyDefinition resources.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['RoutePolicyDefinitionSequenceArgs']]] sequences: List of ACL sequences
@@ -124,7 +127,8 @@ class _RoutePolicyDefinitionState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 
@@ -217,7 +221,8 @@ class RoutePolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
@@ -298,7 +303,8 @@ class RoutePolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `reject`
+                 - Choices: `accept`, `reject`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['RoutePolicyDefinitionSequenceArgs', 'RoutePolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
@@ -321,7 +327,8 @@ class RoutePolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+        Default action, either `accept` or `reject`
+          - Choices: `accept`, `reject`
         """
         return pulumi.get(self, "default_action")
 

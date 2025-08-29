@@ -85,32 +85,41 @@ import (
 type ServiceLanVpnInterfaceIpsecFeature struct {
 	pulumi.CustomResourceState
 
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrOutput `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrOutput `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrOutput `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"clearDontFragmentVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DpdInterval pulumi.IntPtrOutput `pulumi:"dpdInterval"`
 	// Variable name
 	DpdIntervalVariable pulumi.StringPtrOutput `pulumi:"dpdIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DpdRetries pulumi.IntPtrOutput `pulumi:"dpdRetries"`
 	// Variable name
 	DpdRetriesVariable pulumi.StringPtrOutput `pulumi:"dpdRetriesVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrOutput `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrOutput `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeDiffieHellmanGroup pulumi.StringPtrOutput `pulumi:"ikeDiffieHellmanGroup"`
 	// Variable name
 	IkeDiffieHellmanGroupVariable pulumi.StringPtrOutput `pulumi:"ikeDiffieHellmanGroupVariable"`
@@ -122,7 +131,9 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	IkeIdRemoteEndPoint pulumi.StringPtrOutput `pulumi:"ikeIdRemoteEndPoint"`
 	// Variable name
 	IkeIdRemoteEndPointVariable pulumi.StringPtrOutput `pulumi:"ikeIdRemoteEndPointVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeIntegrityProtocol pulumi.StringPtrOutput `pulumi:"ikeIntegrityProtocol"`
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrOutput `pulumi:"ikeIntegrityProtocolVariable"`
@@ -130,11 +141,15 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	IkePresharedKey pulumi.StringPtrOutput `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrOutput `pulumi:"ikePresharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrOutput `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrOutput `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrOutput `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
@@ -144,49 +159,54 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	InterfaceName pulumi.StringPtrOutput `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrOutput `pulumi:"interfaceNameVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrOutput `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrOutput `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrOutput `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrOutput `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrOutput `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrOutput `pulumi:"ipsecReplayWindowVariable"`
 	Ipv4Address               pulumi.StringPtrOutput `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	PerfectForwardSecrecy pulumi.StringPtrOutput `pulumi:"perfectForwardSecrecy"`
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrOutput `pulumi:"perfectForwardSecrecyVariable"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringOutput `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrOutput `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable pulumi.StringPtrOutput `pulumi:"tcpMssVariable"`
@@ -197,11 +217,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	TunnelDestinationIpv4Address pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelDestinationIpv4SubnetMask pulumi.StringOutput `pulumi:"tunnelDestinationIpv4SubnetMask"`
 	// Variable name
 	TunnelDestinationIpv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"tunnelDestinationIpv4SubnetMaskVariable"`
@@ -216,11 +232,7 @@ type ServiceLanVpnInterfaceIpsecFeature struct {
 	TunnelSourceIpv4Address       pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelSourceIpv4SubnetMask pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4SubnetMask"`
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
@@ -267,32 +279,41 @@ func GetServiceLanVpnInterfaceIpsecFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceLanVpnInterfaceIpsecFeature resources.
 type serviceLanVpnInterfaceIpsecFeatureState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType *string `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable *string `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DpdInterval *int `pulumi:"dpdInterval"`
 	// Variable name
 	DpdIntervalVariable *string `pulumi:"dpdIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DpdRetries *int `pulumi:"dpdRetries"`
 	// Variable name
 	DpdRetriesVariable *string `pulumi:"dpdRetriesVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite *string `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable *string `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeDiffieHellmanGroup *string `pulumi:"ikeDiffieHellmanGroup"`
 	// Variable name
 	IkeDiffieHellmanGroupVariable *string `pulumi:"ikeDiffieHellmanGroupVariable"`
@@ -304,7 +325,9 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 	IkeIdRemoteEndPoint *string `pulumi:"ikeIdRemoteEndPoint"`
 	// Variable name
 	IkeIdRemoteEndPointVariable *string `pulumi:"ikeIdRemoteEndPointVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeIntegrityProtocol *string `pulumi:"ikeIntegrityProtocol"`
 	// Variable name
 	IkeIntegrityProtocolVariable *string `pulumi:"ikeIntegrityProtocolVariable"`
@@ -312,11 +335,15 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 	IkePresharedKey *string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable *string `pulumi:"ikePresharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval *int `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable *string `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion *int `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
@@ -326,49 +353,54 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite *string `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable *string `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval *int `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable *string `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
 	Ipv4Address               *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	PerfectForwardSecrecy *string `pulumi:"perfectForwardSecrecy"`
 	// Variable name
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId *string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -379,11 +411,7 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable *string `pulumi:"tunnelDestinationIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelDestinationIpv4SubnetMask *string `pulumi:"tunnelDestinationIpv4SubnetMask"`
 	// Variable name
 	TunnelDestinationIpv4SubnetMaskVariable *string `pulumi:"tunnelDestinationIpv4SubnetMaskVariable"`
@@ -398,11 +426,7 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 	TunnelSourceIpv4Address       *string `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable *string `pulumi:"tunnelSourceIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelSourceIpv4SubnetMask *string `pulumi:"tunnelSourceIpv4SubnetMask"`
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable *string `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
@@ -411,32 +435,41 @@ type serviceLanVpnInterfaceIpsecFeatureState struct {
 }
 
 type ServiceLanVpnInterfaceIpsecFeatureState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrInput
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DpdInterval pulumi.IntPtrInput
 	// Variable name
 	DpdIntervalVariable pulumi.StringPtrInput
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DpdRetries pulumi.IntPtrInput
 	// Variable name
 	DpdRetriesVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrInput
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeDiffieHellmanGroup pulumi.StringPtrInput
 	// Variable name
 	IkeDiffieHellmanGroupVariable pulumi.StringPtrInput
@@ -448,7 +481,9 @@ type ServiceLanVpnInterfaceIpsecFeatureState struct {
 	IkeIdRemoteEndPoint pulumi.StringPtrInput
 	// Variable name
 	IkeIdRemoteEndPointVariable pulumi.StringPtrInput
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeIntegrityProtocol pulumi.StringPtrInput
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrInput
@@ -456,11 +491,15 @@ type ServiceLanVpnInterfaceIpsecFeatureState struct {
 	IkePresharedKey pulumi.StringPtrInput
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrInput
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrInput
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
@@ -470,49 +509,54 @@ type ServiceLanVpnInterfaceIpsecFeatureState struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrInput
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrInput
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
 	Ipv4Address               pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	PerfectForwardSecrecy pulumi.StringPtrInput
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -523,11 +567,7 @@ type ServiceLanVpnInterfaceIpsecFeatureState struct {
 	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelDestinationIpv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4SubnetMaskVariable pulumi.StringPtrInput
@@ -542,11 +582,7 @@ type ServiceLanVpnInterfaceIpsecFeatureState struct {
 	TunnelSourceIpv4Address       pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelSourceIpv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable pulumi.StringPtrInput
@@ -559,32 +595,41 @@ func (ServiceLanVpnInterfaceIpsecFeatureState) ElementType() reflect.Type {
 }
 
 type serviceLanVpnInterfaceIpsecFeatureArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType *string `pulumi:"applicationTunnelType"`
 	// Variable name
 	ApplicationTunnelTypeVariable *string `pulumi:"applicationTunnelTypeVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DpdInterval *int `pulumi:"dpdInterval"`
 	// Variable name
 	DpdIntervalVariable *string `pulumi:"dpdIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DpdRetries *int `pulumi:"dpdRetries"`
 	// Variable name
 	DpdRetriesVariable *string `pulumi:"dpdRetriesVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite *string `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable *string `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeDiffieHellmanGroup *string `pulumi:"ikeDiffieHellmanGroup"`
 	// Variable name
 	IkeDiffieHellmanGroupVariable *string `pulumi:"ikeDiffieHellmanGroupVariable"`
@@ -596,7 +641,9 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	IkeIdRemoteEndPoint *string `pulumi:"ikeIdRemoteEndPoint"`
 	// Variable name
 	IkeIdRemoteEndPointVariable *string `pulumi:"ikeIdRemoteEndPointVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeIntegrityProtocol *string `pulumi:"ikeIntegrityProtocol"`
 	// Variable name
 	IkeIntegrityProtocolVariable *string `pulumi:"ikeIntegrityProtocolVariable"`
@@ -604,11 +651,15 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	IkePresharedKey *string `pulumi:"ikePresharedKey"`
 	// Variable name
 	IkePresharedKeyVariable *string `pulumi:"ikePresharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval *int `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable *string `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion *int `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
@@ -618,49 +669,54 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	InterfaceName *string `pulumi:"interfaceName"`
 	// Variable name
 	InterfaceNameVariable *string `pulumi:"interfaceNameVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite *string `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable *string `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval *int `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable *string `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
 	Ipv4Address               *string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
 	// Variable name
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	PerfectForwardSecrecy *string `pulumi:"perfectForwardSecrecy"`
 	// Variable name
 	PerfectForwardSecrecyVariable *string `pulumi:"perfectForwardSecrecyVariable"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss *int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable *string `pulumi:"tcpMssVariable"`
@@ -671,11 +727,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	TunnelDestinationIpv4Address *string `pulumi:"tunnelDestinationIpv4Address"`
 	// Variable name
 	TunnelDestinationIpv4AddressVariable *string `pulumi:"tunnelDestinationIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelDestinationIpv4SubnetMask string `pulumi:"tunnelDestinationIpv4SubnetMask"`
 	// Variable name
 	TunnelDestinationIpv4SubnetMaskVariable *string `pulumi:"tunnelDestinationIpv4SubnetMaskVariable"`
@@ -690,11 +742,7 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 	TunnelSourceIpv4Address       *string `pulumi:"tunnelSourceIpv4Address"`
 	// Variable name
 	TunnelSourceIpv4AddressVariable *string `pulumi:"tunnelSourceIpv4AddressVariable"`
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelSourceIpv4SubnetMask *string `pulumi:"tunnelSourceIpv4SubnetMask"`
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable *string `pulumi:"tunnelSourceIpv4SubnetMaskVariable"`
@@ -702,32 +750,41 @@ type serviceLanVpnInterfaceIpsecFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceLanVpnInterfaceIpsecFeature resource.
 type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
 	ApplicationTunnelType pulumi.StringPtrInput
 	// Variable name
 	ApplicationTunnelTypeVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DpdInterval pulumi.IntPtrInput
 	// Variable name
 	DpdIntervalVariable pulumi.StringPtrInput
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DpdRetries pulumi.IntPtrInput
 	// Variable name
 	DpdRetriesVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrInput
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeDiffieHellmanGroup pulumi.StringPtrInput
 	// Variable name
 	IkeDiffieHellmanGroupVariable pulumi.StringPtrInput
@@ -739,7 +796,9 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	IkeIdRemoteEndPoint pulumi.StringPtrInput
 	// Variable name
 	IkeIdRemoteEndPointVariable pulumi.StringPtrInput
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeIntegrityProtocol pulumi.StringPtrInput
 	// Variable name
 	IkeIntegrityProtocolVariable pulumi.StringPtrInput
@@ -747,11 +806,15 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	IkePresharedKey pulumi.StringPtrInput
 	// Variable name
 	IkePresharedKeyVariable pulumi.StringPtrInput
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrInput
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
@@ -761,49 +824,54 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	InterfaceName pulumi.StringPtrInput
 	// Variable name
 	InterfaceNameVariable pulumi.StringPtrInput
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrInput
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrInput
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
 	Ipv4Address               pulumi.StringPtrInput
 	// Variable name
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	PerfectForwardSecrecy pulumi.StringPtrInput
 	// Variable name
 	PerfectForwardSecrecyVariable pulumi.StringPtrInput
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId pulumi.StringInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMss pulumi.IntPtrInput
 	// Variable name
 	TcpMssVariable pulumi.StringPtrInput
@@ -814,11 +882,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	TunnelDestinationIpv4Address pulumi.StringPtrInput
 	// Variable name
 	TunnelDestinationIpv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelDestinationIpv4SubnetMask pulumi.StringInput
 	// Variable name
 	TunnelDestinationIpv4SubnetMaskVariable pulumi.StringPtrInput
@@ -833,11 +897,7 @@ type ServiceLanVpnInterfaceIpsecFeatureArgs struct {
 	TunnelSourceIpv4Address       pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4AddressVariable pulumi.StringPtrInput
-	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	//   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	//   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	//   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	//   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	TunnelSourceIpv4SubnetMask pulumi.StringPtrInput
 	// Variable name
 	TunnelSourceIpv4SubnetMaskVariable pulumi.StringPtrInput
@@ -930,7 +990,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ToServiceLanVpnInterfaceIpsecF
 	return o
 }
 
-// Enable Application Tunnel Type - Choices: `none`, `sig`
+// Enable Application Tunnel Type
+//   - Choices: `none`, `sig`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ApplicationTunnelType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.ApplicationTunnelType }).(pulumi.StringPtrOutput)
 }
@@ -942,7 +1003,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ApplicationTunnelTypeVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.BoolPtrOutput { return v.ClearDontFragment }).(pulumi.BoolPtrOutput)
 }
@@ -957,7 +1019,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Description() pulumi.StringPtr
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+// IKE keepalive interval (seconds)
+//   - Range: `10`-`3600`
+//   - Default value: `10`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) DpdInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.DpdInterval }).(pulumi.IntPtrOutput)
 }
@@ -967,7 +1031,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) DpdIntervalVariable() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.DpdIntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+// IKE keepalive retries
+//   - Range: `2`-`60`
+//   - Default value: `3`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) DpdRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.DpdRetries }).(pulumi.IntPtrOutput)
 }
@@ -982,8 +1048,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) FeatureProfileId() pulumi.Stri
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+// IKE identity the IKE preshared secret belongs to
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+//   - Default value: `aes256-cbc-sha1`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeCiphersuite() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkeCiphersuite }).(pulumi.StringPtrOutput)
 }
@@ -993,7 +1060,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeCiphersuiteVariable() pulum
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkeCiphersuiteVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+// IKE Diffie Hellman Groups
+//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+//   - Default value: `16`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeDiffieHellmanGroup() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkeDiffieHellmanGroup }).(pulumi.StringPtrOutput)
 }
@@ -1029,7 +1098,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeIdRemoteEndPointVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+// IKE integrity protocol
+//   - Choices: `main`, `aggressive`
+//   - Default value: `main`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeIntegrityProtocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkeIntegrityProtocol }).(pulumi.StringPtrOutput)
 }
@@ -1051,7 +1122,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkePresharedKeyVariable() pulu
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkePresharedKeyVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+// IKE rekey interval <60..86400> seconds
+//   - Range: `60`-`86400`
+//   - Default value: `14400`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeRekeyInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IkeRekeyInterval }).(pulumi.IntPtrOutput)
 }
@@ -1061,7 +1134,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeRekeyIntervalVariable() pul
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IkeRekeyIntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+// IKE Version <1..2>
+//   - Range: `1`-`2`
+//   - Default value: `1`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IkeVersion() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IkeVersion }).(pulumi.IntPtrOutput)
 }
@@ -1088,7 +1163,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) InterfaceNameVariable() pulumi
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.InterfaceNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+// Interface MTU <68..9216>, in bytes
+//   - Range: `68`-`9216`
+//   - Default value: `1500`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IpMtu }).(pulumi.IntPtrOutput)
 }
@@ -1098,9 +1175,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpMtuVariable() pulumi.StringP
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IpMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-// `aes256-gcm`
+// IPsec(ESP) encryption and integrity protocol
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+//   - Default value: `aes256-gcm`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecCiphersuite() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IpsecCiphersuite }).(pulumi.StringPtrOutput)
 }
@@ -1110,7 +1187,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecCiphersuiteVariable() pul
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.IpsecCiphersuiteVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+// IPsec rekey interval <300..1209600> seconds
+//   - Range: `120`-`2592000`
+//   - Default value: `3600`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecRekeyInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IpsecRekeyInterval }).(pulumi.IntPtrOutput)
 }
@@ -1122,7 +1201,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecRekeyIntervalVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+// Replay window size 32..8192 (must be a power of 2)
+//   - Range: `64`-`4096`
+//   - Default value: `512`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) IpsecReplayWindow() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.IpsecReplayWindow }).(pulumi.IntPtrOutput)
 }
@@ -1141,11 +1222,7 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4AddressVariable() pulumi.S
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-//     `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-//     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-//     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-//     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -1160,8 +1237,9 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+// IPsec perfect forward secrecy settings
+//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+//   - Default value: `group-16`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) PerfectForwardSecrecy() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.PerfectForwardSecrecy }).(pulumi.StringPtrOutput)
 }
@@ -1178,7 +1256,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ServiceLanVpnFeatureId() pulum
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -1188,7 +1267,8 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) ShutdownVariable() pulumi.Stri
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TcpMss() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.IntPtrOutput { return v.TcpMss }).(pulumi.IntPtrOutput)
 }
@@ -1221,11 +1301,7 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelDestinationIpv4AddressVa
 	}).(pulumi.StringPtrOutput)
 }
 
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-//     `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-//     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-//     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-//     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelDestinationIpv4SubnetMask() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringOutput {
 		return v.TunnelDestinationIpv4SubnetMask
@@ -1272,11 +1348,7 @@ func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4AddressVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-//     `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-//     `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-//     `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-//     `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceIpsecFeatureOutput) TunnelSourceIpv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceIpsecFeature) pulumi.StringPtrOutput {
 		return v.TunnelSourceIpv4SubnetMask

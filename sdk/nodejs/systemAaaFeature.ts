@@ -49,77 +49,81 @@ export class SystemAaaFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      */
-    public readonly accountingGroup!: pulumi.Output<boolean | undefined>;
+    declare public readonly accountingGroup: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly accountingGroupVariable!: pulumi.Output<string | undefined>;
+    declare public readonly accountingGroupVariable: pulumi.Output<string | undefined>;
     /**
      * Configure the accounting rules
      */
-    public readonly accountingRules!: pulumi.Output<outputs.SystemAaaFeatureAccountingRule[] | undefined>;
+    declare public readonly accountingRules: pulumi.Output<outputs.SystemAaaFeatureAccountingRule[] | undefined>;
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      */
-    public readonly authenticationGroup!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly authenticationGroupVariable!: pulumi.Output<string | undefined>;
-    /**
-     * For configuration mode commands. - Default value: `false`
-     */
-    public readonly authorizationConfigCommands!: pulumi.Output<boolean | undefined>;
+    declare public readonly authenticationGroup: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly authorizationConfigCommandsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationGroupVariable: pulumi.Output<string | undefined>;
     /**
-     * For enabling console authorization - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      */
-    public readonly authorizationConsole!: pulumi.Output<boolean | undefined>;
+    declare public readonly authorizationConfigCommands: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly authorizationConsoleVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authorizationConfigCommandsVariable: pulumi.Output<string | undefined>;
+    /**
+     * For enabling console authorization
+     *   - Default value: `false`
+     */
+    declare public readonly authorizationConsole: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly authorizationConsoleVariable: pulumi.Output<string | undefined>;
     /**
      * Configure the Authorization Rules
      */
-    public readonly authorizationRules!: pulumi.Output<outputs.SystemAaaFeatureAuthorizationRule[] | undefined>;
+    declare public readonly authorizationRules: pulumi.Output<outputs.SystemAaaFeatureAuthorizationRule[] | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure the Radius serverGroup
      */
-    public readonly radiusGroups!: pulumi.Output<outputs.SystemAaaFeatureRadiusGroup[] | undefined>;
+    declare public readonly radiusGroups: pulumi.Output<outputs.SystemAaaFeatureRadiusGroup[] | undefined>;
     /**
      * ServerGroups priority order
      */
-    public readonly serverAuthOrders!: pulumi.Output<string[]>;
+    declare public readonly serverAuthOrders: pulumi.Output<string[]>;
     /**
      * Configure the TACACS serverGroup
      */
-    public readonly tacacsGroups!: pulumi.Output<outputs.SystemAaaFeatureTacacsGroup[] | undefined>;
+    declare public readonly tacacsGroups: pulumi.Output<outputs.SystemAaaFeatureTacacsGroup[] | undefined>;
     /**
      * Create local login account
      */
-    public readonly users!: pulumi.Output<outputs.SystemAaaFeatureUser[] | undefined>;
+    declare public readonly users: pulumi.Output<outputs.SystemAaaFeatureUser[] | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemAaaFeature resource with the given unique name, arguments, and options.
@@ -134,49 +138,49 @@ export class SystemAaaFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemAaaFeatureState | undefined;
-            resourceInputs["accountingGroup"] = state ? state.accountingGroup : undefined;
-            resourceInputs["accountingGroupVariable"] = state ? state.accountingGroupVariable : undefined;
-            resourceInputs["accountingRules"] = state ? state.accountingRules : undefined;
-            resourceInputs["authenticationGroup"] = state ? state.authenticationGroup : undefined;
-            resourceInputs["authenticationGroupVariable"] = state ? state.authenticationGroupVariable : undefined;
-            resourceInputs["authorizationConfigCommands"] = state ? state.authorizationConfigCommands : undefined;
-            resourceInputs["authorizationConfigCommandsVariable"] = state ? state.authorizationConfigCommandsVariable : undefined;
-            resourceInputs["authorizationConsole"] = state ? state.authorizationConsole : undefined;
-            resourceInputs["authorizationConsoleVariable"] = state ? state.authorizationConsoleVariable : undefined;
-            resourceInputs["authorizationRules"] = state ? state.authorizationRules : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["radiusGroups"] = state ? state.radiusGroups : undefined;
-            resourceInputs["serverAuthOrders"] = state ? state.serverAuthOrders : undefined;
-            resourceInputs["tacacsGroups"] = state ? state.tacacsGroups : undefined;
-            resourceInputs["users"] = state ? state.users : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["accountingGroup"] = state?.accountingGroup;
+            resourceInputs["accountingGroupVariable"] = state?.accountingGroupVariable;
+            resourceInputs["accountingRules"] = state?.accountingRules;
+            resourceInputs["authenticationGroup"] = state?.authenticationGroup;
+            resourceInputs["authenticationGroupVariable"] = state?.authenticationGroupVariable;
+            resourceInputs["authorizationConfigCommands"] = state?.authorizationConfigCommands;
+            resourceInputs["authorizationConfigCommandsVariable"] = state?.authorizationConfigCommandsVariable;
+            resourceInputs["authorizationConsole"] = state?.authorizationConsole;
+            resourceInputs["authorizationConsoleVariable"] = state?.authorizationConsoleVariable;
+            resourceInputs["authorizationRules"] = state?.authorizationRules;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["radiusGroups"] = state?.radiusGroups;
+            resourceInputs["serverAuthOrders"] = state?.serverAuthOrders;
+            resourceInputs["tacacsGroups"] = state?.tacacsGroups;
+            resourceInputs["users"] = state?.users;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemAaaFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.serverAuthOrders === undefined) && !opts.urn) {
+            if (args?.serverAuthOrders === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serverAuthOrders'");
             }
-            resourceInputs["accountingGroup"] = args ? args.accountingGroup : undefined;
-            resourceInputs["accountingGroupVariable"] = args ? args.accountingGroupVariable : undefined;
-            resourceInputs["accountingRules"] = args ? args.accountingRules : undefined;
-            resourceInputs["authenticationGroup"] = args ? args.authenticationGroup : undefined;
-            resourceInputs["authenticationGroupVariable"] = args ? args.authenticationGroupVariable : undefined;
-            resourceInputs["authorizationConfigCommands"] = args ? args.authorizationConfigCommands : undefined;
-            resourceInputs["authorizationConfigCommandsVariable"] = args ? args.authorizationConfigCommandsVariable : undefined;
-            resourceInputs["authorizationConsole"] = args ? args.authorizationConsole : undefined;
-            resourceInputs["authorizationConsoleVariable"] = args ? args.authorizationConsoleVariable : undefined;
-            resourceInputs["authorizationRules"] = args ? args.authorizationRules : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["radiusGroups"] = args ? args.radiusGroups : undefined;
-            resourceInputs["serverAuthOrders"] = args ? args.serverAuthOrders : undefined;
-            resourceInputs["tacacsGroups"] = args ? args.tacacsGroups : undefined;
-            resourceInputs["users"] = args ? args.users : undefined;
+            resourceInputs["accountingGroup"] = args?.accountingGroup;
+            resourceInputs["accountingGroupVariable"] = args?.accountingGroupVariable;
+            resourceInputs["accountingRules"] = args?.accountingRules;
+            resourceInputs["authenticationGroup"] = args?.authenticationGroup;
+            resourceInputs["authenticationGroupVariable"] = args?.authenticationGroupVariable;
+            resourceInputs["authorizationConfigCommands"] = args?.authorizationConfigCommands;
+            resourceInputs["authorizationConfigCommandsVariable"] = args?.authorizationConfigCommandsVariable;
+            resourceInputs["authorizationConsole"] = args?.authorizationConsole;
+            resourceInputs["authorizationConsoleVariable"] = args?.authorizationConsoleVariable;
+            resourceInputs["authorizationRules"] = args?.authorizationRules;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["radiusGroups"] = args?.radiusGroups;
+            resourceInputs["serverAuthOrders"] = args?.serverAuthOrders;
+            resourceInputs["tacacsGroups"] = args?.tacacsGroups;
+            resourceInputs["users"] = args?.users;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -189,7 +193,8 @@ export class SystemAaaFeature extends pulumi.CustomResource {
  */
 export interface SystemAaaFeatureState {
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      */
     accountingGroup?: pulumi.Input<boolean>;
     /**
@@ -201,7 +206,8 @@ export interface SystemAaaFeatureState {
      */
     accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[]>;
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      */
     authenticationGroup?: pulumi.Input<boolean>;
     /**
@@ -209,7 +215,8 @@ export interface SystemAaaFeatureState {
      */
     authenticationGroupVariable?: pulumi.Input<string>;
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      */
     authorizationConfigCommands?: pulumi.Input<boolean>;
     /**
@@ -217,7 +224,8 @@ export interface SystemAaaFeatureState {
      */
     authorizationConfigCommandsVariable?: pulumi.Input<string>;
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      */
     authorizationConsole?: pulumi.Input<boolean>;
     /**
@@ -267,7 +275,8 @@ export interface SystemAaaFeatureState {
  */
 export interface SystemAaaFeatureArgs {
     /**
-     * Accounting configurations parameters - Default value: `false`
+     * Accounting configurations parameters
+     *   - Default value: `false`
      */
     accountingGroup?: pulumi.Input<boolean>;
     /**
@@ -279,7 +288,8 @@ export interface SystemAaaFeatureArgs {
      */
     accountingRules?: pulumi.Input<pulumi.Input<inputs.SystemAaaFeatureAccountingRule>[]>;
     /**
-     * Authentication configurations parameters - Default value: `false`
+     * Authentication configurations parameters
+     *   - Default value: `false`
      */
     authenticationGroup?: pulumi.Input<boolean>;
     /**
@@ -287,7 +297,8 @@ export interface SystemAaaFeatureArgs {
      */
     authenticationGroupVariable?: pulumi.Input<string>;
     /**
-     * For configuration mode commands. - Default value: `false`
+     * For configuration mode commands.
+     *   - Default value: `false`
      */
     authorizationConfigCommands?: pulumi.Input<boolean>;
     /**
@@ -295,7 +306,8 @@ export interface SystemAaaFeatureArgs {
      */
     authorizationConfigCommandsVariable?: pulumi.Input<string>;
     /**
-     * For enabling console authorization - Default value: `false`
+     * For enabling console authorization
+     *   - Default value: `false`
      */
     authorizationConsole?: pulumi.Input<boolean>;
     /**

@@ -37,14 +37,16 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="asNumber")
     private @Nullable Output<Integer> asNumber;
 
     /**
-     * @return Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * @return Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     public Optional<Output<Integer>> asNumber() {
@@ -67,14 +69,16 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * @return Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -112,18 +116,16 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes")
     private @Nullable Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Optional<Output<List<String>>> deviceTypes() {
@@ -131,14 +133,16 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      * 
      */
     @Import(name="filter")
     private @Nullable Output<Boolean> filter;
 
     /**
-     * @return Selective route download - Default value: `false`
+     * @return Selective route download
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> filter() {
@@ -161,14 +165,18 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     @Import(name="helloInterval")
     private @Nullable Output<Integer> helloInterval;
 
     /**
-     * @return Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * @return Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> helloInterval() {
@@ -221,14 +229,18 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     @Import(name="holdTime")
     private @Nullable Output<Integer> holdTime;
 
     /**
-     * @return Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * @return Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     public Optional<Output<Integer>> holdTime() {
@@ -432,7 +444,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param asNumber Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+         * @param asNumber Set autonomous system ID &lt;1..65535&gt;
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -443,7 +456,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param asNumber Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+         * @param asNumber Set autonomous system ID &lt;1..65535&gt;
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -474,7 +488,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param authenticationType Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+         * @param authenticationType Set EIGRP router authentication type
+         *   - Choices: `md5`, `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -485,7 +500,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param authenticationType Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+         * @param authenticationType Set EIGRP router authentication type
+         *   - Choices: `md5`, `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -537,9 +553,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -550,9 +565,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -562,9 +576,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -574,7 +587,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param filter Selective route download - Default value: `false`
+         * @param filter Selective route download
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -585,7 +599,8 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param filter Selective route download - Default value: `false`
+         * @param filter Selective route download
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -616,7 +631,9 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param helloInterval Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+         * @param helloInterval Set EIGRP hello interval
+         *   - Range: `0`-`65535`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -627,7 +644,9 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param helloInterval Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+         * @param helloInterval Set EIGRP hello interval
+         *   - Range: `0`-`65535`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -700,7 +719,9 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param holdTime Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+         * @param holdTime Set EIGRP hold time
+         *   - Range: `0`-`65535`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -711,7 +732,9 @@ public final class EigrpFeatureTemplateState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param holdTime Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+         * @param holdTime Set EIGRP hold time
+         *   - Range: `0`-`65535`
+         *   - Default value: `15`
          * 
          * @return builder
          * 

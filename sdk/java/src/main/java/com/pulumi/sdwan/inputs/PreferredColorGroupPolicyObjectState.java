@@ -47,14 +47,16 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
     }
 
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Import(name="primaryPathPreference")
     private @Nullable Output<String> primaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Optional<Output<String>> primaryPathPreference() {
@@ -77,14 +79,16 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
     }
 
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Import(name="secondaryPathPreference")
     private @Nullable Output<String> secondaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Optional<Output<String>> secondaryPathPreference() {
@@ -107,14 +111,16 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
     }
 
     /**
-     * Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     @Import(name="tertiaryPathPreference")
     private @Nullable Output<String> tertiaryPathPreference;
 
     /**
-     * @return Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+     * @return Path preference
+     *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
      * 
      */
     public Optional<Output<String>> tertiaryPathPreference() {
@@ -210,7 +216,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param primaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param primaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 
@@ -221,7 +228,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param primaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param primaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 
@@ -252,7 +260,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param secondaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param secondaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 
@@ -263,7 +272,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param secondaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param secondaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 
@@ -294,7 +304,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param tertiaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param tertiaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 
@@ -305,7 +316,8 @@ public final class PreferredColorGroupPolicyObjectState extends com.pulumi.resou
         }
 
         /**
-         * @param tertiaryPathPreference Path preference - Choices: `direct-path`, `multi-hop-path`, `all-paths`
+         * @param tertiaryPathPreference Path preference
+         *   - Choices: `direct-path`, `multi-hop-path`, `all-paths`
          * 
          * @return builder
          * 

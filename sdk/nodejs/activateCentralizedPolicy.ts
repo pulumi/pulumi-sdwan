@@ -46,7 +46,7 @@ export class ActivateCentralizedPolicy extends pulumi.CustomResource {
     /**
      * The version of the centralized policy
      */
-    public readonly version!: pulumi.Output<number | undefined>;
+    declare public readonly version: pulumi.Output<number | undefined>;
 
     /**
      * Create a ActivateCentralizedPolicy resource with the given unique name, arguments, and options.
@@ -61,10 +61,10 @@ export class ActivateCentralizedPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ActivateCentralizedPolicyState | undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ActivateCentralizedPolicyArgs | undefined;
-            resourceInputs["version"] = args ? args.version : undefined;
+            resourceInputs["version"] = args?.version;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ActivateCentralizedPolicy.__pulumiType, name, resourceInputs, opts);

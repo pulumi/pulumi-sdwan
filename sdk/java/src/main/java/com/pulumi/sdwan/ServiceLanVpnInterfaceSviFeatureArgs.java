@@ -54,14 +54,18 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     @Import(name="arpTimeout")
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     *   - Range: `0`-`2678400`
+     *   - Default value: `1200`
      * 
      */
     public Optional<Output<Integer>> arpTimeout() {
@@ -114,14 +118,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Enable DHCPv6 - Default value: `false`
+     * Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6 - Default value: `false`
+     * @return Enable DHCPv6
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -159,14 +165,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     @Import(name="icmpRedirectDisable")
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable - Default value: `true`
+     * @return ICMP/ICMPv6 Redirect Disable
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> icmpRedirectDisable() {
@@ -219,14 +227,18 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="interfaceMtu")
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;1500..9216&gt; in bytes
+     *   - Range: `1500`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> interfaceMtu() {
@@ -279,14 +291,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * IP Directed-Broadcast - Default value: `false`
+     * IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipDirectedBroadcast")
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast - Default value: `false`
+     * @return IP Directed-Broadcast
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipDirectedBroadcast() {
@@ -309,14 +323,18 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+     * @return IP MTU &lt;576..Interface MTU&gt;, in bytes
+     *   - Range: `576`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -414,22 +432,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return Subnet Mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -572,14 +584,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -602,14 +616,16 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `552`-`1960`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -733,7 +749,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2678400`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -744,7 +762,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds - Range: `0`-`2678400` - Default value: `1200`
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         *   - Range: `0`-`2678400`
+         *   - Default value: `1200`
          * 
          * @return builder
          * 
@@ -827,7 +847,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6 - Default value: `false`
+         * @param enableDhcpv6 Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -838,7 +859,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6 - Default value: `false`
+         * @param enableDhcpv6 Enable DHCPv6
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -890,7 +912,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -901,7 +924,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable - Default value: `true`
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -974,7 +998,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param interfaceMtu Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -985,7 +1011,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param interfaceMtu Interface MTU &lt;1500..9216&gt; in bytes - Range: `1500`-`9216` - Default value: `1500`
+         * @param interfaceMtu Interface MTU &lt;1500..9216&gt; in bytes
+         *   - Range: `1500`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1058,7 +1086,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1069,7 +1098,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast - Default value: `false`
+         * @param ipDirectedBroadcast IP Directed-Broadcast
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1100,7 +1130,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1111,7 +1143,9 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes - Range: `576`-`9216` - Default value: `1500`
+         * @param ipMtu IP MTU &lt;576..Interface MTU&gt;, in bytes
+         *   - Range: `576`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1267,11 +1301,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1282,11 +1313,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask Subnet Mask
+         *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1525,7 +1553,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1536,7 +1565,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -1567,7 +1597,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 
@@ -1578,7 +1609,8 @@ public final class ServiceLanVpnInterfaceSviFeatureArgs extends com.pulumi.resou
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `552`-`1960`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `552`-`1960`
          * 
          * @return builder
          * 

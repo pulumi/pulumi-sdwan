@@ -114,14 +114,16 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Enable SDWAN Remote Access - Default value: `false`
+     * Enable SDWAN Remote Access
+     *   - Default value: `false`
      * 
      */
     @Import(name="enableSdwanRemoteAccess")
     private @Nullable Output<Boolean> enableSdwanRemoteAccess;
 
     /**
-     * @return Enable SDWAN Remote Access - Default value: `false`
+     * @return Enable SDWAN Remote Access
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> enableSdwanRemoteAccess() {
@@ -299,14 +301,16 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * OMP Admin Distance IPv4 - Range: `1`-`255`
+     * OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="ompAdminDistanceIpv4")
     private @Nullable Output<Integer> ompAdminDistanceIpv4;
 
     /**
-     * @return OMP Admin Distance IPv4 - Range: `1`-`255`
+     * @return OMP Admin Distance IPv4
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv4() {
@@ -329,14 +333,16 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * OMP Admin Distance IPv6 - Range: `1`-`255`
+     * OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      * 
      */
     @Import(name="ompAdminDistanceIpv6")
     private @Nullable Output<Integer> ompAdminDistanceIpv6;
 
     /**
-     * @return OMP Admin Distance IPv6 - Range: `1`-`255`
+     * @return OMP Admin Distance IPv6
+     *   - Range: `1`-`255`
      * 
      */
     public Optional<Output<Integer>> ompAdminDistanceIpv6() {
@@ -584,14 +590,18 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
     }
 
     /**
-     * VPN - Range: `1`-`65527` - Default value: `0`
+     * VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      * 
      */
     @Import(name="vpn")
     private @Nullable Output<Integer> vpn;
 
     /**
-     * @return VPN - Range: `1`-`65527` - Default value: `0`
+     * @return VPN
+     *   - Range: `1`-`65527`
+     *   - Default value: `0`
      * 
      */
     public Optional<Output<Integer>> vpn() {
@@ -803,7 +813,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param enableSdwanRemoteAccess Enable SDWAN Remote Access - Default value: `false`
+         * @param enableSdwanRemoteAccess Enable SDWAN Remote Access
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -814,7 +825,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param enableSdwanRemoteAccess Enable SDWAN Remote Access - Default value: `false`
+         * @param enableSdwanRemoteAccess Enable SDWAN Remote Access
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1148,7 +1160,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1159,7 +1172,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv4 OMP Admin Distance IPv4
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1190,7 +1204,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1201,7 +1216,8 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6 - Range: `1`-`255`
+         * @param ompAdminDistanceIpv6 OMP Admin Distance IPv6
+         *   - Range: `1`-`255`
          * 
          * @return builder
          * 
@@ -1607,7 +1623,9 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param vpn VPN - Range: `1`-`65527` - Default value: `0`
+         * @param vpn VPN
+         *   - Range: `1`-`65527`
+         *   - Default value: `0`
          * 
          * @return builder
          * 
@@ -1618,7 +1636,9 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param vpn VPN - Range: `1`-`65527` - Default value: `0`
+         * @param vpn VPN
+         *   - Range: `1`-`65527`
+         *   - Default value: `0`
          * 
          * @return builder
          * 

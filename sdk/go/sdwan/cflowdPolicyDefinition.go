@@ -24,23 +24,28 @@ import (
 type CflowdPolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// Active flow timeout in seconds - Range: `30`-`3600`
+	// Active flow timeout in seconds
+	//   - Range: `30`-`3600`
 	ActiveFlowTimeout pulumi.IntPtrOutput `pulumi:"activeFlowTimeout"`
 	// List of collectors
 	Collectors CflowdPolicyDefinitionCollectorArrayOutput `pulumi:"collectors"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
-	// Flow refresh in seconds - Range: `60`-`86400`
+	// Flow refresh in seconds
+	//   - Range: `60`-`86400`
 	FlowRefresh pulumi.IntPtrOutput `pulumi:"flowRefresh"`
-	// Inactive flow timeout in seconds - Range: `1`-`3600`
+	// Inactive flow timeout in seconds
+	//   - Range: `1`-`3600`
 	InactiveFlowTimeout pulumi.IntPtrOutput `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `all`
+	//   - Choices: `ipv4`, `ipv6`, `all`
 	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrOutput `pulumi:"remarkedDscp"`
-	// Flow sampling interval - Range: `1`-`65536`
+	// Flow sampling interval
+	//   - Range: `1`-`65536`
 	SamplingInterval pulumi.IntPtrOutput `pulumi:"samplingInterval"`
 	// Collect TOS record field
 	Tos pulumi.BoolPtrOutput `pulumi:"tos"`
@@ -86,23 +91,28 @@ func GetCflowdPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CflowdPolicyDefinition resources.
 type cflowdPolicyDefinitionState struct {
-	// Active flow timeout in seconds - Range: `30`-`3600`
+	// Active flow timeout in seconds
+	//   - Range: `30`-`3600`
 	ActiveFlowTimeout *int `pulumi:"activeFlowTimeout"`
 	// List of collectors
 	Collectors []CflowdPolicyDefinitionCollector `pulumi:"collectors"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
-	// Flow refresh in seconds - Range: `60`-`86400`
+	// Flow refresh in seconds
+	//   - Range: `60`-`86400`
 	FlowRefresh *int `pulumi:"flowRefresh"`
-	// Inactive flow timeout in seconds - Range: `1`-`3600`
+	// Inactive flow timeout in seconds
+	//   - Range: `1`-`3600`
 	InactiveFlowTimeout *int `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `all`
+	//   - Choices: `ipv4`, `ipv6`, `all`
 	Protocol *string `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp *bool `pulumi:"remarkedDscp"`
-	// Flow sampling interval - Range: `1`-`65536`
+	// Flow sampling interval
+	//   - Range: `1`-`65536`
 	SamplingInterval *int `pulumi:"samplingInterval"`
 	// Collect TOS record field
 	Tos *bool `pulumi:"tos"`
@@ -113,23 +123,28 @@ type cflowdPolicyDefinitionState struct {
 }
 
 type CflowdPolicyDefinitionState struct {
-	// Active flow timeout in seconds - Range: `30`-`3600`
+	// Active flow timeout in seconds
+	//   - Range: `30`-`3600`
 	ActiveFlowTimeout pulumi.IntPtrInput
 	// List of collectors
 	Collectors CflowdPolicyDefinitionCollectorArrayInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
-	// Flow refresh in seconds - Range: `60`-`86400`
+	// Flow refresh in seconds
+	//   - Range: `60`-`86400`
 	FlowRefresh pulumi.IntPtrInput
-	// Inactive flow timeout in seconds - Range: `1`-`3600`
+	// Inactive flow timeout in seconds
+	//   - Range: `1`-`3600`
 	InactiveFlowTimeout pulumi.IntPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `all`
+	//   - Choices: `ipv4`, `ipv6`, `all`
 	Protocol pulumi.StringPtrInput
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrInput
-	// Flow sampling interval - Range: `1`-`65536`
+	// Flow sampling interval
+	//   - Range: `1`-`65536`
 	SamplingInterval pulumi.IntPtrInput
 	// Collect TOS record field
 	Tos pulumi.BoolPtrInput
@@ -144,23 +159,28 @@ func (CflowdPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type cflowdPolicyDefinitionArgs struct {
-	// Active flow timeout in seconds - Range: `30`-`3600`
+	// Active flow timeout in seconds
+	//   - Range: `30`-`3600`
 	ActiveFlowTimeout *int `pulumi:"activeFlowTimeout"`
 	// List of collectors
 	Collectors []CflowdPolicyDefinitionCollector `pulumi:"collectors"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
-	// Flow refresh in seconds - Range: `60`-`86400`
+	// Flow refresh in seconds
+	//   - Range: `60`-`86400`
 	FlowRefresh *int `pulumi:"flowRefresh"`
-	// Inactive flow timeout in seconds - Range: `1`-`3600`
+	// Inactive flow timeout in seconds
+	//   - Range: `1`-`3600`
 	InactiveFlowTimeout *int `pulumi:"inactiveFlowTimeout"`
 	// The name of the policy definition
 	Name *string `pulumi:"name"`
-	// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `all`
+	//   - Choices: `ipv4`, `ipv6`, `all`
 	Protocol *string `pulumi:"protocol"`
 	// Collect remarked DSCP
 	RemarkedDscp *bool `pulumi:"remarkedDscp"`
-	// Flow sampling interval - Range: `1`-`65536`
+	// Flow sampling interval
+	//   - Range: `1`-`65536`
 	SamplingInterval *int `pulumi:"samplingInterval"`
 	// Collect TOS record field
 	Tos *bool `pulumi:"tos"`
@@ -168,23 +188,28 @@ type cflowdPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a CflowdPolicyDefinition resource.
 type CflowdPolicyDefinitionArgs struct {
-	// Active flow timeout in seconds - Range: `30`-`3600`
+	// Active flow timeout in seconds
+	//   - Range: `30`-`3600`
 	ActiveFlowTimeout pulumi.IntPtrInput
 	// List of collectors
 	Collectors CflowdPolicyDefinitionCollectorArrayInput
 	// The description of the policy definition
 	Description pulumi.StringInput
-	// Flow refresh in seconds - Range: `60`-`86400`
+	// Flow refresh in seconds
+	//   - Range: `60`-`86400`
 	FlowRefresh pulumi.IntPtrInput
-	// Inactive flow timeout in seconds - Range: `1`-`3600`
+	// Inactive flow timeout in seconds
+	//   - Range: `1`-`3600`
 	InactiveFlowTimeout pulumi.IntPtrInput
 	// The name of the policy definition
 	Name pulumi.StringPtrInput
-	// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+	// Protocol, either `ipv4`, `ipv6` or `all`
+	//   - Choices: `ipv4`, `ipv6`, `all`
 	Protocol pulumi.StringPtrInput
 	// Collect remarked DSCP
 	RemarkedDscp pulumi.BoolPtrInput
-	// Flow sampling interval - Range: `1`-`65536`
+	// Flow sampling interval
+	//   - Range: `1`-`65536`
 	SamplingInterval pulumi.IntPtrInput
 	// Collect TOS record field
 	Tos pulumi.BoolPtrInput
@@ -277,7 +302,8 @@ func (o CflowdPolicyDefinitionOutput) ToCflowdPolicyDefinitionOutputWithContext(
 	return o
 }
 
-// Active flow timeout in seconds - Range: `30`-`3600`
+// Active flow timeout in seconds
+//   - Range: `30`-`3600`
 func (o CflowdPolicyDefinitionOutput) ActiveFlowTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.IntPtrOutput { return v.ActiveFlowTimeout }).(pulumi.IntPtrOutput)
 }
@@ -292,12 +318,14 @@ func (o CflowdPolicyDefinitionOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// Flow refresh in seconds - Range: `60`-`86400`
+// Flow refresh in seconds
+//   - Range: `60`-`86400`
 func (o CflowdPolicyDefinitionOutput) FlowRefresh() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.IntPtrOutput { return v.FlowRefresh }).(pulumi.IntPtrOutput)
 }
 
-// Inactive flow timeout in seconds - Range: `1`-`3600`
+// Inactive flow timeout in seconds
+//   - Range: `1`-`3600`
 func (o CflowdPolicyDefinitionOutput) InactiveFlowTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.IntPtrOutput { return v.InactiveFlowTimeout }).(pulumi.IntPtrOutput)
 }
@@ -307,7 +335,8 @@ func (o CflowdPolicyDefinitionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+// Protocol, either `ipv4`, `ipv6` or `all`
+//   - Choices: `ipv4`, `ipv6`, `all`
 func (o CflowdPolicyDefinitionOutput) Protocol() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.StringPtrOutput { return v.Protocol }).(pulumi.StringPtrOutput)
 }
@@ -317,7 +346,8 @@ func (o CflowdPolicyDefinitionOutput) RemarkedDscp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.BoolPtrOutput { return v.RemarkedDscp }).(pulumi.BoolPtrOutput)
 }
 
-// Flow sampling interval - Range: `1`-`65536`
+// Flow sampling interval
+//   - Range: `1`-`65536`
 func (o CflowdPolicyDefinitionOutput) SamplingInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CflowdPolicyDefinition) pulumi.IntPtrOutput { return v.SamplingInterval }).(pulumi.IntPtrOutput)
 }

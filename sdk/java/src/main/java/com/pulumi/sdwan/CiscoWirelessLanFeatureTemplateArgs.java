@@ -20,14 +20,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     public static final CiscoWirelessLanFeatureTemplateArgs Empty = new CiscoWirelessLanFeatureTemplateArgs();
 
     /**
-     * Set mobile express default gateway - Default value: `0.0.0.0`
+     * Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Import(name="controllerDefaultGateway")
     private @Nullable Output<String> controllerDefaultGateway;
 
     /**
-     * @return Set mobile express default gateway - Default value: `0.0.0.0`
+     * @return Set mobile express default gateway
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Optional<Output<String>> controllerDefaultGateway() {
@@ -50,14 +52,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * Set mobile express controller address - Default value: `0.0.0.0`
+     * Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Import(name="controllerIpAddress")
     private @Nullable Output<String> controllerIpAddress;
 
     /**
-     * @return Set mobile express controller address - Default value: `0.0.0.0`
+     * @return Set mobile express controller address
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Optional<Output<String>> controllerIpAddress() {
@@ -80,14 +84,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      * 
      */
     @Import(name="controllerSubnetMask")
     private @Nullable Output<String> controllerSubnetMask;
 
     /**
-     * @return Set mobile express controller subnet mask - Default value: `0.0.0.0`
+     * @return Set mobile express controller subnet mask
+     *   - Default value: `0.0.0.0`
      * 
      */
     public Optional<Output<String>> controllerSubnetMask() {
@@ -110,24 +116,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     @Import(name="country")
     private @Nullable Output<String> country;
 
     /**
-     * @return Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * @return Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      * 
      */
     public Optional<Output<String>> country() {
@@ -165,18 +163,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Import(name="deviceTypes", required=true)
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -229,14 +225,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * 2.4GHz Shutdown - Default value: `false`
+     * 2.4GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     @Import(name="shutdown24ghz")
     private @Nullable Output<Boolean> shutdown24ghz;
 
     /**
-     * @return 2.4GHz Shutdown - Default value: `false`
+     * @return 2.4GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown24ghz() {
@@ -259,14 +257,16 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
     }
 
     /**
-     * 5GHz Shutdown - Default value: `false`
+     * 5GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     @Import(name="shutdown5ghz")
     private @Nullable Output<Boolean> shutdown5ghz;
 
     /**
-     * @return 5GHz Shutdown - Default value: `false`
+     * @return 5GHz Shutdown
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> shutdown5ghz() {
@@ -377,7 +377,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerDefaultGateway Set mobile express default gateway - Default value: `0.0.0.0`
+         * @param controllerDefaultGateway Set mobile express default gateway
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -388,7 +389,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerDefaultGateway Set mobile express default gateway - Default value: `0.0.0.0`
+         * @param controllerDefaultGateway Set mobile express default gateway
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -419,7 +421,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerIpAddress Set mobile express controller address - Default value: `0.0.0.0`
+         * @param controllerIpAddress Set mobile express controller address
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -430,7 +433,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerIpAddress Set mobile express controller address - Default value: `0.0.0.0`
+         * @param controllerIpAddress Set mobile express controller address
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -461,7 +465,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerSubnetMask Set mobile express controller subnet mask - Default value: `0.0.0.0`
+         * @param controllerSubnetMask Set mobile express controller subnet mask
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -472,7 +477,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param controllerSubnetMask Set mobile express controller subnet mask - Default value: `0.0.0.0`
+         * @param controllerSubnetMask Set mobile express controller subnet mask
+         *   - Default value: `0.0.0.0`
          * 
          * @return builder
          * 
@@ -503,12 +509,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param country Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-         * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-         * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-         * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-         * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-         * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+         * @param country Select country
+         *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
          * 
          * @return builder
          * 
@@ -519,12 +521,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param country Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-         * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-         * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-         * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-         * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-         * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+         * @param country Select country
+         *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
          * 
          * @return builder
          * 
@@ -576,9 +574,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -589,9 +586,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -601,9 +597,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param deviceTypes List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-         * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-         * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+         * @param deviceTypes List of supported device types
+         *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
          * 
          * @return builder
          * 
@@ -676,7 +671,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown24ghz 2.4GHz Shutdown - Default value: `false`
+         * @param shutdown24ghz 2.4GHz Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -687,7 +683,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown24ghz 2.4GHz Shutdown - Default value: `false`
+         * @param shutdown24ghz 2.4GHz Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -718,7 +715,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown5ghz 5GHz Shutdown - Default value: `false`
+         * @param shutdown5ghz 5GHz Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -729,7 +727,8 @@ public final class CiscoWirelessLanFeatureTemplateArgs extends com.pulumi.resour
         }
 
         /**
-         * @param shutdown5ghz 5GHz Shutdown - Default value: `false`
+         * @param shutdown5ghz 5GHz Shutdown
+         *   - Default value: `false`
          * 
          * @return builder
          * 

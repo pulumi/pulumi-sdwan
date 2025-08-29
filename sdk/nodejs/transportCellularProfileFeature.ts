@@ -70,80 +70,84 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
     /**
      * Set access point name
      */
-    public readonly accessPointName!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly accessPointNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly accessPointNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `papChap`
      */
-    public readonly authenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationType: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
-    public readonly authenticationTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authenticationTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * No Overwrite
      */
-    public readonly noOverwrite!: pulumi.Output<boolean | undefined>;
+    declare public readonly noOverwrite: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly noOverwriteVariable!: pulumi.Output<string | undefined>;
+    declare public readonly noOverwriteVariable: pulumi.Output<string | undefined>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
-    public readonly packetDataNetworkType!: pulumi.Output<string | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly packetDataNetworkTypeVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set Profile ID - Range: `1`-`16`
-     */
-    public readonly profileId!: pulumi.Output<number | undefined>;
+    declare public readonly packetDataNetworkType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly profileIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly packetDataNetworkTypeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set Profile ID
+     *   - Range: `1`-`16`
+     */
+    declare public readonly profileId: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly profileIdVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
-    public readonly profilePassword!: pulumi.Output<string | undefined>;
+    declare public readonly profilePassword: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
-    public readonly profilePasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profilePasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
-    public readonly profileUsername!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsername: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      */
-    public readonly profileUsernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly profileUsernameVariable: pulumi.Output<string | undefined>;
     /**
-     * Require authentication type - Default value: `false`
+     * Require authentication type
+     *   - Default value: `false`
      */
-    public readonly requiresAuthentication!: pulumi.Output<boolean | undefined>;
+    declare public readonly requiresAuthentication: pulumi.Output<boolean | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a TransportCellularProfileFeature resource with the given unique name, arguments, and options.
@@ -158,48 +162,48 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TransportCellularProfileFeatureState | undefined;
-            resourceInputs["accessPointName"] = state ? state.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = state ? state.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = state ? state.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = state ? state.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["noOverwrite"] = state ? state.noOverwrite : undefined;
-            resourceInputs["noOverwriteVariable"] = state ? state.noOverwriteVariable : undefined;
-            resourceInputs["packetDataNetworkType"] = state ? state.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = state ? state.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["profileIdVariable"] = state ? state.profileIdVariable : undefined;
-            resourceInputs["profilePassword"] = state ? state.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = state ? state.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = state ? state.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = state ? state.profileUsernameVariable : undefined;
-            resourceInputs["requiresAuthentication"] = state ? state.requiresAuthentication : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["accessPointName"] = state?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = state?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = state?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = state?.authenticationTypeVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["noOverwrite"] = state?.noOverwrite;
+            resourceInputs["noOverwriteVariable"] = state?.noOverwriteVariable;
+            resourceInputs["packetDataNetworkType"] = state?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = state?.packetDataNetworkTypeVariable;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["profileIdVariable"] = state?.profileIdVariable;
+            resourceInputs["profilePassword"] = state?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = state?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = state?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = state?.profileUsernameVariable;
+            resourceInputs["requiresAuthentication"] = state?.requiresAuthentication;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as TransportCellularProfileFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["accessPointName"] = args ? args.accessPointName : undefined;
-            resourceInputs["accessPointNameVariable"] = args ? args.accessPointNameVariable : undefined;
-            resourceInputs["authenticationType"] = args ? args.authenticationType : undefined;
-            resourceInputs["authenticationTypeVariable"] = args ? args.authenticationTypeVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["noOverwrite"] = args ? args.noOverwrite : undefined;
-            resourceInputs["noOverwriteVariable"] = args ? args.noOverwriteVariable : undefined;
-            resourceInputs["packetDataNetworkType"] = args ? args.packetDataNetworkType : undefined;
-            resourceInputs["packetDataNetworkTypeVariable"] = args ? args.packetDataNetworkTypeVariable : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["profileIdVariable"] = args ? args.profileIdVariable : undefined;
-            resourceInputs["profilePassword"] = args ? args.profilePassword : undefined;
-            resourceInputs["profilePasswordVariable"] = args ? args.profilePasswordVariable : undefined;
-            resourceInputs["profileUsername"] = args ? args.profileUsername : undefined;
-            resourceInputs["profileUsernameVariable"] = args ? args.profileUsernameVariable : undefined;
-            resourceInputs["requiresAuthentication"] = args ? args.requiresAuthentication : undefined;
+            resourceInputs["accessPointName"] = args?.accessPointName;
+            resourceInputs["accessPointNameVariable"] = args?.accessPointNameVariable;
+            resourceInputs["authenticationType"] = args?.authenticationType;
+            resourceInputs["authenticationTypeVariable"] = args?.authenticationTypeVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["noOverwrite"] = args?.noOverwrite;
+            resourceInputs["noOverwriteVariable"] = args?.noOverwriteVariable;
+            resourceInputs["packetDataNetworkType"] = args?.packetDataNetworkType;
+            resourceInputs["packetDataNetworkTypeVariable"] = args?.packetDataNetworkTypeVariable;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["profileIdVariable"] = args?.profileIdVariable;
+            resourceInputs["profilePassword"] = args?.profilePassword;
+            resourceInputs["profilePasswordVariable"] = args?.profilePasswordVariable;
+            resourceInputs["profileUsername"] = args?.profileUsername;
+            resourceInputs["profileUsernameVariable"] = args?.profileUsernameVariable;
+            resourceInputs["requiresAuthentication"] = args?.requiresAuthentication;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -220,8 +224,8 @@ export interface TransportCellularProfileFeatureState {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -249,7 +253,9 @@ export interface TransportCellularProfileFeatureState {
      */
     noOverwriteVariable?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -257,7 +263,8 @@ export interface TransportCellularProfileFeatureState {
      */
     packetDataNetworkTypeVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**
@@ -281,7 +288,8 @@ export interface TransportCellularProfileFeatureState {
      */
     profileUsernameVariable?: pulumi.Input<string>;
     /**
-     * Require authentication type - Default value: `false`
+     * Require authentication type
+     *   - Default value: `false`
      */
     requiresAuthentication?: pulumi.Input<boolean>;
     /**
@@ -303,8 +311,8 @@ export interface TransportCellularProfileFeatureArgs {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `papChap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -332,7 +340,9 @@ export interface TransportCellularProfileFeatureArgs {
      */
     noOverwriteVariable?: pulumi.Input<string>;
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      */
     packetDataNetworkType?: pulumi.Input<string>;
     /**
@@ -340,7 +350,8 @@ export interface TransportCellularProfileFeatureArgs {
      */
     packetDataNetworkTypeVariable?: pulumi.Input<string>;
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      */
     profileId?: pulumi.Input<number>;
     /**
@@ -364,7 +375,8 @@ export interface TransportCellularProfileFeatureArgs {
      */
     profileUsernameVariable?: pulumi.Input<string>;
     /**
-     * Require authentication type - Default value: `false`
+     * Require authentication type
+     *   - Default value: `false`
      */
     requiresAuthentication?: pulumi.Input<boolean>;
 }

@@ -19,14 +19,18 @@ public final class TransportIpv4AclFeatureArgs extends com.pulumi.resources.Reso
     public static final TransportIpv4AclFeatureArgs Empty = new TransportIpv4AclFeatureArgs();
 
     /**
-     * Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * @return Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -122,7 +126,9 @@ public final class TransportIpv4AclFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 
@@ -133,7 +139,9 @@ public final class TransportIpv4AclFeatureArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 

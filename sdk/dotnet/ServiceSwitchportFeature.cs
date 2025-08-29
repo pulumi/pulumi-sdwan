@@ -27,7 +27,9 @@ namespace Pulumi.Sdwan
     public partial class ServiceSwitchportFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Output("ageOutTime")]
         public Output<int?> AgeOutTime { get; private set; } = null!;
@@ -121,7 +123,9 @@ namespace Pulumi.Sdwan
     public sealed class ServiceSwitchportFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("ageOutTime")]
         public Input<int>? AgeOutTime { get; set; }
@@ -183,7 +187,9 @@ namespace Pulumi.Sdwan
     public sealed class ServiceSwitchportFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("ageOutTime")]
         public Input<int>? AgeOutTime { get; set; }

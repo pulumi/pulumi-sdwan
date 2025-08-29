@@ -29,14 +29,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     public static final TransportRoutingBgpFeatureArgs Empty = new TransportRoutingBgpFeatureArgs();
 
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Import(name="alwaysCompareMed")
     private @Nullable Output<Boolean> alwaysCompareMed;
 
     /**
-     * @return Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> alwaysCompareMed() {
@@ -89,14 +91,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Import(name="compareRouterId")
     private @Nullable Output<Boolean> compareRouterId;
 
     /**
-     * @return Compare router IDs when selecting active BGP paths - Default value: `false`
+     * @return Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> compareRouterId() {
@@ -134,14 +138,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Import(name="deterministicMed")
     private @Nullable Output<Boolean> deterministicMed;
 
     /**
-     * @return Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * @return Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> deterministicMed() {
@@ -164,14 +170,18 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Import(name="externalRoutesDistance")
     private @Nullable Output<Integer> externalRoutesDistance;
 
     /**
-     * @return Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Optional<Output<Integer>> externalRoutesDistance() {
@@ -209,16 +219,18 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     @Import(name="holdTime")
     private @Nullable Output<Integer> holdTime;
 
     /**
-     * @return Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-     * `180`
+     * @return Interval (seconds) not receiving a keepalive message declares a BGP peer down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      * 
      */
     public Optional<Output<Integer>> holdTime() {
@@ -241,14 +253,18 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     @Import(name="internalRoutesDistance")
     private @Nullable Output<Integer> internalRoutesDistance;
 
     /**
-     * @return Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * @return Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      * 
      */
     public Optional<Output<Integer>> internalRoutesDistance() {
@@ -286,14 +302,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     @Import(name="ipv4EibgpMaximumPaths")
     private @Nullable Output<Integer> ipv4EibgpMaximumPaths;
 
     /**
-     * @return Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * @return Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     public Optional<Output<Integer>> ipv4EibgpMaximumPaths() {
@@ -346,14 +364,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv4Originate")
     private @Nullable Output<Boolean> ipv4Originate;
 
     /**
-     * @return BGP Default Information Originate - Default value: `false`
+     * @return BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv4Originate() {
@@ -391,14 +411,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv4TableMapFilter")
     private @Nullable Output<Boolean> ipv4TableMapFilter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv4TableMapFilter() {
@@ -443,14 +465,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     @Import(name="ipv6EibgpMaximumPaths")
     private @Nullable Output<Integer> ipv6EibgpMaximumPaths;
 
     /**
-     * @return Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+     * @return Set maximum number of parallel IBGP paths for multipath load sharing
+     *   - Range: `1`-`32`
      * 
      */
     public Optional<Output<Integer>> ipv6EibgpMaximumPaths() {
@@ -503,14 +527,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * BGP Default Information Originate - Default value: `false`
+     * BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6Originate")
     private @Nullable Output<Boolean> ipv6Originate;
 
     /**
-     * @return BGP Default Information Originate - Default value: `false`
+     * @return BGP Default Information Originate
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6Originate() {
@@ -548,14 +574,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Table map filtered or not - Default value: `false`
+     * Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     @Import(name="ipv6TableMapFilter")
     private @Nullable Output<Boolean> ipv6TableMapFilter;
 
     /**
-     * @return Table map filtered or not - Default value: `false`
+     * @return Table map filtered or not
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> ipv6TableMapFilter() {
@@ -585,14 +613,18 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     @Import(name="keepaliveTime")
     private @Nullable Output<Integer> keepaliveTime;
 
     /**
-     * @return Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+     * @return Interval (seconds) of keepalive messages sent to its BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      * 
      */
     public Optional<Output<Integer>> keepaliveTime() {
@@ -615,14 +647,18 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     @Import(name="localRoutesDistance")
     private @Nullable Output<Integer> localRoutesDistance;
 
     /**
-     * @return Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * @return Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      * 
      */
     public Optional<Output<Integer>> localRoutesDistance() {
@@ -645,14 +681,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     @Import(name="missingMedAsWorst")
     private @Nullable Output<Boolean> missingMedAsWorst;
 
     /**
-     * @return If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * @return If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> missingMedAsWorst() {
@@ -690,14 +728,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     @Import(name="multipathRelax")
     private @Nullable Output<Boolean> multipathRelax;
 
     /**
-     * @return Ignore AS for multipath selection - Default value: `false`
+     * @return Ignore AS for multipath selection
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> multipathRelax() {
@@ -735,14 +775,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     @Import(name="propagateAsPath")
     private @Nullable Output<Boolean> propagateAsPath;
 
     /**
-     * @return Propagate AS Path - Default value: `false`
+     * @return Propagate AS Path
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> propagateAsPath() {
@@ -765,14 +807,16 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      * 
      */
     @Import(name="propagateCommunity")
     private @Nullable Output<Boolean> propagateCommunity;
 
     /**
-     * @return Propagate Community - Default value: `false`
+     * @return Propagate Community
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> propagateCommunity() {
@@ -902,7 +946,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param alwaysCompareMed Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+         * @param alwaysCompareMed Compare MEDs from all ASs when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -913,7 +958,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param alwaysCompareMed Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+         * @param alwaysCompareMed Compare MEDs from all ASs when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -986,7 +1032,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param compareRouterId Compare router IDs when selecting active BGP paths - Default value: `false`
+         * @param compareRouterId Compare router IDs when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -997,7 +1044,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param compareRouterId Compare router IDs when selecting active BGP paths - Default value: `false`
+         * @param compareRouterId Compare router IDs when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1049,7 +1097,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param deterministicMed Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+         * @param deterministicMed Compare MEDs from all routes from same AS when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1060,7 +1109,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param deterministicMed Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+         * @param deterministicMed Compare MEDs from all routes from same AS when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1091,7 +1141,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param externalRoutesDistance Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+         * @param externalRoutesDistance Set administrative distance for external BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `20`
          * 
          * @return builder
          * 
@@ -1102,7 +1154,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param externalRoutesDistance Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+         * @param externalRoutesDistance Set administrative distance for external BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `20`
          * 
          * @return builder
          * 
@@ -1154,8 +1208,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param holdTime Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-         * `180`
+         * @param holdTime Interval (seconds) not receiving a keepalive message declares a BGP peer down
+         *   - Range: `0`-`65535`
+         *   - Default value: `180`
          * 
          * @return builder
          * 
@@ -1166,8 +1221,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param holdTime Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-         * `180`
+         * @param holdTime Interval (seconds) not receiving a keepalive message declares a BGP peer down
+         *   - Range: `0`-`65535`
+         *   - Default value: `180`
          * 
          * @return builder
          * 
@@ -1198,7 +1254,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param internalRoutesDistance Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+         * @param internalRoutesDistance Set administrative distance for internal BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1209,7 +1267,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param internalRoutesDistance Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+         * @param internalRoutesDistance Set administrative distance for internal BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `200`
          * 
          * @return builder
          * 
@@ -1271,7 +1331,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+         * @param ipv4EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -1282,7 +1343,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+         * @param ipv4EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -1375,7 +1437,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4Originate BGP Default Information Originate - Default value: `false`
+         * @param ipv4Originate BGP Default Information Originate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1386,7 +1449,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4Originate BGP Default Information Originate - Default value: `false`
+         * @param ipv4Originate BGP Default Information Originate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1448,7 +1512,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4TableMapFilter Table map filtered or not - Default value: `false`
+         * @param ipv4TableMapFilter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1459,7 +1524,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv4TableMapFilter Table map filtered or not - Default value: `false`
+         * @param ipv4TableMapFilter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1530,7 +1596,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+         * @param ipv6EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -1541,7 +1608,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+         * @param ipv6EibgpMaximumPaths Set maximum number of parallel IBGP paths for multipath load sharing
+         *   - Range: `1`-`32`
          * 
          * @return builder
          * 
@@ -1634,7 +1702,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6Originate BGP Default Information Originate - Default value: `false`
+         * @param ipv6Originate BGP Default Information Originate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1645,7 +1714,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6Originate BGP Default Information Originate - Default value: `false`
+         * @param ipv6Originate BGP Default Information Originate
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1707,7 +1777,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6TableMapFilter Table map filtered or not - Default value: `false`
+         * @param ipv6TableMapFilter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1718,7 +1789,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param ipv6TableMapFilter Table map filtered or not - Default value: `false`
+         * @param ipv6TableMapFilter Table map filtered or not
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1758,7 +1830,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param keepaliveTime Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+         * @param keepaliveTime Interval (seconds) of keepalive messages sent to its BGP peer
+         *   - Range: `0`-`65535`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -1769,7 +1843,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param keepaliveTime Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+         * @param keepaliveTime Interval (seconds) of keepalive messages sent to its BGP peer
+         *   - Range: `0`-`65535`
+         *   - Default value: `60`
          * 
          * @return builder
          * 
@@ -1800,7 +1876,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param localRoutesDistance Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+         * @param localRoutesDistance Set administrative distance for local BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `20`
          * 
          * @return builder
          * 
@@ -1811,7 +1889,9 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param localRoutesDistance Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+         * @param localRoutesDistance Set administrative distance for local BGP routes
+         *   - Range: `1`-`255`
+         *   - Default value: `20`
          * 
          * @return builder
          * 
@@ -1842,7 +1922,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param missingMedAsWorst If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+         * @param missingMedAsWorst If path has no MED, consider it to be worst path when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1853,7 +1934,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param missingMedAsWorst If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+         * @param missingMedAsWorst If path has no MED, consider it to be worst path when selecting active BGP paths
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1915,7 +1997,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param multipathRelax Ignore AS for multipath selection - Default value: `false`
+         * @param multipathRelax Ignore AS for multipath selection
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1926,7 +2009,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param multipathRelax Ignore AS for multipath selection - Default value: `false`
+         * @param multipathRelax Ignore AS for multipath selection
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1978,7 +2062,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param propagateAsPath Propagate AS Path - Default value: `false`
+         * @param propagateAsPath Propagate AS Path
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1989,7 +2074,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param propagateAsPath Propagate AS Path - Default value: `false`
+         * @param propagateAsPath Propagate AS Path
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2020,7 +2106,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param propagateCommunity Propagate Community - Default value: `false`
+         * @param propagateCommunity Propagate Community
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -2031,7 +2118,8 @@ public final class TransportRoutingBgpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param propagateCommunity Propagate Community - Default value: `false`
+         * @param propagateCommunity Propagate Community
+         *   - Default value: `false`
          * 
          * @return builder
          * 

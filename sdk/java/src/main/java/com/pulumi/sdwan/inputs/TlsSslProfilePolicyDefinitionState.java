@@ -94,14 +94,16 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
     }
 
     /**
-     * Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     @Import(name="decryptThreshold")
     private @Nullable Output<String> decryptThreshold;
 
     /**
-     * @return Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+     * @return Decrypt threshold
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      * 
      */
     public Optional<Output<String>> decryptThreshold() {
@@ -139,14 +141,16 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
     }
 
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     @Import(name="mode")
     private @Nullable Output<String> mode;
 
     /**
-     * @return The policy mode - Choices: `security`, `unified`
+     * @return The policy mode
+     *   - Choices: `security`, `unified`
      * 
      */
     public Optional<Output<String>> mode() {
@@ -381,7 +385,8 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param decryptThreshold Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+         * @param decryptThreshold Decrypt threshold
+         *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
          * 
          * @return builder
          * 
@@ -392,7 +397,8 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param decryptThreshold Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+         * @param decryptThreshold Decrypt threshold
+         *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
          * 
          * @return builder
          * 
@@ -444,7 +450,8 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 
@@ -455,7 +462,8 @@ public final class TlsSslProfilePolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param mode The policy mode - Choices: `security`, `unified`
+         * @param mode The policy mode
+         *   - Choices: `security`, `unified`
          * 
          * @return builder
          * 

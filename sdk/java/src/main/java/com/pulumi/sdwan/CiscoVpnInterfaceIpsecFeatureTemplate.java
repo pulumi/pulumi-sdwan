@@ -97,14 +97,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/ciscoVpnInterfaceIpsecFeatureTemplate:CiscoVpnInterfaceIpsecFeatureTemplate")
 public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     @Export(name="application", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> application;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     public Output<Optional<String>> application() {
@@ -125,14 +129,16 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.applicationVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="clearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> clearDontFragment() {
@@ -153,14 +159,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.clearDontFragmentVariable);
     }
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     @Export(name="deadPeerDetectionInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> deadPeerDetectionInterval;
 
     /**
-     * @return IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * @return IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     public Output<Optional<Integer>> deadPeerDetectionInterval() {
@@ -181,14 +191,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.deadPeerDetectionIntervalVariable);
     }
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     @Export(name="deadPeerDetectionRetries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> deadPeerDetectionRetries;
 
     /**
-     * @return IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * @return IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     public Output<Optional<Integer>> deadPeerDetectionRetries() {
@@ -223,34 +237,34 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     @Export(name="ikeCiphersuite", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeCiphersuite;
 
     /**
-     * @return IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * @return IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     public Output<Optional<String>> ikeCiphersuite() {
@@ -271,14 +285,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ikeCiphersuiteVariable);
     }
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     @Export(name="ikeGroup", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeGroup;
 
     /**
-     * @return IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * @return IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     public Output<Optional<String>> ikeGroup() {
@@ -299,14 +317,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ikeGroupVariable);
     }
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     @Export(name="ikeMode", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikeMode;
 
     /**
-     * @return IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * @return IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     public Output<Optional<String>> ikeMode() {
@@ -411,14 +433,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ikePreSharedKeyVariable);
     }
     /**
-     * IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     @Export(name="ikeRekeyInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikeRekeyInterval;
 
     /**
-     * @return IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * @return IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     public Output<Optional<Integer>> ikeRekeyInterval() {
@@ -439,14 +465,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ikeRekeyIntervalVariable);
     }
     /**
-     * IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ikeVersion", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ikeVersion;
 
     /**
-     * @return IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * @return IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ikeVersion() {
@@ -537,18 +567,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ipAddressVariable);
     }
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     @Export(name="ipsecCiphersuite", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecCiphersuite;
 
     /**
-     * @return IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * @return IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     public Output<Optional<String>> ipsecCiphersuite() {
@@ -569,16 +599,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ipsecCiphersuiteVariable);
     }
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     @Export(name="ipsecPerfectForwardSecrecy", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecPerfectForwardSecrecy;
 
     /**
-     * @return IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * @return IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     public Output<Optional<String>> ipsecPerfectForwardSecrecy() {
@@ -599,14 +631,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ipsecPerfectForwardSecrecyVariable);
     }
     /**
-     * IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     @Export(name="ipsecRekeyInterval", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecRekeyInterval;
 
     /**
-     * @return IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * @return IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     public Output<Optional<Integer>> ipsecRekeyInterval() {
@@ -627,14 +663,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ipsecRekeyIntervalVariable);
     }
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     @Export(name="ipsecReplayWindow", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipsecReplayWindow;
 
     /**
-     * @return Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * @return Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     public Output<Optional<Integer>> ipsecReplayWindow() {
@@ -655,14 +695,18 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.ipsecReplayWindowVariable);
     }
     /**
-     * Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="mtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> mtu;
 
     /**
-     * @return Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> mtu() {
@@ -697,14 +741,16 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return this.name;
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -725,14 +771,16 @@ public class CiscoVpnInterfaceIpsecFeatureTemplate extends com.pulumi.resources.
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMssAdjust", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMssAdjust() {

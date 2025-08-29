@@ -34,7 +34,8 @@ class FeatureDeviceTemplateArgs:
         The set of arguments for constructing a FeatureDeviceTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the device template
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
-        :param pulumi.Input[_builtins.str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
+        :param pulumi.Input[_builtins.str] device_role: The device role
+                 - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]] general_templates: List of general templates
         :param pulumi.Input[_builtins.str] name: The name of the device template
         :param pulumi.Input[_builtins.str] policy_id: The policy ID
@@ -87,7 +88,8 @@ class FeatureDeviceTemplateArgs:
     @pulumi.getter(name="deviceRole")
     def device_role(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The device role - Choices: `sdwan-edge`, `service-node`
+        The device role
+          - Choices: `sdwan-edge`, `service-node`
         """
         return pulumi.get(self, "device_role")
 
@@ -184,7 +186,8 @@ class _FeatureDeviceTemplateState:
         """
         Input properties used for looking up and filtering FeatureDeviceTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the device template
-        :param pulumi.Input[_builtins.str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
+        :param pulumi.Input[_builtins.str] device_role: The device role
+                 - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[Sequence[pulumi.Input['FeatureDeviceTemplateGeneralTemplateArgs']]] general_templates: List of general templates
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -231,7 +234,8 @@ class _FeatureDeviceTemplateState:
     @pulumi.getter(name="deviceRole")
     def device_role(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The device role - Choices: `sdwan-edge`, `service-node`
+        The device role
+          - Choices: `sdwan-edge`, `service-node`
         """
         return pulumi.get(self, "device_role")
 
@@ -382,7 +386,8 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the device template
-        :param pulumi.Input[_builtins.str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
+        :param pulumi.Input[_builtins.str] device_role: The device role
+                 - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]] general_templates: List of general templates
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -499,7 +504,8 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the device template
-        :param pulumi.Input[_builtins.str] device_role: The device role - Choices: `sdwan-edge`, `service-node`
+        :param pulumi.Input[_builtins.str] device_role: The device role
+                 - Choices: `sdwan-edge`, `service-node`
         :param pulumi.Input[_builtins.str] device_type: The device type (e.g., `vedge-ISR-4331`)
         :param pulumi.Input[Sequence[pulumi.Input[Union['FeatureDeviceTemplateGeneralTemplateArgs', 'FeatureDeviceTemplateGeneralTemplateArgsDict']]]] general_templates: List of general templates
         :param pulumi.Input[_builtins.str] name: The name of the device template
@@ -537,7 +543,8 @@ class FeatureDeviceTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceRole")
     def device_role(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The device role - Choices: `sdwan-edge`, `service-node`
+        The device role
+          - Choices: `sdwan-edge`, `service-node`
         """
         return pulumi.get(self, "device_role")
 

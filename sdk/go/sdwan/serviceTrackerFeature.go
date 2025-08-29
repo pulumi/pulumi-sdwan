@@ -80,17 +80,23 @@ type ServiceTrackerFeature struct {
 	EndpointIp pulumi.StringPtrOutput `pulumi:"endpointIp"`
 	// Variable name
 	EndpointIpVariable pulumi.StringPtrOutput `pulumi:"endpointIpVariable"`
-	// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+	// Endpoint Tracker Type
+	//   - Choices: `static-route`
+	//   - Default value: `static-route`
 	EndpointTrackerType pulumi.StringPtrOutput `pulumi:"endpointTrackerType"`
 	// Variable name
 	EndpointTrackerTypeVariable pulumi.StringPtrOutput `pulumi:"endpointTrackerTypeVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Interval - Range: `20`-`600` - Default value: `60`
+	// Interval
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
 	Interval pulumi.IntPtrOutput `pulumi:"interval"`
 	// Variable name
 	IntervalVariable pulumi.StringPtrOutput `pulumi:"intervalVariable"`
-	// Multiplier - Range: `1`-`10` - Default value: `3`
+	// Multiplier
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
 	Multiplier pulumi.IntPtrOutput `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable pulumi.StringPtrOutput `pulumi:"multiplierVariable"`
@@ -104,7 +110,9 @@ type ServiceTrackerFeature struct {
 	Protocol pulumi.StringPtrOutput `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable pulumi.StringPtrOutput `pulumi:"protocolVariable"`
-	// Threshold - Range: `100`-`1000` - Default value: `300`
+	// Threshold
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
 	Threshold pulumi.IntPtrOutput `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable pulumi.StringPtrOutput `pulumi:"thresholdVariable"`
@@ -112,7 +120,9 @@ type ServiceTrackerFeature struct {
 	TrackerName pulumi.StringPtrOutput `pulumi:"trackerName"`
 	// Variable name
 	TrackerNameVariable pulumi.StringPtrOutput `pulumi:"trackerNameVariable"`
-	// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+	// Tracker Type
+	//   - Choices: `endpoint`
+	//   - Default value: `endpoint`
 	TrackerType pulumi.StringPtrOutput `pulumi:"trackerType"`
 	// Variable name
 	TrackerTypeVariable pulumi.StringPtrOutput `pulumi:"trackerTypeVariable"`
@@ -167,17 +177,23 @@ type serviceTrackerFeatureState struct {
 	EndpointIp *string `pulumi:"endpointIp"`
 	// Variable name
 	EndpointIpVariable *string `pulumi:"endpointIpVariable"`
-	// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+	// Endpoint Tracker Type
+	//   - Choices: `static-route`
+	//   - Default value: `static-route`
 	EndpointTrackerType *string `pulumi:"endpointTrackerType"`
 	// Variable name
 	EndpointTrackerTypeVariable *string `pulumi:"endpointTrackerTypeVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Interval - Range: `20`-`600` - Default value: `60`
+	// Interval
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
 	Interval *int `pulumi:"interval"`
 	// Variable name
 	IntervalVariable *string `pulumi:"intervalVariable"`
-	// Multiplier - Range: `1`-`10` - Default value: `3`
+	// Multiplier
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
@@ -191,7 +207,9 @@ type serviceTrackerFeatureState struct {
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable *string `pulumi:"protocolVariable"`
-	// Threshold - Range: `100`-`1000` - Default value: `300`
+	// Threshold
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
 	Threshold *int `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable *string `pulumi:"thresholdVariable"`
@@ -199,7 +217,9 @@ type serviceTrackerFeatureState struct {
 	TrackerName *string `pulumi:"trackerName"`
 	// Variable name
 	TrackerNameVariable *string `pulumi:"trackerNameVariable"`
-	// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+	// Tracker Type
+	//   - Choices: `endpoint`
+	//   - Default value: `endpoint`
 	TrackerType *string `pulumi:"trackerType"`
 	// Variable name
 	TrackerTypeVariable *string `pulumi:"trackerTypeVariable"`
@@ -222,17 +242,23 @@ type ServiceTrackerFeatureState struct {
 	EndpointIp pulumi.StringPtrInput
 	// Variable name
 	EndpointIpVariable pulumi.StringPtrInput
-	// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+	// Endpoint Tracker Type
+	//   - Choices: `static-route`
+	//   - Default value: `static-route`
 	EndpointTrackerType pulumi.StringPtrInput
 	// Variable name
 	EndpointTrackerTypeVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Interval - Range: `20`-`600` - Default value: `60`
+	// Interval
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
 	Interval pulumi.IntPtrInput
 	// Variable name
 	IntervalVariable pulumi.StringPtrInput
-	// Multiplier - Range: `1`-`10` - Default value: `3`
+	// Multiplier
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
@@ -246,7 +272,9 @@ type ServiceTrackerFeatureState struct {
 	Protocol pulumi.StringPtrInput
 	// Variable name
 	ProtocolVariable pulumi.StringPtrInput
-	// Threshold - Range: `100`-`1000` - Default value: `300`
+	// Threshold
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
 	Threshold pulumi.IntPtrInput
 	// Variable name
 	ThresholdVariable pulumi.StringPtrInput
@@ -254,7 +282,9 @@ type ServiceTrackerFeatureState struct {
 	TrackerName pulumi.StringPtrInput
 	// Variable name
 	TrackerNameVariable pulumi.StringPtrInput
-	// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+	// Tracker Type
+	//   - Choices: `endpoint`
+	//   - Default value: `endpoint`
 	TrackerType pulumi.StringPtrInput
 	// Variable name
 	TrackerTypeVariable pulumi.StringPtrInput
@@ -281,17 +311,23 @@ type serviceTrackerFeatureArgs struct {
 	EndpointIp *string `pulumi:"endpointIp"`
 	// Variable name
 	EndpointIpVariable *string `pulumi:"endpointIpVariable"`
-	// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+	// Endpoint Tracker Type
+	//   - Choices: `static-route`
+	//   - Default value: `static-route`
 	EndpointTrackerType *string `pulumi:"endpointTrackerType"`
 	// Variable name
 	EndpointTrackerTypeVariable *string `pulumi:"endpointTrackerTypeVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Interval - Range: `20`-`600` - Default value: `60`
+	// Interval
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
 	Interval *int `pulumi:"interval"`
 	// Variable name
 	IntervalVariable *string `pulumi:"intervalVariable"`
-	// Multiplier - Range: `1`-`10` - Default value: `3`
+	// Multiplier
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
 	Multiplier *int `pulumi:"multiplier"`
 	// Variable name
 	MultiplierVariable *string `pulumi:"multiplierVariable"`
@@ -305,7 +341,9 @@ type serviceTrackerFeatureArgs struct {
 	Protocol *string `pulumi:"protocol"`
 	// Variable name
 	ProtocolVariable *string `pulumi:"protocolVariable"`
-	// Threshold - Range: `100`-`1000` - Default value: `300`
+	// Threshold
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
 	Threshold *int `pulumi:"threshold"`
 	// Variable name
 	ThresholdVariable *string `pulumi:"thresholdVariable"`
@@ -313,7 +351,9 @@ type serviceTrackerFeatureArgs struct {
 	TrackerName *string `pulumi:"trackerName"`
 	// Variable name
 	TrackerNameVariable *string `pulumi:"trackerNameVariable"`
-	// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+	// Tracker Type
+	//   - Choices: `endpoint`
+	//   - Default value: `endpoint`
 	TrackerType *string `pulumi:"trackerType"`
 	// Variable name
 	TrackerTypeVariable *string `pulumi:"trackerTypeVariable"`
@@ -335,17 +375,23 @@ type ServiceTrackerFeatureArgs struct {
 	EndpointIp pulumi.StringPtrInput
 	// Variable name
 	EndpointIpVariable pulumi.StringPtrInput
-	// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+	// Endpoint Tracker Type
+	//   - Choices: `static-route`
+	//   - Default value: `static-route`
 	EndpointTrackerType pulumi.StringPtrInput
 	// Variable name
 	EndpointTrackerTypeVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Interval - Range: `20`-`600` - Default value: `60`
+	// Interval
+	//   - Range: `20`-`600`
+	//   - Default value: `60`
 	Interval pulumi.IntPtrInput
 	// Variable name
 	IntervalVariable pulumi.StringPtrInput
-	// Multiplier - Range: `1`-`10` - Default value: `3`
+	// Multiplier
+	//   - Range: `1`-`10`
+	//   - Default value: `3`
 	Multiplier pulumi.IntPtrInput
 	// Variable name
 	MultiplierVariable pulumi.StringPtrInput
@@ -359,7 +405,9 @@ type ServiceTrackerFeatureArgs struct {
 	Protocol pulumi.StringPtrInput
 	// Variable name
 	ProtocolVariable pulumi.StringPtrInput
-	// Threshold - Range: `100`-`1000` - Default value: `300`
+	// Threshold
+	//   - Range: `100`-`1000`
+	//   - Default value: `300`
 	Threshold pulumi.IntPtrInput
 	// Variable name
 	ThresholdVariable pulumi.StringPtrInput
@@ -367,7 +415,9 @@ type ServiceTrackerFeatureArgs struct {
 	TrackerName pulumi.StringPtrInput
 	// Variable name
 	TrackerNameVariable pulumi.StringPtrInput
-	// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+	// Tracker Type
+	//   - Choices: `endpoint`
+	//   - Default value: `endpoint`
 	TrackerType pulumi.StringPtrInput
 	// Variable name
 	TrackerTypeVariable pulumi.StringPtrInput
@@ -495,7 +545,9 @@ func (o ServiceTrackerFeatureOutput) EndpointIpVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.EndpointIpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Endpoint Tracker Type - Choices: `static-route` - Default value: `static-route`
+// Endpoint Tracker Type
+//   - Choices: `static-route`
+//   - Default value: `static-route`
 func (o ServiceTrackerFeatureOutput) EndpointTrackerType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.EndpointTrackerType }).(pulumi.StringPtrOutput)
 }
@@ -510,7 +562,9 @@ func (o ServiceTrackerFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Interval - Range: `20`-`600` - Default value: `60`
+// Interval
+//   - Range: `20`-`600`
+//   - Default value: `60`
 func (o ServiceTrackerFeatureOutput) Interval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.IntPtrOutput { return v.Interval }).(pulumi.IntPtrOutput)
 }
@@ -520,7 +574,9 @@ func (o ServiceTrackerFeatureOutput) IntervalVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.IntervalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Multiplier - Range: `1`-`10` - Default value: `3`
+// Multiplier
+//   - Range: `1`-`10`
+//   - Default value: `3`
 func (o ServiceTrackerFeatureOutput) Multiplier() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.IntPtrOutput { return v.Multiplier }).(pulumi.IntPtrOutput)
 }
@@ -555,7 +611,9 @@ func (o ServiceTrackerFeatureOutput) ProtocolVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.ProtocolVariable }).(pulumi.StringPtrOutput)
 }
 
-// Threshold - Range: `100`-`1000` - Default value: `300`
+// Threshold
+//   - Range: `100`-`1000`
+//   - Default value: `300`
 func (o ServiceTrackerFeatureOutput) Threshold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.IntPtrOutput { return v.Threshold }).(pulumi.IntPtrOutput)
 }
@@ -575,7 +633,9 @@ func (o ServiceTrackerFeatureOutput) TrackerNameVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.TrackerNameVariable }).(pulumi.StringPtrOutput)
 }
 
-// Tracker Type - Choices: `endpoint` - Default value: `endpoint`
+// Tracker Type
+//   - Choices: `endpoint`
+//   - Default value: `endpoint`
 func (o ServiceTrackerFeatureOutput) TrackerType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceTrackerFeature) pulumi.StringPtrOutput { return v.TrackerType }).(pulumi.StringPtrOutput)
 }

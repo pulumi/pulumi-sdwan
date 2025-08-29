@@ -67,23 +67,23 @@ export class PolicyObjectSecurityGeolocationList extends pulumi.CustomResource {
     /**
      * The description of the Policy_object
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * Geolocation List
+     * Geolocation  List
      */
-    public readonly entries!: pulumi.Output<outputs.PolicyObjectSecurityGeolocationListEntry[]>;
+    declare public readonly entries: pulumi.Output<outputs.PolicyObjectSecurityGeolocationListEntry[]>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Policy_object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the Policy_object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a PolicyObjectSecurityGeolocationList resource with the given unique name, arguments, and options.
@@ -98,23 +98,23 @@ export class PolicyObjectSecurityGeolocationList extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyObjectSecurityGeolocationListState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["entries"] = state ? state.entries : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["entries"] = state?.entries;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PolicyObjectSecurityGeolocationListArgs | undefined;
-            if ((!args || args.entries === undefined) && !opts.urn) {
+            if (args?.entries === undefined && !opts.urn) {
                 throw new Error("Missing required property 'entries'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["entries"] = args ? args.entries : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["entries"] = args?.entries;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -131,7 +131,7 @@ export interface PolicyObjectSecurityGeolocationListState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Geolocation List
+     * Geolocation  List
      */
     entries?: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityGeolocationListEntry>[]>;
     /**
@@ -157,7 +157,7 @@ export interface PolicyObjectSecurityGeolocationListArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * Geolocation List
+     * Geolocation  List
      */
     entries: pulumi.Input<pulumi.Input<inputs.PolicyObjectSecurityGeolocationListEntry>[]>;
     /**

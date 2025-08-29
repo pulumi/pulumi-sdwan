@@ -24,7 +24,8 @@ import (
 type RoutePolicyDefinition struct {
 	pulumi.CustomResourceState
 
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
@@ -71,7 +72,8 @@ func GetRoutePolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering RoutePolicyDefinition resources.
 type routePolicyDefinitionState struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
@@ -86,7 +88,8 @@ type routePolicyDefinitionState struct {
 }
 
 type RoutePolicyDefinitionState struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
@@ -105,7 +108,8 @@ func (RoutePolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type routePolicyDefinitionArgs struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction *string `pulumi:"defaultAction"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
@@ -117,7 +121,8 @@ type routePolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a RoutePolicyDefinition resource.
 type RoutePolicyDefinitionArgs struct {
-	// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+	// Default action, either `accept` or `reject`
+	//   - Choices: `accept`, `reject`
 	DefaultAction pulumi.StringPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
@@ -214,7 +219,8 @@ func (o RoutePolicyDefinitionOutput) ToRoutePolicyDefinitionOutputWithContext(ct
 	return o
 }
 
-// Default action, either `accept` or `reject` - Choices: `accept`, `reject`
+// Default action, either `accept` or `reject`
+//   - Choices: `accept`, `reject`
 func (o RoutePolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RoutePolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
 }

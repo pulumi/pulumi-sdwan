@@ -27,23 +27,30 @@ type CiscoOspfFeatureTemplate struct {
 
 	// Configure OSPF area
 	Areas CiscoOspfFeatureTemplateAreaArrayOutput `pulumi:"areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	AutoCostReferenceBandwidth pulumi.IntPtrOutput `pulumi:"autoCostReferenceBandwidth"`
 	// Variable name
 	AutoCostReferenceBandwidthVariable pulumi.StringPtrOutput `pulumi:"autoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	CompatibleRfc1583 pulumi.BoolPtrOutput `pulumi:"compatibleRfc1583"`
 	// Variable name
 	CompatibleRfc1583Variable pulumi.StringPtrOutput `pulumi:"compatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrOutput `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrOutput `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrOutput `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -51,19 +58,24 @@ type CiscoOspfFeatureTemplate struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrOutput `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrOutput `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrOutput `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrOutput `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrOutput `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrOutput `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrOutput `pulumi:"distanceIntraAreaVariable"`
@@ -81,15 +93,21 @@ type CiscoOspfFeatureTemplate struct {
 	RouterIdVariable pulumi.StringPtrOutput `pulumi:"routerIdVariable"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	TimersSpfDelay pulumi.IntPtrOutput `pulumi:"timersSpfDelay"`
 	// Variable name
 	TimersSpfDelayVariable pulumi.StringPtrOutput `pulumi:"timersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	TimersSpfInitialHold pulumi.IntPtrOutput `pulumi:"timersSpfInitialHold"`
 	// Variable name
 	TimersSpfInitialHoldVariable pulumi.StringPtrOutput `pulumi:"timersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	TimersSpfMaxHold pulumi.IntPtrOutput `pulumi:"timersSpfMaxHold"`
 	// Variable name
 	TimersSpfMaxHoldVariable pulumi.StringPtrOutput `pulumi:"timersSpfMaxHoldVariable"`
@@ -135,23 +153,30 @@ func GetCiscoOspfFeatureTemplate(ctx *pulumi.Context,
 type ciscoOspfFeatureTemplateState struct {
 	// Configure OSPF area
 	Areas []CiscoOspfFeatureTemplateArea `pulumi:"areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	AutoCostReferenceBandwidth *int `pulumi:"autoCostReferenceBandwidth"`
 	// Variable name
 	AutoCostReferenceBandwidthVariable *string `pulumi:"autoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	CompatibleRfc1583 *bool `pulumi:"compatibleRfc1583"`
 	// Variable name
 	CompatibleRfc1583Variable *string `pulumi:"compatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate *bool `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways *bool `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable *string `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric *int `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType *string `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable *string `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -159,19 +184,24 @@ type ciscoOspfFeatureTemplateState struct {
 	DefaultInformationOriginateMetricVariable *string `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea *int `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable *string `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea *int `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable *string `pulumi:"distanceIntraAreaVariable"`
@@ -189,15 +219,21 @@ type ciscoOspfFeatureTemplateState struct {
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	TimersSpfDelay *int `pulumi:"timersSpfDelay"`
 	// Variable name
 	TimersSpfDelayVariable *string `pulumi:"timersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	TimersSpfInitialHold *int `pulumi:"timersSpfInitialHold"`
 	// Variable name
 	TimersSpfInitialHoldVariable *string `pulumi:"timersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	TimersSpfMaxHold *int `pulumi:"timersSpfMaxHold"`
 	// Variable name
 	TimersSpfMaxHoldVariable *string `pulumi:"timersSpfMaxHoldVariable"`
@@ -208,23 +244,30 @@ type ciscoOspfFeatureTemplateState struct {
 type CiscoOspfFeatureTemplateState struct {
 	// Configure OSPF area
 	Areas CiscoOspfFeatureTemplateAreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
@@ -232,19 +275,24 @@ type CiscoOspfFeatureTemplateState struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrInput
@@ -262,15 +310,21 @@ type CiscoOspfFeatureTemplateState struct {
 	RouterIdVariable pulumi.StringPtrInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	TimersSpfMaxHoldVariable pulumi.StringPtrInput
@@ -285,23 +339,30 @@ func (CiscoOspfFeatureTemplateState) ElementType() reflect.Type {
 type ciscoOspfFeatureTemplateArgs struct {
 	// Configure OSPF area
 	Areas []CiscoOspfFeatureTemplateArea `pulumi:"areas"`
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	AutoCostReferenceBandwidth *int `pulumi:"autoCostReferenceBandwidth"`
 	// Variable name
 	AutoCostReferenceBandwidthVariable *string `pulumi:"autoCostReferenceBandwidthVariable"`
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	CompatibleRfc1583 *bool `pulumi:"compatibleRfc1583"`
 	// Variable name
 	CompatibleRfc1583Variable *string `pulumi:"compatibleRfc1583Variable"`
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate *bool `pulumi:"defaultInformationOriginate"`
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways *bool `pulumi:"defaultInformationOriginateAlways"`
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable *string `pulumi:"defaultInformationOriginateAlwaysVariable"`
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric *int `pulumi:"defaultInformationOriginateMetric"`
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType *string `pulumi:"defaultInformationOriginateMetricType"`
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable *string `pulumi:"defaultInformationOriginateMetricTypeVariable"`
@@ -309,19 +370,24 @@ type ciscoOspfFeatureTemplateArgs struct {
 	DefaultInformationOriginateMetricVariable *string `pulumi:"defaultInformationOriginateMetricVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal *int `pulumi:"distanceExternal"`
 	// Variable name
 	DistanceExternalVariable *string `pulumi:"distanceExternalVariable"`
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea *int `pulumi:"distanceInterArea"`
 	// Variable name
 	DistanceInterAreaVariable *string `pulumi:"distanceInterAreaVariable"`
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea *int `pulumi:"distanceIntraArea"`
 	// Variable name
 	DistanceIntraAreaVariable *string `pulumi:"distanceIntraAreaVariable"`
@@ -337,15 +403,21 @@ type ciscoOspfFeatureTemplateArgs struct {
 	RouterId *string `pulumi:"routerId"`
 	// Variable name
 	RouterIdVariable *string `pulumi:"routerIdVariable"`
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	TimersSpfDelay *int `pulumi:"timersSpfDelay"`
 	// Variable name
 	TimersSpfDelayVariable *string `pulumi:"timersSpfDelayVariable"`
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	TimersSpfInitialHold *int `pulumi:"timersSpfInitialHold"`
 	// Variable name
 	TimersSpfInitialHoldVariable *string `pulumi:"timersSpfInitialHoldVariable"`
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	TimersSpfMaxHold *int `pulumi:"timersSpfMaxHold"`
 	// Variable name
 	TimersSpfMaxHoldVariable *string `pulumi:"timersSpfMaxHoldVariable"`
@@ -355,23 +427,30 @@ type ciscoOspfFeatureTemplateArgs struct {
 type CiscoOspfFeatureTemplateArgs struct {
 	// Configure OSPF area
 	Areas CiscoOspfFeatureTemplateAreaArrayInput
-	// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+	// Set reference bandwidth method to assign OSPF cost
+	//   - Range: `1`-`4294967`
+	//   - Default value: `100`
 	AutoCostReferenceBandwidth pulumi.IntPtrInput
 	// Variable name
 	AutoCostReferenceBandwidthVariable pulumi.StringPtrInput
-	// Calculate summary route cost based on RFC 1583 - Default value: `true`
+	// Calculate summary route cost based on RFC 1583
+	//   - Default value: `true`
 	CompatibleRfc1583 pulumi.BoolPtrInput
 	// Variable name
 	CompatibleRfc1583Variable pulumi.StringPtrInput
-	// Distribute default external route into OSPF - Default value: `false`
+	// Distribute default external route into OSPF
+	//   - Default value: `false`
 	DefaultInformationOriginate pulumi.BoolPtrInput
-	// Always advertise default route - Default value: `false`
+	// Always advertise default route
+	//   - Default value: `false`
 	DefaultInformationOriginateAlways pulumi.BoolPtrInput
 	// Variable name
 	DefaultInformationOriginateAlwaysVariable pulumi.StringPtrInput
-	// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+	// Set metric used to generate default route <0..16777214>
+	//   - Range: `0`-`16777214`
 	DefaultInformationOriginateMetric pulumi.IntPtrInput
-	// Set default route type - Choices: `type1`, `type2`
+	// Set default route type
+	//   - Choices: `type1`, `type2`
 	DefaultInformationOriginateMetricType pulumi.StringPtrInput
 	// Variable name
 	DefaultInformationOriginateMetricTypeVariable pulumi.StringPtrInput
@@ -379,19 +458,24 @@ type CiscoOspfFeatureTemplateArgs struct {
 	DefaultInformationOriginateMetricVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for external routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceExternal pulumi.IntPtrInput
 	// Variable name
 	DistanceExternalVariable pulumi.StringPtrInput
-	// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for inter-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceInterArea pulumi.IntPtrInput
 	// Variable name
 	DistanceInterAreaVariable pulumi.StringPtrInput
-	// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+	// Set distance for intra-area routes
+	//   - Range: `1`-`255`
+	//   - Default value: `110`
 	DistanceIntraArea pulumi.IntPtrInput
 	// Variable name
 	DistanceIntraAreaVariable pulumi.StringPtrInput
@@ -407,15 +491,21 @@ type CiscoOspfFeatureTemplateArgs struct {
 	RouterId pulumi.StringPtrInput
 	// Variable name
 	RouterIdVariable pulumi.StringPtrInput
-	// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+	// Set delay from first change received until performing SPF calculation
+	//   - Range: `1`-`600000`
+	//   - Default value: `200`
 	TimersSpfDelay pulumi.IntPtrInput
 	// Variable name
 	TimersSpfDelayVariable pulumi.StringPtrInput
-	// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+	// Set initial hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `1000`
 	TimersSpfInitialHold pulumi.IntPtrInput
 	// Variable name
 	TimersSpfInitialHoldVariable pulumi.StringPtrInput
-	// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+	// Set maximum hold time between consecutive SPF calculations
+	//   - Range: `1`-`600000`
+	//   - Default value: `10000`
 	TimersSpfMaxHold pulumi.IntPtrInput
 	// Variable name
 	TimersSpfMaxHoldVariable pulumi.StringPtrInput
@@ -513,7 +603,9 @@ func (o CiscoOspfFeatureTemplateOutput) Areas() CiscoOspfFeatureTemplateAreaArra
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) CiscoOspfFeatureTemplateAreaArrayOutput { return v.Areas }).(CiscoOspfFeatureTemplateAreaArrayOutput)
 }
 
-// Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+// Set reference bandwidth method to assign OSPF cost
+//   - Range: `1`-`4294967`
+//   - Default value: `100`
 func (o CiscoOspfFeatureTemplateOutput) AutoCostReferenceBandwidth() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.AutoCostReferenceBandwidth }).(pulumi.IntPtrOutput)
 }
@@ -523,7 +615,8 @@ func (o CiscoOspfFeatureTemplateOutput) AutoCostReferenceBandwidthVariable() pul
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.AutoCostReferenceBandwidthVariable }).(pulumi.StringPtrOutput)
 }
 
-// Calculate summary route cost based on RFC 1583 - Default value: `true`
+// Calculate summary route cost based on RFC 1583
+//   - Default value: `true`
 func (o CiscoOspfFeatureTemplateOutput) CompatibleRfc1583() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.BoolPtrOutput { return v.CompatibleRfc1583 }).(pulumi.BoolPtrOutput)
 }
@@ -533,12 +626,14 @@ func (o CiscoOspfFeatureTemplateOutput) CompatibleRfc1583Variable() pulumi.Strin
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.CompatibleRfc1583Variable }).(pulumi.StringPtrOutput)
 }
 
-// Distribute default external route into OSPF - Default value: `false`
+// Distribute default external route into OSPF
+//   - Default value: `false`
 func (o CiscoOspfFeatureTemplateOutput) DefaultInformationOriginate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.BoolPtrOutput { return v.DefaultInformationOriginate }).(pulumi.BoolPtrOutput)
 }
 
-// Always advertise default route - Default value: `false`
+// Always advertise default route
+//   - Default value: `false`
 func (o CiscoOspfFeatureTemplateOutput) DefaultInformationOriginateAlways() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.BoolPtrOutput { return v.DefaultInformationOriginateAlways }).(pulumi.BoolPtrOutput)
 }
@@ -550,12 +645,14 @@ func (o CiscoOspfFeatureTemplateOutput) DefaultInformationOriginateAlwaysVariabl
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set metric used to generate default route <0..16777214> - Range: `0`-`16777214`
+// Set metric used to generate default route <0..16777214>
+//   - Range: `0`-`16777214`
 func (o CiscoOspfFeatureTemplateOutput) DefaultInformationOriginateMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.DefaultInformationOriginateMetric }).(pulumi.IntPtrOutput)
 }
 
-// Set default route type - Choices: `type1`, `type2`
+// Set default route type
+//   - Choices: `type1`, `type2`
 func (o CiscoOspfFeatureTemplateOutput) DefaultInformationOriginateMetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput {
 		return v.DefaultInformationOriginateMetricType
@@ -581,14 +678,15 @@ func (o CiscoOspfFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoOspfFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Set distance for external routes - Range: `1`-`255` - Default value: `110`
+// Set distance for external routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o CiscoOspfFeatureTemplateOutput) DistanceExternal() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceExternal }).(pulumi.IntPtrOutput)
 }
@@ -598,7 +696,9 @@ func (o CiscoOspfFeatureTemplateOutput) DistanceExternalVariable() pulumi.String
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.DistanceExternalVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+// Set distance for inter-area routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o CiscoOspfFeatureTemplateOutput) DistanceInterArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceInterArea }).(pulumi.IntPtrOutput)
 }
@@ -608,7 +708,9 @@ func (o CiscoOspfFeatureTemplateOutput) DistanceInterAreaVariable() pulumi.Strin
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.DistanceInterAreaVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+// Set distance for intra-area routes
+//   - Range: `1`-`255`
+//   - Default value: `110`
 func (o CiscoOspfFeatureTemplateOutput) DistanceIntraArea() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.DistanceIntraArea }).(pulumi.IntPtrOutput)
 }
@@ -659,7 +761,9 @@ func (o CiscoOspfFeatureTemplateOutput) TemplateType() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringOutput { return v.TemplateType }).(pulumi.StringOutput)
 }
 
-// Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+// Set delay from first change received until performing SPF calculation
+//   - Range: `1`-`600000`
+//   - Default value: `200`
 func (o CiscoOspfFeatureTemplateOutput) TimersSpfDelay() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.TimersSpfDelay }).(pulumi.IntPtrOutput)
 }
@@ -669,7 +773,9 @@ func (o CiscoOspfFeatureTemplateOutput) TimersSpfDelayVariable() pulumi.StringPt
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.TimersSpfDelayVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+// Set initial hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `1000`
 func (o CiscoOspfFeatureTemplateOutput) TimersSpfInitialHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.TimersSpfInitialHold }).(pulumi.IntPtrOutput)
 }
@@ -679,7 +785,9 @@ func (o CiscoOspfFeatureTemplateOutput) TimersSpfInitialHoldVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.StringPtrOutput { return v.TimersSpfInitialHoldVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+// Set maximum hold time between consecutive SPF calculations
+//   - Range: `1`-`600000`
+//   - Default value: `10000`
 func (o CiscoOspfFeatureTemplateOutput) TimersSpfMaxHold() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoOspfFeatureTemplate) pulumi.IntPtrOutput { return v.TimersSpfMaxHold }).(pulumi.IntPtrOutput)
 }

@@ -63,7 +63,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SlotVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Card Type - Choices: `e1`, `t1`
+        /// Card Type
+        ///   - Choices: `e1`, `t1`
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -163,7 +164,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SlotVariable { get; set; }
 
         /// <summary>
-        /// Card Type - Choices: `e1`, `t1`
+        /// Card Type
+        ///   - Choices: `e1`, `t1`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
@@ -219,7 +221,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SlotVariable { get; set; }
 
         /// <summary>
-        /// Card Type - Choices: `e1`, `t1`
+        /// Card Type
+        ///   - Choices: `e1`, `t1`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

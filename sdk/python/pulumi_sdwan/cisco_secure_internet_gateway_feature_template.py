@@ -33,16 +33,17 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoSecureInternetGatewayFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]] services: Configure services
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         """
         pulumi.set(__self__, "description", description)
         pulumi.set(__self__, "device_types", device_types)
@@ -77,9 +78,8 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -163,7 +163,9 @@ class CiscoSecureInternetGatewayFeatureTemplateArgs:
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 
@@ -189,9 +191,8 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoSecureInternetGatewayFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs']]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateServiceArgs']]] services: Configure services
@@ -200,7 +201,9 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs']]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -241,9 +244,8 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -351,7 +353,9 @@ class _CiscoSecureInternetGatewayFeatureTemplateState:
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 
@@ -391,16 +395,17 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]] services: Configure services
         :param pulumi.Input[_builtins.str] tracker_source_ip: Source IP address for Tracker
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]] trackers: Tracker configuration
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         """
         ...
     @overload
@@ -497,9 +502,8 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs', 'CiscoSecureInternetGatewayFeatureTemplateInterfaceArgsDict']]]] interfaces: Interface name: IPsec when present
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateServiceArgs', 'CiscoSecureInternetGatewayFeatureTemplateServiceArgsDict']]]] services: Configure services
@@ -508,7 +512,9 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] tracker_source_ip_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoSecureInternetGatewayFeatureTemplateTrackerArgs', 'CiscoSecureInternetGatewayFeatureTemplateTrackerArgsDict']]]] trackers: Tracker configuration
         :param pulumi.Input[_builtins.int] version: The version of the feature template
-        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        :param pulumi.Input[_builtins.int] vpn_id: List of VPN instances
+                 - Range: `0`-`65527`
+                 - Default value: `0`
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -539,9 +545,8 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -613,7 +618,9 @@ class CiscoSecureInternetGatewayFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="vpnId")
     def vpn_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        List of VPN instances
+          - Range: `0`-`65527`
+          - Default value: `0`
         """
         return pulumi.get(self, "vpn_id")
 

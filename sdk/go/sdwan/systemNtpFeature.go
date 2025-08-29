@@ -29,7 +29,8 @@ type SystemNtpFeature struct {
 
 	// Set MD5 authentication key
 	AuthenticationKeys SystemNtpFeatureAuthenticationKeyArrayOutput `pulumi:"authenticationKeys"`
-	// Enable device as NTP Leader - Default value: `false`
+	// Enable device as NTP Leader
+	//   - Default value: `false`
 	AuthoritativeNtpServer pulumi.BoolPtrOutput `pulumi:"authoritativeNtpServer"`
 	// Variable name
 	AuthoritativeNtpServerVariable pulumi.StringPtrOutput `pulumi:"authoritativeNtpServerVariable"`
@@ -45,7 +46,8 @@ type SystemNtpFeature struct {
 	SourceInterface pulumi.StringPtrOutput `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrOutput `pulumi:"sourceInterfaceVariable"`
-	// Enable device as NTP Leader - Range: `1`-`15`
+	// Enable device as NTP Leader
+	//   - Range: `1`-`15`
 	Stratum pulumi.IntPtrOutput `pulumi:"stratum"`
 	// Variable name
 	StratumVariable pulumi.StringPtrOutput `pulumi:"stratumVariable"`
@@ -92,7 +94,8 @@ func GetSystemNtpFeature(ctx *pulumi.Context,
 type systemNtpFeatureState struct {
 	// Set MD5 authentication key
 	AuthenticationKeys []SystemNtpFeatureAuthenticationKey `pulumi:"authenticationKeys"`
-	// Enable device as NTP Leader - Default value: `false`
+	// Enable device as NTP Leader
+	//   - Default value: `false`
 	AuthoritativeNtpServer *bool `pulumi:"authoritativeNtpServer"`
 	// Variable name
 	AuthoritativeNtpServerVariable *string `pulumi:"authoritativeNtpServerVariable"`
@@ -108,7 +111,8 @@ type systemNtpFeatureState struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Enable device as NTP Leader - Range: `1`-`15`
+	// Enable device as NTP Leader
+	//   - Range: `1`-`15`
 	Stratum *int `pulumi:"stratum"`
 	// Variable name
 	StratumVariable *string `pulumi:"stratumVariable"`
@@ -123,7 +127,8 @@ type systemNtpFeatureState struct {
 type SystemNtpFeatureState struct {
 	// Set MD5 authentication key
 	AuthenticationKeys SystemNtpFeatureAuthenticationKeyArrayInput
-	// Enable device as NTP Leader - Default value: `false`
+	// Enable device as NTP Leader
+	//   - Default value: `false`
 	AuthoritativeNtpServer pulumi.BoolPtrInput
 	// Variable name
 	AuthoritativeNtpServerVariable pulumi.StringPtrInput
@@ -139,7 +144,8 @@ type SystemNtpFeatureState struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Enable device as NTP Leader - Range: `1`-`15`
+	// Enable device as NTP Leader
+	//   - Range: `1`-`15`
 	Stratum pulumi.IntPtrInput
 	// Variable name
 	StratumVariable pulumi.StringPtrInput
@@ -158,7 +164,8 @@ func (SystemNtpFeatureState) ElementType() reflect.Type {
 type systemNtpFeatureArgs struct {
 	// Set MD5 authentication key
 	AuthenticationKeys []SystemNtpFeatureAuthenticationKey `pulumi:"authenticationKeys"`
-	// Enable device as NTP Leader - Default value: `false`
+	// Enable device as NTP Leader
+	//   - Default value: `false`
 	AuthoritativeNtpServer *bool `pulumi:"authoritativeNtpServer"`
 	// Variable name
 	AuthoritativeNtpServerVariable *string `pulumi:"authoritativeNtpServerVariable"`
@@ -174,7 +181,8 @@ type systemNtpFeatureArgs struct {
 	SourceInterface *string `pulumi:"sourceInterface"`
 	// Variable name
 	SourceInterfaceVariable *string `pulumi:"sourceInterfaceVariable"`
-	// Enable device as NTP Leader - Range: `1`-`15`
+	// Enable device as NTP Leader
+	//   - Range: `1`-`15`
 	Stratum *int `pulumi:"stratum"`
 	// Variable name
 	StratumVariable *string `pulumi:"stratumVariable"`
@@ -188,7 +196,8 @@ type systemNtpFeatureArgs struct {
 type SystemNtpFeatureArgs struct {
 	// Set MD5 authentication key
 	AuthenticationKeys SystemNtpFeatureAuthenticationKeyArrayInput
-	// Enable device as NTP Leader - Default value: `false`
+	// Enable device as NTP Leader
+	//   - Default value: `false`
 	AuthoritativeNtpServer pulumi.BoolPtrInput
 	// Variable name
 	AuthoritativeNtpServerVariable pulumi.StringPtrInput
@@ -204,7 +213,8 @@ type SystemNtpFeatureArgs struct {
 	SourceInterface pulumi.StringPtrInput
 	// Variable name
 	SourceInterfaceVariable pulumi.StringPtrInput
-	// Enable device as NTP Leader - Range: `1`-`15`
+	// Enable device as NTP Leader
+	//   - Range: `1`-`15`
 	Stratum pulumi.IntPtrInput
 	// Variable name
 	StratumVariable pulumi.StringPtrInput
@@ -306,7 +316,8 @@ func (o SystemNtpFeatureOutput) AuthenticationKeys() SystemNtpFeatureAuthenticat
 	return o.ApplyT(func(v *SystemNtpFeature) SystemNtpFeatureAuthenticationKeyArrayOutput { return v.AuthenticationKeys }).(SystemNtpFeatureAuthenticationKeyArrayOutput)
 }
 
-// Enable device as NTP Leader - Default value: `false`
+// Enable device as NTP Leader
+//   - Default value: `false`
 func (o SystemNtpFeatureOutput) AuthoritativeNtpServer() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemNtpFeature) pulumi.BoolPtrOutput { return v.AuthoritativeNtpServer }).(pulumi.BoolPtrOutput)
 }
@@ -346,7 +357,8 @@ func (o SystemNtpFeatureOutput) SourceInterfaceVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *SystemNtpFeature) pulumi.StringPtrOutput { return v.SourceInterfaceVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable device as NTP Leader - Range: `1`-`15`
+// Enable device as NTP Leader
+//   - Range: `1`-`15`
 func (o SystemNtpFeatureOutput) Stratum() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemNtpFeature) pulumi.IntPtrOutput { return v.Stratum }).(pulumi.IntPtrOutput)
 }

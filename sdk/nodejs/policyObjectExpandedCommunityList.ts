@@ -63,27 +63,27 @@ export class PolicyObjectExpandedCommunityList extends pulumi.CustomResource {
     /**
      * The description of the Policy_object
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Expanded Community List
      */
-    public readonly expandedCommunityLists!: pulumi.Output<string[]>;
+    declare public readonly expandedCommunityLists: pulumi.Output<string[]>;
     /**
      * Variable name
      */
-    public readonly expandedCommunityListsVariable!: pulumi.Output<string | undefined>;
+    declare public readonly expandedCommunityListsVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Policy_object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The version of the Policy_object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a PolicyObjectExpandedCommunityList resource with the given unique name, arguments, and options.
@@ -98,25 +98,25 @@ export class PolicyObjectExpandedCommunityList extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyObjectExpandedCommunityListState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["expandedCommunityLists"] = state ? state.expandedCommunityLists : undefined;
-            resourceInputs["expandedCommunityListsVariable"] = state ? state.expandedCommunityListsVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["expandedCommunityLists"] = state?.expandedCommunityLists;
+            resourceInputs["expandedCommunityListsVariable"] = state?.expandedCommunityListsVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as PolicyObjectExpandedCommunityListArgs | undefined;
-            if ((!args || args.expandedCommunityLists === undefined) && !opts.urn) {
+            if (args?.expandedCommunityLists === undefined && !opts.urn) {
                 throw new Error("Missing required property 'expandedCommunityLists'");
             }
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["expandedCommunityLists"] = args ? args.expandedCommunityLists : undefined;
-            resourceInputs["expandedCommunityListsVariable"] = args ? args.expandedCommunityListsVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["expandedCommunityLists"] = args?.expandedCommunityLists;
+            resourceInputs["expandedCommunityListsVariable"] = args?.expandedCommunityListsVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -25,32 +25,30 @@ import (
 type CiscoWirelessLanFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Set mobile express default gateway - Default value: `0.0.0.0`
+	// Set mobile express default gateway
+	//   - Default value: `0.0.0.0`
 	ControllerDefaultGateway pulumi.StringPtrOutput `pulumi:"controllerDefaultGateway"`
 	// Variable name
 	ControllerDefaultGatewayVariable pulumi.StringPtrOutput `pulumi:"controllerDefaultGatewayVariable"`
-	// Set mobile express controller address - Default value: `0.0.0.0`
+	// Set mobile express controller address
+	//   - Default value: `0.0.0.0`
 	ControllerIpAddress pulumi.StringPtrOutput `pulumi:"controllerIpAddress"`
 	// Variable name
 	ControllerIpAddressVariable pulumi.StringPtrOutput `pulumi:"controllerIpAddressVariable"`
-	// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Default value: `0.0.0.0`
 	ControllerSubnetMask pulumi.StringPtrOutput `pulumi:"controllerSubnetMask"`
 	// Variable name
 	ControllerSubnetMaskVariable pulumi.StringPtrOutput `pulumi:"controllerSubnetMaskVariable"`
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrOutput `pulumi:"country"`
 	// Variable name
 	CountryVariable pulumi.StringPtrOutput `pulumi:"countryVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -58,11 +56,13 @@ type CiscoWirelessLanFeatureTemplate struct {
 	Password pulumi.StringPtrOutput `pulumi:"password"`
 	// Variable name
 	PasswordVariable pulumi.StringPtrOutput `pulumi:"passwordVariable"`
-	// 2.4GHz Shutdown - Default value: `false`
+	// 2.4GHz Shutdown
+	//   - Default value: `false`
 	Shutdown24ghz pulumi.BoolPtrOutput `pulumi:"shutdown24ghz"`
 	// Variable name
 	Shutdown24ghzVariable pulumi.StringPtrOutput `pulumi:"shutdown24ghzVariable"`
-	// 5GHz Shutdown - Default value: `false`
+	// 5GHz Shutdown
+	//   - Default value: `false`
 	Shutdown5ghz pulumi.BoolPtrOutput `pulumi:"shutdown5ghz"`
 	// Variable name
 	Shutdown5ghzVariable pulumi.StringPtrOutput `pulumi:"shutdown5ghzVariable"`
@@ -114,32 +114,30 @@ func GetCiscoWirelessLanFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CiscoWirelessLanFeatureTemplate resources.
 type ciscoWirelessLanFeatureTemplateState struct {
-	// Set mobile express default gateway - Default value: `0.0.0.0`
+	// Set mobile express default gateway
+	//   - Default value: `0.0.0.0`
 	ControllerDefaultGateway *string `pulumi:"controllerDefaultGateway"`
 	// Variable name
 	ControllerDefaultGatewayVariable *string `pulumi:"controllerDefaultGatewayVariable"`
-	// Set mobile express controller address - Default value: `0.0.0.0`
+	// Set mobile express controller address
+	//   - Default value: `0.0.0.0`
 	ControllerIpAddress *string `pulumi:"controllerIpAddress"`
 	// Variable name
 	ControllerIpAddressVariable *string `pulumi:"controllerIpAddressVariable"`
-	// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Default value: `0.0.0.0`
 	ControllerSubnetMask *string `pulumi:"controllerSubnetMask"`
 	// Variable name
 	ControllerSubnetMaskVariable *string `pulumi:"controllerSubnetMaskVariable"`
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country *string `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -147,11 +145,13 @@ type ciscoWirelessLanFeatureTemplateState struct {
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
-	// 2.4GHz Shutdown - Default value: `false`
+	// 2.4GHz Shutdown
+	//   - Default value: `false`
 	Shutdown24ghz *bool `pulumi:"shutdown24ghz"`
 	// Variable name
 	Shutdown24ghzVariable *string `pulumi:"shutdown24ghzVariable"`
-	// 5GHz Shutdown - Default value: `false`
+	// 5GHz Shutdown
+	//   - Default value: `false`
 	Shutdown5ghz *bool `pulumi:"shutdown5ghz"`
 	// Variable name
 	Shutdown5ghzVariable *string `pulumi:"shutdown5ghzVariable"`
@@ -168,32 +168,30 @@ type ciscoWirelessLanFeatureTemplateState struct {
 }
 
 type CiscoWirelessLanFeatureTemplateState struct {
-	// Set mobile express default gateway - Default value: `0.0.0.0`
+	// Set mobile express default gateway
+	//   - Default value: `0.0.0.0`
 	ControllerDefaultGateway pulumi.StringPtrInput
 	// Variable name
 	ControllerDefaultGatewayVariable pulumi.StringPtrInput
-	// Set mobile express controller address - Default value: `0.0.0.0`
+	// Set mobile express controller address
+	//   - Default value: `0.0.0.0`
 	ControllerIpAddress pulumi.StringPtrInput
 	// Variable name
 	ControllerIpAddressVariable pulumi.StringPtrInput
-	// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Default value: `0.0.0.0`
 	ControllerSubnetMask pulumi.StringPtrInput
 	// Variable name
 	ControllerSubnetMaskVariable pulumi.StringPtrInput
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -201,11 +199,13 @@ type CiscoWirelessLanFeatureTemplateState struct {
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
-	// 2.4GHz Shutdown - Default value: `false`
+	// 2.4GHz Shutdown
+	//   - Default value: `false`
 	Shutdown24ghz pulumi.BoolPtrInput
 	// Variable name
 	Shutdown24ghzVariable pulumi.StringPtrInput
-	// 5GHz Shutdown - Default value: `false`
+	// 5GHz Shutdown
+	//   - Default value: `false`
 	Shutdown5ghz pulumi.BoolPtrInput
 	// Variable name
 	Shutdown5ghzVariable pulumi.StringPtrInput
@@ -226,32 +226,30 @@ func (CiscoWirelessLanFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type ciscoWirelessLanFeatureTemplateArgs struct {
-	// Set mobile express default gateway - Default value: `0.0.0.0`
+	// Set mobile express default gateway
+	//   - Default value: `0.0.0.0`
 	ControllerDefaultGateway *string `pulumi:"controllerDefaultGateway"`
 	// Variable name
 	ControllerDefaultGatewayVariable *string `pulumi:"controllerDefaultGatewayVariable"`
-	// Set mobile express controller address - Default value: `0.0.0.0`
+	// Set mobile express controller address
+	//   - Default value: `0.0.0.0`
 	ControllerIpAddress *string `pulumi:"controllerIpAddress"`
 	// Variable name
 	ControllerIpAddressVariable *string `pulumi:"controllerIpAddressVariable"`
-	// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Default value: `0.0.0.0`
 	ControllerSubnetMask *string `pulumi:"controllerSubnetMask"`
 	// Variable name
 	ControllerSubnetMaskVariable *string `pulumi:"controllerSubnetMaskVariable"`
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country *string `pulumi:"country"`
 	// Variable name
 	CountryVariable *string `pulumi:"countryVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
@@ -259,11 +257,13 @@ type ciscoWirelessLanFeatureTemplateArgs struct {
 	Password *string `pulumi:"password"`
 	// Variable name
 	PasswordVariable *string `pulumi:"passwordVariable"`
-	// 2.4GHz Shutdown - Default value: `false`
+	// 2.4GHz Shutdown
+	//   - Default value: `false`
 	Shutdown24ghz *bool `pulumi:"shutdown24ghz"`
 	// Variable name
 	Shutdown24ghzVariable *string `pulumi:"shutdown24ghzVariable"`
-	// 5GHz Shutdown - Default value: `false`
+	// 5GHz Shutdown
+	//   - Default value: `false`
 	Shutdown5ghz *bool `pulumi:"shutdown5ghz"`
 	// Variable name
 	Shutdown5ghzVariable *string `pulumi:"shutdown5ghzVariable"`
@@ -277,32 +277,30 @@ type ciscoWirelessLanFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a CiscoWirelessLanFeatureTemplate resource.
 type CiscoWirelessLanFeatureTemplateArgs struct {
-	// Set mobile express default gateway - Default value: `0.0.0.0`
+	// Set mobile express default gateway
+	//   - Default value: `0.0.0.0`
 	ControllerDefaultGateway pulumi.StringPtrInput
 	// Variable name
 	ControllerDefaultGatewayVariable pulumi.StringPtrInput
-	// Set mobile express controller address - Default value: `0.0.0.0`
+	// Set mobile express controller address
+	//   - Default value: `0.0.0.0`
 	ControllerIpAddress pulumi.StringPtrInput
 	// Variable name
 	ControllerIpAddressVariable pulumi.StringPtrInput
-	// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+	// Set mobile express controller subnet mask
+	//   - Default value: `0.0.0.0`
 	ControllerSubnetMask pulumi.StringPtrInput
 	// Variable name
 	ControllerSubnetMaskVariable pulumi.StringPtrInput
-	// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-	// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-	// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-	// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-	// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-	// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+	// Select country
+	//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 	Country pulumi.StringPtrInput
 	// Variable name
 	CountryVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
@@ -310,11 +308,13 @@ type CiscoWirelessLanFeatureTemplateArgs struct {
 	Password pulumi.StringPtrInput
 	// Variable name
 	PasswordVariable pulumi.StringPtrInput
-	// 2.4GHz Shutdown - Default value: `false`
+	// 2.4GHz Shutdown
+	//   - Default value: `false`
 	Shutdown24ghz pulumi.BoolPtrInput
 	// Variable name
 	Shutdown24ghzVariable pulumi.StringPtrInput
-	// 5GHz Shutdown - Default value: `false`
+	// 5GHz Shutdown
+	//   - Default value: `false`
 	Shutdown5ghz pulumi.BoolPtrInput
 	// Variable name
 	Shutdown5ghzVariable pulumi.StringPtrInput
@@ -413,7 +413,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) ToCiscoWirelessLanFeatureTemplate
 	return o
 }
 
-// Set mobile express default gateway - Default value: `0.0.0.0`
+// Set mobile express default gateway
+//   - Default value: `0.0.0.0`
 func (o CiscoWirelessLanFeatureTemplateOutput) ControllerDefaultGateway() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.ControllerDefaultGateway }).(pulumi.StringPtrOutput)
 }
@@ -425,7 +426,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) ControllerDefaultGatewayVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set mobile express controller address - Default value: `0.0.0.0`
+// Set mobile express controller address
+//   - Default value: `0.0.0.0`
 func (o CiscoWirelessLanFeatureTemplateOutput) ControllerIpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.ControllerIpAddress }).(pulumi.StringPtrOutput)
 }
@@ -435,7 +437,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) ControllerIpAddressVariable() pul
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.ControllerIpAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+// Set mobile express controller subnet mask
+//   - Default value: `0.0.0.0`
 func (o CiscoWirelessLanFeatureTemplateOutput) ControllerSubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.ControllerSubnetMask }).(pulumi.StringPtrOutput)
 }
@@ -445,12 +448,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) ControllerSubnetMaskVariable() pu
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.ControllerSubnetMaskVariable }).(pulumi.StringPtrOutput)
 }
 
-// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+// Select country
+//   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
 func (o CiscoWirelessLanFeatureTemplateOutput) Country() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.Country }).(pulumi.StringPtrOutput)
 }
@@ -465,9 +464,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) Description() pulumi.StringOutput
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoWirelessLanFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -487,7 +485,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) PasswordVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.PasswordVariable }).(pulumi.StringPtrOutput)
 }
 
-// 2.4GHz Shutdown - Default value: `false`
+// 2.4GHz Shutdown
+//   - Default value: `false`
 func (o CiscoWirelessLanFeatureTemplateOutput) Shutdown24ghz() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown24ghz }).(pulumi.BoolPtrOutput)
 }
@@ -497,7 +496,8 @@ func (o CiscoWirelessLanFeatureTemplateOutput) Shutdown24ghzVariable() pulumi.St
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.StringPtrOutput { return v.Shutdown24ghzVariable }).(pulumi.StringPtrOutput)
 }
 
-// 5GHz Shutdown - Default value: `false`
+// 5GHz Shutdown
+//   - Default value: `false`
 func (o CiscoWirelessLanFeatureTemplateOutput) Shutdown5ghz() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoWirelessLanFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown5ghz }).(pulumi.BoolPtrOutput)
 }

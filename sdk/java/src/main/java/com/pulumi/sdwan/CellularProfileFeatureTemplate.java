@@ -108,14 +108,18 @@ public class CellularProfileFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.accessPointNameVariable);
     }
     /**
-     * Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+     * Set authentication type
+     *   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+     *   - Default value: `None`
      * 
      */
     @Export(name="authenticationType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> authenticationType;
 
     /**
-     * @return Set authentication type - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP` - Default value: `None`
+     * @return Set authentication type
+     *   - Choices: `None`, `PAP`, `CHAP`, `PAP/CHAP`
+     *   - Default value: `None`
      * 
      */
     public Output<Optional<String>> authenticationType() {
@@ -150,18 +154,16 @@ public class CellularProfileFeatureTemplate extends com.pulumi.resources.CustomR
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -238,14 +240,16 @@ public class CellularProfileFeatureTemplate extends com.pulumi.resources.CustomR
         return this.name;
     }
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv6`, `ipv46`
      * 
      */
     @Export(name="packetDataNetworkType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> packetDataNetworkType;
 
     /**
-     * @return Set packet data network type - Choices: `ipv4`, `ipv6`, `ipv46`
+     * @return Set packet data network type
+     *   - Choices: `ipv4`, `ipv6`, `ipv46`
      * 
      */
     public Output<Optional<String>> packetDataNetworkType() {
@@ -294,14 +298,16 @@ public class CellularProfileFeatureTemplate extends com.pulumi.resources.CustomR
         return Codegen.optional(this.primaryDnsAddressVariable);
     }
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     @Export(name="profileId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> profileId;
 
     /**
-     * @return Set Profile ID - Range: `1`-`16`
+     * @return Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     public Output<Optional<Integer>> profileId() {

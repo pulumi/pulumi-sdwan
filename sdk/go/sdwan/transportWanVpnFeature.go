@@ -29,7 +29,8 @@ type TransportWanVpnFeature struct {
 
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enhance ECMP Keying - Default value: `false`
+	// Enhance ECMP Keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrOutput `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrOutput `pulumi:"enhanceEcmpKeyingVariable"`
@@ -64,7 +65,8 @@ type TransportWanVpnFeature struct {
 	Services TransportWanVpnFeatureServiceArrayOutput `pulumi:"services"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// VPN - Default value: `0`
+	// VPN
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrOutput `pulumi:"vpn"`
 }
 
@@ -103,7 +105,8 @@ func GetTransportWanVpnFeature(ctx *pulumi.Context,
 type transportWanVpnFeatureState struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enhance ECMP Keying - Default value: `false`
+	// Enhance ECMP Keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying *bool `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable *string `pulumi:"enhanceEcmpKeyingVariable"`
@@ -138,14 +141,16 @@ type transportWanVpnFeatureState struct {
 	Services []TransportWanVpnFeatureService `pulumi:"services"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// VPN - Default value: `0`
+	// VPN
+	//   - Default value: `0`
 	Vpn *int `pulumi:"vpn"`
 }
 
 type TransportWanVpnFeatureState struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enhance ECMP Keying - Default value: `false`
+	// Enhance ECMP Keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrInput
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrInput
@@ -180,7 +185,8 @@ type TransportWanVpnFeatureState struct {
 	Services TransportWanVpnFeatureServiceArrayInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// VPN - Default value: `0`
+	// VPN
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrInput
 }
 
@@ -191,7 +197,8 @@ func (TransportWanVpnFeatureState) ElementType() reflect.Type {
 type transportWanVpnFeatureArgs struct {
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enhance ECMP Keying - Default value: `false`
+	// Enhance ECMP Keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying *bool `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable *string `pulumi:"enhanceEcmpKeyingVariable"`
@@ -224,7 +231,8 @@ type transportWanVpnFeatureArgs struct {
 	SecondaryDnsAddressIpv6Variable *string `pulumi:"secondaryDnsAddressIpv6Variable"`
 	// Service
 	Services []TransportWanVpnFeatureService `pulumi:"services"`
-	// VPN - Default value: `0`
+	// VPN
+	//   - Default value: `0`
 	Vpn *int `pulumi:"vpn"`
 }
 
@@ -232,7 +240,8 @@ type transportWanVpnFeatureArgs struct {
 type TransportWanVpnFeatureArgs struct {
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enhance ECMP Keying - Default value: `false`
+	// Enhance ECMP Keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrInput
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrInput
@@ -265,7 +274,8 @@ type TransportWanVpnFeatureArgs struct {
 	SecondaryDnsAddressIpv6Variable pulumi.StringPtrInput
 	// Service
 	Services TransportWanVpnFeatureServiceArrayInput
-	// VPN - Default value: `0`
+	// VPN
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrInput
 }
 
@@ -361,7 +371,8 @@ func (o TransportWanVpnFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enhance ECMP Keying - Default value: `false`
+// Enhance ECMP Keying
+//   - Default value: `false`
 func (o TransportWanVpnFeatureOutput) EnhanceEcmpKeying() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.BoolPtrOutput { return v.EnhanceEcmpKeying }).(pulumi.BoolPtrOutput)
 }
@@ -456,7 +467,8 @@ func (o TransportWanVpnFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// VPN - Default value: `0`
+// VPN
+//   - Default value: `0`
 func (o TransportWanVpnFeatureOutput) Vpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportWanVpnFeature) pulumi.IntPtrOutput { return v.Vpn }).(pulumi.IntPtrOutput)
 }

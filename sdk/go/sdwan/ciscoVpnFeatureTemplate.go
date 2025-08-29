@@ -27,9 +27,8 @@ type CiscoVpnFeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
 	// Static DNS mapping
 	DnsHosts CiscoVpnFeatureTemplateDnsHostArrayOutput `pulumi:"dnsHosts"`
@@ -37,7 +36,8 @@ type CiscoVpnFeatureTemplate struct {
 	DnsIpv4Servers CiscoVpnFeatureTemplateDnsIpv4ServerArrayOutput `pulumi:"dnsIpv4Servers"`
 	// DNS
 	DnsIpv6Servers CiscoVpnFeatureTemplateDnsIpv6ServerArrayOutput `pulumi:"dnsIpv6Servers"`
-	// Optional packet fields for ECMP keying - Default value: `false`
+	// Optional packet fields for ECMP keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrOutput `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrOutput `pulumi:"enhanceEcmpKeyingVariable"`
@@ -57,11 +57,13 @@ type CiscoVpnFeatureTemplate struct {
 	Nat64Pools CiscoVpnFeatureTemplateNat64PoolArrayOutput `pulumi:"nat64Pools"`
 	// Configure NAT Pool entries
 	NatPools CiscoVpnFeatureTemplateNatPoolArrayOutput `pulumi:"natPools"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -87,11 +89,15 @@ type CiscoVpnFeatureTemplate struct {
 	StaticNatSubnetRules CiscoVpnFeatureTemplateStaticNatSubnetRuleArrayOutput `pulumi:"staticNatSubnetRules"`
 	// The template type
 	TemplateType pulumi.StringOutput `pulumi:"templateType"`
-	// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+	// Tenant VPN
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	TenantVpnId pulumi.IntPtrOutput `pulumi:"tenantVpnId"`
 	// The version of the feature template
 	Version pulumi.IntOutput `pulumi:"version"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrOutput `pulumi:"vpnId"`
 	// Name
 	VpnName pulumi.StringPtrOutput `pulumi:"vpnName"`
@@ -137,9 +143,8 @@ func GetCiscoVpnFeatureTemplate(ctx *pulumi.Context,
 type ciscoVpnFeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Static DNS mapping
 	DnsHosts []CiscoVpnFeatureTemplateDnsHost `pulumi:"dnsHosts"`
@@ -147,7 +152,8 @@ type ciscoVpnFeatureTemplateState struct {
 	DnsIpv4Servers []CiscoVpnFeatureTemplateDnsIpv4Server `pulumi:"dnsIpv4Servers"`
 	// DNS
 	DnsIpv6Servers []CiscoVpnFeatureTemplateDnsIpv6Server `pulumi:"dnsIpv6Servers"`
-	// Optional packet fields for ECMP keying - Default value: `false`
+	// Optional packet fields for ECMP keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying *bool `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable *string `pulumi:"enhanceEcmpKeyingVariable"`
@@ -167,11 +173,13 @@ type ciscoVpnFeatureTemplateState struct {
 	Nat64Pools []CiscoVpnFeatureTemplateNat64Pool `pulumi:"nat64Pools"`
 	// Configure NAT Pool entries
 	NatPools []CiscoVpnFeatureTemplateNatPool `pulumi:"natPools"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -197,11 +205,15 @@ type ciscoVpnFeatureTemplateState struct {
 	StaticNatSubnetRules []CiscoVpnFeatureTemplateStaticNatSubnetRule `pulumi:"staticNatSubnetRules"`
 	// The template type
 	TemplateType *string `pulumi:"templateType"`
-	// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+	// Tenant VPN
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	TenantVpnId *int `pulumi:"tenantVpnId"`
 	// The version of the feature template
 	Version *int `pulumi:"version"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId *int `pulumi:"vpnId"`
 	// Name
 	VpnName *string `pulumi:"vpnName"`
@@ -212,9 +224,8 @@ type ciscoVpnFeatureTemplateState struct {
 type CiscoVpnFeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Static DNS mapping
 	DnsHosts CiscoVpnFeatureTemplateDnsHostArrayInput
@@ -222,7 +233,8 @@ type CiscoVpnFeatureTemplateState struct {
 	DnsIpv4Servers CiscoVpnFeatureTemplateDnsIpv4ServerArrayInput
 	// DNS
 	DnsIpv6Servers CiscoVpnFeatureTemplateDnsIpv6ServerArrayInput
-	// Optional packet fields for ECMP keying - Default value: `false`
+	// Optional packet fields for ECMP keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrInput
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrInput
@@ -242,11 +254,13 @@ type CiscoVpnFeatureTemplateState struct {
 	Nat64Pools CiscoVpnFeatureTemplateNat64PoolArrayInput
 	// Configure NAT Pool entries
 	NatPools CiscoVpnFeatureTemplateNatPoolArrayInput
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
@@ -272,11 +286,15 @@ type CiscoVpnFeatureTemplateState struct {
 	StaticNatSubnetRules CiscoVpnFeatureTemplateStaticNatSubnetRuleArrayInput
 	// The template type
 	TemplateType pulumi.StringPtrInput
-	// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+	// Tenant VPN
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	TenantVpnId pulumi.IntPtrInput
 	// The version of the feature template
 	Version pulumi.IntPtrInput
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrInput
 	// Name
 	VpnName pulumi.StringPtrInput
@@ -291,9 +309,8 @@ func (CiscoVpnFeatureTemplateState) ElementType() reflect.Type {
 type ciscoVpnFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
 	// Static DNS mapping
 	DnsHosts []CiscoVpnFeatureTemplateDnsHost `pulumi:"dnsHosts"`
@@ -301,7 +318,8 @@ type ciscoVpnFeatureTemplateArgs struct {
 	DnsIpv4Servers []CiscoVpnFeatureTemplateDnsIpv4Server `pulumi:"dnsIpv4Servers"`
 	// DNS
 	DnsIpv6Servers []CiscoVpnFeatureTemplateDnsIpv6Server `pulumi:"dnsIpv6Servers"`
-	// Optional packet fields for ECMP keying - Default value: `false`
+	// Optional packet fields for ECMP keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying *bool `pulumi:"enhanceEcmpKeying"`
 	// Variable name
 	EnhanceEcmpKeyingVariable *string `pulumi:"enhanceEcmpKeyingVariable"`
@@ -321,11 +339,13 @@ type ciscoVpnFeatureTemplateArgs struct {
 	Nat64Pools []CiscoVpnFeatureTemplateNat64Pool `pulumi:"nat64Pools"`
 	// Configure NAT Pool entries
 	NatPools []CiscoVpnFeatureTemplateNatPool `pulumi:"natPools"`
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -349,9 +369,13 @@ type ciscoVpnFeatureTemplateArgs struct {
 	StaticNatRules []CiscoVpnFeatureTemplateStaticNatRule `pulumi:"staticNatRules"`
 	// Configure static NAT Subnet entries
 	StaticNatSubnetRules []CiscoVpnFeatureTemplateStaticNatSubnetRule `pulumi:"staticNatSubnetRules"`
-	// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+	// Tenant VPN
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	TenantVpnId *int `pulumi:"tenantVpnId"`
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId *int `pulumi:"vpnId"`
 	// Name
 	VpnName *string `pulumi:"vpnName"`
@@ -363,9 +387,8 @@ type ciscoVpnFeatureTemplateArgs struct {
 type CiscoVpnFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
 	// Static DNS mapping
 	DnsHosts CiscoVpnFeatureTemplateDnsHostArrayInput
@@ -373,7 +396,8 @@ type CiscoVpnFeatureTemplateArgs struct {
 	DnsIpv4Servers CiscoVpnFeatureTemplateDnsIpv4ServerArrayInput
 	// DNS
 	DnsIpv6Servers CiscoVpnFeatureTemplateDnsIpv6ServerArrayInput
-	// Optional packet fields for ECMP keying - Default value: `false`
+	// Optional packet fields for ECMP keying
+	//   - Default value: `false`
 	EnhanceEcmpKeying pulumi.BoolPtrInput
 	// Variable name
 	EnhanceEcmpKeyingVariable pulumi.StringPtrInput
@@ -393,11 +417,13 @@ type CiscoVpnFeatureTemplateArgs struct {
 	Nat64Pools CiscoVpnFeatureTemplateNat64PoolArrayInput
 	// Configure NAT Pool entries
 	NatPools CiscoVpnFeatureTemplateNatPoolArrayInput
-	// omp-admin-distance-ipv4 - Range: `1`-`255`
+	// omp-admin-distance-ipv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// omp-admin-distance-ipv6 - Range: `1`-`255`
+	// omp-admin-distance-ipv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
@@ -421,9 +447,13 @@ type CiscoVpnFeatureTemplateArgs struct {
 	StaticNatRules CiscoVpnFeatureTemplateStaticNatRuleArrayInput
 	// Configure static NAT Subnet entries
 	StaticNatSubnetRules CiscoVpnFeatureTemplateStaticNatSubnetRuleArrayInput
-	// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+	// Tenant VPN
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	TenantVpnId pulumi.IntPtrInput
-	// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+	// List of VPN instances
+	//   - Range: `0`-`65527`
+	//   - Default value: `0`
 	VpnId pulumi.IntPtrInput
 	// Name
 	VpnName pulumi.StringPtrInput
@@ -523,9 +553,8 @@ func (o CiscoVpnFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoVpnFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
@@ -549,7 +578,8 @@ func (o CiscoVpnFeatureTemplateOutput) DnsIpv6Servers() CiscoVpnFeatureTemplateD
 	}).(CiscoVpnFeatureTemplateDnsIpv6ServerArrayOutput)
 }
 
-// Optional packet fields for ECMP keying - Default value: `false`
+// Optional packet fields for ECMP keying
+//   - Default value: `false`
 func (o CiscoVpnFeatureTemplateOutput) EnhanceEcmpKeying() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.BoolPtrOutput { return v.EnhanceEcmpKeying }).(pulumi.BoolPtrOutput)
 }
@@ -609,7 +639,8 @@ func (o CiscoVpnFeatureTemplateOutput) NatPools() CiscoVpnFeatureTemplateNatPool
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) CiscoVpnFeatureTemplateNatPoolArrayOutput { return v.NatPools }).(CiscoVpnFeatureTemplateNatPoolArrayOutput)
 }
 
-// omp-admin-distance-ipv4 - Range: `1`-`255`
+// omp-admin-distance-ipv4
+//   - Range: `1`-`255`
 func (o CiscoVpnFeatureTemplateOutput) OmpAdminDistanceIpv4() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv4 }).(pulumi.IntPtrOutput)
 }
@@ -619,7 +650,8 @@ func (o CiscoVpnFeatureTemplateOutput) OmpAdminDistanceIpv4Variable() pulumi.Str
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv4Variable }).(pulumi.StringPtrOutput)
 }
 
-// omp-admin-distance-ipv6 - Range: `1`-`255`
+// omp-admin-distance-ipv6
+//   - Range: `1`-`255`
 func (o CiscoVpnFeatureTemplateOutput) OmpAdminDistanceIpv6() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv6 }).(pulumi.IntPtrOutput)
 }
@@ -700,7 +732,9 @@ func (o CiscoVpnFeatureTemplateOutput) TemplateType() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.StringOutput { return v.TemplateType }).(pulumi.StringOutput)
 }
 
-// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+// Tenant VPN
+//   - Range: `0`-`65527`
+//   - Default value: `0`
 func (o CiscoVpnFeatureTemplateOutput) TenantVpnId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.IntPtrOutput { return v.TenantVpnId }).(pulumi.IntPtrOutput)
 }
@@ -710,7 +744,9 @@ func (o CiscoVpnFeatureTemplateOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+// List of VPN instances
+//   - Range: `0`-`65527`
+//   - Default value: `0`
 func (o CiscoVpnFeatureTemplateOutput) VpnId() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnFeatureTemplate) pulumi.IntPtrOutput { return v.VpnId }).(pulumi.IntPtrOutput)
 }

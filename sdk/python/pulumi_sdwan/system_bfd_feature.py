@@ -35,13 +35,16 @@ class SystemBfdFeatureArgs:
         The set of arguments for constructing a SystemBfdFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
-        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295` - Default value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -92,7 +95,8 @@ class SystemBfdFeatureArgs:
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `0`-`63` - Default value: `48`
+        - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -128,7 +132,8 @@ class SystemBfdFeatureArgs:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `1`-`6` - Default value: `6`
+        - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -164,7 +169,8 @@ class SystemBfdFeatureArgs:
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `1`-`4294967295` - Default value: `600000`
+        - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 
@@ -202,14 +208,17 @@ class _SystemBfdFeatureState:
         """
         Input properties used for looking up and filtering SystemBfdFeature resources.
         :param pulumi.Input[Sequence[pulumi.Input['SystemBfdFeatureColorArgs']]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295` - Default value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -252,7 +261,8 @@ class _SystemBfdFeatureState:
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `0`-`63` - Default value: `48`
+        - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -300,7 +310,8 @@ class _SystemBfdFeatureState:
     @pulumi.getter
     def multiplier(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `1`-`6` - Default value: `6`
+        - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -336,7 +347,8 @@ class _SystemBfdFeatureState:
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        - Range: `1`-`4294967295` - Default value: `600000`
+        - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 
@@ -403,14 +415,17 @@ class SystemBfdFeature(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295` - Default value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         """
         ...
@@ -509,14 +524,17 @@ class SystemBfdFeature(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SystemBfdFeatureColorArgs', 'SystemBfdFeatureColorArgsDict']]]] colors: Set color that identifies the WAN transport tunnel
-        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63` - Default value: `48`
+        :param pulumi.Input[_builtins.int] default_dscp: - Range: `0`-`63`
+                 - Default value: `48`
         :param pulumi.Input[_builtins.str] default_dscp_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6` - Default value: `6`
+        :param pulumi.Input[_builtins.int] multiplier: - Range: `1`-`6`
+                 - Default value: `6`
         :param pulumi.Input[_builtins.str] multiplier_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295` - Default value: `600000`
+        :param pulumi.Input[_builtins.int] poll_interval: - Range: `1`-`4294967295`
+                 - Default value: `600000`
         :param pulumi.Input[_builtins.str] poll_interval_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -549,7 +567,8 @@ class SystemBfdFeature(pulumi.CustomResource):
     @pulumi.getter(name="defaultDscp")
     def default_dscp(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        - Range: `0`-`63` - Default value: `48`
+        - Range: `0`-`63`
+          - Default value: `48`
         """
         return pulumi.get(self, "default_dscp")
 
@@ -581,7 +600,8 @@ class SystemBfdFeature(pulumi.CustomResource):
     @pulumi.getter
     def multiplier(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        - Range: `1`-`6` - Default value: `6`
+        - Range: `1`-`6`
+          - Default value: `6`
         """
         return pulumi.get(self, "multiplier")
 
@@ -605,7 +625,8 @@ class SystemBfdFeature(pulumi.CustomResource):
     @pulumi.getter(name="pollInterval")
     def poll_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        - Range: `1`-`4294967295` - Default value: `600000`
+        - Range: `1`-`4294967295`
+          - Default value: `600000`
         """
         return pulumi.get(self, "poll_interval")
 

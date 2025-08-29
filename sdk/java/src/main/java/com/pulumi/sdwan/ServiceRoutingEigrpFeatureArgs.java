@@ -24,14 +24,16 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     public static final ServiceRoutingEigrpFeatureArgs Empty = new ServiceRoutingEigrpFeatureArgs();
 
     /**
-     * Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+     * @return Set EIGRP router authentication type
+     *   - Choices: `md5`, `hmac-sha-256`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -54,14 +56,16 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="autonomousSystemId")
     private @Nullable Output<Integer> autonomousSystemId;
 
     /**
-     * @return Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+     * @return Set autonomous system ID &lt;1..65535&gt;
+     *   - Range: `1`-`65535`
      * 
      */
     public Optional<Output<Integer>> autonomousSystemId() {
@@ -114,14 +118,16 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Selective route download - Default value: `false`
+     * Selective route download
+     *   - Default value: `false`
      * 
      */
     @Import(name="filter")
     private @Nullable Output<Boolean> filter;
 
     /**
-     * @return Selective route download - Default value: `false`
+     * @return Selective route download
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> filter() {
@@ -144,14 +150,18 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     @Import(name="helloInterval")
     private @Nullable Output<Integer> helloInterval;
 
     /**
-     * @return Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+     * @return Set EIGRP hello interval
+     *   - Range: `0`-`65535`
+     *   - Default value: `5`
      * 
      */
     public Optional<Output<Integer>> helloInterval() {
@@ -204,14 +214,18 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     @Import(name="holdTime")
     private @Nullable Output<Integer> holdTime;
 
     /**
-     * @return Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+     * @return Set EIGRP hold time
+     *   - Range: `0`-`65535`
+     *   - Default value: `15`
      * 
      */
     public Optional<Output<Integer>> holdTime() {
@@ -359,7 +373,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param authenticationType Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+         * @param authenticationType Set EIGRP router authentication type
+         *   - Choices: `md5`, `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -370,7 +385,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param authenticationType Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+         * @param authenticationType Set EIGRP router authentication type
+         *   - Choices: `md5`, `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -401,7 +417,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param autonomousSystemId Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+         * @param autonomousSystemId Set autonomous system ID &lt;1..65535&gt;
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -412,7 +429,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param autonomousSystemId Set autonomous system ID &lt;1..65535&gt; - Range: `1`-`65535`
+         * @param autonomousSystemId Set autonomous system ID &lt;1..65535&gt;
+         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
@@ -485,7 +503,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param filter Selective route download - Default value: `false`
+         * @param filter Selective route download
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -496,7 +515,8 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param filter Selective route download - Default value: `false`
+         * @param filter Selective route download
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -527,7 +547,9 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param helloInterval Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+         * @param helloInterval Set EIGRP hello interval
+         *   - Range: `0`-`65535`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -538,7 +560,9 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param helloInterval Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+         * @param helloInterval Set EIGRP hello interval
+         *   - Range: `0`-`65535`
+         *   - Default value: `5`
          * 
          * @return builder
          * 
@@ -611,7 +635,9 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param holdTime Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+         * @param holdTime Set EIGRP hold time
+         *   - Range: `0`-`65535`
+         *   - Default value: `15`
          * 
          * @return builder
          * 
@@ -622,7 +648,9 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param holdTime Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+         * @param holdTime Set EIGRP hold time
+         *   - Range: `0`-`65535`
+         *   - Default value: `15`
          * 
          * @return builder
          * 

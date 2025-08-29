@@ -48,65 +48,68 @@ export class UrlFilteringPolicyDefinition extends pulumi.CustomResource {
     /**
      * List of alerts options that will be exported as syslog messages
      */
-    public readonly alerts!: pulumi.Output<string[] | undefined>;
+    declare public readonly alerts: pulumi.Output<string[] | undefined>;
     /**
      * Allow URL list ID
      */
-    public readonly allowUrlListId!: pulumi.Output<string | undefined>;
+    declare public readonly allowUrlListId: pulumi.Output<string | undefined>;
     /**
      * Allow URL list version
      */
-    public readonly allowUrlListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly allowUrlListVersion: pulumi.Output<number | undefined>;
     /**
-     * Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      */
-    public readonly blockPageAction!: pulumi.Output<string | undefined>;
+    declare public readonly blockPageAction: pulumi.Output<string | undefined>;
     /**
      * The message displayed or URL redirected to when a blocked page is accessed.
      */
-    public readonly blockPageContents!: pulumi.Output<string | undefined>;
+    declare public readonly blockPageContents: pulumi.Output<string | undefined>;
     /**
      * Block URL list ID
      */
-    public readonly blockUrlListId!: pulumi.Output<string | undefined>;
+    declare public readonly blockUrlListId: pulumi.Output<string | undefined>;
     /**
      * Block URL list version
      */
-    public readonly blockUrlListVersion!: pulumi.Output<number | undefined>;
+    declare public readonly blockUrlListVersion: pulumi.Output<number | undefined>;
     /**
      * The description of the policy definition.
      */
-    public readonly description!: pulumi.Output<string>;
-    public readonly loggings!: pulumi.Output<outputs.UrlFilteringPolicyDefinitionLogging[] | undefined>;
+    declare public readonly description: pulumi.Output<string>;
+    declare public readonly loggings: pulumi.Output<outputs.UrlFilteringPolicyDefinitionLogging[] | undefined>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
-    public readonly mode!: pulumi.Output<string | undefined>;
+    declare public readonly mode: pulumi.Output<string | undefined>;
     /**
      * The name of the policy definition.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * List of VPN IDs
      */
-    public readonly targetVpns!: pulumi.Output<string[] | undefined>;
+    declare public readonly targetVpns: pulumi.Output<string[] | undefined>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
      * List of categories to block or allow
      */
-    public readonly webCategories!: pulumi.Output<string[] | undefined>;
+    declare public readonly webCategories: pulumi.Output<string[] | undefined>;
     /**
-     * whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      */
-    public readonly webCategoriesAction!: pulumi.Output<string | undefined>;
+    declare public readonly webCategoriesAction: pulumi.Output<string | undefined>;
     /**
-     * The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
-    public readonly webReputation!: pulumi.Output<string | undefined>;
+    declare public readonly webReputation: pulumi.Output<string | undefined>;
 
     /**
      * Create a UrlFilteringPolicyDefinition resource with the given unique name, arguments, and options.
@@ -121,42 +124,42 @@ export class UrlFilteringPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as UrlFilteringPolicyDefinitionState | undefined;
-            resourceInputs["alerts"] = state ? state.alerts : undefined;
-            resourceInputs["allowUrlListId"] = state ? state.allowUrlListId : undefined;
-            resourceInputs["allowUrlListVersion"] = state ? state.allowUrlListVersion : undefined;
-            resourceInputs["blockPageAction"] = state ? state.blockPageAction : undefined;
-            resourceInputs["blockPageContents"] = state ? state.blockPageContents : undefined;
-            resourceInputs["blockUrlListId"] = state ? state.blockUrlListId : undefined;
-            resourceInputs["blockUrlListVersion"] = state ? state.blockUrlListVersion : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["loggings"] = state ? state.loggings : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["targetVpns"] = state ? state.targetVpns : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["webCategories"] = state ? state.webCategories : undefined;
-            resourceInputs["webCategoriesAction"] = state ? state.webCategoriesAction : undefined;
-            resourceInputs["webReputation"] = state ? state.webReputation : undefined;
+            resourceInputs["alerts"] = state?.alerts;
+            resourceInputs["allowUrlListId"] = state?.allowUrlListId;
+            resourceInputs["allowUrlListVersion"] = state?.allowUrlListVersion;
+            resourceInputs["blockPageAction"] = state?.blockPageAction;
+            resourceInputs["blockPageContents"] = state?.blockPageContents;
+            resourceInputs["blockUrlListId"] = state?.blockUrlListId;
+            resourceInputs["blockUrlListVersion"] = state?.blockUrlListVersion;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["loggings"] = state?.loggings;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["targetVpns"] = state?.targetVpns;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["webCategories"] = state?.webCategories;
+            resourceInputs["webCategoriesAction"] = state?.webCategoriesAction;
+            resourceInputs["webReputation"] = state?.webReputation;
         } else {
             const args = argsOrState as UrlFilteringPolicyDefinitionArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["alerts"] = args ? args.alerts : undefined;
-            resourceInputs["allowUrlListId"] = args ? args.allowUrlListId : undefined;
-            resourceInputs["allowUrlListVersion"] = args ? args.allowUrlListVersion : undefined;
-            resourceInputs["blockPageAction"] = args ? args.blockPageAction : undefined;
-            resourceInputs["blockPageContents"] = args ? args.blockPageContents : undefined;
-            resourceInputs["blockUrlListId"] = args ? args.blockUrlListId : undefined;
-            resourceInputs["blockUrlListVersion"] = args ? args.blockUrlListVersion : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["loggings"] = args ? args.loggings : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["targetVpns"] = args ? args.targetVpns : undefined;
-            resourceInputs["webCategories"] = args ? args.webCategories : undefined;
-            resourceInputs["webCategoriesAction"] = args ? args.webCategoriesAction : undefined;
-            resourceInputs["webReputation"] = args ? args.webReputation : undefined;
+            resourceInputs["alerts"] = args?.alerts;
+            resourceInputs["allowUrlListId"] = args?.allowUrlListId;
+            resourceInputs["allowUrlListVersion"] = args?.allowUrlListVersion;
+            resourceInputs["blockPageAction"] = args?.blockPageAction;
+            resourceInputs["blockPageContents"] = args?.blockPageContents;
+            resourceInputs["blockUrlListId"] = args?.blockUrlListId;
+            resourceInputs["blockUrlListVersion"] = args?.blockUrlListVersion;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["loggings"] = args?.loggings;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["targetVpns"] = args?.targetVpns;
+            resourceInputs["webCategories"] = args?.webCategories;
+            resourceInputs["webCategoriesAction"] = args?.webCategoriesAction;
+            resourceInputs["webReputation"] = args?.webReputation;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -181,7 +184,8 @@ export interface UrlFilteringPolicyDefinitionState {
      */
     allowUrlListVersion?: pulumi.Input<number>;
     /**
-     * Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      */
     blockPageAction?: pulumi.Input<string>;
     /**
@@ -202,7 +206,8 @@ export interface UrlFilteringPolicyDefinitionState {
     description?: pulumi.Input<string>;
     loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -222,12 +227,13 @@ export interface UrlFilteringPolicyDefinitionState {
      */
     webCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      */
     webCategoriesAction?: pulumi.Input<string>;
     /**
-     * The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
     webReputation?: pulumi.Input<string>;
 }
@@ -249,7 +255,8 @@ export interface UrlFilteringPolicyDefinitionArgs {
      */
     allowUrlListVersion?: pulumi.Input<number>;
     /**
-     * Redirect to a URL or display a message when a blocked page is accessed. - Choices: `text`, `redirectUrl`
+     * Redirect to a URL or display a message when a blocked page is accessed.
+     *   - Choices: `text`, `redirectUrl`
      */
     blockPageAction?: pulumi.Input<string>;
     /**
@@ -270,7 +277,8 @@ export interface UrlFilteringPolicyDefinitionArgs {
     description: pulumi.Input<string>;
     loggings?: pulumi.Input<pulumi.Input<inputs.UrlFilteringPolicyDefinitionLogging>[]>;
     /**
-     * The policy mode - Choices: `security`, `unified`
+     * The policy mode
+     *   - Choices: `security`, `unified`
      */
     mode?: pulumi.Input<string>;
     /**
@@ -286,12 +294,13 @@ export interface UrlFilteringPolicyDefinitionArgs {
      */
     webCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * whether the selected web categories should be blocked or allowed. - Choices: `block`, `allow`
+     * whether the selected web categories should be blocked or allowed.
+     *   - Choices: `block`, `allow`
      */
     webCategoriesAction?: pulumi.Input<string>;
     /**
-     * The web reputation of the policy definition - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`,
-     * `trustworthy`
+     * The web reputation of the policy definition
+     *   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
      */
     webReputation?: pulumi.Input<string>;
 }

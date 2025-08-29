@@ -27,7 +27,8 @@ namespace Pulumi.Sdwan
     public partial class SystemAaaFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Output("accountingGroup")]
         public Output<bool?> AccountingGroup { get; private set; } = null!;
@@ -45,7 +46,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SystemAaaFeatureAccountingRule>> AccountingRules { get; private set; } = null!;
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Output("authenticationGroup")]
         public Output<bool?> AuthenticationGroup { get; private set; } = null!;
@@ -57,7 +59,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AuthenticationGroupVariable { get; private set; } = null!;
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -69,7 +72,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AuthorizationConfigCommandsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -181,7 +185,8 @@ namespace Pulumi.Sdwan
     public sealed class SystemAaaFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -205,7 +210,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -217,7 +223,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthenticationGroupVariable { get; set; }
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -229,7 +236,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthorizationConfigCommandsVariable { get; set; }
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -327,7 +335,8 @@ namespace Pulumi.Sdwan
     public sealed class SystemAaaFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Accounting configurations parameters - Default value: `false`
+        /// Accounting configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -351,7 +360,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Authentication configurations parameters - Default value: `false`
+        /// Authentication configurations parameters
+        ///   - Default value: `false`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -363,7 +373,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthenticationGroupVariable { get; set; }
 
         /// <summary>
-        /// For configuration mode commands. - Default value: `false`
+        /// For configuration mode commands.
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -375,7 +386,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AuthorizationConfigCommandsVariable { get; set; }
 
         /// <summary>
-        /// For enabling console authorization - Default value: `false`
+        /// For enabling console authorization
+        ///   - Default value: `false`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }

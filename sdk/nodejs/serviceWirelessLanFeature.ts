@@ -49,106 +49,97 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
     }
 
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
-    public readonly country!: pulumi.Output<string | undefined>;
+    declare public readonly country: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly countryVariable!: pulumi.Output<string | undefined>;
+    declare public readonly countryVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * 2.4GHz Enabled - Default value: `true`
+     * 2.4GHz Enabled
+     *   - Default value: `true`
      */
-    public readonly enable24g!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly enable24gVariable!: pulumi.Output<string | undefined>;
-    /**
-     * 5GHz Enabled - Default value: `true`
-     */
-    public readonly enable5g!: pulumi.Output<boolean | undefined>;
+    declare public readonly enable24g: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly enable5gVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enable24gVariable: pulumi.Output<string | undefined>;
+    /**
+     * 5GHz Enabled
+     *   - Default value: `true`
+     */
+    declare public readonly enable5g: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly enable5gVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * Set mobile express default gateway
      */
-    public readonly meDefaultGateway!: pulumi.Output<string | undefined>;
+    declare public readonly meDefaultGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly meDefaultGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly meDefaultGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * ME management IP dynamic allocated by DHCP
      */
-    public readonly meDynamicIpEnabled!: pulumi.Output<boolean>;
+    declare public readonly meDynamicIpEnabled: pulumi.Output<boolean>;
     /**
      * Set mobile express controller address
      */
-    public readonly meIpv4Address!: pulumi.Output<string | undefined>;
+    declare public readonly meIpv4Address: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly meIpv4AddressVariable!: pulumi.Output<string | undefined>;
+    declare public readonly meIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-     * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-     * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-     * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-     * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
-    public readonly meSubnetMask!: pulumi.Output<string | undefined>;
+    declare public readonly meSubnetMask: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly meSubnetMaskVariable!: pulumi.Output<string | undefined>;
+    declare public readonly meSubnetMaskVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Set management password,the password must contains characters from all of the following classes,lowercase
-     * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-     * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-     * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-     * addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
      */
-    public readonly password!: pulumi.Output<string | undefined>;
+    declare public readonly password: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly passwordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly passwordVariable: pulumi.Output<string | undefined>;
     /**
      * Configure Wi-Fi SSID profile
      */
-    public readonly ssids!: pulumi.Output<outputs.ServiceWirelessLanFeatureSsid[]>;
+    declare public readonly ssids: pulumi.Output<outputs.ServiceWirelessLanFeatureSsid[]>;
     /**
      * Set management username
      */
-    public readonly username!: pulumi.Output<string | undefined>;
+    declare public readonly username: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly usernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly usernameVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ServiceWirelessLanFeature resource with the given unique name, arguments, and options.
@@ -163,60 +154,60 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceWirelessLanFeatureState | undefined;
-            resourceInputs["country"] = state ? state.country : undefined;
-            resourceInputs["countryVariable"] = state ? state.countryVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enable24g"] = state ? state.enable24g : undefined;
-            resourceInputs["enable24gVariable"] = state ? state.enable24gVariable : undefined;
-            resourceInputs["enable5g"] = state ? state.enable5g : undefined;
-            resourceInputs["enable5gVariable"] = state ? state.enable5gVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["meDefaultGateway"] = state ? state.meDefaultGateway : undefined;
-            resourceInputs["meDefaultGatewayVariable"] = state ? state.meDefaultGatewayVariable : undefined;
-            resourceInputs["meDynamicIpEnabled"] = state ? state.meDynamicIpEnabled : undefined;
-            resourceInputs["meIpv4Address"] = state ? state.meIpv4Address : undefined;
-            resourceInputs["meIpv4AddressVariable"] = state ? state.meIpv4AddressVariable : undefined;
-            resourceInputs["meSubnetMask"] = state ? state.meSubnetMask : undefined;
-            resourceInputs["meSubnetMaskVariable"] = state ? state.meSubnetMaskVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["password"] = state ? state.password : undefined;
-            resourceInputs["passwordVariable"] = state ? state.passwordVariable : undefined;
-            resourceInputs["ssids"] = state ? state.ssids : undefined;
-            resourceInputs["username"] = state ? state.username : undefined;
-            resourceInputs["usernameVariable"] = state ? state.usernameVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["country"] = state?.country;
+            resourceInputs["countryVariable"] = state?.countryVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enable24g"] = state?.enable24g;
+            resourceInputs["enable24gVariable"] = state?.enable24gVariable;
+            resourceInputs["enable5g"] = state?.enable5g;
+            resourceInputs["enable5gVariable"] = state?.enable5gVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["meDefaultGateway"] = state?.meDefaultGateway;
+            resourceInputs["meDefaultGatewayVariable"] = state?.meDefaultGatewayVariable;
+            resourceInputs["meDynamicIpEnabled"] = state?.meDynamicIpEnabled;
+            resourceInputs["meIpv4Address"] = state?.meIpv4Address;
+            resourceInputs["meIpv4AddressVariable"] = state?.meIpv4AddressVariable;
+            resourceInputs["meSubnetMask"] = state?.meSubnetMask;
+            resourceInputs["meSubnetMaskVariable"] = state?.meSubnetMaskVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["password"] = state?.password;
+            resourceInputs["passwordVariable"] = state?.passwordVariable;
+            resourceInputs["ssids"] = state?.ssids;
+            resourceInputs["username"] = state?.username;
+            resourceInputs["usernameVariable"] = state?.usernameVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceWirelessLanFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.meDynamicIpEnabled === undefined) && !opts.urn) {
+            if (args?.meDynamicIpEnabled === undefined && !opts.urn) {
                 throw new Error("Missing required property 'meDynamicIpEnabled'");
             }
-            if ((!args || args.ssids === undefined) && !opts.urn) {
+            if (args?.ssids === undefined && !opts.urn) {
                 throw new Error("Missing required property 'ssids'");
             }
-            resourceInputs["country"] = args ? args.country : undefined;
-            resourceInputs["countryVariable"] = args ? args.countryVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enable24g"] = args ? args.enable24g : undefined;
-            resourceInputs["enable24gVariable"] = args ? args.enable24gVariable : undefined;
-            resourceInputs["enable5g"] = args ? args.enable5g : undefined;
-            resourceInputs["enable5gVariable"] = args ? args.enable5gVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["meDefaultGateway"] = args ? args.meDefaultGateway : undefined;
-            resourceInputs["meDefaultGatewayVariable"] = args ? args.meDefaultGatewayVariable : undefined;
-            resourceInputs["meDynamicIpEnabled"] = args ? args.meDynamicIpEnabled : undefined;
-            resourceInputs["meIpv4Address"] = args ? args.meIpv4Address : undefined;
-            resourceInputs["meIpv4AddressVariable"] = args ? args.meIpv4AddressVariable : undefined;
-            resourceInputs["meSubnetMask"] = args ? args.meSubnetMask : undefined;
-            resourceInputs["meSubnetMaskVariable"] = args ? args.meSubnetMaskVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["password"] = args ? args.password : undefined;
-            resourceInputs["passwordVariable"] = args ? args.passwordVariable : undefined;
-            resourceInputs["ssids"] = args ? args.ssids : undefined;
-            resourceInputs["username"] = args ? args.username : undefined;
-            resourceInputs["usernameVariable"] = args ? args.usernameVariable : undefined;
+            resourceInputs["country"] = args?.country;
+            resourceInputs["countryVariable"] = args?.countryVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enable24g"] = args?.enable24g;
+            resourceInputs["enable24gVariable"] = args?.enable24gVariable;
+            resourceInputs["enable5g"] = args?.enable5g;
+            resourceInputs["enable5gVariable"] = args?.enable5gVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["meDefaultGateway"] = args?.meDefaultGateway;
+            resourceInputs["meDefaultGatewayVariable"] = args?.meDefaultGatewayVariable;
+            resourceInputs["meDynamicIpEnabled"] = args?.meDynamicIpEnabled;
+            resourceInputs["meIpv4Address"] = args?.meIpv4Address;
+            resourceInputs["meIpv4AddressVariable"] = args?.meIpv4AddressVariable;
+            resourceInputs["meSubnetMask"] = args?.meSubnetMask;
+            resourceInputs["meSubnetMaskVariable"] = args?.meSubnetMaskVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["password"] = args?.password;
+            resourceInputs["passwordVariable"] = args?.passwordVariable;
+            resourceInputs["ssids"] = args?.ssids;
+            resourceInputs["username"] = args?.username;
+            resourceInputs["usernameVariable"] = args?.usernameVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -229,12 +220,8 @@ export class ServiceWirelessLanFeature extends pulumi.CustomResource {
  */
 export interface ServiceWirelessLanFeatureState {
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
     country?: pulumi.Input<string>;
     /**
@@ -246,7 +233,8 @@ export interface ServiceWirelessLanFeatureState {
      */
     description?: pulumi.Input<string>;
     /**
-     * 2.4GHz Enabled - Default value: `true`
+     * 2.4GHz Enabled
+     *   - Default value: `true`
      */
     enable24g?: pulumi.Input<boolean>;
     /**
@@ -254,7 +242,8 @@ export interface ServiceWirelessLanFeatureState {
      */
     enable24gVariable?: pulumi.Input<string>;
     /**
-     * 5GHz Enabled - Default value: `true`
+     * 5GHz Enabled
+     *   - Default value: `true`
      */
     enable5g?: pulumi.Input<boolean>;
     /**
@@ -286,11 +275,8 @@ export interface ServiceWirelessLanFeatureState {
      */
     meIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-     * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-     * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-     * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-     * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     meSubnetMask?: pulumi.Input<string>;
     /**
@@ -302,11 +288,7 @@ export interface ServiceWirelessLanFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set management password,the password must contains characters from all of the following classes,lowercase
-     * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-     * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-     * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-     * addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
      */
     password?: pulumi.Input<string>;
     /**
@@ -336,12 +318,8 @@ export interface ServiceWirelessLanFeatureState {
  */
 export interface ServiceWirelessLanFeatureArgs {
     /**
-     * Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-     * `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-     * `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-     * `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-     * `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-     * `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+     * Select country
+     *   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
      */
     country?: pulumi.Input<string>;
     /**
@@ -353,7 +331,8 @@ export interface ServiceWirelessLanFeatureArgs {
      */
     description?: pulumi.Input<string>;
     /**
-     * 2.4GHz Enabled - Default value: `true`
+     * 2.4GHz Enabled
+     *   - Default value: `true`
      */
     enable24g?: pulumi.Input<boolean>;
     /**
@@ -361,7 +340,8 @@ export interface ServiceWirelessLanFeatureArgs {
      */
     enable24gVariable?: pulumi.Input<string>;
     /**
-     * 5GHz Enabled - Default value: `true`
+     * 5GHz Enabled
+     *   - Default value: `true`
      */
     enable5g?: pulumi.Input<boolean>;
     /**
@@ -393,11 +373,8 @@ export interface ServiceWirelessLanFeatureArgs {
      */
     meIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * Set mobile express controller subnet mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`,
-     * `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`,
-     * `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`,
-     * `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`,
-     * `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Set mobile express controller subnet mask
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     meSubnetMask?: pulumi.Input<string>;
     /**
@@ -409,11 +386,7 @@ export interface ServiceWirelessLanFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Set management password,the password must contains characters from all of the following classes,lowercase
-     * letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three
-     * times consecutively. The password must not be the same as the associated username or the username reversed. The password
-     * must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In
-     * addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
+     * Set management password,the password must contains characters from all of the following classes,lowercase letters,uppercase letters,digits,and special characters. No character in the password can be repeated more than three times consecutively. The password must not be the same as the associated username or the username reversed. The password must not be cisco,ocsic,or any variant obtained by changing the capitalization of the letters in word cisco. In addition,you can't substitute 1,l,or ! for i,0 for o,$ for s.
      */
     password?: pulumi.Input<string>;
     /**

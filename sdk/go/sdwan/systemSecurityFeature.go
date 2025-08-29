@@ -27,14 +27,17 @@ import (
 type SystemSecurityFeature struct {
 	pulumi.CustomResourceState
 
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	AntiReplayWindow pulumi.StringPtrOutput `pulumi:"antiReplayWindow"`
 	// Variable name
 	AntiReplayWindowVariable pulumi.StringPtrOutput `pulumi:"antiReplayWindowVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedAntiReplayWindow pulumi.IntPtrOutput `pulumi:"extendedAntiReplayWindow"`
 	// Variable name
 	ExtendedAntiReplayWindowVariable pulumi.StringPtrOutput `pulumi:"extendedAntiReplayWindowVariable"`
@@ -44,7 +47,8 @@ type SystemSecurityFeature struct {
 	IntegrityTypeVariable pulumi.StringPtrOutput `pulumi:"integrityTypeVariable"`
 	// Set the authentication type for DTLS connections
 	IntegrityTypes pulumi.StringArrayOutput `pulumi:"integrityTypes"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	IpsecPairwiseKeying pulumi.BoolPtrOutput `pulumi:"ipsecPairwiseKeying"`
 	// Variable name
 	IpsecPairwiseKeyingVariable pulumi.StringPtrOutput `pulumi:"ipsecPairwiseKeyingVariable"`
@@ -54,7 +58,9 @@ type SystemSecurityFeature struct {
 	Keys SystemSecurityFeatureKeyArrayOutput `pulumi:"keys"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	Rekey pulumi.IntPtrOutput `pulumi:"rekey"`
 	// Variable name
 	RekeyVariable pulumi.StringPtrOutput `pulumi:"rekeyVariable"`
@@ -95,14 +101,17 @@ func GetSystemSecurityFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SystemSecurityFeature resources.
 type systemSecurityFeatureState struct {
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	AntiReplayWindow *string `pulumi:"antiReplayWindow"`
 	// Variable name
 	AntiReplayWindowVariable *string `pulumi:"antiReplayWindowVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedAntiReplayWindow *int `pulumi:"extendedAntiReplayWindow"`
 	// Variable name
 	ExtendedAntiReplayWindowVariable *string `pulumi:"extendedAntiReplayWindowVariable"`
@@ -112,7 +121,8 @@ type systemSecurityFeatureState struct {
 	IntegrityTypeVariable *string `pulumi:"integrityTypeVariable"`
 	// Set the authentication type for DTLS connections
 	IntegrityTypes []string `pulumi:"integrityTypes"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	IpsecPairwiseKeying *bool `pulumi:"ipsecPairwiseKeying"`
 	// Variable name
 	IpsecPairwiseKeyingVariable *string `pulumi:"ipsecPairwiseKeyingVariable"`
@@ -122,7 +132,9 @@ type systemSecurityFeatureState struct {
 	Keys []SystemSecurityFeatureKey `pulumi:"keys"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	Rekey *int `pulumi:"rekey"`
 	// Variable name
 	RekeyVariable *string `pulumi:"rekeyVariable"`
@@ -131,14 +143,17 @@ type systemSecurityFeatureState struct {
 }
 
 type SystemSecurityFeatureState struct {
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	AntiReplayWindow pulumi.StringPtrInput
 	// Variable name
 	AntiReplayWindowVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedAntiReplayWindow pulumi.IntPtrInput
 	// Variable name
 	ExtendedAntiReplayWindowVariable pulumi.StringPtrInput
@@ -148,7 +163,8 @@ type SystemSecurityFeatureState struct {
 	IntegrityTypeVariable pulumi.StringPtrInput
 	// Set the authentication type for DTLS connections
 	IntegrityTypes pulumi.StringArrayInput
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	IpsecPairwiseKeying pulumi.BoolPtrInput
 	// Variable name
 	IpsecPairwiseKeyingVariable pulumi.StringPtrInput
@@ -158,7 +174,9 @@ type SystemSecurityFeatureState struct {
 	Keys SystemSecurityFeatureKeyArrayInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	Rekey pulumi.IntPtrInput
 	// Variable name
 	RekeyVariable pulumi.StringPtrInput
@@ -171,14 +189,17 @@ func (SystemSecurityFeatureState) ElementType() reflect.Type {
 }
 
 type systemSecurityFeatureArgs struct {
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	AntiReplayWindow *string `pulumi:"antiReplayWindow"`
 	// Variable name
 	AntiReplayWindowVariable *string `pulumi:"antiReplayWindowVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedAntiReplayWindow *int `pulumi:"extendedAntiReplayWindow"`
 	// Variable name
 	ExtendedAntiReplayWindowVariable *string `pulumi:"extendedAntiReplayWindowVariable"`
@@ -188,7 +209,8 @@ type systemSecurityFeatureArgs struct {
 	IntegrityTypeVariable *string `pulumi:"integrityTypeVariable"`
 	// Set the authentication type for DTLS connections
 	IntegrityTypes []string `pulumi:"integrityTypes"`
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	IpsecPairwiseKeying *bool `pulumi:"ipsecPairwiseKeying"`
 	// Variable name
 	IpsecPairwiseKeyingVariable *string `pulumi:"ipsecPairwiseKeyingVariable"`
@@ -198,7 +220,9 @@ type systemSecurityFeatureArgs struct {
 	Keys []SystemSecurityFeatureKey `pulumi:"keys"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	Rekey *int `pulumi:"rekey"`
 	// Variable name
 	RekeyVariable *string `pulumi:"rekeyVariable"`
@@ -206,14 +230,17 @@ type systemSecurityFeatureArgs struct {
 
 // The set of arguments for constructing a SystemSecurityFeature resource.
 type SystemSecurityFeatureArgs struct {
-	// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-	// `512`
+	// Set the sliding replay window size
+	//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+	//   - Default value: `512`
 	AntiReplayWindow pulumi.StringPtrInput
 	// Variable name
 	AntiReplayWindowVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+	// Extended Anti-Replay Window
+	//   - Range: `10`-`2048`
+	//   - Default value: `256`
 	ExtendedAntiReplayWindow pulumi.IntPtrInput
 	// Variable name
 	ExtendedAntiReplayWindowVariable pulumi.StringPtrInput
@@ -223,7 +250,8 @@ type SystemSecurityFeatureArgs struct {
 	IntegrityTypeVariable pulumi.StringPtrInput
 	// Set the authentication type for DTLS connections
 	IntegrityTypes pulumi.StringArrayInput
-	// Enable or disable IPsec pairwise-keying - Default value: `false`
+	// Enable or disable IPsec pairwise-keying
+	//   - Default value: `false`
 	IpsecPairwiseKeying pulumi.BoolPtrInput
 	// Variable name
 	IpsecPairwiseKeyingVariable pulumi.StringPtrInput
@@ -233,7 +261,9 @@ type SystemSecurityFeatureArgs struct {
 	Keys SystemSecurityFeatureKeyArrayInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+	// Set how often to change the AES key for DTLS connections
+	//   - Range: `10`-`1209600`
+	//   - Default value: `86400`
 	Rekey pulumi.IntPtrInput
 	// Variable name
 	RekeyVariable pulumi.StringPtrInput
@@ -326,8 +356,9 @@ func (o SystemSecurityFeatureOutput) ToSystemSecurityFeatureOutputWithContext(ct
 	return o
 }
 
-// Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-// `512`
+// Set the sliding replay window size
+//   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+//   - Default value: `512`
 func (o SystemSecurityFeatureOutput) AntiReplayWindow() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringPtrOutput { return v.AntiReplayWindow }).(pulumi.StringPtrOutput)
 }
@@ -342,7 +373,9 @@ func (o SystemSecurityFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+// Extended Anti-Replay Window
+//   - Range: `10`-`2048`
+//   - Default value: `256`
 func (o SystemSecurityFeatureOutput) ExtendedAntiReplayWindow() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.IntPtrOutput { return v.ExtendedAntiReplayWindow }).(pulumi.IntPtrOutput)
 }
@@ -367,7 +400,8 @@ func (o SystemSecurityFeatureOutput) IntegrityTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringArrayOutput { return v.IntegrityTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable or disable IPsec pairwise-keying - Default value: `false`
+// Enable or disable IPsec pairwise-keying
+//   - Default value: `false`
 func (o SystemSecurityFeatureOutput) IpsecPairwiseKeying() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.BoolPtrOutput { return v.IpsecPairwiseKeying }).(pulumi.BoolPtrOutput)
 }
@@ -392,7 +426,9 @@ func (o SystemSecurityFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+// Set how often to change the AES key for DTLS connections
+//   - Range: `10`-`1209600`
+//   - Default value: `86400`
 func (o SystemSecurityFeatureOutput) Rekey() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemSecurityFeature) pulumi.IntPtrOutput { return v.Rekey }).(pulumi.IntPtrOutput)
 }

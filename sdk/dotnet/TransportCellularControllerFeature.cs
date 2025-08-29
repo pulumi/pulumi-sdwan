@@ -76,7 +76,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Enable/Disable Firmware Auto Sim - Default value: `true`
+        /// Enable/Disable Firmware Auto Sim
+        ///   - Default value: `true`
         /// </summary>
         [Output("firmwareAutoSim")]
         public Output<bool?> FirmwareAutoSim { get; private set; } = null!;
@@ -94,7 +95,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Set primary SIM slot - Range: `0`-`1`
+        /// Set primary SIM slot
+        ///   - Range: `0`-`1`
         /// </summary>
         [Output("primarySimSlot")]
         public Output<int?> PrimarySimSlot { get; private set; } = null!;
@@ -106,7 +108,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PrimarySimSlotVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set SIM failover retries - Range: `0`-`65535`
+        /// Set SIM failover retries
+        ///   - Range: `0`-`65535`
         /// </summary>
         [Output("simFailoverRetries")]
         public Output<int?> SimFailoverRetries { get; private set; } = null!;
@@ -118,7 +121,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SimFailoverRetriesVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set SIM failover timeout in minutes - Range: `3`-`7`
+        /// Set SIM failover timeout in minutes
+        ///   - Range: `3`-`7`
         /// </summary>
         [Output("simFailoverTimeout")]
         public Output<int?> SimFailoverTimeout { get; private set; } = null!;
@@ -206,7 +210,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Enable/Disable Firmware Auto Sim - Default value: `true`
+        /// Enable/Disable Firmware Auto Sim
+        ///   - Default value: `true`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }
@@ -224,7 +229,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set primary SIM slot - Range: `0`-`1`
+        /// Set primary SIM slot
+        ///   - Range: `0`-`1`
         /// </summary>
         [Input("primarySimSlot")]
         public Input<int>? PrimarySimSlot { get; set; }
@@ -236,7 +242,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PrimarySimSlotVariable { get; set; }
 
         /// <summary>
-        /// Set SIM failover retries - Range: `0`-`65535`
+        /// Set SIM failover retries
+        ///   - Range: `0`-`65535`
         /// </summary>
         [Input("simFailoverRetries")]
         public Input<int>? SimFailoverRetries { get; set; }
@@ -248,7 +255,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SimFailoverRetriesVariable { get; set; }
 
         /// <summary>
-        /// Set SIM failover timeout in minutes - Range: `3`-`7`
+        /// Set SIM failover timeout in minutes
+        ///   - Range: `3`-`7`
         /// </summary>
         [Input("simFailoverTimeout")]
         public Input<int>? SimFailoverTimeout { get; set; }
@@ -292,7 +300,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Enable/Disable Firmware Auto Sim - Default value: `true`
+        /// Enable/Disable Firmware Auto Sim
+        ///   - Default value: `true`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }
@@ -310,7 +319,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Set primary SIM slot - Range: `0`-`1`
+        /// Set primary SIM slot
+        ///   - Range: `0`-`1`
         /// </summary>
         [Input("primarySimSlot")]
         public Input<int>? PrimarySimSlot { get; set; }
@@ -322,7 +332,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PrimarySimSlotVariable { get; set; }
 
         /// <summary>
-        /// Set SIM failover retries - Range: `0`-`65535`
+        /// Set SIM failover retries
+        ///   - Range: `0`-`65535`
         /// </summary>
         [Input("simFailoverRetries")]
         public Input<int>? SimFailoverRetries { get; set; }
@@ -334,7 +345,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SimFailoverRetriesVariable { get; set; }
 
         /// <summary>
-        /// Set SIM failover timeout in minutes - Range: `3`-`7`
+        /// Set SIM failover timeout in minutes
+        ///   - Range: `3`-`7`
         /// </summary>
         [Input("simFailoverTimeout")]
         public Input<int>? SimFailoverTimeout { get; set; }

@@ -49,169 +49,186 @@ export class CiscoBgpFeatureTemplate extends pulumi.CustomResource {
     /**
      * Set BGP address family
      */
-    public readonly addressFamilies!: pulumi.Output<outputs.CiscoBgpFeatureTemplateAddressFamily[] | undefined>;
+    declare public readonly addressFamilies: pulumi.Output<outputs.CiscoBgpFeatureTemplateAddressFamily[] | undefined>;
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly alwaysCompareMed!: pulumi.Output<boolean | undefined>;
+    declare public readonly alwaysCompareMed: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly alwaysCompareMedVariable!: pulumi.Output<string | undefined>;
+    declare public readonly alwaysCompareMedVariable: pulumi.Output<string | undefined>;
     /**
      * Set autonomous system number <1..4294967295> or <XX.YY>
      */
-    public readonly asNumber!: pulumi.Output<string | undefined>;
+    declare public readonly asNumber: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly asNumberVariable!: pulumi.Output<string | undefined>;
+    declare public readonly asNumberVariable: pulumi.Output<string | undefined>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly compareRouterId!: pulumi.Output<boolean | undefined>;
+    declare public readonly compareRouterId: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly compareRouterIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly compareRouterIdVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
-    public readonly deterministicMed!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly deterministicMedVariable!: pulumi.Output<string | undefined>;
-    /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-     */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
-    /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
-     */
-    public readonly distanceExternal!: pulumi.Output<number | undefined>;
+    declare public readonly deterministicMed: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly distanceExternalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly deterministicMedVariable: pulumi.Output<string | undefined>;
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly distanceInternal!: pulumi.Output<number | undefined>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Variable name
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
-    public readonly distanceInternalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
-     */
-    public readonly distanceLocal!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly distanceLocalVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
-     */
-    public readonly holdtime!: pulumi.Output<number | undefined>;
+    declare public readonly distanceExternal: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly holdtimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly distanceExternalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
+     */
+    declare public readonly distanceInternal: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly distanceInternalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
+     */
+    declare public readonly distanceLocal: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly distanceLocalVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set the interval when BGP considers a neighbor to be down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
+     */
+    declare public readonly holdtime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly holdtimeVariable: pulumi.Output<string | undefined>;
     /**
      * Set BGP neighbors
      */
-    public readonly ipv4Neighbors!: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv4Neighbor[] | undefined>;
+    declare public readonly ipv4Neighbors: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv4Neighbor[] | undefined>;
     /**
      * Router Target for IPV4
      */
-    public readonly ipv4RouteTargets!: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv4RouteTarget[] | undefined>;
+    declare public readonly ipv4RouteTargets: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv4RouteTarget[] | undefined>;
     /**
      * Set BGP IPv6 neighbors
      */
-    public readonly ipv6Neighbors!: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv6Neighbor[] | undefined>;
+    declare public readonly ipv6Neighbors: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv6Neighbor[] | undefined>;
     /**
      * Router Target for IPV6
      */
-    public readonly ipv6RouteTargets!: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv6RouteTarget[] | undefined>;
+    declare public readonly ipv6RouteTargets: pulumi.Output<outputs.CiscoBgpFeatureTemplateIpv6RouteTarget[] | undefined>;
     /**
-     * Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Set how often keepalive messages are sent to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
-    public readonly keepalive!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly keepaliveVariable!: pulumi.Output<string | undefined>;
-    /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
-     */
-    public readonly missingMedWorst!: pulumi.Output<boolean | undefined>;
+    declare public readonly keepalive: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly missingMedWorstVariable!: pulumi.Output<string | undefined>;
+    declare public readonly keepaliveVariable: pulumi.Output<string | undefined>;
+    /**
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
+     */
+    declare public readonly missingMedWorst: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly missingMedWorstVariable: pulumi.Output<string | undefined>;
     /**
      * MPLS BGP Interface
      */
-    public readonly mplsInterfaces!: pulumi.Output<outputs.CiscoBgpFeatureTemplateMplsInterface[] | undefined>;
+    declare public readonly mplsInterfaces: pulumi.Output<outputs.CiscoBgpFeatureTemplateMplsInterface[] | undefined>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
-    public readonly multipathRelax!: pulumi.Output<boolean | undefined>;
+    declare public readonly multipathRelax: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly multipathRelaxVariable!: pulumi.Output<string | undefined>;
+    declare public readonly multipathRelaxVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path 
+     *   - Default value: `false`
      */
-    public readonly propagateAspath!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly propagateAspathVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Propagate Community - Default value: `false`
-     */
-    public readonly propagateCommunity!: pulumi.Output<boolean | undefined>;
+    declare public readonly propagateAspath: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly propagateCommunityVariable!: pulumi.Output<string | undefined>;
+    declare public readonly propagateAspathVariable: pulumi.Output<string | undefined>;
+    /**
+     * Propagate Community
+     *   - Default value: `false`
+     */
+    declare public readonly propagateCommunity: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly propagateCommunityVariable: pulumi.Output<string | undefined>;
     /**
      * Configure BGP router identifier
      */
-    public readonly routerId!: pulumi.Output<string | undefined>;
+    declare public readonly routerId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly routerIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly routerIdVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable or disable BGP - Default value: `false`
+     * Enable or disable BGP
+     *   - Default value: `false`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoBgpFeatureTemplate resource with the given unique name, arguments, and options.
@@ -226,94 +243,94 @@ export class CiscoBgpFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoBgpFeatureTemplateState | undefined;
-            resourceInputs["addressFamilies"] = state ? state.addressFamilies : undefined;
-            resourceInputs["alwaysCompareMed"] = state ? state.alwaysCompareMed : undefined;
-            resourceInputs["alwaysCompareMedVariable"] = state ? state.alwaysCompareMedVariable : undefined;
-            resourceInputs["asNumber"] = state ? state.asNumber : undefined;
-            resourceInputs["asNumberVariable"] = state ? state.asNumberVariable : undefined;
-            resourceInputs["compareRouterId"] = state ? state.compareRouterId : undefined;
-            resourceInputs["compareRouterIdVariable"] = state ? state.compareRouterIdVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deterministicMed"] = state ? state.deterministicMed : undefined;
-            resourceInputs["deterministicMedVariable"] = state ? state.deterministicMedVariable : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["distanceExternal"] = state ? state.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = state ? state.distanceExternalVariable : undefined;
-            resourceInputs["distanceInternal"] = state ? state.distanceInternal : undefined;
-            resourceInputs["distanceInternalVariable"] = state ? state.distanceInternalVariable : undefined;
-            resourceInputs["distanceLocal"] = state ? state.distanceLocal : undefined;
-            resourceInputs["distanceLocalVariable"] = state ? state.distanceLocalVariable : undefined;
-            resourceInputs["holdtime"] = state ? state.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = state ? state.holdtimeVariable : undefined;
-            resourceInputs["ipv4Neighbors"] = state ? state.ipv4Neighbors : undefined;
-            resourceInputs["ipv4RouteTargets"] = state ? state.ipv4RouteTargets : undefined;
-            resourceInputs["ipv6Neighbors"] = state ? state.ipv6Neighbors : undefined;
-            resourceInputs["ipv6RouteTargets"] = state ? state.ipv6RouteTargets : undefined;
-            resourceInputs["keepalive"] = state ? state.keepalive : undefined;
-            resourceInputs["keepaliveVariable"] = state ? state.keepaliveVariable : undefined;
-            resourceInputs["missingMedWorst"] = state ? state.missingMedWorst : undefined;
-            resourceInputs["missingMedWorstVariable"] = state ? state.missingMedWorstVariable : undefined;
-            resourceInputs["mplsInterfaces"] = state ? state.mplsInterfaces : undefined;
-            resourceInputs["multipathRelax"] = state ? state.multipathRelax : undefined;
-            resourceInputs["multipathRelaxVariable"] = state ? state.multipathRelaxVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["propagateAspath"] = state ? state.propagateAspath : undefined;
-            resourceInputs["propagateAspathVariable"] = state ? state.propagateAspathVariable : undefined;
-            resourceInputs["propagateCommunity"] = state ? state.propagateCommunity : undefined;
-            resourceInputs["propagateCommunityVariable"] = state ? state.propagateCommunityVariable : undefined;
-            resourceInputs["routerId"] = state ? state.routerId : undefined;
-            resourceInputs["routerIdVariable"] = state ? state.routerIdVariable : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["addressFamilies"] = state?.addressFamilies;
+            resourceInputs["alwaysCompareMed"] = state?.alwaysCompareMed;
+            resourceInputs["alwaysCompareMedVariable"] = state?.alwaysCompareMedVariable;
+            resourceInputs["asNumber"] = state?.asNumber;
+            resourceInputs["asNumberVariable"] = state?.asNumberVariable;
+            resourceInputs["compareRouterId"] = state?.compareRouterId;
+            resourceInputs["compareRouterIdVariable"] = state?.compareRouterIdVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deterministicMed"] = state?.deterministicMed;
+            resourceInputs["deterministicMedVariable"] = state?.deterministicMedVariable;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["distanceExternal"] = state?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = state?.distanceExternalVariable;
+            resourceInputs["distanceInternal"] = state?.distanceInternal;
+            resourceInputs["distanceInternalVariable"] = state?.distanceInternalVariable;
+            resourceInputs["distanceLocal"] = state?.distanceLocal;
+            resourceInputs["distanceLocalVariable"] = state?.distanceLocalVariable;
+            resourceInputs["holdtime"] = state?.holdtime;
+            resourceInputs["holdtimeVariable"] = state?.holdtimeVariable;
+            resourceInputs["ipv4Neighbors"] = state?.ipv4Neighbors;
+            resourceInputs["ipv4RouteTargets"] = state?.ipv4RouteTargets;
+            resourceInputs["ipv6Neighbors"] = state?.ipv6Neighbors;
+            resourceInputs["ipv6RouteTargets"] = state?.ipv6RouteTargets;
+            resourceInputs["keepalive"] = state?.keepalive;
+            resourceInputs["keepaliveVariable"] = state?.keepaliveVariable;
+            resourceInputs["missingMedWorst"] = state?.missingMedWorst;
+            resourceInputs["missingMedWorstVariable"] = state?.missingMedWorstVariable;
+            resourceInputs["mplsInterfaces"] = state?.mplsInterfaces;
+            resourceInputs["multipathRelax"] = state?.multipathRelax;
+            resourceInputs["multipathRelaxVariable"] = state?.multipathRelaxVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["propagateAspath"] = state?.propagateAspath;
+            resourceInputs["propagateAspathVariable"] = state?.propagateAspathVariable;
+            resourceInputs["propagateCommunity"] = state?.propagateCommunity;
+            resourceInputs["propagateCommunityVariable"] = state?.propagateCommunityVariable;
+            resourceInputs["routerId"] = state?.routerId;
+            resourceInputs["routerIdVariable"] = state?.routerIdVariable;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoBgpFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["addressFamilies"] = args ? args.addressFamilies : undefined;
-            resourceInputs["alwaysCompareMed"] = args ? args.alwaysCompareMed : undefined;
-            resourceInputs["alwaysCompareMedVariable"] = args ? args.alwaysCompareMedVariable : undefined;
-            resourceInputs["asNumber"] = args ? args.asNumber : undefined;
-            resourceInputs["asNumberVariable"] = args ? args.asNumberVariable : undefined;
-            resourceInputs["compareRouterId"] = args ? args.compareRouterId : undefined;
-            resourceInputs["compareRouterIdVariable"] = args ? args.compareRouterIdVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deterministicMed"] = args ? args.deterministicMed : undefined;
-            resourceInputs["deterministicMedVariable"] = args ? args.deterministicMedVariable : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["distanceExternal"] = args ? args.distanceExternal : undefined;
-            resourceInputs["distanceExternalVariable"] = args ? args.distanceExternalVariable : undefined;
-            resourceInputs["distanceInternal"] = args ? args.distanceInternal : undefined;
-            resourceInputs["distanceInternalVariable"] = args ? args.distanceInternalVariable : undefined;
-            resourceInputs["distanceLocal"] = args ? args.distanceLocal : undefined;
-            resourceInputs["distanceLocalVariable"] = args ? args.distanceLocalVariable : undefined;
-            resourceInputs["holdtime"] = args ? args.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = args ? args.holdtimeVariable : undefined;
-            resourceInputs["ipv4Neighbors"] = args ? args.ipv4Neighbors : undefined;
-            resourceInputs["ipv4RouteTargets"] = args ? args.ipv4RouteTargets : undefined;
-            resourceInputs["ipv6Neighbors"] = args ? args.ipv6Neighbors : undefined;
-            resourceInputs["ipv6RouteTargets"] = args ? args.ipv6RouteTargets : undefined;
-            resourceInputs["keepalive"] = args ? args.keepalive : undefined;
-            resourceInputs["keepaliveVariable"] = args ? args.keepaliveVariable : undefined;
-            resourceInputs["missingMedWorst"] = args ? args.missingMedWorst : undefined;
-            resourceInputs["missingMedWorstVariable"] = args ? args.missingMedWorstVariable : undefined;
-            resourceInputs["mplsInterfaces"] = args ? args.mplsInterfaces : undefined;
-            resourceInputs["multipathRelax"] = args ? args.multipathRelax : undefined;
-            resourceInputs["multipathRelaxVariable"] = args ? args.multipathRelaxVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["propagateAspath"] = args ? args.propagateAspath : undefined;
-            resourceInputs["propagateAspathVariable"] = args ? args.propagateAspathVariable : undefined;
-            resourceInputs["propagateCommunity"] = args ? args.propagateCommunity : undefined;
-            resourceInputs["propagateCommunityVariable"] = args ? args.propagateCommunityVariable : undefined;
-            resourceInputs["routerId"] = args ? args.routerId : undefined;
-            resourceInputs["routerIdVariable"] = args ? args.routerIdVariable : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
+            resourceInputs["addressFamilies"] = args?.addressFamilies;
+            resourceInputs["alwaysCompareMed"] = args?.alwaysCompareMed;
+            resourceInputs["alwaysCompareMedVariable"] = args?.alwaysCompareMedVariable;
+            resourceInputs["asNumber"] = args?.asNumber;
+            resourceInputs["asNumberVariable"] = args?.asNumberVariable;
+            resourceInputs["compareRouterId"] = args?.compareRouterId;
+            resourceInputs["compareRouterIdVariable"] = args?.compareRouterIdVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deterministicMed"] = args?.deterministicMed;
+            resourceInputs["deterministicMedVariable"] = args?.deterministicMedVariable;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["distanceExternal"] = args?.distanceExternal;
+            resourceInputs["distanceExternalVariable"] = args?.distanceExternalVariable;
+            resourceInputs["distanceInternal"] = args?.distanceInternal;
+            resourceInputs["distanceInternalVariable"] = args?.distanceInternalVariable;
+            resourceInputs["distanceLocal"] = args?.distanceLocal;
+            resourceInputs["distanceLocalVariable"] = args?.distanceLocalVariable;
+            resourceInputs["holdtime"] = args?.holdtime;
+            resourceInputs["holdtimeVariable"] = args?.holdtimeVariable;
+            resourceInputs["ipv4Neighbors"] = args?.ipv4Neighbors;
+            resourceInputs["ipv4RouteTargets"] = args?.ipv4RouteTargets;
+            resourceInputs["ipv6Neighbors"] = args?.ipv6Neighbors;
+            resourceInputs["ipv6RouteTargets"] = args?.ipv6RouteTargets;
+            resourceInputs["keepalive"] = args?.keepalive;
+            resourceInputs["keepaliveVariable"] = args?.keepaliveVariable;
+            resourceInputs["missingMedWorst"] = args?.missingMedWorst;
+            resourceInputs["missingMedWorstVariable"] = args?.missingMedWorstVariable;
+            resourceInputs["mplsInterfaces"] = args?.mplsInterfaces;
+            resourceInputs["multipathRelax"] = args?.multipathRelax;
+            resourceInputs["multipathRelaxVariable"] = args?.multipathRelaxVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["propagateAspath"] = args?.propagateAspath;
+            resourceInputs["propagateAspathVariable"] = args?.propagateAspathVariable;
+            resourceInputs["propagateCommunity"] = args?.propagateCommunity;
+            resourceInputs["propagateCommunityVariable"] = args?.propagateCommunityVariable;
+            resourceInputs["routerId"] = args?.routerId;
+            resourceInputs["routerIdVariable"] = args?.routerIdVariable;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -331,7 +348,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[]>;
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
     alwaysCompareMed?: pulumi.Input<boolean>;
     /**
@@ -347,7 +365,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     asNumberVariable?: pulumi.Input<string>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
     compareRouterId?: pulumi.Input<boolean>;
     /**
@@ -359,7 +378,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
     deterministicMed?: pulumi.Input<boolean>;
     /**
@@ -367,13 +387,14 @@ export interface CiscoBgpFeatureTemplateState {
      */
     deterministicMedVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -381,7 +402,9 @@ export interface CiscoBgpFeatureTemplateState {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      */
     distanceInternal?: pulumi.Input<number>;
     /**
@@ -389,7 +412,9 @@ export interface CiscoBgpFeatureTemplateState {
      */
     distanceInternalVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     distanceLocal?: pulumi.Input<number>;
     /**
@@ -397,7 +422,9 @@ export interface CiscoBgpFeatureTemplateState {
      */
     distanceLocalVariable?: pulumi.Input<string>;
     /**
-     * Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+     * Set the interval when BGP considers a neighbor to be down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -421,7 +448,9 @@ export interface CiscoBgpFeatureTemplateState {
      */
     ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[]>;
     /**
-     * Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Set how often keepalive messages are sent to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
     keepalive?: pulumi.Input<number>;
     /**
@@ -429,7 +458,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     keepaliveVariable?: pulumi.Input<string>;
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      */
     missingMedWorst?: pulumi.Input<boolean>;
     /**
@@ -441,7 +471,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[]>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
     multipathRelax?: pulumi.Input<boolean>;
     /**
@@ -453,7 +484,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path 
+     *   - Default value: `false`
      */
     propagateAspath?: pulumi.Input<boolean>;
     /**
@@ -461,7 +493,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     propagateAspathVariable?: pulumi.Input<string>;
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      */
     propagateCommunity?: pulumi.Input<boolean>;
     /**
@@ -477,7 +510,8 @@ export interface CiscoBgpFeatureTemplateState {
      */
     routerIdVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable BGP - Default value: `false`
+     * Enable or disable BGP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -503,7 +537,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     addressFamilies?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateAddressFamily>[]>;
     /**
-     * Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all ASs when selecting active BGP paths
+     *   - Default value: `false`
      */
     alwaysCompareMed?: pulumi.Input<boolean>;
     /**
@@ -519,7 +554,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     asNumberVariable?: pulumi.Input<string>;
     /**
-     * Compare router IDs when selecting active BGP paths - Default value: `false`
+     * Compare router IDs when selecting active BGP paths
+     *   - Default value: `false`
      */
     compareRouterId?: pulumi.Input<boolean>;
     /**
@@ -531,7 +567,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+     * Compare MEDs from all routes from same AS when selecting active BGP paths
+     *   - Default value: `false`
      */
     deterministicMed?: pulumi.Input<boolean>;
     /**
@@ -539,13 +576,14 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     deterministicMedVariable?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for external BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     distanceExternal?: pulumi.Input<number>;
     /**
@@ -553,7 +591,9 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     distanceExternalVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+     * Set administrative distance for internal BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `200`
      */
     distanceInternal?: pulumi.Input<number>;
     /**
@@ -561,7 +601,9 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     distanceInternalVariable?: pulumi.Input<string>;
     /**
-     * Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+     * Set administrative distance for local BGP routes
+     *   - Range: `1`-`255`
+     *   - Default value: `20`
      */
     distanceLocal?: pulumi.Input<number>;
     /**
@@ -569,7 +611,9 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     distanceLocalVariable?: pulumi.Input<string>;
     /**
-     * Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+     * Set the interval when BGP considers a neighbor to be down
+     *   - Range: `0`-`65535`
+     *   - Default value: `180`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -593,7 +637,9 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     ipv6RouteTargets?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateIpv6RouteTarget>[]>;
     /**
-     * Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+     * Set how often keepalive messages are sent to BGP peer
+     *   - Range: `0`-`65535`
+     *   - Default value: `60`
      */
     keepalive?: pulumi.Input<number>;
     /**
@@ -601,7 +647,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     keepaliveVariable?: pulumi.Input<string>;
     /**
-     * If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+     * If path has no MED, consider it to be worst path when selecting active BGP paths
+     *   - Default value: `false`
      */
     missingMedWorst?: pulumi.Input<boolean>;
     /**
@@ -613,7 +660,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     mplsInterfaces?: pulumi.Input<pulumi.Input<inputs.CiscoBgpFeatureTemplateMplsInterface>[]>;
     /**
-     * Ignore AS for multipath selection - Default value: `false`
+     * Ignore AS for multipath selection
+     *   - Default value: `false`
      */
     multipathRelax?: pulumi.Input<boolean>;
     /**
@@ -625,7 +673,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Propagate AS Path - Default value: `false`
+     * Propagate AS Path 
+     *   - Default value: `false`
      */
     propagateAspath?: pulumi.Input<boolean>;
     /**
@@ -633,7 +682,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     propagateAspathVariable?: pulumi.Input<string>;
     /**
-     * Propagate Community - Default value: `false`
+     * Propagate Community
+     *   - Default value: `false`
      */
     propagateCommunity?: pulumi.Input<boolean>;
     /**
@@ -649,7 +699,8 @@ export interface CiscoBgpFeatureTemplateArgs {
      */
     routerIdVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable BGP - Default value: `false`
+     * Enable or disable BGP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**

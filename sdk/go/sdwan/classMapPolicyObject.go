@@ -53,7 +53,8 @@ type ClassMapPolicyObject struct {
 
 	// The name of the policy object
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Queue - Range: `0`-`7`
+	// Queue
+	//   - Range: `0`-`7`
 	Queue pulumi.IntOutput `pulumi:"queue"`
 	// The version of the object
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -94,7 +95,8 @@ func GetClassMapPolicyObject(ctx *pulumi.Context,
 type classMapPolicyObjectState struct {
 	// The name of the policy object
 	Name *string `pulumi:"name"`
-	// Queue - Range: `0`-`7`
+	// Queue
+	//   - Range: `0`-`7`
 	Queue *int `pulumi:"queue"`
 	// The version of the object
 	Version *int `pulumi:"version"`
@@ -103,7 +105,8 @@ type classMapPolicyObjectState struct {
 type ClassMapPolicyObjectState struct {
 	// The name of the policy object
 	Name pulumi.StringPtrInput
-	// Queue - Range: `0`-`7`
+	// Queue
+	//   - Range: `0`-`7`
 	Queue pulumi.IntPtrInput
 	// The version of the object
 	Version pulumi.IntPtrInput
@@ -116,7 +119,8 @@ func (ClassMapPolicyObjectState) ElementType() reflect.Type {
 type classMapPolicyObjectArgs struct {
 	// The name of the policy object
 	Name *string `pulumi:"name"`
-	// Queue - Range: `0`-`7`
+	// Queue
+	//   - Range: `0`-`7`
 	Queue int `pulumi:"queue"`
 }
 
@@ -124,7 +128,8 @@ type classMapPolicyObjectArgs struct {
 type ClassMapPolicyObjectArgs struct {
 	// The name of the policy object
 	Name pulumi.StringPtrInput
-	// Queue - Range: `0`-`7`
+	// Queue
+	//   - Range: `0`-`7`
 	Queue pulumi.IntInput
 }
 
@@ -220,7 +225,8 @@ func (o ClassMapPolicyObjectOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ClassMapPolicyObject) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Queue - Range: `0`-`7`
+// Queue
+//   - Range: `0`-`7`
 func (o ClassMapPolicyObjectOutput) Queue() pulumi.IntOutput {
 	return o.ApplyT(func(v *ClassMapPolicyObject) pulumi.IntOutput { return v.Queue }).(pulumi.IntOutput)
 }

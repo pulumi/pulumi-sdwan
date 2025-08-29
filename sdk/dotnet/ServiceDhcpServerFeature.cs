@@ -87,7 +87,8 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Output("interfaceMtu")]
         public Output<int?> InterfaceMtu { get; private set; } = null!;
@@ -99,7 +100,9 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceMtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Output("leaseTime")]
         public Output<int?> LeaseTime { get; private set; } = null!;
@@ -141,11 +144,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceDhcpServerFeatureStaticLease>> StaticLeases { get; private set; } = null!;
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("subnetMask")]
         public Output<string?> SubnetMask { get; private set; } = null!;
@@ -293,7 +293,8 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -305,7 +306,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceMtuVariable { get; set; }
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("leaseTime")]
         public Input<int>? LeaseTime { get; set; }
@@ -359,11 +362,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("subnetMask")]
         public Input<string>? SubnetMask { get; set; }
@@ -473,7 +473,8 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Set MTU on interface to DHCP client - Range: `68`-`65535`
+        /// Set MTU on interface to DHCP client
+        ///   - Range: `68`-`65535`
         /// </summary>
         [Input("interfaceMtu")]
         public Input<int>? InterfaceMtu { get; set; }
@@ -485,7 +486,9 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceMtuVariable { get; set; }
 
         /// <summary>
-        /// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+        /// Configure how long a DHCP-assigned IP address is valid
+        ///   - Range: `60`-`31536000`
+        ///   - Default value: `86400`
         /// </summary>
         [Input("leaseTime")]
         public Input<int>? LeaseTime { get; set; }
@@ -539,11 +542,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-        /// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-        /// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-        /// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-        /// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+        /// Subnet Mask
+        ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("subnetMask")]
         public Input<string>? SubnetMask { get; set; }

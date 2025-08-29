@@ -19,14 +19,18 @@ public final class ServiceIpv6AclFeatureState extends com.pulumi.resources.Resou
     public static final ServiceIpv6AclFeatureState Empty = new ServiceIpv6AclFeatureState();
 
     /**
-     * Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default Action - Choices: `drop`, `accept` - Default value: `drop`
+     * @return Default Action
+     *   - Choices: `drop`, `accept`
+     *   - Default value: `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -138,7 +142,9 @@ public final class ServiceIpv6AclFeatureState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 
@@ -149,7 +155,9 @@ public final class ServiceIpv6AclFeatureState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param defaultAction Default Action - Choices: `drop`, `accept` - Default value: `drop`
+         * @param defaultAction Default Action
+         *   - Choices: `drop`, `accept`
+         *   - Default value: `drop`
          * 
          * @return builder
          * 

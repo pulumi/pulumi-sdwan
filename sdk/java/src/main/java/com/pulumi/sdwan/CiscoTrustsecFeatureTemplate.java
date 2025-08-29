@@ -39,16 +39,14 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/ciscoTrustsecFeatureTemplate:CiscoTrustsecFeatureTemplate")
 public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomResource {
     /**
-     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      * 
      */
     @Export(name="credentialsId", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> credentialsId;
 
     /**
-     * @return Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32
-     * char)
+     * @return Specify the TrustSec Network Access Device ID, should be same as mentioned in the Identity Services Engine (upto 32 char)
      * 
      */
     public Output<Optional<String>> credentialsId() {
@@ -111,14 +109,16 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return this.description;
     }
     /**
-     * Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+     * Configure Local device security group &lt;2..65519&gt;
+     *   - Range: `2`-`65519`
      * 
      */
     @Export(name="deviceSgt", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> deviceSgt;
 
     /**
-     * @return Configure Local device security group &lt;2..65519&gt; - Range: `2`-`65519`
+     * @return Configure Local device security group &lt;2..65519&gt;
+     *   - Range: `2`-`65519`
      * 
      */
     public Output<Optional<Integer>> deviceSgt() {
@@ -139,32 +139,32 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.deviceSgtVariable);
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Enable Role-based Access Control enforcement - Default value: `false`
+     * Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableEnforcement", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableEnforcement;
 
     /**
-     * @return Enable Role-based Access Control enforcement - Default value: `false`
+     * @return Enable Role-based Access Control enforcement
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableEnforcement() {
@@ -185,28 +185,34 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.enableEnforcementVariable);
     }
     /**
-     * Enable CTS SXP support - Default value: `false`
+     * Enable CTS SXP support
+     *   - Default value: `false`
      * 
      */
     @Export(name="enableSxp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableSxp;
 
     /**
-     * @return Enable CTS SXP support - Default value: `false`
+     * @return Enable CTS SXP support
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> enableSxp() {
         return Codegen.optional(this.enableSxp);
     }
     /**
-     * Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+     * Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      * 
      */
     @Export(name="maximumListenerHoldTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> maximumListenerHoldTime;
 
     /**
-     * @return Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `180`
+     * @return Configure Maximum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `180`
      * 
      */
     public Output<Optional<Integer>> maximumListenerHoldTime() {
@@ -227,14 +233,18 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.maximumListenerHoldTimeVariable);
     }
     /**
-     * Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+     * Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      * 
      */
     @Export(name="minimumListenerHoldTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> minimumListenerHoldTime;
 
     /**
-     * @return Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `90`
+     * @return Configure Minimum allowed hold-time for listener in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `90`
      * 
      */
     public Output<Optional<Integer>> minimumListenerHoldTime() {
@@ -269,14 +279,18 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return this.name;
     }
     /**
-     * Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+     * Configure Speaker hold-time in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      * 
      */
     @Export(name="speakerHoldTime", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> speakerHoldTime;
 
     /**
-     * @return Configure Speaker hold-time in seconds &lt;1..65534&gt; - Range: `1`-`65534` - Default value: `120`
+     * @return Configure Speaker hold-time in seconds &lt;1..65534&gt;
+     *   - Range: `1`-`65534`
+     *   - Default value: `120`
      * 
      */
     public Output<Optional<Integer>> speakerHoldTime() {
@@ -367,14 +381,16 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.sxpKeyChainVariable);
     }
     /**
-     * Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      * 
      */
     @Export(name="sxpLogBindingChanges", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> sxpLogBindingChanges;
 
     /**
-     * @return Enables logging for IP-to-SGT binding changes - Default value: `false`
+     * @return Enables logging for IP-to-SGT binding changes
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> sxpLogBindingChanges() {
@@ -409,16 +425,18 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.sxpNodeId);
     }
     /**
-     * Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      * 
      */
     @Export(name="sxpNodeIdType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> sxpNodeIdType;
 
     /**
-     * @return Define SXP Node ID type &lt;IP, 8 char string or interface name&gt; - Choices: `ip`, `interface-name`, `8-char-hex-string` -
-     * Default value: `ip`
+     * @return Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
+     *   - Choices: `ip`, `interface-name`, `8-char-hex-string`
+     *   - Default value: `ip`
      * 
      */
     public Output<Optional<String>> sxpNodeIdType() {
@@ -439,14 +457,18 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.sxpNodeIdVariable);
     }
     /**
-     * Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     @Export(name="sxpReconciliationPeriod", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> sxpReconciliationPeriod;
 
     /**
-     * @return Configure the SXP reconciliation period in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * @return Configure the SXP reconciliation period in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     public Output<Optional<Integer>> sxpReconciliationPeriod() {
@@ -467,14 +489,18 @@ public class CiscoTrustsecFeatureTemplate extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.sxpReconciliationPeriodVariable);
     }
     /**
-     * Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     @Export(name="sxpRetryPeriod", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> sxpRetryPeriod;
 
     /**
-     * @return Configure Retry period for SXP connection in seconds &lt;0..64000&gt; - Range: `0`-`64000` - Default value: `120`
+     * @return Configure Retry period for SXP connection in seconds &lt;0..64000&gt;
+     *   - Range: `0`-`64000`
+     *   - Default value: `120`
      * 
      */
     public Output<Optional<Integer>> sxpRetryPeriod() {

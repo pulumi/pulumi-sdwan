@@ -47,11 +47,14 @@ type ServiceDhcpServerFeature struct {
 	Excludes pulumi.StringArrayOutput `pulumi:"excludes"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrOutput `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrOutput `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrOutput `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrOutput `pulumi:"leaseTimeVariable"`
@@ -65,11 +68,8 @@ type ServiceDhcpServerFeature struct {
 	OptionCodes ServiceDhcpServerFeatureOptionCodeArrayOutput `pulumi:"optionCodes"`
 	// Configure static IP addresses
 	StaticLeases ServiceDhcpServerFeatureStaticLeaseArrayOutput `pulumi:"staticLeases"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrOutput `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"subnetMaskVariable"`
@@ -134,11 +134,14 @@ type serviceDhcpServerFeatureState struct {
 	Excludes []string `pulumi:"excludes"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime *int `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable *string `pulumi:"leaseTimeVariable"`
@@ -152,11 +155,8 @@ type serviceDhcpServerFeatureState struct {
 	OptionCodes []ServiceDhcpServerFeatureOptionCode `pulumi:"optionCodes"`
 	// Configure static IP addresses
 	StaticLeases []ServiceDhcpServerFeatureStaticLease `pulumi:"staticLeases"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -189,11 +189,14 @@ type ServiceDhcpServerFeatureState struct {
 	Excludes pulumi.StringArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrInput
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrInput
@@ -207,11 +210,8 @@ type ServiceDhcpServerFeatureState struct {
 	OptionCodes ServiceDhcpServerFeatureOptionCodeArrayInput
 	// Configure static IP addresses
 	StaticLeases ServiceDhcpServerFeatureStaticLeaseArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput
@@ -248,11 +248,14 @@ type serviceDhcpServerFeatureArgs struct {
 	Excludes []string `pulumi:"excludes"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu *int `pulumi:"interfaceMtu"`
 	// Variable name
 	InterfaceMtuVariable *string `pulumi:"interfaceMtuVariable"`
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime *int `pulumi:"leaseTime"`
 	// Variable name
 	LeaseTimeVariable *string `pulumi:"leaseTimeVariable"`
@@ -266,11 +269,8 @@ type serviceDhcpServerFeatureArgs struct {
 	OptionCodes []ServiceDhcpServerFeatureOptionCode `pulumi:"optionCodes"`
 	// Configure static IP addresses
 	StaticLeases []ServiceDhcpServerFeatureStaticLease `pulumi:"staticLeases"`
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask *string `pulumi:"subnetMask"`
 	// Variable name
 	SubnetMaskVariable *string `pulumi:"subnetMaskVariable"`
@@ -302,11 +302,14 @@ type ServiceDhcpServerFeatureArgs struct {
 	Excludes pulumi.StringArrayInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Set MTU on interface to DHCP client - Range: `68`-`65535`
+	// Set MTU on interface to DHCP client
+	//   - Range: `68`-`65535`
 	InterfaceMtu pulumi.IntPtrInput
 	// Variable name
 	InterfaceMtuVariable pulumi.StringPtrInput
-	// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+	// Configure how long a DHCP-assigned IP address is valid
+	//   - Range: `60`-`31536000`
+	//   - Default value: `86400`
 	LeaseTime pulumi.IntPtrInput
 	// Variable name
 	LeaseTimeVariable pulumi.StringPtrInput
@@ -320,11 +323,8 @@ type ServiceDhcpServerFeatureArgs struct {
 	OptionCodes ServiceDhcpServerFeatureOptionCodeArrayInput
 	// Configure static IP addresses
 	StaticLeases ServiceDhcpServerFeatureStaticLeaseArrayInput
-	// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-	// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-	// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-	// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-	// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+	// Subnet Mask
+	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	SubnetMask pulumi.StringPtrInput
 	// Variable name
 	SubnetMaskVariable pulumi.StringPtrInput
@@ -471,7 +471,8 @@ func (o ServiceDhcpServerFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceDhcpServerFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Set MTU on interface to DHCP client - Range: `68`-`65535`
+// Set MTU on interface to DHCP client
+//   - Range: `68`-`65535`
 func (o ServiceDhcpServerFeatureOutput) InterfaceMtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceDhcpServerFeature) pulumi.IntPtrOutput { return v.InterfaceMtu }).(pulumi.IntPtrOutput)
 }
@@ -481,7 +482,9 @@ func (o ServiceDhcpServerFeatureOutput) InterfaceMtuVariable() pulumi.StringPtrO
 	return o.ApplyT(func(v *ServiceDhcpServerFeature) pulumi.StringPtrOutput { return v.InterfaceMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// Configure how long a DHCP-assigned IP address is valid - Range: `60`-`31536000` - Default value: `86400`
+// Configure how long a DHCP-assigned IP address is valid
+//   - Range: `60`-`31536000`
+//   - Default value: `86400`
 func (o ServiceDhcpServerFeatureOutput) LeaseTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceDhcpServerFeature) pulumi.IntPtrOutput { return v.LeaseTime }).(pulumi.IntPtrOutput)
 }
@@ -518,11 +521,8 @@ func (o ServiceDhcpServerFeatureOutput) StaticLeases() ServiceDhcpServerFeatureS
 	}).(ServiceDhcpServerFeatureStaticLeaseArrayOutput)
 }
 
-// Subnet Mask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-// `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-// `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-// `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-// `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+// Subnet Mask
+//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceDhcpServerFeatureOutput) SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceDhcpServerFeature) pulumi.StringPtrOutput { return v.SubnetMask }).(pulumi.StringPtrOutput)
 }

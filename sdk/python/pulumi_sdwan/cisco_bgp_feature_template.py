@@ -63,45 +63,62 @@ class CiscoBgpFeatureTemplateArgs:
         """
         The set of arguments for constructing a CiscoBgpFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]] address_families: Set BGP address family
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_external_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] distance_internal_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_local_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]] ipv4_neighbors: Set BGP neighbors
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]] ipv4_route_targets: Router Target for IPV4
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]] ipv6_route_targets: Router Target for IPV6
-        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         """
         pulumi.set(__self__, "description", description)
@@ -197,9 +214,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -223,7 +239,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -271,7 +288,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -295,7 +313,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -319,7 +338,9 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="distanceExternal")
     def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_external")
 
@@ -343,7 +364,9 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="distanceInternal")
     def distance_internal(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "distance_internal")
 
@@ -367,7 +390,9 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="distanceLocal")
     def distance_local(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_local")
 
@@ -391,7 +416,9 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        Set the interval when BGP considers a neighbor to be down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "holdtime")
 
@@ -463,7 +490,9 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter
     def keepalive(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        Set how often keepalive messages are sent to BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive")
 
@@ -487,7 +516,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="missingMedWorst")
     def missing_med_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_worst")
 
@@ -523,7 +553,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -559,7 +590,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path 
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")
 
@@ -583,7 +615,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 
@@ -631,7 +664,8 @@ class CiscoBgpFeatureTemplateArgs:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable BGP - Default value: `false`
+        Enable or disable BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -699,45 +733,62 @@ class _CiscoBgpFeatureTemplateState:
         """
         Input properties used for looking up and filtering CiscoBgpFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateAddressFamilyArgs']]] address_families: Set BGP address family
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_external_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] distance_internal_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_local_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4NeighborArgs']]] ipv4_neighbors: Set BGP neighbors
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv4RouteTargetArgs']]] ipv4_route_targets: Router Target for IPV4
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6NeighborArgs']]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateIpv6RouteTargetArgs']]] ipv6_route_targets: Router Target for IPV6
-        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['CiscoBgpFeatureTemplateMplsInterfaceArgs']]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -841,7 +892,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -889,7 +941,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -925,7 +978,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -949,9 +1003,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -963,7 +1016,9 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="distanceExternal")
     def distance_external(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_external")
 
@@ -987,7 +1042,9 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="distanceInternal")
     def distance_internal(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "distance_internal")
 
@@ -1011,7 +1068,9 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="distanceLocal")
     def distance_local(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_local")
 
@@ -1035,7 +1094,9 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter
     def holdtime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        Set the interval when BGP considers a neighbor to be down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "holdtime")
 
@@ -1107,7 +1168,9 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter
     def keepalive(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        Set how often keepalive messages are sent to BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive")
 
@@ -1131,7 +1194,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="missingMedWorst")
     def missing_med_worst(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_worst")
 
@@ -1167,7 +1231,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -1203,7 +1268,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path 
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")
 
@@ -1227,7 +1293,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 
@@ -1275,7 +1342,8 @@ class _CiscoBgpFeatureTemplateState:
     @pulumi.getter
     def shutdown(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable or disable BGP - Default value: `false`
+        Enable or disable BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 
@@ -1381,45 +1449,62 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set BGP address family
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_external_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] distance_internal_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_local_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]] ipv4_route_targets: Router Target for IPV4
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]] ipv6_route_targets: Router Target for IPV6
-        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         """
         ...
@@ -1607,45 +1692,62 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateAddressFamilyArgs', 'CiscoBgpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set BGP address family
-        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] always_compare_med: Compare MEDs from all ASs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] always_compare_med_variable: Variable name
         :param pulumi.Input[_builtins.str] as_number: Set autonomous system number <1..4294967295> or <XX.YY>
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] compare_router_id: Compare router IDs when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] compare_router_id_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] deterministic_med: Compare MEDs from all routes from same AS when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] deterministic_med_variable: Variable name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.int] distance_external: Set administrative distance for external BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_external_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        :param pulumi.Input[_builtins.int] distance_internal: Set administrative distance for internal BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `200`
         :param pulumi.Input[_builtins.str] distance_internal_variable: Variable name
-        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        :param pulumi.Input[_builtins.int] distance_local: Set administrative distance for local BGP routes
+                 - Range: `1`-`255`
+                 - Default value: `20`
         :param pulumi.Input[_builtins.str] distance_local_variable: Variable name
-        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        :param pulumi.Input[_builtins.int] holdtime: Set the interval when BGP considers a neighbor to be down
+                 - Range: `0`-`65535`
+                 - Default value: `180`
         :param pulumi.Input[_builtins.str] holdtime_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4NeighborArgs', 'CiscoBgpFeatureTemplateIpv4NeighborArgsDict']]]] ipv4_neighbors: Set BGP neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv4RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv4RouteTargetArgsDict']]]] ipv4_route_targets: Router Target for IPV4
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6NeighborArgs', 'CiscoBgpFeatureTemplateIpv6NeighborArgsDict']]]] ipv6_neighbors: Set BGP IPv6 neighbors
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateIpv6RouteTargetArgs', 'CiscoBgpFeatureTemplateIpv6RouteTargetArgsDict']]]] ipv6_route_targets: Router Target for IPV6
-        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        :param pulumi.Input[_builtins.int] keepalive: Set how often keepalive messages are sent to BGP peer
+                 - Range: `0`-`65535`
+                 - Default value: `60`
         :param pulumi.Input[_builtins.str] keepalive_variable: Variable name
-        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        :param pulumi.Input[_builtins.bool] missing_med_worst: If path has no MED, consider it to be worst path when selecting active BGP paths
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] missing_med_worst_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['CiscoBgpFeatureTemplateMplsInterfaceArgs', 'CiscoBgpFeatureTemplateMplsInterfaceArgsDict']]]] mpls_interfaces: MPLS BGP Interface
-        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection - Default value: `false`
+        :param pulumi.Input[_builtins.bool] multipath_relax: Ignore AS for multipath selection
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] multipath_relax_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
-        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_aspath: Propagate AS Path 
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_aspath_variable: Variable name
-        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community - Default value: `false`
+        :param pulumi.Input[_builtins.bool] propagate_community: Propagate Community
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] propagate_community_variable: Variable name
         :param pulumi.Input[_builtins.str] router_id: Configure BGP router identifier
         :param pulumi.Input[_builtins.str] router_id_variable: Variable name
-        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP - Default value: `false`
+        :param pulumi.Input[_builtins.bool] shutdown: Enable or disable BGP
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] shutdown_variable: Variable name
         :param pulumi.Input[_builtins.str] template_type: The template type
         :param pulumi.Input[_builtins.int] version: The version of the feature template
@@ -1709,7 +1811,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="alwaysCompareMed")
     def always_compare_med(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all ASs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "always_compare_med")
 
@@ -1741,7 +1844,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="compareRouterId")
     def compare_router_id(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare router IDs when selecting active BGP paths - Default value: `false`
+        Compare router IDs when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "compare_router_id")
 
@@ -1765,7 +1869,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deterministicMed")
     def deterministic_med(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+        Compare MEDs from all routes from same AS when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "deterministic_med")
 
@@ -1781,9 +1886,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1791,7 +1895,9 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="distanceExternal")
     def distance_external(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for external BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_external")
 
@@ -1807,7 +1913,9 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="distanceInternal")
     def distance_internal(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+        Set administrative distance for internal BGP routes
+          - Range: `1`-`255`
+          - Default value: `200`
         """
         return pulumi.get(self, "distance_internal")
 
@@ -1823,7 +1931,9 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="distanceLocal")
     def distance_local(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+        Set administrative distance for local BGP routes
+          - Range: `1`-`255`
+          - Default value: `20`
         """
         return pulumi.get(self, "distance_local")
 
@@ -1839,7 +1949,9 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def holdtime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set the interval when BGP considers a neighbor to be down - Range: `0`-`65535` - Default value: `180`
+        Set the interval when BGP considers a neighbor to be down
+          - Range: `0`-`65535`
+          - Default value: `180`
         """
         return pulumi.get(self, "holdtime")
 
@@ -1887,7 +1999,9 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def keepalive(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set how often keepalive messages are sent to BGP peer - Range: `0`-`65535` - Default value: `60`
+        Set how often keepalive messages are sent to BGP peer
+          - Range: `0`-`65535`
+          - Default value: `60`
         """
         return pulumi.get(self, "keepalive")
 
@@ -1903,7 +2017,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="missingMedWorst")
     def missing_med_worst(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+        If path has no MED, consider it to be worst path when selecting active BGP paths
+          - Default value: `false`
         """
         return pulumi.get(self, "missing_med_worst")
 
@@ -1927,7 +2042,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="multipathRelax")
     def multipath_relax(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Ignore AS for multipath selection - Default value: `false`
+        Ignore AS for multipath selection
+          - Default value: `false`
         """
         return pulumi.get(self, "multipath_relax")
 
@@ -1951,7 +2067,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="propagateAspath")
     def propagate_aspath(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Propagate AS Path - Default value: `false`
+        Propagate AS Path 
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_aspath")
 
@@ -1967,7 +2084,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="propagateCommunity")
     def propagate_community(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Propagate Community - Default value: `false`
+        Propagate Community
+          - Default value: `false`
         """
         return pulumi.get(self, "propagate_community")
 
@@ -1999,7 +2117,8 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def shutdown(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable or disable BGP - Default value: `false`
+        Enable or disable BGP
+          - Default value: `false`
         """
         return pulumi.get(self, "shutdown")
 

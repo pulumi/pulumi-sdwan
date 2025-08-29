@@ -63,29 +63,29 @@ export class SystemFlexiblePortSpeedFeature extends pulumi.CustomResource {
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-     * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-     * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+     * port Type
+     *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+     *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      */
-    public readonly portType!: pulumi.Output<string | undefined>;
+    declare public readonly portType: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly portTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly portTypeVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemFlexiblePortSpeedFeature resource with the given unique name, arguments, and options.
@@ -100,22 +100,22 @@ export class SystemFlexiblePortSpeedFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemFlexiblePortSpeedFeatureState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["portType"] = state ? state.portType : undefined;
-            resourceInputs["portTypeVariable"] = state ? state.portTypeVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["portType"] = state?.portType;
+            resourceInputs["portTypeVariable"] = state?.portTypeVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemFlexiblePortSpeedFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["portType"] = args ? args.portType : undefined;
-            resourceInputs["portTypeVariable"] = args ? args.portTypeVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["portType"] = args?.portType;
+            resourceInputs["portTypeVariable"] = args?.portTypeVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -140,9 +140,9 @@ export interface SystemFlexiblePortSpeedFeatureState {
      */
     name?: pulumi.Input<string>;
     /**
-     * port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-     * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-     * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+     * port Type
+     *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+     *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      */
     portType?: pulumi.Input<string>;
     /**
@@ -172,9 +172,9 @@ export interface SystemFlexiblePortSpeedFeatureArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-     * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-     * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+     * port Type
+     *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+     *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      */
     portType?: pulumi.Input<string>;
     /**

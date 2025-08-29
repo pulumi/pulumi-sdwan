@@ -29,7 +29,8 @@ class Ipv4DeviceAclPolicyDefinitionArgs:
         The set of arguments for constructing a Ipv4DeviceAclPolicyDefinition resource.
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]] sequences: List of ACL sequences
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
+                 - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         """
         pulumi.set(__self__, "description", description)
@@ -67,7 +68,8 @@ class Ipv4DeviceAclPolicyDefinitionArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        Default action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
         """
         return pulumi.get(self, "default_action")
 
@@ -99,7 +101,8 @@ class _Ipv4DeviceAclPolicyDefinitionState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Ipv4DeviceAclPolicyDefinition resources.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
+                 - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input['Ipv4DeviceAclPolicyDefinitionSequenceArgs']]] sequences: List of ACL sequences
@@ -123,7 +126,8 @@ class _Ipv4DeviceAclPolicyDefinitionState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        Default action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
         """
         return pulumi.get(self, "default_action")
 
@@ -216,7 +220,8 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
+                 - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
@@ -299,7 +304,8 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        :param pulumi.Input[_builtins.str] default_action: Default action, either `accept` or `drop`
+                 - Choices: `accept`, `drop`
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         :param pulumi.Input[Sequence[pulumi.Input[Union['Ipv4DeviceAclPolicyDefinitionSequenceArgs', 'Ipv4DeviceAclPolicyDefinitionSequenceArgsDict']]]] sequences: List of ACL sequences
@@ -322,7 +328,8 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+        Default action, either `accept` or `drop`
+          - Choices: `accept`, `drop`
         """
         return pulumi.get(self, "default_action")
 

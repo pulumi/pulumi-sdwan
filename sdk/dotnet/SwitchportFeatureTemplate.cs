@@ -25,7 +25,9 @@ namespace Pulumi.Sdwan
     public partial class SwitchportFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Output("ageOutTime")]
         public Output<int?> AgeOutTime { get; private set; } = null!;
@@ -43,9 +45,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -57,7 +58,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SwitchportFeatureTemplateInterface>> Interfaces { get; private set; } = null!;
 
         /// <summary>
-        /// Module type - Choices: `4`, `8`, `22`, `50`
+        /// Module type
+        ///   - Choices: `4`, `8`, `22`, `50`
         /// </summary>
         [Output("moduleType")]
         public Output<string?> ModuleType { get; private set; } = null!;
@@ -69,7 +71,9 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Number of Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Output("slot")]
         public Output<int?> Slot { get; private set; } = null!;
@@ -81,7 +85,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.SwitchportFeatureTemplateStaticMacAddress>> StaticMacAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Sub-Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Output("subSlot")]
         public Output<int?> SubSlot { get; private set; } = null!;
@@ -145,7 +151,9 @@ namespace Pulumi.Sdwan
     public sealed class SwitchportFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("ageOutTime")]
         public Input<int>? AgeOutTime { get; set; }
@@ -166,9 +174,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -189,7 +196,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Module type - Choices: `4`, `8`, `22`, `50`
+        /// Module type
+        ///   - Choices: `4`, `8`, `22`, `50`
         /// </summary>
         [Input("moduleType")]
         public Input<string>? ModuleType { get; set; }
@@ -201,7 +209,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Number of Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Input("slot")]
         public Input<int>? Slot { get; set; }
@@ -219,7 +229,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Sub-Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Input("subSlot")]
         public Input<int>? SubSlot { get; set; }
@@ -233,7 +245,9 @@ namespace Pulumi.Sdwan
     public sealed class SwitchportFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise) - Range: `0`-`1000000` - Default value: `300`
+        /// Set when a MAC table entry ages out (0 to disable, 10-1000000 otherwise)
+        ///   - Range: `0`-`1000000`
+        ///   - Default value: `300`
         /// </summary>
         [Input("ageOutTime")]
         public Input<int>? AgeOutTime { get; set; }
@@ -254,9 +268,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -277,7 +290,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Module type - Choices: `4`, `8`, `22`, `50`
+        /// Module type
+        ///   - Choices: `4`, `8`, `22`, `50`
         /// </summary>
         [Input("moduleType")]
         public Input<string>? ModuleType { get; set; }
@@ -289,7 +303,9 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Number of Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Input("slot")]
         public Input<int>? Slot { get; set; }
@@ -307,7 +323,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Number of Sub-Slots - Range: `0`-`31` - Default value: `0`
+        /// Number of Sub-Slots
+        ///   - Range: `0`-`31`
+        ///   - Default value: `0`
         /// </summary>
         [Input("subSlot")]
         public Input<int>? SubSlot { get; set; }

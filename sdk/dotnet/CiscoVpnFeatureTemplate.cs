@@ -31,9 +31,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -57,7 +56,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoVpnFeatureTemplateDnsIpv6Server>> DnsIpv6Servers { get; private set; } = null!;
 
         /// <summary>
-        /// Optional packet fields for ECMP keying - Default value: `false`
+        /// Optional packet fields for ECMP keying
+        ///   - Default value: `false`
         /// </summary>
         [Output("enhanceEcmpKeying")]
         public Output<bool?> EnhanceEcmpKeying { get; private set; } = null!;
@@ -117,7 +117,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoVpnFeatureTemplateNatPool>> NatPools { get; private set; } = null!;
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv4")]
         public Output<int?> OmpAdminDistanceIpv4 { get; private set; } = null!;
@@ -129,7 +130,8 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv4Variable { get; private set; } = null!;
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv6")]
         public Output<int?> OmpAdminDistanceIpv6 { get; private set; } = null!;
@@ -207,7 +209,9 @@ namespace Pulumi.Sdwan
         public Output<string> TemplateType { get; private set; } = null!;
 
         /// <summary>
-        /// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        /// Tenant VPN
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Output("tenantVpnId")]
         public Output<int?> TenantVpnId { get; private set; } = null!;
@@ -219,7 +223,9 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        /// List of VPN instances
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Output("vpnId")]
         public Output<int?> VpnId { get; private set; } = null!;
@@ -292,9 +298,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -339,7 +344,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Optional packet fields for ECMP keying - Default value: `false`
+        /// Optional packet fields for ECMP keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -441,7 +447,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -453,7 +460,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -579,13 +587,17 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        /// Tenant VPN
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("tenantVpnId")]
         public Input<int>? TenantVpnId { get; set; }
 
         /// <summary>
-        /// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        /// List of VPN instances
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpnId")]
         public Input<int>? VpnId { get; set; }
@@ -620,9 +632,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -667,7 +678,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Optional packet fields for ECMP keying - Default value: `false`
+        /// Optional packet fields for ECMP keying
+        ///   - Default value: `false`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -769,7 +781,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -781,7 +794,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -913,7 +927,9 @@ namespace Pulumi.Sdwan
         public Input<string>? TemplateType { get; set; }
 
         /// <summary>
-        /// Tenant VPN - Range: `0`-`65527` - Default value: `0`
+        /// Tenant VPN
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("tenantVpnId")]
         public Input<int>? TenantVpnId { get; set; }
@@ -925,7 +941,9 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// List of VPN instances - Range: `0`-`65527` - Default value: `0`
+        /// List of VPN instances
+        ///   - Range: `0`-`65527`
+        ///   - Default value: `0`
         /// </summary>
         [Input("vpnId")]
         public Input<int>? VpnId { get; set; }

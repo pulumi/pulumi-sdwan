@@ -58,15 +58,16 @@ export class ClassMapPolicyObject extends pulumi.CustomResource {
     /**
      * The name of the policy object
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Queue - Range: `0`-`7`
+     * Queue
+     *   - Range: `0`-`7`
      */
-    public readonly queue!: pulumi.Output<number>;
+    declare public readonly queue: pulumi.Output<number>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a ClassMapPolicyObject resource with the given unique name, arguments, and options.
@@ -81,16 +82,16 @@ export class ClassMapPolicyObject extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ClassMapPolicyObjectState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["queue"] = state ? state.queue : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["queue"] = state?.queue;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ClassMapPolicyObjectArgs | undefined;
-            if ((!args || args.queue === undefined) && !opts.urn) {
+            if (args?.queue === undefined && !opts.urn) {
                 throw new Error("Missing required property 'queue'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["queue"] = args ? args.queue : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["queue"] = args?.queue;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -107,7 +108,8 @@ export interface ClassMapPolicyObjectState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Queue - Range: `0`-`7`
+     * Queue
+     *   - Range: `0`-`7`
      */
     queue?: pulumi.Input<number>;
     /**
@@ -125,7 +127,8 @@ export interface ClassMapPolicyObjectArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Queue - Range: `0`-`7`
+     * Queue
+     *   - Range: `0`-`7`
      */
     queue: pulumi.Input<number>;
 }

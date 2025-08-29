@@ -33,7 +33,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Output("diskEnable")]
         public Output<bool?> DiskEnable { get; private set; } = null!;
@@ -45,7 +46,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DiskEnableVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Output("diskFileRotate")]
         public Output<int?> DiskFileRotate { get; private set; } = null!;
@@ -57,7 +60,9 @@ namespace Pulumi.Sdwan
         public Output<string?> DiskFileRotateVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Output("diskFileSize")]
         public Output<int?> DiskFileSize { get; private set; } = null!;
@@ -157,7 +162,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Input("diskEnable")]
         public Input<bool>? DiskEnable { get; set; }
@@ -169,7 +175,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DiskEnableVariable { get; set; }
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Input("diskFileRotate")]
         public Input<int>? DiskFileRotate { get; set; }
@@ -181,7 +189,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DiskFileRotateVariable { get; set; }
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Input("diskFileSize")]
         public Input<int>? DiskFileSize { get; set; }
@@ -255,7 +265,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Enable logging to local disk - Default value: `true`
+        /// Enable logging to local disk
+        ///   - Default value: `true`
         /// </summary>
         [Input("diskEnable")]
         public Input<bool>? DiskEnable { get; set; }
@@ -267,7 +278,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DiskEnableVariable { get; set; }
 
         /// <summary>
-        /// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+        /// Set number of syslog files to create before discarding oldest files
+        ///   - Range: `1`-`10`
+        ///   - Default value: `10`
         /// </summary>
         [Input("diskFileRotate")]
         public Input<int>? DiskFileRotate { get; set; }
@@ -279,7 +292,9 @@ namespace Pulumi.Sdwan
         public Input<string>? DiskFileRotateVariable { get; set; }
 
         /// <summary>
-        /// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+        /// Set maximum size of file before it is rotated
+        ///   - Range: `1`-`20`
+        ///   - Default value: `10`
         /// </summary>
         [Input("diskFileSize")]
         public Input<int>? DiskFileSize { get; set; }

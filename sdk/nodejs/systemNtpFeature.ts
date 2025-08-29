@@ -51,59 +51,61 @@ export class SystemNtpFeature extends pulumi.CustomResource {
     /**
      * Set MD5 authentication key
      */
-    public readonly authenticationKeys!: pulumi.Output<outputs.SystemNtpFeatureAuthenticationKey[] | undefined>;
+    declare public readonly authenticationKeys: pulumi.Output<outputs.SystemNtpFeatureAuthenticationKey[] | undefined>;
     /**
-     * Enable device as NTP Leader - Default value: `false`
+     * Enable device as NTP Leader
+     *   - Default value: `false`
      */
-    public readonly authoritativeNtpServer!: pulumi.Output<boolean | undefined>;
+    declare public readonly authoritativeNtpServer: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly authoritativeNtpServerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly authoritativeNtpServerVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Configure NTP servers
      */
-    public readonly servers!: pulumi.Output<outputs.SystemNtpFeatureServer[] | undefined>;
+    declare public readonly servers: pulumi.Output<outputs.SystemNtpFeatureServer[] | undefined>;
     /**
      * Enable device as NTP Leader
      */
-    public readonly sourceInterface!: pulumi.Output<string | undefined>;
+    declare public readonly sourceInterface: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly sourceInterfaceVariable!: pulumi.Output<string | undefined>;
+    declare public readonly sourceInterfaceVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable device as NTP Leader - Range: `1`-`15`
+     * Enable device as NTP Leader
+     *   - Range: `1`-`15`
      */
-    public readonly stratum!: pulumi.Output<number | undefined>;
+    declare public readonly stratum: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly stratumVariable!: pulumi.Output<string | undefined>;
+    declare public readonly stratumVariable: pulumi.Output<string | undefined>;
     /**
      * Designate authentication key as trustworthy
      */
-    public readonly trustedKeys!: pulumi.Output<number[] | undefined>;
+    declare public readonly trustedKeys: pulumi.Output<number[] | undefined>;
     /**
      * Variable name
      */
-    public readonly trustedKeysVariable!: pulumi.Output<string | undefined>;
+    declare public readonly trustedKeysVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemNtpFeature resource with the given unique name, arguments, and options.
@@ -118,38 +120,38 @@ export class SystemNtpFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemNtpFeatureState | undefined;
-            resourceInputs["authenticationKeys"] = state ? state.authenticationKeys : undefined;
-            resourceInputs["authoritativeNtpServer"] = state ? state.authoritativeNtpServer : undefined;
-            resourceInputs["authoritativeNtpServerVariable"] = state ? state.authoritativeNtpServerVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
-            resourceInputs["sourceInterface"] = state ? state.sourceInterface : undefined;
-            resourceInputs["sourceInterfaceVariable"] = state ? state.sourceInterfaceVariable : undefined;
-            resourceInputs["stratum"] = state ? state.stratum : undefined;
-            resourceInputs["stratumVariable"] = state ? state.stratumVariable : undefined;
-            resourceInputs["trustedKeys"] = state ? state.trustedKeys : undefined;
-            resourceInputs["trustedKeysVariable"] = state ? state.trustedKeysVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["authenticationKeys"] = state?.authenticationKeys;
+            resourceInputs["authoritativeNtpServer"] = state?.authoritativeNtpServer;
+            resourceInputs["authoritativeNtpServerVariable"] = state?.authoritativeNtpServerVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["servers"] = state?.servers;
+            resourceInputs["sourceInterface"] = state?.sourceInterface;
+            resourceInputs["sourceInterfaceVariable"] = state?.sourceInterfaceVariable;
+            resourceInputs["stratum"] = state?.stratum;
+            resourceInputs["stratumVariable"] = state?.stratumVariable;
+            resourceInputs["trustedKeys"] = state?.trustedKeys;
+            resourceInputs["trustedKeysVariable"] = state?.trustedKeysVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemNtpFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            resourceInputs["authenticationKeys"] = args ? args.authenticationKeys : undefined;
-            resourceInputs["authoritativeNtpServer"] = args ? args.authoritativeNtpServer : undefined;
-            resourceInputs["authoritativeNtpServerVariable"] = args ? args.authoritativeNtpServerVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
-            resourceInputs["sourceInterface"] = args ? args.sourceInterface : undefined;
-            resourceInputs["sourceInterfaceVariable"] = args ? args.sourceInterfaceVariable : undefined;
-            resourceInputs["stratum"] = args ? args.stratum : undefined;
-            resourceInputs["stratumVariable"] = args ? args.stratumVariable : undefined;
-            resourceInputs["trustedKeys"] = args ? args.trustedKeys : undefined;
-            resourceInputs["trustedKeysVariable"] = args ? args.trustedKeysVariable : undefined;
+            resourceInputs["authenticationKeys"] = args?.authenticationKeys;
+            resourceInputs["authoritativeNtpServer"] = args?.authoritativeNtpServer;
+            resourceInputs["authoritativeNtpServerVariable"] = args?.authoritativeNtpServerVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["servers"] = args?.servers;
+            resourceInputs["sourceInterface"] = args?.sourceInterface;
+            resourceInputs["sourceInterfaceVariable"] = args?.sourceInterfaceVariable;
+            resourceInputs["stratum"] = args?.stratum;
+            resourceInputs["stratumVariable"] = args?.stratumVariable;
+            resourceInputs["trustedKeys"] = args?.trustedKeys;
+            resourceInputs["trustedKeysVariable"] = args?.trustedKeysVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -166,7 +168,8 @@ export interface SystemNtpFeatureState {
      */
     authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[]>;
     /**
-     * Enable device as NTP Leader - Default value: `false`
+     * Enable device as NTP Leader
+     *   - Default value: `false`
      */
     authoritativeNtpServer?: pulumi.Input<boolean>;
     /**
@@ -198,7 +201,8 @@ export interface SystemNtpFeatureState {
      */
     sourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Enable device as NTP Leader - Range: `1`-`15`
+     * Enable device as NTP Leader
+     *   - Range: `1`-`15`
      */
     stratum?: pulumi.Input<number>;
     /**
@@ -228,7 +232,8 @@ export interface SystemNtpFeatureArgs {
      */
     authenticationKeys?: pulumi.Input<pulumi.Input<inputs.SystemNtpFeatureAuthenticationKey>[]>;
     /**
-     * Enable device as NTP Leader - Default value: `false`
+     * Enable device as NTP Leader
+     *   - Default value: `false`
      */
     authoritativeNtpServer?: pulumi.Input<boolean>;
     /**
@@ -260,7 +265,8 @@ export interface SystemNtpFeatureArgs {
      */
     sourceInterfaceVariable?: pulumi.Input<string>;
     /**
-     * Enable device as NTP Leader - Range: `1`-`15`
+     * Enable device as NTP Leader
+     *   - Range: `1`-`15`
      */
     stratum?: pulumi.Input<number>;
     /**

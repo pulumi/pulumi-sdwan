@@ -37,7 +37,8 @@ type ServiceLanVpnFeature struct {
 	ConfigDescriptionVariable pulumi.StringPtrOutput `pulumi:"configDescriptionVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Enable SDWAN Remote Access - Default value: `false`
+	// Enable SDWAN Remote Access
+	//   - Default value: `false`
 	EnableSdwanRemoteAccess pulumi.BoolPtrOutput `pulumi:"enableSdwanRemoteAccess"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
@@ -62,11 +63,13 @@ type ServiceLanVpnFeature struct {
 	NatPools ServiceLanVpnFeatureNatPoolArrayOutput `pulumi:"natPools"`
 	// NAT Port Forward
 	NatPortForwards ServiceLanVpnFeatureNatPortForwardArrayOutput `pulumi:"natPortForwards"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -100,7 +103,9 @@ type ServiceLanVpnFeature struct {
 	StaticNats ServiceLanVpnFeatureStaticNatArrayOutput `pulumi:"staticNats"`
 	// The version of the Feature
 	Version pulumi.IntOutput `pulumi:"version"`
-	// VPN - Range: `1`-`65527` - Default value: `0`
+	// VPN
+	//   - Range: `1`-`65527`
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrOutput `pulumi:"vpn"`
 	// Variable name
 	VpnVariable pulumi.StringPtrOutput `pulumi:"vpnVariable"`
@@ -149,7 +154,8 @@ type serviceLanVpnFeatureState struct {
 	ConfigDescriptionVariable *string `pulumi:"configDescriptionVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable SDWAN Remote Access - Default value: `false`
+	// Enable SDWAN Remote Access
+	//   - Default value: `false`
 	EnableSdwanRemoteAccess *bool `pulumi:"enableSdwanRemoteAccess"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
@@ -174,11 +180,13 @@ type serviceLanVpnFeatureState struct {
 	NatPools []ServiceLanVpnFeatureNatPool `pulumi:"natPools"`
 	// NAT Port Forward
 	NatPortForwards []ServiceLanVpnFeatureNatPortForward `pulumi:"natPortForwards"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -212,7 +220,9 @@ type serviceLanVpnFeatureState struct {
 	StaticNats []ServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
 	// The version of the Feature
 	Version *int `pulumi:"version"`
-	// VPN - Range: `1`-`65527` - Default value: `0`
+	// VPN
+	//   - Range: `1`-`65527`
+	//   - Default value: `0`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -229,7 +239,8 @@ type ServiceLanVpnFeatureState struct {
 	ConfigDescriptionVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable SDWAN Remote Access - Default value: `false`
+	// Enable SDWAN Remote Access
+	//   - Default value: `false`
 	EnableSdwanRemoteAccess pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
@@ -254,11 +265,13 @@ type ServiceLanVpnFeatureState struct {
 	NatPools ServiceLanVpnFeatureNatPoolArrayInput
 	// NAT Port Forward
 	NatPortForwards ServiceLanVpnFeatureNatPortForwardArrayInput
-	// OMP Admin Distance IPv4 - Range: `1`-`255`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// OMP Admin Distance IPv6 - Range: `1`-`255`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
@@ -292,7 +305,9 @@ type ServiceLanVpnFeatureState struct {
 	StaticNats ServiceLanVpnFeatureStaticNatArrayInput
 	// The version of the Feature
 	Version pulumi.IntPtrInput
-	// VPN - Range: `1`-`65527` - Default value: `0`
+	// VPN
+	//   - Range: `1`-`65527`
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -313,7 +328,8 @@ type serviceLanVpnFeatureArgs struct {
 	ConfigDescriptionVariable *string `pulumi:"configDescriptionVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Enable SDWAN Remote Access - Default value: `false`
+	// Enable SDWAN Remote Access
+	//   - Default value: `false`
 	EnableSdwanRemoteAccess *bool `pulumi:"enableSdwanRemoteAccess"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
@@ -338,11 +354,13 @@ type serviceLanVpnFeatureArgs struct {
 	NatPools []ServiceLanVpnFeatureNatPool `pulumi:"natPools"`
 	// NAT Port Forward
 	NatPortForwards []ServiceLanVpnFeatureNatPortForward `pulumi:"natPortForwards"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
@@ -374,7 +392,9 @@ type serviceLanVpnFeatureArgs struct {
 	Services []ServiceLanVpnFeatureService `pulumi:"services"`
 	// Static NAT Rules
 	StaticNats []ServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
-	// VPN - Range: `1`-`65527` - Default value: `0`
+	// VPN
+	//   - Range: `1`-`65527`
+	//   - Default value: `0`
 	Vpn *int `pulumi:"vpn"`
 	// Variable name
 	VpnVariable *string `pulumi:"vpnVariable"`
@@ -392,7 +412,8 @@ type ServiceLanVpnFeatureArgs struct {
 	ConfigDescriptionVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Enable SDWAN Remote Access - Default value: `false`
+	// Enable SDWAN Remote Access
+	//   - Default value: `false`
 	EnableSdwanRemoteAccess pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
@@ -417,11 +438,13 @@ type ServiceLanVpnFeatureArgs struct {
 	NatPools ServiceLanVpnFeatureNatPoolArrayInput
 	// NAT Port Forward
 	NatPortForwards ServiceLanVpnFeatureNatPortForwardArrayInput
-	// OMP Admin Distance IPv4 - Range: `1`-`255`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// OMP Admin Distance IPv6 - Range: `1`-`255`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
@@ -453,7 +476,9 @@ type ServiceLanVpnFeatureArgs struct {
 	Services ServiceLanVpnFeatureServiceArrayInput
 	// Static NAT Rules
 	StaticNats ServiceLanVpnFeatureStaticNatArrayInput
-	// VPN - Range: `1`-`65527` - Default value: `0`
+	// VPN
+	//   - Range: `1`-`65527`
+	//   - Default value: `0`
 	Vpn pulumi.IntPtrInput
 	// Variable name
 	VpnVariable pulumi.StringPtrInput
@@ -575,7 +600,8 @@ func (o ServiceLanVpnFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Enable SDWAN Remote Access - Default value: `false`
+// Enable SDWAN Remote Access
+//   - Default value: `false`
 func (o ServiceLanVpnFeatureOutput) EnableSdwanRemoteAccess() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.BoolPtrOutput { return v.EnableSdwanRemoteAccess }).(pulumi.BoolPtrOutput)
 }
@@ -657,7 +683,8 @@ func (o ServiceLanVpnFeatureOutput) NatPortForwards() ServiceLanVpnFeatureNatPor
 	return o.ApplyT(func(v *ServiceLanVpnFeature) ServiceLanVpnFeatureNatPortForwardArrayOutput { return v.NatPortForwards }).(ServiceLanVpnFeatureNatPortForwardArrayOutput)
 }
 
-// OMP Admin Distance IPv4 - Range: `1`-`255`
+// OMP Admin Distance IPv4
+//   - Range: `1`-`255`
 func (o ServiceLanVpnFeatureOutput) OmpAdminDistanceIpv4() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv4 }).(pulumi.IntPtrOutput)
 }
@@ -667,7 +694,8 @@ func (o ServiceLanVpnFeatureOutput) OmpAdminDistanceIpv4Variable() pulumi.String
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv4Variable }).(pulumi.StringPtrOutput)
 }
 
-// OMP Admin Distance IPv6 - Range: `1`-`255`
+// OMP Admin Distance IPv6
+//   - Range: `1`-`255`
 func (o ServiceLanVpnFeatureOutput) OmpAdminDistanceIpv6() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv6 }).(pulumi.IntPtrOutput)
 }
@@ -758,7 +786,9 @@ func (o ServiceLanVpnFeatureOutput) Version() pulumi.IntOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.IntOutput { return v.Version }).(pulumi.IntOutput)
 }
 
-// VPN - Range: `1`-`65527` - Default value: `0`
+// VPN
+//   - Range: `1`-`65527`
+//   - Default value: `0`
 func (o ServiceLanVpnFeatureOutput) Vpn() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) pulumi.IntPtrOutput { return v.Vpn }).(pulumi.IntPtrOutput)
 }

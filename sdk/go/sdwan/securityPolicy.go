@@ -24,15 +24,18 @@ import (
 type SecurityPolicy struct {
 	pulumi.CustomResourceState
 
-	// Audit trail - Choices: `on`, `off`
+	// Audit trail
+	//   - Choices: `on`, `off`
 	AuditTrail pulumi.StringPtrOutput `pulumi:"auditTrail"`
 	// List of policy definitions
 	Definitions SecurityPolicyDefinitionArrayOutput `pulumi:"definitions"`
 	// The description of the security policy
 	Description pulumi.StringOutput `pulumi:"description"`
-	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+	// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+	//   - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrOutput `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrOutput `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrOutput `pulumi:"highSpeedLoggingServerIp"`
@@ -45,7 +48,8 @@ type SecurityPolicy struct {
 	// ICMP Unreachable Allow
 	ImcpUnreachableAllow pulumi.BoolPtrOutput             `pulumi:"imcpUnreachableAllow"`
 	Loggings             SecurityPolicyLoggingArrayOutput `pulumi:"loggings"`
-	// Match Statistics per-filter - Choices: `on`, `off`
+	// Match Statistics per-filter
+	//   - Choices: `on`, `off`
 	MatchStatisticsPerFilter pulumi.StringPtrOutput `pulumi:"matchStatisticsPerFilter"`
 	// Max Incomplete ICMP Limit
 	MaxIncompleteIcmpLimit pulumi.IntPtrOutput `pulumi:"maxIncompleteIcmpLimit"`
@@ -53,7 +57,9 @@ type SecurityPolicy struct {
 	MaxIncompleteTcpLimit pulumi.IntPtrOutput `pulumi:"maxIncompleteTcpLimit"`
 	// Max Incomplete UDP Limit
 	MaxIncompleteUdpLimit pulumi.IntPtrOutput `pulumi:"maxIncompleteUdpLimit"`
-	// The policy mode - Choices: `security`, `unified` - Default value: `security`
+	// The policy mode
+	//   - Choices: `security`, `unified`
+	//   - Default value: `security`
 	Mode pulumi.StringOutput `pulumi:"mode"`
 	// The name of the security policy
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -63,8 +69,9 @@ type SecurityPolicy struct {
 	TcpSynFloodLimit pulumi.StringPtrOutput `pulumi:"tcpSynFloodLimit"`
 	// Unified Logging
 	UnifiedLogging pulumi.BoolPtrOutput `pulumi:"unifiedLogging"`
-	// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-	// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+	// The use case of the security policy
+	//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+	//   - Default value: `custom`
 	UseCase pulumi.StringOutput `pulumi:"useCase"`
 	// The version of the object
 	Version pulumi.IntOutput `pulumi:"version"`
@@ -106,15 +113,18 @@ func GetSecurityPolicy(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SecurityPolicy resources.
 type securityPolicyState struct {
-	// Audit trail - Choices: `on`, `off`
+	// Audit trail
+	//   - Choices: `on`, `off`
 	AuditTrail *string `pulumi:"auditTrail"`
 	// List of policy definitions
 	Definitions []SecurityPolicyDefinition `pulumi:"definitions"`
 	// The description of the security policy
 	Description *string `pulumi:"description"`
-	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+	// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+	//   - Choices: `allow`, `deny`
 	DirectInternetApplications *string `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
@@ -127,7 +137,8 @@ type securityPolicyState struct {
 	// ICMP Unreachable Allow
 	ImcpUnreachableAllow *bool                   `pulumi:"imcpUnreachableAllow"`
 	Loggings             []SecurityPolicyLogging `pulumi:"loggings"`
-	// Match Statistics per-filter - Choices: `on`, `off`
+	// Match Statistics per-filter
+	//   - Choices: `on`, `off`
 	MatchStatisticsPerFilter *string `pulumi:"matchStatisticsPerFilter"`
 	// Max Incomplete ICMP Limit
 	MaxIncompleteIcmpLimit *int `pulumi:"maxIncompleteIcmpLimit"`
@@ -135,7 +146,9 @@ type securityPolicyState struct {
 	MaxIncompleteTcpLimit *int `pulumi:"maxIncompleteTcpLimit"`
 	// Max Incomplete UDP Limit
 	MaxIncompleteUdpLimit *int `pulumi:"maxIncompleteUdpLimit"`
-	// The policy mode - Choices: `security`, `unified` - Default value: `security`
+	// The policy mode
+	//   - Choices: `security`, `unified`
+	//   - Default value: `security`
 	Mode *string `pulumi:"mode"`
 	// The name of the security policy
 	Name *string `pulumi:"name"`
@@ -145,23 +158,27 @@ type securityPolicyState struct {
 	TcpSynFloodLimit *string `pulumi:"tcpSynFloodLimit"`
 	// Unified Logging
 	UnifiedLogging *bool `pulumi:"unifiedLogging"`
-	// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-	// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+	// The use case of the security policy
+	//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+	//   - Default value: `custom`
 	UseCase *string `pulumi:"useCase"`
 	// The version of the object
 	Version *int `pulumi:"version"`
 }
 
 type SecurityPolicyState struct {
-	// Audit trail - Choices: `on`, `off`
+	// Audit trail
+	//   - Choices: `on`, `off`
 	AuditTrail pulumi.StringPtrInput
 	// List of policy definitions
 	Definitions SecurityPolicyDefinitionArrayInput
 	// The description of the security policy
 	Description pulumi.StringPtrInput
-	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+	// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+	//   - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
@@ -174,7 +191,8 @@ type SecurityPolicyState struct {
 	// ICMP Unreachable Allow
 	ImcpUnreachableAllow pulumi.BoolPtrInput
 	Loggings             SecurityPolicyLoggingArrayInput
-	// Match Statistics per-filter - Choices: `on`, `off`
+	// Match Statistics per-filter
+	//   - Choices: `on`, `off`
 	MatchStatisticsPerFilter pulumi.StringPtrInput
 	// Max Incomplete ICMP Limit
 	MaxIncompleteIcmpLimit pulumi.IntPtrInput
@@ -182,7 +200,9 @@ type SecurityPolicyState struct {
 	MaxIncompleteTcpLimit pulumi.IntPtrInput
 	// Max Incomplete UDP Limit
 	MaxIncompleteUdpLimit pulumi.IntPtrInput
-	// The policy mode - Choices: `security`, `unified` - Default value: `security`
+	// The policy mode
+	//   - Choices: `security`, `unified`
+	//   - Default value: `security`
 	Mode pulumi.StringPtrInput
 	// The name of the security policy
 	Name pulumi.StringPtrInput
@@ -192,8 +212,9 @@ type SecurityPolicyState struct {
 	TcpSynFloodLimit pulumi.StringPtrInput
 	// Unified Logging
 	UnifiedLogging pulumi.BoolPtrInput
-	// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-	// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+	// The use case of the security policy
+	//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+	//   - Default value: `custom`
 	UseCase pulumi.StringPtrInput
 	// The version of the object
 	Version pulumi.IntPtrInput
@@ -204,15 +225,18 @@ func (SecurityPolicyState) ElementType() reflect.Type {
 }
 
 type securityPolicyArgs struct {
-	// Audit trail - Choices: `on`, `off`
+	// Audit trail
+	//   - Choices: `on`, `off`
 	AuditTrail *string `pulumi:"auditTrail"`
 	// List of policy definitions
 	Definitions []SecurityPolicyDefinition `pulumi:"definitions"`
 	// The description of the security policy
 	Description string `pulumi:"description"`
-	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+	// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+	//   - Choices: `allow`, `deny`
 	DirectInternetApplications *string `pulumi:"directInternetApplications"`
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode *string `pulumi:"failureMode"`
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp *string `pulumi:"highSpeedLoggingServerIp"`
@@ -225,7 +249,8 @@ type securityPolicyArgs struct {
 	// ICMP Unreachable Allow
 	ImcpUnreachableAllow *bool                   `pulumi:"imcpUnreachableAllow"`
 	Loggings             []SecurityPolicyLogging `pulumi:"loggings"`
-	// Match Statistics per-filter - Choices: `on`, `off`
+	// Match Statistics per-filter
+	//   - Choices: `on`, `off`
 	MatchStatisticsPerFilter *string `pulumi:"matchStatisticsPerFilter"`
 	// Max Incomplete ICMP Limit
 	MaxIncompleteIcmpLimit *int `pulumi:"maxIncompleteIcmpLimit"`
@@ -233,7 +258,9 @@ type securityPolicyArgs struct {
 	MaxIncompleteTcpLimit *int `pulumi:"maxIncompleteTcpLimit"`
 	// Max Incomplete UDP Limit
 	MaxIncompleteUdpLimit *int `pulumi:"maxIncompleteUdpLimit"`
-	// The policy mode - Choices: `security`, `unified` - Default value: `security`
+	// The policy mode
+	//   - Choices: `security`, `unified`
+	//   - Default value: `security`
 	Mode *string `pulumi:"mode"`
 	// The name of the security policy
 	Name *string `pulumi:"name"`
@@ -243,22 +270,26 @@ type securityPolicyArgs struct {
 	TcpSynFloodLimit *string `pulumi:"tcpSynFloodLimit"`
 	// Unified Logging
 	UnifiedLogging *bool `pulumi:"unifiedLogging"`
-	// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-	// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+	// The use case of the security policy
+	//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+	//   - Default value: `custom`
 	UseCase *string `pulumi:"useCase"`
 }
 
 // The set of arguments for constructing a SecurityPolicy resource.
 type SecurityPolicyArgs struct {
-	// Audit trail - Choices: `on`, `off`
+	// Audit trail
+	//   - Choices: `on`, `off`
 	AuditTrail pulumi.StringPtrInput
 	// List of policy definitions
 	Definitions SecurityPolicyDefinitionArrayInput
 	// The description of the security policy
 	Description pulumi.StringInput
-	// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+	// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+	//   - Choices: `allow`, `deny`
 	DirectInternetApplications pulumi.StringPtrInput
-	// Failure mode - Choices: `open`, `close`
+	// Failure mode
+	//   - Choices: `open`, `close`
 	FailureMode pulumi.StringPtrInput
 	// High Speed Logging Server IP
 	HighSpeedLoggingServerIp pulumi.StringPtrInput
@@ -271,7 +302,8 @@ type SecurityPolicyArgs struct {
 	// ICMP Unreachable Allow
 	ImcpUnreachableAllow pulumi.BoolPtrInput
 	Loggings             SecurityPolicyLoggingArrayInput
-	// Match Statistics per-filter - Choices: `on`, `off`
+	// Match Statistics per-filter
+	//   - Choices: `on`, `off`
 	MatchStatisticsPerFilter pulumi.StringPtrInput
 	// Max Incomplete ICMP Limit
 	MaxIncompleteIcmpLimit pulumi.IntPtrInput
@@ -279,7 +311,9 @@ type SecurityPolicyArgs struct {
 	MaxIncompleteTcpLimit pulumi.IntPtrInput
 	// Max Incomplete UDP Limit
 	MaxIncompleteUdpLimit pulumi.IntPtrInput
-	// The policy mode - Choices: `security`, `unified` - Default value: `security`
+	// The policy mode
+	//   - Choices: `security`, `unified`
+	//   - Default value: `security`
 	Mode pulumi.StringPtrInput
 	// The name of the security policy
 	Name pulumi.StringPtrInput
@@ -289,8 +323,9 @@ type SecurityPolicyArgs struct {
 	TcpSynFloodLimit pulumi.StringPtrInput
 	// Unified Logging
 	UnifiedLogging pulumi.BoolPtrInput
-	// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-	// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+	// The use case of the security policy
+	//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+	//   - Default value: `custom`
 	UseCase pulumi.StringPtrInput
 }
 
@@ -381,7 +416,8 @@ func (o SecurityPolicyOutput) ToSecurityPolicyOutputWithContext(ctx context.Cont
 	return o
 }
 
-// Audit trail - Choices: `on`, `off`
+// Audit trail
+//   - Choices: `on`, `off`
 func (o SecurityPolicyOutput) AuditTrail() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.AuditTrail }).(pulumi.StringPtrOutput)
 }
@@ -396,12 +432,14 @@ func (o SecurityPolicyOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// Bypass firewall policy and allow all Internet traffic to/from VPN 0 - Choices: `allow`, `deny`
+// Bypass firewall policy and allow all Internet traffic to/from VPN 0
+//   - Choices: `allow`, `deny`
 func (o SecurityPolicyOutput) DirectInternetApplications() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.DirectInternetApplications }).(pulumi.StringPtrOutput)
 }
 
-// Failure mode - Choices: `open`, `close`
+// Failure mode
+//   - Choices: `open`, `close`
 func (o SecurityPolicyOutput) FailureMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.FailureMode }).(pulumi.StringPtrOutput)
 }
@@ -435,7 +473,8 @@ func (o SecurityPolicyOutput) Loggings() SecurityPolicyLoggingArrayOutput {
 	return o.ApplyT(func(v *SecurityPolicy) SecurityPolicyLoggingArrayOutput { return v.Loggings }).(SecurityPolicyLoggingArrayOutput)
 }
 
-// Match Statistics per-filter - Choices: `on`, `off`
+// Match Statistics per-filter
+//   - Choices: `on`, `off`
 func (o SecurityPolicyOutput) MatchStatisticsPerFilter() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringPtrOutput { return v.MatchStatisticsPerFilter }).(pulumi.StringPtrOutput)
 }
@@ -455,7 +494,9 @@ func (o SecurityPolicyOutput) MaxIncompleteUdpLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.IntPtrOutput { return v.MaxIncompleteUdpLimit }).(pulumi.IntPtrOutput)
 }
 
-// The policy mode - Choices: `security`, `unified` - Default value: `security`
+// The policy mode
+//   - Choices: `security`, `unified`
+//   - Default value: `security`
 func (o SecurityPolicyOutput) Mode() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringOutput { return v.Mode }).(pulumi.StringOutput)
 }
@@ -480,8 +521,9 @@ func (o SecurityPolicyOutput) UnifiedLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.BoolPtrOutput { return v.UnifiedLogging }).(pulumi.BoolPtrOutput)
 }
 
-// The use case of the security policy - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`,
-// `directInternetAccess`, `directCloudAccess` - Default value: `custom`
+// The use case of the security policy
+//   - Choices: `custom`, `compliance`, `guestAccess`, `directCloudAccess`, `directInternetAccess`, `directCloudAccess`
+//   - Default value: `custom`
 func (o SecurityPolicyOutput) UseCase() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityPolicy) pulumi.StringOutput { return v.UseCase }).(pulumi.StringOutput)
 }

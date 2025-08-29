@@ -46,53 +46,58 @@ export class CflowdPolicyDefinition extends pulumi.CustomResource {
     }
 
     /**
-     * Active flow timeout in seconds - Range: `30`-`3600`
+     * Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      */
-    public readonly activeFlowTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly activeFlowTimeout: pulumi.Output<number | undefined>;
     /**
      * List of collectors
      */
-    public readonly collectors!: pulumi.Output<outputs.CflowdPolicyDefinitionCollector[]>;
+    declare public readonly collectors: pulumi.Output<outputs.CflowdPolicyDefinitionCollector[]>;
     /**
      * The description of the policy definition
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * Flow refresh in seconds - Range: `60`-`86400`
+     * Flow refresh in seconds
+     *   - Range: `60`-`86400`
      */
-    public readonly flowRefresh!: pulumi.Output<number | undefined>;
+    declare public readonly flowRefresh: pulumi.Output<number | undefined>;
     /**
-     * Inactive flow timeout in seconds - Range: `1`-`3600`
+     * Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      */
-    public readonly inactiveFlowTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly inactiveFlowTimeout: pulumi.Output<number | undefined>;
     /**
      * The name of the policy definition
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      */
-    public readonly protocol!: pulumi.Output<string | undefined>;
+    declare public readonly protocol: pulumi.Output<string | undefined>;
     /**
      * Collect remarked DSCP
      */
-    public readonly remarkedDscp!: pulumi.Output<boolean | undefined>;
+    declare public readonly remarkedDscp: pulumi.Output<boolean | undefined>;
     /**
-     * Flow sampling interval - Range: `1`-`65536`
+     * Flow sampling interval
+     *   - Range: `1`-`65536`
      */
-    public readonly samplingInterval!: pulumi.Output<number | undefined>;
+    declare public readonly samplingInterval: pulumi.Output<number | undefined>;
     /**
      * Collect TOS record field
      */
-    public readonly tos!: pulumi.Output<boolean | undefined>;
+    declare public readonly tos: pulumi.Output<boolean | undefined>;
     /**
      * Type
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
     /**
      * The version of the object
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CflowdPolicyDefinition resource with the given unique name, arguments, and options.
@@ -107,36 +112,36 @@ export class CflowdPolicyDefinition extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CflowdPolicyDefinitionState | undefined;
-            resourceInputs["activeFlowTimeout"] = state ? state.activeFlowTimeout : undefined;
-            resourceInputs["collectors"] = state ? state.collectors : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["flowRefresh"] = state ? state.flowRefresh : undefined;
-            resourceInputs["inactiveFlowTimeout"] = state ? state.inactiveFlowTimeout : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["remarkedDscp"] = state ? state.remarkedDscp : undefined;
-            resourceInputs["samplingInterval"] = state ? state.samplingInterval : undefined;
-            resourceInputs["tos"] = state ? state.tos : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["activeFlowTimeout"] = state?.activeFlowTimeout;
+            resourceInputs["collectors"] = state?.collectors;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["flowRefresh"] = state?.flowRefresh;
+            resourceInputs["inactiveFlowTimeout"] = state?.inactiveFlowTimeout;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["remarkedDscp"] = state?.remarkedDscp;
+            resourceInputs["samplingInterval"] = state?.samplingInterval;
+            resourceInputs["tos"] = state?.tos;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CflowdPolicyDefinitionArgs | undefined;
-            if ((!args || args.collectors === undefined) && !opts.urn) {
+            if (args?.collectors === undefined && !opts.urn) {
                 throw new Error("Missing required property 'collectors'");
             }
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            resourceInputs["activeFlowTimeout"] = args ? args.activeFlowTimeout : undefined;
-            resourceInputs["collectors"] = args ? args.collectors : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["flowRefresh"] = args ? args.flowRefresh : undefined;
-            resourceInputs["inactiveFlowTimeout"] = args ? args.inactiveFlowTimeout : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["remarkedDscp"] = args ? args.remarkedDscp : undefined;
-            resourceInputs["samplingInterval"] = args ? args.samplingInterval : undefined;
-            resourceInputs["tos"] = args ? args.tos : undefined;
+            resourceInputs["activeFlowTimeout"] = args?.activeFlowTimeout;
+            resourceInputs["collectors"] = args?.collectors;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["flowRefresh"] = args?.flowRefresh;
+            resourceInputs["inactiveFlowTimeout"] = args?.inactiveFlowTimeout;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["remarkedDscp"] = args?.remarkedDscp;
+            resourceInputs["samplingInterval"] = args?.samplingInterval;
+            resourceInputs["tos"] = args?.tos;
             resourceInputs["type"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -150,7 +155,8 @@ export class CflowdPolicyDefinition extends pulumi.CustomResource {
  */
 export interface CflowdPolicyDefinitionState {
     /**
-     * Active flow timeout in seconds - Range: `30`-`3600`
+     * Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      */
     activeFlowTimeout?: pulumi.Input<number>;
     /**
@@ -162,11 +168,13 @@ export interface CflowdPolicyDefinitionState {
      */
     description?: pulumi.Input<string>;
     /**
-     * Flow refresh in seconds - Range: `60`-`86400`
+     * Flow refresh in seconds
+     *   - Range: `60`-`86400`
      */
     flowRefresh?: pulumi.Input<number>;
     /**
-     * Inactive flow timeout in seconds - Range: `1`-`3600`
+     * Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      */
     inactiveFlowTimeout?: pulumi.Input<number>;
     /**
@@ -174,7 +182,8 @@ export interface CflowdPolicyDefinitionState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      */
     protocol?: pulumi.Input<string>;
     /**
@@ -182,7 +191,8 @@ export interface CflowdPolicyDefinitionState {
      */
     remarkedDscp?: pulumi.Input<boolean>;
     /**
-     * Flow sampling interval - Range: `1`-`65536`
+     * Flow sampling interval
+     *   - Range: `1`-`65536`
      */
     samplingInterval?: pulumi.Input<number>;
     /**
@@ -204,7 +214,8 @@ export interface CflowdPolicyDefinitionState {
  */
 export interface CflowdPolicyDefinitionArgs {
     /**
-     * Active flow timeout in seconds - Range: `30`-`3600`
+     * Active flow timeout in seconds
+     *   - Range: `30`-`3600`
      */
     activeFlowTimeout?: pulumi.Input<number>;
     /**
@@ -216,11 +227,13 @@ export interface CflowdPolicyDefinitionArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * Flow refresh in seconds - Range: `60`-`86400`
+     * Flow refresh in seconds
+     *   - Range: `60`-`86400`
      */
     flowRefresh?: pulumi.Input<number>;
     /**
-     * Inactive flow timeout in seconds - Range: `1`-`3600`
+     * Inactive flow timeout in seconds
+     *   - Range: `1`-`3600`
      */
     inactiveFlowTimeout?: pulumi.Input<number>;
     /**
@@ -228,7 +241,8 @@ export interface CflowdPolicyDefinitionArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+     * Protocol, either `ipv4`, `ipv6` or `all`
+     *   - Choices: `ipv4`, `ipv6`, `all`
      */
     protocol?: pulumi.Input<string>;
     /**
@@ -236,7 +250,8 @@ export interface CflowdPolicyDefinitionArgs {
      */
     remarkedDscp?: pulumi.Input<boolean>;
     /**
-     * Flow sampling interval - Range: `1`-`65536`
+     * Flow sampling interval
+     *   - Range: `1`-`65536`
      */
     samplingInterval?: pulumi.Input<number>;
     /**

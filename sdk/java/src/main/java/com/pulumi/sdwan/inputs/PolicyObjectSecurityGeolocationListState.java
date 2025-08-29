@@ -34,14 +34,14 @@ public final class PolicyObjectSecurityGeolocationListState extends com.pulumi.r
     }
 
     /**
-     * Geolocation List
+     * Geolocation  List
      * 
      */
     @Import(name="entries")
     private @Nullable Output<List<PolicyObjectSecurityGeolocationListEntryArgs>> entries;
 
     /**
-     * @return Geolocation List
+     * @return Geolocation  List
      * 
      */
     public Optional<Output<List<PolicyObjectSecurityGeolocationListEntryArgs>>> entries() {
@@ -143,7 +143,7 @@ public final class PolicyObjectSecurityGeolocationListState extends com.pulumi.r
         }
 
         /**
-         * @param entries Geolocation List
+         * @param entries Geolocation  List
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class PolicyObjectSecurityGeolocationListState extends com.pulumi.r
         }
 
         /**
-         * @param entries Geolocation List
+         * @param entries Geolocation  List
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class PolicyObjectSecurityGeolocationListState extends com.pulumi.r
         }
 
         /**
-         * @param entries Geolocation List
+         * @param entries Geolocation  List
          * 
          * @return builder
          * 

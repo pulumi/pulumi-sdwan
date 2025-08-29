@@ -37,7 +37,9 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route>> AdvertiseIpv6Routes { get; private set; } = null!;
 
         /// <summary>
-        /// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        /// Set the time between OMP Update packets
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Output("advertisementInterval")]
         public Output<int?> AdvertisementInterval { get; private set; } = null!;
@@ -55,15 +57,16 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        /// Set maximum number of OMP paths to install in vEdge route table
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Output("ecmpLimit")]
         public Output<int?> EcmpLimit { get; private set; } = null!;
@@ -75,7 +78,9 @@ namespace Pulumi.Sdwan
         public Output<string?> EcmpLimitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+        /// End of RIB timer &lt;1..604800&gt; seconds
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Output("eorTimer")]
         public Output<int?> EorTimer { get; private set; } = null!;
@@ -87,13 +92,16 @@ namespace Pulumi.Sdwan
         public Output<string?> EorTimerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable OMP graceful restart - Default value: `true`
+        /// Enable or disable OMP graceful restart
+        ///   - Default value: `true`
         /// </summary>
         [Output("gracefulRestart")]
         public Output<bool?> GracefulRestart { get; private set; } = null!;
 
         /// <summary>
-        /// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        /// Set the OMP graceful restart timer
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Output("gracefulRestartTimer")]
         public Output<int?> GracefulRestartTimer { get; private set; } = null!;
@@ -111,7 +119,8 @@ namespace Pulumi.Sdwan
         public Output<string?> GracefulRestartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set how long to wait before closing OMP peer connection - Default value: `60`
+        /// Set how long to wait before closing OMP peer connection
+        ///   - Default value: `60`
         /// </summary>
         [Output("holdtime")]
         public Output<int?> Holdtime { get; private set; } = null!;
@@ -123,7 +132,8 @@ namespace Pulumi.Sdwan
         public Output<string?> HoldtimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        /// Ignore Region-Path Length During Best-Path Algorithm
+        ///   - Default value: `false`
         /// </summary>
         [Output("ignoreRegionPathLength")]
         public Output<bool?> IgnoreRegionPathLength { get; private set; } = null!;
@@ -141,7 +151,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv4")]
         public Output<int?> OmpAdminDistanceIpv4 { get; private set; } = null!;
@@ -153,7 +164,8 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv4Variable { get; private set; } = null!;
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Output("ompAdminDistanceIpv6")]
         public Output<int?> OmpAdminDistanceIpv6 { get; private set; } = null!;
@@ -165,7 +177,8 @@ namespace Pulumi.Sdwan
         public Output<string?> OmpAdminDistanceIpv6Variable { get; private set; } = null!;
 
         /// <summary>
-        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Output("overlayAs")]
         public Output<int?> OverlayAs { get; private set; } = null!;
@@ -177,7 +190,9 @@ namespace Pulumi.Sdwan
         public Output<string?> OverlayAsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        /// Set number of TLOC routes advertised between vSmart and vEdge
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Output("sendPathLimit")]
         public Output<int?> SendPathLimit { get; private set; } = null!;
@@ -189,7 +204,8 @@ namespace Pulumi.Sdwan
         public Output<string?> SendPathLimitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable or disable OMP - Default value: `false`
+        /// Enable or disable OMP
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -207,7 +223,8 @@ namespace Pulumi.Sdwan
         public Output<string> TemplateType { get; private set; } = null!;
 
         /// <summary>
-        /// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport gateway path computation
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Output("transportGateway")]
         public Output<string?> TransportGateway { get; private set; } = null!;
@@ -295,7 +312,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        /// Set the time between OMP Update packets
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Input("advertisementInterval")]
         public Input<int>? AdvertisementInterval { get; set; }
@@ -316,9 +335,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -327,7 +345,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        /// Set maximum number of OMP paths to install in vEdge route table
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
         public Input<int>? EcmpLimit { get; set; }
@@ -339,7 +359,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EcmpLimitVariable { get; set; }
 
         /// <summary>
-        /// End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+        /// End of RIB timer &lt;1..604800&gt; seconds
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Input("eorTimer")]
         public Input<int>? EorTimer { get; set; }
@@ -351,13 +373,16 @@ namespace Pulumi.Sdwan
         public Input<string>? EorTimerVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable OMP graceful restart - Default value: `true`
+        /// Enable or disable OMP graceful restart
+        ///   - Default value: `true`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
 
         /// <summary>
-        /// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        /// Set the OMP graceful restart timer
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Input("gracefulRestartTimer")]
         public Input<int>? GracefulRestartTimer { get; set; }
@@ -375,7 +400,8 @@ namespace Pulumi.Sdwan
         public Input<string>? GracefulRestartVariable { get; set; }
 
         /// <summary>
-        /// Set how long to wait before closing OMP peer connection - Default value: `60`
+        /// Set how long to wait before closing OMP peer connection
+        ///   - Default value: `60`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -387,7 +413,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldtimeVariable { get; set; }
 
         /// <summary>
-        /// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        /// Ignore Region-Path Length During Best-Path Algorithm
+        ///   - Default value: `false`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -405,7 +432,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -417,7 +445,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -429,7 +458,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv6Variable { get; set; }
 
         /// <summary>
-        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("overlayAs")]
         public Input<int>? OverlayAs { get; set; }
@@ -441,7 +471,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayAsVariable { get; set; }
 
         /// <summary>
-        /// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        /// Set number of TLOC routes advertised between vSmart and vEdge
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("sendPathLimit")]
         public Input<int>? SendPathLimit { get; set; }
@@ -453,7 +485,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SendPathLimitVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable OMP - Default value: `false`
+        /// Enable or disable OMP
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -465,7 +498,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport gateway path computation
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }
@@ -509,7 +543,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+        /// Set the time between OMP Update packets
+        ///   - Range: `0`-`65535`
+        ///   - Default value: `1`
         /// </summary>
         [Input("advertisementInterval")]
         public Input<int>? AdvertisementInterval { get; set; }
@@ -530,9 +566,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -541,7 +576,9 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+        /// Set maximum number of OMP paths to install in vEdge route table
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("ecmpLimit")]
         public Input<int>? EcmpLimit { get; set; }
@@ -553,7 +590,9 @@ namespace Pulumi.Sdwan
         public Input<string>? EcmpLimitVariable { get; set; }
 
         /// <summary>
-        /// End of RIB timer &lt;1..604800&gt; seconds - Range: `1`-`3600` - Default value: `300`
+        /// End of RIB timer &lt;1..604800&gt; seconds
+        ///   - Range: `1`-`3600`
+        ///   - Default value: `300`
         /// </summary>
         [Input("eorTimer")]
         public Input<int>? EorTimer { get; set; }
@@ -565,13 +604,16 @@ namespace Pulumi.Sdwan
         public Input<string>? EorTimerVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable OMP graceful restart - Default value: `true`
+        /// Enable or disable OMP graceful restart
+        ///   - Default value: `true`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
 
         /// <summary>
-        /// Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+        /// Set the OMP graceful restart timer
+        ///   - Range: `1`-`604800`
+        ///   - Default value: `43200`
         /// </summary>
         [Input("gracefulRestartTimer")]
         public Input<int>? GracefulRestartTimer { get; set; }
@@ -589,7 +631,8 @@ namespace Pulumi.Sdwan
         public Input<string>? GracefulRestartVariable { get; set; }
 
         /// <summary>
-        /// Set how long to wait before closing OMP peer connection - Default value: `60`
+        /// Set how long to wait before closing OMP peer connection
+        ///   - Default value: `60`
         /// </summary>
         [Input("holdtime")]
         public Input<int>? Holdtime { get; set; }
@@ -601,7 +644,8 @@ namespace Pulumi.Sdwan
         public Input<string>? HoldtimeVariable { get; set; }
 
         /// <summary>
-        /// Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+        /// Ignore Region-Path Length During Best-Path Algorithm
+        ///   - Default value: `false`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -619,7 +663,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv4 - Range: `1`-`255`
+        /// omp-admin-distance-ipv4
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv4")]
         public Input<int>? OmpAdminDistanceIpv4 { get; set; }
@@ -631,7 +676,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv4Variable { get; set; }
 
         /// <summary>
-        /// omp-admin-distance-ipv6 - Range: `1`-`255`
+        /// omp-admin-distance-ipv6
+        ///   - Range: `1`-`255`
         /// </summary>
         [Input("ompAdminDistanceIpv6")]
         public Input<int>? OmpAdminDistanceIpv6 { get; set; }
@@ -643,7 +689,8 @@ namespace Pulumi.Sdwan
         public Input<string>? OmpAdminDistanceIpv6Variable { get; set; }
 
         /// <summary>
-        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt; - Range: `1`-`4294967295`
+        /// Set Overlay AS number &lt;1..4294967295&gt; or &lt;XX.YY&gt;
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("overlayAs")]
         public Input<int>? OverlayAs { get; set; }
@@ -655,7 +702,9 @@ namespace Pulumi.Sdwan
         public Input<string>? OverlayAsVariable { get; set; }
 
         /// <summary>
-        /// Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+        /// Set number of TLOC routes advertised between vSmart and vEdge
+        ///   - Range: `1`-`16`
+        ///   - Default value: `4`
         /// </summary>
         [Input("sendPathLimit")]
         public Input<int>? SendPathLimit { get; set; }
@@ -667,7 +716,8 @@ namespace Pulumi.Sdwan
         public Input<string>? SendPathLimitVariable { get; set; }
 
         /// <summary>
-        /// Enable or disable OMP - Default value: `false`
+        /// Enable or disable OMP
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -685,7 +735,8 @@ namespace Pulumi.Sdwan
         public Input<string>? TemplateType { get; set; }
 
         /// <summary>
-        /// Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+        /// Transport gateway path computation
+        ///   - Choices: `prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }

@@ -49,137 +49,154 @@ export class CiscoOmpFeatureTemplate extends pulumi.CustomResource {
     /**
      * Advertise locally learned routes to OMP
      */
-    public readonly advertiseIpv4Routes!: pulumi.Output<outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route[] | undefined>;
+    declare public readonly advertiseIpv4Routes: pulumi.Output<outputs.CiscoOmpFeatureTemplateAdvertiseIpv4Route[] | undefined>;
     /**
      * Advertise locally learned routes to OMP
      */
-    public readonly advertiseIpv6Routes!: pulumi.Output<outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route[] | undefined>;
+    declare public readonly advertiseIpv6Routes: pulumi.Output<outputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route[] | undefined>;
     /**
-     * Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+     * Set the time between OMP Update packets
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      */
-    public readonly advertisementInterval!: pulumi.Output<number | undefined>;
+    declare public readonly advertisementInterval: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly advertisementIntervalVariable!: pulumi.Output<string | undefined>;
+    declare public readonly advertisementIntervalVariable: pulumi.Output<string | undefined>;
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
-     * Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+     * Set maximum number of OMP paths to install in vEdge route table
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
-    public readonly ecmpLimit!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ecmpLimitVariable!: pulumi.Output<string | undefined>;
-    /**
-     * End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
-     */
-    public readonly eorTimer!: pulumi.Output<number | undefined>;
+    declare public readonly ecmpLimit: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly eorTimerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ecmpLimitVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable or disable OMP graceful restart - Default value: `true`
+     * End of RIB timer <1..604800> seconds
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      */
-    public readonly gracefulRestart!: pulumi.Output<boolean | undefined>;
-    /**
-     * Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
-     */
-    public readonly gracefulRestartTimer!: pulumi.Output<number | undefined>;
+    declare public readonly eorTimer: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly gracefulRestartTimerVariable!: pulumi.Output<string | undefined>;
+    declare public readonly eorTimerVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable or disable OMP graceful restart
+     *   - Default value: `true`
+     */
+    declare public readonly gracefulRestart: pulumi.Output<boolean | undefined>;
+    /**
+     * Set the OMP graceful restart timer
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
+     */
+    declare public readonly gracefulRestartTimer: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly gracefulRestartVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set how long to wait before closing OMP peer connection - Default value: `60`
-     */
-    public readonly holdtime!: pulumi.Output<number | undefined>;
+    declare public readonly gracefulRestartTimerVariable: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly holdtimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly gracefulRestartVariable: pulumi.Output<string | undefined>;
     /**
-     * Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+     * Set how long to wait before closing OMP peer connection
+     *   - Default value: `60`
      */
-    public readonly ignoreRegionPathLength!: pulumi.Output<boolean | undefined>;
+    declare public readonly holdtime: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ignoreRegionPathLengthVariable!: pulumi.Output<string | undefined>;
+    declare public readonly holdtimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * Ignore Region-Path Length During Best-Path Algorithm
+     *   - Default value: `false`
+     */
+    declare public readonly ignoreRegionPathLength: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly ignoreRegionPathLengthVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
-    public readonly ompAdminDistanceIpv4!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly ompAdminDistanceIpv4Variable!: pulumi.Output<string | undefined>;
-    /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
-     */
-    public readonly ompAdminDistanceIpv6!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv4: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ompAdminDistanceIpv6Variable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv4Variable: pulumi.Output<string | undefined>;
     /**
-     * Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      */
-    public readonly overlayAs!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly overlayAsVariable!: pulumi.Output<string | undefined>;
-    /**
-     * Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
-     */
-    public readonly sendPathLimit!: pulumi.Output<number | undefined>;
+    declare public readonly ompAdminDistanceIpv6: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly sendPathLimitVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ompAdminDistanceIpv6Variable: pulumi.Output<string | undefined>;
     /**
-     * Enable or disable OMP - Default value: `false`
+     * Set Overlay AS number <1..4294967295> or <XX.YY>
+     *   - Range: `1`-`4294967295`
      */
-    public readonly shutdown!: pulumi.Output<boolean | undefined>;
+    declare public readonly overlayAs: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly shutdownVariable!: pulumi.Output<string | undefined>;
+    declare public readonly overlayAsVariable: pulumi.Output<string | undefined>;
+    /**
+     * Set number of TLOC routes advertised between vSmart and vEdge
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
+     */
+    declare public readonly sendPathLimit: pulumi.Output<number | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly sendPathLimitVariable: pulumi.Output<string | undefined>;
+    /**
+     * Enable or disable OMP
+     *   - Default value: `false`
+     */
+    declare public readonly shutdown: pulumi.Output<boolean | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
-     * Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport gateway path computation
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
-    public readonly transportGateway!: pulumi.Output<string | undefined>;
+    declare public readonly transportGateway: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly transportGatewayVariable!: pulumi.Output<string | undefined>;
+    declare public readonly transportGatewayVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a CiscoOmpFeatureTemplate resource with the given unique name, arguments, and options.
@@ -194,78 +211,78 @@ export class CiscoOmpFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoOmpFeatureTemplateState | undefined;
-            resourceInputs["advertiseIpv4Routes"] = state ? state.advertiseIpv4Routes : undefined;
-            resourceInputs["advertiseIpv6Routes"] = state ? state.advertiseIpv6Routes : undefined;
-            resourceInputs["advertisementInterval"] = state ? state.advertisementInterval : undefined;
-            resourceInputs["advertisementIntervalVariable"] = state ? state.advertisementIntervalVariable : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["ecmpLimit"] = state ? state.ecmpLimit : undefined;
-            resourceInputs["ecmpLimitVariable"] = state ? state.ecmpLimitVariable : undefined;
-            resourceInputs["eorTimer"] = state ? state.eorTimer : undefined;
-            resourceInputs["eorTimerVariable"] = state ? state.eorTimerVariable : undefined;
-            resourceInputs["gracefulRestart"] = state ? state.gracefulRestart : undefined;
-            resourceInputs["gracefulRestartTimer"] = state ? state.gracefulRestartTimer : undefined;
-            resourceInputs["gracefulRestartTimerVariable"] = state ? state.gracefulRestartTimerVariable : undefined;
-            resourceInputs["gracefulRestartVariable"] = state ? state.gracefulRestartVariable : undefined;
-            resourceInputs["holdtime"] = state ? state.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = state ? state.holdtimeVariable : undefined;
-            resourceInputs["ignoreRegionPathLength"] = state ? state.ignoreRegionPathLength : undefined;
-            resourceInputs["ignoreRegionPathLengthVariable"] = state ? state.ignoreRegionPathLengthVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = state ? state.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = state ? state.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = state ? state.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = state ? state.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["overlayAs"] = state ? state.overlayAs : undefined;
-            resourceInputs["overlayAsVariable"] = state ? state.overlayAsVariable : undefined;
-            resourceInputs["sendPathLimit"] = state ? state.sendPathLimit : undefined;
-            resourceInputs["sendPathLimitVariable"] = state ? state.sendPathLimitVariable : undefined;
-            resourceInputs["shutdown"] = state ? state.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = state ? state.shutdownVariable : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["transportGateway"] = state ? state.transportGateway : undefined;
-            resourceInputs["transportGatewayVariable"] = state ? state.transportGatewayVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["advertiseIpv4Routes"] = state?.advertiseIpv4Routes;
+            resourceInputs["advertiseIpv6Routes"] = state?.advertiseIpv6Routes;
+            resourceInputs["advertisementInterval"] = state?.advertisementInterval;
+            resourceInputs["advertisementIntervalVariable"] = state?.advertisementIntervalVariable;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["ecmpLimit"] = state?.ecmpLimit;
+            resourceInputs["ecmpLimitVariable"] = state?.ecmpLimitVariable;
+            resourceInputs["eorTimer"] = state?.eorTimer;
+            resourceInputs["eorTimerVariable"] = state?.eorTimerVariable;
+            resourceInputs["gracefulRestart"] = state?.gracefulRestart;
+            resourceInputs["gracefulRestartTimer"] = state?.gracefulRestartTimer;
+            resourceInputs["gracefulRestartTimerVariable"] = state?.gracefulRestartTimerVariable;
+            resourceInputs["gracefulRestartVariable"] = state?.gracefulRestartVariable;
+            resourceInputs["holdtime"] = state?.holdtime;
+            resourceInputs["holdtimeVariable"] = state?.holdtimeVariable;
+            resourceInputs["ignoreRegionPathLength"] = state?.ignoreRegionPathLength;
+            resourceInputs["ignoreRegionPathLengthVariable"] = state?.ignoreRegionPathLengthVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["ompAdminDistanceIpv4"] = state?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = state?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = state?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = state?.ompAdminDistanceIpv6Variable;
+            resourceInputs["overlayAs"] = state?.overlayAs;
+            resourceInputs["overlayAsVariable"] = state?.overlayAsVariable;
+            resourceInputs["sendPathLimit"] = state?.sendPathLimit;
+            resourceInputs["sendPathLimitVariable"] = state?.sendPathLimitVariable;
+            resourceInputs["shutdown"] = state?.shutdown;
+            resourceInputs["shutdownVariable"] = state?.shutdownVariable;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["transportGateway"] = state?.transportGateway;
+            resourceInputs["transportGatewayVariable"] = state?.transportGatewayVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as CiscoOmpFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["advertiseIpv4Routes"] = args ? args.advertiseIpv4Routes : undefined;
-            resourceInputs["advertiseIpv6Routes"] = args ? args.advertiseIpv6Routes : undefined;
-            resourceInputs["advertisementInterval"] = args ? args.advertisementInterval : undefined;
-            resourceInputs["advertisementIntervalVariable"] = args ? args.advertisementIntervalVariable : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["ecmpLimit"] = args ? args.ecmpLimit : undefined;
-            resourceInputs["ecmpLimitVariable"] = args ? args.ecmpLimitVariable : undefined;
-            resourceInputs["eorTimer"] = args ? args.eorTimer : undefined;
-            resourceInputs["eorTimerVariable"] = args ? args.eorTimerVariable : undefined;
-            resourceInputs["gracefulRestart"] = args ? args.gracefulRestart : undefined;
-            resourceInputs["gracefulRestartTimer"] = args ? args.gracefulRestartTimer : undefined;
-            resourceInputs["gracefulRestartTimerVariable"] = args ? args.gracefulRestartTimerVariable : undefined;
-            resourceInputs["gracefulRestartVariable"] = args ? args.gracefulRestartVariable : undefined;
-            resourceInputs["holdtime"] = args ? args.holdtime : undefined;
-            resourceInputs["holdtimeVariable"] = args ? args.holdtimeVariable : undefined;
-            resourceInputs["ignoreRegionPathLength"] = args ? args.ignoreRegionPathLength : undefined;
-            resourceInputs["ignoreRegionPathLengthVariable"] = args ? args.ignoreRegionPathLengthVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["ompAdminDistanceIpv4"] = args ? args.ompAdminDistanceIpv4 : undefined;
-            resourceInputs["ompAdminDistanceIpv4Variable"] = args ? args.ompAdminDistanceIpv4Variable : undefined;
-            resourceInputs["ompAdminDistanceIpv6"] = args ? args.ompAdminDistanceIpv6 : undefined;
-            resourceInputs["ompAdminDistanceIpv6Variable"] = args ? args.ompAdminDistanceIpv6Variable : undefined;
-            resourceInputs["overlayAs"] = args ? args.overlayAs : undefined;
-            resourceInputs["overlayAsVariable"] = args ? args.overlayAsVariable : undefined;
-            resourceInputs["sendPathLimit"] = args ? args.sendPathLimit : undefined;
-            resourceInputs["sendPathLimitVariable"] = args ? args.sendPathLimitVariable : undefined;
-            resourceInputs["shutdown"] = args ? args.shutdown : undefined;
-            resourceInputs["shutdownVariable"] = args ? args.shutdownVariable : undefined;
-            resourceInputs["transportGateway"] = args ? args.transportGateway : undefined;
-            resourceInputs["transportGatewayVariable"] = args ? args.transportGatewayVariable : undefined;
+            resourceInputs["advertiseIpv4Routes"] = args?.advertiseIpv4Routes;
+            resourceInputs["advertiseIpv6Routes"] = args?.advertiseIpv6Routes;
+            resourceInputs["advertisementInterval"] = args?.advertisementInterval;
+            resourceInputs["advertisementIntervalVariable"] = args?.advertisementIntervalVariable;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["ecmpLimit"] = args?.ecmpLimit;
+            resourceInputs["ecmpLimitVariable"] = args?.ecmpLimitVariable;
+            resourceInputs["eorTimer"] = args?.eorTimer;
+            resourceInputs["eorTimerVariable"] = args?.eorTimerVariable;
+            resourceInputs["gracefulRestart"] = args?.gracefulRestart;
+            resourceInputs["gracefulRestartTimer"] = args?.gracefulRestartTimer;
+            resourceInputs["gracefulRestartTimerVariable"] = args?.gracefulRestartTimerVariable;
+            resourceInputs["gracefulRestartVariable"] = args?.gracefulRestartVariable;
+            resourceInputs["holdtime"] = args?.holdtime;
+            resourceInputs["holdtimeVariable"] = args?.holdtimeVariable;
+            resourceInputs["ignoreRegionPathLength"] = args?.ignoreRegionPathLength;
+            resourceInputs["ignoreRegionPathLengthVariable"] = args?.ignoreRegionPathLengthVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["ompAdminDistanceIpv4"] = args?.ompAdminDistanceIpv4;
+            resourceInputs["ompAdminDistanceIpv4Variable"] = args?.ompAdminDistanceIpv4Variable;
+            resourceInputs["ompAdminDistanceIpv6"] = args?.ompAdminDistanceIpv6;
+            resourceInputs["ompAdminDistanceIpv6Variable"] = args?.ompAdminDistanceIpv6Variable;
+            resourceInputs["overlayAs"] = args?.overlayAs;
+            resourceInputs["overlayAsVariable"] = args?.overlayAsVariable;
+            resourceInputs["sendPathLimit"] = args?.sendPathLimit;
+            resourceInputs["sendPathLimitVariable"] = args?.sendPathLimitVariable;
+            resourceInputs["shutdown"] = args?.shutdown;
+            resourceInputs["shutdownVariable"] = args?.shutdownVariable;
+            resourceInputs["transportGateway"] = args?.transportGateway;
+            resourceInputs["transportGatewayVariable"] = args?.transportGatewayVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -287,7 +304,9 @@ export interface CiscoOmpFeatureTemplateState {
      */
     advertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route>[]>;
     /**
-     * Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+     * Set the time between OMP Update packets
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      */
     advertisementInterval?: pulumi.Input<number>;
     /**
@@ -299,13 +318,14 @@ export interface CiscoOmpFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+     * Set maximum number of OMP paths to install in vEdge route table
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number>;
     /**
@@ -313,7 +333,9 @@ export interface CiscoOmpFeatureTemplateState {
      */
     ecmpLimitVariable?: pulumi.Input<string>;
     /**
-     * End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+     * End of RIB timer <1..604800> seconds
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      */
     eorTimer?: pulumi.Input<number>;
     /**
@@ -321,11 +343,14 @@ export interface CiscoOmpFeatureTemplateState {
      */
     eorTimerVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable OMP graceful restart - Default value: `true`
+     * Enable or disable OMP graceful restart
+     *   - Default value: `true`
      */
     gracefulRestart?: pulumi.Input<boolean>;
     /**
-     * Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+     * Set the OMP graceful restart timer
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number>;
     /**
@@ -337,7 +362,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     gracefulRestartVariable?: pulumi.Input<string>;
     /**
-     * Set how long to wait before closing OMP peer connection - Default value: `60`
+     * Set how long to wait before closing OMP peer connection
+     *   - Default value: `60`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -345,7 +371,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     holdtimeVariable?: pulumi.Input<string>;
     /**
-     * Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+     * Ignore Region-Path Length During Best-Path Algorithm
+     *   - Default value: `false`
      */
     ignoreRegionPathLength?: pulumi.Input<boolean>;
     /**
@@ -357,7 +384,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     name?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -365,7 +393,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -373,7 +402,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
     /**
-     * Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+     * Set Overlay AS number <1..4294967295> or <XX.YY>
+     *   - Range: `1`-`4294967295`
      */
     overlayAs?: pulumi.Input<number>;
     /**
@@ -381,7 +411,9 @@ export interface CiscoOmpFeatureTemplateState {
      */
     overlayAsVariable?: pulumi.Input<string>;
     /**
-     * Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+     * Set number of TLOC routes advertised between vSmart and vEdge
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     sendPathLimit?: pulumi.Input<number>;
     /**
@@ -389,7 +421,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     sendPathLimitVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable OMP - Default value: `false`
+     * Enable or disable OMP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -401,7 +434,8 @@ export interface CiscoOmpFeatureTemplateState {
      */
     templateType?: pulumi.Input<string>;
     /**
-     * Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport gateway path computation
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
     transportGateway?: pulumi.Input<string>;
     /**
@@ -427,7 +461,9 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     advertiseIpv6Routes?: pulumi.Input<pulumi.Input<inputs.CiscoOmpFeatureTemplateAdvertiseIpv6Route>[]>;
     /**
-     * Set the time between OMP Update packets - Range: `0`-`65535` - Default value: `1`
+     * Set the time between OMP Update packets
+     *   - Range: `0`-`65535`
+     *   - Default value: `1`
      */
     advertisementInterval?: pulumi.Input<number>;
     /**
@@ -439,13 +475,14 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Set maximum number of OMP paths to install in vEdge route table - Range: `1`-`16` - Default value: `4`
+     * Set maximum number of OMP paths to install in vEdge route table
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     ecmpLimit?: pulumi.Input<number>;
     /**
@@ -453,7 +490,9 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     ecmpLimitVariable?: pulumi.Input<string>;
     /**
-     * End of RIB timer <1..604800> seconds - Range: `1`-`3600` - Default value: `300`
+     * End of RIB timer <1..604800> seconds
+     *   - Range: `1`-`3600`
+     *   - Default value: `300`
      */
     eorTimer?: pulumi.Input<number>;
     /**
@@ -461,11 +500,14 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     eorTimerVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable OMP graceful restart - Default value: `true`
+     * Enable or disable OMP graceful restart
+     *   - Default value: `true`
      */
     gracefulRestart?: pulumi.Input<boolean>;
     /**
-     * Set the OMP graceful restart timer - Range: `1`-`604800` - Default value: `43200`
+     * Set the OMP graceful restart timer
+     *   - Range: `1`-`604800`
+     *   - Default value: `43200`
      */
     gracefulRestartTimer?: pulumi.Input<number>;
     /**
@@ -477,7 +519,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     gracefulRestartVariable?: pulumi.Input<string>;
     /**
-     * Set how long to wait before closing OMP peer connection - Default value: `60`
+     * Set how long to wait before closing OMP peer connection
+     *   - Default value: `60`
      */
     holdtime?: pulumi.Input<number>;
     /**
@@ -485,7 +528,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     holdtimeVariable?: pulumi.Input<string>;
     /**
-     * Ignore Region-Path Length During Best-Path Algorithm - Default value: `false`
+     * Ignore Region-Path Length During Best-Path Algorithm
+     *   - Default value: `false`
      */
     ignoreRegionPathLength?: pulumi.Input<boolean>;
     /**
@@ -497,7 +541,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv4 - Range: `1`-`255`
+     * omp-admin-distance-ipv4
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv4?: pulumi.Input<number>;
     /**
@@ -505,7 +550,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     ompAdminDistanceIpv4Variable?: pulumi.Input<string>;
     /**
-     * omp-admin-distance-ipv6 - Range: `1`-`255`
+     * omp-admin-distance-ipv6
+     *   - Range: `1`-`255`
      */
     ompAdminDistanceIpv6?: pulumi.Input<number>;
     /**
@@ -513,7 +559,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     ompAdminDistanceIpv6Variable?: pulumi.Input<string>;
     /**
-     * Set Overlay AS number <1..4294967295> or <XX.YY> - Range: `1`-`4294967295`
+     * Set Overlay AS number <1..4294967295> or <XX.YY>
+     *   - Range: `1`-`4294967295`
      */
     overlayAs?: pulumi.Input<number>;
     /**
@@ -521,7 +568,9 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     overlayAsVariable?: pulumi.Input<string>;
     /**
-     * Set number of TLOC routes advertised between vSmart and vEdge - Range: `1`-`16` - Default value: `4`
+     * Set number of TLOC routes advertised between vSmart and vEdge
+     *   - Range: `1`-`16`
+     *   - Default value: `4`
      */
     sendPathLimit?: pulumi.Input<number>;
     /**
@@ -529,7 +578,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     sendPathLimitVariable?: pulumi.Input<string>;
     /**
-     * Enable or disable OMP - Default value: `false`
+     * Enable or disable OMP
+     *   - Default value: `false`
      */
     shutdown?: pulumi.Input<boolean>;
     /**
@@ -537,7 +587,8 @@ export interface CiscoOmpFeatureTemplateArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * Transport gateway path computation - Choices: `prefer`, `ecmp-with-direct-path`
+     * Transport gateway path computation
+     *   - Choices: `prefer`, `ecmp-with-direct-path`
      */
     transportGateway?: pulumi.Input<string>;
     /**

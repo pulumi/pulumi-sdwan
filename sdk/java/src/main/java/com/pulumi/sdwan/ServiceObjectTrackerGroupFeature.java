@@ -82,14 +82,16 @@ public class ServiceObjectTrackerGroupFeature extends com.pulumi.resources.Custo
         return this.name;
     }
     /**
-     * Object ID - Range: `1`-`1000`
+     * Object ID
+     *   - Range: `1`-`1000`
      * 
      */
     @Export(name="objectTrackerId", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> objectTrackerId;
 
     /**
-     * @return Object ID - Range: `1`-`1000`
+     * @return Object ID
+     *   - Range: `1`-`1000`
      * 
      */
     public Output<Optional<Integer>> objectTrackerId() {
@@ -110,14 +112,18 @@ public class ServiceObjectTrackerGroupFeature extends com.pulumi.resources.Custo
         return Codegen.optional(this.objectTrackerIdVariable);
     }
     /**
-     * tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     @Export(name="reachable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> reachable;
 
     /**
-     * @return tracker ref list criteria boolean and or - Choices: `and`, `or` - Default value: `or`
+     * @return tracker ref list criteria boolean and or
+     *   - Choices: `and`, `or`
+     *   - Default value: `or`
      * 
      */
     public Output<Optional<String>> reachable() {

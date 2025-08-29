@@ -44,21 +44,27 @@ class EigrpFeatureTemplateArgs:
         """
         The set of arguments for constructing a EigrpFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]] address_families: Set EIGRP address family
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]] keys: Set keychain name
@@ -121,9 +127,8 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -147,7 +152,8 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter(name="asNumber")
     def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "as_number")
 
@@ -171,7 +177,8 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -195,7 +202,8 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter
     def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -219,7 +227,9 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -267,7 +277,9 @@ class EigrpFeatureTemplateArgs:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 
@@ -376,21 +388,27 @@ class _EigrpFeatureTemplateState:
         """
         Input properties used for looking up and filtering EigrpFeatureTemplate resources.
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateAddressFamilyArgs']]] address_families: Set EIGRP address family
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateInterfaceArgs']]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input['EigrpFeatureTemplateKeyArgs']]] keys: Set keychain name
@@ -461,7 +479,8 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter(name="asNumber")
     def as_number(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "as_number")
 
@@ -485,7 +504,8 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -521,9 +541,8 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -535,7 +554,8 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter
     def filter(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -559,7 +579,9 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -607,7 +629,9 @@ class _EigrpFeatureTemplateState:
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 
@@ -754,21 +778,27 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set EIGRP address family
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]] keys: Set keychain name
@@ -904,21 +934,27 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateAddressFamilyArgs', 'EigrpFeatureTemplateAddressFamilyArgsDict']]]] address_families: Set EIGRP address family
-        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.int] as_number: Set autonomous system ID <1..65535>
+                 - Range: `1`-`65535`
         :param pulumi.Input[_builtins.str] as_number_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        :param pulumi.Input[_builtins.str] authentication_type: Set EIGRP router authentication type
+                 - Choices: `md5`, `hmac-sha-256`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
-        :param pulumi.Input[_builtins.bool] filter: Selective route download - Default value: `false`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[_builtins.bool] filter: Selective route download
+                 - Default value: `false`
         :param pulumi.Input[_builtins.str] filter_variable: Variable name
-        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        :param pulumi.Input[_builtins.int] hello_interval: Set EIGRP hello interval
+                 - Range: `0`-`65535`
+                 - Default value: `5`
         :param pulumi.Input[_builtins.str] hello_interval_variable: Variable name
         :param pulumi.Input[_builtins.str] hmac_authentication_key: Set hmac-sha-256 authentication key
         :param pulumi.Input[_builtins.str] hmac_authentication_key_variable: Variable name
-        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        :param pulumi.Input[_builtins.int] hold_time: Set EIGRP hold time
+                 - Range: `0`-`65535`
+                 - Default value: `15`
         :param pulumi.Input[_builtins.str] hold_time_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateInterfaceArgs', 'EigrpFeatureTemplateInterfaceArgsDict']]]] interfaces: Configure IPv4 Static Routes
         :param pulumi.Input[Sequence[pulumi.Input[Union['EigrpFeatureTemplateKeyArgs', 'EigrpFeatureTemplateKeyArgsDict']]]] keys: Set keychain name
@@ -968,7 +1004,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="asNumber")
     def as_number(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set autonomous system ID <1..65535> - Range: `1`-`65535`
+        Set autonomous system ID <1..65535>
+          - Range: `1`-`65535`
         """
         return pulumi.get(self, "as_number")
 
@@ -984,7 +1021,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set EIGRP router authentication type - Choices: `md5`, `hmac-sha-256`
+        Set EIGRP router authentication type
+          - Choices: `md5`, `hmac-sha-256`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -1008,9 +1046,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -1018,7 +1055,8 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter
     def filter(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Selective route download - Default value: `false`
+        Selective route download
+          - Default value: `false`
         """
         return pulumi.get(self, "filter")
 
@@ -1034,7 +1072,9 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="helloInterval")
     def hello_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set EIGRP hello interval - Range: `0`-`65535` - Default value: `5`
+        Set EIGRP hello interval
+          - Range: `0`-`65535`
+          - Default value: `5`
         """
         return pulumi.get(self, "hello_interval")
 
@@ -1066,7 +1106,9 @@ class EigrpFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="holdTime")
     def hold_time(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set EIGRP hold time - Range: `0`-`65535` - Default value: `15`
+        Set EIGRP hold time
+          - Range: `0`-`65535`
+          - Default value: `15`
         """
         return pulumi.get(self, "hold_time")
 

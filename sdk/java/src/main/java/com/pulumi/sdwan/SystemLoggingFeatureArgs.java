@@ -38,14 +38,16 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Enable logging to local disk - Default value: `true`
+     * Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     @Import(name="diskEnable")
     private @Nullable Output<Boolean> diskEnable;
 
     /**
-     * @return Enable logging to local disk - Default value: `true`
+     * @return Enable logging to local disk
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> diskEnable() {
@@ -68,14 +70,18 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     @Import(name="diskFileRotate")
     private @Nullable Output<Integer> diskFileRotate;
 
     /**
-     * @return Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+     * @return Set number of syslog files to create before discarding oldest files
+     *   - Range: `1`-`10`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> diskFileRotate() {
@@ -98,14 +104,18 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     @Import(name="diskFileSize")
     private @Nullable Output<Integer> diskFileSize;
 
     /**
-     * @return Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+     * @return Set maximum size of file before it is rotated
+     *   - Range: `1`-`20`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> diskFileSize() {
@@ -259,7 +269,8 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskEnable Enable logging to local disk - Default value: `true`
+         * @param diskEnable Enable logging to local disk
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -270,7 +281,8 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskEnable Enable logging to local disk - Default value: `true`
+         * @param diskEnable Enable logging to local disk
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -301,7 +313,9 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskFileRotate Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+         * @param diskFileRotate Set number of syslog files to create before discarding oldest files
+         *   - Range: `1`-`10`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -312,7 +326,9 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskFileRotate Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+         * @param diskFileRotate Set number of syslog files to create before discarding oldest files
+         *   - Range: `1`-`10`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -343,7 +359,9 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskFileSize Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+         * @param diskFileSize Set maximum size of file before it is rotated
+         *   - Range: `1`-`20`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -354,7 +372,9 @@ public final class SystemLoggingFeatureArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param diskFileSize Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+         * @param diskFileSize Set maximum size of file before it is rotated
+         *   - Range: `1`-`20`
+         *   - Default value: `10`
          * 
          * @return builder
          * 

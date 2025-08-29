@@ -62,18 +62,18 @@ public final class SystemFlexiblePortSpeedFeatureState extends com.pulumi.resour
     }
 
     /**
-     * port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-     * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-     * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+     * port Type
+     *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+     *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      * 
      */
     @Import(name="portType")
     private @Nullable Output<String> portType;
 
     /**
-     * @return port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-     * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-     * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+     * @return port Type
+     *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+     *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
      * 
      */
     public Optional<Output<String>> portType() {
@@ -203,9 +203,9 @@ public final class SystemFlexiblePortSpeedFeatureState extends com.pulumi.resour
         }
 
         /**
-         * @param portType port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-         * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-         * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+         * @param portType port Type
+         *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+         *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
          * 
          * @return builder
          * 
@@ -216,9 +216,9 @@ public final class SystemFlexiblePortSpeedFeatureState extends com.pulumi.resour
         }
 
         /**
-         * @param portType port Type - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`,
-         * `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port
-         * of 100GE` - Default value: `12 ports of 1/10GE + 3 ports 40GE`
+         * @param portType port Type
+         *   - Choices: `12 ports of 1/10GE + 3 ports 40GE`, `8 ports of 1/10GE + 4 ports of 40GE`, `2 ports of 100 GE`, `12 ports of 1/10GE + 1 port of 100GE`, `8 ports of 1/10GE + 1 port of 40GE + 1 port of 100GE`, `3 ports of 40GE + 1port of 100GE`
+         *   - Default value: `12 ports of 1/10GE + 3 ports 40GE`
          * 
          * @return builder
          * 

@@ -89,7 +89,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> DecryptCategories { get; private set; } = null!;
 
         /// <summary>
-        /// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        /// Decrypt threshold
+        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         /// </summary>
         [Output("decryptThreshold")]
         public Output<string?> DecryptThreshold { get; private set; } = null!;
@@ -107,7 +108,8 @@ namespace Pulumi.Sdwan
         public Output<bool?> FailDecrypt { get; private set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -225,7 +227,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        /// Decrypt threshold
+        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
         public Input<string>? DecryptThreshold { get; set; }
@@ -243,7 +246,8 @@ namespace Pulumi.Sdwan
         public Input<bool>? FailDecrypt { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -329,7 +333,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Decrypt threshold - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        /// Decrypt threshold
+        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
         public Input<string>? DecryptThreshold { get; set; }
@@ -347,7 +352,8 @@ namespace Pulumi.Sdwan
         public Input<bool>? FailDecrypt { get; set; }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

@@ -37,14 +37,16 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/ipv4AclPolicyDefinition:Ipv4AclPolicyDefinition")
 public class Ipv4AclPolicyDefinition extends com.pulumi.resources.CustomResource {
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     @Export(name="defaultAction", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * @return Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     public Output<Optional<String>> defaultAction() {

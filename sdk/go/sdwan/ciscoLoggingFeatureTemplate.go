@@ -27,11 +27,11 @@ type CiscoLoggingFeatureTemplate struct {
 
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskLogging pulumi.BoolPtrOutput `pulumi:"diskLogging"`
 	// Variable name
 	DiskLoggingVariable pulumi.StringPtrOutput `pulumi:"diskLoggingVariable"`
@@ -39,11 +39,15 @@ type CiscoLoggingFeatureTemplate struct {
 	Ipv4Servers CiscoLoggingFeatureTemplateIpv4ServerArrayOutput `pulumi:"ipv4Servers"`
 	// Enable logging to remote IPv6 server
 	Ipv6Servers CiscoLoggingFeatureTemplateIpv6ServerArrayOutput `pulumi:"ipv6Servers"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	LogRotations pulumi.IntPtrOutput `pulumi:"logRotations"`
 	// Variable name
 	LogRotationsVariable pulumi.StringPtrOutput `pulumi:"logRotationsVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	MaxSize pulumi.IntPtrOutput `pulumi:"maxSize"`
 	// Variable name
 	MaxSizeVariable pulumi.StringPtrOutput `pulumi:"maxSizeVariable"`
@@ -95,11 +99,11 @@ func GetCiscoLoggingFeatureTemplate(ctx *pulumi.Context,
 type ciscoLoggingFeatureTemplateState struct {
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskLogging *bool `pulumi:"diskLogging"`
 	// Variable name
 	DiskLoggingVariable *string `pulumi:"diskLoggingVariable"`
@@ -107,11 +111,15 @@ type ciscoLoggingFeatureTemplateState struct {
 	Ipv4Servers []CiscoLoggingFeatureTemplateIpv4Server `pulumi:"ipv4Servers"`
 	// Enable logging to remote IPv6 server
 	Ipv6Servers []CiscoLoggingFeatureTemplateIpv6Server `pulumi:"ipv6Servers"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	LogRotations *int `pulumi:"logRotations"`
 	// Variable name
 	LogRotationsVariable *string `pulumi:"logRotationsVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	MaxSize *int `pulumi:"maxSize"`
 	// Variable name
 	MaxSizeVariable *string `pulumi:"maxSizeVariable"`
@@ -128,11 +136,11 @@ type ciscoLoggingFeatureTemplateState struct {
 type CiscoLoggingFeatureTemplateState struct {
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskLogging pulumi.BoolPtrInput
 	// Variable name
 	DiskLoggingVariable pulumi.StringPtrInput
@@ -140,11 +148,15 @@ type CiscoLoggingFeatureTemplateState struct {
 	Ipv4Servers CiscoLoggingFeatureTemplateIpv4ServerArrayInput
 	// Enable logging to remote IPv6 server
 	Ipv6Servers CiscoLoggingFeatureTemplateIpv6ServerArrayInput
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	LogRotations pulumi.IntPtrInput
 	// Variable name
 	LogRotationsVariable pulumi.StringPtrInput
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	MaxSize pulumi.IntPtrInput
 	// Variable name
 	MaxSizeVariable pulumi.StringPtrInput
@@ -165,11 +177,11 @@ func (CiscoLoggingFeatureTemplateState) ElementType() reflect.Type {
 type ciscoLoggingFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskLogging *bool `pulumi:"diskLogging"`
 	// Variable name
 	DiskLoggingVariable *string `pulumi:"diskLoggingVariable"`
@@ -177,11 +189,15 @@ type ciscoLoggingFeatureTemplateArgs struct {
 	Ipv4Servers []CiscoLoggingFeatureTemplateIpv4Server `pulumi:"ipv4Servers"`
 	// Enable logging to remote IPv6 server
 	Ipv6Servers []CiscoLoggingFeatureTemplateIpv6Server `pulumi:"ipv6Servers"`
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	LogRotations *int `pulumi:"logRotations"`
 	// Variable name
 	LogRotationsVariable *string `pulumi:"logRotationsVariable"`
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	MaxSize *int `pulumi:"maxSize"`
 	// Variable name
 	MaxSizeVariable *string `pulumi:"maxSizeVariable"`
@@ -195,11 +211,11 @@ type ciscoLoggingFeatureTemplateArgs struct {
 type CiscoLoggingFeatureTemplateArgs struct {
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// Enable logging to local disk - Default value: `true`
+	// Enable logging to local disk
+	//   - Default value: `true`
 	DiskLogging pulumi.BoolPtrInput
 	// Variable name
 	DiskLoggingVariable pulumi.StringPtrInput
@@ -207,11 +223,15 @@ type CiscoLoggingFeatureTemplateArgs struct {
 	Ipv4Servers CiscoLoggingFeatureTemplateIpv4ServerArrayInput
 	// Enable logging to remote IPv6 server
 	Ipv6Servers CiscoLoggingFeatureTemplateIpv6ServerArrayInput
-	// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+	// Set number of syslog files to create before discarding oldest files
+	//   - Range: `1`-`10`
+	//   - Default value: `10`
 	LogRotations pulumi.IntPtrInput
 	// Variable name
 	LogRotationsVariable pulumi.StringPtrInput
-	// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+	// Set maximum size of file before it is rotated
+	//   - Range: `1`-`20`
+	//   - Default value: `10`
 	MaxSize pulumi.IntPtrInput
 	// Variable name
 	MaxSizeVariable pulumi.StringPtrInput
@@ -313,14 +333,14 @@ func (o CiscoLoggingFeatureTemplateOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoLoggingFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// Enable logging to local disk - Default value: `true`
+// Enable logging to local disk
+//   - Default value: `true`
 func (o CiscoLoggingFeatureTemplateOutput) DiskLogging() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.BoolPtrOutput { return v.DiskLogging }).(pulumi.BoolPtrOutput)
 }
@@ -344,7 +364,9 @@ func (o CiscoLoggingFeatureTemplateOutput) Ipv6Servers() CiscoLoggingFeatureTemp
 	}).(CiscoLoggingFeatureTemplateIpv6ServerArrayOutput)
 }
 
-// Set number of syslog files to create before discarding oldest files - Range: `1`-`10` - Default value: `10`
+// Set number of syslog files to create before discarding oldest files
+//   - Range: `1`-`10`
+//   - Default value: `10`
 func (o CiscoLoggingFeatureTemplateOutput) LogRotations() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.IntPtrOutput { return v.LogRotations }).(pulumi.IntPtrOutput)
 }
@@ -354,7 +376,9 @@ func (o CiscoLoggingFeatureTemplateOutput) LogRotationsVariable() pulumi.StringP
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.StringPtrOutput { return v.LogRotationsVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum size of file before it is rotated - Range: `1`-`20` - Default value: `10`
+// Set maximum size of file before it is rotated
+//   - Range: `1`-`20`
+//   - Default value: `10`
 func (o CiscoLoggingFeatureTemplateOutput) MaxSize() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoLoggingFeatureTemplate) pulumi.IntPtrOutput { return v.MaxSize }).(pulumi.IntPtrOutput)
 }

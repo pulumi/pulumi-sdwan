@@ -25,7 +25,8 @@ namespace Pulumi.Sdwan
     public partial class CiscoWirelessLanFeatureTemplate : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Set mobile express default gateway - Default value: `0.0.0.0`
+        /// Set mobile express default gateway
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Output("controllerDefaultGateway")]
         public Output<string?> ControllerDefaultGateway { get; private set; } = null!;
@@ -37,7 +38,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ControllerDefaultGatewayVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set mobile express controller address - Default value: `0.0.0.0`
+        /// Set mobile express controller address
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Output("controllerIpAddress")]
         public Output<string?> ControllerIpAddress { get; private set; } = null!;
@@ -49,7 +51,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ControllerIpAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        /// Set mobile express controller subnet mask
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Output("controllerSubnetMask")]
         public Output<string?> ControllerSubnetMask { get; private set; } = null!;
@@ -61,12 +64,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ControllerSubnetMaskVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        /// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        /// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        /// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        /// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        /// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        /// Select country
+        ///   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         /// </summary>
         [Output("country")]
         public Output<string?> Country { get; private set; } = null!;
@@ -84,9 +83,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         [Output("deviceTypes")]
         public Output<ImmutableArray<string>> DeviceTypes { get; private set; } = null!;
@@ -110,7 +108,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PasswordVariable { get; private set; } = null!;
 
         /// <summary>
-        /// 2.4GHz Shutdown - Default value: `false`
+        /// 2.4GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown24ghz")]
         public Output<bool?> Shutdown24ghz { get; private set; } = null!;
@@ -122,7 +121,8 @@ namespace Pulumi.Sdwan
         public Output<string?> Shutdown24ghzVariable { get; private set; } = null!;
 
         /// <summary>
-        /// 5GHz Shutdown - Default value: `false`
+        /// 5GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Output("shutdown5ghz")]
         public Output<bool?> Shutdown5ghz { get; private set; } = null!;
@@ -210,7 +210,8 @@ namespace Pulumi.Sdwan
     public sealed class CiscoWirelessLanFeatureTemplateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set mobile express default gateway - Default value: `0.0.0.0`
+        /// Set mobile express default gateway
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerDefaultGateway")]
         public Input<string>? ControllerDefaultGateway { get; set; }
@@ -222,7 +223,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerDefaultGatewayVariable { get; set; }
 
         /// <summary>
-        /// Set mobile express controller address - Default value: `0.0.0.0`
+        /// Set mobile express controller address
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerIpAddress")]
         public Input<string>? ControllerIpAddress { get; set; }
@@ -234,7 +236,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerIpAddressVariable { get; set; }
 
         /// <summary>
-        /// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        /// Set mobile express controller subnet mask
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerSubnetMask")]
         public Input<string>? ControllerSubnetMask { get; set; }
@@ -246,12 +249,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerSubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        /// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        /// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        /// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        /// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        /// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        /// Select country
+        ///   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         /// </summary>
         [Input("country")]
         public Input<string>? Country { get; set; }
@@ -272,9 +271,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -301,7 +299,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PasswordVariable { get; set; }
 
         /// <summary>
-        /// 2.4GHz Shutdown - Default value: `false`
+        /// 2.4GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -313,7 +312,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Shutdown24ghzVariable { get; set; }
 
         /// <summary>
-        /// 5GHz Shutdown - Default value: `false`
+        /// 5GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }
@@ -357,7 +357,8 @@ namespace Pulumi.Sdwan
     public sealed class CiscoWirelessLanFeatureTemplateState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set mobile express default gateway - Default value: `0.0.0.0`
+        /// Set mobile express default gateway
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerDefaultGateway")]
         public Input<string>? ControllerDefaultGateway { get; set; }
@@ -369,7 +370,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerDefaultGatewayVariable { get; set; }
 
         /// <summary>
-        /// Set mobile express controller address - Default value: `0.0.0.0`
+        /// Set mobile express controller address
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerIpAddress")]
         public Input<string>? ControllerIpAddress { get; set; }
@@ -381,7 +383,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerIpAddressVariable { get; set; }
 
         /// <summary>
-        /// Set mobile express controller subnet mask - Default value: `0.0.0.0`
+        /// Set mobile express controller subnet mask
+        ///   - Default value: `0.0.0.0`
         /// </summary>
         [Input("controllerSubnetMask")]
         public Input<string>? ControllerSubnetMask { get; set; }
@@ -393,12 +396,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ControllerSubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// Select country - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`,
-        /// `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`,
-        /// `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`,
-        /// `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`,
-        /// `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`,
-        /// `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
+        /// Select country
+        ///   - Choices: `AE`, `AR`, `AT`, `AU`, `BA`, `BB`, `BE`, `BG`, `BH`, `BN`, `BO`, `BR`, `BY`, `CA`, `CA2`, `CH`, `CL`, `CM`, `CN`, `CO`, `CR`, `CY`, `CZ`, `DE`, `DK`, `DO`, `DZ`, `EC`, `EE`, `EG`, `ES`, `FI`, `FJ`, `FR`, `GB`, `GH`, `GI`, `GR`, `HK`, `HR`, `HU`, `ID`, `IE`, `IL`, `IO`, `IN`, `IQ`, `IS`, `IT`, `J2`, `J4`, `JM`, `JO`, `KE`, `KN`, `KW`, `KZ`, `LB`, `LI`, `LK`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `ME`, `MK`, `MN`, `MO`, `MT`, `MX`, `MY`, `NL`, `NO`, `NZ`, `OM`, `PA`, `PE`, `PH`, `PH2`, `PK`, `PL`, `PR`, `PT`, `PY`, `QA`, `RO`, `RS`, `RU`, `SA`, `SE`, `SG`, `SI`, `SK`, `TH`, `TN`, `TR`, `TW`, `UA`, `US`, `UY`, `VE`, `VN`, `ZA`
         /// </summary>
         [Input("country")]
         public Input<string>? Country { get; set; }
@@ -419,9 +418,8 @@ namespace Pulumi.Sdwan
         private InputList<string>? _deviceTypes;
 
         /// <summary>
-        /// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        /// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        /// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        /// List of supported device types
+        ///   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         /// </summary>
         public InputList<string> DeviceTypes
         {
@@ -448,7 +446,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PasswordVariable { get; set; }
 
         /// <summary>
-        /// 2.4GHz Shutdown - Default value: `false`
+        /// 2.4GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -460,7 +459,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Shutdown24ghzVariable { get; set; }
 
         /// <summary>
-        /// 5GHz Shutdown - Default value: `false`
+        /// 5GHz Shutdown
+        ///   - Default value: `false`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }

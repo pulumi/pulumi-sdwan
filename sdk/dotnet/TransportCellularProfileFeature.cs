@@ -67,8 +67,8 @@ namespace Pulumi.Sdwan
         public Output<string?> AccessPointNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-        /// `chap`, `pap_chap`
+        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        ///   - Choices: `pap`, `chap`, `pap_chap`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -110,7 +110,9 @@ namespace Pulumi.Sdwan
         public Output<string?> NoOverwriteVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Output("packetDataNetworkType")]
         public Output<string?> PacketDataNetworkType { get; private set; } = null!;
@@ -122,7 +124,8 @@ namespace Pulumi.Sdwan
         public Output<string?> PacketDataNetworkTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Output("profileId")]
         public Output<int?> ProfileId { get; private set; } = null!;
@@ -158,7 +161,8 @@ namespace Pulumi.Sdwan
         public Output<string?> ProfileUsernameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Require authentication type - Default value: `false`
+        /// Require authentication type
+        ///   - Default value: `false`
         /// </summary>
         [Output("requiresAuthentication")]
         public Output<bool?> RequiresAuthentication { get; private set; } = null!;
@@ -228,8 +232,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-        /// `chap`, `pap_chap`
+        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        ///   - Choices: `pap`, `chap`, `pap_chap`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -271,7 +275,9 @@ namespace Pulumi.Sdwan
         public Input<string>? NoOverwriteVariable { get; set; }
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -283,7 +289,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PacketDataNetworkTypeVariable { get; set; }
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Input("profileId")]
         public Input<int>? ProfileId { get; set; }
@@ -319,7 +326,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileUsernameVariable { get; set; }
 
         /// <summary>
-        /// Require authentication type - Default value: `false`
+        /// Require authentication type
+        ///   - Default value: `false`
         /// </summary>
         [Input("requiresAuthentication")]
         public Input<bool>? RequiresAuthentication { get; set; }
@@ -345,8 +353,8 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-        /// `chap`, `pap_chap`
+        /// Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+        ///   - Choices: `pap`, `chap`, `pap_chap`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -388,7 +396,9 @@ namespace Pulumi.Sdwan
         public Input<string>? NoOverwriteVariable { get; set; }
 
         /// <summary>
-        /// Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        /// Set packet data network type
+        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+        ///   - Default value: `ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -400,7 +410,8 @@ namespace Pulumi.Sdwan
         public Input<string>? PacketDataNetworkTypeVariable { get; set; }
 
         /// <summary>
-        /// Set Profile ID - Range: `1`-`16`
+        /// Set Profile ID
+        ///   - Range: `1`-`16`
         /// </summary>
         [Input("profileId")]
         public Input<int>? ProfileId { get; set; }
@@ -436,7 +447,8 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileUsernameVariable { get; set; }
 
         /// <summary>
-        /// Require authentication type - Default value: `false`
+        /// Require authentication type
+        ///   - Default value: `false`
         /// </summary>
         [Input("requiresAuthentication")]
         public Input<bool>? RequiresAuthentication { get; set; }

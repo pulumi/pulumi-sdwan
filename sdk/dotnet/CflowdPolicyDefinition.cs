@@ -24,7 +24,8 @@ namespace Pulumi.Sdwan
     public partial class CflowdPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Active flow timeout in seconds - Range: `30`-`3600`
+        /// Active flow timeout in seconds
+        ///   - Range: `30`-`3600`
         /// </summary>
         [Output("activeFlowTimeout")]
         public Output<int?> ActiveFlowTimeout { get; private set; } = null!;
@@ -42,13 +43,15 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Flow refresh in seconds - Range: `60`-`86400`
+        /// Flow refresh in seconds
+        ///   - Range: `60`-`86400`
         /// </summary>
         [Output("flowRefresh")]
         public Output<int?> FlowRefresh { get; private set; } = null!;
 
         /// <summary>
-        /// Inactive flow timeout in seconds - Range: `1`-`3600`
+        /// Inactive flow timeout in seconds
+        ///   - Range: `1`-`3600`
         /// </summary>
         [Output("inactiveFlowTimeout")]
         public Output<int?> InactiveFlowTimeout { get; private set; } = null!;
@@ -60,7 +63,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `ipv4`, `ipv6` or `all`
+        ///   - Choices: `ipv4`, `ipv6`, `all`
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -72,7 +76,8 @@ namespace Pulumi.Sdwan
         public Output<bool?> RemarkedDscp { get; private set; } = null!;
 
         /// <summary>
-        /// Flow sampling interval - Range: `1`-`65536`
+        /// Flow sampling interval
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Output("samplingInterval")]
         public Output<int?> SamplingInterval { get; private set; } = null!;
@@ -142,7 +147,8 @@ namespace Pulumi.Sdwan
     public sealed class CflowdPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Active flow timeout in seconds - Range: `30`-`3600`
+        /// Active flow timeout in seconds
+        ///   - Range: `30`-`3600`
         /// </summary>
         [Input("activeFlowTimeout")]
         public Input<int>? ActiveFlowTimeout { get; set; }
@@ -166,13 +172,15 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// Flow refresh in seconds - Range: `60`-`86400`
+        /// Flow refresh in seconds
+        ///   - Range: `60`-`86400`
         /// </summary>
         [Input("flowRefresh")]
         public Input<int>? FlowRefresh { get; set; }
 
         /// <summary>
-        /// Inactive flow timeout in seconds - Range: `1`-`3600`
+        /// Inactive flow timeout in seconds
+        ///   - Range: `1`-`3600`
         /// </summary>
         [Input("inactiveFlowTimeout")]
         public Input<int>? InactiveFlowTimeout { get; set; }
@@ -184,7 +192,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `ipv4`, `ipv6` or `all`
+        ///   - Choices: `ipv4`, `ipv6`, `all`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -196,7 +205,8 @@ namespace Pulumi.Sdwan
         public Input<bool>? RemarkedDscp { get; set; }
 
         /// <summary>
-        /// Flow sampling interval - Range: `1`-`65536`
+        /// Flow sampling interval
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Input("samplingInterval")]
         public Input<int>? SamplingInterval { get; set; }
@@ -216,7 +226,8 @@ namespace Pulumi.Sdwan
     public sealed class CflowdPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Active flow timeout in seconds - Range: `30`-`3600`
+        /// Active flow timeout in seconds
+        ///   - Range: `30`-`3600`
         /// </summary>
         [Input("activeFlowTimeout")]
         public Input<int>? ActiveFlowTimeout { get; set; }
@@ -240,13 +251,15 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Flow refresh in seconds - Range: `60`-`86400`
+        /// Flow refresh in seconds
+        ///   - Range: `60`-`86400`
         /// </summary>
         [Input("flowRefresh")]
         public Input<int>? FlowRefresh { get; set; }
 
         /// <summary>
-        /// Inactive flow timeout in seconds - Range: `1`-`3600`
+        /// Inactive flow timeout in seconds
+        ///   - Range: `1`-`3600`
         /// </summary>
         [Input("inactiveFlowTimeout")]
         public Input<int>? InactiveFlowTimeout { get; set; }
@@ -258,7 +271,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all` - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `ipv4`, `ipv6` or `all`
+        ///   - Choices: `ipv4`, `ipv6`, `all`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -270,7 +284,8 @@ namespace Pulumi.Sdwan
         public Input<bool>? RemarkedDscp { get; set; }
 
         /// <summary>
-        /// Flow sampling interval - Range: `1`-`65536`
+        /// Flow sampling interval
+        ///   - Range: `1`-`65536`
         /// </summary>
         [Input("samplingInterval")]
         public Input<int>? SamplingInterval { get; set; }

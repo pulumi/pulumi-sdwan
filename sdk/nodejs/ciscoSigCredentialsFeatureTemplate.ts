@@ -71,113 +71,113 @@ export class CiscoSigCredentialsFeatureTemplate extends pulumi.CustomResource {
     /**
      * The description of the feature template
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
-    public readonly deviceTypes!: pulumi.Output<string[]>;
+    declare public readonly deviceTypes: pulumi.Output<string[]>;
     /**
      * The name of the feature template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The template type
      */
-    public /*out*/ readonly templateType!: pulumi.Output<string>;
+    declare public /*out*/ readonly templateType: pulumi.Output<string>;
     /**
      * API Key
      */
-    public readonly umbrellaApiKey!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaApiKey: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly umbrellaApiKeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaApiKeyVariable: pulumi.Output<string | undefined>;
     /**
      * API Secret
      */
-    public readonly umbrellaApiSecret!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaApiSecret: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly umbrellaApiSecretVariable!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaApiSecretVariable: pulumi.Output<string | undefined>;
     /**
      * Ord ID
      */
-    public readonly umbrellaOrganizationId!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaOrganizationId: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly umbrellaOrganizationIdVariable!: pulumi.Output<string | undefined>;
+    declare public readonly umbrellaOrganizationIdVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the feature template
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
     /**
-     * Third Party Cloud Name - Range: `0`-`255`
+     * Third Party Cloud Name
+     *   - Range: `0`-`255`
      */
-    public readonly zscalerCloudName!: pulumi.Output<number | undefined>;
+    declare public readonly zscalerCloudName: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerCloudNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerCloudNameVariable: pulumi.Output<string | undefined>;
     /**
      * Organization Name
      */
-    public readonly zscalerOrganization!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerOrganization: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerOrganizationVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerOrganizationVariable: pulumi.Output<string | undefined>;
     /**
      * Partner API Key
      */
-    public readonly zscalerPartnerApiKey!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerApiKey: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerPartnerApiKeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerApiKeyVariable: pulumi.Output<string | undefined>;
     /**
      * Partner Base URI to be used in REST calls
      */
-    public readonly zscalerPartnerBaseUri!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerBaseUri: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerPartnerBaseUriVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerBaseUriVariable: pulumi.Output<string | undefined>;
     /**
      * Partner Password
      */
-    public readonly zscalerPartnerPassword!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerPartnerPasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerPasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Partner User Name
      */
-    public readonly zscalerPartnerUsername!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerUsername: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerPartnerUsernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPartnerUsernameVariable: pulumi.Output<string | undefined>;
     /**
      * Password of Zscaler partner account
      */
-    public readonly zscalerPassword!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPassword: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerPasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerPasswordVariable: pulumi.Output<string | undefined>;
     /**
      * Username of Zscaler partner account
      */
-    public readonly zscalerUsername!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerUsername: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly zscalerUsernameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly zscalerUsernameVariable: pulumi.Output<string | undefined>;
 
     /**
      * Create a CiscoSigCredentialsFeatureTemplate resource with the given unique name, arguments, and options.
@@ -192,66 +192,66 @@ export class CiscoSigCredentialsFeatureTemplate extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CiscoSigCredentialsFeatureTemplateState | undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["deviceTypes"] = state ? state.deviceTypes : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["templateType"] = state ? state.templateType : undefined;
-            resourceInputs["umbrellaApiKey"] = state ? state.umbrellaApiKey : undefined;
-            resourceInputs["umbrellaApiKeyVariable"] = state ? state.umbrellaApiKeyVariable : undefined;
-            resourceInputs["umbrellaApiSecret"] = state ? state.umbrellaApiSecret : undefined;
-            resourceInputs["umbrellaApiSecretVariable"] = state ? state.umbrellaApiSecretVariable : undefined;
-            resourceInputs["umbrellaOrganizationId"] = state ? state.umbrellaOrganizationId : undefined;
-            resourceInputs["umbrellaOrganizationIdVariable"] = state ? state.umbrellaOrganizationIdVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
-            resourceInputs["zscalerCloudName"] = state ? state.zscalerCloudName : undefined;
-            resourceInputs["zscalerCloudNameVariable"] = state ? state.zscalerCloudNameVariable : undefined;
-            resourceInputs["zscalerOrganization"] = state ? state.zscalerOrganization : undefined;
-            resourceInputs["zscalerOrganizationVariable"] = state ? state.zscalerOrganizationVariable : undefined;
-            resourceInputs["zscalerPartnerApiKey"] = state ? state.zscalerPartnerApiKey : undefined;
-            resourceInputs["zscalerPartnerApiKeyVariable"] = state ? state.zscalerPartnerApiKeyVariable : undefined;
-            resourceInputs["zscalerPartnerBaseUri"] = state ? state.zscalerPartnerBaseUri : undefined;
-            resourceInputs["zscalerPartnerBaseUriVariable"] = state ? state.zscalerPartnerBaseUriVariable : undefined;
-            resourceInputs["zscalerPartnerPassword"] = state ? state.zscalerPartnerPassword : undefined;
-            resourceInputs["zscalerPartnerPasswordVariable"] = state ? state.zscalerPartnerPasswordVariable : undefined;
-            resourceInputs["zscalerPartnerUsername"] = state ? state.zscalerPartnerUsername : undefined;
-            resourceInputs["zscalerPartnerUsernameVariable"] = state ? state.zscalerPartnerUsernameVariable : undefined;
-            resourceInputs["zscalerPassword"] = state ? state.zscalerPassword : undefined;
-            resourceInputs["zscalerPasswordVariable"] = state ? state.zscalerPasswordVariable : undefined;
-            resourceInputs["zscalerUsername"] = state ? state.zscalerUsername : undefined;
-            resourceInputs["zscalerUsernameVariable"] = state ? state.zscalerUsernameVariable : undefined;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["deviceTypes"] = state?.deviceTypes;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["templateType"] = state?.templateType;
+            resourceInputs["umbrellaApiKey"] = state?.umbrellaApiKey;
+            resourceInputs["umbrellaApiKeyVariable"] = state?.umbrellaApiKeyVariable;
+            resourceInputs["umbrellaApiSecret"] = state?.umbrellaApiSecret;
+            resourceInputs["umbrellaApiSecretVariable"] = state?.umbrellaApiSecretVariable;
+            resourceInputs["umbrellaOrganizationId"] = state?.umbrellaOrganizationId;
+            resourceInputs["umbrellaOrganizationIdVariable"] = state?.umbrellaOrganizationIdVariable;
+            resourceInputs["version"] = state?.version;
+            resourceInputs["zscalerCloudName"] = state?.zscalerCloudName;
+            resourceInputs["zscalerCloudNameVariable"] = state?.zscalerCloudNameVariable;
+            resourceInputs["zscalerOrganization"] = state?.zscalerOrganization;
+            resourceInputs["zscalerOrganizationVariable"] = state?.zscalerOrganizationVariable;
+            resourceInputs["zscalerPartnerApiKey"] = state?.zscalerPartnerApiKey;
+            resourceInputs["zscalerPartnerApiKeyVariable"] = state?.zscalerPartnerApiKeyVariable;
+            resourceInputs["zscalerPartnerBaseUri"] = state?.zscalerPartnerBaseUri;
+            resourceInputs["zscalerPartnerBaseUriVariable"] = state?.zscalerPartnerBaseUriVariable;
+            resourceInputs["zscalerPartnerPassword"] = state?.zscalerPartnerPassword;
+            resourceInputs["zscalerPartnerPasswordVariable"] = state?.zscalerPartnerPasswordVariable;
+            resourceInputs["zscalerPartnerUsername"] = state?.zscalerPartnerUsername;
+            resourceInputs["zscalerPartnerUsernameVariable"] = state?.zscalerPartnerUsernameVariable;
+            resourceInputs["zscalerPassword"] = state?.zscalerPassword;
+            resourceInputs["zscalerPasswordVariable"] = state?.zscalerPasswordVariable;
+            resourceInputs["zscalerUsername"] = state?.zscalerUsername;
+            resourceInputs["zscalerUsernameVariable"] = state?.zscalerUsernameVariable;
         } else {
             const args = argsOrState as CiscoSigCredentialsFeatureTemplateArgs | undefined;
-            if ((!args || args.description === undefined) && !opts.urn) {
+            if (args?.description === undefined && !opts.urn) {
                 throw new Error("Missing required property 'description'");
             }
-            if ((!args || args.deviceTypes === undefined) && !opts.urn) {
+            if (args?.deviceTypes === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceTypes'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["deviceTypes"] = args ? args.deviceTypes : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["umbrellaApiKey"] = args ? args.umbrellaApiKey : undefined;
-            resourceInputs["umbrellaApiKeyVariable"] = args ? args.umbrellaApiKeyVariable : undefined;
-            resourceInputs["umbrellaApiSecret"] = args ? args.umbrellaApiSecret : undefined;
-            resourceInputs["umbrellaApiSecretVariable"] = args ? args.umbrellaApiSecretVariable : undefined;
-            resourceInputs["umbrellaOrganizationId"] = args ? args.umbrellaOrganizationId : undefined;
-            resourceInputs["umbrellaOrganizationIdVariable"] = args ? args.umbrellaOrganizationIdVariable : undefined;
-            resourceInputs["zscalerCloudName"] = args ? args.zscalerCloudName : undefined;
-            resourceInputs["zscalerCloudNameVariable"] = args ? args.zscalerCloudNameVariable : undefined;
-            resourceInputs["zscalerOrganization"] = args ? args.zscalerOrganization : undefined;
-            resourceInputs["zscalerOrganizationVariable"] = args ? args.zscalerOrganizationVariable : undefined;
-            resourceInputs["zscalerPartnerApiKey"] = args ? args.zscalerPartnerApiKey : undefined;
-            resourceInputs["zscalerPartnerApiKeyVariable"] = args ? args.zscalerPartnerApiKeyVariable : undefined;
-            resourceInputs["zscalerPartnerBaseUri"] = args ? args.zscalerPartnerBaseUri : undefined;
-            resourceInputs["zscalerPartnerBaseUriVariable"] = args ? args.zscalerPartnerBaseUriVariable : undefined;
-            resourceInputs["zscalerPartnerPassword"] = args ? args.zscalerPartnerPassword : undefined;
-            resourceInputs["zscalerPartnerPasswordVariable"] = args ? args.zscalerPartnerPasswordVariable : undefined;
-            resourceInputs["zscalerPartnerUsername"] = args ? args.zscalerPartnerUsername : undefined;
-            resourceInputs["zscalerPartnerUsernameVariable"] = args ? args.zscalerPartnerUsernameVariable : undefined;
-            resourceInputs["zscalerPassword"] = args ? args.zscalerPassword : undefined;
-            resourceInputs["zscalerPasswordVariable"] = args ? args.zscalerPasswordVariable : undefined;
-            resourceInputs["zscalerUsername"] = args ? args.zscalerUsername : undefined;
-            resourceInputs["zscalerUsernameVariable"] = args ? args.zscalerUsernameVariable : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["deviceTypes"] = args?.deviceTypes;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["umbrellaApiKey"] = args?.umbrellaApiKey;
+            resourceInputs["umbrellaApiKeyVariable"] = args?.umbrellaApiKeyVariable;
+            resourceInputs["umbrellaApiSecret"] = args?.umbrellaApiSecret;
+            resourceInputs["umbrellaApiSecretVariable"] = args?.umbrellaApiSecretVariable;
+            resourceInputs["umbrellaOrganizationId"] = args?.umbrellaOrganizationId;
+            resourceInputs["umbrellaOrganizationIdVariable"] = args?.umbrellaOrganizationIdVariable;
+            resourceInputs["zscalerCloudName"] = args?.zscalerCloudName;
+            resourceInputs["zscalerCloudNameVariable"] = args?.zscalerCloudNameVariable;
+            resourceInputs["zscalerOrganization"] = args?.zscalerOrganization;
+            resourceInputs["zscalerOrganizationVariable"] = args?.zscalerOrganizationVariable;
+            resourceInputs["zscalerPartnerApiKey"] = args?.zscalerPartnerApiKey;
+            resourceInputs["zscalerPartnerApiKeyVariable"] = args?.zscalerPartnerApiKeyVariable;
+            resourceInputs["zscalerPartnerBaseUri"] = args?.zscalerPartnerBaseUri;
+            resourceInputs["zscalerPartnerBaseUriVariable"] = args?.zscalerPartnerBaseUriVariable;
+            resourceInputs["zscalerPartnerPassword"] = args?.zscalerPartnerPassword;
+            resourceInputs["zscalerPartnerPasswordVariable"] = args?.zscalerPartnerPasswordVariable;
+            resourceInputs["zscalerPartnerUsername"] = args?.zscalerPartnerUsername;
+            resourceInputs["zscalerPartnerUsernameVariable"] = args?.zscalerPartnerUsernameVariable;
+            resourceInputs["zscalerPassword"] = args?.zscalerPassword;
+            resourceInputs["zscalerPasswordVariable"] = args?.zscalerPasswordVariable;
+            resourceInputs["zscalerUsername"] = args?.zscalerUsername;
+            resourceInputs["zscalerUsernameVariable"] = args?.zscalerUsernameVariable;
             resourceInputs["templateType"] = undefined /*out*/;
             resourceInputs["version"] = undefined /*out*/;
         }
@@ -269,9 +269,8 @@ export interface CiscoSigCredentialsFeatureTemplateState {
      */
     description?: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -311,7 +310,8 @@ export interface CiscoSigCredentialsFeatureTemplateState {
      */
     version?: pulumi.Input<number>;
     /**
-     * Third Party Cloud Name - Range: `0`-`255`
+     * Third Party Cloud Name
+     *   - Range: `0`-`255`
      */
     zscalerCloudName?: pulumi.Input<number>;
     /**
@@ -385,9 +385,8 @@ export interface CiscoSigCredentialsFeatureTemplateArgs {
      */
     description: pulumi.Input<string>;
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      */
     deviceTypes: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -419,7 +418,8 @@ export interface CiscoSigCredentialsFeatureTemplateArgs {
      */
     umbrellaOrganizationIdVariable?: pulumi.Input<string>;
     /**
-     * Third Party Cloud Name - Range: `0`-`255`
+     * Third Party Cloud Name
+     *   - Range: `0`-`255`
      */
     zscalerCloudName?: pulumi.Input<number>;
     /**

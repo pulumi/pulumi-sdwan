@@ -68,21 +68,25 @@ type TransportCellularControllerFeature struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrOutput `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrOutput `pulumi:"firmwareAutoSimVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`1`
+	// Set primary SIM slot
+	//   - Range: `0`-`1`
 	PrimarySimSlot pulumi.IntPtrOutput `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrOutput `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrOutput `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrOutput `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrOutput `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrOutput `pulumi:"simFailoverTimeoutVariable"`
@@ -134,21 +138,25 @@ type transportCellularControllerFeatureState struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim *bool `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable *string `pulumi:"firmwareAutoSimVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`1`
+	// Set primary SIM slot
+	//   - Range: `0`-`1`
 	PrimarySimSlot *int `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable *string `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries *int `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable *string `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout *int `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable *string `pulumi:"simFailoverTimeoutVariable"`
@@ -165,21 +173,25 @@ type TransportCellularControllerFeatureState struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrInput
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set primary SIM slot - Range: `0`-`1`
+	// Set primary SIM slot
+	//   - Range: `0`-`1`
 	PrimarySimSlot pulumi.IntPtrInput
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrInput
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrInput
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrInput
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrInput
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrInput
@@ -200,21 +212,25 @@ type transportCellularControllerFeatureArgs struct {
 	Description *string `pulumi:"description"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim *bool `pulumi:"firmwareAutoSim"`
 	// Variable name
 	FirmwareAutoSimVariable *string `pulumi:"firmwareAutoSimVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Set primary SIM slot - Range: `0`-`1`
+	// Set primary SIM slot
+	//   - Range: `0`-`1`
 	PrimarySimSlot *int `pulumi:"primarySimSlot"`
 	// Variable name
 	PrimarySimSlotVariable *string `pulumi:"primarySimSlotVariable"`
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries *int `pulumi:"simFailoverRetries"`
 	// Variable name
 	SimFailoverRetriesVariable *string `pulumi:"simFailoverRetriesVariable"`
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout *int `pulumi:"simFailoverTimeout"`
 	// Variable name
 	SimFailoverTimeoutVariable *string `pulumi:"simFailoverTimeoutVariable"`
@@ -230,21 +246,25 @@ type TransportCellularControllerFeatureArgs struct {
 	Description pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Enable/Disable Firmware Auto Sim - Default value: `true`
+	// Enable/Disable Firmware Auto Sim
+	//   - Default value: `true`
 	FirmwareAutoSim pulumi.BoolPtrInput
 	// Variable name
 	FirmwareAutoSimVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Set primary SIM slot - Range: `0`-`1`
+	// Set primary SIM slot
+	//   - Range: `0`-`1`
 	PrimarySimSlot pulumi.IntPtrInput
 	// Variable name
 	PrimarySimSlotVariable pulumi.StringPtrInput
-	// Set SIM failover retries - Range: `0`-`65535`
+	// Set SIM failover retries
+	//   - Range: `0`-`65535`
 	SimFailoverRetries pulumi.IntPtrInput
 	// Variable name
 	SimFailoverRetriesVariable pulumi.StringPtrInput
-	// Set SIM failover timeout in minutes - Range: `3`-`7`
+	// Set SIM failover timeout in minutes
+	//   - Range: `3`-`7`
 	SimFailoverTimeout pulumi.IntPtrInput
 	// Variable name
 	SimFailoverTimeoutVariable pulumi.StringPtrInput
@@ -357,7 +377,8 @@ func (o TransportCellularControllerFeatureOutput) FeatureProfileId() pulumi.Stri
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Enable/Disable Firmware Auto Sim - Default value: `true`
+// Enable/Disable Firmware Auto Sim
+//   - Default value: `true`
 func (o TransportCellularControllerFeatureOutput) FirmwareAutoSim() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.BoolPtrOutput { return v.FirmwareAutoSim }).(pulumi.BoolPtrOutput)
 }
@@ -372,7 +393,8 @@ func (o TransportCellularControllerFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Set primary SIM slot - Range: `0`-`1`
+// Set primary SIM slot
+//   - Range: `0`-`1`
 func (o TransportCellularControllerFeatureOutput) PrimarySimSlot() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.IntPtrOutput { return v.PrimarySimSlot }).(pulumi.IntPtrOutput)
 }
@@ -382,7 +404,8 @@ func (o TransportCellularControllerFeatureOutput) PrimarySimSlotVariable() pulum
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.StringPtrOutput { return v.PrimarySimSlotVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set SIM failover retries - Range: `0`-`65535`
+// Set SIM failover retries
+//   - Range: `0`-`65535`
 func (o TransportCellularControllerFeatureOutput) SimFailoverRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.IntPtrOutput { return v.SimFailoverRetries }).(pulumi.IntPtrOutput)
 }
@@ -394,7 +417,8 @@ func (o TransportCellularControllerFeatureOutput) SimFailoverRetriesVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// Set SIM failover timeout in minutes - Range: `3`-`7`
+// Set SIM failover timeout in minutes
+//   - Range: `3`-`7`
 func (o TransportCellularControllerFeatureOutput) SimFailoverTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *TransportCellularControllerFeature) pulumi.IntPtrOutput { return v.SimFailoverTimeout }).(pulumi.IntPtrOutput)
 }

@@ -36,7 +36,8 @@ namespace Pulumi.Sdwan
         public Output<string> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The inspection mode - Choices: `protection`, `detection`
+        /// The inspection mode
+        ///   - Choices: `protection`, `detection`
         /// </summary>
         [Output("inspectionMode")]
         public Output<string?> InspectionMode { get; private set; } = null!;
@@ -54,7 +55,8 @@ namespace Pulumi.Sdwan
         public Output<int?> IpsSignatureListVersion { get; private set; } = null!;
 
         /// <summary>
-        /// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        /// Log level
+        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         /// </summary>
         [Output("logLevel")]
         public Output<string?> LogLevel { get; private set; } = null!;
@@ -63,7 +65,8 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.IntrusionPreventionPolicyDefinitionLogging>> Loggings { get; private set; } = null!;
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -75,7 +78,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Signature set - Choices: `balanced`, `connectivity`, `security`
+        /// Signature set
+        ///   - Choices: `balanced`, `connectivity`, `security`
         /// </summary>
         [Output("signatureSet")]
         public Output<string?> SignatureSet { get; private set; } = null!;
@@ -151,7 +155,8 @@ namespace Pulumi.Sdwan
         public Input<string> Description { get; set; } = null!;
 
         /// <summary>
-        /// The inspection mode - Choices: `protection`, `detection`
+        /// The inspection mode
+        ///   - Choices: `protection`, `detection`
         /// </summary>
         [Input("inspectionMode")]
         public Input<string>? InspectionMode { get; set; }
@@ -169,7 +174,8 @@ namespace Pulumi.Sdwan
         public Input<int>? IpsSignatureListVersion { get; set; }
 
         /// <summary>
-        /// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        /// Log level
+        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
@@ -183,7 +189,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -195,7 +202,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Signature set - Choices: `balanced`, `connectivity`, `security`
+        /// Signature set
+        ///   - Choices: `balanced`, `connectivity`, `security`
         /// </summary>
         [Input("signatureSet")]
         public Input<string>? SignatureSet { get; set; }
@@ -233,7 +241,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The inspection mode - Choices: `protection`, `detection`
+        /// The inspection mode
+        ///   - Choices: `protection`, `detection`
         /// </summary>
         [Input("inspectionMode")]
         public Input<string>? InspectionMode { get; set; }
@@ -251,7 +260,8 @@ namespace Pulumi.Sdwan
         public Input<int>? IpsSignatureListVersion { get; set; }
 
         /// <summary>
-        /// Log level - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        /// Log level
+        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
@@ -265,7 +275,8 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// The policy mode - Choices: `security`, `unified`
+        /// The policy mode
+        ///   - Choices: `security`, `unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -277,7 +288,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Signature set - Choices: `balanced`, `connectivity`, `security`
+        /// Signature set
+        ///   - Choices: `balanced`, `connectivity`, `security`
         /// </summary>
         [Input("signatureSet")]
         public Input<string>? SignatureSet { get; set; }

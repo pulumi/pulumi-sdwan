@@ -27,7 +27,8 @@ import (
 type ServiceRoutingBgpFeature struct {
 	pulumi.CustomResourceState
 
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrOutput `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrOutput `pulumi:"alwaysCompareMedVariable"`
@@ -35,34 +36,42 @@ type ServiceRoutingBgpFeature struct {
 	AsNumber pulumi.IntPtrOutput `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable pulumi.StringPtrOutput `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrOutput `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrOutput `pulumi:"compareRouterIdVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrOutput `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrOutput `pulumi:"deterministicMedVariable"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	ExternalRoutesDistance pulumi.IntPtrOutput `pulumi:"externalRoutesDistance"`
 	// Variable name
 	ExternalRoutesDistanceVariable pulumi.StringPtrOutput `pulumi:"externalRoutesDistanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-	// `180`
+	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	HoldTime pulumi.IntPtrOutput `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrOutput `pulumi:"holdTimeVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	InternalRoutesDistance pulumi.IntPtrOutput `pulumi:"internalRoutesDistance"`
 	// Variable name
 	InternalRoutesDistanceVariable pulumi.StringPtrOutput `pulumi:"internalRoutesDistanceVariable"`
 	// Aggregate prefixes in specific range
 	Ipv4AggregateAddresses ServiceRoutingBgpFeatureIpv4AggregateAddressArrayOutput `pulumi:"ipv4AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv4EibgpMaximumPaths pulumi.IntPtrOutput `pulumi:"ipv4EibgpMaximumPaths"`
 	// Variable name
 	Ipv4EibgpMaximumPathsVariable pulumi.StringPtrOutput `pulumi:"ipv4EibgpMaximumPathsVariable"`
@@ -70,20 +79,23 @@ type ServiceRoutingBgpFeature struct {
 	Ipv4Neighbors ServiceRoutingBgpFeatureIpv4NeighborArrayOutput `pulumi:"ipv4Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv4Networks ServiceRoutingBgpFeatureIpv4NetworkArrayOutput `pulumi:"ipv4Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv4Originate pulumi.BoolPtrOutput `pulumi:"ipv4Originate"`
 	// Variable name
 	Ipv4OriginateVariable pulumi.StringPtrOutput `pulumi:"ipv4OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv4Redistributes ServiceRoutingBgpFeatureIpv4RedistributeArrayOutput `pulumi:"ipv4Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv4TableMapFilter pulumi.BoolPtrOutput `pulumi:"ipv4TableMapFilter"`
 	// Variable name
 	Ipv4TableMapFilterVariable pulumi.StringPtrOutput `pulumi:"ipv4TableMapFilterVariable"`
 	Ipv4TableMapRoutePolicyId  pulumi.StringPtrOutput `pulumi:"ipv4TableMapRoutePolicyId"`
 	// IPv6 Aggregate prefixes in specific range
 	Ipv6AggregateAddresses ServiceRoutingBgpFeatureIpv6AggregateAddressArrayOutput `pulumi:"ipv6AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv6EibgpMaximumPaths pulumi.IntPtrOutput `pulumi:"ipv6EibgpMaximumPaths"`
 	// Variable name
 	Ipv6EibgpMaximumPathsVariable pulumi.StringPtrOutput `pulumi:"ipv6EibgpMaximumPathsVariable"`
@@ -91,40 +103,50 @@ type ServiceRoutingBgpFeature struct {
 	Ipv6Neighbors ServiceRoutingBgpFeatureIpv6NeighborArrayOutput `pulumi:"ipv6Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv6Networks ServiceRoutingBgpFeatureIpv6NetworkArrayOutput `pulumi:"ipv6Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv6Originate pulumi.BoolPtrOutput `pulumi:"ipv6Originate"`
 	// Variable name
 	Ipv6OriginateVariable pulumi.StringPtrOutput `pulumi:"ipv6OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv6Redistributes ServiceRoutingBgpFeatureIpv6RedistributeArrayOutput `pulumi:"ipv6Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv6TableMapFilter pulumi.BoolPtrOutput `pulumi:"ipv6TableMapFilter"`
 	// Variable name
 	Ipv6TableMapFilterVariable pulumi.StringPtrOutput `pulumi:"ipv6TableMapFilterVariable"`
 	Ipv6TableMapRoutePolicyId  pulumi.StringPtrOutput `pulumi:"ipv6TableMapRoutePolicyId"`
-	// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Interval (seconds) of keepalive messages sent to its BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	KeepaliveTime pulumi.IntPtrOutput `pulumi:"keepaliveTime"`
 	// Variable name
 	KeepaliveTimeVariable pulumi.StringPtrOutput `pulumi:"keepaliveTimeVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	LocalRoutesDistance pulumi.IntPtrOutput `pulumi:"localRoutesDistance"`
 	// Variable name
 	LocalRoutesDistanceVariable pulumi.StringPtrOutput `pulumi:"localRoutesDistanceVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedAsWorst pulumi.BoolPtrOutput `pulumi:"missingMedAsWorst"`
 	// Variable name
 	MissingMedAsWorstVariable pulumi.StringPtrOutput `pulumi:"missingMedAsWorstVariable"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrOutput `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrOutput `pulumi:"multipathRelaxVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAsPath pulumi.BoolPtrOutput `pulumi:"propagateAsPath"`
 	// Variable name
 	PropagateAsPathVariable pulumi.StringPtrOutput `pulumi:"propagateAsPathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrOutput `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrOutput `pulumi:"propagateCommunityVariable"`
@@ -169,7 +191,8 @@ func GetServiceRoutingBgpFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ServiceRoutingBgpFeature resources.
 type serviceRoutingBgpFeatureState struct {
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed *bool `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
@@ -177,34 +200,42 @@ type serviceRoutingBgpFeatureState struct {
 	AsNumber *int `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId *bool `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable *string `pulumi:"compareRouterIdVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed *bool `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable *string `pulumi:"deterministicMedVariable"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	ExternalRoutesDistance *int `pulumi:"externalRoutesDistance"`
 	// Variable name
 	ExternalRoutesDistanceVariable *string `pulumi:"externalRoutesDistanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-	// `180`
+	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	InternalRoutesDistance *int `pulumi:"internalRoutesDistance"`
 	// Variable name
 	InternalRoutesDistanceVariable *string `pulumi:"internalRoutesDistanceVariable"`
 	// Aggregate prefixes in specific range
 	Ipv4AggregateAddresses []ServiceRoutingBgpFeatureIpv4AggregateAddress `pulumi:"ipv4AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv4EibgpMaximumPaths *int `pulumi:"ipv4EibgpMaximumPaths"`
 	// Variable name
 	Ipv4EibgpMaximumPathsVariable *string `pulumi:"ipv4EibgpMaximumPathsVariable"`
@@ -212,20 +243,23 @@ type serviceRoutingBgpFeatureState struct {
 	Ipv4Neighbors []ServiceRoutingBgpFeatureIpv4Neighbor `pulumi:"ipv4Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv4Networks []ServiceRoutingBgpFeatureIpv4Network `pulumi:"ipv4Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv4Originate *bool `pulumi:"ipv4Originate"`
 	// Variable name
 	Ipv4OriginateVariable *string `pulumi:"ipv4OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv4Redistributes []ServiceRoutingBgpFeatureIpv4Redistribute `pulumi:"ipv4Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv4TableMapFilter *bool `pulumi:"ipv4TableMapFilter"`
 	// Variable name
 	Ipv4TableMapFilterVariable *string `pulumi:"ipv4TableMapFilterVariable"`
 	Ipv4TableMapRoutePolicyId  *string `pulumi:"ipv4TableMapRoutePolicyId"`
 	// IPv6 Aggregate prefixes in specific range
 	Ipv6AggregateAddresses []ServiceRoutingBgpFeatureIpv6AggregateAddress `pulumi:"ipv6AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv6EibgpMaximumPaths *int `pulumi:"ipv6EibgpMaximumPaths"`
 	// Variable name
 	Ipv6EibgpMaximumPathsVariable *string `pulumi:"ipv6EibgpMaximumPathsVariable"`
@@ -233,40 +267,50 @@ type serviceRoutingBgpFeatureState struct {
 	Ipv6Neighbors []ServiceRoutingBgpFeatureIpv6Neighbor `pulumi:"ipv6Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv6Networks []ServiceRoutingBgpFeatureIpv6Network `pulumi:"ipv6Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv6Originate *bool `pulumi:"ipv6Originate"`
 	// Variable name
 	Ipv6OriginateVariable *string `pulumi:"ipv6OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv6Redistributes []ServiceRoutingBgpFeatureIpv6Redistribute `pulumi:"ipv6Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv6TableMapFilter *bool `pulumi:"ipv6TableMapFilter"`
 	// Variable name
 	Ipv6TableMapFilterVariable *string `pulumi:"ipv6TableMapFilterVariable"`
 	Ipv6TableMapRoutePolicyId  *string `pulumi:"ipv6TableMapRoutePolicyId"`
-	// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Interval (seconds) of keepalive messages sent to its BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	KeepaliveTime *int `pulumi:"keepaliveTime"`
 	// Variable name
 	KeepaliveTimeVariable *string `pulumi:"keepaliveTimeVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	LocalRoutesDistance *int `pulumi:"localRoutesDistance"`
 	// Variable name
 	LocalRoutesDistanceVariable *string `pulumi:"localRoutesDistanceVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedAsWorst *bool `pulumi:"missingMedAsWorst"`
 	// Variable name
 	MissingMedAsWorstVariable *string `pulumi:"missingMedAsWorstVariable"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax *bool `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable *string `pulumi:"multipathRelaxVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAsPath *bool `pulumi:"propagateAsPath"`
 	// Variable name
 	PropagateAsPathVariable *string `pulumi:"propagateAsPathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity *bool `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable *string `pulumi:"propagateCommunityVariable"`
@@ -279,7 +323,8 @@ type serviceRoutingBgpFeatureState struct {
 }
 
 type ServiceRoutingBgpFeatureState struct {
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrInput
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
@@ -287,34 +332,42 @@ type ServiceRoutingBgpFeatureState struct {
 	AsNumber pulumi.IntPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrInput
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrInput
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrInput
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	ExternalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	ExternalRoutesDistanceVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-	// `180`
+	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	InternalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	InternalRoutesDistanceVariable pulumi.StringPtrInput
 	// Aggregate prefixes in specific range
 	Ipv4AggregateAddresses ServiceRoutingBgpFeatureIpv4AggregateAddressArrayInput
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv4EibgpMaximumPaths pulumi.IntPtrInput
 	// Variable name
 	Ipv4EibgpMaximumPathsVariable pulumi.StringPtrInput
@@ -322,20 +375,23 @@ type ServiceRoutingBgpFeatureState struct {
 	Ipv4Neighbors ServiceRoutingBgpFeatureIpv4NeighborArrayInput
 	// Configure the networks for BGP to advertise
 	Ipv4Networks ServiceRoutingBgpFeatureIpv4NetworkArrayInput
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv4Originate pulumi.BoolPtrInput
 	// Variable name
 	Ipv4OriginateVariable pulumi.StringPtrInput
 	// Redistribute routes into BGP
 	Ipv4Redistributes ServiceRoutingBgpFeatureIpv4RedistributeArrayInput
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv4TableMapFilter pulumi.BoolPtrInput
 	// Variable name
 	Ipv4TableMapFilterVariable pulumi.StringPtrInput
 	Ipv4TableMapRoutePolicyId  pulumi.StringPtrInput
 	// IPv6 Aggregate prefixes in specific range
 	Ipv6AggregateAddresses ServiceRoutingBgpFeatureIpv6AggregateAddressArrayInput
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv6EibgpMaximumPaths pulumi.IntPtrInput
 	// Variable name
 	Ipv6EibgpMaximumPathsVariable pulumi.StringPtrInput
@@ -343,40 +399,50 @@ type ServiceRoutingBgpFeatureState struct {
 	Ipv6Neighbors ServiceRoutingBgpFeatureIpv6NeighborArrayInput
 	// Configure the networks for BGP to advertise
 	Ipv6Networks ServiceRoutingBgpFeatureIpv6NetworkArrayInput
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv6Originate pulumi.BoolPtrInput
 	// Variable name
 	Ipv6OriginateVariable pulumi.StringPtrInput
 	// Redistribute routes into BGP
 	Ipv6Redistributes ServiceRoutingBgpFeatureIpv6RedistributeArrayInput
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv6TableMapFilter pulumi.BoolPtrInput
 	// Variable name
 	Ipv6TableMapFilterVariable pulumi.StringPtrInput
 	Ipv6TableMapRoutePolicyId  pulumi.StringPtrInput
-	// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Interval (seconds) of keepalive messages sent to its BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	KeepaliveTime pulumi.IntPtrInput
 	// Variable name
 	KeepaliveTimeVariable pulumi.StringPtrInput
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	LocalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	LocalRoutesDistanceVariable pulumi.StringPtrInput
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedAsWorst pulumi.BoolPtrInput
 	// Variable name
 	MissingMedAsWorstVariable pulumi.StringPtrInput
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrInput
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAsPath pulumi.BoolPtrInput
 	// Variable name
 	PropagateAsPathVariable pulumi.StringPtrInput
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrInput
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrInput
@@ -393,7 +459,8 @@ func (ServiceRoutingBgpFeatureState) ElementType() reflect.Type {
 }
 
 type serviceRoutingBgpFeatureArgs struct {
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed *bool `pulumi:"alwaysCompareMed"`
 	// Variable name
 	AlwaysCompareMedVariable *string `pulumi:"alwaysCompareMedVariable"`
@@ -401,34 +468,42 @@ type serviceRoutingBgpFeatureArgs struct {
 	AsNumber *int `pulumi:"asNumber"`
 	// Variable name
 	AsNumberVariable *string `pulumi:"asNumberVariable"`
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId *bool `pulumi:"compareRouterId"`
 	// Variable name
 	CompareRouterIdVariable *string `pulumi:"compareRouterIdVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed *bool `pulumi:"deterministicMed"`
 	// Variable name
 	DeterministicMedVariable *string `pulumi:"deterministicMedVariable"`
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	ExternalRoutesDistance *int `pulumi:"externalRoutesDistance"`
 	// Variable name
 	ExternalRoutesDistanceVariable *string `pulumi:"externalRoutesDistanceVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-	// `180`
+	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	HoldTime *int `pulumi:"holdTime"`
 	// Variable name
 	HoldTimeVariable *string `pulumi:"holdTimeVariable"`
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	InternalRoutesDistance *int `pulumi:"internalRoutesDistance"`
 	// Variable name
 	InternalRoutesDistanceVariable *string `pulumi:"internalRoutesDistanceVariable"`
 	// Aggregate prefixes in specific range
 	Ipv4AggregateAddresses []ServiceRoutingBgpFeatureIpv4AggregateAddress `pulumi:"ipv4AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv4EibgpMaximumPaths *int `pulumi:"ipv4EibgpMaximumPaths"`
 	// Variable name
 	Ipv4EibgpMaximumPathsVariable *string `pulumi:"ipv4EibgpMaximumPathsVariable"`
@@ -436,20 +511,23 @@ type serviceRoutingBgpFeatureArgs struct {
 	Ipv4Neighbors []ServiceRoutingBgpFeatureIpv4Neighbor `pulumi:"ipv4Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv4Networks []ServiceRoutingBgpFeatureIpv4Network `pulumi:"ipv4Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv4Originate *bool `pulumi:"ipv4Originate"`
 	// Variable name
 	Ipv4OriginateVariable *string `pulumi:"ipv4OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv4Redistributes []ServiceRoutingBgpFeatureIpv4Redistribute `pulumi:"ipv4Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv4TableMapFilter *bool `pulumi:"ipv4TableMapFilter"`
 	// Variable name
 	Ipv4TableMapFilterVariable *string `pulumi:"ipv4TableMapFilterVariable"`
 	Ipv4TableMapRoutePolicyId  *string `pulumi:"ipv4TableMapRoutePolicyId"`
 	// IPv6 Aggregate prefixes in specific range
 	Ipv6AggregateAddresses []ServiceRoutingBgpFeatureIpv6AggregateAddress `pulumi:"ipv6AggregateAddresses"`
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv6EibgpMaximumPaths *int `pulumi:"ipv6EibgpMaximumPaths"`
 	// Variable name
 	Ipv6EibgpMaximumPathsVariable *string `pulumi:"ipv6EibgpMaximumPathsVariable"`
@@ -457,40 +535,50 @@ type serviceRoutingBgpFeatureArgs struct {
 	Ipv6Neighbors []ServiceRoutingBgpFeatureIpv6Neighbor `pulumi:"ipv6Neighbors"`
 	// Configure the networks for BGP to advertise
 	Ipv6Networks []ServiceRoutingBgpFeatureIpv6Network `pulumi:"ipv6Networks"`
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv6Originate *bool `pulumi:"ipv6Originate"`
 	// Variable name
 	Ipv6OriginateVariable *string `pulumi:"ipv6OriginateVariable"`
 	// Redistribute routes into BGP
 	Ipv6Redistributes []ServiceRoutingBgpFeatureIpv6Redistribute `pulumi:"ipv6Redistributes"`
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv6TableMapFilter *bool `pulumi:"ipv6TableMapFilter"`
 	// Variable name
 	Ipv6TableMapFilterVariable *string `pulumi:"ipv6TableMapFilterVariable"`
 	Ipv6TableMapRoutePolicyId  *string `pulumi:"ipv6TableMapRoutePolicyId"`
-	// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Interval (seconds) of keepalive messages sent to its BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	KeepaliveTime *int `pulumi:"keepaliveTime"`
 	// Variable name
 	KeepaliveTimeVariable *string `pulumi:"keepaliveTimeVariable"`
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	LocalRoutesDistance *int `pulumi:"localRoutesDistance"`
 	// Variable name
 	LocalRoutesDistanceVariable *string `pulumi:"localRoutesDistanceVariable"`
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedAsWorst *bool `pulumi:"missingMedAsWorst"`
 	// Variable name
 	MissingMedAsWorstVariable *string `pulumi:"missingMedAsWorstVariable"`
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax *bool `pulumi:"multipathRelax"`
 	// Variable name
 	MultipathRelaxVariable *string `pulumi:"multipathRelaxVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAsPath *bool `pulumi:"propagateAsPath"`
 	// Variable name
 	PropagateAsPathVariable *string `pulumi:"propagateAsPathVariable"`
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity *bool `pulumi:"propagateCommunity"`
 	// Variable name
 	PropagateCommunityVariable *string `pulumi:"propagateCommunityVariable"`
@@ -502,7 +590,8 @@ type serviceRoutingBgpFeatureArgs struct {
 
 // The set of arguments for constructing a ServiceRoutingBgpFeature resource.
 type ServiceRoutingBgpFeatureArgs struct {
-	// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all ASs when selecting active BGP paths
+	//   - Default value: `false`
 	AlwaysCompareMed pulumi.BoolPtrInput
 	// Variable name
 	AlwaysCompareMedVariable pulumi.StringPtrInput
@@ -510,34 +599,42 @@ type ServiceRoutingBgpFeatureArgs struct {
 	AsNumber pulumi.IntPtrInput
 	// Variable name
 	AsNumberVariable pulumi.StringPtrInput
-	// Compare router IDs when selecting active BGP paths - Default value: `false`
+	// Compare router IDs when selecting active BGP paths
+	//   - Default value: `false`
 	CompareRouterId pulumi.BoolPtrInput
 	// Variable name
 	CompareRouterIdVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+	// Compare MEDs from all routes from same AS when selecting active BGP paths
+	//   - Default value: `false`
 	DeterministicMed pulumi.BoolPtrInput
 	// Variable name
 	DeterministicMedVariable pulumi.StringPtrInput
-	// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for external BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	ExternalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	ExternalRoutesDistanceVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-	// `180`
+	// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+	//   - Range: `0`-`65535`
+	//   - Default value: `180`
 	HoldTime pulumi.IntPtrInput
 	// Variable name
 	HoldTimeVariable pulumi.StringPtrInput
-	// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+	// Set administrative distance for internal BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `200`
 	InternalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	InternalRoutesDistanceVariable pulumi.StringPtrInput
 	// Aggregate prefixes in specific range
 	Ipv4AggregateAddresses ServiceRoutingBgpFeatureIpv4AggregateAddressArrayInput
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv4EibgpMaximumPaths pulumi.IntPtrInput
 	// Variable name
 	Ipv4EibgpMaximumPathsVariable pulumi.StringPtrInput
@@ -545,20 +642,23 @@ type ServiceRoutingBgpFeatureArgs struct {
 	Ipv4Neighbors ServiceRoutingBgpFeatureIpv4NeighborArrayInput
 	// Configure the networks for BGP to advertise
 	Ipv4Networks ServiceRoutingBgpFeatureIpv4NetworkArrayInput
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv4Originate pulumi.BoolPtrInput
 	// Variable name
 	Ipv4OriginateVariable pulumi.StringPtrInput
 	// Redistribute routes into BGP
 	Ipv4Redistributes ServiceRoutingBgpFeatureIpv4RedistributeArrayInput
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv4TableMapFilter pulumi.BoolPtrInput
 	// Variable name
 	Ipv4TableMapFilterVariable pulumi.StringPtrInput
 	Ipv4TableMapRoutePolicyId  pulumi.StringPtrInput
 	// IPv6 Aggregate prefixes in specific range
 	Ipv6AggregateAddresses ServiceRoutingBgpFeatureIpv6AggregateAddressArrayInput
-	// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+	// Set maximum number of parallel IBGP paths for multipath load sharing
+	//   - Range: `1`-`32`
 	Ipv6EibgpMaximumPaths pulumi.IntPtrInput
 	// Variable name
 	Ipv6EibgpMaximumPathsVariable pulumi.StringPtrInput
@@ -566,40 +666,50 @@ type ServiceRoutingBgpFeatureArgs struct {
 	Ipv6Neighbors ServiceRoutingBgpFeatureIpv6NeighborArrayInput
 	// Configure the networks for BGP to advertise
 	Ipv6Networks ServiceRoutingBgpFeatureIpv6NetworkArrayInput
-	// BGP Default Information Originate - Default value: `false`
+	// BGP Default Information Originate
+	//   - Default value: `false`
 	Ipv6Originate pulumi.BoolPtrInput
 	// Variable name
 	Ipv6OriginateVariable pulumi.StringPtrInput
 	// Redistribute routes into BGP
 	Ipv6Redistributes ServiceRoutingBgpFeatureIpv6RedistributeArrayInput
-	// Table map filtered or not - Default value: `false`
+	// Table map filtered or not
+	//   - Default value: `false`
 	Ipv6TableMapFilter pulumi.BoolPtrInput
 	// Variable name
 	Ipv6TableMapFilterVariable pulumi.StringPtrInput
 	Ipv6TableMapRoutePolicyId  pulumi.StringPtrInput
-	// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+	// Interval (seconds) of keepalive messages sent to its BGP peer
+	//   - Range: `0`-`65535`
+	//   - Default value: `60`
 	KeepaliveTime pulumi.IntPtrInput
 	// Variable name
 	KeepaliveTimeVariable pulumi.StringPtrInput
-	// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+	// Set administrative distance for local BGP routes
+	//   - Range: `1`-`255`
+	//   - Default value: `20`
 	LocalRoutesDistance pulumi.IntPtrInput
 	// Variable name
 	LocalRoutesDistanceVariable pulumi.StringPtrInput
-	// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+	// If path has no MED, consider it to be worst path when selecting active BGP paths
+	//   - Default value: `false`
 	MissingMedAsWorst pulumi.BoolPtrInput
 	// Variable name
 	MissingMedAsWorstVariable pulumi.StringPtrInput
-	// Ignore AS for multipath selection - Default value: `false`
+	// Ignore AS for multipath selection
+	//   - Default value: `false`
 	MultipathRelax pulumi.BoolPtrInput
 	// Variable name
 	MultipathRelaxVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// Propagate AS Path - Default value: `false`
+	// Propagate AS Path
+	//   - Default value: `false`
 	PropagateAsPath pulumi.BoolPtrInput
 	// Variable name
 	PropagateAsPathVariable pulumi.StringPtrInput
-	// Propagate Community - Default value: `false`
+	// Propagate Community
+	//   - Default value: `false`
 	PropagateCommunity pulumi.BoolPtrInput
 	// Variable name
 	PropagateCommunityVariable pulumi.StringPtrInput
@@ -696,7 +806,8 @@ func (o ServiceRoutingBgpFeatureOutput) ToServiceRoutingBgpFeatureOutputWithCont
 	return o
 }
 
-// Compare MEDs from all ASs when selecting active BGP paths - Default value: `false`
+// Compare MEDs from all ASs when selecting active BGP paths
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) AlwaysCompareMed() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.AlwaysCompareMed }).(pulumi.BoolPtrOutput)
 }
@@ -716,7 +827,8 @@ func (o ServiceRoutingBgpFeatureOutput) AsNumberVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.AsNumberVariable }).(pulumi.StringPtrOutput)
 }
 
-// Compare router IDs when selecting active BGP paths - Default value: `false`
+// Compare router IDs when selecting active BGP paths
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) CompareRouterId() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.CompareRouterId }).(pulumi.BoolPtrOutput)
 }
@@ -731,7 +843,8 @@ func (o ServiceRoutingBgpFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Compare MEDs from all routes from same AS when selecting active BGP paths - Default value: `false`
+// Compare MEDs from all routes from same AS when selecting active BGP paths
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) DeterministicMed() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.DeterministicMed }).(pulumi.BoolPtrOutput)
 }
@@ -741,7 +854,9 @@ func (o ServiceRoutingBgpFeatureOutput) DeterministicMedVariable() pulumi.String
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.DeterministicMedVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for external BGP routes - Range: `1`-`255` - Default value: `20`
+// Set administrative distance for external BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `20`
 func (o ServiceRoutingBgpFeatureOutput) ExternalRoutesDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.ExternalRoutesDistance }).(pulumi.IntPtrOutput)
 }
@@ -756,8 +871,9 @@ func (o ServiceRoutingBgpFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Interval (seconds) not receiving a keepalive message declares a BGP peer down - Range: `0`-`65535` - Default value:
-// `180`
+// Interval (seconds) not receiving a keepalive message declares a BGP peer down
+//   - Range: `0`-`65535`
+//   - Default value: `180`
 func (o ServiceRoutingBgpFeatureOutput) HoldTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.HoldTime }).(pulumi.IntPtrOutput)
 }
@@ -767,7 +883,9 @@ func (o ServiceRoutingBgpFeatureOutput) HoldTimeVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.HoldTimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for internal BGP routes - Range: `1`-`255` - Default value: `200`
+// Set administrative distance for internal BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `200`
 func (o ServiceRoutingBgpFeatureOutput) InternalRoutesDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.InternalRoutesDistance }).(pulumi.IntPtrOutput)
 }
@@ -784,7 +902,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv4AggregateAddresses() ServiceRoutingB
 	}).(ServiceRoutingBgpFeatureIpv4AggregateAddressArrayOutput)
 }
 
-// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+// Set maximum number of parallel IBGP paths for multipath load sharing
+//   - Range: `1`-`32`
 func (o ServiceRoutingBgpFeatureOutput) Ipv4EibgpMaximumPaths() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.Ipv4EibgpMaximumPaths }).(pulumi.IntPtrOutput)
 }
@@ -808,7 +927,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv4Networks() ServiceRoutingBgpFeatureI
 	}).(ServiceRoutingBgpFeatureIpv4NetworkArrayOutput)
 }
 
-// BGP Default Information Originate - Default value: `false`
+// BGP Default Information Originate
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) Ipv4Originate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.Ipv4Originate }).(pulumi.BoolPtrOutput)
 }
@@ -825,7 +945,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv4Redistributes() ServiceRoutingBgpFea
 	}).(ServiceRoutingBgpFeatureIpv4RedistributeArrayOutput)
 }
 
-// Table map filtered or not - Default value: `false`
+// Table map filtered or not
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) Ipv4TableMapFilter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.Ipv4TableMapFilter }).(pulumi.BoolPtrOutput)
 }
@@ -846,7 +967,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv6AggregateAddresses() ServiceRoutingB
 	}).(ServiceRoutingBgpFeatureIpv6AggregateAddressArrayOutput)
 }
 
-// Set maximum number of parallel IBGP paths for multipath load sharing - Range: `1`-`32`
+// Set maximum number of parallel IBGP paths for multipath load sharing
+//   - Range: `1`-`32`
 func (o ServiceRoutingBgpFeatureOutput) Ipv6EibgpMaximumPaths() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.Ipv6EibgpMaximumPaths }).(pulumi.IntPtrOutput)
 }
@@ -870,7 +992,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv6Networks() ServiceRoutingBgpFeatureI
 	}).(ServiceRoutingBgpFeatureIpv6NetworkArrayOutput)
 }
 
-// BGP Default Information Originate - Default value: `false`
+// BGP Default Information Originate
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) Ipv6Originate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.Ipv6Originate }).(pulumi.BoolPtrOutput)
 }
@@ -887,7 +1010,8 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv6Redistributes() ServiceRoutingBgpFea
 	}).(ServiceRoutingBgpFeatureIpv6RedistributeArrayOutput)
 }
 
-// Table map filtered or not - Default value: `false`
+// Table map filtered or not
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) Ipv6TableMapFilter() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.Ipv6TableMapFilter }).(pulumi.BoolPtrOutput)
 }
@@ -901,7 +1025,9 @@ func (o ServiceRoutingBgpFeatureOutput) Ipv6TableMapRoutePolicyId() pulumi.Strin
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.Ipv6TableMapRoutePolicyId }).(pulumi.StringPtrOutput)
 }
 
-// Interval (seconds) of keepalive messages sent to its BGP peer - Range: `0`-`65535` - Default value: `60`
+// Interval (seconds) of keepalive messages sent to its BGP peer
+//   - Range: `0`-`65535`
+//   - Default value: `60`
 func (o ServiceRoutingBgpFeatureOutput) KeepaliveTime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.KeepaliveTime }).(pulumi.IntPtrOutput)
 }
@@ -911,7 +1037,9 @@ func (o ServiceRoutingBgpFeatureOutput) KeepaliveTimeVariable() pulumi.StringPtr
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.KeepaliveTimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Set administrative distance for local BGP routes - Range: `1`-`255` - Default value: `20`
+// Set administrative distance for local BGP routes
+//   - Range: `1`-`255`
+//   - Default value: `20`
 func (o ServiceRoutingBgpFeatureOutput) LocalRoutesDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.IntPtrOutput { return v.LocalRoutesDistance }).(pulumi.IntPtrOutput)
 }
@@ -921,7 +1049,8 @@ func (o ServiceRoutingBgpFeatureOutput) LocalRoutesDistanceVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.LocalRoutesDistanceVariable }).(pulumi.StringPtrOutput)
 }
 
-// If path has no MED, consider it to be worst path when selecting active BGP paths - Default value: `false`
+// If path has no MED, consider it to be worst path when selecting active BGP paths
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) MissingMedAsWorst() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.MissingMedAsWorst }).(pulumi.BoolPtrOutput)
 }
@@ -931,7 +1060,8 @@ func (o ServiceRoutingBgpFeatureOutput) MissingMedAsWorstVariable() pulumi.Strin
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.MissingMedAsWorstVariable }).(pulumi.StringPtrOutput)
 }
 
-// Ignore AS for multipath selection - Default value: `false`
+// Ignore AS for multipath selection
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) MultipathRelax() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.MultipathRelax }).(pulumi.BoolPtrOutput)
 }
@@ -946,7 +1076,8 @@ func (o ServiceRoutingBgpFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Propagate AS Path - Default value: `false`
+// Propagate AS Path
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) PropagateAsPath() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.PropagateAsPath }).(pulumi.BoolPtrOutput)
 }
@@ -956,7 +1087,8 @@ func (o ServiceRoutingBgpFeatureOutput) PropagateAsPathVariable() pulumi.StringP
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.StringPtrOutput { return v.PropagateAsPathVariable }).(pulumi.StringPtrOutput)
 }
 
-// Propagate Community - Default value: `false`
+// Propagate Community
+//   - Default value: `false`
 func (o ServiceRoutingBgpFeatureOutput) PropagateCommunity() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceRoutingBgpFeature) pulumi.BoolPtrOutput { return v.PropagateCommunity }).(pulumi.BoolPtrOutput)
 }

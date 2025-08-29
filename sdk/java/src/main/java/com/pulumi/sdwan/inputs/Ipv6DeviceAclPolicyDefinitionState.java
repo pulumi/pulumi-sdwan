@@ -19,14 +19,16 @@ public final class Ipv6DeviceAclPolicyDefinitionState extends com.pulumi.resourc
     public static final Ipv6DeviceAclPolicyDefinitionState Empty = new Ipv6DeviceAclPolicyDefinitionState();
 
     /**
-     * Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     @Import(name="defaultAction")
     private @Nullable Output<String> defaultAction;
 
     /**
-     * @return Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+     * @return Default action, either `accept` or `drop`
+     *   - Choices: `accept`, `drop`
      * 
      */
     public Optional<Output<String>> defaultAction() {
@@ -138,7 +140,8 @@ public final class Ipv6DeviceAclPolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 
@@ -149,7 +152,8 @@ public final class Ipv6DeviceAclPolicyDefinitionState extends com.pulumi.resourc
         }
 
         /**
-         * @param defaultAction Default action, either `accept` or `drop` - Choices: `accept`, `drop`
+         * @param defaultAction Default action, either `accept` or `drop`
+         *   - Choices: `accept`, `drop`
          * 
          * @return builder
          * 

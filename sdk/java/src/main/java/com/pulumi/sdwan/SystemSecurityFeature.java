@@ -42,16 +42,18 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/systemSecurityFeature:SystemSecurityFeature")
 public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
     /**
-     * Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     @Export(name="antiReplayWindow", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> antiReplayWindow;
 
     /**
-     * @return Set the sliding replay window size - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192` - Default value:
-     * `512`
+     * @return Set the sliding replay window size
+     *   - Choices: `64`, `128`, `256`, `512`, `1024`, `2048`, `4096`, `8192`
+     *   - Default value: `512`
      * 
      */
     public Output<Optional<String>> antiReplayWindow() {
@@ -86,14 +88,18 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.description);
     }
     /**
-     * Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     @Export(name="extendedAntiReplayWindow", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> extendedAntiReplayWindow;
 
     /**
-     * @return Extended Anti-Replay Window - Range: `10`-`2048` - Default value: `256`
+     * @return Extended Anti-Replay Window
+     *   - Range: `10`-`2048`
+     *   - Default value: `256`
      * 
      */
     public Output<Optional<Integer>> extendedAntiReplayWindow() {
@@ -156,14 +162,16 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.integrityTypes);
     }
     /**
-     * Enable or disable IPsec pairwise-keying - Default value: `false`
+     * Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     @Export(name="ipsecPairwiseKeying", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ipsecPairwiseKeying;
 
     /**
-     * @return Enable or disable IPsec pairwise-keying - Default value: `false`
+     * @return Enable or disable IPsec pairwise-keying
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> ipsecPairwiseKeying() {
@@ -226,14 +234,18 @@ public class SystemSecurityFeature extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     @Export(name="rekey", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> rekey;
 
     /**
-     * @return Set how often to change the AES key for DTLS connections - Range: `10`-`1209600` - Default value: `86400`
+     * @return Set how often to change the AES key for DTLS connections
+     *   - Range: `10`-`1209600`
+     *   - Default value: `86400`
      * 
      */
     public Output<Optional<Integer>> rekey() {

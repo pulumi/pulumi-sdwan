@@ -86,117 +86,151 @@ import (
 type SystemOmpFeature struct {
 	pulumi.CustomResourceState
 
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv4Bgp pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Bgp"`
 	// Variable name
 	AdvertiseIpv4BgpVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4BgpVariable"`
-	// Connected - Default value: `true`
+	// Connected
+	//   - Default value: `true`
 	AdvertiseIpv4Connected pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Connected"`
 	// Variable name
 	AdvertiseIpv4ConnectedVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv4Eigrp pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Eigrp"`
 	// Variable name
 	AdvertiseIpv4EigrpVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv4Isis pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Isis"`
 	// Variable name
 	AdvertiseIpv4IsisVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv4Lisp pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Lisp"`
 	// Variable name
 	AdvertiseIpv4LispVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv4Ospf pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Ospf"`
-	// OSPFV3 - Default value: `false`
+	// OSPFV3
+	//   - Default value: `false`
 	AdvertiseIpv4OspfV3 pulumi.BoolPtrOutput `pulumi:"advertiseIpv4OspfV3"`
 	// Variable name
 	AdvertiseIpv4OspfV3Variable pulumi.StringPtrOutput `pulumi:"advertiseIpv4OspfV3Variable"`
 	// Variable name
 	AdvertiseIpv4OspfVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4OspfVariable"`
-	// Static - Default value: `true`
+	// Static
+	//   - Default value: `true`
 	AdvertiseIpv4Static pulumi.BoolPtrOutput `pulumi:"advertiseIpv4Static"`
 	// Variable name
 	AdvertiseIpv4StaticVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv4StaticVariable"`
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv6Bgp pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Bgp"`
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6BgpVariable"`
-	// Connected - Default value: `false`
+	// Connected
+	//   - Default value: `false`
 	AdvertiseIpv6Connected pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv6Eigrp pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Eigrp"`
 	// Variable name
 	AdvertiseIpv6EigrpVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv6Isis pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Isis"`
 	// Variable name
 	AdvertiseIpv6IsisVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv6Lisp pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Lisp"`
 	// Variable name
 	AdvertiseIpv6LispVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv6Ospf pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Ospf"`
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6OspfVariable"`
-	// Static - Default value: `false`
+	// Static
+	//   - Default value: `false`
 	AdvertiseIpv6Static pulumi.BoolPtrOutput `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrOutput `pulumi:"advertiseIpv6StaticVariable"`
-	// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+	// Advertisement Interval (seconds)
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrOutput `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrOutput `pulumi:"advertisementIntervalVariable"`
 	// The description of the Feature
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+	// Set maximum number of OMP paths to install in cEdge route table
+	//   - Range: `1`-`0`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrOutput `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrOutput `pulumi:"ecmpLimitVariable"`
-	// EOR Timer - Range: `1`-`3600` - Default value: `300`
+	// EOR Timer
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrOutput `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable pulumi.StringPtrOutput `pulumi:"eorTimerVariable"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
-	// Graceful Restart for OMP - Default value: `true`
+	// Graceful Restart for OMP
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrOutput `pulumi:"gracefulRestart"`
-	// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+	// Graceful Restart Timer (seconds)
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrOutput `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrOutput `pulumi:"gracefulRestartVariable"`
-	// Hold Time (seconds) - Default value: `60`
+	// Hold Time (seconds)
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrOutput `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrOutput `pulumi:"holdtimeVariable"`
-	// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+	// Treat hierarchical and direct (secondary region) paths equally
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrOutput `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrOutput `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the Feature
 	Name pulumi.StringOutput `pulumi:"name"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv4 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv6 pulumi.IntPtrOutput `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrOutput `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Overlay AS Number - Range: `1`-`4294967295`
+	// Overlay AS Number
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrOutput `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrOutput `pulumi:"overlayAsVariable"`
-	// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+	// Number of Paths Advertised per Prefix
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	PathsAdvertisedPerPrefix pulumi.IntPtrOutput `pulumi:"pathsAdvertisedPerPrefix"`
 	// Variable name
 	PathsAdvertisedPerPrefixVariable pulumi.StringPtrOutput `pulumi:"pathsAdvertisedPerPrefixVariable"`
-	// Shutdown - Default value: `false`
+	// Shutdown
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
@@ -204,7 +238,8 @@ type SystemOmpFeature struct {
 	SiteTypes pulumi.StringArrayOutput `pulumi:"siteTypes"`
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrOutput `pulumi:"siteTypesVariable"`
-	// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport Gateway Path Behavior
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrOutput `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrOutput `pulumi:"transportGatewayVariable"`
@@ -245,117 +280,151 @@ func GetSystemOmpFeature(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SystemOmpFeature resources.
 type systemOmpFeatureState struct {
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv4Bgp *bool `pulumi:"advertiseIpv4Bgp"`
 	// Variable name
 	AdvertiseIpv4BgpVariable *string `pulumi:"advertiseIpv4BgpVariable"`
-	// Connected - Default value: `true`
+	// Connected
+	//   - Default value: `true`
 	AdvertiseIpv4Connected *bool `pulumi:"advertiseIpv4Connected"`
 	// Variable name
 	AdvertiseIpv4ConnectedVariable *string `pulumi:"advertiseIpv4ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv4Eigrp *bool `pulumi:"advertiseIpv4Eigrp"`
 	// Variable name
 	AdvertiseIpv4EigrpVariable *string `pulumi:"advertiseIpv4EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv4Isis *bool `pulumi:"advertiseIpv4Isis"`
 	// Variable name
 	AdvertiseIpv4IsisVariable *string `pulumi:"advertiseIpv4IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv4Lisp *bool `pulumi:"advertiseIpv4Lisp"`
 	// Variable name
 	AdvertiseIpv4LispVariable *string `pulumi:"advertiseIpv4LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv4Ospf *bool `pulumi:"advertiseIpv4Ospf"`
-	// OSPFV3 - Default value: `false`
+	// OSPFV3
+	//   - Default value: `false`
 	AdvertiseIpv4OspfV3 *bool `pulumi:"advertiseIpv4OspfV3"`
 	// Variable name
 	AdvertiseIpv4OspfV3Variable *string `pulumi:"advertiseIpv4OspfV3Variable"`
 	// Variable name
 	AdvertiseIpv4OspfVariable *string `pulumi:"advertiseIpv4OspfVariable"`
-	// Static - Default value: `true`
+	// Static
+	//   - Default value: `true`
 	AdvertiseIpv4Static *bool `pulumi:"advertiseIpv4Static"`
 	// Variable name
 	AdvertiseIpv4StaticVariable *string `pulumi:"advertiseIpv4StaticVariable"`
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv6Bgp *bool `pulumi:"advertiseIpv6Bgp"`
 	// Variable name
 	AdvertiseIpv6BgpVariable *string `pulumi:"advertiseIpv6BgpVariable"`
-	// Connected - Default value: `false`
+	// Connected
+	//   - Default value: `false`
 	AdvertiseIpv6Connected *bool `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable *string `pulumi:"advertiseIpv6ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv6Eigrp *bool `pulumi:"advertiseIpv6Eigrp"`
 	// Variable name
 	AdvertiseIpv6EigrpVariable *string `pulumi:"advertiseIpv6EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv6Isis *bool `pulumi:"advertiseIpv6Isis"`
 	// Variable name
 	AdvertiseIpv6IsisVariable *string `pulumi:"advertiseIpv6IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv6Lisp *bool `pulumi:"advertiseIpv6Lisp"`
 	// Variable name
 	AdvertiseIpv6LispVariable *string `pulumi:"advertiseIpv6LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv6Ospf *bool `pulumi:"advertiseIpv6Ospf"`
 	// Variable name
 	AdvertiseIpv6OspfVariable *string `pulumi:"advertiseIpv6OspfVariable"`
-	// Static - Default value: `false`
+	// Static
+	//   - Default value: `false`
 	AdvertiseIpv6Static *bool `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable *string `pulumi:"advertiseIpv6StaticVariable"`
-	// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+	// Advertisement Interval (seconds)
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+	// Set maximum number of OMP paths to install in cEdge route table
+	//   - Range: `1`-`0`
+	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable *string `pulumi:"ecmpLimitVariable"`
-	// EOR Timer - Range: `1`-`3600` - Default value: `300`
+	// EOR Timer
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer *int `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable *string `pulumi:"eorTimerVariable"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
-	// Graceful Restart for OMP - Default value: `true`
+	// Graceful Restart for OMP
+	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
-	// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+	// Graceful Restart Timer (seconds)
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable *string `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
-	// Hold Time (seconds) - Default value: `60`
+	// Hold Time (seconds)
+	//   - Default value: `60`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
-	// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+	// Treat hierarchical and direct (secondary region) paths equally
+	//   - Default value: `false`
 	IgnoreRegionPathLength *bool `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable *string `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Overlay AS Number - Range: `1`-`4294967295`
+	// Overlay AS Number
+	//   - Range: `1`-`4294967295`
 	OverlayAs *int `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable *string `pulumi:"overlayAsVariable"`
-	// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+	// Number of Paths Advertised per Prefix
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	PathsAdvertisedPerPrefix *int `pulumi:"pathsAdvertisedPerPrefix"`
 	// Variable name
 	PathsAdvertisedPerPrefixVariable *string `pulumi:"pathsAdvertisedPerPrefixVariable"`
-	// Shutdown - Default value: `false`
+	// Shutdown
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -363,7 +432,8 @@ type systemOmpFeatureState struct {
 	SiteTypes []string `pulumi:"siteTypes"`
 	// Variable name
 	SiteTypesVariable *string `pulumi:"siteTypesVariable"`
-	// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport Gateway Path Behavior
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway *string `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable *string `pulumi:"transportGatewayVariable"`
@@ -372,117 +442,151 @@ type systemOmpFeatureState struct {
 }
 
 type SystemOmpFeatureState struct {
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv4Bgp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4BgpVariable pulumi.StringPtrInput
-	// Connected - Default value: `true`
+	// Connected
+	//   - Default value: `true`
 	AdvertiseIpv4Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4ConnectedVariable pulumi.StringPtrInput
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv4Eigrp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4EigrpVariable pulumi.StringPtrInput
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv4Isis pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4IsisVariable pulumi.StringPtrInput
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv4Lisp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4LispVariable pulumi.StringPtrInput
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv4Ospf pulumi.BoolPtrInput
-	// OSPFV3 - Default value: `false`
+	// OSPFV3
+	//   - Default value: `false`
 	AdvertiseIpv4OspfV3 pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4OspfV3Variable pulumi.StringPtrInput
 	// Variable name
 	AdvertiseIpv4OspfVariable pulumi.StringPtrInput
-	// Static - Default value: `true`
+	// Static
+	//   - Default value: `true`
 	AdvertiseIpv4Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4StaticVariable pulumi.StringPtrInput
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv6Bgp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrInput
-	// Connected - Default value: `false`
+	// Connected
+	//   - Default value: `false`
 	AdvertiseIpv6Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrInput
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv6Eigrp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6EigrpVariable pulumi.StringPtrInput
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv6Isis pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6IsisVariable pulumi.StringPtrInput
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv6Lisp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6LispVariable pulumi.StringPtrInput
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv6Ospf pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrInput
-	// Static - Default value: `false`
+	// Static
+	//   - Default value: `false`
 	AdvertiseIpv6Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrInput
-	// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+	// Advertisement Interval (seconds)
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+	// Set maximum number of OMP paths to install in cEdge route table
+	//   - Range: `1`-`0`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrInput
-	// EOR Timer - Range: `1`-`3600` - Default value: `300`
+	// EOR Timer
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrInput
 	// Variable name
 	EorTimerVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
-	// Graceful Restart for OMP - Default value: `true`
+	// Graceful Restart for OMP
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
-	// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+	// Graceful Restart Timer (seconds)
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrInput
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
-	// Hold Time (seconds) - Default value: `60`
+	// Hold Time (seconds)
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
-	// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+	// Treat hierarchical and direct (secondary region) paths equally
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrInput
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
-	// Overlay AS Number - Range: `1`-`4294967295`
+	// Overlay AS Number
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrInput
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrInput
-	// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+	// Number of Paths Advertised per Prefix
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	PathsAdvertisedPerPrefix pulumi.IntPtrInput
 	// Variable name
 	PathsAdvertisedPerPrefixVariable pulumi.StringPtrInput
-	// Shutdown - Default value: `false`
+	// Shutdown
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -490,7 +594,8 @@ type SystemOmpFeatureState struct {
 	SiteTypes pulumi.StringArrayInput
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrInput
-	// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport Gateway Path Behavior
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrInput
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrInput
@@ -503,117 +608,151 @@ func (SystemOmpFeatureState) ElementType() reflect.Type {
 }
 
 type systemOmpFeatureArgs struct {
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv4Bgp *bool `pulumi:"advertiseIpv4Bgp"`
 	// Variable name
 	AdvertiseIpv4BgpVariable *string `pulumi:"advertiseIpv4BgpVariable"`
-	// Connected - Default value: `true`
+	// Connected
+	//   - Default value: `true`
 	AdvertiseIpv4Connected *bool `pulumi:"advertiseIpv4Connected"`
 	// Variable name
 	AdvertiseIpv4ConnectedVariable *string `pulumi:"advertiseIpv4ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv4Eigrp *bool `pulumi:"advertiseIpv4Eigrp"`
 	// Variable name
 	AdvertiseIpv4EigrpVariable *string `pulumi:"advertiseIpv4EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv4Isis *bool `pulumi:"advertiseIpv4Isis"`
 	// Variable name
 	AdvertiseIpv4IsisVariable *string `pulumi:"advertiseIpv4IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv4Lisp *bool `pulumi:"advertiseIpv4Lisp"`
 	// Variable name
 	AdvertiseIpv4LispVariable *string `pulumi:"advertiseIpv4LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv4Ospf *bool `pulumi:"advertiseIpv4Ospf"`
-	// OSPFV3 - Default value: `false`
+	// OSPFV3
+	//   - Default value: `false`
 	AdvertiseIpv4OspfV3 *bool `pulumi:"advertiseIpv4OspfV3"`
 	// Variable name
 	AdvertiseIpv4OspfV3Variable *string `pulumi:"advertiseIpv4OspfV3Variable"`
 	// Variable name
 	AdvertiseIpv4OspfVariable *string `pulumi:"advertiseIpv4OspfVariable"`
-	// Static - Default value: `true`
+	// Static
+	//   - Default value: `true`
 	AdvertiseIpv4Static *bool `pulumi:"advertiseIpv4Static"`
 	// Variable name
 	AdvertiseIpv4StaticVariable *string `pulumi:"advertiseIpv4StaticVariable"`
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv6Bgp *bool `pulumi:"advertiseIpv6Bgp"`
 	// Variable name
 	AdvertiseIpv6BgpVariable *string `pulumi:"advertiseIpv6BgpVariable"`
-	// Connected - Default value: `false`
+	// Connected
+	//   - Default value: `false`
 	AdvertiseIpv6Connected *bool `pulumi:"advertiseIpv6Connected"`
 	// Variable name
 	AdvertiseIpv6ConnectedVariable *string `pulumi:"advertiseIpv6ConnectedVariable"`
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv6Eigrp *bool `pulumi:"advertiseIpv6Eigrp"`
 	// Variable name
 	AdvertiseIpv6EigrpVariable *string `pulumi:"advertiseIpv6EigrpVariable"`
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv6Isis *bool `pulumi:"advertiseIpv6Isis"`
 	// Variable name
 	AdvertiseIpv6IsisVariable *string `pulumi:"advertiseIpv6IsisVariable"`
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv6Lisp *bool `pulumi:"advertiseIpv6Lisp"`
 	// Variable name
 	AdvertiseIpv6LispVariable *string `pulumi:"advertiseIpv6LispVariable"`
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv6Ospf *bool `pulumi:"advertiseIpv6Ospf"`
 	// Variable name
 	AdvertiseIpv6OspfVariable *string `pulumi:"advertiseIpv6OspfVariable"`
-	// Static - Default value: `false`
+	// Static
+	//   - Default value: `false`
 	AdvertiseIpv6Static *bool `pulumi:"advertiseIpv6Static"`
 	// Variable name
 	AdvertiseIpv6StaticVariable *string `pulumi:"advertiseIpv6StaticVariable"`
-	// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+	// Advertisement Interval (seconds)
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval *int `pulumi:"advertisementInterval"`
 	// Variable name
 	AdvertisementIntervalVariable *string `pulumi:"advertisementIntervalVariable"`
 	// The description of the Feature
 	Description *string `pulumi:"description"`
-	// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+	// Set maximum number of OMP paths to install in cEdge route table
+	//   - Range: `1`-`0`
+	//   - Default value: `4`
 	EcmpLimit *int `pulumi:"ecmpLimit"`
 	// Variable name
 	EcmpLimitVariable *string `pulumi:"ecmpLimitVariable"`
-	// EOR Timer - Range: `1`-`3600` - Default value: `300`
+	// EOR Timer
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer *int `pulumi:"eorTimer"`
 	// Variable name
 	EorTimerVariable *string `pulumi:"eorTimerVariable"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
-	// Graceful Restart for OMP - Default value: `true`
+	// Graceful Restart for OMP
+	//   - Default value: `true`
 	GracefulRestart *bool `pulumi:"gracefulRestart"`
-	// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+	// Graceful Restart Timer (seconds)
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer *int `pulumi:"gracefulRestartTimer"`
 	// Variable name
 	GracefulRestartTimerVariable *string `pulumi:"gracefulRestartTimerVariable"`
 	// Variable name
 	GracefulRestartVariable *string `pulumi:"gracefulRestartVariable"`
-	// Hold Time (seconds) - Default value: `60`
+	// Hold Time (seconds)
+	//   - Default value: `60`
 	Holdtime *int `pulumi:"holdtime"`
 	// Variable name
 	HoldtimeVariable *string `pulumi:"holdtimeVariable"`
-	// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+	// Treat hierarchical and direct (secondary region) paths equally
+	//   - Default value: `false`
 	IgnoreRegionPathLength *bool `pulumi:"ignoreRegionPathLength"`
 	// Variable name
 	IgnoreRegionPathLengthVariable *string `pulumi:"ignoreRegionPathLengthVariable"`
 	// The name of the Feature
 	Name *string `pulumi:"name"`
-	// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv4 *int `pulumi:"ompAdminDistanceIpv4"`
 	// Variable name
 	OmpAdminDistanceIpv4Variable *string `pulumi:"ompAdminDistanceIpv4Variable"`
-	// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv6 *int `pulumi:"ompAdminDistanceIpv6"`
 	// Variable name
 	OmpAdminDistanceIpv6Variable *string `pulumi:"ompAdminDistanceIpv6Variable"`
-	// Overlay AS Number - Range: `1`-`4294967295`
+	// Overlay AS Number
+	//   - Range: `1`-`4294967295`
 	OverlayAs *int `pulumi:"overlayAs"`
 	// Variable name
 	OverlayAsVariable *string `pulumi:"overlayAsVariable"`
-	// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+	// Number of Paths Advertised per Prefix
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	PathsAdvertisedPerPrefix *int `pulumi:"pathsAdvertisedPerPrefix"`
 	// Variable name
 	PathsAdvertisedPerPrefixVariable *string `pulumi:"pathsAdvertisedPerPrefixVariable"`
-	// Shutdown - Default value: `false`
+	// Shutdown
+	//   - Default value: `false`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
@@ -621,7 +760,8 @@ type systemOmpFeatureArgs struct {
 	SiteTypes []string `pulumi:"siteTypes"`
 	// Variable name
 	SiteTypesVariable *string `pulumi:"siteTypesVariable"`
-	// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport Gateway Path Behavior
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway *string `pulumi:"transportGateway"`
 	// Variable name
 	TransportGatewayVariable *string `pulumi:"transportGatewayVariable"`
@@ -629,117 +769,151 @@ type systemOmpFeatureArgs struct {
 
 // The set of arguments for constructing a SystemOmpFeature resource.
 type SystemOmpFeatureArgs struct {
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv4Bgp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4BgpVariable pulumi.StringPtrInput
-	// Connected - Default value: `true`
+	// Connected
+	//   - Default value: `true`
 	AdvertiseIpv4Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4ConnectedVariable pulumi.StringPtrInput
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv4Eigrp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4EigrpVariable pulumi.StringPtrInput
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv4Isis pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4IsisVariable pulumi.StringPtrInput
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv4Lisp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4LispVariable pulumi.StringPtrInput
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv4Ospf pulumi.BoolPtrInput
-	// OSPFV3 - Default value: `false`
+	// OSPFV3
+	//   - Default value: `false`
 	AdvertiseIpv4OspfV3 pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4OspfV3Variable pulumi.StringPtrInput
 	// Variable name
 	AdvertiseIpv4OspfVariable pulumi.StringPtrInput
-	// Static - Default value: `true`
+	// Static
+	//   - Default value: `true`
 	AdvertiseIpv4Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv4StaticVariable pulumi.StringPtrInput
-	// BGP - Default value: `false`
+	// BGP
+	//   - Default value: `false`
 	AdvertiseIpv6Bgp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6BgpVariable pulumi.StringPtrInput
-	// Connected - Default value: `false`
+	// Connected
+	//   - Default value: `false`
 	AdvertiseIpv6Connected pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6ConnectedVariable pulumi.StringPtrInput
-	// EIGRP - Default value: `false`
+	// EIGRP
+	//   - Default value: `false`
 	AdvertiseIpv6Eigrp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6EigrpVariable pulumi.StringPtrInput
-	// ISIS - Default value: `false`
+	// ISIS
+	//   - Default value: `false`
 	AdvertiseIpv6Isis pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6IsisVariable pulumi.StringPtrInput
-	// LISP - Default value: `false`
+	// LISP
+	//   - Default value: `false`
 	AdvertiseIpv6Lisp pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6LispVariable pulumi.StringPtrInput
-	// OSPF - Default value: `false`
+	// OSPF
+	//   - Default value: `false`
 	AdvertiseIpv6Ospf pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6OspfVariable pulumi.StringPtrInput
-	// Static - Default value: `false`
+	// Static
+	//   - Default value: `false`
 	AdvertiseIpv6Static pulumi.BoolPtrInput
 	// Variable name
 	AdvertiseIpv6StaticVariable pulumi.StringPtrInput
-	// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+	// Advertisement Interval (seconds)
+	//   - Range: `0`-`65535`
+	//   - Default value: `1`
 	AdvertisementInterval pulumi.IntPtrInput
 	// Variable name
 	AdvertisementIntervalVariable pulumi.StringPtrInput
 	// The description of the Feature
 	Description pulumi.StringPtrInput
-	// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+	// Set maximum number of OMP paths to install in cEdge route table
+	//   - Range: `1`-`0`
+	//   - Default value: `4`
 	EcmpLimit pulumi.IntPtrInput
 	// Variable name
 	EcmpLimitVariable pulumi.StringPtrInput
-	// EOR Timer - Range: `1`-`3600` - Default value: `300`
+	// EOR Timer
+	//   - Range: `1`-`3600`
+	//   - Default value: `300`
 	EorTimer pulumi.IntPtrInput
 	// Variable name
 	EorTimerVariable pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
-	// Graceful Restart for OMP - Default value: `true`
+	// Graceful Restart for OMP
+	//   - Default value: `true`
 	GracefulRestart pulumi.BoolPtrInput
-	// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+	// Graceful Restart Timer (seconds)
+	//   - Range: `1`-`604800`
+	//   - Default value: `43200`
 	GracefulRestartTimer pulumi.IntPtrInput
 	// Variable name
 	GracefulRestartTimerVariable pulumi.StringPtrInput
 	// Variable name
 	GracefulRestartVariable pulumi.StringPtrInput
-	// Hold Time (seconds) - Default value: `60`
+	// Hold Time (seconds)
+	//   - Default value: `60`
 	Holdtime pulumi.IntPtrInput
 	// Variable name
 	HoldtimeVariable pulumi.StringPtrInput
-	// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+	// Treat hierarchical and direct (secondary region) paths equally
+	//   - Default value: `false`
 	IgnoreRegionPathLength pulumi.BoolPtrInput
 	// Variable name
 	IgnoreRegionPathLengthVariable pulumi.StringPtrInput
 	// The name of the Feature
 	Name pulumi.StringPtrInput
-	// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv4
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv4 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv4Variable pulumi.StringPtrInput
-	// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+	// OMP Admin Distance IPv6
+	//   - Range: `1`-`255`
+	//   - Default value: `251`
 	OmpAdminDistanceIpv6 pulumi.IntPtrInput
 	// Variable name
 	OmpAdminDistanceIpv6Variable pulumi.StringPtrInput
-	// Overlay AS Number - Range: `1`-`4294967295`
+	// Overlay AS Number
+	//   - Range: `1`-`4294967295`
 	OverlayAs pulumi.IntPtrInput
 	// Variable name
 	OverlayAsVariable pulumi.StringPtrInput
-	// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+	// Number of Paths Advertised per Prefix
+	//   - Range: `1`-`16`
+	//   - Default value: `4`
 	PathsAdvertisedPerPrefix pulumi.IntPtrInput
 	// Variable name
 	PathsAdvertisedPerPrefixVariable pulumi.StringPtrInput
-	// Shutdown - Default value: `false`
+	// Shutdown
+	//   - Default value: `false`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
@@ -747,7 +921,8 @@ type SystemOmpFeatureArgs struct {
 	SiteTypes pulumi.StringArrayInput
 	// Variable name
 	SiteTypesVariable pulumi.StringPtrInput
-	// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+	// Transport Gateway Path Behavior
+	//   - Choices: `prefer`, `ecmp-with-direct-path`
 	TransportGateway pulumi.StringPtrInput
 	// Variable name
 	TransportGatewayVariable pulumi.StringPtrInput
@@ -840,7 +1015,8 @@ func (o SystemOmpFeatureOutput) ToSystemOmpFeatureOutputWithContext(ctx context.
 	return o
 }
 
-// BGP - Default value: `false`
+// BGP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Bgp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Bgp }).(pulumi.BoolPtrOutput)
 }
@@ -850,7 +1026,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4BgpVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4BgpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Connected - Default value: `true`
+// Connected
+//   - Default value: `true`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Connected() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Connected }).(pulumi.BoolPtrOutput)
 }
@@ -860,7 +1037,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4ConnectedVariable() pulumi.StringPt
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4ConnectedVariable }).(pulumi.StringPtrOutput)
 }
 
-// EIGRP - Default value: `false`
+// EIGRP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Eigrp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Eigrp }).(pulumi.BoolPtrOutput)
 }
@@ -870,7 +1048,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4EigrpVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4EigrpVariable }).(pulumi.StringPtrOutput)
 }
 
-// ISIS - Default value: `false`
+// ISIS
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Isis() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Isis }).(pulumi.BoolPtrOutput)
 }
@@ -880,7 +1059,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4IsisVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4IsisVariable }).(pulumi.StringPtrOutput)
 }
 
-// LISP - Default value: `false`
+// LISP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Lisp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Lisp }).(pulumi.BoolPtrOutput)
 }
@@ -890,12 +1070,14 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4LispVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4LispVariable }).(pulumi.StringPtrOutput)
 }
 
-// OSPF - Default value: `false`
+// OSPF
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Ospf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Ospf }).(pulumi.BoolPtrOutput)
 }
 
-// OSPFV3 - Default value: `false`
+// OSPFV3
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4OspfV3() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4OspfV3 }).(pulumi.BoolPtrOutput)
 }
@@ -910,7 +1092,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4OspfVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4OspfVariable }).(pulumi.StringPtrOutput)
 }
 
-// Static - Default value: `true`
+// Static
+//   - Default value: `true`
 func (o SystemOmpFeatureOutput) AdvertiseIpv4Static() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv4Static }).(pulumi.BoolPtrOutput)
 }
@@ -920,7 +1103,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv4StaticVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv4StaticVariable }).(pulumi.StringPtrOutput)
 }
 
-// BGP - Default value: `false`
+// BGP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Bgp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Bgp }).(pulumi.BoolPtrOutput)
 }
@@ -930,7 +1114,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6BgpVariable() pulumi.StringPtrOutpu
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6BgpVariable }).(pulumi.StringPtrOutput)
 }
 
-// Connected - Default value: `false`
+// Connected
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Connected() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Connected }).(pulumi.BoolPtrOutput)
 }
@@ -940,7 +1125,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6ConnectedVariable() pulumi.StringPt
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6ConnectedVariable }).(pulumi.StringPtrOutput)
 }
 
-// EIGRP - Default value: `false`
+// EIGRP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Eigrp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Eigrp }).(pulumi.BoolPtrOutput)
 }
@@ -950,7 +1136,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6EigrpVariable() pulumi.StringPtrOut
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6EigrpVariable }).(pulumi.StringPtrOutput)
 }
 
-// ISIS - Default value: `false`
+// ISIS
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Isis() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Isis }).(pulumi.BoolPtrOutput)
 }
@@ -960,7 +1147,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6IsisVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6IsisVariable }).(pulumi.StringPtrOutput)
 }
 
-// LISP - Default value: `false`
+// LISP
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Lisp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Lisp }).(pulumi.BoolPtrOutput)
 }
@@ -970,7 +1158,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6LispVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6LispVariable }).(pulumi.StringPtrOutput)
 }
 
-// OSPF - Default value: `false`
+// OSPF
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Ospf() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Ospf }).(pulumi.BoolPtrOutput)
 }
@@ -980,7 +1169,8 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6OspfVariable() pulumi.StringPtrOutp
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6OspfVariable }).(pulumi.StringPtrOutput)
 }
 
-// Static - Default value: `false`
+// Static
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) AdvertiseIpv6Static() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.AdvertiseIpv6Static }).(pulumi.BoolPtrOutput)
 }
@@ -990,7 +1180,9 @@ func (o SystemOmpFeatureOutput) AdvertiseIpv6StaticVariable() pulumi.StringPtrOu
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.AdvertiseIpv6StaticVariable }).(pulumi.StringPtrOutput)
 }
 
-// Advertisement Interval (seconds) - Range: `0`-`65535` - Default value: `1`
+// Advertisement Interval (seconds)
+//   - Range: `0`-`65535`
+//   - Default value: `1`
 func (o SystemOmpFeatureOutput) AdvertisementInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.AdvertisementInterval }).(pulumi.IntPtrOutput)
 }
@@ -1005,7 +1197,9 @@ func (o SystemOmpFeatureOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Set maximum number of OMP paths to install in cEdge route table - Range: `1`-`0` - Default value: `4`
+// Set maximum number of OMP paths to install in cEdge route table
+//   - Range: `1`-`0`
+//   - Default value: `4`
 func (o SystemOmpFeatureOutput) EcmpLimit() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.EcmpLimit }).(pulumi.IntPtrOutput)
 }
@@ -1015,7 +1209,9 @@ func (o SystemOmpFeatureOutput) EcmpLimitVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.EcmpLimitVariable }).(pulumi.StringPtrOutput)
 }
 
-// EOR Timer - Range: `1`-`3600` - Default value: `300`
+// EOR Timer
+//   - Range: `1`-`3600`
+//   - Default value: `300`
 func (o SystemOmpFeatureOutput) EorTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.EorTimer }).(pulumi.IntPtrOutput)
 }
@@ -1030,12 +1226,15 @@ func (o SystemOmpFeatureOutput) FeatureProfileId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringOutput { return v.FeatureProfileId }).(pulumi.StringOutput)
 }
 
-// Graceful Restart for OMP - Default value: `true`
+// Graceful Restart for OMP
+//   - Default value: `true`
 func (o SystemOmpFeatureOutput) GracefulRestart() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.GracefulRestart }).(pulumi.BoolPtrOutput)
 }
 
-// Graceful Restart Timer (seconds) - Range: `1`-`604800` - Default value: `43200`
+// Graceful Restart Timer (seconds)
+//   - Range: `1`-`604800`
+//   - Default value: `43200`
 func (o SystemOmpFeatureOutput) GracefulRestartTimer() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.GracefulRestartTimer }).(pulumi.IntPtrOutput)
 }
@@ -1050,7 +1249,8 @@ func (o SystemOmpFeatureOutput) GracefulRestartVariable() pulumi.StringPtrOutput
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.GracefulRestartVariable }).(pulumi.StringPtrOutput)
 }
 
-// Hold Time (seconds) - Default value: `60`
+// Hold Time (seconds)
+//   - Default value: `60`
 func (o SystemOmpFeatureOutput) Holdtime() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.Holdtime }).(pulumi.IntPtrOutput)
 }
@@ -1060,7 +1260,8 @@ func (o SystemOmpFeatureOutput) HoldtimeVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.HoldtimeVariable }).(pulumi.StringPtrOutput)
 }
 
-// Treat hierarchical and direct (secondary region) paths equally - Default value: `false`
+// Treat hierarchical and direct (secondary region) paths equally
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) IgnoreRegionPathLength() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.IgnoreRegionPathLength }).(pulumi.BoolPtrOutput)
 }
@@ -1075,7 +1276,9 @@ func (o SystemOmpFeatureOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// OMP Admin Distance IPv4 - Range: `1`-`255` - Default value: `251`
+// OMP Admin Distance IPv4
+//   - Range: `1`-`255`
+//   - Default value: `251`
 func (o SystemOmpFeatureOutput) OmpAdminDistanceIpv4() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv4 }).(pulumi.IntPtrOutput)
 }
@@ -1085,7 +1288,9 @@ func (o SystemOmpFeatureOutput) OmpAdminDistanceIpv4Variable() pulumi.StringPtrO
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv4Variable }).(pulumi.StringPtrOutput)
 }
 
-// OMP Admin Distance IPv6 - Range: `1`-`255` - Default value: `251`
+// OMP Admin Distance IPv6
+//   - Range: `1`-`255`
+//   - Default value: `251`
 func (o SystemOmpFeatureOutput) OmpAdminDistanceIpv6() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.OmpAdminDistanceIpv6 }).(pulumi.IntPtrOutput)
 }
@@ -1095,7 +1300,8 @@ func (o SystemOmpFeatureOutput) OmpAdminDistanceIpv6Variable() pulumi.StringPtrO
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.OmpAdminDistanceIpv6Variable }).(pulumi.StringPtrOutput)
 }
 
-// Overlay AS Number - Range: `1`-`4294967295`
+// Overlay AS Number
+//   - Range: `1`-`4294967295`
 func (o SystemOmpFeatureOutput) OverlayAs() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.OverlayAs }).(pulumi.IntPtrOutput)
 }
@@ -1105,7 +1311,9 @@ func (o SystemOmpFeatureOutput) OverlayAsVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.OverlayAsVariable }).(pulumi.StringPtrOutput)
 }
 
-// Number of Paths Advertised per Prefix - Range: `1`-`16` - Default value: `4`
+// Number of Paths Advertised per Prefix
+//   - Range: `1`-`16`
+//   - Default value: `4`
 func (o SystemOmpFeatureOutput) PathsAdvertisedPerPrefix() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.IntPtrOutput { return v.PathsAdvertisedPerPrefix }).(pulumi.IntPtrOutput)
 }
@@ -1115,7 +1323,8 @@ func (o SystemOmpFeatureOutput) PathsAdvertisedPerPrefixVariable() pulumi.String
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.PathsAdvertisedPerPrefixVariable }).(pulumi.StringPtrOutput)
 }
 
-// Shutdown - Default value: `false`
+// Shutdown
+//   - Default value: `false`
 func (o SystemOmpFeatureOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -1135,7 +1344,8 @@ func (o SystemOmpFeatureOutput) SiteTypesVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.SiteTypesVariable }).(pulumi.StringPtrOutput)
 }
 
-// Transport Gateway Path Behavior - Choices: `prefer`, `ecmp-with-direct-path`
+// Transport Gateway Path Behavior
+//   - Choices: `prefer`, `ecmp-with-direct-path`
 func (o SystemOmpFeatureOutput) TransportGateway() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SystemOmpFeature) pulumi.StringPtrOutput { return v.TransportGateway }).(pulumi.StringPtrOutput)
 }

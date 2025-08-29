@@ -61,45 +61,49 @@ namespace Pulumi.Sdwan
         public Output<int?> AppProbeClassVersion { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        /// `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        /// `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Output("fallbackBestTunnelCriteria")]
         public Output<string?> FallbackBestTunnelCriteria { get; private set; } = null!;
 
         /// <summary>
-        /// Jitter variance in ms - Range: `1`-`1000`
+        /// Jitter variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("fallbackBestTunnelJitter")]
         public Output<int?> FallbackBestTunnelJitter { get; private set; } = null!;
 
         /// <summary>
-        /// Latency variance in ms - Range: `1`-`1000`
+        /// Latency variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("fallbackBestTunnelLatency")]
         public Output<int?> FallbackBestTunnelLatency { get; private set; } = null!;
 
         /// <summary>
-        /// Loss variance in percent - Range: `1`-`100`
+        /// Loss variance in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Output("fallbackBestTunnelLoss")]
         public Output<int?> FallbackBestTunnelLoss { get; private set; } = null!;
 
         /// <summary>
-        /// Jitter in ms - Range: `1`-`1000`
+        /// Jitter in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("jitter")]
         public Output<int?> Jitter { get; private set; } = null!;
 
         /// <summary>
-        /// Latency in ms - Range: `1`-`1000`
+        /// Latency in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Output("latency")]
         public Output<int?> Latency { get; private set; } = null!;
 
         /// <summary>
-        /// Loss in percent - Range: `1`-`100`
+        /// Loss in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Output("loss")]
         public Output<int?> Loss { get; private set; } = null!;
@@ -175,45 +179,49 @@ namespace Pulumi.Sdwan
         public Input<int>? AppProbeClassVersion { get; set; }
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        /// `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        /// `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Input("fallbackBestTunnelCriteria")]
         public Input<string>? FallbackBestTunnelCriteria { get; set; }
 
         /// <summary>
-        /// Jitter variance in ms - Range: `1`-`1000`
+        /// Jitter variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("fallbackBestTunnelJitter")]
         public Input<int>? FallbackBestTunnelJitter { get; set; }
 
         /// <summary>
-        /// Latency variance in ms - Range: `1`-`1000`
+        /// Latency variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("fallbackBestTunnelLatency")]
         public Input<int>? FallbackBestTunnelLatency { get; set; }
 
         /// <summary>
-        /// Loss variance in percent - Range: `1`-`100`
+        /// Loss variance in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Input("fallbackBestTunnelLoss")]
         public Input<int>? FallbackBestTunnelLoss { get; set; }
 
         /// <summary>
-        /// Jitter in ms - Range: `1`-`1000`
+        /// Jitter in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("jitter")]
         public Input<int>? Jitter { get; set; }
 
         /// <summary>
-        /// Latency in ms - Range: `1`-`1000`
+        /// Latency in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("latency")]
         public Input<int>? Latency { get; set; }
 
         /// <summary>
-        /// Loss in percent - Range: `1`-`100`
+        /// Loss in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Input("loss")]
         public Input<int>? Loss { get; set; }
@@ -245,45 +253,49 @@ namespace Pulumi.Sdwan
         public Input<int>? AppProbeClassVersion { get; set; }
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`,
-        /// `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`,
-        /// `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Input("fallbackBestTunnelCriteria")]
         public Input<string>? FallbackBestTunnelCriteria { get; set; }
 
         /// <summary>
-        /// Jitter variance in ms - Range: `1`-`1000`
+        /// Jitter variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("fallbackBestTunnelJitter")]
         public Input<int>? FallbackBestTunnelJitter { get; set; }
 
         /// <summary>
-        /// Latency variance in ms - Range: `1`-`1000`
+        /// Latency variance in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("fallbackBestTunnelLatency")]
         public Input<int>? FallbackBestTunnelLatency { get; set; }
 
         /// <summary>
-        /// Loss variance in percent - Range: `1`-`100`
+        /// Loss variance in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Input("fallbackBestTunnelLoss")]
         public Input<int>? FallbackBestTunnelLoss { get; set; }
 
         /// <summary>
-        /// Jitter in ms - Range: `1`-`1000`
+        /// Jitter in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("jitter")]
         public Input<int>? Jitter { get; set; }
 
         /// <summary>
-        /// Latency in ms - Range: `1`-`1000`
+        /// Latency in ms
+        ///   - Range: `1`-`1000`
         /// </summary>
         [Input("latency")]
         public Input<int>? Latency { get; set; }
 
         /// <summary>
-        /// Loss in percent - Range: `1`-`100`
+        /// Loss in percent
+        ///   - Range: `1`-`100`
         /// </summary>
         [Input("loss")]
         public Input<int>? Loss { get; set; }

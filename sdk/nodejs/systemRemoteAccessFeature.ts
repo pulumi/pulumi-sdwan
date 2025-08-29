@@ -78,176 +78,186 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
     /**
      * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly aaaDeriveNameFromPeerDomain!: pulumi.Output<string | undefined>;
+    declare public readonly aaaDeriveNameFromPeerDomain: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly aaaDeriveNameFromPeerDomainVariable!: pulumi.Output<string | undefined>;
+    declare public readonly aaaDeriveNameFromPeerDomainVariable: pulumi.Output<string | undefined>;
     /**
      * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly aaaDeriveNameFromPeerIdentity!: pulumi.Output<string | undefined>;
+    declare public readonly aaaDeriveNameFromPeerIdentity: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly aaaDeriveNameFromPeerIdentityVariable!: pulumi.Output<string | undefined>;
+    declare public readonly aaaDeriveNameFromPeerIdentityVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable Accounting - Default value: `true`
+     * Enable Accounting
+     *   - Default value: `true`
      */
-    public readonly aaaEnableAccounting!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name
-     */
-    public readonly aaaEnableAccountingVariable!: pulumi.Output<string | undefined>;
-    public readonly aaaSpecifyNamePolicyName!: pulumi.Output<string | undefined>;
+    declare public readonly aaaEnableAccounting: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly aaaSpecifyNamePolicyNameVariable!: pulumi.Output<string | undefined>;
-    public readonly aaaSpecifyNamePolicyPassword!: pulumi.Output<string | undefined>;
+    declare public readonly aaaEnableAccountingVariable: pulumi.Output<string | undefined>;
+    declare public readonly aaaSpecifyNamePolicyName: pulumi.Output<string | undefined>;
     /**
      * Variable name
      */
-    public readonly aaaSpecifyNamePolicyPasswordVariable!: pulumi.Output<string | undefined>;
+    declare public readonly aaaSpecifyNamePolicyNameVariable: pulumi.Output<string | undefined>;
+    declare public readonly aaaSpecifyNamePolicyPassword: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
+     * Variable name
      */
-    public readonly anyConnectEapAuthenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly aaaSpecifyNamePolicyPasswordVariable: pulumi.Output<string | undefined>;
     /**
-     * Enabled SSL VPN - Default value: `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `user`, `device`
      */
-    public readonly connectionTypeSsl!: pulumi.Output<boolean | undefined>;
+    declare public readonly anyConnectEapAuthenticationType: pulumi.Output<string | undefined>;
+    /**
+     * Enabled SSL VPN
+     *   - Default value: `false`
+     */
+    declare public readonly connectionTypeSsl: pulumi.Output<boolean | undefined>;
     /**
      * The description of the Feature
      */
-    public readonly description!: pulumi.Output<string | undefined>;
+    declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * - Default value: `false`
      */
-    public readonly enableCertificateListCheck!: pulumi.Output<boolean | undefined>;
+    declare public readonly enableCertificateListCheck: pulumi.Output<boolean | undefined>;
     /**
      * Variable name
      */
-    public readonly enableCertificateListCheckVariable!: pulumi.Output<string | undefined>;
+    declare public readonly enableCertificateListCheckVariable: pulumi.Output<string | undefined>;
     /**
      * Feature Profile ID
      */
-    public readonly featureProfileId!: pulumi.Output<string>;
+    declare public readonly featureProfileId: pulumi.Output<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
-     * value: `100`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `10`-`1000`
+     *   - Default value: `100`
      */
-    public readonly ikev2AntiDosThreshold!: pulumi.Output<number | undefined>;
-    /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
-     */
-    public readonly ikev2AntiDosThresholdVariable!: pulumi.Output<string | undefined>;
-    /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4
-     * ADDRESS`, `IPv6 ADDRESS`
-     */
-    public readonly ikev2LocalIkeIdentityType!: pulumi.Output<string | undefined>;
+    declare public readonly ikev2AntiDosThreshold: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ikev2LocalIkeIdentityTypeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikev2AntiDosThresholdVariable: pulumi.Output<string | undefined>;
+    /**
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
+     */
+    declare public readonly ikev2LocalIkeIdentityType: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     */
+    declare public readonly ikev2LocalIkeIdentityTypeVariable: pulumi.Output<string | undefined>;
     /**
      * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ikev2LocalIkeIdentityValue!: pulumi.Output<string | undefined>;
+    declare public readonly ikev2LocalIkeIdentityValue: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ikev2LocalIkeIdentityValueVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikev2LocalIkeIdentityValueVariable: pulumi.Output<string | undefined>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `86400`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `86400`
      */
-    public readonly ikev2SecurityAssociationLifetime!: pulumi.Output<number | undefined>;
+    declare public readonly ikev2SecurityAssociationLifetime: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ikev2SecurityAssociationLifetimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ikev2SecurityAssociationLifetimeVariable: pulumi.Output<string | undefined>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true` - Default value:
-     * `64`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     *   - Default value: `64`
      */
-    public readonly ipsecAntiReplayWindowSize!: pulumi.Output<number | undefined>;
+    declare public readonly ipsecAntiReplayWindowSize: pulumi.Output<number | undefined>;
     /**
      * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      */
-    public readonly ipsecAntiReplayWindowSizeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecAntiReplayWindowSizeVariable: pulumi.Output<string | undefined>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value: `true`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `true`
      */
-    public readonly ipsecEnableAntiReplay!: pulumi.Output<boolean | undefined>;
-    /**
-     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
-     */
-    public readonly ipsecEnableAntiReplayVariable!: pulumi.Output<string | undefined>;
-    /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value:
-     * `false`
-     */
-    public readonly ipsecEnablePerfectFowardSecrecy!: pulumi.Output<boolean | undefined>;
+    declare public readonly ipsecEnableAntiReplay: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ipsecEnablePerfectFowardSecrecyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecEnableAntiReplayVariable: pulumi.Output<string | undefined>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `3600`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `false`
      */
-    public readonly ipsecSecurityAssociationLifetime!: pulumi.Output<number | undefined>;
+    declare public readonly ipsecEnablePerfectFowardSecrecy: pulumi.Output<boolean | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly ipsecSecurityAssociationLifetimeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipsecEnablePerfectFowardSecrecyVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv4 Pool Size - Default value: `1000`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `3600`
      */
-    public readonly ipv4PoolSize!: pulumi.Output<number | undefined>;
+    declare public readonly ipsecSecurityAssociationLifetime: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     */
+    declare public readonly ipsecSecurityAssociationLifetimeVariable: pulumi.Output<string | undefined>;
+    /**
+     * IPv4 Pool Size
+     *   - Default value: `1000`
+     */
+    declare public readonly ipv4PoolSize: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv4PoolSizeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv4PoolSizeVariable: pulumi.Output<string | undefined>;
     /**
-     * IPv6 Pool Size - Default value: `1024`
+     * IPv6 Pool Size
+     *   - Default value: `1024`
      */
-    public readonly ipv6PoolSize!: pulumi.Output<number | undefined>;
+    declare public readonly ipv6PoolSize: pulumi.Output<number | undefined>;
     /**
      * Variable name
      */
-    public readonly ipv6PoolSizeVariable!: pulumi.Output<string | undefined>;
+    declare public readonly ipv6PoolSizeVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
      */
-    public readonly pskAuthenticationPreSharedKey!: pulumi.Output<string | undefined>;
+    declare public readonly pskAuthenticationPreSharedKey: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      */
-    public readonly pskAuthenticationPreSharedKeyVariable!: pulumi.Output<string | undefined>;
+    declare public readonly pskAuthenticationPreSharedKeyVariable: pulumi.Output<string | undefined>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `aaa`, `group`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `aaa`, `group`
      */
-    public readonly pskAuthenticationType!: pulumi.Output<string | undefined>;
+    declare public readonly pskAuthenticationType: pulumi.Output<string | undefined>;
     /**
      * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      */
-    public readonly pskAuthenticationTypeVariable!: pulumi.Output<string | undefined>;
-    public readonly radiusGroupName!: pulumi.Output<string>;
+    declare public readonly pskAuthenticationTypeVariable: pulumi.Output<string | undefined>;
+    declare public readonly radiusGroupName: pulumi.Output<string>;
     /**
      * Variable name
      */
-    public readonly radiusGroupNameVariable!: pulumi.Output<string | undefined>;
+    declare public readonly radiusGroupNameVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
-    public /*out*/ readonly version!: pulumi.Output<number>;
+    declare public /*out*/ readonly version: pulumi.Output<number>;
 
     /**
      * Create a SystemRemoteAccessFeature resource with the given unique name, arguments, and options.
@@ -262,101 +272,101 @@ export class SystemRemoteAccessFeature extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SystemRemoteAccessFeatureState | undefined;
-            resourceInputs["aaaDeriveNameFromPeerDomain"] = state ? state.aaaDeriveNameFromPeerDomain : undefined;
-            resourceInputs["aaaDeriveNameFromPeerDomainVariable"] = state ? state.aaaDeriveNameFromPeerDomainVariable : undefined;
-            resourceInputs["aaaDeriveNameFromPeerIdentity"] = state ? state.aaaDeriveNameFromPeerIdentity : undefined;
-            resourceInputs["aaaDeriveNameFromPeerIdentityVariable"] = state ? state.aaaDeriveNameFromPeerIdentityVariable : undefined;
-            resourceInputs["aaaEnableAccounting"] = state ? state.aaaEnableAccounting : undefined;
-            resourceInputs["aaaEnableAccountingVariable"] = state ? state.aaaEnableAccountingVariable : undefined;
-            resourceInputs["aaaSpecifyNamePolicyName"] = state ? state.aaaSpecifyNamePolicyName : undefined;
-            resourceInputs["aaaSpecifyNamePolicyNameVariable"] = state ? state.aaaSpecifyNamePolicyNameVariable : undefined;
-            resourceInputs["aaaSpecifyNamePolicyPassword"] = state ? state.aaaSpecifyNamePolicyPassword : undefined;
-            resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = state ? state.aaaSpecifyNamePolicyPasswordVariable : undefined;
-            resourceInputs["anyConnectEapAuthenticationType"] = state ? state.anyConnectEapAuthenticationType : undefined;
-            resourceInputs["connectionTypeSsl"] = state ? state.connectionTypeSsl : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enableCertificateListCheck"] = state ? state.enableCertificateListCheck : undefined;
-            resourceInputs["enableCertificateListCheckVariable"] = state ? state.enableCertificateListCheckVariable : undefined;
-            resourceInputs["featureProfileId"] = state ? state.featureProfileId : undefined;
-            resourceInputs["ikev2AntiDosThreshold"] = state ? state.ikev2AntiDosThreshold : undefined;
-            resourceInputs["ikev2AntiDosThresholdVariable"] = state ? state.ikev2AntiDosThresholdVariable : undefined;
-            resourceInputs["ikev2LocalIkeIdentityType"] = state ? state.ikev2LocalIkeIdentityType : undefined;
-            resourceInputs["ikev2LocalIkeIdentityTypeVariable"] = state ? state.ikev2LocalIkeIdentityTypeVariable : undefined;
-            resourceInputs["ikev2LocalIkeIdentityValue"] = state ? state.ikev2LocalIkeIdentityValue : undefined;
-            resourceInputs["ikev2LocalIkeIdentityValueVariable"] = state ? state.ikev2LocalIkeIdentityValueVariable : undefined;
-            resourceInputs["ikev2SecurityAssociationLifetime"] = state ? state.ikev2SecurityAssociationLifetime : undefined;
-            resourceInputs["ikev2SecurityAssociationLifetimeVariable"] = state ? state.ikev2SecurityAssociationLifetimeVariable : undefined;
-            resourceInputs["ipsecAntiReplayWindowSize"] = state ? state.ipsecAntiReplayWindowSize : undefined;
-            resourceInputs["ipsecAntiReplayWindowSizeVariable"] = state ? state.ipsecAntiReplayWindowSizeVariable : undefined;
-            resourceInputs["ipsecEnableAntiReplay"] = state ? state.ipsecEnableAntiReplay : undefined;
-            resourceInputs["ipsecEnableAntiReplayVariable"] = state ? state.ipsecEnableAntiReplayVariable : undefined;
-            resourceInputs["ipsecEnablePerfectFowardSecrecy"] = state ? state.ipsecEnablePerfectFowardSecrecy : undefined;
-            resourceInputs["ipsecEnablePerfectFowardSecrecyVariable"] = state ? state.ipsecEnablePerfectFowardSecrecyVariable : undefined;
-            resourceInputs["ipsecSecurityAssociationLifetime"] = state ? state.ipsecSecurityAssociationLifetime : undefined;
-            resourceInputs["ipsecSecurityAssociationLifetimeVariable"] = state ? state.ipsecSecurityAssociationLifetimeVariable : undefined;
-            resourceInputs["ipv4PoolSize"] = state ? state.ipv4PoolSize : undefined;
-            resourceInputs["ipv4PoolSizeVariable"] = state ? state.ipv4PoolSizeVariable : undefined;
-            resourceInputs["ipv6PoolSize"] = state ? state.ipv6PoolSize : undefined;
-            resourceInputs["ipv6PoolSizeVariable"] = state ? state.ipv6PoolSizeVariable : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["pskAuthenticationPreSharedKey"] = state ? state.pskAuthenticationPreSharedKey : undefined;
-            resourceInputs["pskAuthenticationPreSharedKeyVariable"] = state ? state.pskAuthenticationPreSharedKeyVariable : undefined;
-            resourceInputs["pskAuthenticationType"] = state ? state.pskAuthenticationType : undefined;
-            resourceInputs["pskAuthenticationTypeVariable"] = state ? state.pskAuthenticationTypeVariable : undefined;
-            resourceInputs["radiusGroupName"] = state ? state.radiusGroupName : undefined;
-            resourceInputs["radiusGroupNameVariable"] = state ? state.radiusGroupNameVariable : undefined;
-            resourceInputs["version"] = state ? state.version : undefined;
+            resourceInputs["aaaDeriveNameFromPeerDomain"] = state?.aaaDeriveNameFromPeerDomain;
+            resourceInputs["aaaDeriveNameFromPeerDomainVariable"] = state?.aaaDeriveNameFromPeerDomainVariable;
+            resourceInputs["aaaDeriveNameFromPeerIdentity"] = state?.aaaDeriveNameFromPeerIdentity;
+            resourceInputs["aaaDeriveNameFromPeerIdentityVariable"] = state?.aaaDeriveNameFromPeerIdentityVariable;
+            resourceInputs["aaaEnableAccounting"] = state?.aaaEnableAccounting;
+            resourceInputs["aaaEnableAccountingVariable"] = state?.aaaEnableAccountingVariable;
+            resourceInputs["aaaSpecifyNamePolicyName"] = state?.aaaSpecifyNamePolicyName;
+            resourceInputs["aaaSpecifyNamePolicyNameVariable"] = state?.aaaSpecifyNamePolicyNameVariable;
+            resourceInputs["aaaSpecifyNamePolicyPassword"] = state?.aaaSpecifyNamePolicyPassword;
+            resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = state?.aaaSpecifyNamePolicyPasswordVariable;
+            resourceInputs["anyConnectEapAuthenticationType"] = state?.anyConnectEapAuthenticationType;
+            resourceInputs["connectionTypeSsl"] = state?.connectionTypeSsl;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enableCertificateListCheck"] = state?.enableCertificateListCheck;
+            resourceInputs["enableCertificateListCheckVariable"] = state?.enableCertificateListCheckVariable;
+            resourceInputs["featureProfileId"] = state?.featureProfileId;
+            resourceInputs["ikev2AntiDosThreshold"] = state?.ikev2AntiDosThreshold;
+            resourceInputs["ikev2AntiDosThresholdVariable"] = state?.ikev2AntiDosThresholdVariable;
+            resourceInputs["ikev2LocalIkeIdentityType"] = state?.ikev2LocalIkeIdentityType;
+            resourceInputs["ikev2LocalIkeIdentityTypeVariable"] = state?.ikev2LocalIkeIdentityTypeVariable;
+            resourceInputs["ikev2LocalIkeIdentityValue"] = state?.ikev2LocalIkeIdentityValue;
+            resourceInputs["ikev2LocalIkeIdentityValueVariable"] = state?.ikev2LocalIkeIdentityValueVariable;
+            resourceInputs["ikev2SecurityAssociationLifetime"] = state?.ikev2SecurityAssociationLifetime;
+            resourceInputs["ikev2SecurityAssociationLifetimeVariable"] = state?.ikev2SecurityAssociationLifetimeVariable;
+            resourceInputs["ipsecAntiReplayWindowSize"] = state?.ipsecAntiReplayWindowSize;
+            resourceInputs["ipsecAntiReplayWindowSizeVariable"] = state?.ipsecAntiReplayWindowSizeVariable;
+            resourceInputs["ipsecEnableAntiReplay"] = state?.ipsecEnableAntiReplay;
+            resourceInputs["ipsecEnableAntiReplayVariable"] = state?.ipsecEnableAntiReplayVariable;
+            resourceInputs["ipsecEnablePerfectFowardSecrecy"] = state?.ipsecEnablePerfectFowardSecrecy;
+            resourceInputs["ipsecEnablePerfectFowardSecrecyVariable"] = state?.ipsecEnablePerfectFowardSecrecyVariable;
+            resourceInputs["ipsecSecurityAssociationLifetime"] = state?.ipsecSecurityAssociationLifetime;
+            resourceInputs["ipsecSecurityAssociationLifetimeVariable"] = state?.ipsecSecurityAssociationLifetimeVariable;
+            resourceInputs["ipv4PoolSize"] = state?.ipv4PoolSize;
+            resourceInputs["ipv4PoolSizeVariable"] = state?.ipv4PoolSizeVariable;
+            resourceInputs["ipv6PoolSize"] = state?.ipv6PoolSize;
+            resourceInputs["ipv6PoolSizeVariable"] = state?.ipv6PoolSizeVariable;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["pskAuthenticationPreSharedKey"] = state?.pskAuthenticationPreSharedKey;
+            resourceInputs["pskAuthenticationPreSharedKeyVariable"] = state?.pskAuthenticationPreSharedKeyVariable;
+            resourceInputs["pskAuthenticationType"] = state?.pskAuthenticationType;
+            resourceInputs["pskAuthenticationTypeVariable"] = state?.pskAuthenticationTypeVariable;
+            resourceInputs["radiusGroupName"] = state?.radiusGroupName;
+            resourceInputs["radiusGroupNameVariable"] = state?.radiusGroupNameVariable;
+            resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as SystemRemoteAccessFeatureArgs | undefined;
-            if ((!args || args.featureProfileId === undefined) && !opts.urn) {
+            if (args?.featureProfileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'featureProfileId'");
             }
-            if ((!args || args.radiusGroupName === undefined) && !opts.urn) {
+            if (args?.radiusGroupName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'radiusGroupName'");
             }
-            resourceInputs["aaaDeriveNameFromPeerDomain"] = args ? args.aaaDeriveNameFromPeerDomain : undefined;
-            resourceInputs["aaaDeriveNameFromPeerDomainVariable"] = args ? args.aaaDeriveNameFromPeerDomainVariable : undefined;
-            resourceInputs["aaaDeriveNameFromPeerIdentity"] = args ? args.aaaDeriveNameFromPeerIdentity : undefined;
-            resourceInputs["aaaDeriveNameFromPeerIdentityVariable"] = args ? args.aaaDeriveNameFromPeerIdentityVariable : undefined;
-            resourceInputs["aaaEnableAccounting"] = args ? args.aaaEnableAccounting : undefined;
-            resourceInputs["aaaEnableAccountingVariable"] = args ? args.aaaEnableAccountingVariable : undefined;
-            resourceInputs["aaaSpecifyNamePolicyName"] = args ? args.aaaSpecifyNamePolicyName : undefined;
-            resourceInputs["aaaSpecifyNamePolicyNameVariable"] = args ? args.aaaSpecifyNamePolicyNameVariable : undefined;
-            resourceInputs["aaaSpecifyNamePolicyPassword"] = args ? args.aaaSpecifyNamePolicyPassword : undefined;
-            resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = args ? args.aaaSpecifyNamePolicyPasswordVariable : undefined;
-            resourceInputs["anyConnectEapAuthenticationType"] = args ? args.anyConnectEapAuthenticationType : undefined;
-            resourceInputs["connectionTypeSsl"] = args ? args.connectionTypeSsl : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enableCertificateListCheck"] = args ? args.enableCertificateListCheck : undefined;
-            resourceInputs["enableCertificateListCheckVariable"] = args ? args.enableCertificateListCheckVariable : undefined;
-            resourceInputs["featureProfileId"] = args ? args.featureProfileId : undefined;
-            resourceInputs["ikev2AntiDosThreshold"] = args ? args.ikev2AntiDosThreshold : undefined;
-            resourceInputs["ikev2AntiDosThresholdVariable"] = args ? args.ikev2AntiDosThresholdVariable : undefined;
-            resourceInputs["ikev2LocalIkeIdentityType"] = args ? args.ikev2LocalIkeIdentityType : undefined;
-            resourceInputs["ikev2LocalIkeIdentityTypeVariable"] = args ? args.ikev2LocalIkeIdentityTypeVariable : undefined;
-            resourceInputs["ikev2LocalIkeIdentityValue"] = args ? args.ikev2LocalIkeIdentityValue : undefined;
-            resourceInputs["ikev2LocalIkeIdentityValueVariable"] = args ? args.ikev2LocalIkeIdentityValueVariable : undefined;
-            resourceInputs["ikev2SecurityAssociationLifetime"] = args ? args.ikev2SecurityAssociationLifetime : undefined;
-            resourceInputs["ikev2SecurityAssociationLifetimeVariable"] = args ? args.ikev2SecurityAssociationLifetimeVariable : undefined;
-            resourceInputs["ipsecAntiReplayWindowSize"] = args ? args.ipsecAntiReplayWindowSize : undefined;
-            resourceInputs["ipsecAntiReplayWindowSizeVariable"] = args ? args.ipsecAntiReplayWindowSizeVariable : undefined;
-            resourceInputs["ipsecEnableAntiReplay"] = args ? args.ipsecEnableAntiReplay : undefined;
-            resourceInputs["ipsecEnableAntiReplayVariable"] = args ? args.ipsecEnableAntiReplayVariable : undefined;
-            resourceInputs["ipsecEnablePerfectFowardSecrecy"] = args ? args.ipsecEnablePerfectFowardSecrecy : undefined;
-            resourceInputs["ipsecEnablePerfectFowardSecrecyVariable"] = args ? args.ipsecEnablePerfectFowardSecrecyVariable : undefined;
-            resourceInputs["ipsecSecurityAssociationLifetime"] = args ? args.ipsecSecurityAssociationLifetime : undefined;
-            resourceInputs["ipsecSecurityAssociationLifetimeVariable"] = args ? args.ipsecSecurityAssociationLifetimeVariable : undefined;
-            resourceInputs["ipv4PoolSize"] = args ? args.ipv4PoolSize : undefined;
-            resourceInputs["ipv4PoolSizeVariable"] = args ? args.ipv4PoolSizeVariable : undefined;
-            resourceInputs["ipv6PoolSize"] = args ? args.ipv6PoolSize : undefined;
-            resourceInputs["ipv6PoolSizeVariable"] = args ? args.ipv6PoolSizeVariable : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["pskAuthenticationPreSharedKey"] = args ? args.pskAuthenticationPreSharedKey : undefined;
-            resourceInputs["pskAuthenticationPreSharedKeyVariable"] = args ? args.pskAuthenticationPreSharedKeyVariable : undefined;
-            resourceInputs["pskAuthenticationType"] = args ? args.pskAuthenticationType : undefined;
-            resourceInputs["pskAuthenticationTypeVariable"] = args ? args.pskAuthenticationTypeVariable : undefined;
-            resourceInputs["radiusGroupName"] = args ? args.radiusGroupName : undefined;
-            resourceInputs["radiusGroupNameVariable"] = args ? args.radiusGroupNameVariable : undefined;
+            resourceInputs["aaaDeriveNameFromPeerDomain"] = args?.aaaDeriveNameFromPeerDomain;
+            resourceInputs["aaaDeriveNameFromPeerDomainVariable"] = args?.aaaDeriveNameFromPeerDomainVariable;
+            resourceInputs["aaaDeriveNameFromPeerIdentity"] = args?.aaaDeriveNameFromPeerIdentity;
+            resourceInputs["aaaDeriveNameFromPeerIdentityVariable"] = args?.aaaDeriveNameFromPeerIdentityVariable;
+            resourceInputs["aaaEnableAccounting"] = args?.aaaEnableAccounting;
+            resourceInputs["aaaEnableAccountingVariable"] = args?.aaaEnableAccountingVariable;
+            resourceInputs["aaaSpecifyNamePolicyName"] = args?.aaaSpecifyNamePolicyName;
+            resourceInputs["aaaSpecifyNamePolicyNameVariable"] = args?.aaaSpecifyNamePolicyNameVariable;
+            resourceInputs["aaaSpecifyNamePolicyPassword"] = args?.aaaSpecifyNamePolicyPassword;
+            resourceInputs["aaaSpecifyNamePolicyPasswordVariable"] = args?.aaaSpecifyNamePolicyPasswordVariable;
+            resourceInputs["anyConnectEapAuthenticationType"] = args?.anyConnectEapAuthenticationType;
+            resourceInputs["connectionTypeSsl"] = args?.connectionTypeSsl;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enableCertificateListCheck"] = args?.enableCertificateListCheck;
+            resourceInputs["enableCertificateListCheckVariable"] = args?.enableCertificateListCheckVariable;
+            resourceInputs["featureProfileId"] = args?.featureProfileId;
+            resourceInputs["ikev2AntiDosThreshold"] = args?.ikev2AntiDosThreshold;
+            resourceInputs["ikev2AntiDosThresholdVariable"] = args?.ikev2AntiDosThresholdVariable;
+            resourceInputs["ikev2LocalIkeIdentityType"] = args?.ikev2LocalIkeIdentityType;
+            resourceInputs["ikev2LocalIkeIdentityTypeVariable"] = args?.ikev2LocalIkeIdentityTypeVariable;
+            resourceInputs["ikev2LocalIkeIdentityValue"] = args?.ikev2LocalIkeIdentityValue;
+            resourceInputs["ikev2LocalIkeIdentityValueVariable"] = args?.ikev2LocalIkeIdentityValueVariable;
+            resourceInputs["ikev2SecurityAssociationLifetime"] = args?.ikev2SecurityAssociationLifetime;
+            resourceInputs["ikev2SecurityAssociationLifetimeVariable"] = args?.ikev2SecurityAssociationLifetimeVariable;
+            resourceInputs["ipsecAntiReplayWindowSize"] = args?.ipsecAntiReplayWindowSize;
+            resourceInputs["ipsecAntiReplayWindowSizeVariable"] = args?.ipsecAntiReplayWindowSizeVariable;
+            resourceInputs["ipsecEnableAntiReplay"] = args?.ipsecEnableAntiReplay;
+            resourceInputs["ipsecEnableAntiReplayVariable"] = args?.ipsecEnableAntiReplayVariable;
+            resourceInputs["ipsecEnablePerfectFowardSecrecy"] = args?.ipsecEnablePerfectFowardSecrecy;
+            resourceInputs["ipsecEnablePerfectFowardSecrecyVariable"] = args?.ipsecEnablePerfectFowardSecrecyVariable;
+            resourceInputs["ipsecSecurityAssociationLifetime"] = args?.ipsecSecurityAssociationLifetime;
+            resourceInputs["ipsecSecurityAssociationLifetimeVariable"] = args?.ipsecSecurityAssociationLifetimeVariable;
+            resourceInputs["ipv4PoolSize"] = args?.ipv4PoolSize;
+            resourceInputs["ipv4PoolSizeVariable"] = args?.ipv4PoolSizeVariable;
+            resourceInputs["ipv6PoolSize"] = args?.ipv6PoolSize;
+            resourceInputs["ipv6PoolSizeVariable"] = args?.ipv6PoolSizeVariable;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["pskAuthenticationPreSharedKey"] = args?.pskAuthenticationPreSharedKey;
+            resourceInputs["pskAuthenticationPreSharedKeyVariable"] = args?.pskAuthenticationPreSharedKeyVariable;
+            resourceInputs["pskAuthenticationType"] = args?.pskAuthenticationType;
+            resourceInputs["pskAuthenticationTypeVariable"] = args?.pskAuthenticationTypeVariable;
+            resourceInputs["radiusGroupName"] = args?.radiusGroupName;
+            resourceInputs["radiusGroupNameVariable"] = args?.radiusGroupNameVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -385,7 +395,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
-     * Enable Accounting - Default value: `true`
+     * Enable Accounting
+     *   - Default value: `true`
      */
     aaaEnableAccounting?: pulumi.Input<boolean>;
     /**
@@ -403,11 +414,13 @@ export interface SystemRemoteAccessFeatureState {
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `user`, `device`
      */
     anyConnectEapAuthenticationType?: pulumi.Input<string>;
     /**
-     * Enabled SSL VPN - Default value: `false`
+     * Enabled SSL VPN
+     *   - Default value: `false`
      */
     connectionTypeSsl?: pulumi.Input<boolean>;
     /**
@@ -427,8 +440,9 @@ export interface SystemRemoteAccessFeatureState {
      */
     featureProfileId?: pulumi.Input<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
-     * value: `100`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `10`-`1000`
+     *   - Default value: `100`
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
@@ -436,8 +450,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4
-     * ADDRESS`, `IPv6 ADDRESS`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
@@ -453,8 +467,9 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `86400`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `86400`
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
@@ -462,8 +477,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true` - Default value:
-     * `64`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     *   - Default value: `64`
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
@@ -471,7 +486,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value: `true`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `true`
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
@@ -479,8 +495,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value:
-     * `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `false`
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
@@ -488,8 +504,9 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `3600`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `3600`
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
@@ -497,7 +514,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Pool Size - Default value: `1000`
+     * IPv4 Pool Size
+     *   - Default value: `1000`
      */
     ipv4PoolSize?: pulumi.Input<number>;
     /**
@@ -505,7 +523,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     ipv4PoolSizeVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Pool Size - Default value: `1024`
+     * IPv6 Pool Size
+     *   - Default value: `1024`
      */
     ipv6PoolSize?: pulumi.Input<number>;
     /**
@@ -525,7 +544,8 @@ export interface SystemRemoteAccessFeatureState {
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `aaa`, `group`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `aaa`, `group`
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**
@@ -564,7 +584,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     aaaDeriveNameFromPeerIdentityVariable?: pulumi.Input<string>;
     /**
-     * Enable Accounting - Default value: `true`
+     * Enable Accounting
+     *   - Default value: `true`
      */
     aaaEnableAccounting?: pulumi.Input<boolean>;
     /**
@@ -582,11 +603,13 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     aaaSpecifyNamePolicyPasswordVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `user`, `device`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `user`, `device`
      */
     anyConnectEapAuthenticationType?: pulumi.Input<string>;
     /**
-     * Enabled SSL VPN - Default value: `false`
+     * Enabled SSL VPN
+     *   - Default value: `false`
      */
     connectionTypeSsl?: pulumi.Input<boolean>;
     /**
@@ -606,8 +629,9 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     featureProfileId: pulumi.Input<string>;
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range: `10`-`1000` - Default
-     * value: `100`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `10`-`1000`
+     *   - Default value: `100`
      */
     ikev2AntiDosThreshold?: pulumi.Input<number>;
     /**
@@ -615,8 +639,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2AntiDosThresholdVariable?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4
-     * ADDRESS`, `IPv6 ADDRESS`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      */
     ikev2LocalIkeIdentityType?: pulumi.Input<string>;
     /**
@@ -632,8 +656,9 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2LocalIkeIdentityValueVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `86400`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `86400`
      */
     ikev2SecurityAssociationLifetime?: pulumi.Input<number>;
     /**
@@ -641,8 +666,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ikev2SecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true` - Default value:
-     * `64`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
+     *   - Default value: `64`
      */
     ipsecAntiReplayWindowSize?: pulumi.Input<number>;
     /**
@@ -650,7 +675,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecAntiReplayWindowSizeVariable?: pulumi.Input<string>;
     /**
-     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value: `true`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `true`
      */
     ipsecEnableAntiReplay?: pulumi.Input<boolean>;
     /**
@@ -658,8 +684,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecEnableAntiReplayVariable?: pulumi.Input<string>;
     /**
-     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false` - Default value:
-     * `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Default value: `false`
      */
     ipsecEnablePerfectFowardSecrecy?: pulumi.Input<boolean>;
     /**
@@ -667,8 +693,9 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecEnablePerfectFowardSecrecyVariable?: pulumi.Input<string>;
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false` - Range:
-     * `3600`-`86400` - Default value: `3600`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Range: `3600`-`86400`
+     *   - Default value: `3600`
      */
     ipsecSecurityAssociationLifetime?: pulumi.Input<number>;
     /**
@@ -676,7 +703,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipsecSecurityAssociationLifetimeVariable?: pulumi.Input<string>;
     /**
-     * IPv4 Pool Size - Default value: `1000`
+     * IPv4 Pool Size
+     *   - Default value: `1000`
      */
     ipv4PoolSize?: pulumi.Input<number>;
     /**
@@ -684,7 +712,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     ipv4PoolSizeVariable?: pulumi.Input<string>;
     /**
-     * IPv6 Pool Size - Default value: `1024`
+     * IPv6 Pool Size
+     *   - Default value: `1024`
      */
     ipv6PoolSize?: pulumi.Input<number>;
     /**
@@ -704,7 +733,8 @@ export interface SystemRemoteAccessFeatureArgs {
      */
     pskAuthenticationPreSharedKeyVariable?: pulumi.Input<string>;
     /**
-     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false` - Choices: `aaa`, `group`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
+     *   - Choices: `aaa`, `group`
      */
     pskAuthenticationType?: pulumi.Input<string>;
     /**

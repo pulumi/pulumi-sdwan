@@ -18,14 +18,16 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     public static final ServiceLanVpnInterfaceIpsecFeatureState Empty = new ServiceLanVpnInterfaceIpsecFeatureState();
 
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     @Import(name="applicationTunnelType")
     private @Nullable Output<String> applicationTunnelType;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
      * 
      */
     public Optional<Output<String>> applicationTunnelType() {
@@ -48,14 +50,16 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Import(name="clearDontFragment")
     private @Nullable Output<Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> clearDontFragment() {
@@ -93,14 +97,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     @Import(name="dpdInterval")
     private @Nullable Output<Integer> dpdInterval;
 
     /**
-     * @return IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+     * @return IKE keepalive interval (seconds)
+     *   - Range: `10`-`3600`
+     *   - Default value: `10`
      * 
      */
     public Optional<Output<Integer>> dpdInterval() {
@@ -123,14 +131,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     @Import(name="dpdRetries")
     private @Nullable Output<Integer> dpdRetries;
 
     /**
-     * @return IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+     * @return IKE keepalive retries
+     *   - Range: `2`-`60`
+     *   - Default value: `3`
      * 
      */
     public Optional<Output<Integer>> dpdRetries() {
@@ -168,16 +180,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     @Import(name="ikeCiphersuite")
     private @Nullable Output<String> ikeCiphersuite;
 
     /**
-     * @return IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-     * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+     * @return IKE identity the IKE preshared secret belongs to
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+     *   - Default value: `aes256-cbc-sha1`
      * 
      */
     public Optional<Output<String>> ikeCiphersuite() {
@@ -200,14 +214,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     @Import(name="ikeDiffieHellmanGroup")
     private @Nullable Output<String> ikeDiffieHellmanGroup;
 
     /**
-     * @return IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+     * @return IKE Diffie Hellman Groups
+     *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+     *   - Default value: `16`
      * 
      */
     public Optional<Output<String>> ikeDiffieHellmanGroup() {
@@ -290,14 +308,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     @Import(name="ikeIntegrityProtocol")
     private @Nullable Output<String> ikeIntegrityProtocol;
 
     /**
-     * @return IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+     * @return IKE integrity protocol
+     *   - Choices: `main`, `aggressive`
+     *   - Default value: `main`
      * 
      */
     public Optional<Output<String>> ikeIntegrityProtocol() {
@@ -350,14 +372,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     @Import(name="ikeRekeyInterval")
     private @Nullable Output<Integer> ikeRekeyInterval;
 
     /**
-     * @return IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+     * @return IKE rekey interval &lt;60..86400&gt; seconds
+     *   - Range: `60`-`86400`
+     *   - Default value: `14400`
      * 
      */
     public Optional<Output<Integer>> ikeRekeyInterval() {
@@ -380,14 +406,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ikeVersion")
     private @Nullable Output<Integer> ikeVersion;
 
     /**
-     * @return IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+     * @return IKE Version &lt;1..2&gt;
+     *   - Range: `1`-`2`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ikeVersion() {
@@ -455,14 +485,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     @Import(name="ipMtu")
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+     * @return Interface MTU &lt;68..9216&gt;, in bytes
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
      * 
      */
     public Optional<Output<Integer>> ipMtu() {
@@ -485,18 +519,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     @Import(name="ipsecCiphersuite")
     private @Nullable Output<String> ipsecCiphersuite;
 
     /**
-     * @return IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-     * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-     * `aes256-gcm`
+     * @return IPsec(ESP) encryption and integrity protocol
+     *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+     *   - Default value: `aes256-gcm`
      * 
      */
     public Optional<Output<String>> ipsecCiphersuite() {
@@ -519,14 +553,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     @Import(name="ipsecRekeyInterval")
     private @Nullable Output<Integer> ipsecRekeyInterval;
 
     /**
-     * @return IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+     * @return IPsec rekey interval &lt;300..1209600&gt; seconds
+     *   - Range: `120`-`2592000`
+     *   - Default value: `3600`
      * 
      */
     public Optional<Output<Integer>> ipsecRekeyInterval() {
@@ -549,14 +587,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     @Import(name="ipsecReplayWindow")
     private @Nullable Output<Integer> ipsecReplayWindow;
 
     /**
-     * @return Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+     * @return Replay window size 32..8192 (must be a power of 2)
+     *   - Range: `64`-`4096`
+     *   - Default value: `512`
      * 
      */
     public Optional<Output<Integer>> ipsecReplayWindow() {
@@ -601,22 +643,14 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="ipv4SubnetMask")
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMask() {
@@ -654,16 +688,18 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     @Import(name="perfectForwardSecrecy")
     private @Nullable Output<String> perfectForwardSecrecy;
 
     /**
-     * @return IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-     * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+     * @return IPsec perfect forward secrecy settings
+     *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+     *   - Default value: `group-16`
      * 
      */
     public Optional<Output<String>> perfectForwardSecrecy() {
@@ -701,14 +737,16 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Import(name="shutdown")
     private @Nullable Output<Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Optional<Output<Boolean>> shutdown() {
@@ -731,14 +769,16 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Import(name="tcpMss")
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Optional<Output<Integer>> tcpMss() {
@@ -813,22 +853,14 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="tunnelDestinationIpv4SubnetMask")
     private @Nullable Output<String> tunnelDestinationIpv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> tunnelDestinationIpv4SubnetMask() {
@@ -933,22 +965,14 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
     }
 
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     *   `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     *   `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     *   `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     *   `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     @Import(name="tunnelSourceIpv4SubnetMask")
     private @Nullable Output<String> tunnelSourceIpv4SubnetMask;
 
     /**
-     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-     * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-     * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-     * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-     * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * @return - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
     public Optional<Output<String>> tunnelSourceIpv4SubnetMask() {
@@ -1073,7 +1097,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param applicationTunnelType Enable Application Tunnel Type - Choices: `none`, `sig`
+         * @param applicationTunnelType Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
          * 
          * @return builder
          * 
@@ -1084,7 +1109,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param applicationTunnelType Enable Application Tunnel Type - Choices: `none`, `sig`
+         * @param applicationTunnelType Enable Application Tunnel Type
+         *   - Choices: `none`, `sig`
          * 
          * @return builder
          * 
@@ -1115,7 +1141,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1126,7 +1153,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+         * @param clearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -1178,7 +1206,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param dpdInterval IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+         * @param dpdInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -1189,7 +1219,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param dpdInterval IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+         * @param dpdInterval IKE keepalive interval (seconds)
+         *   - Range: `10`-`3600`
+         *   - Default value: `10`
          * 
          * @return builder
          * 
@@ -1220,7 +1252,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param dpdRetries IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+         * @param dpdRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -1231,7 +1265,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param dpdRetries IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+         * @param dpdRetries IKE keepalive retries
+         *   - Range: `2`-`60`
+         *   - Default value: `3`
          * 
          * @return builder
          * 
@@ -1283,8 +1319,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-         * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
          * 
          * @return builder
          * 
@@ -1295,8 +1332,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-         * `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+         * @param ikeCiphersuite IKE identity the IKE preshared secret belongs to
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+         *   - Default value: `aes256-cbc-sha1`
          * 
          * @return builder
          * 
@@ -1327,7 +1365,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeDiffieHellmanGroup IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+         * @param ikeDiffieHellmanGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
          * 
          * @return builder
          * 
@@ -1338,7 +1378,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeDiffieHellmanGroup IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+         * @param ikeDiffieHellmanGroup IKE Diffie Hellman Groups
+         *   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+         *   - Default value: `16`
          * 
          * @return builder
          * 
@@ -1453,7 +1495,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeIntegrityProtocol IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+         * @param ikeIntegrityProtocol IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
          * 
          * @return builder
          * 
@@ -1464,7 +1508,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeIntegrityProtocol IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+         * @param ikeIntegrityProtocol IKE integrity protocol
+         *   - Choices: `main`, `aggressive`
+         *   - Default value: `main`
          * 
          * @return builder
          * 
@@ -1537,7 +1583,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
          * 
          * @return builder
          * 
@@ -1548,7 +1596,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds - Range: `60`-`86400` - Default value: `14400`
+         * @param ikeRekeyInterval IKE rekey interval &lt;60..86400&gt; seconds
+         *   - Range: `60`-`86400`
+         *   - Default value: `14400`
          * 
          * @return builder
          * 
@@ -1579,7 +1629,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeVersion IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1590,7 +1642,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ikeVersion IKE Version &lt;1..2&gt; - Range: `1`-`2` - Default value: `1`
+         * @param ikeVersion IKE Version &lt;1..2&gt;
+         *   - Range: `1`-`2`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -1684,7 +1738,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;68..9216&gt;, in bytes
+         *   - Range: `68`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1695,7 +1751,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipMtu Interface MTU &lt;68..9216&gt;, in bytes - Range: `68`-`9216` - Default value: `1500`
+         * @param ipMtu Interface MTU &lt;68..9216&gt;, in bytes
+         *   - Range: `68`-`9216`
+         *   - Default value: `1500`
          * 
          * @return builder
          * 
@@ -1726,9 +1784,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-         * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-         * `aes256-gcm`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
@@ -1739,9 +1797,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-         * `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-         * `aes256-gcm`
+         * @param ipsecCiphersuite IPsec(ESP) encryption and integrity protocol
+         *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+         *   - Default value: `aes256-gcm`
          * 
          * @return builder
          * 
@@ -1772,7 +1830,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
          * 
          * @return builder
          * 
@@ -1783,7 +1843,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds - Range: `120`-`2592000` - Default value: `3600`
+         * @param ipsecRekeyInterval IPsec rekey interval &lt;300..1209600&gt; seconds
+         *   - Range: `120`-`2592000`
+         *   - Default value: `3600`
          * 
          * @return builder
          * 
@@ -1814,7 +1876,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -1825,7 +1889,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+         * @param ipsecReplayWindow Replay window size 32..8192 (must be a power of 2)
+         *   - Range: `64`-`4096`
+         *   - Default value: `512`
          * 
          * @return builder
          * 
@@ -1886,11 +1952,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1901,11 +1963,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param ipv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -1957,8 +2015,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-         * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
          * 
          * @return builder
          * 
@@ -1969,8 +2028,9 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-         * `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+         * @param perfectForwardSecrecy IPsec perfect forward secrecy settings
+         *   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+         *   - Default value: `group-16`
          * 
          * @return builder
          * 
@@ -2022,7 +2082,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2033,7 +2094,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param shutdown Administrative state - Default value: `true`
+         * @param shutdown Administrative state
+         *   - Default value: `true`
          * 
          * @return builder
          * 
@@ -2064,7 +2126,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -2075,7 +2138,8 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+         * @param tcpMss TCP MSS on SYN packets, in bytes
+         *   - Range: `500`-`1460`
          * 
          * @return builder
          * 
@@ -2178,11 +2242,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param tunnelDestinationIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2193,11 +2253,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelDestinationIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param tunnelDestinationIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2342,11 +2398,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param tunnelSourceIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 
@@ -2357,11 +2409,7 @@ public final class ServiceLanVpnInterfaceIpsecFeatureState extends com.pulumi.re
         }
 
         /**
-         * @param tunnelSourceIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`,
-         * `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`,
-         * `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`,
-         * `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`,
-         * `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+         * @param tunnelSourceIpv4SubnetMask - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
          * 

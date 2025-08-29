@@ -53,14 +53,18 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.accessLists);
     }
     /**
-     * Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     @Export(name="application", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> application;
 
     /**
-     * @return Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+     * @return Enable Application Tunnel Type
+     *   - Choices: `none`, `sig`
+     *   - Default value: `none`
      * 
      */
     public Output<Optional<String>> application() {
@@ -81,14 +85,16 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.applicationVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     @Export(name="clearDontFragment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> clearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> clearDontFragment() {
@@ -123,18 +129,16 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
@@ -169,16 +173,14 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     @Export(name="interfaceName", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceName;
 
     /**
-     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when
-     * present
+     * @return Interface name: ge0/&lt;0-..&gt; or ge0/&lt;0-..&gt;.vlanid or irb&lt;bridgeid:1-63&gt; or loopback&lt;string&gt; or natpool-&lt;1..31&gt; when present
      * 
      */
     public Output<Optional<String>> interfaceName() {
@@ -227,14 +229,18 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.ipAddressVariable);
     }
     /**
-     * Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      * 
      */
     @Export(name="ipMtu", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return Interface MTU &lt;576..2000&gt;, in bytes - Range: `64`-`18000` - Default value: `1500`
+     * @return Interface MTU &lt;576..2000&gt;, in bytes
+     *   - Range: `64`-`18000`
+     *   - Default value: `1500`
      * 
      */
     public Output<Optional<Integer>> ipMtu() {
@@ -297,14 +303,16 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.rewriteRuleVariable);
     }
     /**
-     * Administrative state - Default value: `true`
+     * Administrative state
+     *   - Default value: `true`
      * 
      */
     @Export(name="shutdown", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> shutdown;
 
     /**
-     * @return Administrative state - Default value: `true`
+     * @return Administrative state
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> shutdown() {
@@ -325,14 +333,16 @@ public class CiscoVpnInterfaceGreFeatureTemplate extends com.pulumi.resources.Cu
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     @Export(name="tcpMssAdjust", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpMssAdjust;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+     * @return TCP MSS on SYN packets, in bytes
+     *   - Range: `500`-`1460`
      * 
      */
     public Output<Optional<Integer>> tcpMssAdjust() {

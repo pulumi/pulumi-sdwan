@@ -25,9 +25,12 @@ class PolicerPolicyObjectArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicerPolicyObject resource.
-        :param pulumi.Input[_builtins.int] burst: Burst in bytes - Range: `15000`-`10000000`
-        :param pulumi.Input[_builtins.str] exceed_action: Exceed action - Choices: `drop`, `remark`
-        :param pulumi.Input[_builtins.int] rate: Rate in bps - Range: `8`-`100000000000`
+        :param pulumi.Input[_builtins.int] burst: Burst in bytes
+                 - Range: `15000`-`10000000`
+        :param pulumi.Input[_builtins.str] exceed_action: Exceed action
+                 - Choices: `drop`, `remark`
+        :param pulumi.Input[_builtins.int] rate: Rate in bps
+                 - Range: `8`-`100000000000`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
         """
         pulumi.set(__self__, "burst", burst)
@@ -40,7 +43,8 @@ class PolicerPolicyObjectArgs:
     @pulumi.getter
     def burst(self) -> pulumi.Input[_builtins.int]:
         """
-        Burst in bytes - Range: `15000`-`10000000`
+        Burst in bytes
+          - Range: `15000`-`10000000`
         """
         return pulumi.get(self, "burst")
 
@@ -52,7 +56,8 @@ class PolicerPolicyObjectArgs:
     @pulumi.getter(name="exceedAction")
     def exceed_action(self) -> pulumi.Input[_builtins.str]:
         """
-        Exceed action - Choices: `drop`, `remark`
+        Exceed action
+          - Choices: `drop`, `remark`
         """
         return pulumi.get(self, "exceed_action")
 
@@ -64,7 +69,8 @@ class PolicerPolicyObjectArgs:
     @pulumi.getter
     def rate(self) -> pulumi.Input[_builtins.int]:
         """
-        Rate in bps - Range: `8`-`100000000000`
+        Rate in bps
+          - Range: `8`-`100000000000`
         """
         return pulumi.get(self, "rate")
 
@@ -95,10 +101,13 @@ class _PolicerPolicyObjectState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering PolicerPolicyObject resources.
-        :param pulumi.Input[_builtins.int] burst: Burst in bytes - Range: `15000`-`10000000`
-        :param pulumi.Input[_builtins.str] exceed_action: Exceed action - Choices: `drop`, `remark`
+        :param pulumi.Input[_builtins.int] burst: Burst in bytes
+                 - Range: `15000`-`10000000`
+        :param pulumi.Input[_builtins.str] exceed_action: Exceed action
+                 - Choices: `drop`, `remark`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] rate: Rate in bps - Range: `8`-`100000000000`
+        :param pulumi.Input[_builtins.int] rate: Rate in bps
+                 - Range: `8`-`100000000000`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         if burst is not None:
@@ -116,7 +125,8 @@ class _PolicerPolicyObjectState:
     @pulumi.getter
     def burst(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Burst in bytes - Range: `15000`-`10000000`
+        Burst in bytes
+          - Range: `15000`-`10000000`
         """
         return pulumi.get(self, "burst")
 
@@ -128,7 +138,8 @@ class _PolicerPolicyObjectState:
     @pulumi.getter(name="exceedAction")
     def exceed_action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Exceed action - Choices: `drop`, `remark`
+        Exceed action
+          - Choices: `drop`, `remark`
         """
         return pulumi.get(self, "exceed_action")
 
@@ -152,7 +163,8 @@ class _PolicerPolicyObjectState:
     @pulumi.getter
     def rate(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Rate in bps - Range: `8`-`100000000000`
+        Rate in bps
+          - Range: `8`-`100000000000`
         """
         return pulumi.get(self, "rate")
 
@@ -210,10 +222,13 @@ class PolicerPolicyObject(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] burst: Burst in bytes - Range: `15000`-`10000000`
-        :param pulumi.Input[_builtins.str] exceed_action: Exceed action - Choices: `drop`, `remark`
+        :param pulumi.Input[_builtins.int] burst: Burst in bytes
+                 - Range: `15000`-`10000000`
+        :param pulumi.Input[_builtins.str] exceed_action: Exceed action
+                 - Choices: `drop`, `remark`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] rate: Rate in bps - Range: `8`-`100000000000`
+        :param pulumi.Input[_builtins.int] rate: Rate in bps
+                 - Range: `8`-`100000000000`
         """
         ...
     @overload
@@ -306,10 +321,13 @@ class PolicerPolicyObject(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] burst: Burst in bytes - Range: `15000`-`10000000`
-        :param pulumi.Input[_builtins.str] exceed_action: Exceed action - Choices: `drop`, `remark`
+        :param pulumi.Input[_builtins.int] burst: Burst in bytes
+                 - Range: `15000`-`10000000`
+        :param pulumi.Input[_builtins.str] exceed_action: Exceed action
+                 - Choices: `drop`, `remark`
         :param pulumi.Input[_builtins.str] name: The name of the policy object
-        :param pulumi.Input[_builtins.int] rate: Rate in bps - Range: `8`-`100000000000`
+        :param pulumi.Input[_builtins.int] rate: Rate in bps
+                 - Range: `8`-`100000000000`
         :param pulumi.Input[_builtins.int] version: The version of the object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -327,7 +345,8 @@ class PolicerPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def burst(self) -> pulumi.Output[_builtins.int]:
         """
-        Burst in bytes - Range: `15000`-`10000000`
+        Burst in bytes
+          - Range: `15000`-`10000000`
         """
         return pulumi.get(self, "burst")
 
@@ -335,7 +354,8 @@ class PolicerPolicyObject(pulumi.CustomResource):
     @pulumi.getter(name="exceedAction")
     def exceed_action(self) -> pulumi.Output[_builtins.str]:
         """
-        Exceed action - Choices: `drop`, `remark`
+        Exceed action
+          - Choices: `drop`, `remark`
         """
         return pulumi.get(self, "exceed_action")
 
@@ -351,7 +371,8 @@ class PolicerPolicyObject(pulumi.CustomResource):
     @pulumi.getter
     def rate(self) -> pulumi.Output[_builtins.int]:
         """
-        Rate in bps - Range: `8`-`100000000000`
+        Rate in bps
+          - Range: `8`-`100000000000`
         """
         return pulumi.get(self, "rate")
 

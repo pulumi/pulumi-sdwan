@@ -49,16 +49,16 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `pap_chap`
+     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `pap_chap`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-     * `chap`, `pap_chap`
+     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `pap_chap`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -156,14 +156,18 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     @Import(name="packetDataNetworkType")
     private @Nullable Output<String> packetDataNetworkType;
 
     /**
-     * @return Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+     * @return Set packet data network type
+     *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+     *   - Default value: `ipv4`
      * 
      */
     public Optional<Output<String>> packetDataNetworkType() {
@@ -186,14 +190,16 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Set Profile ID - Range: `1`-`16`
+     * Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     @Import(name="profileId")
     private @Nullable Output<Integer> profileId;
 
     /**
-     * @return Set Profile ID - Range: `1`-`16`
+     * @return Set Profile ID
+     *   - Range: `1`-`16`
      * 
      */
     public Optional<Output<Integer>> profileId() {
@@ -276,14 +282,16 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
     }
 
     /**
-     * Require authentication type - Default value: `false`
+     * Require authentication type
+     *   - Default value: `false`
      * 
      */
     @Import(name="requiresAuthentication")
     private @Nullable Output<Boolean> requiresAuthentication;
 
     /**
-     * @return Require authentication type - Default value: `false`
+     * @return Require authentication type
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> requiresAuthentication() {
@@ -374,8 +382,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-         * `chap`, `pap_chap`
+         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+         *   - Choices: `pap`, `chap`, `pap_chap`
          * 
          * @return builder
          * 
@@ -386,8 +394,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true` - Choices: `pap`,
-         * `chap`, `pap_chap`
+         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
+         *   - Choices: `pap`, `chap`, `pap_chap`
          * 
          * @return builder
          * 
@@ -523,7 +531,9 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param packetDataNetworkType Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+         * @param packetDataNetworkType Set packet data network type
+         *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -534,7 +544,9 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param packetDataNetworkType Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+         * @param packetDataNetworkType Set packet data network type
+         *   - Choices: `ipv4`, `ipv4v6`, `ipv6`
+         *   - Default value: `ipv4`
          * 
          * @return builder
          * 
@@ -565,7 +577,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param profileId Set Profile ID - Range: `1`-`16`
+         * @param profileId Set Profile ID
+         *   - Range: `1`-`16`
          * 
          * @return builder
          * 
@@ -576,7 +589,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param profileId Set Profile ID - Range: `1`-`16`
+         * @param profileId Set Profile ID
+         *   - Range: `1`-`16`
          * 
          * @return builder
          * 
@@ -691,7 +705,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param requiresAuthentication Require authentication type - Default value: `false`
+         * @param requiresAuthentication Require authentication type
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -702,7 +717,8 @@ public final class TransportCellularProfileFeatureArgs extends com.pulumi.resour
         }
 
         /**
-         * @param requiresAuthentication Require authentication type - Default value: `false`
+         * @param requiresAuthentication Require authentication type
+         *   - Default value: `false`
          * 
          * @return builder
          * 

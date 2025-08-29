@@ -84,38 +84,49 @@ import (
 type CiscoVpnInterfaceIpsecFeatureTemplate struct {
 	pulumi.CustomResourceState
 
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrOutput `pulumi:"application"`
 	// Variable name
 	ApplicationVariable pulumi.StringPtrOutput `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrOutput `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrOutput `pulumi:"clearDontFragmentVariable"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DeadPeerDetectionInterval pulumi.IntPtrOutput `pulumi:"deadPeerDetectionInterval"`
 	// Variable name
 	DeadPeerDetectionIntervalVariable pulumi.StringPtrOutput `pulumi:"deadPeerDetectionIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DeadPeerDetectionRetries pulumi.IntPtrOutput `pulumi:"deadPeerDetectionRetries"`
 	// Variable name
 	DeadPeerDetectionRetriesVariable pulumi.StringPtrOutput `pulumi:"deadPeerDetectionRetriesVariable"`
 	// The description of the feature template
 	Description pulumi.StringOutput `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayOutput `pulumi:"deviceTypes"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrOutput `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrOutput `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeGroup pulumi.StringPtrOutput `pulumi:"ikeGroup"`
 	// Variable name
 	IkeGroupVariable pulumi.StringPtrOutput `pulumi:"ikeGroupVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeMode pulumi.StringPtrOutput `pulumi:"ikeMode"`
 	// Variable name
 	IkeModeVariable pulumi.StringPtrOutput `pulumi:"ikeModeVariable"`
@@ -131,11 +142,15 @@ type CiscoVpnInterfaceIpsecFeatureTemplate struct {
 	IkePreSharedKeyRemoteIdVariable pulumi.StringPtrOutput `pulumi:"ikePreSharedKeyRemoteIdVariable"`
 	// Variable name
 	IkePreSharedKeyVariable pulumi.StringPtrOutput `pulumi:"ikePreSharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrOutput `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrOutput `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrOutput `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription pulumi.StringPtrOutput `pulumi:"interfaceDescription"`
@@ -149,36 +164,45 @@ type CiscoVpnInterfaceIpsecFeatureTemplate struct {
 	IpAddress pulumi.StringPtrOutput `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable pulumi.StringPtrOutput `pulumi:"ipAddressVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrOutput `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrOutput `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	IpsecPerfectForwardSecrecy pulumi.StringPtrOutput `pulumi:"ipsecPerfectForwardSecrecy"`
 	// Variable name
 	IpsecPerfectForwardSecrecyVariable pulumi.StringPtrOutput `pulumi:"ipsecPerfectForwardSecrecyVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrOutput `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrOutput `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrOutput `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrOutput `pulumi:"ipsecReplayWindowVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrOutput `pulumi:"mtu"`
 	// Variable name
 	MtuVariable pulumi.StringPtrOutput `pulumi:"mtuVariable"`
 	// The name of the feature template
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrOutput `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable pulumi.StringPtrOutput `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrOutput `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrOutput `pulumi:"tcpMssAdjustVariable"`
@@ -244,38 +268,49 @@ func GetCiscoVpnInterfaceIpsecFeatureTemplate(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CiscoVpnInterfaceIpsecFeatureTemplate resources.
 type ciscoVpnInterfaceIpsecFeatureTemplateState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application *string `pulumi:"application"`
 	// Variable name
 	ApplicationVariable *string `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DeadPeerDetectionInterval *int `pulumi:"deadPeerDetectionInterval"`
 	// Variable name
 	DeadPeerDetectionIntervalVariable *string `pulumi:"deadPeerDetectionIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DeadPeerDetectionRetries *int `pulumi:"deadPeerDetectionRetries"`
 	// Variable name
 	DeadPeerDetectionRetriesVariable *string `pulumi:"deadPeerDetectionRetriesVariable"`
 	// The description of the feature template
 	Description *string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite *string `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable *string `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeGroup *string `pulumi:"ikeGroup"`
 	// Variable name
 	IkeGroupVariable *string `pulumi:"ikeGroupVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeMode *string `pulumi:"ikeMode"`
 	// Variable name
 	IkeModeVariable *string `pulumi:"ikeModeVariable"`
@@ -291,11 +326,15 @@ type ciscoVpnInterfaceIpsecFeatureTemplateState struct {
 	IkePreSharedKeyRemoteIdVariable *string `pulumi:"ikePreSharedKeyRemoteIdVariable"`
 	// Variable name
 	IkePreSharedKeyVariable *string `pulumi:"ikePreSharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval *int `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable *string `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion *int `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
@@ -309,36 +348,45 @@ type ciscoVpnInterfaceIpsecFeatureTemplateState struct {
 	IpAddress *string `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite *string `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable *string `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	IpsecPerfectForwardSecrecy *string `pulumi:"ipsecPerfectForwardSecrecy"`
 	// Variable name
 	IpsecPerfectForwardSecrecyVariable *string `pulumi:"ipsecPerfectForwardSecrecyVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval *int `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable *string `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	Mtu *int `pulumi:"mtu"`
 	// Variable name
 	MtuVariable *string `pulumi:"mtuVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -369,38 +417,49 @@ type ciscoVpnInterfaceIpsecFeatureTemplateState struct {
 }
 
 type CiscoVpnInterfaceIpsecFeatureTemplateState struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrInput
 	// Variable name
 	ApplicationVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DeadPeerDetectionInterval pulumi.IntPtrInput
 	// Variable name
 	DeadPeerDetectionIntervalVariable pulumi.StringPtrInput
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DeadPeerDetectionRetries pulumi.IntPtrInput
 	// Variable name
 	DeadPeerDetectionRetriesVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringPtrInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrInput
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeGroup pulumi.StringPtrInput
 	// Variable name
 	IkeGroupVariable pulumi.StringPtrInput
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeMode pulumi.StringPtrInput
 	// Variable name
 	IkeModeVariable pulumi.StringPtrInput
@@ -416,11 +475,15 @@ type CiscoVpnInterfaceIpsecFeatureTemplateState struct {
 	IkePreSharedKeyRemoteIdVariable pulumi.StringPtrInput
 	// Variable name
 	IkePreSharedKeyVariable pulumi.StringPtrInput
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrInput
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
@@ -434,36 +497,45 @@ type CiscoVpnInterfaceIpsecFeatureTemplateState struct {
 	IpAddress pulumi.StringPtrInput
 	// Variable name
 	IpAddressVariable pulumi.StringPtrInput
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrInput
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	IpsecPerfectForwardSecrecy pulumi.StringPtrInput
 	// Variable name
 	IpsecPerfectForwardSecrecyVariable pulumi.StringPtrInput
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrInput
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrInput
 	// Variable name
 	MtuVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -498,38 +570,49 @@ func (CiscoVpnInterfaceIpsecFeatureTemplateState) ElementType() reflect.Type {
 }
 
 type ciscoVpnInterfaceIpsecFeatureTemplateArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application *string `pulumi:"application"`
 	// Variable name
 	ApplicationVariable *string `pulumi:"applicationVariable"`
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment *bool `pulumi:"clearDontFragment"`
 	// Variable name
 	ClearDontFragmentVariable *string `pulumi:"clearDontFragmentVariable"`
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DeadPeerDetectionInterval *int `pulumi:"deadPeerDetectionInterval"`
 	// Variable name
 	DeadPeerDetectionIntervalVariable *string `pulumi:"deadPeerDetectionIntervalVariable"`
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DeadPeerDetectionRetries *int `pulumi:"deadPeerDetectionRetries"`
 	// Variable name
 	DeadPeerDetectionRetriesVariable *string `pulumi:"deadPeerDetectionRetriesVariable"`
 	// The description of the feature template
 	Description string `pulumi:"description"`
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes []string `pulumi:"deviceTypes"`
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite *string `pulumi:"ikeCiphersuite"`
 	// Variable name
 	IkeCiphersuiteVariable *string `pulumi:"ikeCiphersuiteVariable"`
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeGroup *string `pulumi:"ikeGroup"`
 	// Variable name
 	IkeGroupVariable *string `pulumi:"ikeGroupVariable"`
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeMode *string `pulumi:"ikeMode"`
 	// Variable name
 	IkeModeVariable *string `pulumi:"ikeModeVariable"`
@@ -545,11 +628,15 @@ type ciscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 	IkePreSharedKeyRemoteIdVariable *string `pulumi:"ikePreSharedKeyRemoteIdVariable"`
 	// Variable name
 	IkePreSharedKeyVariable *string `pulumi:"ikePreSharedKeyVariable"`
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval *int `pulumi:"ikeRekeyInterval"`
 	// Variable name
 	IkeRekeyIntervalVariable *string `pulumi:"ikeRekeyIntervalVariable"`
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion *int `pulumi:"ikeVersion"`
 	// Interface description
 	InterfaceDescription *string `pulumi:"interfaceDescription"`
@@ -563,36 +650,45 @@ type ciscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 	IpAddress *string `pulumi:"ipAddress"`
 	// Variable name
 	IpAddressVariable *string `pulumi:"ipAddressVariable"`
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite *string `pulumi:"ipsecCiphersuite"`
 	// Variable name
 	IpsecCiphersuiteVariable *string `pulumi:"ipsecCiphersuiteVariable"`
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	IpsecPerfectForwardSecrecy *string `pulumi:"ipsecPerfectForwardSecrecy"`
 	// Variable name
 	IpsecPerfectForwardSecrecyVariable *string `pulumi:"ipsecPerfectForwardSecrecyVariable"`
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval *int `pulumi:"ipsecRekeyInterval"`
 	// Variable name
 	IpsecRekeyIntervalVariable *string `pulumi:"ipsecRekeyIntervalVariable"`
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow *int `pulumi:"ipsecReplayWindow"`
 	// Variable name
 	IpsecReplayWindowVariable *string `pulumi:"ipsecReplayWindowVariable"`
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	Mtu *int `pulumi:"mtu"`
 	// Variable name
 	MtuVariable *string `pulumi:"mtuVariable"`
 	// The name of the feature template
 	Name *string `pulumi:"name"`
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown *bool `pulumi:"shutdown"`
 	// Variable name
 	ShutdownVariable *string `pulumi:"shutdownVariable"`
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust *int `pulumi:"tcpMssAdjust"`
 	// Variable name
 	TcpMssAdjustVariable *string `pulumi:"tcpMssAdjustVariable"`
@@ -620,38 +716,49 @@ type ciscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 
 // The set of arguments for constructing a CiscoVpnInterfaceIpsecFeatureTemplate resource.
 type CiscoVpnInterfaceIpsecFeatureTemplateArgs struct {
-	// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+	// Enable Application Tunnel Type
+	//   - Choices: `none`, `sig`
+	//   - Default value: `none`
 	Application pulumi.StringPtrInput
 	// Variable name
 	ApplicationVariable pulumi.StringPtrInput
-	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+	// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+	//   - Default value: `false`
 	ClearDontFragment pulumi.BoolPtrInput
 	// Variable name
 	ClearDontFragmentVariable pulumi.StringPtrInput
-	// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+	// IKE keepalive interval (seconds)
+	//   - Range: `10`-`3600`
+	//   - Default value: `10`
 	DeadPeerDetectionInterval pulumi.IntPtrInput
 	// Variable name
 	DeadPeerDetectionIntervalVariable pulumi.StringPtrInput
-	// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+	// IKE keepalive retries
+	//   - Range: `2`-`60`
+	//   - Default value: `3`
 	DeadPeerDetectionRetries pulumi.IntPtrInput
 	// Variable name
 	DeadPeerDetectionRetriesVariable pulumi.StringPtrInput
 	// The description of the feature template
 	Description pulumi.StringInput
-	// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-	// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-	// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+	// List of supported device types
+	//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 	DeviceTypes pulumi.StringArrayInput
-	// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-	// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+	// IKE identity the IKE preshared secret belongs to
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+	//   - Default value: `aes256-cbc-sha1`
 	IkeCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IkeCiphersuiteVariable pulumi.StringPtrInput
-	// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+	// IKE Diffie Hellman Groups
+	//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+	//   - Default value: `16`
 	IkeGroup pulumi.StringPtrInput
 	// Variable name
 	IkeGroupVariable pulumi.StringPtrInput
-	// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+	// IKE integrity protocol
+	//   - Choices: `main`, `aggressive`
+	//   - Default value: `main`
 	IkeMode pulumi.StringPtrInput
 	// Variable name
 	IkeModeVariable pulumi.StringPtrInput
@@ -667,11 +774,15 @@ type CiscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 	IkePreSharedKeyRemoteIdVariable pulumi.StringPtrInput
 	// Variable name
 	IkePreSharedKeyVariable pulumi.StringPtrInput
-	// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+	// IKE rekey interval <60..86400> seconds
+	//   - Range: `60`-`86400`
+	//   - Default value: `14400`
 	IkeRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IkeRekeyIntervalVariable pulumi.StringPtrInput
-	// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+	// IKE Version <1..2>
+	//   - Range: `1`-`2`
+	//   - Default value: `1`
 	IkeVersion pulumi.IntPtrInput
 	// Interface description
 	InterfaceDescription pulumi.StringPtrInput
@@ -685,36 +796,45 @@ type CiscoVpnInterfaceIpsecFeatureTemplateArgs struct {
 	IpAddress pulumi.StringPtrInput
 	// Variable name
 	IpAddressVariable pulumi.StringPtrInput
-	// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-	// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-	// `aes256-gcm`
+	// IPsec(ESP) encryption and integrity protocol
+	//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+	//   - Default value: `aes256-gcm`
 	IpsecCiphersuite pulumi.StringPtrInput
 	// Variable name
 	IpsecCiphersuiteVariable pulumi.StringPtrInput
-	// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-	// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+	// IPsec perfect forward secrecy settings
+	//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+	//   - Default value: `group-16`
 	IpsecPerfectForwardSecrecy pulumi.StringPtrInput
 	// Variable name
 	IpsecPerfectForwardSecrecyVariable pulumi.StringPtrInput
-	// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+	// IPsec rekey interval <300..1209600> seconds
+	//   - Range: `120`-`2592000`
+	//   - Default value: `3600`
 	IpsecRekeyInterval pulumi.IntPtrInput
 	// Variable name
 	IpsecRekeyIntervalVariable pulumi.StringPtrInput
-	// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+	// Replay window size 32..8192 (must be a power of 2)
+	//   - Range: `64`-`4096`
+	//   - Default value: `512`
 	IpsecReplayWindow pulumi.IntPtrInput
 	// Variable name
 	IpsecReplayWindowVariable pulumi.StringPtrInput
-	// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+	// Interface MTU <68..9216>, in bytes
+	//   - Range: `68`-`9216`
+	//   - Default value: `1500`
 	Mtu pulumi.IntPtrInput
 	// Variable name
 	MtuVariable pulumi.StringPtrInput
 	// The name of the feature template
 	Name pulumi.StringPtrInput
-	// Administrative state - Default value: `true`
+	// Administrative state
+	//   - Default value: `true`
 	Shutdown pulumi.BoolPtrInput
 	// Variable name
 	ShutdownVariable pulumi.StringPtrInput
-	// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+	// TCP MSS on SYN packets, in bytes
+	//   - Range: `500`-`1460`
 	TcpMssAdjust pulumi.IntPtrInput
 	// Variable name
 	TcpMssAdjustVariable pulumi.StringPtrInput
@@ -827,7 +947,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) ToCiscoVpnInterfaceIpsecFea
 	return o
 }
 
-// Enable Application Tunnel Type - Choices: `none`, `sig` - Default value: `none`
+// Enable Application Tunnel Type
+//   - Choices: `none`, `sig`
+//   - Default value: `none`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) Application() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.Application }).(pulumi.StringPtrOutput)
 }
@@ -837,7 +959,8 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) ApplicationVariable() pulum
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.ApplicationVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface) - Default value: `false`
+// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
+//   - Default value: `false`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) ClearDontFragment() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.BoolPtrOutput { return v.ClearDontFragment }).(pulumi.BoolPtrOutput)
 }
@@ -849,7 +972,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) ClearDontFragmentVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// IKE keepalive interval (seconds) - Range: `10`-`3600` - Default value: `10`
+// IKE keepalive interval (seconds)
+//   - Range: `10`-`3600`
+//   - Default value: `10`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) DeadPeerDetectionInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.DeadPeerDetectionInterval }).(pulumi.IntPtrOutput)
 }
@@ -861,7 +986,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) DeadPeerDetectionIntervalVa
 	}).(pulumi.StringPtrOutput)
 }
 
-// IKE keepalive retries - Range: `2`-`60` - Default value: `3`
+// IKE keepalive retries
+//   - Range: `2`-`60`
+//   - Default value: `3`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) DeadPeerDetectionRetries() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.DeadPeerDetectionRetries }).(pulumi.IntPtrOutput)
 }
@@ -878,15 +1005,15 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) Description() pulumi.String
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringOutput { return v.Description }).(pulumi.StringOutput)
 }
 
-// List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-// `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-// `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+// List of supported device types
+//   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) DeviceTypes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringArrayOutput { return v.DeviceTypes }).(pulumi.StringArrayOutput)
 }
 
-// IKE identity the IKE preshared secret belongs to - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`,
-// `aes128-cbc-sha2` - Default value: `aes256-cbc-sha1`
+// IKE identity the IKE preshared secret belongs to
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha2`, `aes128-cbc-sha1`, `aes128-cbc-sha2`
+//   - Default value: `aes256-cbc-sha1`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeCiphersuite() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IkeCiphersuite }).(pulumi.StringPtrOutput)
 }
@@ -896,7 +1023,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeCiphersuiteVariable() pu
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IkeCiphersuiteVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE Diffie Hellman Groups - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24` - Default value: `16`
+// IKE Diffie Hellman Groups
+//   - Choices: `2`, `14`, `15`, `16`, `19`, `20`, `21`, `24`
+//   - Default value: `16`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeGroup() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IkeGroup }).(pulumi.StringPtrOutput)
 }
@@ -906,7 +1035,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeGroupVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IkeGroupVariable }).(pulumi.StringPtrOutput)
 }
 
-// IKE integrity protocol - Choices: `main`, `aggressive` - Default value: `main`
+// IKE integrity protocol
+//   - Choices: `main`, `aggressive`
+//   - Default value: `main`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeMode() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IkeMode }).(pulumi.StringPtrOutput)
 }
@@ -954,7 +1085,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkePreSharedKeyVariable() p
 	}).(pulumi.StringPtrOutput)
 }
 
-// IKE rekey interval <60..86400> seconds - Range: `60`-`86400` - Default value: `14400`
+// IKE rekey interval <60..86400> seconds
+//   - Range: `60`-`86400`
+//   - Default value: `14400`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeRekeyInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.IkeRekeyInterval }).(pulumi.IntPtrOutput)
 }
@@ -966,7 +1099,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeRekeyIntervalVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// IKE Version <1..2> - Range: `1`-`2` - Default value: `1`
+// IKE Version <1..2>
+//   - Range: `1`-`2`
+//   - Default value: `1`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IkeVersion() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.IkeVersion }).(pulumi.IntPtrOutput)
 }
@@ -1003,9 +1138,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpAddressVariable() pulumi.
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IpAddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// IPsec(ESP) encryption and integrity protocol - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`,
-// `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512` - Default value:
-// `aes256-gcm`
+// IPsec(ESP) encryption and integrity protocol
+//   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
+//   - Default value: `aes256-gcm`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecCiphersuite() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.IpsecCiphersuite }).(pulumi.StringPtrOutput)
 }
@@ -1017,8 +1152,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecCiphersuiteVariable() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPsec perfect forward secrecy settings - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`,
-// `group-19`, `group-20`, `group-21`, `group-24`, `none` - Default value: `group-16`
+// IPsec perfect forward secrecy settings
+//   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+//   - Default value: `group-16`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecPerfectForwardSecrecy() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput {
 		return v.IpsecPerfectForwardSecrecy
@@ -1032,7 +1168,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecPerfectForwardSecrecyV
 	}).(pulumi.StringPtrOutput)
 }
 
-// IPsec rekey interval <300..1209600> seconds - Range: `120`-`2592000` - Default value: `3600`
+// IPsec rekey interval <300..1209600> seconds
+//   - Range: `120`-`2592000`
+//   - Default value: `3600`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecRekeyInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.IpsecRekeyInterval }).(pulumi.IntPtrOutput)
 }
@@ -1044,7 +1182,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecRekeyIntervalVariable(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Replay window size 32..8192 (must be a power of 2) - Range: `64`-`4096` - Default value: `512`
+// Replay window size 32..8192 (must be a power of 2)
+//   - Range: `64`-`4096`
+//   - Default value: `512`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecReplayWindow() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.IpsecReplayWindow }).(pulumi.IntPtrOutput)
 }
@@ -1056,7 +1196,9 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) IpsecReplayWindowVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface MTU <68..9216>, in bytes - Range: `68`-`9216` - Default value: `1500`
+// Interface MTU <68..9216>, in bytes
+//   - Range: `68`-`9216`
+//   - Default value: `1500`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) Mtu() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.Mtu }).(pulumi.IntPtrOutput)
 }
@@ -1071,7 +1213,8 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) Name() pulumi.StringOutput 
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Administrative state - Default value: `true`
+// Administrative state
+//   - Default value: `true`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) Shutdown() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.BoolPtrOutput { return v.Shutdown }).(pulumi.BoolPtrOutput)
 }
@@ -1081,7 +1224,8 @@ func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) ShutdownVariable() pulumi.S
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.StringPtrOutput { return v.ShutdownVariable }).(pulumi.StringPtrOutput)
 }
 
-// TCP MSS on SYN packets, in bytes - Range: `500`-`1460`
+// TCP MSS on SYN packets, in bytes
+//   - Range: `500`-`1460`
 func (o CiscoVpnInterfaceIpsecFeatureTemplateOutput) TcpMssAdjust() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *CiscoVpnInterfaceIpsecFeatureTemplate) pulumi.IntPtrOutput { return v.TcpMssAdjust }).(pulumi.IntPtrOutput)
 }

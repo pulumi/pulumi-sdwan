@@ -56,14 +56,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.areas);
     }
     /**
-     * Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     @Export(name="autoCostReferenceBandwidth", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> autoCostReferenceBandwidth;
 
     /**
-     * @return Set reference bandwidth method to assign OSPF cost - Range: `1`-`4294967` - Default value: `100`
+     * @return Set reference bandwidth method to assign OSPF cost
+     *   - Range: `1`-`4294967`
+     *   - Default value: `100`
      * 
      */
     public Output<Optional<Integer>> autoCostReferenceBandwidth() {
@@ -84,14 +88,16 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.autoCostReferenceBandwidthVariable);
     }
     /**
-     * Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     @Export(name="compatibleRfc1583", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> compatibleRfc1583;
 
     /**
-     * @return Calculate summary route cost based on RFC 1583 - Default value: `true`
+     * @return Calculate summary route cost based on RFC 1583
+     *   - Default value: `true`
      * 
      */
     public Output<Optional<Boolean>> compatibleRfc1583() {
@@ -112,28 +118,32 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.compatibleRfc1583Variable);
     }
     /**
-     * Distribute default external route into OSPF - Default value: `false`
+     * Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     @Export(name="defaultInformationOriginate", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> defaultInformationOriginate;
 
     /**
-     * @return Distribute default external route into OSPF - Default value: `false`
+     * @return Distribute default external route into OSPF
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> defaultInformationOriginate() {
         return Codegen.optional(this.defaultInformationOriginate);
     }
     /**
-     * Always advertise default route - Default value: `false`
+     * Always advertise default route
+     *   - Default value: `false`
      * 
      */
     @Export(name="defaultInformationOriginateAlways", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> defaultInformationOriginateAlways;
 
     /**
-     * @return Always advertise default route - Default value: `false`
+     * @return Always advertise default route
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> defaultInformationOriginateAlways() {
@@ -154,28 +164,32 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.defaultInformationOriginateAlwaysVariable);
     }
     /**
-     * Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     @Export(name="defaultInformationOriginateMetric", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> defaultInformationOriginateMetric;
 
     /**
-     * @return Set metric used to generate default route &lt;0..16777214&gt; - Range: `0`-`16777214`
+     * @return Set metric used to generate default route &lt;0..16777214&gt;
+     *   - Range: `0`-`16777214`
      * 
      */
     public Output<Optional<Integer>> defaultInformationOriginateMetric() {
         return Codegen.optional(this.defaultInformationOriginateMetric);
     }
     /**
-     * Set default route type - Choices: `type1`, `type2`
+     * Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     @Export(name="defaultInformationOriginateMetricType", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultInformationOriginateMetricType;
 
     /**
-     * @return Set default route type - Choices: `type1`, `type2`
+     * @return Set default route type
+     *   - Choices: `type1`, `type2`
      * 
      */
     public Output<Optional<String>> defaultInformationOriginateMetricType() {
@@ -224,32 +238,34 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return this.description;
     }
     /**
-     * List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     @Export(name="deviceTypes", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> deviceTypes;
 
     /**
-     * @return List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-     * `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-     * `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+     * @return List of supported device types
+     *   - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
      * 
      */
     public Output<List<String>> deviceTypes() {
         return this.deviceTypes;
     }
     /**
-     * Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceExternal", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceExternal;
 
     /**
-     * @return Set distance for external routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for external routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceExternal() {
@@ -270,14 +286,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.distanceExternalVariable);
     }
     /**
-     * Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceInterArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceInterArea;
 
     /**
-     * @return Set distance for inter-area routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for inter-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceInterArea() {
@@ -298,14 +318,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.distanceInterAreaVariable);
     }
     /**
-     * Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     @Export(name="distanceIntraArea", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> distanceIntraArea;
 
     /**
-     * @return Set distance for intra-area routes - Range: `1`-`255` - Default value: `110`
+     * @return Set distance for intra-area routes
+     *   - Range: `1`-`255`
+     *   - Default value: `110`
      * 
      */
     public Output<Optional<Integer>> distanceIntraArea() {
@@ -424,14 +448,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return this.templateType;
     }
     /**
-     * Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     @Export(name="timersSpfDelay", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timersSpfDelay;
 
     /**
-     * @return Set delay from first change received until performing SPF calculation - Range: `1`-`600000` - Default value: `200`
+     * @return Set delay from first change received until performing SPF calculation
+     *   - Range: `1`-`600000`
+     *   - Default value: `200`
      * 
      */
     public Output<Optional<Integer>> timersSpfDelay() {
@@ -452,14 +480,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.timersSpfDelayVariable);
     }
     /**
-     * Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     @Export(name="timersSpfInitialHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timersSpfInitialHold;
 
     /**
-     * @return Set initial hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `1000`
+     * @return Set initial hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `1000`
      * 
      */
     public Output<Optional<Integer>> timersSpfInitialHold() {
@@ -480,14 +512,18 @@ public class CiscoOspfFeatureTemplate extends com.pulumi.resources.CustomResourc
         return Codegen.optional(this.timersSpfInitialHoldVariable);
     }
     /**
-     * Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     @Export(name="timersSpfMaxHold", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timersSpfMaxHold;
 
     /**
-     * @return Set maximum hold time between consecutive SPF calculations - Range: `1`-`600000` - Default value: `10000`
+     * @return Set maximum hold time between consecutive SPF calculations
+     *   - Range: `1`-`600000`
+     *   - Default value: `10000`
      * 
      */
     public Output<Optional<Integer>> timersSpfMaxHold() {

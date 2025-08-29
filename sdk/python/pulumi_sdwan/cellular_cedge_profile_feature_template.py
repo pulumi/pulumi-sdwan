@@ -39,19 +39,23 @@ class CellularCedgeProfileFeatureTemplateArgs:
         """
         The set of arguments for constructing a CellularCedgeProfileFeatureTemplate resource.
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type
+                 - Choices: `none`, `pap`, `chap`, `pap_chap`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[_builtins.str] no_overwrite_variable: Variable name
-        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type
+                 - Choices: `ipv4`, `ipv4v6`, `ipv6`
+                 - Default value: `ipv4`
         :param pulumi.Input[_builtins.str] packet_data_network_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
+        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
+                 - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name
@@ -107,9 +111,8 @@ class CellularCedgeProfileFeatureTemplateArgs:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -145,7 +148,9 @@ class CellularCedgeProfileFeatureTemplateArgs:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        Set authentication type
+          - Choices: `none`, `pap`, `chap`, `pap_chap`
+          - Default value: `none`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -205,7 +210,9 @@ class CellularCedgeProfileFeatureTemplateArgs:
     @pulumi.getter(name="packetDataNetworkType")
     def packet_data_network_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        Set packet data network type
+          - Choices: `ipv4`, `ipv4v6`, `ipv6`
+          - Default value: `ipv4`
         """
         return pulumi.get(self, "packet_data_network_type")
 
@@ -229,7 +236,8 @@ class CellularCedgeProfileFeatureTemplateArgs:
     @pulumi.getter(name="profileId")
     def profile_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set Profile ID - Range: `1`-`16`
+        Set Profile ID
+          - Range: `1`-`16`
         """
         return pulumi.get(self, "profile_id")
 
@@ -324,18 +332,22 @@ class _CellularCedgeProfileFeatureTemplateState:
         Input properties used for looking up and filtering CellularCedgeProfileFeatureTemplate resources.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type
+                 - Choices: `none`, `pap`, `chap`, `pap_chap`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[_builtins.str] no_overwrite_variable: Variable name
-        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type
+                 - Choices: `ipv4`, `ipv4v6`, `ipv6`
+                 - Default value: `ipv4`
         :param pulumi.Input[_builtins.str] packet_data_network_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
+        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
+                 - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name
@@ -411,7 +423,9 @@ class _CellularCedgeProfileFeatureTemplateState:
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        Set authentication type
+          - Choices: `none`, `pap`, `chap`, `pap_chap`
+          - Default value: `none`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -447,9 +461,8 @@ class _CellularCedgeProfileFeatureTemplateState:
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -497,7 +510,9 @@ class _CellularCedgeProfileFeatureTemplateState:
     @pulumi.getter(name="packetDataNetworkType")
     def packet_data_network_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        Set packet data network type
+          - Choices: `ipv4`, `ipv4v6`, `ipv6`
+          - Default value: `ipv4`
         """
         return pulumi.get(self, "packet_data_network_type")
 
@@ -521,7 +536,8 @@ class _CellularCedgeProfileFeatureTemplateState:
     @pulumi.getter(name="profileId")
     def profile_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Set Profile ID - Range: `1`-`16`
+        Set Profile ID
+          - Range: `1`-`16`
         """
         return pulumi.get(self, "profile_id")
 
@@ -673,18 +689,22 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type
+                 - Choices: `none`, `pap`, `chap`, `pap_chap`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[_builtins.str] no_overwrite_variable: Variable name
-        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type
+                 - Choices: `ipv4`, `ipv4v6`, `ipv6`
+                 - Default value: `ipv4`
         :param pulumi.Input[_builtins.str] packet_data_network_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
+        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
+                 - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name
@@ -830,18 +850,22 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_point_name: Set access point name
         :param pulumi.Input[_builtins.str] access_point_name_variable: Variable name
-        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        :param pulumi.Input[_builtins.str] authentication_type: Set authentication type
+                 - Choices: `none`, `pap`, `chap`, `pap_chap`
+                 - Default value: `none`
         :param pulumi.Input[_builtins.str] authentication_type_variable: Variable name
         :param pulumi.Input[_builtins.str] description: The description of the feature template
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-               `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-               `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] device_types: List of supported device types
+                 - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         :param pulumi.Input[_builtins.str] name: The name of the feature template
         :param pulumi.Input[_builtins.bool] no_overwrite: No Overwrite
         :param pulumi.Input[_builtins.str] no_overwrite_variable: Variable name
-        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        :param pulumi.Input[_builtins.str] packet_data_network_type: Set packet data network type
+                 - Choices: `ipv4`, `ipv4v6`, `ipv6`
+                 - Default value: `ipv4`
         :param pulumi.Input[_builtins.str] packet_data_network_type_variable: Variable name
-        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID - Range: `1`-`16`
+        :param pulumi.Input[_builtins.int] profile_id: Set Profile ID
+                 - Range: `1`-`16`
         :param pulumi.Input[_builtins.str] profile_id_variable: Variable name
         :param pulumi.Input[_builtins.str] profile_password: Set the profile password
         :param pulumi.Input[_builtins.str] profile_password_variable: Variable name
@@ -895,7 +919,9 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="authenticationType")
     def authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set authentication type - Choices: `none`, `pap`, `chap`, `pap_chap` - Default value: `none`
+        Set authentication type
+          - Choices: `none`, `pap`, `chap`, `pap_chap`
+          - Default value: `none`
         """
         return pulumi.get(self, "authentication_type")
 
@@ -919,9 +945,8 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="deviceTypes")
     def device_types(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        List of supported device types - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`,
-        `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`,
-        `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
+        List of supported device types
+          - Choices: `vedge-C8000V`, `vedge-C8300-1N1S-4T2X`, `vedge-C8300-1N1S-6T`, `vedge-C8300-2N2S-6T`, `vedge-C8300-2N2S-4T2X`, `vedge-C8500-12X4QC`, `vedge-C8500-12X`, `vedge-C8500-20X6C`, `vedge-C8500L-8S4X`, `vedge-C8200-1N-4T`, `vedge-C8200L-1N-4T`
         """
         return pulumi.get(self, "device_types")
 
@@ -953,7 +978,9 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="packetDataNetworkType")
     def packet_data_network_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Set packet data network type - Choices: `ipv4`, `ipv4v6`, `ipv6` - Default value: `ipv4`
+        Set packet data network type
+          - Choices: `ipv4`, `ipv4v6`, `ipv6`
+          - Default value: `ipv4`
         """
         return pulumi.get(self, "packet_data_network_type")
 
@@ -969,7 +996,8 @@ class CellularCedgeProfileFeatureTemplate(pulumi.CustomResource):
     @pulumi.getter(name="profileId")
     def profile_id(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Set Profile ID - Range: `1`-`16`
+        Set Profile ID
+          - Range: `1`-`16`
         """
         return pulumi.get(self, "profile_id")
 
