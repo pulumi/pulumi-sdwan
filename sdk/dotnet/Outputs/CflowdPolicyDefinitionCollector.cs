@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? BfdMetricsExporting;
         /// <summary>
         /// Export spreading
-        ///   - Choices: `enable`, `disable`
+        ///   - Choices: `Enable`, `Disable`
         /// </summary>
         public readonly string? ExportSpreading;
         /// <summary>
@@ -41,7 +41,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourceInterface;
         /// <summary>
         /// Transport protocol
-        ///   - Choices: `transport_tcp`, `transport_udp`
+        ///   - Choices: `TransportTcp`, `TransportUdp`
         /// </summary>
         public readonly string? Transport;
         /// <summary>

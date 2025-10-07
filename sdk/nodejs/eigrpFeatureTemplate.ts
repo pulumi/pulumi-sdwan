@@ -10,6 +10,43 @@ import * as utilities from "./utilities";
  * This resource can manage a eigrp feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.EigrpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     asNumber: 1,
+ *     addressFamilies: [{
+ *         type: "ipv4",
+ *         redistributes: [{
+ *             protocol: "bgp",
+ *             routePolicy: "1.2.3.4",
+ *         }],
+ *         networks: [{
+ *             prefix: "1.2.3.4/24",
+ *         }],
+ *     }],
+ *     helloInterval: 5,
+ *     holdTime: 15,
+ *     routePolicyName: "RP1",
+ *     filter: false,
+ *     authenticationType: "hmac-sha-256",
+ *     hmacAuthenticationKey: "myAuthKey",
+ *     interfaces: [{
+ *         interface_name: "Ethernet1",
+ *         shutdown: false,
+ *         summary_addresses: [{
+ *             prefix: "1.2.3.4/24",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

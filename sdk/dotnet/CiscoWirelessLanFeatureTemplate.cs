@@ -13,6 +13,54 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Wireless LAN feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoWirelessLanFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Shutdown24ghz = false,
+    ///         Shutdown5ghz = false,
+    ///         Ssids = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoWirelessLanFeatureTemplateSsidArgs
+    ///             {
+    ///                 Wireless_network_name = "WLAN1",
+    ///                 Admin_state = false,
+    ///                 Broadcast_ssid = true,
+    ///                 Vlan_id = 1,
+    ///                 Radio_type = "24ghz",
+    ///                 Security_type = "enterprise",
+    ///                 Radius_server_ip = "1.2.3.4",
+    ///                 Radius_server_port = 1812,
+    ///                 Radius_server_secret = "MySecret1",
+    ///                 Passphrase = "passphrase",
+    ///                 Qos_profile = "silver",
+    ///             },
+    ///         },
+    ///         Country = "AE",
+    ///         Username = "user1",
+    ///         Password = "myPassword01",
+    ///         ControllerIpAddress = "0.0.0.0",
+    ///         ControllerSubnetMask = "0.0.0.0",
+    ///         ControllerDefaultGateway = "0.0.0.0",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -109,7 +157,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown24ghz")]
         public Output<bool?> Shutdown24ghz { get; private set; } = null!;
@@ -122,7 +170,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown5ghz")]
         public Output<bool?> Shutdown5ghz { get; private set; } = null!;
@@ -300,7 +348,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -313,7 +361,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }
@@ -447,7 +495,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -460,7 +508,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }

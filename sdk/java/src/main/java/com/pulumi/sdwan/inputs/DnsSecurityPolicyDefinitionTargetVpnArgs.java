@@ -18,14 +18,14 @@ public final class DnsSecurityPolicyDefinitionTargetVpnArgs extends com.pulumi.r
     public static final DnsSecurityPolicyDefinitionTargetVpnArgs Empty = new DnsSecurityPolicyDefinitionTargetVpnArgs();
 
     /**
-     * Only relevant when `umbrella_dns_default` is `false`
+     * Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     @Import(name="customDnsServerIp")
     private @Nullable Output<String> customDnsServerIp;
 
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public Optional<Output<String>> customDnsServerIp() {
@@ -105,7 +105,7 @@ public final class DnsSecurityPolicyDefinitionTargetVpnArgs extends com.pulumi.r
         }
 
         /**
-         * @param customDnsServerIp Only relevant when `umbrella_dns_default` is `false`
+         * @param customDnsServerIp Only relevant when `umbrellaDnsDefault` is `false`
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class DnsSecurityPolicyDefinitionTargetVpnArgs extends com.pulumi.r
         }
 
         /**
-         * @param customDnsServerIp Only relevant when `umbrella_dns_default` is `false`
+         * @param customDnsServerIp Only relevant when `umbrellaDnsDefault` is `false`
          * 
          * @return builder
          * 

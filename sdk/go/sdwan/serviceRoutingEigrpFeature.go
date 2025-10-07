@@ -15,6 +15,63 @@ import (
 // This resource can manage a Service Routing EIGRP Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceRoutingEigrpFeature(ctx, "example", &sdwan.ServiceRoutingEigrpFeatureArgs{
+//				Name:               pulumi.String("Example"),
+//				Description:        pulumi.String("My Example"),
+//				FeatureProfileId:   pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AutonomousSystemId: pulumi.Int(111),
+//				Networks: sdwan.ServiceRoutingEigrpFeatureNetworkArray{
+//					&sdwan.ServiceRoutingEigrpFeatureNetworkArgs{
+//						Ip_address: "100.2.2.3",
+//						Mask:       pulumi.String("255.255.255.0"),
+//					},
+//				},
+//				HelloInterval:      pulumi.Int(5),
+//				HoldTime:           pulumi.Int(15),
+//				AuthenticationType: pulumi.String("md5"),
+//				Md5Keys: sdwan.ServiceRoutingEigrpFeatureMd5KeyArray{
+//					&sdwan.ServiceRoutingEigrpFeatureMd5KeyArgs{
+//						Key_id:     2,
+//						Key_string: "password123",
+//					},
+//				},
+//				Interfaces: sdwan.ServiceRoutingEigrpFeatureInterfaceArray{
+//					&sdwan.ServiceRoutingEigrpFeatureInterfaceArgs{
+//						Name:     pulumi.String("GigabitEthernet3"),
+//						Shutdown: pulumi.Bool(false),
+//						Summary_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"address": "10.0.0.1",
+//								"mask":    "255.255.255.0",
+//							},
+//						},
+//					},
+//				},
+//				Filter: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -10,6 +10,40 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco Wireless LAN feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoWirelessLanFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     shutdown24ghz: false,
+ *     shutdown5ghz: false,
+ *     ssids: [{
+ *         wireless_network_name: "WLAN1",
+ *         admin_state: false,
+ *         broadcast_ssid: true,
+ *         vlan_id: 1,
+ *         radio_type: "24ghz",
+ *         security_type: "enterprise",
+ *         radius_server_ip: "1.2.3.4",
+ *         radius_server_port: 1812,
+ *         radius_server_secret: "MySecret1",
+ *         passphrase: "passphrase",
+ *         qos_profile: "silver",
+ *     }],
+ *     country: "AE",
+ *     username: "user1",
+ *     password: "myPassword01",
+ *     controllerIpAddress: "0.0.0.0",
+ *     controllerSubnetMask: "0.0.0.0",
+ *     controllerDefaultGateway: "0.0.0.0",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

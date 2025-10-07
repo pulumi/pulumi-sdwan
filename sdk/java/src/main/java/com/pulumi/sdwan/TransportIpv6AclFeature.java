@@ -21,6 +21,60 @@ import javax.annotation.Nullable;
  * This resource can manage a Transport IPv6 ACL Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportIpv6AclFeature;
+ * import com.pulumi.sdwan.TransportIpv6AclFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportIpv6AclFeatureSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportIpv6AclFeature("example", TransportIpv6AclFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .defaultAction("drop")
+ *             .sequences(TransportIpv6AclFeatureSequenceArgs.builder()
+ *                 .sequence_id(1)
+ *                 .sequence_name("AccessControlList1")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("nextHeader", 10),
+ *                     Map.entry("packetLength", 1500),
+ *                     Map.entry("sourcePorts", List.of(Map.of("port", 8000))),
+ *                     Map.entry("tcpState", "syn"),
+ *                     Map.entry("trafficClass", List.of(10))
+ *                 )))
+ *                 .actions(TransportIpv6AclFeatureSequenceActionArgs.builder()
+ *                     .acceptCounterName("COUNTER_1")
+ *                     .acceptLog(false)
+ *                     .acceptSetNextHop("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
+ *                     .acceptTrafficClass(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -125,6 +125,22 @@ class TlocListPolicyObject(pulumi.CustomResource):
         """
         This resource can manage a TLOC List Policy Object .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TlocListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "tloc_ip": "1.1.1.2",
+                "color": "blue",
+                "encapsulation": "gre",
+                "preference": 10,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -146,6 +162,22 @@ class TlocListPolicyObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a TLOC List Policy Object .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TlocListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "tloc_ip": "1.1.1.2",
+                "color": "blue",
+                "encapsulation": "gre",
+                "preference": 10,
+            }])
+        ```
 
         ## Import
 

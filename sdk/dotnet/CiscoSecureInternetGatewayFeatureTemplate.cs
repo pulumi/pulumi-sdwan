@@ -13,6 +13,118 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Secure Internet Gateway feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSecureInternetGatewayFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VpnId = 1,
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Name = "ipsec1",
+    ///                 Auto_tunnel_mode = true,
+    ///                 Shutdown = true,
+    ///                 Description = "My Description",
+    ///                 Ip_unnumbered = false,
+    ///                 Ipv4_address = "1.2.3.4/24",
+    ///                 Tunnel_source = "3.3.3.3",
+    ///                 Tunnel_source_interface = "ge0/1",
+    ///                 Tunnel_route_via = "ge0/2",
+    ///                 Tunnel_destination = "3.4.5.6",
+    ///                 Application = "sig",
+    ///                 Sig_provider = "secure-internet-gateway-umbrella",
+    ///                 Tunnel_dc_preference = "primary-dc",
+    ///                 Tcp_mss = 1400,
+    ///                 Mtu = 1500,
+    ///                 Dead_peer_detection_interval = 30,
+    ///                 Dead_peer_detection_retries = 5,
+    ///                 Ike_version = 1,
+    ///                 Ike_pre_shared_key = "A1234567",
+    ///                 Ike_rekey_interval = 600,
+    ///                 Ike_ciphersuite = "aes256-cbc-sha2",
+    ///                 Ike_group = "14",
+    ///                 Ike_pre_shared_key_dynamic = false,
+    ///                 Ike_pre_shared_key_local_id = "1.2.3.4",
+    ///                 Ike_pre_shared_key_remote_id = "2.3.4.5",
+    ///                 Ipsec_rekey_interval = 7200,
+    ///                 Ipsec_replay_window = 1024,
+    ///                 Ipsec_ciphersuite = "aes256-cbc-sha1",
+    ///                 Ipsec_perfect_forward_secrecy = "group-14",
+    ///                 Tracker = "test",
+    ///                 Track_enable = false,
+    ///                 Tunnel_public_ip = "5.5.5.5",
+    ///             },
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateServiceArgs
+    ///             {
+    ///                 Service_type = "sig",
+    ///                 Interface_pairs = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "activeInterface", "e1" },
+    ///                         { "activeInterfaceWeight", 10 },
+    ///                         { "backupInterface", "e2" },
+    ///                         { "backupInterfaceWeight", 20 },
+    ///                     },
+    ///                 },
+    ///                 Zscaler_authentication_required = true,
+    ///                 Zscaler_xff_forward = true,
+    ///                 Zscaler_firewall_enabled = true,
+    ///                 Zscaler_ips_control_enabled = true,
+    ///                 Zscaler_caution_enabled = true,
+    ///                 Zscaler_primary_data_center = "Auto",
+    ///                 Zscaler_secondary_data_center = "Auto",
+    ///                 Zscaler_surrogate_ip = true,
+    ///                 Zscaler_surrogate_idle_time = 100,
+    ///                 Zscaler_surrogate_display_time_unit = "MINUTE",
+    ///                 Zscaler_surrogate_ip_enforce_for_known_browsers = true,
+    ///                 Zscaler_surrogate_refresh_time = 12345,
+    ///                 Zscaler_surrogate_refresh_time_unit = "MINUTE",
+    ///                 Zscaler_aup_enabled = true,
+    ///                 Zscaler_aup_block_internet_until_accepted = true,
+    ///                 Zscaler_aup_force_ssl_inspection = true,
+    ///                 Zscaler_aup_timeout = 60,
+    ///                 Zscaler_location_name = "LOC1",
+    ///                 Umbrella_primary_data_center = "Auto",
+    ///                 Umbrella_secondary_data_center = "Auto",
+    ///             },
+    ///         },
+    ///         TrackerSourceIp = "2.3.4.5",
+    ///         Trackers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateTrackerArgs
+    ///             {
+    ///                 Name = "TRACKER1",
+    ///                 Endpoint_api_url = "https://1.1.1.1",
+    ///                 Threshold = 500,
+    ///                 Interval = 60,
+    ///                 Multiplier = 4,
+    ///                 Tracker_type = "SIG",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

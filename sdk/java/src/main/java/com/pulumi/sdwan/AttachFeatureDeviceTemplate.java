@@ -19,6 +19,49 @@ import javax.annotation.Nullable;
 /**
  * This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.AttachFeatureDeviceTemplate;
+ * import com.pulumi.sdwan.AttachFeatureDeviceTemplateArgs;
+ * import com.pulumi.sdwan.inputs.AttachFeatureDeviceTemplateDeviceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AttachFeatureDeviceTemplate("example", AttachFeatureDeviceTemplateArgs.builder()
+ *             .id(DT1.id())
+ *             .devices(AttachFeatureDeviceTemplateDeviceArgs.builder()
+ *                 .id("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE")
+ *                 .variables(Map.ofEntries(
+ *                     Map.entry("systemSiteId", "1001"),
+ *                     Map.entry("systemSystemIp", "1.1.1.1"),
+ *                     Map.entry("systemHostName", "router1"),
+ *                     Map.entry("vpnIfNameDefaultVEdgeDHCPTunnelInterface", "GigabitEthernet1")
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

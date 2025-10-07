@@ -12,6 +12,51 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a IPv6 Device ACL Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.Ipv6DeviceAclPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.Ipv6DeviceAclPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 10,
+    ///                 Name = "Sequence 10",
+    ///                 Base_action = "accept",
+    ///                 Match_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "destinationPort" },
+    ///                         { "destinationPort", 22 },
+    ///                     },
+    ///                 },
+    ///                 Action_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "count" },
+    ///                         { "counterName", "count1" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,8 +69,8 @@ namespace Pulumi.Sdwan
     public partial class Ipv6DeviceAclPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -107,8 +152,8 @@ namespace Pulumi.Sdwan
     public sealed class Ipv6DeviceAclPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -146,8 +191,8 @@ namespace Pulumi.Sdwan
     public sealed class Ipv6DeviceAclPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

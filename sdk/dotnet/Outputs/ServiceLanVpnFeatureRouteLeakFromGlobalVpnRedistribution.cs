@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Protocol to restributed leaked routes
-        ///   - Choices: `bgp`, `ospf`
+        ///   - Choices: `Bgp`, `Ospf`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

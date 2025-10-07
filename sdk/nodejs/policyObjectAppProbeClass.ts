@@ -10,6 +10,26 @@ import * as utilities from "./utilities";
  * This resource can manage a Policy Object App Probe Class Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectAppProbeClass("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     entries: [{
+ *         map: [{
+ *             color: "3g",
+ *             dscp: 45,
+ *         }],
+ *         forwarding_class: "classlist1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -13,6 +13,153 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport Routing BGP Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportRoutingBgpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AsNumber = 429,
+    ///         RouterId = "1.2.3.4",
+    ///         PropagateAsPath = false,
+    ///         PropagateCommunity = false,
+    ///         ExternalRoutesDistance = 20,
+    ///         InternalRoutesDistance = 200,
+    ///         LocalRoutesDistance = 20,
+    ///         KeepaliveTime = 60,
+    ///         HoldTime = 180,
+    ///         AlwaysCompareMed = false,
+    ///         DeterministicMed = false,
+    ///         MissingMedAsWorst = false,
+    ///         CompareRouterId = false,
+    ///         MultipathRelax = false,
+    ///         Ipv4Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4NeighborArgs
+    ///             {
+    ///                 Address = "1.2.3.4",
+    ///                 Description = "neighbor1",
+    ///                 Shutdown = false,
+    ///                 Remote_as = 200,
+    ///                 Local_as = 200,
+    ///                 Keepalive_time = 40,
+    ///                 Hold_time = 200,
+    ///                 Update_source_interface = "GigabitEthernet0",
+    ///                 Next_hop_self = false,
+    ///                 Send_community = true,
+    ///                 Send_extended_community = true,
+    ///                 Ebgp_multihop = 1,
+    ///                 Password = "myPassword",
+    ///                 Send_label = true,
+    ///                 Explicit_null = false,
+    ///                 As_override = false,
+    ///                 Allowas_in_number = 1,
+    ///                 Address_families = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "familyType", "ipv4-unicast" },
+    ///                         { "policyType", "restart" },
+    ///                         { "restartMaxNumberOfPrefixes", 2000 },
+    ///                         { "restartThreshold", 75 },
+    ///                         { "restartInterval", 30 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6NeighborArgs
+    ///             {
+    ///                 Address = "2001::1",
+    ///                 Description = "neighbor2",
+    ///                 Shutdown = false,
+    ///                 Remote_as = 200,
+    ///                 Local_as = 200,
+    ///                 Keepalive_time = 180,
+    ///                 Hold_time = 60,
+    ///                 Update_source_interface = "Loopback1",
+    ///                 Next_hop_self = true,
+    ///                 Send_community = true,
+    ///                 Send_extended_community = true,
+    ///                 Ebgp_multihop = 3,
+    ///                 Password = "myPassword",
+    ///                 As_override = true,
+    ///                 Allowas_in_number = 3,
+    ///                 Address_families = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "familyType", "ipv6-unicast" },
+    ///                         { "maxNumberOfPrefixes", 2000 },
+    ///                         { "threshold", 75 },
+    ///                         { "policyType", "restart" },
+    ///                         { "restartInterval", 30 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4AggregateAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4AggregateAddressArgs
+    ///             {
+    ///                 Network_address = "10.10.0.0",
+    ///                 Subnet_mask = "255.255.0.0",
+    ///                 As_set_path = false,
+    ///                 Summary_only = false,
+    ///             },
+    ///         },
+    ///         Ipv4Networks = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4NetworkArgs
+    ///             {
+    ///                 Network_address = "10.10.0.0",
+    ///                 Subnet_mask = "255.255.0.0",
+    ///             },
+    ///         },
+    ///         Ipv4EibgpMaximumPaths = 1,
+    ///         Ipv4Originate = false,
+    ///         Ipv4TableMapFilter = false,
+    ///         Ipv6AggregateAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6AggregateAddressArgs
+    ///             {
+    ///                 Aggregate_prefix = "3001::1/128",
+    ///                 As_set_path = false,
+    ///                 Summary_only = false,
+    ///             },
+    ///         },
+    ///         Ipv6Networks = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6NetworkArgs
+    ///             {
+    ///                 Network_prefix = "2001:0DB8:0000:000b::/64",
+    ///             },
+    ///         },
+    ///         Ipv6EibgpMaximumPaths = 2,
+    ///         Ipv6Originate = true,
+    ///         Ipv6TableMapFilter = false,
+    ///         MplsInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureMplsInterfaceArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,7 +175,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("alwaysCompareMed")]
         public Output<bool?> AlwaysCompareMed { get; private set; } = null!;
@@ -53,7 +200,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("compareRouterId")]
         public Output<bool?> CompareRouterId { get; private set; } = null!;
@@ -72,7 +219,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("deterministicMed")]
         public Output<bool?> DeterministicMed { get; private set; } = null!;
@@ -164,7 +311,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4Originate")]
         public Output<bool?> Ipv4Originate { get; private set; } = null!;
@@ -183,7 +330,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4TableMapFilter")]
         public Output<bool?> Ipv4TableMapFilter { get; private set; } = null!;
@@ -230,7 +377,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6Originate")]
         public Output<bool?> Ipv6Originate { get; private set; } = null!;
@@ -249,7 +396,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6TableMapFilter")]
         public Output<bool?> Ipv6TableMapFilter { get; private set; } = null!;
@@ -293,7 +440,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("missingMedAsWorst")]
         public Output<bool?> MissingMedAsWorst { get; private set; } = null!;
@@ -312,7 +459,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("multipathRelax")]
         public Output<bool?> MultipathRelax { get; private set; } = null!;
@@ -331,7 +478,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("propagateAsPath")]
         public Output<bool?> PropagateAsPath { get; private set; } = null!;
@@ -344,7 +491,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("propagateCommunity")]
         public Output<bool?> PropagateCommunity { get; private set; } = null!;
@@ -421,7 +568,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -446,7 +593,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -465,7 +612,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -575,7 +722,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Originate")]
         public Input<bool>? Ipv4Originate { get; set; }
@@ -600,7 +747,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4TableMapFilter")]
         public Input<bool>? Ipv4TableMapFilter { get; set; }
@@ -665,7 +812,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Originate")]
         public Input<bool>? Ipv6Originate { get; set; }
@@ -690,7 +837,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6TableMapFilter")]
         public Input<bool>? Ipv6TableMapFilter { get; set; }
@@ -734,7 +881,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("missingMedAsWorst")]
         public Input<bool>? MissingMedAsWorst { get; set; }
@@ -759,7 +906,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -778,7 +925,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateAsPath")]
         public Input<bool>? PropagateAsPath { get; set; }
@@ -791,7 +938,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -824,7 +971,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -849,7 +996,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -868,7 +1015,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -978,7 +1125,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Originate")]
         public Input<bool>? Ipv4Originate { get; set; }
@@ -1003,7 +1150,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4TableMapFilter")]
         public Input<bool>? Ipv4TableMapFilter { get; set; }
@@ -1068,7 +1215,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Originate")]
         public Input<bool>? Ipv6Originate { get; set; }
@@ -1093,7 +1240,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6TableMapFilter")]
         public Input<bool>? Ipv6TableMapFilter { get; set; }
@@ -1137,7 +1284,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("missingMedAsWorst")]
         public Input<bool>? MissingMedAsWorst { get; set; }
@@ -1162,7 +1309,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -1181,7 +1328,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateAsPath")]
         public Input<bool>? PropagateAsPath { get; set; }
@@ -1194,7 +1341,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }

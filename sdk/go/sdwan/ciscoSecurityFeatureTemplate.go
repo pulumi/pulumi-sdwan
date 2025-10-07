@@ -15,6 +15,76 @@ import (
 // This resource can manage a Cisco Security feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSecurityFeatureTemplate(ctx, "example", &sdwan.CiscoSecurityFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				RekeyInterval:    pulumi.Int(86400),
+//				ReplayWindow:     pulumi.String("64"),
+//				ExtendedArWindow: pulumi.Int(256),
+//				AuthenticationTypes: pulumi.StringArray{
+//					pulumi.String("none"),
+//				},
+//				IntegrityTypes: pulumi.StringArray{
+//					pulumi.String("none"),
+//				},
+//				PairwiseKeying: pulumi.Bool(true),
+//				Keychains: sdwan.CiscoSecurityFeatureTemplateKeychainArray{
+//					&sdwan.CiscoSecurityFeatureTemplateKeychainArgs{
+//						Name:   pulumi.String("CHAIN1"),
+//						Key_id: 1,
+//					},
+//				},
+//				Keys: sdwan.CiscoSecurityFeatureTemplateKeyArray{
+//					&sdwan.CiscoSecurityFeatureTemplateKeyArgs{
+//						Id:                              pulumi.String("1"),
+//						Chain_name:                      "CHAIN1",
+//						Send_id:                         0,
+//						Receive_id:                      0,
+//						Crypto_algorithm:                "hmac-sha-256",
+//						Key_string:                      "abc123",
+//						Send_lifetime_local:             true,
+//						Send_lifetime_start_time:        "2022-12-31T23:59",
+//						Send_lifetime_end_time_format:   "infinite",
+//						Send_lifetime_duration:          1000,
+//						Send_lifetime_end_time:          "2032-12-31T23:59",
+//						Send_lifetime_infinite:          true,
+//						Accept_lifetime_local:           true,
+//						Accept_lifetime_start_time:      "2022-12-31T23:59",
+//						Accept_lifetime_end_time_format: "infinite",
+//						Accept_lifetime_duration:        1000,
+//						Accept_lifetime_end_time:        "2032-12-31T23:59",
+//						Accept_lifetime_infinite:        true,
+//						Include_tcp_options:             false,
+//						Accept_ao_mismatch:              true,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

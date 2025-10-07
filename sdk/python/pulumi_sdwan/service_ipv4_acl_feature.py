@@ -233,6 +233,38 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
         This resource can manage a Service IPv4 ACL Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceIpv4AclFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="drop",
+            sequences=[{
+                "sequence_id": 1,
+                "sequence_name": "AccessControlList1",
+                "match_entries": [{
+                    "dscps": [16],
+                    "packetLength": 1500,
+                    "protocols": [1],
+                    "sourcePorts": [{
+                        "port": 8000,
+                    }],
+                    "tcpState": "syn",
+                }],
+                "actions": [{
+                    "accept_set_dscp": 60,
+                    "accept_counter_name": "COUNTER_1",
+                    "accept_log": False,
+                    "accept_set_next_hop": "1.2.3.4",
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -262,6 +294,38 @@ class ServiceIpv4AclFeature(pulumi.CustomResource):
         """
         This resource can manage a Service IPv4 ACL Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceIpv4AclFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="drop",
+            sequences=[{
+                "sequence_id": 1,
+                "sequence_name": "AccessControlList1",
+                "match_entries": [{
+                    "dscps": [16],
+                    "packetLength": 1500,
+                    "protocols": [1],
+                    "sourcePorts": [{
+                        "port": 8000,
+                    }],
+                    "tcpState": "syn",
+                }],
+                "actions": [{
+                    "accept_set_dscp": 60,
+                    "accept_counter_name": "COUNTER_1",
+                    "accept_log": False,
+                    "accept_set_next_hop": "1.2.3.4",
+                }],
+            }])
+        ```
 
         ## Import
 

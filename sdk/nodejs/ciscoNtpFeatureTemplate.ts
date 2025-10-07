@@ -10,6 +10,35 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco NTP feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoNtpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     master: true,
+ *     masterStratum: 6,
+ *     masterSourceInterface: "e1",
+ *     trustedKeys: [1],
+ *     authenticationKeys: [{
+ *         id: 1,
+ *         value: "12345",
+ *     }],
+ *     servers: [{
+ *         hostname_ip: "NTP_SERVER1",
+ *         authentication_key_id: 1,
+ *         vpn_id: 1,
+ *         version: 4,
+ *         source_interface: "e1",
+ *         prefer: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

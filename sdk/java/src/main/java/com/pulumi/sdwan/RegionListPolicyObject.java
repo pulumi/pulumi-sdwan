@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Region List Policy Object .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.RegionListPolicyObject;
+ * import com.pulumi.sdwan.RegionListPolicyObjectArgs;
+ * import com.pulumi.sdwan.inputs.RegionListPolicyObjectEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RegionListPolicyObject("example", RegionListPolicyObjectArgs.builder()
+ *             .name("Example")
+ *             .entries(RegionListPolicyObjectEntryArgs.builder()
+ *                 .region_id("1-2")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

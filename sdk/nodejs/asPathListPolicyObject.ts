@@ -9,6 +9,20 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a AS Path List Policy Object .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.AsPathListPolicyObject("example", {
+ *     name: "Example",
+ *     entries: [{
+ *         as_path: "^1239_[0-9]*$",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

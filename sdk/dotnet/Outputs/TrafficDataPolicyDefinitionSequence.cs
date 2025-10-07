@@ -18,8 +18,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntry> ActionEntries;
         /// <summary>
-        /// Base action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Base action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>
@@ -27,8 +27,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Id;
         /// <summary>
-        /// Sequence IP type, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Sequence IP type, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         public readonly string? IpType;
         /// <summary>
@@ -41,7 +41,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string Name;
         /// <summary>
         /// Sequence type
-        ///   - Choices: `applicationFirewall`, `qos`, `serviceChaining`, `trafficEngineering`, `data`
+        ///   - Choices: `applicationFirewall`, `Qos`, `serviceChaining`, `trafficEngineering`, `Data`
         /// </summary>
         public readonly string Type;
 

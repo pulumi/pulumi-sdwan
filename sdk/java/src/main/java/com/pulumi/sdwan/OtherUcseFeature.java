@@ -22,6 +22,56 @@ import javax.annotation.Nullable;
  * This resource can manage a Other UCSE Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.OtherUcseFeature;
+ * import com.pulumi.sdwan.OtherUcseFeatureArgs;
+ * import com.pulumi.sdwan.inputs.OtherUcseFeatureInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new OtherUcseFeature("example", OtherUcseFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .bay(2)
+ *             .slot(0)
+ *             .accessPortDedicated(false)
+ *             .accessPortSharedType("ge1")
+ *             .accessPortSharedFailoverType("ge2")
+ *             .ipv4Address("2.2.2.2/24")
+ *             .defaultGateway("2.2.2.2")
+ *             .vlanId(3)
+ *             .assignPriority(3)
+ *             .interfaces(OtherUcseFeatureInterfaceArgs.builder()
+ *                 .interface_name("ucse2/0")
+ *                 .ucse_interface_vpn(2)
+ *                 .ipv4_address("10.1.15.15/24")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
@@ -52,7 +102,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accessPortDedicated);
     }
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -60,7 +110,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> accessPortSharedFailoverType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -68,7 +118,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accessPortSharedFailoverType);
     }
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
@@ -76,7 +126,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> accessPortSharedType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */

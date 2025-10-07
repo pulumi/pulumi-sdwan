@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `log`, `connectionEvents`, `advancedInspectionProfile`
+        ///   - Choices: `Log`, `connectionEvents`, `advancedInspectionProfile`
         /// </summary>
         public readonly string? Type;
 

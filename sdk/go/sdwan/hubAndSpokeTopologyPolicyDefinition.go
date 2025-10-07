@@ -14,6 +14,53 @@ import (
 
 // This resource can manage a Hub and Spoke Topology Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewHubAndSpokeTopologyPolicyDefinition(ctx, "example", &sdwan.HubAndSpokeTopologyPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				VpnListId:   pulumi.String("04fcbb0b-efbf-43d2-a04b-847d3a7b104e"),
+//				Topologies: sdwan.HubAndSpokeTopologyPolicyDefinitionTopologyArray{
+//					&sdwan.HubAndSpokeTopologyPolicyDefinitionTopologyArgs{
+//						Name:                pulumi.String("Topology1"),
+//						All_hubs_are_equal:  false,
+//						Advertise_hub_tlocs: true,
+//						Tloc_list_id:        "b326e448-bf33-47e4-83e7-f947e6981382",
+//						Spokes: sdwan.HubAndSpokeTopologyPolicyDefinitionTopologySpokeArray{
+//							&sdwan.HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs{
+//								SiteListId: pulumi.String("e858e1c4-6aa8-4de7-99df-c3adbf80290d"),
+//								Hubs: sdwan.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArray{
+//									&sdwan.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs{
+//										SiteListId: pulumi.String("e858e1c4-6aa8-4de7-99df-c3adbf80290d"),
+//										Preference: pulumi.String("30"),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

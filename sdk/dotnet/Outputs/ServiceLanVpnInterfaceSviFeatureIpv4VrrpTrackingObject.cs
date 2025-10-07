@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? DecrementValueVariable;
         /// <summary>
         /// Track Action
-        ///   - Choices: `decrement`, `shutdown`
+        ///   - Choices: `Decrement`, `Shutdown`
         /// </summary>
         public readonly string? TrackAction;
         /// <summary>

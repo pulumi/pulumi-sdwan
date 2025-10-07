@@ -27,8 +27,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.EigrpFeatureTemplateAddressFamilyRedistribute> Redistributes;
         /// <summary>
         /// Set EIGRP address family
-        ///   - Choices: `ipv4`
-        ///   - Default value: `ipv4`
+        ///   - Choices: `Ipv4`
+        ///   - Default value: `Ipv4`
         /// </summary>
         public readonly string? Type;
 

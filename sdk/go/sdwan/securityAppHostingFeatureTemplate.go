@@ -15,6 +15,49 @@ import (
 // This resource can manage a Security App Hosting feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSecurityAppHostingFeatureTemplate(ctx, "example", &sdwan.SecurityAppHostingFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VirtualApplications: sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArray{
+//					&sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArgs{
+//						Instance_id:        "2e89c1fe-440a-43f5-9f3a-54a9836fdbb5",
+//						Application_type:   "utd",
+//						Nat:                pulumi.Bool(true),
+//						Database_url:       false,
+//						Resource_profile:   "low",
+//						Service_gateway_ip: "1.2.3.4/24",
+//						Service_ip:         "1.2.3.5/24",
+//						Data_gateway_ip:    "192.0.2.1/24",
+//						Data_service_ip:    "192.0.2.2/24",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

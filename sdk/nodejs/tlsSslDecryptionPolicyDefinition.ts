@@ -9,6 +9,43 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a TLS SSL Decryption Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TlsSslDecryptionPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     mode: "security",
+ *     defaultAction: "noIntent",
+ *     networkRules: [{
+ *         base_action: "doNotDecrypt",
+ *         rule_id: 4,
+ *         rule_name: "Example",
+ *         rule_type: "sslDecryption",
+ *         source_and_destination_configuration: [{
+ *             option: "destinationIp",
+ *             value: "10.0.0.0/12",
+ *         }],
+ *     }],
+ *     sslDecryptionEnabled: "true",
+ *     expiredCertificate: "drop",
+ *     untrustedCertificate: "drop",
+ *     certificateRevocationStatus: "none",
+ *     unknownRevocationStatus: "drop",
+ *     unsupportedProtocolVersions: "drop",
+ *     unsupportedCipherSuites: "drop",
+ *     failureMode: "close",
+ *     rsaKeyPairModulus: "2048",
+ *     ecKeyType: "P384",
+ *     certificateLifetimeInDays: 1,
+ *     minimalTlsVersion: "TLSv1.2",
+ *     useDefaultCaCertBundle: true,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

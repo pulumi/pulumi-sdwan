@@ -13,6 +13,140 @@ namespace Pulumi.Sdwan
     /// This resource can manage a cEdge AAA feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CedgeAaaFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Dot1xAuthentication = true,
+    ///         Dot1xAccounting = true,
+    ///         ServerGroupsPriorityOrder = "100",
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateUserArgs
+    ///             {
+    ///                 Name = "user1",
+    ///                 Password = "password123",
+    ///                 Secret = "secret123",
+    ///                 Privilege_level = "15",
+    ///                 Ssh_pubkeys = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "keyString", "abc123" },
+    ///                         { "keyType", "rsa" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusServerGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusServerGroupArgs
+    ///             {
+    ///                 Group_name = "GROUP1",
+    ///                 Vpn_id = 1,
+    ///                 Source_interface = "e1",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusServerGroupServerArgs
+    ///                     {
+    ///                         Address = "1.1.1.1",
+    ///                         AuthenticationPort = 1812,
+    ///                         AccountingPort = 1813,
+    ///                         Timeout = 5,
+    ///                         Retransmit = 3,
+    ///                         Key = "key123",
+    ///                         SecretKey = "1234567",
+    ///                         EncryptionType = "7",
+    ///                         KeyType = "pac",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusClients = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusClientArgs
+    ///             {
+    ///                 Client_ip = "2.2.2.2",
+    ///                 Vpn_configurations = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "vpnId", 1 },
+    ///                         { "serverKey", "key123" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusDynamicAuthorServerKey = "key123",
+    ///         RadiusDynamicAuthorDomainStripping = "yes",
+    ///         RadiusDynamicAuthorAuthenticationType = "all",
+    ///         RadiusDynamicAuthorPort = 1700,
+    ///         RadiusTrustsecCtsAuthorizationList = "ALIST1",
+    ///         RadiusTrustsecGroup = "GROUP1",
+    ///         TacacsServerGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateTacacsServerGroupArgs
+    ///             {
+    ///                 Group_name = "GROUP1",
+    ///                 Vpn_id = 1,
+    ///                 Source_interface = "e1",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateTacacsServerGroupServerArgs
+    ///                     {
+    ///                         Address = "1.1.1.1",
+    ///                         Port = 49,
+    ///                         Timeout = 5,
+    ///                         Key = "key123",
+    ///                         SecretKey = "1234567",
+    ///                         EncryptionType = "7",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         AccountingRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateAccountingRuleArgs
+    ///             {
+    ///                 Name = "RULE1",
+    ///                 Method = "exec",
+    ///                 Privilege_level = "15",
+    ///                 Start_stop = true,
+    ///                 Groups = "GROUP1",
+    ///             },
+    ///         },
+    ///         AuthorizationConsole = true,
+    ///         AuthorizationConfigCommands = true,
+    ///         AuthorizationRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateAuthorizationRuleArgs
+    ///             {
+    ///                 Name = "RULE1",
+    ///                 Method = "commands",
+    ///                 Privilege_level = "15",
+    ///                 Groups = "GROUP1",
+    ///                 Authenticated = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -32,7 +166,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -45,7 +179,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -77,7 +211,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("dot1xAccounting")]
         public Output<bool?> Dot1xAccounting { get; private set; } = null!;
@@ -90,7 +224,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("dot1xAuthentication")]
         public Output<bool?> Dot1xAuthentication { get; private set; } = null!;
@@ -115,8 +249,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Output("radiusDynamicAuthorAuthenticationType")]
         public Output<string?> RadiusDynamicAuthorAuthenticationType { get; private set; } = null!;
@@ -129,8 +263,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Output("radiusDynamicAuthorDomainStripping")]
         public Output<string?> RadiusDynamicAuthorDomainStripping { get; private set; } = null!;
@@ -193,7 +327,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Output("serverGroupsPriorityOrder")]
         public Output<string?> ServerGroupsPriorityOrder { get; private set; } = null!;
@@ -282,7 +416,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -295,7 +429,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -339,7 +473,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -352,7 +486,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -383,8 +517,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -397,8 +531,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -467,7 +601,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }
@@ -518,7 +652,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -531,7 +665,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -575,7 +709,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -588,7 +722,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -619,8 +753,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -633,8 +767,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -703,7 +837,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }

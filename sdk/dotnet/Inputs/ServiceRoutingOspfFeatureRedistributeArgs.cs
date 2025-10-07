@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Enable NAT DIA for redistributed routes
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natDia")]
         public Input<bool>? NatDia { get; set; }
@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set the protocol
-        ///   - Choices: `static`, `connected`, `bgp`, `omp`, `nat`, `eigrp`
+        ///   - Choices: `Static`, `Connected`, `Bgp`, `Omp`, `Nat`, `Eigrp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -42,8 +42,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RoutePolicyId { get; set; }
 
         /// <summary>
-        /// Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
-        ///   - Default value: `false`
+        /// Translate Rib Metric, Attribute conditional on `Protocol` being equal to `Omp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("translateRibMetric")]
         public Input<bool>? TranslateRibMetric { get; set; }

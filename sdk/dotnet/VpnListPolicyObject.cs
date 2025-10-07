@@ -12,6 +12,31 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a VPN List Policy Object .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.VpnListPolicyObject("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnListPolicyObjectEntryArgs
+    ///             {
+    ///                 Vpn_id = "100-200",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

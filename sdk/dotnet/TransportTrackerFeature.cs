@@ -99,8 +99,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `interface`
-        ///   - Default value: `interface`
+        ///   - Choices: `Interface`
+        ///   - Default value: `Interface`
         /// </summary>
         [Output("endpointTrackerType")]
         public Output<string?> EndpointTrackerType { get; private set; } = null!;
@@ -179,8 +179,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`, `object`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`, `Object`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Output("trackerType")]
         public Output<string?> TrackerType { get; private set; } = null!;
@@ -287,8 +287,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `interface`
-        ///   - Default value: `interface`
+        ///   - Choices: `Interface`
+        ///   - Default value: `Interface`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
@@ -367,8 +367,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`, `object`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`, `Object`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }
@@ -431,8 +431,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Endpoint Tracker Type
-        ///   - Choices: `interface`
-        ///   - Default value: `interface`
+        ///   - Choices: `Interface`
+        ///   - Default value: `Interface`
         /// </summary>
         [Input("endpointTrackerType")]
         public Input<string>? EndpointTrackerType { get; set; }
@@ -511,8 +511,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`, `object`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`, `Object`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }

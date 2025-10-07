@@ -10,6 +10,27 @@ import * as utilities from "./utilities";
  * This resource can manage a Policy Object Preferred Color Group Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectPreferredColorGroup("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     entries: [{
+ *         primary_color_preference: ["default"],
+ *         primary_path_preference: "direct-path",
+ *         secondary_color_preference: ["bronze"],
+ *         secondary_path_preference: "all-paths",
+ *         tertiary_color_preference: ["blue"],
+ *         tertiary_path_preference: "all-paths",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

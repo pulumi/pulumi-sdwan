@@ -24,6 +24,71 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco Logging feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoLoggingFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoLoggingFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateTlsProfileArgs;
+ * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateIpv4ServerArgs;
+ * import com.pulumi.sdwan.inputs.CiscoLoggingFeatureTemplateIpv6ServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoLoggingFeatureTemplate("example", CiscoLoggingFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .diskLogging(true)
+ *             .maxSize(10)
+ *             .logRotations(10)
+ *             .tlsProfiles(CiscoLoggingFeatureTemplateTlsProfileArgs.builder()
+ *                 .name("PROF1")
+ *                 .version("TLSv1.2")
+ *                 .authentication_type("Server")
+ *                 .ciphersuite_list(List.of("aes-128-cbc-sha"))
+ *                 .build())
+ *             .ipv4Servers(CiscoLoggingFeatureTemplateIpv4ServerArgs.builder()
+ *                 .hostname_ip("2.2.2.2")
+ *                 .vpn_id(1)
+ *                 .source_interface("e1")
+ *                 .logging_level("information")
+ *                 .enable_tls(true)
+ *                 .custom_profile(true)
+ *                 .profile("PROF1")
+ *                 .build())
+ *             .ipv6Servers(CiscoLoggingFeatureTemplateIpv6ServerArgs.builder()
+ *                 .hostname_ip("2001::1")
+ *                 .vpn_id(1)
+ *                 .source_interface("e1")
+ *                 .logging_level("information")
+ *                 .enable_tls(true)
+ *                 .custom_profile(true)
+ *                 .profile("PROF1")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

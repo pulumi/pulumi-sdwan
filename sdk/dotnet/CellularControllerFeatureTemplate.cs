@@ -13,6 +13,43 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cellular Controller feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CellularControllerFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         CellularInterfaceId = "1",
+    ///         DataProfiles = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CellularControllerFeatureTemplateDataProfileArgs
+    ///             {
+    ///                 Slot_number = 1,
+    ///                 Data_profile = 8,
+    ///                 Attach_profile = 8,
+    ///             },
+    ///         },
+    ///         PrimarySimSlot = 100,
+    ///         SimFailoverRetries = 160,
+    ///         SimFailoverTimeout = 3,
+    ///         FirmwareAutoSim = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -57,7 +94,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("firmwareAutoSim")]
         public Output<bool?> FirmwareAutoSim { get; private set; } = null!;
@@ -216,7 +253,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }
@@ -325,7 +362,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }

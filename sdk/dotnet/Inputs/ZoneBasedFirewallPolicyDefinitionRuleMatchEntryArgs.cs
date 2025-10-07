@@ -19,14 +19,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? PolicyId { get; set; }
 
         /// <summary>
-        /// Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
+        /// Should be included with additionally entries for `destinationPort` and `Protocol` whenever the type `protocolName` is used.
         /// </summary>
         [Input("protocolType")]
         public Input<string>? ProtocolType { get; set; }
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+        ///   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `Protocol`, `App`, `ruleSetList`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

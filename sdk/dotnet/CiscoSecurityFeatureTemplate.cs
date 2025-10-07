@@ -13,6 +13,75 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Security feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSecurityFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         RekeyInterval = 86400,
+    ///         ReplayWindow = "64",
+    ///         ExtendedArWindow = 256,
+    ///         AuthenticationTypes = new[]
+    ///         {
+    ///             "none",
+    ///         },
+    ///         IntegrityTypes = new[]
+    ///         {
+    ///             "none",
+    ///         },
+    ///         PairwiseKeying = true,
+    ///         Keychains = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecurityFeatureTemplateKeychainArgs
+    ///             {
+    ///                 Name = "CHAIN1",
+    ///                 Key_id = 1,
+    ///             },
+    ///         },
+    ///         Keys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecurityFeatureTemplateKeyArgs
+    ///             {
+    ///                 Id = "1",
+    ///                 Chain_name = "CHAIN1",
+    ///                 Send_id = 0,
+    ///                 Receive_id = 0,
+    ///                 Crypto_algorithm = "hmac-sha-256",
+    ///                 Key_string = "abc123",
+    ///                 Send_lifetime_local = true,
+    ///                 Send_lifetime_start_time = "2022-12-31T23:59",
+    ///                 Send_lifetime_end_time_format = "infinite",
+    ///                 Send_lifetime_duration = 1000,
+    ///                 Send_lifetime_end_time = "2032-12-31T23:59",
+    ///                 Send_lifetime_infinite = true,
+    ///                 Accept_lifetime_local = true,
+    ///                 Accept_lifetime_start_time = "2022-12-31T23:59",
+    ///                 Accept_lifetime_end_time_format = "infinite",
+    ///                 Accept_lifetime_duration = 1000,
+    ///                 Accept_lifetime_end_time = "2032-12-31T23:59",
+    ///                 Accept_lifetime_infinite = true,
+    ///                 Include_tcp_options = false,
+    ///                 Accept_ao_mismatch = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -95,7 +164,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("pairwiseKeying")]
         public Output<bool?> PairwiseKeying { get; private set; } = null!;
@@ -293,7 +362,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }
@@ -441,7 +510,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }

@@ -14,6 +14,55 @@ import (
 
 // This resource can manage a Route Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewRoutePolicyDefinition(ctx, "example", &sdwan.RoutePolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("reject"),
+//				Sequences: sdwan.RoutePolicyDefinitionSequenceArray{
+//					&sdwan.RoutePolicyDefinitionSequenceArgs{
+//						Id:          pulumi.Int(10),
+//						Ip_type:     "ipv4",
+//						Name:        pulumi.String("Sequence 10"),
+//						Base_action: "accept",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":   "metric",
+//								"metric": 100,
+//							},
+//						},
+//						Action_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":                "aggregator",
+//								"aggregator":          10,
+//								"aggregatorIpAddress": "10.1.2.3",
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

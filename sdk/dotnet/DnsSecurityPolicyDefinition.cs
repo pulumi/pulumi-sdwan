@@ -61,7 +61,7 @@ namespace Pulumi.Sdwan
         public Output<int?> CiscoSigCredentialsFeatureTemplateVersion { get; private set; } = null!;
 
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         [Output("customDnsServerIp")]
         public Output<string?> CustomDnsServerIp { get; private set; } = null!;
@@ -109,7 +109,7 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Only relevant when `match_all_vpn` is `false`
+        /// Only relevant when `MatchAllVpn` is `False`
         /// </summary>
         [Output("targetVpns")]
         public Output<ImmutableArray<Outputs.DnsSecurityPolicyDefinitionTargetVpn>> TargetVpns { get; private set; } = null!;
@@ -185,7 +185,7 @@ namespace Pulumi.Sdwan
         public Input<int>? CiscoSigCredentialsFeatureTemplateVersion { get; set; }
 
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         [Input("customDnsServerIp")]
         public Input<string>? CustomDnsServerIp { get; set; }
@@ -236,7 +236,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.DnsSecurityPolicyDefinitionTargetVpnArgs>? _targetVpns;
 
         /// <summary>
-        /// Only relevant when `match_all_vpn` is `false`
+        /// Only relevant when `MatchAllVpn` is `False`
         /// </summary>
         public InputList<Inputs.DnsSecurityPolicyDefinitionTargetVpnArgs> TargetVpns
         {
@@ -271,7 +271,7 @@ namespace Pulumi.Sdwan
         public Input<int>? CiscoSigCredentialsFeatureTemplateVersion { get; set; }
 
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         [Input("customDnsServerIp")]
         public Input<string>? CustomDnsServerIp { get; set; }
@@ -322,7 +322,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.DnsSecurityPolicyDefinitionTargetVpnGetArgs>? _targetVpns;
 
         /// <summary>
-        /// Only relevant when `match_all_vpn` is `false`
+        /// Only relevant when `MatchAllVpn` is `False`
         /// </summary>
         public InputList<Inputs.DnsSecurityPolicyDefinitionTargetVpnGetArgs> TargetVpns
         {

@@ -12,6 +12,50 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Application Aware Routing Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ApplicationAwareRoutingPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "Region1",
+    ///                 Ip_type = "ipv4",
+    ///                 Match_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "appList" },
+    ///                         { "applicationListId", "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c" },
+    ///                     },
+    ///                 },
+    ///                 Action_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "backupSlaPreferredColor" },
+    ///                         { "backupSlaPreferredColor", "bronze" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

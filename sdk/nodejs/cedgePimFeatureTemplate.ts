@@ -10,6 +10,49 @@ import * as utilities from "./utilities";
  * This resource can manage a cEdge PIM feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CedgePimFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     autoRp: true,
+ *     rpAnnounceFields: [{
+ *         interface_name: "Ethernet1",
+ *         scope: 1,
+ *     }],
+ *     interfaceName: "Ethernet1",
+ *     rpCandidates: [{
+ *         "interface": "Ethernet1",
+ *         access_list: "1",
+ *         interval: 100,
+ *         priority: 2,
+ *     }],
+ *     bsrCandidate: "Ethernet1",
+ *     hashMaskLength: "24",
+ *     priority: 1,
+ *     rpCandidateAccessList: "120",
+ *     scope: 1,
+ *     range: "16",
+ *     "default": true,
+ *     rpAddresses: [{
+ *         ip_address: "1.2.3.4",
+ *         access_list: "99",
+ *         override: false,
+ *     }],
+ *     sptThreshold: "0",
+ *     interfaces: [{
+ *         interface_name: "Ethernet1",
+ *         query_interval: 30,
+ *         join_prune_interval: 60,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

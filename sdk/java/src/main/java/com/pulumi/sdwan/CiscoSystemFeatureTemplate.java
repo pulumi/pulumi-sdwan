@@ -25,6 +25,91 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco System feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoSystemFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoSystemFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSystemFeatureTemplateTrackerArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSystemFeatureTemplateObjectTrackerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoSystemFeatureTemplate("example", CiscoSystemFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .timezone("UTC")
+ *             .hostname("Router1")
+ *             .systemDescription("My Description")
+ *             .location("Building 1")
+ *             .latitude(40.0)
+ *             .longitude(50.0)
+ *             .geoFencing(true)
+ *             .geoFencingRange(1000)
+ *             .geoFencingSms(true)
+ *             .geoFencingSmsPhoneNumbers(CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs.builder()
+ *                 .number("+1234567")
+ *                 .build())
+ *             .deviceGroups("group1")
+ *             .controllerGroupLists(1)
+ *             .systemIp("5.5.5.5")
+ *             .overlayId(1)
+ *             .siteId(1)
+ *             .portOffset(1)
+ *             .portHopping(true)
+ *             .controlSessionPps(300)
+ *             .trackTransport(true)
+ *             .trackInterfaceTag(1)
+ *             .consoleBaudRate("115200")
+ *             .maxOmpSessions(5)
+ *             .multiTenant(true)
+ *             .trackDefaultGateway(true)
+ *             .adminTechOnFailure(true)
+ *             .idleTimeout(100)
+ *             .trackers(CiscoSystemFeatureTemplateTrackerArgs.builder()
+ *                 .name("tracker1")
+ *                 .endpoint_ip("5.6.7.8")
+ *                 .threshold(300)
+ *                 .interval(60)
+ *                 .multiplier(3)
+ *                 .type("interface")
+ *                 .build())
+ *             .objectTrackers(CiscoSystemFeatureTemplateObjectTrackerArgs.builder()
+ *                 .object_number(1)
+ *                 .interface_("e1")
+ *                 .build())
+ *             .onDemandTunnel(true)
+ *             .onDemandTunnelIdleTimeout(10)
+ *             .affinityGroupNumber(5)
+ *             .affinityGroupPreferences(1)
+ *             .transportGateway(true)
+ *             .enableMrfMigration("enabled")
+ *             .migrationBgpCommunity(100)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

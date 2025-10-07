@@ -12,6 +12,60 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Custom Control Topology Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CustomControlTopologyPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         DefaultAction = "reject",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CustomControlTopologyPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "Region1",
+    ///                 Type = "route",
+    ///                 Ip_type = "ipv4",
+    ///                 Base_action = "accept",
+    ///                 Match_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "ompTag" },
+    ///                         { "ompTag", 100 },
+    ///                     },
+    ///                 },
+    ///                 Action_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "set" },
+    ///                         { "setParameters", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "type", "preference" },
+    ///                                 { "preference", 100 },
+    ///                             },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,8 +78,8 @@ namespace Pulumi.Sdwan
     public partial class CustomControlTopologyPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -107,8 +161,8 @@ namespace Pulumi.Sdwan
     public sealed class CustomControlTopologyPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -146,8 +200,8 @@ namespace Pulumi.Sdwan
     public sealed class CustomControlTopologyPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

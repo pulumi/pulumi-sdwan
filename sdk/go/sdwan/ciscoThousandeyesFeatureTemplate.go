@@ -15,6 +15,51 @@ import (
 // This resource can manage a Cisco ThousandEyes feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoThousandeyesFeatureTemplate(ctx, "example", &sdwan.CiscoThousandeyesFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VirtualApplications: sdwan.CiscoThousandeyesFeatureTemplateVirtualApplicationArray{
+//					&sdwan.CiscoThousandeyesFeatureTemplateVirtualApplicationArgs{
+//						Instance_id:            "1",
+//						Application_type:       "te",
+//						Te_account_group_token: "1234567",
+//						Te_vpn:                 1,
+//						Te_agent_ip:            "1.1.1.2/24",
+//						Te_default_gateway:     "1.1.1.255",
+//						Te_name_server:         "10.2.2.2",
+//						Te_hostname:            "agent1",
+//						Te_web_proxy_type:      "static",
+//						Te_proxy_host:          "3.3.3.3",
+//						Te_proxy_port:          80,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

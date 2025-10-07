@@ -191,6 +191,22 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
         This resource can manage a Policy Object Security IPS Signature Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectSecurityIpsSignature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "generator_id": "1234",
+                "signature_id": "5678",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -217,6 +233,22 @@ class PolicyObjectSecurityIpsSignature(pulumi.CustomResource):
         """
         This resource can manage a Policy Object Security IPS Signature Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectSecurityIpsSignature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "generator_id": "1234",
+                "signature_id": "5678",
+            }])
+        ```
 
         ## Import
 

@@ -14,6 +14,52 @@ import (
 
 // This resource can manage a Cflowd Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCflowdPolicyDefinition(ctx, "example", &sdwan.CflowdPolicyDefinitionArgs{
+//				Name:                pulumi.String("Example"),
+//				Description:         pulumi.String("My description"),
+//				ActiveFlowTimeout:   pulumi.Int(100),
+//				InactiveFlowTimeout: pulumi.Int(10),
+//				SamplingInterval:    pulumi.Int(10),
+//				FlowRefresh:         pulumi.Int(120),
+//				Protocol:            pulumi.String("ipv4"),
+//				Tos:                 pulumi.Bool(true),
+//				RemarkedDscp:        pulumi.Bool(true),
+//				Collectors: sdwan.CflowdPolicyDefinitionCollectorArray{
+//					&sdwan.CflowdPolicyDefinitionCollectorArgs{
+//						Vpn_id:                1,
+//						Ip_address:            "10.0.0.1",
+//						Port:                  pulumi.Int(12345),
+//						Transport:             pulumi.String("transport_tcp"),
+//						Source_interface:      "Ethernet1",
+//						Export_spreading:      "enable",
+//						Bfd_metrics_exporting: true,
+//						Exporting_interval:    86400,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

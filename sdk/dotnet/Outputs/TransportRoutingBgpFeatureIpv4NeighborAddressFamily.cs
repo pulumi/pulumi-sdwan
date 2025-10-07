@@ -14,22 +14,22 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TransportRoutingBgpFeatureIpv4NeighborAddressFamily
     {
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `disable-peer`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? DisablePeerMaxNumberOfPrefixes;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
         /// </summary>
         public readonly string? DisablePeerMaxNumberOfPrefixesVariable;
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `disable-peer`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
         public readonly int? DisablePeerThreshold;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
         /// </summary>
         public readonly string? DisablePeerThresholdVariable;
         /// <summary>
@@ -41,54 +41,54 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? OutRoutePolicyId;
         /// <summary>
         /// Neighbor received maximum prefix policy is disabled.
-        ///   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
+        ///   - Choices: `Restart`, `Off`, `warning-only`, `disable-peer`
         /// </summary>
         public readonly string? PolicyType;
         /// <summary>
-        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`65535`
         /// </summary>
         public readonly int? RestartInterval;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         public readonly string? RestartIntervalVariable;
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? RestartMaxNumberOfPrefixes;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         public readonly string? RestartMaxNumberOfPrefixesVariable;
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
         public readonly int? RestartThreshold;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         public readonly string? RestartThresholdVariable;
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `warning-only`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? WarningMessageMaxNumberOfPrefixes;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
         /// </summary>
         public readonly string? WarningMessageMaxNumberOfPrefixesVariable;
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `warning-only`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
         public readonly int? WarningMessageThreshold;
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
         /// </summary>
         public readonly string? WarningMessageThresholdVariable;
 

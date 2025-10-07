@@ -9,6 +9,32 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Hub and Spoke Topology Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.HubAndSpokeTopologyPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     vpnListId: "04fcbb0b-efbf-43d2-a04b-847d3a7b104e",
+ *     topologies: [{
+ *         name: "Topology1",
+ *         all_hubs_are_equal: false,
+ *         advertise_hub_tlocs: true,
+ *         tloc_list_id: "b326e448-bf33-47e4-83e7-f947e6981382",
+ *         spokes: [{
+ *             siteListId: "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+ *             hubs: [{
+ *                 siteListId: "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+ *                 preference: "30",
+ *             }],
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

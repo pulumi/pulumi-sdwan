@@ -77,7 +77,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("firmwareAutoSim")]
         public Output<bool?> FirmwareAutoSim { get; private set; } = null!;
@@ -211,7 +211,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }
@@ -301,7 +301,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/Disable Firmware Auto Sim
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("firmwareAutoSim")]
         public Input<bool>? FirmwareAutoSim { get; set; }

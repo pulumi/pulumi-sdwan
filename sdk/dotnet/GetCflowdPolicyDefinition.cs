@@ -146,7 +146,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
         /// </summary>
         public readonly string Protocol;
         /// <summary>

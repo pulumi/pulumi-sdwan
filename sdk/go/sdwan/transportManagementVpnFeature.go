@@ -15,6 +15,72 @@ import (
 // This resource can manage a Transport Management VPN Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportManagementVpnFeature(ctx, "example", &sdwan.TransportManagementVpnFeatureArgs{
+//				Name:                    pulumi.String("Example"),
+//				Description:             pulumi.String("My Example"),
+//				FeatureProfileId:        pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				VpnDescription:          pulumi.String("example"),
+//				PrimaryDnsAddressIpv4:   pulumi.String("1.2.3.4"),
+//				SecondaryDnsAddressIpv4: pulumi.String("2.3.4.5"),
+//				PrimaryDnsAddressIpv6:   pulumi.String("2001:0:0:1::0"),
+//				SecondaryDnsAddressIpv6: pulumi.String("2001:0:0:2::0"),
+//				NewHostMappings: sdwan.TransportManagementVpnFeatureNewHostMappingArray{
+//					&sdwan.TransportManagementVpnFeatureNewHostMappingArgs{
+//						Host_name: "example",
+//						List_of_ip_addresses: []string{
+//							"1.2.3.4",
+//						},
+//					},
+//				},
+//				Ipv4StaticRoutes: sdwan.TransportManagementVpnFeatureIpv4StaticRouteArray{
+//					&sdwan.TransportManagementVpnFeatureIpv4StaticRouteArgs{
+//						Network_address: "1.2.3.4",
+//						Subnet_mask:     "0.0.0.0",
+//						Gateway:         pulumi.String("nextHop"),
+//						Next_hops: []map[string]interface{}{
+//							map[string]interface{}{
+//								"address":                "1.2.3.4",
+//								"administrativeDistance": 1,
+//							},
+//						},
+//					},
+//				},
+//				Ipv6StaticRoutes: sdwan.TransportManagementVpnFeatureIpv6StaticRouteArray{
+//					&sdwan.TransportManagementVpnFeatureIpv6StaticRouteArgs{
+//						Prefix:  pulumi.String("2002::/16"),
+//						Gateway: pulumi.String("nextHop"),
+//						Next_hops: []map[string]interface{}{
+//							map[string]interface{}{
+//								"address":                "2001:0:0:1::1",
+//								"administrativeDistance": 1,
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

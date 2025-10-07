@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set the protocol to redistribute routes from
-        ///   - Choices: `static`, `connected`, `ospf`, `ospfv3`, `omp`, `eigrp`, `nat`
+        ///   - Choices: `Static`, `Connected`, `Ospf`, `Ospfv3`, `Omp`, `Eigrp`, `Nat`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

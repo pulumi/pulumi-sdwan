@@ -14,6 +14,53 @@ import (
 
 // This resource can manage a URL Filtering Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewUrlFilteringPolicyDefinition(ctx, "example", &sdwan.UrlFilteringPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Mode:        pulumi.String("security"),
+//				Alerts: pulumi.StringArray{
+//					pulumi.String("blacklist"),
+//				},
+//				WebCategories: pulumi.StringArray{
+//					pulumi.String("alcohol-and-tobacco"),
+//				},
+//				WebCategoriesAction: pulumi.String("allow"),
+//				WebReputation:       pulumi.String("moderate-risk"),
+//				TargetVpns: pulumi.StringArray{
+//					pulumi.String("1"),
+//				},
+//				BlockPageAction:   pulumi.String("text"),
+//				BlockPageContents: pulumi.String("Access to the requested page has been denied. Please contact your Network Administrator"),
+//				Loggings: sdwan.UrlFilteringPolicyDefinitionLoggingArray{
+//					&sdwan.UrlFilteringPolicyDefinitionLoggingArgs{
+//						External_syslog_server_ip:  "10.0.0.1",
+//						External_syslog_server_vpn: "123",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

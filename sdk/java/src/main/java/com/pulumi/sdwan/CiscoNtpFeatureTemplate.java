@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco NTP feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoNtpFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoNtpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoNtpFeatureTemplateAuthenticationKeyArgs;
+ * import com.pulumi.sdwan.inputs.CiscoNtpFeatureTemplateServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoNtpFeatureTemplate("example", CiscoNtpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .master(true)
+ *             .masterStratum(6)
+ *             .masterSourceInterface("e1")
+ *             .trustedKeys(1)
+ *             .authenticationKeys(CiscoNtpFeatureTemplateAuthenticationKeyArgs.builder()
+ *                 .id(1)
+ *                 .value("12345")
+ *                 .build())
+ *             .servers(CiscoNtpFeatureTemplateServerArgs.builder()
+ *                 .hostname_ip("NTP_SERVER1")
+ *                 .authentication_key_id(1)
+ *                 .vpn_id(1)
+ *                 .version(4)
+ *                 .source_interface("e1")
+ *                 .prefer(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

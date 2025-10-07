@@ -125,6 +125,19 @@ class RegionListPolicyObject(pulumi.CustomResource):
         """
         This resource can manage a Region List Policy Object .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RegionListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "region_id": "1-2",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -146,6 +159,19 @@ class RegionListPolicyObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Region List Policy Object .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RegionListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "region_id": "1-2",
+            }])
+        ```
 
         ## Import
 

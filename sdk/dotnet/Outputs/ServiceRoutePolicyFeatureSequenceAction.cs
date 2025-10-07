@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<int> AsPathPrepends;
         public readonly ImmutableArray<string> Communities;
         /// <summary>
-        /// - Default value: `false`
+        /// - Default value: `False`
         /// </summary>
         public readonly bool? CommunityAdditive;
         /// <summary>
@@ -43,7 +43,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? Metric;
         /// <summary>
         /// Set Metric Type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         public readonly string? MetricType;
         /// <summary>

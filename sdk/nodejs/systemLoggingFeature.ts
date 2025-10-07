@@ -10,6 +10,45 @@ import * as utilities from "./utilities";
  * This resource can manage a System Logging Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemLoggingFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     diskEnable: true,
+ *     diskFileSize: 9,
+ *     diskFileRotate: 10,
+ *     tlsProfiles: [{
+ *         profile: "test",
+ *         tls_version: "TLSv1.1",
+ *         cipher_suites: ["aes-128-cbc-sha"],
+ *     }],
+ *     ipv4Servers: [{
+ *         hostname_ip: "1.1.1.1",
+ *         vpn: 512,
+ *         source_interface: "GigabitEthernet1",
+ *         priority: "informational",
+ *         tls_enable: true,
+ *         tls_properties_custom_profile: true,
+ *         tls_properties_profile: "test",
+ *     }],
+ *     ipv6Servers: [{
+ *         hostname_ip: "1.1.1.1",
+ *         vpn: 512,
+ *         source_interface: "GigabitEthernet1",
+ *         priority: "informational",
+ *         tls_enable: true,
+ *         tls_properties_custom_profile: true,
+ *         tls_properties_profile: "test",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

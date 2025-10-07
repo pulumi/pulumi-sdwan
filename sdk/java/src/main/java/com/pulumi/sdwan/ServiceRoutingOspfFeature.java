@@ -24,6 +24,89 @@ import javax.annotation.Nullable;
  * This resource can manage a Service Routing OSPF Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceRoutingOspfFeature;
+ * import com.pulumi.sdwan.ServiceRoutingOspfFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureRedistributeArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureRouterLsaArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingOspfFeatureAreaArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceRoutingOspfFeature("example", ServiceRoutingOspfFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .routerId("1.2.3.4")
+ *             .referenceBandwidth(101)
+ *             .rfc1583Compatible(true)
+ *             .defaultInformationOriginate(false)
+ *             .defaultInformationOriginateAlways(false)
+ *             .defaultInformationOriginateMetric(1)
+ *             .defaultInformationOriginateMetricType("type1")
+ *             .distanceExternal(110)
+ *             .distanceInterArea(110)
+ *             .distanceIntraArea(110)
+ *             .spfCalculationDelay(200)
+ *             .spfInitialHoldTime(1000)
+ *             .spfMaximumHoldTime(10000)
+ *             .redistributes(ServiceRoutingOspfFeatureRedistributeArgs.builder()
+ *                 .protocol("static")
+ *                 .nat_dia(true)
+ *                 .build())
+ *             .routerLsas(ServiceRoutingOspfFeatureRouterLsaArgs.builder()
+ *                 .type("on-startup")
+ *                 .time(5)
+ *                 .build())
+ *             .areas(ServiceRoutingOspfFeatureAreaArgs.builder()
+ *                 .area_number(1)
+ *                 .area_type("stub")
+ *                 .no_summary(false)
+ *                 .interfaces(ServiceRoutingOspfFeatureAreaInterfaceArgs.builder()
+ *                     .name("GigabitEthernet2")
+ *                     .helloInterval(10)
+ *                     .deadInterval(40)
+ *                     .lsaRetransmitInterval(5)
+ *                     .cost(10)
+ *                     .designatedRouterPriority(1)
+ *                     .networkType("broadcast")
+ *                     .passiveInterface(false)
+ *                     .authenticationType("message-digest")
+ *                     .messageDigestKeyId(7)
+ *                     .messageDigestKey("sdjfhsghbjdjr")
+ *                     .build())
+ *                 .ranges(ServiceRoutingOspfFeatureAreaRangeArgs.builder()
+ *                     .ipAddress("10.1.1.0")
+ *                     .subnetMask("255.255.255.0")
+ *                     .cost(1)
+ *                     .noAdvertise(false)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

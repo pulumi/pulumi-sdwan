@@ -331,6 +331,23 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         This resource can manage a Transport IPv6 Tracker Group Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TransportIpv6TrackerGroupFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            tracker_name="TRACKER_GROUP_1",
+            tracker_elements=[{
+                "tracker_id": "615d948f-34ee-4a2e-810e-a9bd8d3d48ec",
+            }],
+            tracker_boolean="or")
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -363,6 +380,23 @@ class TransportIpv6TrackerGroupFeature(pulumi.CustomResource):
         """
         This resource can manage a Transport IPv6 Tracker Group Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TransportIpv6TrackerGroupFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            tracker_name="TRACKER_GROUP_1",
+            tracker_elements=[{
+                "tracker_id": "615d948f-34ee-4a2e-810e-a9bd8d3d48ec",
+            }],
+            tracker_boolean="or")
+        ```
 
         ## Import
 

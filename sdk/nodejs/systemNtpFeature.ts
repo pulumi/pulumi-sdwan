@@ -10,6 +10,35 @@ import * as utilities from "./utilities";
  * This resource can manage a System NTP Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemNtpFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     servers: [{
+ *         hostname_ip_address: "1.1.1.1",
+ *         authentication_key: 41673,
+ *         vpn: 1,
+ *         ntp_version: 4,
+ *         source_interface: "Ethernet",
+ *         prefer_this_ntp_server: false,
+ *     }],
+ *     authenticationKeys: [{
+ *         key_id: 49737,
+ *         md5_value: "$CRYPT_CLUSTER",
+ *     }],
+ *     trustedKeys: [49737],
+ *     authoritativeNtpServer: false,
+ *     stratum: 1,
+ *     sourceInterface: "ATM",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

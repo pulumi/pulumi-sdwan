@@ -13,6 +13,74 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Switchport feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SwitchportFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Slot = 0,
+    ///         SubSlot = 0,
+    ///         ModuleType = "4",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SwitchportFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Name = "GigabitEthernet0/0/0",
+    ///                 Switchport_mode = "access",
+    ///                 Shutdown = true,
+    ///                 Speed = "100",
+    ///                 Duplex = "full",
+    ///                 Switchport_access_vlan = 100,
+    ///                 Switchport_trunk_allowed_vlans = "100,200",
+    ///                 Switchport_trunk_native_vlan = 100,
+    ///                 Dot1x_enable = true,
+    ///                 Dot1x_port_control = "auto",
+    ///                 Dot1x_authentication_order = new[]
+    ///                 {
+    ///                     "dot1x",
+    ///                 },
+    ///                 Voice_vlan = 200,
+    ///                 Dot1x_pae_enable = true,
+    ///                 Dot1x_mac_authentication_bypass = true,
+    ///                 Dot1x_host_mode = "multi-domain",
+    ///                 Dot1x_enable_periodic_reauth = true,
+    ///                 Dot1x_periodic_reauth_inactivity_timeout = 100,
+    ///                 Dot1x_periodic_reauth_interval = 60,
+    ///                 Dot1x_control_direction = "both",
+    ///                 Dot1x_restricted_vlan = 100,
+    ///                 Dot1x_guest_vlan = 101,
+    ///                 Dot1x_critical_vlan = 102,
+    ///                 Dot1x_enable_criticial_voice_vlan = true,
+    ///             },
+    ///         },
+    ///         AgeOutTime = 500,
+    ///         StaticMacAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SwitchportFeatureTemplateStaticMacAddressArgs
+    ///             {
+    ///                 Mac_address = "0000.0000.0000",
+    ///                 If_name = "GigabitEthernet0/0/0",
+    ///                 Vlan = 100,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

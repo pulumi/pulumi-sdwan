@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Succeed if user has authenticated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authenticated")]
         public Input<bool>? Authenticated { get; set; }
@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Method
-        ///   - Choices: `commands`
+        ///   - Choices: `Commands`
         /// </summary>
         [Input("method")]
         public Input<string>? Method { get; set; }

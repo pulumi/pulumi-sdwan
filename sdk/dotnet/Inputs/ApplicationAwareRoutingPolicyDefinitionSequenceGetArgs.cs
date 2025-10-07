@@ -31,8 +31,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int> Id { get; set; } = null!;
 
         /// <summary>
-        /// Sequence IP type, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Sequence IP type, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("ipType")]
         public Input<string>? IpType { get; set; }

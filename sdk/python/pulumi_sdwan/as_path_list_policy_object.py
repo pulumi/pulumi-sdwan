@@ -125,6 +125,19 @@ class AsPathListPolicyObject(pulumi.CustomResource):
         """
         This resource can manage a AS Path List Policy Object .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.AsPathListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "as_path": "^1239_[0-9]*$",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -146,6 +159,19 @@ class AsPathListPolicyObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a AS Path List Policy Object .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.AsPathListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "as_path": "^1239_[0-9]*$",
+            }])
+        ```
 
         ## Import
 

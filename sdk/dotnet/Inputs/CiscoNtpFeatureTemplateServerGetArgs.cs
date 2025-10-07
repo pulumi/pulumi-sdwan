@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Prefer this NTP server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("prefer")]
         public Input<bool>? Prefer { get; set; }

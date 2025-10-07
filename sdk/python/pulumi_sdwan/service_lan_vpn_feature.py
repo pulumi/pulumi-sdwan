@@ -1360,6 +1360,110 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         This resource can manage a Service LAN VPN Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceLanVpnFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            vpn=1,
+            config_description="VPN1",
+            omp_admin_distance_ipv4=1,
+            omp_admin_distance_ipv6=1,
+            enable_sdwan_remote_access=False,
+            primary_dns_address_ipv4="1.2.3.4",
+            secondary_dns_address_ipv4="2.3.4.5",
+            primary_dns_address_ipv6="2001:0:0:1::0",
+            secondary_dns_address_ipv6="2001:0:0:2::0",
+            host_mappings=[{
+                "host_name": "HOSTMAPPING1",
+                "list_of_ips": ["1.2.3.4"],
+            }],
+            ipv4_static_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "gateway": "nextHop",
+                "next_hops": [{
+                    "address": "1.2.3.4",
+                    "administrativeDistance": 1,
+                }],
+            }],
+            ipv6_static_routes=[{
+                "prefix": "2001:0:0:1::0/12",
+                "gateway": "nextHop",
+                "next_hops": [{
+                    "address": "2001:0:0:1::0",
+                    "administrativeDistance": 1,
+                }],
+            }],
+            services=[{
+                "service_type": "FW",
+                "ipv4_addresses": ["1.2.3.4"],
+                "tracking": True,
+            }],
+            service_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "service": "SIG",
+                "vpn": 0,
+            }],
+            gre_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "interface": ["gre01"],
+                "vpn": 0,
+            }],
+            ipsec_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "interface": ["ipsec01"],
+            }],
+            nat_pools=[{
+                "nat_pool_name": 1,
+                "prefix_length": 3,
+                "range_start": "1.2.3.4",
+                "range_end": "2.3.4.5",
+                "overload": True,
+                "direction": "inside",
+            }],
+            nat_port_forwards=[{
+                "nat_pool_name": 2,
+                "source_port": 122,
+                "translate_port": 330,
+                "source_ip": "1.2.3.4",
+                "translated_source_ip": "2.3.4.5",
+                "protocol": "TCP",
+            }],
+            static_nats=[{
+                "nat_pool_name": 3,
+                "source_ip": "1.2.3.4",
+                "translated_source_ip": "2.3.4.5",
+                "static_nat_direction": "inside",
+            }],
+            nat64_v4_pools=[{
+                "name": "NATPOOL1",
+                "range_start": "1.2.3.4",
+                "range_end": "2.3.4.5",
+                "overload": False,
+            }],
+            ipv4_import_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv4_export_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv6_import_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv6_export_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1422,6 +1526,110 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         """
         This resource can manage a Service LAN VPN Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceLanVpnFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            vpn=1,
+            config_description="VPN1",
+            omp_admin_distance_ipv4=1,
+            omp_admin_distance_ipv6=1,
+            enable_sdwan_remote_access=False,
+            primary_dns_address_ipv4="1.2.3.4",
+            secondary_dns_address_ipv4="2.3.4.5",
+            primary_dns_address_ipv6="2001:0:0:1::0",
+            secondary_dns_address_ipv6="2001:0:0:2::0",
+            host_mappings=[{
+                "host_name": "HOSTMAPPING1",
+                "list_of_ips": ["1.2.3.4"],
+            }],
+            ipv4_static_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "gateway": "nextHop",
+                "next_hops": [{
+                    "address": "1.2.3.4",
+                    "administrativeDistance": 1,
+                }],
+            }],
+            ipv6_static_routes=[{
+                "prefix": "2001:0:0:1::0/12",
+                "gateway": "nextHop",
+                "next_hops": [{
+                    "address": "2001:0:0:1::0",
+                    "administrativeDistance": 1,
+                }],
+            }],
+            services=[{
+                "service_type": "FW",
+                "ipv4_addresses": ["1.2.3.4"],
+                "tracking": True,
+            }],
+            service_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "service": "SIG",
+                "vpn": 0,
+            }],
+            gre_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "interface": ["gre01"],
+                "vpn": 0,
+            }],
+            ipsec_routes=[{
+                "network_address": "1.2.3.4",
+                "subnet_mask": "0.0.0.0",
+                "interface": ["ipsec01"],
+            }],
+            nat_pools=[{
+                "nat_pool_name": 1,
+                "prefix_length": 3,
+                "range_start": "1.2.3.4",
+                "range_end": "2.3.4.5",
+                "overload": True,
+                "direction": "inside",
+            }],
+            nat_port_forwards=[{
+                "nat_pool_name": 2,
+                "source_port": 122,
+                "translate_port": 330,
+                "source_ip": "1.2.3.4",
+                "translated_source_ip": "2.3.4.5",
+                "protocol": "TCP",
+            }],
+            static_nats=[{
+                "nat_pool_name": 3,
+                "source_ip": "1.2.3.4",
+                "translated_source_ip": "2.3.4.5",
+                "static_nat_direction": "inside",
+            }],
+            nat64_v4_pools=[{
+                "name": "NATPOOL1",
+                "range_start": "1.2.3.4",
+                "range_end": "2.3.4.5",
+                "overload": False,
+            }],
+            ipv4_import_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv4_export_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv6_import_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }],
+            ipv6_export_route_targets=[{
+                "route_target": "1.1.1.3:200",
+            }])
+        ```
 
         ## Import
 

@@ -12,6 +12,50 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a URL Filtering Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.UrlFilteringPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Mode = "security",
+    ///         Alerts = new[]
+    ///         {
+    ///             "blacklist",
+    ///         },
+    ///         WebCategories = new[]
+    ///         {
+    ///             "alcohol-and-tobacco",
+    ///         },
+    ///         WebCategoriesAction = "allow",
+    ///         WebReputation = "moderate-risk",
+    ///         TargetVpns = new[]
+    ///         {
+    ///             "1",
+    ///         },
+    ///         BlockPageAction = "text",
+    ///         BlockPageContents = "Access to the requested page has been denied. Please contact your Network Administrator",
+    ///         Loggings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.UrlFilteringPolicyDefinitionLoggingArgs
+    ///             {
+    ///                 External_syslog_server_ip = "10.0.0.1",
+    ///                 External_syslog_server_vpn = "123",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -43,7 +87,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Redirect to a URL or display a message when a blocked page is accessed.
-        ///   - Choices: `text`, `redirectUrl`
+        ///   - Choices: `Text`, `redirectUrl`
         /// </summary>
         [Output("blockPageAction")]
         public Output<string?> BlockPageAction { get; private set; } = null!;
@@ -77,7 +121,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -108,14 +152,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// whether the selected web categories should be blocked or allowed.
-        ///   - Choices: `block`, `allow`
+        ///   - Choices: `Block`, `Allow`
         /// </summary>
         [Output("webCategoriesAction")]
         public Output<string?> WebCategoriesAction { get; private set; } = null!;
 
         /// <summary>
         /// The web reputation of the policy definition
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Output("webReputation")]
         public Output<string?> WebReputation { get; private set; } = null!;
@@ -192,7 +236,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Redirect to a URL or display a message when a blocked page is accessed.
-        ///   - Choices: `text`, `redirectUrl`
+        ///   - Choices: `Text`, `redirectUrl`
         /// </summary>
         [Input("blockPageAction")]
         public Input<string>? BlockPageAction { get; set; }
@@ -231,7 +275,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -268,14 +312,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// whether the selected web categories should be blocked or allowed.
-        ///   - Choices: `block`, `allow`
+        ///   - Choices: `Block`, `Allow`
         /// </summary>
         [Input("webCategoriesAction")]
         public Input<string>? WebCategoriesAction { get; set; }
 
         /// <summary>
         /// The web reputation of the policy definition
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Input("webReputation")]
         public Input<string>? WebReputation { get; set; }
@@ -314,7 +358,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Redirect to a URL or display a message when a blocked page is accessed.
-        ///   - Choices: `text`, `redirectUrl`
+        ///   - Choices: `Text`, `redirectUrl`
         /// </summary>
         [Input("blockPageAction")]
         public Input<string>? BlockPageAction { get; set; }
@@ -353,7 +397,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -396,14 +440,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// whether the selected web categories should be blocked or allowed.
-        ///   - Choices: `block`, `allow`
+        ///   - Choices: `Block`, `Allow`
         /// </summary>
         [Input("webCategoriesAction")]
         public Input<string>? WebCategoriesAction { get; set; }
 
         /// <summary>
         /// The web reputation of the policy definition
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Input("webReputation")]
         public Input<string>? WebReputation { get; set; }

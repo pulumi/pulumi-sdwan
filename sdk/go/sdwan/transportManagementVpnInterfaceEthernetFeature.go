@@ -15,6 +15,72 @@ import (
 // This resource can manage a Transport Management VPN Interface Ethernet Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportManagementVpnInterfaceEthernetFeature(ctx, "example", &sdwan.TransportManagementVpnInterfaceEthernetFeatureArgs{
+//				Name:                            pulumi.String("Example"),
+//				Description:                     pulumi.String("My Example"),
+//				FeatureProfileId:                pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				TransportManagementVpnFeatureId: pulumi.String("140331f6-5418-4755-a059-13c77eb96037"),
+//				Shutdown:                        pulumi.Bool(true),
+//				InterfaceName:                   pulumi.String("GigabitEthernet1"),
+//				InterfaceDescription:            pulumi.String("Transport Management VPN Interface Ethernet"),
+//				Ipv4ConfigurationType:           pulumi.String("static"),
+//				Ipv4Address:                     pulumi.String("1.2.3.4"),
+//				Ipv4SubnetMask:                  pulumi.String("0.0.0.0"),
+//				Ipv4SecondaryAddresses: sdwan.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{
+//					&sdwan.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{
+//						Address:     pulumi.String("1.2.3.4"),
+//						Subnet_mask: "0.0.0.0",
+//					},
+//				},
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("1.2.3.4"),
+//				},
+//				Ipv4IperfServer:         pulumi.String("example"),
+//				Ipv4AutoDetectBandwidth: pulumi.Bool(false),
+//				Ipv6ConfigurationType:   pulumi.String("static"),
+//				Ipv6Address:             pulumi.String("2001:0:0:1::/64"),
+//				ArpEntries: sdwan.TransportManagementVpnInterfaceEthernetFeatureArpEntryArray{
+//					&sdwan.TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs{
+//						Ip_address:  "1.2.3.4",
+//						Mac_address: "00-B0-D0-63-C2-26",
+//					},
+//				},
+//				Duplex:              pulumi.String("full"),
+//				MacAddress:          pulumi.String("00-B0-D0-63-C2-26"),
+//				IpMtu:               pulumi.Int(1500),
+//				InterfaceMtu:        pulumi.Int(1500),
+//				TcpMss:              pulumi.Int(505),
+//				Speed:               pulumi.String("2500"),
+//				ArpTimeout:          pulumi.Int(1200),
+//				Autonegotiate:       pulumi.Bool(false),
+//				MediaType:           pulumi.String("rj45"),
+//				LoadInterval:        pulumi.Int(30),
+//				IcmpRedirectDisable: pulumi.Bool(true),
+//				IpDirectedBroadcast: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

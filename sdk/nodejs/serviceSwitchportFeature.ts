@@ -10,6 +10,48 @@ import * as utilities from "./utilities";
  * This resource can manage a Service Switchport Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceSwitchportFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     interfaces: [{
+ *         interface_name: "GigabitEthernet",
+ *         mode: "access",
+ *         shutdown: true,
+ *         speed: "10",
+ *         duplex: "full",
+ *         switchport_access_vlan: 1,
+ *         switchport_trunk_allowed_vlans: "1",
+ *         switchport_trunk_native_vlan: 1,
+ *         port_control: "auto",
+ *         voice_vlan: 1,
+ *         pae_enable: true,
+ *         mac_authentication_bypass: false,
+ *         host_mode: "single-host",
+ *         enable_periodic_reauth: false,
+ *         inactivity: 60,
+ *         reauthentication: 1,
+ *         control_direction: "both",
+ *         restricted_vlan: 1,
+ *         guest_vlan: 1,
+ *         critical_vlan: 1,
+ *         enable_voice: false,
+ *     }],
+ *     ageOutTime: 300,
+ *     staticMacAddresses: [{
+ *         mac_address: "01:02:03:04:05:06",
+ *         vlan_id: 1,
+ *         interface_name: "GigabitEthernet0/0/0",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

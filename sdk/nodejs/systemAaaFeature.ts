@@ -10,6 +10,76 @@ import * as utilities from "./utilities";
  * This resource can manage a System AAA Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemAaaFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     authenticationGroup: true,
+ *     accountingGroup: true,
+ *     serverAuthOrders: ["local"],
+ *     users: [{
+ *         name: "User1",
+ *         password: "cisco123",
+ *         privilege: "15",
+ *         public_keys: [{
+ *             keyString: "AAAAB3NzaC1yc2",
+ *             keyType: "ssh-rsa",
+ *         }],
+ *     }],
+ *     radiusGroups: [{
+ *         group_name: "RGROUP1",
+ *         vpn: 10,
+ *         source_interface: "GigabitEthernet0",
+ *         servers: [{
+ *             address: "1.2.3.4",
+ *             authPort: 1812,
+ *             acctPort: 1813,
+ *             timeout: 5,
+ *             retransmit: 3,
+ *             key: "cisco123",
+ *             secretKey: "cisco123",
+ *             keyEnum: "7",
+ *             keyType: "key",
+ *         }],
+ *     }],
+ *     tacacsGroups: [{
+ *         group_name: "TGROUP1",
+ *         vpn: 10,
+ *         source_interface: "GigabitEthernet0",
+ *         servers: [{
+ *             address: "1.2.3.4",
+ *             port: 49,
+ *             timeout: 5,
+ *             key: "cisco123",
+ *             secretKey: "cisco123",
+ *             keyEnum: "7",
+ *         }],
+ *     }],
+ *     accountingRules: [{
+ *         rule_id: "1",
+ *         method: "commands",
+ *         level: "15",
+ *         start_stop: true,
+ *         group: ["RGROUP1"],
+ *     }],
+ *     authorizationConsole: true,
+ *     authorizationConfigCommands: true,
+ *     authorizationRules: [{
+ *         rule_id: "1",
+ *         method: "commands",
+ *         level: "15",
+ *         group: ["RGROUP1"],
+ *         if_authenticated: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

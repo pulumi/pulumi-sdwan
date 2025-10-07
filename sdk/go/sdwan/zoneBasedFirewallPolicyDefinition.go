@@ -14,6 +14,59 @@ import (
 
 // This resource can manage a Zone Based Firewall Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewZoneBasedFirewallPolicyDefinition(ctx, "example", &sdwan.ZoneBasedFirewallPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Mode:        pulumi.String("security"),
+//				ApplyZonePairs: sdwan.ZoneBasedFirewallPolicyDefinitionApplyZonePairArray{
+//					&sdwan.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs{
+//						Source_zone:      "self",
+//						Destination_zone: "0d26a366-4a11-4942-a5ea-82af9502889f",
+//					},
+//				},
+//				DefaultAction: pulumi.String("pass"),
+//				Rules: sdwan.ZoneBasedFirewallPolicyDefinitionRuleArray{
+//					&sdwan.ZoneBasedFirewallPolicyDefinitionRuleArgs{
+//						Rule_order:  1,
+//						Rule_name:   "RULE_1",
+//						Base_action: "inspect",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":     "sourceGeoLocationList",
+//								"policyId": "0d26a366-4a11-4942-a5ea-82af9502889f",
+//							},
+//						},
+//						Action_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type": "log",
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

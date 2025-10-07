@@ -15,6 +15,64 @@ import (
 // This resource can manage a Cisco TrustSec feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoTrustsecFeatureTemplate(ctx, "example", &sdwan.CiscoTrustsecFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				DeviceSgt:               pulumi.Int(100),
+//				CredentialsId:           pulumi.String("user1"),
+//				CredentialsPassword:     pulumi.String("MyPassword"),
+//				EnableEnforcement:       pulumi.Bool(true),
+//				EnableSxp:               pulumi.Bool(true),
+//				SxpSourceIp:             pulumi.String("1.2.3.4"),
+//				SxpDefaultPassword:      pulumi.String("MyPassword"),
+//				SxpKeyChain:             pulumi.String("keychain1"),
+//				SxpLogBindingChanges:    pulumi.Bool(false),
+//				SxpReconciliationPeriod: pulumi.Int(120),
+//				SxpRetryPeriod:          pulumi.Int(120),
+//				SpeakerHoldTime:         pulumi.Int(120),
+//				MinimumListenerHoldTime: pulumi.Int(90),
+//				MaximumListenerHoldTime: pulumi.Int(180),
+//				SxpNodeIdType:           pulumi.String("interface-name"),
+//				SxpNodeId:               pulumi.String("VirtualPortGroup"),
+//				SxpConnections: sdwan.CiscoTrustsecFeatureTemplateSxpConnectionArray{
+//					&sdwan.CiscoTrustsecFeatureTemplateSxpConnectionArgs{
+//						Peer_ip:           "1.2.3.4",
+//						Source_ip:         "2.3.4.5",
+//						Preshared_key:     "default",
+//						Mode:              pulumi.String("local"),
+//						Mode_type:         "listener",
+//						Minimum_hold_time: 100,
+//						Maximum_hold_time: 200,
+//						Vpn_id:            0,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

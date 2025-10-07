@@ -433,6 +433,28 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco BFD feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoBfdFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            multiplier=3,
+            poll_interval=800000,
+            default_dscp=48,
+            colors=[{
+                "color": "private5",
+                "hello_interval": 1000,
+                "multiplier": 7,
+                "pmtu_discovery": True,
+                "dscp": 46,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -470,6 +492,28 @@ class CiscoBfdFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco BFD feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoBfdFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            multiplier=3,
+            poll_interval=800000,
+            default_dscp=48,
+            colors=[{
+                "color": "private5",
+                "hello_interval": 1000,
+                "multiplier": 7,
+                "pmtu_discovery": True,
+                "dscp": 46,
+            }])
+        ```
 
         ## Import
 

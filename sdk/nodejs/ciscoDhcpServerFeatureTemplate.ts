@@ -10,6 +10,39 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco DHCP Server feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoDhcpServerFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     addressPool: "10.1.1.0/24",
+ *     excludeAddresses: [
+ *         "10.1.1.1-10.1.1.5",
+ *         "10.1.1.254",
+ *     ],
+ *     leaseTime: 600,
+ *     interfaceMtu: 1500,
+ *     domainName: "cisco.com",
+ *     defaultGateway: "10.1.1.254",
+ *     dnsServers: ["1.2.3.4"],
+ *     tftpServers: ["1.2.3.4"],
+ *     staticLeases: [{
+ *         mac_address: "11:11:11:11:11:11",
+ *         ip_address: "10.1.1.10",
+ *         hostname: "HOST1",
+ *     }],
+ *     options: [{
+ *         option_code: 10,
+ *         ascii: "abc",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

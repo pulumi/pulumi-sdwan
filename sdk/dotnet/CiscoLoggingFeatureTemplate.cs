@@ -13,6 +13,71 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Logging feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoLoggingFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         DiskLogging = true,
+    ///         MaxSize = 10,
+    ///         LogRotations = 10,
+    ///         TlsProfiles = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateTlsProfileArgs
+    ///             {
+    ///                 Name = "PROF1",
+    ///                 Version = "TLSv1.2",
+    ///                 Authentication_type = "Server",
+    ///                 Ciphersuite_list = new[]
+    ///                 {
+    ///                     "aes-128-cbc-sha",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateIpv4ServerArgs
+    ///             {
+    ///                 Hostname_ip = "2.2.2.2",
+    ///                 Vpn_id = 1,
+    ///                 Source_interface = "e1",
+    ///                 Logging_level = "information",
+    ///                 Enable_tls = true,
+    ///                 Custom_profile = true,
+    ///                 Profile = "PROF1",
+    ///             },
+    ///         },
+    ///         Ipv6Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateIpv6ServerArgs
+    ///             {
+    ///                 Hostname_ip = "2001::1",
+    ///                 Vpn_id = 1,
+    ///                 Source_interface = "e1",
+    ///                 Logging_level = "information",
+    ///                 Enable_tls = true,
+    ///                 Custom_profile = true,
+    ///                 Profile = "PROF1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -39,7 +104,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("diskLogging")]
         public Output<bool?> DiskLogging { get; private set; } = null!;
@@ -181,7 +246,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }
@@ -291,7 +356,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }

@@ -211,6 +211,33 @@ class RoutePolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Route Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RoutePolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 10,
+                "ip_type": "ipv4",
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "metric",
+                    "metric": 100,
+                }],
+                "action_entries": [{
+                    "type": "aggregator",
+                    "aggregator": 10,
+                    "aggregatorIpAddress": "10.1.2.3",
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -235,6 +262,33 @@ class RoutePolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Route Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RoutePolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 10,
+                "ip_type": "ipv4",
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "metric",
+                    "metric": 100,
+                }],
+                "action_entries": [{
+                    "type": "aggregator",
+                    "aggregator": 10,
+                    "aggregatorIpAddress": "10.1.2.3",
+                }],
+            }])
+        ```
 
         ## Import
 

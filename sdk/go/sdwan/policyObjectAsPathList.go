@@ -15,6 +15,40 @@ import (
 // This resource can manage a Policy Object AS Path List Policy_object.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewPolicyObjectAsPathList(ctx, "example", &sdwan.PolicyObjectAsPathListArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AsPathListId:     pulumi.Int(1),
+//				Entries: sdwan.PolicyObjectAsPathListEntryArray{
+//					&sdwan.PolicyObjectAsPathListEntryArgs{
+//						As_path_list: "110",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

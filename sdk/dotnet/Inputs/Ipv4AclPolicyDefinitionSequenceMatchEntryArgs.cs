@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4AclPolicyDefinitionSequenceMatchEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `type` being equal to `class`
+        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
         /// </summary>
         [Input("classMapId")]
         public Input<string>? ClassMapId { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ClassMapVersion { get; set; }
 
         /// <summary>
-        /// Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
         /// </summary>
         [Input("destinationDataIpv4PrefixListId")]
         public Input<string>? DestinationDataIpv4PrefixListId { get; set; }
@@ -37,57 +37,57 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP prefix, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP prefix variable, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         [Input("destinationIpVariable")]
         public Input<string>? DestinationIpVariable { get; set; }
 
         /// <summary>
-        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `destinationPort`
         /// </summary>
         [Input("destinationPorts")]
         public Input<string>? DestinationPorts { get; set; }
 
         /// <summary>
-        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
+        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
         /// </summary>
         [Input("dscp")]
         public Input<string>? Dscp { get; set; }
 
         /// <summary>
-        /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        /// ICMP Message, Attribute conditional on `Type` being equal to `icmpMessage`
         /// </summary>
         [Input("icmpMessage")]
         public Input<string>? IcmpMessage { get; set; }
 
         /// <summary>
-        /// Packet length, Attribute conditional on `type` being equal to `packetLength`
+        /// Packet length, Attribute conditional on `Type` being equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("packetLength")]
         public Input<int>? PacketLength { get; set; }
 
         /// <summary>
-        /// PLP - priority, Attribute conditional on `type` being equal to `plp`
-        ///   - Choices: `high`, `low`
+        /// PLP - priority, Attribute conditional on `Type` being equal to `Plp`
+        ///   - Choices: `High`, `Low`
         /// </summary>
         [Input("priority")]
         public Input<string>? Priority { get; set; }
 
         /// <summary>
-        /// Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
+        /// Single value (0-255) or multiple values separated by spaces, Attribute conditional on `Type` being equal to `Protocol`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
 
         /// <summary>
-        /// Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
         /// </summary>
         [Input("sourceDataIpv4PrefixListId")]
         public Input<string>? SourceDataIpv4PrefixListId { get; set; }
@@ -99,33 +99,33 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataIpv4PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP prefix, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP prefix variable, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         [Input("sourceIpVariable")]
         public Input<string>? SourceIpVariable { get; set; }
 
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
         /// </summary>
         [Input("sourcePorts")]
         public Input<string>? SourcePorts { get; set; }
 
         /// <summary>
-        /// TCP parameters, Attribute conditional on `type` being equal to `tcp`
-        ///   - Choices: `syn`
+        /// TCP parameters, Attribute conditional on `Type` being equal to `Tcp`
+        ///   - Choices: `Syn`
         /// </summary>
         [Input("tcp")]
         public Input<string>? Tcp { get; set; }
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `dscp`, `sourceIp`, `destinationIp`, `class`, `packetLength`, `plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `protocol`, `tcp`, `icmpMessage`
+        ///   - Choices: `Dscp`, `sourceIp`, `destinationIp`, `Class`, `packetLength`, `Plp`, `sourcePort`, `destinationPort`, `sourceDataPrefixList`, `destinationDataPrefixList`, `Protocol`, `Tcp`, `icmpMessage`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

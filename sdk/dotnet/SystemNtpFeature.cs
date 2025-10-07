@@ -13,6 +13,53 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System NTP Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemNtpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemNtpFeatureServerArgs
+    ///             {
+    ///                 Hostname_ip_address = "1.1.1.1",
+    ///                 Authentication_key = 41673,
+    ///                 Vpn = 1,
+    ///                 Ntp_version = 4,
+    ///                 Source_interface = "Ethernet",
+    ///                 Prefer_this_ntp_server = false,
+    ///             },
+    ///         },
+    ///         AuthenticationKeys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemNtpFeatureAuthenticationKeyArgs
+    ///             {
+    ///                 Key_id = 49737,
+    ///                 Md5_value = "$CRYPT_CLUSTER",
+    ///             },
+    ///         },
+    ///         TrustedKeys = new[]
+    ///         {
+    ///             49737,
+    ///         },
+    ///         AuthoritativeNtpServer = false,
+    ///         Stratum = 1,
+    ///         SourceInterface = "ATM",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -34,7 +81,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authoritativeNtpServer")]
         public Output<bool?> AuthoritativeNtpServer { get; private set; } = null!;
@@ -172,7 +219,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }
@@ -278,7 +325,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }

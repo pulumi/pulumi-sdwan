@@ -15,6 +15,59 @@ import (
 // This resource can manage a Application Priority Traffic Policy Policy.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewApplicationPriorityTrafficPolicyPolicy(ctx, "example", &sdwan.ApplicationPriorityTrafficPolicyPolicyArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("accept"),
+//				Vpns: pulumi.StringArray{
+//					pulumi.String("edge_basic_vpn1"),
+//				},
+//				Direction: pulumi.String("all"),
+//				Sequences: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceArray{
+//					&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceArgs{
+//						Sequence_id:   1,
+//						Sequence_name: "traffic",
+//						Base_action:   "accept",
+//						Protocol:      pulumi.String("ipv4"),
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"dscp": 1,
+//							},
+//						},
+//						Actions: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArray{
+//							&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArgs{
+//								SetParameters: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArray{
+//									&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs{},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

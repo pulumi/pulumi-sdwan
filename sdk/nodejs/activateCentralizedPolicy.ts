@@ -7,6 +7,15 @@ import * as utilities from "./utilities";
 /**
  * This resource can activate a centralized policy.
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ActivateCentralizedPolicy("example", {id: POLICY1.id});
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

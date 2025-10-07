@@ -20,6 +20,57 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Traffic Data Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TrafficDataPolicyDefinition;
+ * import com.pulumi.sdwan.TrafficDataPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.TrafficDataPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TrafficDataPolicyDefinition("example", TrafficDataPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("drop")
+ *             .sequences(TrafficDataPolicyDefinitionSequenceArgs.builder()
+ *                 .id(1)
+ *                 .name("Seq1")
+ *                 .type("applicationFirewall")
+ *                 .ip_type("ipv4")
+ *                 .base_action("accept")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "appList"),
+ *                     Map.entry("applicationListId", "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c")
+ *                 )))
+ *                 .action_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "log"),
+ *                     Map.entry("log", true)
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

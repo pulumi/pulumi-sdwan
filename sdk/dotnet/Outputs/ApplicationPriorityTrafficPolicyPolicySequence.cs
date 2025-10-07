@@ -16,13 +16,13 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.ApplicationPriorityTrafficPolicyPolicySequenceAction> Actions;
         /// <summary>
         /// Base Action
-        ///   - Choices: `drop`, `accept`
+        ///   - Choices: `Drop`, `Accept`
         /// </summary>
         public readonly string? BaseAction;
         public readonly ImmutableArray<Outputs.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry> MatchEntries;
         /// <summary>
         /// Sequence IP Type
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

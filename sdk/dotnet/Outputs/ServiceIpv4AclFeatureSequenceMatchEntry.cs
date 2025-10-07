@@ -57,7 +57,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.ServiceIpv4AclFeatureSequenceMatchEntrySourcePort> SourcePorts;
         /// <summary>
         /// TCP States
-        ///   - Choices: `syn`
+        ///   - Choices: `Syn`
         /// </summary>
         public readonly string? TcpState;
 

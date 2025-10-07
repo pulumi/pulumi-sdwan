@@ -497,6 +497,34 @@ class SystemNtpFeature(pulumi.CustomResource):
         This resource can manage a System NTP Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemNtpFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            servers=[{
+                "hostname_ip_address": "1.1.1.1",
+                "authentication_key": 41673,
+                "vpn": 1,
+                "ntp_version": 4,
+                "source_interface": "Ethernet",
+                "prefer_this_ntp_server": False,
+            }],
+            authentication_keys=[{
+                "key_id": 49737,
+                "md5_value": "$CRYPT_CLUSTER",
+            }],
+            trusted_keys=[49737],
+            authoritative_ntp_server=False,
+            stratum=1,
+            source_interface="ATM")
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -534,6 +562,34 @@ class SystemNtpFeature(pulumi.CustomResource):
         """
         This resource can manage a System NTP Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemNtpFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            servers=[{
+                "hostname_ip_address": "1.1.1.1",
+                "authentication_key": 41673,
+                "vpn": 1,
+                "ntp_version": 4,
+                "source_interface": "Ethernet",
+                "prefer_this_ntp_server": False,
+            }],
+            authentication_keys=[{
+                "key_id": 49737,
+                "md5_value": "$CRYPT_CLUSTER",
+            }],
+            trusted_keys=[49737],
+            authoritative_ntp_server=False,
+            stratum=1,
+            source_interface="ATM")
+        ```
 
         ## Import
 

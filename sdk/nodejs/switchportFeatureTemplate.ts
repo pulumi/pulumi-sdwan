@@ -10,6 +10,53 @@ import * as utilities from "./utilities";
  * This resource can manage a Switchport feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SwitchportFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     slot: 0,
+ *     subSlot: 0,
+ *     moduleType: "4",
+ *     interfaces: [{
+ *         name: "GigabitEthernet0/0/0",
+ *         switchport_mode: "access",
+ *         shutdown: true,
+ *         speed: "100",
+ *         duplex: "full",
+ *         switchport_access_vlan: 100,
+ *         switchport_trunk_allowed_vlans: "100,200",
+ *         switchport_trunk_native_vlan: 100,
+ *         dot1x_enable: true,
+ *         dot1x_port_control: "auto",
+ *         dot1x_authentication_order: ["dot1x"],
+ *         voice_vlan: 200,
+ *         dot1x_pae_enable: true,
+ *         dot1x_mac_authentication_bypass: true,
+ *         dot1x_host_mode: "multi-domain",
+ *         dot1x_enable_periodic_reauth: true,
+ *         dot1x_periodic_reauth_inactivity_timeout: 100,
+ *         dot1x_periodic_reauth_interval: 60,
+ *         dot1x_control_direction: "both",
+ *         dot1x_restricted_vlan: 100,
+ *         dot1x_guest_vlan: 101,
+ *         dot1x_critical_vlan: 102,
+ *         dot1x_enable_criticial_voice_vlan: true,
+ *     }],
+ *     ageOutTime: 500,
+ *     staticMacAddresses: [{
+ *         mac_address: "0000.0000.0000",
+ *         if_name: "GigabitEthernet0/0/0",
+ *         vlan: 100,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

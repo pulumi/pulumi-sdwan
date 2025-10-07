@@ -10,6 +10,39 @@ import * as utilities from "./utilities";
  * This resource can manage a Transport Route Policy Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportRoutePolicyFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     defaultAction: "accept",
+ *     sequences: [{
+ *         id: 1,
+ *         name: "SEQ_1",
+ *         base_action: "reject",
+ *         protocol: "IPV4",
+ *         actions: [{
+ *             asPathPrepend: [65521],
+ *             communityAdditive: false,
+ *             community: ["internet"],
+ *             localPreference: 100,
+ *             metric: 20,
+ *             metricType: "type1",
+ *             ompTag: 200,
+ *             origin: "EGP",
+ *             ospfTag: 1200,
+ *             weight: 2200,
+ *             ipv4NextHop: "10.0.0.1",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

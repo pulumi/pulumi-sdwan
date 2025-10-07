@@ -12,6 +12,31 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a AS Path List Policy Object .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.AsPathListPolicyObject("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.AsPathListPolicyObjectEntryArgs
+    ///             {
+    ///                 As_path = "^1239_[0-9]*$",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

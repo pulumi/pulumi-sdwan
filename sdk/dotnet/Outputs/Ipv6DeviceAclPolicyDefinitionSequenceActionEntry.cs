@@ -14,12 +14,12 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv6DeviceAclPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         public readonly string? CounterName;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `count`
+        ///   - Choices: `Count`
         /// </summary>
         public readonly string Type;
 

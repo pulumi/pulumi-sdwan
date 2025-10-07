@@ -14,6 +14,37 @@ import (
 
 // This resource can manage a Site List Policy Object .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSiteListPolicyObject(ctx, "example", &sdwan.SiteListPolicyObjectArgs{
+//				Name: pulumi.String("Example"),
+//				Entries: sdwan.SiteListPolicyObjectEntryArray{
+//					&sdwan.SiteListPolicyObjectEntryArgs{
+//						Site_id: "100-200",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

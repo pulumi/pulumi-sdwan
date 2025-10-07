@@ -13,6 +13,68 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service IPv4 ACL Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceIpv4AclFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceArgs
+    ///             {
+    ///                 Sequence_id = 1,
+    ///                 Sequence_name = "AccessControlList1",
+    ///                 Match_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "dscps", new[]
+    ///                         {
+    ///                             16,
+    ///                         } },
+    ///                         { "packetLength", 1500 },
+    ///                         { "protocols", new[]
+    ///                         {
+    ///                             1,
+    ///                         } },
+    ///                         { "sourcePorts", new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "port", 8000 },
+    ///                             },
+    ///                         } },
+    ///                         { "tcpState", "syn" },
+    ///                     },
+    ///                 },
+    ///                 Actions = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceActionArgs
+    ///                     {
+    ///                         AcceptSetDscp = 60,
+    ///                         AcceptCounterName = "COUNTER_1",
+    ///                         AcceptLog = false,
+    ///                         AcceptSetNextHop = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,8 +90,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -112,8 +174,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -158,8 +220,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

@@ -22,6 +22,66 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a TLS SSL Decryption Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TlsSslDecryptionPolicyDefinition;
+ * import com.pulumi.sdwan.TlsSslDecryptionPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TlsSslDecryptionPolicyDefinition("example", TlsSslDecryptionPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .mode("security")
+ *             .defaultAction("noIntent")
+ *             .networkRules(TlsSslDecryptionPolicyDefinitionNetworkRuleArgs.builder()
+ *                 .base_action("doNotDecrypt")
+ *                 .rule_id(4)
+ *                 .rule_name("Example")
+ *                 .rule_type("sslDecryption")
+ *                 .source_and_destination_configuration(List.of(Map.ofEntries(
+ *                     Map.entry("option", "destinationIp"),
+ *                     Map.entry("value", "10.0.0.0/12")
+ *                 )))
+ *                 .build())
+ *             .sslDecryptionEnabled("true")
+ *             .expiredCertificate("drop")
+ *             .untrustedCertificate("drop")
+ *             .certificateRevocationStatus("none")
+ *             .unknownRevocationStatus("drop")
+ *             .unsupportedProtocolVersions("drop")
+ *             .unsupportedCipherSuites("drop")
+ *             .failureMode("close")
+ *             .rsaKeyPairModulus("2048")
+ *             .ecKeyType("P384")
+ *             .certificateLifetimeInDays(1)
+ *             .minimalTlsVersion("TLSv1.2")
+ *             .useDefaultCaCertBundle(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

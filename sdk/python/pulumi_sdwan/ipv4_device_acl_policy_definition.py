@@ -210,6 +210,31 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a IPv4 Device ACL Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.Ipv4DeviceAclPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 10,
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "destinationPort",
+                    "destinationPort": 22,
+                }],
+                "action_entries": [{
+                    "type": "count",
+                    "counterName": "count1",
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -234,6 +259,31 @@ class Ipv4DeviceAclPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a IPv4 Device ACL Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.Ipv4DeviceAclPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 10,
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "destinationPort",
+                    "destinationPort": 22,
+                }],
+                "action_entries": [{
+                    "type": "count",
+                    "counterName": "count1",
+                }],
+            }])
+        ```
 
         ## Import
 

@@ -25,6 +25,65 @@ import javax.annotation.Nullable;
  * This resource can manage a Service Routing EIGRP Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceRoutingEigrpFeature;
+ * import com.pulumi.sdwan.ServiceRoutingEigrpFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureNetworkArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureMd5KeyArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceRoutingEigrpFeature("example", ServiceRoutingEigrpFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .autonomousSystemId(111)
+ *             .networks(ServiceRoutingEigrpFeatureNetworkArgs.builder()
+ *                 .ip_address("100.2.2.3")
+ *                 .mask("255.255.255.0")
+ *                 .build())
+ *             .helloInterval(5)
+ *             .holdTime(15)
+ *             .authenticationType("md5")
+ *             .md5Keys(ServiceRoutingEigrpFeatureMd5KeyArgs.builder()
+ *                 .key_id(2)
+ *                 .key_string("password123")
+ *                 .build())
+ *             .interfaces(ServiceRoutingEigrpFeatureInterfaceArgs.builder()
+ *                 .name("GigabitEthernet3")
+ *                 .shutdown(false)
+ *                 .summary_addresses(List.of(Map.ofEntries(
+ *                     Map.entry("address", "10.0.0.1"),
+ *                     Map.entry("mask", "255.255.255.0")
+ *                 )))
+ *                 .build())
+ *             .filter(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
@@ -189,28 +248,28 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.helloIntervalVariable);
     }
     /**
-     * Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     @Export(name="hmacAuthenticationKey", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> hmacAuthenticationKey;
 
     /**
-     * @return Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * @return Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     public Output<Optional<String>> hmacAuthenticationKey() {
         return Codegen.optional(this.hmacAuthenticationKey);
     }
     /**
-     * Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     @Export(name="hmacAuthenticationKeyVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> hmacAuthenticationKeyVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * @return Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     public Output<Optional<String>> hmacAuthenticationKeyVariable() {
@@ -263,14 +322,14 @@ public class ServiceRoutingEigrpFeature extends com.pulumi.resources.CustomResou
         return Codegen.optional(this.interfaces);
     }
     /**
-     * Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+     * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
      * 
      */
     @Export(name="md5Keys", refs={List.class,ServiceRoutingEigrpFeatureMd5Key.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceRoutingEigrpFeatureMd5Key>> md5Keys;
 
     /**
-     * @return Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+     * @return Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
      * 
      */
     public Output<Optional<List<ServiceRoutingEigrpFeatureMd5Key>>> md5Keys() {

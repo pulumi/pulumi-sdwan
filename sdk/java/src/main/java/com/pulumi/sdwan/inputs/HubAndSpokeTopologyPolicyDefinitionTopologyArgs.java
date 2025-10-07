@@ -80,14 +80,14 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologyArgs extends com.p
     }
 
     /**
-     * TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     @Import(name="tlocListId")
     private @Nullable Output<String> tlocListId;
 
     /**
-     * @return TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * @return TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     public Optional<Output<String>> tlocListId() {
@@ -217,7 +217,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologyArgs extends com.p
         }
 
         /**
-         * @param tlocListId TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+         * @param tlocListId TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologyArgs extends com.p
         }
 
         /**
-         * @param tlocListId TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+         * @param tlocListId TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
          * 
          * @return builder
          * 

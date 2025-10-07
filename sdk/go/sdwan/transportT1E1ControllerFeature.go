@@ -15,6 +15,54 @@ import (
 // This resource can manage a Transport T1 E1 Controller Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportT1E1ControllerFeature(ctx, "example", &sdwan.TransportT1E1ControllerFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Type:             pulumi.String("t1"),
+//				Slot:             pulumi.String("11"),
+//				Entries: sdwan.TransportT1E1ControllerFeatureEntryArray{
+//					&sdwan.TransportT1E1ControllerFeatureEntryArgs{
+//						T1_description: "T1",
+//						T1_framing:     "esf",
+//						T1_linecode:    "ami",
+//						Cable_length:   "long",
+//						Length_long:    "-7.5db",
+//						Clock_source:   "line",
+//						Line_mode:      "primary",
+//						Description:    pulumi.String("desc"),
+//						Channel_groups: []map[string]interface{}{
+//							map[string]interface{}{
+//								"channelGroup": 12,
+//								"timeSlot":     "timeslots 15",
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

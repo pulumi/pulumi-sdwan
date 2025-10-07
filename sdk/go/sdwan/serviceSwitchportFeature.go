@@ -15,6 +15,67 @@ import (
 // This resource can manage a Service Switchport Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceSwitchportFeature(ctx, "example", &sdwan.ServiceSwitchportFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Interfaces: sdwan.ServiceSwitchportFeatureInterfaceArray{
+//					&sdwan.ServiceSwitchportFeatureInterfaceArgs{
+//						Interface_name:                 "GigabitEthernet",
+//						Mode:                           pulumi.String("access"),
+//						Shutdown:                       pulumi.Bool(true),
+//						Speed:                          pulumi.String("10"),
+//						Duplex:                         pulumi.String("full"),
+//						Switchport_access_vlan:         1,
+//						Switchport_trunk_allowed_vlans: "1",
+//						Switchport_trunk_native_vlan:   1,
+//						Port_control:                   "auto",
+//						Voice_vlan:                     1,
+//						Pae_enable:                     true,
+//						Mac_authentication_bypass:      false,
+//						Host_mode:                      "single-host",
+//						Enable_periodic_reauth:         false,
+//						Inactivity:                     pulumi.Int(60),
+//						Reauthentication:               pulumi.Int(1),
+//						Control_direction:              "both",
+//						Restricted_vlan:                1,
+//						Guest_vlan:                     1,
+//						Critical_vlan:                  1,
+//						Enable_voice:                   false,
+//					},
+//				},
+//				AgeOutTime: pulumi.Int(300),
+//				StaticMacAddresses: sdwan.ServiceSwitchportFeatureStaticMacAddressArray{
+//					&sdwan.ServiceSwitchportFeatureStaticMacAddressArgs{
+//						Mac_address:    "01:02:03:04:05:06",
+//						Vlan_id:        1,
+//						Interface_name: "GigabitEthernet0/0/0",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

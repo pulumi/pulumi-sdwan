@@ -9,6 +9,30 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a URL Filtering Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.UrlFilteringPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     mode: "security",
+ *     alerts: ["blacklist"],
+ *     webCategories: ["alcohol-and-tobacco"],
+ *     webCategoriesAction: "allow",
+ *     webReputation: "moderate-risk",
+ *     targetVpns: ["1"],
+ *     blockPageAction: "text",
+ *     blockPageContents: "Access to the requested page has been denied. Please contact your Network Administrator",
+ *     loggings: [{
+ *         external_syslog_server_ip: "10.0.0.1",
+ *         external_syslog_server_vpn: "123",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

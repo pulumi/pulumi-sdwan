@@ -211,6 +211,29 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Security App Hosting feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SecurityAppHostingFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            virtual_applications=[{
+                "instance_id": "2e89c1fe-440a-43f5-9f3a-54a9836fdbb5",
+                "application_type": "utd",
+                "nat": True,
+                "database_url": False,
+                "resource_profile": "low",
+                "service_gateway_ip": "1.2.3.4/24",
+                "service_ip": "1.2.3.5/24",
+                "data_gateway_ip": "192.0.2.1/24",
+                "data_service_ip": "192.0.2.2/24",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -236,6 +259,29 @@ class SecurityAppHostingFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Security App Hosting feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SecurityAppHostingFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            virtual_applications=[{
+                "instance_id": "2e89c1fe-440a-43f5-9f3a-54a9836fdbb5",
+                "application_type": "utd",
+                "nat": True,
+                "database_url": False,
+                "resource_profile": "low",
+                "service_gateway_ip": "1.2.3.4/24",
+                "service_ip": "1.2.3.5/24",
+                "data_gateway_ip": "192.0.2.1/24",
+                "data_service_ip": "192.0.2.2/24",
+            }])
+        ```
 
         ## Import
 

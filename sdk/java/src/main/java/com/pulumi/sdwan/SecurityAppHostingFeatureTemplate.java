@@ -21,6 +21,53 @@ import javax.annotation.Nullable;
  * This resource can manage a Security App Hosting feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SecurityAppHostingFeatureTemplate;
+ * import com.pulumi.sdwan.SecurityAppHostingFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.SecurityAppHostingFeatureTemplateVirtualApplicationArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecurityAppHostingFeatureTemplate("example", SecurityAppHostingFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .virtualApplications(SecurityAppHostingFeatureTemplateVirtualApplicationArgs.builder()
+ *                 .instance_id("2e89c1fe-440a-43f5-9f3a-54a9836fdbb5")
+ *                 .application_type("utd")
+ *                 .nat(true)
+ *                 .database_url(false)
+ *                 .resource_profile("low")
+ *                 .service_gateway_ip("1.2.3.4/24")
+ *                 .service_ip("1.2.3.5/24")
+ *                 .data_gateway_ip("192.0.2.1/24")
+ *                 .data_service_ip("192.0.2.2/24")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

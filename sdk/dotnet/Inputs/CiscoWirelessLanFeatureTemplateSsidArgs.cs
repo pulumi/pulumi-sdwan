@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set admin state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("adminState")]
         public Input<bool>? AdminState { get; set; }
@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable broadcast SSID
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("broadcastSsid")]
         public Input<bool>? BroadcastSsid { get; set; }
@@ -52,8 +52,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select QoS profile
-        ///   - Choices: `platinum`, `gold`, `silver`, `bronze`
-        ///   - Default value: `silver`
+        ///   - Choices: `Platinum`, `Gold`, `Silver`, `Bronze`
+        ///   - Default value: `Silver`
         /// </summary>
         [Input("qosProfile")]
         public Input<string>? QosProfile { get; set; }
@@ -66,8 +66,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select radio type
-        ///   - Choices: `24ghz`, `5ghz`, `all`
-        ///   - Default value: `all`
+        ///   - Choices: `24ghz`, `5ghz`, `All`
+        ///   - Default value: `All`
         /// </summary>
         [Input("radioType")]
         public Input<string>? RadioType { get; set; }
@@ -118,8 +118,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select security type
-        ///   - Choices: `enterprise`, `personal`, `open`
-        ///   - Default value: `personal`
+        ///   - Choices: `Enterprise`, `Personal`, `Open`
+        ///   - Default value: `Personal`
         /// </summary>
         [Input("securityType")]
         public Input<string>? SecurityType { get; set; }

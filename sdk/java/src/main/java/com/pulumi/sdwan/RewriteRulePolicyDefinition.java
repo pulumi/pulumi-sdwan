@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Rewrite Rule Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.RewriteRulePolicyDefinition;
+ * import com.pulumi.sdwan.RewriteRulePolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.RewriteRulePolicyDefinitionRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RewriteRulePolicyDefinition("example", RewriteRulePolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .rules(RewriteRulePolicyDefinitionRuleArgs.builder()
+ *                 .class_map_id("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
+ *                 .priority("low")
+ *                 .dscp(16)
+ *                 .layer2_cos(1)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

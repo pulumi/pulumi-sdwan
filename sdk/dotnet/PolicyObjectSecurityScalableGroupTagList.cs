@@ -13,6 +13,34 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Policy Object Security Scalable Group Tag List Policy_object.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.PolicyObjectSecurityScalableGroupTagList("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.PolicyObjectSecurityScalableGroupTagListEntryArgs
+    ///             {
+    ///                 Sgt_name = "ANY",
+    ///                 Tag = "65535",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

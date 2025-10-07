@@ -12,6 +12,38 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.AttachFeatureDeviceTemplate("example", new()
+    ///     {
+    ///         Id = DT1.Id,
+    ///         Devices = new[]
+    ///         {
+    ///             new Sdwan.Inputs.AttachFeatureDeviceTemplateDeviceArgs
+    ///             {
+    ///                 Id = "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE",
+    ///                 Variables = 
+    ///                 {
+    ///                     { "systemSiteId", "1001" },
+    ///                     { "systemSystemIp", "1.1.1.1" },
+    ///                     { "systemHostName", "router1" },
+    ///                     { "vpnIfNameDefaultVEdgeDHCPTunnelInterface", "GigabitEthernet1" },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

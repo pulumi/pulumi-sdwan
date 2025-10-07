@@ -23,6 +23,59 @@ import javax.annotation.Nullable;
  * This resource can manage a System NTP Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SystemNtpFeature;
+ * import com.pulumi.sdwan.SystemNtpFeatureArgs;
+ * import com.pulumi.sdwan.inputs.SystemNtpFeatureServerArgs;
+ * import com.pulumi.sdwan.inputs.SystemNtpFeatureAuthenticationKeyArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SystemNtpFeature("example", SystemNtpFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .servers(SystemNtpFeatureServerArgs.builder()
+ *                 .hostname_ip_address("1.1.1.1")
+ *                 .authentication_key(41673)
+ *                 .vpn(1)
+ *                 .ntp_version(4)
+ *                 .source_interface("Ethernet")
+ *                 .prefer_this_ntp_server(false)
+ *                 .build())
+ *             .authenticationKeys(SystemNtpFeatureAuthenticationKeyArgs.builder()
+ *                 .key_id(49737)
+ *                 .md5_value("$CRYPT_CLUSTER")
+ *                 .build())
+ *             .trustedKeys(49737)
+ *             .authoritativeNtpServer(false)
+ *             .stratum(1)
+ *             .sourceInterface("ATM")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

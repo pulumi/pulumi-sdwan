@@ -13,6 +13,57 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco OMP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOmpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         GracefulRestart = true,
+    ///         OverlayAs = 1,
+    ///         SendPathLimit = 4,
+    ///         EcmpLimit = 4,
+    ///         Shutdown = false,
+    ///         OmpAdminDistanceIpv4 = 10,
+    ///         OmpAdminDistanceIpv6 = 10,
+    ///         AdvertisementInterval = 1,
+    ///         GracefulRestartTimer = 43200,
+    ///         EorTimer = 300,
+    ///         Holdtime = 60,
+    ///         IgnoreRegionPathLength = false,
+    ///         TransportGateway = "prefer",
+    ///         AdvertiseIpv4Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///                 Advertise_external_ospf = "external",
+    ///             },
+    ///         },
+    ///         AdvertiseIpv6Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -93,7 +144,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("gracefulRestart")]
         public Output<bool?> GracefulRestart { get; private set; } = null!;
@@ -133,7 +184,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ignoreRegionPathLength")]
         public Output<bool?> IgnoreRegionPathLength { get; private set; } = null!;
@@ -205,7 +256,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -224,7 +275,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Output("transportGateway")]
         public Output<string?> TransportGateway { get; private set; } = null!;
@@ -374,7 +425,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -414,7 +465,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -486,7 +537,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -499,7 +550,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }
@@ -605,7 +656,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -645,7 +696,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -717,7 +768,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -736,7 +787,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }

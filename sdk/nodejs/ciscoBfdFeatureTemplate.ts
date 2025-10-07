@@ -10,6 +10,29 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco BFD feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoBfdFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     multiplier: 3,
+ *     pollInterval: 800000,
+ *     defaultDscp: 48,
+ *     colors: [{
+ *         color: "private5",
+ *         hello_interval: 1000,
+ *         multiplier: 7,
+ *         pmtu_discovery: true,
+ *         dscp: 46,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

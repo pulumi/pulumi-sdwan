@@ -27,8 +27,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PrefixVariable;
         /// <summary>
         /// Service
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         public readonly string? Service;
         /// <summary>

@@ -14,6 +14,48 @@ import (
 
 // This resource can manage a Rule Set Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewRuleSetPolicyDefinition(ctx, "example", &sdwan.RuleSetPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Rules: sdwan.RuleSetPolicyDefinitionRuleArray{
+//					&sdwan.RuleSetPolicyDefinitionRuleArgs{
+//						Name:                     pulumi.String("Rule1"),
+//						Order:                    pulumi.Int(1),
+//						Source_ipv4_prefix:       "10.1.1.0/24",
+//						Source_fqdn:              "cisco.com",
+//						Source_port:              "80-90",
+//						Source_geo_location:      "AF",
+//						Destination_ipv4_prefix:  "10.1.1.0/24",
+//						Destination_fqdn:         "cisco.com",
+//						Destination_port:         "80-90",
+//						Destination_geo_location: "AF",
+//						Protocol:                 pulumi.String("cifs"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -23,17 +23,17 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? EndAddressVariable;
         /// <summary>
         /// Enable Route Leaking from Global VPN to this Service VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? LeakFromGlobal;
         /// <summary>
         /// Select protocol for route leaking
-        ///   - Choices: `all`, `static`, `mobile`, `connected`, `rip`, `odr`
+        ///   - Choices: `All`, `Static`, `Mobile`, `Connected`, `Rip`, `Odr`
         /// </summary>
         public readonly string? LeakFromGlobalProtocol;
         /// <summary>
         /// Enable Route Leaking from this Service VPN to Global VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? LeakToGlobal;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// NAT 64 Overload Option
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Overload;
         /// <summary>

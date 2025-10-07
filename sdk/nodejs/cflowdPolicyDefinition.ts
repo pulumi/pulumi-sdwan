@@ -9,6 +9,35 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Cflowd Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CflowdPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     activeFlowTimeout: 100,
+ *     inactiveFlowTimeout: 10,
+ *     samplingInterval: 10,
+ *     flowRefresh: 120,
+ *     protocol: "ipv4",
+ *     tos: true,
+ *     remarkedDscp: true,
+ *     collectors: [{
+ *         vpn_id: 1,
+ *         ip_address: "10.0.0.1",
+ *         port: 12345,
+ *         transport: "transport_tcp",
+ *         source_interface: "Ethernet1",
+ *         export_spreading: "enable",
+ *         bfd_metrics_exporting: true,
+ *         exporting_interval: 86400,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

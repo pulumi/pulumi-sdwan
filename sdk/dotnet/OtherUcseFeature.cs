@@ -13,6 +13,44 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Other UCSE Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.OtherUcseFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Bay = 2,
+    ///         Slot = 0,
+    ///         AccessPortDedicated = false,
+    ///         AccessPortSharedType = "ge1",
+    ///         AccessPortSharedFailoverType = "ge2",
+    ///         Ipv4Address = "2.2.2.2/24",
+    ///         DefaultGateway = "2.2.2.2",
+    ///         VlanId = 3,
+    ///         AssignPriority = 3,
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.OtherUcseFeatureInterfaceArgs
+    ///             {
+    ///                 Interface_name = "ucse2/0",
+    ///                 Ucse_interface_vpn = 2,
+    ///                 Ipv4_address = "10.1.15.15/24",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,21 +66,21 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Dedicated
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("accessPortDedicated")]
         public Output<bool?> AccessPortDedicated { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Output("accessPortSharedFailoverType")]
         public Output<string?> AccessPortSharedFailoverType { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Output("accessPortSharedType")]
         public Output<string?> AccessPortSharedType { get; private set; } = null!;
@@ -189,21 +227,21 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Dedicated
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("accessPortDedicated")]
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Input("accessPortSharedType")]
         public Input<string>? AccessPortSharedType { get; set; }
@@ -312,21 +350,21 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Dedicated
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("accessPortDedicated")]
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge2`, `te2`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `access_port_dedicated` being equal to `false`
-        ///   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
+        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Input("accessPortSharedType")]
         public Input<string>? AccessPortSharedType { get; set; }

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Define custom profile
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("customProfile")]
         public Input<bool>? CustomProfile { get; set; }
@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable TLS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableTls")]
         public Input<bool>? EnableTls { get; set; }
@@ -52,8 +52,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set logging level for messages logged to server
-        ///   - Choices: `information`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
-        ///   - Default value: `information`
+        ///   - Choices: `Information`, `Debugging`, `Notice`, `Warn`, `Error`, `Critical`, `Alert`, `Emergency`
+        ///   - Default value: `Information`
         /// </summary>
         [Input("loggingLevel")]
         public Input<string>? LoggingLevel { get; set; }

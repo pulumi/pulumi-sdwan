@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select a Route Protocol to enable redistribution
-        ///   - Choices: `bgp`, `eigrp`, `ospf`
+        ///   - Choices: `Bgp`, `Eigrp`, `Ospf`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

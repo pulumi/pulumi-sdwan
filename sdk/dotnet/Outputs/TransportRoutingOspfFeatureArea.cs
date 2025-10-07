@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AreaNumberVariable;
         /// <summary>
         /// set the area type
-        ///   - Choices: `stub`, `nssa`
+        ///   - Choices: `Stub`, `Nssa`
         /// </summary>
         public readonly string? AreaType;
         /// <summary>
@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.TransportRoutingOspfFeatureAreaInterface> Interfaces;
         /// <summary>
         /// Do not inject interarea routes into STUB or NSSA
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? NoSummary;
         /// <summary>

@@ -15,6 +15,59 @@ import (
 // This resource can manage a Cisco Wireless LAN feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoWirelessLanFeatureTemplate(ctx, "example", &sdwan.CiscoWirelessLanFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Shutdown24ghz: pulumi.Bool(false),
+//				Shutdown5ghz:  pulumi.Bool(false),
+//				Ssids: sdwan.CiscoWirelessLanFeatureTemplateSsidArray{
+//					&sdwan.CiscoWirelessLanFeatureTemplateSsidArgs{
+//						Wireless_network_name: "WLAN1",
+//						Admin_state:           false,
+//						Broadcast_ssid:        true,
+//						Vlan_id:               1,
+//						Radio_type:            "24ghz",
+//						Security_type:         "enterprise",
+//						Radius_server_ip:      "1.2.3.4",
+//						Radius_server_port:    1812,
+//						Radius_server_secret:  "MySecret1",
+//						Passphrase:            pulumi.String("passphrase"),
+//						Qos_profile:           "silver",
+//					},
+//				},
+//				Country:                  pulumi.String("AE"),
+//				Username:                 pulumi.String("user1"),
+//				Password:                 pulumi.String("myPassword01"),
+//				ControllerIpAddress:      pulumi.String("0.0.0.0"),
+//				ControllerSubnetMask:     pulumi.String("0.0.0.0"),
+//				ControllerDefaultGateway: pulumi.String("0.0.0.0"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

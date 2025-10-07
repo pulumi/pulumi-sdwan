@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Encapsulation for interface
-        ///   - Choices: `hdlc`, `ppp`
+        ///   - Choices: `Hdlc`, `Ppp`
         /// </summary>
         [Input("encapsulationSerial")]
         public Input<string>? EncapsulationSerial { get; set; }

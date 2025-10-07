@@ -13,6 +13,110 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Multicast Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceMulticastFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         SptOnly = false,
+    ///         LocalReplicator = false,
+    ///         LocalReplicatorThreshold = 10,
+    ///         IgmpInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureIgmpInterfaceArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet1",
+    ///                 Version = 2,
+    ///                 Join_groups = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "groupAddress", "224.0.0.0" },
+    ///                         { "sourceAddress", "1.2.3.4" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         PimSourceSpecificMulticastEnable = true,
+    ///         PimSourceSpecificMulticastAccessList = "1",
+    ///         PimSptThreshold = "0",
+    ///         PimInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimInterfaceArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet1",
+    ///                 Query_interval = 30,
+    ///                 Join_prune_interval = 60,
+    ///             },
+    ///         },
+    ///         StaticRpAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureStaticRpAddressArgs
+    ///             {
+    ///                 Ip_address = "1.2.3.4",
+    ///                 Access_list = "1",
+    ///                 Override = false,
+    ///             },
+    ///         },
+    ///         EnableAutoRp = false,
+    ///         PimBsrRpCandidates = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimBsrRpCandidateArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet1",
+    ///                 Access_list_id = "2",
+    ///                 Interval = 30,
+    ///                 Priority = 1,
+    ///             },
+    ///         },
+    ///         PimBsrCandidates = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimBsrCandidateArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet1",
+    ///                 Hash_mask_length = 30,
+    ///                 Priority = 120,
+    ///                 Accept_candidate_access_list = "test",
+    ///             },
+    ///         },
+    ///         MsdpGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureMsdpGroupArgs
+    ///             {
+    ///                 Mesh_group_name = "Example",
+    ///                 Peers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceMulticastFeatureMsdpGroupPeerArgs
+    ///                     {
+    ///                         PeerIp = "1.2.3.4",
+    ///                         ConnectionSourceInterface = "GigabitEthernet1",
+    ///                         RemoteAs = 1,
+    ///                         PeerAuthenticationPassword = "Password123!",
+    ///                         KeepaliveInterval = 15,
+    ///                         KeepaliveHoldTime = 30,
+    ///                         SaLimit = 1,
+    ///                         DefaultPeer = false,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         MsdpOriginatorId = "GigabitEthernet1",
+    ///         MsdpConnectionRetryInterval = 30,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -46,7 +150,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableAutoRp")]
         public Output<bool?> EnableAutoRp { get; private set; } = null!;
@@ -71,7 +175,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("localReplicator")]
         public Output<bool?> LocalReplicator { get; private set; } = null!;
@@ -170,7 +274,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Output("pimSptThreshold")]
@@ -184,7 +288,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("sptOnly")]
         public Output<bool?> SptOnly { get; private set; } = null!;
@@ -285,7 +389,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -316,7 +420,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -439,7 +543,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
@@ -453,7 +557,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -516,7 +620,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -547,7 +651,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -670,7 +774,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
@@ -684,7 +788,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }

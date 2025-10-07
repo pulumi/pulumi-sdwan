@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// As Override
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("asOverride")]
         public Input<bool>? AsOverride { get; set; }
@@ -116,7 +116,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nextHopSelf")]
         public Input<bool>? NextHopSelf { get; set; }
@@ -159,7 +159,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("sendCommunity")]
         public Input<bool>? SendCommunity { get; set; }
@@ -172,7 +172,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send extended community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("sendExtCommunity")]
         public Input<bool>? SendExtCommunity { get; set; }
@@ -185,14 +185,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sendLabel")]
         public Input<bool>? SendLabel { get; set; }
 
         /// <summary>
         /// Send label Explicit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sendLabelExplicit")]
         public Input<bool>? SendLabelExplicit { get; set; }
@@ -211,7 +211,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable or disable a BGP neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

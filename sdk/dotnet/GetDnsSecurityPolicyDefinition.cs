@@ -126,7 +126,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly int CiscoSigCredentialsFeatureTemplateVersion;
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         public readonly string CustomDnsServerIp;
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Only relevant when `match_all_vpn` is `false`
+        /// Only relevant when `MatchAllVpn` is `False`
         /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsSecurityPolicyDefinitionTargetVpnResult> TargetVpns;
         /// <summary>

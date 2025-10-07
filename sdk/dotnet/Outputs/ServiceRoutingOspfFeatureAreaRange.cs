@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? IpAddressVariable;
         /// <summary>
         /// Do not advertise this range
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? NoAdvertise;
         /// <summary>

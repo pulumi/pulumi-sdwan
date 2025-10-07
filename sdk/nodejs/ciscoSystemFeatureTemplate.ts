@@ -10,6 +10,66 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco System feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoSystemFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     timezone: "UTC",
+ *     hostname: "Router1",
+ *     systemDescription: "My Description",
+ *     location: "Building 1",
+ *     latitude: 40,
+ *     longitude: 50,
+ *     geoFencing: true,
+ *     geoFencingRange: 1000,
+ *     geoFencingSms: true,
+ *     geoFencingSmsPhoneNumbers: [{
+ *         number: "+1234567",
+ *     }],
+ *     deviceGroups: ["group1"],
+ *     controllerGroupLists: [1],
+ *     systemIp: "5.5.5.5",
+ *     overlayId: 1,
+ *     siteId: 1,
+ *     portOffset: 1,
+ *     portHopping: true,
+ *     controlSessionPps: 300,
+ *     trackTransport: true,
+ *     trackInterfaceTag: 1,
+ *     consoleBaudRate: "115200",
+ *     maxOmpSessions: 5,
+ *     multiTenant: true,
+ *     trackDefaultGateway: true,
+ *     adminTechOnFailure: true,
+ *     idleTimeout: 100,
+ *     trackers: [{
+ *         name: "tracker1",
+ *         endpoint_ip: "5.6.7.8",
+ *         threshold: 300,
+ *         interval: 60,
+ *         multiplier: 3,
+ *         type: "interface",
+ *     }],
+ *     objectTrackers: [{
+ *         object_number: 1,
+ *         "interface": "e1",
+ *     }],
+ *     onDemandTunnel: true,
+ *     onDemandTunnelIdleTimeout: 10,
+ *     affinityGroupNumber: 5,
+ *     affinityGroupPreferences: [1],
+ *     transportGateway: true,
+ *     enableMrfMigration: "enabled",
+ *     migrationBgpCommunity: 100,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

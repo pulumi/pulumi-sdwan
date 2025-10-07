@@ -12,6 +12,31 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Region List Policy Object .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.RegionListPolicyObject("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.RegionListPolicyObjectEntryArgs
+    ///             {
+    ///                 Region_id = "1-2",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

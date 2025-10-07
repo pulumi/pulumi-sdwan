@@ -299,6 +299,47 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         This resource can manage a Service Switchport Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceSwitchportFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            interfaces=[{
+                "interface_name": "GigabitEthernet",
+                "mode": "access",
+                "shutdown": True,
+                "speed": "10",
+                "duplex": "full",
+                "switchport_access_vlan": 1,
+                "switchport_trunk_allowed_vlans": "1",
+                "switchport_trunk_native_vlan": 1,
+                "port_control": "auto",
+                "voice_vlan": 1,
+                "pae_enable": True,
+                "mac_authentication_bypass": False,
+                "host_mode": "single-host",
+                "enable_periodic_reauth": False,
+                "inactivity": 60,
+                "reauthentication": 1,
+                "control_direction": "both",
+                "restricted_vlan": 1,
+                "guest_vlan": 1,
+                "critical_vlan": 1,
+                "enable_voice": False,
+            }],
+            age_out_time=300,
+            static_mac_addresses=[{
+                "mac_address": "01:02:03:04:05:06",
+                "vlan_id": 1,
+                "interface_name": "GigabitEthernet0/0/0",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -330,6 +371,47 @@ class ServiceSwitchportFeature(pulumi.CustomResource):
         """
         This resource can manage a Service Switchport Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceSwitchportFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            interfaces=[{
+                "interface_name": "GigabitEthernet",
+                "mode": "access",
+                "shutdown": True,
+                "speed": "10",
+                "duplex": "full",
+                "switchport_access_vlan": 1,
+                "switchport_trunk_allowed_vlans": "1",
+                "switchport_trunk_native_vlan": 1,
+                "port_control": "auto",
+                "voice_vlan": 1,
+                "pae_enable": True,
+                "mac_authentication_bypass": False,
+                "host_mode": "single-host",
+                "enable_periodic_reauth": False,
+                "inactivity": 60,
+                "reauthentication": 1,
+                "control_direction": "both",
+                "restricted_vlan": 1,
+                "guest_vlan": 1,
+                "critical_vlan": 1,
+                "enable_voice": False,
+            }],
+            age_out_time=300,
+            static_mac_addresses=[{
+                "mac_address": "01:02:03:04:05:06",
+                "vlan_id": 1,
+                "interface_name": "GigabitEthernet0/0/0",
+            }])
+        ```
 
         ## Import
 

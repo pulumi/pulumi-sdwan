@@ -15,6 +15,76 @@ import (
 // This resource can manage a Switchport feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSwitchportFeatureTemplate(ctx, "example", &sdwan.SwitchportFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Slot:       pulumi.Int(0),
+//				SubSlot:    pulumi.Int(0),
+//				ModuleType: pulumi.String("4"),
+//				Interfaces: sdwan.SwitchportFeatureTemplateInterfaceArray{
+//					&sdwan.SwitchportFeatureTemplateInterfaceArgs{
+//						Name:                           pulumi.String("GigabitEthernet0/0/0"),
+//						Switchport_mode:                "access",
+//						Shutdown:                       pulumi.Bool(true),
+//						Speed:                          pulumi.String("100"),
+//						Duplex:                         pulumi.String("full"),
+//						Switchport_access_vlan:         100,
+//						Switchport_trunk_allowed_vlans: "100,200",
+//						Switchport_trunk_native_vlan:   100,
+//						Dot1x_enable:                   true,
+//						Dot1x_port_control:             "auto",
+//						Dot1x_authentication_order: []string{
+//							"dot1x",
+//						},
+//						Voice_vlan:                               200,
+//						Dot1x_pae_enable:                         true,
+//						Dot1x_mac_authentication_bypass:          true,
+//						Dot1x_host_mode:                          "multi-domain",
+//						Dot1x_enable_periodic_reauth:             true,
+//						Dot1x_periodic_reauth_inactivity_timeout: 100,
+//						Dot1x_periodic_reauth_interval:           60,
+//						Dot1x_control_direction:                  "both",
+//						Dot1x_restricted_vlan:                    100,
+//						Dot1x_guest_vlan:                         101,
+//						Dot1x_critical_vlan:                      102,
+//						Dot1x_enable_criticial_voice_vlan:        true,
+//					},
+//				},
+//				AgeOutTime: pulumi.Int(500),
+//				StaticMacAddresses: sdwan.SwitchportFeatureTemplateStaticMacAddressArray{
+//					&sdwan.SwitchportFeatureTemplateStaticMacAddressArgs{
+//						Mac_address: "0000.0000.0000",
+//						If_name:     "GigabitEthernet0/0/0",
+//						Vlan:        pulumi.Int(100),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -10,6 +10,39 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco OMP feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoOmpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     gracefulRestart: true,
+ *     overlayAs: 1,
+ *     sendPathLimit: 4,
+ *     ecmpLimit: 4,
+ *     shutdown: false,
+ *     ompAdminDistanceIpv4: 10,
+ *     ompAdminDistanceIpv6: 10,
+ *     advertisementInterval: 1,
+ *     gracefulRestartTimer: 43200,
+ *     eorTimer: 300,
+ *     holdtime: 60,
+ *     ignoreRegionPathLength: false,
+ *     transportGateway: "prefer",
+ *     advertiseIpv4Routes: [{
+ *         protocol: "ospf",
+ *         advertise_external_ospf: "external",
+ *     }],
+ *     advertiseIpv6Routes: [{
+ *         protocol: "ospf",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

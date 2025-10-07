@@ -13,6 +13,156 @@ namespace Pulumi.Sdwan
     /// This resource can manage a VPN Interface SVI feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.VpnInterfaceSviFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         IfName = "Vlan100",
+    ///         InterfaceDescription = "VPN Interface SVI",
+    ///         Ipv4Address = "2.3.4.5",
+    ///         Ipv4SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs
+    ///             {
+    ///                 Ipv4_address = "4.5.6.7",
+    ///             },
+    ///         },
+    ///         Ipv6Address = "2001:db8:85a3::8a2e:370:7334",
+    ///         Ipv6DhcpClient = false,
+    ///         Ipv6DhcpDistance = 101,
+    ///         Ipv6DhcpRapidCommit = false,
+    ///         Ipv6SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs
+    ///             {
+    ///                 Ipv6_address = "2001:db8:85a3::8a2e:370:7334",
+    ///             },
+    ///         },
+    ///         Ipv4DhcpHelpers = new[]
+    ///         {
+    ///             "7.7.7.7",
+    ///         },
+    ///         Ipv6DhcpHelpers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs
+    ///             {
+    ///                 Address = "2001:db8:85a3::8a2e:370:7334",
+    ///                 Vpn_id = 100,
+    ///             },
+    ///         },
+    ///         IpDirectedBroadcast = true,
+    ///         Mtu = 1500,
+    ///         IpMtu = 1500,
+    ///         TcpMssAdjust = 1400,
+    ///         Shutdown = false,
+    ///         ArpTimeout = 100,
+    ///         Ipv4AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv4AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 Acl_name = "ACL1",
+    ///             },
+    ///         },
+    ///         Ipv6AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv6AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 Acl_name = "ACL2",
+    ///             },
+    ///         },
+    ///         Policers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplatePolicerArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 Policer_name = "POLICER1",
+    ///             },
+    ///         },
+    ///         StaticArpEntries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateStaticArpEntryArgs
+    ///             {
+    ///                 Ipv4_address = "3.4.4.5",
+    ///                 Mac_address = "00:00:00:00:00:00",
+    ///             },
+    ///         },
+    ///         Ipv4Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv4VrrpArgs
+    ///             {
+    ///                 Group_id = 1,
+    ///                 Priority = 100,
+    ///                 Timer = 1000,
+    ///                 Track_omp = true,
+    ///                 Track_prefix_list = "TRACK1",
+    ///                 Ipv4_address = "5.6.7.8",
+    ///                 Ipv4_secondary_addresses = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "ipv4Address", "8.8.8.8" },
+    ///                     },
+    ///                 },
+    ///                 Tloc_preference_change = true,
+    ///                 Tloc_preference_change_value = 100,
+    ///                 Tracking_objects = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", 100 },
+    ///                         { "trackAction", "decrement" },
+    ///                         { "decrementValue", 10 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceSviFeatureTemplateIpv6VrrpArgs
+    ///             {
+    ///                 Group_id = 1,
+    ///                 Priority = 100,
+    ///                 Timer = 1000,
+    ///                 Track_omp = true,
+    ///                 Track_prefix_list = "TRACK1",
+    ///                 Ipv6_addresses = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "linkLocalAddress", "FE80::1/64" },
+    ///                         { "prefix", "2001:db8:85a3::8a2e:370:7335" },
+    ///                     },
+    ///                 },
+    ///                 Ipv6_secondary_addresses = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "prefix", "2001:db8:85a3::8a2e:370:7336" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -77,7 +227,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -164,7 +314,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DhcpClient")]
         public Output<bool?> Ipv6DhcpClient { get; private set; } = null!;
@@ -197,7 +347,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DhcpRapidCommit")]
         public Output<bool?> Ipv6DhcpRapidCommit { get; private set; } = null!;
@@ -248,7 +398,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -395,7 +545,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -512,7 +662,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -551,7 +701,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -620,7 +770,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -723,7 +873,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -840,7 +990,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -879,7 +1029,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -948,7 +1098,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

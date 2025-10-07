@@ -13,6 +13,34 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Tracker Group Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceTrackerGroupFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         TrackerElements = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceTrackerGroupFeatureTrackerElementArgs
+    ///             {
+    ///                 Tracker_id = "615d948f-34ee-4a2e-810e-a9bd8d3d48ec",
+    ///             },
+    ///         },
+    ///         TrackerBoolean = "or",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -46,8 +74,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Output("trackerBoolean")]
         public Output<string?> TrackerBoolean { get; private set; } = null!;
@@ -136,8 +164,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }
@@ -188,8 +216,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }

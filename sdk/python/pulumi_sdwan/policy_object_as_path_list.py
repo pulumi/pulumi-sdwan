@@ -227,6 +227,22 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
         This resource can manage a Policy Object AS Path List Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectAsPathList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            as_path_list_id=1,
+            entries=[{
+                "as_path_list": "110",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -255,6 +271,22 @@ class PolicyObjectAsPathList(pulumi.CustomResource):
         """
         This resource can manage a Policy Object AS Path List Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectAsPathList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            as_path_list_id=1,
+            entries=[{
+                "as_path_list": "110",
+            }])
+        ```
 
         ## Import
 

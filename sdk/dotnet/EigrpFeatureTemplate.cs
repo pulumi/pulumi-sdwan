@@ -13,6 +13,73 @@ namespace Pulumi.Sdwan
     /// This resource can manage a eigrp feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.EigrpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         AsNumber = 1,
+    ///         AddressFamilies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyArgs
+    ///             {
+    ///                 Type = "ipv4",
+    ///                 Redistributes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyRedistributeArgs
+    ///                     {
+    ///                         Protocol = "bgp",
+    ///                         RoutePolicy = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///                 Networks = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyNetworkArgs
+    ///                     {
+    ///                         Prefix = "1.2.3.4/24",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         HelloInterval = 5,
+    ///         HoldTime = 15,
+    ///         RoutePolicyName = "RP1",
+    ///         Filter = false,
+    ///         AuthenticationType = "hmac-sha-256",
+    ///         HmacAuthenticationKey = "myAuthKey",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.EigrpFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Interface_name = "Ethernet1",
+    ///                 Shutdown = false,
+    ///                 Summary_addresses = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "prefix", "1.2.3.4/24" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -45,7 +112,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -71,7 +138,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -237,7 +304,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -269,7 +336,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -397,7 +464,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -429,7 +496,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
