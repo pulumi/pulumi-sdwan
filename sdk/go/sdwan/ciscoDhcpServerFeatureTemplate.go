@@ -15,6 +15,64 @@ import (
 // This resource can manage a Cisco DHCP Server feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoDhcpServerFeatureTemplate(ctx, "example", &sdwan.CiscoDhcpServerFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				AddressPool: pulumi.String("10.1.1.0/24"),
+//				ExcludeAddresses: pulumi.StringArray{
+//					pulumi.String("10.1.1.1-10.1.1.5"),
+//					pulumi.String("10.1.1.254"),
+//				},
+//				LeaseTime:      pulumi.Int(600),
+//				InterfaceMtu:   pulumi.Int(1500),
+//				DomainName:     pulumi.String("cisco.com"),
+//				DefaultGateway: pulumi.String("10.1.1.254"),
+//				DnsServers: pulumi.StringArray{
+//					pulumi.String("1.2.3.4"),
+//				},
+//				TftpServers: pulumi.StringArray{
+//					pulumi.String("1.2.3.4"),
+//				},
+//				StaticLeases: sdwan.CiscoDhcpServerFeatureTemplateStaticLeaseArray{
+//					&sdwan.CiscoDhcpServerFeatureTemplateStaticLeaseArgs{
+//						Mac_address: "11:11:11:11:11:11",
+//						Ip_address:  "10.1.1.10",
+//						Hostname:    pulumi.String("HOST1"),
+//					},
+//				},
+//				Options: sdwan.CiscoDhcpServerFeatureTemplateOptionArray{
+//					&sdwan.CiscoDhcpServerFeatureTemplateOptionArgs{
+//						Option_code: 10,
+//						Ascii:       pulumi.String("abc"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

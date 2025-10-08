@@ -101,14 +101,14 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
         return Codegen.optional(this.ciscoSigCredentialsFeatureTemplateVersion);
     }
     /**
-     * Only relevant when `umbrella_dns_default` is `false`
+     * Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     @Export(name="customDnsServerIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> customDnsServerIp;
 
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public Output<Optional<String>> customDnsServerIp() {
@@ -213,14 +213,14 @@ public class DnsSecurityPolicyDefinition extends com.pulumi.resources.CustomReso
         return this.name;
     }
     /**
-     * Only relevant when `match_all_vpn` is `false`
+     * Only relevant when `matchAllVpn` is `false`
      * 
      */
     @Export(name="targetVpns", refs={List.class,DnsSecurityPolicyDefinitionTargetVpn.class}, tree="[0,1]")
     private Output</* @Nullable */ List<DnsSecurityPolicyDefinitionTargetVpn>> targetVpns;
 
     /**
-     * @return Only relevant when `match_all_vpn` is `false`
+     * @return Only relevant when `matchAllVpn` is `false`
      * 
      */
     public Output<Optional<List<DnsSecurityPolicyDefinitionTargetVpn>>> targetVpns() {

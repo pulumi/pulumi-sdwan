@@ -10,6 +10,29 @@ import * as utilities from "./utilities";
  * This resource can manage a System BFD Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemBfdFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     multiplier: 3,
+ *     pollInterval: 100,
+ *     defaultDscp: 8,
+ *     colors: [{
+ *         color: "3g",
+ *         hello_interval: 200,
+ *         multiplier: 3,
+ *         pmtu_discovery: true,
+ *         dscp: 16,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

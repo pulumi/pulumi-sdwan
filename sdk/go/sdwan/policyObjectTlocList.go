@@ -15,6 +15,42 @@ import (
 // This resource can manage a Policy Object TLOC List Policy_object.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewPolicyObjectTlocList(ctx, "example", &sdwan.PolicyObjectTlocListArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Entries: sdwan.PolicyObjectTlocListEntryArray{
+//					&sdwan.PolicyObjectTlocListEntryArgs{
+//						Tloc_ip:       "10.0.0.0",
+//						Color:         pulumi.String("3g"),
+//						Encapsulation: pulumi.String("gre"),
+//						Preference:    pulumi.String("33"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

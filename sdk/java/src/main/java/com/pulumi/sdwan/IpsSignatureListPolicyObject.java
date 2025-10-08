@@ -19,6 +19,44 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a IPS Signature List Policy Object .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.IpsSignatureListPolicyObject;
+ * import com.pulumi.sdwan.IpsSignatureListPolicyObjectArgs;
+ * import com.pulumi.sdwan.inputs.IpsSignatureListPolicyObjectEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new IpsSignatureListPolicyObject("example", IpsSignatureListPolicyObjectArgs.builder()
+ *             .name("Example")
+ *             .entries(IpsSignatureListPolicyObjectEntryArgs.builder()
+ *                 .generator_id(1111)
+ *                 .signature_id(2222)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

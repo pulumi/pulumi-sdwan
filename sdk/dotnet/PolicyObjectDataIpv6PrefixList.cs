@@ -13,6 +13,34 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Policy Object Data IPv6 Prefix List Policy_object.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.PolicyObjectDataIpv6PrefixList("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.PolicyObjectDataIpv6PrefixListEntryArgs
+    ///             {
+    ///                 Ipv6_address = "2001:db8:85a3::8a2e:370:7334",
+    ///                 Ipv6_prefix_length = 64,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

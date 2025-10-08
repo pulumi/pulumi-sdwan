@@ -13,6 +13,50 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport T1 E1 Controller Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportT1E1ControllerFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Type = "t1",
+    ///         Slot = "11",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportT1E1ControllerFeatureEntryArgs
+    ///             {
+    ///                 T1_description = "T1",
+    ///                 T1_framing = "esf",
+    ///                 T1_linecode = "ami",
+    ///                 Cable_length = "long",
+    ///                 Length_long = "-7.5db",
+    ///                 Clock_source = "line",
+    ///                 Line_mode = "primary",
+    ///                 Description = "desc",
+    ///                 Channel_groups = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "channelGroup", 12 },
+    ///                         { "timeSlot", "timeslots 15" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -64,7 +108,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -165,7 +209,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
@@ -222,7 +266,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

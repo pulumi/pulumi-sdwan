@@ -15,6 +15,154 @@ import (
 // This resource can manage a VPN Interface Cellular feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewVpnInterfaceCellularFeatureTemplate(ctx, "example", &sdwan.VpnInterfaceCellularFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				CellularInterfaceName: pulumi.String("Cellular1"),
+//				InterfaceDescription:  pulumi.String("My Description"),
+//				Ipv6AccessLists: sdwan.VpnInterfaceCellularFeatureTemplateIpv6AccessListArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplateIpv6AccessListArgs{
+//						Direction: pulumi.String("in"),
+//						Acl_name:  "ACL1",
+//					},
+//				},
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("6.6.6.6"),
+//				},
+//				Trackers: pulumi.StringArray{
+//					pulumi.String("tracker1"),
+//				},
+//				Nat:               pulumi.Bool(true),
+//				NatRefreshMode:    pulumi.String("outbound"),
+//				NatUdpTimeout:     pulumi.Int(1),
+//				NatTcpTimeout:     pulumi.Int(60),
+//				NatBlockIcmpError: pulumi.Bool(true),
+//				NatResponseToPing: pulumi.Bool(false),
+//				NatPortForwards: sdwan.VpnInterfaceCellularFeatureTemplateNatPortForwardArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplateNatPortForwardArgs{
+//						Port_start_range:   0,
+//						Port_end_range:     65530,
+//						Protocol:           pulumi.String("tcp"),
+//						Private_vpn:        65530,
+//						Private_ip_address: "1.2.3.4",
+//					},
+//				},
+//				EnableCoreRegion: pulumi.Bool(true),
+//				CoreRegion:       pulumi.String("core"),
+//				SecondaryRegion:  pulumi.String("off"),
+//				TunnelInterfaceEncapsulations: sdwan.VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplateTunnelInterfaceEncapsulationArgs{
+//						Encapsulation: pulumi.String("gre"),
+//						Preference:    pulumi.Int(4294967),
+//						Weight:        pulumi.Int(250),
+//					},
+//				},
+//				TunnelInterfaceGroups: pulumi.IntArray{
+//					pulumi.Int(42949672),
+//				},
+//				TunnelInterfaceBorder:                pulumi.Bool(true),
+//				PerTunnelQos:                         pulumi.Bool(true),
+//				PerTunnelQosAggregator:               pulumi.Bool(false),
+//				TunnelQosMode:                        pulumi.String("spoke"),
+//				TunnelInterfaceColor:                 pulumi.String("custom1"),
+//				TunnelInterfaceLastResortCircuit:     pulumi.Bool(false),
+//				TunnelInterfaceLowBandwidthLink:      pulumi.Bool(false),
+//				TunnelInterfaceTunnelTcpMss:          pulumi.Int(1460),
+//				TunnelInterfaceClearDontFragment:     pulumi.Bool(false),
+//				TunnelInterfaceNetworkBroadcast:      pulumi.Bool(false),
+//				TunnelInterfaceMaxControlConnections: pulumi.Int(8),
+//				TunnelInterfaceControlConnections:    pulumi.Bool(true),
+//				TunnelInterfaceVbondAsStunServer:     pulumi.Bool(false),
+//				TunnelInterfaceExcludeControllerGroupLists: pulumi.IntArray{
+//					pulumi.Int(100),
+//				},
+//				TunnelInterfaceVmanageConnectionPreference: pulumi.Int(5),
+//				TunnelInterfacePortHop:                     pulumi.Bool(false),
+//				TunnelInterfaceColorRestrict:               pulumi.Bool(false),
+//				TunnelInterfaceCarrier:                     pulumi.String("carrier1"),
+//				TunnelInterfaceNatRefreshInterval:          pulumi.Int(15),
+//				TunnelInterfaceHelloInterval:               pulumi.Int(1000),
+//				TunnelInterfaceHelloTolerance:              pulumi.Int(12),
+//				TunnelInterfaceBindLoopbackTunnel:          pulumi.String("12"),
+//				TunnelInterfaceAllowAll:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowBgp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowDhcp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowDns:                    pulumi.Bool(true),
+//				TunnelInterfaceAllowIcmp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowSsh:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowNtp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowNetconf:                pulumi.Bool(false),
+//				TunnelInterfaceAllowOspf:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowStun:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowSnmp:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowHttps:                  pulumi.Bool(true),
+//				ClearDontFragmentBit:                       pulumi.Bool(false),
+//				PmtuDiscovery:                              pulumi.Bool(false),
+//				IpMtu:                                      pulumi.Int(1500),
+//				StaticIngressQos:                           pulumi.Int(6),
+//				TcpMss:                                     pulumi.Int(720),
+//				TlocExtension:                              pulumi.String("tloc"),
+//				IpDirectedBroadcast:                        pulumi.Bool(true),
+//				Shutdown:                                   pulumi.Bool(true),
+//				Autonegotiate:                              pulumi.Bool(true),
+//				QosAdaptivePeriod:                          pulumi.Int(15),
+//				QosAdaptiveBandwidthDownstream:             pulumi.Int(10000),
+//				QosAdaptiveMinDownstream:                   pulumi.Int(100),
+//				QosAdaptiveMaxDownstream:                   pulumi.Int(100000),
+//				QosAdaptiveBandwidthUpstream:               pulumi.Int(10000),
+//				QosAdaptiveMinUpstream:                     pulumi.Int(100),
+//				QosAdaptiveMaxUpstream:                     pulumi.Int(100000),
+//				ShapingRate:                                pulumi.Int(10000000),
+//				QosMap:                                     pulumi.String("test"),
+//				QosMapVpn:                                  pulumi.String("test"),
+//				BandwidthUpstream:                          pulumi.Int(214748300),
+//				BandwidthDownstream:                        pulumi.Int(214748300),
+//				WriteRule:                                  pulumi.String("RULE1"),
+//				Ipv4AccessLists: sdwan.VpnInterfaceCellularFeatureTemplateIpv4AccessListArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplateIpv4AccessListArgs{
+//						Direction: pulumi.String("in"),
+//						Acl_name:  "ACL2",
+//					},
+//				},
+//				Policers: sdwan.VpnInterfaceCellularFeatureTemplatePolicerArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplatePolicerArgs{
+//						Direction:    pulumi.String("in"),
+//						Policer_name: "example",
+//					},
+//				},
+//				StaticArps: sdwan.VpnInterfaceCellularFeatureTemplateStaticArpArray{
+//					&sdwan.VpnInterfaceCellularFeatureTemplateStaticArpArgs{
+//						Ip_address: "1.2.3.4",
+//						Mac:        pulumi.String("00-B0-D0-63-C2-26"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

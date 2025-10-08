@@ -13,6 +13,35 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Object Tracker Group Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceObjectTrackerGroupFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         ObjectTrackerId = 10,
+    ///         TrackerElements = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceObjectTrackerGroupFeatureTrackerElementArgs
+    ///             {
+    ///                 Object_tracker_id = "615d948f-34ee-4a2e-810e-a9bd8d3d48ec",
+    ///             },
+    ///         },
+    ///         Reachable = "or",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -59,8 +88,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Output("reachable")]
         public Output<string?> Reachable { get; private set; } = null!;
@@ -162,8 +191,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }
@@ -227,8 +256,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }

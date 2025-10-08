@@ -15,6 +15,61 @@ import (
 // This resource can manage a Service DHCP Server Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceDhcpServerFeature(ctx, "example", &sdwan.ServiceDhcpServerFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				NetworkAddress:   pulumi.String("1.2.3.4"),
+//				SubnetMask:       pulumi.String("255.255.255.0"),
+//				Excludes: pulumi.StringArray{
+//					pulumi.String("192.168.1.1"),
+//				},
+//				LeaseTime:      pulumi.Int(86400),
+//				InterfaceMtu:   pulumi.Int(65535),
+//				DomainName:     pulumi.String("example.com"),
+//				DefaultGateway: pulumi.String("1.2.3.4"),
+//				DnsServers: pulumi.StringArray{
+//					pulumi.String("8.8.8.8"),
+//				},
+//				TftpServers: pulumi.StringArray{
+//					pulumi.String("1.1.1.1"),
+//				},
+//				StaticLeases: sdwan.ServiceDhcpServerFeatureStaticLeaseArray{
+//					&sdwan.ServiceDhcpServerFeatureStaticLeaseArgs{
+//						Mac_address: "01:02:03:04:05:06",
+//						Ip_address:  "1.2.3.4",
+//					},
+//				},
+//				OptionCodes: sdwan.ServiceDhcpServerFeatureOptionCodeArray{
+//					&sdwan.ServiceDhcpServerFeatureOptionCodeArgs{
+//						Code:  pulumi.Int(250),
+//						Ascii: pulumi.String("example"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

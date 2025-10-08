@@ -13,6 +13,124 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System AAA Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemAaaFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AuthenticationGroup = true,
+    ///         AccountingGroup = true,
+    ///         ServerAuthOrders = new[]
+    ///         {
+    ///             "local",
+    ///         },
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureUserArgs
+    ///             {
+    ///                 Name = "User1",
+    ///                 Password = "cisco123",
+    ///                 Privilege = "15",
+    ///                 Public_keys = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "keyString", "AAAAB3NzaC1yc2" },
+    ///                         { "keyType", "ssh-rsa" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureRadiusGroupArgs
+    ///             {
+    ///                 Group_name = "RGROUP1",
+    ///                 Vpn = 10,
+    ///                 Source_interface = "GigabitEthernet0",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemAaaFeatureRadiusGroupServerArgs
+    ///                     {
+    ///                         Address = "1.2.3.4",
+    ///                         AuthPort = 1812,
+    ///                         AcctPort = 1813,
+    ///                         Timeout = 5,
+    ///                         Retransmit = 3,
+    ///                         Key = "cisco123",
+    ///                         SecretKey = "cisco123",
+    ///                         KeyEnum = "7",
+    ///                         KeyType = "key",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         TacacsGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureTacacsGroupArgs
+    ///             {
+    ///                 Group_name = "TGROUP1",
+    ///                 Vpn = 10,
+    ///                 Source_interface = "GigabitEthernet0",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemAaaFeatureTacacsGroupServerArgs
+    ///                     {
+    ///                         Address = "1.2.3.4",
+    ///                         Port = 49,
+    ///                         Timeout = 5,
+    ///                         Key = "cisco123",
+    ///                         SecretKey = "cisco123",
+    ///                         KeyEnum = "7",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         AccountingRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureAccountingRuleArgs
+    ///             {
+    ///                 Rule_id = "1",
+    ///                 Method = "commands",
+    ///                 Level = "15",
+    ///                 Start_stop = true,
+    ///                 Group = new[]
+    ///                 {
+    ///                     "RGROUP1",
+    ///                 },
+    ///             },
+    ///         },
+    ///         AuthorizationConsole = true,
+    ///         AuthorizationConfigCommands = true,
+    ///         AuthorizationRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureAuthorizationRuleArgs
+    ///             {
+    ///                 Rule_id = "1",
+    ///                 Method = "commands",
+    ///                 Level = "15",
+    ///                 Group = new[]
+    ///                 {
+    ///                     "RGROUP1",
+    ///                 },
+    ///                 If_authenticated = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,7 +146,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("accountingGroup")]
         public Output<bool?> AccountingGroup { get; private set; } = null!;
@@ -47,7 +165,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authenticationGroup")]
         public Output<bool?> AuthenticationGroup { get; private set; } = null!;
@@ -60,7 +178,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -73,7 +191,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -186,7 +304,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -211,7 +329,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -224,7 +342,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -237,7 +355,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -336,7 +454,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -361,7 +479,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -374,7 +492,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -387,7 +505,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }

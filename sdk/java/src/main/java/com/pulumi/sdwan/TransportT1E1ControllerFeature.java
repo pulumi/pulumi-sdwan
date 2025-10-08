@@ -21,6 +21,58 @@ import javax.annotation.Nullable;
  * This resource can manage a Transport T1 E1 Controller Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportT1E1ControllerFeature;
+ * import com.pulumi.sdwan.TransportT1E1ControllerFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportT1E1ControllerFeatureEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportT1E1ControllerFeature("example", TransportT1E1ControllerFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .type("t1")
+ *             .slot("11")
+ *             .entries(TransportT1E1ControllerFeatureEntryArgs.builder()
+ *                 .t1_description("T1")
+ *                 .t1_framing("esf")
+ *                 .t1_linecode("ami")
+ *                 .cable_length("long")
+ *                 .length_long("-7.5db")
+ *                 .clock_source("line")
+ *                 .line_mode("primary")
+ *                 .description("desc")
+ *                 .channel_groups(List.of(Map.ofEntries(
+ *                     Map.entry("channelGroup", 12),
+ *                     Map.entry("timeSlot", "timeslots 15")
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

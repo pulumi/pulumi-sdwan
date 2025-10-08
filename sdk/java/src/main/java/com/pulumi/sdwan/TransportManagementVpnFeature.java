@@ -23,6 +23,70 @@ import javax.annotation.Nullable;
  * This resource can manage a Transport Management VPN Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportManagementVpnFeature;
+ * import com.pulumi.sdwan.TransportManagementVpnFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportManagementVpnFeatureNewHostMappingArgs;
+ * import com.pulumi.sdwan.inputs.TransportManagementVpnFeatureIpv4StaticRouteArgs;
+ * import com.pulumi.sdwan.inputs.TransportManagementVpnFeatureIpv6StaticRouteArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportManagementVpnFeature("example", TransportManagementVpnFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .vpnDescription("example")
+ *             .primaryDnsAddressIpv4("1.2.3.4")
+ *             .secondaryDnsAddressIpv4("2.3.4.5")
+ *             .primaryDnsAddressIpv6("2001:0:0:1::0")
+ *             .secondaryDnsAddressIpv6("2001:0:0:2::0")
+ *             .newHostMappings(TransportManagementVpnFeatureNewHostMappingArgs.builder()
+ *                 .host_name("example")
+ *                 .list_of_ip_addresses(List.of("1.2.3.4"))
+ *                 .build())
+ *             .ipv4StaticRoutes(TransportManagementVpnFeatureIpv4StaticRouteArgs.builder()
+ *                 .network_address("1.2.3.4")
+ *                 .subnet_mask("0.0.0.0")
+ *                 .gateway("nextHop")
+ *                 .next_hops(List.of(Map.ofEntries(
+ *                     Map.entry("address", "1.2.3.4"),
+ *                     Map.entry("administrativeDistance", 1)
+ *                 )))
+ *                 .build())
+ *             .ipv6StaticRoutes(TransportManagementVpnFeatureIpv6StaticRouteArgs.builder()
+ *                 .prefix("2002::/16")
+ *                 .gateway("nextHop")
+ *                 .next_hops(List.of(Map.ofEntries(
+ *                     Map.entry("address", "2001:0:0:1::1"),
+ *                     Map.entry("administrativeDistance", 1)
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

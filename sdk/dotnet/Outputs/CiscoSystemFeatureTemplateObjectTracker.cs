@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Type of grouping to be performed for tracker group
-        ///   - Choices: `and`, `or`
+        ///   - Choices: `And`, `Or`
         /// </summary>
         public readonly string? Boolean;
         /// <summary>

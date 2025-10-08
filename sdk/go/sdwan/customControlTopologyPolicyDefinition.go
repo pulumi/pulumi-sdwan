@@ -14,6 +14,60 @@ import (
 
 // This resource can manage a Custom Control Topology Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCustomControlTopologyPolicyDefinition(ctx, "example", &sdwan.CustomControlTopologyPolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("reject"),
+//				Sequences: sdwan.CustomControlTopologyPolicyDefinitionSequenceArray{
+//					&sdwan.CustomControlTopologyPolicyDefinitionSequenceArgs{
+//						Id:          pulumi.Int(1),
+//						Name:        pulumi.String("Region1"),
+//						Type:        pulumi.String("route"),
+//						Ip_type:     "ipv4",
+//						Base_action: "accept",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":   "ompTag",
+//								"ompTag": 100,
+//							},
+//						},
+//						Action_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type": "set",
+//								"setParameters": []map[string]interface{}{
+//									map[string]interface{}{
+//										"type":       "preference",
+//										"preference": 100,
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

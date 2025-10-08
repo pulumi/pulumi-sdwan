@@ -775,6 +775,28 @@ class SecurityPolicy(pulumi.CustomResource):
         """
         This resource can manage a Security Policy .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SecurityPolicy("example",
+            name="Example",
+            description="Example",
+            mode="security",
+            use_case="custom",
+            definitions=[{
+                "id": "7d299c34-981c-4fb3-9167-6be44ab1691f",
+                "type": "urlFiltering",
+            }],
+            failure_mode="close",
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -822,6 +844,28 @@ class SecurityPolicy(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Security Policy .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SecurityPolicy("example",
+            name="Example",
+            description="Example",
+            mode="security",
+            use_case="custom",
+            definitions=[{
+                "id": "7d299c34-981c-4fb3-9167-6be44ab1691f",
+                "type": "urlFiltering",
+            }],
+            failure_mode="close",
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
 
         ## Import
 

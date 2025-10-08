@@ -12,6 +12,51 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Hub and Spoke Topology Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.HubAndSpokeTopologyPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         VpnListId = "04fcbb0b-efbf-43d2-a04b-847d3a7b104e",
+    ///         Topologies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.HubAndSpokeTopologyPolicyDefinitionTopologyArgs
+    ///             {
+    ///                 Name = "Topology1",
+    ///                 All_hubs_are_equal = false,
+    ///                 Advertise_hub_tlocs = true,
+    ///                 Tloc_list_id = "b326e448-bf33-47e4-83e7-f947e6981382",
+    ///                 Spokes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeArgs
+    ///                     {
+    ///                         SiteListId = "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+    ///                         Hubs = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs
+    ///                             {
+    ///                                 SiteListId = "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+    ///                                 Preference = "30",
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

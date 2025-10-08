@@ -211,6 +211,36 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Custom Control Topology Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CustomControlTopologyPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 1,
+                "name": "Region1",
+                "type": "route",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "ompTag",
+                    "ompTag": 100,
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "setParameters": [{
+                        "type": "preference",
+                        "preference": 100,
+                    }],
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -235,6 +265,36 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Custom Control Topology Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CustomControlTopologyPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 1,
+                "name": "Region1",
+                "type": "route",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "ompTag",
+                    "ompTag": 100,
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "setParameters": [{
+                        "type": "preference",
+                        "preference": 100,
+                    }],
+                }],
+            }])
+        ```
 
         ## Import
 

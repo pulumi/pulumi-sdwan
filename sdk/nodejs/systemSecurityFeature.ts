@@ -10,6 +10,44 @@ import * as utilities from "./utilities";
  * This resource can manage a System Security Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemSecurityFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     rekey: 86400,
+ *     antiReplayWindow: "512",
+ *     extendedAntiReplayWindow: 256,
+ *     ipsecPairwiseKeying: false,
+ *     integrityTypes: ["esp"],
+ *     keychains: [{
+ *         key_chain_name: "aaa",
+ *         key_id: 1,
+ *     }],
+ *     keys: [{
+ *         id: 0,
+ *         name: "aaa",
+ *         send_id: 1,
+ *         receiver_id: 2,
+ *         include_tcp_options: false,
+ *         accept_ao_mismatch: false,
+ *         crypto_algorithm: "aes-128-cmac",
+ *         key_string: "abcabc",
+ *         send_life_time_local: true,
+ *         send_life_time_start_epoch: 1659284400,
+ *         send_life_time_infinite: true,
+ *         accept_life_time_local: true,
+ *         accept_life_time_start_epoch: 1659284400,
+ *         accept_life_time_infinite: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

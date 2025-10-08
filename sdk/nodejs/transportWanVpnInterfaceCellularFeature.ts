@@ -10,6 +10,85 @@ import * as utilities from "./utilities";
  * This resource can manage a Transport WAN VPN Interface Cellular Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportWanVpnInterfaceCellularFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     transportWanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
+ *     shutdown: true,
+ *     interfaceName: "GigabitEthernet1",
+ *     interfaceDescription: "WAN",
+ *     ipv4DhcpHelpers: ["1.2.3.4"],
+ *     serviceProvider: "example",
+ *     bandwidthUpstream: 21474836,
+ *     bandwidthDownstream: 21474836,
+ *     tunnelInterface: true,
+ *     perTunnelQos: true,
+ *     tunnelQosMode: "hub",
+ *     tunnelBandwidthPercent: 82,
+ *     tunnelInterfaceBindLoopbackTunnel: "example",
+ *     tunnelInterfaceCarrier: "default",
+ *     tunnelInterfaceColor: "default",
+ *     tunnelInterfaceHelloInterval: 1000,
+ *     tunnelInterfaceHelloTolerance: 12,
+ *     tunnelInterfaceLastResortCircuit: false,
+ *     tunnelInterfaceColorRestrict: true,
+ *     tunnelInterfaceGroups: 42949672,
+ *     tunnelInterfaceBorder: false,
+ *     tunnelInterfaceMaxControlConnections: 62,
+ *     tunnelInterfaceNatRefreshInterval: 5,
+ *     tunnelInterfaceVbondAsStunServer: false,
+ *     tunnelInterfaceExcludeControllerGroupLists: [2],
+ *     tunnelInterfaceVmanageConnectionPreference: 8,
+ *     tunnelInterfacePortHop: true,
+ *     tunnelInterfaceLowBandwidthLink: false,
+ *     tunnelInterfaceTunnelTcpMss: 1460,
+ *     tunnelInterfaceClearDontFragment: false,
+ *     tunnelInterfaceNetworkBroadcast: false,
+ *     tunnelInterfaceAllowAll: false,
+ *     tunnelInterfaceAllowBgp: false,
+ *     tunnelInterfaceAllowDhcp: true,
+ *     tunnelInterfaceAllowNtp: false,
+ *     tunnelInterfaceAllowSsh: false,
+ *     tunnelInterfaceAllowDns: true,
+ *     tunnelInterfaceAllowIcmp: true,
+ *     tunnelInterfaceAllowHttps: true,
+ *     tunnelInterfaceAllowOspf: false,
+ *     tunnelInterfaceAllowStun: false,
+ *     tunnelInterfaceAllowSnmp: false,
+ *     tunnelInterfaceAllowNetconf: false,
+ *     tunnelInterfaceAllowBfd: false,
+ *     tunnelInterfaceEncapsulations: [{
+ *         encapsulation: "gre",
+ *         preference: 4294967,
+ *         weight: 250,
+ *     }],
+ *     natIpv4: true,
+ *     natUdpTimeout: 1,
+ *     natTcpTimeout: 60,
+ *     qosAdaptive: false,
+ *     qosShapingRate: 16,
+ *     aclIpv4EgressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     aclIpv6IngressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     arps: [{
+ *         ip_address: "1.2.3.4",
+ *         mac_address: "00-B0-D0-63-C2-26",
+ *     }],
+ *     ipMtu: 1500,
+ *     interfaceMtu: 1500,
+ *     tcpMss: 505,
+ *     tlocExtension: "tloc",
+ *     tracker: "example",
+ *     ipDirectedBroadcast: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

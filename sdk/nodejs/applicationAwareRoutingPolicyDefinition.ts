@@ -9,6 +9,31 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Application Aware Routing Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ApplicationAwareRoutingPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     sequences: [{
+ *         id: 1,
+ *         name: "Region1",
+ *         ip_type: "ipv4",
+ *         match_entries: [{
+ *             type: "appList",
+ *             applicationListId: "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+ *         }],
+ *         action_entries: [{
+ *             type: "backupSlaPreferredColor",
+ *             backupSlaPreferredColor: "bronze",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -68,8 +68,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set authentication type
-        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Pap`, `Chap`, `PapChap`
+        ///   - Default value: `None`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -113,8 +113,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
-        ///   - Default value: `ipv4`
+        ///   - Choices: `Ipv4`, `Ipv4v6`, `Ipv6`
+        ///   - Default value: `Ipv4`
         /// </summary>
         [Output("packetDataNetworkType")]
         public Output<string?> PacketDataNetworkType { get; private set; } = null!;
@@ -234,8 +234,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set authentication type
-        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Pap`, `Chap`, `PapChap`
+        ///   - Default value: `None`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -285,8 +285,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
-        ///   - Default value: `ipv4`
+        ///   - Choices: `Ipv4`, `Ipv4v6`, `Ipv6`
+        ///   - Default value: `Ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -356,8 +356,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set authentication type
-        ///   - Choices: `none`, `pap`, `chap`, `pap_chap`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Pap`, `Chap`, `PapChap`
+        ///   - Default value: `None`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -407,8 +407,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv4v6`, `ipv6`
-        ///   - Default value: `ipv4`
+        ///   - Choices: `Ipv4`, `Ipv4v6`, `Ipv6`
+        ///   - Default value: `Ipv4`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }

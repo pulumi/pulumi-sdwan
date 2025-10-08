@@ -9,6 +9,20 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Region List Policy Object .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.RegionListPolicyObject("example", {
+ *     name: "Example",
+ *     entries: [{
+ *         region_id: "1-2",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

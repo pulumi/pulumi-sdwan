@@ -22,6 +22,53 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Security Policy .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SecurityPolicy;
+ * import com.pulumi.sdwan.SecurityPolicyArgs;
+ * import com.pulumi.sdwan.inputs.SecurityPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.SecurityPolicyLoggingArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecurityPolicy("example", SecurityPolicyArgs.builder()
+ *             .name("Example")
+ *             .description("Example")
+ *             .mode("security")
+ *             .useCase("custom")
+ *             .definitions(SecurityPolicyDefinitionArgs.builder()
+ *                 .id("7d299c34-981c-4fb3-9167-6be44ab1691f")
+ *                 .type("urlFiltering")
+ *                 .build())
+ *             .failureMode("close")
+ *             .loggings(SecurityPolicyLoggingArgs.builder()
+ *                 .external_syslog_server_ip("10.0.0.1")
+ *                 .external_syslog_server_vpn("123")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

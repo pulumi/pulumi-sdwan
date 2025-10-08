@@ -34,7 +34,7 @@ public final class GetHubAndSpokeTopologyPolicyDefinitionTopology {
      */
     private List<GetHubAndSpokeTopologyPolicyDefinitionTopologySpoke> spokes;
     /**
-     * @return TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * @return TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     private String tlocListId;
@@ -69,7 +69,7 @@ public final class GetHubAndSpokeTopologyPolicyDefinitionTopology {
         return this.spokes;
     }
     /**
-     * @return TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * @return TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     public String tlocListId() {

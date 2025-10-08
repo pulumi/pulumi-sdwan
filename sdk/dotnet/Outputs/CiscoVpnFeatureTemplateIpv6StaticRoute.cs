@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.CiscoVpnFeatureTemplateIpv6StaticRouteNextHop> NextHops;
         /// <summary>
         /// null0
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Null0;
         /// <summary>

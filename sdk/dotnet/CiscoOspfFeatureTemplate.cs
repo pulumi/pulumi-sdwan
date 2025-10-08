@@ -13,6 +13,104 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco OSPF feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOspfFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         RouterId = "1.2.3.4",
+    ///         AutoCostReferenceBandwidth = 100000,
+    ///         CompatibleRfc1583 = true,
+    ///         DefaultInformationOriginate = true,
+    ///         DefaultInformationOriginateAlways = true,
+    ///         DefaultInformationOriginateMetric = 100,
+    ///         DefaultInformationOriginateMetricType = "type1",
+    ///         DistanceExternal = 111,
+    ///         DistanceInterArea = 111,
+    ///         DistanceIntraArea = 112,
+    ///         TimersSpfDelay = 300,
+    ///         TimersSpfInitialHold = 2000,
+    ///         TimersSpfMaxHold = 20000,
+    ///         Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateRedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 Route_policy = "RP1",
+    ///                 Nat_dia = true,
+    ///             },
+    ///         },
+    ///         MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs
+    ///             {
+    ///                 Ad_type = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         RoutePolicies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateRoutePolicyArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 Policy_name = "POLICY1",
+    ///             },
+    ///         },
+    ///         Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaArgs
+    ///             {
+    ///                 Area_number = 1,
+    ///                 Stub = false,
+    ///                 Stub_no_summary = false,
+    ///                 Nssa = false,
+    ///                 Nssa_no_summary = true,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Priority = 10,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "message-digest",
+    ///                         AuthenticationMessageDigestKeyId = 1,
+    ///                         AuthenticationMessageDigestKey = "cisco123",
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaRangeArgs
+    ///                     {
+    ///                         Address = "1.1.1.0/24",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -46,7 +144,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("compatibleRfc1583")]
         public Output<bool?> CompatibleRfc1583 { get; private set; } = null!;
@@ -59,14 +157,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("defaultInformationOriginate")]
         public Output<bool?> DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("defaultInformationOriginateAlways")]
         public Output<bool?> DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -86,7 +184,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("defaultInformationOriginateMetricType")]
         public Output<string?> DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -322,7 +420,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("compatibleRfc1583")]
         public Input<bool>? CompatibleRfc1583 { get; set; }
@@ -335,14 +433,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -362,7 +460,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -572,7 +670,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("compatibleRfc1583")]
         public Input<bool>? CompatibleRfc1583 { get; set; }
@@ -585,14 +683,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -612,7 +710,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }

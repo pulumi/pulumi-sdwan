@@ -15,6 +15,157 @@ import (
 // This resource can manage a Cisco OSPFv3 feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoOspfv3FeatureTemplate(ctx, "example", &sdwan.CiscoOspfv3FeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Ipv4RouterId:                              pulumi.String("1.2.3.4"),
+//				Ipv4AutoCostReferenceBandwidth:            pulumi.Int(100000),
+//				Ipv4CompatibleRfc1583:                     pulumi.Bool(true),
+//				Ipv4DefaultInformationOriginate:           pulumi.Bool(true),
+//				Ipv4DefaultInformationOriginateAlways:     pulumi.Bool(true),
+//				Ipv4DefaultInformationOriginateMetric:     pulumi.Int(100),
+//				Ipv4DefaultInformationOriginateMetricType: pulumi.String("type1"),
+//				Ipv4DistanceExternal:                      pulumi.Int(111),
+//				Ipv4DistanceInterArea:                     pulumi.Int(111),
+//				Ipv4DistanceIntraArea:                     pulumi.Int(112),
+//				Ipv4TimersSpfDelay:                        pulumi.Int(300),
+//				Ipv4TimersSpfInitialHold:                  pulumi.Int(2000),
+//				Ipv4TimersSpfMaxHold:                      pulumi.Int(20000),
+//				Ipv4Distance:                              pulumi.Int(110),
+//				Ipv4PolicyName:                            pulumi.String("POLICY1"),
+//				Ipv4Filter:                                pulumi.Bool(false),
+//				Ipv4Redistributes: sdwan.CiscoOspfv3FeatureTemplateIpv4RedistributeArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv4RedistributeArgs{
+//						Protocol:     pulumi.String("static"),
+//						Route_policy: "RP1",
+//						Nat_dia:      true,
+//					},
+//				},
+//				Ipv4MaxMetricRouterLsas: sdwan.CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs{
+//						Ad_type: "on-startup",
+//						Time:    pulumi.Int(100),
+//					},
+//				},
+//				Ipv4Areas: sdwan.CiscoOspfv3FeatureTemplateIpv4AreaArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv4AreaArgs{
+//						Area_number:     1,
+//						Stub:            pulumi.Bool(false),
+//						Stub_no_summary: false,
+//						Nssa:            pulumi.Bool(false),
+//						Nssa_no_summary: true,
+//						Translate:       pulumi.String("always"),
+//						Normal:          pulumi.Bool(false),
+//						Interfaces: sdwan.CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArray{
+//							&sdwan.CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs{
+//								Name:               pulumi.String("e1"),
+//								HelloInterval:      pulumi.Int(20),
+//								DeadInterval:       pulumi.Int(60),
+//								RetransmitInterval: pulumi.Int(10),
+//								Cost:               pulumi.Int(100),
+//								Network:            pulumi.String("point-to-point"),
+//								PassiveInterface:   pulumi.Bool(true),
+//								AuthenticationType: pulumi.String("md5"),
+//								AuthenticationKey:  pulumi.String("authenticationKey"),
+//								IpsecSpi:           pulumi.Int(256),
+//							},
+//						},
+//						Ranges: sdwan.CiscoOspfv3FeatureTemplateIpv4AreaRangeArray{
+//							&sdwan.CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs{
+//								Address:     pulumi.String("1.1.1.0/24"),
+//								Cost:        pulumi.Int(100),
+//								NoAdvertise: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//				Ipv6RouterId:                              pulumi.String("1.2.3.4"),
+//				Ipv6AutoCostReferenceBandwidth:            pulumi.Int(100000),
+//				Ipv6CompatibleRfc1583:                     pulumi.Bool(true),
+//				Ipv6DefaultInformationOriginate:           pulumi.Bool(true),
+//				Ipv6DefaultInformationOriginateAlways:     pulumi.Bool(true),
+//				Ipv6DefaultInformationOriginateMetric:     pulumi.Int(100),
+//				Ipv6DefaultInformationOriginateMetricType: pulumi.String("type1"),
+//				Ipv6DistanceExternal:                      pulumi.Int(111),
+//				Ipv6DistanceInterArea:                     pulumi.Int(111),
+//				Ipv6DistanceIntraArea:                     pulumi.Int(112),
+//				Ipv6TimersSpfDelay:                        pulumi.Int(300),
+//				Ipv6TimersSpfInitialHold:                  pulumi.Int(2000),
+//				Ipv6TimersSpfMaxHold:                      pulumi.Int(20000),
+//				Ipv6Distance:                              pulumi.Int(110),
+//				Ipv6PolicyName:                            pulumi.String("POLICY2"),
+//				Ipv6Filter:                                pulumi.Bool(false),
+//				Ipv6Redistributes: sdwan.CiscoOspfv3FeatureTemplateIpv6RedistributeArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv6RedistributeArgs{
+//						Protocol:     pulumi.String("static"),
+//						Route_policy: "RP1",
+//					},
+//				},
+//				Ipv6MaxMetricRouterLsas: sdwan.CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs{
+//						Ad_type: "on-startup",
+//						Time:    pulumi.Int(100),
+//					},
+//				},
+//				Ipv6Areas: sdwan.CiscoOspfv3FeatureTemplateIpv6AreaArray{
+//					&sdwan.CiscoOspfv3FeatureTemplateIpv6AreaArgs{
+//						Area_number:     1,
+//						Stub:            pulumi.Bool(false),
+//						Stub_no_summary: false,
+//						Nssa:            pulumi.Bool(false),
+//						Nssa_no_summary: true,
+//						Translate:       pulumi.String("always"),
+//						Normal:          pulumi.Bool(false),
+//						Interfaces: sdwan.CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArray{
+//							&sdwan.CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs{
+//								Name:               pulumi.String("e1"),
+//								HelloInterval:      pulumi.Int(20),
+//								DeadInterval:       pulumi.Int(60),
+//								RetransmitInterval: pulumi.Int(10),
+//								Cost:               pulumi.Int(100),
+//								Network:            pulumi.String("point-to-point"),
+//								PassiveInterface:   pulumi.Bool(true),
+//								AuthenticationType: pulumi.String("md5"),
+//								AuthenticationKey:  pulumi.String("authenticationKey"),
+//								IpsecSpi:           pulumi.Int(256),
+//							},
+//						},
+//						Ranges: sdwan.CiscoOspfv3FeatureTemplateIpv6AreaRangeArray{
+//							&sdwan.CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs{
+//								Address:     pulumi.String("2001::/48"),
+//								Cost:        pulumi.Int(100),
+//								NoAdvertise: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

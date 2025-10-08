@@ -20,6 +20,60 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Custom Control Topology Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CustomControlTopologyPolicyDefinition;
+ * import com.pulumi.sdwan.CustomControlTopologyPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.CustomControlTopologyPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CustomControlTopologyPolicyDefinition("example", CustomControlTopologyPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("reject")
+ *             .sequences(CustomControlTopologyPolicyDefinitionSequenceArgs.builder()
+ *                 .id(1)
+ *                 .name("Region1")
+ *                 .type("route")
+ *                 .ip_type("ipv4")
+ *                 .base_action("accept")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "ompTag"),
+ *                     Map.entry("ompTag", 100)
+ *                 )))
+ *                 .action_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "set"),
+ *                     Map.entry("setParameters", List.of(Map.ofEntries(
+ *                         Map.entry("type", "preference"),
+ *                         Map.entry("preference", 100)
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

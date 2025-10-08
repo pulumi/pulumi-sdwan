@@ -15,6 +15,120 @@ import (
 // This resource can manage a Service LAN VPN Interface SVI Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceLanVpnInterfaceSviFeature(ctx, "example", &sdwan.ServiceLanVpnInterfaceSviFeatureArgs{
+//				Name:                   pulumi.String("Example"),
+//				Description:            pulumi.String("My Example"),
+//				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				ServiceLanVpnFeatureId: pulumi.String("140331f6-5418-4755-a059-13c77eb96037"),
+//				Shutdown:               pulumi.Bool(false),
+//				InterfaceName:          pulumi.String("Vlan1"),
+//				InterfaceDescription:   pulumi.String("SVI"),
+//				InterfaceMtu:           pulumi.Int(1500),
+//				IpMtu:                  pulumi.Int(1500),
+//				Ipv4Address:            pulumi.String("1.2.3.4"),
+//				Ipv4SubnetMask:         pulumi.String("0.0.0.0"),
+//				Ipv4SecondaryAddresses: sdwan.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs{
+//						Address:          pulumi.String("2.3.4.5"),
+//						Ipv4_subnet_mask: "0.0.0.0",
+//					},
+//				},
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("4.5.6.7"),
+//				},
+//				Ipv6Address: pulumi.String("2001:0:0:1::0/32"),
+//				Ipv6SecondaryAddresses: sdwan.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs{
+//						Address: pulumi.String("::2/32"),
+//					},
+//				},
+//				Ipv6DhcpHelpers: sdwan.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs{
+//						Address: pulumi.String("2001:0:0:1::0"),
+//						Vpn:     pulumi.Int(1),
+//					},
+//				},
+//				AclIpv4EgressFeatureId:  pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AclIpv6IngressFeatureId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Arps: sdwan.ServiceLanVpnInterfaceSviFeatureArpArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureArpArgs{
+//						Ip_address:  "1.2.3.4",
+//						Mac_address: "00-B0-D0-63-C2-26",
+//					},
+//				},
+//				Ipv4Vrrps: sdwan.ServiceLanVpnInterfaceSviFeatureIpv4VrrpArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs{
+//						Group_id:    1,
+//						Priority:    pulumi.Int(100),
+//						Timer:       pulumi.Int(1000),
+//						Track_omp:   false,
+//						Prefix_list: "prefix",
+//						Address:     pulumi.String("1.2.3.4"),
+//						Secondary_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"address": "2.3.4.5",
+//							},
+//						},
+//						Tloc_prefix_change:       true,
+//						Tloc_prefix_change_value: 100,
+//						Tracking_objects: []map[string]interface{}{
+//							map[string]interface{}{
+//								"trackerId":      "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+//								"trackAction":    "decrement",
+//								"decrementValue": 100,
+//							},
+//						},
+//					},
+//				},
+//				Ipv6Vrrps: sdwan.ServiceLanVpnInterfaceSviFeatureIpv6VrrpArray{
+//					&sdwan.ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs{
+//						Group_id:          1,
+//						Priority:          pulumi.Int(100),
+//						Timer:             pulumi.Int(1000),
+//						Track_omp:         false,
+//						Track_prefix_list: "1",
+//						Addresses: sdwan.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArray{
+//							&sdwan.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs{
+//								LinkLocalAddress: pulumi.String("1::1"),
+//								GlobalAddress:    pulumi.String("1::1/24"),
+//							},
+//						},
+//						Secondary_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"prefix": "::20/32",
+//							},
+//						},
+//					},
+//				},
+//				EnableDhcpv6:        pulumi.Bool(false),
+//				TcpMss:              pulumi.Int(1024),
+//				ArpTimeout:          pulumi.Int(1200),
+//				IpDirectedBroadcast: pulumi.Bool(false),
+//				IcmpRedirectDisable: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

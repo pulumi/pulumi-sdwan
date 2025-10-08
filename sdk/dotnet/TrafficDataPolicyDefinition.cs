@@ -12,6 +12,53 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Traffic Data Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TrafficDataPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TrafficDataPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "Seq1",
+    ///                 Type = "applicationFirewall",
+    ///                 Ip_type = "ipv4",
+    ///                 Base_action = "accept",
+    ///                 Match_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "appList" },
+    ///                         { "applicationListId", "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c" },
+    ///                     },
+    ///                 },
+    ///                 Action_entries = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "log" },
+    ///                         { "log", true },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,8 +71,8 @@ namespace Pulumi.Sdwan
     public partial class TrafficDataPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -107,8 +154,8 @@ namespace Pulumi.Sdwan
     public sealed class TrafficDataPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -146,8 +193,8 @@ namespace Pulumi.Sdwan
     public sealed class TrafficDataPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

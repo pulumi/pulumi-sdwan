@@ -15,6 +15,74 @@ import (
 // This resource can manage a cEdge PIM feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCedgePimFeatureTemplate(ctx, "example", &sdwan.CedgePimFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				AutoRp: pulumi.Bool(true),
+//				RpAnnounceFields: sdwan.CedgePimFeatureTemplateRpAnnounceFieldArray{
+//					&sdwan.CedgePimFeatureTemplateRpAnnounceFieldArgs{
+//						Interface_name: "Ethernet1",
+//						Scope:          pulumi.Int(1),
+//					},
+//				},
+//				InterfaceName: pulumi.String("Ethernet1"),
+//				RpCandidates: sdwan.CedgePimFeatureTemplateRpCandidateArray{
+//					&sdwan.CedgePimFeatureTemplateRpCandidateArgs{
+//						Interface:   pulumi.String("Ethernet1"),
+//						Access_list: "1",
+//						Interval:    pulumi.Int(100),
+//						Priority:    pulumi.Int(2),
+//					},
+//				},
+//				BsrCandidate:          pulumi.String("Ethernet1"),
+//				HashMaskLength:        pulumi.String("24"),
+//				Priority:              pulumi.Int(1),
+//				RpCandidateAccessList: pulumi.String("120"),
+//				Scope:                 pulumi.Int(1),
+//				Range:                 pulumi.String("16"),
+//				Default:               pulumi.Bool(true),
+//				RpAddresses: sdwan.CedgePimFeatureTemplateRpAddressArray{
+//					&sdwan.CedgePimFeatureTemplateRpAddressArgs{
+//						Ip_address:  "1.2.3.4",
+//						Access_list: "99",
+//						Override:    pulumi.Bool(false),
+//					},
+//				},
+//				SptThreshold: pulumi.String("0"),
+//				Interfaces: sdwan.CedgePimFeatureTemplateInterfaceArray{
+//					&sdwan.CedgePimFeatureTemplateInterfaceArgs{
+//						Interface_name:      "Ethernet1",
+//						Query_interval:      30,
+//						Join_prune_interval: 60,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

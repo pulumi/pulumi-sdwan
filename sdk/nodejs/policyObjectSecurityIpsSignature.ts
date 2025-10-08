@@ -10,6 +10,23 @@ import * as utilities from "./utilities";
  * This resource can manage a Policy Object Security IPS Signature Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectSecurityIpsSignature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     entries: [{
+ *         generator_id: "1234",
+ *         signature_id: "5678",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -10,6 +10,51 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco Security feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoSecurityFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     rekeyInterval: 86400,
+ *     replayWindow: "64",
+ *     extendedArWindow: 256,
+ *     authenticationTypes: ["none"],
+ *     integrityTypes: ["none"],
+ *     pairwiseKeying: true,
+ *     keychains: [{
+ *         name: "CHAIN1",
+ *         key_id: 1,
+ *     }],
+ *     keys: [{
+ *         id: "1",
+ *         chain_name: "CHAIN1",
+ *         send_id: 0,
+ *         receive_id: 0,
+ *         crypto_algorithm: "hmac-sha-256",
+ *         key_string: "abc123",
+ *         send_lifetime_local: true,
+ *         send_lifetime_start_time: "2022-12-31T23:59",
+ *         send_lifetime_end_time_format: "infinite",
+ *         send_lifetime_duration: 1000,
+ *         send_lifetime_end_time: "2032-12-31T23:59",
+ *         send_lifetime_infinite: true,
+ *         accept_lifetime_local: true,
+ *         accept_lifetime_start_time: "2022-12-31T23:59",
+ *         accept_lifetime_end_time_format: "infinite",
+ *         accept_lifetime_duration: 1000,
+ *         accept_lifetime_end_time: "2032-12-31T23:59",
+ *         accept_lifetime_infinite: true,
+ *         include_tcp_options: false,
+ *         accept_ao_mismatch: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

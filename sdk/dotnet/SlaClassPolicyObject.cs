@@ -61,7 +61,7 @@ namespace Pulumi.Sdwan
         public Output<int?> AppProbeClassVersion { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `Loss`, `Latency`, `Jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Output("fallbackBestTunnelCriteria")]
         public Output<string?> FallbackBestTunnelCriteria { get; private set; } = null!;
@@ -179,7 +179,7 @@ namespace Pulumi.Sdwan
         public Input<int>? AppProbeClassVersion { get; set; }
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `Loss`, `Latency`, `Jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Input("fallbackBestTunnelCriteria")]
         public Input<string>? FallbackBestTunnelCriteria { get; set; }
@@ -253,7 +253,7 @@ namespace Pulumi.Sdwan
         public Input<int>? AppProbeClassVersion { get; set; }
 
         /// <summary>
-        /// - Choices: `loss`, `latency`, `jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `Loss`, `Latency`, `Jitter`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Input("fallbackBestTunnelCriteria")]
         public Input<string>? FallbackBestTunnelCriteria { get; set; }

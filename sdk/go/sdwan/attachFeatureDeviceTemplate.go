@@ -14,6 +14,43 @@ import (
 
 // This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewAttachFeatureDeviceTemplate(ctx, "example", &sdwan.AttachFeatureDeviceTemplateArgs{
+//				Id: DT1.Id,
+//				Devices: sdwan.AttachFeatureDeviceTemplateDeviceArray{
+//					&sdwan.AttachFeatureDeviceTemplateDeviceArgs{
+//						Id: pulumi.String("C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE"),
+//						Variables: pulumi.StringMap{
+//							"systemSiteId":   pulumi.String("1001"),
+//							"systemSystemIp": pulumi.String("1.1.1.1"),
+//							"systemHostName": pulumi.String("router1"),
+//							"vpnIfNameDefaultVEdgeDHCPTunnelInterface": pulumi.String("GigabitEthernet1"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

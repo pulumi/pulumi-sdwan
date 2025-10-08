@@ -191,6 +191,26 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         This resource can manage a Policy Object Preferred Color Group Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectPreferredColorGroup("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "primary_color_preference": ["default"],
+                "primary_path_preference": "direct-path",
+                "secondary_color_preference": ["bronze"],
+                "secondary_path_preference": "all-paths",
+                "tertiary_color_preference": ["blue"],
+                "tertiary_path_preference": "all-paths",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -217,6 +237,26 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         """
         This resource can manage a Policy Object Preferred Color Group Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectPreferredColorGroup("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "primary_color_preference": ["default"],
+                "primary_path_preference": "direct-path",
+                "secondary_color_preference": ["bronze"],
+                "secondary_path_preference": "all-paths",
+                "tertiary_color_preference": ["blue"],
+                "tertiary_path_preference": "all-paths",
+            }])
+        ```
 
         ## Import
 

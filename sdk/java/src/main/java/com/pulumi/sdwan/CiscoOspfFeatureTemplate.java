@@ -25,6 +25,96 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco OSPF feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoOspfFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoOspfFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateRedistributeArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateRoutePolicyArgs;
+ * import com.pulumi.sdwan.inputs.CiscoOspfFeatureTemplateAreaArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoOspfFeatureTemplate("example", CiscoOspfFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .routerId("1.2.3.4")
+ *             .autoCostReferenceBandwidth(100000)
+ *             .compatibleRfc1583(true)
+ *             .defaultInformationOriginate(true)
+ *             .defaultInformationOriginateAlways(true)
+ *             .defaultInformationOriginateMetric(100)
+ *             .defaultInformationOriginateMetricType("type1")
+ *             .distanceExternal(111)
+ *             .distanceInterArea(111)
+ *             .distanceIntraArea(112)
+ *             .timersSpfDelay(300)
+ *             .timersSpfInitialHold(2000)
+ *             .timersSpfMaxHold(20000)
+ *             .redistributes(CiscoOspfFeatureTemplateRedistributeArgs.builder()
+ *                 .protocol("static")
+ *                 .route_policy("RP1")
+ *                 .nat_dia(true)
+ *                 .build())
+ *             .maxMetricRouterLsas(CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs.builder()
+ *                 .ad_type("on-startup")
+ *                 .time(100)
+ *                 .build())
+ *             .routePolicies(CiscoOspfFeatureTemplateRoutePolicyArgs.builder()
+ *                 .direction("in")
+ *                 .policy_name("POLICY1")
+ *                 .build())
+ *             .areas(CiscoOspfFeatureTemplateAreaArgs.builder()
+ *                 .area_number(1)
+ *                 .stub(false)
+ *                 .stub_no_summary(false)
+ *                 .nssa(false)
+ *                 .nssa_no_summary(true)
+ *                 .interfaces(CiscoOspfFeatureTemplateAreaInterfaceArgs.builder()
+ *                     .name("e1")
+ *                     .helloInterval(20)
+ *                     .deadInterval(60)
+ *                     .retransmitInterval(10)
+ *                     .cost(100)
+ *                     .priority(10)
+ *                     .network("point-to-point")
+ *                     .passiveInterface(true)
+ *                     .authenticationType("message-digest")
+ *                     .authenticationMessageDigestKeyId(1)
+ *                     .authenticationMessageDigestKey("cisco123")
+ *                     .build())
+ *                 .ranges(CiscoOspfFeatureTemplateAreaRangeArgs.builder()
+ *                     .address("1.1.1.0/24")
+ *                     .cost(100)
+ *                     .noAdvertise(true)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

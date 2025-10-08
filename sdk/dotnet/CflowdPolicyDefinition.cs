@@ -12,6 +12,46 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Cflowd Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CflowdPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         ActiveFlowTimeout = 100,
+    ///         InactiveFlowTimeout = 10,
+    ///         SamplingInterval = 10,
+    ///         FlowRefresh = 120,
+    ///         Protocol = "ipv4",
+    ///         Tos = true,
+    ///         RemarkedDscp = true,
+    ///         Collectors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CflowdPolicyDefinitionCollectorArgs
+    ///             {
+    ///                 Vpn_id = 1,
+    ///                 Ip_address = "10.0.0.1",
+    ///                 Port = 12345,
+    ///                 Transport = "transport_tcp",
+    ///                 Source_interface = "Ethernet1",
+    ///                 Export_spreading = "enable",
+    ///                 Bfd_metrics_exporting = true,
+    ///                 Exporting_interval = 86400,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -63,8 +103,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -192,8 +232,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -271,8 +311,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

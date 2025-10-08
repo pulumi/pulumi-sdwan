@@ -15,6 +15,65 @@ import (
 // This resource can manage a System Security Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemSecurityFeature(ctx, "example", &sdwan.SystemSecurityFeatureArgs{
+//				Name:                     pulumi.String("Example"),
+//				Description:              pulumi.String("My Example"),
+//				FeatureProfileId:         pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Rekey:                    pulumi.Int(86400),
+//				AntiReplayWindow:         pulumi.String("512"),
+//				ExtendedAntiReplayWindow: pulumi.Int(256),
+//				IpsecPairwiseKeying:      pulumi.Bool(false),
+//				IntegrityTypes: pulumi.StringArray{
+//					pulumi.String("esp"),
+//				},
+//				Keychains: sdwan.SystemSecurityFeatureKeychainArray{
+//					&sdwan.SystemSecurityFeatureKeychainArgs{
+//						Key_chain_name: "aaa",
+//						Key_id:         1,
+//					},
+//				},
+//				Keys: sdwan.SystemSecurityFeatureKeyArray{
+//					&sdwan.SystemSecurityFeatureKeyArgs{
+//						Id:                           pulumi.Int(0),
+//						Name:                         pulumi.String("aaa"),
+//						Send_id:                      1,
+//						Receiver_id:                  2,
+//						Include_tcp_options:          false,
+//						Accept_ao_mismatch:           false,
+//						Crypto_algorithm:             "aes-128-cmac",
+//						Key_string:                   "abcabc",
+//						Send_life_time_local:         true,
+//						Send_life_time_start_epoch:   1659284400,
+//						Send_life_time_infinite:      true,
+//						Accept_life_time_local:       true,
+//						Accept_life_time_start_epoch: 1659284400,
+//						Accept_life_time_infinite:    true,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -13,6 +13,63 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Switchport Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceSwitchportFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceSwitchportFeatureInterfaceArgs
+    ///             {
+    ///                 Interface_name = "GigabitEthernet",
+    ///                 Mode = "access",
+    ///                 Shutdown = true,
+    ///                 Speed = "10",
+    ///                 Duplex = "full",
+    ///                 Switchport_access_vlan = 1,
+    ///                 Switchport_trunk_allowed_vlans = "1",
+    ///                 Switchport_trunk_native_vlan = 1,
+    ///                 Port_control = "auto",
+    ///                 Voice_vlan = 1,
+    ///                 Pae_enable = true,
+    ///                 Mac_authentication_bypass = false,
+    ///                 Host_mode = "single-host",
+    ///                 Enable_periodic_reauth = false,
+    ///                 Inactivity = 60,
+    ///                 Reauthentication = 1,
+    ///                 Control_direction = "both",
+    ///                 Restricted_vlan = 1,
+    ///                 Guest_vlan = 1,
+    ///                 Critical_vlan = 1,
+    ///                 Enable_voice = false,
+    ///             },
+    ///         },
+    ///         AgeOutTime = 300,
+    ///         StaticMacAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceSwitchportFeatureStaticMacAddressArgs
+    ///             {
+    ///                 Mac_address = "01:02:03:04:05:06",
+    ///                 Vlan_id = 1,
+    ///                 Interface_name = "GigabitEthernet0/0/0",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

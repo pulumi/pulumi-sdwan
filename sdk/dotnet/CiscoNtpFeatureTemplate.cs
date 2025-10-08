@@ -13,6 +13,56 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco NTP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoNtpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Master = true,
+    ///         MasterStratum = 6,
+    ///         MasterSourceInterface = "e1",
+    ///         TrustedKeys = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         AuthenticationKeys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoNtpFeatureTemplateAuthenticationKeyArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Value = "12345",
+    ///             },
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoNtpFeatureTemplateServerArgs
+    ///             {
+    ///                 Hostname_ip = "NTP_SERVER1",
+    ///                 Authentication_key_id = 1,
+    ///                 Vpn_id = 1,
+    ///                 Version = 4,
+    ///                 Source_interface = "e1",
+    ///                 Prefer = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -45,7 +95,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("master")]
         public Output<bool?> Master { get; private set; } = null!;
@@ -196,7 +246,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }
@@ -309,7 +359,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }

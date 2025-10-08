@@ -13,6 +13,46 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco ThousandEyes feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoThousandeyesFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VirtualApplications = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoThousandeyesFeatureTemplateVirtualApplicationArgs
+    ///             {
+    ///                 Instance_id = "1",
+    ///                 Application_type = "te",
+    ///                 Te_account_group_token = "1234567",
+    ///                 Te_vpn = 1,
+    ///                 Te_agent_ip = "1.1.1.2/24",
+    ///                 Te_default_gateway = "1.1.1.255",
+    ///                 Te_name_server = "10.2.2.2",
+    ///                 Te_hostname = "agent1",
+    ///                 Te_web_proxy_type = "static",
+    ///                 Te_proxy_host = "3.3.3.3",
+    ///                 Te_proxy_port = 80,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

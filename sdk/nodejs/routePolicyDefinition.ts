@@ -9,6 +9,34 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Route Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.RoutePolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "reject",
+ *     sequences: [{
+ *         id: 10,
+ *         ip_type: "ipv4",
+ *         name: "Sequence 10",
+ *         base_action: "accept",
+ *         match_entries: [{
+ *             type: "metric",
+ *             metric: 100,
+ *         }],
+ *         action_entries: [{
+ *             type: "aggregator",
+ *             aggregator: 10,
+ *             aggregatorIpAddress: "10.1.2.3",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -10,6 +10,171 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco VPN feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoVpnFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     vpnId: 1,
+ *     vpnName: "VPN1",
+ *     tenantVpnId: 1,
+ *     organizationName: "org1",
+ *     ompAdminDistanceIpv4: 10,
+ *     ompAdminDistanceIpv6: 10,
+ *     enhanceEcmpKeying: true,
+ *     dnsIpv4Servers: [{
+ *         address: "9.9.9.9",
+ *         role: "primary",
+ *     }],
+ *     dnsIpv6Servers: [{
+ *         address: "2001::9",
+ *         role: "primary",
+ *     }],
+ *     dnsHosts: [{
+ *         hostname: "abc1",
+ *         ip: ["7.7.7.7"],
+ *     }],
+ *     services: [{
+ *         service_types: "FW",
+ *         address: ["8.8.8.8"],
+ *         "interface": "e1",
+ *         track_enable: true,
+ *     }],
+ *     ipv4StaticServiceRoutes: [{
+ *         prefix: "2.2.2.0/24",
+ *         vpn_id: 2,
+ *         service: "sig",
+ *     }],
+ *     ipv4StaticRoutes: [{
+ *         prefix: "3.3.3.0/24",
+ *         null0: false,
+ *         distance: 10,
+ *         vpn_id: 5,
+ *         dhcp: false,
+ *         next_hops: [{
+ *             address: "11.1.1.1",
+ *             distance: 20,
+ *         }],
+ *         track_next_hops: [{
+ *             address: "12.1.1.1",
+ *             distance: 20,
+ *             tracker: "tracker1",
+ *         }],
+ *     }],
+ *     ipv6StaticRoutes: [{
+ *         prefix: "2001::/48",
+ *         null0: false,
+ *         vpn_id: 5,
+ *         nat: "NAT64",
+ *         next_hops: [{
+ *             address: "2001::11",
+ *             distance: 20,
+ *         }],
+ *     }],
+ *     ipv4StaticGreRoutes: [{
+ *         prefix: "3.3.3.0/24",
+ *         vpn_id: 2,
+ *         interfaces: ["e1"],
+ *     }],
+ *     ipv4StaticIpsecRoutes: [{
+ *         prefix: "4.4.4.0/24",
+ *         vpn_id: 2,
+ *         interfaces: ["e1"],
+ *     }],
+ *     ompAdvertiseIpv4Routes: [{
+ *         protocol: "bgp",
+ *         route_policy: "rp1",
+ *         protocol_sub_type: ["external"],
+ *         prefixes: [{
+ *             prefixEntry: "1.1.1.0/24",
+ *             aggregateOnly: true,
+ *         }],
+ *     }],
+ *     ompAdvertiseIpv6Routes: [{
+ *         protocol: "bgp",
+ *         route_policy: "rp1",
+ *         protocol_sub_type: ["external"],
+ *         prefixes: [{
+ *             prefixEntry: "2001:2::/48",
+ *             aggregateOnly: true,
+ *         }],
+ *     }],
+ *     nat64Pools: [{
+ *         name: "POOL1",
+ *         start_address: "100.1.1.1",
+ *         end_address: "100.1.2.255",
+ *         overload: true,
+ *         leak_from_global: true,
+ *         leak_from_global_protocol: "rip",
+ *         leak_to_global: true,
+ *     }],
+ *     natPools: [{
+ *         name: 1,
+ *         prefix_length: 24,
+ *         range_start: "101.1.1.1",
+ *         range_end: "101.1.2.255",
+ *         overload: true,
+ *         direction: "inside",
+ *         tracker_id: 10,
+ *     }],
+ *     staticNatRules: [{
+ *         pool_name: 1,
+ *         source_ip: "10.1.1.1",
+ *         translate_ip: "105.1.1.1",
+ *         static_nat_direction: "inside",
+ *         tracker_id: 10,
+ *     }],
+ *     staticNatSubnetRules: [{
+ *         source_ip_subnet: "10.2.1.0",
+ *         translate_ip_subnet: "105.2.1.0",
+ *         prefix_length: 24,
+ *         static_nat_direction: "inside",
+ *         tracker_id: 10,
+ *     }],
+ *     portForwardRules: [{
+ *         pool_name: 1,
+ *         source_port: 5000,
+ *         translate_port: 6000,
+ *         source_ip: "10.3.1.1",
+ *         translate_ip: "120.3.1.1",
+ *         protocol: "tcp",
+ *     }],
+ *     routeGlobalImports: [{
+ *         protocol: "ospf",
+ *         protocol_sub_type: ["external"],
+ *         route_policy: "policy1",
+ *         redistributes: [{
+ *             protocol: "bgp",
+ *             routePolicy: "policy1",
+ *         }],
+ *     }],
+ *     routeVpnImports: [{
+ *         source_vpn_id: 5,
+ *         protocol: "ospf",
+ *         protocol_sub_type: ["external"],
+ *         route_policy: "policy1",
+ *         redistributes: [{
+ *             protocol: "bgp",
+ *             routePolicy: "policy1",
+ *         }],
+ *     }],
+ *     routeGlobalExports: [{
+ *         protocol: "ospf",
+ *         protocol_sub_type: ["external"],
+ *         route_policy: "policy1",
+ *         redistributes: [{
+ *             protocol: "bgp",
+ *             routePolicy: "policy1",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

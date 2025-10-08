@@ -12,6 +12,38 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a QoS Map Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.QosMapPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         QosSchedulers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.QosMapPolicyDefinitionQosSchedulerArgs
+    ///             {
+    ///                 Queue = 6,
+    ///                 Class_map_id = "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+    ///                 Bandwidth_percent = 10,
+    ///                 Buffer_percent = 10,
+    ///                 Burst = 100000,
+    ///                 Drop_type = "red-drop",
+    ///                 Scheduling_type = "wrr",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

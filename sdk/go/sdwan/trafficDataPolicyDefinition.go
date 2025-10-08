@@ -14,6 +14,55 @@ import (
 
 // This resource can manage a Traffic Data Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTrafficDataPolicyDefinition(ctx, "example", &sdwan.TrafficDataPolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("drop"),
+//				Sequences: sdwan.TrafficDataPolicyDefinitionSequenceArray{
+//					&sdwan.TrafficDataPolicyDefinitionSequenceArgs{
+//						Id:          pulumi.Int(1),
+//						Name:        pulumi.String("Seq1"),
+//						Type:        pulumi.String("applicationFirewall"),
+//						Ip_type:     "ipv4",
+//						Base_action: "accept",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":              "appList",
+//								"applicationListId": "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+//							},
+//						},
+//						Action_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type": "log",
+//								"log":  true,
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

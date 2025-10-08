@@ -13,6 +13,170 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco OSPFv3 feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOspfv3FeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Ipv4RouterId = "1.2.3.4",
+    ///         Ipv4AutoCostReferenceBandwidth = 100000,
+    ///         Ipv4CompatibleRfc1583 = true,
+    ///         Ipv4DefaultInformationOriginate = true,
+    ///         Ipv4DefaultInformationOriginateAlways = true,
+    ///         Ipv4DefaultInformationOriginateMetric = 100,
+    ///         Ipv4DefaultInformationOriginateMetricType = "type1",
+    ///         Ipv4DistanceExternal = 111,
+    ///         Ipv4DistanceInterArea = 111,
+    ///         Ipv4DistanceIntraArea = 112,
+    ///         Ipv4TimersSpfDelay = 300,
+    ///         Ipv4TimersSpfInitialHold = 2000,
+    ///         Ipv4TimersSpfMaxHold = 20000,
+    ///         Ipv4Distance = 110,
+    ///         Ipv4PolicyName = "POLICY1",
+    ///         Ipv4Filter = false,
+    ///         Ipv4Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4RedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 Route_policy = "RP1",
+    ///                 Nat_dia = true,
+    ///             },
+    ///         },
+    ///         Ipv4MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs
+    ///             {
+    ///                 Ad_type = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         Ipv4Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaArgs
+    ///             {
+    ///                 Area_number = 1,
+    ///                 Stub = false,
+    ///                 Stub_no_summary = false,
+    ///                 Nssa = false,
+    ///                 Nssa_no_summary = true,
+    ///                 Translate = "always",
+    ///                 Normal = false,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "md5",
+    ///                         AuthenticationKey = "authenticationKey",
+    ///                         IpsecSpi = 256,
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs
+    ///                     {
+    ///                         Address = "1.1.1.0/24",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6RouterId = "1.2.3.4",
+    ///         Ipv6AutoCostReferenceBandwidth = 100000,
+    ///         Ipv6CompatibleRfc1583 = true,
+    ///         Ipv6DefaultInformationOriginate = true,
+    ///         Ipv6DefaultInformationOriginateAlways = true,
+    ///         Ipv6DefaultInformationOriginateMetric = 100,
+    ///         Ipv6DefaultInformationOriginateMetricType = "type1",
+    ///         Ipv6DistanceExternal = 111,
+    ///         Ipv6DistanceInterArea = 111,
+    ///         Ipv6DistanceIntraArea = 112,
+    ///         Ipv6TimersSpfDelay = 300,
+    ///         Ipv6TimersSpfInitialHold = 2000,
+    ///         Ipv6TimersSpfMaxHold = 20000,
+    ///         Ipv6Distance = 110,
+    ///         Ipv6PolicyName = "POLICY2",
+    ///         Ipv6Filter = false,
+    ///         Ipv6Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6RedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 Route_policy = "RP1",
+    ///             },
+    ///         },
+    ///         Ipv6MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs
+    ///             {
+    ///                 Ad_type = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         Ipv6Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaArgs
+    ///             {
+    ///                 Area_number = 1,
+    ///                 Stub = false,
+    ///                 Stub_no_summary = false,
+    ///                 Nssa = false,
+    ///                 Nssa_no_summary = true,
+    ///                 Translate = "always",
+    ///                 Normal = false,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "md5",
+    ///                         AuthenticationKey = "authenticationKey",
+    ///                         IpsecSpi = 256,
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs
+    ///                     {
+    ///                         Address = "2001::/48",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -59,7 +223,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("ipv4CompatibleRfc1583")]
         public Output<bool?> Ipv4CompatibleRfc1583 { get; private set; } = null!;
@@ -72,14 +236,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4DefaultInformationOriginate")]
         public Output<bool?> Ipv4DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4DefaultInformationOriginateAlways")]
         public Output<bool?> Ipv4DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -99,7 +263,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("ipv4DefaultInformationOriginateMetricType")]
         public Output<string?> Ipv4DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -174,7 +338,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4Filter")]
         public Output<bool?> Ipv4Filter { get; private set; } = null!;
@@ -285,7 +449,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("ipv6CompatibleRfc1583")]
         public Output<bool?> Ipv6CompatibleRfc1583 { get; private set; } = null!;
@@ -298,14 +462,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DefaultInformationOriginate")]
         public Output<bool?> Ipv6DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DefaultInformationOriginateAlways")]
         public Output<bool?> Ipv6DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -325,7 +489,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("ipv6DefaultInformationOriginateMetricType")]
         public Output<string?> Ipv6DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -400,7 +564,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6Filter")]
         public Output<bool?> Ipv6Filter { get; private set; } = null!;
@@ -600,7 +764,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv4CompatibleRfc1583")]
         public Input<bool>? Ipv4CompatibleRfc1583 { get; set; }
@@ -613,14 +777,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4DefaultInformationOriginate")]
         public Input<bool>? Ipv4DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv4DefaultInformationOriginateAlways { get; set; }
@@ -640,7 +804,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv4DefaultInformationOriginateMetricType { get; set; }
@@ -715,7 +879,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Filter")]
         public Input<bool>? Ipv4Filter { get; set; }
@@ -844,7 +1008,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv6CompatibleRfc1583")]
         public Input<bool>? Ipv6CompatibleRfc1583 { get; set; }
@@ -857,14 +1021,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DefaultInformationOriginate")]
         public Input<bool>? Ipv6DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv6DefaultInformationOriginateAlways { get; set; }
@@ -884,7 +1048,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv6DefaultInformationOriginateMetricType { get; set; }
@@ -959,7 +1123,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Filter")]
         public Input<bool>? Ipv6Filter { get; set; }
@@ -1121,7 +1285,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv4CompatibleRfc1583")]
         public Input<bool>? Ipv4CompatibleRfc1583 { get; set; }
@@ -1134,14 +1298,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4DefaultInformationOriginate")]
         public Input<bool>? Ipv4DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv4DefaultInformationOriginateAlways { get; set; }
@@ -1161,7 +1325,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("ipv4DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv4DefaultInformationOriginateMetricType { get; set; }
@@ -1236,7 +1400,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Filter")]
         public Input<bool>? Ipv4Filter { get; set; }
@@ -1365,7 +1529,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv6CompatibleRfc1583")]
         public Input<bool>? Ipv6CompatibleRfc1583 { get; set; }
@@ -1378,14 +1542,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DefaultInformationOriginate")]
         public Input<bool>? Ipv6DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateAlways")]
         public Input<bool>? Ipv6DefaultInformationOriginateAlways { get; set; }
@@ -1405,7 +1569,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("ipv6DefaultInformationOriginateMetricType")]
         public Input<string>? Ipv6DefaultInformationOriginateMetricType { get; set; }
@@ -1480,7 +1644,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Filter")]
         public Input<bool>? Ipv6Filter { get; set; }

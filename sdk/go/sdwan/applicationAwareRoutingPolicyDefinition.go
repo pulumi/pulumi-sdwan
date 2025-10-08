@@ -14,6 +14,52 @@ import (
 
 // This resource can manage a Application Aware Routing Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewApplicationAwareRoutingPolicyDefinition(ctx, "example", &sdwan.ApplicationAwareRoutingPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Sequences: sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceArray{
+//					&sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceArgs{
+//						Id:      pulumi.Int(1),
+//						Name:    pulumi.String("Region1"),
+//						Ip_type: "ipv4",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":              "appList",
+//								"applicationListId": "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+//							},
+//						},
+//						Action_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type":                    "backupSlaPreferredColor",
+//								"backupSlaPreferredColor": "bronze",
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

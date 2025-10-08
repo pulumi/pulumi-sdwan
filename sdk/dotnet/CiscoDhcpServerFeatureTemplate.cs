@@ -13,6 +13,64 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco DHCP Server feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoDhcpServerFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         AddressPool = "10.1.1.0/24",
+    ///         ExcludeAddresses = new[]
+    ///         {
+    ///             "10.1.1.1-10.1.1.5",
+    ///             "10.1.1.254",
+    ///         },
+    ///         LeaseTime = 600,
+    ///         InterfaceMtu = 1500,
+    ///         DomainName = "cisco.com",
+    ///         DefaultGateway = "10.1.1.254",
+    ///         DnsServers = new[]
+    ///         {
+    ///             "1.2.3.4",
+    ///         },
+    ///         TftpServers = new[]
+    ///         {
+    ///             "1.2.3.4",
+    ///         },
+    ///         StaticLeases = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoDhcpServerFeatureTemplateStaticLeaseArgs
+    ///             {
+    ///                 Mac_address = "11:11:11:11:11:11",
+    ///                 Ip_address = "10.1.1.10",
+    ///                 Hostname = "HOST1",
+    ///             },
+    ///         },
+    ///         Options = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoDhcpServerFeatureTemplateOptionArgs
+    ///             {
+    ///                 Option_code = 10,
+    ///                 Ascii = "abc",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

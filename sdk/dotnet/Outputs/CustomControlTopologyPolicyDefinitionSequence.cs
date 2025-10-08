@@ -18,8 +18,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.CustomControlTopologyPolicyDefinitionSequenceActionEntry> ActionEntries;
         /// <summary>
-        /// Base action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Base action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>
@@ -27,8 +27,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Id;
         /// <summary>
-        /// Sequence IP type, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Sequence IP type, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         public readonly string? IpType;
         /// <summary>
@@ -40,8 +40,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Sequence type, either `route` or `tloc`
-        ///   - Choices: `route`, `tloc`
+        /// Sequence type, either `Route` or `Tloc`
+        ///   - Choices: `Route`, `Tloc`
         /// </summary>
         public readonly string? Type;
 

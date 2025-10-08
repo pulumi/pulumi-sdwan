@@ -20,6 +20,58 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a IPv6 ACL Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.Ipv6AclPolicyDefinition;
+ * import com.pulumi.sdwan.Ipv6AclPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.Ipv6AclPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ipv6AclPolicyDefinition("example", Ipv6AclPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("drop")
+ *             .sequences(Ipv6AclPolicyDefinitionSequenceArgs.builder()
+ *                 .id(10)
+ *                 .name("Sequence 10")
+ *                 .base_action("accept")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "nextHeader"),
+ *                     Map.entry("nextHeader", 1)
+ *                 )))
+ *                 .action_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "set"),
+ *                     Map.entry("setParameters", List.of(Map.ofEntries(
+ *                         Map.entry("type", "trafficClass"),
+ *                         Map.entry("trafficClass", 16)
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

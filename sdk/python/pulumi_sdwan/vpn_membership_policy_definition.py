@@ -173,6 +173,21 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a VPN Membership Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnMembershipPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            sites=[{
+                "site_list_id": "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+                "vpn_list_ids": ["04fcbb0b-efbf-43d2-a04b-847d3a7b104e"],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -195,6 +210,21 @@ class VpnMembershipPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a VPN Membership Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnMembershipPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            sites=[{
+                "site_list_id": "e858e1c4-6aa8-4de7-99df-c3adbf80290d",
+                "vpn_list_ids": ["04fcbb0b-efbf-43d2-a04b-847d3a7b104e"],
+            }])
+        ```
 
         ## Import
 

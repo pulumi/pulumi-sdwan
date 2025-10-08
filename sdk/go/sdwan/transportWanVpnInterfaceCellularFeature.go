@@ -15,6 +15,108 @@ import (
 // This resource can manage a Transport WAN VPN Interface Cellular Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportWanVpnInterfaceCellularFeature(ctx, "example", &sdwan.TransportWanVpnInterfaceCellularFeatureArgs{
+//				Name:                     pulumi.String("Example"),
+//				Description:              pulumi.String("My Example"),
+//				FeatureProfileId:         pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				TransportWanVpnFeatureId: pulumi.String("140331f6-5418-4755-a059-13c77eb96037"),
+//				Shutdown:                 pulumi.Bool(true),
+//				InterfaceName:            pulumi.String("GigabitEthernet1"),
+//				InterfaceDescription:     pulumi.String("WAN"),
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("1.2.3.4"),
+//				},
+//				ServiceProvider:                      pulumi.String("example"),
+//				BandwidthUpstream:                    pulumi.Int(21474836),
+//				BandwidthDownstream:                  pulumi.Int(21474836),
+//				TunnelInterface:                      pulumi.Bool(true),
+//				PerTunnelQos:                         pulumi.Bool(true),
+//				TunnelQosMode:                        pulumi.String("hub"),
+//				TunnelBandwidthPercent:               pulumi.Int(82),
+//				TunnelInterfaceBindLoopbackTunnel:    pulumi.String("example"),
+//				TunnelInterfaceCarrier:               pulumi.String("default"),
+//				TunnelInterfaceColor:                 pulumi.String("default"),
+//				TunnelInterfaceHelloInterval:         pulumi.Int(1000),
+//				TunnelInterfaceHelloTolerance:        pulumi.Int(12),
+//				TunnelInterfaceLastResortCircuit:     pulumi.Bool(false),
+//				TunnelInterfaceColorRestrict:         pulumi.Bool(true),
+//				TunnelInterfaceGroups:                pulumi.Int(42949672),
+//				TunnelInterfaceBorder:                pulumi.Bool(false),
+//				TunnelInterfaceMaxControlConnections: pulumi.Int(62),
+//				TunnelInterfaceNatRefreshInterval:    pulumi.Int(5),
+//				TunnelInterfaceVbondAsStunServer:     pulumi.Bool(false),
+//				TunnelInterfaceExcludeControllerGroupLists: pulumi.IntArray{
+//					pulumi.Int(2),
+//				},
+//				TunnelInterfaceVmanageConnectionPreference: pulumi.Int(8),
+//				TunnelInterfacePortHop:                     pulumi.Bool(true),
+//				TunnelInterfaceLowBandwidthLink:            pulumi.Bool(false),
+//				TunnelInterfaceTunnelTcpMss:                pulumi.Int(1460),
+//				TunnelInterfaceClearDontFragment:           pulumi.Bool(false),
+//				TunnelInterfaceNetworkBroadcast:            pulumi.Bool(false),
+//				TunnelInterfaceAllowAll:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowBgp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowDhcp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowNtp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowSsh:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowDns:                    pulumi.Bool(true),
+//				TunnelInterfaceAllowIcmp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowHttps:                  pulumi.Bool(true),
+//				TunnelInterfaceAllowOspf:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowStun:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowSnmp:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowNetconf:                pulumi.Bool(false),
+//				TunnelInterfaceAllowBfd:                    pulumi.Bool(false),
+//				TunnelInterfaceEncapsulations: sdwan.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArray{
+//					&sdwan.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs{
+//						Encapsulation: pulumi.String("gre"),
+//						Preference:    pulumi.Int(4294967),
+//						Weight:        pulumi.Int(250),
+//					},
+//				},
+//				NatIpv4:                 pulumi.Bool(true),
+//				NatUdpTimeout:           pulumi.Int(1),
+//				NatTcpTimeout:           pulumi.Int(60),
+//				QosAdaptive:             pulumi.Bool(false),
+//				QosShapingRate:          pulumi.Int(16),
+//				AclIpv4EgressFeatureId:  pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AclIpv6IngressFeatureId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Arps: sdwan.TransportWanVpnInterfaceCellularFeatureArpArray{
+//					&sdwan.TransportWanVpnInterfaceCellularFeatureArpArgs{
+//						Ip_address:  "1.2.3.4",
+//						Mac_address: "00-B0-D0-63-C2-26",
+//					},
+//				},
+//				IpMtu:               pulumi.Int(1500),
+//				InterfaceMtu:        pulumi.Int(1500),
+//				TcpMss:              pulumi.Int(505),
+//				TlocExtension:       pulumi.String("tloc"),
+//				Tracker:             pulumi.String("example"),
+//				IpDirectedBroadcast: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

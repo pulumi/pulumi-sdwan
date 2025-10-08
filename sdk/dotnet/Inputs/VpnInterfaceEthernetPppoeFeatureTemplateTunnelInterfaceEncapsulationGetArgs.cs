@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Encapsulation
-        ///   - Choices: `gre`, `ipsec`
+        ///   - Choices: `Gre`, `Ipsec`
         /// </summary>
         [Input("encapsulation")]
         public Input<string>? Encapsulation { get; set; }

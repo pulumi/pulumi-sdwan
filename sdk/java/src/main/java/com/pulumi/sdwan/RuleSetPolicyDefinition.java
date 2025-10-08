@@ -19,6 +19,54 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a Rule Set Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.RuleSetPolicyDefinition;
+ * import com.pulumi.sdwan.RuleSetPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.RuleSetPolicyDefinitionRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new RuleSetPolicyDefinition("example", RuleSetPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .rules(RuleSetPolicyDefinitionRuleArgs.builder()
+ *                 .name("Rule1")
+ *                 .order(1)
+ *                 .source_ipv4_prefix("10.1.1.0/24")
+ *                 .source_fqdn("cisco.com")
+ *                 .source_port("80-90")
+ *                 .source_geo_location("AF")
+ *                 .destination_ipv4_prefix("10.1.1.0/24")
+ *                 .destination_fqdn("cisco.com")
+ *                 .destination_port("80-90")
+ *                 .destination_geo_location("AF")
+ *                 .protocol("cifs")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

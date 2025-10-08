@@ -13,6 +13,83 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Routing OSPFv3 IPv4 Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceRoutingOspfv3Ipv4Feature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         RouterId = "1.2.3.4",
+    ///         Distance = 110,
+    ///         DistanceExternal = 110,
+    ///         DistanceInterArea = 110,
+    ///         DistanceIntraArea = 110,
+    ///         ReferenceBandwidth = 101,
+    ///         Rfc1583Compatible = true,
+    ///         DefaultInformationOriginate = false,
+    ///         DefaultInformationOriginateAlways = false,
+    ///         DefaultInformationOriginateMetric = 1,
+    ///         DefaultInformationOriginateMetricType = "type1",
+    ///         SpfCalculationDelay = 200,
+    ///         SpfInitialHoldTime = 1000,
+    ///         SpfMaximumHoldTime = 10000,
+    ///         Filter = false,
+    ///         Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs
+    ///             {
+    ///                 Protocol = "nat-route",
+    ///                 Nat_dia = true,
+    ///             },
+    ///         },
+    ///         RouterLsaAction = "on-startup",
+    ///         RouterLsaOnStartupTime = 30,
+    ///         Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceRoutingOspfv3Ipv4FeatureAreaArgs
+    ///             {
+    ///                 Area_number = 1,
+    ///                 Area_type = "stub",
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceRoutingOspfv3Ipv4FeatureAreaInterfaceArgs
+    ///                     {
+    ///                         Name = "GigabitEthernet2",
+    ///                         HelloInterval = 10,
+    ///                         DeadInterval = 40,
+    ///                         LsaRetransmitInterval = 5,
+    ///                         Cost = 10,
+    ///                         NetworkType = "broadcast",
+    ///                         PassiveInterface = false,
+    ///                         AuthenticationType = "no-auth",
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceRoutingOspfv3Ipv4FeatureAreaRangeArgs
+    ///                     {
+    ///                         IpAddress = "10.1.1.0",
+    ///                         SubnetMask = "255.255.255.0",
+    ///                         Cost = 1,
+    ///                         NoAdvertise = false,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -59,7 +136,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("defaultInformationOriginateMetricType")]
         public Output<string?> DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -146,7 +223,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -185,7 +262,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("rfc1583Compatible")]
         public Output<bool?> Rfc1583Compatible { get; private set; } = null!;
@@ -363,7 +440,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -450,7 +527,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -495,7 +572,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }
@@ -629,7 +706,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -716,7 +793,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -761,7 +838,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }

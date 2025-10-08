@@ -14,6 +14,44 @@ import (
 
 // This resource can manage a QoS Map Policy Definition .
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewQosMapPolicyDefinition(ctx, "example", &sdwan.QosMapPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				QosSchedulers: sdwan.QosMapPolicyDefinitionQosSchedulerArray{
+//					&sdwan.QosMapPolicyDefinitionQosSchedulerArgs{
+//						Queue:             pulumi.Int(6),
+//						Class_map_id:      "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+//						Bandwidth_percent: 10,
+//						Buffer_percent:    10,
+//						Burst:             pulumi.Int(100000),
+//						Drop_type:         "red-drop",
+//						Scheduling_type:   "wrr",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

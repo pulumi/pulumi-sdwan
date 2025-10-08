@@ -9,6 +9,21 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a IPS Signature List Policy Object .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.IpsSignatureListPolicyObject("example", {
+ *     name: "Example",
+ *     entries: [{
+ *         generator_id: 1111,
+ *         signature_id: 2222,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

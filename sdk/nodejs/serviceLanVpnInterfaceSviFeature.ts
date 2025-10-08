@@ -10,6 +10,83 @@ import * as utilities from "./utilities";
  * This resource can manage a Service LAN VPN Interface SVI Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceLanVpnInterfaceSviFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     serviceLanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
+ *     shutdown: false,
+ *     interfaceName: "Vlan1",
+ *     interfaceDescription: "SVI",
+ *     interfaceMtu: 1500,
+ *     ipMtu: 1500,
+ *     ipv4Address: "1.2.3.4",
+ *     ipv4SubnetMask: "0.0.0.0",
+ *     ipv4SecondaryAddresses: [{
+ *         address: "2.3.4.5",
+ *         ipv4_subnet_mask: "0.0.0.0",
+ *     }],
+ *     ipv4DhcpHelpers: ["4.5.6.7"],
+ *     ipv6Address: "2001:0:0:1::0/32",
+ *     ipv6SecondaryAddresses: [{
+ *         address: "::2/32",
+ *     }],
+ *     ipv6DhcpHelpers: [{
+ *         address: "2001:0:0:1::0",
+ *         vpn: 1,
+ *     }],
+ *     aclIpv4EgressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     aclIpv6IngressFeatureId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     arps: [{
+ *         ip_address: "1.2.3.4",
+ *         mac_address: "00-B0-D0-63-C2-26",
+ *     }],
+ *     ipv4Vrrps: [{
+ *         group_id: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         track_omp: false,
+ *         prefix_list: "prefix",
+ *         address: "1.2.3.4",
+ *         secondary_addresses: [{
+ *             address: "2.3.4.5",
+ *         }],
+ *         tloc_prefix_change: true,
+ *         tloc_prefix_change_value: 100,
+ *         tracking_objects: [{
+ *             trackerId: "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+ *             trackAction: "decrement",
+ *             decrementValue: 100,
+ *         }],
+ *     }],
+ *     ipv6Vrrps: [{
+ *         group_id: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         track_omp: false,
+ *         track_prefix_list: "1",
+ *         addresses: [{
+ *             linkLocalAddress: "1::1",
+ *             globalAddress: "1::1/24",
+ *         }],
+ *         secondary_addresses: [{
+ *             prefix: "::20/32",
+ *         }],
+ *     }],
+ *     enableDhcpv6: false,
+ *     tcpMss: 1024,
+ *     arpTimeout: 1200,
+ *     ipDirectedBroadcast: false,
+ *     icmpRedirectDisable: true,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

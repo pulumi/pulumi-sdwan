@@ -13,6 +13,60 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service DHCP Server Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceDhcpServerFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         NetworkAddress = "1.2.3.4",
+    ///         SubnetMask = "255.255.255.0",
+    ///         Excludes = new[]
+    ///         {
+    ///             "192.168.1.1",
+    ///         },
+    ///         LeaseTime = 86400,
+    ///         InterfaceMtu = 65535,
+    ///         DomainName = "example.com",
+    ///         DefaultGateway = "1.2.3.4",
+    ///         DnsServers = new[]
+    ///         {
+    ///             "8.8.8.8",
+    ///         },
+    ///         TftpServers = new[]
+    ///         {
+    ///             "1.1.1.1",
+    ///         },
+    ///         StaticLeases = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceDhcpServerFeatureStaticLeaseArgs
+    ///             {
+    ///                 Mac_address = "01:02:03:04:05:06",
+    ///                 Ip_address = "1.2.3.4",
+    ///             },
+    ///         },
+    ///         OptionCodes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceDhcpServerFeatureOptionCodeArgs
+    ///             {
+    ///                 Code = 250,
+    ///                 Ascii = "example",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

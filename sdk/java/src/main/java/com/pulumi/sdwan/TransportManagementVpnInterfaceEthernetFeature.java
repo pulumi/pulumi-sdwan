@@ -23,6 +23,75 @@ import javax.annotation.Nullable;
  * This resource can manage a Transport Management VPN Interface Ethernet Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportManagementVpnInterfaceEthernetFeature;
+ * import com.pulumi.sdwan.TransportManagementVpnInterfaceEthernetFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportManagementVpnInterfaceEthernetFeature("example", TransportManagementVpnInterfaceEthernetFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .transportManagementVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+ *             .shutdown(true)
+ *             .interfaceName("GigabitEthernet1")
+ *             .interfaceDescription("Transport Management VPN Interface Ethernet")
+ *             .ipv4ConfigurationType("static")
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv4SubnetMask("0.0.0.0")
+ *             .ipv4SecondaryAddresses(TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs.builder()
+ *                 .address("1.2.3.4")
+ *                 .subnet_mask("0.0.0.0")
+ *                 .build())
+ *             .ipv4DhcpHelpers("1.2.3.4")
+ *             .ipv4IperfServer("example")
+ *             .ipv4AutoDetectBandwidth(false)
+ *             .ipv6ConfigurationType("static")
+ *             .ipv6Address("2001:0:0:1::/64")
+ *             .arpEntries(TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs.builder()
+ *                 .ip_address("1.2.3.4")
+ *                 .mac_address("00-B0-D0-63-C2-26")
+ *                 .build())
+ *             .duplex("full")
+ *             .macAddress("00-B0-D0-63-C2-26")
+ *             .ipMtu(1500)
+ *             .interfaceMtu(1500)
+ *             .tcpMss(505)
+ *             .speed("2500")
+ *             .arpTimeout(1200)
+ *             .autonegotiate(false)
+ *             .mediaType("rj45")
+ *             .loadInterval(30)
+ *             .icmpRedirectDisable(true)
+ *             .ipDirectedBroadcast(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
@@ -155,14 +224,14 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -347,28 +416,28 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipMtuVariable);
     }
     /**
-     * IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
@@ -423,7 +492,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4ConfigurationType);
     }
     /**
-     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
      *   - Default value: `1`
      * 
@@ -432,7 +501,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
      *   - Default value: `1`
      * 
@@ -441,14 +510,14 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
@@ -511,21 +580,21 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4IperfServerVariable);
     }
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4SecondaryAddresses", refs={List.class,TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<List<TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddress>>> ipv4SecondaryAddresses() {
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -533,7 +602,7 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -541,42 +610,42 @@ public class TransportManagementVpnInterfaceEthernetFeature extends com.pulumi.r
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
         return Codegen.optional(this.ipv4SubnetMaskVariable);
     }
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {

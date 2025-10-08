@@ -20,6 +20,55 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a IPv6 Device ACL Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.Ipv6DeviceAclPolicyDefinition;
+ * import com.pulumi.sdwan.Ipv6DeviceAclPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.Ipv6DeviceAclPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ipv6DeviceAclPolicyDefinition("example", Ipv6DeviceAclPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("drop")
+ *             .sequences(Ipv6DeviceAclPolicyDefinitionSequenceArgs.builder()
+ *                 .id(10)
+ *                 .name("Sequence 10")
+ *                 .base_action("accept")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "destinationPort"),
+ *                     Map.entry("destinationPort", 22)
+ *                 )))
+ *                 .action_entries(List.of(Map.ofEntries(
+ *                     Map.entry("type", "count"),
+ *                     Map.entry("counterName", "count1")
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

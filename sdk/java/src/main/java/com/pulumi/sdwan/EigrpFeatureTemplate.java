@@ -24,6 +24,65 @@ import javax.annotation.Nullable;
  * This resource can manage a eigrp feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.EigrpFeatureTemplate;
+ * import com.pulumi.sdwan.EigrpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.EigrpFeatureTemplateAddressFamilyArgs;
+ * import com.pulumi.sdwan.inputs.EigrpFeatureTemplateInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new EigrpFeatureTemplate("example", EigrpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .asNumber(1)
+ *             .addressFamilies(EigrpFeatureTemplateAddressFamilyArgs.builder()
+ *                 .type("ipv4")
+ *                 .redistributes(EigrpFeatureTemplateAddressFamilyRedistributeArgs.builder()
+ *                     .protocol("bgp")
+ *                     .routePolicy("1.2.3.4")
+ *                     .build())
+ *                 .networks(EigrpFeatureTemplateAddressFamilyNetworkArgs.builder()
+ *                     .prefix("1.2.3.4/24")
+ *                     .build())
+ *                 .build())
+ *             .helloInterval(5)
+ *             .holdTime(15)
+ *             .routePolicyName("RP1")
+ *             .filter(false)
+ *             .authenticationType("hmac-sha-256")
+ *             .hmacAuthenticationKey("myAuthKey")
+ *             .interfaces(EigrpFeatureTemplateInterfaceArgs.builder()
+ *                 .interface_name("Ethernet1")
+ *                 .shutdown(false)
+ *                 .summary_addresses(List.of(Map.of("prefix", "1.2.3.4/24")))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -13,6 +13,75 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport Management VPN Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportManagementVpnFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         VpnDescription = "example",
+    ///         PrimaryDnsAddressIpv4 = "1.2.3.4",
+    ///         SecondaryDnsAddressIpv4 = "2.3.4.5",
+    ///         PrimaryDnsAddressIpv6 = "2001:0:0:1::0",
+    ///         SecondaryDnsAddressIpv6 = "2001:0:0:2::0",
+    ///         NewHostMappings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportManagementVpnFeatureNewHostMappingArgs
+    ///             {
+    ///                 Host_name = "example",
+    ///                 List_of_ip_addresses = new[]
+    ///                 {
+    ///                     "1.2.3.4",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportManagementVpnFeatureIpv4StaticRouteArgs
+    ///             {
+    ///                 Network_address = "1.2.3.4",
+    ///                 Subnet_mask = "0.0.0.0",
+    ///                 Gateway = "nextHop",
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "1.2.3.4" },
+    ///                         { "administrativeDistance", 1 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportManagementVpnFeatureIpv6StaticRouteArgs
+    ///             {
+    ///                 Prefix = "2002::/16",
+    ///                 Gateway = "nextHop",
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "2001:0:0:1::1" },
+    ///                         { "administrativeDistance", 1 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

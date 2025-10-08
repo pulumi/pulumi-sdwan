@@ -12,6 +12,58 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a TLS SSL Decryption Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TlsSslDecryptionPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Mode = "security",
+    ///         DefaultAction = "noIntent",
+    ///         NetworkRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs
+    ///             {
+    ///                 Base_action = "doNotDecrypt",
+    ///                 Rule_id = 4,
+    ///                 Rule_name = "Example",
+    ///                 Rule_type = "sslDecryption",
+    ///                 Source_and_destination_configuration = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "option", "destinationIp" },
+    ///                         { "value", "10.0.0.0/12" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         SslDecryptionEnabled = "true",
+    ///         ExpiredCertificate = "drop",
+    ///         UntrustedCertificate = "drop",
+    ///         CertificateRevocationStatus = "none",
+    ///         UnknownRevocationStatus = "drop",
+    ///         UnsupportedProtocolVersions = "drop",
+    ///         UnsupportedCipherSuites = "drop",
+    ///         FailureMode = "close",
+    ///         RsaKeyPairModulus = "2048",
+    ///         EcKeyType = "P384",
+    ///         CertificateLifetimeInDays = 1,
+    ///         MinimalTlsVersion = "TLSv1.2",
+    ///         UseDefaultCaCertBundle = true,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -31,14 +83,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Certificate revocation status
-        ///   - Choices: `ocsp`, `none`
+        ///   - Choices: `Ocsp`, `None`
         /// </summary>
         [Output("certificateRevocationStatus")]
         public Output<string?> CertificateRevocationStatus { get; private set; } = null!;
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`)
-        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `Mode` set to `Security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `Decrypt`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -58,14 +110,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Expired certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Output("expiredCertificate")]
         public Output<string?> ExpiredCertificate { get; private set; } = null!;
 
         /// <summary>
         /// Failure mode
-        ///   - Choices: `open`, `close`
+        ///   - Choices: `Open`, `Close`
         /// </summary>
         [Output("failureMode")]
         public Output<string?> FailureMode { get; private set; } = null!;
@@ -79,7 +131,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -91,7 +143,7 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// List of network rules (applies when `mode` set to `security`)
+        /// List of network rules (applies when `Mode` set to `Security`)
         /// </summary>
         [Output("networkRules")]
         public Output<ImmutableArray<Outputs.TlsSslDecryptionPolicyDefinitionNetworkRule>> NetworkRules { get; private set; } = null!;
@@ -111,34 +163,34 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unknown revocation status action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Output("unknownRevocationStatus")]
         public Output<string?> UnknownRevocationStatus { get; private set; } = null!;
 
         /// <summary>
         /// Unsupported cipher suites action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Output("unsupportedCipherSuites")]
         public Output<string?> UnsupportedCipherSuites { get; private set; } = null!;
 
         /// <summary>
         /// Unsupported protocol versions action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Output("unsupportedProtocolVersions")]
         public Output<string?> UnsupportedProtocolVersions { get; private set; } = null!;
 
         /// <summary>
         /// Untrusted certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Output("untrustedCertificate")]
         public Output<string?> UntrustedCertificate { get; private set; } = null!;
 
         /// <summary>
-        /// List of url rules (applies when `mode` set to `security`)
+        /// List of url rules (applies when `Mode` set to `Security`)
         /// </summary>
         [Output("urlRules")]
         public Output<ImmutableArray<Outputs.TlsSslDecryptionPolicyDefinitionUrlRule>> UrlRules { get; private set; } = null!;
@@ -209,14 +261,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Certificate revocation status
-        ///   - Choices: `ocsp`, `none`
+        ///   - Choices: `Ocsp`, `None`
         /// </summary>
         [Input("certificateRevocationStatus")]
         public Input<string>? CertificateRevocationStatus { get; set; }
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`)
-        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `Mode` set to `Security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `Decrypt`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -236,14 +288,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Expired certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("expiredCertificate")]
         public Input<string>? ExpiredCertificate { get; set; }
 
         /// <summary>
         /// Failure mode
-        ///   - Choices: `open`, `close`
+        ///   - Choices: `Open`, `Close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
@@ -257,7 +309,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -272,7 +324,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs>? _networkRules;
 
         /// <summary>
-        /// List of network rules (applies when `mode` set to `security`)
+        /// List of network rules (applies when `Mode` set to `Security`)
         /// </summary>
         public InputList<Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs> NetworkRules
         {
@@ -295,28 +347,28 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unknown revocation status action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("unknownRevocationStatus")]
         public Input<string>? UnknownRevocationStatus { get; set; }
 
         /// <summary>
         /// Unsupported cipher suites action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedCipherSuites")]
         public Input<string>? UnsupportedCipherSuites { get; set; }
 
         /// <summary>
         /// Unsupported protocol versions action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedProtocolVersions")]
         public Input<string>? UnsupportedProtocolVersions { get; set; }
 
         /// <summary>
         /// Untrusted certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("untrustedCertificate")]
         public Input<string>? UntrustedCertificate { get; set; }
@@ -325,7 +377,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TlsSslDecryptionPolicyDefinitionUrlRuleArgs>? _urlRules;
 
         /// <summary>
-        /// List of url rules (applies when `mode` set to `security`)
+        /// List of url rules (applies when `Mode` set to `Security`)
         /// </summary>
         public InputList<Inputs.TlsSslDecryptionPolicyDefinitionUrlRuleArgs> UrlRules
         {
@@ -355,14 +407,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Certificate revocation status
-        ///   - Choices: `ocsp`, `none`
+        ///   - Choices: `Ocsp`, `None`
         /// </summary>
         [Input("certificateRevocationStatus")]
         public Input<string>? CertificateRevocationStatus { get; set; }
 
         /// <summary>
-        /// Default action (applies when `mode` set to `security`)
-        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        /// Default action (applies when `Mode` set to `Security`)
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `Decrypt`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -382,14 +434,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Expired certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("expiredCertificate")]
         public Input<string>? ExpiredCertificate { get; set; }
 
         /// <summary>
         /// Failure mode
-        ///   - Choices: `open`, `close`
+        ///   - Choices: `Open`, `Close`
         /// </summary>
         [Input("failureMode")]
         public Input<string>? FailureMode { get; set; }
@@ -403,7 +455,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -418,7 +470,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleGetArgs>? _networkRules;
 
         /// <summary>
-        /// List of network rules (applies when `mode` set to `security`)
+        /// List of network rules (applies when `Mode` set to `Security`)
         /// </summary>
         public InputList<Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleGetArgs> NetworkRules
         {
@@ -441,28 +493,28 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unknown revocation status action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("unknownRevocationStatus")]
         public Input<string>? UnknownRevocationStatus { get; set; }
 
         /// <summary>
         /// Unsupported cipher suites action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedCipherSuites")]
         public Input<string>? UnsupportedCipherSuites { get; set; }
 
         /// <summary>
         /// Unsupported protocol versions action
-        ///   - Choices: `drop`, `no-decrypt`
+        ///   - Choices: `Drop`, `no-decrypt`
         /// </summary>
         [Input("unsupportedProtocolVersions")]
         public Input<string>? UnsupportedProtocolVersions { get; set; }
 
         /// <summary>
         /// Untrusted certificate action
-        ///   - Choices: `drop`, `decrypt`
+        ///   - Choices: `Drop`, `Decrypt`
         /// </summary>
         [Input("untrustedCertificate")]
         public Input<string>? UntrustedCertificate { get; set; }
@@ -471,7 +523,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TlsSslDecryptionPolicyDefinitionUrlRuleGetArgs>? _urlRules;
 
         /// <summary>
-        /// List of url rules (applies when `mode` set to `security`)
+        /// List of url rules (applies when `Mode` set to `Security`)
         /// </summary>
         public InputList<Inputs.TlsSslDecryptionPolicyDefinitionUrlRuleGetArgs> UrlRules
         {

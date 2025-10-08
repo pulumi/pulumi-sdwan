@@ -9,6 +9,29 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Security Policy .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SecurityPolicy("example", {
+ *     name: "Example",
+ *     description: "Example",
+ *     mode: "security",
+ *     useCase: "custom",
+ *     definitions: [{
+ *         id: "7d299c34-981c-4fb3-9167-6be44ab1691f",
+ *         type: "urlFiltering",
+ *     }],
+ *     failureMode: "close",
+ *     loggings: [{
+ *         external_syslog_server_ip: "10.0.0.1",
+ *         external_syslog_server_vpn: "123",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

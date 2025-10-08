@@ -15,6 +15,83 @@ import (
 // This resource can manage a System Basic Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemBasicFeature(ctx, "example", &sdwan.SystemBasicFeatureArgs{
+//				Name:                pulumi.String("Example"),
+//				Description:         pulumi.String("My Example"),
+//				FeatureProfileId:    pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Timezone:            pulumi.String("UTC"),
+//				ConfigDescription:   pulumi.String("example"),
+//				Location:            pulumi.String("example"),
+//				GpsLongitude:        pulumi.Float64(-77),
+//				GpsLatitude:         pulumi.Float64(38),
+//				GpsGeoFencingEnable: pulumi.Bool(true),
+//				GpsGeoFencingRange:  pulumi.Int(100),
+//				GpsSmsEnable:        pulumi.Bool(true),
+//				GpsSmsMobileNumbers: sdwan.SystemBasicFeatureGpsSmsMobileNumberArray{
+//					&sdwan.SystemBasicFeatureGpsSmsMobileNumberArgs{
+//						Number: pulumi.String("+11111233"),
+//					},
+//				},
+//				DeviceGroups: pulumi.StringArray{
+//					pulumi.String("example"),
+//				},
+//				ControllerGroups: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				OverlayId:               pulumi.Int(1),
+//				PortOffset:              pulumi.Int(19),
+//				PortHopping:             pulumi.Bool(true),
+//				ControlSessionPps:       pulumi.Int(300),
+//				TrackTransport:          pulumi.Bool(true),
+//				TrackInterfaceTag:       pulumi.Int(2),
+//				ConsoleBaudRate:         pulumi.String("9600"),
+//				MaxOmpSessions:          pulumi.Int(24),
+//				MultiTenant:             pulumi.Bool(false),
+//				TrackDefaultGateway:     pulumi.Bool(true),
+//				AdminTechOnFailure:      pulumi.Bool(true),
+//				IdleTimeout:             pulumi.Int(10),
+//				OnDemandEnable:          pulumi.Bool(true),
+//				OnDemandIdleTimeout:     pulumi.Int(10),
+//				TransportGateway:        pulumi.Bool(false),
+//				EnhancedAppAwareRouting: pulumi.String("aggressive"),
+//				SiteTypes: pulumi.StringArray{
+//					pulumi.String("type-1"),
+//				},
+//				AffinityGroupNumber: pulumi.Int(1),
+//				AffinityGroupPreferences: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				AffinityPreferenceAuto: pulumi.Bool(false),
+//				AffinityPerVrfs: sdwan.SystemBasicFeatureAffinityPerVrfArray{
+//					&sdwan.SystemBasicFeatureAffinityPerVrfArgs{
+//						Affinity_group_number: 1,
+//						Vrf_range:             "123-456",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

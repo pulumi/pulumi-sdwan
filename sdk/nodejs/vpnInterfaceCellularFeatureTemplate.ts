@@ -10,6 +10,117 @@ import * as utilities from "./utilities";
  * This resource can manage a VPN Interface Cellular feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.VpnInterfaceCellularFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     cellularInterfaceName: "Cellular1",
+ *     interfaceDescription: "My Description",
+ *     ipv6AccessLists: [{
+ *         direction: "in",
+ *         acl_name: "ACL1",
+ *     }],
+ *     ipv4DhcpHelpers: ["6.6.6.6"],
+ *     trackers: ["tracker1"],
+ *     nat: true,
+ *     natRefreshMode: "outbound",
+ *     natUdpTimeout: 1,
+ *     natTcpTimeout: 60,
+ *     natBlockIcmpError: true,
+ *     natResponseToPing: false,
+ *     natPortForwards: [{
+ *         port_start_range: 0,
+ *         port_end_range: 65530,
+ *         protocol: "tcp",
+ *         private_vpn: 65530,
+ *         private_ip_address: "1.2.3.4",
+ *     }],
+ *     enableCoreRegion: true,
+ *     coreRegion: "core",
+ *     secondaryRegion: "off",
+ *     tunnelInterfaceEncapsulations: [{
+ *         encapsulation: "gre",
+ *         preference: 4294967,
+ *         weight: 250,
+ *     }],
+ *     tunnelInterfaceGroups: [42949672],
+ *     tunnelInterfaceBorder: true,
+ *     perTunnelQos: true,
+ *     perTunnelQosAggregator: false,
+ *     tunnelQosMode: "spoke",
+ *     tunnelInterfaceColor: "custom1",
+ *     tunnelInterfaceLastResortCircuit: false,
+ *     tunnelInterfaceLowBandwidthLink: false,
+ *     tunnelInterfaceTunnelTcpMss: 1460,
+ *     tunnelInterfaceClearDontFragment: false,
+ *     tunnelInterfaceNetworkBroadcast: false,
+ *     tunnelInterfaceMaxControlConnections: 8,
+ *     tunnelInterfaceControlConnections: true,
+ *     tunnelInterfaceVbondAsStunServer: false,
+ *     tunnelInterfaceExcludeControllerGroupLists: [100],
+ *     tunnelInterfaceVmanageConnectionPreference: 5,
+ *     tunnelInterfacePortHop: false,
+ *     tunnelInterfaceColorRestrict: false,
+ *     tunnelInterfaceCarrier: "carrier1",
+ *     tunnelInterfaceNatRefreshInterval: 15,
+ *     tunnelInterfaceHelloInterval: 1000,
+ *     tunnelInterfaceHelloTolerance: 12,
+ *     tunnelInterfaceBindLoopbackTunnel: "12",
+ *     tunnelInterfaceAllowAll: false,
+ *     tunnelInterfaceAllowBgp: false,
+ *     tunnelInterfaceAllowDhcp: true,
+ *     tunnelInterfaceAllowDns: true,
+ *     tunnelInterfaceAllowIcmp: true,
+ *     tunnelInterfaceAllowSsh: false,
+ *     tunnelInterfaceAllowNtp: false,
+ *     tunnelInterfaceAllowNetconf: false,
+ *     tunnelInterfaceAllowOspf: false,
+ *     tunnelInterfaceAllowStun: false,
+ *     tunnelInterfaceAllowSnmp: false,
+ *     tunnelInterfaceAllowHttps: true,
+ *     clearDontFragmentBit: false,
+ *     pmtuDiscovery: false,
+ *     ipMtu: 1500,
+ *     staticIngressQos: 6,
+ *     tcpMss: 720,
+ *     tlocExtension: "tloc",
+ *     ipDirectedBroadcast: true,
+ *     shutdown: true,
+ *     autonegotiate: true,
+ *     qosAdaptivePeriod: 15,
+ *     qosAdaptiveBandwidthDownstream: 10000,
+ *     qosAdaptiveMinDownstream: 100,
+ *     qosAdaptiveMaxDownstream: 100000,
+ *     qosAdaptiveBandwidthUpstream: 10000,
+ *     qosAdaptiveMinUpstream: 100,
+ *     qosAdaptiveMaxUpstream: 100000,
+ *     shapingRate: 10000000,
+ *     qosMap: "test",
+ *     qosMapVpn: "test",
+ *     bandwidthUpstream: 214748300,
+ *     bandwidthDownstream: 214748300,
+ *     writeRule: "RULE1",
+ *     ipv4AccessLists: [{
+ *         direction: "in",
+ *         acl_name: "ACL2",
+ *     }],
+ *     policers: [{
+ *         direction: "in",
+ *         policer_name: "example",
+ *     }],
+ *     staticArps: [{
+ *         ip_address: "1.2.3.4",
+ *         mac: "00-B0-D0-63-C2-26",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

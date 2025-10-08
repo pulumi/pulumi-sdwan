@@ -23,7 +23,7 @@ public final class GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeHub {
      */
     private List<String> ipv6PrefixListIds;
     /**
-     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
      * 
      */
     private String preference;
@@ -54,7 +54,7 @@ public final class GetHubAndSpokeTopologyPolicyDefinitionTopologySpokeHub {
         return this.ipv6PrefixListIds;
     }
     /**
-     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
      * 
      */
     public String preference() {

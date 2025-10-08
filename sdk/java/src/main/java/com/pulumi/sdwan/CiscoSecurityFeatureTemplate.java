@@ -23,6 +23,75 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco Security feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoSecurityFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoSecurityFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSecurityFeatureTemplateKeychainArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSecurityFeatureTemplateKeyArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoSecurityFeatureTemplate("example", CiscoSecurityFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .rekeyInterval(86400)
+ *             .replayWindow("64")
+ *             .extendedArWindow(256)
+ *             .authenticationTypes("none")
+ *             .integrityTypes("none")
+ *             .pairwiseKeying(true)
+ *             .keychains(CiscoSecurityFeatureTemplateKeychainArgs.builder()
+ *                 .name("CHAIN1")
+ *                 .key_id(1)
+ *                 .build())
+ *             .keys(CiscoSecurityFeatureTemplateKeyArgs.builder()
+ *                 .id("1")
+ *                 .chain_name("CHAIN1")
+ *                 .send_id(0)
+ *                 .receive_id(0)
+ *                 .crypto_algorithm("hmac-sha-256")
+ *                 .key_string("abc123")
+ *                 .send_lifetime_local(true)
+ *                 .send_lifetime_start_time("2022-12-31T23:59")
+ *                 .send_lifetime_end_time_format("infinite")
+ *                 .send_lifetime_duration(1000)
+ *                 .send_lifetime_end_time("2032-12-31T23:59")
+ *                 .send_lifetime_infinite(true)
+ *                 .accept_lifetime_local(true)
+ *                 .accept_lifetime_start_time("2022-12-31T23:59")
+ *                 .accept_lifetime_end_time_format("infinite")
+ *                 .accept_lifetime_duration(1000)
+ *                 .accept_lifetime_end_time("2032-12-31T23:59")
+ *                 .accept_lifetime_infinite(true)
+ *                 .include_tcp_options(false)
+ *                 .accept_ao_mismatch(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -19,6 +19,45 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a VPN Membership Policy Definition .
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnMembershipPolicyDefinition;
+ * import com.pulumi.sdwan.VpnMembershipPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.VpnMembershipPolicyDefinitionSiteArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnMembershipPolicyDefinition("example", VpnMembershipPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .sites(VpnMembershipPolicyDefinitionSiteArgs.builder()
+ *                 .site_list_id("e858e1c4-6aa8-4de7-99df-c3adbf80290d")
+ *                 .vpn_list_ids(List.of("04fcbb0b-efbf-43d2-a04b-847d3a7b104e"))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

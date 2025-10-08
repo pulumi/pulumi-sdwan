@@ -26,35 +26,35 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set VDSL operating mode to adsl1
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("modeAdsl1")]
         public Input<bool>? ModeAdsl1 { get; set; }
 
         /// <summary>
         /// Set VDSL operating mode to adsl2
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("modeAdsl2")]
         public Input<bool>? ModeAdsl2 { get; set; }
 
         /// <summary>
         /// Set VDSL operating mode to adsl2plus
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("modeAdsl2plus")]
         public Input<bool>? ModeAdsl2plus { get; set; }
 
         /// <summary>
         /// Set VDSL operating mode to ansi
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("modeAnsi")]
         public Input<bool>? ModeAnsi { get; set; }
 
         /// <summary>
         /// Set VDSL operating mode to vdsl2
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("modeVdsl2")]
         public Input<bool>? ModeVdsl2 { get; set; }
@@ -67,7 +67,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Seamless rate adaption
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("sra")]
         public Input<bool>? Sra { get; set; }

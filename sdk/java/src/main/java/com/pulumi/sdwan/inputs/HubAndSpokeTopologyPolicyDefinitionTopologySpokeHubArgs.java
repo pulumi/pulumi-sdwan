@@ -48,14 +48,14 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs exten
     }
 
     /**
-     * Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+     * Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
      * 
      */
     @Import(name="preference")
     private @Nullable Output<String> preference;
 
     /**
-     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+     * @return Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
      * 
      */
     public Optional<Output<String>> preference() {
@@ -183,7 +183,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs exten
         }
 
         /**
-         * @param preference Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+         * @param preference Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
          * 
          * @return builder
          * 
@@ -194,7 +194,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopologySpokeHubArgs exten
         }
 
         /**
-         * @param preference Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is &#39;false&#39;)
+         * @param preference Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `allHubsAreEqual` is &#39;false&#39;)
          * 
          * @return builder
          * 

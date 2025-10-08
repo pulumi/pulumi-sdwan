@@ -10,6 +10,94 @@ import * as utilities from "./utilities";
  * This resource can manage a Service LAN VPN Interface Ethernet Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceLanVpnInterfaceEthernetFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     serviceLanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
+ *     shutdown: false,
+ *     interfaceName: "GigabitEthernet3",
+ *     interfaceDescription: "LAN",
+ *     ipv4Address: "1.2.3.4",
+ *     ipv4SubnetMask: "0.0.0.0",
+ *     ipv4SecondaryAddresses: [{
+ *         address: "1.2.3.5",
+ *         subnet_mask: "0.0.0.0",
+ *     }],
+ *     ipv4DhcpHelpers: ["1.2.3.4"],
+ *     ipv6DhcpHelpers: [{
+ *         address: "2001:0:0:1::0",
+ *         dhcpv6_helper_vpn: 1,
+ *     }],
+ *     ipv4Nat: false,
+ *     ipv4NatType: "pool",
+ *     ipv4NatRangeStart: "1.2.3.4",
+ *     ipv4NatRangeEnd: "4.5.6.7",
+ *     ipv4NatPrefixLength: 1,
+ *     ipv4NatOverload: true,
+ *     ipv6Nat: true,
+ *     nat64: false,
+ *     aclShapingRate: 12,
+ *     ipv6Vrrps: [{
+ *         group_id: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         track_omp: false,
+ *         ipv6_addresses: [{
+ *             linkLocalAddress: "1::1",
+ *             globalAddress: "1::1/24",
+ *         }],
+ *     }],
+ *     ipv4Vrrps: [{
+ *         group_id: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         track_omp: false,
+ *         address: "1.2.3.4",
+ *         secondary_addresses: [{
+ *             address: "2.3.4.5",
+ *             subnetMask: "0.0.0.0",
+ *         }],
+ *         tloc_prefix_change: true,
+ *         tloc_pref_change_value: 100,
+ *         tracking_objects: [{
+ *             trackerId: "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+ *             trackerAction: "Decrement",
+ *             decrementValue: 100,
+ *         }],
+ *     }],
+ *     arps: [{
+ *         ip_address: "1.2.3.4",
+ *         mac_address: "00-B0-D0-63-C2-26",
+ *     }],
+ *     trustsecEnableSgtPropogation: false,
+ *     trustsecPropogate: true,
+ *     trustsecSecurityGroupTag: 123,
+ *     trustsecEnableEnforcedPropogation: false,
+ *     trustsecEnforcedSecurityGroupTag: 1234,
+ *     duplex: "full",
+ *     macAddress: "00-B0-D0-63-C2-26",
+ *     ipMtu: 1500,
+ *     interfaceMtu: 1500,
+ *     tcpMss: 500,
+ *     speed: "1000",
+ *     arpTimeout: 1200,
+ *     autonegotiate: false,
+ *     mediaType: "auto-select",
+ *     loadInterval: 30,
+ *     tracker: "TRACKER1",
+ *     icmpRedirectDisable: true,
+ *     xconnect: "1",
+ *     ipDirectedBroadcast: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

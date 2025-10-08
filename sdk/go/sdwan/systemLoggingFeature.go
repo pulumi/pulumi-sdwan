@@ -15,6 +15,68 @@ import (
 // This resource can manage a System Logging Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemLoggingFeature(ctx, "example", &sdwan.SystemLoggingFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DiskEnable:       pulumi.Bool(true),
+//				DiskFileSize:     pulumi.Int(9),
+//				DiskFileRotate:   pulumi.Int(10),
+//				TlsProfiles: sdwan.SystemLoggingFeatureTlsProfileArray{
+//					&sdwan.SystemLoggingFeatureTlsProfileArgs{
+//						Profile:     pulumi.String("test"),
+//						Tls_version: "TLSv1.1",
+//						Cipher_suites: []string{
+//							"aes-128-cbc-sha",
+//						},
+//					},
+//				},
+//				Ipv4Servers: sdwan.SystemLoggingFeatureIpv4ServerArray{
+//					&sdwan.SystemLoggingFeatureIpv4ServerArgs{
+//						Hostname_ip:                   "1.1.1.1",
+//						Vpn:                           pulumi.Int(512),
+//						Source_interface:              "GigabitEthernet1",
+//						Priority:                      pulumi.String("informational"),
+//						Tls_enable:                    true,
+//						Tls_properties_custom_profile: true,
+//						Tls_properties_profile:        "test",
+//					},
+//				},
+//				Ipv6Servers: sdwan.SystemLoggingFeatureIpv6ServerArray{
+//					&sdwan.SystemLoggingFeatureIpv6ServerArgs{
+//						Hostname_ip:                   "1.1.1.1",
+//						Vpn:                           pulumi.Int(512),
+//						Source_interface:              "GigabitEthernet1",
+//						Priority:                      pulumi.String("informational"),
+//						Tls_enable:                    true,
+//						Tls_properties_custom_profile: true,
+//						Tls_properties_profile:        "test",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

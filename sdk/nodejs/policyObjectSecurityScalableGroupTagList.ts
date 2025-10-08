@@ -10,6 +10,23 @@ import * as utilities from "./utilities";
  * This resource can manage a Policy Object Security Scalable Group Tag List Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectSecurityScalableGroupTagList("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "",
+ *     entries: [{
+ *         sgt_name: "ANY",
+ *         tag: "65535",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

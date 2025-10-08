@@ -430,6 +430,27 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.IntrusionPreventionPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            mode="security",
+            inspection_mode="protection",
+            log_level="alert",
+            custom_signature=False,
+            signature_set="connectivity",
+            target_vpns=["1"],
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -463,6 +484,27 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.IntrusionPreventionPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            mode="security",
+            inspection_mode="protection",
+            log_level="alert",
+            custom_signature=False,
+            signature_set="connectivity",
+            target_vpns=["1"],
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
 
         ## Import
 

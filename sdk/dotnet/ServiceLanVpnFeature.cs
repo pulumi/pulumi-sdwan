@@ -13,6 +13,198 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service LAN VPN Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceLanVpnFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Vpn = 1,
+    ///         ConfigDescription = "VPN1",
+    ///         OmpAdminDistanceIpv4 = 1,
+    ///         OmpAdminDistanceIpv6 = 1,
+    ///         EnableSdwanRemoteAccess = false,
+    ///         PrimaryDnsAddressIpv4 = "1.2.3.4",
+    ///         SecondaryDnsAddressIpv4 = "2.3.4.5",
+    ///         PrimaryDnsAddressIpv6 = "2001:0:0:1::0",
+    ///         SecondaryDnsAddressIpv6 = "2001:0:0:2::0",
+    ///         HostMappings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureHostMappingArgs
+    ///             {
+    ///                 Host_name = "HOSTMAPPING1",
+    ///                 List_of_ips = new[]
+    ///                 {
+    ///                     "1.2.3.4",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv4StaticRouteArgs
+    ///             {
+    ///                 Network_address = "1.2.3.4",
+    ///                 Subnet_mask = "0.0.0.0",
+    ///                 Gateway = "nextHop",
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "1.2.3.4" },
+    ///                         { "administrativeDistance", 1 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv6StaticRouteArgs
+    ///             {
+    ///                 Prefix = "2001:0:0:1::0/12",
+    ///                 Gateway = "nextHop",
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "2001:0:0:1::0" },
+    ///                         { "administrativeDistance", 1 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureServiceArgs
+    ///             {
+    ///                 Service_type = "FW",
+    ///                 Ipv4_addresses = new[]
+    ///                 {
+    ///                     "1.2.3.4",
+    ///                 },
+    ///                 Tracking = true,
+    ///             },
+    ///         },
+    ///         ServiceRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureServiceRouteArgs
+    ///             {
+    ///                 Network_address = "1.2.3.4",
+    ///                 Subnet_mask = "0.0.0.0",
+    ///                 Service = "SIG",
+    ///                 Vpn = 0,
+    ///             },
+    ///         },
+    ///         GreRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureGreRouteArgs
+    ///             {
+    ///                 Network_address = "1.2.3.4",
+    ///                 Subnet_mask = "0.0.0.0",
+    ///                 Interface = new[]
+    ///                 {
+    ///                     "gre01",
+    ///                 },
+    ///                 Vpn = 0,
+    ///             },
+    ///         },
+    ///         IpsecRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpsecRouteArgs
+    ///             {
+    ///                 Network_address = "1.2.3.4",
+    ///                 Subnet_mask = "0.0.0.0",
+    ///                 Interface = new[]
+    ///                 {
+    ///                     "ipsec01",
+    ///                 },
+    ///             },
+    ///         },
+    ///         NatPools = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureNatPoolArgs
+    ///             {
+    ///                 Nat_pool_name = 1,
+    ///                 Prefix_length = 3,
+    ///                 Range_start = "1.2.3.4",
+    ///                 Range_end = "2.3.4.5",
+    ///                 Overload = true,
+    ///                 Direction = "inside",
+    ///             },
+    ///         },
+    ///         NatPortForwards = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureNatPortForwardArgs
+    ///             {
+    ///                 Nat_pool_name = 2,
+    ///                 Source_port = 122,
+    ///                 Translate_port = 330,
+    ///                 Source_ip = "1.2.3.4",
+    ///                 Translated_source_ip = "2.3.4.5",
+    ///                 Protocol = "TCP",
+    ///             },
+    ///         },
+    ///         StaticNats = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureStaticNatArgs
+    ///             {
+    ///                 Nat_pool_name = 3,
+    ///                 Source_ip = "1.2.3.4",
+    ///                 Translated_source_ip = "2.3.4.5",
+    ///                 Static_nat_direction = "inside",
+    ///             },
+    ///         },
+    ///         Nat64V4Pools = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureNat64V4PoolArgs
+    ///             {
+    ///                 Name = "NATPOOL1",
+    ///                 Range_start = "1.2.3.4",
+    ///                 Range_end = "2.3.4.5",
+    ///                 Overload = false,
+    ///             },
+    ///         },
+    ///         Ipv4ImportRouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv4ImportRouteTargetArgs
+    ///             {
+    ///                 Route_target = "1.1.1.3:200",
+    ///             },
+    ///         },
+    ///         Ipv4ExportRouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv4ExportRouteTargetArgs
+    ///             {
+    ///                 Route_target = "1.1.1.3:200",
+    ///             },
+    ///         },
+    ///         Ipv6ImportRouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv6ImportRouteTargetArgs
+    ///             {
+    ///                 Route_target = "1.1.1.3:200",
+    ///             },
+    ///         },
+    ///         Ipv6ExportRouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureIpv6ExportRouteTargetArgs
+    ///             {
+    ///                 Route_target = "1.1.1.3:200",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -58,7 +250,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable SDWAN Remote Access
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableSdwanRemoteAccess")]
         public Output<bool?> EnableSdwanRemoteAccess { get; private set; } = null!;
@@ -352,7 +544,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable SDWAN Remote Access
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableSdwanRemoteAccess")]
         public Input<bool>? EnableSdwanRemoteAccess { get; set; }
@@ -705,7 +897,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable SDWAN Remote Access
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableSdwanRemoteAccess")]
         public Input<bool>? EnableSdwanRemoteAccess { get; set; }

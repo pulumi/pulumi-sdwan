@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityPolicyDefinitionTargetVpn {
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     private @Nullable String customDnsServerIp;
@@ -36,7 +36,7 @@ public final class DnsSecurityPolicyDefinitionTargetVpn {
 
     private DnsSecurityPolicyDefinitionTargetVpn() {}
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public Optional<String> customDnsServerIp() {

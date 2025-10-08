@@ -583,6 +583,43 @@ class SystemSecurityFeature(pulumi.CustomResource):
         This resource can manage a System Security Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemSecurityFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            rekey=86400,
+            anti_replay_window="512",
+            extended_anti_replay_window=256,
+            ipsec_pairwise_keying=False,
+            integrity_types=["esp"],
+            keychains=[{
+                "key_chain_name": "aaa",
+                "key_id": 1,
+            }],
+            keys=[{
+                "id": 0,
+                "name": "aaa",
+                "send_id": 1,
+                "receiver_id": 2,
+                "include_tcp_options": False,
+                "accept_ao_mismatch": False,
+                "crypto_algorithm": "aes-128-cmac",
+                "key_string": "abcabc",
+                "send_life_time_local": True,
+                "send_life_time_start_epoch": 1659284400,
+                "send_life_time_infinite": True,
+                "accept_life_time_local": True,
+                "accept_life_time_start_epoch": 1659284400,
+                "accept_life_time_infinite": True,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -627,6 +664,43 @@ class SystemSecurityFeature(pulumi.CustomResource):
         """
         This resource can manage a System Security Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemSecurityFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            rekey=86400,
+            anti_replay_window="512",
+            extended_anti_replay_window=256,
+            ipsec_pairwise_keying=False,
+            integrity_types=["esp"],
+            keychains=[{
+                "key_chain_name": "aaa",
+                "key_id": 1,
+            }],
+            keys=[{
+                "id": 0,
+                "name": "aaa",
+                "send_id": 1,
+                "receiver_id": 2,
+                "include_tcp_options": False,
+                "accept_ao_mismatch": False,
+                "crypto_algorithm": "aes-128-cmac",
+                "key_string": "abcabc",
+                "send_life_time_local": True,
+                "send_life_time_start_epoch": 1659284400,
+                "send_life_time_infinite": True,
+                "accept_life_time_local": True,
+                "accept_life_time_start_epoch": 1659284400,
+                "accept_life_time_infinite": True,
+            }])
+        ```
 
         ## Import
 

@@ -210,6 +210,34 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a IPv4 ACL Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.Ipv4AclPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 10,
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "dscp",
+                    "dscp": "16",
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "setParameters": [{
+                        "type": "dscp",
+                        "dscp": 16,
+                    }],
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -234,6 +262,34 @@ class Ipv4AclPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a IPv4 ACL Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.Ipv4AclPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 10,
+                "name": "Sequence 10",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "dscp",
+                    "dscp": "16",
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "setParameters": [{
+                        "type": "dscp",
+                        "dscp": 16,
+                    }],
+                }],
+            }])
+        ```
 
         ## Import
 

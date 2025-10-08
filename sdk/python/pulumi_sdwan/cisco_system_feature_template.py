@@ -2665,6 +2665,65 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco System feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoSystemFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            timezone="UTC",
+            hostname="Router1",
+            system_description="My Description",
+            location="Building 1",
+            latitude=40,
+            longitude=50,
+            geo_fencing=True,
+            geo_fencing_range=1000,
+            geo_fencing_sms=True,
+            geo_fencing_sms_phone_numbers=[{
+                "number": "+1234567",
+            }],
+            device_groups=["group1"],
+            controller_group_lists=[1],
+            system_ip="5.5.5.5",
+            overlay_id=1,
+            site_id=1,
+            port_offset=1,
+            port_hopping=True,
+            control_session_pps=300,
+            track_transport=True,
+            track_interface_tag=1,
+            console_baud_rate="115200",
+            max_omp_sessions=5,
+            multi_tenant=True,
+            track_default_gateway=True,
+            admin_tech_on_failure=True,
+            idle_timeout=100,
+            trackers=[{
+                "name": "tracker1",
+                "endpoint_ip": "5.6.7.8",
+                "threshold": 300,
+                "interval": 60,
+                "multiplier": 3,
+                "type": "interface",
+            }],
+            object_trackers=[{
+                "object_number": 1,
+                "interface": "e1",
+            }],
+            on_demand_tunnel=True,
+            on_demand_tunnel_idle_timeout=10,
+            affinity_group_number=5,
+            affinity_group_preferences=[1],
+            transport_gateway=True,
+            enable_mrf_migration="enabled",
+            migration_bgp_community=100)
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -2796,6 +2855,65 @@ class CiscoSystemFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco System feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoSystemFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            timezone="UTC",
+            hostname="Router1",
+            system_description="My Description",
+            location="Building 1",
+            latitude=40,
+            longitude=50,
+            geo_fencing=True,
+            geo_fencing_range=1000,
+            geo_fencing_sms=True,
+            geo_fencing_sms_phone_numbers=[{
+                "number": "+1234567",
+            }],
+            device_groups=["group1"],
+            controller_group_lists=[1],
+            system_ip="5.5.5.5",
+            overlay_id=1,
+            site_id=1,
+            port_offset=1,
+            port_hopping=True,
+            control_session_pps=300,
+            track_transport=True,
+            track_interface_tag=1,
+            console_baud_rate="115200",
+            max_omp_sessions=5,
+            multi_tenant=True,
+            track_default_gateway=True,
+            admin_tech_on_failure=True,
+            idle_timeout=100,
+            trackers=[{
+                "name": "tracker1",
+                "endpoint_ip": "5.6.7.8",
+                "threshold": 300,
+                "interval": 60,
+                "multiplier": 3,
+                "type": "interface",
+            }],
+            object_trackers=[{
+                "object_number": 1,
+                "interface": "e1",
+            }],
+            on_demand_tunnel=True,
+            on_demand_tunnel_idle_timeout=10,
+            affinity_group_number=5,
+            affinity_group_preferences=[1],
+            transport_gateway=True,
+            enable_mrf_migration="enabled",
+            migration_bgp_community=100)
+        ```
 
         ## Import
 

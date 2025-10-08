@@ -18,7 +18,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRoutePolicyDefinitionSequenceActionEntryResult> ActionEntries;
         /// <summary>
-        /// Base action, either `accept` or `reject`
+        /// Base action, either `Accept` or `Reject`
         /// </summary>
         public readonly string BaseAction;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Id;
         /// <summary>
-        /// IP version, either `ipv4` or `ipv6`
+        /// IP version, either `Ipv4` or `Ipv6`
         /// </summary>
         public readonly string IpType;
         /// <summary>

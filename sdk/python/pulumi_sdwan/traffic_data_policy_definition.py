@@ -210,6 +210,33 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Traffic Data Policy Definition .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TrafficDataPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 1,
+                "name": "Seq1",
+                "type": "applicationFirewall",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "appList",
+                    "applicationListId": "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+                }],
+                "action_entries": [{
+                    "type": "log",
+                    "log": True,
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -234,6 +261,33 @@ class TrafficDataPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Traffic Data Policy Definition .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TrafficDataPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="drop",
+            sequences=[{
+                "id": 1,
+                "name": "Seq1",
+                "type": "applicationFirewall",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "appList",
+                    "applicationListId": "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+                }],
+                "action_entries": [{
+                    "type": "log",
+                    "log": True,
+                }],
+            }])
+        ```
 
         ## Import
 

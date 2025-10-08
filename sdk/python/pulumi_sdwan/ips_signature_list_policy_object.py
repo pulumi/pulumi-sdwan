@@ -125,6 +125,20 @@ class IpsSignatureListPolicyObject(pulumi.CustomResource):
         """
         This resource can manage a IPS Signature List Policy Object .
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.IpsSignatureListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "generator_id": 1111,
+                "signature_id": 2222,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -146,6 +160,20 @@ class IpsSignatureListPolicyObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a IPS Signature List Policy Object .
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.IpsSignatureListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "generator_id": 1111,
+                "signature_id": 2222,
+            }])
+        ```
 
         ## Import
 

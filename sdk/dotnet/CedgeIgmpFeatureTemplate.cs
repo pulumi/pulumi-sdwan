@@ -13,6 +13,44 @@ namespace Pulumi.Sdwan
     /// This resource can manage a cEdge IGMP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CedgeIgmpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeIgmpFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Name = "Ethernet0",
+    ///                 Join_groups = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "groupAddress", "235.1.1.1" },
+    ///                         { "source", "1.2.3.4" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

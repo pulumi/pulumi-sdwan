@@ -104,7 +104,7 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
     }
     /**
      * Set authentication type
-     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      * 
      */
@@ -113,7 +113,7 @@ public class CellularCedgeProfileFeatureTemplate extends com.pulumi.resources.Cu
 
     /**
      * @return Set authentication type
-     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      * 
      */

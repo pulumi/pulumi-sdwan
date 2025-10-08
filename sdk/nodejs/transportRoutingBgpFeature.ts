@@ -10,6 +10,110 @@ import * as utilities from "./utilities";
  * This resource can manage a Transport Routing BGP Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportRoutingBgpFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     asNumber: 429,
+ *     routerId: "1.2.3.4",
+ *     propagateAsPath: false,
+ *     propagateCommunity: false,
+ *     externalRoutesDistance: 20,
+ *     internalRoutesDistance: 200,
+ *     localRoutesDistance: 20,
+ *     keepaliveTime: 60,
+ *     holdTime: 180,
+ *     alwaysCompareMed: false,
+ *     deterministicMed: false,
+ *     missingMedAsWorst: false,
+ *     compareRouterId: false,
+ *     multipathRelax: false,
+ *     ipv4Neighbors: [{
+ *         address: "1.2.3.4",
+ *         description: "neighbor1",
+ *         shutdown: false,
+ *         remote_as: 200,
+ *         local_as: 200,
+ *         keepalive_time: 40,
+ *         hold_time: 200,
+ *         update_source_interface: "GigabitEthernet0",
+ *         next_hop_self: false,
+ *         send_community: true,
+ *         send_extended_community: true,
+ *         ebgp_multihop: 1,
+ *         password: "myPassword",
+ *         send_label: true,
+ *         explicit_null: false,
+ *         as_override: false,
+ *         allowas_in_number: 1,
+ *         address_families: [{
+ *             familyType: "ipv4-unicast",
+ *             policyType: "restart",
+ *             restartMaxNumberOfPrefixes: 2000,
+ *             restartThreshold: 75,
+ *             restartInterval: 30,
+ *         }],
+ *     }],
+ *     ipv6Neighbors: [{
+ *         address: "2001::1",
+ *         description: "neighbor2",
+ *         shutdown: false,
+ *         remote_as: 200,
+ *         local_as: 200,
+ *         keepalive_time: 180,
+ *         hold_time: 60,
+ *         update_source_interface: "Loopback1",
+ *         next_hop_self: true,
+ *         send_community: true,
+ *         send_extended_community: true,
+ *         ebgp_multihop: 3,
+ *         password: "myPassword",
+ *         as_override: true,
+ *         allowas_in_number: 3,
+ *         address_families: [{
+ *             familyType: "ipv6-unicast",
+ *             maxNumberOfPrefixes: 2000,
+ *             threshold: 75,
+ *             policyType: "restart",
+ *             restartInterval: 30,
+ *         }],
+ *     }],
+ *     ipv4AggregateAddresses: [{
+ *         network_address: "10.10.0.0",
+ *         subnet_mask: "255.255.0.0",
+ *         as_set_path: false,
+ *         summary_only: false,
+ *     }],
+ *     ipv4Networks: [{
+ *         network_address: "10.10.0.0",
+ *         subnet_mask: "255.255.0.0",
+ *     }],
+ *     ipv4EibgpMaximumPaths: 1,
+ *     ipv4Originate: false,
+ *     ipv4TableMapFilter: false,
+ *     ipv6AggregateAddresses: [{
+ *         aggregate_prefix: "3001::1/128",
+ *         as_set_path: false,
+ *         summary_only: false,
+ *     }],
+ *     ipv6Networks: [{
+ *         network_prefix: "2001:0DB8:0000:000b::/64",
+ *     }],
+ *     ipv6EibgpMaximumPaths: 2,
+ *     ipv6Originate: true,
+ *     ipv6TableMapFilter: false,
+ *     mplsInterfaces: [{
+ *         interface_name: "GigabitEthernet1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

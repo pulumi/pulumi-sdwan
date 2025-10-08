@@ -15,6 +15,66 @@ import (
 // This resource can manage a Transport IPv4 ACL Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportIpv4AclFeature(ctx, "example", &sdwan.TransportIpv4AclFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("drop"),
+//				Sequences: sdwan.TransportIpv4AclFeatureSequenceArray{
+//					&sdwan.TransportIpv4AclFeatureSequenceArgs{
+//						Sequence_id:   1,
+//						Sequence_name: "AccessControlList1",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"dscps": []float64{
+//									16,
+//								},
+//								"packetLength": 1500,
+//								"protocols": []float64{
+//									1,
+//								},
+//								"sourcePorts": []map[string]interface{}{
+//									map[string]interface{}{
+//										"port": 8000,
+//									},
+//								},
+//								"tcpState": "syn",
+//							},
+//						},
+//						Actions: sdwan.TransportIpv4AclFeatureSequenceActionArray{
+//							&sdwan.TransportIpv4AclFeatureSequenceActionArgs{
+//								AcceptSetDscp:     pulumi.Int(60),
+//								AcceptCounterName: pulumi.String("COUNTER_1"),
+//								AcceptLog:         pulumi.Bool(false),
+//								AcceptSetNextHop:  pulumi.String("1.2.3.4"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -10,6 +10,32 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco ThousandEyes feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoThousandeyesFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     virtualApplications: [{
+ *         instance_id: "1",
+ *         application_type: "te",
+ *         te_account_group_token: "1234567",
+ *         te_vpn: 1,
+ *         te_agent_ip: "1.1.1.2/24",
+ *         te_default_gateway: "1.1.1.255",
+ *         te_name_server: "10.2.2.2",
+ *         te_hostname: "agent1",
+ *         te_web_proxy_type: "static",
+ *         te_proxy_host: "3.3.3.3",
+ *         te_proxy_port: 80,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

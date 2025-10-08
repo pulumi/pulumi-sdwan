@@ -15,6 +15,136 @@ import (
 // This resource can manage a VPN Interface SVI feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewVpnInterfaceSviFeatureTemplate(ctx, "example", &sdwan.VpnInterfaceSviFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				IfName:               pulumi.String("Vlan100"),
+//				InterfaceDescription: pulumi.String("VPN Interface SVI"),
+//				Ipv4Address:          pulumi.String("2.3.4.5"),
+//				Ipv4SecondaryAddresses: sdwan.VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv4SecondaryAddressArgs{
+//						Ipv4_address: "4.5.6.7",
+//					},
+//				},
+//				Ipv6Address:         pulumi.String("2001:db8:85a3::8a2e:370:7334"),
+//				Ipv6DhcpClient:      pulumi.Bool(false),
+//				Ipv6DhcpDistance:    pulumi.Int(101),
+//				Ipv6DhcpRapidCommit: pulumi.Bool(false),
+//				Ipv6SecondaryAddresses: sdwan.VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv6SecondaryAddressArgs{
+//						Ipv6_address: "2001:db8:85a3::8a2e:370:7334",
+//					},
+//				},
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("7.7.7.7"),
+//				},
+//				Ipv6DhcpHelpers: sdwan.VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv6DhcpHelperArgs{
+//						Address: pulumi.String("2001:db8:85a3::8a2e:370:7334"),
+//						Vpn_id:  100,
+//					},
+//				},
+//				IpDirectedBroadcast: pulumi.Bool(true),
+//				Mtu:                 pulumi.Int(1500),
+//				IpMtu:               pulumi.Int(1500),
+//				TcpMssAdjust:        pulumi.Int(1400),
+//				Shutdown:            pulumi.Bool(false),
+//				ArpTimeout:          pulumi.Int(100),
+//				Ipv4AccessLists: sdwan.VpnInterfaceSviFeatureTemplateIpv4AccessListArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv4AccessListArgs{
+//						Direction: pulumi.String("in"),
+//						Acl_name:  "ACL1",
+//					},
+//				},
+//				Ipv6AccessLists: sdwan.VpnInterfaceSviFeatureTemplateIpv6AccessListArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv6AccessListArgs{
+//						Direction: pulumi.String("in"),
+//						Acl_name:  "ACL2",
+//					},
+//				},
+//				Policers: sdwan.VpnInterfaceSviFeatureTemplatePolicerArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplatePolicerArgs{
+//						Direction:    pulumi.String("in"),
+//						Policer_name: "POLICER1",
+//					},
+//				},
+//				StaticArpEntries: sdwan.VpnInterfaceSviFeatureTemplateStaticArpEntryArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateStaticArpEntryArgs{
+//						Ipv4_address: "3.4.4.5",
+//						Mac_address:  "00:00:00:00:00:00",
+//					},
+//				},
+//				Ipv4Vrrps: sdwan.VpnInterfaceSviFeatureTemplateIpv4VrrpArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv4VrrpArgs{
+//						Group_id:          1,
+//						Priority:          pulumi.Int(100),
+//						Timer:             pulumi.Int(1000),
+//						Track_omp:         true,
+//						Track_prefix_list: "TRACK1",
+//						Ipv4_address:      "5.6.7.8",
+//						Ipv4_secondary_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"ipv4Address": "8.8.8.8",
+//							},
+//						},
+//						Tloc_preference_change:       true,
+//						Tloc_preference_change_value: 100,
+//						Tracking_objects: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name":           100,
+//								"trackAction":    "decrement",
+//								"decrementValue": 10,
+//							},
+//						},
+//					},
+//				},
+//				Ipv6Vrrps: sdwan.VpnInterfaceSviFeatureTemplateIpv6VrrpArray{
+//					&sdwan.VpnInterfaceSviFeatureTemplateIpv6VrrpArgs{
+//						Group_id:          1,
+//						Priority:          pulumi.Int(100),
+//						Timer:             pulumi.Int(1000),
+//						Track_omp:         true,
+//						Track_prefix_list: "TRACK1",
+//						Ipv6_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"linkLocalAddress": "FE80::1/64",
+//								"prefix":           "2001:db8:85a3::8a2e:370:7335",
+//							},
+//						},
+//						Ipv6_secondary_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"prefix": "2001:db8:85a3::8a2e:370:7336",
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

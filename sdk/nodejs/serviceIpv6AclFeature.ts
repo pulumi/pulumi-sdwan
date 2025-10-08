@@ -10,6 +10,39 @@ import * as utilities from "./utilities";
  * This resource can manage a Service IPv6 ACL Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceIpv6AclFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         sequence_id: 1,
+ *         sequence_name: "AccessControlList1",
+ *         match_entries: [{
+ *             nextHeader: 10,
+ *             packetLength: 1500,
+ *             sourcePorts: [{
+ *                 port: 8000,
+ *             }],
+ *             tcpState: "syn",
+ *             trafficClass: [10],
+ *         }],
+ *         actions: [{
+ *             acceptCounterName: "COUNTER_1",
+ *             acceptLog: false,
+ *             acceptSetNextHop: "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+ *             acceptTrafficClass: 10,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

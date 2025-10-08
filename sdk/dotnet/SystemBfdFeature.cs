@@ -13,6 +13,40 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System BFD Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemBfdFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Multiplier = 3,
+    ///         PollInterval = 100,
+    ///         DefaultDscp = 8,
+    ///         Colors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemBfdFeatureColorArgs
+    ///             {
+    ///                 Color = "3g",
+    ///                 Hello_interval = 200,
+    ///                 Multiplier = 3,
+    ///                 Pmtu_discovery = true,
+    ///                 Dscp = 16,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

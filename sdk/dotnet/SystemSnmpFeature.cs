@@ -13,6 +13,87 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System SNMP Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemSnmpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Shutdown = false,
+    ///         ContactPerson = "wixie.cisco",
+    ///         LocationOfDevice = "SHANGHAI",
+    ///         Views = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSnmpFeatureViewArgs
+    ///             {
+    ///                 Name = "VIEW1",
+    ///                 Oids = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemSnmpFeatureViewOidArgs
+    ///                     {
+    ///                         Id = "1.3.6.1.4.1.9.9.394",
+    ///                         Exclude = false,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Communities = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSnmpFeatureCommunityArgs
+    ///             {
+    ///                 Name = "example",
+    ///                 User_label = "COMMUNITY1",
+    ///                 View = "VIEW1",
+    ///                 Authorization = "read-only",
+    ///             },
+    ///         },
+    ///         Groups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSnmpFeatureGroupArgs
+    ///             {
+    ///                 Name = "GROUP1",
+    ///                 Security_level = "auth-priv",
+    ///                 View = "VIEW1",
+    ///             },
+    ///         },
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSnmpFeatureUserArgs
+    ///             {
+    ///                 Name = "USER1",
+    ///                 Authentication_protocol = "sha",
+    ///                 Authentication_password = "$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==",
+    ///                 Privacy_protocol = "aes-256-cfb-128",
+    ///                 Privacy_password = "$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==",
+    ///                 Group = "GROUP1",
+    ///             },
+    ///         },
+    ///         TrapTargetServers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSnmpFeatureTrapTargetServerArgs
+    ///             {
+    ///                 Vpn_id = 1,
+    ///                 Ip = "10.75.221.156",
+    ///                 Port = 161,
+    ///                 User_label = "TARGET1",
+    ///                 User = "USER1",
+    ///                 Source_interface = "GigabitEthernet1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -82,7 +163,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -231,7 +312,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -354,7 +435,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

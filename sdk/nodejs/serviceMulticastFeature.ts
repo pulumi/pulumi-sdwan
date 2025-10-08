@@ -10,6 +10,71 @@ import * as utilities from "./utilities";
  * This resource can manage a Service Multicast Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceMulticastFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     sptOnly: false,
+ *     localReplicator: false,
+ *     localReplicatorThreshold: 10,
+ *     igmpInterfaces: [{
+ *         interface_name: "GigabitEthernet1",
+ *         version: 2,
+ *         join_groups: [{
+ *             groupAddress: "224.0.0.0",
+ *             sourceAddress: "1.2.3.4",
+ *         }],
+ *     }],
+ *     pimSourceSpecificMulticastEnable: true,
+ *     pimSourceSpecificMulticastAccessList: "1",
+ *     pimSptThreshold: "0",
+ *     pimInterfaces: [{
+ *         interface_name: "GigabitEthernet1",
+ *         query_interval: 30,
+ *         join_prune_interval: 60,
+ *     }],
+ *     staticRpAddresses: [{
+ *         ip_address: "1.2.3.4",
+ *         access_list: "1",
+ *         override: false,
+ *     }],
+ *     enableAutoRp: false,
+ *     pimBsrRpCandidates: [{
+ *         interface_name: "GigabitEthernet1",
+ *         access_list_id: "2",
+ *         interval: 30,
+ *         priority: 1,
+ *     }],
+ *     pimBsrCandidates: [{
+ *         interface_name: "GigabitEthernet1",
+ *         hash_mask_length: 30,
+ *         priority: 120,
+ *         accept_candidate_access_list: "test",
+ *     }],
+ *     msdpGroups: [{
+ *         mesh_group_name: "Example",
+ *         peers: [{
+ *             peerIp: "1.2.3.4",
+ *             connectionSourceInterface: "GigabitEthernet1",
+ *             remoteAs: 1,
+ *             peerAuthenticationPassword: "Password123!",
+ *             keepaliveInterval: 15,
+ *             keepaliveHoldTime: 30,
+ *             saLimit: 1,
+ *             defaultPeer: false,
+ *         }],
+ *     }],
+ *     msdpOriginatorId: "GigabitEthernet1",
+ *     msdpConnectionRetryInterval: 30,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

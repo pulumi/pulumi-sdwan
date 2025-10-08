@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Service Type
-        ///   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
+        ///   - Choices: `FW`, `IDS`, `IDP`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `TE`, `Appqoe`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tracking")]
         public Input<bool>? Tracking { get; set; }

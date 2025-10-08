@@ -22,6 +22,72 @@ import javax.annotation.Nullable;
  * This resource can manage a Service Switchport Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceSwitchportFeature;
+ * import com.pulumi.sdwan.ServiceSwitchportFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceSwitchportFeatureInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceSwitchportFeatureStaticMacAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceSwitchportFeature("example", ServiceSwitchportFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .interfaces(ServiceSwitchportFeatureInterfaceArgs.builder()
+ *                 .interface_name("GigabitEthernet")
+ *                 .mode("access")
+ *                 .shutdown(true)
+ *                 .speed("10")
+ *                 .duplex("full")
+ *                 .switchport_access_vlan(1)
+ *                 .switchport_trunk_allowed_vlans("1")
+ *                 .switchport_trunk_native_vlan(1)
+ *                 .port_control("auto")
+ *                 .voice_vlan(1)
+ *                 .pae_enable(true)
+ *                 .mac_authentication_bypass(false)
+ *                 .host_mode("single-host")
+ *                 .enable_periodic_reauth(false)
+ *                 .inactivity(60)
+ *                 .reauthentication(1)
+ *                 .control_direction("both")
+ *                 .restricted_vlan(1)
+ *                 .guest_vlan(1)
+ *                 .critical_vlan(1)
+ *                 .enable_voice(false)
+ *                 .build())
+ *             .ageOutTime(300)
+ *             .staticMacAddresses(ServiceSwitchportFeatureStaticMacAddressArgs.builder()
+ *                 .mac_address("01:02:03:04:05:06")
+ *                 .vlan_id(1)
+ *                 .interface_name("GigabitEthernet0/0/0")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

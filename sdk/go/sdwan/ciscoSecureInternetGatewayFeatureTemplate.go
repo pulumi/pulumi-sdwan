@@ -15,6 +15,117 @@ import (
 // This resource can manage a Cisco Secure Internet Gateway feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSecureInternetGatewayFeatureTemplate(ctx, "example", &sdwan.CiscoSecureInternetGatewayFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VpnId: pulumi.Int(1),
+//				Interfaces: sdwan.CiscoSecureInternetGatewayFeatureTemplateInterfaceArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs{
+//						Name:                          pulumi.String("ipsec1"),
+//						Auto_tunnel_mode:              true,
+//						Shutdown:                      pulumi.Bool(true),
+//						Description:                   pulumi.String("My Description"),
+//						Ip_unnumbered:                 false,
+//						Ipv4_address:                  "1.2.3.4/24",
+//						Tunnel_source:                 "3.3.3.3",
+//						Tunnel_source_interface:       "ge0/1",
+//						Tunnel_route_via:              "ge0/2",
+//						Tunnel_destination:            "3.4.5.6",
+//						Application:                   pulumi.String("sig"),
+//						Sig_provider:                  "secure-internet-gateway-umbrella",
+//						Tunnel_dc_preference:          "primary-dc",
+//						Tcp_mss:                       1400,
+//						Mtu:                           pulumi.Int(1500),
+//						Dead_peer_detection_interval:  30,
+//						Dead_peer_detection_retries:   5,
+//						Ike_version:                   1,
+//						Ike_pre_shared_key:            "A1234567",
+//						Ike_rekey_interval:            600,
+//						Ike_ciphersuite:               "aes256-cbc-sha2",
+//						Ike_group:                     "14",
+//						Ike_pre_shared_key_dynamic:    false,
+//						Ike_pre_shared_key_local_id:   "1.2.3.4",
+//						Ike_pre_shared_key_remote_id:  "2.3.4.5",
+//						Ipsec_rekey_interval:          7200,
+//						Ipsec_replay_window:           1024,
+//						Ipsec_ciphersuite:             "aes256-cbc-sha1",
+//						Ipsec_perfect_forward_secrecy: "group-14",
+//						Tracker:                       pulumi.String("test"),
+//						Track_enable:                  false,
+//						Tunnel_public_ip:              "5.5.5.5",
+//					},
+//				},
+//				Services: sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceArgs{
+//						Service_type: "sig",
+//						Interface_pairs: []map[string]interface{}{
+//							map[string]interface{}{
+//								"activeInterface":       "e1",
+//								"activeInterfaceWeight": 10,
+//								"backupInterface":       "e2",
+//								"backupInterfaceWeight": 20,
+//							},
+//						},
+//						Zscaler_authentication_required:                 true,
+//						Zscaler_xff_forward:                             true,
+//						Zscaler_firewall_enabled:                        true,
+//						Zscaler_ips_control_enabled:                     true,
+//						Zscaler_caution_enabled:                         true,
+//						Zscaler_primary_data_center:                     "Auto",
+//						Zscaler_secondary_data_center:                   "Auto",
+//						Zscaler_surrogate_ip:                            true,
+//						Zscaler_surrogate_idle_time:                     100,
+//						Zscaler_surrogate_display_time_unit:             "MINUTE",
+//						Zscaler_surrogate_ip_enforce_for_known_browsers: true,
+//						Zscaler_surrogate_refresh_time:                  12345,
+//						Zscaler_surrogate_refresh_time_unit:             "MINUTE",
+//						Zscaler_aup_enabled:                             true,
+//						Zscaler_aup_block_internet_until_accepted:       true,
+//						Zscaler_aup_force_ssl_inspection:                true,
+//						Zscaler_aup_timeout:                             60,
+//						Zscaler_location_name:                           "LOC1",
+//						Umbrella_primary_data_center:                    "Auto",
+//						Umbrella_secondary_data_center:                  "Auto",
+//					},
+//				},
+//				TrackerSourceIp: pulumi.String("2.3.4.5"),
+//				Trackers: sdwan.CiscoSecureInternetGatewayFeatureTemplateTrackerArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateTrackerArgs{
+//						Name:             pulumi.String("TRACKER1"),
+//						Endpoint_api_url: "https://1.1.1.1",
+//						Threshold:        pulumi.Int(500),
+//						Interval:         pulumi.Int(60),
+//						Multiplier:       pulumi.Int(4),
+//						Tracker_type:     "SIG",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

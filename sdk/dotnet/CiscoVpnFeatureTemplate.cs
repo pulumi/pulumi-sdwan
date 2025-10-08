@@ -13,6 +13,316 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco VPN feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoVpnFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VpnId = 1,
+    ///         VpnName = "VPN1",
+    ///         TenantVpnId = 1,
+    ///         OrganizationName = "org1",
+    ///         OmpAdminDistanceIpv4 = 10,
+    ///         OmpAdminDistanceIpv6 = 10,
+    ///         EnhanceEcmpKeying = true,
+    ///         DnsIpv4Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateDnsIpv4ServerArgs
+    ///             {
+    ///                 Address = "9.9.9.9",
+    ///                 Role = "primary",
+    ///             },
+    ///         },
+    ///         DnsIpv6Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateDnsIpv6ServerArgs
+    ///             {
+    ///                 Address = "2001::9",
+    ///                 Role = "primary",
+    ///             },
+    ///         },
+    ///         DnsHosts = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateDnsHostArgs
+    ///             {
+    ///                 Hostname = "abc1",
+    ///                 Ip = new[]
+    ///                 {
+    ///                     "7.7.7.7",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateServiceArgs
+    ///             {
+    ///                 Service_types = "FW",
+    ///                 Address = new[]
+    ///                 {
+    ///                     "8.8.8.8",
+    ///                 },
+    ///                 Interface = "e1",
+    ///                 Track_enable = true,
+    ///             },
+    ///         },
+    ///         Ipv4StaticServiceRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs
+    ///             {
+    ///                 Prefix = "2.2.2.0/24",
+    ///                 Vpn_id = 2,
+    ///                 Service = "sig",
+    ///             },
+    ///         },
+    ///         Ipv4StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateIpv4StaticRouteArgs
+    ///             {
+    ///                 Prefix = "3.3.3.0/24",
+    ///                 Null0 = false,
+    ///                 Distance = 10,
+    ///                 Vpn_id = 5,
+    ///                 Dhcp = false,
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "11.1.1.1" },
+    ///                         { "distance", 20 },
+    ///                     },
+    ///                 },
+    ///                 Track_next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "12.1.1.1" },
+    ///                         { "distance", 20 },
+    ///                         { "tracker", "tracker1" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateIpv6StaticRouteArgs
+    ///             {
+    ///                 Prefix = "2001::/48",
+    ///                 Null0 = false,
+    ///                 Vpn_id = 5,
+    ///                 Nat = "NAT64",
+    ///                 Next_hops = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "address", "2001::11" },
+    ///                         { "distance", 20 },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4StaticGreRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs
+    ///             {
+    ///                 Prefix = "3.3.3.0/24",
+    ///                 Vpn_id = 2,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     "e1",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4StaticIpsecRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs
+    ///             {
+    ///                 Prefix = "4.4.4.0/24",
+    ///                 Vpn_id = 2,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     "e1",
+    ///                 },
+    ///             },
+    ///         },
+    ///         OmpAdvertiseIpv4Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs
+    ///             {
+    ///                 Protocol = "bgp",
+    ///                 Route_policy = "rp1",
+    ///                 Protocol_sub_type = new[]
+    ///                 {
+    ///                     "external",
+    ///                 },
+    ///                 Prefixes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs
+    ///                     {
+    ///                         PrefixEntry = "1.1.1.0/24",
+    ///                         AggregateOnly = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         OmpAdvertiseIpv6Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs
+    ///             {
+    ///                 Protocol = "bgp",
+    ///                 Route_policy = "rp1",
+    ///                 Protocol_sub_type = new[]
+    ///                 {
+    ///                     "external",
+    ///                 },
+    ///                 Prefixes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs
+    ///                     {
+    ///                         PrefixEntry = "2001:2::/48",
+    ///                         AggregateOnly = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Nat64Pools = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateNat64PoolArgs
+    ///             {
+    ///                 Name = "POOL1",
+    ///                 Start_address = "100.1.1.1",
+    ///                 End_address = "100.1.2.255",
+    ///                 Overload = true,
+    ///                 Leak_from_global = true,
+    ///                 Leak_from_global_protocol = "rip",
+    ///                 Leak_to_global = true,
+    ///             },
+    ///         },
+    ///         NatPools = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateNatPoolArgs
+    ///             {
+    ///                 Name = 1,
+    ///                 Prefix_length = 24,
+    ///                 Range_start = "101.1.1.1",
+    ///                 Range_end = "101.1.2.255",
+    ///                 Overload = true,
+    ///                 Direction = "inside",
+    ///                 Tracker_id = 10,
+    ///             },
+    ///         },
+    ///         StaticNatRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateStaticNatRuleArgs
+    ///             {
+    ///                 Pool_name = 1,
+    ///                 Source_ip = "10.1.1.1",
+    ///                 Translate_ip = "105.1.1.1",
+    ///                 Static_nat_direction = "inside",
+    ///                 Tracker_id = 10,
+    ///             },
+    ///         },
+    ///         StaticNatSubnetRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs
+    ///             {
+    ///                 Source_ip_subnet = "10.2.1.0",
+    ///                 Translate_ip_subnet = "105.2.1.0",
+    ///                 Prefix_length = 24,
+    ///                 Static_nat_direction = "inside",
+    ///                 Tracker_id = 10,
+    ///             },
+    ///         },
+    ///         PortForwardRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplatePortForwardRuleArgs
+    ///             {
+    ///                 Pool_name = 1,
+    ///                 Source_port = 5000,
+    ///                 Translate_port = 6000,
+    ///                 Source_ip = "10.3.1.1",
+    ///                 Translate_ip = "120.3.1.1",
+    ///                 Protocol = "tcp",
+    ///             },
+    ///         },
+    ///         RouteGlobalImports = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteGlobalImportArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///                 Protocol_sub_type = new[]
+    ///                 {
+    ///                     "external",
+    ///                 },
+    ///                 Route_policy = "policy1",
+    ///                 Redistributes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs
+    ///                     {
+    ///                         Protocol = "bgp",
+    ///                         RoutePolicy = "policy1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RouteVpnImports = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteVpnImportArgs
+    ///             {
+    ///                 Source_vpn_id = 5,
+    ///                 Protocol = "ospf",
+    ///                 Protocol_sub_type = new[]
+    ///                 {
+    ///                     "external",
+    ///                 },
+    ///                 Route_policy = "policy1",
+    ///                 Redistributes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs
+    ///                     {
+    ///                         Protocol = "bgp",
+    ///                         RoutePolicy = "policy1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RouteGlobalExports = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteGlobalExportArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///                 Protocol_sub_type = new[]
+    ///                 {
+    ///                     "external",
+    ///                 },
+    ///                 Route_policy = "policy1",
+    ///                 Redistributes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs
+    ///                     {
+    ///                         Protocol = "bgp",
+    ///                         RoutePolicy = "policy1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -57,7 +367,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enhanceEcmpKeying")]
         public Output<bool?> EnhanceEcmpKeying { get; private set; } = null!;
@@ -345,7 +655,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -679,7 +989,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }

@@ -27,6 +27,150 @@ import javax.annotation.Nullable;
  * This resource can manage a Cisco BGP feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoBgpFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoBgpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv4RouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv6RouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateMplsInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateAddressFamilyArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv4NeighborArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv6NeighborArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoBgpFeatureTemplate("example", CiscoBgpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .asNumber("65000")
+ *             .shutdown(true)
+ *             .routerId("1.2.3.4")
+ *             .propagateAspath(true)
+ *             .propagateCommunity(true)
+ *             .ipv4RouteTargets(CiscoBgpFeatureTemplateIpv4RouteTargetArgs.builder()
+ *                 .vpn_id(1)
+ *                 .export(List.of(Map.of("asnIp", "10:100")))
+ *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .build())
+ *             .ipv6RouteTargets(CiscoBgpFeatureTemplateIpv6RouteTargetArgs.builder()
+ *                 .vpn_id(1)
+ *                 .export(List.of(Map.of("asnIp", "10:100")))
+ *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .build())
+ *             .mplsInterfaces(CiscoBgpFeatureTemplateMplsInterfaceArgs.builder()
+ *                 .interface_name("GigabitEthernet0")
+ *                 .build())
+ *             .distanceExternal(30)
+ *             .distanceInternal(210)
+ *             .distanceLocal(30)
+ *             .keepalive(90)
+ *             .holdtime(220)
+ *             .alwaysCompareMed(true)
+ *             .deterministicMed(true)
+ *             .missingMedWorst(true)
+ *             .compareRouterId(true)
+ *             .multipathRelax(true)
+ *             .addressFamilies(CiscoBgpFeatureTemplateAddressFamilyArgs.builder()
+ *                 .family_type("ipv4-unicast")
+ *                 .ipv4_aggregate_addresses(List.of(Map.ofEntries(
+ *                     Map.entry("prefix", "10.0.0.0/8"),
+ *                     Map.entry("asSetPath", true),
+ *                     Map.entry("summaryOnly", true)
+ *                 )))
+ *                 .ipv4_networks(List.of(Map.of("prefix", "10.2.2.0/24")))
+ *                 .maximum_paths(8)
+ *                 .default_information_originate(true)
+ *                 .table_map_policy("MAP1")
+ *                 .table_map_filter(true)
+ *                 .redistribute_routes(List.of(Map.ofEntries(
+ *                     Map.entry("protocol", "ospf"),
+ *                     Map.entry("routePolicy", "POLICY1")
+ *                 )))
+ *                 .build())
+ *             .ipv4Neighbors(CiscoBgpFeatureTemplateIpv4NeighborArgs.builder()
+ *                 .address("10.2.2.2")
+ *                 .description("My neighbor")
+ *                 .shutdown(true)
+ *                 .remote_as("65001")
+ *                 .keepalive(30)
+ *                 .holdtime(90)
+ *                 .source_interface("GigabitEthernet1")
+ *                 .next_hop_self(true)
+ *                 .send_community(false)
+ *                 .send_ext_community(false)
+ *                 .ebgp_multihop(10)
+ *                 .password("cisco123")
+ *                 .send_label(true)
+ *                 .send_label_explicit(true)
+ *                 .as_override(true)
+ *                 .allow_as_in(5)
+ *                 .address_families(List.of(Map.ofEntries(
+ *                     Map.entry("familyType", "ipv4-unicast"),
+ *                     Map.entry("maximumPrefixes", 10000),
+ *                     Map.entry("maximumPrefixesThreshold", 80),
+ *                     Map.entry("maximumPrefixesRestart", 180),
+ *                     Map.entry("maximumPrefixesWarningOnly", true),
+ *                     Map.entry("routePolicies", List.of(Map.ofEntries(
+ *                         Map.entry("direction", "in"),
+ *                         Map.entry("policyName", "POLICY1")
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .ipv6Neighbors(CiscoBgpFeatureTemplateIpv6NeighborArgs.builder()
+ *                 .address("2001:1::1")
+ *                 .description("My neighbor")
+ *                 .shutdown(true)
+ *                 .remote_as("65001")
+ *                 .keepalive(30)
+ *                 .holdtime(90)
+ *                 .source_interface("GigabitEthernet1")
+ *                 .next_hop_self(true)
+ *                 .send_community(false)
+ *                 .send_ext_community(false)
+ *                 .ebgp_multihop(10)
+ *                 .password("cisco123")
+ *                 .send_label(true)
+ *                 .send_label_explicit(true)
+ *                 .as_override(true)
+ *                 .allow_as_in(5)
+ *                 .address_families(List.of(Map.ofEntries(
+ *                     Map.entry("familyType", "ipv6-unicast"),
+ *                     Map.entry("maximumPrefixes", 10000),
+ *                     Map.entry("maximumPrefixesThreshold", 80),
+ *                     Map.entry("maximumPrefixesRestart", 180),
+ *                     Map.entry("maximumPrefixesWarningOnly", true),
+ *                     Map.entry("routePolicies", List.of(Map.ofEntries(
+ *                         Map.entry("direction", "in"),
+ *                         Map.entry("policyName", "POLICY1")
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

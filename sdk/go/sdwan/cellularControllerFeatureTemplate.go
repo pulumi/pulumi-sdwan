@@ -15,6 +15,48 @@ import (
 // This resource can manage a Cellular Controller feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCellularControllerFeatureTemplate(ctx, "example", &sdwan.CellularControllerFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				CellularInterfaceId: pulumi.String("1"),
+//				DataProfiles: sdwan.CellularControllerFeatureTemplateDataProfileArray{
+//					&sdwan.CellularControllerFeatureTemplateDataProfileArgs{
+//						Slot_number:    1,
+//						Data_profile:   8,
+//						Attach_profile: 8,
+//					},
+//				},
+//				PrimarySimSlot:     pulumi.Int(100),
+//				SimFailoverRetries: pulumi.Int(160),
+//				SimFailoverTimeout: pulumi.Int(3),
+//				FirmwareAutoSim:    pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _listValues;
 
         /// <summary>
-        /// Use this instead of `value` in case value is of type `List`.
+        /// Use this instead of `Value` in case value is of type `List`.
         /// </summary>
         public InputList<string> ListValues
         {

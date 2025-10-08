@@ -32,8 +32,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Role
-        ///   - Choices: `primary`, `secondary`
-        ///   - Default value: `primary`
+        ///   - Choices: `Primary`, `Secondary`
+        ///   - Default value: `Primary`
         /// </summary>
         [Input("role")]
         public Input<string>? Role { get; set; }

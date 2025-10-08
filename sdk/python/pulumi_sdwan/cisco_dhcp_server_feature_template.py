@@ -784,6 +784,38 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco DHCP Server feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoDhcpServerFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            address_pool="10.1.1.0/24",
+            exclude_addresses=[
+                "10.1.1.1-10.1.1.5",
+                "10.1.1.254",
+            ],
+            lease_time=600,
+            interface_mtu=1500,
+            domain_name="cisco.com",
+            default_gateway="10.1.1.254",
+            dns_servers=["1.2.3.4"],
+            tftp_servers=["1.2.3.4"],
+            static_leases=[{
+                "mac_address": "11:11:11:11:11:11",
+                "ip_address": "10.1.1.10",
+                "hostname": "HOST1",
+            }],
+            options=[{
+                "option_code": 10,
+                "ascii": "abc",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -829,6 +861,38 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco DHCP Server feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoDhcpServerFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            address_pool="10.1.1.0/24",
+            exclude_addresses=[
+                "10.1.1.1-10.1.1.5",
+                "10.1.1.254",
+            ],
+            lease_time=600,
+            interface_mtu=1500,
+            domain_name="cisco.com",
+            default_gateway="10.1.1.254",
+            dns_servers=["1.2.3.4"],
+            tftp_servers=["1.2.3.4"],
+            static_leases=[{
+                "mac_address": "11:11:11:11:11:11",
+                "ip_address": "10.1.1.10",
+                "hostname": "HOST1",
+            }],
+            options=[{
+                "option_code": 10,
+                "ascii": "abc",
+            }])
+        ```
 
         ## Import
 

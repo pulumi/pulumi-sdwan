@@ -10,6 +10,46 @@ import * as utilities from "./utilities";
  * This resource can manage a Cisco Logging feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoLoggingFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     diskLogging: true,
+ *     maxSize: 10,
+ *     logRotations: 10,
+ *     tlsProfiles: [{
+ *         name: "PROF1",
+ *         version: "TLSv1.2",
+ *         authentication_type: "Server",
+ *         ciphersuite_list: ["aes-128-cbc-sha"],
+ *     }],
+ *     ipv4Servers: [{
+ *         hostname_ip: "2.2.2.2",
+ *         vpn_id: 1,
+ *         source_interface: "e1",
+ *         logging_level: "information",
+ *         enable_tls: true,
+ *         custom_profile: true,
+ *         profile: "PROF1",
+ *     }],
+ *     ipv6Servers: [{
+ *         hostname_ip: "2001::1",
+ *         vpn_id: 1,
+ *         source_interface: "e1",
+ *         logging_level: "information",
+ *         enable_tls: true,
+ *         custom_profile: true,
+ *         profile: "PROF1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

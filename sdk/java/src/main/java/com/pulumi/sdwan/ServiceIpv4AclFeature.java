@@ -21,6 +21,60 @@ import javax.annotation.Nullable;
  * This resource can manage a Service IPv4 ACL Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceIpv4AclFeature;
+ * import com.pulumi.sdwan.ServiceIpv4AclFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceIpv4AclFeatureSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceIpv4AclFeature("example", ServiceIpv4AclFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .defaultAction("drop")
+ *             .sequences(ServiceIpv4AclFeatureSequenceArgs.builder()
+ *                 .sequence_id(1)
+ *                 .sequence_name("AccessControlList1")
+ *                 .match_entries(List.of(Map.ofEntries(
+ *                     Map.entry("dscps", List.of(16)),
+ *                     Map.entry("packetLength", 1500),
+ *                     Map.entry("protocols", List.of(1)),
+ *                     Map.entry("sourcePorts", List.of(Map.of("port", 8000))),
+ *                     Map.entry("tcpState", "syn")
+ *                 )))
+ *                 .actions(ServiceIpv4AclFeatureSequenceActionArgs.builder()
+ *                     .acceptSetDscp(60)
+ *                     .acceptCounterName("COUNTER_1")
+ *                     .acceptLog(false)
+ *                     .acceptSetNextHop("1.2.3.4")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

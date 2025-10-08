@@ -9,6 +9,35 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a IPv6 ACL Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.Ipv6AclPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         id: 10,
+ *         name: "Sequence 10",
+ *         base_action: "accept",
+ *         match_entries: [{
+ *             type: "nextHeader",
+ *             nextHeader: 1,
+ *         }],
+ *         action_entries: [{
+ *             type: "set",
+ *             setParameters: [{
+ *                 type: "trafficClass",
+ *                 trafficClass: 16,
+ *             }],
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

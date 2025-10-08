@@ -75,6 +75,15 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
         """
         This resource can activate a centralized policy.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ActivateCentralizedPolicy("example", id=policy1["id"])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -95,6 +104,15 @@ class ActivateCentralizedPolicy(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can activate a centralized policy.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ActivateCentralizedPolicy("example", id=policy1["id"])
+        ```
 
         ## Import
 

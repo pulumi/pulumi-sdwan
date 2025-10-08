@@ -10,6 +10,23 @@ import * as utilities from "./utilities";
  * This resource can manage a Policy Object Data IPv6 Prefix List Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectDataIpv6PrefixList("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     entries: [{
+ *         ipv6_address: "2001:db8:85a3::8a2e:370:7334",
+ *         ipv6_prefix_length: 64,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

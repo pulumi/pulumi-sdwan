@@ -10,6 +10,26 @@ import * as utilities from "./utilities";
  * This resource can manage a System IPv4 Device Access Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemIpv4DeviceAccessFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         id: 1,
+ *         name: "SEQ_1",
+ *         base_action: "accept",
+ *         device_access_port: 161,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

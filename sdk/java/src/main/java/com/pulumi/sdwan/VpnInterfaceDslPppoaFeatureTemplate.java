@@ -27,6 +27,163 @@ import javax.annotation.Nullable;
  * This resource can manage a VPN Interface DSL PPPoA feature template.
  *   - Minimum SD-WAN Manager version: `15.0.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnInterfaceDslPppoaFeatureTemplate;
+ * import com.pulumi.sdwan.VpnInterfaceDslPppoaFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplatePvcArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplateAccessListArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslPppoaFeatureTemplatePolicerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnInterfaceDslPppoaFeatureTemplate("example", VpnInterfaceDslPppoaFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .atmSubInterfaceName("ATM1")
+ *             .shutdown(true)
+ *             .atmDescription("My Description")
+ *             .vdslConfigurations(VpnInterfaceDslPppoaFeatureTemplateVdslConfigurationArgs.builder()
+ *                 .controller_vdsl_slot("Example")
+ *                 .sra(true)
+ *                 .mode_adsl1(false)
+ *                 .mode_adsl2(false)
+ *                 .mode_adsl2plus(false)
+ *                 .mode_vdsl2(false)
+ *                 .mode_ansi(false)
+ *                 .vdsl_modem_configuration("100")
+ *                 .build())
+ *             .pvcs(VpnInterfaceDslPppoaFeatureTemplatePvcArgs.builder()
+ *                 .atm_vpi_and_vci("example-vpi")
+ *                 .atm_vbr_nrt_peak_cell_rate(1010)
+ *                 .atm_vbr_nrt_sustainable_cell_rate(1000)
+ *                 .atm_vbr_nrt_maximum_burst_size(65530)
+ *                 .atm_vbr_rt_peak_cell_rate(1015)
+ *                 .atm_vbr_rt_average_cell_rate(1000)
+ *                 .atm_vbr_rt_maximum_burst_size(65530)
+ *                 .atm_encapsulation_aal5mux(false)
+ *                 .atm_encapsulation_aal5nlpid(false)
+ *                 .atm_encapsulation_aal5snap(true)
+ *                 .atm_dialer_pool_member(100)
+ *                 .build())
+ *             .pppAuthenticationProtocol("chap")
+ *             .pppAuthenticationProtocolPap(false)
+ *             .chapHostname("chap-example")
+ *             .chapPppAuthPassword("myPassword")
+ *             .papUsername("pap-username")
+ *             .papPassword(true)
+ *             .papPppAuthPassword("myPassword")
+ *             .pppAuthenticationType("callin")
+ *             .enableCoreRegion(true)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
+ *             .tunnelInterfaceEncapsulations(VpnInterfaceDslPppoaFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
+ *                 .encapsulation("gre")
+ *                 .preference(4294967)
+ *                 .weight(250)
+ *                 .build())
+ *             .tunnelInterfaceGroups(42949672)
+ *             .tunnelInterfaceBorder(true)
+ *             .perTunnelQos(true)
+ *             .perTunnelQosAggregator(false)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
+ *             .tunnelInterfaceLastResortCircuit(false)
+ *             .tunnelInterfaceLowBandwidthLink(false)
+ *             .tunnelInterfaceTunnelTcpMss(1460)
+ *             .tunnelInterfaceClearDontFragment(false)
+ *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceMaxControlConnections(8)
+ *             .tunnelInterfaceControlConnections(true)
+ *             .tunnelInterfaceVbondAsStunServer(false)
+ *             .tunnelInterfaceExcludeControllerGroupLists(100)
+ *             .tunnelInterfaceVmanageConnectionPreference(5)
+ *             .tunnelInterfacePortHop(false)
+ *             .tunnelInterfaceColorRestrict(false)
+ *             .tunnelInterfaceCarrier("carrier1")
+ *             .tunnelInterfaceNatRefreshInterval(15)
+ *             .tunnelInterfaceHelloInterval(1000)
+ *             .tunnelInterfaceHelloTolerance(12)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
+ *             .tunnelInterfaceAllowAll(false)
+ *             .tunnelInterfaceAllowBgp(false)
+ *             .tunnelInterfaceAllowDhcp(true)
+ *             .tunnelInterfaceAllowDns(true)
+ *             .tunnelInterfaceAllowIcmp(true)
+ *             .tunnelInterfaceAllowSsh(false)
+ *             .tunnelInterfaceAllowNtp(false)
+ *             .tunnelInterfaceAllowNetconf(false)
+ *             .tunnelInterfaceAllowOspf(false)
+ *             .tunnelInterfaceAllowStun(false)
+ *             .tunnelInterfaceAllowSnmp(false)
+ *             .tunnelInterfaceAllowHttps(true)
+ *             .nat(true)
+ *             .natRefreshMode("outbound")
+ *             .natUdpTimeout(1)
+ *             .natTcpTimeout(60)
+ *             .natBlockIcmpError(true)
+ *             .natResponseToPing(false)
+ *             .natPortForwards(VpnInterfaceDslPppoaFeatureTemplateNatPortForwardArgs.builder()
+ *                 .port_start_range(0)
+ *                 .port_end_range(65530)
+ *                 .protocol("tcp")
+ *                 .private_vpn(65530)
+ *                 .private_ip_address("1.2.3.4")
+ *                 .build())
+ *             .qosAdaptivePeriod(15)
+ *             .qosAdaptiveBandwidthDownstream(10000)
+ *             .qosAdaptiveMinDownstream(100)
+ *             .qosAdaptiveMaxDownstream(100000)
+ *             .qosAdaptiveBandwidthUpstream(10000)
+ *             .qosAdaptiveMinUpstream(100)
+ *             .qosAdaptiveMaxUpstream(100000)
+ *             .shapingRate(10000000)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
+ *             .bandwidthUpstream(214748300)
+ *             .bandwidthDownstream(214748300)
+ *             .writeRule("RULE1")
+ *             .accessLists(VpnInterfaceDslPppoaFeatureTemplateAccessListArgs.builder()
+ *                 .direction("in")
+ *                 .acl_name("ACL1")
+ *                 .build())
+ *             .policers(VpnInterfaceDslPppoaFeatureTemplatePolicerArgs.builder()
+ *                 .direction("in")
+ *                 .policer_name("example")
+ *                 .build())
+ *             .ipMtu(1500)
+ *             .tcpMss(720)
+ *             .tlocExtension("tloc")
+ *             .trackers("tracker1")
+ *             .ipDirectedBroadcast(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -15,6 +15,64 @@ import (
 // This resource can manage a Transport IPv6 ACL Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportIpv6AclFeature(ctx, "example", &sdwan.TransportIpv6AclFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("drop"),
+//				Sequences: sdwan.TransportIpv6AclFeatureSequenceArray{
+//					&sdwan.TransportIpv6AclFeatureSequenceArgs{
+//						Sequence_id:   1,
+//						Sequence_name: "AccessControlList1",
+//						Match_entries: []map[string]interface{}{
+//							map[string]interface{}{
+//								"nextHeader":   10,
+//								"packetLength": 1500,
+//								"sourcePorts": []map[string]interface{}{
+//									map[string]interface{}{
+//										"port": 8000,
+//									},
+//								},
+//								"tcpState": "syn",
+//								"trafficClass": []float64{
+//									10,
+//								},
+//							},
+//						},
+//						Actions: sdwan.TransportIpv6AclFeatureSequenceActionArray{
+//							&sdwan.TransportIpv6AclFeatureSequenceActionArgs{
+//								AcceptCounterName:  pulumi.String("COUNTER_1"),
+//								AcceptLog:          pulumi.Bool(false),
+//								AcceptSetNextHop:   pulumi.String("2001:0db8:85a3:0000:0000:8a2e:0370:7334"),
+//								AcceptTrafficClass: pulumi.Int(10),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

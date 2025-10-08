@@ -13,6 +13,37 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System IPv6 Device Access Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemIpv6DeviceAccessFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemIpv6DeviceAccessFeatureSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "SEQ_1",
+    ///                 Base_action = "accept",
+    ///                 Device_access_port = 22,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,8 +59,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -112,8 +143,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -158,8 +189,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

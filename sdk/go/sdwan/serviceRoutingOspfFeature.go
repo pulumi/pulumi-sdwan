@@ -15,6 +15,89 @@ import (
 // This resource can manage a Service Routing OSPF Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceRoutingOspfFeature(ctx, "example", &sdwan.ServiceRoutingOspfFeatureArgs{
+//				Name:                                  pulumi.String("Example"),
+//				Description:                           pulumi.String("My Example"),
+//				FeatureProfileId:                      pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				RouterId:                              pulumi.String("1.2.3.4"),
+//				ReferenceBandwidth:                    pulumi.Int(101),
+//				Rfc1583Compatible:                     pulumi.Bool(true),
+//				DefaultInformationOriginate:           pulumi.Bool(false),
+//				DefaultInformationOriginateAlways:     pulumi.Bool(false),
+//				DefaultInformationOriginateMetric:     pulumi.Int(1),
+//				DefaultInformationOriginateMetricType: pulumi.String("type1"),
+//				DistanceExternal:                      pulumi.Int(110),
+//				DistanceInterArea:                     pulumi.Int(110),
+//				DistanceIntraArea:                     pulumi.Int(110),
+//				SpfCalculationDelay:                   pulumi.Int(200),
+//				SpfInitialHoldTime:                    pulumi.Int(1000),
+//				SpfMaximumHoldTime:                    pulumi.Int(10000),
+//				Redistributes: sdwan.ServiceRoutingOspfFeatureRedistributeArray{
+//					&sdwan.ServiceRoutingOspfFeatureRedistributeArgs{
+//						Protocol: pulumi.String("static"),
+//						Nat_dia:  true,
+//					},
+//				},
+//				RouterLsas: sdwan.ServiceRoutingOspfFeatureRouterLsaArray{
+//					&sdwan.ServiceRoutingOspfFeatureRouterLsaArgs{
+//						Type: pulumi.String("on-startup"),
+//						Time: pulumi.Int(5),
+//					},
+//				},
+//				Areas: sdwan.ServiceRoutingOspfFeatureAreaArray{
+//					&sdwan.ServiceRoutingOspfFeatureAreaArgs{
+//						Area_number: 1,
+//						Area_type:   "stub",
+//						No_summary:  false,
+//						Interfaces: sdwan.ServiceRoutingOspfFeatureAreaInterfaceArray{
+//							&sdwan.ServiceRoutingOspfFeatureAreaInterfaceArgs{
+//								Name:                     pulumi.String("GigabitEthernet2"),
+//								HelloInterval:            pulumi.Int(10),
+//								DeadInterval:             pulumi.Int(40),
+//								LsaRetransmitInterval:    pulumi.Int(5),
+//								Cost:                     pulumi.Int(10),
+//								DesignatedRouterPriority: pulumi.Int(1),
+//								NetworkType:              pulumi.String("broadcast"),
+//								PassiveInterface:         pulumi.Bool(false),
+//								AuthenticationType:       pulumi.String("message-digest"),
+//								MessageDigestKeyId:       pulumi.Int(7),
+//								MessageDigestKey:         pulumi.String("sdjfhsghbjdjr"),
+//							},
+//						},
+//						Ranges: sdwan.ServiceRoutingOspfFeatureAreaRangeArray{
+//							&sdwan.ServiceRoutingOspfFeatureAreaRangeArgs{
+//								IpAddress:   pulumi.String("10.1.1.0"),
+//								SubnetMask:  pulumi.String("255.255.255.0"),
+//								Cost:        pulumi.Int(1),
+//								NoAdvertise: pulumi.Bool(false),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

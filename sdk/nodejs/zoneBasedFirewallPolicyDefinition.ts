@@ -9,6 +9,36 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a Zone Based Firewall Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ZoneBasedFirewallPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     mode: "security",
+ *     applyZonePairs: [{
+ *         source_zone: "self",
+ *         destination_zone: "0d26a366-4a11-4942-a5ea-82af9502889f",
+ *     }],
+ *     defaultAction: "pass",
+ *     rules: [{
+ *         rule_order: 1,
+ *         rule_name: "RULE_1",
+ *         base_action: "inspect",
+ *         match_entries: [{
+ *             type: "sourceGeoLocationList",
+ *             policyId: "0d26a366-4a11-4942-a5ea-82af9502889f",
+ *         }],
+ *         action_entries: [{
+ *             type: "log",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

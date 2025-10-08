@@ -211,6 +211,25 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
         This resource can manage a cEdge IGMP feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CedgeIgmpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            interfaces=[{
+                "name": "Ethernet0",
+                "join_groups": [{
+                    "groupAddress": "235.1.1.1",
+                    "source": "1.2.3.4",
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -236,6 +255,25 @@ class CedgeIgmpFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a cEdge IGMP feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CedgeIgmpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            interfaces=[{
+                "name": "Ethernet0",
+                "join_groups": [{
+                    "groupAddress": "235.1.1.1",
+                    "source": "1.2.3.4",
+                }],
+            }])
+        ```
 
         ## Import
 

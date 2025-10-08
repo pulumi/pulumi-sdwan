@@ -21,6 +21,49 @@ import javax.annotation.Nullable;
  * This resource can manage a Policy Object App Probe Class Policy_object.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.PolicyObjectAppProbeClass;
+ * import com.pulumi.sdwan.PolicyObjectAppProbeClassArgs;
+ * import com.pulumi.sdwan.inputs.PolicyObjectAppProbeClassEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new PolicyObjectAppProbeClass("example", PolicyObjectAppProbeClassArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .entries(PolicyObjectAppProbeClassEntryArgs.builder()
+ *                 .map(List.of(Map.ofEntries(
+ *                     Map.entry("color", "3g"),
+ *                     Map.entry("dscp", 45)
+ *                 )))
+ *                 .forwarding_class("classlist1")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

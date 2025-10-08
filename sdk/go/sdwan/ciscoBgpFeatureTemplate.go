@@ -15,6 +15,183 @@ import (
 // This resource can manage a Cisco BGP feature template.
 //   - Minimum SD-WAN Manager version: `15.0.0`
 //
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoBgpFeatureTemplate(ctx, "example", &sdwan.CiscoBgpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				AsNumber:           pulumi.String("65000"),
+//				Shutdown:           pulumi.Bool(true),
+//				RouterId:           pulumi.String("1.2.3.4"),
+//				PropagateAspath:    pulumi.Bool(true),
+//				PropagateCommunity: pulumi.Bool(true),
+//				Ipv4RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArgs{
+//						Vpn_id: 1,
+//						Export: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//						Import: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//					},
+//				},
+//				Ipv6RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArgs{
+//						Vpn_id: 1,
+//						Export: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//						Import: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//					},
+//				},
+//				MplsInterfaces: sdwan.CiscoBgpFeatureTemplateMplsInterfaceArray{
+//					&sdwan.CiscoBgpFeatureTemplateMplsInterfaceArgs{
+//						Interface_name: "GigabitEthernet0",
+//					},
+//				},
+//				DistanceExternal: pulumi.Int(30),
+//				DistanceInternal: pulumi.Int(210),
+//				DistanceLocal:    pulumi.Int(30),
+//				Keepalive:        pulumi.Int(90),
+//				Holdtime:         pulumi.Int(220),
+//				AlwaysCompareMed: pulumi.Bool(true),
+//				DeterministicMed: pulumi.Bool(true),
+//				MissingMedWorst:  pulumi.Bool(true),
+//				CompareRouterId:  pulumi.Bool(true),
+//				MultipathRelax:   pulumi.Bool(true),
+//				AddressFamilies: sdwan.CiscoBgpFeatureTemplateAddressFamilyArray{
+//					&sdwan.CiscoBgpFeatureTemplateAddressFamilyArgs{
+//						Family_type: "ipv4-unicast",
+//						Ipv4_aggregate_addresses: []map[string]interface{}{
+//							map[string]interface{}{
+//								"prefix":      "10.0.0.0/8",
+//								"asSetPath":   true,
+//								"summaryOnly": true,
+//							},
+//						},
+//						Ipv4_networks: []map[string]interface{}{
+//							map[string]interface{}{
+//								"prefix": "10.2.2.0/24",
+//							},
+//						},
+//						Maximum_paths:                 8,
+//						Default_information_originate: true,
+//						Table_map_policy:              "MAP1",
+//						Table_map_filter:              true,
+//						Redistribute_routes: []map[string]interface{}{
+//							map[string]interface{}{
+//								"protocol":    "ospf",
+//								"routePolicy": "POLICY1",
+//							},
+//						},
+//					},
+//				},
+//				Ipv4Neighbors: sdwan.CiscoBgpFeatureTemplateIpv4NeighborArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv4NeighborArgs{
+//						Address:             pulumi.String("10.2.2.2"),
+//						Description:         pulumi.String("My neighbor"),
+//						Shutdown:            pulumi.Bool(true),
+//						Remote_as:           "65001",
+//						Keepalive:           pulumi.Int(30),
+//						Holdtime:            pulumi.Int(90),
+//						Source_interface:    "GigabitEthernet1",
+//						Next_hop_self:       true,
+//						Send_community:      false,
+//						Send_ext_community:  false,
+//						Ebgp_multihop:       10,
+//						Password:            pulumi.String("cisco123"),
+//						Send_label:          true,
+//						Send_label_explicit: true,
+//						As_override:         true,
+//						Allow_as_in:         5,
+//						Address_families: []map[string]interface{}{
+//							map[string]interface{}{
+//								"familyType":                 "ipv4-unicast",
+//								"maximumPrefixes":            10000,
+//								"maximumPrefixesThreshold":   80,
+//								"maximumPrefixesRestart":     180,
+//								"maximumPrefixesWarningOnly": true,
+//								"routePolicies": []map[string]interface{}{
+//									map[string]interface{}{
+//										"direction":  "in",
+//										"policyName": "POLICY1",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//				Ipv6Neighbors: sdwan.CiscoBgpFeatureTemplateIpv6NeighborArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv6NeighborArgs{
+//						Address:             pulumi.String("2001:1::1"),
+//						Description:         pulumi.String("My neighbor"),
+//						Shutdown:            pulumi.Bool(true),
+//						Remote_as:           "65001",
+//						Keepalive:           pulumi.Int(30),
+//						Holdtime:            pulumi.Int(90),
+//						Source_interface:    "GigabitEthernet1",
+//						Next_hop_self:       true,
+//						Send_community:      false,
+//						Send_ext_community:  false,
+//						Ebgp_multihop:       10,
+//						Password:            pulumi.String("cisco123"),
+//						Send_label:          true,
+//						Send_label_explicit: true,
+//						As_override:         true,
+//						Allow_as_in:         5,
+//						Address_families: []map[string]interface{}{
+//							map[string]interface{}{
+//								"familyType":                 "ipv6-unicast",
+//								"maximumPrefixes":            10000,
+//								"maximumPrefixesThreshold":   80,
+//								"maximumPrefixesRestart":     180,
+//								"maximumPrefixesWarningOnly": true,
+//								"routePolicies": []map[string]interface{}{
+//									map[string]interface{}{
+//										"direction":  "in",
+//										"policyName": "POLICY1",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

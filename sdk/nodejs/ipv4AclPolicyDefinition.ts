@@ -9,6 +9,35 @@ import * as utilities from "./utilities";
 /**
  * This resource can manage a IPv4 ACL Policy Definition .
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.Ipv4AclPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         id: 10,
+ *         name: "Sequence 10",
+ *         base_action: "accept",
+ *         match_entries: [{
+ *             type: "dscp",
+ *             dscp: "16",
+ *         }],
+ *         action_entries: [{
+ *             type: "set",
+ *             setParameters: [{
+ *                 type: "dscp",
+ *                 dscp: 16,
+ *             }],
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

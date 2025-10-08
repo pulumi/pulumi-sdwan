@@ -10,6 +10,64 @@ import * as utilities from "./utilities";
  * This resource can manage a Service Routing OSPF Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceRoutingOspfFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     routerId: "1.2.3.4",
+ *     referenceBandwidth: 101,
+ *     rfc1583Compatible: true,
+ *     defaultInformationOriginate: false,
+ *     defaultInformationOriginateAlways: false,
+ *     defaultInformationOriginateMetric: 1,
+ *     defaultInformationOriginateMetricType: "type1",
+ *     distanceExternal: 110,
+ *     distanceInterArea: 110,
+ *     distanceIntraArea: 110,
+ *     spfCalculationDelay: 200,
+ *     spfInitialHoldTime: 1000,
+ *     spfMaximumHoldTime: 10000,
+ *     redistributes: [{
+ *         protocol: "static",
+ *         nat_dia: true,
+ *     }],
+ *     routerLsas: [{
+ *         type: "on-startup",
+ *         time: 5,
+ *     }],
+ *     areas: [{
+ *         area_number: 1,
+ *         area_type: "stub",
+ *         no_summary: false,
+ *         interfaces: [{
+ *             name: "GigabitEthernet2",
+ *             helloInterval: 10,
+ *             deadInterval: 40,
+ *             lsaRetransmitInterval: 5,
+ *             cost: 10,
+ *             designatedRouterPriority: 1,
+ *             networkType: "broadcast",
+ *             passiveInterface: false,
+ *             authenticationType: "message-digest",
+ *             messageDigestKeyId: 7,
+ *             messageDigestKey: "sdjfhsghbjdjr",
+ *         }],
+ *         ranges: [{
+ *             ipAddress: "10.1.1.0",
+ *             subnetMask: "255.255.255.0",
+ *             cost: 1,
+ *             noAdvertise: false,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

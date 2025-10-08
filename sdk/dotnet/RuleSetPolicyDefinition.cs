@@ -12,6 +12,42 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Rule Set Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.RuleSetPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Rules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.RuleSetPolicyDefinitionRuleArgs
+    ///             {
+    ///                 Name = "Rule1",
+    ///                 Order = 1,
+    ///                 Source_ipv4_prefix = "10.1.1.0/24",
+    ///                 Source_fqdn = "cisco.com",
+    ///                 Source_port = "80-90",
+    ///                 Source_geo_location = "AF",
+    ///                 Destination_ipv4_prefix = "10.1.1.0/24",
+    ///                 Destination_fqdn = "cisco.com",
+    ///                 Destination_port = "80-90",
+    ///                 Destination_geo_location = "AF",
+    ///                 Protocol = "cifs",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
