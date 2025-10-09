@@ -65,14 +65,14 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
      * 
      */
     @Import(name="dnsServerIp", required=true)
     private Output<String> dnsServerIp;
 
     /**
-     * @return Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+     * @return Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
      * 
      */
     public Output<String> dnsServerIp() {
@@ -147,14 +147,14 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
      * 
      */
     @Import(name="targetVpns")
     private @Nullable Output<List<DnsSecurityPolicyTargetVpnArgs>> targetVpns;
 
     /**
-     * @return Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+     * @return Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
      * 
      */
     public Optional<Output<List<DnsSecurityPolicyTargetVpnArgs>>> targetVpns() {
@@ -274,7 +274,7 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dnsServerIp Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+         * @param dnsServerIp Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
          * 
          * @return builder
          * 
@@ -285,7 +285,7 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dnsServerIp Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+         * @param dnsServerIp Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
          * 
          * @return builder
          * 
@@ -388,7 +388,7 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
          * 
          * @return builder
          * 
@@ -399,7 +399,7 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
          * 
          * @return builder
          * 
@@ -409,7 +409,7 @@ public final class DnsSecurityPolicyArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+         * @param targetVpns Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
          * 
          * @return builder
          * 

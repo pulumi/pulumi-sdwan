@@ -79,8 +79,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Output("application")]
         public Output<string?> Application { get; private set; } = null!;
@@ -93,7 +93,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("clearDontFragment")]
         public Output<bool?> ClearDontFragment { get; private set; } = null!;
@@ -175,8 +175,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IKE integrity protocol
-        ///   - Choices: `main`, `aggressive`
-        ///   - Default value: `main`
+        ///   - Choices: `Main`, `Aggressive`
+        ///   - Default value: `Main`
         /// </summary>
         [Output("ikeMode")]
         public Output<string?> IkeMode { get; private set; } = null!;
@@ -297,7 +297,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPsec perfect forward secrecy settings
-        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `None`
         ///   - Default value: `group-16`
         /// </summary>
         [Output("ipsecPerfectForwardSecrecy")]
@@ -359,7 +359,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -503,8 +503,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -517,7 +517,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -605,8 +605,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IKE integrity protocol
-        ///   - Choices: `main`, `aggressive`
-        ///   - Default value: `main`
+        ///   - Choices: `Main`, `Aggressive`
+        ///   - Default value: `Main`
         /// </summary>
         [Input("ikeMode")]
         public Input<string>? IkeMode { get; set; }
@@ -727,7 +727,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPsec perfect forward secrecy settings
-        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `None`
         ///   - Default value: `group-16`
         /// </summary>
         [Input("ipsecPerfectForwardSecrecy")]
@@ -789,7 +789,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -889,8 +889,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -903,7 +903,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -991,8 +991,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IKE integrity protocol
-        ///   - Choices: `main`, `aggressive`
-        ///   - Default value: `main`
+        ///   - Choices: `Main`, `Aggressive`
+        ///   - Default value: `Main`
         /// </summary>
         [Input("ikeMode")]
         public Input<string>? IkeMode { get; set; }
@@ -1113,7 +1113,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPsec perfect forward secrecy settings
-        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `none`
+        ///   - Choices: `group-1`, `group-2`, `group-5`, `group-14`, `group-15`, `group-16`, `group-19`, `group-20`, `group-21`, `group-24`, `None`
         ///   - Default value: `group-16`
         /// </summary>
         [Input("ipsecPerfectForwardSecrecy")]
@@ -1175,7 +1175,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

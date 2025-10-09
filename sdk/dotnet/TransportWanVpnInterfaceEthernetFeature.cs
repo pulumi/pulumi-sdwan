@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport WAN VPN Interface Ethernet Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -60,7 +62,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Interface auto detect bandwidth
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("autoDetectBandwidth")]
         public Output<bool?> AutoDetectBandwidth { get; private set; } = null!;
@@ -111,7 +113,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Block packets originating from IP address that is not from this source
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("blockNonSourceIp")]
         public Output<bool?> BlockNonSourceIp { get; private set; } = null!;
@@ -130,7 +132,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Output("duplex")]
         public Output<string?> Duplex { get; private set; } = null!;
@@ -142,7 +144,7 @@ namespace Pulumi.Sdwan
         public Output<string?> DuplexVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("enableDhcpv6")]
         public Output<bool?> EnableDhcpv6 { get; private set; } = null!;
@@ -167,7 +169,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("icmpRedirectDisable")]
         public Output<bool?> IcmpRedirectDisable { get; private set; } = null!;
@@ -212,7 +214,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -250,27 +252,27 @@ namespace Pulumi.Sdwan
         public Output<string?> IperfServerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4Address")]
         public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4AddressVariable")]
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
         /// IPv4 Configuration Type
-        ///   - Choices: `dynamic`, `static`
-        ///   - Default value: `dynamic`
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
         /// </summary>
         [Output("ipv4ConfigurationType")]
         public Output<string?> Ipv4ConfigurationType { get; private set; } = null!;
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
         ///   - Default value: `1`
         /// </summary>
@@ -278,7 +280,7 @@ namespace Pulumi.Sdwan
         public Output<int?> Ipv4DhcpDistance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("ipv4DhcpDistanceVariable")]
         public Output<string?> Ipv4DhcpDistanceVariable { get; private set; } = null!;
@@ -296,52 +298,52 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<string>> Ipv4DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> Ipv4SecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4SubnetMaskVariable")]
         public Output<string?> Ipv4SubnetMaskVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6Address")]
         public Output<string?> Ipv6Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
         /// IPv6 Configuration Type
-        ///   - Choices: `dynamic`, `static`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
         /// </summary>
         [Output("ipv6ConfigurationType")]
         public Output<string?> Ipv6ConfigurationType { get; private set; } = null!;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("ipv6DhcpSecondaryAddresses")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> Ipv6DhcpSecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> Ipv6SecondaryAddresses { get; private set; } = null!;
@@ -374,7 +376,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Output("mediaType")]
         public Output<string?> MediaType { get; private set; } = null!;
@@ -392,22 +394,22 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("nat64")]
         public Output<bool?> Nat64 { get; private set; } = null!;
 
         /// <summary>
-        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("nat66")]
         public Output<bool?> Nat66 { get; private set; } = null!;
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("natIpv4")]
         public Output<bool?> NatIpv4 { get; private set; } = null!;
@@ -420,7 +422,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("natIpv6")]
         public Output<bool?> NatIpv6 { get; private set; } = null!;
@@ -432,69 +434,69 @@ namespace Pulumi.Sdwan
         public Output<string?> NatIpv6Variable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natLoopback")]
         public Output<string?> NatLoopback { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natLoopbackVariable")]
         public Output<string?> NatLoopbackVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Default value: `true`
+        /// NAT Overload, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Output("natOverload")]
         public Output<bool?> NatOverload { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natOverloadVariable")]
         public Output<string?> NatOverloadVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Prefix Length, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Output("natPrefixLength")]
         public Output<int?> NatPrefixLength { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natPrefixLengthVariable")]
         public Output<string?> NatPrefixLengthVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range End, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natRangeEnd")]
         public Output<string?> NatRangeEnd { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natRangeEndVariable")]
         public Output<string?> NatRangeEndVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range Start, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natRangeStart")]
         public Output<string?> NatRangeStart { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natRangeStartVariable")]
         public Output<string?> NatRangeStartVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -502,27 +504,27 @@ namespace Pulumi.Sdwan
         public Output<int?> NatTcpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natTcpTimeoutVariable")]
         public Output<string?> NatTcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Choices: `interface`, `pool`, `loopback`
-        ///   - Default value: `interface`
+        /// NAT Type, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Choices: `Interface`, `Pool`, `Loopback`
+        ///   - Default value: `Interface`
         /// </summary>
         [Output("natType")]
         public Output<string?> NatType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natTypeVariable")]
         public Output<string?> NatTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -530,47 +532,47 @@ namespace Pulumi.Sdwan
         public Output<int?> NatUdpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("natUdpTimeoutVariable")]
         public Output<string?> NatUdpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// static NAT, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Output("newStaticNats")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat>> NewStaticNats { get; private set; } = null!;
 
         /// <summary>
-        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("perTunnelQos")]
         public Output<bool?> PerTunnelQos { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("perTunnelQosVariable")]
         public Output<string?> PerTunnelQosVariable { get; private set; } = null!;
 
         /// <summary>
         /// Adaptive QoS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("qosAdaptive")]
         public Output<bool?> QosAdaptive { get; private set; } = null!;
 
         /// <summary>
         /// Shaping Rate Downstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("qosAdaptiveBandwidthDownstream")]
         public Output<bool?> QosAdaptiveBandwidthDownstream { get; private set; } = null!;
 
         /// <summary>
         /// Shaping Rate Upstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("qosAdaptiveBandwidthUpstream")]
         public Output<bool?> QosAdaptiveBandwidthUpstream { get; private set; } = null!;
@@ -693,7 +695,7 @@ namespace Pulumi.Sdwan
         public Output<string?> ServiceProviderVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -718,7 +720,7 @@ namespace Pulumi.Sdwan
         public Output<string?> SpeedVariable { get; private set; } = null!;
 
         /// <summary>
-        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
+        /// static NAT66, Attribute conditional on `NatIpv6` being equal to `True`
         /// </summary>
         [Output("staticNat66s")]
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66>> StaticNat66s { get; private set; } = null!;
@@ -767,7 +769,7 @@ namespace Pulumi.Sdwan
         public Output<string> TransportWanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -775,21 +777,21 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelBandwidthPercent { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelBandwidthPercentVariable")]
         public Output<string?> TunnelBandwidthPercentVariable { get; private set; } = null!;
 
         /// <summary>
         /// Tunnel Interface on/off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterface")]
         public Output<bool?> TunnelInterface { get; private set; } = null!;
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowAll")]
         public Output<bool?> TunnelInterfaceAllowAll { get; private set; } = null!;
@@ -802,7 +804,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny BFD
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowBfd")]
         public Output<bool?> TunnelInterfaceAllowBfd { get; private set; } = null!;
@@ -815,7 +817,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowBgp")]
         public Output<bool?> TunnelInterfaceAllowBgp { get; private set; } = null!;
@@ -828,7 +830,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowDhcp")]
         public Output<bool?> TunnelInterfaceAllowDhcp { get; private set; } = null!;
@@ -841,7 +843,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowDns")]
         public Output<bool?> TunnelInterfaceAllowDns { get; private set; } = null!;
@@ -854,7 +856,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny HTTPS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowHttps")]
         public Output<bool?> TunnelInterfaceAllowHttps { get; private set; } = null!;
@@ -867,7 +869,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowIcmp")]
         public Output<bool?> TunnelInterfaceAllowIcmp { get; private set; } = null!;
@@ -880,7 +882,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowNetconf")]
         public Output<bool?> TunnelInterfaceAllowNetconf { get; private set; } = null!;
@@ -893,7 +895,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowNtp")]
         public Output<bool?> TunnelInterfaceAllowNtp { get; private set; } = null!;
@@ -906,7 +908,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowOspf")]
         public Output<bool?> TunnelInterfaceAllowOspf { get; private set; } = null!;
@@ -919,7 +921,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowSnmp")]
         public Output<bool?> TunnelInterfaceAllowSnmp { get; private set; } = null!;
@@ -932,7 +934,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowSsh")]
         public Output<bool?> TunnelInterfaceAllowSsh { get; private set; } = null!;
@@ -945,7 +947,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowStun")]
         public Output<bool?> TunnelInterfaceAllowStun { get; private set; } = null!;
@@ -957,93 +959,93 @@ namespace Pulumi.Sdwan
         public Output<string?> TunnelInterfaceAllowStunVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceBindLoopbackTunnel")]
         public Output<string?> TunnelInterfaceBindLoopbackTunnel { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Output<string?> TunnelInterfaceBindLoopbackTunnelVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceBorder")]
         public Output<bool?> TunnelInterfaceBorder { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceBorderVariable")]
         public Output<string?> TunnelInterfaceBorderVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Output("tunnelInterfaceCarrier")]
         public Output<string?> TunnelInterfaceCarrier { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceCarrierVariable")]
         public Output<string?> TunnelInterfaceCarrierVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceClearDontFragment")]
         public Output<bool?> TunnelInterfaceClearDontFragment { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceClearDontFragmentVariable")]
         public Output<string?> TunnelInterfaceClearDontFragmentVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Mpls`
         /// </summary>
         [Output("tunnelInterfaceColor")]
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
-        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceColorRestrict")]
         public Output<bool?> TunnelInterfaceColorRestrict { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceColorRestrictVariable")]
         public Output<string?> TunnelInterfaceColorRestrictVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceColorVariable")]
         public Output<string?> TunnelInterfaceColorVariable { get; private set; } = null!;
 
         /// <summary>
-        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceCtsSgtPropagation")]
         public Output<bool?> TunnelInterfaceCtsSgtPropagation { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceCtsSgtPropagationVariable")]
         public Output<string?> TunnelInterfaceCtsSgtPropagationVariable { get; private set; } = null!;
@@ -1055,44 +1057,44 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation>> TunnelInterfaceEncapsulations { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Output<string?> TunnelInterfaceExcludeControllerGroupListVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceExcludeControllerGroupLists")]
         public Output<ImmutableArray<int>> TunnelInterfaceExcludeControllerGroupLists { get; private set; } = null!;
 
         /// <summary>
-        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceGreTunnelDestinationIp")]
         public Output<string?> TunnelInterfaceGreTunnelDestinationIp { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Output<string?> TunnelInterfaceGreTunnelDestinationIpVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// List of groups, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Output("tunnelInterfaceGroups")]
         public Output<int?> TunnelInterfaceGroups { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceGroupsVariable")]
         public Output<string?> TunnelInterfaceGroupsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `100`-`600000`
         ///   - Default value: `1000`
         /// </summary>
@@ -1100,13 +1102,13 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelInterfaceHelloInterval { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceHelloIntervalVariable")]
         public Output<string?> TunnelInterfaceHelloIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `12`-`6000`
         ///   - Default value: `12`
         /// </summary>
@@ -1114,52 +1116,52 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelInterfaceHelloTolerance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceHelloToleranceVariable")]
         public Output<string?> TunnelInterfaceHelloToleranceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceLastResortCircuit")]
         public Output<bool?> TunnelInterfaceLastResortCircuit { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceLastResortCircuitVariable")]
         public Output<string?> TunnelInterfaceLastResortCircuitVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceLowBandwidthLink")]
         public Output<bool?> TunnelInterfaceLowBandwidthLink { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceLowBandwidthLinkVariable")]
         public Output<string?> TunnelInterfaceLowBandwidthLinkVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Maximum Control Connections, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`100`
         /// </summary>
         [Output("tunnelInterfaceMaxControlConnections")]
         public Output<int?> TunnelInterfaceMaxControlConnections { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceMaxControlConnectionsVariable")]
         public Output<string?> TunnelInterfaceMaxControlConnectionsVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`60`
         ///   - Default value: `5`
         /// </summary>
@@ -1167,65 +1169,65 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelInterfaceNatRefreshInterval { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceNatRefreshIntervalVariable")]
         public Output<string?> TunnelInterfaceNatRefreshIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceNetworkBroadcast")]
         public Output<bool?> TunnelInterfaceNetworkBroadcast { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceNetworkBroadcastVariable")]
         public Output<string?> TunnelInterfaceNetworkBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
         public Output<bool?> TunnelInterfacePortHop { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfacePortHopVariable")]
         public Output<string?> TunnelInterfacePortHopVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tunnelInterfaceTunnelTcpMss")]
         public Output<int?> TunnelInterfaceTunnelTcpMss { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceTunnelTcpMssVariable")]
         public Output<string?> TunnelInterfaceTunnelTcpMssVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceVbondAsStunServer")]
         public Output<bool?> TunnelInterfaceVbondAsStunServer { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceVbondAsStunServerVariable")]
         public Output<string?> TunnelInterfaceVbondAsStunServerVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`8`
         ///   - Default value: `5`
         /// </summary>
@@ -1233,20 +1235,20 @@ namespace Pulumi.Sdwan
         public Output<int?> TunnelInterfaceVmanageConnectionPreference { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Output<string?> TunnelInterfaceVmanageConnectionPreferenceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Hub`, `Spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Output("tunnelQosModeVariable")]
         public Output<string?> TunnelQosModeVariable { get; private set; } = null!;
@@ -1355,7 +1357,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Interface auto detect bandwidth
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("autoDetectBandwidth")]
         public Input<bool>? AutoDetectBandwidth { get; set; }
@@ -1406,7 +1408,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Block packets originating from IP address that is not from this source
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("blockNonSourceIp")]
         public Input<bool>? BlockNonSourceIp { get; set; }
@@ -1425,7 +1427,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -1437,7 +1439,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -1462,7 +1464,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -1507,7 +1509,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -1545,27 +1547,27 @@ namespace Pulumi.Sdwan
         public Input<string>? IperfServerVariable { get; set; }
 
         /// <summary>
-        /// IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
         /// IPv4 Configuration Type
-        ///   - Choices: `dynamic`, `static`
-        ///   - Default value: `dynamic`
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
         /// </summary>
         [Input("ipv4ConfigurationType")]
         public Input<string>? Ipv4ConfigurationType { get; set; }
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
         ///   - Default value: `1`
         /// </summary>
@@ -1573,7 +1575,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -1600,7 +1602,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs> Ipv4SecondaryAddresses
         {
@@ -1609,34 +1611,34 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
         /// IPv6 Configuration Type
-        ///   - Choices: `dynamic`, `static`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
         /// </summary>
         [Input("ipv6ConfigurationType")]
         public Input<string>? Ipv6ConfigurationType { get; set; }
@@ -1645,7 +1647,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -1657,7 +1659,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs> Ipv6SecondaryAddresses
         {
@@ -1693,7 +1695,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -1711,22 +1713,22 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
 
         /// <summary>
-        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat66")]
         public Input<bool>? Nat66 { get; set; }
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natIpv4")]
         public Input<bool>? NatIpv4 { get; set; }
@@ -1739,7 +1741,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natIpv6")]
         public Input<bool>? NatIpv6 { get; set; }
@@ -1751,69 +1753,69 @@ namespace Pulumi.Sdwan
         public Input<string>? NatIpv6Variable { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natLoopback")]
         public Input<string>? NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natLoopbackVariable")]
         public Input<string>? NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Default value: `true`
+        /// NAT Overload, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natOverload")]
         public Input<bool>? NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natOverloadVariable")]
         public Input<string>? NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Prefix Length, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Input("natPrefixLength")]
         public Input<int>? NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natPrefixLengthVariable")]
         public Input<string>? NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range End, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeEnd")]
         public Input<string>? NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeEndVariable")]
         public Input<string>? NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range Start, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeStart")]
         public Input<string>? NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeStartVariable")]
         public Input<string>? NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -1821,27 +1823,27 @@ namespace Pulumi.Sdwan
         public Input<int>? NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natTcpTimeoutVariable")]
         public Input<string>? NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Choices: `interface`, `pool`, `loopback`
-        ///   - Default value: `interface`
+        /// NAT Type, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Choices: `Interface`, `Pool`, `Loopback`
+        ///   - Default value: `Interface`
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natTypeVariable")]
         public Input<string>? NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -1849,7 +1851,7 @@ namespace Pulumi.Sdwan
         public Input<int>? NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natUdpTimeoutVariable")]
         public Input<string>? NatUdpTimeoutVariable { get; set; }
@@ -1858,7 +1860,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs>? _newStaticNats;
 
         /// <summary>
-        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// static NAT, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs> NewStaticNats
         {
@@ -1867,35 +1869,35 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("perTunnelQosVariable")]
         public Input<string>? PerTunnelQosVariable { get; set; }
 
         /// <summary>
         /// Adaptive QoS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptive")]
         public Input<bool>? QosAdaptive { get; set; }
 
         /// <summary>
         /// Shaping Rate Downstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptiveBandwidthDownstream")]
         public Input<bool>? QosAdaptiveBandwidthDownstream { get; set; }
 
         /// <summary>
         /// Shaping Rate Upstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptiveBandwidthUpstream")]
         public Input<bool>? QosAdaptiveBandwidthUpstream { get; set; }
@@ -2018,7 +2020,7 @@ namespace Pulumi.Sdwan
         public Input<string>? ServiceProviderVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -2046,7 +2048,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args>? _staticNat66s;
 
         /// <summary>
-        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
+        /// static NAT66, Attribute conditional on `NatIpv6` being equal to `True`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args> StaticNat66s
         {
@@ -2098,7 +2100,7 @@ namespace Pulumi.Sdwan
         public Input<string> TransportWanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -2106,21 +2108,21 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
 
         /// <summary>
         /// Tunnel Interface on/off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterface")]
         public Input<bool>? TunnelInterface { get; set; }
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowAll")]
         public Input<bool>? TunnelInterfaceAllowAll { get; set; }
@@ -2133,7 +2135,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny BFD
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBfd")]
         public Input<bool>? TunnelInterfaceAllowBfd { get; set; }
@@ -2146,7 +2148,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBgp")]
         public Input<bool>? TunnelInterfaceAllowBgp { get; set; }
@@ -2159,7 +2161,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDhcp")]
         public Input<bool>? TunnelInterfaceAllowDhcp { get; set; }
@@ -2172,7 +2174,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDns")]
         public Input<bool>? TunnelInterfaceAllowDns { get; set; }
@@ -2185,7 +2187,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny HTTPS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowHttps")]
         public Input<bool>? TunnelInterfaceAllowHttps { get; set; }
@@ -2198,7 +2200,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowIcmp")]
         public Input<bool>? TunnelInterfaceAllowIcmp { get; set; }
@@ -2211,7 +2213,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNetconf")]
         public Input<bool>? TunnelInterfaceAllowNetconf { get; set; }
@@ -2224,7 +2226,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowNtp")]
         public Input<bool>? TunnelInterfaceAllowNtp { get; set; }
@@ -2237,7 +2239,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowOspf")]
         public Input<bool>? TunnelInterfaceAllowOspf { get; set; }
@@ -2250,7 +2252,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSnmp")]
         public Input<bool>? TunnelInterfaceAllowSnmp { get; set; }
@@ -2263,7 +2265,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowSsh")]
         public Input<bool>? TunnelInterfaceAllowSsh { get; set; }
@@ -2276,7 +2278,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowStun")]
         public Input<bool>? TunnelInterfaceAllowStun { get; set; }
@@ -2288,93 +2290,93 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceAllowStunVariable { get; set; }
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnel")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnel { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnelVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBorderVariable")]
         public Input<string>? TunnelInterfaceBorderVariable { get; set; }
 
         /// <summary>
-        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceCarrierVariable")]
         public Input<string>? TunnelInterfaceCarrierVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragmentVariable")]
         public Input<string>? TunnelInterfaceClearDontFragmentVariable { get; set; }
 
         /// <summary>
-        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
-        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceColorRestrictVariable")]
         public Input<string>? TunnelInterfaceColorRestrictVariable { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
         public Input<string>? TunnelInterfaceColorVariable { get; set; }
 
         /// <summary>
-        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagation")]
         public Input<bool>? TunnelInterfaceCtsSgtPropagation { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagationVariable")]
         public Input<string>? TunnelInterfaceCtsSgtPropagationVariable { get; set; }
@@ -2392,7 +2394,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Input<string>? TunnelInterfaceExcludeControllerGroupListVariable { get; set; }
@@ -2401,7 +2403,7 @@ namespace Pulumi.Sdwan
         private InputList<int>? _tunnelInterfaceExcludeControllerGroupLists;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         public InputList<int> TunnelInterfaceExcludeControllerGroupLists
         {
@@ -2410,32 +2412,32 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIp")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIp { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIpVariable { get; set; }
 
         /// <summary>
-        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// List of groups, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("tunnelInterfaceGroups")]
         public Input<int>? TunnelInterfaceGroups { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGroupsVariable")]
         public Input<string>? TunnelInterfaceGroupsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `100`-`600000`
         ///   - Default value: `1000`
         /// </summary>
@@ -2443,13 +2445,13 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceHelloInterval { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceHelloIntervalVariable")]
         public Input<string>? TunnelInterfaceHelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `12`-`6000`
         ///   - Default value: `12`
         /// </summary>
@@ -2457,52 +2459,52 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceHelloTolerance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceHelloToleranceVariable")]
         public Input<string>? TunnelInterfaceHelloToleranceVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuitVariable")]
         public Input<string>? TunnelInterfaceLastResortCircuitVariable { get; set; }
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLinkVariable")]
         public Input<string>? TunnelInterfaceLowBandwidthLinkVariable { get; set; }
 
         /// <summary>
-        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Maximum Control Connections, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`100`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnections")]
         public Input<int>? TunnelInterfaceMaxControlConnections { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnectionsVariable")]
         public Input<string>? TunnelInterfaceMaxControlConnectionsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`60`
         ///   - Default value: `5`
         /// </summary>
@@ -2510,65 +2512,65 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceNatRefreshInterval { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshIntervalVariable")]
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcastVariable")]
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfacePortHopVariable")]
         public Input<string>? TunnelInterfacePortHopVariable { get; set; }
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMss")]
         public Input<int>? TunnelInterfaceTunnelTcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMssVariable")]
         public Input<string>? TunnelInterfaceTunnelTcpMssVariable { get; set; }
 
         /// <summary>
-        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServerVariable")]
         public Input<string>? TunnelInterfaceVbondAsStunServerVariable { get; set; }
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`8`
         ///   - Default value: `5`
         /// </summary>
@@ -2576,20 +2578,20 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceVmanageConnectionPreference { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Hub`, `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelQosModeVariable")]
         public Input<string>? TunnelQosModeVariable { get; set; }
@@ -2654,7 +2656,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Interface auto detect bandwidth
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("autoDetectBandwidth")]
         public Input<bool>? AutoDetectBandwidth { get; set; }
@@ -2705,7 +2707,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Block packets originating from IP address that is not from this source
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("blockNonSourceIp")]
         public Input<bool>? BlockNonSourceIp { get; set; }
@@ -2724,7 +2726,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -2736,7 +2738,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -2761,7 +2763,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -2806,7 +2808,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -2844,27 +2846,27 @@ namespace Pulumi.Sdwan
         public Input<string>? IperfServerVariable { get; set; }
 
         /// <summary>
-        /// IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
         /// IPv4 Configuration Type
-        ///   - Choices: `dynamic`, `static`
-        ///   - Default value: `dynamic`
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
         /// </summary>
         [Input("ipv4ConfigurationType")]
         public Input<string>? Ipv4ConfigurationType { get; set; }
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
         ///   - Default value: `1`
         /// </summary>
@@ -2872,7 +2874,7 @@ namespace Pulumi.Sdwan
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -2899,7 +2901,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs> Ipv4SecondaryAddresses
         {
@@ -2908,34 +2910,34 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
         /// IPv6 Configuration Type
-        ///   - Choices: `dynamic`, `static`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
         /// </summary>
         [Input("ipv6ConfigurationType")]
         public Input<string>? Ipv6ConfigurationType { get; set; }
@@ -2944,7 +2946,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -2956,7 +2958,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs> Ipv6SecondaryAddresses
         {
@@ -2992,7 +2994,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -3010,22 +3012,22 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// NAT64 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT64 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
 
         /// <summary>
-        /// NAT66 on this interface, Attribute conditional on `nat_ipv6` being equal to `true`
-        ///   - Default value: `false`
+        /// NAT66 on this interface, Attribute conditional on `NatIpv6` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat66")]
         public Input<bool>? Nat66 { get; set; }
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natIpv4")]
         public Input<bool>? NatIpv4 { get; set; }
@@ -3038,7 +3040,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natIpv6")]
         public Input<bool>? NatIpv6 { get; set; }
@@ -3050,69 +3052,69 @@ namespace Pulumi.Sdwan
         public Input<string>? NatIpv6Variable { get; set; }
 
         /// <summary>
-        /// NAT Inside Source Loopback Interface, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Inside Source Loopback Interface, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natLoopback")]
         public Input<string>? NatLoopback { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natLoopbackVariable")]
         public Input<string>? NatLoopbackVariable { get; set; }
 
         /// <summary>
-        /// NAT Overload, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Default value: `true`
+        /// NAT Overload, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natOverload")]
         public Input<bool>? NatOverload { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natOverloadVariable")]
         public Input<string>? NatOverloadVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Prefix Length, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Prefix Length, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`32`
         /// </summary>
         [Input("natPrefixLength")]
         public Input<int>? NatPrefixLength { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natPrefixLengthVariable")]
         public Input<string>? NatPrefixLengthVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range End, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range End, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeEnd")]
         public Input<string>? NatRangeEnd { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeEndVariable")]
         public Input<string>? NatRangeEndVariable { get; set; }
 
         /// <summary>
-        /// NAT Pool Range Start, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// NAT Pool Range Start, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeStart")]
         public Input<string>? NatRangeStart { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natRangeStartVariable")]
         public Input<string>? NatRangeStartVariable { get; set; }
 
         /// <summary>
-        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT TCP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `60`
         /// </summary>
@@ -3120,27 +3122,27 @@ namespace Pulumi.Sdwan
         public Input<int>? NatTcpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natTcpTimeoutVariable")]
         public Input<string>? NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type, Attribute conditional on `nat_ipv4` being equal to `true`
-        ///   - Choices: `interface`, `pool`, `loopback`
-        ///   - Default value: `interface`
+        /// NAT Type, Attribute conditional on `NatIpv4` being equal to `True`
+        ///   - Choices: `Interface`, `Pool`, `Loopback`
+        ///   - Default value: `Interface`
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natTypeVariable")]
         public Input<string>? NatTypeVariable { get; set; }
 
         /// <summary>
-        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Set NAT UDP session timeout, in minutes, Attribute conditional on `NatIpv4` being equal to `True`
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
         /// </summary>
@@ -3148,7 +3150,7 @@ namespace Pulumi.Sdwan
         public Input<int>? NatUdpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// Variable name, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         [Input("natUdpTimeoutVariable")]
         public Input<string>? NatUdpTimeoutVariable { get; set; }
@@ -3157,7 +3159,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatGetArgs>? _newStaticNats;
 
         /// <summary>
-        /// static NAT, Attribute conditional on `nat_ipv4` being equal to `true`
+        /// static NAT, Attribute conditional on `NatIpv4` being equal to `True`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatGetArgs> NewStaticNats
         {
@@ -3166,35 +3168,35 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Per-tunnel Qos, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Per-tunnel Qos, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("perTunnelQosVariable")]
         public Input<string>? PerTunnelQosVariable { get; set; }
 
         /// <summary>
         /// Adaptive QoS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptive")]
         public Input<bool>? QosAdaptive { get; set; }
 
         /// <summary>
         /// Shaping Rate Downstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptiveBandwidthDownstream")]
         public Input<bool>? QosAdaptiveBandwidthDownstream { get; set; }
 
         /// <summary>
         /// Shaping Rate Upstream
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("qosAdaptiveBandwidthUpstream")]
         public Input<bool>? QosAdaptiveBandwidthUpstream { get; set; }
@@ -3317,7 +3319,7 @@ namespace Pulumi.Sdwan
         public Input<string>? ServiceProviderVariable { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -3345,7 +3347,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66GetArgs>? _staticNat66s;
 
         /// <summary>
-        /// static NAT66, Attribute conditional on `nat_ipv6` being equal to `true`
+        /// static NAT66, Attribute conditional on `NatIpv6` being equal to `True`
         /// </summary>
         public InputList<Inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66GetArgs> StaticNat66s
         {
@@ -3397,7 +3399,7 @@ namespace Pulumi.Sdwan
         public Input<string>? TransportWanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// Tunnels Bandwidth Percent, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnels Bandwidth Percent, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`100`
         ///   - Default value: `50`
         /// </summary>
@@ -3405,21 +3407,21 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelBandwidthPercent { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelBandwidthPercentVariable")]
         public Input<string>? TunnelBandwidthPercentVariable { get; set; }
 
         /// <summary>
         /// Tunnel Interface on/off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterface")]
         public Input<bool>? TunnelInterface { get; set; }
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowAll")]
         public Input<bool>? TunnelInterfaceAllowAll { get; set; }
@@ -3432,7 +3434,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny BFD
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBfd")]
         public Input<bool>? TunnelInterfaceAllowBfd { get; set; }
@@ -3445,7 +3447,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBgp")]
         public Input<bool>? TunnelInterfaceAllowBgp { get; set; }
@@ -3458,7 +3460,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDhcp")]
         public Input<bool>? TunnelInterfaceAllowDhcp { get; set; }
@@ -3471,7 +3473,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDns")]
         public Input<bool>? TunnelInterfaceAllowDns { get; set; }
@@ -3484,7 +3486,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny HTTPS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowHttps")]
         public Input<bool>? TunnelInterfaceAllowHttps { get; set; }
@@ -3497,7 +3499,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowIcmp")]
         public Input<bool>? TunnelInterfaceAllowIcmp { get; set; }
@@ -3510,7 +3512,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNetconf")]
         public Input<bool>? TunnelInterfaceAllowNetconf { get; set; }
@@ -3523,7 +3525,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowNtp")]
         public Input<bool>? TunnelInterfaceAllowNtp { get; set; }
@@ -3536,7 +3538,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowOspf")]
         public Input<bool>? TunnelInterfaceAllowOspf { get; set; }
@@ -3549,7 +3551,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSnmp")]
         public Input<bool>? TunnelInterfaceAllowSnmp { get; set; }
@@ -3562,7 +3564,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowSsh")]
         public Input<bool>? TunnelInterfaceAllowSsh { get; set; }
@@ -3575,7 +3577,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowStun")]
         public Input<bool>? TunnelInterfaceAllowStun { get; set; }
@@ -3587,93 +3589,93 @@ namespace Pulumi.Sdwan
         public Input<string>? TunnelInterfaceAllowStunVariable { get; set; }
 
         /// <summary>
-        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Bind loopback tunnel interface to a physical interface, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnel")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnel { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBindLoopbackTunnelVariable")]
         public Input<string>? TunnelInterfaceBindLoopbackTunnelVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as border TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as border TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceBorderVariable")]
         public Input<string>? TunnelInterfaceBorderVariable { get; set; }
 
         /// <summary>
-        /// Set carrier for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        /// Set carrier for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceCarrierVariable")]
         public Input<string>? TunnelInterfaceCarrierVariable { get; set; }
 
         /// <summary>
-        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragmentVariable")]
         public Input<string>? TunnelInterfaceClearDontFragmentVariable { get; set; }
 
         /// <summary>
-        /// Set color for TLOC, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `mpls`
+        /// Set color for TLOC, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Mpls`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
-        /// Restrict this TLOC behavior, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Restrict this TLOC behavior, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceColorRestrictVariable")]
         public Input<string>? TunnelInterfaceColorRestrictVariable { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceColorVariable")]
         public Input<string>? TunnelInterfaceColorVariable { get; set; }
 
         /// <summary>
-        /// CTS SGT Propagation configuration, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// CTS SGT Propagation configuration, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagation")]
         public Input<bool>? TunnelInterfaceCtsSgtPropagation { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceCtsSgtPropagationVariable")]
         public Input<string>? TunnelInterfaceCtsSgtPropagationVariable { get; set; }
@@ -3691,7 +3693,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceExcludeControllerGroupListVariable")]
         public Input<string>? TunnelInterfaceExcludeControllerGroupListVariable { get; set; }
@@ -3700,7 +3702,7 @@ namespace Pulumi.Sdwan
         private InputList<int>? _tunnelInterfaceExcludeControllerGroupLists;
 
         /// <summary>
-        /// Exclude the following controller groups defined in this list., Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Exclude the following controller groups defined in this list., Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         public InputList<int> TunnelInterfaceExcludeControllerGroupLists
         {
@@ -3709,32 +3711,32 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// GRE tunnel destination IP, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// GRE tunnel destination IP, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIp")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIp { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGreTunnelDestinationIpVariable")]
         public Input<string>? TunnelInterfaceGreTunnelDestinationIpVariable { get; set; }
 
         /// <summary>
-        /// List of groups, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// List of groups, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("tunnelInterfaceGroups")]
         public Input<int>? TunnelInterfaceGroups { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceGroupsVariable")]
         public Input<string>? TunnelInterfaceGroupsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `100`-`600000`
         ///   - Default value: `1000`
         /// </summary>
@@ -3742,13 +3744,13 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceHelloInterval { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceHelloIntervalVariable")]
         public Input<string>? TunnelInterfaceHelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `12`-`6000`
         ///   - Default value: `12`
         /// </summary>
@@ -3756,52 +3758,52 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceHelloTolerance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceHelloToleranceVariable")]
         public Input<string>? TunnelInterfaceHelloToleranceVariable { get; set; }
 
         /// <summary>
-        /// Set TLOC as last resort, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set TLOC as last resort, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuitVariable")]
         public Input<string>? TunnelInterfaceLastResortCircuitVariable { get; set; }
 
         /// <summary>
-        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Set the interface as a low-bandwidth circuit, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLinkVariable")]
         public Input<string>? TunnelInterfaceLowBandwidthLinkVariable { get; set; }
 
         /// <summary>
-        /// Maximum Control Connections, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Maximum Control Connections, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`100`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnections")]
         public Input<int>? TunnelInterfaceMaxControlConnections { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceMaxControlConnectionsVariable")]
         public Input<string>? TunnelInterfaceMaxControlConnectionsVariable { get; set; }
 
         /// <summary>
-        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `1`-`60`
         ///   - Default value: `5`
         /// </summary>
@@ -3809,65 +3811,65 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceNatRefreshInterval { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceNatRefreshIntervalVariable")]
         public Input<string>? TunnelInterfaceNatRefreshIntervalVariable { get; set; }
 
         /// <summary>
-        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcastVariable")]
         public Input<string>? TunnelInterfaceNetworkBroadcastVariable { get; set; }
 
         /// <summary>
-        /// Disallow port hopping on the tunnel interface, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `true`
+        /// Disallow port hopping on the tunnel interface, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfacePortHopVariable")]
         public Input<string>? TunnelInterfacePortHopVariable { get; set; }
 
         /// <summary>
-        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMss")]
         public Input<int>? TunnelInterfaceTunnelTcpMss { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceTunnelTcpMssVariable")]
         public Input<string>? TunnelInterfaceTunnelTcpMssVariable { get; set; }
 
         /// <summary>
-        /// Put this wan interface in STUN mode only, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Default value: `false`
+        /// Put this wan interface in STUN mode only, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServerVariable")]
         public Input<string>? TunnelInterfaceVbondAsStunServerVariable { get; set; }
 
         /// <summary>
-        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `TunnelInterface` being equal to `True`
         ///   - Range: `0`-`8`
         ///   - Default value: `5`
         /// </summary>
@@ -3875,20 +3877,20 @@ namespace Pulumi.Sdwan
         public Input<int>? TunnelInterfaceVmanageConnectionPreference { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelInterfaceVmanageConnectionPreferenceVariable")]
         public Input<string>? TunnelInterfaceVmanageConnectionPreferenceVariable { get; set; }
 
         /// <summary>
-        /// Set tunnel QoS mode, Attribute conditional on `tunnel_interface` being equal to `true`
-        ///   - Choices: `hub`, `spoke`
+        /// Set tunnel QoS mode, Attribute conditional on `TunnelInterface` being equal to `True`
+        ///   - Choices: `Hub`, `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `tunnel_interface` being equal to `true`
+        /// Variable name, Attribute conditional on `TunnelInterface` being equal to `True`
         /// </summary>
         [Input("tunnelQosModeVariable")]
         public Input<string>? TunnelQosModeVariable { get; set; }

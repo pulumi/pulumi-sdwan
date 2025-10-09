@@ -44,8 +44,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set EIGRP address family
-        ///   - Choices: `ipv4`
-        ///   - Default value: `ipv4`
+        ///   - Choices: `Ipv4`
+        ///   - Default value: `Ipv4`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

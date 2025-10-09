@@ -20,7 +20,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
     private String id;
     /**
      * @return Feature template type
-     *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
+     *   - Choices: `ciscoDhcpServer`, `cellular-cedge-profile`
      * 
      */
     private String type;
@@ -40,7 +40,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate {
     }
     /**
      * @return Feature template type
-     *   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
+     *   - Choices: `ciscoDhcpServer`, `cellular-cedge-profile`
      * 
      */
     public String type() {

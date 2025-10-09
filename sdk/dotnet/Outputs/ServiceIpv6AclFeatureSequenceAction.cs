@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AcceptCounterName;
         /// <summary>
         /// Enable Log
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AcceptLog;
         public readonly string? AcceptMirrorListId;
@@ -39,7 +39,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? DropCounterName;
         /// <summary>
         /// Enable Log
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? DropLog;
 

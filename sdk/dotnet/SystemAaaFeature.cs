@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System AAA Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,7 +30,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("accountingGroup")]
         public Output<bool?> AccountingGroup { get; private set; } = null!;
@@ -47,7 +49,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authenticationGroup")]
         public Output<bool?> AuthenticationGroup { get; private set; } = null!;
@@ -60,7 +62,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -73,7 +75,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -186,7 +188,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -211,7 +213,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -224,7 +226,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -237,7 +239,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -336,7 +338,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("accountingGroup")]
         public Input<bool>? AccountingGroup { get; set; }
@@ -361,7 +363,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authenticationGroup")]
         public Input<bool>? AuthenticationGroup { get; set; }
@@ -374,7 +376,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -387,7 +389,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }

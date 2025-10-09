@@ -19,6 +19,8 @@ import javax.annotation.Nullable;
 /**
  * This resource can manage a VPN Membership Policy Definition .
  * 
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

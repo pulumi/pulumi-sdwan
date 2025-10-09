@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Accounting Method
-        ///   - Choices: `commands`, `exec`, `network`, `system`
+        ///   - Choices: `Commands`, `Exec`, `Network`, `System`
         /// </summary>
         [Input("method")]
         public Input<string>? Method { get; set; }
@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Record start and stop without waiting
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("startStop")]
         public Input<bool>? StartStop { get; set; }

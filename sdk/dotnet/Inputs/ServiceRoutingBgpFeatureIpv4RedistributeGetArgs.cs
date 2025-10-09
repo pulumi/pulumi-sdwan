@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set the protocol to redistribute routes from
-        ///   - Choices: `static`, `connected`, `omp`, `nat`, `ospf`, `ospfv3`, `eigrp`
+        ///   - Choices: `Static`, `Connected`, `Omp`, `Nat`, `Ospf`, `Ospfv3`, `Eigrp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -29,8 +29,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RoutePolicyId { get; set; }
 
         /// <summary>
-        /// Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
-        ///   - Default value: `false`
+        /// Translate Rib Metric, Attribute conditional on `Protocol` being equal to `Omp`
+        ///   - Default value: `False`
         /// </summary>
         [Input("translateRibMetric")]
         public Input<bool>? TranslateRibMetric { get; set; }

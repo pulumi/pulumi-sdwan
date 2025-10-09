@@ -61,8 +61,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// key type
-        ///   - Choices: `key`, `pac`
-        ///   - Default value: `key`
+        ///   - Choices: `Key`, `Pac`
+        ///   - Default value: `Key`
         /// </summary>
         [Input("keyType")]
         public Input<string>? KeyType { get; set; }

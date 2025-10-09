@@ -82,14 +82,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+     * Set passphrase, Attribute conditional on `securityType` being equal to `personal`
      * 
      */
     @Import(name="passphrase")
     private @Nullable Output<String> passphrase;
 
     /**
-     * @return Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+     * @return Set passphrase, Attribute conditional on `securityType` being equal to `personal`
      * 
      */
     public Optional<Output<String>> passphrase() {
@@ -97,14 +97,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Variable name, Attribute conditional on `security_type` being equal to `personal`
+     * Variable name, Attribute conditional on `securityType` being equal to `personal`
      * 
      */
     @Import(name="passphraseVariable")
     private @Nullable Output<String> passphraseVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `security_type` being equal to `personal`
+     * @return Variable name, Attribute conditional on `securityType` being equal to `personal`
      * 
      */
     public Optional<Output<String>> passphraseVariable() {
@@ -180,14 +180,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+     * Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     @Import(name="radiusServerIp")
     private @Nullable Output<String> radiusServerIp;
 
     /**
-     * @return Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     public Optional<Output<String>> radiusServerIp() {
@@ -195,14 +195,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     @Import(name="radiusServerIpVariable")
     private @Nullable Output<String> radiusServerIpVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     public Optional<Output<String>> radiusServerIpVariable() {
@@ -210,7 +210,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+     * Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      * 
@@ -219,7 +219,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     private @Nullable Output<Integer> radiusServerPort;
 
     /**
-     * @return Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      * 
@@ -229,14 +229,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     @Import(name="radiusServerPortVariable")
     private @Nullable Output<String> radiusServerPortVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     public Optional<Output<String>> radiusServerPortVariable() {
@@ -244,14 +244,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     @Import(name="radiusServerSecret")
     private @Nullable Output<String> radiusServerSecret;
 
     /**
-     * @return Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     public Optional<Output<String>> radiusServerSecret() {
@@ -259,14 +259,14 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
     }
 
     /**
-     * Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     @Import(name="radiusServerSecretVariable")
     private @Nullable Output<String> radiusServerSecretVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
      * 
      */
     public Optional<Output<String>> radiusServerSecretVariable() {
@@ -469,7 +469,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passphrase Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+         * @param passphrase Set passphrase, Attribute conditional on `securityType` being equal to `personal`
          * 
          * @return builder
          * 
@@ -480,7 +480,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passphrase Set passphrase, Attribute conditional on `security_type` being equal to `personal`
+         * @param passphrase Set passphrase, Attribute conditional on `securityType` being equal to `personal`
          * 
          * @return builder
          * 
@@ -490,7 +490,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passphraseVariable Variable name, Attribute conditional on `security_type` being equal to `personal`
+         * @param passphraseVariable Variable name, Attribute conditional on `securityType` being equal to `personal`
          * 
          * @return builder
          * 
@@ -501,7 +501,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passphraseVariable Variable name, Attribute conditional on `security_type` being equal to `personal`
+         * @param passphraseVariable Variable name, Attribute conditional on `securityType` being equal to `personal`
          * 
          * @return builder
          * 
@@ -603,7 +603,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerIp Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerIp Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -614,7 +614,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerIp Set RADIUS server IP, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerIp Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -624,7 +624,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerIpVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerIpVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -635,7 +635,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerIpVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerIpVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -645,7 +645,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerPort Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerPort Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
          *   - Range: `1`-`65535`
          *   - Default value: `1812`
          * 
@@ -658,7 +658,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerPort Set RADIUS server authentication port, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerPort Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
          *   - Range: `1`-`65535`
          *   - Default value: `1812`
          * 
@@ -670,7 +670,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerPortVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerPortVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -681,7 +681,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerPortVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerPortVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -691,7 +691,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -702,7 +702,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerSecret Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -712,7 +712,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerSecretVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerSecretVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 
@@ -723,7 +723,7 @@ public final class ServiceWirelessLanFeatureSsidArgs extends com.pulumi.resource
         }
 
         /**
-         * @param radiusServerSecretVariable Variable name, Attribute conditional on `security_type` being equal to `enterprise`
+         * @param radiusServerSecretVariable Variable name, Attribute conditional on `securityType` being equal to `enterprise`
          * 
          * @return builder
          * 

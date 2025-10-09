@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? Layer2Cos;
         /// <summary>
         /// Priority
-        ///   - Choices: `high`, `low`
+        ///   - Choices: `High`, `Low`
         /// </summary>
         public readonly string Priority;
 

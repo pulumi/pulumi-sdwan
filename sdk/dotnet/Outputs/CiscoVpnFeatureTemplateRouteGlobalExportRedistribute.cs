@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Select a Route Protocol to enable redistribution
-        ///   - Choices: `bgp`, `ospf`
+        ///   - Choices: `Bgp`, `Ospf`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

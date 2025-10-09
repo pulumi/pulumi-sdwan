@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Override matching AS-number while sending update
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("asOverride")]
         public Input<bool>? AsOverride { get; set; }
@@ -90,7 +90,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send explicit null label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("explicitNull")]
         public Input<bool>? ExplicitNull { get; set; }
@@ -143,7 +143,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nextHopSelf")]
         public Input<bool>? NextHopSelf { get; set; }
@@ -180,7 +180,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("sendCommunity")]
         public Input<bool>? SendCommunity { get; set; }
@@ -193,7 +193,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send extended community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("sendExtendedCommunity")]
         public Input<bool>? SendExtendedCommunity { get; set; }
@@ -206,14 +206,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Send label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sendLabel")]
         public Input<bool>? SendLabel { get; set; }
 
         /// <summary>
         /// Enable or disable a BGP neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

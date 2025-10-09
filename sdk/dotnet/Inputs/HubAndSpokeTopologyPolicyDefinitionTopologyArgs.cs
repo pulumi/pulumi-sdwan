@@ -43,7 +43,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// TLOC list ID (required when `advertise_hub_tlocs` is 'true')
+        /// TLOC list ID (required when `AdvertiseHubTlocs` is 'true')
         /// </summary>
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }

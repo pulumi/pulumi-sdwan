@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Color that identifies the WAN transport tunnel
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
         /// </summary>
         [Input("color")]
         public Input<string>? Color { get; set; }
@@ -69,7 +69,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Path MTU Discovery
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("pmtuDiscovery")]
         public Input<bool>? PmtuDiscovery { get; set; }

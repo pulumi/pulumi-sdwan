@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string Id;
         /// <summary>
         /// Policy definition type
-        ///   - Choices: `hubAndSpoke`, `mesh`, `control`, `vpnMembershipGroup`, `appRoute`, `cflowd`, `data`
+        ///   - Choices: `hubAndSpoke`, `Mesh`, `Control`, `vpnMembershipGroup`, `appRoute`, `Cflowd`, `Data`
         /// </summary>
         public readonly string Type;
         /// <summary>

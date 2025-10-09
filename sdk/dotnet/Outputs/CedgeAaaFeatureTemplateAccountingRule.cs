@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Groups;
         /// <summary>
         /// Configure Accounting Method
-        ///   - Choices: `commands`, `exec`, `network`, `system`
+        ///   - Choices: `Commands`, `Exec`, `Network`, `System`
         /// </summary>
         public readonly string? Method;
         /// <summary>
@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PrivilegeLevel;
         /// <summary>
         /// Record start and stop without waiting
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? StartStop;
         /// <summary>

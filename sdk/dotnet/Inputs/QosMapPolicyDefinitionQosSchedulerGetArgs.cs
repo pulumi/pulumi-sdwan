@@ -61,7 +61,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Scheduling type
-        ///   - Choices: `llq`, `wrr`
+        ///   - Choices: `Llq`, `Wrr`
         /// </summary>
         [Input("schedulingType", required: true)]
         public Input<string> SchedulingType { get; set; } = null!;

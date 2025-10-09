@@ -32,8 +32,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set uni or bi directional authorization mode
-        ///   - Choices: `both`, `in`
-        ///   - Default value: `both`
+        ///   - Choices: `Both`, `In`
+        ///   - Default value: `Both`
         /// </summary>
         [Input("dot1xControlDirection")]
         public Input<string>? Dot1xControlDirection { get; set; }
@@ -59,14 +59,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set 802.1x on off
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("dot1xEnable")]
         public Input<bool>? Dot1xEnable { get; set; }
 
         /// <summary>
         /// Enable Critical Voice VLAN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xEnableCriticialVoiceVlan")]
         public Input<bool>? Dot1xEnableCriticialVoiceVlan { get; set; }
@@ -79,7 +79,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable Periodic Reauthentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xEnablePeriodicReauth")]
         public Input<bool>? Dot1xEnablePeriodicReauth { get; set; }
@@ -125,7 +125,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// MAC Authentication Bypass
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xMacAuthenticationBypass")]
         public Input<bool>? Dot1xMacAuthenticationBypass { get; set; }
@@ -138,7 +138,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set 802.1x Interface Pae Type
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("dot1xPaeEnable")]
         public Input<bool>? Dot1xPaeEnable { get; set; }
@@ -179,8 +179,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set Port-Control Mode
-        ///   - Choices: `auto`, `force-unauthorized`, `force-authorized`
-        ///   - Default value: `auto`
+        ///   - Choices: `Auto`, `force-unauthorized`, `force-authorized`
+        ///   - Default value: `Auto`
         /// </summary>
         [Input("dot1xPortControl")]
         public Input<string>? Dot1xPortControl { get; set; }
@@ -206,7 +206,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`
+        ///   - Choices: `Full`, `Half`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -237,7 +237,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -276,7 +276,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set type of switch port: access/trunk
-        ///   - Choices: `access`, `trunk`
+        ///   - Choices: `Access`, `Trunk`
         /// </summary>
         [Input("switchportMode")]
         public Input<string>? SwitchportMode { get; set; }

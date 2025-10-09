@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Criteria attribute
-        ///   - Choices: `tag`
+        ///   - Choices: `Tag`
         /// </summary>
         [Input("criteriaAttribute", required: true)]
         public Input<string> CriteriaAttribute { get; set; } = null!;

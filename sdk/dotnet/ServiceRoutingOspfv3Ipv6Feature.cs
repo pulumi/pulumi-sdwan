@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Routing OSPFv3 IPv6 Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -59,7 +61,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("defaultInformationOriginateMetricType")]
         public Output<string?> DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -146,7 +148,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -185,7 +187,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("rfc1583Compatible")]
         public Output<bool?> Rfc1583Compatible { get; private set; } = null!;
@@ -363,7 +365,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -450,7 +452,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -495,7 +497,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }
@@ -629,7 +631,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route metric type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -716,7 +718,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Table map filtered or not
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -761,7 +763,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }

@@ -647,6 +647,8 @@ class OtherUcseFeature(pulumi.CustomResource):
         This resource can manage a Other UCSE Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -693,6 +695,8 @@ class OtherUcseFeature(pulumi.CustomResource):
         """
         This resource can manage a Other UCSE Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

@@ -40,12 +40,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? InterfaceType;
         /// <summary>
         /// Internal
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Internal;
         /// <summary>
         /// Line Mode
-        ///   - Choices: `secondary`, `primary`
+        ///   - Choices: `Secondary`, `Primary`
         /// </summary>
         public readonly string? LineMode;
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? LineModeVariable;
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `b8zs`, `hdb3`
+        ///   - Choices: `Ami`, `B8zs`, `Hdb3`
         /// </summary>
         public readonly string? Linecode;
         /// <summary>

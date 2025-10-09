@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AreaNumberVariable;
         /// <summary>
         /// stub area type
-        ///   - Choices: `stub`
+        ///   - Choices: `Stub`
         /// </summary>
         public readonly string? AreaType;
         /// <summary>

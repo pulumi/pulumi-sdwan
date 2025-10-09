@@ -19,8 +19,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.ServiceIpv4AclFeatureSequenceAction> Actions;
         /// <summary>
         /// Base Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `accept`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Accept`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>
