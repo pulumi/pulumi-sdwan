@@ -25,8 +25,8 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Base action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Base action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("baseAction")]
         public Input<string>? BaseAction { get; set; }
@@ -38,8 +38,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int> Id { get; set; } = null!;
 
         /// <summary>
-        /// Sequence IP type, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Sequence IP type, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("ipType")]
         public Input<string>? IpType { get; set; }
@@ -63,8 +63,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Sequence type, either `route` or `tloc`
-        ///   - Choices: `route`, `tloc`
+        /// Sequence type, either `Route` or `Tloc`
+        ///   - Choices: `Route`, `Tloc`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

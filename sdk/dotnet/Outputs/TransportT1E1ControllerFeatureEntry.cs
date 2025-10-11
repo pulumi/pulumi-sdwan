@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Cable Config
-        ///   - Choices: `short`, `long`
+        ///   - Choices: `Short`, `Long`
         /// </summary>
         public readonly string? CableLength;
         /// <summary>
@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.TransportT1E1ControllerFeatureEntryChannelGroup> ChannelGroups;
         /// <summary>
         /// Clock Source
-        ///   - Choices: `line`, `internal`, `loop-timed`, `network`
+        ///   - Choices: `Line`, `Internal`, `loop-timed`, `Network`
         /// </summary>
         public readonly string? ClockSource;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? E1Description;
         /// <summary>
         /// Framing
-        ///   - Choices: `crc4`, `no-crc4`
+        ///   - Choices: `Crc4`, `no-crc4`
         /// </summary>
         public readonly string? E1Framing;
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? E1FramingVariable;
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `hdb3`
+        ///   - Choices: `Ami`, `Hdb3`
         /// </summary>
         public readonly string? E1Linecode;
         /// <summary>
@@ -59,26 +59,26 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? E1LinecodeVariable;
         /// <summary>
-        /// length, Attribute conditional on `cable_length` being equal to `long`
+        /// length, Attribute conditional on `CableLength` being equal to `Long`
         ///   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
         /// </summary>
         public readonly string? LengthLong;
         /// <summary>
-        /// Variable name, Attribute conditional on `cable_length` being equal to `long`
+        /// Variable name, Attribute conditional on `CableLength` being equal to `Long`
         /// </summary>
         public readonly string? LengthLongVariable;
         /// <summary>
-        /// length, Attribute conditional on `cable_length` being equal to `short`
+        /// length, Attribute conditional on `CableLength` being equal to `Short`
         ///   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
         /// </summary>
         public readonly string? LengthShort;
         /// <summary>
-        /// Variable name, Attribute conditional on `cable_length` being equal to `short`
+        /// Variable name, Attribute conditional on `CableLength` being equal to `Short`
         /// </summary>
         public readonly string? LengthShortVariable;
         /// <summary>
         /// Line Mode
-        ///   - Choices: `secondary`, `primary`
+        ///   - Choices: `Secondary`, `Primary`
         /// </summary>
         public readonly string? LineMode;
         /// <summary>
@@ -92,7 +92,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? T1Description;
         /// <summary>
         /// Framing
-        ///   - Choices: `esf`, `sf`
+        ///   - Choices: `Esf`, `Sf`
         /// </summary>
         public readonly string? T1Framing;
         /// <summary>
@@ -101,7 +101,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? T1FramingVariable;
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `b8zs`
+        ///   - Choices: `Ami`, `B8zs`
         /// </summary>
         public readonly string? T1Linecode;
         /// <summary>

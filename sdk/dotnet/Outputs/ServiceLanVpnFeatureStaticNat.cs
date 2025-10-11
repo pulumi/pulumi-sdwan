@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourceIpVariable;
         /// <summary>
         /// Static NAT Direction
-        ///   - Choices: `inside`, `outside`
+        ///   - Choices: `Inside`, `Outside`
         /// </summary>
         public readonly string? StaticNatDirection;
         /// <summary>

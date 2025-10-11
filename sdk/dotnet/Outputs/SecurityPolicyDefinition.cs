@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class SecurityPolicyDefinition
     {
         /// <summary>
-        /// Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        /// Destination Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
         public readonly string? DestinationZone;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        /// Source Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
         public readonly string? SourceZone;
         /// <summary>

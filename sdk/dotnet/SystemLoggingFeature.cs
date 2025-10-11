@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System Logging Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -34,7 +36,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("diskEnable")]
         public Output<bool?> DiskEnable { get; private set; } = null!;
@@ -163,7 +165,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskEnable")]
         public Input<bool>? DiskEnable { get; set; }
@@ -266,7 +268,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskEnable")]
         public Input<bool>? DiskEnable { get; set; }

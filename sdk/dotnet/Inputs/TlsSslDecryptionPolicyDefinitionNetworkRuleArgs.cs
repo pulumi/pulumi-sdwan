@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Rule base action
-        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `Decrypt`
         /// </summary>
         [Input("baseAction")]
         public Input<string>? BaseAction { get; set; }

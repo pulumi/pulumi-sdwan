@@ -14,11 +14,11 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter
     {
         /// <summary>
-        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `preferredColor`
         /// </summary>
         public readonly string? PreferredColor;
         /// <summary>
-        /// Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+        /// Preferred color group list ID, Attribute conditional on `Type` being equal to `preferredColorGroup`
         /// </summary>
         public readonly string? PreferredColorGroupListId;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PreferredColorGroupListVersion;
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `type` being equal to `name`
+        /// SLA class list ID, Attribute conditional on `Type` being equal to `Name`
         /// </summary>
         public readonly string? SlaClassListId;
         /// <summary>
@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? SlaClassListVersion;
         /// <summary>
         /// Type of SLA class parameter
-        ///   - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
+        ///   - Choices: `Name`, `preferredColor`, `preferredColorGroup`, `Strict`, `fallbackToBestPath`
         /// </summary>
         public readonly string Type;
 

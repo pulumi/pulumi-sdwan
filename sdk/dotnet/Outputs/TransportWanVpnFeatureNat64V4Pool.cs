@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Nat64V4PoolNameVariable;
         /// <summary>
         /// NAT64 Overload
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Nat64V4PoolOverload;
         /// <summary>

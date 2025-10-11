@@ -72,7 +72,7 @@ namespace Pulumi.Sdwan
         public Output<bool> DnsCrypt { get; private set; } = null!;
 
         /// <summary>
-        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `MatchAllVpn` being equal to `True`
         /// </summary>
         [Output("dnsServerIp")]
         public Output<string> DnsServerIp { get; private set; } = null!;
@@ -105,7 +105,7 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `MatchAllVpn` being equal to `False`
         /// </summary>
         [Output("targetVpns")]
         public Output<ImmutableArray<Outputs.DnsSecurityPolicyTargetVpn>> TargetVpns { get; private set; } = null!;
@@ -187,7 +187,7 @@ namespace Pulumi.Sdwan
         public Input<bool> DnsCrypt { get; set; } = null!;
 
         /// <summary>
-        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `MatchAllVpn` being equal to `True`
         /// </summary>
         [Input("dnsServerIp", required: true)]
         public Input<string> DnsServerIp { get; set; } = null!;
@@ -223,7 +223,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.DnsSecurityPolicyTargetVpnArgs>? _targetVpns;
 
         /// <summary>
-        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `MatchAllVpn` being equal to `False`
         /// </summary>
         public InputList<Inputs.DnsSecurityPolicyTargetVpnArgs> TargetVpns
         {
@@ -264,7 +264,7 @@ namespace Pulumi.Sdwan
         public Input<bool>? DnsCrypt { get; set; }
 
         /// <summary>
-        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+        /// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `MatchAllVpn` being equal to `True`
         /// </summary>
         [Input("dnsServerIp")]
         public Input<string>? DnsServerIp { get; set; }
@@ -300,7 +300,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.DnsSecurityPolicyTargetVpnGetArgs>? _targetVpns;
 
         /// <summary>
-        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+        /// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `MatchAllVpn` being equal to `False`
         /// </summary>
         public InputList<Inputs.DnsSecurityPolicyTargetVpnGetArgs> TargetVpns
         {

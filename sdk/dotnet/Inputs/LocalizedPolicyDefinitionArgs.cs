@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Policy definition type
-        ///   - Choices: `qosMap`, `rewriteRule`, `vedgeRoute`, `acl`, `aclv6`, `deviceAccessPolicy`, `deviceAccessPolicyv6`
+        ///   - Choices: `qosMap`, `rewriteRule`, `vedgeRoute`, `Acl`, `Aclv6`, `deviceAccessPolicy`, `deviceAccessPolicyv6`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

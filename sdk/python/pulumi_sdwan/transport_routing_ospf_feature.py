@@ -1184,6 +1184,8 @@ class TransportRoutingOspfFeature(pulumi.CustomResource):
         This resource can manage a Transport Routing OSPF Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1256,6 +1258,8 @@ class TransportRoutingOspfFeature(pulumi.CustomResource):
         """
         This resource can manage a Transport Routing OSPF Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco BGP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -32,7 +34,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("alwaysCompareMed")]
         public Output<bool?> AlwaysCompareMed { get; private set; } = null!;
@@ -57,7 +59,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("compareRouterId")]
         public Output<bool?> CompareRouterId { get; private set; } = null!;
@@ -76,7 +78,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("deterministicMed")]
         public Output<bool?> DeterministicMed { get; private set; } = null!;
@@ -190,7 +192,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("missingMedWorst")]
         public Output<bool?> MissingMedWorst { get; private set; } = null!;
@@ -209,7 +211,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("multipathRelax")]
         public Output<bool?> MultipathRelax { get; private set; } = null!;
@@ -228,7 +230,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path 
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("propagateAspath")]
         public Output<bool?> PropagateAspath { get; private set; } = null!;
@@ -241,7 +243,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("propagateCommunity")]
         public Output<bool?> PropagateCommunity { get; private set; } = null!;
@@ -266,7 +268,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -349,7 +351,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -374,7 +376,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -393,7 +395,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -537,7 +539,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("missingMedWorst")]
         public Input<bool>? MissingMedWorst { get; set; }
@@ -562,7 +564,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -581,7 +583,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path 
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateAspath")]
         public Input<bool>? PropagateAspath { get; set; }
@@ -594,7 +596,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -619,7 +621,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -652,7 +654,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all ASs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("alwaysCompareMed")]
         public Input<bool>? AlwaysCompareMed { get; set; }
@@ -677,7 +679,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare router IDs when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("compareRouterId")]
         public Input<bool>? CompareRouterId { get; set; }
@@ -696,7 +698,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Compare MEDs from all routes from same AS when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("deterministicMed")]
         public Input<bool>? DeterministicMed { get; set; }
@@ -840,7 +842,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// If path has no MED, consider it to be worst path when selecting active BGP paths
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("missingMedWorst")]
         public Input<bool>? MissingMedWorst { get; set; }
@@ -865,7 +867,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore AS for multipath selection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multipathRelax")]
         public Input<bool>? MultipathRelax { get; set; }
@@ -884,7 +886,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate AS Path 
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateAspath")]
         public Input<bool>? PropagateAspath { get; set; }
@@ -897,7 +899,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Propagate Community
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("propagateCommunity")]
         public Input<bool>? PropagateCommunity { get; set; }
@@ -922,7 +924,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

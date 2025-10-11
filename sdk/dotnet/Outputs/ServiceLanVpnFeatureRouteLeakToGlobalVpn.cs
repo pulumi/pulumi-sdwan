@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RoutePolicyId;
         /// <summary>
         /// Leak Routes of particular protocol from Service to Global VPN
-        ///   - Choices: `static`, `connected`, `bgp`, `ospf`
+        ///   - Choices: `Static`, `Connected`, `Bgp`, `Ospf`
         /// </summary>
         public readonly string? RouteProtocol;
         /// <summary>

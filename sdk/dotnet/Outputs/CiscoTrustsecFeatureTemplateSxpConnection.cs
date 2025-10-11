@@ -35,14 +35,14 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? MinimumHoldTimeVariable;
         /// <summary>
         /// Define Mode of connection
-        ///   - Choices: `local`, `peer`
-        ///   - Default value: `local`
+        ///   - Choices: `Local`, `Peer`
+        ///   - Default value: `Local`
         /// </summary>
         public readonly string? Mode;
         /// <summary>
         /// Define Role of a device &lt;speaker/listener/both&gt;
-        ///   - Choices: `listener`, `speaker`, `both`
-        ///   - Default value: `speaker`
+        ///   - Choices: `Listener`, `Speaker`, `Both`
+        ///   - Default value: `Speaker`
         /// </summary>
         public readonly string? ModeType;
         /// <summary>
@@ -55,8 +55,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PeerIp;
         /// <summary>
         /// Define Preshared Key type
-        ///   - Choices: `default`, `key-chain`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `Default`, `key-chain`, `None`
+        ///   - Default value: `None`
         /// </summary>
         public readonly string? PresharedKey;
         /// <summary>

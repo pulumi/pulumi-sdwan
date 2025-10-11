@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Routing EIGRP Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,7 +30,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -66,7 +68,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -92,13 +94,13 @@ namespace Pulumi.Sdwan
         public Output<string?> HelloIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Output("hmacAuthenticationKey")]
         public Output<string?> HmacAuthenticationKey { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Variable name, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Output("hmacAuthenticationKeyVariable")]
         public Output<string?> HmacAuthenticationKeyVariable { get; private set; } = null!;
@@ -124,7 +126,7 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceRoutingEigrpFeatureInterface>> Interfaces { get; private set; } = null!;
 
         /// <summary>
-        /// Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        /// Set keychain details, Attribute conditional on `AuthenticationType` being equal to `Md5`
         /// </summary>
         [Output("md5Keys")]
         public Output<ImmutableArray<Outputs.ServiceRoutingEigrpFeatureMd5Key>> Md5Keys { get; private set; } = null!;
@@ -204,7 +206,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -242,7 +244,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -268,13 +270,13 @@ namespace Pulumi.Sdwan
         public Input<string>? HelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKey")]
         public Input<string>? HmacAuthenticationKey { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Variable name, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
@@ -309,7 +311,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceRoutingEigrpFeatureMd5KeyArgs>? _md5Keys;
 
         /// <summary>
-        /// Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        /// Set keychain details, Attribute conditional on `AuthenticationType` being equal to `Md5`
         /// </summary>
         public InputList<Inputs.ServiceRoutingEigrpFeatureMd5KeyArgs> Md5Keys
         {
@@ -360,7 +362,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -398,7 +400,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -424,13 +426,13 @@ namespace Pulumi.Sdwan
         public Input<string>? HelloIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Set hmac-sha-256 authentication key, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKey")]
         public Input<string>? HmacAuthenticationKey { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+        /// Variable name, Attribute conditional on `AuthenticationType` being equal to `hmac-sha-256`
         /// </summary>
         [Input("hmacAuthenticationKeyVariable")]
         public Input<string>? HmacAuthenticationKeyVariable { get; set; }
@@ -465,7 +467,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceRoutingEigrpFeatureMd5KeyGetArgs>? _md5Keys;
 
         /// <summary>
-        /// Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+        /// Set keychain details, Attribute conditional on `AuthenticationType` being equal to `Md5`
         /// </summary>
         public InputList<Inputs.ServiceRoutingEigrpFeatureMd5KeyGetArgs> Md5Keys
         {

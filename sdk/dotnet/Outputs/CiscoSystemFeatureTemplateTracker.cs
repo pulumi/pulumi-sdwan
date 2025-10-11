@@ -15,8 +15,8 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Type of grouping to be performed for tracker group
-        ///   - Choices: `or`, `and`
-        ///   - Default value: `or`
+        ///   - Choices: `Or`, `And`
+        ///   - Default value: `Or`
         /// </summary>
         public readonly string? Boolean;
         /// <summary>
@@ -99,8 +99,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ThresholdVariable;
         /// <summary>
         /// Default(Interface)
-        ///   - Choices: `tracker-group`, `interface`, `static-route`
-        ///   - Default value: `interface`
+        ///   - Choices: `tracker-group`, `Interface`, `static-route`
+        ///   - Default value: `Interface`
         /// </summary>
         public readonly string? Type;
         /// <summary>

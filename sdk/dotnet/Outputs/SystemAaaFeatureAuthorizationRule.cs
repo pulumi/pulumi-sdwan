@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<string> Groups;
         /// <summary>
         /// Succeed if user has authenticated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? IfAuthenticated;
         /// <summary>
@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Level;
         /// <summary>
         /// Method
-        ///   - Choices: `commands`
+        ///   - Choices: `Commands`
         /// </summary>
         public readonly string? Method;
         /// <summary>

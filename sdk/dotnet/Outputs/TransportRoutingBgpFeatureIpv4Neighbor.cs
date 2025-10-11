@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AllowasInNumberVariable;
         /// <summary>
         /// Override matching AS-number while sending update
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AsOverride;
         /// <summary>
@@ -63,7 +63,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? EbgpMultihopVariable;
         /// <summary>
         /// Send explicit null label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ExplicitNull;
         /// <summary>
@@ -100,7 +100,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? LocalAsVariable;
         /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? NextHopSelf;
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RemoteAsVariable;
         /// <summary>
         /// Send community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? SendCommunity;
         /// <summary>
@@ -134,7 +134,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendCommunityVariable;
         /// <summary>
         /// Send extended community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? SendExtendedCommunity;
         /// <summary>
@@ -143,12 +143,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendExtendedCommunityVariable;
         /// <summary>
         /// Send label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? SendLabel;
         /// <summary>
         /// Enable or disable a BGP neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Shutdown;
         /// <summary>

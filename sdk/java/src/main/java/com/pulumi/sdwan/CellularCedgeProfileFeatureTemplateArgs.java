@@ -51,7 +51,7 @@ public final class CellularCedgeProfileFeatureTemplateArgs extends com.pulumi.re
 
     /**
      * Set authentication type
-     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      * 
      */
@@ -60,7 +60,7 @@ public final class CellularCedgeProfileFeatureTemplateArgs extends com.pulumi.re
 
     /**
      * @return Set authentication type
-     *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+     *   - Choices: `none`, `pap`, `chap`, `papChap`
      *   - Default value: `none`
      * 
      */
@@ -370,7 +370,7 @@ public final class CellularCedgeProfileFeatureTemplateArgs extends com.pulumi.re
 
         /**
          * @param authenticationType Set authentication type
-         *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+         *   - Choices: `none`, `pap`, `chap`, `papChap`
          *   - Default value: `none`
          * 
          * @return builder
@@ -383,7 +383,7 @@ public final class CellularCedgeProfileFeatureTemplateArgs extends com.pulumi.re
 
         /**
          * @param authenticationType Set authentication type
-         *   - Choices: `none`, `pap`, `chap`, `pap_chap`
+         *   - Choices: `none`, `pap`, `chap`, `papChap`
          *   - Default value: `none`
          * 
          * @return builder

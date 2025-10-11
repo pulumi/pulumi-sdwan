@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set AS set path information
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("asSetPath")]
         public Input<bool>? AsSetPath { get; set; }
@@ -39,7 +39,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Filter out more specific routes from updates
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("summaryOnly")]
         public Input<bool>? SummaryOnly { get; set; }

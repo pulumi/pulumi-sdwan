@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Application performance monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("appPerfMonitorEnabled")]
         public Output<bool?> AppPerfMonitorEnabled { get; private set; } = null!;
@@ -79,7 +79,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS event driven monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("eventDrivenConfigEnabled")]
         public Output<bool?> EventDrivenConfigEnabled { get; private set; } = null!;
@@ -98,7 +98,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("monitoringConfigEnabled")]
         public Output<bool?> MonitoringConfigEnabled { get; private set; } = null!;
@@ -182,7 +182,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Application performance monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("appPerfMonitorEnabled")]
         public Input<bool>? AppPerfMonitorEnabled { get; set; }
@@ -195,7 +195,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS event driven monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("eventDrivenConfigEnabled")]
         public Input<bool>? EventDrivenConfigEnabled { get; set; }
@@ -220,7 +220,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("monitoringConfigEnabled")]
         public Input<bool>? MonitoringConfigEnabled { get; set; }
@@ -260,7 +260,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Application performance monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("appPerfMonitorEnabled")]
         public Input<bool>? AppPerfMonitorEnabled { get; set; }
@@ -273,7 +273,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS event driven monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("eventDrivenConfigEnabled")]
         public Input<bool>? EventDrivenConfigEnabled { get; set; }
@@ -298,7 +298,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// UMTS monitoring enable or disable
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("monitoringConfigEnabled")]
         public Input<bool>? MonitoringConfigEnabled { get; set; }

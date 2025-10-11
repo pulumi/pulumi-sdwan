@@ -784,6 +784,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco DHCP Server feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -829,6 +831,8 @@ class CiscoDhcpServerFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco DHCP Server feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
 
         ## Import
 

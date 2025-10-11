@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AclNameVariable;
         /// <summary>
         /// Direction
-        ///   - Choices: `in`, `out`
+        ///   - Choices: `In`, `Out`
         /// </summary>
         public readonly string? Direction;
         /// <summary>

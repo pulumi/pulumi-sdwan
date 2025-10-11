@@ -233,6 +233,8 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
         This resource can manage a Transport Route Policy Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -262,6 +264,8 @@ class TransportRoutePolicyFeature(pulumi.CustomResource):
         """
         This resource can manage a Transport Route Policy Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

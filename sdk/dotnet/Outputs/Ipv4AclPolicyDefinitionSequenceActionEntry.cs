@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4AclPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `type` being equal to `class`
+        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,15 +22,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         public readonly string? CounterName;
         /// <summary>
-        /// Enable logging, Attribute conditional on `type` being equal to `log`
+        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// Mirror ID, Attribute conditional on `type` being equal to `mirror`
+        /// Mirror ID, Attribute conditional on `Type` being equal to `Mirror`
         /// </summary>
         public readonly string? MirrorId;
         /// <summary>
@@ -38,7 +38,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? MirrorVersion;
         /// <summary>
-        /// Policer ID, Attribute conditional on `type` being equal to `policer`
+        /// Policer ID, Attribute conditional on `Type` being equal to `Policer`
         /// </summary>
         public readonly string? PolicerId;
         /// <summary>
@@ -46,12 +46,12 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PolicerVersion;
         /// <summary>
-        /// List of set parameters, Attribute conditional on `type` being equal to `set`
+        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
         /// </summary>
         public readonly ImmutableArray<Outputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `class`, `count`, `set`, `log`, `mirror`, `policer`
+        ///   - Choices: `Class`, `Count`, `Set`, `Log`, `Mirror`, `Policer`
         /// </summary>
         public readonly string Type;
 

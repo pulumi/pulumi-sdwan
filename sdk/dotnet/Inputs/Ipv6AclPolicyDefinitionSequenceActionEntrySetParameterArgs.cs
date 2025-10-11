@@ -13,13 +13,13 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameterArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
         /// </summary>
         [Input("nextHop")]
         public Input<string>? NextHop { get; set; }
 
         /// <summary>
-        /// Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+        /// Traffic class, Attribute conditional on `Type` being equal to `trafficClass`
         ///   - Range: `0`-`63`
         /// </summary>
         [Input("trafficClass")]

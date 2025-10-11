@@ -254,6 +254,8 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Zone Based Firewall Policy Definition .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -280,6 +282,8 @@ class ZoneBasedFirewallPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Zone Based Firewall Policy Definition .
+
+        ## Example Usage
 
         ## Import
 

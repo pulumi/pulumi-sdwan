@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a IPv4 ACL Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,8 +26,8 @@ namespace Pulumi.Sdwan
     public partial class Ipv4AclPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -107,8 +109,8 @@ namespace Pulumi.Sdwan
     public sealed class Ipv4AclPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -146,8 +148,8 @@ namespace Pulumi.Sdwan
     public sealed class Ipv4AclPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Default action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

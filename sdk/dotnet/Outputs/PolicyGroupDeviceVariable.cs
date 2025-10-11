@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class PolicyGroupDeviceVariable
     {
         /// <summary>
-        /// Use this instead of `value` in case value is of type `List`.
+        /// Use this instead of `Value` in case value is of type `List`.
         /// </summary>
         public readonly ImmutableArray<string> ListValues;
         /// <summary>

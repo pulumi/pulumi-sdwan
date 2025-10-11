@@ -81,7 +81,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// TCP States
-        ///   - Choices: `syn`
+        ///   - Choices: `Syn`
         /// </summary>
         [Input("tcpState")]
         public Input<string>? TcpState { get; set; }
