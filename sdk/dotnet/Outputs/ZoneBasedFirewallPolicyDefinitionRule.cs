@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntry> ActionEntries;
         /// <summary>
         /// Base action
-        ///   - Choices: `pass`, `drop`, `inspect`
+        ///   - Choices: `Pass`, `Drop`, `Inspect`
         /// </summary>
         public readonly string BaseAction;
         /// <summary>

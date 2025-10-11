@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// NAT Direction
-        ///   - Choices: `inside`, `outside`
+        ///   - Choices: `Inside`, `Outside`
         /// </summary>
         public readonly string? Direction;
         /// <summary>
@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NatPoolNameVariable;
         /// <summary>
         /// NAT Overload
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Overload;
         /// <summary>

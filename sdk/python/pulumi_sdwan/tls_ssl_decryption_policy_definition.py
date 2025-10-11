@@ -734,6 +734,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a TLS SSL Decryption Policy Definition .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -784,6 +786,8 @@ class TlsSslDecryptionPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a TLS SSL Decryption Policy Definition .
+
+        ## Example Usage
 
         ## Import
 

@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Zone Based Firewall Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,14 +26,14 @@ namespace Pulumi.Sdwan
     public partial class ZoneBasedFirewallPolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// , Attribute conditional on `mode` being equal to `security`
+        /// , Attribute conditional on `Mode` being equal to `Security`
         /// </summary>
         [Output("applyZonePairs")]
         public Output<ImmutableArray<Outputs.ZoneBasedFirewallPolicyDefinitionApplyZonePair>> ApplyZonePairs { get; private set; } = null!;
 
         /// <summary>
         /// Default Action
-        ///   - Choices: `pass`, `drop`
+        ///   - Choices: `Pass`, `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string> DefaultAction { get; private set; } = null!;
@@ -44,7 +46,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Output("mode")]
         public Output<string> Mode { get; private set; } = null!;
@@ -114,7 +116,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>? _applyZonePairs;
 
         /// <summary>
-        /// , Attribute conditional on `mode` being equal to `security`
+        /// , Attribute conditional on `Mode` being equal to `Security`
         /// </summary>
         public InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs> ApplyZonePairs
         {
@@ -124,7 +126,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Default Action
-        ///   - Choices: `pass`, `drop`
+        ///   - Choices: `Pass`, `Drop`
         /// </summary>
         [Input("defaultAction", required: true)]
         public Input<string> DefaultAction { get; set; } = null!;
@@ -137,7 +139,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode", required: true)]
         public Input<string> Mode { get; set; } = null!;
@@ -168,7 +170,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairGetArgs>? _applyZonePairs;
 
         /// <summary>
-        /// , Attribute conditional on `mode` being equal to `security`
+        /// , Attribute conditional on `Mode` being equal to `Security`
         /// </summary>
         public InputList<Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairGetArgs> ApplyZonePairs
         {
@@ -178,7 +180,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Default Action
-        ///   - Choices: `pass`, `drop`
+        ///   - Choices: `Pass`, `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -191,7 +193,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

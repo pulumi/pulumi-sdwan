@@ -80,7 +80,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4Bgp")]
         public Output<bool?> AdvertiseIpv4Bgp { get; private set; } = null!;
@@ -93,7 +93,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("advertiseIpv4Connected")]
         public Output<bool?> AdvertiseIpv4Connected { get; private set; } = null!;
@@ -106,7 +106,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4Eigrp")]
         public Output<bool?> AdvertiseIpv4Eigrp { get; private set; } = null!;
@@ -119,7 +119,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4Isis")]
         public Output<bool?> AdvertiseIpv4Isis { get; private set; } = null!;
@@ -132,7 +132,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4Lisp")]
         public Output<bool?> AdvertiseIpv4Lisp { get; private set; } = null!;
@@ -145,14 +145,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4Ospf")]
         public Output<bool?> AdvertiseIpv4Ospf { get; private set; } = null!;
 
         /// <summary>
         /// OSPFV3
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv4OspfV3")]
         public Output<bool?> AdvertiseIpv4OspfV3 { get; private set; } = null!;
@@ -171,7 +171,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("advertiseIpv4Static")]
         public Output<bool?> AdvertiseIpv4Static { get; private set; } = null!;
@@ -184,7 +184,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Bgp")]
         public Output<bool?> AdvertiseIpv6Bgp { get; private set; } = null!;
@@ -197,7 +197,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Connected")]
         public Output<bool?> AdvertiseIpv6Connected { get; private set; } = null!;
@@ -210,7 +210,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Eigrp")]
         public Output<bool?> AdvertiseIpv6Eigrp { get; private set; } = null!;
@@ -223,7 +223,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Isis")]
         public Output<bool?> AdvertiseIpv6Isis { get; private set; } = null!;
@@ -236,7 +236,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Lisp")]
         public Output<bool?> AdvertiseIpv6Lisp { get; private set; } = null!;
@@ -249,7 +249,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Ospf")]
         public Output<bool?> AdvertiseIpv6Ospf { get; private set; } = null!;
@@ -262,7 +262,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("advertiseIpv6Static")]
         public Output<bool?> AdvertiseIpv6Static { get; private set; } = null!;
@@ -329,7 +329,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Graceful Restart for OMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("gracefulRestart")]
         public Output<bool?> GracefulRestart { get; private set; } = null!;
@@ -369,7 +369,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Treat hierarchical and direct (secondary region) paths equally
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ignoreRegionPathLength")]
         public Output<bool?> IgnoreRegionPathLength { get; private set; } = null!;
@@ -443,7 +443,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -468,7 +468,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport Gateway Path Behavior
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Output("transportGateway")]
         public Output<string?> TransportGateway { get; private set; } = null!;
@@ -533,7 +533,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Bgp")]
         public Input<bool>? AdvertiseIpv4Bgp { get; set; }
@@ -546,7 +546,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv4Connected")]
         public Input<bool>? AdvertiseIpv4Connected { get; set; }
@@ -559,7 +559,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Eigrp")]
         public Input<bool>? AdvertiseIpv4Eigrp { get; set; }
@@ -572,7 +572,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Isis")]
         public Input<bool>? AdvertiseIpv4Isis { get; set; }
@@ -585,7 +585,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Lisp")]
         public Input<bool>? AdvertiseIpv4Lisp { get; set; }
@@ -598,14 +598,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Ospf")]
         public Input<bool>? AdvertiseIpv4Ospf { get; set; }
 
         /// <summary>
         /// OSPFV3
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4OspfV3")]
         public Input<bool>? AdvertiseIpv4OspfV3 { get; set; }
@@ -624,7 +624,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv4Static")]
         public Input<bool>? AdvertiseIpv4Static { get; set; }
@@ -637,7 +637,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Bgp")]
         public Input<bool>? AdvertiseIpv6Bgp { get; set; }
@@ -650,7 +650,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -663,7 +663,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Eigrp")]
         public Input<bool>? AdvertiseIpv6Eigrp { get; set; }
@@ -676,7 +676,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Isis")]
         public Input<bool>? AdvertiseIpv6Isis { get; set; }
@@ -689,7 +689,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Lisp")]
         public Input<bool>? AdvertiseIpv6Lisp { get; set; }
@@ -702,7 +702,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Ospf")]
         public Input<bool>? AdvertiseIpv6Ospf { get; set; }
@@ -715,7 +715,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -782,7 +782,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Graceful Restart for OMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -822,7 +822,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Treat hierarchical and direct (secondary region) paths equally
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -896,7 +896,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -927,7 +927,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport Gateway Path Behavior
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }
@@ -948,7 +948,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Bgp")]
         public Input<bool>? AdvertiseIpv4Bgp { get; set; }
@@ -961,7 +961,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv4Connected")]
         public Input<bool>? AdvertiseIpv4Connected { get; set; }
@@ -974,7 +974,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Eigrp")]
         public Input<bool>? AdvertiseIpv4Eigrp { get; set; }
@@ -987,7 +987,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Isis")]
         public Input<bool>? AdvertiseIpv4Isis { get; set; }
@@ -1000,7 +1000,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Lisp")]
         public Input<bool>? AdvertiseIpv4Lisp { get; set; }
@@ -1013,14 +1013,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4Ospf")]
         public Input<bool>? AdvertiseIpv4Ospf { get; set; }
 
         /// <summary>
         /// OSPFV3
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv4OspfV3")]
         public Input<bool>? AdvertiseIpv4OspfV3 { get; set; }
@@ -1039,7 +1039,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("advertiseIpv4Static")]
         public Input<bool>? AdvertiseIpv4Static { get; set; }
@@ -1052,7 +1052,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Bgp")]
         public Input<bool>? AdvertiseIpv6Bgp { get; set; }
@@ -1065,7 +1065,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Connected
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Connected")]
         public Input<bool>? AdvertiseIpv6Connected { get; set; }
@@ -1078,7 +1078,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Eigrp")]
         public Input<bool>? AdvertiseIpv6Eigrp { get; set; }
@@ -1091,7 +1091,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ISIS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Isis")]
         public Input<bool>? AdvertiseIpv6Isis { get; set; }
@@ -1104,7 +1104,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// LISP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Lisp")]
         public Input<bool>? AdvertiseIpv6Lisp { get; set; }
@@ -1117,7 +1117,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Ospf")]
         public Input<bool>? AdvertiseIpv6Ospf { get; set; }
@@ -1130,7 +1130,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Static
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("advertiseIpv6Static")]
         public Input<bool>? AdvertiseIpv6Static { get; set; }
@@ -1197,7 +1197,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Graceful Restart for OMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -1237,7 +1237,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Treat hierarchical and direct (secondary region) paths equally
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -1311,7 +1311,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1342,7 +1342,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport Gateway Path Behavior
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }

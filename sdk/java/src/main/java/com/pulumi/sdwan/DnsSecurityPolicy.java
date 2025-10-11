@@ -120,14 +120,14 @@ public class DnsSecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.dnsCrypt;
     }
     /**
-     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
      * 
      */
     @Export(name="dnsServerIp", refs={String.class}, tree="[0]")
     private Output<String> dnsServerIp;
 
     /**
-     * @return Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `match_all_vpn` being equal to `true`
+     * @return Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
      * 
      */
     public Output<String> dnsServerIp() {
@@ -196,14 +196,14 @@ public class DnsSecurityPolicy extends com.pulumi.resources.CustomResource {
         return this.name;
     }
     /**
-     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
      * 
      */
     @Export(name="targetVpns", refs={List.class,DnsSecurityPolicyTargetVpn.class}, tree="[0,1]")
     private Output</* @Nullable */ List<DnsSecurityPolicyTargetVpn>> targetVpns;
 
     /**
-     * @return Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `match_all_vpn` being equal to `false`
+     * @return Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
      * 
      */
     public Output<Optional<List<DnsSecurityPolicyTargetVpn>>> targetVpns() {

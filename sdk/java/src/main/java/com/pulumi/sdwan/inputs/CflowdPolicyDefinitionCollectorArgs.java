@@ -113,7 +113,7 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
 
     /**
      * Transport protocol
-     *   - Choices: `transport_tcp`, `transport_udp`
+     *   - Choices: `transportTcp`, `transportUdp`
      * 
      */
     @Import(name="transport")
@@ -121,7 +121,7 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
 
     /**
      * @return Transport protocol
-     *   - Choices: `transport_tcp`, `transport_udp`
+     *   - Choices: `transportTcp`, `transportUdp`
      * 
      */
     public Optional<Output<String>> transport() {
@@ -308,7 +308,7 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
 
         /**
          * @param transport Transport protocol
-         *   - Choices: `transport_tcp`, `transport_udp`
+         *   - Choices: `transportTcp`, `transportUdp`
          * 
          * @return builder
          * 
@@ -320,7 +320,7 @@ public final class CflowdPolicyDefinitionCollectorArgs extends com.pulumi.resour
 
         /**
          * @param transport Transport protocol
-         *   - Choices: `transport_tcp`, `transport_udp`
+         *   - Choices: `transportTcp`, `transportUdp`
          * 
          * @return builder
          * 

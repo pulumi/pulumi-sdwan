@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Feature template type
-        ///   - Choices: `cisco_dhcp_server`, `cellular-cedge-profile`
+        ///   - Choices: `CiscoDhcpServer`, `cellular-cedge-profile`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Encapsulation
-        ///   - Choices: `gre`, `ipsec`
+        ///   - Choices: `Gre`, `Ipsec`
         /// </summary>
         public readonly string? Encapsulation;
         /// <summary>

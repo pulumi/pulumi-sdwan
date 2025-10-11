@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco OMP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -93,7 +95,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("gracefulRestart")]
         public Output<bool?> GracefulRestart { get; private set; } = null!;
@@ -133,7 +135,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ignoreRegionPathLength")]
         public Output<bool?> IgnoreRegionPathLength { get; private set; } = null!;
@@ -205,7 +207,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -224,7 +226,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Output("transportGateway")]
         public Output<string?> TransportGateway { get; private set; } = null!;
@@ -374,7 +376,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -414,7 +416,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -486,7 +488,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -499,7 +501,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }
@@ -605,7 +607,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP graceful restart
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("gracefulRestart")]
         public Input<bool>? GracefulRestart { get; set; }
@@ -645,7 +647,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Ignore Region-Path Length During Best-Path Algorithm
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ignoreRegionPathLength")]
         public Input<bool>? IgnoreRegionPathLength { get; set; }
@@ -717,7 +719,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable OMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -736,7 +738,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Transport gateway path computation
-        ///   - Choices: `prefer`, `ecmp-with-direct-path`
+        ///   - Choices: `Prefer`, `ecmp-with-direct-path`
         /// </summary>
         [Input("transportGateway")]
         public Input<string>? TransportGateway { get; set; }

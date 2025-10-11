@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Nssa;
         /// <summary>
         /// Do not inject interarea routes into NSSA
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? NssaNoSummary;
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Stub;
         /// <summary>
         /// Do not inject interarea routes into stub
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? StubNoSummary;
         /// <summary>

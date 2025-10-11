@@ -42,16 +42,16 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Define Mode of connection
-        ///   - Choices: `local`, `peer`
-        ///   - Default value: `local`
+        ///   - Choices: `Local`, `Peer`
+        ///   - Default value: `Local`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
 
         /// <summary>
         /// Define Role of a device &lt;speaker/listener/both&gt;
-        ///   - Choices: `listener`, `speaker`, `both`
-        ///   - Default value: `speaker`
+        ///   - Choices: `Listener`, `Speaker`, `Both`
+        ///   - Default value: `Speaker`
         /// </summary>
         [Input("modeType")]
         public Input<string>? ModeType { get; set; }
@@ -70,8 +70,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Define Preshared Key type
-        ///   - Choices: `default`, `key-chain`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `Default`, `key-chain`, `None`
+        ///   - Default value: `None`
         /// </summary>
         [Input("presharedKey")]
         public Input<string>? PresharedKey { get; set; }

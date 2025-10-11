@@ -9,6 +9,8 @@ import * as utilities from "./utilities";
 /**
  * This resource can attach a feature device template. Due to limitations of the API, once a device template is attached to a device, only one change can be applied per `pulumi up` operation. More information is available here.
  *
+ * ## Example Usage
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

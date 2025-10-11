@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Application Priority Traffic Policy Policy.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -27,7 +29,7 @@ namespace Pulumi.Sdwan
     public partial class ApplicationPriorityTrafficPolicyPolicy : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// - Choices: `drop`, `accept`
+        /// - Choices: `Drop`, `Accept`
         /// </summary>
         [Output("defaultAction")]
         public Output<string> DefaultAction { get; private set; } = null!;
@@ -39,7 +41,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `service`, `tunnel`, `all`
+        /// - Choices: `Service`, `Tunnel`, `All`
         /// </summary>
         [Output("direction")]
         public Output<string> Direction { get; private set; } = null!;
@@ -118,7 +120,7 @@ namespace Pulumi.Sdwan
     public sealed class ApplicationPriorityTrafficPolicyPolicyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// - Choices: `drop`, `accept`
+        /// - Choices: `Drop`, `Accept`
         /// </summary>
         [Input("defaultAction", required: true)]
         public Input<string> DefaultAction { get; set; } = null!;
@@ -130,7 +132,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// - Choices: `service`, `tunnel`, `all`
+        /// - Choices: `Service`, `Tunnel`, `All`
         /// </summary>
         [Input("direction", required: true)]
         public Input<string> Direction { get; set; } = null!;
@@ -176,7 +178,7 @@ namespace Pulumi.Sdwan
     public sealed class ApplicationPriorityTrafficPolicyPolicyState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// - Choices: `drop`, `accept`
+        /// - Choices: `Drop`, `Accept`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -188,7 +190,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// - Choices: `service`, `tunnel`, `all`
+        /// - Choices: `Service`, `Tunnel`, `All`
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }

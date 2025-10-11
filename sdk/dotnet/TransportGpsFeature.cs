@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable GPS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("gpsEnable")]
         public Output<bool?> GpsEnable { get; private set; } = null!;
@@ -79,7 +79,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Select GPS mode
-        ///   - Choices: `ms-based`, `standalone`
+        ///   - Choices: `ms-based`, `Standalone`
         ///   - Default value: `ms-based`
         /// </summary>
         [Output("gpsMode")]
@@ -124,7 +124,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable NMEA data
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("nmeaEnable")]
         public Output<bool?> NmeaEnable { get; private set; } = null!;
@@ -213,7 +213,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable GPS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("gpsEnable")]
         public Input<bool>? GpsEnable { get; set; }
@@ -226,7 +226,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Select GPS mode
-        ///   - Choices: `ms-based`, `standalone`
+        ///   - Choices: `ms-based`, `Standalone`
         ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
@@ -271,7 +271,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable NMEA data
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nmeaEnable")]
         public Input<bool>? NmeaEnable { get; set; }
@@ -316,7 +316,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable GPS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("gpsEnable")]
         public Input<bool>? GpsEnable { get; set; }
@@ -329,7 +329,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Select GPS mode
-        ///   - Choices: `ms-based`, `standalone`
+        ///   - Choices: `ms-based`, `Standalone`
         ///   - Default value: `ms-based`
         /// </summary>
         [Input("gpsMode")]
@@ -374,7 +374,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable/disable NMEA data
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nmeaEnable")]
         public Input<bool>? NmeaEnable { get; set; }

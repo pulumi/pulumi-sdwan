@@ -90,7 +90,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Decrypt threshold
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Output("decryptThreshold")]
         public Output<string?> DecryptThreshold { get; private set; } = null!;
@@ -109,7 +109,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -228,7 +228,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Decrypt threshold
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
         public Input<string>? DecryptThreshold { get; set; }
@@ -247,7 +247,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -334,7 +334,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Decrypt threshold
-        ///   - Choices: `high-risk`, `suspicious`, `moderate-risk`, `low-risk`, `trustworthy`
+        ///   - Choices: `high-risk`, `Suspicious`, `moderate-risk`, `low-risk`, `Trustworthy`
         /// </summary>
         [Input("decryptThreshold")]
         public Input<string>? DecryptThreshold { get; set; }
@@ -353,7 +353,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }

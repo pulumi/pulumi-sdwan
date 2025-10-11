@@ -72,7 +72,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set ARP Proxy
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("arpProxy")]
         public Output<bool?> ArpProxy { get; private set; } = null!;
@@ -85,7 +85,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Ignore BOOTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("bootp")]
         public Output<bool?> Bootp { get; private set; } = null!;
@@ -98,7 +98,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure CDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("cdp")]
         public Output<bool?> Cdp { get; private set; } = null!;
@@ -111,7 +111,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Console Logging
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("consoleLogging")]
         public Output<bool?> ConsoleLogging { get; private set; } = null!;
@@ -137,7 +137,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Domain-Lookup
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("domainLookup")]
         public Output<bool?> DomainLookup { get; private set; } = null!;
@@ -150,7 +150,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Passive FTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ftpPassive")]
         public Output<bool?> FtpPassive { get; private set; } = null!;
@@ -163,7 +163,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set preference for HTTP Authentication
-        ///   - Choices: `local`, `aaa`
+        ///   - Choices: `Local`, `Aaa`
         /// </summary>
         [Output("httpAuthentication")]
         public Output<string?> HttpAuthentication { get; private set; } = null!;
@@ -176,7 +176,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTP Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("httpServer")]
         public Output<bool?> HttpServer { get; private set; } = null!;
@@ -189,7 +189,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTPS Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("httpsServer")]
         public Output<bool?> HttpsServer { get; private set; } = null!;
@@ -202,7 +202,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Source Route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipSourceRouting")]
         public Output<bool?> IpSourceRouting { get; private set; } = null!;
@@ -215,7 +215,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Telnet (Outbound)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("lineVty")]
         public Output<bool?> LineVty { get; private set; } = null!;
@@ -228,7 +228,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure LLDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("lldp")]
         public Output<bool?> Lldp { get; private set; } = null!;
@@ -275,7 +275,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set RSH/RCP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("rshRcp")]
         public Output<bool?> RshRcp { get; private set; } = null!;
@@ -288,7 +288,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure SNMP Ifindex Persist
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("snmpIfindexPersist")]
         public Output<bool?> SnmpIfindexPersist { get; private set; } = null!;
@@ -326,7 +326,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-in
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tcpKeepalivesIn")]
         public Output<bool?> TcpKeepalivesIn { get; private set; } = null!;
@@ -339,7 +339,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-out
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tcpKeepalivesOut")]
         public Output<bool?> TcpKeepalivesOut { get; private set; } = null!;
@@ -352,7 +352,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tcpSmallServers")]
         public Output<bool?> TcpSmallServers { get; private set; } = null!;
@@ -371,7 +371,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure udp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("udpSmallServers")]
         public Output<bool?> UdpSmallServers { get; private set; } = null!;
@@ -390,7 +390,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure VTY Line Logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("vtyLogging")]
         public Output<bool?> VtyLogging { get; private set; } = null!;
@@ -449,7 +449,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set ARP Proxy
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("arpProxy")]
         public Input<bool>? ArpProxy { get; set; }
@@ -462,7 +462,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Ignore BOOTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("bootp")]
         public Input<bool>? Bootp { get; set; }
@@ -475,7 +475,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure CDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("cdp")]
         public Input<bool>? Cdp { get; set; }
@@ -488,7 +488,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Console Logging
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("consoleLogging")]
         public Input<bool>? ConsoleLogging { get; set; }
@@ -520,7 +520,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Domain-Lookup
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("domainLookup")]
         public Input<bool>? DomainLookup { get; set; }
@@ -533,7 +533,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Passive FTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ftpPassive")]
         public Input<bool>? FtpPassive { get; set; }
@@ -546,7 +546,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set preference for HTTP Authentication
-        ///   - Choices: `local`, `aaa`
+        ///   - Choices: `Local`, `Aaa`
         /// </summary>
         [Input("httpAuthentication")]
         public Input<string>? HttpAuthentication { get; set; }
@@ -559,7 +559,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTP Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("httpServer")]
         public Input<bool>? HttpServer { get; set; }
@@ -572,7 +572,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTPS Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("httpsServer")]
         public Input<bool>? HttpsServer { get; set; }
@@ -585,7 +585,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Source Route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipSourceRouting")]
         public Input<bool>? IpSourceRouting { get; set; }
@@ -598,7 +598,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Telnet (Outbound)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("lineVty")]
         public Input<bool>? LineVty { get; set; }
@@ -611,7 +611,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure LLDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("lldp")]
         public Input<bool>? Lldp { get; set; }
@@ -658,7 +658,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set RSH/RCP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("rshRcp")]
         public Input<bool>? RshRcp { get; set; }
@@ -671,7 +671,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure SNMP Ifindex Persist
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("snmpIfindexPersist")]
         public Input<bool>? SnmpIfindexPersist { get; set; }
@@ -709,7 +709,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-in
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tcpKeepalivesIn")]
         public Input<bool>? TcpKeepalivesIn { get; set; }
@@ -722,7 +722,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-out
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tcpKeepalivesOut")]
         public Input<bool>? TcpKeepalivesOut { get; set; }
@@ -735,7 +735,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tcpSmallServers")]
         public Input<bool>? TcpSmallServers { get; set; }
@@ -748,7 +748,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure udp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("udpSmallServers")]
         public Input<bool>? UdpSmallServers { get; set; }
@@ -761,7 +761,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure VTY Line Logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("vtyLogging")]
         public Input<bool>? VtyLogging { get; set; }
@@ -782,7 +782,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Set ARP Proxy
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("arpProxy")]
         public Input<bool>? ArpProxy { get; set; }
@@ -795,7 +795,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Ignore BOOTP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("bootp")]
         public Input<bool>? Bootp { get; set; }
@@ -808,7 +808,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure CDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("cdp")]
         public Input<bool>? Cdp { get; set; }
@@ -821,7 +821,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Console Logging
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("consoleLogging")]
         public Input<bool>? ConsoleLogging { get; set; }
@@ -853,7 +853,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Domain-Lookup
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("domainLookup")]
         public Input<bool>? DomainLookup { get; set; }
@@ -866,7 +866,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Passive FTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ftpPassive")]
         public Input<bool>? FtpPassive { get; set; }
@@ -879,7 +879,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set preference for HTTP Authentication
-        ///   - Choices: `local`, `aaa`
+        ///   - Choices: `Local`, `Aaa`
         /// </summary>
         [Input("httpAuthentication")]
         public Input<string>? HttpAuthentication { get; set; }
@@ -892,7 +892,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTP Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("httpServer")]
         public Input<bool>? HttpServer { get; set; }
@@ -905,7 +905,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set HTTPS Server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("httpsServer")]
         public Input<bool>? HttpsServer { get; set; }
@@ -918,7 +918,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set Source Route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipSourceRouting")]
         public Input<bool>? IpSourceRouting { get; set; }
@@ -931,7 +931,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure Telnet (Outbound)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("lineVty")]
         public Input<bool>? LineVty { get; set; }
@@ -944,7 +944,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure LLDP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("lldp")]
         public Input<bool>? Lldp { get; set; }
@@ -991,7 +991,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set RSH/RCP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("rshRcp")]
         public Input<bool>? RshRcp { get; set; }
@@ -1004,7 +1004,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure SNMP Ifindex Persist
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("snmpIfindexPersist")]
         public Input<bool>? SnmpIfindexPersist { get; set; }
@@ -1042,7 +1042,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-in
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tcpKeepalivesIn")]
         public Input<bool>? TcpKeepalivesIn { get; set; }
@@ -1055,7 +1055,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-keepalives-out
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tcpKeepalivesOut")]
         public Input<bool>? TcpKeepalivesOut { get; set; }
@@ -1068,7 +1068,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tcp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tcpSmallServers")]
         public Input<bool>? TcpSmallServers { get; set; }
@@ -1087,7 +1087,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure udp-small-servers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("udpSmallServers")]
         public Input<bool>? UdpSmallServers { get; set; }
@@ -1106,7 +1106,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure VTY Line Logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("vtyLogging")]
         public Input<bool>? VtyLogging { get; set; }

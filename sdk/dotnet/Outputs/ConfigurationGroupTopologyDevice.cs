@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Criteria attribute
-        ///   - Choices: `tag`
+        ///   - Choices: `Tag`
         /// </summary>
         public readonly string CriteriaAttribute;
         /// <summary>

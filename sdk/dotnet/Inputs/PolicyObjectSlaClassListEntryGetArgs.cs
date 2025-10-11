@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AppProbeClassListId { get; set; }
 
         /// <summary>
-        /// - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `Jitter`, `Latency`, `Loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         [Input("fallbackBestTunnelCriteria")]
         public Input<string>? FallbackBestTunnelCriteria { get; set; }

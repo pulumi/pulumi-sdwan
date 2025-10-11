@@ -65,7 +65,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("localReplicator")]
         public Output<bool?> LocalReplicator { get; private set; } = null!;
@@ -84,7 +84,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("sptOnly")]
         public Output<bool?> SptOnly { get; private set; } = null!;
@@ -187,7 +187,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -206,7 +206,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -259,7 +259,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -278,7 +278,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }

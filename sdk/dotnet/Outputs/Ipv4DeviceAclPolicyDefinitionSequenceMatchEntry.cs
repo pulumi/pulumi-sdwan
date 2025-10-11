@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
         /// </summary>
         public readonly string? DestinationDataIpv4PrefixListId;
         /// <summary>
@@ -22,20 +22,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataIpv4PrefixListVersion;
         /// <summary>
-        /// Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP prefix, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP prefix variable, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIpVariable;
         /// <summary>
-        /// Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+        /// Destination port, only `22` and `161` supported, Attribute conditional on `Type` being equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? DestinationPort;
         /// <summary>
-        /// Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
         /// </summary>
         public readonly string? SourceDataIpv4PrefixListId;
         /// <summary>
@@ -43,15 +43,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataIpv4PrefixListVersion;
         /// <summary>
-        /// Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP prefix, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP prefix variable, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIpVariable;
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePorts;
         /// <summary>

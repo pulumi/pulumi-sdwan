@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Security feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -95,7 +97,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("pairwiseKeying")]
         public Output<bool?> PairwiseKeying { get; private set; } = null!;
@@ -293,7 +295,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }
@@ -441,7 +443,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pairwiseKeying")]
         public Input<bool>? PairwiseKeying { get; set; }

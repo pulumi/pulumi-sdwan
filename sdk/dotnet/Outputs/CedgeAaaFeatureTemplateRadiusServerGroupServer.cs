@@ -48,8 +48,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Key;
         /// <summary>
         /// key type
-        ///   - Choices: `key`, `pac`
-        ///   - Default value: `key`
+        ///   - Choices: `Key`, `Pac`
+        ///   - Default value: `Key`
         /// </summary>
         public readonly string? KeyType;
         /// <summary>

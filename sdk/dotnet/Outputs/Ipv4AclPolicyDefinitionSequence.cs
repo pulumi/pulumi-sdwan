@@ -18,8 +18,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.Ipv4AclPolicyDefinitionSequenceActionEntry> ActionEntries;
         /// <summary>
-        /// Base action, either `accept` or `drop`
-        ///   - Choices: `accept`, `drop`
+        /// Base action, either `Accept` or `Drop`
+        ///   - Choices: `Accept`, `Drop`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>

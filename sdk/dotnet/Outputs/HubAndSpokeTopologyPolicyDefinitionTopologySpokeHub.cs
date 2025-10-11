@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Ipv6PrefixListIds;
         /// <summary>
-        /// Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is 'false')
+        /// Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `AllHubsAreEqual` is 'false')
         /// </summary>
         public readonly string? Preference;
         /// <summary>

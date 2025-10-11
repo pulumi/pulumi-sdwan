@@ -21,7 +21,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Exceed options such as Drop or Remark
-        ///   - Choices: `drop`, `remark`
+        ///   - Choices: `Drop`, `Remark`
         /// </summary>
         [Input("exceedAction")]
         public Input<string>? ExceedAction { get; set; }

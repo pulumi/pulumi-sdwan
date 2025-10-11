@@ -28,8 +28,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Track Action
-        ///   - Choices: `decrement`, `shutdown`
-        ///   - Default value: `decrement`
+        ///   - Choices: `Decrement`, `Shutdown`
+        ///   - Default value: `Decrement`
         /// </summary>
         public readonly string? TrackAction;
         /// <summary>

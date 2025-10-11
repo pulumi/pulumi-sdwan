@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// List of Virtual applications
-        ///   - Default value: `te`
+        ///   - Default value: `Te`
         /// </summary>
         [Input("applicationType")]
         public Input<string>? ApplicationType { get; set; }
@@ -144,8 +144,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Web Proxy Type
-        ///   - Choices: `none`, `static`, `pac`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Static`, `Pac`
+        ///   - Default value: `None`
         /// </summary>
         [Input("teWebProxyType")]
         public Input<string>? TeWebProxyType { get; set; }

@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Prefer this NTP server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Prefer;
         /// <summary>

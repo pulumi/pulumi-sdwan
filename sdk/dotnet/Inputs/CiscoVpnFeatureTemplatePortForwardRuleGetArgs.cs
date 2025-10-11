@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Protocol
-        ///   - Choices: `tcp`, `udp`
+        ///   - Choices: `Tcp`, `Udp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

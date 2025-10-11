@@ -37,8 +37,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourceVpnIdVariable;
         /// <summary>
         /// Direction of static NAT translation
-        ///   - Choices: `inside`, `outside`
-        ///   - Default value: `inside`
+        ///   - Choices: `Inside`, `Outside`
+        ///   - Default value: `Inside`
         /// </summary>
         public readonly string? StaticNatDirection;
         /// <summary>

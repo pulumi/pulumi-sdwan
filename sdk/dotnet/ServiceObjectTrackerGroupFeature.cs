@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Object Tracker Group Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -59,8 +61,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Output("reachable")]
         public Output<string?> Reachable { get; private set; } = null!;
@@ -162,8 +164,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }
@@ -227,8 +229,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list criteria boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("reachable")]
         public Input<string>? Reachable { get; set; }

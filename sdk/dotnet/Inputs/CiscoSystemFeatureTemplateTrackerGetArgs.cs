@@ -14,8 +14,8 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Type of grouping to be performed for tracker group
-        ///   - Choices: `or`, `and`
-        ///   - Default value: `or`
+        ///   - Choices: `Or`, `And`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("boolean")]
         public Input<string>? Boolean { get; set; }
@@ -142,8 +142,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Default(Interface)
-        ///   - Choices: `tracker-group`, `interface`, `static-route`
-        ///   - Default value: `interface`
+        ///   - Choices: `tracker-group`, `Interface`, `static-route`
+        ///   - Default value: `Interface`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

@@ -32,8 +32,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Service Type
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
@@ -66,21 +66,21 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// For first-time Acceptable User Policy behavior, block Internet access
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerAupBlockInternetUntilAccepted")]
         public Input<bool>? ZscalerAupBlockInternetUntilAccepted { get; set; }
 
         /// <summary>
         /// Enable Acceptable User Policy
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerAupEnabled")]
         public Input<bool>? ZscalerAupEnabled { get; set; }
 
         /// <summary>
         /// For first-time Acceptable User Policy behavior, force SSL inspection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerAupForceSslInspection")]
         public Input<bool>? ZscalerAupForceSslInspection { get; set; }
@@ -94,28 +94,28 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enforce Authentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerAuthenticationRequired")]
         public Input<bool>? ZscalerAuthenticationRequired { get; set; }
 
         /// <summary>
         /// Enable Caution
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerCautionEnabled")]
         public Input<bool>? ZscalerCautionEnabled { get; set; }
 
         /// <summary>
         /// Firewall enabled
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerFirewallEnabled")]
         public Input<bool>? ZscalerFirewallEnabled { get; set; }
 
         /// <summary>
         /// Enable IPS Control
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerIpsControlEnabled")]
         public Input<bool>? ZscalerIpsControlEnabled { get; set; }
@@ -176,14 +176,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable Surrogate IP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerSurrogateIp")]
         public Input<bool>? ZscalerSurrogateIp { get; set; }
 
         /// <summary>
         /// Enforce Surrogate IP for known browsers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerSurrogateIpEnforceForKnownBrowsers")]
         public Input<bool>? ZscalerSurrogateIpEnforceForKnownBrowsers { get; set; }
@@ -205,7 +205,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// XFF forwarding enabled
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("zscalerXffForward")]
         public Input<bool>? ZscalerXffForward { get; set; }

@@ -13,52 +13,52 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+        /// Community value, e.g. `1000:10000` or `Internet` or `local-AS`, Attribute conditional on `Type` being equal to `Community`
         /// </summary>
         [Input("community")]
         public Input<string>? Community { get; set; }
 
         /// <summary>
-        /// Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+        /// Community additive, Attribute conditional on `Type` being equal to `communityAdditive`
         /// </summary>
         [Input("communityAdditive")]
         public Input<bool>? CommunityAdditive { get; set; }
 
         /// <summary>
-        /// OMP tag, Attribute conditional on `type` being equal to `ompTag`
+        /// OMP tag, Attribute conditional on `Type` being equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Preference, Attribute conditional on `type` being equal to `preference`
+        /// Preference, Attribute conditional on `Type` being equal to `Preference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("preference")]
         public Input<int>? Preference { get; set; }
 
         /// <summary>
-        /// Service TLOC color, Attribute conditional on `type` being equal to `service`
+        /// Service TLOC color, Attribute conditional on `Type` being equal to `Service`
         /// </summary>
         [Input("serviceTlocColor")]
         public Input<string>? ServiceTlocColor { get; set; }
 
         /// <summary>
-        /// Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
-        ///   - Choices: `ipsec`, `gre`
+        /// Service TLOC encapsulation, Attribute conditional on `Type` being equal to `Service`
+        ///   - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("serviceTlocEncapsulation")]
         public Input<string>? ServiceTlocEncapsulation { get; set; }
 
         /// <summary>
-        /// Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+        /// Service TLOC IP address, Attribute conditional on `Type` being equal to `Service`
         /// </summary>
         [Input("serviceTlocIp")]
         public Input<string>? ServiceTlocIp { get; set; }
 
         /// <summary>
-        /// Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+        /// Service TLOC list ID, Attribute conditional on `Type` being equal to `Service`
         /// </summary>
         [Input("serviceTlocListId")]
         public Input<string>? ServiceTlocListId { get; set; }
@@ -70,47 +70,47 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ServiceTlocListVersion { get; set; }
 
         /// <summary>
-        /// Service type, Attribute conditional on `type` being equal to `service`
-        ///   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
+        /// Service type, Attribute conditional on `Type` being equal to `Service`
+        ///   - Choices: `FW`, `IDP`, `IDS`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `Netsvc5`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
 
         /// <summary>
-        /// Service VPN ID, Attribute conditional on `type` being equal to `service`
+        /// Service VPN ID, Attribute conditional on `Type` being equal to `Service`
         ///   - Range: `0`-`65536`
         /// </summary>
         [Input("serviceVpnId")]
         public Input<int>? ServiceVpnId { get; set; }
 
         /// <summary>
-        /// TLOC action, Attribute conditional on `type` being equal to `tlocAction`
-        ///   - Choices: `strict`, `primary`, `backup`, `ecmp`
+        /// TLOC action, Attribute conditional on `Type` being equal to `tlocAction`
+        ///   - Choices: `Strict`, `Primary`, `Backup`, `Ecmp`
         /// </summary>
         [Input("tlocAction")]
         public Input<string>? TlocAction { get; set; }
 
         /// <summary>
-        /// TLOC color, Attribute conditional on `type` being equal to `tloc`
+        /// TLOC color, Attribute conditional on `Type` being equal to `Tloc`
         /// </summary>
         [Input("tlocColor")]
         public Input<string>? TlocColor { get; set; }
 
         /// <summary>
-        /// TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
-        ///   - Choices: `ipsec`, `gre`
+        /// TLOC encapsulation, Attribute conditional on `Type` being equal to `Tloc`
+        ///   - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("tlocEncapsulation")]
         public Input<string>? TlocEncapsulation { get; set; }
 
         /// <summary>
-        /// TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+        /// TLOC IP address, Attribute conditional on `Type` being equal to `Tloc`
         /// </summary>
         [Input("tlocIp")]
         public Input<string>? TlocIp { get; set; }
 
         /// <summary>
-        /// TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+        /// TLOC list ID, Attribute conditional on `Type` being equal to `tlocList`
         /// </summary>
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }
@@ -123,7 +123,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of set parameter
-        ///   - Choices: `tlocList`, `tloc`, `tlocAction`, `preference`, `ompTag`, `community`, `communityAdditive`, `service`
+        ///   - Choices: `tlocList`, `Tloc`, `tlocAction`, `Preference`, `ompTag`, `Community`, `communityAdditive`, `Service`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

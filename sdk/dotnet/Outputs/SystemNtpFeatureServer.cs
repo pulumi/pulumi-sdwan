@@ -42,7 +42,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NtpVersionVariable;
         /// <summary>
         /// Prefer this NTP server
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? PreferThisNtpServer;
         /// <summary>

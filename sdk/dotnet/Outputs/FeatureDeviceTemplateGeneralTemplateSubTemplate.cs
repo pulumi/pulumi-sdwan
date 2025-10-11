@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.FeatureDeviceTemplateGeneralTemplateSubTemplateSubTemplate> SubTemplates;
         /// <summary>
         /// Feature template type
-        ///   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
+        ///   - Choices: `CiscoLogging`, `CiscoNtp`, `CiscoOspf`, `CiscoBgp`, `CiscoVpnInterface`, `CiscoVpnInterfaceGre`, `CiscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `CiscoSecureInternetGateway`
         /// </summary>
         public readonly string Type;
         /// <summary>

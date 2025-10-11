@@ -1390,6 +1390,8 @@ class ServiceRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
         This resource can manage a Service Routing OSPFv3 IPv4 Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1470,6 +1472,8 @@ class ServiceRoutingOspfv3Ipv4Feature(pulumi.CustomResource):
         """
         This resource can manage a Service Routing OSPFv3 IPv4 Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

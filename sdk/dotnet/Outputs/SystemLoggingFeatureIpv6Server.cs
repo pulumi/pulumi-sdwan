@@ -23,8 +23,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? HostnameIpVariable;
         /// <summary>
         /// Set logging level for messages logged to server
-        ///   - Choices: `informational`, `debugging`, `notice`, `warn`, `error`, `critical`, `alert`, `emergency`
-        ///   - Default value: `informational`
+        ///   - Choices: `Informational`, `Debugging`, `Notice`, `Warn`, `Error`, `Critical`, `Alert`, `Emergency`
+        ///   - Default value: `Informational`
         /// </summary>
         public readonly string? Priority;
         /// <summary>
@@ -41,7 +41,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourceInterfaceVariable;
         /// <summary>
         /// Enable TLS Profile
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TlsEnable;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TlsEnableVariable;
         /// <summary>
         /// Define custom profile
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TlsPropertiesCustomProfile;
         /// <summary>

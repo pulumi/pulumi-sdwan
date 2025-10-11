@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set AS set path information
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AsSetPath;
         /// <summary>
@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SubnetMaskVariable;
         /// <summary>
         /// Filter out more specific routes from updates
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? SummaryOnly;
         /// <summary>

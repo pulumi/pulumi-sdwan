@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Logging feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -39,7 +41,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("diskLogging")]
         public Output<bool?> DiskLogging { get; private set; } = null!;
@@ -181,7 +183,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }
@@ -291,7 +293,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable logging to local disk
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("diskLogging")]
         public Input<bool>? DiskLogging { get; set; }

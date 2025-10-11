@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TransportManagementVpnFeatureIpv4StaticRouteGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+        /// Administrative distance, Attribute conditional on `Gateway` being equal to `Null0`
         ///   - Range: `1`-`255`
         ///   - Default value: `1`
         /// </summary>
@@ -21,14 +21,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? AdministrativeDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `gateway` being equal to `null0`
+        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
         /// </summary>
         [Input("administrativeDistanceVariable")]
         public Input<string>? AdministrativeDistanceVariable { get; set; }
 
         /// <summary>
         /// Gateway
-        ///   - Choices: `nextHop`, `dhcp`, `null0`
+        ///   - Choices: `nextHop`, `Dhcp`, `Null0`
         ///   - Default value: `nextHop`
         /// </summary>
         [Input("gateway")]
@@ -50,7 +50,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TransportManagementVpnFeatureIpv4StaticRouteNextHopGetArgs>? _nextHops;
 
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
         /// </summary>
         public InputList<Inputs.TransportManagementVpnFeatureIpv4StaticRouteNextHopGetArgs> NextHops
         {

@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// - Default value: `false`
+        /// - Default value: `False`
         /// </summary>
         [Input("communityAdditive")]
         public Input<bool>? CommunityAdditive { get; set; }
@@ -68,7 +68,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set Metric Type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("metricType")]
         public Input<string>? MetricType { get; set; }

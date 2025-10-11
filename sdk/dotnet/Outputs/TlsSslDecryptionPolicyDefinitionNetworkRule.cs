@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Rule base action
-        ///   - Choices: `noIntent`, `doNotDecrypt`, `decrypt`
+        ///   - Choices: `noIntent`, `doNotDecrypt`, `Decrypt`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>

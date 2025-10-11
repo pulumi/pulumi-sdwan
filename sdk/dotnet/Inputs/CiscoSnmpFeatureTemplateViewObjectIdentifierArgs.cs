@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Exclude the OID
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("exclude")]
         public Input<bool>? Exclude { get; set; }

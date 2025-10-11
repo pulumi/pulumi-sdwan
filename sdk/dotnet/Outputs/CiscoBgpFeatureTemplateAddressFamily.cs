@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? DefaultInformationOriginate;
         /// <summary>
@@ -62,7 +62,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.CiscoBgpFeatureTemplateAddressFamilyRedistributeRoute> RedistributeRoutes;
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TableMapFilter;
         /// <summary>

@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco SNMP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -81,7 +83,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -243,7 +245,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -373,7 +375,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable SNMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

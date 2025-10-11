@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco TrustSec feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -76,7 +78,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Role-based Access Control enforcement
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableEnforcement")]
         public Output<bool?> EnableEnforcement { get; private set; } = null!;
@@ -89,7 +91,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable CTS SXP support
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableSxp")]
         public Output<bool?> EnableSxp { get; private set; } = null!;
@@ -174,7 +176,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables logging for IP-to-SGT binding changes
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("sxpLogBindingChanges")]
         public Output<bool?> SxpLogBindingChanges { get; private set; } = null!;
@@ -193,8 +195,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
-        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
-        ///   - Default value: `ip`
+        ///   - Choices: `Ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `Ip`
         /// </summary>
         [Output("sxpNodeIdType")]
         public Output<string?> SxpNodeIdType { get; private set; } = null!;
@@ -361,7 +363,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Role-based Access Control enforcement
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableEnforcement")]
         public Input<bool>? EnableEnforcement { get; set; }
@@ -374,7 +376,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable CTS SXP support
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableSxp")]
         public Input<bool>? EnableSxp { get; set; }
@@ -465,7 +467,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables logging for IP-to-SGT binding changes
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sxpLogBindingChanges")]
         public Input<bool>? SxpLogBindingChanges { get; set; }
@@ -484,8 +486,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
-        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
-        ///   - Default value: `ip`
+        ///   - Choices: `Ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `Ip`
         /// </summary>
         [Input("sxpNodeIdType")]
         public Input<string>? SxpNodeIdType { get; set; }
@@ -602,7 +604,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Role-based Access Control enforcement
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableEnforcement")]
         public Input<bool>? EnableEnforcement { get; set; }
@@ -615,7 +617,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable CTS SXP support
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableSxp")]
         public Input<bool>? EnableSxp { get; set; }
@@ -706,7 +708,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables logging for IP-to-SGT binding changes
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sxpLogBindingChanges")]
         public Input<bool>? SxpLogBindingChanges { get; set; }
@@ -725,8 +727,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Define SXP Node ID type &lt;IP, 8 char string or interface name&gt;
-        ///   - Choices: `ip`, `interface-name`, `8-char-hex-string`
-        ///   - Default value: `ip`
+        ///   - Choices: `Ip`, `interface-name`, `8-char-hex-string`
+        ///   - Default value: `Ip`
         /// </summary>
         [Input("sxpNodeIdType")]
         public Input<string>? SxpNodeIdType { get; set; }

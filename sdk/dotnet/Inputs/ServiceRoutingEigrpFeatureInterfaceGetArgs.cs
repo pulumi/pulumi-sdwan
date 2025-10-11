@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable/disable EIGRP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

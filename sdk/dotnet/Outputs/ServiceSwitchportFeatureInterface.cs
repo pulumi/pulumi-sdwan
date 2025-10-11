@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set uni or bi directional authorization mode
-        ///   - Choices: `both`, `in`
+        ///   - Choices: `Both`, `In`
         /// </summary>
         public readonly string? ControlDirection;
         /// <summary>
@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? CriticalVlanVariable;
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`
+        ///   - Choices: `Full`, `Half`
         /// </summary>
         public readonly string? Duplex;
         /// <summary>
@@ -101,7 +101,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? MacAuthenticationBypassVariable;
         /// <summary>
         /// Set type of switch port: access/trunk
-        ///   - Choices: `access`, `trunk`
+        ///   - Choices: `Access`, `Trunk`
         /// </summary>
         public readonly string? Mode;
         /// <summary>
@@ -114,7 +114,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PaeEnableVariable;
         /// <summary>
         /// Set Port-Control Mode
-        ///   - Choices: `auto`, `force-unauthorized`, `force-authorized`
+        ///   - Choices: `Auto`, `force-unauthorized`, `force-authorized`
         /// </summary>
         public readonly string? PortControl;
         /// <summary>
@@ -142,7 +142,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RestrictedVlanVariable;
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Shutdown;
         /// <summary>

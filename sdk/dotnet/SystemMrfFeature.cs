@@ -59,7 +59,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Output("enableMigrationToMrf")]
         public Output<string?> EnableMigrationToMrf { get; private set; } = null!;
@@ -176,7 +176,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMigrationToMrf")]
         public Input<string>? EnableMigrationToMrf { get; set; }
@@ -249,7 +249,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMigrationToMrf")]
         public Input<string>? EnableMigrationToMrf { get; set; }

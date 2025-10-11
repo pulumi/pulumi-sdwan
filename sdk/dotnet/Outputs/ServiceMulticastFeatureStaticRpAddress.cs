@@ -31,7 +31,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? IpAddressVariable;
         /// <summary>
         /// Set override flag
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Override;
         /// <summary>

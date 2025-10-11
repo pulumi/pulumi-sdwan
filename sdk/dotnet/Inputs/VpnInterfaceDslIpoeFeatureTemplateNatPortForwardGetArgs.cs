@@ -59,7 +59,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Layer 4 protocol to apply port forwarding to
-        ///   - Choices: `tcp`, `udp`
+        ///   - Choices: `Tcp`, `Udp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

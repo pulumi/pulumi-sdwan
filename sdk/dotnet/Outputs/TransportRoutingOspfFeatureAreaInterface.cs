@@ -98,8 +98,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NameVariable;
         /// <summary>
         /// Set the OSPF network type
-        ///   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
-        ///   - Default value: `broadcast`
+        ///   - Choices: `Broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        ///   - Default value: `Broadcast`
         /// </summary>
         public readonly string? NetworkType;
         /// <summary>
@@ -108,7 +108,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NetworkTypeVariable;
         /// <summary>
         /// Set the interface to advertise its address, but not to actively run OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? PassiveInterface;
         /// <summary>

@@ -118,7 +118,7 @@ namespace Pulumi.Sdwan
     public sealed class GetRoutePolicyDefinitionResult
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
+        /// Default action, either `Accept` or `Reject`
         /// </summary>
         public readonly string DefaultAction;
         /// <summary>

@@ -125,6 +125,8 @@ class TlocListPolicyObject(pulumi.CustomResource):
         """
         This resource can manage a TLOC List Policy Object .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -146,6 +148,8 @@ class TlocListPolicyObject(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a TLOC List Policy Object .
+
+        ## Example Usage
 
         ## Import
 

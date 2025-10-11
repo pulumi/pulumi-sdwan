@@ -18,7 +18,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PolicyId;
         /// <summary>
-        /// Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
+        /// Should be included with additionally entries for `destinationPort` and `Protocol` whenever the type `protocolName` is used.
         /// </summary>
         public readonly string ProtocolType;
         /// <summary>

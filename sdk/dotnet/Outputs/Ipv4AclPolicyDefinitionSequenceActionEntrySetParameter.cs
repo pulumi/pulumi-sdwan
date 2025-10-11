@@ -14,17 +14,17 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter
     {
         /// <summary>
-        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
+        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
-        /// Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
         /// </summary>
         public readonly string? NextHop;
         /// <summary>
         /// Type of set parameter
-        ///   - Choices: `dscp`, `nextHop`
+        ///   - Choices: `Dscp`, `nextHop`
         /// </summary>
         public readonly string Type;
 

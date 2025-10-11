@@ -63,32 +63,32 @@ namespace Pulumi.Sdwan
     public partial class SystemRemoteAccessFeature : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("aaaDeriveNameFromPeerDomain")]
         public Output<string?> AaaDeriveNameFromPeerDomain { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("aaaDeriveNameFromPeerDomainVariable")]
         public Output<string?> AaaDeriveNameFromPeerDomainVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("aaaDeriveNameFromPeerIdentity")]
         public Output<string?> AaaDeriveNameFromPeerIdentity { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("aaaDeriveNameFromPeerIdentityVariable")]
         public Output<string?> AaaDeriveNameFromPeerIdentityVariable { get; private set; } = null!;
 
         /// <summary>
         /// Enable Accounting
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("aaaEnableAccounting")]
         public Output<bool?> AaaEnableAccounting { get; private set; } = null!;
@@ -118,15 +118,15 @@ namespace Pulumi.Sdwan
         public Output<string?> AaaSpecifyNamePolicyPasswordVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `user`, `device`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `User`, `Device`
         /// </summary>
         [Output("anyConnectEapAuthenticationType")]
         public Output<string?> AnyConnectEapAuthenticationType { get; private set; } = null!;
 
         /// <summary>
         /// Enabled SSL VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("connectionTypeSsl")]
         public Output<bool?> ConnectionTypeSsl { get; private set; } = null!;
@@ -138,7 +138,7 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `false`
+        /// - Default value: `False`
         /// </summary>
         [Output("enableCertificateListCheck")]
         public Output<bool?> EnableCertificateListCheck { get; private set; } = null!;
@@ -156,7 +156,7 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Anti-DOS Threshold, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `10`-`1000`
         ///   - Default value: `100`
         /// </summary>
@@ -164,38 +164,38 @@ namespace Pulumi.Sdwan
         public Output<int?> Ikev2AntiDosThreshold { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ikev2AntiDosThresholdVariable")]
         public Output<string?> Ikev2AntiDosThresholdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         /// </summary>
         [Output("ikev2LocalIkeIdentityType")]
         public Output<string?> Ikev2LocalIkeIdentityType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ikev2LocalIkeIdentityTypeVariable")]
         public Output<string?> Ikev2LocalIkeIdentityTypeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ikev2LocalIkeIdentityValue")]
         public Output<string?> Ikev2LocalIkeIdentityValue { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ikev2LocalIkeIdentityValueVariable")]
         public Output<string?> Ikev2LocalIkeIdentityValueVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `86400`
         /// </summary>
@@ -203,52 +203,52 @@ namespace Pulumi.Sdwan
         public Output<int?> Ikev2SecurityAssociationLifetime { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ikev2SecurityAssociationLifetimeVariable")]
         public Output<string?> Ikev2SecurityAssociationLifetimeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// security Association Lifetime, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         ///   - Default value: `64`
         /// </summary>
         [Output("ipsecAntiReplayWindowSize")]
         public Output<int?> IpsecAntiReplayWindowSize { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// Variable name, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         /// </summary>
         [Output("ipsecAntiReplayWindowSizeVariable")]
         public Output<string?> IpsecAntiReplayWindowSizeVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `true`
+        /// Enable Anti-Replay, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `True`
         /// </summary>
         [Output("ipsecEnableAntiReplay")]
         public Output<bool?> IpsecEnableAntiReplay { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ipsecEnableAntiReplayVariable")]
         public Output<string?> IpsecEnableAntiReplayVariable { get; private set; } = null!;
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `false`
+        /// security Association Lifetime, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipsecEnablePerfectFowardSecrecy")]
         public Output<bool?> IpsecEnablePerfectFowardSecrecy { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ipsecEnablePerfectFowardSecrecyVariable")]
         public Output<string?> IpsecEnablePerfectFowardSecrecyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `3600`
         /// </summary>
@@ -256,7 +256,7 @@ namespace Pulumi.Sdwan
         public Output<int?> IpsecSecurityAssociationLifetime { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("ipsecSecurityAssociationLifetimeVariable")]
         public Output<string?> IpsecSecurityAssociationLifetimeVariable { get; private set; } = null!;
@@ -294,26 +294,26 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Output("pskAuthenticationPreSharedKey")]
         public Output<string?> PskAuthenticationPreSharedKey { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// Variable name, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Output("pskAuthenticationPreSharedKeyVariable")]
         public Output<string?> PskAuthenticationPreSharedKeyVariable { get; private set; } = null!;
 
         /// <summary>
-        /// PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `aaa`, `group`
+        /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `Aaa`, `Group`
         /// </summary>
         [Output("pskAuthenticationType")]
         public Output<string?> PskAuthenticationType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Output("pskAuthenticationTypeVariable")]
         public Output<string?> PskAuthenticationTypeVariable { get; private set; } = null!;
@@ -380,32 +380,32 @@ namespace Pulumi.Sdwan
     public sealed class SystemRemoteAccessFeatureArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerDomain")]
         public Input<string>? AaaDeriveNameFromPeerDomain { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerDomainVariable")]
         public Input<string>? AaaDeriveNameFromPeerDomainVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerIdentity")]
         public Input<string>? AaaDeriveNameFromPeerIdentity { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerIdentityVariable")]
         public Input<string>? AaaDeriveNameFromPeerIdentityVariable { get; set; }
 
         /// <summary>
         /// Enable Accounting
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("aaaEnableAccounting")]
         public Input<bool>? AaaEnableAccounting { get; set; }
@@ -435,15 +435,15 @@ namespace Pulumi.Sdwan
         public Input<string>? AaaSpecifyNamePolicyPasswordVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `user`, `device`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `User`, `Device`
         /// </summary>
         [Input("anyConnectEapAuthenticationType")]
         public Input<string>? AnyConnectEapAuthenticationType { get; set; }
 
         /// <summary>
         /// Enabled SSL VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("connectionTypeSsl")]
         public Input<bool>? ConnectionTypeSsl { get; set; }
@@ -455,7 +455,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// - Default value: `false`
+        /// - Default value: `False`
         /// </summary>
         [Input("enableCertificateListCheck")]
         public Input<bool>? EnableCertificateListCheck { get; set; }
@@ -473,7 +473,7 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Anti-DOS Threshold, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `10`-`1000`
         ///   - Default value: `100`
         /// </summary>
@@ -481,38 +481,38 @@ namespace Pulumi.Sdwan
         public Input<int>? Ikev2AntiDosThreshold { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2AntiDosThresholdVariable")]
         public Input<string>? Ikev2AntiDosThresholdVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         /// </summary>
         [Input("ikev2LocalIkeIdentityType")]
         public Input<string>? Ikev2LocalIkeIdentityType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityTypeVariable")]
         public Input<string>? Ikev2LocalIkeIdentityTypeVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityValue")]
         public Input<string>? Ikev2LocalIkeIdentityValue { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityValueVariable")]
         public Input<string>? Ikev2LocalIkeIdentityValueVariable { get; set; }
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `86400`
         /// </summary>
@@ -520,52 +520,52 @@ namespace Pulumi.Sdwan
         public Input<int>? Ikev2SecurityAssociationLifetime { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2SecurityAssociationLifetimeVariable")]
         public Input<string>? Ikev2SecurityAssociationLifetimeVariable { get; set; }
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// security Association Lifetime, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         ///   - Default value: `64`
         /// </summary>
         [Input("ipsecAntiReplayWindowSize")]
         public Input<int>? IpsecAntiReplayWindowSize { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// Variable name, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         /// </summary>
         [Input("ipsecAntiReplayWindowSizeVariable")]
         public Input<string>? IpsecAntiReplayWindowSizeVariable { get; set; }
 
         /// <summary>
-        /// Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `true`
+        /// Enable Anti-Replay, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipsecEnableAntiReplay")]
         public Input<bool>? IpsecEnableAntiReplay { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecEnableAntiReplayVariable")]
         public Input<string>? IpsecEnableAntiReplayVariable { get; set; }
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `false`
+        /// security Association Lifetime, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipsecEnablePerfectFowardSecrecy")]
         public Input<bool>? IpsecEnablePerfectFowardSecrecy { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecEnablePerfectFowardSecrecyVariable")]
         public Input<string>? IpsecEnablePerfectFowardSecrecyVariable { get; set; }
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `3600`
         /// </summary>
@@ -573,7 +573,7 @@ namespace Pulumi.Sdwan
         public Input<int>? IpsecSecurityAssociationLifetime { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecSecurityAssociationLifetimeVariable")]
         public Input<string>? IpsecSecurityAssociationLifetimeVariable { get; set; }
@@ -611,26 +611,26 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKey")]
         public Input<string>? PskAuthenticationPreSharedKey { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// Variable name, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKeyVariable")]
         public Input<string>? PskAuthenticationPreSharedKeyVariable { get; set; }
 
         /// <summary>
-        /// PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `aaa`, `group`
+        /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `Aaa`, `Group`
         /// </summary>
         [Input("pskAuthenticationType")]
         public Input<string>? PskAuthenticationType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("pskAuthenticationTypeVariable")]
         public Input<string>? PskAuthenticationTypeVariable { get; set; }
@@ -653,32 +653,32 @@ namespace Pulumi.Sdwan
     public sealed class SystemRemoteAccessFeatureState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerDomain")]
         public Input<string>? AaaDeriveNameFromPeerDomain { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerDomainVariable")]
         public Input<string>? AaaDeriveNameFromPeerDomainVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerIdentity")]
         public Input<string>? AaaDeriveNameFromPeerIdentity { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("aaaDeriveNameFromPeerIdentityVariable")]
         public Input<string>? AaaDeriveNameFromPeerIdentityVariable { get; set; }
 
         /// <summary>
         /// Enable Accounting
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("aaaEnableAccounting")]
         public Input<bool>? AaaEnableAccounting { get; set; }
@@ -708,15 +708,15 @@ namespace Pulumi.Sdwan
         public Input<string>? AaaSpecifyNamePolicyPasswordVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `user`, `device`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `User`, `Device`
         /// </summary>
         [Input("anyConnectEapAuthenticationType")]
         public Input<string>? AnyConnectEapAuthenticationType { get; set; }
 
         /// <summary>
         /// Enabled SSL VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("connectionTypeSsl")]
         public Input<bool>? ConnectionTypeSsl { get; set; }
@@ -728,7 +728,7 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// - Default value: `false`
+        /// - Default value: `False`
         /// </summary>
         [Input("enableCertificateListCheck")]
         public Input<bool>? EnableCertificateListCheck { get; set; }
@@ -746,7 +746,7 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Anti-DOS Threshold, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `10`-`1000`
         ///   - Default value: `100`
         /// </summary>
@@ -754,38 +754,38 @@ namespace Pulumi.Sdwan
         public Input<int>? Ikev2AntiDosThreshold { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2AntiDosThresholdVariable")]
         public Input<string>? Ikev2AntiDosThresholdVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         /// </summary>
         [Input("ikev2LocalIkeIdentityType")]
         public Input<string>? Ikev2LocalIkeIdentityType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityTypeVariable")]
         public Input<string>? Ikev2LocalIkeIdentityTypeVariable { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// , Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityValue")]
         public Input<string>? Ikev2LocalIkeIdentityValue { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2LocalIkeIdentityValueVariable")]
         public Input<string>? Ikev2LocalIkeIdentityValueVariable { get; set; }
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `86400`
         /// </summary>
@@ -793,52 +793,52 @@ namespace Pulumi.Sdwan
         public Input<int>? Ikev2SecurityAssociationLifetime { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ikev2SecurityAssociationLifetimeVariable")]
         public Input<string>? Ikev2SecurityAssociationLifetimeVariable { get; set; }
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// security Association Lifetime, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         ///   - Default value: `64`
         /// </summary>
         [Input("ipsecAntiReplayWindowSize")]
         public Input<int>? IpsecAntiReplayWindowSize { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        /// Variable name, Attribute conditional on `IpsecEnableAntiReplay` being equal to `True`
         /// </summary>
         [Input("ipsecAntiReplayWindowSizeVariable")]
         public Input<string>? IpsecAntiReplayWindowSizeVariable { get; set; }
 
         /// <summary>
-        /// Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `true`
+        /// Enable Anti-Replay, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipsecEnableAntiReplay")]
         public Input<bool>? IpsecEnableAntiReplay { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecEnableAntiReplayVariable")]
         public Input<string>? IpsecEnableAntiReplayVariable { get; set; }
 
         /// <summary>
-        /// security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Default value: `false`
+        /// security Association Lifetime, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipsecEnablePerfectFowardSecrecy")]
         public Input<bool>? IpsecEnablePerfectFowardSecrecy { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecEnablePerfectFowardSecrecyVariable")]
         public Input<string>? IpsecEnablePerfectFowardSecrecyVariable { get; set; }
 
         /// <summary>
-        /// Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Security Association Lifetime in Seconds, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         ///   - Range: `3600`-`86400`
         ///   - Default value: `3600`
         /// </summary>
@@ -846,7 +846,7 @@ namespace Pulumi.Sdwan
         public Input<int>? IpsecSecurityAssociationLifetime { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("ipsecSecurityAssociationLifetimeVariable")]
         public Input<string>? IpsecSecurityAssociationLifetimeVariable { get; set; }
@@ -884,26 +884,26 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// PSK Pre Shared Key, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKey")]
         public Input<string>? PskAuthenticationPreSharedKey { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        /// Variable name, Attribute conditional on `PskAuthenticationType` being equal to `Group`
         /// </summary>
         [Input("pskAuthenticationPreSharedKeyVariable")]
         public Input<string>? PskAuthenticationPreSharedKeyVariable { get; set; }
 
         /// <summary>
-        /// PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
-        ///   - Choices: `aaa`, `group`
+        /// PSK Selection, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
+        ///   - Choices: `Aaa`, `Group`
         /// </summary>
         [Input("pskAuthenticationType")]
         public Input<string>? PskAuthenticationType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        /// Variable name, Attribute conditional on `ConnectionTypeSsl` being equal to `False`
         /// </summary>
         [Input("pskAuthenticationTypeVariable")]
         public Input<string>? PskAuthenticationTypeVariable { get; set; }

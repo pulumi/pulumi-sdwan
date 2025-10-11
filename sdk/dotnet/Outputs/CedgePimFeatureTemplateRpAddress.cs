@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Set override flag
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Override;
         /// <summary>

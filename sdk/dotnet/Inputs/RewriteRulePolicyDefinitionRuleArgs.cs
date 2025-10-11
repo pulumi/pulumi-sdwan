@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Priority
-        ///   - Choices: `high`, `low`
+        ///   - Choices: `High`, `Low`
         /// </summary>
         [Input("priority", required: true)]
         public Input<string> Priority { get; set; } = null!;

@@ -25,8 +25,8 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Base action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Base action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("baseAction")]
         public Input<string>? BaseAction { get; set; }
@@ -39,8 +39,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int> Id { get; set; } = null!;
 
         /// <summary>
-        /// IP version, either `ipv4` or `ipv6`
-        ///   - Choices: `ipv4`, `ipv6`
+        /// IP version, either `Ipv4` or `Ipv6`
+        ///   - Choices: `Ipv4`, `Ipv6`
         /// </summary>
         [Input("ipType")]
         public Input<string>? IpType { get; set; }

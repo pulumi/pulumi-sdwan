@@ -13,20 +13,20 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Fallback, Attribute conditional on `type` being equal to `fallback`
+        /// Fallback, Attribute conditional on `Type` being equal to `Fallback`
         /// </summary>
         [Input("fallback")]
         public Input<bool>? Fallback { get; set; }
 
         /// <summary>
         /// Type of NAT parameter
-        ///   - Choices: `useVpn`, `fallback`
+        ///   - Choices: `useVpn`, `Fallback`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
 
         /// <summary>
-        /// DSCP, Attribute conditional on `type` being equal to `useVpn`
+        /// DSCP, Attribute conditional on `Type` being equal to `useVpn`
         /// </summary>
         [Input("vpnId")]
         public Input<int>? VpnId { get; set; }

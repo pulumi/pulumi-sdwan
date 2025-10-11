@@ -13,13 +13,13 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `preferredColor`
         /// </summary>
         [Input("preferredColor")]
         public Input<string>? PreferredColor { get; set; }
 
         /// <summary>
-        /// Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+        /// Preferred color group list ID, Attribute conditional on `Type` being equal to `preferredColorGroup`
         /// </summary>
         [Input("preferredColorGroupListId")]
         public Input<string>? PreferredColorGroupListId { get; set; }
@@ -31,7 +31,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PreferredColorGroupListVersion { get; set; }
 
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `type` being equal to `name`
+        /// SLA class list ID, Attribute conditional on `Type` being equal to `Name`
         /// </summary>
         [Input("slaClassListId")]
         public Input<string>? SlaClassListId { get; set; }
@@ -44,7 +44,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of SLA class parameter
-        ///   - Choices: `name`, `preferredColor`, `preferredColorGroup`, `strict`, `fallbackToBestPath`
+        ///   - Choices: `Name`, `preferredColor`, `preferredColorGroup`, `Strict`, `fallbackToBestPath`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

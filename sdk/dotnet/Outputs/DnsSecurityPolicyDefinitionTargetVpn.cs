@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class DnsSecurityPolicyDefinitionTargetVpn
     {
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         public readonly string? CustomDnsServerIp;
         /// <summary>

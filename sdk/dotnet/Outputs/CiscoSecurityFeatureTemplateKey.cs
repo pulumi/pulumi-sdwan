@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Configure Accept AO Mismatch
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AcceptAoMismatch;
         /// <summary>
@@ -37,8 +37,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AcceptLifetimeEndTime;
         /// <summary>
         /// Configure Key lifetime end time
-        ///   - Choices: `infinite`, `duration`, `end-epoch`
-        ///   - Default value: `infinite`
+        ///   - Choices: `Infinite`, `Duration`, `end-epoch`
+        ///   - Default value: `Infinite`
         /// </summary>
         public readonly string? AcceptLifetimeEndTimeFormat;
         /// <summary>
@@ -51,7 +51,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AcceptLifetimeInfiniteVariable;
         /// <summary>
         /// Configure Accept Lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AcceptLifetimeLocal;
         /// <summary>
@@ -77,7 +77,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Id;
         /// <summary>
         /// Configure Include TCP Options
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? IncludeTcpOptions;
         /// <summary>
@@ -131,8 +131,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendLifetimeEndTime;
         /// <summary>
         /// Configure Key lifetime end time
-        ///   - Choices: `infinite`, `duration`, `end-epoch`
-        ///   - Default value: `infinite`
+        ///   - Choices: `Infinite`, `Duration`, `end-epoch`
+        ///   - Default value: `Infinite`
         /// </summary>
         public readonly string? SendLifetimeEndTimeFormat;
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendLifetimeInfiniteVariable;
         /// <summary>
         /// Configure Send lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? SendLifetimeLocal;
         /// <summary>

@@ -126,7 +126,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string CertificateRevocationStatus;
         /// <summary>
-        /// Default action (applies when `mode` set to `security`)
+        /// Default action (applies when `Mode` set to `Security`)
         /// </summary>
         public readonly string DefaultAction;
         /// <summary>
@@ -162,7 +162,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// List of network rules (applies when `mode` set to `security`)
+        /// List of network rules (applies when `Mode` set to `Security`)
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTlsSslDecryptionPolicyDefinitionNetworkRuleResult> NetworkRules;
         /// <summary>
@@ -190,7 +190,7 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string UntrustedCertificate;
         /// <summary>
-        /// List of url rules (applies when `mode` set to `security`)
+        /// List of url rules (applies when `Mode` set to `Security`)
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTlsSslDecryptionPolicyDefinitionUrlRuleResult> UrlRules;
         /// <summary>

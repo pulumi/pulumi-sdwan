@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a cEdge AAA feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -32,7 +34,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConfigCommands")]
         public Output<bool?> AuthorizationConfigCommands { get; private set; } = null!;
@@ -45,7 +47,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authorizationConsole")]
         public Output<bool?> AuthorizationConsole { get; private set; } = null!;
@@ -77,7 +79,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("dot1xAccounting")]
         public Output<bool?> Dot1xAccounting { get; private set; } = null!;
@@ -90,7 +92,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("dot1xAuthentication")]
         public Output<bool?> Dot1xAuthentication { get; private set; } = null!;
@@ -115,8 +117,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Output("radiusDynamicAuthorAuthenticationType")]
         public Output<string?> RadiusDynamicAuthorAuthenticationType { get; private set; } = null!;
@@ -129,8 +131,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Output("radiusDynamicAuthorDomainStripping")]
         public Output<string?> RadiusDynamicAuthorDomainStripping { get; private set; } = null!;
@@ -193,7 +195,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Output("serverGroupsPriorityOrder")]
         public Output<string?> ServerGroupsPriorityOrder { get; private set; } = null!;
@@ -282,7 +284,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -295,7 +297,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -339,7 +341,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -352,7 +354,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -383,8 +385,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -397,8 +399,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -467,7 +469,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }
@@ -518,7 +520,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For configuration mode commands.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConfigCommands")]
         public Input<bool>? AuthorizationConfigCommands { get; set; }
@@ -531,7 +533,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// For enabling console authorization
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authorizationConsole")]
         public Input<bool>? AuthorizationConsole { get; set; }
@@ -575,7 +577,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accounting configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAccounting")]
         public Input<bool>? Dot1xAccounting { get; set; }
@@ -588,7 +590,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication configurations parameters
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dot1xAuthentication")]
         public Input<bool>? Dot1xAuthentication { get; set; }
@@ -619,8 +621,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authentication Type
-        ///   - Choices: `any`, `all`, `session-key`
-        ///   - Default value: `any`
+        ///   - Choices: `Any`, `All`, `session-key`
+        ///   - Default value: `Any`
         /// </summary>
         [Input("radiusDynamicAuthorAuthenticationType")]
         public Input<string>? RadiusDynamicAuthorAuthenticationType { get; set; }
@@ -633,8 +635,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Domain Stripping
-        ///   - Choices: `yes`, `no`, `right-to-left`
-        ///   - Default value: `no`
+        ///   - Choices: `Yes`, `No`, `right-to-left`
+        ///   - Default value: `No`
         /// </summary>
         [Input("radiusDynamicAuthorDomainStripping")]
         public Input<string>? RadiusDynamicAuthorDomainStripping { get; set; }
@@ -703,7 +705,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ServerGroups priority order
-        ///   - Default value: `local`
+        ///   - Default value: `Local`
         /// </summary>
         [Input("serverGroupsPriorityOrder")]
         public Input<string>? ServerGroupsPriorityOrder { get; set; }

@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PoolNameVariable;
         /// <summary>
         /// Protocol
-        ///   - Choices: `tcp`, `udp`
+        ///   - Choices: `Tcp`, `Udp`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

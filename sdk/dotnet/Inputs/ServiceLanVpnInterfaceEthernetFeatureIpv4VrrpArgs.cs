@@ -86,14 +86,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Timer interval for successive advertisements, in milliseconds
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tlocPrefixChange")]
         public Input<bool>? TlocPrefixChange { get; set; }
 
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("trackOmp")]
         public Input<bool>? TrackOmp { get; set; }

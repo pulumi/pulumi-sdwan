@@ -50,14 +50,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Service Type
-        ///   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
+        ///   - Choices: `FW`, `IDS`, `IDP`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `TE`, `Appqoe`
         /// </summary>
         [Input("serviceTypes")]
         public Input<string>? ServiceTypes { get; set; }
 
         /// <summary>
         /// Tracking Service
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackEnable")]
         public Input<bool>? TrackEnable { get; set; }

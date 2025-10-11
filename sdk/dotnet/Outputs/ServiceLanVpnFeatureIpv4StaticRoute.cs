@@ -14,12 +14,12 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRoute
     {
         /// <summary>
-        /// IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
+        /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` being equal to `Dhcp`
         /// </summary>
         public readonly bool? Dhcp;
         /// <summary>
         /// Gateway type
-        ///   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+        ///   - Choices: `nextHop`, `Null0`, `Vpn`, `Dhcp`
         /// </summary>
         public readonly string? Gateway;
         /// <summary>
@@ -31,15 +31,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? NetworkAddressVariable;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `Gateway` being equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> NextHopWithTrackers;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop> NextHops;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `Null0`
         /// </summary>
         public readonly bool? Null0;
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? SubnetMaskVariable;
         /// <summary>
-        /// IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
+        /// IPv4 Route Gateway VPN, Attribute conditional on `Gateway` being equal to `Vpn`
         /// </summary>
         public readonly bool? Vpn;
 

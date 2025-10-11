@@ -14,91 +14,91 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
+        /// Enable cflowd, Attribute conditional on `Type` being equal to `Cflowd`
         /// </summary>
         public readonly bool? Cflowd;
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         public readonly string? Counter;
         /// <summary>
-        /// Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
+        /// Enable DRE optimization, Attribute conditional on `Type` being equal to `dreOptimization`
         /// </summary>
         public readonly bool? DreOptimization;
         /// <summary>
-        /// Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
+        /// Enable fallback to routing, Attribute conditional on `Type` being equal to `fallbackToRouting`
         /// </summary>
         public readonly bool? FallbackToRouting;
         /// <summary>
-        /// Enable logging, Attribute conditional on `type` being equal to `log`
+        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// Loss correction, Attribute conditional on `type` being equal to `lossProtect`
+        /// Loss correction, Attribute conditional on `Type` being equal to `lossProtect`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrection;
         /// <summary>
-        /// Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
+        /// Loss correction FEC, Attribute conditional on `Type` being equal to `lossProtectFec`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrectionFec;
         /// <summary>
-        /// Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
+        /// Loss correction FEC threshold, Attribute conditional on `Type` being equal to `lossProtectFec`
         /// </summary>
         public readonly string? LossCorrectionFecThreshold;
         /// <summary>
-        /// Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
+        /// Loss correction packet duplication, Attribute conditional on `Type` being equal to `lossProtectPktDup`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrectionPacketDuplication;
         /// <summary>
-        /// List of NAT parameters, Attribute conditional on `type` being equal to `nat`
+        /// List of NAT parameters, Attribute conditional on `Type` being equal to `Nat`
         /// </summary>
         public readonly ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> NatParameters;
         /// <summary>
-        /// NAT pool, Attribute conditional on `type` being equal to `nat`
-        ///   - Choices: `pool`
+        /// NAT pool, Attribute conditional on `Type` being equal to `Nat`
+        ///   - Choices: `Pool`
         /// </summary>
         public readonly string? NatPool;
         /// <summary>
-        /// NAT pool ID, Attribute conditional on `type` being equal to `nat`
+        /// NAT pool ID, Attribute conditional on `Type` being equal to `Nat`
         ///   - Range: `1`-`31`
         /// </summary>
         public readonly int? NatPoolId;
         /// <summary>
-        /// Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
+        /// Redirect DNS, Attribute conditional on `Type` being equal to `redirectDns`
         ///   - Choices: `dnsType`, `ipAddress`
         /// </summary>
         public readonly string? RedirectDns;
         /// <summary>
-        /// Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+        /// Redirect DNS IP address, Attribute conditional on `RedirectDns` being equal to `ipAddress`
         /// </summary>
         public readonly string? RedirectDnsAddress;
         /// <summary>
-        /// Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
-        ///   - Choices: `host`, `umbrella`
+        /// Redirect DNS type, Attribute conditional on `RedirectDns` being equal to `dnsType`
+        ///   - Choices: `Host`, `Umbrella`
         /// </summary>
         public readonly string? RedirectDnsType;
         /// <summary>
-        /// Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
+        /// Enable secure internet gateway, Attribute conditional on `Type` being equal to `Sig`
         /// </summary>
         public readonly bool? SecureInternetGateway;
         /// <summary>
-        /// Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
+        /// Service node group, Attribute conditional on `Type` being equal to `serviceNodeGroup`
         /// </summary>
         public readonly string? ServiceNodeGroup;
         /// <summary>
-        /// List of set parameters, Attribute conditional on `type` being equal to `set`
+        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
         /// </summary>
         public readonly ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>
-        /// Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
+        /// Enable TCP optimization, Attribute conditional on `Type` being equal to `tcpOptimization`
         /// </summary>
         public readonly bool? TcpOptimization;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `cflowd`, `count`, `dreOptimization`, `fallbackToRouting`, `log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `nat`, `redirectDns`, `serviceNodeGroup`, `set`, `sig`, `tcpOptimization`
+        ///   - Choices: `Cflowd`, `Count`, `dreOptimization`, `fallbackToRouting`, `Log`, `lossProtect`, `lossProtectPktDup`, `lossProtectFec`, `Nat`, `redirectDns`, `serviceNodeGroup`, `Set`, `Sig`, `tcpOptimization`
         /// </summary>
         public readonly string Type;
 

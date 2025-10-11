@@ -430,6 +430,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -463,6 +465,8 @@ class IntrusionPreventionPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Intrusion Prevention Policy Definition .
+
+        ## Example Usage
 
         ## Import
 

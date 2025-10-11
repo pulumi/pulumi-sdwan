@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Do not advertise this range
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("noAdvertise")]
         public Input<bool>? NoAdvertise { get; set; }

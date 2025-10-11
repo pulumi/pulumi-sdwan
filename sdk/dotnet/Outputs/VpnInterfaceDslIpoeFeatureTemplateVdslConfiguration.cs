@@ -23,27 +23,27 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ControllerVdslSlotVariable;
         /// <summary>
         /// Set VDSL operating mode to adsl1
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ModeAdsl1;
         /// <summary>
         /// Set VDSL operating mode to adsl2
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ModeAdsl2;
         /// <summary>
         /// Set VDSL operating mode to adsl2plus
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ModeAdsl2plus;
         /// <summary>
         /// Set VDSL operating mode to ansi
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ModeAnsi;
         /// <summary>
         /// Set VDSL operating mode to vdsl2
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ModeVdsl2;
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Seamless rate adaption
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Sra;
         /// <summary>

@@ -15,6 +15,8 @@ import (
 // This resource can manage a System IPv6 Device Access Feature.
 //   - Minimum SD-WAN Manager version: `20.12.0`
 //
+// ## Example Usage
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

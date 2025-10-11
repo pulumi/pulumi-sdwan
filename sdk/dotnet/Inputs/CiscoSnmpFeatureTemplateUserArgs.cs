@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure authentication protocol
-        ///   - Choices: `md5`, `sha`
+        ///   - Choices: `Md5`, `Sha`
         /// </summary>
         [Input("authenticationProtocol")]
         public Input<string>? AuthenticationProtocol { get; set; }

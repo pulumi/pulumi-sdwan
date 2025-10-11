@@ -48,16 +48,16 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
-     *   - Choices: `pap`, `chap`, `pap_chap`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `papChap`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
-     *   - Choices: `pap`, `chap`, `pap_chap`
+     * @return Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     *   - Choices: `pap`, `chap`, `papChap`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -65,14 +65,14 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     @Import(name="authenticationTypeVariable")
     private @Nullable Output<String> authenticationTypeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * @return Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     public Optional<Output<String>> authenticationTypeVariable() {
@@ -221,14 +221,14 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     @Import(name="profilePassword")
     private @Nullable Output<String> profilePassword;
 
     /**
-     * @return Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+     * @return Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     public Optional<Output<String>> profilePassword() {
@@ -236,14 +236,14 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     @Import(name="profilePasswordVariable")
     private @Nullable Output<String> profilePasswordVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * @return Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     public Optional<Output<String>> profilePasswordVariable() {
@@ -251,14 +251,14 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     @Import(name="profileUsername")
     private @Nullable Output<String> profileUsername;
 
     /**
-     * @return Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+     * @return Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     public Optional<Output<String>> profileUsername() {
@@ -266,14 +266,14 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
     }
 
     /**
-     * Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     @Import(name="profileUsernameVariable")
     private @Nullable Output<String> profileUsernameVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+     * @return Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
      * 
      */
     public Optional<Output<String>> profileUsernameVariable() {
@@ -397,8 +397,8 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
-         *   - Choices: `pap`, `chap`, `pap_chap`
+         * @param authenticationType Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+         *   - Choices: `pap`, `chap`, `papChap`
          * 
          * @return builder
          * 
@@ -409,8 +409,8 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param authenticationType Set authentication type, Attribute conditional on `requires_authentication` being equal to `true`
-         *   - Choices: `pap`, `chap`, `pap_chap`
+         * @param authenticationType Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+         *   - Choices: `pap`, `chap`, `papChap`
          * 
          * @return builder
          * 
@@ -420,7 +420,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param authenticationTypeVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param authenticationTypeVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -431,7 +431,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param authenticationTypeVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param authenticationTypeVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -636,7 +636,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profilePassword Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profilePassword Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -647,7 +647,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profilePassword Set the profile password, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profilePassword Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -657,7 +657,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profilePasswordVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profilePasswordVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -668,7 +668,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profilePasswordVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profilePasswordVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -678,7 +678,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profileUsername Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profileUsername Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -689,7 +689,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profileUsername Set the profile username, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profileUsername Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -699,7 +699,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profileUsernameVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profileUsernameVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 
@@ -710,7 +710,7 @@ public final class TransportCellularProfileFeatureState extends com.pulumi.resou
         }
 
         /**
-         * @param profileUsernameVariable Variable name, Attribute conditional on `requires_authentication` being equal to `true`
+         * @param profileUsernameVariable Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
          * 
          * @return builder
          * 

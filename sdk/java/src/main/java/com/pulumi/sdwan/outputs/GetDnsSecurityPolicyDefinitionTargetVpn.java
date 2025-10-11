@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityPolicyDefinitionTargetVpn {
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     private String customDnsServerIp;
@@ -35,7 +35,7 @@ public final class GetDnsSecurityPolicyDefinitionTargetVpn {
 
     private GetDnsSecurityPolicyDefinitionTargetVpn() {}
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public String customDnsServerIp() {

@@ -191,6 +191,8 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         This resource can manage a Policy Object Preferred Color Group Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -217,6 +219,8 @@ class PolicyObjectPreferredColorGroup(pulumi.CustomResource):
         """
         This resource can manage a Policy Object Preferred Color Group Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

@@ -39,7 +39,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Area Type Normal
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("normal")]
         public Input<bool>? Normal { get; set; }
@@ -58,7 +58,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Do not inject interarea routes into NSSA
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nssaNoSummary")]
         public Input<bool>? NssaNoSummary { get; set; }
@@ -95,7 +95,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Do not inject interarea routes into stub
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("stubNoSummary")]
         public Input<bool>? StubNoSummary { get; set; }
@@ -108,7 +108,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Always Translate LSAs on this ABR
-        ///   - Choices: `always`
+        ///   - Choices: `Always`
         /// </summary>
         [Input("translate")]
         public Input<string>? Translate { get; set; }

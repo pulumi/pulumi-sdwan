@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Select a Route Protocol to enable route leaking from this Service VPN to Global VPN
-        ///   - Choices: `static`, `connected`, `bgp`, `eigrp`, `ospf`
+        ///   - Choices: `Static`, `Connected`, `Bgp`, `Eigrp`, `Ospf`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _protocolSubTypes;
 
         /// <summary>
-        /// - Default value: `external`
+        /// - Default value: `External`
         /// </summary>
         public InputList<string> ProtocolSubTypes
         {

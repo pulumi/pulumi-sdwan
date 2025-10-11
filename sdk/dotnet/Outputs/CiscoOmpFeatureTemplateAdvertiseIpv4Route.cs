@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Advertise OSPF external routes
-        ///   - Choices: `external`
+        ///   - Choices: `External`
         /// </summary>
         public readonly string? AdvertiseExternalOspf;
         /// <summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Set routes to advertise
-        ///   - Choices: `bgp`, `ospf`, `ospfv3`, `connected`, `static`, `eigrp`, `lisp`, `isis`
+        ///   - Choices: `Bgp`, `Ospf`, `Ospfv3`, `Connected`, `Static`, `Eigrp`, `Lisp`, `Isis`
         /// </summary>
         public readonly string? Protocol;
 

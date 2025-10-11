@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set direction to apply policy
-        ///   - Choices: `in`
+        ///   - Choices: `In`
         /// </summary>
         public readonly string? Direction;
         /// <summary>

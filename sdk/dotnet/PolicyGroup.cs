@@ -87,7 +87,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `sdwan`
+        ///   - Choices: `Sdwan`
         /// </summary>
         [Output("solution")]
         public Output<string> Solution { get; private set; } = null!;
@@ -188,7 +188,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `sdwan`
+        ///   - Choices: `Sdwan`
         /// </summary>
         [Input("solution", required: true)]
         public Input<string> Solution { get; set; } = null!;
@@ -251,7 +251,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `sdwan`
+        ///   - Choices: `Sdwan`
         /// </summary>
         [Input("solution")]
         public Input<string>? Solution { get; set; }

@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class SecurityPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        /// Destination Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
         [Input("destinationZone")]
         public Input<string>? DestinationZone { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        /// Source Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
         [Input("sourceZone")]
         public Input<string>? SourceZone { get; set; }

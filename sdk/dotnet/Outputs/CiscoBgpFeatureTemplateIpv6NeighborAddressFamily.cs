@@ -49,7 +49,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? MaximumPrefixesVariable;
         /// <summary>
         /// Display only a warning message when threshold is exceeded
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? MaximumPrefixesWarningOnly;
         /// <summary>

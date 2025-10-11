@@ -14,6 +14,8 @@ import (
 
 // This resource can manage a AS Path List Policy Object .
 //
+// ## Example Usage
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

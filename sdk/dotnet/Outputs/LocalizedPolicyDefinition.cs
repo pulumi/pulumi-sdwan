@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string Id;
         /// <summary>
         /// Policy definition type
-        ///   - Choices: `qosMap`, `rewriteRule`, `vedgeRoute`, `acl`, `aclv6`, `deviceAccessPolicy`, `deviceAccessPolicyv6`
+        ///   - Choices: `qosMap`, `rewriteRule`, `vedgeRoute`, `Acl`, `Aclv6`, `deviceAccessPolicy`, `deviceAccessPolicyv6`
         /// </summary>
         public readonly string Type;
         /// <summary>

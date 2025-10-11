@@ -13,25 +13,25 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `backupSlaPreferredColor`
         /// </summary>
         [Input("backupSlaPreferredColor")]
         public Input<string>? BackupSlaPreferredColor { get; set; }
 
         /// <summary>
-        /// Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+        /// Cloud SLA, Attribute conditional on `Type` being equal to `cloudSaas`
         /// </summary>
         [Input("cloudSla")]
         public Input<bool>? CloudSla { get; set; }
 
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         [Input("counter")]
         public Input<string>? Counter { get; set; }
 
         /// <summary>
-        /// Enable logging, Attribute conditional on `type` being equal to `log`
+        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterGetArgs>? _slaClassParameters;
 
         /// <summary>
-        /// List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
+        /// List of SLA class parameters, Attribute conditional on `Type` being equal to `slaClass`
         /// </summary>
         public InputList<Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterGetArgs> SlaClassParameters
         {
@@ -50,7 +50,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `backupSlaPreferredColor`, `count`, `log`, `slaClass`, `cloudSaas`
+        ///   - Choices: `backupSlaPreferredColor`, `Count`, `Log`, `slaClass`, `cloudSaas`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

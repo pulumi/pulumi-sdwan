@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Policy definition type
-        ///   - Choices: `hubAndSpoke`, `mesh`, `control`, `vpnMembershipGroup`, `appRoute`, `cflowd`, `data`
+        ///   - Choices: `hubAndSpoke`, `Mesh`, `Control`, `vpnMembershipGroup`, `appRoute`, `Cflowd`, `Data`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

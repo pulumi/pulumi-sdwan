@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Intrusion Prevention Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -37,7 +39,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The inspection mode
-        ///   - Choices: `protection`, `detection`
+        ///   - Choices: `Protection`, `Detection`
         /// </summary>
         [Output("inspectionMode")]
         public Output<string?> InspectionMode { get; private set; } = null!;
@@ -56,7 +58,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Log level
-        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        ///   - Choices: `Emergency`, `Alert`, `Critical`, `Error`, `Warning`, `Notice`, `Info`, `Debug`
         /// </summary>
         [Output("logLevel")]
         public Output<string?> LogLevel { get; private set; } = null!;
@@ -66,7 +68,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Output("mode")]
         public Output<string?> Mode { get; private set; } = null!;
@@ -79,7 +81,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Signature set
-        ///   - Choices: `balanced`, `connectivity`, `security`
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`
         /// </summary>
         [Output("signatureSet")]
         public Output<string?> SignatureSet { get; private set; } = null!;
@@ -156,7 +158,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The inspection mode
-        ///   - Choices: `protection`, `detection`
+        ///   - Choices: `Protection`, `Detection`
         /// </summary>
         [Input("inspectionMode")]
         public Input<string>? InspectionMode { get; set; }
@@ -175,7 +177,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Log level
-        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        ///   - Choices: `Emergency`, `Alert`, `Critical`, `Error`, `Warning`, `Notice`, `Info`, `Debug`
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
@@ -190,7 +192,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -203,7 +205,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Signature set
-        ///   - Choices: `balanced`, `connectivity`, `security`
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`
         /// </summary>
         [Input("signatureSet")]
         public Input<string>? SignatureSet { get; set; }
@@ -242,7 +244,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The inspection mode
-        ///   - Choices: `protection`, `detection`
+        ///   - Choices: `Protection`, `Detection`
         /// </summary>
         [Input("inspectionMode")]
         public Input<string>? InspectionMode { get; set; }
@@ -261,7 +263,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Log level
-        ///   - Choices: `emergency`, `alert`, `critical`, `error`, `warning`, `notice`, `info`, `debug`
+        ///   - Choices: `Emergency`, `Alert`, `Critical`, `Error`, `Warning`, `Notice`, `Info`, `Debug`
         /// </summary>
         [Input("logLevel")]
         public Input<string>? LogLevel { get; set; }
@@ -276,7 +278,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// The policy mode
-        ///   - Choices: `security`, `unified`
+        ///   - Choices: `Security`, `Unified`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -289,7 +291,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Signature set
-        ///   - Choices: `balanced`, `connectivity`, `security`
+        ///   - Choices: `Balanced`, `Connectivity`, `Security`
         /// </summary>
         [Input("signatureSet")]
         public Input<string>? SignatureSet { get; set; }

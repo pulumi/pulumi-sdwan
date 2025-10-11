@@ -85,56 +85,56 @@ import javax.annotation.Nullable;
 @ResourceType(type="sdwan:index/systemRemoteAccessFeature:SystemRemoteAccessFeature")
 public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResource {
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="aaaDeriveNameFromPeerDomain", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aaaDeriveNameFromPeerDomain;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> aaaDeriveNameFromPeerDomain() {
         return Codegen.optional(this.aaaDeriveNameFromPeerDomain);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="aaaDeriveNameFromPeerDomainVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aaaDeriveNameFromPeerDomainVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> aaaDeriveNameFromPeerDomainVariable() {
         return Codegen.optional(this.aaaDeriveNameFromPeerDomainVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="aaaDeriveNameFromPeerIdentity", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aaaDeriveNameFromPeerIdentity;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> aaaDeriveNameFromPeerIdentity() {
         return Codegen.optional(this.aaaDeriveNameFromPeerIdentity);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="aaaDeriveNameFromPeerIdentityVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> aaaDeriveNameFromPeerIdentityVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> aaaDeriveNameFromPeerIdentityVariable() {
@@ -211,7 +211,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.aaaSpecifyNamePolicyPasswordVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `user`, `device`
      * 
      */
@@ -219,7 +219,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ String> anyConnectEapAuthenticationType;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return , Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `user`, `device`
      * 
      */
@@ -299,7 +299,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return this.featureProfileId;
     }
     /**
-     * Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `10`-`1000`
      *   - Default value: `100`
      * 
@@ -308,7 +308,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Integer> ikev2AntiDosThreshold;
 
     /**
-     * @return Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Anti-DOS Threshold, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `10`-`1000`
      *   - Default value: `100`
      * 
@@ -317,21 +317,21 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2AntiDosThreshold);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ikev2AntiDosThresholdVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2AntiDosThresholdVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ikev2AntiDosThresholdVariable() {
         return Codegen.optional(this.ikev2AntiDosThresholdVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      * 
      */
@@ -339,7 +339,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ String> ikev2LocalIkeIdentityType;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return , Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
      * 
      */
@@ -347,49 +347,49 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2LocalIkeIdentityType);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ikev2LocalIkeIdentityTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2LocalIkeIdentityTypeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ikev2LocalIkeIdentityTypeVariable() {
         return Codegen.optional(this.ikev2LocalIkeIdentityTypeVariable);
     }
     /**
-     * , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ikev2LocalIkeIdentityValue", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2LocalIkeIdentityValue;
 
     /**
-     * @return , Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return , Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ikev2LocalIkeIdentityValue() {
         return Codegen.optional(this.ikev2LocalIkeIdentityValue);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ikev2LocalIkeIdentityValueVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2LocalIkeIdentityValueVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ikev2LocalIkeIdentityValueVariable() {
         return Codegen.optional(this.ikev2LocalIkeIdentityValueVariable);
     }
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `86400`
      * 
@@ -398,7 +398,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Integer> ikev2SecurityAssociationLifetime;
 
     /**
-     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `86400`
      * 
@@ -407,21 +407,21 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ikev2SecurityAssociationLifetime);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ikev2SecurityAssociationLifetimeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ikev2SecurityAssociationLifetimeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ikev2SecurityAssociationLifetimeVariable() {
         return Codegen.optional(this.ikev2SecurityAssociationLifetimeVariable);
     }
     /**
-     * security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     * security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      *   - Default value: `64`
      * 
      */
@@ -429,7 +429,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Integer> ipsecAntiReplayWindowSize;
 
     /**
-     * @return security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     * @return security Association Lifetime, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      *   - Default value: `64`
      * 
      */
@@ -437,21 +437,21 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecAntiReplayWindowSize);
     }
     /**
-     * Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     * Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      * 
      */
     @Export(name="ipsecAntiReplayWindowSizeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecAntiReplayWindowSizeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+     * @return Variable name, Attribute conditional on `ipsecEnableAntiReplay` being equal to `true`
      * 
      */
     public Output<Optional<String>> ipsecAntiReplayWindowSizeVariable() {
         return Codegen.optional(this.ipsecAntiReplayWindowSizeVariable);
     }
     /**
-     * Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Default value: `true`
      * 
      */
@@ -459,7 +459,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Boolean> ipsecEnableAntiReplay;
 
     /**
-     * @return Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Enable Anti-Replay, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Default value: `true`
      * 
      */
@@ -467,21 +467,21 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecEnableAntiReplay);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ipsecEnableAntiReplayVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecEnableAntiReplayVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ipsecEnableAntiReplayVariable() {
         return Codegen.optional(this.ipsecEnableAntiReplayVariable);
     }
     /**
-     * security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Default value: `false`
      * 
      */
@@ -489,7 +489,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Boolean> ipsecEnablePerfectFowardSecrecy;
 
     /**
-     * @return security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return security Association Lifetime, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Default value: `false`
      * 
      */
@@ -497,21 +497,21 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecEnablePerfectFowardSecrecy);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ipsecEnablePerfectFowardSecrecyVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecEnablePerfectFowardSecrecyVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ipsecEnablePerfectFowardSecrecyVariable() {
         return Codegen.optional(this.ipsecEnablePerfectFowardSecrecyVariable);
     }
     /**
-     * Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `3600`
      * 
@@ -520,7 +520,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ Integer> ipsecSecurityAssociationLifetime;
 
     /**
-     * @return Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Security Association Lifetime in Seconds, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Range: `3600`-`86400`
      *   - Default value: `3600`
      * 
@@ -529,14 +529,14 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.ipsecSecurityAssociationLifetime);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="ipsecSecurityAssociationLifetimeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipsecSecurityAssociationLifetimeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> ipsecSecurityAssociationLifetimeVariable() {
@@ -617,35 +617,35 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return this.name;
     }
     /**
-     * PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+     * PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
      * 
      */
     @Export(name="pskAuthenticationPreSharedKey", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> pskAuthenticationPreSharedKey;
 
     /**
-     * @return PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+     * @return PSK Pre Shared Key, Attribute conditional on `pskAuthenticationType` being equal to `group`
      * 
      */
     public Output<Optional<String>> pskAuthenticationPreSharedKey() {
         return Codegen.optional(this.pskAuthenticationPreSharedKey);
     }
     /**
-     * Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+     * Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      * 
      */
     @Export(name="pskAuthenticationPreSharedKeyVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> pskAuthenticationPreSharedKeyVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+     * @return Variable name, Attribute conditional on `pskAuthenticationType` being equal to `group`
      * 
      */
     public Output<Optional<String>> pskAuthenticationPreSharedKeyVariable() {
         return Codegen.optional(this.pskAuthenticationPreSharedKeyVariable);
     }
     /**
-     * PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `aaa`, `group`
      * 
      */
@@ -653,7 +653,7 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
     private Output</* @Nullable */ String> pskAuthenticationType;
 
     /**
-     * @return PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return PSK Selection, Attribute conditional on `connectionTypeSsl` being equal to `false`
      *   - Choices: `aaa`, `group`
      * 
      */
@@ -661,14 +661,14 @@ public class SystemRemoteAccessFeature extends com.pulumi.resources.CustomResour
         return Codegen.optional(this.pskAuthenticationType);
     }
     /**
-     * Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     @Export(name="pskAuthenticationTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> pskAuthenticationTypeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+     * @return Variable name, Attribute conditional on `connectionTypeSsl` being equal to `false`
      * 
      */
     public Output<Optional<String>> pskAuthenticationTypeVariable() {

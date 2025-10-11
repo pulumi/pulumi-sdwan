@@ -14,8 +14,8 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// List of Virtual applications
-        ///   - Choices: `utd`
-        ///   - Default value: `utd`
+        ///   - Choices: `Utd`
+        ///   - Default value: `Utd`
         /// </summary>
         [Input("applicationType")]
         public Input<string>? ApplicationType { get; set; }
@@ -48,7 +48,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Download URL Database on Device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("databaseUrl")]
         public Input<bool>? DatabaseUrl { get; set; }
@@ -68,7 +68,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Is Nat enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("nat")]
         public Input<bool>? Nat { get; set; }
@@ -87,8 +87,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Resource Profile
-        ///   - Choices: `low`, `medium`, `high`
-        ///   - Default value: `low`
+        ///   - Choices: `Low`, `Medium`, `High`
+        ///   - Default value: `Low`
         /// </summary>
         [Input("resourceProfile")]
         public Input<string>? ResourceProfile { get; set; }

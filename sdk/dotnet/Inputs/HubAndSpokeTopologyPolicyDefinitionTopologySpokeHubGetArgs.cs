@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `all_hubs_are_equal` is 'false')
+        /// Preference, multiple of 10 (for example 70, 80, 90, 100). The higher the value the higher the priority of the associated hub (required when `AllHubsAreEqual` is 'false')
         /// </summary>
         [Input("preference")]
         public Input<string>? Preference { get; set; }

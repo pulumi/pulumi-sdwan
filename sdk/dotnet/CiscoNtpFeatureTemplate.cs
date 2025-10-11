@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco NTP feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -45,7 +47,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("master")]
         public Output<bool?> Master { get; private set; } = null!;
@@ -196,7 +198,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }
@@ -309,7 +311,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure device as NTP master
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("master")]
         public Input<bool>? Master { get; set; }

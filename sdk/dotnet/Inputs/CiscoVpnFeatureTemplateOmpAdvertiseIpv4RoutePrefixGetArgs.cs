@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Aggregate Only
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("aggregateOnly")]
         public Input<bool>? AggregateOnly { get; set; }

@@ -30,7 +30,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.HubAndSpokeTopologyPolicyDefinitionTopologySpoke> Spokes;
         /// <summary>
-        /// TLOC list ID (required when `advertise_hub_tlocs` is 'true')
+        /// TLOC list ID (required when `AdvertiseHubTlocs` is 'true')
         /// </summary>
         public readonly string? TlocListId;
 

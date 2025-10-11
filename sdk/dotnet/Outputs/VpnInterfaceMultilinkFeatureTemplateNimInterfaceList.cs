@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ClockRateVariable;
         /// <summary>
         /// Configure Encapsulation for interface
-        ///   - Choices: `hdlc`, `ppp`
+        ///   - Choices: `Hdlc`, `Ppp`
         /// </summary>
         public readonly string? EncapsulationSerial;
         /// <summary>

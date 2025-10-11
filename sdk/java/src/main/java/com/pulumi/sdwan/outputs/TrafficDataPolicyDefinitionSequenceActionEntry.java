@@ -89,12 +89,12 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable String redirectDns;
     /**
-     * @return Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
      * 
      */
     private @Nullable String redirectDnsAddress;
     /**
-     * @return Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+     * @return Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -225,14 +225,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.redirectDns);
     }
     /**
-     * @return Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
      * 
      */
     public Optional<String> redirectDnsAddress() {
         return Optional.ofNullable(this.redirectDnsAddress);
     }
     /**
-     * @return Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+     * @return Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */

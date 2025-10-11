@@ -19,8 +19,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.ServiceRoutePolicyFeatureSequenceAction> Actions;
         /// <summary>
         /// Base Action
-        ///   - Choices: `reject`, `accept`
-        ///   - Default value: `reject`
+        ///   - Choices: `Reject`, `Accept`
+        ///   - Default value: `Reject`
         /// </summary>
         public readonly string? BaseAction;
         /// <summary>

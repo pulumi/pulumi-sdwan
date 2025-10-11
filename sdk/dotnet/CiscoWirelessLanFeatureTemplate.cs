@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco Wireless LAN feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -109,7 +111,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown24ghz")]
         public Output<bool?> Shutdown24ghz { get; private set; } = null!;
@@ -122,7 +124,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("shutdown5ghz")]
         public Output<bool?> Shutdown5ghz { get; private set; } = null!;
@@ -300,7 +302,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -313,7 +315,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }
@@ -447,7 +449,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown24ghz")]
         public Input<bool>? Shutdown24ghz { get; set; }
@@ -460,7 +462,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Shutdown
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown5ghz")]
         public Input<bool>? Shutdown5ghz { get; set; }

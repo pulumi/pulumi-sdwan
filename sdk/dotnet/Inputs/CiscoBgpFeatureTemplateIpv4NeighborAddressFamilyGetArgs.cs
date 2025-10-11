@@ -60,7 +60,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Display only a warning message when threshold is exceeded
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("maximumPrefixesWarningOnly")]
         public Input<bool>? MaximumPrefixesWarningOnly { get; set; }

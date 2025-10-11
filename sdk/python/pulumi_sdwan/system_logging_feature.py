@@ -476,6 +476,8 @@ class SystemLoggingFeature(pulumi.CustomResource):
         This resource can manage a System Logging Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -515,6 +517,8 @@ class SystemLoggingFeature(pulumi.CustomResource):
         """
         This resource can manage a System Logging Feature.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

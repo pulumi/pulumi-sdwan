@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TimerVariable;
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TrackOmp;
         /// <summary>

@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? DestinationRegion;
         /// <summary>
         /// Dns
-        ///   - Choices: `request`, `response`
+        ///   - Choices: `Request`, `Response`
         /// </summary>
         public readonly string? Dns;
         public readonly string? DnsApplicationListId;
@@ -81,22 +81,22 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<string> SourcePorts;
         /// <summary>
         /// TCP States
-        ///   - Choices: `syn`
+        ///   - Choices: `Syn`
         /// </summary>
         public readonly string? Tcp;
         /// <summary>
         /// M365 Traffic Category
-        ///   - Choices: `optimize-allow`, `optimize`, `all`
+        ///   - Choices: `optimize-allow`, `Optimize`, `All`
         /// </summary>
         public readonly string? TrafficCategory;
         /// <summary>
         /// Traffic Class
-        ///   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+        ///   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `Silver`, `Bronze`
         /// </summary>
         public readonly string? TrafficClass;
         /// <summary>
         /// Traffic to
-        ///   - Choices: `core`, `service`, `access`
+        ///   - Choices: `Core`, `Service`, `Access`
         /// </summary>
         public readonly string? TrafficTo;
 

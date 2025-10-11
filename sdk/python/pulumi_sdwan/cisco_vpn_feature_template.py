@@ -1196,6 +1196,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco VPN feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1257,6 +1259,8 @@ class CiscoVpnFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco VPN feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
 
         ## Import
 

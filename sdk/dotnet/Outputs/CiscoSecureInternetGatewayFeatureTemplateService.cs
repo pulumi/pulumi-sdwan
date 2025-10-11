@@ -23,8 +23,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Service Type
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         public readonly string? ServiceType;
         /// <summary>
@@ -47,17 +47,17 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? UmbrellaSecondaryDataCenterVariable;
         /// <summary>
         /// For first-time Acceptable User Policy behavior, block Internet access
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerAupBlockInternetUntilAccepted;
         /// <summary>
         /// Enable Acceptable User Policy
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerAupEnabled;
         /// <summary>
         /// For first-time Acceptable User Policy behavior, force SSL inspection
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerAupForceSslInspection;
         /// <summary>
@@ -67,22 +67,22 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? ZscalerAupTimeout;
         /// <summary>
         /// Enforce Authentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerAuthenticationRequired;
         /// <summary>
         /// Enable Caution
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerCautionEnabled;
         /// <summary>
         /// Firewall enabled
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerFirewallEnabled;
         /// <summary>
         /// Enable IPS Control
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerIpsControlEnabled;
         /// <summary>
@@ -125,12 +125,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? ZscalerSurrogateIdleTime;
         /// <summary>
         /// Enable Surrogate IP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerSurrogateIp;
         /// <summary>
         /// Enforce Surrogate IP for known browsers
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerSurrogateIpEnforceForKnownBrowsers;
         /// <summary>
@@ -146,7 +146,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ZscalerSurrogateRefreshTimeUnit;
         /// <summary>
         /// XFF forwarding enabled
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? ZscalerXffForward;
 

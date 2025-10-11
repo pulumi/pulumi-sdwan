@@ -148,14 +148,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -354,14 +354,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -369,14 +369,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -435,7 +435,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
      *   - Default value: `1`
      * 
@@ -444,7 +444,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
      *   - Default value: `1`
      * 
@@ -454,14 +454,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -529,14 +529,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4SecondaryAddresses")
     private @Nullable Output<List<TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<List<TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>>> ipv4SecondaryAddresses() {
@@ -544,7 +544,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -552,7 +552,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -561,14 +561,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -576,14 +576,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -591,14 +591,14 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -1105,7 +1105,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1116,7 +1116,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6_configuration_type` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1387,7 +1387,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1398,7 +1398,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1408,7 +1408,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1419,7 +1419,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1498,7 +1498,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          *   - Range: `1`-`65536`
          *   - Default value: `1`
          * 
@@ -1511,7 +1511,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          *   - Range: `1`-`65536`
          *   - Default value: `1`
          * 
@@ -1523,7 +1523,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1534,7 +1534,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1638,7 +1638,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1649,7 +1649,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1659,7 +1659,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1669,7 +1669,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -1681,7 +1681,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -1692,7 +1692,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1703,7 +1703,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4_configuration_type` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1713,7 +1713,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1724,7 +1724,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1734,7 +1734,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -1745,7 +1745,7 @@ public final class TransportManagementVpnInterfaceEthernetFeatureArgs extends co
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6_configuration_type` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 

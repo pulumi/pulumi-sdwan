@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TimeVariable;
         /// <summary>
         /// Set the router LSA advertisement type
-        ///   - Choices: `administrative`, `on-startup`
+        ///   - Choices: `Administrative`, `on-startup`
         /// </summary>
         public readonly string? Type;
 

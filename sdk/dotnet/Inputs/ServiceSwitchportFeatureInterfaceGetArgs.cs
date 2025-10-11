@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set uni or bi directional authorization mode
-        ///   - Choices: `both`, `in`
+        ///   - Choices: `Both`, `In`
         /// </summary>
         [Input("controlDirection")]
         public Input<string>? ControlDirection { get; set; }
@@ -40,7 +40,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`
+        ///   - Choices: `Full`, `Half`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -140,7 +140,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set type of switch port: access/trunk
-        ///   - Choices: `access`, `trunk`
+        ///   - Choices: `Access`, `Trunk`
         /// </summary>
         [Input("mode")]
         public Input<string>? Mode { get; set; }
@@ -159,7 +159,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set Port-Control Mode
-        ///   - Choices: `auto`, `force-unauthorized`, `force-authorized`
+        ///   - Choices: `Auto`, `force-unauthorized`, `force-authorized`
         /// </summary>
         [Input("portControl")]
         public Input<string>? PortControl { get; set; }
@@ -199,7 +199,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

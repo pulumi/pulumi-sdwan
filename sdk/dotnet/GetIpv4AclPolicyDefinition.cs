@@ -118,7 +118,7 @@ namespace Pulumi.Sdwan
     public sealed class GetIpv4AclPolicyDefinitionResult
     {
         /// <summary>
-        /// Default action, either `accept` or `drop`
+        /// Default action, either `Accept` or `Drop`
         /// </summary>
         public readonly string DefaultAction;
         /// <summary>

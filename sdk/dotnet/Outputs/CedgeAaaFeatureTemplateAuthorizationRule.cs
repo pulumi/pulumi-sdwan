@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Succeed if user has authenticated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Authenticated;
         /// <summary>
@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Groups;
         /// <summary>
         /// Method
-        ///   - Choices: `commands`
+        ///   - Choices: `Commands`
         /// </summary>
         public readonly string? Method;
         /// <summary>

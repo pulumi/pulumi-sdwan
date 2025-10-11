@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? PrivateVpnVariable;
         /// <summary>
         /// Layer 4 protocol to apply port forwarding to
-        ///   - Choices: `tcp`, `udp`
+        ///   - Choices: `Tcp`, `Udp`
         /// </summary>
         public readonly string? Protocol;
 

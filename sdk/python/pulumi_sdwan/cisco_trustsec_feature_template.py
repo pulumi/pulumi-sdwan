@@ -1265,6 +1265,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         This resource can manage a Cisco TrustSec feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1336,6 +1338,8 @@ class CiscoTrustsecFeatureTemplate(pulumi.CustomResource):
         """
         This resource can manage a Cisco TrustSec feature template.
           - Minimum SD-WAN Manager version: `15.0.0`
+
+        ## Example Usage
 
         ## Import
 

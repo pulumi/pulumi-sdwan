@@ -51,7 +51,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs extends c
 
     /**
      * Feature template type
-     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
+     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
      * 
      */
     @Import(name="type", required=true)
@@ -59,7 +59,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs extends c
 
     /**
      * @return Feature template type
-     *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
+     *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
      * 
      */
     public Output<String> type() {
@@ -162,7 +162,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs extends c
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
+         *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class FeatureDeviceTemplateGeneralTemplateSubTemplateArgs extends c
 
         /**
          * @param type Feature template type
-         *   - Choices: `cisco_logging`, `cisco_ntp`, `cisco_ospf`, `cisco_bgp`, `cisco_vpn_interface`, `cisco_vpn_interface_gre`, `cisco_vpn_interface_ipsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `cisco_secure_internet_gateway`
+         *   - Choices: `ciscoLogging`, `ciscoNtp`, `ciscoOspf`, `ciscoBgp`, `ciscoVpnInterface`, `ciscoVpnInterfaceGre`, `ciscoVpnInterfaceIpsec`, `vpn-interface-svi`, `vpn-cedge-interface-cellular`, `ciscoSecureInternetGateway`
          * 
          * @return builder
          * 

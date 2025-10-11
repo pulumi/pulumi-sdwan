@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco System feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -26,7 +28,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Collect admin-tech before reboot due to daemon failure
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("adminTechOnFailure")]
         public Output<bool?> AdminTechOnFailure { get; private set; } = null!;
@@ -129,15 +131,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Output("enableMrfMigration")]
         public Output<string?> EnableMrfMigration { get; private set; } = null!;
 
         /// <summary>
         /// Enhanced App Aware Routing
-        ///   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
-        ///   - Default value: `disabled`
+        ///   - Choices: `Disabled`, `Aggressive`, `Moderate`, `Conservative`
+        ///   - Default value: `Disabled`
         /// </summary>
         [Output("enhancedAppAwareRouting")]
         public Output<string?> EnhancedAppAwareRouting { get; private set; } = null!;
@@ -150,7 +152,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("geoFencing")]
         public Output<bool?> GeoFencing { get; private set; } = null!;
@@ -171,7 +173,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("geoFencingSms")]
         public Output<bool?> GeoFencingSms { get; private set; } = null!;
@@ -267,7 +269,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Device is multi-tenant
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("multiTenant")]
         public Output<bool?> MultiTenant { get; private set; } = null!;
@@ -292,7 +294,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable On-demand Tunnel
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("onDemandTunnel")]
         public Output<bool?> OnDemandTunnel { get; private set; } = null!;
@@ -332,7 +334,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable port hopping
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("portHopping")]
         public Output<bool?> PortHopping { get; private set; } = null!;
@@ -455,7 +457,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable default gateway tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("trackDefaultGateway")]
         public Output<bool?> TrackDefaultGateway { get; private set; } = null!;
@@ -481,7 +483,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tracking of transport
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("trackTransport")]
         public Output<bool?> TrackTransport { get; private set; } = null!;
@@ -500,7 +502,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable transport gateway
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("transportGateway")]
         public Output<bool?> TransportGateway { get; private set; } = null!;
@@ -565,7 +567,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Collect admin-tech before reboot due to daemon failure
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("adminTechOnFailure")]
         public Input<bool>? AdminTechOnFailure { get; set; }
@@ -692,15 +694,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMrfMigration")]
         public Input<string>? EnableMrfMigration { get; set; }
 
         /// <summary>
         /// Enhanced App Aware Routing
-        ///   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
-        ///   - Default value: `disabled`
+        ///   - Choices: `Disabled`, `Aggressive`, `Moderate`, `Conservative`
+        ///   - Default value: `Disabled`
         /// </summary>
         [Input("enhancedAppAwareRouting")]
         public Input<string>? EnhancedAppAwareRouting { get; set; }
@@ -713,7 +715,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("geoFencing")]
         public Input<bool>? GeoFencing { get; set; }
@@ -734,7 +736,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("geoFencingSms")]
         public Input<bool>? GeoFencingSms { get; set; }
@@ -836,7 +838,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Device is multi-tenant
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multiTenant")]
         public Input<bool>? MultiTenant { get; set; }
@@ -867,7 +869,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable On-demand Tunnel
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("onDemandTunnel")]
         public Input<bool>? OnDemandTunnel { get; set; }
@@ -907,7 +909,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable port hopping
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portHopping")]
         public Input<bool>? PortHopping { get; set; }
@@ -1024,7 +1026,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable default gateway tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackDefaultGateway")]
         public Input<bool>? TrackDefaultGateway { get; set; }
@@ -1050,7 +1052,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tracking of transport
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackTransport")]
         public Input<bool>? TrackTransport { get; set; }
@@ -1075,7 +1077,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable transport gateway
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("transportGateway")]
         public Input<bool>? TransportGateway { get; set; }
@@ -1096,7 +1098,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Collect admin-tech before reboot due to daemon failure
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("adminTechOnFailure")]
         public Input<bool>? AdminTechOnFailure { get; set; }
@@ -1223,15 +1225,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable migration mode to Multi-Region Fabric
-        ///   - Choices: `enabled`, `enabled-from-bgp-core`
+        ///   - Choices: `Enabled`, `enabled-from-bgp-core`
         /// </summary>
         [Input("enableMrfMigration")]
         public Input<string>? EnableMrfMigration { get; set; }
 
         /// <summary>
         /// Enhanced App Aware Routing
-        ///   - Choices: `disabled`, `aggressive`, `moderate`, `conservative`
-        ///   - Default value: `disabled`
+        ///   - Choices: `Disabled`, `Aggressive`, `Moderate`, `Conservative`
+        ///   - Default value: `Disabled`
         /// </summary>
         [Input("enhancedAppAwareRouting")]
         public Input<string>? EnhancedAppAwareRouting { get; set; }
@@ -1244,7 +1246,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("geoFencing")]
         public Input<bool>? GeoFencing { get; set; }
@@ -1265,7 +1267,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Geo fencing
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("geoFencingSms")]
         public Input<bool>? GeoFencingSms { get; set; }
@@ -1367,7 +1369,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Device is multi-tenant
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("multiTenant")]
         public Input<bool>? MultiTenant { get; set; }
@@ -1398,7 +1400,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable On-demand Tunnel
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("onDemandTunnel")]
         public Input<bool>? OnDemandTunnel { get; set; }
@@ -1438,7 +1440,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable port hopping
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("portHopping")]
         public Input<bool>? PortHopping { get; set; }
@@ -1561,7 +1563,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable default gateway tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackDefaultGateway")]
         public Input<bool>? TrackDefaultGateway { get; set; }
@@ -1587,7 +1589,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Configure tracking of transport
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackTransport")]
         public Input<bool>? TrackTransport { get; set; }
@@ -1612,7 +1614,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable transport gateway
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("transportGateway")]
         public Input<bool>? TransportGateway { get; set; }

@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<Outputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefix> Prefixes;
         /// <summary>
         /// Advertised routes protocol
-        ///   - Choices: `bgp`, `ospf`, `connected`, `static`, `network`, `aggregate`
+        ///   - Choices: `Bgp`, `Ospf`, `Connected`, `Static`, `Network`, `Aggregate`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

@@ -36,7 +36,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopology {
      */
     private @Nullable List<HubAndSpokeTopologyPolicyDefinitionTopologySpoke> spokes;
     /**
-     * @return TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * @return TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     private @Nullable String tlocListId;
@@ -71,7 +71,7 @@ public final class HubAndSpokeTopologyPolicyDefinitionTopology {
         return this.spokes == null ? List.of() : this.spokes;
     }
     /**
-     * @return TLOC list ID (required when `advertise_hub_tlocs` is &#39;true&#39;)
+     * @return TLOC list ID (required when `advertiseHubTlocs` is &#39;true&#39;)
      * 
      */
     public Optional<String> tlocListId() {

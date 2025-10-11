@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Set the protocol
-        ///   - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
+        ///   - Choices: `Bgp`, `Connected`, `Eigrp`, `Isis`, `Lisp`, `nat-route`, `Omp`, `Static`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TrafficDataPolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Application list ID, Attribute conditional on `type` being equal to `appList`
+        /// Application list ID, Attribute conditional on `Type` being equal to `appList`
         /// </summary>
         [Input("applicationListId")]
         public Input<string>? ApplicationListId { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ApplicationListVersion { get; set; }
 
         /// <summary>
-        /// Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+        /// Destination Data Prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
         /// </summary>
         [Input("destinationDataPrefixListId")]
         public Input<string>? DestinationDataPrefixListId { get; set; }
@@ -37,33 +37,33 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataPrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `destinationPort`
         /// </summary>
         [Input("destinationPort")]
         public Input<string>? DestinationPort { get; set; }
 
         /// <summary>
-        /// Destination region, Attribute conditional on `type` being equal to `destinationRegion`
+        /// Destination region, Attribute conditional on `Type` being equal to `destinationRegion`
         ///   - Choices: `primary-region`, `secondary-region`, `other-region`
         /// </summary>
         [Input("destinationRegion")]
         public Input<string>? DestinationRegion { get; set; }
 
         /// <summary>
-        /// DNS request or response, Attribute conditional on `type` being equal to `dns`
-        ///   - Choices: `request`, `response`
+        /// DNS request or response, Attribute conditional on `Type` being equal to `Dns`
+        ///   - Choices: `Request`, `Response`
         /// </summary>
         [Input("dns")]
         public Input<string>? Dns { get; set; }
 
         /// <summary>
-        /// DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
+        /// DNS Application list ID, Attribute conditional on `Type` being equal to `dnsAppList`
         /// </summary>
         [Input("dnsApplicationListId")]
         public Input<string>? DnsApplicationListId { get; set; }
@@ -75,39 +75,39 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DnsApplicationListVersion { get; set; }
 
         /// <summary>
-        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
+        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
         /// </summary>
         [Input("dscp")]
         public Input<string>? Dscp { get; set; }
 
         /// <summary>
-        /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        /// ICMP Message, Attribute conditional on `Type` being equal to `icmpMessage`
         /// </summary>
         [Input("icmpMessage")]
         public Input<string>? IcmpMessage { get; set; }
 
         /// <summary>
-        /// Packet length, Attribute conditional on `type` being equal to `packetLength`
+        /// Packet length, Attribute conditional on `Type` being equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("packetLength")]
         public Input<int>? PacketLength { get; set; }
 
         /// <summary>
-        /// PLP, Attribute conditional on `type` being equal to `plp`
-        ///   - Choices: `low`, `high`
+        /// PLP, Attribute conditional on `Type` being equal to `Plp`
+        ///   - Choices: `Low`, `High`
         /// </summary>
         [Input("plp")]
         public Input<string>? Plp { get; set; }
 
         /// <summary>
-        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `Protocol`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
 
         /// <summary>
-        /// Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+        /// Source Data Prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
         /// </summary>
         [Input("sourceDataPrefixListId")]
         public Input<string>? SourceDataPrefixListId { get; set; }
@@ -119,34 +119,34 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataPrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `sourcePort`
         /// </summary>
         [Input("sourcePort")]
         public Input<string>? SourcePort { get; set; }
 
         /// <summary>
-        /// TCP flags, Attribute conditional on `type` being equal to `tcp`
-        ///   - Choices: `syn`
+        /// TCP flags, Attribute conditional on `Type` being equal to `Tcp`
+        ///   - Choices: `Syn`
         /// </summary>
         [Input("tcp")]
         public Input<string>? Tcp { get; set; }
 
         /// <summary>
-        /// Traffic to, Attribute conditional on `type` being equal to `trafficTo`
-        ///   - Choices: `access`, `core`, `service`
+        /// Traffic to, Attribute conditional on `Type` being equal to `trafficTo`
+        ///   - Choices: `Access`, `Core`, `Service`
         /// </summary>
         [Input("trafficTo")]
         public Input<string>? TrafficTo { get; set; }
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
+        ///   - Choices: `appList`, `dnsAppList`, `Dns`, `Dscp`, `packetLength`, `Plp`, `Protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `Tcp`, `trafficTo`, `icmpMessage`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

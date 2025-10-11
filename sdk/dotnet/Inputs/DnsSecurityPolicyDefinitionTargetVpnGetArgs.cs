@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class DnsSecurityPolicyDefinitionTargetVpnGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Only relevant when `umbrella_dns_default` is `false`
+        /// Only relevant when `UmbrellaDnsDefault` is `False`
         /// </summary>
         [Input("customDnsServerIp")]
         public Input<string>? CustomDnsServerIp { get; set; }

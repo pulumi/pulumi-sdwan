@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AuthenticationPasswordVariable;
         /// <summary>
         /// Configure authentication protocol
-        ///   - Choices: `md5`, `sha`
+        ///   - Choices: `Md5`, `Sha`
         /// </summary>
         public readonly string? AuthenticationProtocol;
         /// <summary>

@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Rule Set Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

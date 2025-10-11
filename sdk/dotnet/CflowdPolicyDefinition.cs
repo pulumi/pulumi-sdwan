@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Cflowd Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -63,8 +65,8 @@ namespace Pulumi.Sdwan
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -192,8 +194,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -271,8 +273,8 @@ namespace Pulumi.Sdwan
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Protocol, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Protocol, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

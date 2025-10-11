@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport T1 E1 Controller Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -64,7 +66,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Output("type")]
         public Output<string> Type { get; private set; } = null!;
@@ -165,7 +167,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;
@@ -222,7 +224,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Card Type
-        ///   - Choices: `e1`, `t1`
+        ///   - Choices: `E1`, `T1`
         /// </summary>
         [Input("type")]
         public Input<string>? Type { get; set; }

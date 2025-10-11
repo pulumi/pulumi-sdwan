@@ -23,8 +23,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly ImmutableArray<string> Dot1xAuthenticationOrders;
         /// <summary>
         /// Set uni or bi directional authorization mode
-        ///   - Choices: `both`, `in`
-        ///   - Default value: `both`
+        ///   - Choices: `Both`, `In`
+        ///   - Default value: `Both`
         /// </summary>
         public readonly string? Dot1xControlDirection;
         /// <summary>
@@ -42,12 +42,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xCriticalVlanVariable;
         /// <summary>
         /// Set 802.1x on off
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Dot1xEnable;
         /// <summary>
         /// Enable Critical Voice VLAN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Dot1xEnableCriticialVoiceVlan;
         /// <summary>
@@ -56,7 +56,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xEnableCriticialVoiceVlanVariable;
         /// <summary>
         /// Enable Periodic Reauthentication
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Dot1xEnablePeriodicReauth;
         /// <summary>
@@ -88,7 +88,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xHostModeVariable;
         /// <summary>
         /// MAC Authentication Bypass
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Dot1xMacAuthenticationBypass;
         /// <summary>
@@ -97,7 +97,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xMacAuthenticationBypassVariable;
         /// <summary>
         /// Set 802.1x Interface Pae Type
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Dot1xPaeEnable;
         /// <summary>
@@ -126,8 +126,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xPeriodicReauthIntervalVariable;
         /// <summary>
         /// Set Port-Control Mode
-        ///   - Choices: `auto`, `force-unauthorized`, `force-authorized`
-        ///   - Default value: `auto`
+        ///   - Choices: `Auto`, `force-unauthorized`, `force-authorized`
+        ///   - Default value: `Auto`
         /// </summary>
         public readonly string? Dot1xPortControl;
         /// <summary>
@@ -145,7 +145,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dot1xRestrictedVlanVariable;
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`
+        ///   - Choices: `Full`, `Half`
         /// </summary>
         public readonly string? Duplex;
         /// <summary>
@@ -166,7 +166,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Shutdown;
         /// <summary>
@@ -193,7 +193,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SwitchportAccessVlanVariable;
         /// <summary>
         /// Set type of switch port: access/trunk
-        ///   - Choices: `access`, `trunk`
+        ///   - Choices: `Access`, `Trunk`
         /// </summary>
         public readonly string? SwitchportMode;
         /// <summary>

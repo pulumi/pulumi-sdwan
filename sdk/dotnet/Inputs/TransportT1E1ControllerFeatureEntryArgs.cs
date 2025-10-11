@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Cable Config
-        ///   - Choices: `short`, `long`
+        ///   - Choices: `Short`, `Long`
         /// </summary>
         [Input("cableLength")]
         public Input<string>? CableLength { get; set; }
@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Clock Source
-        ///   - Choices: `line`, `internal`, `loop-timed`, `network`
+        ///   - Choices: `Line`, `Internal`, `loop-timed`, `Network`
         /// </summary>
         [Input("clockSource")]
         public Input<string>? ClockSource { get; set; }
@@ -59,7 +59,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Framing
-        ///   - Choices: `crc4`, `no-crc4`
+        ///   - Choices: `Crc4`, `no-crc4`
         /// </summary>
         [Input("e1Framing")]
         public Input<string>? E1Framing { get; set; }
@@ -72,7 +72,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `hdb3`
+        ///   - Choices: `Ami`, `Hdb3`
         /// </summary>
         [Input("e1Linecode")]
         public Input<string>? E1Linecode { get; set; }
@@ -84,34 +84,34 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? E1LinecodeVariable { get; set; }
 
         /// <summary>
-        /// length, Attribute conditional on `cable_length` being equal to `long`
+        /// length, Attribute conditional on `CableLength` being equal to `Long`
         ///   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
         /// </summary>
         [Input("lengthLong")]
         public Input<string>? LengthLong { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `cable_length` being equal to `long`
+        /// Variable name, Attribute conditional on `CableLength` being equal to `Long`
         /// </summary>
         [Input("lengthLongVariable")]
         public Input<string>? LengthLongVariable { get; set; }
 
         /// <summary>
-        /// length, Attribute conditional on `cable_length` being equal to `short`
+        /// length, Attribute conditional on `CableLength` being equal to `Short`
         ///   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
         /// </summary>
         [Input("lengthShort")]
         public Input<string>? LengthShort { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `cable_length` being equal to `short`
+        /// Variable name, Attribute conditional on `CableLength` being equal to `Short`
         /// </summary>
         [Input("lengthShortVariable")]
         public Input<string>? LengthShortVariable { get; set; }
 
         /// <summary>
         /// Line Mode
-        ///   - Choices: `secondary`, `primary`
+        ///   - Choices: `Secondary`, `Primary`
         /// </summary>
         [Input("lineMode")]
         public Input<string>? LineMode { get; set; }
@@ -131,7 +131,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Framing
-        ///   - Choices: `esf`, `sf`
+        ///   - Choices: `Esf`, `Sf`
         /// </summary>
         [Input("t1Framing")]
         public Input<string>? T1Framing { get; set; }
@@ -144,7 +144,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `b8zs`
+        ///   - Choices: `Ami`, `B8zs`
         /// </summary>
         [Input("t1Linecode")]
         public Input<string>? T1Linecode { get; set; }

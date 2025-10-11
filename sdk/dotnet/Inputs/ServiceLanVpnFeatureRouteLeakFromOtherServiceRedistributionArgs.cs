@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Protocol to restributed leaked routes
-        ///   - Choices: `bgp`, `ospf`
+        ///   - Choices: `Bgp`, `Ospf`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

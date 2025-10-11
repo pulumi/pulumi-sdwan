@@ -15,13 +15,13 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         public readonly string? Application;
         /// <summary>
         /// Auto Tunnel Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AutoTunnelMode;
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? IkePreSharedKey;
         /// <summary>
         /// Use preshared key to authenticate IKE peer
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? IkePreSharedKeyDynamic;
         /// <summary>
@@ -123,7 +123,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? IkeVersionVariable;
         /// <summary>
         /// Unnumbered interface
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? IpUnnumbered;
         /// <summary>
@@ -138,8 +138,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? IpsecCiphersuiteVariable;
         /// <summary>
         /// IPsec perfect forward secrecy settings
-        ///   - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `None`
+        ///   - Default value: `None`
         /// </summary>
         public readonly string? IpsecPerfectForwardSecrecy;
         /// <summary>
@@ -198,7 +198,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Administrative state
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Shutdown;
         /// <summary>
@@ -218,7 +218,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TcpMssVariable;
         /// <summary>
         /// Enable/disable SIG tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? TrackEnable;
         /// <summary>

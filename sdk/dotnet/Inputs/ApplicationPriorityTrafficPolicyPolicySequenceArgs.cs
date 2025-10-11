@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Base Action
-        ///   - Choices: `drop`, `accept`
+        ///   - Choices: `Drop`, `Accept`
         /// </summary>
         [Input("baseAction")]
         public Input<string>? BaseAction { get; set; }
@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Sequence IP Type
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

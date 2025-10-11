@@ -183,6 +183,8 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
         This resource can manage a Policy Object Security Scalable Group Tag List Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -208,6 +210,8 @@ class PolicyObjectSecurityScalableGroupTagList(pulumi.CustomResource):
         """
         This resource can manage a Policy Object Security Scalable Group Tag List Policy_object.
           - Minimum SD-WAN Manager version: `20.12.0`
+
+        ## Example Usage
 
         ## Import
 

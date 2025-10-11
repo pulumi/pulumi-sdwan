@@ -44,7 +44,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set override flag
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("override")]
         public Input<bool>? Override { get; set; }

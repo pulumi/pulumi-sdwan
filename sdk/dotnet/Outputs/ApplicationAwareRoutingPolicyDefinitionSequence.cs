@@ -22,8 +22,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Id;
         /// <summary>
-        /// Sequence IP type, either `ipv4`, `ipv6` or `all`
-        ///   - Choices: `ipv4`, `ipv6`, `all`
+        /// Sequence IP type, either `Ipv4`, `Ipv6` or `All`
+        ///   - Choices: `Ipv4`, `Ipv6`, `All`
         /// </summary>
         public readonly string? IpType;
         /// <summary>

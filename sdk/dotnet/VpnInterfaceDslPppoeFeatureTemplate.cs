@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a VPN Interface DSL PPPoE feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -82,8 +84,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Choices: `core`, `core-shared`
-        ///   - Default value: `core`
+        ///   - Choices: `Core`, `core-shared`
+        ///   - Default value: `Core`
         /// </summary>
         [Output("coreRegion")]
         public Output<string?> CoreRegion { get; private set; } = null!;
@@ -109,7 +111,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableCoreRegion")]
         public Output<bool?> EnableCoreRegion { get; private set; } = null!;
@@ -134,7 +136,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Dialer IP Negotiated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ethernetDialerAddressNegotiated")]
         public Output<bool?> EthernetDialerAddressNegotiated { get; private set; } = null!;
@@ -204,7 +206,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -237,14 +239,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("nat")]
         public Output<bool?> Nat { get; private set; } = null!;
 
         /// <summary>
         /// Block inbound ICMP error messages
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("natBlockIcmpError")]
         public Output<bool?> NatBlockIcmpError { get; private set; } = null!;
@@ -263,8 +265,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set NAT refresh mode
-        ///   - Choices: `outbound`, `bi-directional`
-        ///   - Default value: `outbound`
+        ///   - Choices: `Outbound`, `bi-directional`
+        ///   - Default value: `Outbound`
         /// </summary>
         [Output("natRefreshMode")]
         public Output<string?> NatRefreshMode { get; private set; } = null!;
@@ -277,7 +279,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Respond to ping requests to NAT interface ip address from the public side
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("natResponseToPing")]
         public Output<bool?> NatResponseToPing { get; private set; } = null!;
@@ -348,14 +350,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Per-tunnel Qos
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("perTunnelQos")]
         public Output<bool?> PerTunnelQos { get; private set; } = null!;
 
         /// <summary>
         /// Per-tunnel QoS Aggregator
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("perTunnelQosAggregator")]
         public Output<bool?> PerTunnelQosAggregator { get; private set; } = null!;
@@ -380,14 +382,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// PPP Link Authentication Protocol
-        ///   - Choices: `chap`, `pap`
+        ///   - Choices: `Chap`, `Pap`
         /// </summary>
         [Output("pppAuthenticationProtocol")]
         public Output<string?> PppAuthenticationProtocol { get; private set; } = null!;
 
         /// <summary>
         /// PPP Authentication Protocol PAP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("pppAuthenticationProtocolPap")]
         public Output<bool?> PppAuthenticationProtocolPap { get; private set; } = null!;
@@ -400,8 +402,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authenticate remote on incoming call only
-        ///   - Choices: `callin`, `false`
-        ///   - Default value: `callin`
+        ///   - Choices: `Callin`, `False`
+        ///   - Default value: `Callin`
         /// </summary>
         [Output("pppAuthenticationType")]
         public Output<string?> PppAuthenticationType { get; private set; } = null!;
@@ -512,8 +514,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable secondary region
-        ///   - Choices: `off`, `secondary-only`, `secondary-shared`
-        ///   - Default value: `off`
+        ///   - Choices: `Off`, `secondary-only`, `secondary-shared`
+        ///   - Default value: `Off`
         /// </summary>
         [Output("secondaryRegion")]
         public Output<string?> SecondaryRegion { get; private set; } = null!;
@@ -539,7 +541,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -595,7 +597,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowAll")]
         public Output<bool?> TunnelInterfaceAllowAll { get; private set; } = null!;
@@ -608,7 +610,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowBgp")]
         public Output<bool?> TunnelInterfaceAllowBgp { get; private set; } = null!;
@@ -621,7 +623,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowDhcp")]
         public Output<bool?> TunnelInterfaceAllowDhcp { get; private set; } = null!;
@@ -634,7 +636,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowDns")]
         public Output<bool?> TunnelInterfaceAllowDns { get; private set; } = null!;
@@ -647,7 +649,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny Https
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowHttps")]
         public Output<bool?> TunnelInterfaceAllowHttps { get; private set; } = null!;
@@ -660,7 +662,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceAllowIcmp")]
         public Output<bool?> TunnelInterfaceAllowIcmp { get; private set; } = null!;
@@ -673,7 +675,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowNetconf")]
         public Output<bool?> TunnelInterfaceAllowNetconf { get; private set; } = null!;
@@ -686,7 +688,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowNtp")]
         public Output<bool?> TunnelInterfaceAllowNtp { get; private set; } = null!;
@@ -699,7 +701,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowOspf")]
         public Output<bool?> TunnelInterfaceAllowOspf { get; private set; } = null!;
@@ -712,7 +714,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowSnmp")]
         public Output<bool?> TunnelInterfaceAllowSnmp { get; private set; } = null!;
@@ -725,7 +727,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowSsh")]
         public Output<bool?> TunnelInterfaceAllowSsh { get; private set; } = null!;
@@ -738,7 +740,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceAllowStun")]
         public Output<bool?> TunnelInterfaceAllowStun { get; private set; } = null!;
@@ -763,7 +765,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as border TLOC
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceBorder")]
         public Output<bool?> TunnelInterfaceBorder { get; private set; } = null!;
@@ -776,8 +778,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set carrier for TLOC
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Output("tunnelInterfaceCarrier")]
         public Output<string?> TunnelInterfaceCarrier { get; private set; } = null!;
@@ -790,7 +792,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceClearDontFragment")]
         public Output<bool?> TunnelInterfaceClearDontFragment { get; private set; } = null!;
@@ -803,15 +805,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Default`
         /// </summary>
         [Output("tunnelInterfaceColor")]
         public Output<string?> TunnelInterfaceColor { get; private set; } = null!;
 
         /// <summary>
         /// Restrict this TLOC behavior
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceColorRestrict")]
         public Output<bool?> TunnelInterfaceColorRestrict { get; private set; } = null!;
@@ -824,7 +826,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow Control Connection
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfaceControlConnections")]
         public Output<bool?> TunnelInterfaceControlConnections { get; private set; } = null!;
@@ -895,7 +897,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as last resort
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceLastResortCircuit")]
         public Output<bool?> TunnelInterfaceLastResortCircuit { get; private set; } = null!;
@@ -908,7 +910,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set the interface as a low-bandwidth circuit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceLowBandwidthLink")]
         public Output<bool?> TunnelInterfaceLowBandwidthLink { get; private set; } = null!;
@@ -948,7 +950,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accept and respond to network-prefix-directed broadcasts)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceNetworkBroadcast")]
         public Output<bool?> TunnelInterfaceNetworkBroadcast { get; private set; } = null!;
@@ -961,7 +963,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Disallow port hopping on the tunnel interface
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("tunnelInterfacePortHop")]
         public Output<bool?> TunnelInterfacePortHop { get; private set; } = null!;
@@ -987,7 +989,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Put this wan interface in STUN mode only
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("tunnelInterfaceVbondAsStunServer")]
         public Output<bool?> TunnelInterfaceVbondAsStunServer { get; private set; } = null!;
@@ -1014,7 +1016,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Output("tunnelQosMode")]
         public Output<string?> TunnelQosMode { get; private set; } = null!;
@@ -1171,8 +1173,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Choices: `core`, `core-shared`
-        ///   - Default value: `core`
+        ///   - Choices: `Core`, `core-shared`
+        ///   - Default value: `Core`
         /// </summary>
         [Input("coreRegion")]
         public Input<string>? CoreRegion { get; set; }
@@ -1204,7 +1206,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableCoreRegion")]
         public Input<bool>? EnableCoreRegion { get; set; }
@@ -1229,7 +1231,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Dialer IP Negotiated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ethernetDialerAddressNegotiated")]
         public Input<bool>? EthernetDialerAddressNegotiated { get; set; }
@@ -1299,7 +1301,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -1332,14 +1334,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat")]
         public Input<bool>? Nat { get; set; }
 
         /// <summary>
         /// Block inbound ICMP error messages
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natBlockIcmpError")]
         public Input<bool>? NatBlockIcmpError { get; set; }
@@ -1364,8 +1366,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set NAT refresh mode
-        ///   - Choices: `outbound`, `bi-directional`
-        ///   - Default value: `outbound`
+        ///   - Choices: `Outbound`, `bi-directional`
+        ///   - Default value: `Outbound`
         /// </summary>
         [Input("natRefreshMode")]
         public Input<string>? NatRefreshMode { get; set; }
@@ -1378,7 +1380,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Respond to ping requests to NAT interface ip address from the public side
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natResponseToPing")]
         public Input<bool>? NatResponseToPing { get; set; }
@@ -1449,14 +1451,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Per-tunnel Qos
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
         /// Per-tunnel QoS Aggregator
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQosAggregator")]
         public Input<bool>? PerTunnelQosAggregator { get; set; }
@@ -1487,14 +1489,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// PPP Link Authentication Protocol
-        ///   - Choices: `chap`, `pap`
+        ///   - Choices: `Chap`, `Pap`
         /// </summary>
         [Input("pppAuthenticationProtocol")]
         public Input<string>? PppAuthenticationProtocol { get; set; }
 
         /// <summary>
         /// PPP Authentication Protocol PAP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pppAuthenticationProtocolPap")]
         public Input<bool>? PppAuthenticationProtocolPap { get; set; }
@@ -1507,8 +1509,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authenticate remote on incoming call only
-        ///   - Choices: `callin`, `false`
-        ///   - Default value: `callin`
+        ///   - Choices: `Callin`, `False`
+        ///   - Default value: `Callin`
         /// </summary>
         [Input("pppAuthenticationType")]
         public Input<string>? PppAuthenticationType { get; set; }
@@ -1619,8 +1621,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable secondary region
-        ///   - Choices: `off`, `secondary-only`, `secondary-shared`
-        ///   - Default value: `off`
+        ///   - Choices: `Off`, `secondary-only`, `secondary-shared`
+        ///   - Default value: `Off`
         /// </summary>
         [Input("secondaryRegion")]
         public Input<string>? SecondaryRegion { get; set; }
@@ -1646,7 +1648,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1702,7 +1704,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowAll")]
         public Input<bool>? TunnelInterfaceAllowAll { get; set; }
@@ -1715,7 +1717,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBgp")]
         public Input<bool>? TunnelInterfaceAllowBgp { get; set; }
@@ -1728,7 +1730,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDhcp")]
         public Input<bool>? TunnelInterfaceAllowDhcp { get; set; }
@@ -1741,7 +1743,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDns")]
         public Input<bool>? TunnelInterfaceAllowDns { get; set; }
@@ -1754,7 +1756,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny Https
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowHttps")]
         public Input<bool>? TunnelInterfaceAllowHttps { get; set; }
@@ -1767,7 +1769,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowIcmp")]
         public Input<bool>? TunnelInterfaceAllowIcmp { get; set; }
@@ -1780,7 +1782,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNetconf")]
         public Input<bool>? TunnelInterfaceAllowNetconf { get; set; }
@@ -1793,7 +1795,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNtp")]
         public Input<bool>? TunnelInterfaceAllowNtp { get; set; }
@@ -1806,7 +1808,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowOspf")]
         public Input<bool>? TunnelInterfaceAllowOspf { get; set; }
@@ -1819,7 +1821,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSnmp")]
         public Input<bool>? TunnelInterfaceAllowSnmp { get; set; }
@@ -1832,7 +1834,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSsh")]
         public Input<bool>? TunnelInterfaceAllowSsh { get; set; }
@@ -1845,7 +1847,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowStun")]
         public Input<bool>? TunnelInterfaceAllowStun { get; set; }
@@ -1870,7 +1872,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as border TLOC
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
@@ -1883,8 +1885,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set carrier for TLOC
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
@@ -1897,7 +1899,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
@@ -1910,15 +1912,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
         /// Restrict this TLOC behavior
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
@@ -1931,7 +1933,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow Control Connection
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceControlConnections")]
         public Input<bool>? TunnelInterfaceControlConnections { get; set; }
@@ -2020,7 +2022,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as last resort
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
@@ -2033,7 +2035,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set the interface as a low-bandwidth circuit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
@@ -2073,7 +2075,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accept and respond to network-prefix-directed broadcasts)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
@@ -2086,7 +2088,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Disallow port hopping on the tunnel interface
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
@@ -2112,7 +2114,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Put this wan interface in STUN mode only
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
@@ -2139,7 +2141,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }
@@ -2258,8 +2260,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Choices: `core`, `core-shared`
-        ///   - Default value: `core`
+        ///   - Choices: `Core`, `core-shared`
+        ///   - Default value: `Core`
         /// </summary>
         [Input("coreRegion")]
         public Input<string>? CoreRegion { get; set; }
@@ -2291,7 +2293,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable core region
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableCoreRegion")]
         public Input<bool>? EnableCoreRegion { get; set; }
@@ -2316,7 +2318,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Dialer IP Negotiated
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ethernetDialerAddressNegotiated")]
         public Input<bool>? EthernetDialerAddressNegotiated { get; set; }
@@ -2386,7 +2388,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -2419,14 +2421,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat")]
         public Input<bool>? Nat { get; set; }
 
         /// <summary>
         /// Block inbound ICMP error messages
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natBlockIcmpError")]
         public Input<bool>? NatBlockIcmpError { get; set; }
@@ -2451,8 +2453,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set NAT refresh mode
-        ///   - Choices: `outbound`, `bi-directional`
-        ///   - Default value: `outbound`
+        ///   - Choices: `Outbound`, `bi-directional`
+        ///   - Default value: `Outbound`
         /// </summary>
         [Input("natRefreshMode")]
         public Input<string>? NatRefreshMode { get; set; }
@@ -2465,7 +2467,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Respond to ping requests to NAT interface ip address from the public side
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("natResponseToPing")]
         public Input<bool>? NatResponseToPing { get; set; }
@@ -2536,14 +2538,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Per-tunnel Qos
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQos")]
         public Input<bool>? PerTunnelQos { get; set; }
 
         /// <summary>
         /// Per-tunnel QoS Aggregator
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("perTunnelQosAggregator")]
         public Input<bool>? PerTunnelQosAggregator { get; set; }
@@ -2574,14 +2576,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// PPP Link Authentication Protocol
-        ///   - Choices: `chap`, `pap`
+        ///   - Choices: `Chap`, `Pap`
         /// </summary>
         [Input("pppAuthenticationProtocol")]
         public Input<string>? PppAuthenticationProtocol { get; set; }
 
         /// <summary>
         /// PPP Authentication Protocol PAP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("pppAuthenticationProtocolPap")]
         public Input<bool>? PppAuthenticationProtocolPap { get; set; }
@@ -2594,8 +2596,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Authenticate remote on incoming call only
-        ///   - Choices: `callin`, `false`
-        ///   - Default value: `callin`
+        ///   - Choices: `Callin`, `False`
+        ///   - Default value: `Callin`
         /// </summary>
         [Input("pppAuthenticationType")]
         public Input<string>? PppAuthenticationType { get; set; }
@@ -2706,8 +2708,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable secondary region
-        ///   - Choices: `off`, `secondary-only`, `secondary-shared`
-        ///   - Default value: `off`
+        ///   - Choices: `Off`, `secondary-only`, `secondary-shared`
+        ///   - Default value: `Off`
         /// </summary>
         [Input("secondaryRegion")]
         public Input<string>? SecondaryRegion { get; set; }
@@ -2733,7 +2735,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -2795,7 +2797,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow all traffic. Overrides all other allow-service options if allow-service all is set
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowAll")]
         public Input<bool>? TunnelInterfaceAllowAll { get; set; }
@@ -2808,7 +2810,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/deny BGP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowBgp")]
         public Input<bool>? TunnelInterfaceAllowBgp { get; set; }
@@ -2821,7 +2823,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DHCP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDhcp")]
         public Input<bool>? TunnelInterfaceAllowDhcp { get; set; }
@@ -2834,7 +2836,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny DNS
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowDns")]
         public Input<bool>? TunnelInterfaceAllowDns { get; set; }
@@ -2847,7 +2849,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny Https
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowHttps")]
         public Input<bool>? TunnelInterfaceAllowHttps { get; set; }
@@ -2860,7 +2862,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny ICMP
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceAllowIcmp")]
         public Input<bool>? TunnelInterfaceAllowIcmp { get; set; }
@@ -2873,7 +2875,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NETCONF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNetconf")]
         public Input<bool>? TunnelInterfaceAllowNetconf { get; set; }
@@ -2886,7 +2888,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny NTP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowNtp")]
         public Input<bool>? TunnelInterfaceAllowNtp { get; set; }
@@ -2899,7 +2901,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowOspf")]
         public Input<bool>? TunnelInterfaceAllowOspf { get; set; }
@@ -2912,7 +2914,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SNMP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSnmp")]
         public Input<bool>? TunnelInterfaceAllowSnmp { get; set; }
@@ -2925,7 +2927,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny SSH
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowSsh")]
         public Input<bool>? TunnelInterfaceAllowSsh { get; set; }
@@ -2938,7 +2940,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow/Deny STUN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceAllowStun")]
         public Input<bool>? TunnelInterfaceAllowStun { get; set; }
@@ -2963,7 +2965,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as border TLOC
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceBorder")]
         public Input<bool>? TunnelInterfaceBorder { get; set; }
@@ -2976,8 +2978,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set carrier for TLOC
-        ///   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Carrier1`, `Carrier2`, `Carrier3`, `Carrier4`, `Carrier5`, `Carrier6`, `Carrier7`, `Carrier8`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceCarrier")]
         public Input<string>? TunnelInterfaceCarrier { get; set; }
@@ -2990,7 +2992,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceClearDontFragment")]
         public Input<bool>? TunnelInterfaceClearDontFragment { get; set; }
@@ -3003,15 +3005,15 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set color for TLOC
-        ///   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
-        ///   - Default value: `default`
+        ///   - Choices: `Default`, `Mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `Lte`, `3g`, `Red`, `Green`, `Blue`, `Gold`, `Silver`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`
+        ///   - Default value: `Default`
         /// </summary>
         [Input("tunnelInterfaceColor")]
         public Input<string>? TunnelInterfaceColor { get; set; }
 
         /// <summary>
         /// Restrict this TLOC behavior
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceColorRestrict")]
         public Input<bool>? TunnelInterfaceColorRestrict { get; set; }
@@ -3024,7 +3026,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Allow Control Connection
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfaceControlConnections")]
         public Input<bool>? TunnelInterfaceControlConnections { get; set; }
@@ -3113,7 +3115,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set TLOC as last resort
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLastResortCircuit")]
         public Input<bool>? TunnelInterfaceLastResortCircuit { get; set; }
@@ -3126,7 +3128,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set the interface as a low-bandwidth circuit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceLowBandwidthLink")]
         public Input<bool>? TunnelInterfaceLowBandwidthLink { get; set; }
@@ -3166,7 +3168,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Accept and respond to network-prefix-directed broadcasts)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceNetworkBroadcast")]
         public Input<bool>? TunnelInterfaceNetworkBroadcast { get; set; }
@@ -3179,7 +3181,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Disallow port hopping on the tunnel interface
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("tunnelInterfacePortHop")]
         public Input<bool>? TunnelInterfacePortHop { get; set; }
@@ -3205,7 +3207,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Put this wan interface in STUN mode only
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tunnelInterfaceVbondAsStunServer")]
         public Input<bool>? TunnelInterfaceVbondAsStunServer { get; set; }
@@ -3232,7 +3234,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set tunnel QoS mode
-        ///   - Choices: `spoke`
+        ///   - Choices: `Spoke`
         /// </summary>
         [Input("tunnelQosMode")]
         public Input<string>? TunnelQosMode { get; set; }

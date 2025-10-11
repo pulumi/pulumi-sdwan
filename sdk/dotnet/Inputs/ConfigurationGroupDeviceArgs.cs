@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Deploy to device if enabled.
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("deploy")]
         public Input<bool>? Deploy { get; set; }

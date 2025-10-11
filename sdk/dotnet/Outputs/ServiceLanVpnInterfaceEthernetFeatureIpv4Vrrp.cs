@@ -61,12 +61,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? TlocPrefChangeValue;
         /// <summary>
         /// Timer interval for successive advertisements, in milliseconds
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TlocPrefixChange;
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TrackOmp;
         /// <summary>

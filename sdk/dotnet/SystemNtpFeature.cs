@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System NTP Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -34,7 +36,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("authoritativeNtpServer")]
         public Output<bool?> AuthoritativeNtpServer { get; private set; } = null!;
@@ -172,7 +174,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }
@@ -278,7 +280,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable device as NTP Leader
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("authoritativeNtpServer")]
         public Input<bool>? AuthoritativeNtpServer { get; set; }

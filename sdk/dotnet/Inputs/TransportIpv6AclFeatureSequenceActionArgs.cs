@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable Log
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("acceptLog")]
         public Input<bool>? AcceptLog { get; set; }
@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable Log
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dropLog")]
         public Input<bool>? DropLog { get; set; }

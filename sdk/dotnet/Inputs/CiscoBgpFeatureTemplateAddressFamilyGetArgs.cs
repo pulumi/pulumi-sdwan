@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// BGP Default Information Originate
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
@@ -113,7 +113,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Filter
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tableMapFilter")]
         public Input<bool>? TableMapFilter { get; set; }

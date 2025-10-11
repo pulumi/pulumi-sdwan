@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set the router LSA advertisement type
-        ///   - Choices: `administrative`, `on-startup`
+        ///   - Choices: `Administrative`, `on-startup`
         /// </summary>
         [Input("adType")]
         public Input<string>? AdType { get; set; }

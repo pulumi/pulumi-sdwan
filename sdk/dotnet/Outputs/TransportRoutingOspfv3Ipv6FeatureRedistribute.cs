@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set the protocol
-        ///   - Choices: `connected`, `static`, `omp`, `bgp`, `eigrp`
+        ///   - Choices: `Connected`, `Static`, `Omp`, `Bgp`, `Eigrp`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

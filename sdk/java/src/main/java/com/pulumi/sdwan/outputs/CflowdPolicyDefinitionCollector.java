@@ -47,7 +47,7 @@ public final class CflowdPolicyDefinitionCollector {
     private @Nullable String sourceInterface;
     /**
      * @return Transport protocol
-     *   - Choices: `transport_tcp`, `transport_udp`
+     *   - Choices: `transportTcp`, `transportUdp`
      * 
      */
     private @Nullable String transport;
@@ -105,7 +105,7 @@ public final class CflowdPolicyDefinitionCollector {
     }
     /**
      * @return Transport protocol
-     *   - Choices: `transport_tcp`, `transport_udp`
+     *   - Choices: `transportTcp`, `transportUdp`
      * 
      */
     public Optional<String> transport() {

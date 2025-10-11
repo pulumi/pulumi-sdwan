@@ -46,8 +46,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Direction of static NAT translation
-        ///   - Choices: `inside`, `outside`
-        ///   - Default value: `inside`
+        ///   - Choices: `Inside`, `Outside`
+        ///   - Default value: `Inside`
         /// </summary>
         [Input("staticNatDirection")]
         public Input<string>? StaticNatDirection { get; set; }

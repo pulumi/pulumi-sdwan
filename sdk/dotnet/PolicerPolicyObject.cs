@@ -53,7 +53,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Exceed action
-        ///   - Choices: `drop`, `remark`
+        ///   - Choices: `Drop`, `Remark`
         /// </summary>
         [Output("exceedAction")]
         public Output<string> ExceedAction { get; private set; } = null!;
@@ -132,7 +132,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Exceed action
-        ///   - Choices: `drop`, `remark`
+        ///   - Choices: `Drop`, `Remark`
         /// </summary>
         [Input("exceedAction", required: true)]
         public Input<string> ExceedAction { get; set; } = null!;
@@ -167,7 +167,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Exceed action
-        ///   - Choices: `drop`, `remark`
+        ///   - Choices: `Drop`, `Remark`
         /// </summary>
         [Input("exceedAction")]
         public Input<string>? ExceedAction { get; set; }

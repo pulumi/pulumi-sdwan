@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TrafficDataPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Application list ID, Attribute conditional on `type` being equal to `appList`
+        /// Application list ID, Attribute conditional on `Type` being equal to `appList`
         /// </summary>
         public readonly string? ApplicationListId;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ApplicationListVersion;
         /// <summary>
-        /// Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+        /// Destination Data Prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
         /// </summary>
         public readonly string? DestinationDataPrefixListId;
         /// <summary>
@@ -30,25 +30,25 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataPrefixListVersion;
         /// <summary>
-        /// Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+        /// Destination IP, Attribute conditional on `Type` being equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+        /// Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `destinationPort`
         /// </summary>
         public readonly string? DestinationPort;
         /// <summary>
-        /// Destination region, Attribute conditional on `type` being equal to `destinationRegion`
+        /// Destination region, Attribute conditional on `Type` being equal to `destinationRegion`
         ///   - Choices: `primary-region`, `secondary-region`, `other-region`
         /// </summary>
         public readonly string? DestinationRegion;
         /// <summary>
-        /// DNS request or response, Attribute conditional on `type` being equal to `dns`
-        ///   - Choices: `request`, `response`
+        /// DNS request or response, Attribute conditional on `Type` being equal to `Dns`
+        ///   - Choices: `Request`, `Response`
         /// </summary>
         public readonly string? Dns;
         /// <summary>
-        /// DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
+        /// DNS Application list ID, Attribute conditional on `Type` being equal to `dnsAppList`
         /// </summary>
         public readonly string? DnsApplicationListId;
         /// <summary>
@@ -56,29 +56,29 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DnsApplicationListVersion;
         /// <summary>
-        /// DSCP value, Attribute conditional on `type` being equal to `dscp`
+        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
         /// </summary>
         public readonly string? Dscp;
         /// <summary>
-        /// ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+        /// ICMP Message, Attribute conditional on `Type` being equal to `icmpMessage`
         /// </summary>
         public readonly string? IcmpMessage;
         /// <summary>
-        /// Packet length, Attribute conditional on `type` being equal to `packetLength`
+        /// Packet length, Attribute conditional on `Type` being equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? PacketLength;
         /// <summary>
-        /// PLP, Attribute conditional on `type` being equal to `plp`
-        ///   - Choices: `low`, `high`
+        /// PLP, Attribute conditional on `Type` being equal to `Plp`
+        ///   - Choices: `Low`, `High`
         /// </summary>
         public readonly string? Plp;
         /// <summary>
-        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+        /// IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `Protocol`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>
-        /// Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+        /// Source Data Prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
         /// </summary>
         public readonly string? SourceDataPrefixListId;
         /// <summary>
@@ -86,26 +86,26 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataPrefixListVersion;
         /// <summary>
-        /// Source IP, Attribute conditional on `type` being equal to `sourceIp`
+        /// Source IP, Attribute conditional on `Type` being equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+        /// Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `Type` being equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePort;
         /// <summary>
-        /// TCP flags, Attribute conditional on `type` being equal to `tcp`
-        ///   - Choices: `syn`
+        /// TCP flags, Attribute conditional on `Type` being equal to `Tcp`
+        ///   - Choices: `Syn`
         /// </summary>
         public readonly string? Tcp;
         /// <summary>
-        /// Traffic to, Attribute conditional on `type` being equal to `trafficTo`
-        ///   - Choices: `access`, `core`, `service`
+        /// Traffic to, Attribute conditional on `Type` being equal to `trafficTo`
+        ///   - Choices: `Access`, `Core`, `Service`
         /// </summary>
         public readonly string? TrafficTo;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `appList`, `dnsAppList`, `dns`, `dscp`, `packetLength`, `plp`, `protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `tcp`, `trafficTo`, `icmpMessage`
+        ///   - Choices: `appList`, `dnsAppList`, `Dns`, `Dscp`, `packetLength`, `Plp`, `Protocol`, `sourceDataPrefixList`, `sourceIp`, `sourcePort`, `destinationDataPrefixList`, `destinationIp`, `destinationRegion`, `destinationPort`, `Tcp`, `trafficTo`, `icmpMessage`
         /// </summary>
         public readonly string Type;
 

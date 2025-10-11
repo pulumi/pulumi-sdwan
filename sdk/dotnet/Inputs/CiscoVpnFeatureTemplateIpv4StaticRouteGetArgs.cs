@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Default Gateway obtained from DHCP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("dhcp")]
         public Input<bool>? Dhcp { get; set; }
@@ -53,7 +53,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// null0
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("null0")]
         public Input<bool>? Null0 { get; set; }

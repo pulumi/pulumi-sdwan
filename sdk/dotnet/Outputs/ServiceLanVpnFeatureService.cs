@@ -23,7 +23,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Ipv4AddressesVariable;
         /// <summary>
         /// Service Type
-        ///   - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `TE`, `appqoe`
+        ///   - Choices: `FW`, `IDS`, `IDP`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `TE`, `Appqoe`
         /// </summary>
         public readonly string? ServiceType;
         /// <summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ServiceTypeVariable;
         /// <summary>
         /// Tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Tracking;
         /// <summary>

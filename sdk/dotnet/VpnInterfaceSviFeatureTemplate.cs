@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a VPN Interface SVI feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -77,7 +79,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -164,7 +166,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DhcpClient")]
         public Output<bool?> Ipv6DhcpClient { get; private set; } = null!;
@@ -197,7 +199,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6DhcpRapidCommit")]
         public Output<bool?> Ipv6DhcpRapidCommit { get; private set; } = null!;
@@ -248,7 +250,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -395,7 +397,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -512,7 +514,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -551,7 +553,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -620,7 +622,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -723,7 +725,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -840,7 +842,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpClient")]
         public Input<bool>? Ipv6DhcpClient { get; set; }
@@ -879,7 +881,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6 rapid commit
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6DhcpRapidCommit")]
         public Input<bool>? Ipv6DhcpRapidCommit { get; set; }
@@ -948,7 +950,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

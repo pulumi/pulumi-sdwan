@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Direction of NAT translation
-        ///   - Choices: `inside`, `outside`
+        ///   - Choices: `Inside`, `Outside`
         /// </summary>
         public readonly string? Direction;
         /// <summary>
@@ -37,7 +37,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Enable port translation(PAT)
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Overload;
         /// <summary>

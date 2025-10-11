@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class StandardCommunityListPolicyObjectEntry
     {
         /// <summary>
-        /// Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
+        /// Standard community value, e.g. `100:1000`, `Internet`, `local-AS`, `no-advertise` or `no-export`
         /// </summary>
         public readonly string Community;
 

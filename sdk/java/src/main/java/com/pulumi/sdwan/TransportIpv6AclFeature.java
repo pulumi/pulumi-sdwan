@@ -21,6 +21,8 @@ import javax.annotation.Nullable;
  * This resource can manage a Transport IPv6 ACL Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  * 
+ * ## Example Usage
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

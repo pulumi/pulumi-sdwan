@@ -15,8 +15,8 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// List of Virtual applications
-        ///   - Choices: `utd`
-        ///   - Default value: `utd`
+        ///   - Choices: `Utd`
+        ///   - Default value: `Utd`
         /// </summary>
         public readonly string? ApplicationType;
         /// <summary>
@@ -39,7 +39,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? DataServiceIpVariable;
         /// <summary>
         /// Download URL Database on Device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? DatabaseUrl;
         /// <summary>
@@ -53,7 +53,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? InstanceId;
         /// <summary>
         /// Is Nat enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? Nat;
         /// <summary>
@@ -66,8 +66,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Resource Profile
-        ///   - Choices: `low`, `medium`, `high`
-        ///   - Default value: `low`
+        ///   - Choices: `Low`, `Medium`, `High`
+        ///   - Default value: `Low`
         /// </summary>
         public readonly string? ResourceProfile;
         /// <summary>

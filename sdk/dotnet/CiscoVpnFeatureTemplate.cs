@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco VPN feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -57,7 +59,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enhanceEcmpKeying")]
         public Output<bool?> EnhanceEcmpKeying { get; private set; } = null!;
@@ -345,7 +347,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -679,7 +681,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Optional packet fields for ECMP keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }

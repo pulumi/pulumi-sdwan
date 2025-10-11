@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ForwardingClassListId;
         public readonly ImmutableArray<string> LocalTlocListColors;
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         public readonly string? LocalTlocListEncapsulation;
         public readonly string? LocalTlocListRestrict;
@@ -35,7 +35,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? ServiceChainLocal;
         public readonly ImmutableArray<string> ServiceChainTlocColors;
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         public readonly string? ServiceChainTlocEncapsulation;
         public readonly string? ServiceChainTlocIp;
@@ -50,19 +50,19 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? ServiceChainVpn;
         public readonly ImmutableArray<string> ServiceTlocColors;
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         public readonly string? ServiceTlocEncapsulation;
         public readonly string? ServiceTlocIp;
         public readonly string? ServiceTlocListId;
         /// <summary>
-        /// - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        /// - Choices: `FW`, `IDS`, `IDP`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `Appqoe`
         /// </summary>
         public readonly string? ServiceType;
         public readonly string? ServiceVpn;
         public readonly ImmutableArray<string> TlocColors;
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         public readonly string? TlocEncapsulation;
         public readonly string? TlocIp;

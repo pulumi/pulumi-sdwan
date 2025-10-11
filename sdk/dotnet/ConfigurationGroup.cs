@@ -95,7 +95,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
+        ///   - Choices: `Mobility`, `Sdwan`, `Nfvirtual`
         /// </summary>
         [Output("solution")]
         public Output<string> Solution { get; private set; } = null!;
@@ -209,7 +209,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
+        ///   - Choices: `Mobility`, `Sdwan`, `Nfvirtual`
         /// </summary>
         [Input("solution", required: true)]
         public Input<string> Solution { get; set; } = null!;
@@ -291,7 +291,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Type of solution
-        ///   - Choices: `mobility`, `sdwan`, `nfvirtual`
+        ///   - Choices: `Mobility`, `Sdwan`, `Nfvirtual`
         /// </summary>
         [Input("solution")]
         public Input<string>? Solution { get; set; }

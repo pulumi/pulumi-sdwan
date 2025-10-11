@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// List of Virtual applications
-        ///   - Default value: `te`
+        ///   - Default value: `Te`
         /// </summary>
         public readonly string? ApplicationType;
         /// <summary>
@@ -103,8 +103,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TeVpnVariable;
         /// <summary>
         /// Web Proxy Type
-        ///   - Choices: `none`, `static`, `pac`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Static`, `Pac`
+        ///   - Default value: `None`
         /// </summary>
         public readonly string? TeWebProxyType;
 

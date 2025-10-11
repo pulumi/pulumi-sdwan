@@ -82,7 +82,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// TLS Action
-        ///   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        ///   - Choices: `Decrypt`, `skipDecrypt`, `doNotDecrypt`
         /// </summary>
         [Output("tlsAction")]
         public Output<string?> TlsAction { get; private set; } = null!;
@@ -201,7 +201,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// TLS Action
-        ///   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        ///   - Choices: `Decrypt`, `skipDecrypt`, `doNotDecrypt`
         /// </summary>
         [Input("tlsAction")]
         public Input<string>? TlsAction { get; set; }
@@ -276,7 +276,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// TLS Action
-        ///   - Choices: `decrypt`, `skipDecrypt`, `doNotDecrypt`
+        ///   - Choices: `Decrypt`, `skipDecrypt`, `doNotDecrypt`
         /// </summary>
         [Input("tlsAction")]
         public Input<string>? TlsAction { get; set; }

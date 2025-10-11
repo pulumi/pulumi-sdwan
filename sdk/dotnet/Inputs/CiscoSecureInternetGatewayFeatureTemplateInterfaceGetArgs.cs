@@ -14,15 +14,15 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
 
         /// <summary>
         /// Auto Tunnel Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("autoTunnelMode")]
         public Input<bool>? AutoTunnelMode { get; set; }
@@ -103,7 +103,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Use preshared key to authenticate IKE peer
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ikePreSharedKeyDynamic")]
         public Input<bool>? IkePreSharedKeyDynamic { get; set; }
@@ -168,7 +168,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Unnumbered interface
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipUnnumbered")]
         public Input<bool>? IpUnnumbered { get; set; }
@@ -189,8 +189,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// IPsec perfect forward secrecy settings
-        ///   - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `none`
-        ///   - Default value: `none`
+        ///   - Choices: `group-2`, `group-14`, `group-15`, `group-16`, `None`
+        ///   - Default value: `None`
         /// </summary>
         [Input("ipsecPerfectForwardSecrecy")]
         public Input<string>? IpsecPerfectForwardSecrecy { get; set; }
@@ -275,7 +275,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -303,7 +303,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable/disable SIG tracking
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trackEnable")]
         public Input<bool>? TrackEnable { get; set; }

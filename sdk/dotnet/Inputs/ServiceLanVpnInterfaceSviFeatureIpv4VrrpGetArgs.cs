@@ -91,7 +91,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// change TLOC preference
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("tlocPrefixChange")]
         public Input<bool>? TlocPrefixChange { get; set; }
@@ -111,7 +111,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("trackOmp")]
         public Input<bool>? TrackOmp { get; set; }

@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         public readonly string? AppProbeClassListId;
         /// <summary>
-        /// - Choices: `jitter`, `latency`, `loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
+        /// - Choices: `Jitter`, `Latency`, `Loss`, `loss-latency`, `loss-jitter`, `latency-loss`, `latency-jitter`, `jitter-latency`, `jitter-loss`, `loss-latency-jitter`, `loss-jitter-latency`, `latency-loss-jitter`, `latency-jitter-loss`, `jitter-latency-loss`, `jitter-loss-latency`
         /// </summary>
         public readonly string? FallbackBestTunnelCriteria;
         /// <summary>

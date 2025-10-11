@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Configure Accept AO Mismatch
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("acceptAoMismatch")]
         public Input<bool>? AcceptAoMismatch { get; set; }
@@ -58,7 +58,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Send lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("acceptLifeTimeLocal")]
         public Input<bool>? AcceptLifeTimeLocal { get; set; }
@@ -90,7 +90,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Include TCP Options
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("includeTcpOptions")]
         public Input<bool>? IncludeTcpOptions { get; set; }
@@ -178,7 +178,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Send lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sendLifeTimeLocal")]
         public Input<bool>? SendLifeTimeLocal { get; set; }

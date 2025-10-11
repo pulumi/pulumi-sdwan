@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+        /// Export to VPN list ID, Attribute conditional on `Type` being equal to `exportTo`
         /// </summary>
         public readonly string? ExportToVpnListId;
         /// <summary>
@@ -22,12 +22,12 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExportToVpnListVersion;
         /// <summary>
-        /// List of set parameters, Attribute conditional on `type` being equal to `set`
+        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
         /// </summary>
         public readonly ImmutableArray<Outputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `set`, `exportTo`
+        ///   - Choices: `Set`, `exportTo`
         /// </summary>
         public readonly string Type;
 

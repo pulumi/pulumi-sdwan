@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class StandardCommunityListPolicyObjectEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Standard community value, e.g. `100:1000`, `internet`, `local-AS`, `no-advertise` or `no-export`
+        /// Standard community value, e.g. `100:1000`, `Internet`, `local-AS`, `no-advertise` or `no-export`
         /// </summary>
         [Input("community", required: true)]
         public Input<string> Community { get; set; } = null!;
