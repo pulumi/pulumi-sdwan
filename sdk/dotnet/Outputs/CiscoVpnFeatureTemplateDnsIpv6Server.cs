@@ -23,8 +23,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly bool? Optional;
         /// <summary>
         /// Role
-        ///   - Choices: `primary`, `secondary`
-        ///   - Default value: `primary`
+        ///   - Choices: `Primary`, `Secondary`
+        ///   - Default value: `Primary`
         /// </summary>
         public readonly string? Role;
         /// <summary>

@@ -184,14 +184,14 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     @Import(name="hmacAuthenticationKey")
     private @Nullable Output<String> hmacAuthenticationKey;
 
     /**
-     * @return Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * @return Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     public Optional<Output<String>> hmacAuthenticationKey() {
@@ -199,14 +199,14 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     @Import(name="hmacAuthenticationKeyVariable")
     private @Nullable Output<String> hmacAuthenticationKeyVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+     * @return Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
      * 
      */
     public Optional<Output<String>> hmacAuthenticationKeyVariable() {
@@ -263,14 +263,14 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
     }
 
     /**
-     * Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+     * Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
      * 
      */
     @Import(name="md5Keys")
     private @Nullable Output<List<ServiceRoutingEigrpFeatureMd5KeyArgs>> md5Keys;
 
     /**
-     * @return Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+     * @return Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
      * 
      */
     public Optional<Output<List<ServiceRoutingEigrpFeatureMd5KeyArgs>>> md5Keys() {
@@ -593,7 +593,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hmacAuthenticationKey Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+         * @param hmacAuthenticationKey Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -604,7 +604,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hmacAuthenticationKey Set hmac-sha-256 authentication key, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+         * @param hmacAuthenticationKey Set hmac-sha-256 authentication key, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -614,7 +614,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -625,7 +625,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authentication_type` being equal to `hmac-sha-256`
+         * @param hmacAuthenticationKeyVariable Variable name, Attribute conditional on `authenticationType` being equal to `hmac-sha-256`
          * 
          * @return builder
          * 
@@ -712,7 +712,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param md5Keys Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+         * @param md5Keys Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
          * 
          * @return builder
          * 
@@ -723,7 +723,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param md5Keys Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+         * @param md5Keys Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
          * 
          * @return builder
          * 
@@ -733,7 +733,7 @@ public final class ServiceRoutingEigrpFeatureArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param md5Keys Set keychain details, Attribute conditional on `authentication_type` being equal to `md5`
+         * @param md5Keys Set keychain details, Attribute conditional on `authenticationType` being equal to `md5`
          * 
          * @return builder
          * 

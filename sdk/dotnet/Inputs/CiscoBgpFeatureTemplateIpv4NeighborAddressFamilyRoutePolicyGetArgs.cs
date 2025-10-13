@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set direction for applying route policy
-        ///   - Choices: `in`, `out`
+        ///   - Choices: `In`, `Out`
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }

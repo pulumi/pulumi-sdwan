@@ -26,21 +26,21 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Enable Route Leaking from Global VPN to this Service VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("leakFromGlobal")]
         public Input<bool>? LeakFromGlobal { get; set; }
 
         /// <summary>
         /// Select protocol for route leaking
-        ///   - Choices: `all`, `static`, `mobile`, `connected`, `rip`, `odr`
+        ///   - Choices: `All`, `Static`, `Mobile`, `Connected`, `Rip`, `Odr`
         /// </summary>
         [Input("leakFromGlobalProtocol")]
         public Input<string>? LeakFromGlobalProtocol { get; set; }
 
         /// <summary>
         /// Enable Route Leaking from this Service VPN to Global VPN
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("leakToGlobal")]
         public Input<bool>? LeakToGlobal { get; set; }
@@ -59,7 +59,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// NAT 64 Overload Option
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("overload")]
         public Input<bool>? Overload { get; set; }

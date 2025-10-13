@@ -62,14 +62,14 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// IPv4 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("applicationVisibilityIpv4")]
         public Output<bool> ApplicationVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
         /// IPv6 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("applicationVisibilityIpv6")]
         public Output<bool> ApplicationVisibilityIpv6 { get; private set; } = null!;
@@ -100,21 +100,21 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPv4 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("flowVisibilityIpv4")]
         public Output<bool> FlowVisibilityIpv4 { get; private set; } = null!;
 
         /// <summary>
         /// IPv6 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("flowVisibilityIpv6")]
         public Output<bool> FlowVisibilityIpv6 { get; private set; } = null!;
 
         /// <summary>
         /// Implicit ACL logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("implicitAclLogging")]
         public Output<bool> ImplicitAclLogging { get; private set; } = null!;
@@ -200,14 +200,14 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// IPv4 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
         /// IPv6 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -244,21 +244,21 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPv4 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
         /// IPv6 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
         /// Implicit ACL logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }
@@ -300,14 +300,14 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// IPv4 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("applicationVisibilityIpv4")]
         public Input<bool>? ApplicationVisibilityIpv4 { get; set; }
 
         /// <summary>
         /// IPv6 application visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("applicationVisibilityIpv6")]
         public Input<bool>? ApplicationVisibilityIpv6 { get; set; }
@@ -344,21 +344,21 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IPv4 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("flowVisibilityIpv4")]
         public Input<bool>? FlowVisibilityIpv4 { get; set; }
 
         /// <summary>
         /// IPv6 flow visibility
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("flowVisibilityIpv6")]
         public Input<bool>? FlowVisibilityIpv6 { get; set; }
 
         /// <summary>
         /// Implicit ACL logging
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("implicitAclLogging")]
         public Input<bool>? ImplicitAclLogging { get; set; }

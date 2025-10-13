@@ -46,8 +46,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Track Action
-        ///   - Choices: `decrement`, `shutdown`
-        ///   - Default value: `decrement`
+        ///   - Choices: `Decrement`, `Shutdown`
+        ///   - Default value: `Decrement`
         /// </summary>
         [Input("trackAction")]
         public Input<string>? TrackAction { get; set; }

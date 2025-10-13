@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport IPv4 ACL Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -28,8 +30,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -112,8 +114,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -158,8 +160,8 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Default Action
-        ///   - Choices: `drop`, `accept`
-        ///   - Default value: `drop`
+        ///   - Choices: `Drop`, `Accept`
+        ///   - Default value: `Drop`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

@@ -129,7 +129,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv6`, `ipv46`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Ipv46`
         /// </summary>
         [Output("packetDataNetworkType")]
         public Output<string?> PacketDataNetworkType { get; private set; } = null!;
@@ -348,7 +348,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv6`, `ipv46`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Ipv46`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }
@@ -517,7 +517,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set packet data network type
-        ///   - Choices: `ipv4`, `ipv6`, `ipv46`
+        ///   - Choices: `Ipv4`, `Ipv6`, `Ipv46`
         /// </summary>
         [Input("packetDataNetworkType")]
         public Input<string>? PacketDataNetworkType { get; set; }

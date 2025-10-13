@@ -25,7 +25,7 @@ public final class GetDnsSecurityPolicyDefinitionResult {
      */
     private Integer ciscoSigCredentialsFeatureTemplateVersion;
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     private String customDnsServerIp;
@@ -70,7 +70,7 @@ public final class GetDnsSecurityPolicyDefinitionResult {
      */
     private String name;
     /**
-     * @return Only relevant when `match_all_vpn` is `false`
+     * @return Only relevant when `matchAllVpn` is `false`
      * 
      */
     private List<GetDnsSecurityPolicyDefinitionTargetVpn> targetVpns;
@@ -101,7 +101,7 @@ public final class GetDnsSecurityPolicyDefinitionResult {
         return this.ciscoSigCredentialsFeatureTemplateVersion;
     }
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public String customDnsServerIp() {
@@ -164,7 +164,7 @@ public final class GetDnsSecurityPolicyDefinitionResult {
         return this.name;
     }
     /**
-     * @return Only relevant when `match_all_vpn` is `false`
+     * @return Only relevant when `matchAllVpn` is `false`
      * 
      */
     public List<GetDnsSecurityPolicyDefinitionTargetVpn> targetVpns() {

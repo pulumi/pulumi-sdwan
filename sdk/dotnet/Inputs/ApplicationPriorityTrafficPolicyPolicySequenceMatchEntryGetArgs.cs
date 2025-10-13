@@ -54,7 +54,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Dns
-        ///   - Choices: `request`, `response`
+        ///   - Choices: `Request`, `Response`
         /// </summary>
         [Input("dns")]
         public Input<string>? Dns { get; set; }
@@ -158,28 +158,28 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// TCP States
-        ///   - Choices: `syn`
+        ///   - Choices: `Syn`
         /// </summary>
         [Input("tcp")]
         public Input<string>? Tcp { get; set; }
 
         /// <summary>
         /// M365 Traffic Category
-        ///   - Choices: `optimize-allow`, `optimize`, `all`
+        ///   - Choices: `optimize-allow`, `Optimize`, `All`
         /// </summary>
         [Input("trafficCategory")]
         public Input<string>? TrafficCategory { get; set; }
 
         /// <summary>
         /// Traffic Class
-        ///   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `silver`, `bronze`
+        ///   - Choices: `gold-voip-telephony`, `gold-broadcast-video`, `gold-real-time-interactive`, `gold-multimedia-conferencing`, `gold-multimedia-streaming`, `gold-network-control`, `gold-signaling`, `gold-ops-admin-mgmt`, `gold-transactional-data`, `gold-bulk-data`, `Silver`, `Bronze`
         /// </summary>
         [Input("trafficClass")]
         public Input<string>? TrafficClass { get; set; }
 
         /// <summary>
         /// Traffic to
-        ///   - Choices: `core`, `service`, `access`
+        ///   - Choices: `Core`, `Service`, `Access`
         /// </summary>
         [Input("trafficTo")]
         public Input<string>? TrafficTo { get; set; }

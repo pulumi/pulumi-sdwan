@@ -37,7 +37,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -45,7 +45,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> accessPortSharedFailoverType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -54,7 +54,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
@@ -62,7 +62,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
     private @Nullable Output<String> accessPortSharedType;
 
     /**
-     * @return , Attribute conditional on `access_port_dedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
@@ -368,7 +368,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         * @param accessPortSharedFailoverType , Attribute conditional on `accessPortDedicated` being equal to `false`
          *   - Choices: `ge2`, `te2`
          * 
          * @return builder
@@ -380,7 +380,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedFailoverType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         * @param accessPortSharedFailoverType , Attribute conditional on `accessPortDedicated` being equal to `false`
          *   - Choices: `ge2`, `te2`
          * 
          * @return builder
@@ -391,7 +391,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         * @param accessPortSharedType , Attribute conditional on `accessPortDedicated` being equal to `false`
          *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
          * 
          * @return builder
@@ -403,7 +403,7 @@ public final class OtherUcseFeatureState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param accessPortSharedType , Attribute conditional on `access_port_dedicated` being equal to `false`
+         * @param accessPortSharedType , Attribute conditional on `accessPortDedicated` being equal to `false`
          *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
          * 
          * @return builder

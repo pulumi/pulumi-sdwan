@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Aggregate Only
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AggregateOnly;
         public readonly string? NetworkAddress;
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? NetworkAddressVariable;
         /// <summary>
         /// Applied to Region
-        ///   - Choices: `core-and-access`, `core`, `access`
+        ///   - Choices: `core-and-access`, `Core`, `Access`
         ///   - Default value: `core-and-access`
         /// </summary>
         public readonly string? Region;

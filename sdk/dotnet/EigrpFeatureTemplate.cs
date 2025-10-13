@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a eigrp feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -45,7 +47,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
@@ -71,7 +73,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("filter")]
         public Output<bool?> Filter { get; private set; } = null!;
@@ -237,7 +239,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -269,7 +271,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }
@@ -397,7 +399,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set EIGRP router authentication type
-        ///   - Choices: `md5`, `hmac-sha-256`
+        ///   - Choices: `Md5`, `hmac-sha-256`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -429,7 +431,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Selective route download
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("filter")]
         public Input<bool>? Filter { get; set; }

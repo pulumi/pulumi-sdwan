@@ -30,7 +30,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("localTlocListEncapsulation")]
         public Input<string>? LocalTlocListEncapsulation { get; set; }
@@ -79,7 +79,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("serviceChainTlocEncapsulation")]
         public Input<string>? ServiceChainTlocEncapsulation { get; set; }
@@ -111,7 +111,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("serviceTlocEncapsulation")]
         public Input<string>? ServiceTlocEncapsulation { get; set; }
@@ -123,7 +123,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? ServiceTlocListId { get; set; }
 
         /// <summary>
-        /// - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
+        /// - Choices: `FW`, `IDS`, `IDP`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `Appqoe`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
@@ -140,7 +140,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// - Choices: `ipsec`, `gre`
+        /// - Choices: `Ipsec`, `Gre`
         /// </summary>
         [Input("tlocEncapsulation")]
         public Input<string>? TlocEncapsulation { get; set; }

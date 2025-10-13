@@ -57,14 +57,14 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Internal
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("internal")]
         public Input<bool>? Internal { get; set; }
 
         /// <summary>
         /// Line Mode
-        ///   - Choices: `secondary`, `primary`
+        ///   - Choices: `Secondary`, `Primary`
         /// </summary>
         [Input("lineMode")]
         public Input<string>? LineMode { get; set; }
@@ -77,7 +77,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// LineCode
-        ///   - Choices: `ami`, `b8zs`, `hdb3`
+        ///   - Choices: `Ami`, `B8zs`, `Hdb3`
         /// </summary>
         [Input("linecode")]
         public Input<string>? Linecode { get; set; }

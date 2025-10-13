@@ -13,6 +13,8 @@ import (
 
 // This resource can activate a centralized policy.
 //
+// ## Example Usage
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

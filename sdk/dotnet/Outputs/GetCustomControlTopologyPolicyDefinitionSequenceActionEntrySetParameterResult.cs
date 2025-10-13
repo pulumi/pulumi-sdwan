@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetCustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterResult
     {
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `internet` or `local-AS`
+        /// Community value, e.g. `1000:10000` or `Internet` or `local-AS`
         /// </summary>
         public readonly string Community;
         /// <summary>

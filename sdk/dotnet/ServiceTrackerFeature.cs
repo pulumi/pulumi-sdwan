@@ -166,7 +166,7 @@ namespace Pulumi.Sdwan
         public Output<string?> PortVariable { get; private set; } = null!;
 
         /// <summary>
-        /// - Choices: `tcp`, `udp`
+        /// - Choices: `Tcp`, `Udp`
         /// </summary>
         [Output("protocol")]
         public Output<string?> Protocol { get; private set; } = null!;
@@ -205,8 +205,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Output("trackerType")]
         public Output<string?> TrackerType { get; private set; } = null!;
@@ -378,7 +378,7 @@ namespace Pulumi.Sdwan
         public Input<string>? PortVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `tcp`, `udp`
+        /// - Choices: `Tcp`, `Udp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -417,8 +417,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }
@@ -546,7 +546,7 @@ namespace Pulumi.Sdwan
         public Input<string>? PortVariable { get; set; }
 
         /// <summary>
-        /// - Choices: `tcp`, `udp`
+        /// - Choices: `Tcp`, `Udp`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }
@@ -585,8 +585,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }

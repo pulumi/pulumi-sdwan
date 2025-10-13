@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service LAN VPN Interface SVI Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -66,7 +68,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableDhcpv6")]
         public Output<bool?> EnableDhcpv6 { get; private set; } = null!;
@@ -85,7 +87,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("icmpRedirectDisable")]
         public Output<bool?> IcmpRedirectDisable { get; private set; } = null!;
@@ -136,7 +138,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -254,7 +256,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -376,7 +378,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -395,7 +397,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -446,7 +448,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -600,7 +602,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -678,7 +680,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable DHCPv6
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -697,7 +699,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -748,7 +750,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -902,7 +904,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

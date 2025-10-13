@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport Routing OSPF Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -34,14 +36,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("defaultInformationOriginate")]
         public Output<bool?> DefaultInformationOriginate { get; private set; } = null!;
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("defaultInformationOriginateAlways")]
         public Output<bool?> DefaultInformationOriginateAlways { get; private set; } = null!;
@@ -61,7 +63,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Output("defaultInformationOriginateMetricType")]
         public Output<string?> DefaultInformationOriginateMetricType { get; private set; } = null!;
@@ -160,7 +162,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("rfc1583Compatible")]
         public Output<bool?> Rfc1583Compatible { get; private set; } = null!;
@@ -300,14 +302,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -327,7 +329,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -432,7 +434,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }
@@ -534,14 +536,14 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Distribute default external route into OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginate")]
         public Input<bool>? DefaultInformationOriginate { get; set; }
 
         /// <summary>
         /// Always advertise default route
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("defaultInformationOriginateAlways")]
         public Input<bool>? DefaultInformationOriginateAlways { get; set; }
@@ -561,7 +563,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set default route type
-        ///   - Choices: `type1`, `type2`
+        ///   - Choices: `Type1`, `Type2`
         /// </summary>
         [Input("defaultInformationOriginateMetricType")]
         public Input<string>? DefaultInformationOriginateMetricType { get; set; }
@@ -666,7 +668,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Calculate summary route cost based on RFC 1583
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("rfc1583Compatible")]
         public Input<bool>? Rfc1583Compatible { get; set; }

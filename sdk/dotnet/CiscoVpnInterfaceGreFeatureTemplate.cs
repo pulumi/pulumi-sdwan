@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Cisco VPN Interface GRE feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -32,8 +34,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Output("application")]
         public Output<string?> Application { get; private set; } = null!;
@@ -46,7 +48,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("clearDontFragment")]
         public Output<bool?> ClearDontFragment { get; private set; } = null!;
@@ -140,7 +142,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -296,8 +298,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -310,7 +312,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -410,7 +412,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -522,8 +524,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable Application Tunnel Type
-        ///   - Choices: `none`, `sig`
-        ///   - Default value: `none`
+        ///   - Choices: `None`, `Sig`
+        ///   - Default value: `None`
         /// </summary>
         [Input("application")]
         public Input<string>? Application { get; set; }
@@ -536,7 +538,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable clear dont fragment (Currently Only SDWAN Tunnel Interface)
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("clearDontFragment")]
         public Input<bool>? ClearDontFragment { get; set; }
@@ -636,7 +638,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Administrative state
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }

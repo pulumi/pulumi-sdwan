@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service LAN VPN Interface Ethernet Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -91,7 +93,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Output("duplex")]
         public Output<string?> Duplex { get; private set; } = null!;
@@ -116,7 +118,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("icmpRedirectDisable")]
         public Output<bool?> IcmpRedirectDisable { get; private set; } = null!;
@@ -161,7 +163,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
@@ -225,7 +227,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv4Nat")]
         public Output<bool?> Ipv4Nat { get; private set; } = null!;
@@ -244,7 +246,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Overload
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("ipv4NatOverload")]
         public Output<bool?> Ipv4NatOverload { get; private set; } = null!;
@@ -308,7 +310,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Type
-        ///   - Choices: `pool`, `loopback`
+        ///   - Choices: `Pool`, `Loopback`
         /// </summary>
         [Output("ipv4NatType")]
         public Output<string?> Ipv4NatType { get; private set; } = null!;
@@ -384,7 +386,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipv6Nat")]
         public Output<bool?> Ipv6Nat { get; private set; } = null!;
@@ -429,7 +431,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Output("mediaType")]
         public Output<string?> MediaType { get; private set; } = null!;
@@ -448,7 +450,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT64 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("nat64")]
         public Output<bool?> Nat64 { get; private set; } = null!;
@@ -460,7 +462,7 @@ namespace Pulumi.Sdwan
         public Output<string> ServiceLanVpnFeatureId { get; private set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Output("shutdown")]
         public Output<bool?> Shutdown { get; private set; } = null!;
@@ -523,7 +525,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Indicates that the interface is trustworthy for CTS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("trustsecEnableSgtPropogation")]
         public Output<bool?> TrustsecEnableSgtPropogation { get; private set; } = null!;
@@ -543,7 +545,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables the interface for CTS SGT authorization and forwarding
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("trustsecPropogate")]
         public Output<bool?> TrustsecPropogate { get; private set; } = null!;
@@ -696,7 +698,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -721,7 +723,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -766,7 +768,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -836,7 +838,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Nat")]
         public Input<bool>? Ipv4Nat { get; set; }
@@ -855,7 +857,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Overload
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
@@ -919,7 +921,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Type
-        ///   - Choices: `pool`, `loopback`
+        ///   - Choices: `Pool`, `Loopback`
         /// </summary>
         [Input("ipv4NatType")]
         public Input<string>? Ipv4NatType { get; set; }
@@ -1019,7 +1021,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Nat")]
         public Input<bool>? Ipv6Nat { get; set; }
@@ -1076,7 +1078,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -1095,7 +1097,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT64 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
@@ -1107,7 +1109,7 @@ namespace Pulumi.Sdwan
         public Input<string> ServiceLanVpnFeatureId { get; set; } = null!;
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1176,7 +1178,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Indicates that the interface is trustworthy for CTS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
@@ -1196,7 +1198,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables the interface for CTS SGT authorization and forwarding
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }
@@ -1305,7 +1307,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Duplex mode
-        ///   - Choices: `full`, `half`, `auto`
+        ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
@@ -1330,7 +1332,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP/ICMPv6 Redirect Disable
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
@@ -1375,7 +1377,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// IP Directed-Broadcast
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
@@ -1445,7 +1447,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Nat")]
         public Input<bool>? Ipv4Nat { get; set; }
@@ -1464,7 +1466,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Overload
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("ipv4NatOverload")]
         public Input<bool>? Ipv4NatOverload { get; set; }
@@ -1528,7 +1530,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT Type
-        ///   - Choices: `pool`, `loopback`
+        ///   - Choices: `Pool`, `Loopback`
         /// </summary>
         [Input("ipv4NatType")]
         public Input<string>? Ipv4NatType { get; set; }
@@ -1628,7 +1630,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// enable Network Address Translation ipv6 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Nat")]
         public Input<bool>? Ipv6Nat { get; set; }
@@ -1685,7 +1687,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Media type
-        ///   - Choices: `auto-select`, `rj45`, `sfp`
+        ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
@@ -1704,7 +1706,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// NAT64 on this interface
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
@@ -1716,7 +1718,7 @@ namespace Pulumi.Sdwan
         public Input<string>? ServiceLanVpnFeatureId { get; set; }
 
         /// <summary>
-        /// - Default value: `true`
+        /// - Default value: `True`
         /// </summary>
         [Input("shutdown")]
         public Input<bool>? Shutdown { get; set; }
@@ -1785,7 +1787,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Indicates that the interface is trustworthy for CTS
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
@@ -1805,7 +1807,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enables the interface for CTS SGT authorization and forwarding
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }

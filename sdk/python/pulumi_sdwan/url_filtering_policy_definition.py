@@ -562,6 +562,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a URL Filtering Policy Definition .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -599,6 +601,8 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a URL Filtering Policy Definition .
+
+        ## Example Usage
 
         ## Import
 

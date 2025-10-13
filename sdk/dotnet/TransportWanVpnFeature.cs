@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport WAN VPN Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -34,7 +36,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enhance ECMP Keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enhanceEcmpKeying")]
         public Output<bool?> EnhanceEcmpKeying { get; private set; } = null!;
@@ -199,7 +201,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enhance ECMP Keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }
@@ -349,7 +351,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enhance ECMP Keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enhanceEcmpKeying")]
         public Input<bool>? EnhanceEcmpKeying { get; set; }

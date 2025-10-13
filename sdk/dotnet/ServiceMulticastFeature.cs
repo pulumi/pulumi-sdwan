@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Multicast Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -46,7 +48,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("enableAutoRp")]
         public Output<bool?> EnableAutoRp { get; private set; } = null!;
@@ -71,7 +73,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("localReplicator")]
         public Output<bool?> LocalReplicator { get; private set; } = null!;
@@ -170,7 +172,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Output("pimSptThreshold")]
@@ -184,7 +186,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("sptOnly")]
         public Output<bool?> SptOnly { get; private set; } = null!;
@@ -285,7 +287,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -316,7 +318,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -439,7 +441,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
@@ -453,7 +455,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }
@@ -516,7 +518,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("enableAutoRp")]
         public Input<bool>? EnableAutoRp { get; set; }
@@ -547,7 +549,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Replicator is local to this device
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("localReplicator")]
         public Input<bool>? LocalReplicator { get; set; }
@@ -670,7 +672,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         ///   - Default value: `0`
         /// </summary>
         [Input("pimSptThreshold")]
@@ -684,7 +686,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Shortest Path Tree (SPT) Only Mode
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sptOnly")]
         public Input<bool>? SptOnly { get; set; }

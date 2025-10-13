@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? BurstBytes;
         /// <summary>
         /// Exceed options such as Drop or Remark
-        ///   - Choices: `drop`, `remark`
+        ///   - Choices: `Drop`, `Remark`
         /// </summary>
         public readonly string? ExceedAction;
         /// <summary>

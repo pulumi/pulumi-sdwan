@@ -64,7 +64,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TimerVariable;
         /// <summary>
         /// change TLOC preference
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TlocPrefixChange;
         /// <summary>
@@ -78,7 +78,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TlocPrefixChangeValueVariable;
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TrackOmp;
         /// <summary>

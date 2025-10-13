@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a cEdge PIM feature template.
     ///   - Minimum SD-WAN Manager version: `15.0.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -26,7 +28,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("autoRp")]
         public Output<bool?> AutoRp { get; private set; } = null!;
@@ -51,7 +53,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Turn SSM On / Off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("default")]
         public Output<bool?> Default { get; private set; } = null!;
@@ -181,7 +183,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         /// </summary>
         [Output("sptThreshold")]
         public Output<string?> SptThreshold { get; private set; } = null!;
@@ -252,7 +254,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("autoRp")]
         public Input<bool>? AutoRp { get; set; }
@@ -277,7 +279,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Turn SSM On / Off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("default")]
         public Input<bool>? Default { get; set; }
@@ -437,7 +439,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         /// </summary>
         [Input("sptThreshold")]
         public Input<string>? SptThreshold { get; set; }
@@ -458,7 +460,7 @@ namespace Pulumi.Sdwan
     {
         /// <summary>
         /// Enable or disable auto-RP
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("autoRp")]
         public Input<bool>? AutoRp { get; set; }
@@ -483,7 +485,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Turn SSM On / Off
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("default")]
         public Input<bool>? Default { get; set; }
@@ -643,7 +645,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Set when PIM router joins the SPT (kbps)
-        ///   - Choices: `0`, `infinity`
+        ///   - Choices: `0`, `Infinity`
         /// </summary>
         [Input("sptThreshold")]
         public Input<string>? SptThreshold { get; set; }

@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Enable NAT DIA for redistributed routes
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("natDia")]
         public Input<bool>? NatDia { get; set; }
@@ -33,7 +33,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set the protocol
-        ///   - Choices: `bgp`, `connected`, `eigrp`, `isis`, `lisp`, `nat-route`, `omp`, `static`
+        ///   - Choices: `Bgp`, `Connected`, `Eigrp`, `Isis`, `Lisp`, `nat-route`, `Omp`, `Static`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

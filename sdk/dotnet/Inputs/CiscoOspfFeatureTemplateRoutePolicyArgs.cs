@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Set direction to apply policy
-        ///   - Choices: `in`
+        ///   - Choices: `In`
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }

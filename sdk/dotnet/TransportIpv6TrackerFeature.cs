@@ -179,8 +179,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Output("trackerType")]
         public Output<string?> TrackerType { get; private set; } = null!;
@@ -367,8 +367,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }
@@ -511,8 +511,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Tracker Type
-        ///   - Choices: `endpoint`
-        ///   - Default value: `endpoint`
+        ///   - Choices: `Endpoint`
+        ///   - Default value: `Endpoint`
         /// </summary>
         [Input("trackerType")]
         public Input<string>? TrackerType { get; set; }

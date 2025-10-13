@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Transport IPv6 Tracker Group Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -46,8 +48,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Output("trackerBoolean")]
         public Output<string?> TrackerBoolean { get; private set; } = null!;
@@ -148,8 +150,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }
@@ -212,8 +214,8 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// tracker ref list combine boolean and or
-        ///   - Choices: `and`, `or`
-        ///   - Default value: `or`
+        ///   - Choices: `And`, `Or`
+        ///   - Default value: `Or`
         /// </summary>
         [Input("trackerBoolean")]
         public Input<string>? TrackerBoolean { get; set; }
