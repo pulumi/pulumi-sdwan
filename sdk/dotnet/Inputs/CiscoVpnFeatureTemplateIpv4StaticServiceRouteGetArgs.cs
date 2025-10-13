@@ -32,8 +32,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Service
-        ///   - Choices: `sig`
-        ///   - Default value: `sig`
+        ///   - Choices: `Sig`
+        ///   - Default value: `Sig`
         /// </summary>
         [Input("service")]
         public Input<string>? Service { get; set; }

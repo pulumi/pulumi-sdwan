@@ -39,7 +39,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// stub area type
-        ///   - Choices: `stub`
+        ///   - Choices: `Stub`
         /// </summary>
         [Input("areaType")]
         public Input<string>? AreaType { get; set; }

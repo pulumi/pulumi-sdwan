@@ -13,20 +13,20 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `disable-peer`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("disablePeerMaxNumberOfPrefixes")]
         public Input<int>? DisablePeerMaxNumberOfPrefixes { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
         /// </summary>
         [Input("disablePeerMaxNumberOfPrefixesVariable")]
         public Input<string>? DisablePeerMaxNumberOfPrefixesVariable { get; set; }
 
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `disable-peer`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DisablePeerThreshold { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `disable-peer`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
         /// </summary>
         [Input("disablePeerThresholdVariable")]
         public Input<string>? DisablePeerThresholdVariable { get; set; }
@@ -54,39 +54,39 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Neighbor received maximum prefix policy is disabled.
-        ///   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
+        ///   - Choices: `Restart`, `Off`, `warning-only`, `disable-peer`
         /// </summary>
         [Input("policyType")]
         public Input<string>? PolicyType { get; set; }
 
         /// <summary>
-        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`65535`
         /// </summary>
         [Input("restartInterval")]
         public Input<int>? RestartInterval { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         [Input("restartIntervalVariable")]
         public Input<string>? RestartIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("restartMaxNumberOfPrefixes")]
         public Input<int>? RestartMaxNumberOfPrefixes { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         [Input("restartMaxNumberOfPrefixesVariable")]
         public Input<string>? RestartMaxNumberOfPrefixesVariable { get; set; }
 
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `restart`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
@@ -94,26 +94,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? RestartThreshold { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `restart`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         [Input("restartThresholdVariable")]
         public Input<string>? RestartThresholdVariable { get; set; }
 
         /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `warning-only`
         ///   - Range: `1`-`4294967295`
         /// </summary>
         [Input("warningMessageMaxNumberOfPrefixes")]
         public Input<int>? WarningMessageMaxNumberOfPrefixes { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
         /// </summary>
         [Input("warningMessageMaxNumberOfPrefixesVariable")]
         public Input<string>? WarningMessageMaxNumberOfPrefixesVariable { get; set; }
 
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `warning-only`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
@@ -121,7 +121,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? WarningMessageThreshold { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `policy_type` being equal to `warning-only`
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
         /// </summary>
         [Input("warningMessageThresholdVariable")]
         public Input<string>? WarningMessageThresholdVariable { get; set; }

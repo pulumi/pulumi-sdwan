@@ -50,14 +50,14 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
     }
 
     /**
-     * Only relevant when `umbrella_dns_default` is `false`
+     * Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     @Import(name="customDnsServerIp")
     private @Nullable Output<String> customDnsServerIp;
 
     /**
-     * @return Only relevant when `umbrella_dns_default` is `false`
+     * @return Only relevant when `umbrellaDnsDefault` is `false`
      * 
      */
     public Optional<Output<String>> customDnsServerIp() {
@@ -170,14 +170,14 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
     }
 
     /**
-     * Only relevant when `match_all_vpn` is `false`
+     * Only relevant when `matchAllVpn` is `false`
      * 
      */
     @Import(name="targetVpns")
     private @Nullable Output<List<DnsSecurityPolicyDefinitionTargetVpnArgs>> targetVpns;
 
     /**
-     * @return Only relevant when `match_all_vpn` is `false`
+     * @return Only relevant when `matchAllVpn` is `false`
      * 
      */
     public Optional<Output<List<DnsSecurityPolicyDefinitionTargetVpnArgs>>> targetVpns() {
@@ -293,7 +293,7 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
         }
 
         /**
-         * @param customDnsServerIp Only relevant when `umbrella_dns_default` is `false`
+         * @param customDnsServerIp Only relevant when `umbrellaDnsDefault` is `false`
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
         }
 
         /**
-         * @param customDnsServerIp Only relevant when `umbrella_dns_default` is `false`
+         * @param customDnsServerIp Only relevant when `umbrellaDnsDefault` is `false`
          * 
          * @return builder
          * 
@@ -461,7 +461,7 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
         }
 
         /**
-         * @param targetVpns Only relevant when `match_all_vpn` is `false`
+         * @param targetVpns Only relevant when `matchAllVpn` is `false`
          * 
          * @return builder
          * 
@@ -472,7 +472,7 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
         }
 
         /**
-         * @param targetVpns Only relevant when `match_all_vpn` is `false`
+         * @param targetVpns Only relevant when `matchAllVpn` is `false`
          * 
          * @return builder
          * 
@@ -482,7 +482,7 @@ public final class DnsSecurityPolicyDefinitionState extends com.pulumi.resources
         }
 
         /**
-         * @param targetVpns Only relevant when `match_all_vpn` is `false`
+         * @param targetVpns Only relevant when `matchAllVpn` is `false`
          * 
          * @return builder
          * 

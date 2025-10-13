@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Type of grouping to be performed for tracker group
-        ///   - Choices: `and`, `or`
+        ///   - Choices: `And`, `Or`
         /// </summary>
         [Input("boolean")]
         public Input<string>? Boolean { get; set; }

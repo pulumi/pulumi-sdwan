@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set the protocol to redistribute routes from
-        ///   - Choices: `static`, `connected`, `ospf`
+        ///   - Choices: `Static`, `Connected`, `Ospf`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>

@@ -14,18 +14,18 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TransportManagementVpnFeatureIpv4StaticRoute
     {
         /// <summary>
-        /// Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+        /// Administrative distance, Attribute conditional on `Gateway` being equal to `Null0`
         ///   - Range: `1`-`255`
         ///   - Default value: `1`
         /// </summary>
         public readonly int? AdministrativeDistance;
         /// <summary>
-        /// Variable name, Attribute conditional on `gateway` being equal to `null0`
+        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
         /// </summary>
         public readonly string? AdministrativeDistanceVariable;
         /// <summary>
         /// Gateway
-        ///   - Choices: `nextHop`, `dhcp`, `null0`
+        ///   - Choices: `nextHop`, `Dhcp`, `Null0`
         ///   - Default value: `nextHop`
         /// </summary>
         public readonly string? Gateway;
@@ -38,7 +38,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? NetworkAddressVariable;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop> NextHops;
         /// <summary>

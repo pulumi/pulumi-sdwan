@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// NAT64 Overload
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("overload")]
         public Input<bool>? Overload { get; set; }

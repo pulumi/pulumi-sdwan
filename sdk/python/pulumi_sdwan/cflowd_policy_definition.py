@@ -424,6 +424,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         """
         This resource can manage a Cflowd Policy Definition .
 
+        ## Example Usage
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -458,6 +460,8 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Cflowd Policy Definition .
+
+        ## Example Usage
 
         ## Import
 

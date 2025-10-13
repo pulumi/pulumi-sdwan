@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class PolicyObjectColorListEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// - Choices: `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `default`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        /// - Choices: `3g`, `biz-internet`, `Blue`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Default`, `Gold`, `Green`, `Lte`, `metro-ethernet`, `Mpls`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`, `public-internet`, `Red`, `Silver`
         /// </summary>
         [Input("color")]
         public Input<string>? Color { get; set; }

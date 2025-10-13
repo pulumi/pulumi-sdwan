@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a Service Wireless LAN Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -47,7 +49,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("enable24g")]
         public Output<bool?> Enable24g { get; private set; } = null!;
@@ -60,7 +62,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Output("enable5g")]
         public Output<bool?> Enable5g { get; private set; } = null!;
@@ -229,7 +231,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enable24g")]
         public Input<bool>? Enable24g { get; set; }
@@ -242,7 +244,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enable5g")]
         public Input<bool>? Enable5g { get; set; }
@@ -373,7 +375,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 2.4GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enable24g")]
         public Input<bool>? Enable24g { get; set; }
@@ -386,7 +388,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// 5GHz Enabled
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         [Input("enable5g")]
         public Input<bool>? Enable5g { get; set; }

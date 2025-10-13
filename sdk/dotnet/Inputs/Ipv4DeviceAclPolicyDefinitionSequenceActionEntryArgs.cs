@@ -13,14 +13,14 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4DeviceAclPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         [Input("counterName")]
         public Input<string>? CounterName { get; set; }
 
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `count`
+        ///   - Choices: `Count`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

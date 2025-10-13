@@ -12,6 +12,8 @@ namespace Pulumi.Sdwan
     /// <summary>
     /// This resource can manage a Route Policy Definition .
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -24,8 +26,8 @@ namespace Pulumi.Sdwan
     public partial class RoutePolicyDefinition : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Output("defaultAction")]
         public Output<string?> DefaultAction { get; private set; } = null!;
@@ -107,8 +109,8 @@ namespace Pulumi.Sdwan
     public sealed class RoutePolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }
@@ -146,8 +148,8 @@ namespace Pulumi.Sdwan
     public sealed class RoutePolicyDefinitionState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Default action, either `accept` or `reject`
-        ///   - Choices: `accept`, `reject`
+        /// Default action, either `Accept` or `Reject`
+        ///   - Choices: `Accept`, `Reject`
         /// </summary>
         [Input("defaultAction")]
         public Input<string>? DefaultAction { get; set; }

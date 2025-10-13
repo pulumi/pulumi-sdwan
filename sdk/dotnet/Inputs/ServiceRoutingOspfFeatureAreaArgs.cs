@@ -27,7 +27,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// set the area type
-        ///   - Choices: `stub`, `nssa`
+        ///   - Choices: `Stub`, `Nssa`
         /// </summary>
         [Input("areaType")]
         public Input<string>? AreaType { get; set; }
@@ -46,7 +46,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Do not inject interarea routes into STUB or NSSA
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("noSummary")]
         public Input<bool>? NoSummary { get; set; }

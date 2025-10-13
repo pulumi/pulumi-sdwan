@@ -48,7 +48,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int Queue;
         /// <summary>
         /// Scheduling type
-        ///   - Choices: `llq`, `wrr`
+        ///   - Choices: `Llq`, `Wrr`
         /// </summary>
         public readonly string SchedulingType;
 

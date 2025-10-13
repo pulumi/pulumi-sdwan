@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Export spreading
-        ///   - Choices: `enable`, `disable`
+        ///   - Choices: `Enable`, `Disable`
         /// </summary>
         [Input("exportSpreading")]
         public Input<string>? ExportSpreading { get; set; }
@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Transport protocol
-        ///   - Choices: `transport_tcp`, `transport_udp`
+        ///   - Choices: `TransportTcp`, `TransportUdp`
         /// </summary>
         [Input("transport")]
         public Input<string>? Transport { get; set; }

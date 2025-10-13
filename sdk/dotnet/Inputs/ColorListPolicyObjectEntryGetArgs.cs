@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Color
-        ///   - Choices: `default`, `3g`, `biz-internet`, `blue`, `bronze`, `custom1`, `custom2`, `custom3`, `gold`, `green`, `lte`, `metro-ethernet`, `mpls`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`, `public-internet`, `red`, `silver`
+        ///   - Choices: `Default`, `3g`, `biz-internet`, `Blue`, `Bronze`, `Custom1`, `Custom2`, `Custom3`, `Gold`, `Green`, `Lte`, `metro-ethernet`, `Mpls`, `Private1`, `Private2`, `Private3`, `Private4`, `Private5`, `Private6`, `public-internet`, `Red`, `Silver`
         /// </summary>
         [Input("color", required: true)]
         public Input<string> Color { get; set; } = null!;

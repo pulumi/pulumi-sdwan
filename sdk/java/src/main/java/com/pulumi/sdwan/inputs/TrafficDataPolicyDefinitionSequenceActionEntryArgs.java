@@ -229,14 +229,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+     * Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
      * 
      */
     @Import(name="redirectDnsAddress")
     private @Nullable Output<String> redirectDnsAddress;
 
     /**
-     * @return Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
      * 
      */
     public Optional<Output<String>> redirectDnsAddress() {
@@ -244,7 +244,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     }
 
     /**
-     * Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+     * Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -252,7 +252,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
     private @Nullable Output<String> redirectDnsType;
 
     /**
-     * @return Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+     * @return Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -676,7 +676,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
          * 
          * @return builder
          * 
@@ -687,7 +687,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirect_dns` being equal to `ipAddress`
+         * @param redirectDnsAddress Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
          * 
          * @return builder
          * 
@@ -697,7 +697,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
          *   - Choices: `host`, `umbrella`
          * 
          * @return builder
@@ -709,7 +709,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryArgs extends co
         }
 
         /**
-         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirect_dns` being equal to `dnsType`
+         * @param redirectDnsType Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
          *   - Choices: `host`, `umbrella`
          * 
          * @return builder

@@ -15,7 +15,7 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Set the protocol to redistribute routes from
-        ///   - Choices: `static`, `connected`, `ospf`, `omp`
+        ///   - Choices: `Static`, `Connected`, `Ospf`, `Omp`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>
@@ -24,8 +24,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ProtocolVariable;
         public readonly string? RoutePolicyId;
         /// <summary>
-        /// Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
-        ///   - Default value: `false`
+        /// Translate Rib Metric, Attribute conditional on `Protocol` being equal to `Omp`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? TranslateRibMetric;
 

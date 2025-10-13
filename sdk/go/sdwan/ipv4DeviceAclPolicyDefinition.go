@@ -14,6 +14,8 @@ import (
 
 // This resource can manage a IPv4 Device ACL Policy Definition .
 //
+// ## Example Usage
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

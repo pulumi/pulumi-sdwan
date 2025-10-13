@@ -14,28 +14,28 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+        /// Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `backupSlaPreferredColor`
         /// </summary>
         public readonly string? BackupSlaPreferredColor;
         /// <summary>
-        /// Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+        /// Cloud SLA, Attribute conditional on `Type` being equal to `cloudSaas`
         /// </summary>
         public readonly bool? CloudSla;
         /// <summary>
-        /// Counter name, Attribute conditional on `type` being equal to `count`
+        /// Counter name, Attribute conditional on `Type` being equal to `Count`
         /// </summary>
         public readonly string? Counter;
         /// <summary>
-        /// Enable logging, Attribute conditional on `type` being equal to `log`
+        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
+        /// List of SLA class parameters, Attribute conditional on `Type` being equal to `slaClass`
         /// </summary>
         public readonly ImmutableArray<Outputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter> SlaClassParameters;
         /// <summary>
         /// Type of action entry
-        ///   - Choices: `backupSlaPreferredColor`, `count`, `log`, `slaClass`, `cloudSaas`
+        ///   - Choices: `backupSlaPreferredColor`, `Count`, `Log`, `slaClass`, `cloudSaas`
         /// </summary>
         public readonly string Type;
 

@@ -13,6 +13,8 @@ namespace Pulumi.Sdwan
     /// This resource can manage a System Security Feature.
     ///   - Minimum SD-WAN Manager version: `20.12.0`
     /// 
+    /// ## Example Usage
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -80,7 +82,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Output("ipsecPairwiseKeying")]
         public Output<bool?> IpsecPairwiseKeying { get; private set; } = null!;
@@ -235,7 +237,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipsecPairwiseKeying")]
         public Input<bool>? IpsecPairwiseKeying { get; set; }
@@ -358,7 +360,7 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Enable or disable IPsec pairwise-keying
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("ipsecPairwiseKeying")]
         public Input<bool>? IpsecPairwiseKeying { get; set; }

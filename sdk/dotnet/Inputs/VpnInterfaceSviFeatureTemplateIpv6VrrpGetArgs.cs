@@ -85,7 +85,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Track OMP status
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("trackOmp")]
         public Input<bool>? TrackOmp { get; set; }

@@ -10,6 +10,8 @@ import * as utilities from "./utilities";
  * This resource can manage a Transport Management VPN Feature.
  *   - Minimum SD-WAN Manager version: `20.12.0`
  *
+ * ## Example Usage
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

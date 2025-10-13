@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? AllowAsInVariable;
         /// <summary>
         /// As Override
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? AsOverride;
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? KeepaliveVariable;
         /// <summary>
         /// Set router to be next hop for routes advertised to neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? NextHopSelf;
         /// <summary>
@@ -110,7 +110,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? RemoteAsVariable;
         /// <summary>
         /// Send community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? SendCommunity;
         /// <summary>
@@ -119,7 +119,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendCommunityVariable;
         /// <summary>
         /// Send extended community attribute
-        ///   - Default value: `true`
+        ///   - Default value: `True`
         /// </summary>
         public readonly bool? SendExtCommunity;
         /// <summary>
@@ -128,12 +128,12 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendExtCommunityVariable;
         /// <summary>
         /// Send label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? SendLabel;
         /// <summary>
         /// Send label
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? SendLabelExplicit;
         /// <summary>
@@ -146,7 +146,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SendLabelVariable;
         /// <summary>
         /// Enable or disable a BGP neighbor
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         public readonly bool? Shutdown;
         /// <summary>

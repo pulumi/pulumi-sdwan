@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Configure Accept AO Mismatch
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("acceptAoMismatch")]
         public Input<bool>? AcceptAoMismatch { get; set; }
@@ -46,8 +46,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Key lifetime end time
-        ///   - Choices: `infinite`, `duration`, `end-epoch`
-        ///   - Default value: `infinite`
+        ///   - Choices: `Infinite`, `Duration`, `end-epoch`
+        ///   - Default value: `Infinite`
         /// </summary>
         [Input("acceptLifetimeEndTimeFormat")]
         public Input<string>? AcceptLifetimeEndTimeFormat { get; set; }
@@ -66,7 +66,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Accept Lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("acceptLifetimeLocal")]
         public Input<bool>? AcceptLifetimeLocal { get; set; }
@@ -104,7 +104,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Include TCP Options
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("includeTcpOptions")]
         public Input<bool>? IncludeTcpOptions { get; set; }
@@ -182,8 +182,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Key lifetime end time
-        ///   - Choices: `infinite`, `duration`, `end-epoch`
-        ///   - Default value: `infinite`
+        ///   - Choices: `Infinite`, `Duration`, `end-epoch`
+        ///   - Default value: `Infinite`
         /// </summary>
         [Input("sendLifetimeEndTimeFormat")]
         public Input<string>? SendLifetimeEndTimeFormat { get; set; }
@@ -202,7 +202,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Configure Send lifetime Local
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("sendLifetimeLocal")]
         public Input<bool>? SendLifetimeLocal { get; set; }

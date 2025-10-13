@@ -20,7 +20,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set routes to advertise
-        ///   - Choices: `bgp`, `ospf`, `connected`, `static`, `eigrp`, `lisp`, `isis`
+        ///   - Choices: `Bgp`, `Ospf`, `Connected`, `Static`, `Eigrp`, `Lisp`, `Isis`
         /// </summary>
         [Input("protocol")]
         public Input<string>? Protocol { get; set; }

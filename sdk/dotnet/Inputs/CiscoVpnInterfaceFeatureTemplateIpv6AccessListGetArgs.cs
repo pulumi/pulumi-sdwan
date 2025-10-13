@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Direction
-        ///   - Choices: `in`, `out`
+        ///   - Choices: `In`, `Out`
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }

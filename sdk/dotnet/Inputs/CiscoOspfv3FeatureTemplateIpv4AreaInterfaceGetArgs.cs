@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set OSPF interface authentication type
-        ///   - Choices: `md5`, `sha1`
+        ///   - Choices: `Md5`, `Sha1`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
@@ -105,8 +105,8 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set the OSPF network type
-        ///   - Choices: `broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
-        ///   - Default value: `broadcast`
+        ///   - Choices: `Broadcast`, `point-to-point`, `non-broadcast`, `point-to-multipoint`
+        ///   - Default value: `Broadcast`
         /// </summary>
         [Input("network")]
         public Input<string>? Network { get; set; }
@@ -125,7 +125,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set the interface to advertise its address, but not to actively run OSPF
-        ///   - Default value: `false`
+        ///   - Default value: `False`
         /// </summary>
         [Input("passiveInterface")]
         public Input<bool>? PassiveInterface { get; set; }
