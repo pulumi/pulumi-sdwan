@@ -5,8 +5,10 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.SecurityPolicyDefinitionEntry;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,20 +16,15 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecurityPolicyDefinition {
     /**
-     * @return Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * @return List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
      * 
      */
-    private @Nullable String destinationZone;
+    private @Nullable List<SecurityPolicyDefinitionEntry> entries;
     /**
      * @return Policy definition ID
      * 
      */
     private String id;
-    /**
-     * @return Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-     * 
-     */
-    private @Nullable String sourceZone;
     /**
      * @return Policy definition type
      *   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
@@ -42,11 +39,11 @@ public final class SecurityPolicyDefinition {
 
     private SecurityPolicyDefinition() {}
     /**
-     * @return Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * @return List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
      * 
      */
-    public Optional<String> destinationZone() {
-        return Optional.ofNullable(this.destinationZone);
+    public List<SecurityPolicyDefinitionEntry> entries() {
+        return this.entries == null ? List.of() : this.entries;
     }
     /**
      * @return Policy definition ID
@@ -54,13 +51,6 @@ public final class SecurityPolicyDefinition {
      */
     public String id() {
         return this.id;
-    }
-    /**
-     * @return Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-     * 
-     */
-    public Optional<String> sourceZone() {
-        return Optional.ofNullable(this.sourceZone);
     }
     /**
      * @return Policy definition type
@@ -87,26 +77,27 @@ public final class SecurityPolicyDefinition {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String destinationZone;
+        private @Nullable List<SecurityPolicyDefinitionEntry> entries;
         private String id;
-        private @Nullable String sourceZone;
         private String type;
         private @Nullable Integer version;
         public Builder() {}
         public Builder(SecurityPolicyDefinition defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.destinationZone = defaults.destinationZone;
+    	      this.entries = defaults.entries;
     	      this.id = defaults.id;
-    	      this.sourceZone = defaults.sourceZone;
     	      this.type = defaults.type;
     	      this.version = defaults.version;
         }
 
         @CustomType.Setter
-        public Builder destinationZone(@Nullable String destinationZone) {
+        public Builder entries(@Nullable List<SecurityPolicyDefinitionEntry> entries) {
 
-            this.destinationZone = destinationZone;
+            this.entries = entries;
             return this;
+        }
+        public Builder entries(SecurityPolicyDefinitionEntry... entries) {
+            return entries(List.of(entries));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -114,12 +105,6 @@ public final class SecurityPolicyDefinition {
               throw new MissingRequiredPropertyException("SecurityPolicyDefinition", "id");
             }
             this.id = id;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder sourceZone(@Nullable String sourceZone) {
-
-            this.sourceZone = sourceZone;
             return this;
         }
         @CustomType.Setter
@@ -138,9 +123,8 @@ public final class SecurityPolicyDefinition {
         }
         public SecurityPolicyDefinition build() {
             final var _resultValue = new SecurityPolicyDefinition();
-            _resultValue.destinationZone = destinationZone;
+            _resultValue.entries = entries;
             _resultValue.id = id;
-            _resultValue.sourceZone = sourceZone;
             _resultValue.type = type;
             _resultValue.version = version;
             return _resultValue;

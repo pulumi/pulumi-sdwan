@@ -32,7 +32,7 @@ import (
 //				Name: pulumi.String("Example"),
 //				Entries: sdwan.PortListPolicyObjectEntryArray{
 //					&sdwan.PortListPolicyObjectEntryArgs{
-//						Port: pulumi.Int(80),
+//						Port: pulumi.String("80"),
 //					},
 //				},
 //			})

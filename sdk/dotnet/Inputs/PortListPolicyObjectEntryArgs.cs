@@ -14,10 +14,9 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Port number
-        ///   - Range: `1`-`65535`
         /// </summary>
         [Input("port")]
-        public Input<int>? Port { get; set; }
+        public Input<string>? Port { get; set; }
 
         public PortListPolicyObjectEntryArgs()
         {

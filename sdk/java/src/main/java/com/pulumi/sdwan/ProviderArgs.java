@@ -63,6 +63,21 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+     * 
+     */
+    @Import(name="taskTimeout", json=true)
+    private @Nullable Output<Integer> taskTimeout;
+
+    /**
+     * @return Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+     * 
+     */
+    public Optional<Output<Integer>> taskTimeout() {
+        return Optional.ofNullable(this.taskTimeout);
+    }
+
+    /**
      * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      * 
      */
@@ -98,6 +113,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         this.insecure = $.insecure;
         this.password = $.password;
         this.retries = $.retries;
+        this.taskTimeout = $.taskTimeout;
         this.url = $.url;
         this.username = $.username;
     }
@@ -181,6 +197,27 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder retries(Integer retries) {
             return retries(Output.of(retries));
+        }
+
+        /**
+         * @param taskTimeout Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskTimeout(@Nullable Output<Integer> taskTimeout) {
+            $.taskTimeout = taskTimeout;
+            return this;
+        }
+
+        /**
+         * @param taskTimeout Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taskTimeout(Integer taskTimeout) {
+            return taskTimeout(Output.of(taskTimeout));
         }
 
         /**

@@ -22,6 +22,7 @@ class ProviderArgs:
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
+                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -29,6 +30,7 @@ class ProviderArgs:
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+        :param pulumi.Input[_builtins.int] task_timeout: Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
         :param pulumi.Input[_builtins.str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         :param pulumi.Input[_builtins.str] username: Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
@@ -38,6 +40,8 @@ class ProviderArgs:
             pulumi.set(__self__, "password", password)
         if retries is not None:
             pulumi.set(__self__, "retries", retries)
+        if task_timeout is not None:
+            pulumi.set(__self__, "task_timeout", task_timeout)
         if url is not None:
             pulumi.set(__self__, "url", url)
         if username is not None:
@@ -80,6 +84,18 @@ class ProviderArgs:
         pulumi.set(self, "retries", value)
 
     @_builtins.property
+    @pulumi.getter(name="taskTimeout")
+    def task_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+        """
+        return pulumi.get(self, "task_timeout")
+
+    @task_timeout.setter
+    def task_timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "task_timeout", value)
+
+    @_builtins.property
     @pulumi.getter
     def url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -113,6 +129,7 @@ class Provider(pulumi.ProviderResource):
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
+                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -127,6 +144,7 @@ class Provider(pulumi.ProviderResource):
         :param pulumi.Input[_builtins.bool] insecure: Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
         :param pulumi.Input[_builtins.str] password: Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
         :param pulumi.Input[_builtins.int] retries: Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+        :param pulumi.Input[_builtins.int] task_timeout: Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
         :param pulumi.Input[_builtins.str] url: URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         :param pulumi.Input[_builtins.str] username: Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.
         """
@@ -160,6 +178,7 @@ class Provider(pulumi.ProviderResource):
                  insecure: Optional[pulumi.Input[_builtins.bool]] = None,
                  password: Optional[pulumi.Input[_builtins.str]] = None,
                  retries: Optional[pulumi.Input[_builtins.int]] = None,
+                 task_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  username: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -174,6 +193,7 @@ class Provider(pulumi.ProviderResource):
             __props__.__dict__["insecure"] = pulumi.Output.from_input(insecure).apply(pulumi.runtime.to_json) if insecure is not None else None
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["retries"] = pulumi.Output.from_input(retries).apply(pulumi.runtime.to_json) if retries is not None else None
+            __props__.__dict__["task_timeout"] = pulumi.Output.from_input(task_timeout).apply(pulumi.runtime.to_json) if task_timeout is not None else None
             __props__.__dict__["url"] = url
             __props__.__dict__["username"] = username
         secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["password"])

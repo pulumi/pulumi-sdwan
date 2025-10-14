@@ -24,6 +24,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("asPathListVersion")]
         public Input<int>? AsPathListVersion { get; set; }
 
+        /// <summary>
+        /// Community list ID, Attribute conditional on `Type` being equal to `Community`
+        /// </summary>
+        [Input("communityListId")]
+        public Input<string>? CommunityListId { get; set; }
+
         [Input("communityListIds")]
         private InputList<string>? _communityListIds;
 
@@ -37,11 +43,17 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Community list match flag, Attribute conditional on `Type` being equal to `advancedCommunity`
+        /// Community list match flag
         ///   - Choices: `And`, `Or`, `Exact`
         /// </summary>
         [Input("communityListMatchFlag")]
         public Input<string>? CommunityListMatchFlag { get; set; }
+
+        /// <summary>
+        /// Community list version
+        /// </summary>
+        [Input("communityListVersion")]
+        public Input<int>? CommunityListVersion { get; set; }
 
         [Input("communityListVersions")]
         private InputList<string>? _communityListVersions;
@@ -152,7 +164,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `Address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `Metric`, `nextHop`, `Origin`, `Peer`, `ompTag`, `ospfTag`
+        ///   - Choices: `Address`, `asPath`, `Community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `Metric`, `nextHop`, `Origin`, `Peer`, `ompTag`, `ospfTag`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

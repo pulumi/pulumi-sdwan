@@ -42,6 +42,13 @@ class _ExportableConfig(types.ModuleType):
         return __config__.get_int('retries')
 
     @_builtins.property
+    def task_timeout(self) -> Optional[int]:
+        """
+        Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+        """
+        return __config__.get_int('taskTimeout')
+
+    @_builtins.property
     def url(self) -> Optional[str]:
         """
         URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.

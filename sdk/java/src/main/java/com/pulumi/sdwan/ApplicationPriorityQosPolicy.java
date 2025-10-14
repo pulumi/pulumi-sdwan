@@ -93,20 +93,6 @@ public class ApplicationPriorityQosPolicy extends com.pulumi.resources.CustomRes
         return Codegen.optional(this.qosSchedulers);
     }
     /**
-     * Variable name
-     * 
-     */
-    @Export(name="targetInterfaceVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> targetInterfaceVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Output<Optional<String>> targetInterfaceVariable() {
-        return Codegen.optional(this.targetInterfaceVariable);
-    }
-    /**
      * interfaces
      * 
      */
@@ -119,6 +105,20 @@ public class ApplicationPriorityQosPolicy extends com.pulumi.resources.CustomRes
      */
     public Output<Optional<List<String>>> targetInterfaces() {
         return Codegen.optional(this.targetInterfaces);
+    }
+    /**
+     * Variable name
+     * 
+     */
+    @Export(name="targetInterfacesVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetInterfacesVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Output<Optional<String>> targetInterfacesVariable() {
+        return Codegen.optional(this.targetInterfacesVariable);
     }
     /**
      * The version of the Policy

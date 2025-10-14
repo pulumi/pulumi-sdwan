@@ -134,7 +134,7 @@ class PortListPolicyObject(pulumi.CustomResource):
         example = sdwan.PortListPolicyObject("example",
             name="Example",
             entries=[{
-                "port": 80,
+                "port": "80",
             }])
         ```
 
@@ -169,7 +169,7 @@ class PortListPolicyObject(pulumi.CustomResource):
         example = sdwan.PortListPolicyObject("example",
             name="Example",
             entries=[{
-                "port": 80,
+                "port": "80",
             }])
         ```
 

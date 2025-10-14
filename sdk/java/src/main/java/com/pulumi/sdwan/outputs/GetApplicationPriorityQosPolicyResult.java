@@ -39,15 +39,15 @@ public final class GetApplicationPriorityQosPolicyResult {
      */
     private List<GetApplicationPriorityQosPolicyQosScheduler> qosSchedulers;
     /**
-     * @return Variable name
-     * 
-     */
-    private String targetInterfaceVariable;
-    /**
      * @return interfaces
      * 
      */
     private List<String> targetInterfaces;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String targetInterfacesVariable;
     /**
      * @return The version of the Policy
      * 
@@ -91,18 +91,18 @@ public final class GetApplicationPriorityQosPolicyResult {
         return this.qosSchedulers;
     }
     /**
-     * @return Variable name
-     * 
-     */
-    public String targetInterfaceVariable() {
-        return this.targetInterfaceVariable;
-    }
-    /**
      * @return interfaces
      * 
      */
     public List<String> targetInterfaces() {
         return this.targetInterfaces;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String targetInterfacesVariable() {
+        return this.targetInterfacesVariable;
     }
     /**
      * @return The version of the Policy
@@ -126,8 +126,8 @@ public final class GetApplicationPriorityQosPolicyResult {
         private String id;
         private String name;
         private List<GetApplicationPriorityQosPolicyQosScheduler> qosSchedulers;
-        private String targetInterfaceVariable;
         private List<String> targetInterfaces;
+        private String targetInterfacesVariable;
         private Integer version;
         public Builder() {}
         public Builder(GetApplicationPriorityQosPolicyResult defaults) {
@@ -137,8 +137,8 @@ public final class GetApplicationPriorityQosPolicyResult {
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.qosSchedulers = defaults.qosSchedulers;
-    	      this.targetInterfaceVariable = defaults.targetInterfaceVariable;
     	      this.targetInterfaces = defaults.targetInterfaces;
+    	      this.targetInterfacesVariable = defaults.targetInterfacesVariable;
     	      this.version = defaults.version;
         }
 
@@ -186,14 +186,6 @@ public final class GetApplicationPriorityQosPolicyResult {
             return qosSchedulers(List.of(qosSchedulers));
         }
         @CustomType.Setter
-        public Builder targetInterfaceVariable(String targetInterfaceVariable) {
-            if (targetInterfaceVariable == null) {
-              throw new MissingRequiredPropertyException("GetApplicationPriorityQosPolicyResult", "targetInterfaceVariable");
-            }
-            this.targetInterfaceVariable = targetInterfaceVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder targetInterfaces(List<String> targetInterfaces) {
             if (targetInterfaces == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityQosPolicyResult", "targetInterfaces");
@@ -203,6 +195,14 @@ public final class GetApplicationPriorityQosPolicyResult {
         }
         public Builder targetInterfaces(String... targetInterfaces) {
             return targetInterfaces(List.of(targetInterfaces));
+        }
+        @CustomType.Setter
+        public Builder targetInterfacesVariable(String targetInterfacesVariable) {
+            if (targetInterfacesVariable == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityQosPolicyResult", "targetInterfacesVariable");
+            }
+            this.targetInterfacesVariable = targetInterfacesVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder version(Integer version) {
@@ -219,8 +219,8 @@ public final class GetApplicationPriorityQosPolicyResult {
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.qosSchedulers = qosSchedulers;
-            _resultValue.targetInterfaceVariable = targetInterfaceVariable;
             _resultValue.targetInterfaces = targetInterfaces;
+            _resultValue.targetInterfacesVariable = targetInterfacesVariable;
             _resultValue.version = version;
             return _resultValue;
         }

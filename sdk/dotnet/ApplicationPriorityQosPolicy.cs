@@ -53,16 +53,16 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ApplicationPriorityQosPolicyQosScheduler>> QosSchedulers { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
-        /// </summary>
-        [Output("targetInterfaceVariable")]
-        public Output<string?> TargetInterfaceVariable { get; private set; } = null!;
-
-        /// <summary>
         /// interfaces
         /// </summary>
         [Output("targetInterfaces")]
         public Output<ImmutableArray<string>> TargetInterfaces { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("targetInterfacesVariable")]
+        public Output<string?> TargetInterfacesVariable { get; private set; } = null!;
 
         /// <summary>
         /// The version of the Policy
@@ -146,12 +146,6 @@ namespace Pulumi.Sdwan
             set => _qosSchedulers = value;
         }
 
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("targetInterfaceVariable")]
-        public Input<string>? TargetInterfaceVariable { get; set; }
-
         [Input("targetInterfaces")]
         private InputList<string>? _targetInterfaces;
 
@@ -163,6 +157,12 @@ namespace Pulumi.Sdwan
             get => _targetInterfaces ?? (_targetInterfaces = new InputList<string>());
             set => _targetInterfaces = value;
         }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("targetInterfacesVariable")]
+        public Input<string>? TargetInterfacesVariable { get; set; }
 
         public ApplicationPriorityQosPolicyArgs()
         {
@@ -202,12 +202,6 @@ namespace Pulumi.Sdwan
             set => _qosSchedulers = value;
         }
 
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("targetInterfaceVariable")]
-        public Input<string>? TargetInterfaceVariable { get; set; }
-
         [Input("targetInterfaces")]
         private InputList<string>? _targetInterfaces;
 
@@ -219,6 +213,12 @@ namespace Pulumi.Sdwan
             get => _targetInterfaces ?? (_targetInterfaces = new InputList<string>());
             set => _targetInterfaces = value;
         }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("targetInterfacesVariable")]
+        public Input<string>? TargetInterfacesVariable { get; set; }
 
         /// <summary>
         /// The version of the Policy

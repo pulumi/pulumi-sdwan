@@ -27,7 +27,7 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceEthernetFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_type=None, ipv4_nat_type_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_variable=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, tracker=None, tracker_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, version=None, xconnect=None, xconnect_variable=None):
+    def __init__(__self__, acl_ipv4_egress_policy_id=None, acl_ipv4_ingress_policy_id=None, acl_ipv6_egress_policy_id=None, acl_ipv6_ingress_policy_id=None, acl_shaping_rate=None, acl_shaping_rate_variable=None, arp_timeout=None, arp_timeout_variable=None, arps=None, autonegotiate=None, autonegotiate_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_configuration_type=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_nat=None, ipv4_nat_loopback=None, ipv4_nat_loopback_variable=None, ipv4_nat_overload=None, ipv4_nat_overload_variable=None, ipv4_nat_prefix_length=None, ipv4_nat_prefix_length_variable=None, ipv4_nat_range_end=None, ipv4_nat_range_end_variable=None, ipv4_nat_range_start=None, ipv4_nat_range_start_variable=None, ipv4_nat_tcp_timeout=None, ipv4_nat_tcp_timeout_variable=None, ipv4_nat_udp_timeout=None, ipv4_nat_udp_timeout_variable=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_vrrps=None, ipv6_address=None, ipv6_address_variable=None, ipv6_configuration_type=None, ipv6_dhcp_helpers=None, ipv6_dhcp_secondary_addresses=None, ipv6_nat=None, ipv6_secondary_addresses=None, ipv6_vrrps=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nats=None, tcp_mss=None, tcp_mss_variable=None, tracker=None, tracker_variable=None, trustsec_enable_enforced_propogation=None, trustsec_enable_sgt_propogation=None, trustsec_enforced_security_group_tag=None, trustsec_enforced_security_group_tag_variable=None, trustsec_propogate=None, trustsec_security_group_tag=None, trustsec_security_group_tag_variable=None, version=None, xconnect=None, xconnect_variable=None):
         if acl_ipv4_egress_policy_id and not isinstance(acl_ipv4_egress_policy_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_policy_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_policy_id", acl_ipv4_egress_policy_id)
@@ -121,6 +121,9 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if ipv4_address_variable and not isinstance(ipv4_address_variable, str):
             raise TypeError("Expected argument 'ipv4_address_variable' to be a str")
         pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
+        if ipv4_configuration_type and not isinstance(ipv4_configuration_type, str):
+            raise TypeError("Expected argument 'ipv4_configuration_type' to be a str")
+        pulumi.set(__self__, "ipv4_configuration_type", ipv4_configuration_type)
         if ipv4_dhcp_distance and not isinstance(ipv4_dhcp_distance, int):
             raise TypeError("Expected argument 'ipv4_dhcp_distance' to be a int")
         pulumi.set(__self__, "ipv4_dhcp_distance", ipv4_dhcp_distance)
@@ -172,12 +175,6 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if ipv4_nat_tcp_timeout_variable and not isinstance(ipv4_nat_tcp_timeout_variable, str):
             raise TypeError("Expected argument 'ipv4_nat_tcp_timeout_variable' to be a str")
         pulumi.set(__self__, "ipv4_nat_tcp_timeout_variable", ipv4_nat_tcp_timeout_variable)
-        if ipv4_nat_type and not isinstance(ipv4_nat_type, str):
-            raise TypeError("Expected argument 'ipv4_nat_type' to be a str")
-        pulumi.set(__self__, "ipv4_nat_type", ipv4_nat_type)
-        if ipv4_nat_type_variable and not isinstance(ipv4_nat_type_variable, str):
-            raise TypeError("Expected argument 'ipv4_nat_type_variable' to be a str")
-        pulumi.set(__self__, "ipv4_nat_type_variable", ipv4_nat_type_variable)
         if ipv4_nat_udp_timeout and not isinstance(ipv4_nat_udp_timeout, int):
             raise TypeError("Expected argument 'ipv4_nat_udp_timeout' to be a int")
         pulumi.set(__self__, "ipv4_nat_udp_timeout", ipv4_nat_udp_timeout)
@@ -202,6 +199,9 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         if ipv6_address_variable and not isinstance(ipv6_address_variable, str):
             raise TypeError("Expected argument 'ipv6_address_variable' to be a str")
         pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if ipv6_configuration_type and not isinstance(ipv6_configuration_type, str):
+            raise TypeError("Expected argument 'ipv6_configuration_type' to be a str")
+        pulumi.set(__self__, "ipv6_configuration_type", ipv6_configuration_type)
         if ipv6_dhcp_helpers and not isinstance(ipv6_dhcp_helpers, list):
             raise TypeError("Expected argument 'ipv6_dhcp_helpers' to be a list")
         pulumi.set(__self__, "ipv6_dhcp_helpers", ipv6_dhcp_helpers)
@@ -533,6 +533,14 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "ipv4_address_variable")
 
     @_builtins.property
+    @pulumi.getter(name="ipv4ConfigurationType")
+    def ipv4_configuration_type(self) -> _builtins.str:
+        """
+        IPv4 Configuration Type
+        """
+        return pulumi.get(self, "ipv4_configuration_type")
+
+    @_builtins.property
     @pulumi.getter(name="ipv4DhcpDistance")
     def ipv4_dhcp_distance(self) -> _builtins.int:
         """
@@ -669,22 +677,6 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "ipv4_nat_tcp_timeout_variable")
 
     @_builtins.property
-    @pulumi.getter(name="ipv4NatType")
-    def ipv4_nat_type(self) -> _builtins.str:
-        """
-        NAT Type
-        """
-        return pulumi.get(self, "ipv4_nat_type")
-
-    @_builtins.property
-    @pulumi.getter(name="ipv4NatTypeVariable")
-    def ipv4_nat_type_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "ipv4_nat_type_variable")
-
-    @_builtins.property
     @pulumi.getter(name="ipv4NatUdpTimeout")
     def ipv4_nat_udp_timeout(self) -> _builtins.int:
         """
@@ -747,6 +739,14 @@ class GetServiceLanVpnInterfaceEthernetFeatureResult:
         Variable name
         """
         return pulumi.get(self, "ipv6_address_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6ConfigurationType")
+    def ipv6_configuration_type(self) -> _builtins.str:
+        """
+        IPv6 Configuration Type
+        """
+        return pulumi.get(self, "ipv6_configuration_type")
 
     @_builtins.property
     @pulumi.getter(name="ipv6DhcpHelpers")
@@ -1047,6 +1047,7 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             ip_mtu_variable=self.ip_mtu_variable,
             ipv4_address=self.ipv4_address,
             ipv4_address_variable=self.ipv4_address_variable,
+            ipv4_configuration_type=self.ipv4_configuration_type,
             ipv4_dhcp_distance=self.ipv4_dhcp_distance,
             ipv4_dhcp_distance_variable=self.ipv4_dhcp_distance_variable,
             ipv4_dhcp_helper_variable=self.ipv4_dhcp_helper_variable,
@@ -1064,8 +1065,6 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             ipv4_nat_range_start_variable=self.ipv4_nat_range_start_variable,
             ipv4_nat_tcp_timeout=self.ipv4_nat_tcp_timeout,
             ipv4_nat_tcp_timeout_variable=self.ipv4_nat_tcp_timeout_variable,
-            ipv4_nat_type=self.ipv4_nat_type,
-            ipv4_nat_type_variable=self.ipv4_nat_type_variable,
             ipv4_nat_udp_timeout=self.ipv4_nat_udp_timeout,
             ipv4_nat_udp_timeout_variable=self.ipv4_nat_udp_timeout_variable,
             ipv4_secondary_addresses=self.ipv4_secondary_addresses,
@@ -1074,6 +1073,7 @@ class AwaitableGetServiceLanVpnInterfaceEthernetFeatureResult(GetServiceLanVpnIn
             ipv4_vrrps=self.ipv4_vrrps,
             ipv6_address=self.ipv6_address,
             ipv6_address_variable=self.ipv6_address_variable,
+            ipv6_configuration_type=self.ipv6_configuration_type,
             ipv6_dhcp_helpers=self.ipv6_dhcp_helpers,
             ipv6_dhcp_secondary_addresses=self.ipv6_dhcp_secondary_addresses,
             ipv6_nat=self.ipv6_nat,
@@ -1171,6 +1171,7 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         ip_mtu_variable=pulumi.get(__ret__, 'ip_mtu_variable'),
         ipv4_address=pulumi.get(__ret__, 'ipv4_address'),
         ipv4_address_variable=pulumi.get(__ret__, 'ipv4_address_variable'),
+        ipv4_configuration_type=pulumi.get(__ret__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__ret__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__ret__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__ret__, 'ipv4_dhcp_helper_variable'),
@@ -1188,8 +1189,6 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         ipv4_nat_range_start_variable=pulumi.get(__ret__, 'ipv4_nat_range_start_variable'),
         ipv4_nat_tcp_timeout=pulumi.get(__ret__, 'ipv4_nat_tcp_timeout'),
         ipv4_nat_tcp_timeout_variable=pulumi.get(__ret__, 'ipv4_nat_tcp_timeout_variable'),
-        ipv4_nat_type=pulumi.get(__ret__, 'ipv4_nat_type'),
-        ipv4_nat_type_variable=pulumi.get(__ret__, 'ipv4_nat_type_variable'),
         ipv4_nat_udp_timeout=pulumi.get(__ret__, 'ipv4_nat_udp_timeout'),
         ipv4_nat_udp_timeout_variable=pulumi.get(__ret__, 'ipv4_nat_udp_timeout_variable'),
         ipv4_secondary_addresses=pulumi.get(__ret__, 'ipv4_secondary_addresses'),
@@ -1198,6 +1197,7 @@ def get_service_lan_vpn_interface_ethernet_feature(feature_profile_id: Optional[
         ipv4_vrrps=pulumi.get(__ret__, 'ipv4_vrrps'),
         ipv6_address=pulumi.get(__ret__, 'ipv6_address'),
         ipv6_address_variable=pulumi.get(__ret__, 'ipv6_address_variable'),
+        ipv6_configuration_type=pulumi.get(__ret__, 'ipv6_configuration_type'),
         ipv6_dhcp_helpers=pulumi.get(__ret__, 'ipv6_dhcp_helpers'),
         ipv6_dhcp_secondary_addresses=pulumi.get(__ret__, 'ipv6_dhcp_secondary_addresses'),
         ipv6_nat=pulumi.get(__ret__, 'ipv6_nat'),
@@ -1292,6 +1292,7 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: Op
         ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
         ipv4_address=pulumi.get(__response__, 'ipv4_address'),
         ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        ipv4_configuration_type=pulumi.get(__response__, 'ipv4_configuration_type'),
         ipv4_dhcp_distance=pulumi.get(__response__, 'ipv4_dhcp_distance'),
         ipv4_dhcp_distance_variable=pulumi.get(__response__, 'ipv4_dhcp_distance_variable'),
         ipv4_dhcp_helper_variable=pulumi.get(__response__, 'ipv4_dhcp_helper_variable'),
@@ -1309,8 +1310,6 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: Op
         ipv4_nat_range_start_variable=pulumi.get(__response__, 'ipv4_nat_range_start_variable'),
         ipv4_nat_tcp_timeout=pulumi.get(__response__, 'ipv4_nat_tcp_timeout'),
         ipv4_nat_tcp_timeout_variable=pulumi.get(__response__, 'ipv4_nat_tcp_timeout_variable'),
-        ipv4_nat_type=pulumi.get(__response__, 'ipv4_nat_type'),
-        ipv4_nat_type_variable=pulumi.get(__response__, 'ipv4_nat_type_variable'),
         ipv4_nat_udp_timeout=pulumi.get(__response__, 'ipv4_nat_udp_timeout'),
         ipv4_nat_udp_timeout_variable=pulumi.get(__response__, 'ipv4_nat_udp_timeout_variable'),
         ipv4_secondary_addresses=pulumi.get(__response__, 'ipv4_secondary_addresses'),
@@ -1319,6 +1318,7 @@ def get_service_lan_vpn_interface_ethernet_feature_output(feature_profile_id: Op
         ipv4_vrrps=pulumi.get(__response__, 'ipv4_vrrps'),
         ipv6_address=pulumi.get(__response__, 'ipv6_address'),
         ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
+        ipv6_configuration_type=pulumi.get(__response__, 'ipv6_configuration_type'),
         ipv6_dhcp_helpers=pulumi.get(__response__, 'ipv6_dhcp_helpers'),
         ipv6_dhcp_secondary_addresses=pulumi.get(__response__, 'ipv6_dhcp_secondary_addresses'),
         ipv6_nat=pulumi.get(__response__, 'ipv6_nat'),

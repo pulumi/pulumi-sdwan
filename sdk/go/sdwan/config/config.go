@@ -26,6 +26,11 @@ func GetRetries(ctx *pulumi.Context) int {
 	return config.GetInt(ctx, "sdwan:retries")
 }
 
+// Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+func GetTaskTimeout(ctx *pulumi.Context) int {
+	return config.GetInt(ctx, "sdwan:taskTimeout")
+}
+
 // URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 func GetUrl(ctx *pulumi.Context) string {
 	return config.Get(ctx, "sdwan:url")

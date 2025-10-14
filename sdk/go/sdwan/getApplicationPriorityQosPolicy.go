@@ -69,10 +69,10 @@ type LookupApplicationPriorityQosPolicyResult struct {
 	Name string `pulumi:"name"`
 	// qosSchedulers
 	QosSchedulers []GetApplicationPriorityQosPolicyQosScheduler `pulumi:"qosSchedulers"`
-	// Variable name
-	TargetInterfaceVariable string `pulumi:"targetInterfaceVariable"`
 	// interfaces
 	TargetInterfaces []string `pulumi:"targetInterfaces"`
+	// Variable name
+	TargetInterfacesVariable string `pulumi:"targetInterfacesVariable"`
 	// The version of the Policy
 	Version int `pulumi:"version"`
 }
@@ -140,14 +140,14 @@ func (o LookupApplicationPriorityQosPolicyResultOutput) QosSchedulers() GetAppli
 	}).(GetApplicationPriorityQosPolicyQosSchedulerArrayOutput)
 }
 
-// Variable name
-func (o LookupApplicationPriorityQosPolicyResultOutput) TargetInterfaceVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupApplicationPriorityQosPolicyResult) string { return v.TargetInterfaceVariable }).(pulumi.StringOutput)
-}
-
 // interfaces
 func (o LookupApplicationPriorityQosPolicyResultOutput) TargetInterfaces() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationPriorityQosPolicyResult) []string { return v.TargetInterfaces }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o LookupApplicationPriorityQosPolicyResultOutput) TargetInterfacesVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationPriorityQosPolicyResult) string { return v.TargetInterfacesVariable }).(pulumi.StringOutput)
 }
 
 // The version of the Policy

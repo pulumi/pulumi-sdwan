@@ -67,13 +67,13 @@ export class ApplicationPriorityQosPolicy extends pulumi.CustomResource {
      */
     declare public readonly qosSchedulers: pulumi.Output<outputs.ApplicationPriorityQosPolicyQosScheduler[] | undefined>;
     /**
-     * Variable name
-     */
-    declare public readonly targetInterfaceVariable: pulumi.Output<string | undefined>;
-    /**
      * interfaces
      */
     declare public readonly targetInterfaces: pulumi.Output<string[] | undefined>;
+    /**
+     * Variable name
+     */
+    declare public readonly targetInterfacesVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Policy
      */
@@ -96,8 +96,8 @@ export class ApplicationPriorityQosPolicy extends pulumi.CustomResource {
             resourceInputs["featureProfileId"] = state?.featureProfileId;
             resourceInputs["name"] = state?.name;
             resourceInputs["qosSchedulers"] = state?.qosSchedulers;
-            resourceInputs["targetInterfaceVariable"] = state?.targetInterfaceVariable;
             resourceInputs["targetInterfaces"] = state?.targetInterfaces;
+            resourceInputs["targetInterfacesVariable"] = state?.targetInterfacesVariable;
             resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ApplicationPriorityQosPolicyArgs | undefined;
@@ -108,8 +108,8 @@ export class ApplicationPriorityQosPolicy extends pulumi.CustomResource {
             resourceInputs["featureProfileId"] = args?.featureProfileId;
             resourceInputs["name"] = args?.name;
             resourceInputs["qosSchedulers"] = args?.qosSchedulers;
-            resourceInputs["targetInterfaceVariable"] = args?.targetInterfaceVariable;
             resourceInputs["targetInterfaces"] = args?.targetInterfaces;
+            resourceInputs["targetInterfacesVariable"] = args?.targetInterfacesVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -138,13 +138,13 @@ export interface ApplicationPriorityQosPolicyState {
      */
     qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[]>;
     /**
-     * Variable name
-     */
-    targetInterfaceVariable?: pulumi.Input<string>;
-    /**
      * interfaces
      */
     targetInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    targetInterfacesVariable?: pulumi.Input<string>;
     /**
      * The version of the Policy
      */
@@ -172,11 +172,11 @@ export interface ApplicationPriorityQosPolicyArgs {
      */
     qosSchedulers?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityQosPolicyQosScheduler>[]>;
     /**
-     * Variable name
-     */
-    targetInterfaceVariable?: pulumi.Input<string>;
-    /**
      * interfaces
      */
     targetInterfaces?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Variable name
+     */
+    targetInterfacesVariable?: pulumi.Input<string>;
 }

@@ -37,10 +37,10 @@ type ApplicationPriorityQosPolicy struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// qosSchedulers
 	QosSchedulers ApplicationPriorityQosPolicyQosSchedulerArrayOutput `pulumi:"qosSchedulers"`
-	// Variable name
-	TargetInterfaceVariable pulumi.StringPtrOutput `pulumi:"targetInterfaceVariable"`
 	// interfaces
 	TargetInterfaces pulumi.StringArrayOutput `pulumi:"targetInterfaces"`
+	// Variable name
+	TargetInterfacesVariable pulumi.StringPtrOutput `pulumi:"targetInterfacesVariable"`
 	// The version of the Policy
 	Version pulumi.IntOutput `pulumi:"version"`
 }
@@ -86,10 +86,10 @@ type applicationPriorityQosPolicyState struct {
 	Name *string `pulumi:"name"`
 	// qosSchedulers
 	QosSchedulers []ApplicationPriorityQosPolicyQosScheduler `pulumi:"qosSchedulers"`
-	// Variable name
-	TargetInterfaceVariable *string `pulumi:"targetInterfaceVariable"`
 	// interfaces
 	TargetInterfaces []string `pulumi:"targetInterfaces"`
+	// Variable name
+	TargetInterfacesVariable *string `pulumi:"targetInterfacesVariable"`
 	// The version of the Policy
 	Version *int `pulumi:"version"`
 }
@@ -103,10 +103,10 @@ type ApplicationPriorityQosPolicyState struct {
 	Name pulumi.StringPtrInput
 	// qosSchedulers
 	QosSchedulers ApplicationPriorityQosPolicyQosSchedulerArrayInput
-	// Variable name
-	TargetInterfaceVariable pulumi.StringPtrInput
 	// interfaces
 	TargetInterfaces pulumi.StringArrayInput
+	// Variable name
+	TargetInterfacesVariable pulumi.StringPtrInput
 	// The version of the Policy
 	Version pulumi.IntPtrInput
 }
@@ -124,10 +124,10 @@ type applicationPriorityQosPolicyArgs struct {
 	Name *string `pulumi:"name"`
 	// qosSchedulers
 	QosSchedulers []ApplicationPriorityQosPolicyQosScheduler `pulumi:"qosSchedulers"`
-	// Variable name
-	TargetInterfaceVariable *string `pulumi:"targetInterfaceVariable"`
 	// interfaces
 	TargetInterfaces []string `pulumi:"targetInterfaces"`
+	// Variable name
+	TargetInterfacesVariable *string `pulumi:"targetInterfacesVariable"`
 }
 
 // The set of arguments for constructing a ApplicationPriorityQosPolicy resource.
@@ -140,10 +140,10 @@ type ApplicationPriorityQosPolicyArgs struct {
 	Name pulumi.StringPtrInput
 	// qosSchedulers
 	QosSchedulers ApplicationPriorityQosPolicyQosSchedulerArrayInput
-	// Variable name
-	TargetInterfaceVariable pulumi.StringPtrInput
 	// interfaces
 	TargetInterfaces pulumi.StringArrayInput
+	// Variable name
+	TargetInterfacesVariable pulumi.StringPtrInput
 }
 
 func (ApplicationPriorityQosPolicyArgs) ElementType() reflect.Type {
@@ -255,14 +255,14 @@ func (o ApplicationPriorityQosPolicyOutput) QosSchedulers() ApplicationPriorityQ
 	}).(ApplicationPriorityQosPolicyQosSchedulerArrayOutput)
 }
 
-// Variable name
-func (o ApplicationPriorityQosPolicyOutput) TargetInterfaceVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ApplicationPriorityQosPolicy) pulumi.StringPtrOutput { return v.TargetInterfaceVariable }).(pulumi.StringPtrOutput)
-}
-
 // interfaces
 func (o ApplicationPriorityQosPolicyOutput) TargetInterfaces() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationPriorityQosPolicy) pulumi.StringArrayOutput { return v.TargetInterfaces }).(pulumi.StringArrayOutput)
+}
+
+// Variable name
+func (o ApplicationPriorityQosPolicyOutput) TargetInterfacesVariable() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ApplicationPriorityQosPolicy) pulumi.StringPtrOutput { return v.TargetInterfacesVariable }).(pulumi.StringPtrOutput)
 }
 
 // The version of the Policy

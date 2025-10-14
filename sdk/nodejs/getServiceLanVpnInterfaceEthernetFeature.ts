@@ -160,6 +160,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv4AddressVariable: string;
     /**
+     * IPv4 Configuration Type
+     */
+    readonly ipv4ConfigurationType: string;
+    /**
      * DHCP Distance
      */
     readonly ipv4DhcpDistance: number;
@@ -228,14 +232,6 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly ipv4NatTcpTimeoutVariable: string;
     /**
-     * NAT Type
-     */
-    readonly ipv4NatType: string;
-    /**
-     * Variable name
-     */
-    readonly ipv4NatTypeVariable: string;
-    /**
      * Set NAT UDP session timeout, in minutes
      */
     readonly ipv4NatUdpTimeout: number;
@@ -267,6 +263,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly ipv6AddressVariable: string;
+    /**
+     * IPv6 Configuration Type
+     */
+    readonly ipv6ConfigurationType: string;
     /**
      * DHCPv6 Helper
      */

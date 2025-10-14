@@ -34,6 +34,13 @@ public final class Config {
         return Codegen.integerProp("retries").config(config).get();
     }
 /**
+ * Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+ * 
+ */
+    public Optional<Integer> taskTimeout() {
+        return Codegen.integerProp("taskTimeout").config(config).get();
+    }
+/**
  * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
  * 
  */

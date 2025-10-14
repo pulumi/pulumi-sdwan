@@ -68,13 +68,13 @@ export interface GetApplicationPriorityQosPolicyResult {
      */
     readonly qosSchedulers: outputs.GetApplicationPriorityQosPolicyQosScheduler[];
     /**
-     * Variable name
-     */
-    readonly targetInterfaceVariable: string;
-    /**
      * interfaces
      */
     readonly targetInterfaces: string[];
+    /**
+     * Variable name
+     */
+    readonly targetInterfacesVariable: string;
     /**
      * The version of the Policy
      */

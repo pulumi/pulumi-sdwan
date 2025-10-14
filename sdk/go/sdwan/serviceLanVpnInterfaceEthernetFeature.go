@@ -57,7 +57,7 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Duplex pulumi.StringPtrOutput `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable pulumi.StringPtrOutput `pulumi:"duplexVariable"`
-	// Enable DHCPv6
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrOutput `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
@@ -89,14 +89,19 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	IpMtu pulumi.IntPtrOutput `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable pulumi.StringPtrOutput `pulumi:"ipMtuVariable"`
-	// IP Address
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4Address pulumi.StringPtrOutput `pulumi:"ipv4Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrOutput `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
+	Ipv4ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv4ConfigurationType"`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrOutput `pulumi:"ipv4DhcpDistance"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrOutput `pulumi:"ipv4DhcpHelperVariable"`
@@ -133,38 +138,37 @@ type ServiceLanVpnInterfaceEthernetFeature struct {
 	Ipv4NatTcpTimeout pulumi.IntPtrOutput `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrOutput `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type
-	//   - Choices: `pool`, `loopback`
-	Ipv4NatType pulumi.StringPtrOutput `pulumi:"ipv4NatType"`
-	// Variable name
-	Ipv4NatTypeVariable pulumi.StringPtrOutput `pulumi:"ipv4NatTypeVariable"`
 	// Set NAT UDP session timeout, in minutes
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrOutput `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrOutput `pulumi:"ipv4NatUdpTimeoutVariable"`
-	// Secondary IpV4 Addresses
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrOutput `pulumi:"ipv4SubnetMask"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrOutput `pulumi:"ipv4SubnetMaskVariable"`
 	// Enable VRRP
 	Ipv4Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArrayOutput `pulumi:"ipv4Vrrps"`
-	// IPv6 Address Secondary
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6Address pulumi.StringPtrOutput `pulumi:"ipv6Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrOutput `pulumi:"ipv6AddressVariable"`
-	// DHCPv6 Helper
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
+	Ipv6ConfigurationType pulumi.StringPtrOutput `pulumi:"ipv6ConfigurationType"`
+	// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayOutput `pulumi:"ipv6DhcpHelpers"`
-	// secondary IPv6 addresses
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput `pulumi:"ipv6DhcpSecondaryAddresses"`
 	// enable Network Address Translation ipv6 on this interface
 	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrOutput `pulumi:"ipv6Nat"`
-	// Static secondary IPv6 addresses
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayOutput `pulumi:"ipv6Vrrps"`
@@ -300,7 +304,7 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
@@ -332,14 +336,19 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IP Address
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
+	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
@@ -376,38 +385,37 @@ type serviceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4NatTcpTimeout *int `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable *string `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type
-	//   - Choices: `pool`, `loopback`
-	Ipv4NatType *string `pulumi:"ipv4NatType"`
-	// Variable name
-	Ipv4NatTypeVariable *string `pulumi:"ipv4NatTypeVariable"`
 	// Set NAT UDP session timeout, in minutes
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	Ipv4NatUdpTimeout *int `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable *string `pulumi:"ipv4NatUdpTimeoutVariable"`
-	// Secondary IpV4 Addresses
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// Enable VRRP
 	Ipv4Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp `pulumi:"ipv4Vrrps"`
-	// IPv6 Address Secondary
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// DHCPv6 Helper
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
+	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
+	// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6DhcpHelpers []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// secondary IPv6 addresses
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
 	// enable Network Address Translation ipv6 on this interface
 	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
-	// Static secondary IPv6 addresses
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp `pulumi:"ipv6Vrrps"`
@@ -508,7 +516,7 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
@@ -540,14 +548,19 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IP Address
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// DHCP Distance
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
+	Ipv4ConfigurationType pulumi.StringPtrInput
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
@@ -584,38 +597,37 @@ type ServiceLanVpnInterfaceEthernetFeatureState struct {
 	Ipv4NatTcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type
-	//   - Choices: `pool`, `loopback`
-	Ipv4NatType pulumi.StringPtrInput
-	// Variable name
-	Ipv4NatTypeVariable pulumi.StringPtrInput
 	// Set NAT UDP session timeout, in minutes
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrInput
-	// Secondary IpV4 Addresses
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// Enable VRRP
 	Ipv4Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArrayInput
-	// IPv6 Address Secondary
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// DHCPv6 Helper
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
+	Ipv6ConfigurationType pulumi.StringPtrInput
+	// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayInput
-	// secondary IPv6 addresses
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
 	// enable Network Address Translation ipv6 on this interface
 	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
-	// Static secondary IPv6 addresses
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayInput
@@ -720,7 +732,7 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Duplex *string `pulumi:"duplex"`
 	// Variable name
 	DuplexVariable *string `pulumi:"duplexVariable"`
-	// Enable DHCPv6
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 *bool `pulumi:"enableDhcpv6"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
@@ -752,14 +764,19 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	IpMtu *int `pulumi:"ipMtu"`
 	// Variable name
 	IpMtuVariable *string `pulumi:"ipMtuVariable"`
-	// IP Address
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4Address *string `pulumi:"ipv4Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable *string `pulumi:"ipv4AddressVariable"`
-	// DHCP Distance
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
+	Ipv4ConfigurationType *string `pulumi:"ipv4ConfigurationType"`
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance *int `pulumi:"ipv4DhcpDistance"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable *string `pulumi:"ipv4DhcpDistanceVariable"`
 	// Variable name
 	Ipv4DhcpHelperVariable *string `pulumi:"ipv4DhcpHelperVariable"`
@@ -796,38 +813,37 @@ type serviceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4NatTcpTimeout *int `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable *string `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type
-	//   - Choices: `pool`, `loopback`
-	Ipv4NatType *string `pulumi:"ipv4NatType"`
-	// Variable name
-	Ipv4NatTypeVariable *string `pulumi:"ipv4NatTypeVariable"`
 	// Set NAT UDP session timeout, in minutes
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	Ipv4NatUdpTimeout *int `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
 	Ipv4NatUdpTimeoutVariable *string `pulumi:"ipv4NatUdpTimeoutVariable"`
-	// Secondary IpV4 Addresses
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
-	// Subnet Mask
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask *string `pulumi:"ipv4SubnetMask"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable *string `pulumi:"ipv4SubnetMaskVariable"`
 	// Enable VRRP
 	Ipv4Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp `pulumi:"ipv4Vrrps"`
-	// IPv6 Address Secondary
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6Address *string `pulumi:"ipv6Address"`
-	// Variable name
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable *string `pulumi:"ipv6AddressVariable"`
-	// DHCPv6 Helper
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
+	Ipv6ConfigurationType *string `pulumi:"ipv6ConfigurationType"`
+	// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6DhcpHelpers []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
-	// secondary IPv6 addresses
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress `pulumi:"ipv6DhcpSecondaryAddresses"`
 	// enable Network Address Translation ipv6 on this interface
 	//   - Default value: `false`
 	Ipv6Nat *bool `pulumi:"ipv6Nat"`
-	// Static secondary IPv6 addresses
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6SecondaryAddresses []ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress `pulumi:"ipv6SecondaryAddresses"`
 	// Enable VRRP Ipv6
 	Ipv6Vrrps []ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp `pulumi:"ipv6Vrrps"`
@@ -927,7 +943,7 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Duplex pulumi.StringPtrInput
 	// Variable name
 	DuplexVariable pulumi.StringPtrInput
-	// Enable DHCPv6
+	// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	EnableDhcpv6 pulumi.BoolPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
@@ -959,14 +975,19 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	IpMtu pulumi.IntPtrInput
 	// Variable name
 	IpMtuVariable pulumi.StringPtrInput
-	// IP Address
+	// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4Address pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4AddressVariable pulumi.StringPtrInput
-	// DHCP Distance
+	// IPv4 Configuration Type
+	//   - Choices: `dynamic`, `static`
+	//   - Default value: `dynamic`
+	Ipv4ConfigurationType pulumi.StringPtrInput
+	// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	//   - Range: `1`-`65536`
+	//   - Default value: `1`
 	Ipv4DhcpDistance pulumi.IntPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 	Ipv4DhcpDistanceVariable pulumi.StringPtrInput
 	// Variable name
 	Ipv4DhcpHelperVariable pulumi.StringPtrInput
@@ -1003,38 +1024,37 @@ type ServiceLanVpnInterfaceEthernetFeatureArgs struct {
 	Ipv4NatTcpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatTcpTimeoutVariable pulumi.StringPtrInput
-	// NAT Type
-	//   - Choices: `pool`, `loopback`
-	Ipv4NatType pulumi.StringPtrInput
-	// Variable name
-	Ipv4NatTypeVariable pulumi.StringPtrInput
 	// Set NAT UDP session timeout, in minutes
 	//   - Range: `1`-`8947`
 	//   - Default value: `1`
 	Ipv4NatUdpTimeout pulumi.IntPtrInput
 	// Variable name
 	Ipv4NatUdpTimeoutVariable pulumi.StringPtrInput
-	// Secondary IpV4 Addresses
+	// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayInput
-	// Subnet Mask
+	// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	//   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 	Ipv4SubnetMask pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 	Ipv4SubnetMaskVariable pulumi.StringPtrInput
 	// Enable VRRP
 	Ipv4Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArrayInput
-	// IPv6 Address Secondary
+	// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6Address pulumi.StringPtrInput
-	// Variable name
+	// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6AddressVariable pulumi.StringPtrInput
-	// DHCPv6 Helper
+	// IPv6 Configuration Type
+	//   - Choices: `dynamic`, `static`, `none`
+	//   - Default value: `none`
+	Ipv6ConfigurationType pulumi.StringPtrInput
+	// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6DhcpHelpers ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayInput
-	// secondary IPv6 addresses
+	// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 	Ipv6DhcpSecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayInput
 	// enable Network Address Translation ipv6 on this interface
 	//   - Default value: `false`
 	Ipv6Nat pulumi.BoolPtrInput
-	// Static secondary IPv6 addresses
+	// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 	Ipv6SecondaryAddresses ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayInput
 	// Enable VRRP Ipv6
 	Ipv6Vrrps ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArrayInput
@@ -1263,7 +1283,7 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) DuplexVariable() pulumi.Str
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.DuplexVariable }).(pulumi.StringPtrOutput)
 }
 
-// Enable DHCPv6
+// Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) EnableDhcpv6() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.EnableDhcpv6 }).(pulumi.BoolPtrOutput)
 }
@@ -1343,23 +1363,31 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) IpMtuVariable() pulumi.Stri
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.IpMtuVariable }).(pulumi.StringPtrOutput)
 }
 
-// IP Address
+// IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// DHCP Distance
+// IPv4 Configuration Type
+//   - Choices: `dynamic`, `static`
+//   - Default value: `dynamic`
+func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4ConfigurationType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4ConfigurationType }).(pulumi.StringPtrOutput)
+}
+
+// DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 //   - Range: `1`-`65536`
+//   - Default value: `1`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistance() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.IntPtrOutput { return v.Ipv4DhcpDistance }).(pulumi.IntPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4DhcpDistanceVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput {
 		return v.Ipv4DhcpDistanceVariable
@@ -1458,17 +1486,6 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatTcpTimeoutVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// NAT Type
-//   - Choices: `pool`, `loopback`
-func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatType() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4NatType }).(pulumi.StringPtrOutput)
-}
-
-// Variable name
-func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatTypeVariable() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4NatTypeVariable }).(pulumi.StringPtrOutput)
-}
-
 // Set NAT UDP session timeout, in minutes
 //   - Range: `1`-`8947`
 //   - Default value: `1`
@@ -1483,20 +1500,20 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4NatUdpTimeoutVariable()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Secondary IpV4 Addresses
+// Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4SecondaryAddresses() ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput {
 		return v.Ipv4SecondaryAddresses
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArrayOutput)
 }
 
-// Subnet Mask
+// Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 //   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMask }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4SubnetMaskVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv4SubnetMaskVariable }).(pulumi.StringPtrOutput)
 }
@@ -1508,24 +1525,31 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv4Vrrps() ServiceLanVpnIn
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArrayOutput)
 }
 
-// IPv6 Address Secondary
+// IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
-// Variable name
+// Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6AddressVariable() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6AddressVariable }).(pulumi.StringPtrOutput)
 }
 
-// DHCPv6 Helper
+// IPv6 Configuration Type
+//   - Choices: `dynamic`, `static`, `none`
+//   - Default value: `none`
+func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6ConfigurationType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.StringPtrOutput { return v.Ipv6ConfigurationType }).(pulumi.StringPtrOutput)
+}
+
+// DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6DhcpHelpers() ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayOutput {
 		return v.Ipv6DhcpHelpers
 	}).(ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArrayOutput)
 }
 
-// secondary IPv6 addresses
+// secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6DhcpSecondaryAddresses() ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArrayOutput {
 		return v.Ipv6DhcpSecondaryAddresses
@@ -1538,7 +1562,7 @@ func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6Nat() pulumi.BoolPtrOut
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) pulumi.BoolPtrOutput { return v.Ipv6Nat }).(pulumi.BoolPtrOutput)
 }
 
-// Static secondary IPv6 addresses
+// Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
 func (o ServiceLanVpnInterfaceEthernetFeatureOutput) Ipv6SecondaryAddresses() ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
 	return o.ApplyT(func(v *ServiceLanVpnInterfaceEthernetFeature) ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArrayOutput {
 		return v.Ipv6SecondaryAddresses

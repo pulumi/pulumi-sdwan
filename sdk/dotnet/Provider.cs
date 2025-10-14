@@ -103,6 +103,12 @@ namespace Pulumi.Sdwan
         public Input<int>? Retries { get; set; }
 
         /// <summary>
+        /// Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+        /// </summary>
+        [Input("taskTimeout", json: true)]
+        public Input<int>? TaskTimeout { get; set; }
+
+        /// <summary>
         /// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
         /// </summary>
         [Input("url")]

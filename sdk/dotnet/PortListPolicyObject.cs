@@ -29,7 +29,7 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.PortListPolicyObjectEntryArgs
     ///             {
-    ///                 Port = 80,
+    ///                 Port = "80",
     ///             },
     ///         },
     ///     });

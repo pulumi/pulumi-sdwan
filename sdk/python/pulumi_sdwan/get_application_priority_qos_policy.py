@@ -27,7 +27,7 @@ class GetApplicationPriorityQosPolicyResult:
     """
     A collection of values returned by getApplicationPriorityQosPolicy.
     """
-    def __init__(__self__, description=None, feature_profile_id=None, id=None, name=None, qos_schedulers=None, target_interface_variable=None, target_interfaces=None, version=None):
+    def __init__(__self__, description=None, feature_profile_id=None, id=None, name=None, qos_schedulers=None, target_interfaces=None, target_interfaces_variable=None, version=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -43,12 +43,12 @@ class GetApplicationPriorityQosPolicyResult:
         if qos_schedulers and not isinstance(qos_schedulers, list):
             raise TypeError("Expected argument 'qos_schedulers' to be a list")
         pulumi.set(__self__, "qos_schedulers", qos_schedulers)
-        if target_interface_variable and not isinstance(target_interface_variable, str):
-            raise TypeError("Expected argument 'target_interface_variable' to be a str")
-        pulumi.set(__self__, "target_interface_variable", target_interface_variable)
         if target_interfaces and not isinstance(target_interfaces, list):
             raise TypeError("Expected argument 'target_interfaces' to be a list")
         pulumi.set(__self__, "target_interfaces", target_interfaces)
+        if target_interfaces_variable and not isinstance(target_interfaces_variable, str):
+            raise TypeError("Expected argument 'target_interfaces_variable' to be a str")
+        pulumi.set(__self__, "target_interfaces_variable", target_interfaces_variable)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -94,20 +94,20 @@ class GetApplicationPriorityQosPolicyResult:
         return pulumi.get(self, "qos_schedulers")
 
     @_builtins.property
-    @pulumi.getter(name="targetInterfaceVariable")
-    def target_interface_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "target_interface_variable")
-
-    @_builtins.property
     @pulumi.getter(name="targetInterfaces")
     def target_interfaces(self) -> Sequence[_builtins.str]:
         """
         interfaces
         """
         return pulumi.get(self, "target_interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="targetInterfacesVariable")
+    def target_interfaces_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "target_interfaces_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -129,8 +129,8 @@ class AwaitableGetApplicationPriorityQosPolicyResult(GetApplicationPriorityQosPo
             id=self.id,
             name=self.name,
             qos_schedulers=self.qos_schedulers,
-            target_interface_variable=self.target_interface_variable,
             target_interfaces=self.target_interfaces,
+            target_interfaces_variable=self.target_interfaces_variable,
             version=self.version)
 
 
@@ -166,8 +166,8 @@ def get_application_priority_qos_policy(feature_profile_id: Optional[_builtins.s
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         qos_schedulers=pulumi.get(__ret__, 'qos_schedulers'),
-        target_interface_variable=pulumi.get(__ret__, 'target_interface_variable'),
         target_interfaces=pulumi.get(__ret__, 'target_interfaces'),
+        target_interfaces_variable=pulumi.get(__ret__, 'target_interfaces_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_application_priority_qos_policy_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                                                id: Optional[pulumi.Input[_builtins.str]] = None,
@@ -200,6 +200,6 @@ def get_application_priority_qos_policy_output(feature_profile_id: Optional[pulu
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         qos_schedulers=pulumi.get(__response__, 'qos_schedulers'),
-        target_interface_variable=pulumi.get(__response__, 'target_interface_variable'),
         target_interfaces=pulumi.get(__response__, 'target_interfaces'),
+        target_interfaces_variable=pulumi.get(__response__, 'target_interfaces_variable'),
         version=pulumi.get(__response__, 'version')))

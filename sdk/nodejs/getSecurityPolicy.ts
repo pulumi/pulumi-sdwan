@@ -84,7 +84,7 @@ export interface GetSecurityPolicyResult {
     /**
      * ICMP Unreachable Allow
      */
-    readonly imcpUnreachableAllow: boolean;
+    readonly imcpUnreachableAllow: string;
     readonly loggings: outputs.GetSecurityPolicyLogging[];
     /**
      * Match Statistics per-filter
@@ -93,15 +93,15 @@ export interface GetSecurityPolicyResult {
     /**
      * Max Incomplete ICMP Limit
      */
-    readonly maxIncompleteIcmpLimit: number;
+    readonly maxIncompleteIcmpLimit: string;
     /**
      * Max Incomplete TCP Limit
      */
-    readonly maxIncompleteTcpLimit: number;
+    readonly maxIncompleteTcpLimit: string;
     /**
      * Max Incomplete UDP Limit
      */
-    readonly maxIncompleteUdpLimit: number;
+    readonly maxIncompleteUdpLimit: string;
     /**
      * The policy mode
      */
@@ -113,7 +113,7 @@ export interface GetSecurityPolicyResult {
     /**
      * Session Reclassify Allow
      */
-    readonly sessionReclassifyAllow: boolean;
+    readonly sessionReclassifyAllow: string;
     /**
      * TCP SYN Flood Limit, value from 1 to 4294967295
      */
@@ -121,7 +121,7 @@ export interface GetSecurityPolicyResult {
     /**
      * Unified Logging
      */
-    readonly unifiedLogging: boolean;
+    readonly unifiedLogging: string;
     /**
      * The use case of the security policy
      */

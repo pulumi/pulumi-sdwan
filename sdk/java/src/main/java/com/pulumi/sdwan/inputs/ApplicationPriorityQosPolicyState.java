@@ -79,21 +79,6 @@ public final class ApplicationPriorityQosPolicyState extends com.pulumi.resource
     }
 
     /**
-     * Variable name
-     * 
-     */
-    @Import(name="targetInterfaceVariable")
-    private @Nullable Output<String> targetInterfaceVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> targetInterfaceVariable() {
-        return Optional.ofNullable(this.targetInterfaceVariable);
-    }
-
-    /**
      * interfaces
      * 
      */
@@ -106,6 +91,21 @@ public final class ApplicationPriorityQosPolicyState extends com.pulumi.resource
      */
     public Optional<Output<List<String>>> targetInterfaces() {
         return Optional.ofNullable(this.targetInterfaces);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="targetInterfacesVariable")
+    private @Nullable Output<String> targetInterfacesVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> targetInterfacesVariable() {
+        return Optional.ofNullable(this.targetInterfacesVariable);
     }
 
     /**
@@ -130,8 +130,8 @@ public final class ApplicationPriorityQosPolicyState extends com.pulumi.resource
         this.featureProfileId = $.featureProfileId;
         this.name = $.name;
         this.qosSchedulers = $.qosSchedulers;
-        this.targetInterfaceVariable = $.targetInterfaceVariable;
         this.targetInterfaces = $.targetInterfaces;
+        this.targetInterfacesVariable = $.targetInterfacesVariable;
         this.version = $.version;
     }
 
@@ -248,27 +248,6 @@ public final class ApplicationPriorityQosPolicyState extends com.pulumi.resource
         }
 
         /**
-         * @param targetInterfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder targetInterfaceVariable(@Nullable Output<String> targetInterfaceVariable) {
-            $.targetInterfaceVariable = targetInterfaceVariable;
-            return this;
-        }
-
-        /**
-         * @param targetInterfaceVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder targetInterfaceVariable(String targetInterfaceVariable) {
-            return targetInterfaceVariable(Output.of(targetInterfaceVariable));
-        }
-
-        /**
          * @param targetInterfaces interfaces
          * 
          * @return builder
@@ -297,6 +276,27 @@ public final class ApplicationPriorityQosPolicyState extends com.pulumi.resource
          */
         public Builder targetInterfaces(String... targetInterfaces) {
             return targetInterfaces(List.of(targetInterfaces));
+        }
+
+        /**
+         * @param targetInterfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetInterfacesVariable(@Nullable Output<String> targetInterfacesVariable) {
+            $.targetInterfacesVariable = targetInterfacesVariable;
+            return this;
+        }
+
+        /**
+         * @param targetInterfacesVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetInterfacesVariable(String targetInterfacesVariable) {
+            return targetInterfacesVariable(Output.of(targetInterfacesVariable));
         }
 
         /**

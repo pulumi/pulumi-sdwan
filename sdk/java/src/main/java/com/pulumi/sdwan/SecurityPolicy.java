@@ -12,7 +12,6 @@ import com.pulumi.sdwan.Utilities;
 import com.pulumi.sdwan.inputs.SecurityPolicyState;
 import com.pulumi.sdwan.outputs.SecurityPolicyDefinition;
 import com.pulumi.sdwan.outputs.SecurityPolicyLogging;
-import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -169,16 +168,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
     }
     /**
      * ICMP Unreachable Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    @Export(name="imcpUnreachableAllow", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> imcpUnreachableAllow;
+    @Export(name="imcpUnreachableAllow", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> imcpUnreachableAllow;
 
     /**
      * @return ICMP Unreachable Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    public Output<Optional<Boolean>> imcpUnreachableAllow() {
+    public Output<Optional<String>> imcpUnreachableAllow() {
         return Codegen.optional(this.imcpUnreachableAllow);
     }
     @Export(name="loggings", refs={List.class,SecurityPolicyLogging.class}, tree="[0,1]")
@@ -207,42 +208,42 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
      * Max Incomplete ICMP Limit
      * 
      */
-    @Export(name="maxIncompleteIcmpLimit", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> maxIncompleteIcmpLimit;
+    @Export(name="maxIncompleteIcmpLimit", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> maxIncompleteIcmpLimit;
 
     /**
      * @return Max Incomplete ICMP Limit
      * 
      */
-    public Output<Optional<Integer>> maxIncompleteIcmpLimit() {
+    public Output<Optional<String>> maxIncompleteIcmpLimit() {
         return Codegen.optional(this.maxIncompleteIcmpLimit);
     }
     /**
      * Max Incomplete TCP Limit
      * 
      */
-    @Export(name="maxIncompleteTcpLimit", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> maxIncompleteTcpLimit;
+    @Export(name="maxIncompleteTcpLimit", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> maxIncompleteTcpLimit;
 
     /**
      * @return Max Incomplete TCP Limit
      * 
      */
-    public Output<Optional<Integer>> maxIncompleteTcpLimit() {
+    public Output<Optional<String>> maxIncompleteTcpLimit() {
         return Codegen.optional(this.maxIncompleteTcpLimit);
     }
     /**
      * Max Incomplete UDP Limit
      * 
      */
-    @Export(name="maxIncompleteUdpLimit", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> maxIncompleteUdpLimit;
+    @Export(name="maxIncompleteUdpLimit", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> maxIncompleteUdpLimit;
 
     /**
      * @return Max Incomplete UDP Limit
      * 
      */
-    public Output<Optional<Integer>> maxIncompleteUdpLimit() {
+    public Output<Optional<String>> maxIncompleteUdpLimit() {
         return Codegen.optional(this.maxIncompleteUdpLimit);
     }
     /**
@@ -279,16 +280,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
     }
     /**
      * Session Reclassify Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    @Export(name="sessionReclassifyAllow", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> sessionReclassifyAllow;
+    @Export(name="sessionReclassifyAllow", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> sessionReclassifyAllow;
 
     /**
      * @return Session Reclassify Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    public Output<Optional<Boolean>> sessionReclassifyAllow() {
+    public Output<Optional<String>> sessionReclassifyAllow() {
         return Codegen.optional(this.sessionReclassifyAllow);
     }
     /**
@@ -307,16 +310,18 @@ public class SecurityPolicy extends com.pulumi.resources.CustomResource {
     }
     /**
      * Unified Logging
+     *   - Choices: `on`, `off`
      * 
      */
-    @Export(name="unifiedLogging", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> unifiedLogging;
+    @Export(name="unifiedLogging", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> unifiedLogging;
 
     /**
      * @return Unified Logging
+     *   - Choices: `on`, `off`
      * 
      */
-    public Output<Optional<Boolean>> unifiedLogging() {
+    public Output<Optional<String>> unifiedLogging() {
         return Codegen.optional(this.unifiedLogging);
     }
     /**
