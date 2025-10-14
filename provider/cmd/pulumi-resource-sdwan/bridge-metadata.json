@@ -76,7 +76,7 @@
                     "qos_schedulers": {
                         "maxItemsOne": false
                     },
-                    "target_interface": {
+                    "target_interfaces": {
                         "maxItemsOne": false
                     }
                 }
@@ -1904,7 +1904,14 @@
                 "current": "sdwan:index/securityPolicy:SecurityPolicy",
                 "fields": {
                     "definitions": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "entries": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "logging": {
                         "maxItemsOne": false
@@ -3811,7 +3818,7 @@
                     "qos_schedulers": {
                         "maxItemsOne": false
                     },
-                    "target_interface": {
+                    "target_interfaces": {
                         "maxItemsOne": false
                     }
                 }
@@ -5639,7 +5646,14 @@
                 "current": "sdwan:index/getSecurityPolicy:getSecurityPolicy",
                 "fields": {
                     "definitions": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "entries": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     },
                     "logging": {
                         "maxItemsOne": false
