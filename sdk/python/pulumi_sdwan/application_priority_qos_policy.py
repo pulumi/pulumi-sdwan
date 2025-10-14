@@ -25,16 +25,16 @@ class ApplicationPriorityQosPolicyArgs:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityQosPolicyQosSchedulerArgs']]]] = None,
-                 target_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
-                 target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationPriorityQosPolicy resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] description: The description of the Policy
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityQosPolicyQosSchedulerArgs']]] qos_schedulers: qosSchedulers
-        :param pulumi.Input[_builtins.str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
+        :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
         if description is not None:
@@ -43,10 +43,10 @@ class ApplicationPriorityQosPolicyArgs:
             pulumi.set(__self__, "name", name)
         if qos_schedulers is not None:
             pulumi.set(__self__, "qos_schedulers", qos_schedulers)
-        if target_interface_variable is not None:
-            pulumi.set(__self__, "target_interface_variable", target_interface_variable)
         if target_interfaces is not None:
             pulumi.set(__self__, "target_interfaces", target_interfaces)
+        if target_interfaces_variable is not None:
+            pulumi.set(__self__, "target_interfaces_variable", target_interfaces_variable)
 
     @_builtins.property
     @pulumi.getter(name="featureProfileId")
@@ -97,18 +97,6 @@ class ApplicationPriorityQosPolicyArgs:
         pulumi.set(self, "qos_schedulers", value)
 
     @_builtins.property
-    @pulumi.getter(name="targetInterfaceVariable")
-    def target_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "target_interface_variable")
-
-    @target_interface_variable.setter
-    def target_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "target_interface_variable", value)
-
-    @_builtins.property
     @pulumi.getter(name="targetInterfaces")
     def target_interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -120,6 +108,18 @@ class ApplicationPriorityQosPolicyArgs:
     def target_interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_interfaces", value)
 
+    @_builtins.property
+    @pulumi.getter(name="targetInterfacesVariable")
+    def target_interfaces_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "target_interfaces_variable")
+
+    @target_interfaces_variable.setter
+    def target_interfaces_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_interfaces_variable", value)
+
 
 @pulumi.input_type
 class _ApplicationPriorityQosPolicyState:
@@ -128,8 +128,8 @@ class _ApplicationPriorityQosPolicyState:
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityQosPolicyQosSchedulerArgs']]]] = None,
-                 target_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ApplicationPriorityQosPolicy resources.
@@ -137,8 +137,8 @@ class _ApplicationPriorityQosPolicyState:
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationPriorityQosPolicyQosSchedulerArgs']]] qos_schedulers: qosSchedulers
-        :param pulumi.Input[_builtins.str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
+        :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Policy
         """
         if description is not None:
@@ -149,10 +149,10 @@ class _ApplicationPriorityQosPolicyState:
             pulumi.set(__self__, "name", name)
         if qos_schedulers is not None:
             pulumi.set(__self__, "qos_schedulers", qos_schedulers)
-        if target_interface_variable is not None:
-            pulumi.set(__self__, "target_interface_variable", target_interface_variable)
         if target_interfaces is not None:
             pulumi.set(__self__, "target_interfaces", target_interfaces)
+        if target_interfaces_variable is not None:
+            pulumi.set(__self__, "target_interfaces_variable", target_interfaces_variable)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -205,18 +205,6 @@ class _ApplicationPriorityQosPolicyState:
         pulumi.set(self, "qos_schedulers", value)
 
     @_builtins.property
-    @pulumi.getter(name="targetInterfaceVariable")
-    def target_interface_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "target_interface_variable")
-
-    @target_interface_variable.setter
-    def target_interface_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "target_interface_variable", value)
-
-    @_builtins.property
     @pulumi.getter(name="targetInterfaces")
     def target_interfaces(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -227,6 +215,18 @@ class _ApplicationPriorityQosPolicyState:
     @target_interfaces.setter
     def target_interfaces(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "target_interfaces", value)
+
+    @_builtins.property
+    @pulumi.getter(name="targetInterfacesVariable")
+    def target_interfaces_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "target_interfaces_variable")
+
+    @target_interfaces_variable.setter
+    def target_interfaces_variable(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_interfaces_variable", value)
 
     @_builtins.property
     @pulumi.getter
@@ -251,8 +251,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
-                 target_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Application Priority QoS Policy.
@@ -276,8 +276,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
-        :param pulumi.Input[_builtins.str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
+        :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         """
         ...
     @overload
@@ -320,8 +320,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
                  feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
-                 target_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -337,8 +337,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
             __props__.__dict__["feature_profile_id"] = feature_profile_id
             __props__.__dict__["name"] = name
             __props__.__dict__["qos_schedulers"] = qos_schedulers
-            __props__.__dict__["target_interface_variable"] = target_interface_variable
             __props__.__dict__["target_interfaces"] = target_interfaces
+            __props__.__dict__["target_interfaces_variable"] = target_interfaces_variable
             __props__.__dict__["version"] = None
         super(ApplicationPriorityQosPolicy, __self__).__init__(
             'sdwan:index/applicationPriorityQosPolicy:ApplicationPriorityQosPolicy',
@@ -354,8 +354,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
             feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             qos_schedulers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]]] = None,
-            target_interface_variable: Optional[pulumi.Input[_builtins.str]] = None,
             target_interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_interfaces_variable: Optional[pulumi.Input[_builtins.str]] = None,
             version: Optional[pulumi.Input[_builtins.int]] = None) -> 'ApplicationPriorityQosPolicy':
         """
         Get an existing ApplicationPriorityQosPolicy resource's state with the given name, id, and optional extra
@@ -368,8 +368,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
         :param pulumi.Input[_builtins.str] name: The name of the Policy
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationPriorityQosPolicyQosSchedulerArgs', 'ApplicationPriorityQosPolicyQosSchedulerArgsDict']]]] qos_schedulers: qosSchedulers
-        :param pulumi.Input[_builtins.str] target_interface_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] target_interfaces: interfaces
+        :param pulumi.Input[_builtins.str] target_interfaces_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Policy
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -380,8 +380,8 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         __props__.__dict__["feature_profile_id"] = feature_profile_id
         __props__.__dict__["name"] = name
         __props__.__dict__["qos_schedulers"] = qos_schedulers
-        __props__.__dict__["target_interface_variable"] = target_interface_variable
         __props__.__dict__["target_interfaces"] = target_interfaces
+        __props__.__dict__["target_interfaces_variable"] = target_interfaces_variable
         __props__.__dict__["version"] = version
         return ApplicationPriorityQosPolicy(resource_name, opts=opts, __props__=__props__)
 
@@ -418,20 +418,20 @@ class ApplicationPriorityQosPolicy(pulumi.CustomResource):
         return pulumi.get(self, "qos_schedulers")
 
     @_builtins.property
-    @pulumi.getter(name="targetInterfaceVariable")
-    def target_interface_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "target_interface_variable")
-
-    @_builtins.property
     @pulumi.getter(name="targetInterfaces")
     def target_interfaces(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
         interfaces
         """
         return pulumi.get(self, "target_interfaces")
+
+    @_builtins.property
+    @pulumi.getter(name="targetInterfacesVariable")
+    def target_interfaces_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "target_interfaces_variable")
 
     @_builtins.property
     @pulumi.getter

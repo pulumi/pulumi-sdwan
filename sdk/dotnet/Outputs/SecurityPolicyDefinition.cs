@@ -14,17 +14,13 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class SecurityPolicyDefinition
     {
         /// <summary>
-        /// Destination Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
+        /// List of zone pair definitions, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
-        public readonly string? DestinationZone;
+        public readonly ImmutableArray<Outputs.SecurityPolicyDefinitionEntry> Entries;
         /// <summary>
         /// Policy definition ID
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Source Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
-        /// </summary>
-        public readonly string? SourceZone;
         /// <summary>
         /// Policy definition type
         ///   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
@@ -37,19 +33,16 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private SecurityPolicyDefinition(
-            string? destinationZone,
+            ImmutableArray<Outputs.SecurityPolicyDefinitionEntry> entries,
 
             string id,
-
-            string? sourceZone,
 
             string type,
 
             int? version)
         {
-            DestinationZone = destinationZone;
+            Entries = entries;
             Id = id;
-            SourceZone = sourceZone;
             Type = type;
             Version = version;
         }

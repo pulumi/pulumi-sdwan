@@ -491,6 +491,8 @@ __all__ = [
     'SecurityAppHostingFeatureTemplateVirtualApplicationArgsDict',
     'SecurityPolicyDefinitionArgs',
     'SecurityPolicyDefinitionArgsDict',
+    'SecurityPolicyDefinitionEntryArgs',
+    'SecurityPolicyDefinitionEntryArgsDict',
     'SecurityPolicyLoggingArgs',
     'SecurityPolicyLoggingArgsDict',
     'ServiceDhcpServerFeatureOptionCodeArgs',
@@ -37496,10 +37498,9 @@ class PolicyObjectVpnGroupEntryArgs:
 
 if not MYPY:
     class PortListPolicyObjectEntryArgsDict(TypedDict):
-        port: NotRequired[pulumi.Input[_builtins.int]]
+        port: NotRequired[pulumi.Input[_builtins.str]]
         """
         Port number
-          - Range: `1`-`65535`
         """
 elif False:
     PortListPolicyObjectEntryArgsDict: TypeAlias = Mapping[str, Any]
@@ -37507,25 +37508,23 @@ elif False:
 @pulumi.input_type
 class PortListPolicyObjectEntryArgs:
     def __init__(__self__, *,
-                 port: Optional[pulumi.Input[_builtins.int]] = None):
+                 port: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.int] port: Port number
-                 - Range: `1`-`65535`
+        :param pulumi.Input[_builtins.str] port: Port number
         """
         if port is not None:
             pulumi.set(__self__, "port", port)
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Port number
-          - Range: `1`-`65535`
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "port", value)
 
 
@@ -38436,7 +38435,7 @@ if not MYPY:
         type: pulumi.Input[_builtins.str]
         """
         Type of match entry
-          - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+          - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         """
         as_path_list_id: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -38446,14 +38445,22 @@ if not MYPY:
         """
         AS path list version
         """
+        community_list_id: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Community list ID, Attribute conditional on `type` being equal to `community`
+        """
         community_list_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
         Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
         """
         community_list_match_flag: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+        Community list match flag
           - Choices: `and`, `or`, `exact`
+        """
+        community_list_version: NotRequired[pulumi.Input[_builtins.int]]
+        """
+        Community list version
         """
         community_list_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
@@ -38533,8 +38540,10 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
                  type: pulumi.Input[_builtins.str],
                  as_path_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  as_path_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 community_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  community_list_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  community_list_match_flag: Optional[pulumi.Input[_builtins.str]] = None,
+                 community_list_version: Optional[pulumi.Input[_builtins.int]] = None,
                  community_list_versions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  expanded_community_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  expanded_community_list_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -38553,12 +38562,14 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
                  prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] type: Type of match entry
-                 - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+                 - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         :param pulumi.Input[_builtins.str] as_path_list_id: AS path list ID, Attribute conditional on `type` being equal to `asPath`
         :param pulumi.Input[_builtins.int] as_path_list_version: AS path list version
+        :param pulumi.Input[_builtins.str] community_list_id: Community list ID, Attribute conditional on `type` being equal to `community`
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] community_list_ids: Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
-        :param pulumi.Input[_builtins.str] community_list_match_flag: Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+        :param pulumi.Input[_builtins.str] community_list_match_flag: Community list match flag
                  - Choices: `and`, `or`, `exact`
+        :param pulumi.Input[_builtins.int] community_list_version: Community list version
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] community_list_versions: Community list versions
         :param pulumi.Input[_builtins.str] expanded_community_list_id: Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
         :param pulumi.Input[_builtins.str] expanded_community_list_variable: Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
@@ -38586,10 +38597,14 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
             pulumi.set(__self__, "as_path_list_id", as_path_list_id)
         if as_path_list_version is not None:
             pulumi.set(__self__, "as_path_list_version", as_path_list_version)
+        if community_list_id is not None:
+            pulumi.set(__self__, "community_list_id", community_list_id)
         if community_list_ids is not None:
             pulumi.set(__self__, "community_list_ids", community_list_ids)
         if community_list_match_flag is not None:
             pulumi.set(__self__, "community_list_match_flag", community_list_match_flag)
+        if community_list_version is not None:
+            pulumi.set(__self__, "community_list_version", community_list_version)
         if community_list_versions is not None:
             pulumi.set(__self__, "community_list_versions", community_list_versions)
         if expanded_community_list_id is not None:
@@ -38628,7 +38643,7 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
     def type(self) -> pulumi.Input[_builtins.str]:
         """
         Type of match entry
-          - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+          - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
         """
         return pulumi.get(self, "type")
 
@@ -38661,6 +38676,18 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
         pulumi.set(self, "as_path_list_version", value)
 
     @_builtins.property
+    @pulumi.getter(name="communityListId")
+    def community_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Community list ID, Attribute conditional on `type` being equal to `community`
+        """
+        return pulumi.get(self, "community_list_id")
+
+    @community_list_id.setter
+    def community_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "community_list_id", value)
+
+    @_builtins.property
     @pulumi.getter(name="communityListIds")
     def community_list_ids(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -38676,7 +38703,7 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
     @pulumi.getter(name="communityListMatchFlag")
     def community_list_match_flag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+        Community list match flag
           - Choices: `and`, `or`, `exact`
         """
         return pulumi.get(self, "community_list_match_flag")
@@ -38684,6 +38711,18 @@ class RoutePolicyDefinitionSequenceMatchEntryArgs:
     @community_list_match_flag.setter
     def community_list_match_flag(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "community_list_match_flag", value)
+
+    @_builtins.property
+    @pulumi.getter(name="communityListVersion")
+    def community_list_version(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Community list version
+        """
+        return pulumi.get(self, "community_list_version")
+
+    @community_list_version.setter
+    def community_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "community_list_version", value)
 
     @_builtins.property
     @pulumi.getter(name="communityListVersions")
@@ -40006,13 +40045,9 @@ if not MYPY:
         Policy definition type
           - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
         """
-        destination_zone: NotRequired[pulumi.Input[_builtins.str]]
+        entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgsDict']]]]
         """
-        Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-        """
-        source_zone: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
         """
         version: NotRequired[pulumi.Input[_builtins.int]]
         """
@@ -40026,23 +40061,19 @@ class SecurityPolicyDefinitionArgs:
     def __init__(__self__, *,
                  id: pulumi.Input[_builtins.str],
                  type: pulumi.Input[_builtins.str],
-                 destination_zone: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_zone: Optional[pulumi.Input[_builtins.str]] = None,
+                 entries: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgs']]]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] id: Policy definition ID
         :param pulumi.Input[_builtins.str] type: Policy definition type
                  - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
-        :param pulumi.Input[_builtins.str] destination_zone: Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-        :param pulumi.Input[_builtins.str] source_zone: Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        :param pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgs']]] entries: List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
         :param pulumi.Input[_builtins.int] version: Policy definition version
         """
         pulumi.set(__self__, "id", id)
         pulumi.set(__self__, "type", type)
-        if destination_zone is not None:
-            pulumi.set(__self__, "destination_zone", destination_zone)
-        if source_zone is not None:
-            pulumi.set(__self__, "source_zone", source_zone)
+        if entries is not None:
+            pulumi.set(__self__, "entries", entries)
         if version is not None:
             pulumi.set(__self__, "version", version)
 
@@ -40072,28 +40103,16 @@ class SecurityPolicyDefinitionArgs:
         pulumi.set(self, "type", value)
 
     @_builtins.property
-    @pulumi.getter(name="destinationZone")
-    def destination_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter
+    def entries(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgs']]]]:
         """
-        Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+        List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
         """
-        return pulumi.get(self, "destination_zone")
+        return pulumi.get(self, "entries")
 
-    @destination_zone.setter
-    def destination_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "destination_zone", value)
-
-    @_builtins.property
-    @pulumi.getter(name="sourceZone")
-    def source_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-        """
-        return pulumi.get(self, "source_zone")
-
-    @source_zone.setter
-    def source_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "source_zone", value)
+    @entries.setter
+    def entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityPolicyDefinitionEntryArgs']]]]):
+        pulumi.set(self, "entries", value)
 
     @_builtins.property
     @pulumi.getter
@@ -40106,6 +40125,58 @@ class SecurityPolicyDefinitionArgs:
     @version.setter
     def version(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "version", value)
+
+
+if not MYPY:
+    class SecurityPolicyDefinitionEntryArgsDict(TypedDict):
+        destination_zone: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Destination Zone
+        """
+        source_zone: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Source Zone
+        """
+elif False:
+    SecurityPolicyDefinitionEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class SecurityPolicyDefinitionEntryArgs:
+    def __init__(__self__, *,
+                 destination_zone: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_zone: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] destination_zone: Destination Zone
+        :param pulumi.Input[_builtins.str] source_zone: Source Zone
+        """
+        if destination_zone is not None:
+            pulumi.set(__self__, "destination_zone", destination_zone)
+        if source_zone is not None:
+            pulumi.set(__self__, "source_zone", source_zone)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationZone")
+    def destination_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination Zone
+        """
+        return pulumi.get(self, "destination_zone")
+
+    @destination_zone.setter
+    def destination_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "destination_zone", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceZone")
+    def source_zone(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Source Zone
+        """
+        return pulumi.get(self, "source_zone")
+
+    @source_zone.setter
+    def source_zone(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "source_zone", value)
 
 
 if not MYPY:
@@ -42802,6 +42873,7 @@ if not MYPY:
         """
         Administrative distance
           - Range: `1`-`255`
+          - Default value: `1`
         """
         administrative_distance_variable: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -42822,6 +42894,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs:
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.int] administrative_distance: Administrative distance
                  - Range: `1`-`255`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -42863,6 +42936,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs:
         """
         Administrative distance
           - Range: `1`-`255`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -42897,6 +42971,7 @@ if not MYPY:
         """
         Administrative distance
           - Range: `1`-`255`
+          - Default value: `1`
         """
         administrative_distance_variable: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -42919,6 +42994,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs:
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.int] administrative_distance: Administrative distance
                  - Range: `1`-`255`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -42962,6 +43038,7 @@ class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs:
         """
         Administrative distance
           - Range: `1`-`255`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -43267,6 +43344,7 @@ if not MYPY:
         """
         Administrative distance
           - Range: `1`-`254`
+          - Default value: `1`
         """
         administrative_distance_variable: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -43287,6 +43365,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs:
         :param pulumi.Input[_builtins.str] address_variable: Variable name
         :param pulumi.Input[_builtins.int] administrative_distance: Administrative distance
                  - Range: `1`-`254`
+                 - Default value: `1`
         :param pulumi.Input[_builtins.str] administrative_distance_variable: Variable name
         """
         if address is not None:
@@ -43328,6 +43407,7 @@ class ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs:
         """
         Administrative distance
           - Range: `1`-`254`
+          - Default value: `1`
         """
         return pulumi.get(self, "administrative_distance")
 
@@ -83224,7 +83304,7 @@ if not MYPY:
         type: pulumi.Input[_builtins.str]
         """
         Type of match entry
-          - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+          - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
         """
         policy_id: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -83255,7 +83335,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs:
                  value_variable: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] type: Type of match entry
-                 - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+                 - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
         :param pulumi.Input[_builtins.str] policy_id: policy id for selected match entry
         :param pulumi.Input[_builtins.str] protocol_type: Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
         :param pulumi.Input[_builtins.str] value: value for selected match entry
@@ -83276,7 +83356,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs:
     def type(self) -> pulumi.Input[_builtins.str]:
         """
         Type of match entry
-          - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+          - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
         """
         return pulumi.get(self, "type")
 

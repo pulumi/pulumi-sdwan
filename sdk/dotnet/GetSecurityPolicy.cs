@@ -160,7 +160,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// ICMP Unreachable Allow
         /// </summary>
-        public readonly bool ImcpUnreachableAllow;
+        public readonly string ImcpUnreachableAllow;
         public readonly ImmutableArray<Outputs.GetSecurityPolicyLoggingResult> Loggings;
         /// <summary>
         /// Match Statistics per-filter
@@ -169,15 +169,15 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Max Incomplete ICMP Limit
         /// </summary>
-        public readonly int MaxIncompleteIcmpLimit;
+        public readonly string MaxIncompleteIcmpLimit;
         /// <summary>
         /// Max Incomplete TCP Limit
         /// </summary>
-        public readonly int MaxIncompleteTcpLimit;
+        public readonly string MaxIncompleteTcpLimit;
         /// <summary>
         /// Max Incomplete UDP Limit
         /// </summary>
-        public readonly int MaxIncompleteUdpLimit;
+        public readonly string MaxIncompleteUdpLimit;
         /// <summary>
         /// The policy mode
         /// </summary>
@@ -189,7 +189,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Session Reclassify Allow
         /// </summary>
-        public readonly bool SessionReclassifyAllow;
+        public readonly string SessionReclassifyAllow;
         /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
         /// </summary>
@@ -197,7 +197,7 @@ namespace Pulumi.Sdwan
         /// <summary>
         /// Unified Logging
         /// </summary>
-        public readonly bool UnifiedLogging;
+        public readonly string UnifiedLogging;
         /// <summary>
         /// The use case of the security policy
         /// </summary>
@@ -229,27 +229,27 @@ namespace Pulumi.Sdwan
 
             string id,
 
-            bool imcpUnreachableAllow,
+            string imcpUnreachableAllow,
 
             ImmutableArray<Outputs.GetSecurityPolicyLoggingResult> loggings,
 
             string matchStatisticsPerFilter,
 
-            int maxIncompleteIcmpLimit,
+            string maxIncompleteIcmpLimit,
 
-            int maxIncompleteTcpLimit,
+            string maxIncompleteTcpLimit,
 
-            int maxIncompleteUdpLimit,
+            string maxIncompleteUdpLimit,
 
             string mode,
 
             string name,
 
-            bool sessionReclassifyAllow,
+            string sessionReclassifyAllow,
 
             string tcpSynFloodLimit,
 
-            bool unifiedLogging,
+            string unifiedLogging,
 
             string useCase,
 

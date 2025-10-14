@@ -41,6 +41,17 @@ Object.defineProperty(exports, "retries", {
 });
 
 /**
+ * Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+ */
+export declare const taskTimeout: number | undefined;
+Object.defineProperty(exports, "taskTimeout", {
+    get() {
+        return __config.getObject<number>("taskTimeout");
+    },
+    enumerable: true,
+});
+
+/**
  * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
  */
 export declare const url: string | undefined;

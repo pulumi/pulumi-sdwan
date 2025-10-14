@@ -49,6 +49,21 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
+     * Community list ID, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    @Import(name="communityListId")
+    private @Nullable Output<String> communityListId;
+
+    /**
+     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    public Optional<Output<String>> communityListId() {
+        return Optional.ofNullable(this.communityListId);
+    }
+
+    /**
      * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      * 
      */
@@ -64,7 +79,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * Community list match flag
      *   - Choices: `and`, `or`, `exact`
      * 
      */
@@ -72,12 +87,27 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<String> communityListMatchFlag;
 
     /**
-     * @return Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list match flag
      *   - Choices: `and`, `or`, `exact`
      * 
      */
     public Optional<Output<String>> communityListMatchFlag() {
         return Optional.ofNullable(this.communityListMatchFlag);
+    }
+
+    /**
+     * Community list version
+     * 
+     */
+    @Import(name="communityListVersion")
+    private @Nullable Output<Integer> communityListVersion;
+
+    /**
+     * @return Community list version
+     * 
+     */
+    public Optional<Output<Integer>> communityListVersion() {
+        return Optional.ofNullable(this.communityListVersion);
     }
 
     /**
@@ -332,7 +362,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     @Import(name="type", required=true)
@@ -340,7 +370,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     public Output<String> type() {
@@ -352,8 +382,10 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private RoutePolicyDefinitionSequenceMatchEntryArgs(RoutePolicyDefinitionSequenceMatchEntryArgs $) {
         this.asPathListId = $.asPathListId;
         this.asPathListVersion = $.asPathListVersion;
+        this.communityListId = $.communityListId;
         this.communityListIds = $.communityListIds;
         this.communityListMatchFlag = $.communityListMatchFlag;
+        this.communityListVersion = $.communityListVersion;
         this.communityListVersions = $.communityListVersions;
         this.expandedCommunityListId = $.expandedCommunityListId;
         this.expandedCommunityListVariable = $.expandedCommunityListVariable;
@@ -434,6 +466,27 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
+         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityListId(@Nullable Output<String> communityListId) {
+            $.communityListId = communityListId;
+            return this;
+        }
+
+        /**
+         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityListId(String communityListId) {
+            return communityListId(Output.of(communityListId));
+        }
+
+        /**
          * @param communityListIds Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
          * 
          * @return builder
@@ -465,7 +518,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListMatchFlag Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+         * @param communityListMatchFlag Community list match flag
          *   - Choices: `and`, `or`, `exact`
          * 
          * @return builder
@@ -477,7 +530,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListMatchFlag Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+         * @param communityListMatchFlag Community list match flag
          *   - Choices: `and`, `or`, `exact`
          * 
          * @return builder
@@ -485,6 +538,27 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
          */
         public Builder communityListMatchFlag(String communityListMatchFlag) {
             return communityListMatchFlag(Output.of(communityListMatchFlag));
+        }
+
+        /**
+         * @param communityListVersion Community list version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityListVersion(@Nullable Output<Integer> communityListVersion) {
+            $.communityListVersion = communityListVersion;
+            return this;
+        }
+
+        /**
+         * @param communityListVersion Community list version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder communityListVersion(Integer communityListVersion) {
+            return communityListVersion(Output.of(communityListVersion));
         }
 
         /**
@@ -845,7 +919,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
         /**
          * @param type Type of match entry
-         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+         *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
          * 
          * @return builder
          * 
@@ -857,7 +931,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
 
         /**
          * @param type Type of match entry
-         *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+         *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
          * 
          * @return builder
          * 

@@ -22,14 +22,22 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? AsPathListVersion;
         /// <summary>
+        /// Community list ID, Attribute conditional on `Type` being equal to `Community`
+        /// </summary>
+        public readonly string? CommunityListId;
+        /// <summary>
         /// Community list IDs, Attribute conditional on `Type` being equal to `advancedCommunity`
         /// </summary>
         public readonly ImmutableArray<string> CommunityListIds;
         /// <summary>
-        /// Community list match flag, Attribute conditional on `Type` being equal to `advancedCommunity`
+        /// Community list match flag
         ///   - Choices: `And`, `Or`, `Exact`
         /// </summary>
         public readonly string? CommunityListMatchFlag;
+        /// <summary>
+        /// Community list version
+        /// </summary>
+        public readonly int? CommunityListVersion;
         /// <summary>
         /// Community list versions
         /// </summary>
@@ -101,7 +109,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? PrefixListVersion;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `Address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `Metric`, `nextHop`, `Origin`, `Peer`, `ompTag`, `ospfTag`
+        ///   - Choices: `Address`, `asPath`, `Community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `Metric`, `nextHop`, `Origin`, `Peer`, `ompTag`, `ospfTag`
         /// </summary>
         public readonly string Type;
 
@@ -111,9 +119,13 @@ namespace Pulumi.Sdwan.Outputs
 
             int? asPathListVersion,
 
+            string? communityListId,
+
             ImmutableArray<string> communityListIds,
 
             string? communityListMatchFlag,
+
+            int? communityListVersion,
 
             ImmutableArray<string> communityListVersions,
 
@@ -151,8 +163,10 @@ namespace Pulumi.Sdwan.Outputs
         {
             AsPathListId = asPathListId;
             AsPathListVersion = asPathListVersion;
+            CommunityListId = communityListId;
             CommunityListIds = communityListIds;
             CommunityListMatchFlag = communityListMatchFlag;
+            CommunityListVersion = communityListVersion;
             CommunityListVersions = communityListVersions;
             ExpandedCommunityListId = expandedCommunityListId;
             ExpandedCommunityListVariable = expandedCommunityListVariable;

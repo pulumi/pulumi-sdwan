@@ -13377,7 +13377,7 @@ export interface GetPortListPolicyObjectEntry {
     /**
      * Port number
      */
-    port: number;
+    port: string;
 }
 
 export interface GetProtocolListPolicyObjectEntry {
@@ -13564,6 +13564,10 @@ export interface GetRoutePolicyDefinitionSequenceMatchEntry {
      */
     asPathListVersion: number;
     /**
+     * Community list ID
+     */
+    communityListId: string;
+    /**
      * Community list IDs
      */
     communityListIds: string[];
@@ -13571,6 +13575,10 @@ export interface GetRoutePolicyDefinitionSequenceMatchEntry {
      * Community list match flag
      */
     communityListMatchFlag: string;
+    /**
+     * Community list version
+     */
+    communityListVersion: number;
     /**
      * Community list versions
      */
@@ -13861,17 +13869,13 @@ export interface GetSecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface GetSecurityPolicyDefinition {
     /**
-     * Destination Zone
+     * List of zone pair definitions
      */
-    destinationZone: string;
+    entries: outputs.GetSecurityPolicyDefinitionEntry[];
     /**
      * Policy definition ID
      */
     id: string;
-    /**
-     * Source Zone
-     */
-    sourceZone: string;
     /**
      * Policy definition type
      */
@@ -13880,6 +13884,17 @@ export interface GetSecurityPolicyDefinition {
      * Policy definition version
      */
     version: number;
+}
+
+export interface GetSecurityPolicyDefinitionEntry {
+    /**
+     * Destination Zone
+     */
+    destinationZone: string;
+    /**
+     * Source Zone
+     */
+    sourceZone: string;
 }
 
 export interface GetSecurityPolicyLogging {
@@ -23240,9 +23255,8 @@ export interface PolicyObjectVpnGroupEntry {
 export interface PortListPolicyObjectEntry {
     /**
      * Port number
-     *   - Range: `1`-`65535`
      */
-    port?: number;
+    port?: string;
 }
 
 export interface ProtocolListPolicyObjectEntry {
@@ -23450,14 +23464,22 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     asPathListVersion?: number;
     /**
+     * Community list ID, Attribute conditional on `type` being equal to `community`
+     */
+    communityListId?: string;
+    /**
      * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      */
     communityListIds?: string[];
     /**
-     * Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * Community list match flag
      *   - Choices: `and`, `or`, `exact`
      */
     communityListMatchFlag?: string;
+    /**
+     * Community list version
+     */
+    communityListVersion?: number;
     /**
      * Community list versions
      */
@@ -23529,7 +23551,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
     prefixListVersion?: number;
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      */
     type: string;
 }
@@ -23764,17 +23786,13 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface SecurityPolicyDefinition {
     /**
-     * Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
      */
-    destinationZone?: string;
+    entries?: outputs.SecurityPolicyDefinitionEntry[];
     /**
      * Policy definition ID
      */
     id: string;
-    /**
-     * Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-     */
-    sourceZone?: string;
     /**
      * Policy definition type
      *   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
@@ -23784,6 +23802,17 @@ export interface SecurityPolicyDefinition {
      * Policy definition version
      */
     version?: number;
+}
+
+export interface SecurityPolicyDefinitionEntry {
+    /**
+     * Destination Zone
+     */
+    destinationZone?: string;
+    /**
+     * Source Zone
+     */
+    sourceZone?: string;
 }
 
 export interface SecurityPolicyLogging {
@@ -24341,6 +24370,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -24361,6 +24391,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -24437,6 +24468,7 @@ export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -32734,7 +32766,7 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     protocolType?: string;
     /**
      * Type of match entry
-     *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+     *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
      */
     type: string;
     /**

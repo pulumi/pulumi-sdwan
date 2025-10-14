@@ -15,12 +15,11 @@ namespace Pulumi.Sdwan.Outputs
     {
         /// <summary>
         /// Port number
-        ///   - Range: `1`-`65535`
         /// </summary>
-        public readonly int? Port;
+        public readonly string? Port;
 
         [OutputConstructor]
-        private PortListPolicyObjectEntry(int? port)
+        private PortListPolicyObjectEntry(string? port)
         {
             Port = port;
         }

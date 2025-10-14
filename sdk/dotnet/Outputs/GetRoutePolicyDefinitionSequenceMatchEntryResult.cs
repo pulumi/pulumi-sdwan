@@ -22,6 +22,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int AsPathListVersion;
         /// <summary>
+        /// Community list ID
+        /// </summary>
+        public readonly string CommunityListId;
+        /// <summary>
         /// Community list IDs
         /// </summary>
         public readonly ImmutableArray<string> CommunityListIds;
@@ -29,6 +33,10 @@ namespace Pulumi.Sdwan.Outputs
         /// Community list match flag
         /// </summary>
         public readonly string CommunityListMatchFlag;
+        /// <summary>
+        /// Community list version
+        /// </summary>
+        public readonly int CommunityListVersion;
         /// <summary>
         /// Community list versions
         /// </summary>
@@ -104,9 +112,13 @@ namespace Pulumi.Sdwan.Outputs
 
             int asPathListVersion,
 
+            string communityListId,
+
             ImmutableArray<string> communityListIds,
 
             string communityListMatchFlag,
+
+            int communityListVersion,
 
             ImmutableArray<string> communityListVersions,
 
@@ -144,8 +156,10 @@ namespace Pulumi.Sdwan.Outputs
         {
             AsPathListId = asPathListId;
             AsPathListVersion = asPathListVersion;
+            CommunityListId = communityListId;
             CommunityListIds = communityListIds;
             CommunityListMatchFlag = communityListMatchFlag;
+            CommunityListVersion = communityListVersion;
             CommunityListVersions = communityListVersions;
             ExpandedCommunityListId = expandedCommunityListId;
             ExpandedCommunityListVariable = expandedCommunityListVariable;

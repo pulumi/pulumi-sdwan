@@ -5,27 +5,24 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.GetSecurityPolicyDefinitionEntry;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GetSecurityPolicyDefinition {
     /**
-     * @return Destination Zone
+     * @return List of zone pair definitions
      * 
      */
-    private String destinationZone;
+    private List<GetSecurityPolicyDefinitionEntry> entries;
     /**
      * @return Policy definition ID
      * 
      */
     private String id;
-    /**
-     * @return Source Zone
-     * 
-     */
-    private String sourceZone;
     /**
      * @return Policy definition type
      * 
@@ -39,11 +36,11 @@ public final class GetSecurityPolicyDefinition {
 
     private GetSecurityPolicyDefinition() {}
     /**
-     * @return Destination Zone
+     * @return List of zone pair definitions
      * 
      */
-    public String destinationZone() {
-        return this.destinationZone;
+    public List<GetSecurityPolicyDefinitionEntry> entries() {
+        return this.entries;
     }
     /**
      * @return Policy definition ID
@@ -51,13 +48,6 @@ public final class GetSecurityPolicyDefinition {
      */
     public String id() {
         return this.id;
-    }
-    /**
-     * @return Source Zone
-     * 
-     */
-    public String sourceZone() {
-        return this.sourceZone;
     }
     /**
      * @return Policy definition type
@@ -83,28 +73,29 @@ public final class GetSecurityPolicyDefinition {
     }
     @CustomType.Builder
     public static final class Builder {
-        private String destinationZone;
+        private List<GetSecurityPolicyDefinitionEntry> entries;
         private String id;
-        private String sourceZone;
         private String type;
         private Integer version;
         public Builder() {}
         public Builder(GetSecurityPolicyDefinition defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.destinationZone = defaults.destinationZone;
+    	      this.entries = defaults.entries;
     	      this.id = defaults.id;
-    	      this.sourceZone = defaults.sourceZone;
     	      this.type = defaults.type;
     	      this.version = defaults.version;
         }
 
         @CustomType.Setter
-        public Builder destinationZone(String destinationZone) {
-            if (destinationZone == null) {
-              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "destinationZone");
+        public Builder entries(List<GetSecurityPolicyDefinitionEntry> entries) {
+            if (entries == null) {
+              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "entries");
             }
-            this.destinationZone = destinationZone;
+            this.entries = entries;
             return this;
+        }
+        public Builder entries(GetSecurityPolicyDefinitionEntry... entries) {
+            return entries(List.of(entries));
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -112,14 +103,6 @@ public final class GetSecurityPolicyDefinition {
               throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "id");
             }
             this.id = id;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder sourceZone(String sourceZone) {
-            if (sourceZone == null) {
-              throw new MissingRequiredPropertyException("GetSecurityPolicyDefinition", "sourceZone");
-            }
-            this.sourceZone = sourceZone;
             return this;
         }
         @CustomType.Setter
@@ -140,9 +123,8 @@ public final class GetSecurityPolicyDefinition {
         }
         public GetSecurityPolicyDefinition build() {
             final var _resultValue = new GetSecurityPolicyDefinition();
-            _resultValue.destinationZone = destinationZone;
+            _resultValue.entries = entries;
             _resultValue.id = id;
-            _resultValue.sourceZone = sourceZone;
             _resultValue.type = type;
             _resultValue.version = version;
             return _resultValue;

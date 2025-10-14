@@ -49,6 +49,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs ext
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     @Import(name="administrativeDistance")
@@ -57,6 +58,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs ext
     /**
      * @return Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> administrativeDistance() {
@@ -158,6 +160,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs ext
         /**
          * @param administrativeDistance Administrative distance
          *   - Range: `1`-`255`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -170,6 +173,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs ext
         /**
          * @param administrativeDistance Administrative distance
          *   - Range: `1`-`255`
+         *   - Default value: `1`
          * 
          * @return builder
          * 

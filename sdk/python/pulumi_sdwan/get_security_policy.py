@@ -58,8 +58,8 @@ class GetSecurityPolicyResult:
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
-        if imcp_unreachable_allow and not isinstance(imcp_unreachable_allow, bool):
-            raise TypeError("Expected argument 'imcp_unreachable_allow' to be a bool")
+        if imcp_unreachable_allow and not isinstance(imcp_unreachable_allow, str):
+            raise TypeError("Expected argument 'imcp_unreachable_allow' to be a str")
         pulumi.set(__self__, "imcp_unreachable_allow", imcp_unreachable_allow)
         if loggings and not isinstance(loggings, list):
             raise TypeError("Expected argument 'loggings' to be a list")
@@ -67,14 +67,14 @@ class GetSecurityPolicyResult:
         if match_statistics_per_filter and not isinstance(match_statistics_per_filter, str):
             raise TypeError("Expected argument 'match_statistics_per_filter' to be a str")
         pulumi.set(__self__, "match_statistics_per_filter", match_statistics_per_filter)
-        if max_incomplete_icmp_limit and not isinstance(max_incomplete_icmp_limit, int):
-            raise TypeError("Expected argument 'max_incomplete_icmp_limit' to be a int")
+        if max_incomplete_icmp_limit and not isinstance(max_incomplete_icmp_limit, str):
+            raise TypeError("Expected argument 'max_incomplete_icmp_limit' to be a str")
         pulumi.set(__self__, "max_incomplete_icmp_limit", max_incomplete_icmp_limit)
-        if max_incomplete_tcp_limit and not isinstance(max_incomplete_tcp_limit, int):
-            raise TypeError("Expected argument 'max_incomplete_tcp_limit' to be a int")
+        if max_incomplete_tcp_limit and not isinstance(max_incomplete_tcp_limit, str):
+            raise TypeError("Expected argument 'max_incomplete_tcp_limit' to be a str")
         pulumi.set(__self__, "max_incomplete_tcp_limit", max_incomplete_tcp_limit)
-        if max_incomplete_udp_limit and not isinstance(max_incomplete_udp_limit, int):
-            raise TypeError("Expected argument 'max_incomplete_udp_limit' to be a int")
+        if max_incomplete_udp_limit and not isinstance(max_incomplete_udp_limit, str):
+            raise TypeError("Expected argument 'max_incomplete_udp_limit' to be a str")
         pulumi.set(__self__, "max_incomplete_udp_limit", max_incomplete_udp_limit)
         if mode and not isinstance(mode, str):
             raise TypeError("Expected argument 'mode' to be a str")
@@ -82,14 +82,14 @@ class GetSecurityPolicyResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
-        if session_reclassify_allow and not isinstance(session_reclassify_allow, bool):
-            raise TypeError("Expected argument 'session_reclassify_allow' to be a bool")
+        if session_reclassify_allow and not isinstance(session_reclassify_allow, str):
+            raise TypeError("Expected argument 'session_reclassify_allow' to be a str")
         pulumi.set(__self__, "session_reclassify_allow", session_reclassify_allow)
         if tcp_syn_flood_limit and not isinstance(tcp_syn_flood_limit, str):
             raise TypeError("Expected argument 'tcp_syn_flood_limit' to be a str")
         pulumi.set(__self__, "tcp_syn_flood_limit", tcp_syn_flood_limit)
-        if unified_logging and not isinstance(unified_logging, bool):
-            raise TypeError("Expected argument 'unified_logging' to be a bool")
+        if unified_logging and not isinstance(unified_logging, str):
+            raise TypeError("Expected argument 'unified_logging' to be a str")
         pulumi.set(__self__, "unified_logging", unified_logging)
         if use_case and not isinstance(use_case, str):
             raise TypeError("Expected argument 'use_case' to be a str")
@@ -180,7 +180,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="imcpUnreachableAllow")
-    def imcp_unreachable_allow(self) -> _builtins.bool:
+    def imcp_unreachable_allow(self) -> _builtins.str:
         """
         ICMP Unreachable Allow
         """
@@ -201,7 +201,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteIcmpLimit")
-    def max_incomplete_icmp_limit(self) -> _builtins.int:
+    def max_incomplete_icmp_limit(self) -> _builtins.str:
         """
         Max Incomplete ICMP Limit
         """
@@ -209,7 +209,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteTcpLimit")
-    def max_incomplete_tcp_limit(self) -> _builtins.int:
+    def max_incomplete_tcp_limit(self) -> _builtins.str:
         """
         Max Incomplete TCP Limit
         """
@@ -217,7 +217,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="maxIncompleteUdpLimit")
-    def max_incomplete_udp_limit(self) -> _builtins.int:
+    def max_incomplete_udp_limit(self) -> _builtins.str:
         """
         Max Incomplete UDP Limit
         """
@@ -241,7 +241,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="sessionReclassifyAllow")
-    def session_reclassify_allow(self) -> _builtins.bool:
+    def session_reclassify_allow(self) -> _builtins.str:
         """
         Session Reclassify Allow
         """
@@ -257,7 +257,7 @@ class GetSecurityPolicyResult:
 
     @_builtins.property
     @pulumi.getter(name="unifiedLogging")
-    def unified_logging(self) -> _builtins.bool:
+    def unified_logging(self) -> _builtins.str:
         """
         Unified Logging
         """

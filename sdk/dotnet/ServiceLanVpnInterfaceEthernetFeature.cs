@@ -105,7 +105,7 @@ namespace Pulumi.Sdwan
         public Output<string?> DuplexVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable DHCPv6
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("enableDhcpv6")]
         public Output<bool?> EnableDhcpv6 { get; private set; } = null!;
@@ -189,26 +189,35 @@ namespace Pulumi.Sdwan
         public Output<string?> IpMtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Address
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4Address")]
         public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4AddressVariable")]
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// DHCP Distance
+        /// IPv4 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
+        /// </summary>
+        [Output("ipv4ConfigurationType")]
+        public Output<string?> Ipv4ConfigurationType { get; private set; } = null!;
+
+        /// <summary>
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Output("ipv4DhcpDistance")]
         public Output<int?> Ipv4DhcpDistance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("ipv4DhcpDistanceVariable")]
         public Output<string?> Ipv4DhcpDistanceVariable { get; private set; } = null!;
@@ -309,19 +318,6 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatTcpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// NAT Type
-        ///   - Choices: `Pool`, `Loopback`
-        /// </summary>
-        [Output("ipv4NatType")]
-        public Output<string?> Ipv4NatType { get; private set; } = null!;
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Output("ipv4NatTypeVariable")]
-        public Output<string?> Ipv4NatTypeVariable { get; private set; } = null!;
-
-        /// <summary>
         /// Set NAT UDP session timeout, in minutes
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
@@ -336,20 +332,20 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatUdpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Secondary IpV4 Addresses
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> Ipv4SecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Subnet Mask
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv4SubnetMaskVariable")]
         public Output<string?> Ipv4SubnetMaskVariable { get; private set; } = null!;
@@ -361,25 +357,33 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>> Ipv4Vrrps { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 Address Secondary
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6Address")]
         public Output<string?> Ipv6Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// DHCPv6 Helper
+        /// IPv6 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
+        /// </summary>
+        [Output("ipv6ConfigurationType")]
+        public Output<string?> Ipv6ConfigurationType { get; private set; } = null!;
+
+        /// <summary>
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6DhcpHelpers")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>> Ipv6DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// secondary IPv6 addresses
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Output("ipv6DhcpSecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> Ipv6DhcpSecondaryAddresses { get; private set; } = null!;
@@ -392,7 +396,7 @@ namespace Pulumi.Sdwan
         public Output<bool?> Ipv6Nat { get; private set; } = null!;
 
         /// <summary>
-        /// Static secondary IPv6 addresses
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Output("ipv6SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> Ipv6SecondaryAddresses { get; private set; } = null!;
@@ -710,7 +714,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -794,26 +798,35 @@ namespace Pulumi.Sdwan
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IP Address
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// DHCP Distance
+        /// IPv4 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
+        /// </summary>
+        [Input("ipv4ConfigurationType")]
+        public Input<string>? Ipv4ConfigurationType { get; set; }
+
+        /// <summary>
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -920,19 +933,6 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type
-        ///   - Choices: `Pool`, `Loopback`
-        /// </summary>
-        [Input("ipv4NatType")]
-        public Input<string>? Ipv4NatType { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("ipv4NatTypeVariable")]
-        public Input<string>? Ipv4NatTypeVariable { get; set; }
-
-        /// <summary>
         /// Set NAT UDP session timeout, in minutes
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
@@ -950,7 +950,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs> Ipv4SecondaryAddresses
         {
@@ -959,14 +959,14 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -984,22 +984,30 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// IPv6 Address Secondary
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
+
+        /// <summary>
+        /// IPv6 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
+        /// </summary>
+        [Input("ipv6ConfigurationType")]
+        public Input<string>? Ipv6ConfigurationType { get; set; }
 
         [Input("ipv6DhcpHelpers")]
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>? _ipv6DhcpHelpers;
 
         /// <summary>
-        /// DHCPv6 Helper
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs> Ipv6DhcpHelpers
         {
@@ -1011,7 +1019,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -1030,7 +1038,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs> Ipv6SecondaryAddresses
         {
@@ -1319,7 +1327,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -1403,26 +1411,35 @@ namespace Pulumi.Sdwan
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IP Address
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// DHCP Distance
+        /// IPv4 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`
+        ///   - Default value: `Dynamic`
+        /// </summary>
+        [Input("ipv4ConfigurationType")]
+        public Input<string>? Ipv4ConfigurationType { get; set; }
+
+        /// <summary>
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         ///   - Range: `1`-`65536`
+        ///   - Default value: `1`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
@@ -1529,19 +1546,6 @@ namespace Pulumi.Sdwan
         public Input<string>? Ipv4NatTcpTimeoutVariable { get; set; }
 
         /// <summary>
-        /// NAT Type
-        ///   - Choices: `Pool`, `Loopback`
-        /// </summary>
-        [Input("ipv4NatType")]
-        public Input<string>? Ipv4NatType { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("ipv4NatTypeVariable")]
-        public Input<string>? Ipv4NatTypeVariable { get; set; }
-
-        /// <summary>
         /// Set NAT UDP session timeout, in minutes
         ///   - Range: `1`-`8947`
         ///   - Default value: `1`
@@ -1559,7 +1563,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs> Ipv4SecondaryAddresses
         {
@@ -1568,14 +1572,14 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -1593,22 +1597,30 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// IPv6 Address Secondary
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
+
+        /// <summary>
+        /// IPv6 Configuration Type
+        ///   - Choices: `Dynamic`, `Static`, `None`
+        ///   - Default value: `None`
+        /// </summary>
+        [Input("ipv6ConfigurationType")]
+        public Input<string>? Ipv6ConfigurationType { get; set; }
 
         [Input("ipv6DhcpHelpers")]
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperGetArgs>? _ipv6DhcpHelpers;
 
         /// <summary>
-        /// DHCPv6 Helper
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperGetArgs> Ipv6DhcpHelpers
         {
@@ -1620,7 +1632,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -1639,7 +1651,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs> Ipv6SecondaryAddresses
         {

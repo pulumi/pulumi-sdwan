@@ -12,23 +12,23 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class SecurityPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
+        [Input("entries")]
+        private InputList<Inputs.SecurityPolicyDefinitionEntryArgs>? _entries;
+
         /// <summary>
-        /// Destination Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
+        /// List of zone pair definitions, Attribute conditional on `Type` being equal to `zoneBasedFW`
         /// </summary>
-        [Input("destinationZone")]
-        public Input<string>? DestinationZone { get; set; }
+        public InputList<Inputs.SecurityPolicyDefinitionEntryArgs> Entries
+        {
+            get => _entries ?? (_entries = new InputList<Inputs.SecurityPolicyDefinitionEntryArgs>());
+            set => _entries = value;
+        }
 
         /// <summary>
         /// Policy definition ID
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
-
-        /// <summary>
-        /// Source Zone, Attribute conditional on `Type` being equal to `zoneBasedFW`
-        /// </summary>
-        [Input("sourceZone")]
-        public Input<string>? SourceZone { get; set; }
 
         /// <summary>
         /// Policy definition type

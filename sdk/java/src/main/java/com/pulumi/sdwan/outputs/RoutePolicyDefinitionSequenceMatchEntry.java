@@ -25,16 +25,26 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer asPathListVersion;
     /**
+     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    private @Nullable String communityListId;
+    /**
      * @return Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      * 
      */
     private @Nullable List<String> communityListIds;
     /**
-     * @return Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list match flag
      *   - Choices: `and`, `or`, `exact`
      * 
      */
     private @Nullable String communityListMatchFlag;
+    /**
+     * @return Community list version
+     * 
+     */
+    private @Nullable Integer communityListVersion;
     /**
      * @return Community list versions
      * 
@@ -122,7 +132,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     private @Nullable Integer prefixListVersion;
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     private String type;
@@ -143,6 +153,13 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.asPathListVersion);
     }
     /**
+     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * 
+     */
+    public Optional<String> communityListId() {
+        return Optional.ofNullable(this.communityListId);
+    }
+    /**
      * @return Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      * 
      */
@@ -150,12 +167,19 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return this.communityListIds == null ? List.of() : this.communityListIds;
     }
     /**
-     * @return Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list match flag
      *   - Choices: `and`, `or`, `exact`
      * 
      */
     public Optional<String> communityListMatchFlag() {
         return Optional.ofNullable(this.communityListMatchFlag);
+    }
+    /**
+     * @return Community list version
+     * 
+     */
+    public Optional<Integer> communityListVersion() {
+        return Optional.ofNullable(this.communityListVersion);
     }
     /**
      * @return Community list versions
@@ -276,7 +300,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      * 
      */
     public String type() {
@@ -294,8 +318,10 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     public static final class Builder {
         private @Nullable String asPathListId;
         private @Nullable Integer asPathListVersion;
+        private @Nullable String communityListId;
         private @Nullable List<String> communityListIds;
         private @Nullable String communityListMatchFlag;
+        private @Nullable Integer communityListVersion;
         private @Nullable List<String> communityListVersions;
         private @Nullable String expandedCommunityListId;
         private @Nullable String expandedCommunityListVariable;
@@ -318,8 +344,10 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
     	      Objects.requireNonNull(defaults);
     	      this.asPathListId = defaults.asPathListId;
     	      this.asPathListVersion = defaults.asPathListVersion;
+    	      this.communityListId = defaults.communityListId;
     	      this.communityListIds = defaults.communityListIds;
     	      this.communityListMatchFlag = defaults.communityListMatchFlag;
+    	      this.communityListVersion = defaults.communityListVersion;
     	      this.communityListVersions = defaults.communityListVersions;
     	      this.expandedCommunityListId = defaults.expandedCommunityListId;
     	      this.expandedCommunityListVariable = defaults.expandedCommunityListVariable;
@@ -352,6 +380,12 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder communityListId(@Nullable String communityListId) {
+
+            this.communityListId = communityListId;
+            return this;
+        }
+        @CustomType.Setter
         public Builder communityListIds(@Nullable List<String> communityListIds) {
 
             this.communityListIds = communityListIds;
@@ -364,6 +398,12 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         public Builder communityListMatchFlag(@Nullable String communityListMatchFlag) {
 
             this.communityListMatchFlag = communityListMatchFlag;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder communityListVersion(@Nullable Integer communityListVersion) {
+
+            this.communityListVersion = communityListVersion;
             return this;
         }
         @CustomType.Setter
@@ -477,8 +517,10 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
             final var _resultValue = new RoutePolicyDefinitionSequenceMatchEntry();
             _resultValue.asPathListId = asPathListId;
             _resultValue.asPathListVersion = asPathListVersion;
+            _resultValue.communityListId = communityListId;
             _resultValue.communityListIds = communityListIds;
             _resultValue.communityListMatchFlag = communityListMatchFlag;
+            _resultValue.communityListVersion = communityListVersion;
             _resultValue.communityListVersions = communityListVersions;
             _resultValue.expandedCommunityListId = expandedCommunityListId;
             _resultValue.expandedCommunityListVariable = expandedCommunityListVariable;

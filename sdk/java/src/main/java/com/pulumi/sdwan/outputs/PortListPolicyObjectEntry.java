@@ -4,7 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,18 +13,16 @@ import javax.annotation.Nullable;
 public final class PortListPolicyObjectEntry {
     /**
      * @return Port number
-     *   - Range: `1`-`65535`
      * 
      */
-    private @Nullable Integer port;
+    private @Nullable String port;
 
     private PortListPolicyObjectEntry() {}
     /**
      * @return Port number
-     *   - Range: `1`-`65535`
      * 
      */
-    public Optional<Integer> port() {
+    public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
 
@@ -37,7 +35,7 @@ public final class PortListPolicyObjectEntry {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer port;
+        private @Nullable String port;
         public Builder() {}
         public Builder(PortListPolicyObjectEntry defaults) {
     	      Objects.requireNonNull(defaults);
@@ -45,7 +43,7 @@ public final class PortListPolicyObjectEntry {
         }
 
         @CustomType.Setter
-        public Builder port(@Nullable Integer port) {
+        public Builder port(@Nullable String port) {
 
             this.port = port;
             return this;

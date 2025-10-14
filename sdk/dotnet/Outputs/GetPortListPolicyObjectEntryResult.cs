@@ -16,10 +16,10 @@ namespace Pulumi.Sdwan.Outputs
         /// <summary>
         /// Port number
         /// </summary>
-        public readonly int Port;
+        public readonly string Port;
 
         [OutputConstructor]
-        private GetPortListPolicyObjectEntryResult(int port)
+        private GetPortListPolicyObjectEntryResult(string port)
         {
             Port = port;
         }

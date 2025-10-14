@@ -7,7 +7,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.sdwan.inputs.SecurityPolicyDefinitionArgs;
 import com.pulumi.sdwan.inputs.SecurityPolicyLoggingArgs;
-import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,16 +162,18 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
     /**
      * ICMP Unreachable Allow
+     *   - Choices: `on`, `off`
      * 
      */
     @Import(name="imcpUnreachableAllow")
-    private @Nullable Output<Boolean> imcpUnreachableAllow;
+    private @Nullable Output<String> imcpUnreachableAllow;
 
     /**
      * @return ICMP Unreachable Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    public Optional<Output<Boolean>> imcpUnreachableAllow() {
+    public Optional<Output<String>> imcpUnreachableAllow() {
         return Optional.ofNullable(this.imcpUnreachableAllow);
     }
 
@@ -205,13 +206,13 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxIncompleteIcmpLimit")
-    private @Nullable Output<Integer> maxIncompleteIcmpLimit;
+    private @Nullable Output<String> maxIncompleteIcmpLimit;
 
     /**
      * @return Max Incomplete ICMP Limit
      * 
      */
-    public Optional<Output<Integer>> maxIncompleteIcmpLimit() {
+    public Optional<Output<String>> maxIncompleteIcmpLimit() {
         return Optional.ofNullable(this.maxIncompleteIcmpLimit);
     }
 
@@ -220,13 +221,13 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxIncompleteTcpLimit")
-    private @Nullable Output<Integer> maxIncompleteTcpLimit;
+    private @Nullable Output<String> maxIncompleteTcpLimit;
 
     /**
      * @return Max Incomplete TCP Limit
      * 
      */
-    public Optional<Output<Integer>> maxIncompleteTcpLimit() {
+    public Optional<Output<String>> maxIncompleteTcpLimit() {
         return Optional.ofNullable(this.maxIncompleteTcpLimit);
     }
 
@@ -235,13 +236,13 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="maxIncompleteUdpLimit")
-    private @Nullable Output<Integer> maxIncompleteUdpLimit;
+    private @Nullable Output<String> maxIncompleteUdpLimit;
 
     /**
      * @return Max Incomplete UDP Limit
      * 
      */
-    public Optional<Output<Integer>> maxIncompleteUdpLimit() {
+    public Optional<Output<String>> maxIncompleteUdpLimit() {
         return Optional.ofNullable(this.maxIncompleteUdpLimit);
     }
 
@@ -281,16 +282,18 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
     /**
      * Session Reclassify Allow
+     *   - Choices: `on`, `off`
      * 
      */
     @Import(name="sessionReclassifyAllow")
-    private @Nullable Output<Boolean> sessionReclassifyAllow;
+    private @Nullable Output<String> sessionReclassifyAllow;
 
     /**
      * @return Session Reclassify Allow
+     *   - Choices: `on`, `off`
      * 
      */
-    public Optional<Output<Boolean>> sessionReclassifyAllow() {
+    public Optional<Output<String>> sessionReclassifyAllow() {
         return Optional.ofNullable(this.sessionReclassifyAllow);
     }
 
@@ -311,16 +314,18 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
     /**
      * Unified Logging
+     *   - Choices: `on`, `off`
      * 
      */
     @Import(name="unifiedLogging")
-    private @Nullable Output<Boolean> unifiedLogging;
+    private @Nullable Output<String> unifiedLogging;
 
     /**
      * @return Unified Logging
+     *   - Choices: `on`, `off`
      * 
      */
-    public Optional<Output<Boolean>> unifiedLogging() {
+    public Optional<Output<String>> unifiedLogging() {
         return Optional.ofNullable(this.unifiedLogging);
     }
 
@@ -610,22 +615,24 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param imcpUnreachableAllow ICMP Unreachable Allow
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder imcpUnreachableAllow(@Nullable Output<Boolean> imcpUnreachableAllow) {
+        public Builder imcpUnreachableAllow(@Nullable Output<String> imcpUnreachableAllow) {
             $.imcpUnreachableAllow = imcpUnreachableAllow;
             return this;
         }
 
         /**
          * @param imcpUnreachableAllow ICMP Unreachable Allow
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder imcpUnreachableAllow(Boolean imcpUnreachableAllow) {
+        public Builder imcpUnreachableAllow(String imcpUnreachableAllow) {
             return imcpUnreachableAllow(Output.of(imcpUnreachableAllow));
         }
 
@@ -671,7 +678,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteIcmpLimit(@Nullable Output<Integer> maxIncompleteIcmpLimit) {
+        public Builder maxIncompleteIcmpLimit(@Nullable Output<String> maxIncompleteIcmpLimit) {
             $.maxIncompleteIcmpLimit = maxIncompleteIcmpLimit;
             return this;
         }
@@ -682,7 +689,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteIcmpLimit(Integer maxIncompleteIcmpLimit) {
+        public Builder maxIncompleteIcmpLimit(String maxIncompleteIcmpLimit) {
             return maxIncompleteIcmpLimit(Output.of(maxIncompleteIcmpLimit));
         }
 
@@ -692,7 +699,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteTcpLimit(@Nullable Output<Integer> maxIncompleteTcpLimit) {
+        public Builder maxIncompleteTcpLimit(@Nullable Output<String> maxIncompleteTcpLimit) {
             $.maxIncompleteTcpLimit = maxIncompleteTcpLimit;
             return this;
         }
@@ -703,7 +710,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteTcpLimit(Integer maxIncompleteTcpLimit) {
+        public Builder maxIncompleteTcpLimit(String maxIncompleteTcpLimit) {
             return maxIncompleteTcpLimit(Output.of(maxIncompleteTcpLimit));
         }
 
@@ -713,7 +720,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteUdpLimit(@Nullable Output<Integer> maxIncompleteUdpLimit) {
+        public Builder maxIncompleteUdpLimit(@Nullable Output<String> maxIncompleteUdpLimit) {
             $.maxIncompleteUdpLimit = maxIncompleteUdpLimit;
             return this;
         }
@@ -724,7 +731,7 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder maxIncompleteUdpLimit(Integer maxIncompleteUdpLimit) {
+        public Builder maxIncompleteUdpLimit(String maxIncompleteUdpLimit) {
             return maxIncompleteUdpLimit(Output.of(maxIncompleteUdpLimit));
         }
 
@@ -776,22 +783,24 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param sessionReclassifyAllow Session Reclassify Allow
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder sessionReclassifyAllow(@Nullable Output<Boolean> sessionReclassifyAllow) {
+        public Builder sessionReclassifyAllow(@Nullable Output<String> sessionReclassifyAllow) {
             $.sessionReclassifyAllow = sessionReclassifyAllow;
             return this;
         }
 
         /**
          * @param sessionReclassifyAllow Session Reclassify Allow
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder sessionReclassifyAllow(Boolean sessionReclassifyAllow) {
+        public Builder sessionReclassifyAllow(String sessionReclassifyAllow) {
             return sessionReclassifyAllow(Output.of(sessionReclassifyAllow));
         }
 
@@ -818,22 +827,24 @@ public final class SecurityPolicyState extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param unifiedLogging Unified Logging
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder unifiedLogging(@Nullable Output<Boolean> unifiedLogging) {
+        public Builder unifiedLogging(@Nullable Output<String> unifiedLogging) {
             $.unifiedLogging = unifiedLogging;
             return this;
         }
 
         /**
          * @param unifiedLogging Unified Logging
+         *   - Choices: `on`, `off`
          * 
          * @return builder
          * 
          */
-        public Builder unifiedLogging(Boolean unifiedLogging) {
+        public Builder unifiedLogging(String unifiedLogging) {
             return unifiedLogging(Output.of(unifiedLogging));
         }
 

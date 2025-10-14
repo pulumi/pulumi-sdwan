@@ -217,14 +217,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable DHCPv6
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -409,58 +409,78 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipMtuVariable);
     }
     /**
-     * IP Address
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
     /**
-     * @return IP Address
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * DHCP Distance
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
+     * 
+     */
+    @Export(name="ipv4ConfigurationType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv4ConfigurationType;
+
+    /**
+     * @return IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
+     * 
+     */
+    public Output<Optional<String>> ipv4ConfigurationType() {
+        return Codegen.optional(this.ipv4ConfigurationType);
+    }
+    /**
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Export(name="ipv4DhcpDistance", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Output<Optional<Integer>> ipv4DhcpDistance() {
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
@@ -687,36 +707,6 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatTcpTimeoutVariable);
     }
     /**
-     * NAT Type
-     *   - Choices: `pool`, `loopback`
-     * 
-     */
-    @Export(name="ipv4NatType", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ipv4NatType;
-
-    /**
-     * @return NAT Type
-     *   - Choices: `pool`, `loopback`
-     * 
-     */
-    public Output<Optional<String>> ipv4NatType() {
-        return Codegen.optional(this.ipv4NatType);
-    }
-    /**
-     * Variable name
-     * 
-     */
-    @Export(name="ipv4NatTypeVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> ipv4NatTypeVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Output<Optional<String>> ipv4NatTypeVariable() {
-        return Codegen.optional(this.ipv4NatTypeVariable);
-    }
-    /**
      * Set NAT UDP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `1`
@@ -749,21 +739,21 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4NatUdpTimeoutVariable);
     }
     /**
-     * Secondary IpV4 Addresses
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4SecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>>> ipv4SecondaryAddresses() {
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -771,7 +761,7 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -779,14 +769,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
@@ -807,56 +797,74 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv4Vrrps);
     }
     /**
-     * IPv6 Address Secondary
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * DHCPv6 Helper
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
+     * 
+     */
+    @Export(name="ipv6ConfigurationType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> ipv6ConfigurationType;
+
+    /**
+     * @return IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
+     * 
+     */
+    public Output<Optional<String>> ipv6ConfigurationType() {
+        return Codegen.optional(this.ipv6ConfigurationType);
+    }
+    /**
+     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6DhcpHelpers", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>> ipv6DhcpHelpers;
 
     /**
-     * @return DHCPv6 Helper
+     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>>> ipv6DhcpHelpers() {
         return Codegen.optional(this.ipv6DhcpHelpers);
     }
     /**
-     * secondary IPv6 addresses
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Export(name="ipv6DhcpSecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>>> ipv6DhcpSecondaryAddresses() {
@@ -879,14 +887,14 @@ public class ServiceLanVpnInterfaceEthernetFeature extends com.pulumi.resources.
         return Codegen.optional(this.ipv6Nat);
     }
     /**
-     * Static secondary IPv6 addresses
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Export(name="ipv6SecondaryAddresses", refs={List.class,ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Output<Optional<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>>> ipv6SecondaryAddresses() {

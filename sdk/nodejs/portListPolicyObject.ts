@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * const example = new sdwan.PortListPolicyObject("example", {
  *     name: "Example",
  *     entries: [{
- *         port: 80,
+ *         port: "80",
  *     }],
  * });
  * ```

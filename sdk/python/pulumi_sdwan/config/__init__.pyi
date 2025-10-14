@@ -29,6 +29,11 @@ retries: Optional[int]
 Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
 """
 
+taskTimeout: Optional[int]
+"""
+Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+"""
+
 url: Optional[str]
 """
 URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.

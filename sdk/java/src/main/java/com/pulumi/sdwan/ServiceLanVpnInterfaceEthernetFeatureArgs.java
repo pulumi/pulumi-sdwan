@@ -214,14 +214,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Enable DHCPv6
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -420,14 +420,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * IP Address
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return IP Address
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -435,14 +435,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -450,16 +450,37 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * DHCP Distance
+     * IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
+     * 
+     */
+    @Import(name="ipv4ConfigurationType")
+    private @Nullable Output<String> ipv4ConfigurationType;
+
+    /**
+     * @return IPv4 Configuration Type
+     *   - Choices: `dynamic`, `static`
+     *   - Default value: `dynamic`
+     * 
+     */
+    public Optional<Output<String>> ipv4ConfigurationType() {
+        return Optional.ofNullable(this.ipv4ConfigurationType);
+    }
+
+    /**
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     @Import(name="ipv4DhcpDistance")
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      *   - Range: `1`-`65536`
+     *   - Default value: `1`
      * 
      */
     public Optional<Output<Integer>> ipv4DhcpDistance() {
@@ -467,14 +488,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -717,38 +738,6 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * NAT Type
-     *   - Choices: `pool`, `loopback`
-     * 
-     */
-    @Import(name="ipv4NatType")
-    private @Nullable Output<String> ipv4NatType;
-
-    /**
-     * @return NAT Type
-     *   - Choices: `pool`, `loopback`
-     * 
-     */
-    public Optional<Output<String>> ipv4NatType() {
-        return Optional.ofNullable(this.ipv4NatType);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="ipv4NatTypeVariable")
-    private @Nullable Output<String> ipv4NatTypeVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> ipv4NatTypeVariable() {
-        return Optional.ofNullable(this.ipv4NatTypeVariable);
-    }
-
-    /**
      * Set NAT UDP session timeout, in minutes
      *   - Range: `1`-`8947`
      *   - Default value: `1`
@@ -783,14 +772,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Secondary IpV4 Addresses
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4SecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>>> ipv4SecondaryAddresses() {
@@ -798,7 +787,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Subnet Mask
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -806,7 +795,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -815,14 +804,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -845,14 +834,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * IPv6 Address Secondary
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -860,14 +849,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -875,14 +864,33 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * DHCPv6 Helper
+     * IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
+     * 
+     */
+    @Import(name="ipv6ConfigurationType")
+    private @Nullable Output<String> ipv6ConfigurationType;
+
+    /**
+     * @return IPv6 Configuration Type
+     *   - Choices: `dynamic`, `static`, `none`
+     *   - Default value: `none`
+     * 
+     */
+    public Optional<Output<String>> ipv6ConfigurationType() {
+        return Optional.ofNullable(this.ipv6ConfigurationType);
+    }
+
+    /**
+     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6DhcpHelpers")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>> ipv6DhcpHelpers;
 
     /**
-     * @return DHCPv6 Helper
+     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>>> ipv6DhcpHelpers() {
@@ -890,14 +898,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * secondary IPv6 addresses
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     @Import(name="ipv6DhcpSecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>>> ipv6DhcpSecondaryAddresses() {
@@ -922,14 +930,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
     }
 
     /**
-     * Static secondary IPv6 addresses
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     @Import(name="ipv6SecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>>> ipv6SecondaryAddresses() {
@@ -1409,6 +1417,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         this.ipMtuVariable = $.ipMtuVariable;
         this.ipv4Address = $.ipv4Address;
         this.ipv4AddressVariable = $.ipv4AddressVariable;
+        this.ipv4ConfigurationType = $.ipv4ConfigurationType;
         this.ipv4DhcpDistance = $.ipv4DhcpDistance;
         this.ipv4DhcpDistanceVariable = $.ipv4DhcpDistanceVariable;
         this.ipv4DhcpHelperVariable = $.ipv4DhcpHelperVariable;
@@ -1426,8 +1435,6 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         this.ipv4NatRangeStartVariable = $.ipv4NatRangeStartVariable;
         this.ipv4NatTcpTimeout = $.ipv4NatTcpTimeout;
         this.ipv4NatTcpTimeoutVariable = $.ipv4NatTcpTimeoutVariable;
-        this.ipv4NatType = $.ipv4NatType;
-        this.ipv4NatTypeVariable = $.ipv4NatTypeVariable;
         this.ipv4NatUdpTimeout = $.ipv4NatUdpTimeout;
         this.ipv4NatUdpTimeoutVariable = $.ipv4NatUdpTimeoutVariable;
         this.ipv4SecondaryAddresses = $.ipv4SecondaryAddresses;
@@ -1436,6 +1443,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         this.ipv4Vrrps = $.ipv4Vrrps;
         this.ipv6Address = $.ipv6Address;
         this.ipv6AddressVariable = $.ipv6AddressVariable;
+        this.ipv6ConfigurationType = $.ipv6ConfigurationType;
         this.ipv6DhcpHelpers = $.ipv6DhcpHelpers;
         this.ipv6DhcpSecondaryAddresses = $.ipv6DhcpSecondaryAddresses;
         this.ipv6Nat = $.ipv6Nat;
@@ -1753,7 +1761,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1764,7 +1772,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2035,7 +2043,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4Address IP Address
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2046,7 +2054,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4Address IP Address
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2056,7 +2064,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2067,7 +2075,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4AddressVariable Variable name
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2077,8 +2085,34 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance
+         * @param ipv4ConfigurationType IPv4 Configuration Type
+         *   - Choices: `dynamic`, `static`
+         *   - Default value: `dynamic`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4ConfigurationType(@Nullable Output<String> ipv4ConfigurationType) {
+            $.ipv4ConfigurationType = ipv4ConfigurationType;
+            return this;
+        }
+
+        /**
+         * @param ipv4ConfigurationType IPv4 Configuration Type
+         *   - Choices: `dynamic`, `static`
+         *   - Default value: `dynamic`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv4ConfigurationType(String ipv4ConfigurationType) {
+            return ipv4ConfigurationType(Output.of(ipv4ConfigurationType));
+        }
+
+        /**
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2089,8 +2123,9 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          *   - Range: `1`-`65536`
+         *   - Default value: `1`
          * 
          * @return builder
          * 
@@ -2100,7 +2135,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2111,7 +2146,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2456,50 +2491,6 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4NatType NAT Type
-         *   - Choices: `pool`, `loopback`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4NatType(@Nullable Output<String> ipv4NatType) {
-            $.ipv4NatType = ipv4NatType;
-            return this;
-        }
-
-        /**
-         * @param ipv4NatType NAT Type
-         *   - Choices: `pool`, `loopback`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4NatType(String ipv4NatType) {
-            return ipv4NatType(Output.of(ipv4NatType));
-        }
-
-        /**
-         * @param ipv4NatTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4NatTypeVariable(@Nullable Output<String> ipv4NatTypeVariable) {
-            $.ipv4NatTypeVariable = ipv4NatTypeVariable;
-            return this;
-        }
-
-        /**
-         * @param ipv4NatTypeVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4NatTypeVariable(String ipv4NatTypeVariable) {
-            return ipv4NatTypeVariable(Output.of(ipv4NatTypeVariable));
-        }
-
-        /**
          * @param ipv4NatUdpTimeout Set NAT UDP session timeout, in minutes
          *   - Range: `1`-`8947`
          *   - Default value: `1`
@@ -2546,7 +2537,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2557,7 +2548,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2567,7 +2558,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2577,7 +2568,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -2589,7 +2580,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -2600,7 +2591,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2611,7 +2602,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2652,7 +2643,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2663,7 +2654,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2673,7 +2664,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6AddressVariable Variable name
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2684,7 +2675,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6AddressVariable Variable name
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2694,7 +2685,32 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper
+         * @param ipv6ConfigurationType IPv6 Configuration Type
+         *   - Choices: `dynamic`, `static`, `none`
+         *   - Default value: `none`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6ConfigurationType(@Nullable Output<String> ipv6ConfigurationType) {
+            $.ipv6ConfigurationType = ipv6ConfigurationType;
+            return this;
+        }
+
+        /**
+         * @param ipv6ConfigurationType IPv6 Configuration Type
+         *   - Choices: `dynamic`, `static`, `none`
+         *   - Default value: `none`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6ConfigurationType(String ipv6ConfigurationType) {
+            return ipv6ConfigurationType(Output.of(ipv6ConfigurationType));
+        }
+
+        /**
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2705,7 +2721,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2715,7 +2731,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2725,7 +2741,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2736,7 +2752,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2746,7 +2762,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2779,7 +2795,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2790,7 +2806,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 
@@ -2800,7 +2816,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureArgs extends com.pulumi.
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
          * 
          * @return builder
          * 

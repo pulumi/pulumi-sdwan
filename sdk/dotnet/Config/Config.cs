@@ -62,6 +62,16 @@ namespace Pulumi.Sdwan
             set => _retries.Set(value);
         }
 
+        private static readonly __Value<int?> _taskTimeout = new __Value<int?>(() => __config.GetInt32("taskTimeout"));
+        /// <summary>
+        /// Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+        /// </summary>
+        public static int? TaskTimeout
+        {
+            get => _taskTimeout.Get();
+            set => _taskTimeout.Set(value);
+        }
+
         private static readonly __Value<string?> _url = new __Value<string?>(() => __config.Get("url"));
         /// <summary>
         /// URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.

@@ -25,6 +25,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * @return Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     private @Nullable Integer administrativeDistance;
@@ -53,6 +54,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * @return Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      * 
      */
     public Optional<Integer> administrativeDistance() {

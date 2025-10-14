@@ -118,6 +118,8 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	Ipv4Address string `pulumi:"ipv4Address"`
 	// Variable name
 	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
+	// IPv4 Configuration Type
+	Ipv4ConfigurationType string `pulumi:"ipv4ConfigurationType"`
 	// DHCP Distance
 	Ipv4DhcpDistance int `pulumi:"ipv4DhcpDistance"`
 	// Variable name
@@ -152,10 +154,6 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	Ipv4NatTcpTimeout int `pulumi:"ipv4NatTcpTimeout"`
 	// Variable name
 	Ipv4NatTcpTimeoutVariable string `pulumi:"ipv4NatTcpTimeoutVariable"`
-	// NAT Type
-	Ipv4NatType string `pulumi:"ipv4NatType"`
-	// Variable name
-	Ipv4NatTypeVariable string `pulumi:"ipv4NatTypeVariable"`
 	// Set NAT UDP session timeout, in minutes
 	Ipv4NatUdpTimeout int `pulumi:"ipv4NatUdpTimeout"`
 	// Variable name
@@ -172,6 +170,8 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	Ipv6Address string `pulumi:"ipv6Address"`
 	// Variable name
 	Ipv6AddressVariable string `pulumi:"ipv6AddressVariable"`
+	// IPv6 Configuration Type
+	Ipv6ConfigurationType string `pulumi:"ipv6ConfigurationType"`
 	// DHCPv6 Helper
 	Ipv6DhcpHelpers []GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper `pulumi:"ipv6DhcpHelpers"`
 	// secondary IPv6 addresses
@@ -430,6 +430,11 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4AddressVari
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4AddressVariable }).(pulumi.StringOutput)
 }
 
+// IPv4 Configuration Type
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4ConfigurationType }).(pulumi.StringOutput)
+}
+
 // DHCP Distance
 func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4DhcpDistance() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) int { return v.Ipv4DhcpDistance }).(pulumi.IntOutput)
@@ -515,16 +520,6 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4NatTcpTimeo
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4NatTcpTimeoutVariable }).(pulumi.StringOutput)
 }
 
-// NAT Type
-func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4NatType() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4NatType }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4NatTypeVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv4NatTypeVariable }).(pulumi.StringOutput)
-}
-
 // Set NAT UDP session timeout, in minutes
 func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv4NatUdpTimeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) int { return v.Ipv4NatUdpTimeout }).(pulumi.IntOutput)
@@ -567,6 +562,11 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv6Address() p
 // Variable name
 func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv6AddressVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv6AddressVariable }).(pulumi.StringOutput)
+}
+
+// IPv6 Configuration Type
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Ipv6ConfigurationType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Ipv6ConfigurationType }).(pulumi.StringOutput)
 }
 
 // DHCPv6 Helper

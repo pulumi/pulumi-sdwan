@@ -254,6 +254,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv4AddressVariable;
         /// <summary>
+        /// IPv4 Configuration Type
+        /// </summary>
+        public readonly string Ipv4ConfigurationType;
+        /// <summary>
         /// DHCP Distance
         /// </summary>
         public readonly int Ipv4DhcpDistance;
@@ -322,14 +326,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string Ipv4NatTcpTimeoutVariable;
         /// <summary>
-        /// NAT Type
-        /// </summary>
-        public readonly string Ipv4NatType;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string Ipv4NatTypeVariable;
-        /// <summary>
         /// Set NAT UDP session timeout, in minutes
         /// </summary>
         public readonly int Ipv4NatUdpTimeout;
@@ -361,6 +357,10 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string Ipv6AddressVariable;
+        /// <summary>
+        /// IPv6 Configuration Type
+        /// </summary>
+        public readonly string Ipv6ConfigurationType;
         /// <summary>
         /// DHCPv6 Helper
         /// </summary>
@@ -555,6 +555,8 @@ namespace Pulumi.Sdwan
 
             string ipv4AddressVariable,
 
+            string ipv4ConfigurationType,
+
             int ipv4DhcpDistance,
 
             string ipv4DhcpDistanceVariable,
@@ -589,10 +591,6 @@ namespace Pulumi.Sdwan
 
             string ipv4NatTcpTimeoutVariable,
 
-            string ipv4NatType,
-
-            string ipv4NatTypeVariable,
-
             int ipv4NatUdpTimeout,
 
             string ipv4NatUdpTimeoutVariable,
@@ -608,6 +606,8 @@ namespace Pulumi.Sdwan
             string ipv6Address,
 
             string ipv6AddressVariable,
+
+            string ipv6ConfigurationType,
 
             ImmutableArray<Outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperResult> ipv6DhcpHelpers,
 
@@ -706,6 +706,7 @@ namespace Pulumi.Sdwan
             IpMtuVariable = ipMtuVariable;
             Ipv4Address = ipv4Address;
             Ipv4AddressVariable = ipv4AddressVariable;
+            Ipv4ConfigurationType = ipv4ConfigurationType;
             Ipv4DhcpDistance = ipv4DhcpDistance;
             Ipv4DhcpDistanceVariable = ipv4DhcpDistanceVariable;
             Ipv4DhcpHelperVariable = ipv4DhcpHelperVariable;
@@ -723,8 +724,6 @@ namespace Pulumi.Sdwan
             Ipv4NatRangeStartVariable = ipv4NatRangeStartVariable;
             Ipv4NatTcpTimeout = ipv4NatTcpTimeout;
             Ipv4NatTcpTimeoutVariable = ipv4NatTcpTimeoutVariable;
-            Ipv4NatType = ipv4NatType;
-            Ipv4NatTypeVariable = ipv4NatTypeVariable;
             Ipv4NatUdpTimeout = ipv4NatUdpTimeout;
             Ipv4NatUdpTimeoutVariable = ipv4NatUdpTimeoutVariable;
             Ipv4SecondaryAddresses = ipv4SecondaryAddresses;
@@ -733,6 +732,7 @@ namespace Pulumi.Sdwan
             Ipv4Vrrps = ipv4Vrrps;
             Ipv6Address = ipv6Address;
             Ipv6AddressVariable = ipv6AddressVariable;
+            Ipv6ConfigurationType = ipv6ConfigurationType;
             Ipv6DhcpHelpers = ipv6DhcpHelpers;
             Ipv6DhcpSecondaryAddresses = ipv6DhcpSecondaryAddresses;
             Ipv6Nat = ipv6Nat;

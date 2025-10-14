@@ -5,7 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,18 +17,16 @@ public final class PortListPolicyObjectEntryArgs extends com.pulumi.resources.Re
 
     /**
      * Port number
-     *   - Range: `1`-`65535`
      * 
      */
     @Import(name="port")
-    private @Nullable Output<Integer> port;
+    private @Nullable Output<String> port;
 
     /**
      * @return Port number
-     *   - Range: `1`-`65535`
      * 
      */
-    public Optional<Output<Integer>> port() {
+    public Optional<Output<String>> port() {
         return Optional.ofNullable(this.port);
     }
 
@@ -58,24 +56,22 @@ public final class PortListPolicyObjectEntryArgs extends com.pulumi.resources.Re
 
         /**
          * @param port Port number
-         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
          */
-        public Builder port(@Nullable Output<Integer> port) {
+        public Builder port(@Nullable Output<String> port) {
             $.port = port;
             return this;
         }
 
         /**
          * @param port Port number
-         *   - Range: `1`-`65535`
          * 
          * @return builder
          * 
          */
-        public Builder port(Integer port) {
+        public Builder port(String port) {
             return port(Output.of(port));
         }
 

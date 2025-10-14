@@ -47,7 +47,7 @@ import javax.annotation.Nullable;
  *         var example = new PortListPolicyObject("example", PortListPolicyObjectArgs.builder()
  *             .name("Example")
  *             .entries(PortListPolicyObjectEntryArgs.builder()
- *                 .port(80)
+ *                 .port("80")
  *                 .build())
  *             .build());
  * 

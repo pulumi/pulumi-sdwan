@@ -153,13 +153,13 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationPriorityQosPolicyQosSchedulerResult> QosSchedulers;
         /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string TargetInterfaceVariable;
-        /// <summary>
         /// interfaces
         /// </summary>
         public readonly ImmutableArray<string> TargetInterfaces;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TargetInterfacesVariable;
         /// <summary>
         /// The version of the Policy
         /// </summary>
@@ -177,9 +177,9 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetApplicationPriorityQosPolicyQosSchedulerResult> qosSchedulers,
 
-            string targetInterfaceVariable,
-
             ImmutableArray<string> targetInterfaces,
+
+            string targetInterfacesVariable,
 
             int version)
         {
@@ -188,8 +188,8 @@ namespace Pulumi.Sdwan
             Id = id;
             Name = name;
             QosSchedulers = qosSchedulers;
-            TargetInterfaceVariable = targetInterfaceVariable;
             TargetInterfaces = targetInterfaces;
+            TargetInterfacesVariable = targetInterfacesVariable;
             Version = version;
         }
     }

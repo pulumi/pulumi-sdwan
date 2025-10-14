@@ -23,7 +23,7 @@ All resources and functions have been tested with the following releases.
 
 |    Platform     | Version |
 |-----------------|---------|
-| Catalyst SD-WAN |    20.9 |
+| Catalyst SD-WAN |   20.09 |
 | Catalyst SD-WAN |   20.12 |
 ## Example Usage
 
@@ -45,5 +45,6 @@ config:
 - `insecure` (Boolean) Allow insecure HTTPS client. This can also be set as the `SDWAN_INSECURE` environment variable. Defaults to `true`.
 - `password` (String, Sensitive) Password for the SD-WAN Manager account. This can also be set as the `SDWAN_PASSWORD` environment variable.
 - `retries` (Number) Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
+- `taskTimeout` (Number) Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
 - `url` (String) URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
 - `username` (String) Username for the SD-WAN Manager account. This can also be set as the `SDWAN_USERNAME` environment variable.

@@ -52,6 +52,7 @@ export class Provider extends pulumi.ProviderResource {
             resourceInputs["insecure"] = pulumi.output(args?.insecure).apply(JSON.stringify);
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["retries"] = pulumi.output(args?.retries).apply(JSON.stringify);
+            resourceInputs["taskTimeout"] = pulumi.output(args?.taskTimeout).apply(JSON.stringify);
             resourceInputs["url"] = args?.url;
             resourceInputs["username"] = args?.username;
         }
@@ -87,6 +88,10 @@ export interface ProviderArgs {
      * Number of retries for REST API calls. This can also be set as the `SDWAN_RETRIES` environment variable. Defaults to `3`.
      */
     retries?: pulumi.Input<number>;
+    /**
+     * Timeout in seconds for asynchronous tasks. This can also be set as the `SDWAN_TASK_TIMEOUT` environment variable. Defaults to `1500`.
+     */
+    taskTimeout?: pulumi.Input<number>;
     /**
      * URL of the Cisco SD-WAN Manager device. This can also be set as the `SDWAN_URL` environment variable.
      */

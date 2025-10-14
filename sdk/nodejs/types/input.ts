@@ -7544,9 +7544,8 @@ export interface PolicyObjectVpnGroupEntry {
 export interface PortListPolicyObjectEntry {
     /**
      * Port number
-     *   - Range: `1`-`65535`
      */
-    port?: pulumi.Input<number>;
+    port?: pulumi.Input<string>;
 }
 
 export interface ProtocolListPolicyObjectEntry {
@@ -7754,14 +7753,22 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     asPathListVersion?: pulumi.Input<number>;
     /**
+     * Community list ID, Attribute conditional on `type` being equal to `community`
+     */
+    communityListId?: pulumi.Input<string>;
+    /**
      * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
      */
     communityListIds?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Community list match flag, Attribute conditional on `type` being equal to `advancedCommunity`
+     * Community list match flag
      *   - Choices: `and`, `or`, `exact`
      */
     communityListMatchFlag?: pulumi.Input<string>;
+    /**
+     * Community list version
+     */
+    communityListVersion?: pulumi.Input<number>;
     /**
      * Community list versions
      */
@@ -7833,7 +7840,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
     prefixListVersion?: pulumi.Input<number>;
     /**
      * Type of match entry
-     *   - Choices: `address`, `asPath`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
+     *   - Choices: `address`, `asPath`, `community`, `advancedCommunity`, `expandedCommunity`, `expandedCommunityInline`, `extCommunity`, `localPreference`, `metric`, `nextHop`, `origin`, `peer`, `ompTag`, `ospfTag`
      */
     type: pulumi.Input<string>;
 }
@@ -8068,17 +8075,13 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface SecurityPolicyDefinition {
     /**
-     * Destination Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
      */
-    destinationZone?: pulumi.Input<string>;
+    entries?: pulumi.Input<pulumi.Input<inputs.SecurityPolicyDefinitionEntry>[]>;
     /**
      * Policy definition ID
      */
     id: pulumi.Input<string>;
-    /**
-     * Source Zone, Attribute conditional on `type` being equal to `zoneBasedFW`
-     */
-    sourceZone?: pulumi.Input<string>;
     /**
      * Policy definition type
      *   - Choices: `urlFiltering`, `zoneBasedFW`, `intrusionPrevention`, `sslDecryption`, `advancedMalwareProtection`, `dnsSecurity`
@@ -8088,6 +8091,17 @@ export interface SecurityPolicyDefinition {
      * Policy definition version
      */
     version?: pulumi.Input<number>;
+}
+
+export interface SecurityPolicyDefinitionEntry {
+    /**
+     * Destination Zone
+     */
+    destinationZone?: pulumi.Input<string>;
+    /**
+     * Source Zone
+     */
+    sourceZone?: pulumi.Input<string>;
 }
 
 export interface SecurityPolicyLogging {
@@ -8645,6 +8659,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
@@ -8665,6 +8680,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker {
     /**
      * Administrative distance
      *   - Range: `1`-`255`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
@@ -8741,6 +8757,7 @@ export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
@@ -17038,7 +17055,7 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     protocolType?: pulumi.Input<string>;
     /**
      * Type of match entry
-     *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
+     *   - Choices: `sourceFqdnList`, `sourceDataPrefixList`, `sourceGeoLocationList`, `sourcePortList`, `destinationFqdnList`, `destinationDataPrefixList`, `destinationGeoLocationList`, `destinationPortList`, `appList`, `appListFlat`, `protocolNameList`, `sourceIp`, `sourcePort`, `sourceFqdn`, `destinationIp`, `destinationFqdn`, `destinationPort`, `sourceGeoLocation`, `destinationGeoLocation`, `protocolName`, `protocol`, `app`, `ruleSetList`
      */
     type: pulumi.Input<string>;
     /**

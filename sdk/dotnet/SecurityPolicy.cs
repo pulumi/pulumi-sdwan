@@ -84,9 +84,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP Unreachable Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Output("imcpUnreachableAllow")]
-        public Output<bool?> ImcpUnreachableAllow { get; private set; } = null!;
+        public Output<string?> ImcpUnreachableAllow { get; private set; } = null!;
 
         [Output("loggings")]
         public Output<ImmutableArray<Outputs.SecurityPolicyLogging>> Loggings { get; private set; } = null!;
@@ -102,19 +103,19 @@ namespace Pulumi.Sdwan
         /// Max Incomplete ICMP Limit
         /// </summary>
         [Output("maxIncompleteIcmpLimit")]
-        public Output<int?> MaxIncompleteIcmpLimit { get; private set; } = null!;
+        public Output<string?> MaxIncompleteIcmpLimit { get; private set; } = null!;
 
         /// <summary>
         /// Max Incomplete TCP Limit
         /// </summary>
         [Output("maxIncompleteTcpLimit")]
-        public Output<int?> MaxIncompleteTcpLimit { get; private set; } = null!;
+        public Output<string?> MaxIncompleteTcpLimit { get; private set; } = null!;
 
         /// <summary>
         /// Max Incomplete UDP Limit
         /// </summary>
         [Output("maxIncompleteUdpLimit")]
-        public Output<int?> MaxIncompleteUdpLimit { get; private set; } = null!;
+        public Output<string?> MaxIncompleteUdpLimit { get; private set; } = null!;
 
         /// <summary>
         /// The policy mode
@@ -132,9 +133,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Session Reclassify Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Output("sessionReclassifyAllow")]
-        public Output<bool?> SessionReclassifyAllow { get; private set; } = null!;
+        public Output<string?> SessionReclassifyAllow { get; private set; } = null!;
 
         /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
@@ -144,9 +146,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unified Logging
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Output("unifiedLogging")]
-        public Output<bool?> UnifiedLogging { get; private set; } = null!;
+        public Output<string?> UnifiedLogging { get; private set; } = null!;
 
         /// <summary>
         /// The use case of the security policy
@@ -273,9 +276,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP Unreachable Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("imcpUnreachableAllow")]
-        public Input<bool>? ImcpUnreachableAllow { get; set; }
+        public Input<string>? ImcpUnreachableAllow { get; set; }
 
         [Input("loggings")]
         private InputList<Inputs.SecurityPolicyLoggingArgs>? _loggings;
@@ -296,19 +300,19 @@ namespace Pulumi.Sdwan
         /// Max Incomplete ICMP Limit
         /// </summary>
         [Input("maxIncompleteIcmpLimit")]
-        public Input<int>? MaxIncompleteIcmpLimit { get; set; }
+        public Input<string>? MaxIncompleteIcmpLimit { get; set; }
 
         /// <summary>
         /// Max Incomplete TCP Limit
         /// </summary>
         [Input("maxIncompleteTcpLimit")]
-        public Input<int>? MaxIncompleteTcpLimit { get; set; }
+        public Input<string>? MaxIncompleteTcpLimit { get; set; }
 
         /// <summary>
         /// Max Incomplete UDP Limit
         /// </summary>
         [Input("maxIncompleteUdpLimit")]
-        public Input<int>? MaxIncompleteUdpLimit { get; set; }
+        public Input<string>? MaxIncompleteUdpLimit { get; set; }
 
         /// <summary>
         /// The policy mode
@@ -326,9 +330,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Session Reclassify Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("sessionReclassifyAllow")]
-        public Input<bool>? SessionReclassifyAllow { get; set; }
+        public Input<string>? SessionReclassifyAllow { get; set; }
 
         /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
@@ -338,9 +343,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unified Logging
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("unifiedLogging")]
-        public Input<bool>? UnifiedLogging { get; set; }
+        public Input<string>? UnifiedLogging { get; set; }
 
         /// <summary>
         /// The use case of the security policy
@@ -423,9 +429,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// ICMP Unreachable Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("imcpUnreachableAllow")]
-        public Input<bool>? ImcpUnreachableAllow { get; set; }
+        public Input<string>? ImcpUnreachableAllow { get; set; }
 
         [Input("loggings")]
         private InputList<Inputs.SecurityPolicyLoggingGetArgs>? _loggings;
@@ -446,19 +453,19 @@ namespace Pulumi.Sdwan
         /// Max Incomplete ICMP Limit
         /// </summary>
         [Input("maxIncompleteIcmpLimit")]
-        public Input<int>? MaxIncompleteIcmpLimit { get; set; }
+        public Input<string>? MaxIncompleteIcmpLimit { get; set; }
 
         /// <summary>
         /// Max Incomplete TCP Limit
         /// </summary>
         [Input("maxIncompleteTcpLimit")]
-        public Input<int>? MaxIncompleteTcpLimit { get; set; }
+        public Input<string>? MaxIncompleteTcpLimit { get; set; }
 
         /// <summary>
         /// Max Incomplete UDP Limit
         /// </summary>
         [Input("maxIncompleteUdpLimit")]
-        public Input<int>? MaxIncompleteUdpLimit { get; set; }
+        public Input<string>? MaxIncompleteUdpLimit { get; set; }
 
         /// <summary>
         /// The policy mode
@@ -476,9 +483,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Session Reclassify Allow
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("sessionReclassifyAllow")]
-        public Input<bool>? SessionReclassifyAllow { get; set; }
+        public Input<string>? SessionReclassifyAllow { get; set; }
 
         /// <summary>
         /// TCP SYN Flood Limit, value from 1 to 4294967295
@@ -488,9 +496,10 @@ namespace Pulumi.Sdwan
 
         /// <summary>
         /// Unified Logging
+        ///   - Choices: `On`, `Off`
         /// </summary>
         [Input("unifiedLogging")]
-        public Input<bool>? UnifiedLogging { get; set; }
+        public Input<string>? UnifiedLogging { get; set; }
 
         /// <summary>
         /// The use case of the security policy

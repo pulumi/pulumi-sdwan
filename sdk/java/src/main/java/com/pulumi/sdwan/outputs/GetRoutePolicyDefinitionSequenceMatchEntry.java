@@ -23,6 +23,11 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
      */
     private Integer asPathListVersion;
     /**
+     * @return Community list ID
+     * 
+     */
+    private String communityListId;
+    /**
      * @return Community list IDs
      * 
      */
@@ -32,6 +37,11 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
      * 
      */
     private String communityListMatchFlag;
+    /**
+     * @return Community list version
+     * 
+     */
+    private Integer communityListVersion;
     /**
      * @return Community list versions
      * 
@@ -134,6 +144,13 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
         return this.asPathListVersion;
     }
     /**
+     * @return Community list ID
+     * 
+     */
+    public String communityListId() {
+        return this.communityListId;
+    }
+    /**
      * @return Community list IDs
      * 
      */
@@ -146,6 +163,13 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
      */
     public String communityListMatchFlag() {
         return this.communityListMatchFlag;
+    }
+    /**
+     * @return Community list version
+     * 
+     */
+    public Integer communityListVersion() {
+        return this.communityListVersion;
     }
     /**
      * @return Community list versions
@@ -278,8 +302,10 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
     public static final class Builder {
         private String asPathListId;
         private Integer asPathListVersion;
+        private String communityListId;
         private List<String> communityListIds;
         private String communityListMatchFlag;
+        private Integer communityListVersion;
         private List<String> communityListVersions;
         private String expandedCommunityListId;
         private String expandedCommunityListVariable;
@@ -302,8 +328,10 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
     	      Objects.requireNonNull(defaults);
     	      this.asPathListId = defaults.asPathListId;
     	      this.asPathListVersion = defaults.asPathListVersion;
+    	      this.communityListId = defaults.communityListId;
     	      this.communityListIds = defaults.communityListIds;
     	      this.communityListMatchFlag = defaults.communityListMatchFlag;
+    	      this.communityListVersion = defaults.communityListVersion;
     	      this.communityListVersions = defaults.communityListVersions;
     	      this.expandedCommunityListId = defaults.expandedCommunityListId;
     	      this.expandedCommunityListVariable = defaults.expandedCommunityListVariable;
@@ -340,6 +368,14 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder communityListId(String communityListId) {
+            if (communityListId == null) {
+              throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "communityListId");
+            }
+            this.communityListId = communityListId;
+            return this;
+        }
+        @CustomType.Setter
         public Builder communityListIds(List<String> communityListIds) {
             if (communityListIds == null) {
               throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "communityListIds");
@@ -356,6 +392,14 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
               throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "communityListMatchFlag");
             }
             this.communityListMatchFlag = communityListMatchFlag;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder communityListVersion(Integer communityListVersion) {
+            if (communityListVersion == null) {
+              throw new MissingRequiredPropertyException("GetRoutePolicyDefinitionSequenceMatchEntry", "communityListVersion");
+            }
+            this.communityListVersion = communityListVersion;
             return this;
         }
         @CustomType.Setter
@@ -501,8 +545,10 @@ public final class GetRoutePolicyDefinitionSequenceMatchEntry {
             final var _resultValue = new GetRoutePolicyDefinitionSequenceMatchEntry();
             _resultValue.asPathListId = asPathListId;
             _resultValue.asPathListVersion = asPathListVersion;
+            _resultValue.communityListId = communityListId;
             _resultValue.communityListIds = communityListIds;
             _resultValue.communityListMatchFlag = communityListMatchFlag;
+            _resultValue.communityListVersion = communityListVersion;
             _resultValue.communityListVersions = communityListVersions;
             _resultValue.expandedCommunityListId = expandedCommunityListId;
             _resultValue.expandedCommunityListVariable = expandedCommunityListVariable;
