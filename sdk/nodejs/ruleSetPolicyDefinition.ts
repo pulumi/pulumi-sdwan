@@ -11,6 +11,29 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.RuleSetPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     rules: [{
+ *         name: "Rule1",
+ *         order: 1,
+ *         sourceIpv4Prefix: "10.1.1.0/24",
+ *         sourceFqdn: "cisco.com",
+ *         sourcePort: "80-90",
+ *         sourceGeoLocation: "AF",
+ *         destinationIpv4Prefix: "10.1.1.0/24",
+ *         destinationFqdn: "cisco.com",
+ *         destinationPort: "80-90",
+ *         destinationGeoLocation: "AF",
+ *         protocol: "cifs",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

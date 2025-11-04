@@ -15,6 +15,35 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemIpv6DeviceAccessFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemIpv6DeviceAccessFeatureSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "SEQ_1",
+    ///                 BaseAction = "accept",
+    ///                 DeviceAccessPort = 22,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

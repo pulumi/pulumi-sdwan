@@ -12,6 +12,37 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoDhcpServerFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     addressPool: "10.1.1.0/24",
+ *     excludeAddresses: [
+ *         "10.1.1.1-10.1.1.5",
+ *         "10.1.1.254",
+ *     ],
+ *     leaseTime: 600,
+ *     interfaceMtu: 1500,
+ *     domainName: "cisco.com",
+ *     defaultGateway: "10.1.1.254",
+ *     dnsServers: ["1.2.3.4"],
+ *     tftpServers: ["1.2.3.4"],
+ *     staticLeases: [{
+ *         macAddress: "11:11:11:11:11:11",
+ *         ipAddress: "10.1.1.10",
+ *         hostname: "HOST1",
+ *     }],
+ *     options: [{
+ *         optionCode: 10,
+ *         ascii: "abc",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

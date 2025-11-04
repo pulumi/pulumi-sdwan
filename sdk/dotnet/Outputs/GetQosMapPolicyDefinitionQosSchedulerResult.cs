@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int Burst;
         /// <summary>
-        /// Class map ID
+        /// Class map ID (can be empty for queue 0 when left as Control)
         /// </summary>
         public readonly string ClassMapId;
         /// <summary>

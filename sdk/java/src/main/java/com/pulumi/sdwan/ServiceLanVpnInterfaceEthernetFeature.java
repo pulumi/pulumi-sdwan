@@ -31,6 +31,119 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceLanVpnInterfaceEthernetFeature;
+ * import com.pulumi.sdwan.ServiceLanVpnInterfaceEthernetFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureArpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceLanVpnInterfaceEthernetFeature("example", ServiceLanVpnInterfaceEthernetFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+ *             .shutdown(false)
+ *             .interfaceName("GigabitEthernet3")
+ *             .interfaceDescription("LAN")
+ *             .ipv4ConfigurationType("static")
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv4SubnetMask("0.0.0.0")
+ *             .ipv4SecondaryAddresses(ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs.builder()
+ *                 .address("1.2.3.5")
+ *                 .subnetMask("0.0.0.0")
+ *                 .build())
+ *             .ipv4DhcpHelpers("1.2.3.4")
+ *             .ipv6ConfigurationType("static")
+ *             .ipv6DhcpHelpers(ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs.builder()
+ *                 .address("2001:0:0:1::0")
+ *                 .dhcpv6HelperVpn(1)
+ *                 .build())
+ *             .ipv4Nat(false)
+ *             .ipv4NatRangeStart("1.2.3.4")
+ *             .ipv4NatRangeEnd("4.5.6.7")
+ *             .ipv4NatPrefixLength(1)
+ *             .ipv4NatOverload(true)
+ *             .ipv6Nat(true)
+ *             .nat64(false)
+ *             .aclShapingRate(12)
+ *             .ipv6Vrrps(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs.builder()
+ *                 .groupId(1)
+ *                 .priority(100)
+ *                 .timer(1000)
+ *                 .trackOmp(false)
+ *                 .ipv6Addresses(ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs.builder()
+ *                     .linkLocalAddress("1::1")
+ *                     .globalAddress("1::1/24")
+ *                     .build())
+ *                 .build())
+ *             .ipv4Vrrps(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs.builder()
+ *                 .groupId(1)
+ *                 .priority(100)
+ *                 .timer(1000)
+ *                 .trackOmp(false)
+ *                 .address("1.2.3.4")
+ *                 .secondaryAddresses(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs.builder()
+ *                     .address("2.3.4.5")
+ *                     .subnetMask("0.0.0.0")
+ *                     .build())
+ *                 .tlocPrefixChange(true)
+ *                 .tlocPrefChangeValue(100)
+ *                 .trackingObjects(ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs.builder()
+ *                     .trackerId("1b270f6d-479b-47e3-ab0b-51bc6811a303")
+ *                     .trackerAction("Decrement")
+ *                     .decrementValue(100)
+ *                     .build())
+ *                 .build())
+ *             .arps(ServiceLanVpnInterfaceEthernetFeatureArpArgs.builder()
+ *                 .ipAddress("1.2.3.4")
+ *                 .macAddress("00-B0-D0-63-C2-26")
+ *                 .build())
+ *             .trustsecEnableSgtPropogation(false)
+ *             .trustsecPropogate(true)
+ *             .trustsecSecurityGroupTag(123)
+ *             .trustsecEnableEnforcedPropogation(false)
+ *             .trustsecEnforcedSecurityGroupTag(1234)
+ *             .duplex("full")
+ *             .macAddress("00-B0-D0-63-C2-26")
+ *             .ipMtu(1500)
+ *             .interfaceMtu(1500)
+ *             .tcpMss(500)
+ *             .speed("1000")
+ *             .arpTimeout(1200)
+ *             .autonegotiate(false)
+ *             .mediaType("auto-select")
+ *             .loadInterval(30)
+ *             .icmpRedirectDisable(true)
+ *             .xconnect("1")
+ *             .ipDirectedBroadcast(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

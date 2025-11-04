@@ -12,6 +12,90 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoSecureInternetGatewayFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     vpnId: 1,
+ *     interfaces: [{
+ *         name: "ipsec1",
+ *         autoTunnelMode: true,
+ *         shutdown: true,
+ *         description: "My Description",
+ *         ipUnnumbered: false,
+ *         ipv4Address: "1.2.3.4/24",
+ *         tunnelSource: "3.3.3.3",
+ *         tunnelSourceInterface: "ge0/1",
+ *         tunnelRouteVia: "ge0/2",
+ *         tunnelDestination: "3.4.5.6",
+ *         application: "sig",
+ *         sigProvider: "secure-internet-gateway-umbrella",
+ *         tunnelDcPreference: "primary-dc",
+ *         tcpMss: 1400,
+ *         mtu: 1500,
+ *         deadPeerDetectionInterval: 30,
+ *         deadPeerDetectionRetries: 5,
+ *         ikeVersion: 1,
+ *         ikePreSharedKey: "A1234567",
+ *         ikeRekeyInterval: 600,
+ *         ikeCiphersuite: "aes256-cbc-sha2",
+ *         ikeGroup: "14",
+ *         ikePreSharedKeyDynamic: false,
+ *         ikePreSharedKeyLocalId: "1.2.3.4",
+ *         ikePreSharedKeyRemoteId: "2.3.4.5",
+ *         ipsecRekeyInterval: 7200,
+ *         ipsecReplayWindow: 1024,
+ *         ipsecCiphersuite: "aes256-cbc-sha1",
+ *         ipsecPerfectForwardSecrecy: "group-14",
+ *         tracker: "test",
+ *         trackEnable: false,
+ *         tunnelPublicIp: "5.5.5.5",
+ *     }],
+ *     services: [{
+ *         serviceType: "sig",
+ *         interfacePairs: [{
+ *             activeInterface: "e1",
+ *             backupInterface: "e2",
+ *             activeInterfaceWeight: 10,
+ *             backupInterfaceWeight: 20,
+ *         }],
+ *         zscalerAuthenticationRequired: true,
+ *         zscalerXffForward: true,
+ *         zscalerFirewallEnabled: true,
+ *         zscalerIpsControlEnabled: true,
+ *         zscalerCautionEnabled: true,
+ *         zscalerPrimaryDataCenter: "Auto",
+ *         zscalerSecondaryDataCenter: "Auto",
+ *         zscalerSurrogateIp: true,
+ *         zscalerSurrogateIdleTime: 100,
+ *         zscalerSurrogateDisplayTimeUnit: "MINUTE",
+ *         zscalerSurrogateIpEnforceForKnownBrowsers: true,
+ *         zscalerSurrogateRefreshTime: 12345,
+ *         zscalerSurrogateRefreshTimeUnit: "MINUTE",
+ *         zscalerAupEnabled: true,
+ *         zscalerAupBlockInternetUntilAccepted: true,
+ *         zscalerAupForceSslInspection: true,
+ *         zscalerAupTimeout: 60,
+ *         zscalerLocationName: "LOC1",
+ *         umbrellaPrimaryDataCenter: "Auto",
+ *         umbrellaSecondaryDataCenter: "Auto",
+ *     }],
+ *     trackerSourceIp: "2.3.4.5",
+ *     trackers: [{
+ *         trackerType: "SIG",
+ *         name: "TRACKER1",
+ *         endpointApiUrl: "https://1.1.1.1",
+ *         threshold: 500,
+ *         interval: 60,
+ *         multiplier: 4,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

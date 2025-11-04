@@ -25,6 +25,57 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoNtpFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoNtpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoNtpFeatureTemplateAuthenticationKeyArgs;
+ * import com.pulumi.sdwan.inputs.CiscoNtpFeatureTemplateServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoNtpFeatureTemplate("example", CiscoNtpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .master(true)
+ *             .masterStratum(6)
+ *             .masterSourceInterface("e1")
+ *             .trustedKeys(1)
+ *             .authenticationKeys(CiscoNtpFeatureTemplateAuthenticationKeyArgs.builder()
+ *                 .id(1)
+ *                 .value("12345")
+ *                 .build())
+ *             .servers(CiscoNtpFeatureTemplateServerArgs.builder()
+ *                 .hostnameIp("NTP_SERVER1")
+ *                 .authenticationKeyId(1)
+ *                 .vpnId(1)
+ *                 .version(4)
+ *                 .sourceInterface("e1")
+ *                 .prefer(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

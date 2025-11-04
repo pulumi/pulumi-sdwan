@@ -92,6 +92,21 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private Integer prefixListVersion;
     /**
+     * @return Region ID
+     * 
+     */
+    private Integer regionId;
+    /**
+     * @return Region list ID
+     * 
+     */
+    private String regionListId;
+    /**
+     * @return Role
+     * 
+     */
+    private String role;
+    /**
      * @return Site ID
      * 
      */
@@ -266,6 +281,27 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return this.prefixListVersion;
     }
     /**
+     * @return Region ID
+     * 
+     */
+    public Integer regionId() {
+        return this.regionId;
+    }
+    /**
+     * @return Region list ID
+     * 
+     */
+    public String regionListId() {
+        return this.regionListId;
+    }
+    /**
+     * @return Role
+     * 
+     */
+    public String role() {
+        return this.role;
+    }
+    /**
      * @return Site ID
      * 
      */
@@ -375,6 +411,9 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         private Integer preference;
         private String prefixListId;
         private Integer prefixListVersion;
+        private Integer regionId;
+        private String regionListId;
+        private String role;
         private Integer siteId;
         private String siteListId;
         private Integer siteListVersion;
@@ -406,6 +445,9 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     	      this.preference = defaults.preference;
     	      this.prefixListId = defaults.prefixListId;
     	      this.prefixListVersion = defaults.prefixListVersion;
+    	      this.regionId = defaults.regionId;
+    	      this.regionListId = defaults.regionListId;
+    	      this.role = defaults.role;
     	      this.siteId = defaults.siteId;
     	      this.siteListId = defaults.siteListId;
     	      this.siteListVersion = defaults.siteListVersion;
@@ -549,6 +591,30 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder regionId(Integer regionId) {
+            if (regionId == null) {
+              throw new MissingRequiredPropertyException("GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry", "regionId");
+            }
+            this.regionId = regionId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder regionListId(String regionListId) {
+            if (regionListId == null) {
+              throw new MissingRequiredPropertyException("GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry", "regionListId");
+            }
+            this.regionListId = regionListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder role(String role) {
+            if (role == null) {
+              throw new MissingRequiredPropertyException("GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry", "role");
+            }
+            this.role = role;
+            return this;
+        }
+        @CustomType.Setter
         public Builder siteId(Integer siteId) {
             if (siteId == null) {
               throw new MissingRequiredPropertyException("GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry", "siteId");
@@ -662,6 +728,9 @@ public final class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
             _resultValue.preference = preference;
             _resultValue.prefixListId = prefixListId;
             _resultValue.prefixListVersion = prefixListVersion;
+            _resultValue.regionId = regionId;
+            _resultValue.regionListId = regionListId;
+            _resultValue.role = role;
             _resultValue.siteId = siteId;
             _resultValue.siteListId = siteListId;
             _resultValue.siteListVersion = siteListVersion;

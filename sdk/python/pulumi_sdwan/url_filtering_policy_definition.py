@@ -564,6 +564,27 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.UrlFilteringPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            mode="security",
+            alerts=["blacklist"],
+            web_categories=["alcohol-and-tobacco"],
+            web_categories_action="allow",
+            web_reputation="moderate-risk",
+            target_vpns=["1"],
+            block_page_action="text",
+            block_page_contents="Access to the requested page has been denied. Please contact your Network Administrator",
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -603,6 +624,27 @@ class UrlFilteringPolicyDefinition(pulumi.CustomResource):
         This resource can manage a URL Filtering Policy Definition .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.UrlFilteringPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            mode="security",
+            alerts=["blacklist"],
+            web_categories=["alcohol-and-tobacco"],
+            web_categories_action="allow",
+            web_reputation="moderate-risk",
+            target_vpns=["1"],
+            block_page_action="text",
+            block_page_contents="Access to the requested page has been denied. Please contact your Network Administrator",
+            loggings=[{
+                "external_syslog_server_ip": "10.0.0.1",
+                "external_syslog_server_vpn": "123",
+            }])
+        ```
 
         ## Import
 

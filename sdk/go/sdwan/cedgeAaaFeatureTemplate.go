@@ -17,6 +17,125 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCedgeAaaFeatureTemplate(ctx, "example", &sdwan.CedgeAaaFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Dot1xAuthentication:       pulumi.Bool(true),
+//				Dot1xAccounting:           pulumi.Bool(true),
+//				ServerGroupsPriorityOrder: pulumi.String("100"),
+//				Users: sdwan.CedgeAaaFeatureTemplateUserArray{
+//					&sdwan.CedgeAaaFeatureTemplateUserArgs{
+//						Name:           pulumi.String("user1"),
+//						Password:       pulumi.String("password123"),
+//						Secret:         pulumi.String("secret123"),
+//						PrivilegeLevel: pulumi.String("15"),
+//						SshPubkeys: sdwan.CedgeAaaFeatureTemplateUserSshPubkeyArray{
+//							&sdwan.CedgeAaaFeatureTemplateUserSshPubkeyArgs{
+//								KeyString: pulumi.String("abc123"),
+//								KeyType:   pulumi.String("rsa"),
+//							},
+//						},
+//					},
+//				},
+//				RadiusServerGroups: sdwan.CedgeAaaFeatureTemplateRadiusServerGroupArray{
+//					&sdwan.CedgeAaaFeatureTemplateRadiusServerGroupArgs{
+//						GroupName:       pulumi.String("GROUP1"),
+//						VpnId:           pulumi.Int(1),
+//						SourceInterface: pulumi.String("e1"),
+//						Servers: sdwan.CedgeAaaFeatureTemplateRadiusServerGroupServerArray{
+//							&sdwan.CedgeAaaFeatureTemplateRadiusServerGroupServerArgs{
+//								Address:            pulumi.String("1.1.1.1"),
+//								AuthenticationPort: pulumi.Int(1812),
+//								AccountingPort:     pulumi.Int(1813),
+//								Timeout:            pulumi.Int(5),
+//								Retransmit:         pulumi.Int(3),
+//								Key:                pulumi.String("key123"),
+//								SecretKey:          pulumi.String("1234567"),
+//								EncryptionType:     pulumi.String("7"),
+//								KeyType:            pulumi.String("pac"),
+//							},
+//						},
+//					},
+//				},
+//				RadiusClients: sdwan.CedgeAaaFeatureTemplateRadiusClientArray{
+//					&sdwan.CedgeAaaFeatureTemplateRadiusClientArgs{
+//						ClientIp: pulumi.String("2.2.2.2"),
+//						VpnConfigurations: sdwan.CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArray{
+//							&sdwan.CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs{
+//								VpnId:     pulumi.Int(1),
+//								ServerKey: pulumi.String("key123"),
+//							},
+//						},
+//					},
+//				},
+//				RadiusDynamicAuthorServerKey:          pulumi.String("key123"),
+//				RadiusDynamicAuthorDomainStripping:    pulumi.String("yes"),
+//				RadiusDynamicAuthorAuthenticationType: pulumi.String("all"),
+//				RadiusDynamicAuthorPort:               pulumi.Int(1700),
+//				RadiusTrustsecCtsAuthorizationList:    pulumi.String("ALIST1"),
+//				RadiusTrustsecGroup:                   pulumi.String("GROUP1"),
+//				TacacsServerGroups: sdwan.CedgeAaaFeatureTemplateTacacsServerGroupArray{
+//					&sdwan.CedgeAaaFeatureTemplateTacacsServerGroupArgs{
+//						GroupName:       pulumi.String("GROUP1"),
+//						VpnId:           pulumi.Int(1),
+//						SourceInterface: pulumi.String("e1"),
+//						Servers: sdwan.CedgeAaaFeatureTemplateTacacsServerGroupServerArray{
+//							&sdwan.CedgeAaaFeatureTemplateTacacsServerGroupServerArgs{
+//								Address:        pulumi.String("1.1.1.1"),
+//								Port:           pulumi.Int(49),
+//								Timeout:        pulumi.Int(5),
+//								Key:            pulumi.String("key123"),
+//								SecretKey:      pulumi.String("1234567"),
+//								EncryptionType: pulumi.String("7"),
+//							},
+//						},
+//					},
+//				},
+//				AccountingRules: sdwan.CedgeAaaFeatureTemplateAccountingRuleArray{
+//					&sdwan.CedgeAaaFeatureTemplateAccountingRuleArgs{
+//						Name:           pulumi.String("RULE1"),
+//						Method:         pulumi.String("exec"),
+//						PrivilegeLevel: pulumi.String("15"),
+//						StartStop:      pulumi.Bool(true),
+//						Groups:         pulumi.String("GROUP1"),
+//					},
+//				},
+//				AuthorizationConsole:        pulumi.Bool(true),
+//				AuthorizationConfigCommands: pulumi.Bool(true),
+//				AuthorizationRules: sdwan.CedgeAaaFeatureTemplateAuthorizationRuleArray{
+//					&sdwan.CedgeAaaFeatureTemplateAuthorizationRuleArgs{
+//						Name:           pulumi.String("RULE1"),
+//						Method:         pulumi.String("commands"),
+//						PrivilegeLevel: pulumi.String("15"),
+//						Groups:         pulumi.String("GROUP1"),
+//						Authenticated:  pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

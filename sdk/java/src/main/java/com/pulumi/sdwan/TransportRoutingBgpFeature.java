@@ -32,6 +32,137 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportRoutingBgpFeature;
+ * import com.pulumi.sdwan.TransportRoutingBgpFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4NeighborArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv6NeighborArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4AggregateAddressArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv4NetworkArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv6AggregateAddressArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureIpv6NetworkArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingBgpFeatureMplsInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportRoutingBgpFeature("example", TransportRoutingBgpFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .asNumber(429)
+ *             .routerId("1.2.3.4")
+ *             .propagateAsPath(false)
+ *             .propagateCommunity(false)
+ *             .externalRoutesDistance(20)
+ *             .internalRoutesDistance(200)
+ *             .localRoutesDistance(20)
+ *             .keepaliveTime(60)
+ *             .holdTime(180)
+ *             .alwaysCompareMed(false)
+ *             .deterministicMed(false)
+ *             .missingMedAsWorst(false)
+ *             .compareRouterId(false)
+ *             .multipathRelax(false)
+ *             .ipv4Neighbors(TransportRoutingBgpFeatureIpv4NeighborArgs.builder()
+ *                 .address("1.2.3.4")
+ *                 .description("neighbor1")
+ *                 .shutdown(false)
+ *                 .remoteAs(200)
+ *                 .localAs(200)
+ *                 .keepaliveTime(40)
+ *                 .holdTime(200)
+ *                 .updateSourceInterface("GigabitEthernet0")
+ *                 .nextHopSelf(false)
+ *                 .sendCommunity(true)
+ *                 .sendExtendedCommunity(true)
+ *                 .ebgpMultihop(1)
+ *                 .password("myPassword")
+ *                 .sendLabel(true)
+ *                 .explicitNull(false)
+ *                 .asOverride(false)
+ *                 .allowasInNumber(1)
+ *                 .addressFamilies(TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs.builder()
+ *                     .familyType("ipv4-unicast")
+ *                     .policyType("restart")
+ *                     .restartMaxNumberOfPrefixes(2000)
+ *                     .restartThreshold(75)
+ *                     .restartInterval(30)
+ *                     .build())
+ *                 .build())
+ *             .ipv6Neighbors(TransportRoutingBgpFeatureIpv6NeighborArgs.builder()
+ *                 .address("2001::1")
+ *                 .description("neighbor2")
+ *                 .shutdown(false)
+ *                 .remoteAs(200)
+ *                 .localAs(200)
+ *                 .keepaliveTime(180)
+ *                 .holdTime(60)
+ *                 .updateSourceInterface("Loopback1")
+ *                 .nextHopSelf(true)
+ *                 .sendCommunity(true)
+ *                 .sendExtendedCommunity(true)
+ *                 .ebgpMultihop(3)
+ *                 .password("myPassword")
+ *                 .asOverride(true)
+ *                 .allowasInNumber(3)
+ *                 .addressFamilies(TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs.builder()
+ *                     .familyType("ipv6-unicast")
+ *                     .maxNumberOfPrefixes(2000)
+ *                     .threshold(75)
+ *                     .policyType("restart")
+ *                     .restartInterval(30)
+ *                     .build())
+ *                 .build())
+ *             .ipv4AggregateAddresses(TransportRoutingBgpFeatureIpv4AggregateAddressArgs.builder()
+ *                 .networkAddress("10.10.0.0")
+ *                 .subnetMask("255.255.0.0")
+ *                 .asSetPath(false)
+ *                 .summaryOnly(false)
+ *                 .build())
+ *             .ipv4Networks(TransportRoutingBgpFeatureIpv4NetworkArgs.builder()
+ *                 .networkAddress("10.10.0.0")
+ *                 .subnetMask("255.255.0.0")
+ *                 .build())
+ *             .ipv4EibgpMaximumPaths(1)
+ *             .ipv4Originate(false)
+ *             .ipv4TableMapFilter(false)
+ *             .ipv6AggregateAddresses(TransportRoutingBgpFeatureIpv6AggregateAddressArgs.builder()
+ *                 .aggregatePrefix("3001::1/128")
+ *                 .asSetPath(false)
+ *                 .summaryOnly(false)
+ *                 .build())
+ *             .ipv6Networks(TransportRoutingBgpFeatureIpv6NetworkArgs.builder()
+ *                 .networkPrefix("2001:0DB8:0000:000b::/64")
+ *                 .build())
+ *             .ipv6EibgpMaximumPaths(2)
+ *             .ipv6Originate(true)
+ *             .ipv6TableMapFilter(false)
+ *             .mplsInterfaces(TransportRoutingBgpFeatureMplsInterfaceArgs.builder()
+ *                 .interfaceName("GigabitEthernet1")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

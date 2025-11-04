@@ -31,6 +31,97 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceMulticastFeature;
+ * import com.pulumi.sdwan.ServiceMulticastFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeatureIgmpInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeaturePimInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeatureStaticRpAddressArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeaturePimBsrRpCandidateArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeaturePimBsrCandidateArgs;
+ * import com.pulumi.sdwan.inputs.ServiceMulticastFeatureMsdpGroupArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceMulticastFeature("example", ServiceMulticastFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .sptOnly(false)
+ *             .localReplicator(false)
+ *             .localReplicatorThreshold(10)
+ *             .igmpInterfaces(ServiceMulticastFeatureIgmpInterfaceArgs.builder()
+ *                 .interfaceName("GigabitEthernet1")
+ *                 .version(2)
+ *                 .joinGroups(ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs.builder()
+ *                     .groupAddress("224.0.0.0")
+ *                     .sourceAddress("1.2.3.4")
+ *                     .build())
+ *                 .build())
+ *             .pimSourceSpecificMulticastEnable(true)
+ *             .pimSourceSpecificMulticastAccessList("1")
+ *             .pimSptThreshold("0")
+ *             .pimInterfaces(ServiceMulticastFeaturePimInterfaceArgs.builder()
+ *                 .interfaceName("GigabitEthernet1")
+ *                 .queryInterval(30)
+ *                 .joinPruneInterval(60)
+ *                 .build())
+ *             .staticRpAddresses(ServiceMulticastFeatureStaticRpAddressArgs.builder()
+ *                 .ipAddress("1.2.3.4")
+ *                 .accessList("1")
+ *                 .override(false)
+ *                 .build())
+ *             .enableAutoRp(false)
+ *             .pimBsrRpCandidates(ServiceMulticastFeaturePimBsrRpCandidateArgs.builder()
+ *                 .interfaceName("GigabitEthernet1")
+ *                 .accessListId("2")
+ *                 .interval(30)
+ *                 .priority(1)
+ *                 .build())
+ *             .pimBsrCandidates(ServiceMulticastFeaturePimBsrCandidateArgs.builder()
+ *                 .interfaceName("GigabitEthernet1")
+ *                 .hashMaskLength(30)
+ *                 .priority(120)
+ *                 .acceptCandidateAccessList("test")
+ *                 .build())
+ *             .msdpGroups(ServiceMulticastFeatureMsdpGroupArgs.builder()
+ *                 .meshGroupName("Example")
+ *                 .peers(ServiceMulticastFeatureMsdpGroupPeerArgs.builder()
+ *                     .peerIp("1.2.3.4")
+ *                     .connectionSourceInterface("GigabitEthernet1")
+ *                     .remoteAs(1)
+ *                     .peerAuthenticationPassword("Password123!")
+ *                     .keepaliveInterval(15)
+ *                     .keepaliveHoldTime(30)
+ *                     .saLimit(1)
+ *                     .defaultPeer(false)
+ *                     .build())
+ *                 .build())
+ *             .msdpOriginatorId("GigabitEthernet1")
+ *             .msdpConnectionRetryInterval(30)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

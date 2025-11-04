@@ -11,6 +11,26 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.IntrusionPreventionPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     mode: "security",
+ *     inspectionMode: "protection",
+ *     logLevel: "alert",
+ *     customSignature: false,
+ *     signatureSet: "connectivity",
+ *     targetVpns: ["1"],
+ *     loggings: [{
+ *         externalSyslogServerIp: "10.0.0.1",
+ *         externalSyslogServerVpn: "123",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

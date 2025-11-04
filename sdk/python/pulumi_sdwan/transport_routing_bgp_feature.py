@@ -1920,6 +1920,107 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TransportRoutingBgpFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            as_number=429,
+            router_id="1.2.3.4",
+            propagate_as_path=False,
+            propagate_community=False,
+            external_routes_distance=20,
+            internal_routes_distance=200,
+            local_routes_distance=20,
+            keepalive_time=60,
+            hold_time=180,
+            always_compare_med=False,
+            deterministic_med=False,
+            missing_med_as_worst=False,
+            compare_router_id=False,
+            multipath_relax=False,
+            ipv4_neighbors=[{
+                "address": "1.2.3.4",
+                "description": "neighbor1",
+                "shutdown": False,
+                "remote_as": 200,
+                "local_as": 200,
+                "keepalive_time": 40,
+                "hold_time": 200,
+                "update_source_interface": "GigabitEthernet0",
+                "next_hop_self": False,
+                "send_community": True,
+                "send_extended_community": True,
+                "ebgp_multihop": 1,
+                "password": "myPassword",
+                "send_label": True,
+                "explicit_null": False,
+                "as_override": False,
+                "allowas_in_number": 1,
+                "address_families": [{
+                    "family_type": "ipv4-unicast",
+                    "policy_type": "restart",
+                    "restart_max_number_of_prefixes": 2000,
+                    "restart_threshold": 75,
+                    "restart_interval": 30,
+                }],
+            }],
+            ipv6_neighbors=[{
+                "address": "2001::1",
+                "description": "neighbor2",
+                "shutdown": False,
+                "remote_as": 200,
+                "local_as": 200,
+                "keepalive_time": 180,
+                "hold_time": 60,
+                "update_source_interface": "Loopback1",
+                "next_hop_self": True,
+                "send_community": True,
+                "send_extended_community": True,
+                "ebgp_multihop": 3,
+                "password": "myPassword",
+                "as_override": True,
+                "allowas_in_number": 3,
+                "address_families": [{
+                    "family_type": "ipv6-unicast",
+                    "max_number_of_prefixes": 2000,
+                    "threshold": 75,
+                    "policy_type": "restart",
+                    "restart_interval": 30,
+                }],
+            }],
+            ipv4_aggregate_addresses=[{
+                "network_address": "10.10.0.0",
+                "subnet_mask": "255.255.0.0",
+                "as_set_path": False,
+                "summary_only": False,
+            }],
+            ipv4_networks=[{
+                "network_address": "10.10.0.0",
+                "subnet_mask": "255.255.0.0",
+            }],
+            ipv4_eibgp_maximum_paths=1,
+            ipv4_originate=False,
+            ipv4_table_map_filter=False,
+            ipv6_aggregate_addresses=[{
+                "aggregate_prefix": "3001::1/128",
+                "as_set_path": False,
+                "summary_only": False,
+            }],
+            ipv6_networks=[{
+                "network_prefix": "2001:0DB8:0000:000b::/64",
+            }],
+            ipv6_eibgp_maximum_paths=2,
+            ipv6_originate=True,
+            ipv6_table_map_filter=False,
+            mpls_interfaces=[{
+                "interface_name": "GigabitEthernet1",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -2019,6 +2120,107 @@ class TransportRoutingBgpFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.TransportRoutingBgpFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            as_number=429,
+            router_id="1.2.3.4",
+            propagate_as_path=False,
+            propagate_community=False,
+            external_routes_distance=20,
+            internal_routes_distance=200,
+            local_routes_distance=20,
+            keepalive_time=60,
+            hold_time=180,
+            always_compare_med=False,
+            deterministic_med=False,
+            missing_med_as_worst=False,
+            compare_router_id=False,
+            multipath_relax=False,
+            ipv4_neighbors=[{
+                "address": "1.2.3.4",
+                "description": "neighbor1",
+                "shutdown": False,
+                "remote_as": 200,
+                "local_as": 200,
+                "keepalive_time": 40,
+                "hold_time": 200,
+                "update_source_interface": "GigabitEthernet0",
+                "next_hop_self": False,
+                "send_community": True,
+                "send_extended_community": True,
+                "ebgp_multihop": 1,
+                "password": "myPassword",
+                "send_label": True,
+                "explicit_null": False,
+                "as_override": False,
+                "allowas_in_number": 1,
+                "address_families": [{
+                    "family_type": "ipv4-unicast",
+                    "policy_type": "restart",
+                    "restart_max_number_of_prefixes": 2000,
+                    "restart_threshold": 75,
+                    "restart_interval": 30,
+                }],
+            }],
+            ipv6_neighbors=[{
+                "address": "2001::1",
+                "description": "neighbor2",
+                "shutdown": False,
+                "remote_as": 200,
+                "local_as": 200,
+                "keepalive_time": 180,
+                "hold_time": 60,
+                "update_source_interface": "Loopback1",
+                "next_hop_self": True,
+                "send_community": True,
+                "send_extended_community": True,
+                "ebgp_multihop": 3,
+                "password": "myPassword",
+                "as_override": True,
+                "allowas_in_number": 3,
+                "address_families": [{
+                    "family_type": "ipv6-unicast",
+                    "max_number_of_prefixes": 2000,
+                    "threshold": 75,
+                    "policy_type": "restart",
+                    "restart_interval": 30,
+                }],
+            }],
+            ipv4_aggregate_addresses=[{
+                "network_address": "10.10.0.0",
+                "subnet_mask": "255.255.0.0",
+                "as_set_path": False,
+                "summary_only": False,
+            }],
+            ipv4_networks=[{
+                "network_address": "10.10.0.0",
+                "subnet_mask": "255.255.0.0",
+            }],
+            ipv4_eibgp_maximum_paths=1,
+            ipv4_originate=False,
+            ipv4_table_map_filter=False,
+            ipv6_aggregate_addresses=[{
+                "aggregate_prefix": "3001::1/128",
+                "as_set_path": False,
+                "summary_only": False,
+            }],
+            ipv6_networks=[{
+                "network_prefix": "2001:0DB8:0000:000b::/64",
+            }],
+            ipv6_eibgp_maximum_paths=2,
+            ipv6_originate=True,
+            ipv6_table_map_filter=False,
+            mpls_interfaces=[{
+                "interface_name": "GigabitEthernet1",
+            }])
+        ```
 
         ## Import
 

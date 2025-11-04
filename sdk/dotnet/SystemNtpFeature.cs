@@ -15,6 +15,51 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemNtpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemNtpFeatureServerArgs
+    ///             {
+    ///                 HostnameIpAddress = "1.1.1.1",
+    ///                 AuthenticationKey = 41673,
+    ///                 Vpn = 1,
+    ///                 NtpVersion = 4,
+    ///                 SourceInterface = "Ethernet",
+    ///                 PreferThisNtpServer = false,
+    ///             },
+    ///         },
+    ///         AuthenticationKeys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemNtpFeatureAuthenticationKeyArgs
+    ///             {
+    ///                 KeyId = 49737,
+    ///                 Md5Value = "$CRYPT_CLUSTER",
+    ///             },
+    ///         },
+    ///         TrustedKeys = new[]
+    ///         {
+    ///             49737,
+    ///         },
+    ///         AuthoritativeNtpServer = false,
+    ///         Stratum = 1,
+    ///         SourceInterface = "ATM",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

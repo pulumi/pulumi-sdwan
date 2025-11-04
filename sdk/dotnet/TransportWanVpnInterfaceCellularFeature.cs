@@ -15,6 +15,104 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportWanVpnInterfaceCellularFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         TransportWanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+    ///         Shutdown = true,
+    ///         InterfaceName = "GigabitEthernet1",
+    ///         InterfaceDescription = "WAN",
+    ///         Ipv4DhcpHelpers = new[]
+    ///         {
+    ///             "1.2.3.4",
+    ///         },
+    ///         ServiceProvider = "example",
+    ///         BandwidthUpstream = 21474836,
+    ///         BandwidthDownstream = 21474836,
+    ///         TunnelInterface = true,
+    ///         PerTunnelQos = true,
+    ///         TunnelQosMode = "hub",
+    ///         TunnelBandwidthPercent = 82,
+    ///         TunnelInterfaceBindLoopbackTunnel = "example",
+    ///         TunnelInterfaceCarrier = "default",
+    ///         TunnelInterfaceColor = "default",
+    ///         TunnelInterfaceHelloInterval = 1000,
+    ///         TunnelInterfaceHelloTolerance = 12,
+    ///         TunnelInterfaceLastResortCircuit = false,
+    ///         TunnelInterfaceColorRestrict = true,
+    ///         TunnelInterfaceGroups = 42949672,
+    ///         TunnelInterfaceBorder = false,
+    ///         TunnelInterfaceMaxControlConnections = 62,
+    ///         TunnelInterfaceNatRefreshInterval = 5,
+    ///         TunnelInterfaceVbondAsStunServer = false,
+    ///         TunnelInterfaceExcludeControllerGroupLists = new[]
+    ///         {
+    ///             2,
+    ///         },
+    ///         TunnelInterfaceVmanageConnectionPreference = 8,
+    ///         TunnelInterfacePortHop = true,
+    ///         TunnelInterfaceLowBandwidthLink = false,
+    ///         TunnelInterfaceTunnelTcpMss = 1460,
+    ///         TunnelInterfaceClearDontFragment = false,
+    ///         TunnelInterfaceNetworkBroadcast = false,
+    ///         TunnelInterfaceAllowAll = false,
+    ///         TunnelInterfaceAllowBgp = false,
+    ///         TunnelInterfaceAllowDhcp = true,
+    ///         TunnelInterfaceAllowNtp = false,
+    ///         TunnelInterfaceAllowSsh = false,
+    ///         TunnelInterfaceAllowDns = true,
+    ///         TunnelInterfaceAllowIcmp = true,
+    ///         TunnelInterfaceAllowHttps = true,
+    ///         TunnelInterfaceAllowOspf = false,
+    ///         TunnelInterfaceAllowStun = false,
+    ///         TunnelInterfaceAllowSnmp = false,
+    ///         TunnelInterfaceAllowNetconf = false,
+    ///         TunnelInterfaceAllowBfd = false,
+    ///         TunnelInterfaceEncapsulations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnInterfaceCellularFeatureTunnelInterfaceEncapsulationArgs
+    ///             {
+    ///                 Encapsulation = "gre",
+    ///                 Preference = 4294967,
+    ///                 Weight = 250,
+    ///             },
+    ///         },
+    ///         NatIpv4 = true,
+    ///         NatUdpTimeout = 1,
+    ///         NatTcpTimeout = 60,
+    ///         QosAdaptive = false,
+    ///         QosShapingRate = 16,
+    ///         AclIpv4EgressFeatureId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AclIpv6IngressFeatureId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Arps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnInterfaceCellularFeatureArpArgs
+    ///             {
+    ///                 IpAddress = "1.2.3.4",
+    ///                 MacAddress = "00-B0-D0-63-C2-26",
+    ///             },
+    ///         },
+    ///         IpMtu = 1500,
+    ///         InterfaceMtu = 1500,
+    ///         TcpMss = 505,
+    ///         TlocExtension = "tloc",
+    ///         Tracker = "example",
+    ///         IpDirectedBroadcast = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -15,6 +15,42 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CedgeIgmpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeIgmpFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Name = "Ethernet0",
+    ///                 JoinGroups = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs
+    ///                     {
+    ///                         GroupAddress = "235.1.1.1",
+    ///                         Source = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

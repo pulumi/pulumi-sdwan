@@ -12,6 +12,47 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CedgePimFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     autoRp: true,
+ *     rpAnnounceFields: [{
+ *         interfaceName: "Ethernet1",
+ *         scope: 1,
+ *     }],
+ *     interfaceName: "Ethernet1",
+ *     rpCandidates: [{
+ *         "interface": "Ethernet1",
+ *         accessList: "1",
+ *         interval: 100,
+ *         priority: 2,
+ *     }],
+ *     bsrCandidate: "Ethernet1",
+ *     hashMaskLength: "24",
+ *     priority: 1,
+ *     rpCandidateAccessList: "120",
+ *     scope: 1,
+ *     range: "16",
+ *     "default": true,
+ *     rpAddresses: [{
+ *         accessList: "99",
+ *         ipAddress: "1.2.3.4",
+ *         override: false,
+ *     }],
+ *     sptThreshold: "0",
+ *     interfaces: [{
+ *         interfaceName: "Ethernet1",
+ *         queryInterval: 30,
+ *         joinPruneInterval: 60,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

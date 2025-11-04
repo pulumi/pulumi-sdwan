@@ -15,6 +15,34 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.PolicyObjectIpv4PrefixList("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.PolicyObjectIpv4PrefixListEntryArgs
+    ///             {
+    ///                 Ipv4Address = "10.0.0.0",
+    ///                 Ipv4PrefixLength = 8,
+    ///                 Le = 24,
+    ///                 Ge = 16,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

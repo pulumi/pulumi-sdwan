@@ -22,6 +22,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string BaseAction;
         /// <summary>
+        /// Rule Type
+        /// </summary>
+        public readonly string IpType;
+        /// <summary>
         /// List of match entries
         /// </summary>
         public readonly ImmutableArray<Outputs.GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryResult> MatchEntries;
@@ -40,6 +44,8 @@ namespace Pulumi.Sdwan.Outputs
 
             string baseAction,
 
+            string ipType,
+
             ImmutableArray<Outputs.GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryResult> matchEntries,
 
             string ruleName,
@@ -48,6 +54,7 @@ namespace Pulumi.Sdwan.Outputs
         {
             ActionEntries = actionEntries;
             BaseAction = baseAction;
+            IpType = ipType;
             MatchEntries = matchEntries;
             RuleName = ruleName;
             RuleOrder = ruleOrder;

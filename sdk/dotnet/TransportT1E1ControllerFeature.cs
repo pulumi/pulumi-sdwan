@@ -15,6 +15,48 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportT1E1ControllerFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Type = "t1",
+    ///         Slot = "11",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportT1E1ControllerFeatureEntryArgs
+    ///             {
+    ///                 T1Description = "T1",
+    ///                 T1Framing = "esf",
+    ///                 T1Linecode = "ami",
+    ///                 CableLength = "long",
+    ///                 LengthLong = "-7.5db",
+    ///                 ClockSource = "line",
+    ///                 LineMode = "primary",
+    ///                 Description = "desc",
+    ///                 ChannelGroups = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportT1E1ControllerFeatureEntryChannelGroupArgs
+    ///                     {
+    ///                         ChannelGroup = 12,
+    ///                         TimeSlot = "timeslots 15",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

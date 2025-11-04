@@ -17,6 +17,63 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemSecurityFeature(ctx, "example", &sdwan.SystemSecurityFeatureArgs{
+//				Name:                     pulumi.String("Example"),
+//				Description:              pulumi.String("My Example"),
+//				FeatureProfileId:         pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Rekey:                    pulumi.Int(86400),
+//				AntiReplayWindow:         pulumi.String("512"),
+//				ExtendedAntiReplayWindow: pulumi.Int(256),
+//				IpsecPairwiseKeying:      pulumi.Bool(false),
+//				IntegrityTypes: pulumi.StringArray{
+//					pulumi.String("esp"),
+//				},
+//				Keychains: sdwan.SystemSecurityFeatureKeychainArray{
+//					&sdwan.SystemSecurityFeatureKeychainArgs{
+//						KeyChainName: pulumi.String("aaa"),
+//						KeyId:        pulumi.Int(1),
+//					},
+//				},
+//				Keys: sdwan.SystemSecurityFeatureKeyArray{
+//					&sdwan.SystemSecurityFeatureKeyArgs{
+//						Id:                       pulumi.Int(0),
+//						Name:                     pulumi.String("aaa"),
+//						SendId:                   pulumi.Int(1),
+//						ReceiverId:               pulumi.Int(2),
+//						IncludeTcpOptions:        pulumi.Bool(false),
+//						AcceptAoMismatch:         pulumi.Bool(false),
+//						CryptoAlgorithm:          pulumi.String("aes-128-cmac"),
+//						KeyString:                pulumi.String("abcabc"),
+//						SendLifeTimeLocal:        pulumi.Bool(true),
+//						SendLifeTimeStartEpoch:   pulumi.Int(1659284400),
+//						SendLifeTimeInfinite:     pulumi.Bool(true),
+//						AcceptLifeTimeLocal:      pulumi.Bool(true),
+//						AcceptLifeTimeStartEpoch: pulumi.Int(1659284400),
+//						AcceptLifeTimeInfinite:   pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

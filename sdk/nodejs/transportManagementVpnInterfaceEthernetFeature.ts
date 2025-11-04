@@ -12,6 +12,49 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportManagementVpnInterfaceEthernetFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     transportManagementVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
+ *     shutdown: true,
+ *     interfaceName: "GigabitEthernet1",
+ *     interfaceDescription: "Transport Management VPN Interface Ethernet",
+ *     ipv4ConfigurationType: "static",
+ *     ipv4Address: "1.2.3.4",
+ *     ipv4SubnetMask: "0.0.0.0",
+ *     ipv4SecondaryAddresses: [{
+ *         address: "1.2.3.4",
+ *         subnetMask: "0.0.0.0",
+ *     }],
+ *     ipv4DhcpHelpers: ["1.2.3.4"],
+ *     ipv4IperfServer: "example",
+ *     ipv4AutoDetectBandwidth: false,
+ *     ipv6ConfigurationType: "static",
+ *     ipv6Address: "2001:0:0:1::/64",
+ *     arpEntries: [{
+ *         ipAddress: "1.2.3.4",
+ *         macAddress: "00-B0-D0-63-C2-26",
+ *     }],
+ *     duplex: "full",
+ *     macAddress: "00-B0-D0-63-C2-26",
+ *     ipMtu: 1500,
+ *     interfaceMtu: 1500,
+ *     tcpMss: 505,
+ *     speed: "2500",
+ *     arpTimeout: 1200,
+ *     autonegotiate: false,
+ *     mediaType: "rj45",
+ *     loadInterval: 30,
+ *     icmpRedirectDisable: true,
+ *     ipDirectedBroadcast: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

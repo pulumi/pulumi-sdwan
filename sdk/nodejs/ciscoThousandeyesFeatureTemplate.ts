@@ -12,6 +12,30 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoThousandeyesFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     virtualApplications: [{
+ *         instanceId: "1",
+ *         applicationType: "te",
+ *         teAccountGroupToken: "1234567",
+ *         teVpn: 1,
+ *         teAgentIp: "1.1.1.2/24",
+ *         teDefaultGateway: "1.1.1.255",
+ *         teNameServer: "10.2.2.2",
+ *         teHostname: "agent1",
+ *         teWebProxyType: "static",
+ *         teProxyHost: "3.3.3.3",
+ *         teProxyPort: 80,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

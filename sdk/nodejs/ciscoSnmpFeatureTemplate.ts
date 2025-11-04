@@ -12,6 +12,53 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoSnmpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     shutdown: false,
+ *     contact: "Max",
+ *     location: "Building 1",
+ *     views: [{
+ *         name: "VIEW1",
+ *         objectIdentifiers: [{
+ *             id: "1.2.3",
+ *             exclude: true,
+ *         }],
+ *     }],
+ *     communities: [{
+ *         name: "community1",
+ *         view: "VIEW1",
+ *         authorization: "read-only",
+ *     }],
+ *     groups: [{
+ *         name: "GROUP1",
+ *         securityLevel: "auth-priv",
+ *         view: "VIEW1",
+ *     }],
+ *     users: [{
+ *         name: "user1",
+ *         authenticationProtocol: "sha",
+ *         authenticationPassword: "password123",
+ *         privacyProtocol: "aes-cfb-128",
+ *         privacyPassword: "password123",
+ *         group: "GROUP1",
+ *     }],
+ *     trapTargets: [{
+ *         vpnId: 1,
+ *         ip: "1.1.1.1",
+ *         udpPort: 12345,
+ *         communityName: "community1",
+ *         user: "user1",
+ *         sourceInterface: "e1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -15,6 +15,44 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoThousandeyesFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VirtualApplications = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoThousandeyesFeatureTemplateVirtualApplicationArgs
+    ///             {
+    ///                 InstanceId = "1",
+    ///                 ApplicationType = "te",
+    ///                 TeAccountGroupToken = "1234567",
+    ///                 TeVpn = 1,
+    ///                 TeAgentIp = "1.1.1.2/24",
+    ///                 TeDefaultGateway = "1.1.1.255",
+    ///                 TeNameServer = "10.2.2.2",
+    ///                 TeHostname = "agent1",
+    ///                 TeWebProxyType = "static",
+    ///                 TeProxyHost = "3.3.3.3",
+    ///                 TeProxyPort = 80,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

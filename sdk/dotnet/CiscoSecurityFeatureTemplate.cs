@@ -15,6 +15,73 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSecurityFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         RekeyInterval = 86400,
+    ///         ReplayWindow = "64",
+    ///         ExtendedArWindow = 256,
+    ///         AuthenticationTypes = new[]
+    ///         {
+    ///             "none",
+    ///         },
+    ///         IntegrityTypes = new[]
+    ///         {
+    ///             "none",
+    ///         },
+    ///         PairwiseKeying = true,
+    ///         Keychains = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecurityFeatureTemplateKeychainArgs
+    ///             {
+    ///                 Name = "CHAIN1",
+    ///                 KeyId = 1,
+    ///             },
+    ///         },
+    ///         Keys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecurityFeatureTemplateKeyArgs
+    ///             {
+    ///                 Id = "1",
+    ///                 ChainName = "CHAIN1",
+    ///                 SendId = 0,
+    ///                 ReceiveId = 0,
+    ///                 CryptoAlgorithm = "hmac-sha-256",
+    ///                 KeyString = "abc123",
+    ///                 SendLifetimeLocal = true,
+    ///                 SendLifetimeStartTime = "2022-12-31T23:59",
+    ///                 SendLifetimeEndTimeFormat = "infinite",
+    ///                 SendLifetimeDuration = 1000,
+    ///                 SendLifetimeEndTime = "2032-12-31T23:59",
+    ///                 SendLifetimeInfinite = true,
+    ///                 AcceptLifetimeLocal = true,
+    ///                 AcceptLifetimeStartTime = "2022-12-31T23:59",
+    ///                 AcceptLifetimeEndTimeFormat = "infinite",
+    ///                 AcceptLifetimeDuration = 1000,
+    ///                 AcceptLifetimeEndTime = "2032-12-31T23:59",
+    ///                 AcceptLifetimeInfinite = true,
+    ///                 IncludeTcpOptions = false,
+    ///                 AcceptAoMismatch = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

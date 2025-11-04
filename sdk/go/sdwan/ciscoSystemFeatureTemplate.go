@@ -17,6 +17,93 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSystemFeatureTemplate(ctx, "example", &sdwan.CiscoSystemFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Timezone:          pulumi.String("UTC"),
+//				Hostname:          pulumi.String("Router1"),
+//				SystemDescription: pulumi.String("My Description"),
+//				Location:          pulumi.String("Building 1"),
+//				Latitude:          pulumi.Float64(40),
+//				Longitude:         pulumi.Float64(50),
+//				GeoFencing:        pulumi.Bool(true),
+//				GeoFencingRange:   pulumi.Int(1000),
+//				GeoFencingSms:     pulumi.Bool(true),
+//				GeoFencingSmsPhoneNumbers: sdwan.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArray{
+//					&sdwan.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs{
+//						Number: pulumi.String("+1234567"),
+//					},
+//				},
+//				DeviceGroups: pulumi.StringArray{
+//					pulumi.String("group1"),
+//				},
+//				ControllerGroupLists: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				SystemIp:            pulumi.String("5.5.5.5"),
+//				OverlayId:           pulumi.Int(1),
+//				SiteId:              pulumi.Int(1),
+//				PortOffset:          pulumi.Int(1),
+//				PortHopping:         pulumi.Bool(true),
+//				ControlSessionPps:   pulumi.Int(300),
+//				TrackTransport:      pulumi.Bool(true),
+//				TrackInterfaceTag:   pulumi.Int(1),
+//				ConsoleBaudRate:     pulumi.String("115200"),
+//				MaxOmpSessions:      pulumi.Int(5),
+//				MultiTenant:         pulumi.Bool(true),
+//				TrackDefaultGateway: pulumi.Bool(true),
+//				AdminTechOnFailure:  pulumi.Bool(true),
+//				IdleTimeout:         pulumi.Int(100),
+//				Trackers: sdwan.CiscoSystemFeatureTemplateTrackerArray{
+//					&sdwan.CiscoSystemFeatureTemplateTrackerArgs{
+//						Name:       pulumi.String("tracker1"),
+//						EndpointIp: pulumi.String("5.6.7.8"),
+//						Threshold:  pulumi.Int(300),
+//						Interval:   pulumi.Int(60),
+//						Multiplier: pulumi.Int(3),
+//						Type:       pulumi.String("interface"),
+//					},
+//				},
+//				ObjectTrackers: sdwan.CiscoSystemFeatureTemplateObjectTrackerArray{
+//					&sdwan.CiscoSystemFeatureTemplateObjectTrackerArgs{
+//						ObjectNumber: pulumi.Int(1),
+//						Interface:    pulumi.String("e1"),
+//					},
+//				},
+//				OnDemandTunnel:            pulumi.Bool(true),
+//				OnDemandTunnelIdleTimeout: pulumi.Int(10),
+//				AffinityGroupNumber:       pulumi.Int(5),
+//				AffinityGroupPreferences: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				TransportGateway:      pulumi.Bool(true),
+//				EnableMrfMigration:    pulumi.String("enabled"),
+//				MigrationBgpCommunity: pulumi.Int(100),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

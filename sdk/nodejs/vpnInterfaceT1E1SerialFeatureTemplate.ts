@@ -12,6 +12,87 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.VpnInterfaceT1E1SerialFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     serialInterfaceName: "SERIAL1",
+ *     interfaceDescription: "My description",
+ *     ipv4Address: "1.2.3.4/24",
+ *     ipv6Address: "2001:0:0:1::/64",
+ *     ipv6AccessLists: [{
+ *         direction: "in",
+ *         aclName: "ACL1",
+ *     }],
+ *     enableCoreRegion: true,
+ *     coreRegion: "core",
+ *     secondaryRegion: "off",
+ *     tunnelInterfaceEncapsulations: [{
+ *         encapsulation: "gre",
+ *         preference: 4294967,
+ *         weight: 250,
+ *     }],
+ *     tunnelInterfaceGroups: [42949672],
+ *     tunnelInterfaceBorder: true,
+ *     perTunnelQos: true,
+ *     perTunnelQosAggregator: false,
+ *     tunnelQosMode: "spoke",
+ *     tunnelInterfaceColor: "custom1",
+ *     tunnelInterfaceLastResortCircuit: false,
+ *     tunnelInterfaceLowBandwidthLink: false,
+ *     tunnelInterfaceTunnelTcpMss: 1460,
+ *     tunnelInterfaceClearDontFragment: false,
+ *     tunnelInterfaceNetworkBroadcast: false,
+ *     tunnelInterfaceControlConnections: 8,
+ *     tunnelInterfaceVbondAsStunServer: false,
+ *     tunnelInterfaceExcludeControllerGroupLists: [100],
+ *     tunnelInterfaceVmanageConnectionPreference: 5,
+ *     tunnelInterfacePortHop: false,
+ *     tunnelInterfaceRestrict: false,
+ *     tunnelInterfaceCarrier: "carrier1",
+ *     tunnelInterfaceNatRefreshInterval: 15,
+ *     tunnelInterfaceHelloInterval: 1000,
+ *     tunnelInterfaceHelloTolerance: 12,
+ *     tunnelInterfaceBindLoopbackTunnel: "12",
+ *     tunnelInterfaceAllowAll: false,
+ *     tunnelInterfaceAllowBgp: false,
+ *     tunnelInterfaceAllowDhcp: true,
+ *     tunnelInterfaceAllowDns: true,
+ *     tunnelInterfaceAllowIcmp: true,
+ *     tunnelInterfaceAllowSsh: false,
+ *     tunnelInterfaceAllowNtp: false,
+ *     tunnelInterfaceAllowNetconf: false,
+ *     tunnelInterfaceAllowOspf: false,
+ *     tunnelInterfaceAllowStun: false,
+ *     tunnelInterfaceAllowSnmp: false,
+ *     tunnelInterfaceAllowHttps: true,
+ *     clearDontFragmentBit: false,
+ *     pmtuDiscovery: false,
+ *     ipMtu: 1500,
+ *     staticIngressQos: 6,
+ *     tcpMss: 720,
+ *     tlocExtension: "tloc",
+ *     shutdown: true,
+ *     autonegotiate: true,
+ *     shapingRate: 10000000,
+ *     qosMap: "test",
+ *     qosMapVpn: "test",
+ *     interfaceBandwidthCapacity: 128,
+ *     clockRate: "5300000",
+ *     encapsulation: "hdlc",
+ *     interfaceDownstreamBandwidthCapacity: 10000000,
+ *     writeRule: "RULE1",
+ *     ipv4AccessLists: [{
+ *         direction: "in",
+ *         aclName: "ACL2",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

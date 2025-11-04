@@ -12,6 +12,33 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceWirelessLanFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     enable24g: true,
+ *     enable5g: true,
+ *     ssids: [{
+ *         ssidName: "SSID_1",
+ *         adminState: true,
+ *         broadcastSsid: true,
+ *         vlanId: 1,
+ *         radioType: "all",
+ *         securityType: "personal",
+ *         passphrase: "MyPassword123",
+ *         qosProfile: "silver",
+ *     }],
+ *     country: "GB",
+ *     username: "user1",
+ *     password: "Test@316s13",
+ *     meDynamicIpEnabled: true,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

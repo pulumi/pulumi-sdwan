@@ -116,6 +116,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PrefixListVersion { get; set; }
 
         /// <summary>
+        /// Region ID, Attribute conditional on `Type` being equal to `regionId`
+        ///   - Range: `0`-`63`
+        /// </summary>
+        [Input("regionId")]
+        public Input<int>? RegionId { get; set; }
+
+        /// <summary>
+        /// Region list ID, Attribute conditional on `Type` being equal to `regionList`
+        /// </summary>
+        [Input("regionListId")]
+        public Input<string>? RegionListId { get; set; }
+
+        /// <summary>
+        /// Role, Attribute conditional on `Type` being equal to `regionId`
+        ///   - Choices: `border-router`, `edge-router`
+        /// </summary>
+        [Input("role")]
+        public Input<string>? Role { get; set; }
+
+        /// <summary>
         /// Site ID, Attribute conditional on `Type` being equal to `siteId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
@@ -167,7 +187,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `colorList`, `Community`, `expandedCommunity`, `ompTag`, `Origin`, `Originator`, `Preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `Vpn`, `Tloc`, `siteId`, `Carrier`, `domainId`, `groupId`
+        ///   - Choices: `colorList`, `Community`, `expandedCommunity`, `ompTag`, `Origin`, `Originator`, `Preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `Vpn`, `Tloc`, `siteId`, `Carrier`, `domainId`, `groupId`, `regionId`, `Role`, `regionList`
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

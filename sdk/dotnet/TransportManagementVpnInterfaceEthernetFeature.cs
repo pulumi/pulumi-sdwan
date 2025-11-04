@@ -15,6 +15,67 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportManagementVpnInterfaceEthernetFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         TransportManagementVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+    ///         Shutdown = true,
+    ///         InterfaceName = "GigabitEthernet1",
+    ///         InterfaceDescription = "Transport Management VPN Interface Ethernet",
+    ///         Ipv4ConfigurationType = "static",
+    ///         Ipv4Address = "1.2.3.4",
+    ///         Ipv4SubnetMask = "0.0.0.0",
+    ///         Ipv4SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportManagementVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs
+    ///             {
+    ///                 Address = "1.2.3.4",
+    ///                 SubnetMask = "0.0.0.0",
+    ///             },
+    ///         },
+    ///         Ipv4DhcpHelpers = new[]
+    ///         {
+    ///             "1.2.3.4",
+    ///         },
+    ///         Ipv4IperfServer = "example",
+    ///         Ipv4AutoDetectBandwidth = false,
+    ///         Ipv6ConfigurationType = "static",
+    ///         Ipv6Address = "2001:0:0:1::/64",
+    ///         ArpEntries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportManagementVpnInterfaceEthernetFeatureArpEntryArgs
+    ///             {
+    ///                 IpAddress = "1.2.3.4",
+    ///                 MacAddress = "00-B0-D0-63-C2-26",
+    ///             },
+    ///         },
+    ///         Duplex = "full",
+    ///         MacAddress = "00-B0-D0-63-C2-26",
+    ///         IpMtu = 1500,
+    ///         InterfaceMtu = 1500,
+    ///         TcpMss = 505,
+    ///         Speed = "2500",
+    ///         ArpTimeout = 1200,
+    ///         Autonegotiate = false,
+    ///         MediaType = "rj45",
+    ///         LoadInterval = 30,
+    ///         IcmpRedirectDisable = true,
+    ///         IpDirectedBroadcast = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

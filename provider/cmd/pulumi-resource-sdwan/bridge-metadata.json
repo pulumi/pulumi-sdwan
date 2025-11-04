@@ -1754,6 +1754,14 @@
                     }
                 }
             },
+            "sdwan_policy_object_security_protocol_list": {
+                "current": "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_policy_object_security_scalable_group_tag_list": {
                 "current": "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList",
                 "fields": {
@@ -1798,6 +1806,48 @@
                 "current": "sdwan:index/policyObjectTlocList:PolicyObjectTlocList",
                 "fields": {
                     "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_advanced_inspection_profile": {
+                "current": "sdwan:index/policyObjectUnifiedAdvancedInspectionProfile:PolicyObjectUnifiedAdvancedInspectionProfile"
+            },
+            "sdwan_policy_object_unified_advanced_malware_protection": {
+                "current": "sdwan:index/policyObjectUnifiedAdvancedMalwareProtection:PolicyObjectUnifiedAdvancedMalwareProtection",
+                "fields": {
+                    "file_analysis_file_types": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_intrusion_prevention": {
+                "current": "sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention"
+            },
+            "sdwan_policy_object_unified_tls_ssl_decryption": {
+                "current": "sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption"
+            },
+            "sdwan_policy_object_unified_tls_ssl_profile": {
+                "current": "sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile",
+                "fields": {
+                    "decrypt_categories": {
+                        "maxItemsOne": false
+                    },
+                    "no_decrypt_categories": {
+                        "maxItemsOne": false
+                    },
+                    "pass_through_categories": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_url_filtering": {
+                "current": "sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering",
+                "fields": {
+                    "alerts": {
+                        "maxItemsOne": false
+                    },
+                    "web_categories": {
                         "maxItemsOne": false
                     }
                 }
@@ -5496,6 +5546,14 @@
                     }
                 }
             },
+            "sdwan_policy_object_security_protocol_list": {
+                "current": "sdwan:index/getPolicyObjectSecurityProtocolList:getPolicyObjectSecurityProtocolList",
+                "fields": {
+                    "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "sdwan_policy_object_security_scalable_group_tag_list": {
                 "current": "sdwan:index/getPolicyObjectSecurityScalableGroupTagList:getPolicyObjectSecurityScalableGroupTagList",
                 "fields": {
@@ -5540,6 +5598,48 @@
                 "current": "sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList",
                 "fields": {
                     "entries": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_advanced_inspection_profile": {
+                "current": "sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile"
+            },
+            "sdwan_policy_object_unified_advanced_malware_protection": {
+                "current": "sdwan:index/getPolicyObjectUnifiedAdvancedMalwareProtection:getPolicyObjectUnifiedAdvancedMalwareProtection",
+                "fields": {
+                    "file_analysis_file_types": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_intrusion_prevention": {
+                "current": "sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention"
+            },
+            "sdwan_policy_object_unified_tls_ssl_decryption": {
+                "current": "sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption"
+            },
+            "sdwan_policy_object_unified_tls_ssl_profile": {
+                "current": "sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile",
+                "fields": {
+                    "decrypt_categories": {
+                        "maxItemsOne": false
+                    },
+                    "no_decrypt_categories": {
+                        "maxItemsOne": false
+                    },
+                    "pass_through_categories": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_policy_object_unified_url_filtering": {
+                "current": "sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering",
+                "fields": {
+                    "alerts": {
+                        "maxItemsOne": false
+                    },
+                    "web_categories": {
                         "maxItemsOne": false
                     }
                 }

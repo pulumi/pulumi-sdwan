@@ -12,6 +12,49 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoSecurityFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     rekeyInterval: 86400,
+ *     replayWindow: "64",
+ *     extendedArWindow: 256,
+ *     authenticationTypes: ["none"],
+ *     integrityTypes: ["none"],
+ *     pairwiseKeying: true,
+ *     keychains: [{
+ *         name: "CHAIN1",
+ *         keyId: 1,
+ *     }],
+ *     keys: [{
+ *         id: "1",
+ *         chainName: "CHAIN1",
+ *         sendId: 0,
+ *         receiveId: 0,
+ *         cryptoAlgorithm: "hmac-sha-256",
+ *         keyString: "abc123",
+ *         sendLifetimeLocal: true,
+ *         sendLifetimeStartTime: "2022-12-31T23:59",
+ *         sendLifetimeEndTimeFormat: "infinite",
+ *         sendLifetimeDuration: 1000,
+ *         sendLifetimeEndTime: "2032-12-31T23:59",
+ *         sendLifetimeInfinite: true,
+ *         acceptLifetimeLocal: true,
+ *         acceptLifetimeStartTime: "2022-12-31T23:59",
+ *         acceptLifetimeEndTimeFormat: "infinite",
+ *         acceptLifetimeDuration: 1000,
+ *         acceptLifetimeEndTime: "2032-12-31T23:59",
+ *         acceptLifetimeInfinite: true,
+ *         includeTcpOptions: false,
+ *         acceptAoMismatch: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

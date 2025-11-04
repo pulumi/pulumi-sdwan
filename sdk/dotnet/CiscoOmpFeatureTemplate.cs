@@ -15,6 +15,55 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOmpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         GracefulRestart = true,
+    ///         OverlayAs = 1,
+    ///         SendPathLimit = 4,
+    ///         EcmpLimit = 4,
+    ///         Shutdown = false,
+    ///         OmpAdminDistanceIpv4 = 10,
+    ///         OmpAdminDistanceIpv6 = 10,
+    ///         AdvertisementInterval = 1,
+    ///         GracefulRestartTimer = 43200,
+    ///         EorTimer = 300,
+    ///         Holdtime = 60,
+    ///         IgnoreRegionPathLength = false,
+    ///         TransportGateway = "prefer",
+    ///         AdvertiseIpv4Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///                 AdvertiseExternalOspf = "external",
+    ///             },
+    ///         },
+    ///         AdvertiseIpv6Routes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs
+    ///             {
+    ///                 Protocol = "ospf",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

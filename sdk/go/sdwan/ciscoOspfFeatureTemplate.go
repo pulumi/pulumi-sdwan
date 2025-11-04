@@ -17,6 +17,97 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoOspfFeatureTemplate(ctx, "example", &sdwan.CiscoOspfFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				RouterId:                              pulumi.String("1.2.3.4"),
+//				AutoCostReferenceBandwidth:            pulumi.Int(100000),
+//				CompatibleRfc1583:                     pulumi.Bool(true),
+//				DefaultInformationOriginate:           pulumi.Bool(true),
+//				DefaultInformationOriginateAlways:     pulumi.Bool(true),
+//				DefaultInformationOriginateMetric:     pulumi.Int(100),
+//				DefaultInformationOriginateMetricType: pulumi.String("type1"),
+//				DistanceExternal:                      pulumi.Int(111),
+//				DistanceInterArea:                     pulumi.Int(111),
+//				DistanceIntraArea:                     pulumi.Int(112),
+//				TimersSpfDelay:                        pulumi.Int(300),
+//				TimersSpfInitialHold:                  pulumi.Int(2000),
+//				TimersSpfMaxHold:                      pulumi.Int(20000),
+//				Redistributes: sdwan.CiscoOspfFeatureTemplateRedistributeArray{
+//					&sdwan.CiscoOspfFeatureTemplateRedistributeArgs{
+//						Protocol:    pulumi.String("static"),
+//						RoutePolicy: pulumi.String("RP1"),
+//						NatDia:      pulumi.Bool(true),
+//					},
+//				},
+//				MaxMetricRouterLsas: sdwan.CiscoOspfFeatureTemplateMaxMetricRouterLsaArray{
+//					&sdwan.CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs{
+//						AdType: pulumi.String("on-startup"),
+//						Time:   pulumi.Int(100),
+//					},
+//				},
+//				RoutePolicies: sdwan.CiscoOspfFeatureTemplateRoutePolicyArray{
+//					&sdwan.CiscoOspfFeatureTemplateRoutePolicyArgs{
+//						Direction:  pulumi.String("in"),
+//						PolicyName: pulumi.String("POLICY1"),
+//					},
+//				},
+//				Areas: sdwan.CiscoOspfFeatureTemplateAreaArray{
+//					&sdwan.CiscoOspfFeatureTemplateAreaArgs{
+//						AreaNumber:    pulumi.Int(1),
+//						Stub:          pulumi.Bool(false),
+//						StubNoSummary: pulumi.Bool(false),
+//						Nssa:          pulumi.Bool(false),
+//						NssaNoSummary: pulumi.Bool(true),
+//						Interfaces: sdwan.CiscoOspfFeatureTemplateAreaInterfaceArray{
+//							&sdwan.CiscoOspfFeatureTemplateAreaInterfaceArgs{
+//								Name:                             pulumi.String("e1"),
+//								HelloInterval:                    pulumi.Int(20),
+//								DeadInterval:                     pulumi.Int(60),
+//								RetransmitInterval:               pulumi.Int(10),
+//								Cost:                             pulumi.Int(100),
+//								Priority:                         pulumi.Int(10),
+//								Network:                          pulumi.String("point-to-point"),
+//								PassiveInterface:                 pulumi.Bool(true),
+//								AuthenticationType:               pulumi.String("message-digest"),
+//								AuthenticationMessageDigestKeyId: pulumi.Int(1),
+//								AuthenticationMessageDigestKey:   pulumi.String("cisco123"),
+//							},
+//						},
+//						Ranges: sdwan.CiscoOspfFeatureTemplateAreaRangeArray{
+//							&sdwan.CiscoOspfFeatureTemplateAreaRangeArgs{
+//								Address:     pulumi.String("1.1.1.0/24"),
+//								Cost:        pulumi.Int(100),
+//								NoAdvertise: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

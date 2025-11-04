@@ -16,6 +16,51 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewIpv6DeviceAclPolicyDefinition(ctx, "example", &sdwan.Ipv6DeviceAclPolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("drop"),
+//				Sequences: sdwan.Ipv6DeviceAclPolicyDefinitionSequenceArray{
+//					&sdwan.Ipv6DeviceAclPolicyDefinitionSequenceArgs{
+//						Id:         pulumi.Int(10),
+//						Name:       pulumi.String("Sequence 10"),
+//						BaseAction: pulumi.String("accept"),
+//						MatchEntries: sdwan.Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArray{
+//							&sdwan.Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs{
+//								Type:            pulumi.String("destinationPort"),
+//								DestinationPort: pulumi.Int(22),
+//							},
+//						},
+//						ActionEntries: sdwan.Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArray{
+//							&sdwan.Ipv6DeviceAclPolicyDefinitionSequenceActionEntryArgs{
+//								Type:        pulumi.String("count"),
+//								CounterName: pulumi.String("count1"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

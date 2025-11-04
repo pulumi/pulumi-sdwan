@@ -16,6 +16,50 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCflowdPolicyDefinition(ctx, "example", &sdwan.CflowdPolicyDefinitionArgs{
+//				Name:                pulumi.String("Example"),
+//				Description:         pulumi.String("My description"),
+//				ActiveFlowTimeout:   pulumi.Int(100),
+//				InactiveFlowTimeout: pulumi.Int(10),
+//				SamplingInterval:    pulumi.Int(10),
+//				FlowRefresh:         pulumi.Int(120),
+//				Protocol:            pulumi.String("ipv4"),
+//				Tos:                 pulumi.Bool(true),
+//				RemarkedDscp:        pulumi.Bool(true),
+//				Collectors: sdwan.CflowdPolicyDefinitionCollectorArray{
+//					&sdwan.CflowdPolicyDefinitionCollectorArgs{
+//						VpnId:               pulumi.Int(1),
+//						IpAddress:           pulumi.String("10.0.0.1"),
+//						Port:                pulumi.Int(12345),
+//						Transport:           pulumi.String("transport_tcp"),
+//						SourceInterface:     pulumi.String("Ethernet1"),
+//						ExportSpreading:     pulumi.String("enable"),
+//						BfdMetricsExporting: pulumi.Bool(true),
+//						ExportingInterval:   pulumi.Int(86400),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

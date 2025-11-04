@@ -14,6 +14,30 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.IpsSignatureListPolicyObject("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.IpsSignatureListPolicyObjectEntryArgs
+    ///             {
+    ///                 GeneratorId = 1111,
+    ///                 SignatureId = 2222,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

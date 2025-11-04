@@ -26,6 +26,68 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SystemLoggingFeature;
+ * import com.pulumi.sdwan.SystemLoggingFeatureArgs;
+ * import com.pulumi.sdwan.inputs.SystemLoggingFeatureTlsProfileArgs;
+ * import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv4ServerArgs;
+ * import com.pulumi.sdwan.inputs.SystemLoggingFeatureIpv6ServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SystemLoggingFeature("example", SystemLoggingFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .diskEnable(true)
+ *             .diskFileSize(9)
+ *             .diskFileRotate(10)
+ *             .tlsProfiles(SystemLoggingFeatureTlsProfileArgs.builder()
+ *                 .profile("test")
+ *                 .tlsVersion("TLSv1.1")
+ *                 .cipherSuites("aes-128-cbc-sha")
+ *                 .build())
+ *             .ipv4Servers(SystemLoggingFeatureIpv4ServerArgs.builder()
+ *                 .hostnameIp("1.1.1.1")
+ *                 .vpn(512)
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .priority("informational")
+ *                 .tlsEnable(true)
+ *                 .tlsPropertiesCustomProfile(true)
+ *                 .tlsPropertiesProfile("test")
+ *                 .build())
+ *             .ipv6Servers(SystemLoggingFeatureIpv6ServerArgs.builder()
+ *                 .hostnameIp("1.1.1.1")
+ *                 .vpn(512)
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .priority("informational")
+ *                 .tlsEnable(true)
+ *                 .tlsPropertiesCustomProfile(true)
+ *                 .tlsPropertiesProfile("test")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

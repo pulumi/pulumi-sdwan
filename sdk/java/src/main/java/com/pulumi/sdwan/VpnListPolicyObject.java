@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnListPolicyObject;
+ * import com.pulumi.sdwan.VpnListPolicyObjectArgs;
+ * import com.pulumi.sdwan.inputs.VpnListPolicyObjectEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnListPolicyObject("example", VpnListPolicyObjectArgs.builder()
+ *             .name("Example")
+ *             .entries(VpnListPolicyObjectEntryArgs.builder()
+ *                 .vpnId("100-200")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -235,6 +235,23 @@ class SystemIpv4DeviceAccessFeature(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemIpv4DeviceAccessFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="drop",
+            sequences=[{
+                "id": 1,
+                "name": "SEQ_1",
+                "base_action": "accept",
+                "device_access_port": 161,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -266,6 +283,23 @@ class SystemIpv4DeviceAccessFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemIpv4DeviceAccessFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="drop",
+            sequences=[{
+                "id": 1,
+                "name": "SEQ_1",
+                "base_action": "accept",
+                "device_access_port": 161,
+            }])
+        ```
 
         ## Import
 

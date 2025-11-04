@@ -85,6 +85,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PrefixListVersion;
         /// <summary>
+        /// Region ID, Attribute conditional on `Type` being equal to `regionId`
+        ///   - Range: `0`-`63`
+        /// </summary>
+        public readonly int? RegionId;
+        /// <summary>
+        /// Region list ID, Attribute conditional on `Type` being equal to `regionList`
+        /// </summary>
+        public readonly string? RegionListId;
+        /// <summary>
+        /// Role, Attribute conditional on `Type` being equal to `regionId`
+        ///   - Choices: `border-router`, `edge-router`
+        /// </summary>
+        public readonly string? Role;
+        /// <summary>
         /// Site ID, Attribute conditional on `Type` being equal to `siteId`
         ///   - Range: `0`-`4294967295`
         /// </summary>
@@ -120,7 +134,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly int? TlocListVersion;
         /// <summary>
         /// Type of match entry
-        ///   - Choices: `colorList`, `Community`, `expandedCommunity`, `ompTag`, `Origin`, `Originator`, `Preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `Vpn`, `Tloc`, `siteId`, `Carrier`, `domainId`, `groupId`
+        ///   - Choices: `colorList`, `Community`, `expandedCommunity`, `ompTag`, `Origin`, `Originator`, `Preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `Vpn`, `Tloc`, `siteId`, `Carrier`, `domainId`, `groupId`, `regionId`, `Role`, `regionList`
         /// </summary>
         public readonly string Type;
         /// <summary>
@@ -171,6 +185,12 @@ namespace Pulumi.Sdwan.Outputs
 
             int? prefixListVersion,
 
+            int? regionId,
+
+            string? regionListId,
+
+            string? role,
+
             int? siteId,
 
             string? siteListId,
@@ -211,6 +231,9 @@ namespace Pulumi.Sdwan.Outputs
             Preference = preference;
             PrefixListId = prefixListId;
             PrefixListVersion = prefixListVersion;
+            RegionId = regionId;
+            RegionListId = regionListId;
+            Role = role;
             SiteId = siteId;
             SiteListId = siteListId;
             SiteListVersion = siteListVersion;

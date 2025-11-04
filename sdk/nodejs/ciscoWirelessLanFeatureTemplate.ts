@@ -12,6 +12,38 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoWirelessLanFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     shutdown24ghz: false,
+ *     shutdown5ghz: false,
+ *     ssids: [{
+ *         wirelessNetworkName: "WLAN1",
+ *         adminState: false,
+ *         broadcastSsid: true,
+ *         vlanId: 1,
+ *         radioType: "24ghz",
+ *         securityType: "enterprise",
+ *         radiusServerIp: "1.2.3.4",
+ *         radiusServerPort: 1812,
+ *         radiusServerSecret: "MySecret1",
+ *         passphrase: "passphrase",
+ *         qosProfile: "silver",
+ *     }],
+ *     country: "AE",
+ *     username: "user1",
+ *     password: "myPassword01",
+ *     controllerIpAddress: "0.0.0.0",
+ *     controllerSubnetMask: "0.0.0.0",
+ *     controllerDefaultGateway: "0.0.0.0",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -23,6 +23,56 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportT1E1ControllerFeature;
+ * import com.pulumi.sdwan.TransportT1E1ControllerFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportT1E1ControllerFeatureEntryArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportT1E1ControllerFeature("example", TransportT1E1ControllerFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .type("t1")
+ *             .slot("11")
+ *             .entries(TransportT1E1ControllerFeatureEntryArgs.builder()
+ *                 .t1Description("T1")
+ *                 .t1Framing("esf")
+ *                 .t1Linecode("ami")
+ *                 .cableLength("long")
+ *                 .lengthLong("-7.5db")
+ *                 .clockSource("line")
+ *                 .lineMode("primary")
+ *                 .description("desc")
+ *                 .channelGroups(TransportT1E1ControllerFeatureEntryChannelGroupArgs.builder()
+ *                     .channelGroup(12)
+ *                     .timeSlot("timeslots 15")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

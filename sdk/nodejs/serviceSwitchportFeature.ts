@@ -12,6 +12,46 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceSwitchportFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     interfaces: [{
+ *         interfaceName: "GigabitEthernet",
+ *         mode: "access",
+ *         shutdown: true,
+ *         speed: "10",
+ *         duplex: "full",
+ *         switchportAccessVlan: 1,
+ *         switchportTrunkAllowedVlans: "1",
+ *         switchportTrunkNativeVlan: 1,
+ *         portControl: "auto",
+ *         voiceVlan: 1,
+ *         paeEnable: true,
+ *         macAuthenticationBypass: false,
+ *         hostMode: "single-host",
+ *         enablePeriodicReauth: false,
+ *         inactivity: 60,
+ *         reauthentication: 1,
+ *         controlDirection: "both",
+ *         restrictedVlan: 1,
+ *         guestVlan: 1,
+ *         criticalVlan: 1,
+ *         enableVoice: false,
+ *     }],
+ *     ageOutTime: 300,
+ *     staticMacAddresses: [{
+ *         macAddress: "01:02:03:04:05:06",
+ *         vlanId: 1,
+ *         interfaceName: "GigabitEthernet0/0/0",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

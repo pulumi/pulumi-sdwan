@@ -14,6 +14,51 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.RoutePolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         DefaultAction = "reject",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.RoutePolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 10,
+    ///                 IpType = "ipv4",
+    ///                 Name = "Sequence 10",
+    ///                 BaseAction = "accept",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.RoutePolicyDefinitionSequenceMatchEntryArgs
+    ///                     {
+    ///                         Type = "metric",
+    ///                         Metric = 100,
+    ///                     },
+    ///                 },
+    ///                 ActionEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.RoutePolicyDefinitionSequenceActionEntryArgs
+    ///                     {
+    ///                         Type = "aggregator",
+    ///                         Aggregator = 10,
+    ///                         AggregatorIpAddress = "10.1.2.3",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

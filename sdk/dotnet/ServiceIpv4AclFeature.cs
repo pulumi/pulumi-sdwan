@@ -15,6 +15,66 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceIpv4AclFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceArgs
+    ///             {
+    ///                 SequenceId = 1,
+    ///                 SequenceName = "AccessControlList1",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceMatchEntryArgs
+    ///                     {
+    ///                         Dscps = new[]
+    ///                         {
+    ///                             16,
+    ///                         },
+    ///                         PacketLength = "1500",
+    ///                         Protocols = new[]
+    ///                         {
+    ///                             1,
+    ///                         },
+    ///                         SourcePorts = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceMatchEntrySourcePortArgs
+    ///                             {
+    ///                                 Port = "8000",
+    ///                             },
+    ///                         },
+    ///                         TcpState = "syn",
+    ///                     },
+    ///                 },
+    ///                 Actions = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceIpv4AclFeatureSequenceActionArgs
+    ///                     {
+    ///                         AcceptSetDscp = 60,
+    ///                         AcceptCounterName = "COUNTER_1",
+    ///                         AcceptLog = false,
+    ///                         AcceptSetNextHop = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

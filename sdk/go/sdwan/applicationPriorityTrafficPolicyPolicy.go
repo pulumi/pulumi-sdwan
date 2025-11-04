@@ -17,6 +17,57 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewApplicationPriorityTrafficPolicyPolicy(ctx, "example", &sdwan.ApplicationPriorityTrafficPolicyPolicyArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("accept"),
+//				Vpns: pulumi.StringArray{
+//					pulumi.String("edge_basic_vpn1"),
+//				},
+//				Direction: pulumi.String("all"),
+//				Sequences: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceArray{
+//					&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceArgs{
+//						SequenceId:   pulumi.Int(1),
+//						SequenceName: pulumi.String("traffic"),
+//						BaseAction:   pulumi.String("accept"),
+//						Protocol:     pulumi.String("ipv4"),
+//						MatchEntries: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArray{
+//							&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs{
+//								Dscp: pulumi.Int(1),
+//							},
+//						},
+//						Actions: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArray{
+//							&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArgs{
+//								SetParameters: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArray{
+//									&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs{},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

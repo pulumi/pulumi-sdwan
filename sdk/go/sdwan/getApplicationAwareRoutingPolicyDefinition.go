@@ -56,6 +56,12 @@ type LookupApplicationAwareRoutingPolicyDefinitionArgs struct {
 
 // A collection of values returned by getApplicationAwareRoutingPolicyDefinition.
 type LookupApplicationAwareRoutingPolicyDefinitionResult struct {
+	// Type of default action
+	DefaultAction string `pulumi:"defaultAction"`
+	// SLA class list ID
+	DefaultActionSlaClassListId string `pulumi:"defaultActionSlaClassListId"`
+	// SLA class list version
+	DefaultActionSlaClassListVersion int `pulumi:"defaultActionSlaClassListVersion"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
 	// The id of the object
@@ -102,6 +108,25 @@ func (o LookupApplicationAwareRoutingPolicyDefinitionResultOutput) ToLookupAppli
 
 func (o LookupApplicationAwareRoutingPolicyDefinitionResultOutput) ToLookupApplicationAwareRoutingPolicyDefinitionResultOutputWithContext(ctx context.Context) LookupApplicationAwareRoutingPolicyDefinitionResultOutput {
 	return o
+}
+
+// Type of default action
+func (o LookupApplicationAwareRoutingPolicyDefinitionResultOutput) DefaultAction() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationAwareRoutingPolicyDefinitionResult) string { return v.DefaultAction }).(pulumi.StringOutput)
+}
+
+// SLA class list ID
+func (o LookupApplicationAwareRoutingPolicyDefinitionResultOutput) DefaultActionSlaClassListId() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationAwareRoutingPolicyDefinitionResult) string {
+		return v.DefaultActionSlaClassListId
+	}).(pulumi.StringOutput)
+}
+
+// SLA class list version
+func (o LookupApplicationAwareRoutingPolicyDefinitionResultOutput) DefaultActionSlaClassListVersion() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupApplicationAwareRoutingPolicyDefinitionResult) int {
+		return v.DefaultActionSlaClassListVersion
+	}).(pulumi.IntOutput)
 }
 
 // The description of the policy definition

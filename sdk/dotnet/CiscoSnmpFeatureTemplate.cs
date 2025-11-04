@@ -15,6 +15,87 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSnmpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Shutdown = false,
+    ///         Contact = "Max",
+    ///         Location = "Building 1",
+    ///         Views = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSnmpFeatureTemplateViewArgs
+    ///             {
+    ///                 Name = "VIEW1",
+    ///                 ObjectIdentifiers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoSnmpFeatureTemplateViewObjectIdentifierArgs
+    ///                     {
+    ///                         Id = "1.2.3",
+    ///                         Exclude = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Communities = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSnmpFeatureTemplateCommunityArgs
+    ///             {
+    ///                 Name = "community1",
+    ///                 View = "VIEW1",
+    ///                 Authorization = "read-only",
+    ///             },
+    ///         },
+    ///         Groups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSnmpFeatureTemplateGroupArgs
+    ///             {
+    ///                 Name = "GROUP1",
+    ///                 SecurityLevel = "auth-priv",
+    ///                 View = "VIEW1",
+    ///             },
+    ///         },
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSnmpFeatureTemplateUserArgs
+    ///             {
+    ///                 Name = "user1",
+    ///                 AuthenticationProtocol = "sha",
+    ///                 AuthenticationPassword = "password123",
+    ///                 PrivacyProtocol = "aes-cfb-128",
+    ///                 PrivacyPassword = "password123",
+    ///                 Group = "GROUP1",
+    ///             },
+    ///         },
+    ///         TrapTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSnmpFeatureTemplateTrapTargetArgs
+    ///             {
+    ///                 VpnId = 1,
+    ///                 Ip = "1.1.1.1",
+    ///                 UdpPort = 12345,
+    ///                 CommunityName = "community1",
+    ///                 User = "user1",
+    ///                 SourceInterface = "e1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

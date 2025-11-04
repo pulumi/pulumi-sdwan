@@ -15,6 +15,168 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOspfv3FeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Ipv4RouterId = "1.2.3.4",
+    ///         Ipv4AutoCostReferenceBandwidth = 100000,
+    ///         Ipv4CompatibleRfc1583 = true,
+    ///         Ipv4DefaultInformationOriginate = true,
+    ///         Ipv4DefaultInformationOriginateAlways = true,
+    ///         Ipv4DefaultInformationOriginateMetric = 100,
+    ///         Ipv4DefaultInformationOriginateMetricType = "type1",
+    ///         Ipv4DistanceExternal = 111,
+    ///         Ipv4DistanceInterArea = 111,
+    ///         Ipv4DistanceIntraArea = 112,
+    ///         Ipv4TimersSpfDelay = 300,
+    ///         Ipv4TimersSpfInitialHold = 2000,
+    ///         Ipv4TimersSpfMaxHold = 20000,
+    ///         Ipv4Distance = 110,
+    ///         Ipv4PolicyName = "POLICY1",
+    ///         Ipv4Filter = false,
+    ///         Ipv4Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4RedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 RoutePolicy = "RP1",
+    ///                 NatDia = true,
+    ///             },
+    ///         },
+    ///         Ipv4MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4MaxMetricRouterLsaArgs
+    ///             {
+    ///                 AdType = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         Ipv4Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaArgs
+    ///             {
+    ///                 AreaNumber = 1,
+    ///                 Stub = false,
+    ///                 StubNoSummary = false,
+    ///                 Nssa = false,
+    ///                 NssaNoSummary = true,
+    ///                 Translate = "always",
+    ///                 Normal = false,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "md5",
+    ///                         AuthenticationKey = "authenticationKey",
+    ///                         IpsecSpi = 256,
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv4AreaRangeArgs
+    ///                     {
+    ///                         Address = "1.1.1.0/24",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6RouterId = "1.2.3.4",
+    ///         Ipv6AutoCostReferenceBandwidth = 100000,
+    ///         Ipv6CompatibleRfc1583 = true,
+    ///         Ipv6DefaultInformationOriginate = true,
+    ///         Ipv6DefaultInformationOriginateAlways = true,
+    ///         Ipv6DefaultInformationOriginateMetric = 100,
+    ///         Ipv6DefaultInformationOriginateMetricType = "type1",
+    ///         Ipv6DistanceExternal = 111,
+    ///         Ipv6DistanceInterArea = 111,
+    ///         Ipv6DistanceIntraArea = 112,
+    ///         Ipv6TimersSpfDelay = 300,
+    ///         Ipv6TimersSpfInitialHold = 2000,
+    ///         Ipv6TimersSpfMaxHold = 20000,
+    ///         Ipv6Distance = 110,
+    ///         Ipv6PolicyName = "POLICY2",
+    ///         Ipv6Filter = false,
+    ///         Ipv6Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6RedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 RoutePolicy = "RP1",
+    ///             },
+    ///         },
+    ///         Ipv6MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6MaxMetricRouterLsaArgs
+    ///             {
+    ///                 AdType = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         Ipv6Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaArgs
+    ///             {
+    ///                 AreaNumber = 1,
+    ///                 Stub = false,
+    ///                 StubNoSummary = false,
+    ///                 Nssa = false,
+    ///                 NssaNoSummary = true,
+    ///                 Translate = "always",
+    ///                 Normal = false,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "md5",
+    ///                         AuthenticationKey = "authenticationKey",
+    ///                         IpsecSpi = 256,
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfv3FeatureTemplateIpv6AreaRangeArgs
+    ///                     {
+    ///                         Address = "2001::/48",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

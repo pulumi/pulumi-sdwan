@@ -15,6 +15,91 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportWanVpnFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Vpn = 0,
+    ///         EnhanceEcmpKeying = true,
+    ///         PrimaryDnsAddressIpv4 = "1.2.3.4",
+    ///         SecondaryDnsAddressIpv4 = "2.3.4.5",
+    ///         PrimaryDnsAddressIpv6 = "2001:0:0:1::0",
+    ///         SecondaryDnsAddressIpv6 = "2001:0:0:2::0",
+    ///         NewHostMappings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnFeatureNewHostMappingArgs
+    ///             {
+    ///                 HostName = "example",
+    ///                 ListOfIpAddresses = new[]
+    ///                 {
+    ///                     "1.2.3.4",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnFeatureIpv4StaticRouteArgs
+    ///             {
+    ///                 NetworkAddress = "1.2.3.4",
+    ///                 SubnetMask = "0.0.0.0",
+    ///                 Gateway = "nextHop",
+    ///                 NextHops = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportWanVpnFeatureIpv4StaticRouteNextHopArgs
+    ///                     {
+    ///                         Address = "1.2.3.4",
+    ///                         AdministrativeDistance = 1,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6StaticRoutes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnFeatureIpv6StaticRouteArgs
+    ///             {
+    ///                 Prefix = "2002::/16",
+    ///                 Gateway = "nextHop",
+    ///                 NextHops = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportWanVpnFeatureIpv6StaticRouteNextHopArgs
+    ///                     {
+    ///                         Address = "2001:0:0:1::0",
+    ///                         AdministrativeDistance = 1,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnFeatureServiceArgs
+    ///             {
+    ///                 ServiceType = "TE",
+    ///             },
+    ///         },
+    ///         Nat64V4Pools = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportWanVpnFeatureNat64V4PoolArgs
+    ///             {
+    ///                 Nat64V4PoolName = "example",
+    ///                 Nat64V4PoolRangeStart = "203.0.113.50",
+    ///                 Nat64V4PoolRangeEnd = "203.0.113.100",
+    ///                 Nat64V4PoolOverload = false,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

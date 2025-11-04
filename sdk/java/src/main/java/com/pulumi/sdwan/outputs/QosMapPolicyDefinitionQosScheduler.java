@@ -32,10 +32,10 @@ public final class QosMapPolicyDefinitionQosScheduler {
      */
     private @Nullable Integer burst;
     /**
-     * @return Class map ID
+     * @return Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
-    private String classMapId;
+    private @Nullable String classMapId;
     /**
      * @return Class map version
      * 
@@ -86,11 +86,11 @@ public final class QosMapPolicyDefinitionQosScheduler {
         return Optional.ofNullable(this.burst);
     }
     /**
-     * @return Class map ID
+     * @return Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
-    public String classMapId() {
-        return this.classMapId;
+    public Optional<String> classMapId() {
+        return Optional.ofNullable(this.classMapId);
     }
     /**
      * @return Class map version
@@ -136,7 +136,7 @@ public final class QosMapPolicyDefinitionQosScheduler {
         private Integer bandwidthPercent;
         private Integer bufferPercent;
         private @Nullable Integer burst;
-        private String classMapId;
+        private @Nullable String classMapId;
         private @Nullable Integer classMapVersion;
         private String dropType;
         private Integer queue;
@@ -177,10 +177,8 @@ public final class QosMapPolicyDefinitionQosScheduler {
             return this;
         }
         @CustomType.Setter
-        public Builder classMapId(String classMapId) {
-            if (classMapId == null) {
-              throw new MissingRequiredPropertyException("QosMapPolicyDefinitionQosScheduler", "classMapId");
-            }
+        public Builder classMapId(@Nullable String classMapId) {
+
             this.classMapId = classMapId;
             return this;
         }

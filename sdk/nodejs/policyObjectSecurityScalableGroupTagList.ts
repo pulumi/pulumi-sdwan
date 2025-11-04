@@ -12,6 +12,21 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.PolicyObjectSecurityScalableGroupTagList("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "",
+ *     entries: [{
+ *         sgtName: "ANY",
+ *         tag: "65535",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

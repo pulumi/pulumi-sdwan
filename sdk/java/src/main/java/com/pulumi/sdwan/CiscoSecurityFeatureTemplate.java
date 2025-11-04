@@ -25,6 +25,73 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoSecurityFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoSecurityFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSecurityFeatureTemplateKeychainArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSecurityFeatureTemplateKeyArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoSecurityFeatureTemplate("example", CiscoSecurityFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .rekeyInterval(86400)
+ *             .replayWindow("64")
+ *             .extendedArWindow(256)
+ *             .authenticationTypes("none")
+ *             .integrityTypes("none")
+ *             .pairwiseKeying(true)
+ *             .keychains(CiscoSecurityFeatureTemplateKeychainArgs.builder()
+ *                 .name("CHAIN1")
+ *                 .keyId(1)
+ *                 .build())
+ *             .keys(CiscoSecurityFeatureTemplateKeyArgs.builder()
+ *                 .id("1")
+ *                 .chainName("CHAIN1")
+ *                 .sendId(0)
+ *                 .receiveId(0)
+ *                 .cryptoAlgorithm("hmac-sha-256")
+ *                 .keyString("abc123")
+ *                 .sendLifetimeLocal(true)
+ *                 .sendLifetimeStartTime("2022-12-31T23:59")
+ *                 .sendLifetimeEndTimeFormat("infinite")
+ *                 .sendLifetimeDuration(1000)
+ *                 .sendLifetimeEndTime("2032-12-31T23:59")
+ *                 .sendLifetimeInfinite(true)
+ *                 .acceptLifetimeLocal(true)
+ *                 .acceptLifetimeStartTime("2022-12-31T23:59")
+ *                 .acceptLifetimeEndTimeFormat("infinite")
+ *                 .acceptLifetimeDuration(1000)
+ *                 .acceptLifetimeEndTime("2032-12-31T23:59")
+ *                 .acceptLifetimeInfinite(true)
+ *                 .includeTcpOptions(false)
+ *                 .acceptAoMismatch(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

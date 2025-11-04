@@ -16,6 +16,46 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewRuleSetPolicyDefinition(ctx, "example", &sdwan.RuleSetPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Rules: sdwan.RuleSetPolicyDefinitionRuleArray{
+//					&sdwan.RuleSetPolicyDefinitionRuleArgs{
+//						Name:                   pulumi.String("Rule1"),
+//						Order:                  pulumi.Int(1),
+//						SourceIpv4Prefix:       pulumi.String("10.1.1.0/24"),
+//						SourceFqdn:             pulumi.String("cisco.com"),
+//						SourcePort:             pulumi.String("80-90"),
+//						SourceGeoLocation:      pulumi.String("AF"),
+//						DestinationIpv4Prefix:  pulumi.String("10.1.1.0/24"),
+//						DestinationFqdn:        pulumi.String("cisco.com"),
+//						DestinationPort:        pulumi.String("80-90"),
+//						DestinationGeoLocation: pulumi.String("AF"),
+//						Protocol:               pulumi.String("cifs"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

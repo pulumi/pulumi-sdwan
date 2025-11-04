@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.sdwan.inputs.ApplicationAwareRoutingPolicyDefinitionSequenceArgs;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,6 +18,53 @@ import javax.annotation.Nullable;
 public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ApplicationAwareRoutingPolicyDefinitionArgs Empty = new ApplicationAwareRoutingPolicyDefinitionArgs();
+
+    /**
+     * Type of default action
+     *   - Choices: `slaClass`
+     * 
+     */
+    @Import(name="defaultAction")
+    private @Nullable Output<String> defaultAction;
+
+    /**
+     * @return Type of default action
+     *   - Choices: `slaClass`
+     * 
+     */
+    public Optional<Output<String>> defaultAction() {
+        return Optional.ofNullable(this.defaultAction);
+    }
+
+    /**
+     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * 
+     */
+    @Import(name="defaultActionSlaClassListId")
+    private @Nullable Output<String> defaultActionSlaClassListId;
+
+    /**
+     * @return SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * 
+     */
+    public Optional<Output<String>> defaultActionSlaClassListId() {
+        return Optional.ofNullable(this.defaultActionSlaClassListId);
+    }
+
+    /**
+     * SLA class list version
+     * 
+     */
+    @Import(name="defaultActionSlaClassListVersion")
+    private @Nullable Output<Integer> defaultActionSlaClassListVersion;
+
+    /**
+     * @return SLA class list version
+     * 
+     */
+    public Optional<Output<Integer>> defaultActionSlaClassListVersion() {
+        return Optional.ofNullable(this.defaultActionSlaClassListVersion);
+    }
 
     /**
      * The description of the policy definition
@@ -66,6 +114,9 @@ public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulum
     private ApplicationAwareRoutingPolicyDefinitionArgs() {}
 
     private ApplicationAwareRoutingPolicyDefinitionArgs(ApplicationAwareRoutingPolicyDefinitionArgs $) {
+        this.defaultAction = $.defaultAction;
+        this.defaultActionSlaClassListId = $.defaultActionSlaClassListId;
+        this.defaultActionSlaClassListVersion = $.defaultActionSlaClassListVersion;
         this.description = $.description;
         this.name = $.name;
         this.sequences = $.sequences;
@@ -87,6 +138,71 @@ public final class ApplicationAwareRoutingPolicyDefinitionArgs extends com.pulum
 
         public Builder(ApplicationAwareRoutingPolicyDefinitionArgs defaults) {
             $ = new ApplicationAwareRoutingPolicyDefinitionArgs(Objects.requireNonNull(defaults));
+        }
+
+        /**
+         * @param defaultAction Type of default action
+         *   - Choices: `slaClass`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultAction(@Nullable Output<String> defaultAction) {
+            $.defaultAction = defaultAction;
+            return this;
+        }
+
+        /**
+         * @param defaultAction Type of default action
+         *   - Choices: `slaClass`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultAction(String defaultAction) {
+            return defaultAction(Output.of(defaultAction));
+        }
+
+        /**
+         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultActionSlaClassListId(@Nullable Output<String> defaultActionSlaClassListId) {
+            $.defaultActionSlaClassListId = defaultActionSlaClassListId;
+            return this;
+        }
+
+        /**
+         * @param defaultActionSlaClassListId SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultActionSlaClassListId(String defaultActionSlaClassListId) {
+            return defaultActionSlaClassListId(Output.of(defaultActionSlaClassListId));
+        }
+
+        /**
+         * @param defaultActionSlaClassListVersion SLA class list version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultActionSlaClassListVersion(@Nullable Output<Integer> defaultActionSlaClassListVersion) {
+            $.defaultActionSlaClassListVersion = defaultActionSlaClassListVersion;
+            return this;
+        }
+
+        /**
+         * @param defaultActionSlaClassListVersion SLA class list version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultActionSlaClassListVersion(Integer defaultActionSlaClassListVersion) {
+            return defaultActionSlaClassListVersion(Output.of(defaultActionSlaClassListVersion));
         }
 
         /**

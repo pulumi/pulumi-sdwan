@@ -15,6 +15,57 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoTrustsecFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         DeviceSgt = 100,
+    ///         CredentialsId = "user1",
+    ///         CredentialsPassword = "MyPassword",
+    ///         EnableEnforcement = true,
+    ///         EnableSxp = true,
+    ///         SxpSourceIp = "1.2.3.4",
+    ///         SxpDefaultPassword = "MyPassword",
+    ///         SxpKeyChain = "keychain1",
+    ///         SxpLogBindingChanges = false,
+    ///         SxpReconciliationPeriod = 120,
+    ///         SxpRetryPeriod = 120,
+    ///         SpeakerHoldTime = 120,
+    ///         MinimumListenerHoldTime = 90,
+    ///         MaximumListenerHoldTime = 180,
+    ///         SxpNodeIdType = "interface-name",
+    ///         SxpNodeId = "VirtualPortGroup",
+    ///         SxpConnections = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoTrustsecFeatureTemplateSxpConnectionArgs
+    ///             {
+    ///                 PeerIp = "1.2.3.4",
+    ///                 SourceIp = "2.3.4.5",
+    ///                 PresharedKey = "default",
+    ///                 Mode = "local",
+    ///                 ModeType = "listener",
+    ///                 MinimumHoldTime = 100,
+    ///                 MaximumHoldTime = 200,
+    ///                 VpnId = 0,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

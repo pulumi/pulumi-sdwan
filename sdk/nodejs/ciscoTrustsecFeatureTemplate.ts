@@ -12,6 +12,43 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoTrustsecFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     deviceSgt: 100,
+ *     credentialsId: "user1",
+ *     credentialsPassword: "MyPassword",
+ *     enableEnforcement: true,
+ *     enableSxp: true,
+ *     sxpSourceIp: "1.2.3.4",
+ *     sxpDefaultPassword: "MyPassword",
+ *     sxpKeyChain: "keychain1",
+ *     sxpLogBindingChanges: false,
+ *     sxpReconciliationPeriod: 120,
+ *     sxpRetryPeriod: 120,
+ *     speakerHoldTime: 120,
+ *     minimumListenerHoldTime: 90,
+ *     maximumListenerHoldTime: 180,
+ *     sxpNodeIdType: "interface-name",
+ *     sxpNodeId: "VirtualPortGroup",
+ *     sxpConnections: [{
+ *         peerIp: "1.2.3.4",
+ *         sourceIp: "2.3.4.5",
+ *         presharedKey: "default",
+ *         mode: "local",
+ *         modeType: "listener",
+ *         minimumHoldTime: 100,
+ *         maximumHoldTime: 200,
+ *         vpnId: 0,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

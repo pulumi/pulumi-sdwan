@@ -17,6 +17,125 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceLanVpnInterfaceEthernetFeature(ctx, "example", &sdwan.ServiceLanVpnInterfaceEthernetFeatureArgs{
+//				Name:                   pulumi.String("Example"),
+//				Description:            pulumi.String("My Example"),
+//				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				ServiceLanVpnFeatureId: pulumi.String("140331f6-5418-4755-a059-13c77eb96037"),
+//				Shutdown:               pulumi.Bool(false),
+//				InterfaceName:          pulumi.String("GigabitEthernet3"),
+//				InterfaceDescription:   pulumi.String("LAN"),
+//				Ipv4ConfigurationType:  pulumi.String("static"),
+//				Ipv4Address:            pulumi.String("1.2.3.4"),
+//				Ipv4SubnetMask:         pulumi.String("0.0.0.0"),
+//				Ipv4SecondaryAddresses: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArray{
+//					&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs{
+//						Address:    pulumi.String("1.2.3.5"),
+//						SubnetMask: pulumi.String("0.0.0.0"),
+//					},
+//				},
+//				Ipv4DhcpHelpers: pulumi.StringArray{
+//					pulumi.String("1.2.3.4"),
+//				},
+//				Ipv6ConfigurationType: pulumi.String("static"),
+//				Ipv6DhcpHelpers: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArray{
+//					&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs{
+//						Address:         pulumi.String("2001:0:0:1::0"),
+//						Dhcpv6HelperVpn: pulumi.Int(1),
+//					},
+//				},
+//				Ipv4Nat:             pulumi.Bool(false),
+//				Ipv4NatRangeStart:   pulumi.String("1.2.3.4"),
+//				Ipv4NatRangeEnd:     pulumi.String("4.5.6.7"),
+//				Ipv4NatPrefixLength: pulumi.Int(1),
+//				Ipv4NatOverload:     pulumi.Bool(true),
+//				Ipv6Nat:             pulumi.Bool(true),
+//				Nat64:               pulumi.Bool(false),
+//				AclShapingRate:      pulumi.Int(12),
+//				Ipv6Vrrps: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArray{
+//					&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs{
+//						GroupId:  pulumi.Int(1),
+//						Priority: pulumi.Int(100),
+//						Timer:    pulumi.Int(1000),
+//						TrackOmp: pulumi.Bool(false),
+//						Ipv6Addresses: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArray{
+//							&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs{
+//								LinkLocalAddress: pulumi.String("1::1"),
+//								GlobalAddress:    pulumi.String("1::1/24"),
+//							},
+//						},
+//					},
+//				},
+//				Ipv4Vrrps: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArray{
+//					&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs{
+//						GroupId:  pulumi.Int(1),
+//						Priority: pulumi.Int(100),
+//						Timer:    pulumi.Int(1000),
+//						TrackOmp: pulumi.Bool(false),
+//						Address:  pulumi.String("1.2.3.4"),
+//						SecondaryAddresses: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArray{
+//							&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs{
+//								Address:    pulumi.String("2.3.4.5"),
+//								SubnetMask: pulumi.String("0.0.0.0"),
+//							},
+//						},
+//						TlocPrefixChange:    pulumi.Bool(true),
+//						TlocPrefChangeValue: pulumi.Int(100),
+//						TrackingObjects: sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArray{
+//							&sdwan.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs{
+//								TrackerId:      pulumi.String("1b270f6d-479b-47e3-ab0b-51bc6811a303"),
+//								TrackerAction:  pulumi.String("Decrement"),
+//								DecrementValue: pulumi.Int(100),
+//							},
+//						},
+//					},
+//				},
+//				Arps: sdwan.ServiceLanVpnInterfaceEthernetFeatureArpArray{
+//					&sdwan.ServiceLanVpnInterfaceEthernetFeatureArpArgs{
+//						IpAddress:  pulumi.String("1.2.3.4"),
+//						MacAddress: pulumi.String("00-B0-D0-63-C2-26"),
+//					},
+//				},
+//				TrustsecEnableSgtPropogation:      pulumi.Bool(false),
+//				TrustsecPropogate:                 pulumi.Bool(true),
+//				TrustsecSecurityGroupTag:          pulumi.Int(123),
+//				TrustsecEnableEnforcedPropogation: pulumi.Bool(false),
+//				TrustsecEnforcedSecurityGroupTag:  pulumi.Int(1234),
+//				Duplex:                            pulumi.String("full"),
+//				MacAddress:                        pulumi.String("00-B0-D0-63-C2-26"),
+//				IpMtu:                             pulumi.Int(1500),
+//				InterfaceMtu:                      pulumi.Int(1500),
+//				TcpMss:                            pulumi.Int(500),
+//				Speed:                             pulumi.String("1000"),
+//				ArpTimeout:                        pulumi.Int(1200),
+//				Autonegotiate:                     pulumi.Bool(false),
+//				MediaType:                         pulumi.String("auto-select"),
+//				LoadInterval:                      pulumi.Int(30),
+//				IcmpRedirectDisable:               pulumi.Bool(true),
+//				Xconnect:                          pulumi.String("1"),
+//				IpDirectedBroadcast:               pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

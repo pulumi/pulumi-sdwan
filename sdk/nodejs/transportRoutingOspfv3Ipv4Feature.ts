@@ -12,6 +12,58 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportRoutingOspfv3Ipv4Feature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     routerId: "1.2.3.4",
+ *     distance: 110,
+ *     distanceExternal: 110,
+ *     distanceInterArea: 110,
+ *     distanceIntraArea: 110,
+ *     referenceBandwidth: 101,
+ *     rfc1583Compatible: true,
+ *     defaultInformationOriginate: false,
+ *     defaultInformationOriginateAlways: false,
+ *     defaultInformationOriginateMetric: 1,
+ *     defaultInformationOriginateMetricType: "type1",
+ *     spfCalculationDelay: 200,
+ *     spfInitialHoldTime: 1000,
+ *     spfMaximumHoldTime: 10000,
+ *     filter: false,
+ *     redistributes: [{
+ *         protocol: "nat-route",
+ *         natDia: true,
+ *     }],
+ *     routerLsaAction: "on-startup",
+ *     routerLsaOnStartupTime: 30,
+ *     areas: [{
+ *         areaNumber: 1,
+ *         areaType: "stub",
+ *         interfaces: [{
+ *             name: "GigabitEthernet2",
+ *             helloInterval: 10,
+ *             deadInterval: 40,
+ *             lsaRetransmitInterval: 5,
+ *             cost: 10,
+ *             networkType: "broadcast",
+ *             passiveInterface: false,
+ *             authenticationType: "no-auth",
+ *         }],
+ *         ranges: [{
+ *             ipAddress: "10.1.1.0",
+ *             subnetMask: "255.255.255.0",
+ *             cost: 1,
+ *             noAdvertise: false,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

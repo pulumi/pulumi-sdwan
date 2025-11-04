@@ -17,6 +17,81 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemSnmpFeature(ctx, "example", &sdwan.SystemSnmpFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Shutdown:         pulumi.Bool(false),
+//				ContactPerson:    pulumi.String("wixie.cisco"),
+//				LocationOfDevice: pulumi.String("SHANGHAI"),
+//				Views: sdwan.SystemSnmpFeatureViewArray{
+//					&sdwan.SystemSnmpFeatureViewArgs{
+//						Name: pulumi.String("VIEW1"),
+//						Oids: sdwan.SystemSnmpFeatureViewOidArray{
+//							&sdwan.SystemSnmpFeatureViewOidArgs{
+//								Id:      pulumi.String("1.3.6.1.4.1.9.9.394"),
+//								Exclude: pulumi.Bool(false),
+//							},
+//						},
+//					},
+//				},
+//				Communities: sdwan.SystemSnmpFeatureCommunityArray{
+//					&sdwan.SystemSnmpFeatureCommunityArgs{
+//						Name:          pulumi.String("example"),
+//						UserLabel:     pulumi.String("COMMUNITY1"),
+//						View:          pulumi.String("VIEW1"),
+//						Authorization: pulumi.String("read-only"),
+//					},
+//				},
+//				Groups: sdwan.SystemSnmpFeatureGroupArray{
+//					&sdwan.SystemSnmpFeatureGroupArgs{
+//						Name:          pulumi.String("GROUP1"),
+//						SecurityLevel: pulumi.String("auth-priv"),
+//						View:          pulumi.String("VIEW1"),
+//					},
+//				},
+//				Users: sdwan.SystemSnmpFeatureUserArray{
+//					&sdwan.SystemSnmpFeatureUserArgs{
+//						Name:                   pulumi.String("USER1"),
+//						AuthenticationProtocol: pulumi.String("sha"),
+//						AuthenticationPassword: pulumi.String("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ=="),
+//						PrivacyProtocol:        pulumi.String("aes-256-cfb-128"),
+//						PrivacyPassword:        pulumi.String("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ=="),
+//						Group:                  pulumi.String("GROUP1"),
+//					},
+//				},
+//				TrapTargetServers: sdwan.SystemSnmpFeatureTrapTargetServerArray{
+//					&sdwan.SystemSnmpFeatureTrapTargetServerArgs{
+//						VpnId:           pulumi.Int(1),
+//						Ip:              pulumi.String("10.75.221.156"),
+//						Port:            pulumi.Int(161),
+//						UserLabel:       pulumi.String("TARGET1"),
+//						User:            pulumi.String("USER1"),
+//						SourceInterface: pulumi.String("GigabitEthernet1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -17,6 +17,52 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportT1E1ControllerFeature(ctx, "example", &sdwan.TransportT1E1ControllerFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Type:             pulumi.String("t1"),
+//				Slot:             pulumi.String("11"),
+//				Entries: sdwan.TransportT1E1ControllerFeatureEntryArray{
+//					&sdwan.TransportT1E1ControllerFeatureEntryArgs{
+//						T1Description: pulumi.String("T1"),
+//						T1Framing:     pulumi.String("esf"),
+//						T1Linecode:    pulumi.String("ami"),
+//						CableLength:   pulumi.String("long"),
+//						LengthLong:    pulumi.String("-7.5db"),
+//						ClockSource:   pulumi.String("line"),
+//						LineMode:      pulumi.String("primary"),
+//						Description:   pulumi.String("desc"),
+//						ChannelGroups: sdwan.TransportT1E1ControllerFeatureEntryChannelGroupArray{
+//							&sdwan.TransportT1E1ControllerFeatureEntryChannelGroupArgs{
+//								ChannelGroup: pulumi.Int(12),
+//								TimeSlot:     pulumi.String("timeslots 15"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -14,6 +14,58 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ZoneBasedFirewallPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Mode = "security",
+    ///         ApplyZonePairs = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs
+    ///             {
+    ///                 SourceZone = "self",
+    ///                 DestinationZone = "0d26a366-4a11-4942-a5ea-82af9502889f",
+    ///             },
+    ///         },
+    ///         DefaultAction = "pass",
+    ///         Rules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ZoneBasedFirewallPolicyDefinitionRuleArgs
+    ///             {
+    ///                 RuleOrder = 1,
+    ///                 RuleName = "RULE_1",
+    ///                 BaseAction = "inspect",
+    ///                 IpType = "ipv4",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs
+    ///                     {
+    ///                         Type = "sourceGeoLocationList",
+    ///                         PolicyId = "0d26a366-4a11-4942-a5ea-82af9502889f",
+    ///                     },
+    ///                 },
+    ///                 ActionEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs
+    ///                     {
+    ///                         Type = "log",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

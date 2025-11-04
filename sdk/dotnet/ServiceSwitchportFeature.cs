@@ -15,6 +15,61 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceSwitchportFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceSwitchportFeatureInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet",
+    ///                 Mode = "access",
+    ///                 Shutdown = true,
+    ///                 Speed = "10",
+    ///                 Duplex = "full",
+    ///                 SwitchportAccessVlan = 1,
+    ///                 SwitchportTrunkAllowedVlans = "1",
+    ///                 SwitchportTrunkNativeVlan = 1,
+    ///                 PortControl = "auto",
+    ///                 VoiceVlan = 1,
+    ///                 PaeEnable = true,
+    ///                 MacAuthenticationBypass = false,
+    ///                 HostMode = "single-host",
+    ///                 EnablePeriodicReauth = false,
+    ///                 Inactivity = 60,
+    ///                 Reauthentication = 1,
+    ///                 ControlDirection = "both",
+    ///                 RestrictedVlan = 1,
+    ///                 GuestVlan = 1,
+    ///                 CriticalVlan = 1,
+    ///                 EnableVoice = false,
+    ///             },
+    ///         },
+    ///         AgeOutTime = 300,
+    ///         StaticMacAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceSwitchportFeatureStaticMacAddressArgs
+    ///             {
+    ///                 MacAddress = "01:02:03:04:05:06",
+    ///                 VlanId = 1,
+    ///                 InterfaceName = "GigabitEthernet0/0/0",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

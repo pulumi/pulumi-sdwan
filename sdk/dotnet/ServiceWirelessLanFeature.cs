@@ -15,6 +15,44 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceWirelessLanFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Enable24g = true,
+    ///         Enable5g = true,
+    ///         Ssids = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceWirelessLanFeatureSsidArgs
+    ///             {
+    ///                 SsidName = "SSID_1",
+    ///                 AdminState = true,
+    ///                 BroadcastSsid = true,
+    ///                 VlanId = 1,
+    ///                 RadioType = "all",
+    ///                 SecurityType = "personal",
+    ///                 Passphrase = "MyPassword123",
+    ///                 QosProfile = "silver",
+    ///             },
+    ///         },
+    ///         Country = "GB",
+    ///         Username = "user1",
+    ///         Password = "Test@316s13",
+    ///         MeDynamicIpEnabled = true,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

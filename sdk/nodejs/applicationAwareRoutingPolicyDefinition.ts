@@ -11,6 +11,29 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ApplicationAwareRoutingPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     sequences: [{
+ *         id: 1,
+ *         name: "Region1",
+ *         ipType: "ipv4",
+ *         matchEntries: [{
+ *             type: "appList",
+ *             applicationListId: "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+ *         }],
+ *         actionEntries: [{
+ *             type: "backupSlaPreferredColor",
+ *             backupSlaPreferredColor: "bronze",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:
@@ -48,6 +71,19 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
     }
 
     /**
+     * Type of default action
+     *   - Choices: `slaClass`
+     */
+    declare public readonly defaultAction: pulumi.Output<string | undefined>;
+    /**
+     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     */
+    declare public readonly defaultActionSlaClassListId: pulumi.Output<string | undefined>;
+    /**
+     * SLA class list version
+     */
+    declare public readonly defaultActionSlaClassListVersion: pulumi.Output<number | undefined>;
+    /**
      * The description of the policy definition
      */
     declare public readonly description: pulumi.Output<string>;
@@ -81,6 +117,9 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplicationAwareRoutingPolicyDefinitionState | undefined;
+            resourceInputs["defaultAction"] = state?.defaultAction;
+            resourceInputs["defaultActionSlaClassListId"] = state?.defaultActionSlaClassListId;
+            resourceInputs["defaultActionSlaClassListVersion"] = state?.defaultActionSlaClassListVersion;
             resourceInputs["description"] = state?.description;
             resourceInputs["name"] = state?.name;
             resourceInputs["sequences"] = state?.sequences;
@@ -94,6 +133,9 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
             if (args?.sequences === undefined && !opts.urn) {
                 throw new Error("Missing required property 'sequences'");
             }
+            resourceInputs["defaultAction"] = args?.defaultAction;
+            resourceInputs["defaultActionSlaClassListId"] = args?.defaultActionSlaClassListId;
+            resourceInputs["defaultActionSlaClassListVersion"] = args?.defaultActionSlaClassListVersion;
             resourceInputs["description"] = args?.description;
             resourceInputs["name"] = args?.name;
             resourceInputs["sequences"] = args?.sequences;
@@ -109,6 +151,19 @@ export class ApplicationAwareRoutingPolicyDefinition extends pulumi.CustomResour
  * Input properties used for looking up and filtering ApplicationAwareRoutingPolicyDefinition resources.
  */
 export interface ApplicationAwareRoutingPolicyDefinitionState {
+    /**
+     * Type of default action
+     *   - Choices: `slaClass`
+     */
+    defaultAction?: pulumi.Input<string>;
+    /**
+     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     */
+    defaultActionSlaClassListId?: pulumi.Input<string>;
+    /**
+     * SLA class list version
+     */
+    defaultActionSlaClassListVersion?: pulumi.Input<number>;
     /**
      * The description of the policy definition
      */
@@ -135,6 +190,19 @@ export interface ApplicationAwareRoutingPolicyDefinitionState {
  * The set of arguments for constructing a ApplicationAwareRoutingPolicyDefinition resource.
  */
 export interface ApplicationAwareRoutingPolicyDefinitionArgs {
+    /**
+     * Type of default action
+     *   - Choices: `slaClass`
+     */
+    defaultAction?: pulumi.Input<string>;
+    /**
+     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     */
+    defaultActionSlaClassListId?: pulumi.Input<string>;
+    /**
+     * SLA class list version
+     */
+    defaultActionSlaClassListVersion?: pulumi.Input<number>;
     /**
      * The description of the policy definition
      */

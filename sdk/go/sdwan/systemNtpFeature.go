@@ -17,6 +17,54 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemNtpFeature(ctx, "example", &sdwan.SystemNtpFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Servers: sdwan.SystemNtpFeatureServerArray{
+//					&sdwan.SystemNtpFeatureServerArgs{
+//						HostnameIpAddress:   pulumi.String("1.1.1.1"),
+//						AuthenticationKey:   pulumi.Int(41673),
+//						Vpn:                 pulumi.Int(1),
+//						NtpVersion:          pulumi.Int(4),
+//						SourceInterface:     pulumi.String("Ethernet"),
+//						PreferThisNtpServer: pulumi.Bool(false),
+//					},
+//				},
+//				AuthenticationKeys: sdwan.SystemNtpFeatureAuthenticationKeyArray{
+//					&sdwan.SystemNtpFeatureAuthenticationKeyArgs{
+//						KeyId:    pulumi.Int(49737),
+//						Md5Value: pulumi.String("$CRYPT_CLUSTER"),
+//					},
+//				},
+//				TrustedKeys: pulumi.IntArray{
+//					pulumi.Int(49737),
+//				},
+//				AuthoritativeNtpServer: pulumi.Bool(false),
+//				Stratum:                pulumi.Int(1),
+//				SourceInterface:        pulumi.String("ATM"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

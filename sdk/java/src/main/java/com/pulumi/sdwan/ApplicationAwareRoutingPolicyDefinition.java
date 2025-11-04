@@ -14,12 +14,59 @@ import com.pulumi.sdwan.outputs.ApplicationAwareRoutingPolicyDefinitionSequence;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Application Aware Routing Policy Definition .
  * 
  * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ApplicationAwareRoutingPolicyDefinition;
+ * import com.pulumi.sdwan.ApplicationAwareRoutingPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.ApplicationAwareRoutingPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplicationAwareRoutingPolicyDefinition("example", ApplicationAwareRoutingPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .sequences(ApplicationAwareRoutingPolicyDefinitionSequenceArgs.builder()
+ *                 .id(1)
+ *                 .name("Region1")
+ *                 .ipType("ipv4")
+ *                 .matchEntries(ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs.builder()
+ *                     .type("appList")
+ *                     .applicationListId("e3aad846-abb9-425f-aaa8-9ed17b9c8d7c")
+ *                     .build())
+ *                 .actionEntries(ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs.builder()
+ *                     .type("backupSlaPreferredColor")
+ *                     .backupSlaPreferredColor("bronze")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  * ## Import
  * 
@@ -32,6 +79,50 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition")
 public class ApplicationAwareRoutingPolicyDefinition extends com.pulumi.resources.CustomResource {
+    /**
+     * Type of default action
+     *   - Choices: `slaClass`
+     * 
+     */
+    @Export(name="defaultAction", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> defaultAction;
+
+    /**
+     * @return Type of default action
+     *   - Choices: `slaClass`
+     * 
+     */
+    public Output<Optional<String>> defaultAction() {
+        return Codegen.optional(this.defaultAction);
+    }
+    /**
+     * SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * 
+     */
+    @Export(name="defaultActionSlaClassListId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> defaultActionSlaClassListId;
+
+    /**
+     * @return SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+     * 
+     */
+    public Output<Optional<String>> defaultActionSlaClassListId() {
+        return Codegen.optional(this.defaultActionSlaClassListId);
+    }
+    /**
+     * SLA class list version
+     * 
+     */
+    @Export(name="defaultActionSlaClassListVersion", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> defaultActionSlaClassListVersion;
+
+    /**
+     * @return SLA class list version
+     * 
+     */
+    public Output<Optional<Integer>> defaultActionSlaClassListVersion() {
+        return Codegen.optional(this.defaultActionSlaClassListVersion);
+    }
     /**
      * The description of the policy definition
      * 

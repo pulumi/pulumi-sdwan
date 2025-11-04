@@ -14,6 +14,33 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.RewriteRulePolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Rules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.RewriteRulePolicyDefinitionRuleArgs
+    ///             {
+    ///                 ClassMapId = "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+    ///                 Priority = "low",
+    ///                 Dscp = 16,
+    ///                 Layer2Cos = 1,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

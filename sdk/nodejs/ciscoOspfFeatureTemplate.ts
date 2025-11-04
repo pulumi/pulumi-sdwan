@@ -12,6 +12,68 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoOspfFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     routerId: "1.2.3.4",
+ *     autoCostReferenceBandwidth: 100000,
+ *     compatibleRfc1583: true,
+ *     defaultInformationOriginate: true,
+ *     defaultInformationOriginateAlways: true,
+ *     defaultInformationOriginateMetric: 100,
+ *     defaultInformationOriginateMetricType: "type1",
+ *     distanceExternal: 111,
+ *     distanceInterArea: 111,
+ *     distanceIntraArea: 112,
+ *     timersSpfDelay: 300,
+ *     timersSpfInitialHold: 2000,
+ *     timersSpfMaxHold: 20000,
+ *     redistributes: [{
+ *         protocol: "static",
+ *         routePolicy: "RP1",
+ *         natDia: true,
+ *     }],
+ *     maxMetricRouterLsas: [{
+ *         adType: "on-startup",
+ *         time: 100,
+ *     }],
+ *     routePolicies: [{
+ *         direction: "in",
+ *         policyName: "POLICY1",
+ *     }],
+ *     areas: [{
+ *         areaNumber: 1,
+ *         stub: false,
+ *         stubNoSummary: false,
+ *         nssa: false,
+ *         nssaNoSummary: true,
+ *         interfaces: [{
+ *             name: "e1",
+ *             helloInterval: 20,
+ *             deadInterval: 60,
+ *             retransmitInterval: 10,
+ *             cost: 100,
+ *             priority: 10,
+ *             network: "point-to-point",
+ *             passiveInterface: true,
+ *             authenticationType: "message-digest",
+ *             authenticationMessageDigestKeyId: 1,
+ *             authenticationMessageDigestKey: "cisco123",
+ *         }],
+ *         ranges: [{
+ *             address: "1.1.1.0/24",
+ *             cost: 100,
+ *             noAdvertise: true,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

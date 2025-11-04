@@ -17,6 +17,65 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceSwitchportFeature(ctx, "example", &sdwan.ServiceSwitchportFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Interfaces: sdwan.ServiceSwitchportFeatureInterfaceArray{
+//					&sdwan.ServiceSwitchportFeatureInterfaceArgs{
+//						InterfaceName:               pulumi.String("GigabitEthernet"),
+//						Mode:                        pulumi.String("access"),
+//						Shutdown:                    pulumi.Bool(true),
+//						Speed:                       pulumi.String("10"),
+//						Duplex:                      pulumi.String("full"),
+//						SwitchportAccessVlan:        pulumi.Int(1),
+//						SwitchportTrunkAllowedVlans: pulumi.String("1"),
+//						SwitchportTrunkNativeVlan:   pulumi.Int(1),
+//						PortControl:                 pulumi.String("auto"),
+//						VoiceVlan:                   pulumi.Int(1),
+//						PaeEnable:                   pulumi.Bool(true),
+//						MacAuthenticationBypass:     pulumi.Bool(false),
+//						HostMode:                    pulumi.String("single-host"),
+//						EnablePeriodicReauth:        pulumi.Bool(false),
+//						Inactivity:                  pulumi.Int(60),
+//						Reauthentication:            pulumi.Int(1),
+//						ControlDirection:            pulumi.String("both"),
+//						RestrictedVlan:              pulumi.Int(1),
+//						GuestVlan:                   pulumi.Int(1),
+//						CriticalVlan:                pulumi.Int(1),
+//						EnableVoice:                 pulumi.Bool(false),
+//					},
+//				},
+//				AgeOutTime: pulumi.Int(300),
+//				StaticMacAddresses: sdwan.ServiceSwitchportFeatureStaticMacAddressArray{
+//					&sdwan.ServiceSwitchportFeatureStaticMacAddressArgs{
+//						MacAddress:    pulumi.String("01:02:03:04:05:06"),
+//						VlanId:        pulumi.Int(1),
+//						InterfaceName: pulumi.String("GigabitEthernet0/0/0"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

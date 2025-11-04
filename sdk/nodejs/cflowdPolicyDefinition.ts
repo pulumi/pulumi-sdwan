@@ -11,6 +11,33 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CflowdPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     activeFlowTimeout: 100,
+ *     inactiveFlowTimeout: 10,
+ *     samplingInterval: 10,
+ *     flowRefresh: 120,
+ *     protocol: "ipv4",
+ *     tos: true,
+ *     remarkedDscp: true,
+ *     collectors: [{
+ *         vpnId: 1,
+ *         ipAddress: "10.0.0.1",
+ *         port: 12345,
+ *         transport: "transport_tcp",
+ *         sourceInterface: "Ethernet1",
+ *         exportSpreading: "enable",
+ *         bfdMetricsExporting: true,
+ *         exportingInterval: 86400,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

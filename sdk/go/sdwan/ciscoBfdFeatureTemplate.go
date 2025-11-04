@@ -17,6 +17,46 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoBfdFeatureTemplate(ctx, "example", &sdwan.CiscoBfdFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Multiplier:   pulumi.Int(3),
+//				PollInterval: pulumi.Int(800000),
+//				DefaultDscp:  pulumi.Int(48),
+//				Colors: sdwan.CiscoBfdFeatureTemplateColorArray{
+//					&sdwan.CiscoBfdFeatureTemplateColorArgs{
+//						Color:         pulumi.String("private5"),
+//						HelloInterval: pulumi.Int(1000),
+//						Multiplier:    pulumi.Int(7),
+//						PmtuDiscovery: pulumi.Bool(true),
+//						Dscp:          pulumi.Int(46),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

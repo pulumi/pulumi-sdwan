@@ -42,6 +42,18 @@ export interface GetApplicationAwareRoutingPolicyDefinitionArgs {
  */
 export interface GetApplicationAwareRoutingPolicyDefinitionResult {
     /**
+     * Type of default action
+     */
+    readonly defaultAction: string;
+    /**
+     * SLA class list ID
+     */
+    readonly defaultActionSlaClassListId: string;
+    /**
+     * SLA class list version
+     */
+    readonly defaultActionSlaClassListVersion: number;
+    /**
      * The description of the policy definition
      */
     readonly description: string;

@@ -15,6 +15,42 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SecurityAppHostingFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VirtualApplications = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SecurityAppHostingFeatureTemplateVirtualApplicationArgs
+    ///             {
+    ///                 InstanceId = "2e89c1fe-440a-43f5-9f3a-54a9836fdbb5",
+    ///                 ApplicationType = "utd",
+    ///                 Nat = true,
+    ///                 DatabaseUrl = false,
+    ///                 ResourceProfile = "low",
+    ///                 ServiceGatewayIp = "1.2.3.4/24",
+    ///                 ServiceIp = "1.2.3.5/24",
+    ///                 DataGatewayIp = "192.0.2.1/24",
+    ///                 DataServiceIp = "192.0.2.2/24",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

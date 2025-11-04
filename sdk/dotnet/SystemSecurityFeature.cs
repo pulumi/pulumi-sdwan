@@ -15,6 +15,60 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemSecurityFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Rekey = 86400,
+    ///         AntiReplayWindow = "512",
+    ///         ExtendedAntiReplayWindow = 256,
+    ///         IpsecPairwiseKeying = false,
+    ///         IntegrityTypes = new[]
+    ///         {
+    ///             "esp",
+    ///         },
+    ///         Keychains = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSecurityFeatureKeychainArgs
+    ///             {
+    ///                 KeyChainName = "aaa",
+    ///                 KeyId = 1,
+    ///             },
+    ///         },
+    ///         Keys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemSecurityFeatureKeyArgs
+    ///             {
+    ///                 Id = 0,
+    ///                 Name = "aaa",
+    ///                 SendId = 1,
+    ///                 ReceiverId = 2,
+    ///                 IncludeTcpOptions = false,
+    ///                 AcceptAoMismatch = false,
+    ///                 CryptoAlgorithm = "aes-128-cmac",
+    ///                 KeyString = "abcabc",
+    ///                 SendLifeTimeLocal = true,
+    ///                 SendLifeTimeStartEpoch = 1659284400,
+    ///                 SendLifeTimeInfinite = true,
+    ///                 AcceptLifeTimeLocal = true,
+    ///                 AcceptLifeTimeStartEpoch = 1659284400,
+    ///                 AcceptLifeTimeInfinite = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

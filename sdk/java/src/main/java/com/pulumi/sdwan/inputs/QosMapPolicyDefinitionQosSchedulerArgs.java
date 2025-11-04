@@ -69,18 +69,18 @@ public final class QosMapPolicyDefinitionQosSchedulerArgs extends com.pulumi.res
     }
 
     /**
-     * Class map ID
+     * Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
-    @Import(name="classMapId", required=true)
-    private Output<String> classMapId;
+    @Import(name="classMapId")
+    private @Nullable Output<String> classMapId;
 
     /**
-     * @return Class map ID
+     * @return Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
-    public Output<String> classMapId() {
-        return this.classMapId;
+    public Optional<Output<String>> classMapId() {
+        return Optional.ofNullable(this.classMapId);
     }
 
     /**
@@ -250,18 +250,18 @@ public final class QosMapPolicyDefinitionQosSchedulerArgs extends com.pulumi.res
         }
 
         /**
-         * @param classMapId Class map ID
+         * @param classMapId Class map ID (can be empty for queue 0 when left as Control)
          * 
          * @return builder
          * 
          */
-        public Builder classMapId(Output<String> classMapId) {
+        public Builder classMapId(@Nullable Output<String> classMapId) {
             $.classMapId = classMapId;
             return this;
         }
 
         /**
-         * @param classMapId Class map ID
+         * @param classMapId Class map ID (can be empty for queue 0 when left as Control)
          * 
          * @return builder
          * 
@@ -366,9 +366,6 @@ public final class QosMapPolicyDefinitionQosSchedulerArgs extends com.pulumi.res
             }
             if ($.bufferPercent == null) {
                 throw new MissingRequiredPropertyException("QosMapPolicyDefinitionQosSchedulerArgs", "bufferPercent");
-            }
-            if ($.classMapId == null) {
-                throw new MissingRequiredPropertyException("QosMapPolicyDefinitionQosSchedulerArgs", "classMapId");
             }
             if ($.dropType == null) {
                 throw new MissingRequiredPropertyException("QosMapPolicyDefinitionQosSchedulerArgs", "dropType");

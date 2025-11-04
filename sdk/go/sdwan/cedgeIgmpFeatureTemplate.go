@@ -17,6 +17,45 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCedgeIgmpFeatureTemplate(ctx, "example", &sdwan.CedgeIgmpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Interfaces: sdwan.CedgeIgmpFeatureTemplateInterfaceArray{
+//					&sdwan.CedgeIgmpFeatureTemplateInterfaceArgs{
+//						Name: pulumi.String("Ethernet0"),
+//						JoinGroups: sdwan.CedgeIgmpFeatureTemplateInterfaceJoinGroupArray{
+//							&sdwan.CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs{
+//								GroupAddress: pulumi.String("235.1.1.1"),
+//								Source:       pulumi.String("1.2.3.4"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

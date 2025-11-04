@@ -426,6 +426,32 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CflowdPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            active_flow_timeout=100,
+            inactive_flow_timeout=10,
+            sampling_interval=10,
+            flow_refresh=120,
+            protocol="ipv4",
+            tos=True,
+            remarked_dscp=True,
+            collectors=[{
+                "vpn_id": 1,
+                "ip_address": "10.0.0.1",
+                "port": 12345,
+                "transport": "transport_tcp",
+                "source_interface": "Ethernet1",
+                "export_spreading": "enable",
+                "bfd_metrics_exporting": True,
+                "exporting_interval": 86400,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -462,6 +488,32 @@ class CflowdPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Cflowd Policy Definition .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CflowdPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            active_flow_timeout=100,
+            inactive_flow_timeout=10,
+            sampling_interval=10,
+            flow_refresh=120,
+            protocol="ipv4",
+            tos=True,
+            remarked_dscp=True,
+            collectors=[{
+                "vpn_id": 1,
+                "ip_address": "10.0.0.1",
+                "port": 12345,
+                "transport": "transport_tcp",
+                "source_interface": "Ethernet1",
+                "export_spreading": "enable",
+                "bfd_metrics_exporting": True,
+                "exporting_interval": 86400,
+            }])
+        ```
 
         ## Import
 

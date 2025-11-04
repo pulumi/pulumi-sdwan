@@ -17,6 +17,68 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewEigrpFeatureTemplate(ctx, "example", &sdwan.EigrpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				AsNumber: pulumi.Int(1),
+//				AddressFamilies: sdwan.EigrpFeatureTemplateAddressFamilyArray{
+//					&sdwan.EigrpFeatureTemplateAddressFamilyArgs{
+//						Type: pulumi.String("ipv4"),
+//						Redistributes: sdwan.EigrpFeatureTemplateAddressFamilyRedistributeArray{
+//							&sdwan.EigrpFeatureTemplateAddressFamilyRedistributeArgs{
+//								Protocol:    pulumi.String("bgp"),
+//								RoutePolicy: pulumi.String("1.2.3.4"),
+//							},
+//						},
+//						Networks: sdwan.EigrpFeatureTemplateAddressFamilyNetworkArray{
+//							&sdwan.EigrpFeatureTemplateAddressFamilyNetworkArgs{
+//								Prefix: pulumi.String("1.2.3.4/24"),
+//							},
+//						},
+//					},
+//				},
+//				HelloInterval:         pulumi.Int(5),
+//				HoldTime:              pulumi.Int(15),
+//				RoutePolicyName:       pulumi.String("RP1"),
+//				Filter:                pulumi.Bool(false),
+//				AuthenticationType:    pulumi.String("hmac-sha-256"),
+//				HmacAuthenticationKey: pulumi.String("myAuthKey"),
+//				Interfaces: sdwan.EigrpFeatureTemplateInterfaceArray{
+//					&sdwan.EigrpFeatureTemplateInterfaceArgs{
+//						InterfaceName: pulumi.String("Ethernet1"),
+//						Shutdown:      pulumi.Bool(false),
+//						SummaryAddresses: sdwan.EigrpFeatureTemplateInterfaceSummaryAddressArray{
+//							&sdwan.EigrpFeatureTemplateInterfaceSummaryAddressArgs{
+//								Prefix: pulumi.String("1.2.3.4/24"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

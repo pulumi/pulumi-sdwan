@@ -12,6 +12,41 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.EigrpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     asNumber: 1,
+ *     addressFamilies: [{
+ *         type: "ipv4",
+ *         redistributes: [{
+ *             protocol: "bgp",
+ *             routePolicy: "1.2.3.4",
+ *         }],
+ *         networks: [{
+ *             prefix: "1.2.3.4/24",
+ *         }],
+ *     }],
+ *     helloInterval: 5,
+ *     holdTime: 15,
+ *     routePolicyName: "RP1",
+ *     filter: false,
+ *     authenticationType: "hmac-sha-256",
+ *     hmacAuthenticationKey: "myAuthKey",
+ *     interfaces: [{
+ *         interfaceName: "Ethernet1",
+ *         shutdown: false,
+ *         summaryAddresses: [{
+ *             prefix: "1.2.3.4/24",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

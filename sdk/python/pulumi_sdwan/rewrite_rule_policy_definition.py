@@ -175,6 +175,21 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RewriteRulePolicyDefinition("example",
+            name="Example",
+            description="My description",
+            rules=[{
+                "class_map_id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "priority": "low",
+                "dscp": 16,
+                "layer2_cos": 1,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -199,6 +214,21 @@ class RewriteRulePolicyDefinition(pulumi.CustomResource):
         This resource can manage a Rewrite Rule Policy Definition .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RewriteRulePolicyDefinition("example",
+            name="Example",
+            description="My description",
+            rules=[{
+                "class_map_id": "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+                "priority": "low",
+                "dscp": 16,
+                "layer2_cos": 1,
+            }])
+        ```
 
         ## Import
 

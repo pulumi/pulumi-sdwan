@@ -12,6 +12,88 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CedgeAaaFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     dot1xAuthentication: true,
+ *     dot1xAccounting: true,
+ *     serverGroupsPriorityOrder: "100",
+ *     users: [{
+ *         name: "user1",
+ *         password: "password123",
+ *         secret: "secret123",
+ *         privilegeLevel: "15",
+ *         sshPubkeys: [{
+ *             keyString: "abc123",
+ *             keyType: "rsa",
+ *         }],
+ *     }],
+ *     radiusServerGroups: [{
+ *         groupName: "GROUP1",
+ *         vpnId: 1,
+ *         sourceInterface: "e1",
+ *         servers: [{
+ *             address: "1.1.1.1",
+ *             authenticationPort: 1812,
+ *             accountingPort: 1813,
+ *             timeout: 5,
+ *             retransmit: 3,
+ *             key: "key123",
+ *             secretKey: "1234567",
+ *             encryptionType: "7",
+ *             keyType: "pac",
+ *         }],
+ *     }],
+ *     radiusClients: [{
+ *         clientIp: "2.2.2.2",
+ *         vpnConfigurations: [{
+ *             vpnId: 1,
+ *             serverKey: "key123",
+ *         }],
+ *     }],
+ *     radiusDynamicAuthorServerKey: "key123",
+ *     radiusDynamicAuthorDomainStripping: "yes",
+ *     radiusDynamicAuthorAuthenticationType: "all",
+ *     radiusDynamicAuthorPort: 1700,
+ *     radiusTrustsecCtsAuthorizationList: "ALIST1",
+ *     radiusTrustsecGroup: "GROUP1",
+ *     tacacsServerGroups: [{
+ *         groupName: "GROUP1",
+ *         vpnId: 1,
+ *         sourceInterface: "e1",
+ *         servers: [{
+ *             address: "1.1.1.1",
+ *             port: 49,
+ *             timeout: 5,
+ *             key: "key123",
+ *             secretKey: "1234567",
+ *             encryptionType: "7",
+ *         }],
+ *     }],
+ *     accountingRules: [{
+ *         name: "RULE1",
+ *         method: "exec",
+ *         privilegeLevel: "15",
+ *         startStop: true,
+ *         groups: "GROUP1",
+ *     }],
+ *     authorizationConsole: true,
+ *     authorizationConfigCommands: true,
+ *     authorizationRules: [{
+ *         name: "RULE1",
+ *         method: "commands",
+ *         privilegeLevel: "15",
+ *         groups: "GROUP1",
+ *         authenticated: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

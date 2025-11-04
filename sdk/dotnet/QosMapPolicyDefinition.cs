@@ -14,6 +14,36 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.QosMapPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         QosSchedulers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.QosMapPolicyDefinitionQosSchedulerArgs
+    ///             {
+    ///                 Queue = 6,
+    ///                 ClassMapId = "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+    ///                 BandwidthPercent = 10,
+    ///                 BufferPercent = 10,
+    ///                 Burst = 100000,
+    ///                 DropType = "red-drop",
+    ///                 SchedulingType = "wrr",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

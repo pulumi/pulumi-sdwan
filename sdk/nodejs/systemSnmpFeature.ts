@@ -12,6 +12,54 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemSnmpFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     shutdown: false,
+ *     contactPerson: "wixie.cisco",
+ *     locationOfDevice: "SHANGHAI",
+ *     views: [{
+ *         name: "VIEW1",
+ *         oids: [{
+ *             id: "1.3.6.1.4.1.9.9.394",
+ *             exclude: false,
+ *         }],
+ *     }],
+ *     communities: [{
+ *         name: "example",
+ *         userLabel: "COMMUNITY1",
+ *         view: "VIEW1",
+ *         authorization: "read-only",
+ *     }],
+ *     groups: [{
+ *         name: "GROUP1",
+ *         securityLevel: "auth-priv",
+ *         view: "VIEW1",
+ *     }],
+ *     users: [{
+ *         name: "USER1",
+ *         authenticationProtocol: "sha",
+ *         authenticationPassword: "$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==",
+ *         privacyProtocol: "aes-256-cfb-128",
+ *         privacyPassword: "$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==",
+ *         group: "GROUP1",
+ *     }],
+ *     trapTargetServers: [{
+ *         vpnId: 1,
+ *         ip: "10.75.221.156",
+ *         port: 161,
+ *         userLabel: "TARGET1",
+ *         user: "USER1",
+ *         sourceInterface: "GigabitEthernet1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

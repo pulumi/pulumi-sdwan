@@ -3090,6 +3090,91 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceLanVpnInterfaceEthernetFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            service_lan_vpn_feature_id="140331f6-5418-4755-a059-13c77eb96037",
+            shutdown=False,
+            interface_name="GigabitEthernet3",
+            interface_description="LAN",
+            ipv4_configuration_type="static",
+            ipv4_address="1.2.3.4",
+            ipv4_subnet_mask="0.0.0.0",
+            ipv4_secondary_addresses=[{
+                "address": "1.2.3.5",
+                "subnet_mask": "0.0.0.0",
+            }],
+            ipv4_dhcp_helpers=["1.2.3.4"],
+            ipv6_configuration_type="static",
+            ipv6_dhcp_helpers=[{
+                "address": "2001:0:0:1::0",
+                "dhcpv6_helper_vpn": 1,
+            }],
+            ipv4_nat=False,
+            ipv4_nat_range_start="1.2.3.4",
+            ipv4_nat_range_end="4.5.6.7",
+            ipv4_nat_prefix_length=1,
+            ipv4_nat_overload=True,
+            ipv6_nat=True,
+            nat64=False,
+            acl_shaping_rate=12,
+            ipv6_vrrps=[{
+                "group_id": 1,
+                "priority": 100,
+                "timer": 1000,
+                "track_omp": False,
+                "ipv6_addresses": [{
+                    "link_local_address": "1::1",
+                    "global_address": "1::1/24",
+                }],
+            }],
+            ipv4_vrrps=[{
+                "group_id": 1,
+                "priority": 100,
+                "timer": 1000,
+                "track_omp": False,
+                "address": "1.2.3.4",
+                "secondary_addresses": [{
+                    "address": "2.3.4.5",
+                    "subnet_mask": "0.0.0.0",
+                }],
+                "tloc_prefix_change": True,
+                "tloc_pref_change_value": 100,
+                "tracking_objects": [{
+                    "tracker_id": "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+                    "tracker_action": "Decrement",
+                    "decrement_value": 100,
+                }],
+            }],
+            arps=[{
+                "ip_address": "1.2.3.4",
+                "mac_address": "00-B0-D0-63-C2-26",
+            }],
+            trustsec_enable_sgt_propogation=False,
+            trustsec_propogate=True,
+            trustsec_security_group_tag=123,
+            trustsec_enable_enforced_propogation=False,
+            trustsec_enforced_security_group_tag=1234,
+            duplex="full",
+            mac_address="00-B0-D0-63-C2-26",
+            ip_mtu=1500,
+            interface_mtu=1500,
+            tcp_mss=500,
+            speed="1000",
+            arp_timeout=1200,
+            autonegotiate=False,
+            media_type="auto-select",
+            load_interval=30,
+            icmp_redirect_disable=True,
+            xconnect="1",
+            ip_directed_broadcast=False)
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -3232,6 +3317,91 @@ class ServiceLanVpnInterfaceEthernetFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ServiceLanVpnInterfaceEthernetFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            service_lan_vpn_feature_id="140331f6-5418-4755-a059-13c77eb96037",
+            shutdown=False,
+            interface_name="GigabitEthernet3",
+            interface_description="LAN",
+            ipv4_configuration_type="static",
+            ipv4_address="1.2.3.4",
+            ipv4_subnet_mask="0.0.0.0",
+            ipv4_secondary_addresses=[{
+                "address": "1.2.3.5",
+                "subnet_mask": "0.0.0.0",
+            }],
+            ipv4_dhcp_helpers=["1.2.3.4"],
+            ipv6_configuration_type="static",
+            ipv6_dhcp_helpers=[{
+                "address": "2001:0:0:1::0",
+                "dhcpv6_helper_vpn": 1,
+            }],
+            ipv4_nat=False,
+            ipv4_nat_range_start="1.2.3.4",
+            ipv4_nat_range_end="4.5.6.7",
+            ipv4_nat_prefix_length=1,
+            ipv4_nat_overload=True,
+            ipv6_nat=True,
+            nat64=False,
+            acl_shaping_rate=12,
+            ipv6_vrrps=[{
+                "group_id": 1,
+                "priority": 100,
+                "timer": 1000,
+                "track_omp": False,
+                "ipv6_addresses": [{
+                    "link_local_address": "1::1",
+                    "global_address": "1::1/24",
+                }],
+            }],
+            ipv4_vrrps=[{
+                "group_id": 1,
+                "priority": 100,
+                "timer": 1000,
+                "track_omp": False,
+                "address": "1.2.3.4",
+                "secondary_addresses": [{
+                    "address": "2.3.4.5",
+                    "subnet_mask": "0.0.0.0",
+                }],
+                "tloc_prefix_change": True,
+                "tloc_pref_change_value": 100,
+                "tracking_objects": [{
+                    "tracker_id": "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+                    "tracker_action": "Decrement",
+                    "decrement_value": 100,
+                }],
+            }],
+            arps=[{
+                "ip_address": "1.2.3.4",
+                "mac_address": "00-B0-D0-63-C2-26",
+            }],
+            trustsec_enable_sgt_propogation=False,
+            trustsec_propogate=True,
+            trustsec_security_group_tag=123,
+            trustsec_enable_enforced_propogation=False,
+            trustsec_enforced_security_group_tag=1234,
+            duplex="full",
+            mac_address="00-B0-D0-63-C2-26",
+            ip_mtu=1500,
+            interface_mtu=1500,
+            tcp_mss=500,
+            speed="1000",
+            arp_timeout=1200,
+            autonegotiate=False,
+            media_type="auto-select",
+            load_interval=30,
+            icmp_redirect_disable=True,
+            xconnect="1",
+            ip_directed_broadcast=False)
+        ```
 
         ## Import
 

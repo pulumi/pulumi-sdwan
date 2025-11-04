@@ -17,6 +17,74 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSecurityFeatureTemplate(ctx, "example", &sdwan.CiscoSecurityFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				RekeyInterval:    pulumi.Int(86400),
+//				ReplayWindow:     pulumi.String("64"),
+//				ExtendedArWindow: pulumi.Int(256),
+//				AuthenticationTypes: pulumi.StringArray{
+//					pulumi.String("none"),
+//				},
+//				IntegrityTypes: pulumi.StringArray{
+//					pulumi.String("none"),
+//				},
+//				PairwiseKeying: pulumi.Bool(true),
+//				Keychains: sdwan.CiscoSecurityFeatureTemplateKeychainArray{
+//					&sdwan.CiscoSecurityFeatureTemplateKeychainArgs{
+//						Name:  pulumi.String("CHAIN1"),
+//						KeyId: pulumi.Int(1),
+//					},
+//				},
+//				Keys: sdwan.CiscoSecurityFeatureTemplateKeyArray{
+//					&sdwan.CiscoSecurityFeatureTemplateKeyArgs{
+//						Id:                          pulumi.String("1"),
+//						ChainName:                   pulumi.String("CHAIN1"),
+//						SendId:                      pulumi.Int(0),
+//						ReceiveId:                   pulumi.Int(0),
+//						CryptoAlgorithm:             pulumi.String("hmac-sha-256"),
+//						KeyString:                   pulumi.String("abc123"),
+//						SendLifetimeLocal:           pulumi.Bool(true),
+//						SendLifetimeStartTime:       pulumi.String("2022-12-31T23:59"),
+//						SendLifetimeEndTimeFormat:   pulumi.String("infinite"),
+//						SendLifetimeDuration:        pulumi.Int(1000),
+//						SendLifetimeEndTime:         pulumi.String("2032-12-31T23:59"),
+//						SendLifetimeInfinite:        pulumi.Bool(true),
+//						AcceptLifetimeLocal:         pulumi.Bool(true),
+//						AcceptLifetimeStartTime:     pulumi.String("2022-12-31T23:59"),
+//						AcceptLifetimeEndTimeFormat: pulumi.String("infinite"),
+//						AcceptLifetimeDuration:      pulumi.Int(1000),
+//						AcceptLifetimeEndTime:       pulumi.String("2032-12-31T23:59"),
+//						AcceptLifetimeInfinite:      pulumi.Bool(true),
+//						IncludeTcpOptions:           pulumi.Bool(false),
+//						AcceptAoMismatch:            pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

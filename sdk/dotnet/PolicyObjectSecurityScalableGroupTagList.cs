@@ -15,6 +15,32 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.PolicyObjectSecurityScalableGroupTagList("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.PolicyObjectSecurityScalableGroupTagListEntryArgs
+    ///             {
+    ///                 SgtName = "ANY",
+    ///                 Tag = "65535",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

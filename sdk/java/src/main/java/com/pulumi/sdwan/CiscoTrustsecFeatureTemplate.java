@@ -24,6 +24,66 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoTrustsecFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoTrustsecFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoTrustsecFeatureTemplateSxpConnectionArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoTrustsecFeatureTemplate("example", CiscoTrustsecFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .deviceSgt(100)
+ *             .credentialsId("user1")
+ *             .credentialsPassword("MyPassword")
+ *             .enableEnforcement(true)
+ *             .enableSxp(true)
+ *             .sxpSourceIp("1.2.3.4")
+ *             .sxpDefaultPassword("MyPassword")
+ *             .sxpKeyChain("keychain1")
+ *             .sxpLogBindingChanges(false)
+ *             .sxpReconciliationPeriod(120)
+ *             .sxpRetryPeriod(120)
+ *             .speakerHoldTime(120)
+ *             .minimumListenerHoldTime(90)
+ *             .maximumListenerHoldTime(180)
+ *             .sxpNodeIdType("interface-name")
+ *             .sxpNodeId("VirtualPortGroup")
+ *             .sxpConnections(CiscoTrustsecFeatureTemplateSxpConnectionArgs.builder()
+ *                 .peerIp("1.2.3.4")
+ *                 .sourceIp("2.3.4.5")
+ *                 .presharedKey("default")
+ *                 .mode("local")
+ *                 .modeType("listener")
+ *                 .minimumHoldTime(100)
+ *                 .maximumHoldTime(200)
+ *                 .vpnId(0)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

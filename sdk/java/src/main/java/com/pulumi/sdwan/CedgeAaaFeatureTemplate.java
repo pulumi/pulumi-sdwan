@@ -29,6 +29,116 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CedgeAaaFeatureTemplate;
+ * import com.pulumi.sdwan.CedgeAaaFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateUserArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateRadiusServerGroupArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateRadiusClientArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateTacacsServerGroupArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateAccountingRuleArgs;
+ * import com.pulumi.sdwan.inputs.CedgeAaaFeatureTemplateAuthorizationRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CedgeAaaFeatureTemplate("example", CedgeAaaFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .dot1xAuthentication(true)
+ *             .dot1xAccounting(true)
+ *             .serverGroupsPriorityOrder("100")
+ *             .users(CedgeAaaFeatureTemplateUserArgs.builder()
+ *                 .name("user1")
+ *                 .password("password123")
+ *                 .secret("secret123")
+ *                 .privilegeLevel("15")
+ *                 .sshPubkeys(CedgeAaaFeatureTemplateUserSshPubkeyArgs.builder()
+ *                     .keyString("abc123")
+ *                     .keyType("rsa")
+ *                     .build())
+ *                 .build())
+ *             .radiusServerGroups(CedgeAaaFeatureTemplateRadiusServerGroupArgs.builder()
+ *                 .groupName("GROUP1")
+ *                 .vpnId(1)
+ *                 .sourceInterface("e1")
+ *                 .servers(CedgeAaaFeatureTemplateRadiusServerGroupServerArgs.builder()
+ *                     .address("1.1.1.1")
+ *                     .authenticationPort(1812)
+ *                     .accountingPort(1813)
+ *                     .timeout(5)
+ *                     .retransmit(3)
+ *                     .key("key123")
+ *                     .secretKey("1234567")
+ *                     .encryptionType("7")
+ *                     .keyType("pac")
+ *                     .build())
+ *                 .build())
+ *             .radiusClients(CedgeAaaFeatureTemplateRadiusClientArgs.builder()
+ *                 .clientIp("2.2.2.2")
+ *                 .vpnConfigurations(CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs.builder()
+ *                     .vpnId(1)
+ *                     .serverKey("key123")
+ *                     .build())
+ *                 .build())
+ *             .radiusDynamicAuthorServerKey("key123")
+ *             .radiusDynamicAuthorDomainStripping("yes")
+ *             .radiusDynamicAuthorAuthenticationType("all")
+ *             .radiusDynamicAuthorPort(1700)
+ *             .radiusTrustsecCtsAuthorizationList("ALIST1")
+ *             .radiusTrustsecGroup("GROUP1")
+ *             .tacacsServerGroups(CedgeAaaFeatureTemplateTacacsServerGroupArgs.builder()
+ *                 .groupName("GROUP1")
+ *                 .vpnId(1)
+ *                 .sourceInterface("e1")
+ *                 .servers(CedgeAaaFeatureTemplateTacacsServerGroupServerArgs.builder()
+ *                     .address("1.1.1.1")
+ *                     .port(49)
+ *                     .timeout(5)
+ *                     .key("key123")
+ *                     .secretKey("1234567")
+ *                     .encryptionType("7")
+ *                     .build())
+ *                 .build())
+ *             .accountingRules(CedgeAaaFeatureTemplateAccountingRuleArgs.builder()
+ *                 .name("RULE1")
+ *                 .method("exec")
+ *                 .privilegeLevel("15")
+ *                 .startStop(true)
+ *                 .groups("GROUP1")
+ *                 .build())
+ *             .authorizationConsole(true)
+ *             .authorizationConfigCommands(true)
+ *             .authorizationRules(CedgeAaaFeatureTemplateAuthorizationRuleArgs.builder()
+ *                 .name("RULE1")
+ *                 .method("commands")
+ *                 .privilegeLevel("15")
+ *                 .groups("GROUP1")
+ *                 .authenticated(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

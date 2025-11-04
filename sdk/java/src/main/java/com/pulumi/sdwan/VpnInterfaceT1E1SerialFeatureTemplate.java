@@ -26,6 +26,112 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnInterfaceT1E1SerialFeatureTemplate;
+ * import com.pulumi.sdwan.VpnInterfaceT1E1SerialFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnInterfaceT1E1SerialFeatureTemplate("example", VpnInterfaceT1E1SerialFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .serialInterfaceName("SERIAL1")
+ *             .interfaceDescription("My description")
+ *             .ipv4Address("1.2.3.4/24")
+ *             .ipv6Address("2001:0:0:1::/64")
+ *             .ipv6AccessLists(VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL1")
+ *                 .build())
+ *             .enableCoreRegion(true)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
+ *             .tunnelInterfaceEncapsulations(VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
+ *                 .encapsulation("gre")
+ *                 .preference(4294967)
+ *                 .weight(250)
+ *                 .build())
+ *             .tunnelInterfaceGroups(42949672)
+ *             .tunnelInterfaceBorder(true)
+ *             .perTunnelQos(true)
+ *             .perTunnelQosAggregator(false)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
+ *             .tunnelInterfaceLastResortCircuit(false)
+ *             .tunnelInterfaceLowBandwidthLink(false)
+ *             .tunnelInterfaceTunnelTcpMss(1460)
+ *             .tunnelInterfaceClearDontFragment(false)
+ *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceControlConnections(8)
+ *             .tunnelInterfaceVbondAsStunServer(false)
+ *             .tunnelInterfaceExcludeControllerGroupLists(100)
+ *             .tunnelInterfaceVmanageConnectionPreference(5)
+ *             .tunnelInterfacePortHop(false)
+ *             .tunnelInterfaceRestrict(false)
+ *             .tunnelInterfaceCarrier("carrier1")
+ *             .tunnelInterfaceNatRefreshInterval(15)
+ *             .tunnelInterfaceHelloInterval(1000)
+ *             .tunnelInterfaceHelloTolerance(12)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
+ *             .tunnelInterfaceAllowAll(false)
+ *             .tunnelInterfaceAllowBgp(false)
+ *             .tunnelInterfaceAllowDhcp(true)
+ *             .tunnelInterfaceAllowDns(true)
+ *             .tunnelInterfaceAllowIcmp(true)
+ *             .tunnelInterfaceAllowSsh(false)
+ *             .tunnelInterfaceAllowNtp(false)
+ *             .tunnelInterfaceAllowNetconf(false)
+ *             .tunnelInterfaceAllowOspf(false)
+ *             .tunnelInterfaceAllowStun(false)
+ *             .tunnelInterfaceAllowSnmp(false)
+ *             .tunnelInterfaceAllowHttps(true)
+ *             .clearDontFragmentBit(false)
+ *             .pmtuDiscovery(false)
+ *             .ipMtu(1500)
+ *             .staticIngressQos(6)
+ *             .tcpMss(720)
+ *             .tlocExtension("tloc")
+ *             .shutdown(true)
+ *             .autonegotiate(true)
+ *             .shapingRate(10000000)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
+ *             .interfaceBandwidthCapacity(128)
+ *             .clockRate("5300000")
+ *             .encapsulation("hdlc")
+ *             .interfaceDownstreamBandwidthCapacity(10000000)
+ *             .writeRule("RULE1")
+ *             .ipv4AccessLists(VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL2")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

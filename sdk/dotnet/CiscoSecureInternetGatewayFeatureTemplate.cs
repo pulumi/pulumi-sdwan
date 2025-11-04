@@ -15,6 +15,116 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSecureInternetGatewayFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         VpnId = 1,
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 Name = "ipsec1",
+    ///                 AutoTunnelMode = true,
+    ///                 Shutdown = true,
+    ///                 Description = "My Description",
+    ///                 IpUnnumbered = false,
+    ///                 Ipv4Address = "1.2.3.4/24",
+    ///                 TunnelSource = "3.3.3.3",
+    ///                 TunnelSourceInterface = "ge0/1",
+    ///                 TunnelRouteVia = "ge0/2",
+    ///                 TunnelDestination = "3.4.5.6",
+    ///                 Application = "sig",
+    ///                 SigProvider = "secure-internet-gateway-umbrella",
+    ///                 TunnelDcPreference = "primary-dc",
+    ///                 TcpMss = 1400,
+    ///                 Mtu = 1500,
+    ///                 DeadPeerDetectionInterval = 30,
+    ///                 DeadPeerDetectionRetries = 5,
+    ///                 IkeVersion = 1,
+    ///                 IkePreSharedKey = "A1234567",
+    ///                 IkeRekeyInterval = 600,
+    ///                 IkeCiphersuite = "aes256-cbc-sha2",
+    ///                 IkeGroup = "14",
+    ///                 IkePreSharedKeyDynamic = false,
+    ///                 IkePreSharedKeyLocalId = "1.2.3.4",
+    ///                 IkePreSharedKeyRemoteId = "2.3.4.5",
+    ///                 IpsecRekeyInterval = 7200,
+    ///                 IpsecReplayWindow = 1024,
+    ///                 IpsecCiphersuite = "aes256-cbc-sha1",
+    ///                 IpsecPerfectForwardSecrecy = "group-14",
+    ///                 Tracker = "test",
+    ///                 TrackEnable = false,
+    ///                 TunnelPublicIp = "5.5.5.5",
+    ///             },
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateServiceArgs
+    ///             {
+    ///                 ServiceType = "sig",
+    ///                 InterfacePairs = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs
+    ///                     {
+    ///                         ActiveInterface = "e1",
+    ///                         BackupInterface = "e2",
+    ///                         ActiveInterfaceWeight = 10,
+    ///                         BackupInterfaceWeight = 20,
+    ///                     },
+    ///                 },
+    ///                 ZscalerAuthenticationRequired = true,
+    ///                 ZscalerXffForward = true,
+    ///                 ZscalerFirewallEnabled = true,
+    ///                 ZscalerIpsControlEnabled = true,
+    ///                 ZscalerCautionEnabled = true,
+    ///                 ZscalerPrimaryDataCenter = "Auto",
+    ///                 ZscalerSecondaryDataCenter = "Auto",
+    ///                 ZscalerSurrogateIp = true,
+    ///                 ZscalerSurrogateIdleTime = 100,
+    ///                 ZscalerSurrogateDisplayTimeUnit = "MINUTE",
+    ///                 ZscalerSurrogateIpEnforceForKnownBrowsers = true,
+    ///                 ZscalerSurrogateRefreshTime = 12345,
+    ///                 ZscalerSurrogateRefreshTimeUnit = "MINUTE",
+    ///                 ZscalerAupEnabled = true,
+    ///                 ZscalerAupBlockInternetUntilAccepted = true,
+    ///                 ZscalerAupForceSslInspection = true,
+    ///                 ZscalerAupTimeout = 60,
+    ///                 ZscalerLocationName = "LOC1",
+    ///                 UmbrellaPrimaryDataCenter = "Auto",
+    ///                 UmbrellaSecondaryDataCenter = "Auto",
+    ///             },
+    ///         },
+    ///         TrackerSourceIp = "2.3.4.5",
+    ///         Trackers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSecureInternetGatewayFeatureTemplateTrackerArgs
+    ///             {
+    ///                 TrackerType = "SIG",
+    ///                 Name = "TRACKER1",
+    ///                 EndpointApiUrl = "https://1.1.1.1",
+    ///                 Threshold = 500,
+    ///                 Interval = 60,
+    ///                 Multiplier = 4,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

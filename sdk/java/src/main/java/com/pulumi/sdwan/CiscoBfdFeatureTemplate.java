@@ -23,6 +23,50 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoBfdFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoBfdFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBfdFeatureTemplateColorArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoBfdFeatureTemplate("example", CiscoBfdFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .multiplier(3)
+ *             .pollInterval(800000)
+ *             .defaultDscp(48)
+ *             .colors(CiscoBfdFeatureTemplateColorArgs.builder()
+ *                 .color("private5")
+ *                 .helloInterval(1000)
+ *                 .multiplier(7)
+ *                 .pmtuDiscovery(true)
+ *                 .dscp(46)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

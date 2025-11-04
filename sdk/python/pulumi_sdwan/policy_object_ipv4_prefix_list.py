@@ -193,6 +193,22 @@ class PolicyObjectIpv4PrefixList(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectIpv4PrefixList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "ipv4_address": "10.0.0.0",
+                "ipv4_prefix_length": 8,
+                "le": 24,
+                "ge": 16,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -221,6 +237,22 @@ class PolicyObjectIpv4PrefixList(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectIpv4PrefixList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "ipv4_address": "10.0.0.0",
+                "ipv4_prefix_length": 8,
+                "le": 24,
+                "ge": 16,
+            }])
+        ```
 
         ## Import
 
