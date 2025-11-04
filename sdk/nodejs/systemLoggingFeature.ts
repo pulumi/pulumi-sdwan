@@ -12,6 +12,43 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemLoggingFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     diskEnable: true,
+ *     diskFileSize: 9,
+ *     diskFileRotate: 10,
+ *     tlsProfiles: [{
+ *         profile: "test",
+ *         tlsVersion: "TLSv1.1",
+ *         cipherSuites: ["aes-128-cbc-sha"],
+ *     }],
+ *     ipv4Servers: [{
+ *         hostnameIp: "1.1.1.1",
+ *         vpn: 512,
+ *         sourceInterface: "GigabitEthernet1",
+ *         priority: "informational",
+ *         tlsEnable: true,
+ *         tlsPropertiesCustomProfile: true,
+ *         tlsPropertiesProfile: "test",
+ *     }],
+ *     ipv6Servers: [{
+ *         hostnameIp: "1.1.1.1",
+ *         vpn: 512,
+ *         sourceInterface: "GigabitEthernet1",
+ *         priority: "informational",
+ *         tlsEnable: true,
+ *         tlsPropertiesCustomProfile: true,
+ *         tlsPropertiesProfile: "test",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

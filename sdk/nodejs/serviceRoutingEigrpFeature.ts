@@ -12,6 +12,38 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceRoutingEigrpFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     autonomousSystemId: 111,
+ *     networks: [{
+ *         ipAddress: "100.2.2.3",
+ *         mask: "255.255.255.0",
+ *     }],
+ *     helloInterval: 5,
+ *     holdTime: 15,
+ *     authenticationType: "md5",
+ *     md5Keys: [{
+ *         keyId: 2,
+ *         keyString: "password123",
+ *     }],
+ *     interfaces: [{
+ *         name: "GigabitEthernet3",
+ *         shutdown: false,
+ *         summaryAddresses: [{
+ *             address: "10.0.0.1",
+ *             mask: "255.255.255.0",
+ *         }],
+ *     }],
+ *     filter: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

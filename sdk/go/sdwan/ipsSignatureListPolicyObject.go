@@ -16,6 +16,36 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewIpsSignatureListPolicyObject(ctx, "example", &sdwan.IpsSignatureListPolicyObjectArgs{
+//				Name: pulumi.String("Example"),
+//				Entries: sdwan.IpsSignatureListPolicyObjectEntryArray{
+//					&sdwan.IpsSignatureListPolicyObjectEntryArgs{
+//						GeneratorId: pulumi.Int(1111),
+//						SignatureId: pulumi.Int(2222),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

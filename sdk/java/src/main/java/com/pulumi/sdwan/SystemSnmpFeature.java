@@ -28,6 +28,81 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SystemSnmpFeature;
+ * import com.pulumi.sdwan.SystemSnmpFeatureArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureViewArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureCommunityArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureGroupArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureUserArgs;
+ * import com.pulumi.sdwan.inputs.SystemSnmpFeatureTrapTargetServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SystemSnmpFeature("example", SystemSnmpFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .shutdown(false)
+ *             .contactPerson("wixie.cisco")
+ *             .locationOfDevice("SHANGHAI")
+ *             .views(SystemSnmpFeatureViewArgs.builder()
+ *                 .name("VIEW1")
+ *                 .oids(SystemSnmpFeatureViewOidArgs.builder()
+ *                     .id("1.3.6.1.4.1.9.9.394")
+ *                     .exclude(false)
+ *                     .build())
+ *                 .build())
+ *             .communities(SystemSnmpFeatureCommunityArgs.builder()
+ *                 .name("example")
+ *                 .userLabel("COMMUNITY1")
+ *                 .view("VIEW1")
+ *                 .authorization("read-only")
+ *                 .build())
+ *             .groups(SystemSnmpFeatureGroupArgs.builder()
+ *                 .name("GROUP1")
+ *                 .securityLevel("auth-priv")
+ *                 .view("VIEW1")
+ *                 .build())
+ *             .users(SystemSnmpFeatureUserArgs.builder()
+ *                 .name("USER1")
+ *                 .authenticationProtocol("sha")
+ *                 .authenticationPassword("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==")
+ *                 .privacyProtocol("aes-256-cfb-128")
+ *                 .privacyPassword("$CRYPT_CLUSTER$su56l1Z0Tk4Qc9N7+T/uOg==$sD6b0HLqEdI+RNwsEOoLcQ==")
+ *                 .group("GROUP1")
+ *                 .build())
+ *             .trapTargetServers(SystemSnmpFeatureTrapTargetServerArgs.builder()
+ *                 .vpnId(1)
+ *                 .ip("10.75.221.156")
+ *                 .port(161)
+ *                 .userLabel("TARGET1")
+ *                 .user("USER1")
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

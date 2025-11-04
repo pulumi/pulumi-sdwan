@@ -11,6 +11,35 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ZoneBasedFirewallPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     mode: "security",
+ *     applyZonePairs: [{
+ *         sourceZone: "self",
+ *         destinationZone: "0d26a366-4a11-4942-a5ea-82af9502889f",
+ *     }],
+ *     defaultAction: "pass",
+ *     rules: [{
+ *         ruleOrder: 1,
+ *         ruleName: "RULE_1",
+ *         baseAction: "inspect",
+ *         ipType: "ipv4",
+ *         matchEntries: [{
+ *             type: "sourceGeoLocationList",
+ *             policyId: "0d26a366-4a11-4942-a5ea-82af9502889f",
+ *         }],
+ *         actionEntries: [{
+ *             type: "log",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

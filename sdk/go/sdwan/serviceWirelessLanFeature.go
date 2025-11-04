@@ -17,6 +17,50 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceWirelessLanFeature(ctx, "example", &sdwan.ServiceWirelessLanFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Enable24g:        pulumi.Bool(true),
+//				Enable5g:         pulumi.Bool(true),
+//				Ssids: sdwan.ServiceWirelessLanFeatureSsidArray{
+//					&sdwan.ServiceWirelessLanFeatureSsidArgs{
+//						SsidName:      pulumi.String("SSID_1"),
+//						AdminState:    pulumi.Bool(true),
+//						BroadcastSsid: pulumi.Bool(true),
+//						VlanId:        pulumi.Int(1),
+//						RadioType:     pulumi.String("all"),
+//						SecurityType:  pulumi.String("personal"),
+//						Passphrase:    pulumi.String("MyPassword123"),
+//						QosProfile:    pulumi.String("silver"),
+//					},
+//				},
+//				Country:            pulumi.String("GB"),
+//				Username:           pulumi.String("user1"),
+//				Password:           pulumi.String("Test@316s13"),
+//				MeDynamicIpEnabled: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

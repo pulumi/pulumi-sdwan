@@ -11,6 +11,32 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.RoutePolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "reject",
+ *     sequences: [{
+ *         id: 10,
+ *         ipType: "ipv4",
+ *         name: "Sequence 10",
+ *         baseAction: "accept",
+ *         matchEntries: [{
+ *             type: "metric",
+ *             metric: 100,
+ *         }],
+ *         actionEntries: [{
+ *             type: "aggregator",
+ *             aggregator: 10,
+ *             aggregatorIpAddress: "10.1.2.3",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

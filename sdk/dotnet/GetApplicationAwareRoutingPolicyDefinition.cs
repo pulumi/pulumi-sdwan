@@ -118,6 +118,18 @@ namespace Pulumi.Sdwan
     public sealed class GetApplicationAwareRoutingPolicyDefinitionResult
     {
         /// <summary>
+        /// Type of default action
+        /// </summary>
+        public readonly string DefaultAction;
+        /// <summary>
+        /// SLA class list ID
+        /// </summary>
+        public readonly string DefaultActionSlaClassListId;
+        /// <summary>
+        /// SLA class list version
+        /// </summary>
+        public readonly int DefaultActionSlaClassListVersion;
+        /// <summary>
         /// The description of the policy definition
         /// </summary>
         public readonly string Description;
@@ -144,6 +156,12 @@ namespace Pulumi.Sdwan
 
         [OutputConstructor]
         private GetApplicationAwareRoutingPolicyDefinitionResult(
+            string defaultAction,
+
+            string defaultActionSlaClassListId,
+
+            int defaultActionSlaClassListVersion,
+
             string description,
 
             string id,
@@ -156,6 +174,9 @@ namespace Pulumi.Sdwan
 
             int version)
         {
+            DefaultAction = defaultAction;
+            DefaultActionSlaClassListId = defaultActionSlaClassListId;
+            DefaultActionSlaClassListVersion = defaultActionSlaClassListVersion;
             Description = description;
             Id = id;
             Name = name;

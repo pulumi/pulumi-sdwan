@@ -15,6 +15,138 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CedgeAaaFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Dot1xAuthentication = true,
+    ///         Dot1xAccounting = true,
+    ///         ServerGroupsPriorityOrder = "100",
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateUserArgs
+    ///             {
+    ///                 Name = "user1",
+    ///                 Password = "password123",
+    ///                 Secret = "secret123",
+    ///                 PrivilegeLevel = "15",
+    ///                 SshPubkeys = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateUserSshPubkeyArgs
+    ///                     {
+    ///                         KeyString = "abc123",
+    ///                         KeyType = "rsa",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusServerGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusServerGroupArgs
+    ///             {
+    ///                 GroupName = "GROUP1",
+    ///                 VpnId = 1,
+    ///                 SourceInterface = "e1",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusServerGroupServerArgs
+    ///                     {
+    ///                         Address = "1.1.1.1",
+    ///                         AuthenticationPort = 1812,
+    ///                         AccountingPort = 1813,
+    ///                         Timeout = 5,
+    ///                         Retransmit = 3,
+    ///                         Key = "key123",
+    ///                         SecretKey = "1234567",
+    ///                         EncryptionType = "7",
+    ///                         KeyType = "pac",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusClients = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusClientArgs
+    ///             {
+    ///                 ClientIp = "2.2.2.2",
+    ///                 VpnConfigurations = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateRadiusClientVpnConfigurationArgs
+    ///                     {
+    ///                         VpnId = 1,
+    ///                         ServerKey = "key123",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusDynamicAuthorServerKey = "key123",
+    ///         RadiusDynamicAuthorDomainStripping = "yes",
+    ///         RadiusDynamicAuthorAuthenticationType = "all",
+    ///         RadiusDynamicAuthorPort = 1700,
+    ///         RadiusTrustsecCtsAuthorizationList = "ALIST1",
+    ///         RadiusTrustsecGroup = "GROUP1",
+    ///         TacacsServerGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateTacacsServerGroupArgs
+    ///             {
+    ///                 GroupName = "GROUP1",
+    ///                 VpnId = 1,
+    ///                 SourceInterface = "e1",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CedgeAaaFeatureTemplateTacacsServerGroupServerArgs
+    ///                     {
+    ///                         Address = "1.1.1.1",
+    ///                         Port = 49,
+    ///                         Timeout = 5,
+    ///                         Key = "key123",
+    ///                         SecretKey = "1234567",
+    ///                         EncryptionType = "7",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         AccountingRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateAccountingRuleArgs
+    ///             {
+    ///                 Name = "RULE1",
+    ///                 Method = "exec",
+    ///                 PrivilegeLevel = "15",
+    ///                 StartStop = true,
+    ///                 Groups = "GROUP1",
+    ///             },
+    ///         },
+    ///         AuthorizationConsole = true,
+    ///         AuthorizationConfigCommands = true,
+    ///         AuthorizationRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgeAaaFeatureTemplateAuthorizationRuleArgs
+    ///             {
+    ///                 Name = "RULE1",
+    ///                 Method = "commands",
+    ///                 PrivilegeLevel = "15",
+    ///                 Groups = "GROUP1",
+    ///                 Authenticated = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

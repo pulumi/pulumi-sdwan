@@ -28,6 +28,80 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoSnmpFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoSnmpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateViewArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateCommunityArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateGroupArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateUserArgs;
+ * import com.pulumi.sdwan.inputs.CiscoSnmpFeatureTemplateTrapTargetArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoSnmpFeatureTemplate("example", CiscoSnmpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .shutdown(false)
+ *             .contact("Max")
+ *             .location("Building 1")
+ *             .views(CiscoSnmpFeatureTemplateViewArgs.builder()
+ *                 .name("VIEW1")
+ *                 .objectIdentifiers(CiscoSnmpFeatureTemplateViewObjectIdentifierArgs.builder()
+ *                     .id("1.2.3")
+ *                     .exclude(true)
+ *                     .build())
+ *                 .build())
+ *             .communities(CiscoSnmpFeatureTemplateCommunityArgs.builder()
+ *                 .name("community1")
+ *                 .view("VIEW1")
+ *                 .authorization("read-only")
+ *                 .build())
+ *             .groups(CiscoSnmpFeatureTemplateGroupArgs.builder()
+ *                 .name("GROUP1")
+ *                 .securityLevel("auth-priv")
+ *                 .view("VIEW1")
+ *                 .build())
+ *             .users(CiscoSnmpFeatureTemplateUserArgs.builder()
+ *                 .name("user1")
+ *                 .authenticationProtocol("sha")
+ *                 .authenticationPassword("password123")
+ *                 .privacyProtocol("aes-cfb-128")
+ *                 .privacyPassword("password123")
+ *                 .group("GROUP1")
+ *                 .build())
+ *             .trapTargets(CiscoSnmpFeatureTemplateTrapTargetArgs.builder()
+ *                 .vpnId(1)
+ *                 .ip("1.1.1.1")
+ *                 .udpPort(12345)
+ *                 .communityName("community1")
+ *                 .user("user1")
+ *                 .sourceInterface("e1")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

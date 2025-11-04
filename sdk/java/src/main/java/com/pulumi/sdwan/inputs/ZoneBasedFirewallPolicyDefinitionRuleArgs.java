@@ -53,6 +53,23 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleArgs extends com.pulumi.
     }
 
     /**
+     * Rule Type
+     *   - Choices: `ipv4`, `ipv6`
+     * 
+     */
+    @Import(name="ipType")
+    private @Nullable Output<String> ipType;
+
+    /**
+     * @return Rule Type
+     *   - Choices: `ipv4`, `ipv6`
+     * 
+     */
+    public Optional<Output<String>> ipType() {
+        return Optional.ofNullable(this.ipType);
+    }
+
+    /**
      * List of match entries
      * 
      */
@@ -102,6 +119,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleArgs extends com.pulumi.
     private ZoneBasedFirewallPolicyDefinitionRuleArgs(ZoneBasedFirewallPolicyDefinitionRuleArgs $) {
         this.actionEntries = $.actionEntries;
         this.baseAction = $.baseAction;
+        this.ipType = $.ipType;
         this.matchEntries = $.matchEntries;
         this.ruleName = $.ruleName;
         this.ruleOrder = $.ruleOrder;
@@ -177,6 +195,29 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleArgs extends com.pulumi.
          */
         public Builder baseAction(String baseAction) {
             return baseAction(Output.of(baseAction));
+        }
+
+        /**
+         * @param ipType Rule Type
+         *   - Choices: `ipv4`, `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipType(@Nullable Output<String> ipType) {
+            $.ipType = ipType;
+            return this;
+        }
+
+        /**
+         * @param ipType Rule Type
+         *   - Choices: `ipv4`, `ipv6`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipType(String ipType) {
+            return ipType(Output.of(ipType));
         }
 
         /**

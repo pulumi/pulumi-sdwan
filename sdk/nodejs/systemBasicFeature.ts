@@ -12,6 +12,54 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemBasicFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     timezone: "UTC",
+ *     configDescription: "example",
+ *     location: "example",
+ *     gpsLongitude: -77,
+ *     gpsLatitude: 38,
+ *     gpsGeoFencingEnable: true,
+ *     gpsGeoFencingRange: 100,
+ *     gpsSmsEnable: true,
+ *     gpsSmsMobileNumbers: [{
+ *         number: "+11111233",
+ *     }],
+ *     deviceGroups: ["example"],
+ *     controllerGroups: [1],
+ *     overlayId: 1,
+ *     portOffset: 19,
+ *     portHopping: true,
+ *     controlSessionPps: 300,
+ *     trackTransport: true,
+ *     trackInterfaceTag: 2,
+ *     consoleBaudRate: "9600",
+ *     maxOmpSessions: 24,
+ *     multiTenant: false,
+ *     trackDefaultGateway: true,
+ *     adminTechOnFailure: true,
+ *     idleTimeout: 10,
+ *     onDemandEnable: true,
+ *     onDemandIdleTimeout: 10,
+ *     transportGateway: false,
+ *     enhancedAppAwareRouting: "aggressive",
+ *     siteTypes: ["type-1"],
+ *     affinityGroupNumber: 1,
+ *     affinityGroupPreferences: [1],
+ *     affinityPreferenceAuto: false,
+ *     affinityPerVrfs: [{
+ *         affinityGroupNumber: 1,
+ *         vrfRange: "123-456",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

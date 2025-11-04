@@ -15,6 +15,73 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CedgePimFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         AutoRp = true,
+    ///         RpAnnounceFields = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgePimFeatureTemplateRpAnnounceFieldArgs
+    ///             {
+    ///                 InterfaceName = "Ethernet1",
+    ///                 Scope = 1,
+    ///             },
+    ///         },
+    ///         InterfaceName = "Ethernet1",
+    ///         RpCandidates = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgePimFeatureTemplateRpCandidateArgs
+    ///             {
+    ///                 Interface = "Ethernet1",
+    ///                 AccessList = "1",
+    ///                 Interval = 100,
+    ///                 Priority = 2,
+    ///             },
+    ///         },
+    ///         BsrCandidate = "Ethernet1",
+    ///         HashMaskLength = "24",
+    ///         Priority = 1,
+    ///         RpCandidateAccessList = "120",
+    ///         Scope = 1,
+    ///         Range = "16",
+    ///         Default = true,
+    ///         RpAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgePimFeatureTemplateRpAddressArgs
+    ///             {
+    ///                 AccessList = "99",
+    ///                 IpAddress = "1.2.3.4",
+    ///                 Override = false,
+    ///             },
+    ///         },
+    ///         SptThreshold = "0",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CedgePimFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "Ethernet1",
+    ///                 QueryInterval = 30,
+    ///                 JoinPruneInterval = 60,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

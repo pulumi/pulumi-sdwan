@@ -455,6 +455,8 @@ __all__ = [
     'PolicyObjectSecurityLocalDomainListEntryArgsDict',
     'PolicyObjectSecurityPortListEntryArgs',
     'PolicyObjectSecurityPortListEntryArgsDict',
+    'PolicyObjectSecurityProtocolListEntryArgs',
+    'PolicyObjectSecurityProtocolListEntryArgsDict',
     'PolicyObjectSecurityScalableGroupTagListEntryArgs',
     'PolicyObjectSecurityScalableGroupTagListEntryArgsDict',
     'PolicyObjectSecurityUrlAllowListEntryArgs',
@@ -30246,7 +30248,7 @@ if not MYPY:
         type: pulumi.Input[_builtins.str]
         """
         Type of match entry
-          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
         """
         carrier: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -30319,6 +30321,20 @@ if not MYPY:
         """
         Prefix list version
         """
+        region_id: NotRequired[pulumi.Input[_builtins.int]]
+        """
+        Region ID, Attribute conditional on `type` being equal to `regionId`
+          - Range: `0`-`63`
+        """
+        region_list_id: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Region list ID, Attribute conditional on `type` being equal to `regionList`
+        """
+        role: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Role, Attribute conditional on `type` being equal to `regionId`
+          - Choices: `border-router`, `edge-router`
+        """
         site_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Site ID, Attribute conditional on `type` being equal to `siteId`
@@ -30389,6 +30405,9 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
                  preference: Optional[pulumi.Input[_builtins.int]] = None,
                  prefix_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list_version: Optional[pulumi.Input[_builtins.int]] = None,
+                 region_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 region_list_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 role: Optional[pulumi.Input[_builtins.str]] = None,
                  site_id: Optional[pulumi.Input[_builtins.int]] = None,
                  site_list_id: Optional[pulumi.Input[_builtins.str]] = None,
                  site_list_version: Optional[pulumi.Input[_builtins.int]] = None,
@@ -30402,7 +30421,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
                  vpn_list_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] type: Type of match entry
-                 - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+                 - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
         :param pulumi.Input[_builtins.str] carrier: Carrier, Attribute conditional on `type` being equal to `carrier`
                  - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
         :param pulumi.Input[_builtins.str] color_list_id: Color list ID, Attribute conditional on `type` being equal to `colorList`
@@ -30426,6 +30445,11 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
                  - Range: `0`-`4294967295`
         :param pulumi.Input[_builtins.str] prefix_list_id: Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         :param pulumi.Input[_builtins.int] prefix_list_version: Prefix list version
+        :param pulumi.Input[_builtins.int] region_id: Region ID, Attribute conditional on `type` being equal to `regionId`
+                 - Range: `0`-`63`
+        :param pulumi.Input[_builtins.str] region_list_id: Region list ID, Attribute conditional on `type` being equal to `regionList`
+        :param pulumi.Input[_builtins.str] role: Role, Attribute conditional on `type` being equal to `regionId`
+                 - Choices: `border-router`, `edge-router`
         :param pulumi.Input[_builtins.int] site_id: Site ID, Attribute conditional on `type` being equal to `siteId`
                  - Range: `0`-`4294967295`
         :param pulumi.Input[_builtins.str] site_list_id: Site list ID, Attribute conditional on `type` being equal to `siteList`
@@ -30474,6 +30498,12 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
             pulumi.set(__self__, "prefix_list_id", prefix_list_id)
         if prefix_list_version is not None:
             pulumi.set(__self__, "prefix_list_version", prefix_list_version)
+        if region_id is not None:
+            pulumi.set(__self__, "region_id", region_id)
+        if region_list_id is not None:
+            pulumi.set(__self__, "region_list_id", region_list_id)
+        if role is not None:
+            pulumi.set(__self__, "role", role)
         if site_id is not None:
             pulumi.set(__self__, "site_id", site_id)
         if site_list_id is not None:
@@ -30502,7 +30532,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
     def type(self) -> pulumi.Input[_builtins.str]:
         """
         Type of match entry
-          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
         """
         return pulumi.get(self, "type")
 
@@ -30708,6 +30738,44 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs:
     @prefix_list_version.setter
     def prefix_list_version(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "prefix_list_version", value)
+
+    @_builtins.property
+    @pulumi.getter(name="regionId")
+    def region_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Region ID, Attribute conditional on `type` being equal to `regionId`
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "region_id")
+
+    @region_id.setter
+    def region_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "region_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="regionListId")
+    def region_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Region list ID, Attribute conditional on `type` being equal to `regionList`
+        """
+        return pulumi.get(self, "region_list_id")
+
+    @region_list_id.setter
+    def region_list_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "region_list_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def role(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Role, Attribute conditional on `type` being equal to `regionId`
+          - Choices: `border-router`, `edge-router`
+        """
+        return pulumi.get(self, "role")
+
+    @role.setter
+    def role(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "role", value)
 
     @_builtins.property
     @pulumi.getter(name="siteId")
@@ -37070,6 +37138,38 @@ class PolicyObjectSecurityPortListEntryArgs:
 
 
 if not MYPY:
+    class PolicyObjectSecurityProtocolListEntryArgsDict(TypedDict):
+        protocol_name: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+        """
+elif False:
+    PolicyObjectSecurityProtocolListEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class PolicyObjectSecurityProtocolListEntryArgs:
+    def __init__(__self__, *,
+                 protocol_name: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] protocol_name: - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+        """
+        if protocol_name is not None:
+            pulumi.set(__self__, "protocol_name", protocol_name)
+
+    @_builtins.property
+    @pulumi.getter(name="protocolName")
+    def protocol_name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+        """
+        return pulumi.get(self, "protocol_name")
+
+    @protocol_name.setter
+    def protocol_name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "protocol_name", value)
+
+
+if not MYPY:
     class PolicyObjectSecurityScalableGroupTagListEntryArgsDict(TypedDict):
         sgt_name: NotRequired[pulumi.Input[_builtins.str]]
         tag: NotRequired[pulumi.Input[_builtins.str]]
@@ -37572,10 +37672,6 @@ if not MYPY:
         Buffer percent
           - Range: `0`-`100`
         """
-        class_map_id: pulumi.Input[_builtins.str]
-        """
-        Class map ID
-        """
         drop_type: pulumi.Input[_builtins.str]
         """
         Drop type
@@ -37596,6 +37692,10 @@ if not MYPY:
         Burst size
           - Range: `5000`-`10000000`
         """
+        class_map_id: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Class map ID (can be empty for queue 0 when left as Control)
+        """
         class_map_version: NotRequired[pulumi.Input[_builtins.int]]
         """
         Class map version
@@ -37608,18 +37708,17 @@ class QosMapPolicyDefinitionQosSchedulerArgs:
     def __init__(__self__, *,
                  bandwidth_percent: pulumi.Input[_builtins.int],
                  buffer_percent: pulumi.Input[_builtins.int],
-                 class_map_id: pulumi.Input[_builtins.str],
                  drop_type: pulumi.Input[_builtins.str],
                  queue: pulumi.Input[_builtins.int],
                  scheduling_type: pulumi.Input[_builtins.str],
                  burst: Optional[pulumi.Input[_builtins.int]] = None,
+                 class_map_id: Optional[pulumi.Input[_builtins.str]] = None,
                  class_map_version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.int] bandwidth_percent: Bandwidth percent
                  - Range: `0`-`100`
         :param pulumi.Input[_builtins.int] buffer_percent: Buffer percent
                  - Range: `0`-`100`
-        :param pulumi.Input[_builtins.str] class_map_id: Class map ID
         :param pulumi.Input[_builtins.str] drop_type: Drop type
                  - Choices: `tail-drop`, `red-drop`
         :param pulumi.Input[_builtins.int] queue: Queue number
@@ -37628,16 +37727,18 @@ class QosMapPolicyDefinitionQosSchedulerArgs:
                  - Choices: `llq`, `wrr`
         :param pulumi.Input[_builtins.int] burst: Burst size
                  - Range: `5000`-`10000000`
+        :param pulumi.Input[_builtins.str] class_map_id: Class map ID (can be empty for queue 0 when left as Control)
         :param pulumi.Input[_builtins.int] class_map_version: Class map version
         """
         pulumi.set(__self__, "bandwidth_percent", bandwidth_percent)
         pulumi.set(__self__, "buffer_percent", buffer_percent)
-        pulumi.set(__self__, "class_map_id", class_map_id)
         pulumi.set(__self__, "drop_type", drop_type)
         pulumi.set(__self__, "queue", queue)
         pulumi.set(__self__, "scheduling_type", scheduling_type)
         if burst is not None:
             pulumi.set(__self__, "burst", burst)
+        if class_map_id is not None:
+            pulumi.set(__self__, "class_map_id", class_map_id)
         if class_map_version is not None:
             pulumi.set(__self__, "class_map_version", class_map_version)
 
@@ -37666,18 +37767,6 @@ class QosMapPolicyDefinitionQosSchedulerArgs:
     @buffer_percent.setter
     def buffer_percent(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "buffer_percent", value)
-
-    @_builtins.property
-    @pulumi.getter(name="classMapId")
-    def class_map_id(self) -> pulumi.Input[_builtins.str]:
-        """
-        Class map ID
-        """
-        return pulumi.get(self, "class_map_id")
-
-    @class_map_id.setter
-    def class_map_id(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "class_map_id", value)
 
     @_builtins.property
     @pulumi.getter(name="dropType")
@@ -37730,6 +37819,18 @@ class QosMapPolicyDefinitionQosSchedulerArgs:
     @burst.setter
     def burst(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "burst", value)
+
+    @_builtins.property
+    @pulumi.getter(name="classMapId")
+    def class_map_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Class map ID (can be empty for queue 0 when left as Control)
+        """
+        return pulumi.get(self, "class_map_id")
+
+    @class_map_id.setter
+    def class_map_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "class_map_id", value)
 
     @_builtins.property
     @pulumi.getter(name="classMapVersion")
@@ -83171,6 +83272,11 @@ if not MYPY:
         """
         List of actions entries
         """
+        ip_type: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Rule Type
+          - Choices: `ipv4`, `ipv6`
+        """
         match_entries: NotRequired[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgsDict']]]]
         """
         List of match entries
@@ -83185,6 +83291,7 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgs:
                  rule_name: pulumi.Input[_builtins.str],
                  rule_order: pulumi.Input[_builtins.int],
                  action_entries: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs']]]] = None,
+                 ip_type: Optional[pulumi.Input[_builtins.str]] = None,
                  match_entries: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs']]]] = None):
         """
         :param pulumi.Input[_builtins.str] base_action: Base action
@@ -83192,6 +83299,8 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgs:
         :param pulumi.Input[_builtins.str] rule_name: Rule name
         :param pulumi.Input[_builtins.int] rule_order: Rule
         :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs']]] action_entries: List of actions entries
+        :param pulumi.Input[_builtins.str] ip_type: Rule Type
+                 - Choices: `ipv4`, `ipv6`
         :param pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs']]] match_entries: List of match entries
         """
         pulumi.set(__self__, "base_action", base_action)
@@ -83199,6 +83308,8 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgs:
         pulumi.set(__self__, "rule_order", rule_order)
         if action_entries is not None:
             pulumi.set(__self__, "action_entries", action_entries)
+        if ip_type is not None:
+            pulumi.set(__self__, "ip_type", ip_type)
         if match_entries is not None:
             pulumi.set(__self__, "match_entries", match_entries)
 
@@ -83250,6 +83361,19 @@ class ZoneBasedFirewallPolicyDefinitionRuleArgs:
     @action_entries.setter
     def action_entries(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs']]]]):
         pulumi.set(self, "action_entries", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipType")
+    def ip_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Rule Type
+          - Choices: `ipv4`, `ipv6`
+        """
+        return pulumi.get(self, "ip_type")
+
+    @ip_type.setter
+    def ip_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip_type", value)
 
     @_builtins.property
     @pulumi.getter(name="matchEntries")

@@ -11,6 +11,32 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TrafficDataPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         id: 1,
+ *         name: "Seq1",
+ *         type: "applicationFirewall",
+ *         ipType: "ipv4",
+ *         baseAction: "accept",
+ *         matchEntries: [{
+ *             type: "appList",
+ *             applicationListId: "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+ *         }],
+ *         actionEntries: [{
+ *             type: "log",
+ *             log: true,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

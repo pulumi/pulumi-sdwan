@@ -31,6 +31,13 @@ namespace Pulumi.Sdwan.Inputs
         [Input("baseAction", required: true)]
         public Input<string> BaseAction { get; set; } = null!;
 
+        /// <summary>
+        /// Rule Type
+        ///   - Choices: `Ipv4`, `Ipv6`
+        /// </summary>
+        [Input("ipType")]
+        public Input<string>? IpType { get; set; }
+
         [Input("matchEntries")]
         private InputList<Inputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs>? _matchEntries;
 

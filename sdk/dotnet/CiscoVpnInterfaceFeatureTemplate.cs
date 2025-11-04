@@ -15,6 +15,274 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoVpnInterfaceFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         InterfaceName = "ge0/0",
+    ///         InterfaceDescription = "My Interface Description",
+    ///         Poe = false,
+    ///         Address = "1.1.1.1/24",
+    ///         Ipv4SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs
+    ///             {
+    ///                 Address = "2.2.2.2/24",
+    ///             },
+    ///         },
+    ///         Dhcp = false,
+    ///         DhcpDistance = 10,
+    ///         Ipv6Address = "2001:1::1/48",
+    ///         Dhcpv6 = false,
+    ///         Ipv6SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs
+    ///             {
+    ///                 Address = "2.2.2.2/24",
+    ///             },
+    ///         },
+    ///         Ipv6AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL1",
+    ///             },
+    ///         },
+    ///         Ipv4DhcpHelpers = new[]
+    ///         {
+    ///             "6.6.6.6",
+    ///         },
+    ///         Ipv6DhcpHelpers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs
+    ///             {
+    ///                 Address = "2001:7::7/48",
+    ///                 VpnId = 5,
+    ///             },
+    ///         },
+    ///         Trackers = new[]
+    ///         {
+    ///             "tracker1",
+    ///         },
+    ///         AutoBandwidthDetect = false,
+    ///         IperfServer = "8.8.8.8",
+    ///         Nat = true,
+    ///         NatType = "interface",
+    ///         UdpTimeout = 1,
+    ///         TcpTimeout = 60,
+    ///         NatPoolRangeStart = "10.1.1.1",
+    ///         NatPoolRangeEnd = "10.1.1.255",
+    ///         NatOverload = false,
+    ///         NatInsideSourceLoopbackInterface = "lo1",
+    ///         NatPoolPrefixLength = 24,
+    ///         Ipv6Nat = false,
+    ///         Nat64Interface = false,
+    ///         Nat66Interface = false,
+    ///         StaticNat66Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs
+    ///             {
+    ///                 SourcePrefix = "2001:7::/48",
+    ///                 TranslatedSourcePrefix = "2001:8::/48",
+    ///                 SourceVpnId = 1,
+    ///             },
+    ///         },
+    ///         StaticNatEntries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs
+    ///             {
+    ///                 SourceIp = "10.1.1.1",
+    ///                 TranslateIp = "100.1.1.1",
+    ///                 StaticNatDirection = "inside",
+    ///                 SourceVpnId = 1,
+    ///             },
+    ///         },
+    ///         StaticPortForwardEntries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs
+    ///             {
+    ///                 SourceIp = "10.1.1.1",
+    ///                 TranslateIp = "100.1.1.1",
+    ///                 StaticNatDirection = "inside",
+    ///                 SourcePort = 8000,
+    ///                 TranslatePort = 9000,
+    ///                 Protocol = "tcp",
+    ///                 SourceVpnId = 1,
+    ///             },
+    ///         },
+    ///         EnableCoreRegion = false,
+    ///         CoreRegion = "core",
+    ///         SecondaryRegion = "off",
+    ///         TunnelInterfaceEncapsulations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs
+    ///             {
+    ///                 Encapsulation = "gre",
+    ///                 Preference = 10,
+    ///                 Weight = 100,
+    ///             },
+    ///         },
+    ///         TunnelInterfaceBorder = false,
+    ///         TunnelQosMode = "spoke",
+    ///         TunnelBandwidth = 50,
+    ///         TunnelInterfaceGroups = new[]
+    ///         {
+    ///             5,
+    ///         },
+    ///         TunnelInterfaceColor = "gold",
+    ///         TunnelInterfaceMaxControlConnections = 10,
+    ///         TunnelInterfaceControlConnections = false,
+    ///         TunnelInterfaceVbondAsStunServer = false,
+    ///         TunnelInterfaceExcludeControllerGroupLists = new[]
+    ///         {
+    ///             10,
+    ///         },
+    ///         TunnelInterfaceVmanageConnectionPreference = 5,
+    ///         TunnelInterfacePortHop = false,
+    ///         TunnelInterfaceColorRestrict = false,
+    ///         TunnelInterfaceGreTunnelDestinationIp = "5.5.5.5",
+    ///         TunnelInterfaceCarrier = "carrier1",
+    ///         TunnelInterfaceNatRefreshInterval = 5,
+    ///         TunnelInterfaceHelloInterval = 1000,
+    ///         TunnelInterfaceHelloTolerance = 12,
+    ///         TunnelInterfaceBindLoopbackTunnel = "1",
+    ///         TunnelInterfaceLastResortCircuit = false,
+    ///         TunnelInterfaceLowBandwidthLink = false,
+    ///         TunnelInterfaceTunnelTcpMss = 1460,
+    ///         TunnelInterfaceClearDontFragment = false,
+    ///         TunnelInterfacePropagateSgt = false,
+    ///         TunnelInterfaceNetworkBroadcast = false,
+    ///         TunnelInterfaceAllowAll = false,
+    ///         TunnelInterfaceAllowBgp = false,
+    ///         TunnelInterfaceAllowDhcp = false,
+    ///         TunnelInterfaceAllowDns = false,
+    ///         TunnelInterfaceAllowIcmp = false,
+    ///         TunnelInterfaceAllowSsh = false,
+    ///         TunnelInterfaceAllowNetconf = false,
+    ///         TunnelInterfaceAllowNtp = false,
+    ///         TunnelInterfaceAllowOspf = false,
+    ///         TunnelInterfaceAllowStun = false,
+    ///         TunnelInterfaceAllowSnmp = false,
+    ///         TunnelInterfaceAllowHttps = false,
+    ///         MediaType = "auto-select",
+    ///         InterfaceMtu = 9216,
+    ///         IpMtu = 1500,
+    ///         TcpMssAdjust = 1460,
+    ///         TlocExtension = "123",
+    ///         LoadInterval = 30,
+    ///         GreTunnelSourceIp = "3.3.3.3",
+    ///         GreTunnelXconnect = "a123",
+    ///         MacAddress = "00-B0-D0-63-C2-26",
+    ///         Speed = "1000",
+    ///         Duplex = "full",
+    ///         Shutdown = false,
+    ///         ArpTimeout = 1200,
+    ///         Autonegotiate = true,
+    ///         IpDirectedBroadcast = false,
+    ///         IcmpRedirectDisable = false,
+    ///         QosAdaptivePeriod = 15,
+    ///         QosAdaptiveBandwidthDownstream = 10000,
+    ///         QosAdaptiveMinDownstream = 100,
+    ///         QosAdaptiveMaxDownstream = 100000,
+    ///         QosAdaptiveBandwidthUpstream = 10000,
+    ///         QosAdaptiveMinUpstream = 100,
+    ///         QosAdaptiveMaxUpstream = 100000,
+    ///         ShapingRate = 1000,
+    ///         QosMap = "QOSMAP1",
+    ///         QosMapVpn = "QOSMAP2",
+    ///         BandwidthUpstream = 10000,
+    ///         BandwidthDownstream = 10000,
+    ///         BlockNonSourceIp = false,
+    ///         RewriteRuleName = "RULE1",
+    ///         AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateAccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL1",
+    ///             },
+    ///         },
+    ///         StaticArps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateStaticArpArgs
+    ///             {
+    ///                 IpAddress = "8.8.8.8",
+    ///                 Mac = "00-B0-D0-63-C2-26",
+    ///             },
+    ///         },
+    ///         Ipv4Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs
+    ///             {
+    ///                 GroupId = 100,
+    ///                 Priority = 100,
+    ///                 Timer = 100,
+    ///                 TrackOmp = false,
+    ///                 TrackPrefixList = "PL1",
+    ///                 IpAddress = "2.2.2.2",
+    ///                 Ipv4SecondaryAddresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs
+    ///                     {
+    ///                         IpAddress = "2.2.2.3",
+    ///                     },
+    ///                 },
+    ///                 TlocPreferenceChange = false,
+    ///                 TlocPreferenceChangeValue = 10,
+    ///                 TrackingObjects = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs
+    ///                     {
+    ///                         TrackerId = 10,
+    ///                         TrackAction = "decrement",
+    ///                         DecrementValue = 100,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs
+    ///             {
+    ///                 GroupId = 100,
+    ///                 Priority = 100,
+    ///                 Timer = 100,
+    ///                 TrackOmp = false,
+    ///                 TrackPrefixList = "PL1",
+    ///                 Ipv6Addresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs
+    ///                     {
+    ///                         Ipv6LinkLocal = "fe80::260:8ff:fe52:f9d8",
+    ///                         Prefix = "2001:9::/48",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         PropagateSgt = false,
+    ///         StaticSgt = 1003,
+    ///         StaticSgtTrusted = false,
+    ///         EnableSgt = true,
+    ///         SgtEnforcement = true,
+    ///         SgtEnforcementSgt = 1004,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

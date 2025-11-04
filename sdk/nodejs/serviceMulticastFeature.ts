@@ -12,6 +12,69 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceMulticastFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     sptOnly: false,
+ *     localReplicator: false,
+ *     localReplicatorThreshold: 10,
+ *     igmpInterfaces: [{
+ *         interfaceName: "GigabitEthernet1",
+ *         version: 2,
+ *         joinGroups: [{
+ *             groupAddress: "224.0.0.0",
+ *             sourceAddress: "1.2.3.4",
+ *         }],
+ *     }],
+ *     pimSourceSpecificMulticastEnable: true,
+ *     pimSourceSpecificMulticastAccessList: "1",
+ *     pimSptThreshold: "0",
+ *     pimInterfaces: [{
+ *         interfaceName: "GigabitEthernet1",
+ *         queryInterval: 30,
+ *         joinPruneInterval: 60,
+ *     }],
+ *     staticRpAddresses: [{
+ *         ipAddress: "1.2.3.4",
+ *         accessList: "1",
+ *         override: false,
+ *     }],
+ *     enableAutoRp: false,
+ *     pimBsrRpCandidates: [{
+ *         interfaceName: "GigabitEthernet1",
+ *         accessListId: "2",
+ *         interval: 30,
+ *         priority: 1,
+ *     }],
+ *     pimBsrCandidates: [{
+ *         interfaceName: "GigabitEthernet1",
+ *         hashMaskLength: 30,
+ *         priority: 120,
+ *         acceptCandidateAccessList: "test",
+ *     }],
+ *     msdpGroups: [{
+ *         meshGroupName: "Example",
+ *         peers: [{
+ *             peerIp: "1.2.3.4",
+ *             connectionSourceInterface: "GigabitEthernet1",
+ *             remoteAs: 1,
+ *             peerAuthenticationPassword: "Password123!",
+ *             keepaliveInterval: 15,
+ *             keepaliveHoldTime: 30,
+ *             saLimit: 1,
+ *             defaultPeer: false,
+ *         }],
+ *     }],
+ *     msdpOriginatorId: "GigabitEthernet1",
+ *     msdpConnectionRetryInterval: 30,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

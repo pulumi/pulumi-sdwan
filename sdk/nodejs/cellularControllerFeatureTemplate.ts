@@ -12,6 +12,27 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CellularControllerFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     cellularInterfaceId: "1",
+ *     dataProfiles: [{
+ *         slotNumber: 1,
+ *         dataProfile: 8,
+ *         attachProfile: 8,
+ *     }],
+ *     primarySimSlot: 100,
+ *     simFailoverRetries: 160,
+ *     simFailoverTimeout: 3,
+ *     firmwareAutoSim: false,
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

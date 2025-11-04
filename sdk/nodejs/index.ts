@@ -865,6 +865,11 @@ export const getPolicyObjectSecurityPortList: typeof import("./getPolicyObjectSe
 export const getPolicyObjectSecurityPortListOutput: typeof import("./getPolicyObjectSecurityPortList").getPolicyObjectSecurityPortListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectSecurityPortList","getPolicyObjectSecurityPortListOutput"], () => require("./getPolicyObjectSecurityPortList"));
 
+export { GetPolicyObjectSecurityProtocolListArgs, GetPolicyObjectSecurityProtocolListResult, GetPolicyObjectSecurityProtocolListOutputArgs } from "./getPolicyObjectSecurityProtocolList";
+export const getPolicyObjectSecurityProtocolList: typeof import("./getPolicyObjectSecurityProtocolList").getPolicyObjectSecurityProtocolList = null as any;
+export const getPolicyObjectSecurityProtocolListOutput: typeof import("./getPolicyObjectSecurityProtocolList").getPolicyObjectSecurityProtocolListOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectSecurityProtocolList","getPolicyObjectSecurityProtocolListOutput"], () => require("./getPolicyObjectSecurityProtocolList"));
+
 export { GetPolicyObjectSecurityScalableGroupTagListArgs, GetPolicyObjectSecurityScalableGroupTagListResult, GetPolicyObjectSecurityScalableGroupTagListOutputArgs } from "./getPolicyObjectSecurityScalableGroupTagList";
 export const getPolicyObjectSecurityScalableGroupTagList: typeof import("./getPolicyObjectSecurityScalableGroupTagList").getPolicyObjectSecurityScalableGroupTagList = null as any;
 export const getPolicyObjectSecurityScalableGroupTagListOutput: typeof import("./getPolicyObjectSecurityScalableGroupTagList").getPolicyObjectSecurityScalableGroupTagListOutput = null as any;
@@ -894,6 +899,36 @@ export { GetPolicyObjectTlocListArgs, GetPolicyObjectTlocListResult, GetPolicyOb
 export const getPolicyObjectTlocList: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocList = null as any;
 export const getPolicyObjectTlocListOutput: typeof import("./getPolicyObjectTlocList").getPolicyObjectTlocListOutput = null as any;
 utilities.lazyLoad(exports, ["getPolicyObjectTlocList","getPolicyObjectTlocListOutput"], () => require("./getPolicyObjectTlocList"));
+
+export { GetPolicyObjectUnifiedAdvancedInspectionProfileArgs, GetPolicyObjectUnifiedAdvancedInspectionProfileResult, GetPolicyObjectUnifiedAdvancedInspectionProfileOutputArgs } from "./getPolicyObjectUnifiedAdvancedInspectionProfile";
+export const getPolicyObjectUnifiedAdvancedInspectionProfile: typeof import("./getPolicyObjectUnifiedAdvancedInspectionProfile").getPolicyObjectUnifiedAdvancedInspectionProfile = null as any;
+export const getPolicyObjectUnifiedAdvancedInspectionProfileOutput: typeof import("./getPolicyObjectUnifiedAdvancedInspectionProfile").getPolicyObjectUnifiedAdvancedInspectionProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedAdvancedInspectionProfile","getPolicyObjectUnifiedAdvancedInspectionProfileOutput"], () => require("./getPolicyObjectUnifiedAdvancedInspectionProfile"));
+
+export { GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs, GetPolicyObjectUnifiedAdvancedMalwareProtectionResult, GetPolicyObjectUnifiedAdvancedMalwareProtectionOutputArgs } from "./getPolicyObjectUnifiedAdvancedMalwareProtection";
+export const getPolicyObjectUnifiedAdvancedMalwareProtection: typeof import("./getPolicyObjectUnifiedAdvancedMalwareProtection").getPolicyObjectUnifiedAdvancedMalwareProtection = null as any;
+export const getPolicyObjectUnifiedAdvancedMalwareProtectionOutput: typeof import("./getPolicyObjectUnifiedAdvancedMalwareProtection").getPolicyObjectUnifiedAdvancedMalwareProtectionOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedAdvancedMalwareProtection","getPolicyObjectUnifiedAdvancedMalwareProtectionOutput"], () => require("./getPolicyObjectUnifiedAdvancedMalwareProtection"));
+
+export { GetPolicyObjectUnifiedIntrusionPreventionArgs, GetPolicyObjectUnifiedIntrusionPreventionResult, GetPolicyObjectUnifiedIntrusionPreventionOutputArgs } from "./getPolicyObjectUnifiedIntrusionPrevention";
+export const getPolicyObjectUnifiedIntrusionPrevention: typeof import("./getPolicyObjectUnifiedIntrusionPrevention").getPolicyObjectUnifiedIntrusionPrevention = null as any;
+export const getPolicyObjectUnifiedIntrusionPreventionOutput: typeof import("./getPolicyObjectUnifiedIntrusionPrevention").getPolicyObjectUnifiedIntrusionPreventionOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedIntrusionPrevention","getPolicyObjectUnifiedIntrusionPreventionOutput"], () => require("./getPolicyObjectUnifiedIntrusionPrevention"));
+
+export { GetPolicyObjectUnifiedTlsSslDecryptionArgs, GetPolicyObjectUnifiedTlsSslDecryptionResult, GetPolicyObjectUnifiedTlsSslDecryptionOutputArgs } from "./getPolicyObjectUnifiedTlsSslDecryption";
+export const getPolicyObjectUnifiedTlsSslDecryption: typeof import("./getPolicyObjectUnifiedTlsSslDecryption").getPolicyObjectUnifiedTlsSslDecryption = null as any;
+export const getPolicyObjectUnifiedTlsSslDecryptionOutput: typeof import("./getPolicyObjectUnifiedTlsSslDecryption").getPolicyObjectUnifiedTlsSslDecryptionOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedTlsSslDecryption","getPolicyObjectUnifiedTlsSslDecryptionOutput"], () => require("./getPolicyObjectUnifiedTlsSslDecryption"));
+
+export { GetPolicyObjectUnifiedTlsSslProfileArgs, GetPolicyObjectUnifiedTlsSslProfileResult, GetPolicyObjectUnifiedTlsSslProfileOutputArgs } from "./getPolicyObjectUnifiedTlsSslProfile";
+export const getPolicyObjectUnifiedTlsSslProfile: typeof import("./getPolicyObjectUnifiedTlsSslProfile").getPolicyObjectUnifiedTlsSslProfile = null as any;
+export const getPolicyObjectUnifiedTlsSslProfileOutput: typeof import("./getPolicyObjectUnifiedTlsSslProfile").getPolicyObjectUnifiedTlsSslProfileOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedTlsSslProfile","getPolicyObjectUnifiedTlsSslProfileOutput"], () => require("./getPolicyObjectUnifiedTlsSslProfile"));
+
+export { GetPolicyObjectUnifiedUrlFilteringArgs, GetPolicyObjectUnifiedUrlFilteringResult, GetPolicyObjectUnifiedUrlFilteringOutputArgs } from "./getPolicyObjectUnifiedUrlFiltering";
+export const getPolicyObjectUnifiedUrlFiltering: typeof import("./getPolicyObjectUnifiedUrlFiltering").getPolicyObjectUnifiedUrlFiltering = null as any;
+export const getPolicyObjectUnifiedUrlFilteringOutput: typeof import("./getPolicyObjectUnifiedUrlFiltering").getPolicyObjectUnifiedUrlFilteringOutput = null as any;
+utilities.lazyLoad(exports, ["getPolicyObjectUnifiedUrlFiltering","getPolicyObjectUnifiedUrlFilteringOutput"], () => require("./getPolicyObjectUnifiedUrlFiltering"));
 
 export { GetPolicyObjectVpnGroupArgs, GetPolicyObjectVpnGroupResult, GetPolicyObjectVpnGroupOutputArgs } from "./getPolicyObjectVpnGroup";
 export const getPolicyObjectVpnGroup: typeof import("./getPolicyObjectVpnGroup").getPolicyObjectVpnGroup = null as any;
@@ -1715,6 +1750,11 @@ export type PolicyObjectSecurityPortList = import("./policyObjectSecurityPortLis
 export const PolicyObjectSecurityPortList: typeof import("./policyObjectSecurityPortList").PolicyObjectSecurityPortList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectSecurityPortList"], () => require("./policyObjectSecurityPortList"));
 
+export { PolicyObjectSecurityProtocolListArgs, PolicyObjectSecurityProtocolListState } from "./policyObjectSecurityProtocolList";
+export type PolicyObjectSecurityProtocolList = import("./policyObjectSecurityProtocolList").PolicyObjectSecurityProtocolList;
+export const PolicyObjectSecurityProtocolList: typeof import("./policyObjectSecurityProtocolList").PolicyObjectSecurityProtocolList = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectSecurityProtocolList"], () => require("./policyObjectSecurityProtocolList"));
+
 export { PolicyObjectSecurityScalableGroupTagListArgs, PolicyObjectSecurityScalableGroupTagListState } from "./policyObjectSecurityScalableGroupTagList";
 export type PolicyObjectSecurityScalableGroupTagList = import("./policyObjectSecurityScalableGroupTagList").PolicyObjectSecurityScalableGroupTagList;
 export const PolicyObjectSecurityScalableGroupTagList: typeof import("./policyObjectSecurityScalableGroupTagList").PolicyObjectSecurityScalableGroupTagList = null as any;
@@ -1744,6 +1784,36 @@ export { PolicyObjectTlocListArgs, PolicyObjectTlocListState } from "./policyObj
 export type PolicyObjectTlocList = import("./policyObjectTlocList").PolicyObjectTlocList;
 export const PolicyObjectTlocList: typeof import("./policyObjectTlocList").PolicyObjectTlocList = null as any;
 utilities.lazyLoad(exports, ["PolicyObjectTlocList"], () => require("./policyObjectTlocList"));
+
+export { PolicyObjectUnifiedAdvancedInspectionProfileArgs, PolicyObjectUnifiedAdvancedInspectionProfileState } from "./policyObjectUnifiedAdvancedInspectionProfile";
+export type PolicyObjectUnifiedAdvancedInspectionProfile = import("./policyObjectUnifiedAdvancedInspectionProfile").PolicyObjectUnifiedAdvancedInspectionProfile;
+export const PolicyObjectUnifiedAdvancedInspectionProfile: typeof import("./policyObjectUnifiedAdvancedInspectionProfile").PolicyObjectUnifiedAdvancedInspectionProfile = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedAdvancedInspectionProfile"], () => require("./policyObjectUnifiedAdvancedInspectionProfile"));
+
+export { PolicyObjectUnifiedAdvancedMalwareProtectionArgs, PolicyObjectUnifiedAdvancedMalwareProtectionState } from "./policyObjectUnifiedAdvancedMalwareProtection";
+export type PolicyObjectUnifiedAdvancedMalwareProtection = import("./policyObjectUnifiedAdvancedMalwareProtection").PolicyObjectUnifiedAdvancedMalwareProtection;
+export const PolicyObjectUnifiedAdvancedMalwareProtection: typeof import("./policyObjectUnifiedAdvancedMalwareProtection").PolicyObjectUnifiedAdvancedMalwareProtection = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedAdvancedMalwareProtection"], () => require("./policyObjectUnifiedAdvancedMalwareProtection"));
+
+export { PolicyObjectUnifiedIntrusionPreventionArgs, PolicyObjectUnifiedIntrusionPreventionState } from "./policyObjectUnifiedIntrusionPrevention";
+export type PolicyObjectUnifiedIntrusionPrevention = import("./policyObjectUnifiedIntrusionPrevention").PolicyObjectUnifiedIntrusionPrevention;
+export const PolicyObjectUnifiedIntrusionPrevention: typeof import("./policyObjectUnifiedIntrusionPrevention").PolicyObjectUnifiedIntrusionPrevention = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedIntrusionPrevention"], () => require("./policyObjectUnifiedIntrusionPrevention"));
+
+export { PolicyObjectUnifiedTlsSslDecryptionArgs, PolicyObjectUnifiedTlsSslDecryptionState } from "./policyObjectUnifiedTlsSslDecryption";
+export type PolicyObjectUnifiedTlsSslDecryption = import("./policyObjectUnifiedTlsSslDecryption").PolicyObjectUnifiedTlsSslDecryption;
+export const PolicyObjectUnifiedTlsSslDecryption: typeof import("./policyObjectUnifiedTlsSslDecryption").PolicyObjectUnifiedTlsSslDecryption = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedTlsSslDecryption"], () => require("./policyObjectUnifiedTlsSslDecryption"));
+
+export { PolicyObjectUnifiedTlsSslProfileArgs, PolicyObjectUnifiedTlsSslProfileState } from "./policyObjectUnifiedTlsSslProfile";
+export type PolicyObjectUnifiedTlsSslProfile = import("./policyObjectUnifiedTlsSslProfile").PolicyObjectUnifiedTlsSslProfile;
+export const PolicyObjectUnifiedTlsSslProfile: typeof import("./policyObjectUnifiedTlsSslProfile").PolicyObjectUnifiedTlsSslProfile = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedTlsSslProfile"], () => require("./policyObjectUnifiedTlsSslProfile"));
+
+export { PolicyObjectUnifiedUrlFilteringArgs, PolicyObjectUnifiedUrlFilteringState } from "./policyObjectUnifiedUrlFiltering";
+export type PolicyObjectUnifiedUrlFiltering = import("./policyObjectUnifiedUrlFiltering").PolicyObjectUnifiedUrlFiltering;
+export const PolicyObjectUnifiedUrlFiltering: typeof import("./policyObjectUnifiedUrlFiltering").PolicyObjectUnifiedUrlFiltering = null as any;
+utilities.lazyLoad(exports, ["PolicyObjectUnifiedUrlFiltering"], () => require("./policyObjectUnifiedUrlFiltering"));
 
 export { PolicyObjectVpnGroupArgs, PolicyObjectVpnGroupState } from "./policyObjectVpnGroup";
 export type PolicyObjectVpnGroup = import("./policyObjectVpnGroup").PolicyObjectVpnGroup;
@@ -2578,6 +2648,8 @@ const _module = {
                 return new PolicyObjectSecurityLocalDomainList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
                 return new PolicyObjectSecurityPortList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList":
+                return new PolicyObjectSecurityProtocolList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
                 return new PolicyObjectSecurityScalableGroupTagList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
@@ -2590,6 +2662,18 @@ const _module = {
                 return new PolicyObjectStandardCommunityList(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectTlocList:PolicyObjectTlocList":
                 return new PolicyObjectTlocList(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedAdvancedInspectionProfile:PolicyObjectUnifiedAdvancedInspectionProfile":
+                return new PolicyObjectUnifiedAdvancedInspectionProfile(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedAdvancedMalwareProtection:PolicyObjectUnifiedAdvancedMalwareProtection":
+                return new PolicyObjectUnifiedAdvancedMalwareProtection(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention":
+                return new PolicyObjectUnifiedIntrusionPrevention(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption":
+                return new PolicyObjectUnifiedTlsSslDecryption(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile":
+                return new PolicyObjectUnifiedTlsSslProfile(name, <any>undefined, { urn })
+            case "sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering":
+                return new PolicyObjectUnifiedUrlFiltering(name, <any>undefined, { urn })
             case "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup":
                 return new PolicyObjectVpnGroup(name, <any>undefined, { urn })
             case "sdwan:index/portListPolicyObject:PortListPolicyObject":
@@ -2943,12 +3027,19 @@ pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityIpsSig
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalApplicationList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityLocalDomainList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityPortList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityProtocolList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityScalableGroupTagList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlAllowList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSecurityUrlBlockList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectSlaClassList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectStandardCommunityList", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectTlocList", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedAdvancedInspectionProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedAdvancedMalwareProtection", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedIntrusionPrevention", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedTlsSslDecryption", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedTlsSslProfile", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectUnifiedUrlFiltering", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/policyObjectVpnGroup", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/portListPolicyObject", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/preferredColorGroupPolicyObject", _module)

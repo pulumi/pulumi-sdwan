@@ -12,6 +12,28 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SecurityAppHostingFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     virtualApplications: [{
+ *         instanceId: "2e89c1fe-440a-43f5-9f3a-54a9836fdbb5",
+ *         applicationType: "utd",
+ *         nat: true,
+ *         databaseUrl: false,
+ *         resourceProfile: "low",
+ *         serviceGatewayIp: "1.2.3.4/24",
+ *         serviceIp: "1.2.3.5/24",
+ *         dataGatewayIp: "192.0.2.1/24",
+ *         dataServiceIp: "192.0.2.2/24",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

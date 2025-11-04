@@ -15,6 +15,115 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.VpnInterfaceT1E1SerialFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         SerialInterfaceName = "SERIAL1",
+    ///         InterfaceDescription = "My description",
+    ///         Ipv4Address = "1.2.3.4/24",
+    ///         Ipv6Address = "2001:0:0:1::/64",
+    ///         Ipv6AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceT1E1SerialFeatureTemplateIpv6AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL1",
+    ///             },
+    ///         },
+    ///         EnableCoreRegion = true,
+    ///         CoreRegion = "core",
+    ///         SecondaryRegion = "off",
+    ///         TunnelInterfaceEncapsulations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceT1E1SerialFeatureTemplateTunnelInterfaceEncapsulationArgs
+    ///             {
+    ///                 Encapsulation = "gre",
+    ///                 Preference = 4294967,
+    ///                 Weight = 250,
+    ///             },
+    ///         },
+    ///         TunnelInterfaceGroups = new[]
+    ///         {
+    ///             42949672,
+    ///         },
+    ///         TunnelInterfaceBorder = true,
+    ///         PerTunnelQos = true,
+    ///         PerTunnelQosAggregator = false,
+    ///         TunnelQosMode = "spoke",
+    ///         TunnelInterfaceColor = "custom1",
+    ///         TunnelInterfaceLastResortCircuit = false,
+    ///         TunnelInterfaceLowBandwidthLink = false,
+    ///         TunnelInterfaceTunnelTcpMss = 1460,
+    ///         TunnelInterfaceClearDontFragment = false,
+    ///         TunnelInterfaceNetworkBroadcast = false,
+    ///         TunnelInterfaceControlConnections = 8,
+    ///         TunnelInterfaceVbondAsStunServer = false,
+    ///         TunnelInterfaceExcludeControllerGroupLists = new[]
+    ///         {
+    ///             100,
+    ///         },
+    ///         TunnelInterfaceVmanageConnectionPreference = 5,
+    ///         TunnelInterfacePortHop = false,
+    ///         TunnelInterfaceRestrict = false,
+    ///         TunnelInterfaceCarrier = "carrier1",
+    ///         TunnelInterfaceNatRefreshInterval = 15,
+    ///         TunnelInterfaceHelloInterval = 1000,
+    ///         TunnelInterfaceHelloTolerance = 12,
+    ///         TunnelInterfaceBindLoopbackTunnel = "12",
+    ///         TunnelInterfaceAllowAll = false,
+    ///         TunnelInterfaceAllowBgp = false,
+    ///         TunnelInterfaceAllowDhcp = true,
+    ///         TunnelInterfaceAllowDns = true,
+    ///         TunnelInterfaceAllowIcmp = true,
+    ///         TunnelInterfaceAllowSsh = false,
+    ///         TunnelInterfaceAllowNtp = false,
+    ///         TunnelInterfaceAllowNetconf = false,
+    ///         TunnelInterfaceAllowOspf = false,
+    ///         TunnelInterfaceAllowStun = false,
+    ///         TunnelInterfaceAllowSnmp = false,
+    ///         TunnelInterfaceAllowHttps = true,
+    ///         ClearDontFragmentBit = false,
+    ///         PmtuDiscovery = false,
+    ///         IpMtu = 1500,
+    ///         StaticIngressQos = 6,
+    ///         TcpMss = 720,
+    ///         TlocExtension = "tloc",
+    ///         Shutdown = true,
+    ///         Autonegotiate = true,
+    ///         ShapingRate = 10000000,
+    ///         QosMap = "test",
+    ///         QosMapVpn = "test",
+    ///         InterfaceBandwidthCapacity = 128,
+    ///         ClockRate = "5300000",
+    ///         Encapsulation = "hdlc",
+    ///         InterfaceDownstreamBandwidthCapacity = 10000000,
+    ///         WriteRule = "RULE1",
+    ///         Ipv4AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceT1E1SerialFeatureTemplateIpv4AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL2",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

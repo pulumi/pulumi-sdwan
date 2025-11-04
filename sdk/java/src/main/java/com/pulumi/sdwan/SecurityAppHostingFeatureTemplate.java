@@ -23,6 +23,51 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SecurityAppHostingFeatureTemplate;
+ * import com.pulumi.sdwan.SecurityAppHostingFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.SecurityAppHostingFeatureTemplateVirtualApplicationArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SecurityAppHostingFeatureTemplate("example", SecurityAppHostingFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .virtualApplications(SecurityAppHostingFeatureTemplateVirtualApplicationArgs.builder()
+ *                 .instanceId("2e89c1fe-440a-43f5-9f3a-54a9836fdbb5")
+ *                 .applicationType("utd")
+ *                 .nat(true)
+ *                 .databaseUrl(false)
+ *                 .resourceProfile("low")
+ *                 .serviceGatewayIp("1.2.3.4/24")
+ *                 .serviceIp("1.2.3.5/24")
+ *                 .dataGatewayIp("192.0.2.1/24")
+ *                 .dataServiceIp("192.0.2.2/24")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

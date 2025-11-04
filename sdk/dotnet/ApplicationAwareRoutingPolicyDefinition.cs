@@ -14,6 +14,48 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ApplicationAwareRoutingPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "Region1",
+    ///                 IpType = "ipv4",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs
+    ///                     {
+    ///                         Type = "appList",
+    ///                         ApplicationListId = "e3aad846-abb9-425f-aaa8-9ed17b9c8d7c",
+    ///                     },
+    ///                 },
+    ///                 ActionEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs
+    ///                     {
+    ///                         Type = "backupSlaPreferredColor",
+    ///                         BackupSlaPreferredColor = "bronze",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:
@@ -25,6 +67,25 @@ namespace Pulumi.Sdwan
     [SdwanResourceType("sdwan:index/applicationAwareRoutingPolicyDefinition:ApplicationAwareRoutingPolicyDefinition")]
     public partial class ApplicationAwareRoutingPolicyDefinition : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// Type of default action
+        ///   - Choices: `slaClass`
+        /// </summary>
+        [Output("defaultAction")]
+        public Output<string?> DefaultAction { get; private set; } = null!;
+
+        /// <summary>
+        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// </summary>
+        [Output("defaultActionSlaClassListId")]
+        public Output<string?> DefaultActionSlaClassListId { get; private set; } = null!;
+
+        /// <summary>
+        /// SLA class list version
+        /// </summary>
+        [Output("defaultActionSlaClassListVersion")]
+        public Output<int?> DefaultActionSlaClassListVersion { get; private set; } = null!;
+
         /// <summary>
         /// The description of the policy definition
         /// </summary>
@@ -102,6 +163,25 @@ namespace Pulumi.Sdwan
     public sealed class ApplicationAwareRoutingPolicyDefinitionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Type of default action
+        ///   - Choices: `slaClass`
+        /// </summary>
+        [Input("defaultAction")]
+        public Input<string>? DefaultAction { get; set; }
+
+        /// <summary>
+        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// </summary>
+        [Input("defaultActionSlaClassListId")]
+        public Input<string>? DefaultActionSlaClassListId { get; set; }
+
+        /// <summary>
+        /// SLA class list version
+        /// </summary>
+        [Input("defaultActionSlaClassListVersion")]
+        public Input<int>? DefaultActionSlaClassListVersion { get; set; }
+
+        /// <summary>
         /// The description of the policy definition
         /// </summary>
         [Input("description", required: true)]
@@ -133,6 +213,25 @@ namespace Pulumi.Sdwan
 
     public sealed class ApplicationAwareRoutingPolicyDefinitionState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// Type of default action
+        ///   - Choices: `slaClass`
+        /// </summary>
+        [Input("defaultAction")]
+        public Input<string>? DefaultAction { get; set; }
+
+        /// <summary>
+        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// </summary>
+        [Input("defaultActionSlaClassListId")]
+        public Input<string>? DefaultActionSlaClassListId { get; set; }
+
+        /// <summary>
+        /// SLA class list version
+        /// </summary>
+        [Input("defaultActionSlaClassListVersion")]
+        public Input<int>? DefaultActionSlaClassListVersion { get; set; }
+
         /// <summary>
         /// The description of the policy definition
         /// </summary>

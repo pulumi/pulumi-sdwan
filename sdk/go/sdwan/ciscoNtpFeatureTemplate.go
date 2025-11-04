@@ -17,6 +17,56 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoNtpFeatureTemplate(ctx, "example", &sdwan.CiscoNtpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Master:                pulumi.Bool(true),
+//				MasterStratum:         pulumi.Int(6),
+//				MasterSourceInterface: pulumi.String("e1"),
+//				TrustedKeys: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				AuthenticationKeys: sdwan.CiscoNtpFeatureTemplateAuthenticationKeyArray{
+//					&sdwan.CiscoNtpFeatureTemplateAuthenticationKeyArgs{
+//						Id:    pulumi.Int(1),
+//						Value: pulumi.String("12345"),
+//					},
+//				},
+//				Servers: sdwan.CiscoNtpFeatureTemplateServerArray{
+//					&sdwan.CiscoNtpFeatureTemplateServerArgs{
+//						HostnameIp:          pulumi.String("NTP_SERVER1"),
+//						AuthenticationKeyId: pulumi.Int(1),
+//						VpnId:               pulumi.Int(1),
+//						Version:             pulumi.Int(4),
+//						SourceInterface:     pulumi.String("e1"),
+//						Prefer:              pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

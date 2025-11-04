@@ -4261,6 +4261,86 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnInterfaceT1E1SerialFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            serial_interface_name="SERIAL1",
+            interface_description="My description",
+            ipv4_address="1.2.3.4/24",
+            ipv6_address="2001:0:0:1::/64",
+            ipv6_access_lists=[{
+                "direction": "in",
+                "acl_name": "ACL1",
+            }],
+            enable_core_region=True,
+            core_region="core",
+            secondary_region="off",
+            tunnel_interface_encapsulations=[{
+                "encapsulation": "gre",
+                "preference": 4294967,
+                "weight": 250,
+            }],
+            tunnel_interface_groups=[42949672],
+            tunnel_interface_border=True,
+            per_tunnel_qos=True,
+            per_tunnel_qos_aggregator=False,
+            tunnel_qos_mode="spoke",
+            tunnel_interface_color="custom1",
+            tunnel_interface_last_resort_circuit=False,
+            tunnel_interface_low_bandwidth_link=False,
+            tunnel_interface_tunnel_tcp_mss=1460,
+            tunnel_interface_clear_dont_fragment=False,
+            tunnel_interface_network_broadcast=False,
+            tunnel_interface_control_connections=8,
+            tunnel_interface_vbond_as_stun_server=False,
+            tunnel_interface_exclude_controller_group_lists=[100],
+            tunnel_interface_vmanage_connection_preference=5,
+            tunnel_interface_port_hop=False,
+            tunnel_interface_restrict=False,
+            tunnel_interface_carrier="carrier1",
+            tunnel_interface_nat_refresh_interval=15,
+            tunnel_interface_hello_interval=1000,
+            tunnel_interface_hello_tolerance=12,
+            tunnel_interface_bind_loopback_tunnel="12",
+            tunnel_interface_allow_all=False,
+            tunnel_interface_allow_bgp=False,
+            tunnel_interface_allow_dhcp=True,
+            tunnel_interface_allow_dns=True,
+            tunnel_interface_allow_icmp=True,
+            tunnel_interface_allow_ssh=False,
+            tunnel_interface_allow_ntp=False,
+            tunnel_interface_allow_netconf=False,
+            tunnel_interface_allow_ospf=False,
+            tunnel_interface_allow_stun=False,
+            tunnel_interface_allow_snmp=False,
+            tunnel_interface_allow_https=True,
+            clear_dont_fragment_bit=False,
+            pmtu_discovery=False,
+            ip_mtu=1500,
+            static_ingress_qos=6,
+            tcp_mss=720,
+            tloc_extension="tloc",
+            shutdown=True,
+            autonegotiate=True,
+            shaping_rate=10000000,
+            qos_map="test",
+            qos_map_vpn="test",
+            interface_bandwidth_capacity=128,
+            clock_rate="5300000",
+            encapsulation="hdlc",
+            interface_downstream_bandwidth_capacity=10000000,
+            write_rule="RULE1",
+            ipv4_access_lists=[{
+                "direction": "in",
+                "acl_name": "ACL2",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -4459,6 +4539,86 @@ class VpnInterfaceT1E1SerialFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnInterfaceT1E1SerialFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            serial_interface_name="SERIAL1",
+            interface_description="My description",
+            ipv4_address="1.2.3.4/24",
+            ipv6_address="2001:0:0:1::/64",
+            ipv6_access_lists=[{
+                "direction": "in",
+                "acl_name": "ACL1",
+            }],
+            enable_core_region=True,
+            core_region="core",
+            secondary_region="off",
+            tunnel_interface_encapsulations=[{
+                "encapsulation": "gre",
+                "preference": 4294967,
+                "weight": 250,
+            }],
+            tunnel_interface_groups=[42949672],
+            tunnel_interface_border=True,
+            per_tunnel_qos=True,
+            per_tunnel_qos_aggregator=False,
+            tunnel_qos_mode="spoke",
+            tunnel_interface_color="custom1",
+            tunnel_interface_last_resort_circuit=False,
+            tunnel_interface_low_bandwidth_link=False,
+            tunnel_interface_tunnel_tcp_mss=1460,
+            tunnel_interface_clear_dont_fragment=False,
+            tunnel_interface_network_broadcast=False,
+            tunnel_interface_control_connections=8,
+            tunnel_interface_vbond_as_stun_server=False,
+            tunnel_interface_exclude_controller_group_lists=[100],
+            tunnel_interface_vmanage_connection_preference=5,
+            tunnel_interface_port_hop=False,
+            tunnel_interface_restrict=False,
+            tunnel_interface_carrier="carrier1",
+            tunnel_interface_nat_refresh_interval=15,
+            tunnel_interface_hello_interval=1000,
+            tunnel_interface_hello_tolerance=12,
+            tunnel_interface_bind_loopback_tunnel="12",
+            tunnel_interface_allow_all=False,
+            tunnel_interface_allow_bgp=False,
+            tunnel_interface_allow_dhcp=True,
+            tunnel_interface_allow_dns=True,
+            tunnel_interface_allow_icmp=True,
+            tunnel_interface_allow_ssh=False,
+            tunnel_interface_allow_ntp=False,
+            tunnel_interface_allow_netconf=False,
+            tunnel_interface_allow_ospf=False,
+            tunnel_interface_allow_stun=False,
+            tunnel_interface_allow_snmp=False,
+            tunnel_interface_allow_https=True,
+            clear_dont_fragment_bit=False,
+            pmtu_discovery=False,
+            ip_mtu=1500,
+            static_ingress_qos=6,
+            tcp_mss=720,
+            tloc_extension="tloc",
+            shutdown=True,
+            autonegotiate=True,
+            shaping_rate=10000000,
+            qos_map="test",
+            qos_map_vpn="test",
+            interface_bandwidth_capacity=128,
+            clock_rate="5300000",
+            encapsulation="hdlc",
+            interface_downstream_bandwidth_capacity=10000000,
+            write_rule="RULE1",
+            ipv4_access_lists=[{
+                "direction": "in",
+                "acl_name": "ACL2",
+            }])
+        ```
 
         ## Import
 

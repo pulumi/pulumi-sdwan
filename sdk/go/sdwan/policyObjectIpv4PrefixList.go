@@ -17,6 +17,40 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewPolicyObjectIpv4PrefixList(ctx, "example", &sdwan.PolicyObjectIpv4PrefixListArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Entries: sdwan.PolicyObjectIpv4PrefixListEntryArray{
+//					&sdwan.PolicyObjectIpv4PrefixListEntryArgs{
+//						Ipv4Address:      pulumi.String("10.0.0.0"),
+//						Ipv4PrefixLength: pulumi.Int(8),
+//						Le:               pulumi.Int(24),
+//						Ge:               pulumi.Int(16),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

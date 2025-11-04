@@ -17,6 +17,58 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoOmpFeatureTemplate(ctx, "example", &sdwan.CiscoOmpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				GracefulRestart:        pulumi.Bool(true),
+//				OverlayAs:              pulumi.Int(1),
+//				SendPathLimit:          pulumi.Int(4),
+//				EcmpLimit:              pulumi.Int(4),
+//				Shutdown:               pulumi.Bool(false),
+//				OmpAdminDistanceIpv4:   pulumi.Int(10),
+//				OmpAdminDistanceIpv6:   pulumi.Int(10),
+//				AdvertisementInterval:  pulumi.Int(1),
+//				GracefulRestartTimer:   pulumi.Int(43200),
+//				EorTimer:               pulumi.Int(300),
+//				Holdtime:               pulumi.Int(60),
+//				IgnoreRegionPathLength: pulumi.Bool(false),
+//				TransportGateway:       pulumi.String("prefer"),
+//				AdvertiseIpv4Routes: sdwan.CiscoOmpFeatureTemplateAdvertiseIpv4RouteArray{
+//					&sdwan.CiscoOmpFeatureTemplateAdvertiseIpv4RouteArgs{
+//						Protocol:              pulumi.String("ospf"),
+//						AdvertiseExternalOspf: pulumi.String("external"),
+//					},
+//				},
+//				AdvertiseIpv6Routes: sdwan.CiscoOmpFeatureTemplateAdvertiseIpv6RouteArray{
+//					&sdwan.CiscoOmpFeatureTemplateAdvertiseIpv6RouteArgs{
+//						Protocol: pulumi.String("ospf"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

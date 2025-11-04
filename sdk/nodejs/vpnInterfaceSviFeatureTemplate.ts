@@ -12,6 +12,89 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.VpnInterfaceSviFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     ifName: "Vlan100",
+ *     interfaceDescription: "VPN Interface SVI",
+ *     ipv4Address: "2.3.4.5",
+ *     ipv4SecondaryAddresses: [{
+ *         ipv4Address: "4.5.6.7",
+ *     }],
+ *     ipv6Address: "2001:db8:85a3::8a2e:370:7334",
+ *     ipv6DhcpClient: false,
+ *     ipv6DhcpDistance: 101,
+ *     ipv6DhcpRapidCommit: false,
+ *     ipv6SecondaryAddresses: [{
+ *         ipv6Address: "2001:db8:85a3::8a2e:370:7334",
+ *     }],
+ *     ipv4DhcpHelpers: ["7.7.7.7"],
+ *     ipv6DhcpHelpers: [{
+ *         address: "2001:db8:85a3::8a2e:370:7334",
+ *         vpnId: 100,
+ *     }],
+ *     ipDirectedBroadcast: true,
+ *     mtu: 1500,
+ *     ipMtu: 1500,
+ *     tcpMssAdjust: 1400,
+ *     shutdown: false,
+ *     arpTimeout: 100,
+ *     ipv4AccessLists: [{
+ *         direction: "in",
+ *         aclName: "ACL1",
+ *     }],
+ *     ipv6AccessLists: [{
+ *         direction: "in",
+ *         aclName: "ACL2",
+ *     }],
+ *     policers: [{
+ *         direction: "in",
+ *         policerName: "POLICER1",
+ *     }],
+ *     staticArpEntries: [{
+ *         ipv4Address: "3.4.4.5",
+ *         macAddress: "00:00:00:00:00:00",
+ *     }],
+ *     ipv4Vrrps: [{
+ *         groupId: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         trackOmp: true,
+ *         trackPrefixList: "TRACK1",
+ *         ipv4Address: "5.6.7.8",
+ *         ipv4SecondaryAddresses: [{
+ *             ipv4Address: "8.8.8.8",
+ *         }],
+ *         tlocPreferenceChange: true,
+ *         tlocPreferenceChangeValue: 100,
+ *         trackingObjects: [{
+ *             name: 100,
+ *             trackAction: "decrement",
+ *             decrementValue: 10,
+ *         }],
+ *     }],
+ *     ipv6Vrrps: [{
+ *         groupId: 1,
+ *         priority: 100,
+ *         timer: 1000,
+ *         trackOmp: true,
+ *         trackPrefixList: "TRACK1",
+ *         ipv6Addresses: [{
+ *             linkLocalAddress: "FE80::1/64",
+ *             prefix: "2001:db8:85a3::8a2e:370:7335",
+ *         }],
+ *         ipv6SecondaryAddresses: [{
+ *             prefix: "2001:db8:85a3::8a2e:370:7336",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

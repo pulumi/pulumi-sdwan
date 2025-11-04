@@ -17,6 +17,48 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewOtherUcseFeature(ctx, "example", &sdwan.OtherUcseFeatureArgs{
+//				Name:                         pulumi.String("Example"),
+//				Description:                  pulumi.String("My Example"),
+//				FeatureProfileId:             pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Bay:                          pulumi.Int(2),
+//				Slot:                         pulumi.Int(0),
+//				AccessPortDedicated:          pulumi.Bool(false),
+//				AccessPortSharedType:         pulumi.String("ge1"),
+//				AccessPortSharedFailoverType: pulumi.String("ge2"),
+//				Ipv4Address:                  pulumi.String("2.2.2.2/24"),
+//				DefaultGateway:               pulumi.String("2.2.2.2"),
+//				VlanId:                       pulumi.Int(3),
+//				AssignPriority:               pulumi.Int(3),
+//				Interfaces: sdwan.OtherUcseFeatureInterfaceArray{
+//					&sdwan.OtherUcseFeatureInterfaceArgs{
+//						InterfaceName:    pulumi.String("ucse2/0"),
+//						UcseInterfaceVpn: pulumi.Int(2),
+//						Ipv4Address:      pulumi.String("10.1.15.15/24"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

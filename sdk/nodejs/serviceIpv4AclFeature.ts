@@ -12,6 +12,37 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceIpv4AclFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         sequenceId: 1,
+ *         sequenceName: "AccessControlList1",
+ *         matchEntries: [{
+ *             dscps: [16],
+ *             packetLength: "1500",
+ *             protocols: [1],
+ *             sourcePorts: [{
+ *                 port: "8000",
+ *             }],
+ *             tcpState: "syn",
+ *         }],
+ *         actions: [{
+ *             acceptSetDscp: 60,
+ *             acceptCounterName: "COUNTER_1",
+ *             acceptLog: false,
+ *             acceptSetNextHop: "1.2.3.4",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

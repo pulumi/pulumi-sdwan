@@ -78,6 +78,18 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int PrefixListVersion;
         /// <summary>
+        /// Region ID
+        /// </summary>
+        public readonly int RegionId;
+        /// <summary>
+        /// Region list ID
+        /// </summary>
+        public readonly string RegionListId;
+        /// <summary>
+        /// Role
+        /// </summary>
+        public readonly string Role;
+        /// <summary>
         /// Site ID
         /// </summary>
         public readonly int SiteId;
@@ -160,6 +172,12 @@ namespace Pulumi.Sdwan.Outputs
 
             int prefixListVersion,
 
+            int regionId,
+
+            string regionListId,
+
+            string role,
+
             int siteId,
 
             string siteListId,
@@ -200,6 +218,9 @@ namespace Pulumi.Sdwan.Outputs
             Preference = preference;
             PrefixListId = prefixListId;
             PrefixListVersion = prefixListVersion;
+            RegionId = regionId;
+            RegionListId = regionListId;
+            Role = role;
             SiteId = siteId;
             SiteListId = siteListId;
             SiteListVersion = siteListVersion;

@@ -12,6 +12,33 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TransportT1E1ControllerFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     type: "t1",
+ *     slot: "11",
+ *     entries: [{
+ *         t1Description: "T1",
+ *         t1Framing: "esf",
+ *         t1Linecode: "ami",
+ *         cableLength: "long",
+ *         lengthLong: "-7.5db",
+ *         clockSource: "line",
+ *         lineMode: "primary",
+ *         description: "desc",
+ *         channelGroups: [{
+ *             channelGroup: 12,
+ *             timeSlot: "timeslots 15",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

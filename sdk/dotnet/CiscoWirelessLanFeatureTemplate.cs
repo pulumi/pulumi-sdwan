@@ -15,6 +15,52 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoWirelessLanFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Shutdown24ghz = false,
+    ///         Shutdown5ghz = false,
+    ///         Ssids = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoWirelessLanFeatureTemplateSsidArgs
+    ///             {
+    ///                 WirelessNetworkName = "WLAN1",
+    ///                 AdminState = false,
+    ///                 BroadcastSsid = true,
+    ///                 VlanId = 1,
+    ///                 RadioType = "24ghz",
+    ///                 SecurityType = "enterprise",
+    ///                 RadiusServerIp = "1.2.3.4",
+    ///                 RadiusServerPort = 1812,
+    ///                 RadiusServerSecret = "MySecret1",
+    ///                 Passphrase = "passphrase",
+    ///                 QosProfile = "silver",
+    ///             },
+    ///         },
+    ///         Country = "AE",
+    ///         Username = "user1",
+    ///         Password = "myPassword01",
+    ///         ControllerIpAddress = "0.0.0.0",
+    ///         ControllerSubnetMask = "0.0.0.0",
+    ///         ControllerDefaultGateway = "0.0.0.0",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

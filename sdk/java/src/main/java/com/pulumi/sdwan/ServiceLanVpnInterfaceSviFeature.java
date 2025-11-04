@@ -29,6 +29,109 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceLanVpnInterfaceSviFeature;
+ * import com.pulumi.sdwan.ServiceLanVpnInterfaceSviFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureArpArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceLanVpnInterfaceSviFeature("example", ServiceLanVpnInterfaceSviFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .serviceLanVpnFeatureId("140331f6-5418-4755-a059-13c77eb96037")
+ *             .shutdown(false)
+ *             .interfaceName("Vlan1")
+ *             .interfaceDescription("SVI")
+ *             .interfaceMtu(1500)
+ *             .ipMtu(1500)
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv4SubnetMask("0.0.0.0")
+ *             .ipv4SecondaryAddresses(ServiceLanVpnInterfaceSviFeatureIpv4SecondaryAddressArgs.builder()
+ *                 .address("2.3.4.5")
+ *                 .ipv4SubnetMask("0.0.0.0")
+ *                 .build())
+ *             .ipv4DhcpHelpers("4.5.6.7")
+ *             .ipv6Address("2001:0:0:1::0/32")
+ *             .ipv6SecondaryAddresses(ServiceLanVpnInterfaceSviFeatureIpv6SecondaryAddressArgs.builder()
+ *                 .address("::2/32")
+ *                 .build())
+ *             .ipv6DhcpHelpers(ServiceLanVpnInterfaceSviFeatureIpv6DhcpHelperArgs.builder()
+ *                 .address("2001:0:0:1::0")
+ *                 .vpn(1)
+ *                 .build())
+ *             .aclIpv4EgressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .aclIpv6IngressFeatureId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .arps(ServiceLanVpnInterfaceSviFeatureArpArgs.builder()
+ *                 .ipAddress("1.2.3.4")
+ *                 .macAddress("00-B0-D0-63-C2-26")
+ *                 .build())
+ *             .ipv4Vrrps(ServiceLanVpnInterfaceSviFeatureIpv4VrrpArgs.builder()
+ *                 .groupId(1)
+ *                 .priority(100)
+ *                 .timer(1000)
+ *                 .trackOmp(false)
+ *                 .prefixList("prefix")
+ *                 .address("1.2.3.4")
+ *                 .secondaryAddresses(ServiceLanVpnInterfaceSviFeatureIpv4VrrpSecondaryAddressArgs.builder()
+ *                     .address("2.3.4.5")
+ *                     .build())
+ *                 .tlocPrefixChange(true)
+ *                 .tlocPrefixChangeValue(100)
+ *                 .trackingObjects(ServiceLanVpnInterfaceSviFeatureIpv4VrrpTrackingObjectArgs.builder()
+ *                     .trackerId("1b270f6d-479b-47e3-ab0b-51bc6811a303")
+ *                     .trackAction("decrement")
+ *                     .decrementValue(100)
+ *                     .build())
+ *                 .build())
+ *             .ipv6Vrrps(ServiceLanVpnInterfaceSviFeatureIpv6VrrpArgs.builder()
+ *                 .groupId(1)
+ *                 .priority(100)
+ *                 .timer(1000)
+ *                 .trackOmp(false)
+ *                 .trackPrefixList("1")
+ *                 .addresses(ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddressArgs.builder()
+ *                     .linkLocalAddress("1::1")
+ *                     .globalAddress("1::1/24")
+ *                     .build())
+ *                 .secondaryAddresses(ServiceLanVpnInterfaceSviFeatureIpv6VrrpSecondaryAddressArgs.builder()
+ *                     .prefix("::20/32")
+ *                     .build())
+ *                 .build())
+ *             .enableDhcpv6(false)
+ *             .tcpMss(1024)
+ *             .arpTimeout(1200)
+ *             .ipDirectedBroadcast(false)
+ *             .icmpRedirectDisable(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

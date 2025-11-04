@@ -15,6 +15,71 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.EigrpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         AsNumber = 1,
+    ///         AddressFamilies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyArgs
+    ///             {
+    ///                 Type = "ipv4",
+    ///                 Redistributes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyRedistributeArgs
+    ///                     {
+    ///                         Protocol = "bgp",
+    ///                         RoutePolicy = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///                 Networks = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.EigrpFeatureTemplateAddressFamilyNetworkArgs
+    ///                     {
+    ///                         Prefix = "1.2.3.4/24",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         HelloInterval = 5,
+    ///         HoldTime = 15,
+    ///         RoutePolicyName = "RP1",
+    ///         Filter = false,
+    ///         AuthenticationType = "hmac-sha-256",
+    ///         HmacAuthenticationKey = "myAuthKey",
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.EigrpFeatureTemplateInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "Ethernet1",
+    ///                 Shutdown = false,
+    ///                 SummaryAddresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.EigrpFeatureTemplateInterfaceSummaryAddressArgs
+    ///                     {
+    ///                         Prefix = "1.2.3.4/24",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

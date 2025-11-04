@@ -765,6 +765,37 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoWirelessLanFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            shutdown24ghz=False,
+            shutdown5ghz=False,
+            ssids=[{
+                "wireless_network_name": "WLAN1",
+                "admin_state": False,
+                "broadcast_ssid": True,
+                "vlan_id": 1,
+                "radio_type": "24ghz",
+                "security_type": "enterprise",
+                "radius_server_ip": "1.2.3.4",
+                "radius_server_port": 1812,
+                "radius_server_secret": "MySecret1",
+                "passphrase": "passphrase",
+                "qos_profile": "silver",
+            }],
+            country="AE",
+            username="user1",
+            password="myPassword01",
+            controller_ip_address="0.0.0.0",
+            controller_subnet_mask="0.0.0.0",
+            controller_default_gateway="0.0.0.0")
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -814,6 +845,37 @@ class CiscoWirelessLanFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoWirelessLanFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            shutdown24ghz=False,
+            shutdown5ghz=False,
+            ssids=[{
+                "wireless_network_name": "WLAN1",
+                "admin_state": False,
+                "broadcast_ssid": True,
+                "vlan_id": 1,
+                "radio_type": "24ghz",
+                "security_type": "enterprise",
+                "radius_server_ip": "1.2.3.4",
+                "radius_server_port": 1812,
+                "radius_server_secret": "MySecret1",
+                "passphrase": "passphrase",
+                "qos_profile": "silver",
+            }],
+            country="AE",
+            username="user1",
+            password="myPassword01",
+            controller_ip_address="0.0.0.0",
+            controller_subnet_mask="0.0.0.0",
+            controller_default_gateway="0.0.0.0")
+        ```
 
         ## Import
 

@@ -15,6 +15,102 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoOspfFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         RouterId = "1.2.3.4",
+    ///         AutoCostReferenceBandwidth = 100000,
+    ///         CompatibleRfc1583 = true,
+    ///         DefaultInformationOriginate = true,
+    ///         DefaultInformationOriginateAlways = true,
+    ///         DefaultInformationOriginateMetric = 100,
+    ///         DefaultInformationOriginateMetricType = "type1",
+    ///         DistanceExternal = 111,
+    ///         DistanceInterArea = 111,
+    ///         DistanceIntraArea = 112,
+    ///         TimersSpfDelay = 300,
+    ///         TimersSpfInitialHold = 2000,
+    ///         TimersSpfMaxHold = 20000,
+    ///         Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateRedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 RoutePolicy = "RP1",
+    ///                 NatDia = true,
+    ///             },
+    ///         },
+    ///         MaxMetricRouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateMaxMetricRouterLsaArgs
+    ///             {
+    ///                 AdType = "on-startup",
+    ///                 Time = 100,
+    ///             },
+    ///         },
+    ///         RoutePolicies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateRoutePolicyArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 PolicyName = "POLICY1",
+    ///             },
+    ///         },
+    ///         Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaArgs
+    ///             {
+    ///                 AreaNumber = 1,
+    ///                 Stub = false,
+    ///                 StubNoSummary = false,
+    ///                 Nssa = false,
+    ///                 NssaNoSummary = true,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaInterfaceArgs
+    ///                     {
+    ///                         Name = "e1",
+    ///                         HelloInterval = 20,
+    ///                         DeadInterval = 60,
+    ///                         RetransmitInterval = 10,
+    ///                         Cost = 100,
+    ///                         Priority = 10,
+    ///                         Network = "point-to-point",
+    ///                         PassiveInterface = true,
+    ///                         AuthenticationType = "message-digest",
+    ///                         AuthenticationMessageDigestKeyId = 1,
+    ///                         AuthenticationMessageDigestKey = "cisco123",
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoOspfFeatureTemplateAreaRangeArgs
+    ///                     {
+    ///                         Address = "1.1.1.0/24",
+    ///                         Cost = 100,
+    ///                         NoAdvertise = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

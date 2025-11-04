@@ -13,6 +13,377 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetVpnInterfaceSviFeatureTemplateIpv4Vrrp struct {
+	// Group ID
+	GroupId int `pulumi:"groupId"`
+	// Variable name
+	GroupIdVariable string `pulumi:"groupIdVariable"`
+	// Assign IP Address
+	Ipv4Address string `pulumi:"ipv4Address"`
+	// Variable name
+	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
+	// VRRP Secondary IP address
+	Ipv4SecondaryAddresses []GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress `pulumi:"ipv4SecondaryAddresses"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+	// Set priority
+	Priority int `pulumi:"priority"`
+	// Variable name
+	PriorityVariable string `pulumi:"priorityVariable"`
+	// Timer interval for successive advertisements, in milliseconds
+	Timer int `pulumi:"timer"`
+	// Variable name
+	TimerVariable string `pulumi:"timerVariable"`
+	// change TLOC preference
+	TlocPreferenceChange bool `pulumi:"tlocPreferenceChange"`
+	// Set tloc preference change value
+	TlocPreferenceChangeValue int `pulumi:"tlocPreferenceChangeValue"`
+	// Variable name
+	TlocPreferenceChangeValueVariable string `pulumi:"tlocPreferenceChangeValueVariable"`
+	// Track OMP status
+	TrackOmp bool `pulumi:"trackOmp"`
+	// Variable name
+	TrackOmpVariable string `pulumi:"trackOmpVariable"`
+	// Track Prefix List
+	TrackPrefixList string `pulumi:"trackPrefixList"`
+	// Variable name
+	TrackPrefixListVariable string `pulumi:"trackPrefixListVariable"`
+	// tracking object for VRRP configuration
+	TrackingObjects []GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject `pulumi:"trackingObjects"`
+}
+
+// GetVpnInterfaceSviFeatureTemplateIpv4VrrpInput is an input type that accepts GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs and GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceSviFeatureTemplateIpv4VrrpInput` via:
+//
+//	GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs{...}
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutputWithContext(context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs struct {
+	// Group ID
+	GroupId pulumi.IntInput `pulumi:"groupId"`
+	// Variable name
+	GroupIdVariable pulumi.StringInput `pulumi:"groupIdVariable"`
+	// Assign IP Address
+	Ipv4Address pulumi.StringInput `pulumi:"ipv4Address"`
+	// Variable name
+	Ipv4AddressVariable pulumi.StringInput `pulumi:"ipv4AddressVariable"`
+	// VRRP Secondary IP address
+	Ipv4SecondaryAddresses GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayInput `pulumi:"ipv4SecondaryAddresses"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+	// Set priority
+	Priority pulumi.IntInput `pulumi:"priority"`
+	// Variable name
+	PriorityVariable pulumi.StringInput `pulumi:"priorityVariable"`
+	// Timer interval for successive advertisements, in milliseconds
+	Timer pulumi.IntInput `pulumi:"timer"`
+	// Variable name
+	TimerVariable pulumi.StringInput `pulumi:"timerVariable"`
+	// change TLOC preference
+	TlocPreferenceChange pulumi.BoolInput `pulumi:"tlocPreferenceChange"`
+	// Set tloc preference change value
+	TlocPreferenceChangeValue pulumi.IntInput `pulumi:"tlocPreferenceChangeValue"`
+	// Variable name
+	TlocPreferenceChangeValueVariable pulumi.StringInput `pulumi:"tlocPreferenceChangeValueVariable"`
+	// Track OMP status
+	TrackOmp pulumi.BoolInput `pulumi:"trackOmp"`
+	// Variable name
+	TrackOmpVariable pulumi.StringInput `pulumi:"trackOmpVariable"`
+	// Track Prefix List
+	TrackPrefixList pulumi.StringInput `pulumi:"trackPrefixList"`
+	// Variable name
+	TrackPrefixListVariable pulumi.StringInput `pulumi:"trackPrefixListVariable"`
+	// tracking object for VRRP configuration
+	TrackingObjects GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArrayInput `pulumi:"trackingObjects"`
+}
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4Vrrp)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput {
+	return i.ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput)
+}
+
+// GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayInput is an input type that accepts GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray and GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayInput` via:
+//
+//	GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray{ GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs{...} }
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutputWithContext(context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray []GetVpnInterfaceSviFeatureTemplateIpv4VrrpInput
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceSviFeatureTemplateIpv4Vrrp)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput {
+	return i.ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput)
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4Vrrp)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput {
+	return o
+}
+
+// Group ID
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) GroupId() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) int { return v.GroupId }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) GroupIdVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.GroupIdVariable }).(pulumi.StringOutput)
+}
+
+// Assign IP Address
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Ipv4Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.Ipv4Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Ipv4AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.Ipv4AddressVariable }).(pulumi.StringOutput)
+}
+
+// VRRP Secondary IP address
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Ipv4SecondaryAddresses() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) []GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress {
+		return v.Ipv4SecondaryAddresses
+	}).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+// Set priority
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Priority() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) int { return v.Priority }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) PriorityVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.PriorityVariable }).(pulumi.StringOutput)
+}
+
+// Timer interval for successive advertisements, in milliseconds
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) Timer() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) int { return v.Timer }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TimerVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.TimerVariable }).(pulumi.StringOutput)
+}
+
+// change TLOC preference
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TlocPreferenceChange() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) bool { return v.TlocPreferenceChange }).(pulumi.BoolOutput)
+}
+
+// Set tloc preference change value
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TlocPreferenceChangeValue() pulumi.IntOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) int { return v.TlocPreferenceChangeValue }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TlocPreferenceChangeValueVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.TlocPreferenceChangeValueVariable }).(pulumi.StringOutput)
+}
+
+// Track OMP status
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TrackOmp() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) bool { return v.TrackOmp }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TrackOmpVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.TrackOmpVariable }).(pulumi.StringOutput)
+}
+
+// Track Prefix List
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TrackPrefixList() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.TrackPrefixList }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TrackPrefixListVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) string { return v.TrackPrefixListVariable }).(pulumi.StringOutput)
+}
+
+// tracking object for VRRP configuration
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput) TrackingObjects() GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArrayOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4Vrrp) []GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject {
+		return v.TrackingObjects
+	}).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArrayOutput)
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceSviFeatureTemplateIpv4Vrrp)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceSviFeatureTemplateIpv4Vrrp {
+		return vs[0].([]GetVpnInterfaceSviFeatureTemplateIpv4Vrrp)[vs[1].(int)]
+	}).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput)
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress struct {
+	// VRRP Secondary IP address
+	Ipv4Address string `pulumi:"ipv4Address"`
+	// Variable name
+	Ipv4AddressVariable string `pulumi:"ipv4AddressVariable"`
+	// Indicates if list item is considered optional.
+	Optional bool `pulumi:"optional"`
+}
+
+// GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressInput is an input type that accepts GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs and GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressInput` via:
+//
+//	GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs{...}
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutputWithContext(context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs struct {
+	// VRRP Secondary IP address
+	Ipv4Address pulumi.StringInput `pulumi:"ipv4Address"`
+	// Variable name
+	Ipv4AddressVariable pulumi.StringInput `pulumi:"ipv4AddressVariable"`
+	// Indicates if list item is considered optional.
+	Optional pulumi.BoolInput `pulumi:"optional"`
+}
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput {
+	return i.ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput)
+}
+
+// GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayInput is an input type that accepts GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray and GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput values.
+// You can construct a concrete instance of `GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayInput` via:
+//
+//	GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray{ GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs{...} }
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayInput interface {
+	pulumi.Input
+
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput
+	ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutputWithContext(context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray []GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressInput
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput {
+	return i.ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutputWithContext(context.Background())
+}
+
+func (i GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput)
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput {
+	return o
+}
+
+// VRRP Secondary IP address
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) Ipv4Address() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress) string { return v.Ipv4Address }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) Ipv4AddressVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress) string {
+		return v.Ipv4AddressVariable
+	}).(pulumi.StringOutput)
+}
+
+// Indicates if list item is considered optional.
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput) Optional() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress) bool { return v.Optional }).(pulumi.BoolOutput)
+}
+
+type GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput struct{ *pulumi.OutputState }
+
+func (GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress)(nil)).Elem()
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput() GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput) ToGetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutputWithContext(ctx context.Context) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput {
+	return o
+}
+
+func (o GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput) Index(i pulumi.IntInput) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress {
+		return vs[0].([]GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddress)[vs[1].(int)]
+	}).(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput)
+}
+
 type GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObject struct {
 	// Decrement Value for VRRP priority
 	DecrementValue int `pulumi:"decrementValue"`
@@ -1971,6 +2342,8 @@ type GetZoneBasedFirewallPolicyDefinitionRule struct {
 	ActionEntries []GetZoneBasedFirewallPolicyDefinitionRuleActionEntry `pulumi:"actionEntries"`
 	// Base action
 	BaseAction string `pulumi:"baseAction"`
+	// Rule Type
+	IpType string `pulumi:"ipType"`
 	// List of match entries
 	MatchEntries []GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry `pulumi:"matchEntries"`
 	// Rule name
@@ -1995,6 +2368,8 @@ type GetZoneBasedFirewallPolicyDefinitionRuleArgs struct {
 	ActionEntries GetZoneBasedFirewallPolicyDefinitionRuleActionEntryArrayInput `pulumi:"actionEntries"`
 	// Base action
 	BaseAction pulumi.StringInput `pulumi:"baseAction"`
+	// Rule Type
+	IpType pulumi.StringInput `pulumi:"ipType"`
 	// List of match entries
 	MatchEntries GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput `pulumi:"matchEntries"`
 	// Rule name
@@ -2064,6 +2439,11 @@ func (o GetZoneBasedFirewallPolicyDefinitionRuleOutput) ActionEntries() GetZoneB
 // Base action
 func (o GetZoneBasedFirewallPolicyDefinitionRuleOutput) BaseAction() pulumi.StringOutput {
 	return o.ApplyT(func(v GetZoneBasedFirewallPolicyDefinitionRule) string { return v.BaseAction }).(pulumi.StringOutput)
+}
+
+// Rule Type
+func (o GetZoneBasedFirewallPolicyDefinitionRuleOutput) IpType() pulumi.StringOutput {
+	return o.ApplyT(func(v GetZoneBasedFirewallPolicyDefinitionRule) string { return v.IpType }).(pulumi.StringOutput)
 }
 
 // List of match entries
@@ -2440,6 +2820,10 @@ func (o GetZoneListPolicyObjectEntryArrayOutput) Index(i pulumi.IntInput) GetZon
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArrayInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetVpnInterfaceSviFeatureTemplateIpv6AccessListInput)(nil)).Elem(), GetVpnInterfaceSviFeatureTemplateIpv6AccessListArgs{})
@@ -2478,6 +2862,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArrayInput)(nil)).Elem(), GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetZoneListPolicyObjectEntryArrayInput)(nil)).Elem(), GetZoneListPolicyObjectEntryArray{})
+	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpArrayOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressOutput{})
+	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpIpv4SecondaryAddressArrayOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv4VrrpTrackingObjectArrayOutput{})
 	pulumi.RegisterOutputType(GetVpnInterfaceSviFeatureTemplateIpv6AccessListOutput{})

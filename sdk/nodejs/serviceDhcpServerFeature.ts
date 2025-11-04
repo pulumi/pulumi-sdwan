@@ -12,6 +12,34 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceDhcpServerFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     networkAddress: "1.2.3.4",
+ *     subnetMask: "255.255.255.0",
+ *     excludes: ["192.168.1.1"],
+ *     leaseTime: 86400,
+ *     interfaceMtu: 65535,
+ *     domainName: "example.com",
+ *     defaultGateway: "1.2.3.4",
+ *     dnsServers: ["8.8.8.8"],
+ *     tftpServers: ["1.1.1.1"],
+ *     staticLeases: [{
+ *         macAddress: "01:02:03:04:05:06",
+ *         ipAddress: "1.2.3.4",
+ *     }],
+ *     optionCodes: [{
+ *         code: 250,
+ *         ascii: "example",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

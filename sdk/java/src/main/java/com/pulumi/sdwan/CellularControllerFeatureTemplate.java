@@ -24,6 +24,50 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CellularControllerFeatureTemplate;
+ * import com.pulumi.sdwan.CellularControllerFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CellularControllerFeatureTemplateDataProfileArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CellularControllerFeatureTemplate("example", CellularControllerFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .cellularInterfaceId("1")
+ *             .dataProfiles(CellularControllerFeatureTemplateDataProfileArgs.builder()
+ *                 .slotNumber(1)
+ *                 .dataProfile(8)
+ *                 .attachProfile(8)
+ *                 .build())
+ *             .primarySimSlot(100)
+ *             .simFailoverRetries(160)
+ *             .simFailoverTimeout(3)
+ *             .firmwareAutoSim(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

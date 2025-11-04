@@ -159,6 +159,28 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RuleSetPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            rules=[{
+                "name": "Rule1",
+                "order": 1,
+                "source_ipv4_prefix": "10.1.1.0/24",
+                "source_fqdn": "cisco.com",
+                "source_port": "80-90",
+                "source_geo_location": "AF",
+                "destination_ipv4_prefix": "10.1.1.0/24",
+                "destination_fqdn": "cisco.com",
+                "destination_port": "80-90",
+                "destination_geo_location": "AF",
+                "protocol": "cifs",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -183,6 +205,28 @@ class RuleSetPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Rule Set Policy Definition .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.RuleSetPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            rules=[{
+                "name": "Rule1",
+                "order": 1,
+                "source_ipv4_prefix": "10.1.1.0/24",
+                "source_fqdn": "cisco.com",
+                "source_port": "80-90",
+                "source_geo_location": "AF",
+                "destination_ipv4_prefix": "10.1.1.0/24",
+                "destination_fqdn": "cisco.com",
+                "destination_port": "80-90",
+                "destination_geo_location": "AF",
+                "protocol": "cifs",
+            }])
+        ```
 
         ## Import
 

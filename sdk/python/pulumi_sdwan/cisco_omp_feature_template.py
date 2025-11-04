@@ -1176,6 +1176,36 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoOmpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            graceful_restart=True,
+            overlay_as=1,
+            send_path_limit=4,
+            ecmp_limit=4,
+            shutdown=False,
+            omp_admin_distance_ipv4=10,
+            omp_admin_distance_ipv6=10,
+            advertisement_interval=1,
+            graceful_restart_timer=43200,
+            eor_timer=300,
+            holdtime=60,
+            ignore_region_path_length=False,
+            transport_gateway="prefer",
+            advertise_ipv4_routes=[{
+                "protocol": "ospf",
+                "advertise_external_ospf": "external",
+            }],
+            advertise_ipv6_routes=[{
+                "protocol": "ospf",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1248,6 +1278,36 @@ class CiscoOmpFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoOmpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            graceful_restart=True,
+            overlay_as=1,
+            send_path_limit=4,
+            ecmp_limit=4,
+            shutdown=False,
+            omp_admin_distance_ipv4=10,
+            omp_admin_distance_ipv6=10,
+            advertisement_interval=1,
+            graceful_restart_timer=43200,
+            eor_timer=300,
+            holdtime=60,
+            ignore_region_path_length=False,
+            transport_gateway="prefer",
+            advertise_ipv4_routes=[{
+                "protocol": "ospf",
+                "advertise_external_ospf": "external",
+            }],
+            advertise_ipv6_routes=[{
+                "protocol": "ospf",
+            }])
+        ```
 
         ## Import
 

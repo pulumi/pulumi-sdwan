@@ -12,6 +12,35 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoVpnInterfaceGreFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     interfaceName: "gre0/0",
+ *     interfaceDescription: "My Description",
+ *     ipAddress: "1.1.1.1/24",
+ *     tunnelSource: "1.2.3.4",
+ *     shutdown: true,
+ *     tunnelSourceInterface: "e1",
+ *     tunnelDestination: "3.4.5.6",
+ *     application: "sig",
+ *     ipMtu: 1500,
+ *     tcpMssAdjust: 1400,
+ *     clearDontFragment: true,
+ *     rewriteRule: "ACL1",
+ *     accessLists: [{
+ *         direction: "in",
+ *         aclName: "ACL2",
+ *     }],
+ *     trackers: ["TRACKER1"],
+ *     tunnelRouteVia: "g0/0",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

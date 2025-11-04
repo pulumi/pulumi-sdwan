@@ -22,6 +22,56 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.Ipv4AclPolicyDefinition;
+ * import com.pulumi.sdwan.Ipv4AclPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.Ipv4AclPolicyDefinitionSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Ipv4AclPolicyDefinition("example", Ipv4AclPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .defaultAction("drop")
+ *             .sequences(Ipv4AclPolicyDefinitionSequenceArgs.builder()
+ *                 .id(10)
+ *                 .name("Sequence 10")
+ *                 .baseAction("accept")
+ *                 .matchEntries(Ipv4AclPolicyDefinitionSequenceMatchEntryArgs.builder()
+ *                     .type("dscp")
+ *                     .dscp("16")
+ *                     .build())
+ *                 .actionEntries(Ipv4AclPolicyDefinitionSequenceActionEntryArgs.builder()
+ *                     .type("set")
+ *                     .setParameters(Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs.builder()
+ *                         .type("dscp")
+ *                         .dscp(16)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

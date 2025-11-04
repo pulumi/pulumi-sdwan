@@ -15,6 +15,95 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoSystemFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Timezone = "UTC",
+    ///         Hostname = "Router1",
+    ///         SystemDescription = "My Description",
+    ///         Location = "Building 1",
+    ///         Latitude = 40,
+    ///         Longitude = 50,
+    ///         GeoFencing = true,
+    ///         GeoFencingRange = 1000,
+    ///         GeoFencingSms = true,
+    ///         GeoFencingSmsPhoneNumbers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSystemFeatureTemplateGeoFencingSmsPhoneNumberArgs
+    ///             {
+    ///                 Number = "+1234567",
+    ///             },
+    ///         },
+    ///         DeviceGroups = new[]
+    ///         {
+    ///             "group1",
+    ///         },
+    ///         ControllerGroupLists = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         SystemIp = "5.5.5.5",
+    ///         OverlayId = 1,
+    ///         SiteId = 1,
+    ///         PortOffset = 1,
+    ///         PortHopping = true,
+    ///         ControlSessionPps = 300,
+    ///         TrackTransport = true,
+    ///         TrackInterfaceTag = 1,
+    ///         ConsoleBaudRate = "115200",
+    ///         MaxOmpSessions = 5,
+    ///         MultiTenant = true,
+    ///         TrackDefaultGateway = true,
+    ///         AdminTechOnFailure = true,
+    ///         IdleTimeout = 100,
+    ///         Trackers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSystemFeatureTemplateTrackerArgs
+    ///             {
+    ///                 Name = "tracker1",
+    ///                 EndpointIp = "5.6.7.8",
+    ///                 Threshold = 300,
+    ///                 Interval = 60,
+    ///                 Multiplier = 3,
+    ///                 Type = "interface",
+    ///             },
+    ///         },
+    ///         ObjectTrackers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoSystemFeatureTemplateObjectTrackerArgs
+    ///             {
+    ///                 ObjectNumber = 1,
+    ///                 Interface = "e1",
+    ///             },
+    ///         },
+    ///         OnDemandTunnel = true,
+    ///         OnDemandTunnelIdleTimeout = 10,
+    ///         AffinityGroupNumber = 5,
+    ///         AffinityGroupPreferences = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         TransportGateway = true,
+    ///         EnableMrfMigration = "enabled",
+    ///         MigrationBgpCommunity = 100,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -11,6 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @CustomType
@@ -26,6 +27,12 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
      * 
      */
     private String baseAction;
+    /**
+     * @return Rule Type
+     *   - Choices: `ipv4`, `ipv6`
+     * 
+     */
+    private @Nullable String ipType;
     /**
      * @return List of match entries
      * 
@@ -57,6 +64,14 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
      */
     public String baseAction() {
         return this.baseAction;
+    }
+    /**
+     * @return Rule Type
+     *   - Choices: `ipv4`, `ipv6`
+     * 
+     */
+    public Optional<String> ipType() {
+        return Optional.ofNullable(this.ipType);
     }
     /**
      * @return List of match entries
@@ -91,6 +106,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
     public static final class Builder {
         private @Nullable List<ZoneBasedFirewallPolicyDefinitionRuleActionEntry> actionEntries;
         private String baseAction;
+        private @Nullable String ipType;
         private @Nullable List<ZoneBasedFirewallPolicyDefinitionRuleMatchEntry> matchEntries;
         private String ruleName;
         private Integer ruleOrder;
@@ -99,6 +115,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
     	      Objects.requireNonNull(defaults);
     	      this.actionEntries = defaults.actionEntries;
     	      this.baseAction = defaults.baseAction;
+    	      this.ipType = defaults.ipType;
     	      this.matchEntries = defaults.matchEntries;
     	      this.ruleName = defaults.ruleName;
     	      this.ruleOrder = defaults.ruleOrder;
@@ -119,6 +136,12 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
               throw new MissingRequiredPropertyException("ZoneBasedFirewallPolicyDefinitionRule", "baseAction");
             }
             this.baseAction = baseAction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipType(@Nullable String ipType) {
+
+            this.ipType = ipType;
             return this;
         }
         @CustomType.Setter
@@ -150,6 +173,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRule {
             final var _resultValue = new ZoneBasedFirewallPolicyDefinitionRule();
             _resultValue.actionEntries = actionEntries;
             _resultValue.baseAction = baseAction;
+            _resultValue.ipType = ipType;
             _resultValue.matchEntries = matchEntries;
             _resultValue.ruleName = ruleName;
             _resultValue.ruleOrder = ruleOrder;

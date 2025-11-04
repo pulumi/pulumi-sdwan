@@ -15,6 +15,41 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoBfdFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Multiplier = 3,
+    ///         PollInterval = 800000,
+    ///         DefaultDscp = 48,
+    ///         Colors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBfdFeatureTemplateColorArgs
+    ///             {
+    ///                 Color = "private5",
+    ///                 HelloInterval = 1000,
+    ///                 Multiplier = 7,
+    ///                 PmtuDiscovery = true,
+    ///                 Dscp = 46,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

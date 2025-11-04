@@ -17,6 +17,100 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewServiceMulticastFeature(ctx, "example", &sdwan.ServiceMulticastFeatureArgs{
+//				Name:                     pulumi.String("Example"),
+//				Description:              pulumi.String("My Example"),
+//				FeatureProfileId:         pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				SptOnly:                  pulumi.Bool(false),
+//				LocalReplicator:          pulumi.Bool(false),
+//				LocalReplicatorThreshold: pulumi.Int(10),
+//				IgmpInterfaces: sdwan.ServiceMulticastFeatureIgmpInterfaceArray{
+//					&sdwan.ServiceMulticastFeatureIgmpInterfaceArgs{
+//						InterfaceName: pulumi.String("GigabitEthernet1"),
+//						Version:       pulumi.Int(2),
+//						JoinGroups: sdwan.ServiceMulticastFeatureIgmpInterfaceJoinGroupArray{
+//							&sdwan.ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs{
+//								GroupAddress:  pulumi.String("224.0.0.0"),
+//								SourceAddress: pulumi.String("1.2.3.4"),
+//							},
+//						},
+//					},
+//				},
+//				PimSourceSpecificMulticastEnable:     pulumi.Bool(true),
+//				PimSourceSpecificMulticastAccessList: pulumi.String("1"),
+//				PimSptThreshold:                      pulumi.String("0"),
+//				PimInterfaces: sdwan.ServiceMulticastFeaturePimInterfaceArray{
+//					&sdwan.ServiceMulticastFeaturePimInterfaceArgs{
+//						InterfaceName:     pulumi.String("GigabitEthernet1"),
+//						QueryInterval:     pulumi.Int(30),
+//						JoinPruneInterval: pulumi.Int(60),
+//					},
+//				},
+//				StaticRpAddresses: sdwan.ServiceMulticastFeatureStaticRpAddressArray{
+//					&sdwan.ServiceMulticastFeatureStaticRpAddressArgs{
+//						IpAddress:  pulumi.String("1.2.3.4"),
+//						AccessList: pulumi.String("1"),
+//						Override:   pulumi.Bool(false),
+//					},
+//				},
+//				EnableAutoRp: pulumi.Bool(false),
+//				PimBsrRpCandidates: sdwan.ServiceMulticastFeaturePimBsrRpCandidateArray{
+//					&sdwan.ServiceMulticastFeaturePimBsrRpCandidateArgs{
+//						InterfaceName: pulumi.String("GigabitEthernet1"),
+//						AccessListId:  pulumi.String("2"),
+//						Interval:      pulumi.Int(30),
+//						Priority:      pulumi.Int(1),
+//					},
+//				},
+//				PimBsrCandidates: sdwan.ServiceMulticastFeaturePimBsrCandidateArray{
+//					&sdwan.ServiceMulticastFeaturePimBsrCandidateArgs{
+//						InterfaceName:             pulumi.String("GigabitEthernet1"),
+//						HashMaskLength:            pulumi.Int(30),
+//						Priority:                  pulumi.Int(120),
+//						AcceptCandidateAccessList: pulumi.String("test"),
+//					},
+//				},
+//				MsdpGroups: sdwan.ServiceMulticastFeatureMsdpGroupArray{
+//					&sdwan.ServiceMulticastFeatureMsdpGroupArgs{
+//						MeshGroupName: pulumi.String("Example"),
+//						Peers: sdwan.ServiceMulticastFeatureMsdpGroupPeerArray{
+//							&sdwan.ServiceMulticastFeatureMsdpGroupPeerArgs{
+//								PeerIp:                     pulumi.String("1.2.3.4"),
+//								ConnectionSourceInterface:  pulumi.String("GigabitEthernet1"),
+//								RemoteAs:                   pulumi.Int(1),
+//								PeerAuthenticationPassword: pulumi.String("Password123!"),
+//								KeepaliveInterval:          pulumi.Int(15),
+//								KeepaliveHoldTime:          pulumi.Int(30),
+//								SaLimit:                    pulumi.Int(1),
+//								DefaultPeer:                pulumi.Bool(false),
+//							},
+//						},
+//					},
+//				},
+//				MsdpOriginatorId:            pulumi.String("GigabitEthernet1"),
+//				MsdpConnectionRetryInterval: pulumi.Int(30),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

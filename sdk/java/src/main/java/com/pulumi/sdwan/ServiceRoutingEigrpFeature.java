@@ -27,6 +27,63 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceRoutingEigrpFeature;
+ * import com.pulumi.sdwan.ServiceRoutingEigrpFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureNetworkArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureMd5KeyArgs;
+ * import com.pulumi.sdwan.inputs.ServiceRoutingEigrpFeatureInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceRoutingEigrpFeature("example", ServiceRoutingEigrpFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .autonomousSystemId(111)
+ *             .networks(ServiceRoutingEigrpFeatureNetworkArgs.builder()
+ *                 .ipAddress("100.2.2.3")
+ *                 .mask("255.255.255.0")
+ *                 .build())
+ *             .helloInterval(5)
+ *             .holdTime(15)
+ *             .authenticationType("md5")
+ *             .md5Keys(ServiceRoutingEigrpFeatureMd5KeyArgs.builder()
+ *                 .keyId(2)
+ *                 .keyString("password123")
+ *                 .build())
+ *             .interfaces(ServiceRoutingEigrpFeatureInterfaceArgs.builder()
+ *                 .name("GigabitEthernet3")
+ *                 .shutdown(false)
+ *                 .summaryAddresses(ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs.builder()
+ *                     .address("10.0.0.1")
+ *                     .mask("255.255.255.0")
+ *                     .build())
+ *                 .build())
+ *             .filter(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

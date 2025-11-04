@@ -27,7 +27,16 @@ class GetApplicationAwareRoutingPolicyDefinitionResult:
     """
     A collection of values returned by getApplicationAwareRoutingPolicyDefinition.
     """
-    def __init__(__self__, description=None, id=None, name=None, sequences=None, type=None, version=None):
+    def __init__(__self__, default_action=None, default_action_sla_class_list_id=None, default_action_sla_class_list_version=None, description=None, id=None, name=None, sequences=None, type=None, version=None):
+        if default_action and not isinstance(default_action, str):
+            raise TypeError("Expected argument 'default_action' to be a str")
+        pulumi.set(__self__, "default_action", default_action)
+        if default_action_sla_class_list_id and not isinstance(default_action_sla_class_list_id, str):
+            raise TypeError("Expected argument 'default_action_sla_class_list_id' to be a str")
+        pulumi.set(__self__, "default_action_sla_class_list_id", default_action_sla_class_list_id)
+        if default_action_sla_class_list_version and not isinstance(default_action_sla_class_list_version, int):
+            raise TypeError("Expected argument 'default_action_sla_class_list_version' to be a int")
+        pulumi.set(__self__, "default_action_sla_class_list_version", default_action_sla_class_list_version)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -46,6 +55,30 @@ class GetApplicationAwareRoutingPolicyDefinitionResult:
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
+
+    @_builtins.property
+    @pulumi.getter(name="defaultAction")
+    def default_action(self) -> _builtins.str:
+        """
+        Type of default action
+        """
+        return pulumi.get(self, "default_action")
+
+    @_builtins.property
+    @pulumi.getter(name="defaultActionSlaClassListId")
+    def default_action_sla_class_list_id(self) -> _builtins.str:
+        """
+        SLA class list ID
+        """
+        return pulumi.get(self, "default_action_sla_class_list_id")
+
+    @_builtins.property
+    @pulumi.getter(name="defaultActionSlaClassListVersion")
+    def default_action_sla_class_list_version(self) -> _builtins.int:
+        """
+        SLA class list version
+        """
+        return pulumi.get(self, "default_action_sla_class_list_version")
 
     @_builtins.property
     @pulumi.getter
@@ -102,6 +135,9 @@ class AwaitableGetApplicationAwareRoutingPolicyDefinitionResult(GetApplicationAw
         if False:
             yield self
         return GetApplicationAwareRoutingPolicyDefinitionResult(
+            default_action=self.default_action,
+            default_action_sla_class_list_id=self.default_action_sla_class_list_id,
+            default_action_sla_class_list_version=self.default_action_sla_class_list_version,
             description=self.description,
             id=self.id,
             name=self.name,
@@ -133,6 +169,9 @@ def get_application_aware_routing_policy_definition(id: Optional[_builtins.str] 
     __ret__ = pulumi.runtime.invoke('sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition', __args__, opts=opts, typ=GetApplicationAwareRoutingPolicyDefinitionResult).value
 
     return AwaitableGetApplicationAwareRoutingPolicyDefinitionResult(
+        default_action=pulumi.get(__ret__, 'default_action'),
+        default_action_sla_class_list_id=pulumi.get(__ret__, 'default_action_sla_class_list_id'),
+        default_action_sla_class_list_version=pulumi.get(__ret__, 'default_action_sla_class_list_version'),
         description=pulumi.get(__ret__, 'description'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
@@ -161,6 +200,9 @@ def get_application_aware_routing_policy_definition_output(id: Optional[pulumi.I
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('sdwan:index/getApplicationAwareRoutingPolicyDefinition:getApplicationAwareRoutingPolicyDefinition', __args__, opts=opts, typ=GetApplicationAwareRoutingPolicyDefinitionResult)
     return __ret__.apply(lambda __response__: GetApplicationAwareRoutingPolicyDefinitionResult(
+        default_action=pulumi.get(__response__, 'default_action'),
+        default_action_sla_class_list_id=pulumi.get(__response__, 'default_action_sla_class_list_id'),
+        default_action_sla_class_list_version=pulumi.get(__response__, 'default_action_sla_class_list_version'),
         description=pulumi.get(__response__, 'description'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),

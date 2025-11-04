@@ -237,6 +237,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectSecurityLocalDomainList{}
 	case "sdwan:index/policyObjectSecurityPortList:PolicyObjectSecurityPortList":
 		r = &PolicyObjectSecurityPortList{}
+	case "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList":
+		r = &PolicyObjectSecurityProtocolList{}
 	case "sdwan:index/policyObjectSecurityScalableGroupTagList:PolicyObjectSecurityScalableGroupTagList":
 		r = &PolicyObjectSecurityScalableGroupTagList{}
 	case "sdwan:index/policyObjectSecurityUrlAllowList:PolicyObjectSecurityUrlAllowList":
@@ -249,6 +251,18 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &PolicyObjectStandardCommunityList{}
 	case "sdwan:index/policyObjectTlocList:PolicyObjectTlocList":
 		r = &PolicyObjectTlocList{}
+	case "sdwan:index/policyObjectUnifiedAdvancedInspectionProfile:PolicyObjectUnifiedAdvancedInspectionProfile":
+		r = &PolicyObjectUnifiedAdvancedInspectionProfile{}
+	case "sdwan:index/policyObjectUnifiedAdvancedMalwareProtection:PolicyObjectUnifiedAdvancedMalwareProtection":
+		r = &PolicyObjectUnifiedAdvancedMalwareProtection{}
+	case "sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention":
+		r = &PolicyObjectUnifiedIntrusionPrevention{}
+	case "sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption":
+		r = &PolicyObjectUnifiedTlsSslDecryption{}
+	case "sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile":
+		r = &PolicyObjectUnifiedTlsSslProfile{}
+	case "sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering":
+		r = &PolicyObjectUnifiedUrlFiltering{}
 	case "sdwan:index/policyObjectVpnGroup:PolicyObjectVpnGroup":
 		r = &PolicyObjectVpnGroup{}
 	case "sdwan:index/portListPolicyObject:PortListPolicyObject":
@@ -1062,6 +1076,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"sdwan",
+		"index/policyObjectSecurityProtocolList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
 		"index/policyObjectSecurityScalableGroupTagList",
 		&module{version},
 	)
@@ -1088,6 +1107,36 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/policyObjectTlocList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedAdvancedInspectionProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedAdvancedMalwareProtection",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedIntrusionPrevention",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedTlsSslDecryption",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedTlsSslProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/policyObjectUnifiedUrlFiltering",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

@@ -17,6 +17,56 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoVpnInterfaceGreFeatureTemplate(ctx, "example", &sdwan.CiscoVpnInterfaceGreFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				InterfaceName:         pulumi.String("gre0/0"),
+//				InterfaceDescription:  pulumi.String("My Description"),
+//				IpAddress:             pulumi.String("1.1.1.1/24"),
+//				TunnelSource:          pulumi.String("1.2.3.4"),
+//				Shutdown:              pulumi.Bool(true),
+//				TunnelSourceInterface: pulumi.String("e1"),
+//				TunnelDestination:     pulumi.String("3.4.5.6"),
+//				Application:           pulumi.String("sig"),
+//				IpMtu:                 pulumi.Int(1500),
+//				TcpMssAdjust:          pulumi.Int(1400),
+//				ClearDontFragment:     pulumi.Bool(true),
+//				RewriteRule:           pulumi.String("ACL1"),
+//				AccessLists: sdwan.CiscoVpnInterfaceGreFeatureTemplateAccessListArray{
+//					&sdwan.CiscoVpnInterfaceGreFeatureTemplateAccessListArgs{
+//						Direction: pulumi.String("in"),
+//						AclName:   pulumi.String("ACL2"),
+//					},
+//				},
+//				Trackers: pulumi.StringArray{
+//					pulumi.String("TRACKER1"),
+//				},
+//				TunnelRouteVia: pulumi.String("g0/0"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

@@ -27,6 +27,73 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CedgePimFeatureTemplate;
+ * import com.pulumi.sdwan.CedgePimFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CedgePimFeatureTemplateRpAnnounceFieldArgs;
+ * import com.pulumi.sdwan.inputs.CedgePimFeatureTemplateRpCandidateArgs;
+ * import com.pulumi.sdwan.inputs.CedgePimFeatureTemplateRpAddressArgs;
+ * import com.pulumi.sdwan.inputs.CedgePimFeatureTemplateInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CedgePimFeatureTemplate("example", CedgePimFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .autoRp(true)
+ *             .rpAnnounceFields(CedgePimFeatureTemplateRpAnnounceFieldArgs.builder()
+ *                 .interfaceName("Ethernet1")
+ *                 .scope(1)
+ *                 .build())
+ *             .interfaceName("Ethernet1")
+ *             .rpCandidates(CedgePimFeatureTemplateRpCandidateArgs.builder()
+ *                 .interface_("Ethernet1")
+ *                 .accessList("1")
+ *                 .interval(100)
+ *                 .priority(2)
+ *                 .build())
+ *             .bsrCandidate("Ethernet1")
+ *             .hashMaskLength("24")
+ *             .priority(1)
+ *             .rpCandidateAccessList("120")
+ *             .scope(1)
+ *             .range("16")
+ *             .default_(true)
+ *             .rpAddresses(CedgePimFeatureTemplateRpAddressArgs.builder()
+ *                 .accessList("99")
+ *                 .ipAddress("1.2.3.4")
+ *                 .override(false)
+ *                 .build())
+ *             .sptThreshold("0")
+ *             .interfaces(CedgePimFeatureTemplateInterfaceArgs.builder()
+ *                 .interfaceName("Ethernet1")
+ *                 .queryInterval(30)
+ *                 .joinPruneInterval(60)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

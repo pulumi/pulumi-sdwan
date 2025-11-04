@@ -15,6 +15,61 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceRoutingEigrpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AutonomousSystemId = 111,
+    ///         Networks = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceRoutingEigrpFeatureNetworkArgs
+    ///             {
+    ///                 IpAddress = "100.2.2.3",
+    ///                 Mask = "255.255.255.0",
+    ///             },
+    ///         },
+    ///         HelloInterval = 5,
+    ///         HoldTime = 15,
+    ///         AuthenticationType = "md5",
+    ///         Md5Keys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceRoutingEigrpFeatureMd5KeyArgs
+    ///             {
+    ///                 KeyId = 2,
+    ///                 KeyString = "password123",
+    ///             },
+    ///         },
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceRoutingEigrpFeatureInterfaceArgs
+    ///             {
+    ///                 Name = "GigabitEthernet3",
+    ///                 Shutdown = false,
+    ///                 SummaryAddresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceRoutingEigrpFeatureInterfaceSummaryAddressArgs
+    ///                     {
+    ///                         Address = "10.0.0.1",
+    ///                         Mask = "255.255.255.0",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Filter = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

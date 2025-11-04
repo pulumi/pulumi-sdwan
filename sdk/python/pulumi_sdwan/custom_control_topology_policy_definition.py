@@ -213,6 +213,34 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CustomControlTopologyPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 1,
+                "name": "Region1",
+                "type": "route",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "ompTag",
+                    "omp_tag": 100,
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "set_parameters": [{
+                        "type": "preference",
+                        "preference": 100,
+                    }],
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -239,6 +267,34 @@ class CustomControlTopologyPolicyDefinition(pulumi.CustomResource):
         This resource can manage a Custom Control Topology Policy Definition .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CustomControlTopologyPolicyDefinition("example",
+            name="Example",
+            description="My description",
+            default_action="reject",
+            sequences=[{
+                "id": 1,
+                "name": "Region1",
+                "type": "route",
+                "ip_type": "ipv4",
+                "base_action": "accept",
+                "match_entries": [{
+                    "type": "ompTag",
+                    "omp_tag": 100,
+                }],
+                "action_entries": [{
+                    "type": "set",
+                    "set_parameters": [{
+                        "type": "preference",
+                        "preference": 100,
+                    }],
+                }],
+            }])
+        ```
 
         ## Import
 

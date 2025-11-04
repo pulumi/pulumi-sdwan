@@ -17,6 +17,84 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportWanVpnFeature(ctx, "example", &sdwan.TransportWanVpnFeatureArgs{
+//				Name:                    pulumi.String("Example"),
+//				Description:             pulumi.String("My Example"),
+//				FeatureProfileId:        pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				Vpn:                     pulumi.Int(0),
+//				EnhanceEcmpKeying:       pulumi.Bool(true),
+//				PrimaryDnsAddressIpv4:   pulumi.String("1.2.3.4"),
+//				SecondaryDnsAddressIpv4: pulumi.String("2.3.4.5"),
+//				PrimaryDnsAddressIpv6:   pulumi.String("2001:0:0:1::0"),
+//				SecondaryDnsAddressIpv6: pulumi.String("2001:0:0:2::0"),
+//				NewHostMappings: sdwan.TransportWanVpnFeatureNewHostMappingArray{
+//					&sdwan.TransportWanVpnFeatureNewHostMappingArgs{
+//						HostName: pulumi.String("example"),
+//						ListOfIpAddresses: pulumi.StringArray{
+//							pulumi.String("1.2.3.4"),
+//						},
+//					},
+//				},
+//				Ipv4StaticRoutes: sdwan.TransportWanVpnFeatureIpv4StaticRouteArray{
+//					&sdwan.TransportWanVpnFeatureIpv4StaticRouteArgs{
+//						NetworkAddress: pulumi.String("1.2.3.4"),
+//						SubnetMask:     pulumi.String("0.0.0.0"),
+//						Gateway:        pulumi.String("nextHop"),
+//						NextHops: sdwan.TransportWanVpnFeatureIpv4StaticRouteNextHopArray{
+//							&sdwan.TransportWanVpnFeatureIpv4StaticRouteNextHopArgs{
+//								Address:                pulumi.String("1.2.3.4"),
+//								AdministrativeDistance: pulumi.Int(1),
+//							},
+//						},
+//					},
+//				},
+//				Ipv6StaticRoutes: sdwan.TransportWanVpnFeatureIpv6StaticRouteArray{
+//					&sdwan.TransportWanVpnFeatureIpv6StaticRouteArgs{
+//						Prefix:  pulumi.String("2002::/16"),
+//						Gateway: pulumi.String("nextHop"),
+//						NextHops: sdwan.TransportWanVpnFeatureIpv6StaticRouteNextHopArray{
+//							&sdwan.TransportWanVpnFeatureIpv6StaticRouteNextHopArgs{
+//								Address:                pulumi.String("2001:0:0:1::0"),
+//								AdministrativeDistance: pulumi.Int(1),
+//							},
+//						},
+//					},
+//				},
+//				Services: sdwan.TransportWanVpnFeatureServiceArray{
+//					&sdwan.TransportWanVpnFeatureServiceArgs{
+//						ServiceType: pulumi.String("TE"),
+//					},
+//				},
+//				Nat64V4Pools: sdwan.TransportWanVpnFeatureNat64V4PoolArray{
+//					&sdwan.TransportWanVpnFeatureNat64V4PoolArgs{
+//						Nat64V4PoolName:       pulumi.String("example"),
+//						Nat64V4PoolRangeStart: pulumi.String("203.0.113.50"),
+//						Nat64V4PoolRangeEnd:   pulumi.String("203.0.113.100"),
+//						Nat64V4PoolOverload:   pulumi.Bool(false),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

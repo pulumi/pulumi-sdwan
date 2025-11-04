@@ -14,6 +14,42 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SecurityPolicy("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "Example",
+    ///         Mode = "security",
+    ///         UseCase = "custom",
+    ///         Definitions = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SecurityPolicyDefinitionArgs
+    ///             {
+    ///                 Id = "7d299c34-981c-4fb3-9167-6be44ab1691f",
+    ///                 Type = "urlFiltering",
+    ///             },
+    ///         },
+    ///         FailureMode = "close",
+    ///         Loggings = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SecurityPolicyLoggingArgs
+    ///             {
+    ///                 ExternalSyslogServerIp = "10.0.0.1",
+    ///                 ExternalSyslogServerVpn = "123",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

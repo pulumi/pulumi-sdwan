@@ -27,7 +27,7 @@ public final class GetQosMapPolicyDefinitionQosScheduler {
      */
     private Integer burst;
     /**
-     * @return Class map ID
+     * @return Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
     private String classMapId;
@@ -75,7 +75,7 @@ public final class GetQosMapPolicyDefinitionQosScheduler {
         return this.burst;
     }
     /**
-     * @return Class map ID
+     * @return Class map ID (can be empty for queue 0 when left as Control)
      * 
      */
     public String classMapId() {

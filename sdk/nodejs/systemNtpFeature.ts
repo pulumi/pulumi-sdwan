@@ -12,6 +12,33 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemNtpFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     servers: [{
+ *         hostnameIpAddress: "1.1.1.1",
+ *         authenticationKey: 41673,
+ *         vpn: 1,
+ *         ntpVersion: 4,
+ *         sourceInterface: "Ethernet",
+ *         preferThisNtpServer: false,
+ *     }],
+ *     authenticationKeys: [{
+ *         keyId: 49737,
+ *         md5Value: "$CRYPT_CLUSTER",
+ *     }],
+ *     trustedKeys: [49737],
+ *     authoritativeNtpServer: false,
+ *     stratum: 1,
+ *     sourceInterface: "ATM",
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

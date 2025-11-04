@@ -11,6 +11,22 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.RewriteRulePolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     rules: [{
+ *         classMapId: "2081c2f4-3f9f-4fee-8078-dcc8904e368d",
+ *         priority: "low",
+ *         dscp: 16,
+ *         layer2Cos: 1,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

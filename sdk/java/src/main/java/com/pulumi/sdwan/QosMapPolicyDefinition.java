@@ -21,6 +21,48 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.QosMapPolicyDefinition;
+ * import com.pulumi.sdwan.QosMapPolicyDefinitionArgs;
+ * import com.pulumi.sdwan.inputs.QosMapPolicyDefinitionQosSchedulerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new QosMapPolicyDefinition("example", QosMapPolicyDefinitionArgs.builder()
+ *             .name("Example")
+ *             .description("My description")
+ *             .qosSchedulers(QosMapPolicyDefinitionQosSchedulerArgs.builder()
+ *                 .queue(6)
+ *                 .classMapId("2081c2f4-3f9f-4fee-8078-dcc8904e368d")
+ *                 .bandwidthPercent(10)
+ *                 .bufferPercent(10)
+ *                 .burst(100000)
+ *                 .dropType("red-drop")
+ *                 .schedulingType("wrr")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -11,6 +11,21 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.TlocListPolicyObject("example", {
+ *     name: "Example",
+ *     entries: [{
+ *         tlocIp: "1.1.1.2",
+ *         color: "blue",
+ *         encapsulation: "gre",
+ *         preference: 10,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

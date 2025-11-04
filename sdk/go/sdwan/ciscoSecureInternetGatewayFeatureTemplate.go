@@ -17,6 +17,115 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSecureInternetGatewayFeatureTemplate(ctx, "example", &sdwan.CiscoSecureInternetGatewayFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VpnId: pulumi.Int(1),
+//				Interfaces: sdwan.CiscoSecureInternetGatewayFeatureTemplateInterfaceArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateInterfaceArgs{
+//						Name:                       pulumi.String("ipsec1"),
+//						AutoTunnelMode:             pulumi.Bool(true),
+//						Shutdown:                   pulumi.Bool(true),
+//						Description:                pulumi.String("My Description"),
+//						IpUnnumbered:               pulumi.Bool(false),
+//						Ipv4Address:                pulumi.String("1.2.3.4/24"),
+//						TunnelSource:               pulumi.String("3.3.3.3"),
+//						TunnelSourceInterface:      pulumi.String("ge0/1"),
+//						TunnelRouteVia:             pulumi.String("ge0/2"),
+//						TunnelDestination:          pulumi.String("3.4.5.6"),
+//						Application:                pulumi.String("sig"),
+//						SigProvider:                pulumi.String("secure-internet-gateway-umbrella"),
+//						TunnelDcPreference:         pulumi.String("primary-dc"),
+//						TcpMss:                     pulumi.Int(1400),
+//						Mtu:                        pulumi.Int(1500),
+//						DeadPeerDetectionInterval:  pulumi.Int(30),
+//						DeadPeerDetectionRetries:   pulumi.Int(5),
+//						IkeVersion:                 pulumi.Int(1),
+//						IkePreSharedKey:            pulumi.String("A1234567"),
+//						IkeRekeyInterval:           pulumi.Int(600),
+//						IkeCiphersuite:             pulumi.String("aes256-cbc-sha2"),
+//						IkeGroup:                   pulumi.String("14"),
+//						IkePreSharedKeyDynamic:     pulumi.Bool(false),
+//						IkePreSharedKeyLocalId:     pulumi.String("1.2.3.4"),
+//						IkePreSharedKeyRemoteId:    pulumi.String("2.3.4.5"),
+//						IpsecRekeyInterval:         pulumi.Int(7200),
+//						IpsecReplayWindow:          pulumi.Int(1024),
+//						IpsecCiphersuite:           pulumi.String("aes256-cbc-sha1"),
+//						IpsecPerfectForwardSecrecy: pulumi.String("group-14"),
+//						Tracker:                    pulumi.String("test"),
+//						TrackEnable:                pulumi.Bool(false),
+//						TunnelPublicIp:             pulumi.String("5.5.5.5"),
+//					},
+//				},
+//				Services: sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceArgs{
+//						ServiceType: pulumi.String("sig"),
+//						InterfacePairs: sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArray{
+//							&sdwan.CiscoSecureInternetGatewayFeatureTemplateServiceInterfacePairArgs{
+//								ActiveInterface:       pulumi.String("e1"),
+//								BackupInterface:       pulumi.String("e2"),
+//								ActiveInterfaceWeight: pulumi.Int(10),
+//								BackupInterfaceWeight: pulumi.Int(20),
+//							},
+//						},
+//						ZscalerAuthenticationRequired:             pulumi.Bool(true),
+//						ZscalerXffForward:                         pulumi.Bool(true),
+//						ZscalerFirewallEnabled:                    pulumi.Bool(true),
+//						ZscalerIpsControlEnabled:                  pulumi.Bool(true),
+//						ZscalerCautionEnabled:                     pulumi.Bool(true),
+//						ZscalerPrimaryDataCenter:                  pulumi.String("Auto"),
+//						ZscalerSecondaryDataCenter:                pulumi.String("Auto"),
+//						ZscalerSurrogateIp:                        pulumi.Bool(true),
+//						ZscalerSurrogateIdleTime:                  pulumi.Int(100),
+//						ZscalerSurrogateDisplayTimeUnit:           pulumi.String("MINUTE"),
+//						ZscalerSurrogateIpEnforceForKnownBrowsers: pulumi.Bool(true),
+//						ZscalerSurrogateRefreshTime:               pulumi.Int(12345),
+//						ZscalerSurrogateRefreshTimeUnit:           pulumi.String("MINUTE"),
+//						ZscalerAupEnabled:                         pulumi.Bool(true),
+//						ZscalerAupBlockInternetUntilAccepted:      pulumi.Bool(true),
+//						ZscalerAupForceSslInspection:              pulumi.Bool(true),
+//						ZscalerAupTimeout:                         pulumi.Int(60),
+//						ZscalerLocationName:                       pulumi.String("LOC1"),
+//						UmbrellaPrimaryDataCenter:                 pulumi.String("Auto"),
+//						UmbrellaSecondaryDataCenter:               pulumi.String("Auto"),
+//					},
+//				},
+//				TrackerSourceIp: pulumi.String("2.3.4.5"),
+//				Trackers: sdwan.CiscoSecureInternetGatewayFeatureTemplateTrackerArray{
+//					&sdwan.CiscoSecureInternetGatewayFeatureTemplateTrackerArgs{
+//						TrackerType:    pulumi.String("SIG"),
+//						Name:           pulumi.String("TRACKER1"),
+//						EndpointApiUrl: pulumi.String("https://1.1.1.1"),
+//						Threshold:      pulumi.Int(500),
+//						Interval:       pulumi.Int(60),
+//						Multiplier:     pulumi.Int(4),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

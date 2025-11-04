@@ -17,6 +17,82 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoSnmpFeatureTemplate(ctx, "example", &sdwan.CiscoSnmpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				Shutdown: pulumi.Bool(false),
+//				Contact:  pulumi.String("Max"),
+//				Location: pulumi.String("Building 1"),
+//				Views: sdwan.CiscoSnmpFeatureTemplateViewArray{
+//					&sdwan.CiscoSnmpFeatureTemplateViewArgs{
+//						Name: pulumi.String("VIEW1"),
+//						ObjectIdentifiers: sdwan.CiscoSnmpFeatureTemplateViewObjectIdentifierArray{
+//							&sdwan.CiscoSnmpFeatureTemplateViewObjectIdentifierArgs{
+//								Id:      pulumi.String("1.2.3"),
+//								Exclude: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//				Communities: sdwan.CiscoSnmpFeatureTemplateCommunityArray{
+//					&sdwan.CiscoSnmpFeatureTemplateCommunityArgs{
+//						Name:          pulumi.String("community1"),
+//						View:          pulumi.String("VIEW1"),
+//						Authorization: pulumi.String("read-only"),
+//					},
+//				},
+//				Groups: sdwan.CiscoSnmpFeatureTemplateGroupArray{
+//					&sdwan.CiscoSnmpFeatureTemplateGroupArgs{
+//						Name:          pulumi.String("GROUP1"),
+//						SecurityLevel: pulumi.String("auth-priv"),
+//						View:          pulumi.String("VIEW1"),
+//					},
+//				},
+//				Users: sdwan.CiscoSnmpFeatureTemplateUserArray{
+//					&sdwan.CiscoSnmpFeatureTemplateUserArgs{
+//						Name:                   pulumi.String("user1"),
+//						AuthenticationProtocol: pulumi.String("sha"),
+//						AuthenticationPassword: pulumi.String("password123"),
+//						PrivacyProtocol:        pulumi.String("aes-cfb-128"),
+//						PrivacyPassword:        pulumi.String("password123"),
+//						Group:                  pulumi.String("GROUP1"),
+//					},
+//				},
+//				TrapTargets: sdwan.CiscoSnmpFeatureTemplateTrapTargetArray{
+//					&sdwan.CiscoSnmpFeatureTemplateTrapTargetArgs{
+//						VpnId:           pulumi.Int(1),
+//						Ip:              pulumi.String("1.1.1.1"),
+//						UdpPort:         pulumi.Int(12345),
+//						CommunityName:   pulumi.String("community1"),
+//						User:            pulumi.String("user1"),
+//						SourceInterface: pulumi.String("e1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

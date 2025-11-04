@@ -14,6 +14,56 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.Ipv4AclPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.Ipv4AclPolicyDefinitionSequenceArgs
+    ///             {
+    ///                 Id = 10,
+    ///                 Name = "Sequence 10",
+    ///                 BaseAction = "accept",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.Ipv4AclPolicyDefinitionSequenceMatchEntryArgs
+    ///                     {
+    ///                         Type = "dscp",
+    ///                         Dscp = "16",
+    ///                     },
+    ///                 },
+    ///                 ActionEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.Ipv4AclPolicyDefinitionSequenceActionEntryArgs
+    ///                     {
+    ///                         Type = "set",
+    ///                         SetParameters = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterArgs
+    ///                             {
+    ///                                 Type = "dscp",
+    ///                                 Dscp = 16,
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

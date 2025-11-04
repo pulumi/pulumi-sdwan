@@ -23,6 +23,50 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SystemBfdFeature;
+ * import com.pulumi.sdwan.SystemBfdFeatureArgs;
+ * import com.pulumi.sdwan.inputs.SystemBfdFeatureColorArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SystemBfdFeature("example", SystemBfdFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .multiplier(3)
+ *             .pollInterval(100)
+ *             .defaultDscp(8)
+ *             .colors(SystemBfdFeatureColorArgs.builder()
+ *                 .color("3g")
+ *                 .helloInterval(200)
+ *                 .multiplier(3)
+ *                 .pmtuDiscovery(true)
+ *                 .dscp(16)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

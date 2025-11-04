@@ -14,6 +14,21 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationAwareRoutingPolicyDefinitionResult {
     /**
+     * @return Type of default action
+     * 
+     */
+    private String defaultAction;
+    /**
+     * @return SLA class list ID
+     * 
+     */
+    private String defaultActionSlaClassListId;
+    /**
+     * @return SLA class list version
+     * 
+     */
+    private Integer defaultActionSlaClassListVersion;
+    /**
      * @return The description of the policy definition
      * 
      */
@@ -45,6 +60,27 @@ public final class GetApplicationAwareRoutingPolicyDefinitionResult {
     private Integer version;
 
     private GetApplicationAwareRoutingPolicyDefinitionResult() {}
+    /**
+     * @return Type of default action
+     * 
+     */
+    public String defaultAction() {
+        return this.defaultAction;
+    }
+    /**
+     * @return SLA class list ID
+     * 
+     */
+    public String defaultActionSlaClassListId() {
+        return this.defaultActionSlaClassListId;
+    }
+    /**
+     * @return SLA class list version
+     * 
+     */
+    public Integer defaultActionSlaClassListVersion() {
+        return this.defaultActionSlaClassListVersion;
+    }
     /**
      * @return The description of the policy definition
      * 
@@ -97,6 +133,9 @@ public final class GetApplicationAwareRoutingPolicyDefinitionResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String defaultAction;
+        private String defaultActionSlaClassListId;
+        private Integer defaultActionSlaClassListVersion;
         private String description;
         private String id;
         private String name;
@@ -106,6 +145,9 @@ public final class GetApplicationAwareRoutingPolicyDefinitionResult {
         public Builder() {}
         public Builder(GetApplicationAwareRoutingPolicyDefinitionResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.defaultAction = defaults.defaultAction;
+    	      this.defaultActionSlaClassListId = defaults.defaultActionSlaClassListId;
+    	      this.defaultActionSlaClassListVersion = defaults.defaultActionSlaClassListVersion;
     	      this.description = defaults.description;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -114,6 +156,30 @@ public final class GetApplicationAwareRoutingPolicyDefinitionResult {
     	      this.version = defaults.version;
         }
 
+        @CustomType.Setter
+        public Builder defaultAction(String defaultAction) {
+            if (defaultAction == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionResult", "defaultAction");
+            }
+            this.defaultAction = defaultAction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder defaultActionSlaClassListId(String defaultActionSlaClassListId) {
+            if (defaultActionSlaClassListId == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionResult", "defaultActionSlaClassListId");
+            }
+            this.defaultActionSlaClassListId = defaultActionSlaClassListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder defaultActionSlaClassListVersion(Integer defaultActionSlaClassListVersion) {
+            if (defaultActionSlaClassListVersion == null) {
+              throw new MissingRequiredPropertyException("GetApplicationAwareRoutingPolicyDefinitionResult", "defaultActionSlaClassListVersion");
+            }
+            this.defaultActionSlaClassListVersion = defaultActionSlaClassListVersion;
+            return this;
+        }
         @CustomType.Setter
         public Builder description(String description) {
             if (description == null) {
@@ -167,6 +233,9 @@ public final class GetApplicationAwareRoutingPolicyDefinitionResult {
         }
         public GetApplicationAwareRoutingPolicyDefinitionResult build() {
             final var _resultValue = new GetApplicationAwareRoutingPolicyDefinitionResult();
+            _resultValue.defaultAction = defaultAction;
+            _resultValue.defaultActionSlaClassListId = defaultActionSlaClassListId;
+            _resultValue.defaultActionSlaClassListVersion = defaultActionSlaClassListVersion;
             _resultValue.description = description;
             _resultValue.id = id;
             _resultValue.name = name;

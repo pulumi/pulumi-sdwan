@@ -15,6 +15,65 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemLoggingFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DiskEnable = true,
+    ///         DiskFileSize = 9,
+    ///         DiskFileRotate = 10,
+    ///         TlsProfiles = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemLoggingFeatureTlsProfileArgs
+    ///             {
+    ///                 Profile = "test",
+    ///                 TlsVersion = "TLSv1.1",
+    ///                 CipherSuites = new[]
+    ///                 {
+    ///                     "aes-128-cbc-sha",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemLoggingFeatureIpv4ServerArgs
+    ///             {
+    ///                 HostnameIp = "1.1.1.1",
+    ///                 Vpn = 512,
+    ///                 SourceInterface = "GigabitEthernet1",
+    ///                 Priority = "informational",
+    ///                 TlsEnable = true,
+    ///                 TlsPropertiesCustomProfile = true,
+    ///                 TlsPropertiesProfile = "test",
+    ///             },
+    ///         },
+    ///         Ipv6Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemLoggingFeatureIpv6ServerArgs
+    ///             {
+    ///                 HostnameIp = "1.1.1.1",
+    ///                 Vpn = 512,
+    ///                 SourceInterface = "GigabitEthernet1",
+    ///                 Priority = "informational",
+    ///                 TlsEnable = true,
+    ///                 TlsPropertiesCustomProfile = true,
+    ///                 TlsPropertiesProfile = "test",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -101,6 +101,23 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer prefixListVersion;
     /**
+     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     *   - Range: `0`-`63`
+     * 
+     */
+    private @Nullable Integer regionId;
+    /**
+     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * 
+     */
+    private @Nullable String regionListId;
+    /**
+     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     *   - Choices: `border-router`, `edge-router`
+     * 
+     */
+    private @Nullable String role;
+    /**
      * @return Site ID, Attribute conditional on `type` being equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
@@ -144,7 +161,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     private @Nullable Integer tlocListVersion;
     /**
      * @return Type of match entry
-     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
      * 
      */
     private String type;
@@ -286,6 +303,29 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.prefixListVersion);
     }
     /**
+     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     *   - Range: `0`-`63`
+     * 
+     */
+    public Optional<Integer> regionId() {
+        return Optional.ofNullable(this.regionId);
+    }
+    /**
+     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * 
+     */
+    public Optional<String> regionListId() {
+        return Optional.ofNullable(this.regionListId);
+    }
+    /**
+     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     *   - Choices: `border-router`, `edge-router`
+     * 
+     */
+    public Optional<String> role() {
+        return Optional.ofNullable(this.role);
+    }
+    /**
      * @return Site ID, Attribute conditional on `type` being equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
@@ -345,7 +385,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     }
     /**
      * @return Type of match entry
-     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
      * 
      */
     public String type() {
@@ -399,6 +439,9 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         private @Nullable Integer preference;
         private @Nullable String prefixListId;
         private @Nullable Integer prefixListVersion;
+        private @Nullable Integer regionId;
+        private @Nullable String regionListId;
+        private @Nullable String role;
         private @Nullable Integer siteId;
         private @Nullable String siteListId;
         private @Nullable Integer siteListVersion;
@@ -430,6 +473,9 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     	      this.preference = defaults.preference;
     	      this.prefixListId = defaults.prefixListId;
     	      this.prefixListVersion = defaults.prefixListVersion;
+    	      this.regionId = defaults.regionId;
+    	      this.regionListId = defaults.regionListId;
+    	      this.role = defaults.role;
     	      this.siteId = defaults.siteId;
     	      this.siteListId = defaults.siteListId;
     	      this.siteListVersion = defaults.siteListVersion;
@@ -541,6 +587,24 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
+        public Builder regionId(@Nullable Integer regionId) {
+
+            this.regionId = regionId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder regionListId(@Nullable String regionListId) {
+
+            this.regionListId = regionListId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder role(@Nullable String role) {
+
+            this.role = role;
+            return this;
+        }
+        @CustomType.Setter
         public Builder siteId(@Nullable Integer siteId) {
 
             this.siteId = siteId;
@@ -632,6 +696,9 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
             _resultValue.preference = preference;
             _resultValue.prefixListId = prefixListId;
             _resultValue.prefixListVersion = prefixListVersion;
+            _resultValue.regionId = regionId;
+            _resultValue.regionListId = regionListId;
+            _resultValue.role = role;
             _resultValue.siteId = siteId;
             _resultValue.siteListId = siteListId;
             _resultValue.siteListVersion = siteListVersion;

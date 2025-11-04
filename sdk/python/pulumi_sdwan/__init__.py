@@ -178,12 +178,19 @@ from .get_policy_object_security_ips_signature import *
 from .get_policy_object_security_local_application_list import *
 from .get_policy_object_security_local_domain_list import *
 from .get_policy_object_security_port_list import *
+from .get_policy_object_security_protocol_list import *
 from .get_policy_object_security_scalable_group_tag_list import *
 from .get_policy_object_security_url_allow_list import *
 from .get_policy_object_security_url_block_list import *
 from .get_policy_object_sla_class_list import *
 from .get_policy_object_standard_community_list import *
 from .get_policy_object_tloc_list import *
+from .get_policy_object_unified_advanced_inspection_profile import *
+from .get_policy_object_unified_advanced_malware_protection import *
+from .get_policy_object_unified_intrusion_prevention import *
+from .get_policy_object_unified_tls_ssl_decryption import *
+from .get_policy_object_unified_tls_ssl_profile import *
+from .get_policy_object_unified_url_filtering import *
 from .get_policy_object_vpn_group import *
 from .get_port_list_policy_object import *
 from .get_preferred_color_group_policy_object import *
@@ -348,12 +355,19 @@ from .policy_object_security_ips_signature import *
 from .policy_object_security_local_application_list import *
 from .policy_object_security_local_domain_list import *
 from .policy_object_security_port_list import *
+from .policy_object_security_protocol_list import *
 from .policy_object_security_scalable_group_tag_list import *
 from .policy_object_security_url_allow_list import *
 from .policy_object_security_url_block_list import *
 from .policy_object_sla_class_list import *
 from .policy_object_standard_community_list import *
 from .policy_object_tloc_list import *
+from .policy_object_unified_advanced_inspection_profile import *
+from .policy_object_unified_advanced_malware_protection import *
+from .policy_object_unified_intrusion_prevention import *
+from .policy_object_unified_tls_ssl_decryption import *
+from .policy_object_unified_tls_ssl_profile import *
+from .policy_object_unified_url_filtering import *
 from .policy_object_vpn_group import *
 from .port_list_policy_object import *
 from .preferred_color_group_policy_object import *
@@ -1354,6 +1368,14 @@ _utilities.register(
  },
  {
   "pkg": "sdwan",
+  "mod": "index/policyObjectSecurityProtocolList",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectSecurityProtocolList:PolicyObjectSecurityProtocolList": "PolicyObjectSecurityProtocolList"
+  }
+ },
+ {
+  "pkg": "sdwan",
   "mod": "index/policyObjectSecurityScalableGroupTagList",
   "fqn": "pulumi_sdwan",
   "classes": {
@@ -1398,6 +1420,54 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/policyObjectTlocList:PolicyObjectTlocList": "PolicyObjectTlocList"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedAdvancedInspectionProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedAdvancedInspectionProfile:PolicyObjectUnifiedAdvancedInspectionProfile": "PolicyObjectUnifiedAdvancedInspectionProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedAdvancedMalwareProtection",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedAdvancedMalwareProtection:PolicyObjectUnifiedAdvancedMalwareProtection": "PolicyObjectUnifiedAdvancedMalwareProtection"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedIntrusionPrevention",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedIntrusionPrevention:PolicyObjectUnifiedIntrusionPrevention": "PolicyObjectUnifiedIntrusionPrevention"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedTlsSslDecryption",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedTlsSslDecryption:PolicyObjectUnifiedTlsSslDecryption": "PolicyObjectUnifiedTlsSslDecryption"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedTlsSslProfile",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedTlsSslProfile:PolicyObjectUnifiedTlsSslProfile": "PolicyObjectUnifiedTlsSslProfile"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/policyObjectUnifiedUrlFiltering",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/policyObjectUnifiedUrlFiltering:PolicyObjectUnifiedUrlFiltering": "PolicyObjectUnifiedUrlFiltering"
   }
  },
  {

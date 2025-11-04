@@ -12,6 +12,118 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoOspfv3FeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     ipv4RouterId: "1.2.3.4",
+ *     ipv4AutoCostReferenceBandwidth: 100000,
+ *     ipv4CompatibleRfc1583: true,
+ *     ipv4DefaultInformationOriginate: true,
+ *     ipv4DefaultInformationOriginateAlways: true,
+ *     ipv4DefaultInformationOriginateMetric: 100,
+ *     ipv4DefaultInformationOriginateMetricType: "type1",
+ *     ipv4DistanceExternal: 111,
+ *     ipv4DistanceInterArea: 111,
+ *     ipv4DistanceIntraArea: 112,
+ *     ipv4TimersSpfDelay: 300,
+ *     ipv4TimersSpfInitialHold: 2000,
+ *     ipv4TimersSpfMaxHold: 20000,
+ *     ipv4Distance: 110,
+ *     ipv4PolicyName: "POLICY1",
+ *     ipv4Filter: false,
+ *     ipv4Redistributes: [{
+ *         protocol: "static",
+ *         routePolicy: "RP1",
+ *         natDia: true,
+ *     }],
+ *     ipv4MaxMetricRouterLsas: [{
+ *         adType: "on-startup",
+ *         time: 100,
+ *     }],
+ *     ipv4Areas: [{
+ *         areaNumber: 1,
+ *         stub: false,
+ *         stubNoSummary: false,
+ *         nssa: false,
+ *         nssaNoSummary: true,
+ *         translate: "always",
+ *         normal: false,
+ *         interfaces: [{
+ *             name: "e1",
+ *             helloInterval: 20,
+ *             deadInterval: 60,
+ *             retransmitInterval: 10,
+ *             cost: 100,
+ *             network: "point-to-point",
+ *             passiveInterface: true,
+ *             authenticationType: "md5",
+ *             authenticationKey: "authenticationKey",
+ *             ipsecSpi: 256,
+ *         }],
+ *         ranges: [{
+ *             address: "1.1.1.0/24",
+ *             cost: 100,
+ *             noAdvertise: true,
+ *         }],
+ *     }],
+ *     ipv6RouterId: "1.2.3.4",
+ *     ipv6AutoCostReferenceBandwidth: 100000,
+ *     ipv6CompatibleRfc1583: true,
+ *     ipv6DefaultInformationOriginate: true,
+ *     ipv6DefaultInformationOriginateAlways: true,
+ *     ipv6DefaultInformationOriginateMetric: 100,
+ *     ipv6DefaultInformationOriginateMetricType: "type1",
+ *     ipv6DistanceExternal: 111,
+ *     ipv6DistanceInterArea: 111,
+ *     ipv6DistanceIntraArea: 112,
+ *     ipv6TimersSpfDelay: 300,
+ *     ipv6TimersSpfInitialHold: 2000,
+ *     ipv6TimersSpfMaxHold: 20000,
+ *     ipv6Distance: 110,
+ *     ipv6PolicyName: "POLICY2",
+ *     ipv6Filter: false,
+ *     ipv6Redistributes: [{
+ *         protocol: "static",
+ *         routePolicy: "RP1",
+ *     }],
+ *     ipv6MaxMetricRouterLsas: [{
+ *         adType: "on-startup",
+ *         time: 100,
+ *     }],
+ *     ipv6Areas: [{
+ *         areaNumber: 1,
+ *         stub: false,
+ *         stubNoSummary: false,
+ *         nssa: false,
+ *         nssaNoSummary: true,
+ *         translate: "always",
+ *         normal: false,
+ *         interfaces: [{
+ *             name: "e1",
+ *             helloInterval: 20,
+ *             deadInterval: 60,
+ *             retransmitInterval: 10,
+ *             cost: 100,
+ *             network: "point-to-point",
+ *             passiveInterface: true,
+ *             authenticationType: "md5",
+ *             authenticationKey: "authenticationKey",
+ *             ipsecSpi: 256,
+ *         }],
+ *         ranges: [{
+ *             address: "2001::/48",
+ *             cost: 100,
+ *             noAdvertise: true,
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

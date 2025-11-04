@@ -16,6 +16,53 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewRoutePolicyDefinition(ctx, "example", &sdwan.RoutePolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("reject"),
+//				Sequences: sdwan.RoutePolicyDefinitionSequenceArray{
+//					&sdwan.RoutePolicyDefinitionSequenceArgs{
+//						Id:         pulumi.Int(10),
+//						IpType:     pulumi.String("ipv4"),
+//						Name:       pulumi.String("Sequence 10"),
+//						BaseAction: pulumi.String("accept"),
+//						MatchEntries: sdwan.RoutePolicyDefinitionSequenceMatchEntryArray{
+//							&sdwan.RoutePolicyDefinitionSequenceMatchEntryArgs{
+//								Type:   pulumi.String("metric"),
+//								Metric: pulumi.Int(100),
+//							},
+//						},
+//						ActionEntries: sdwan.RoutePolicyDefinitionSequenceActionEntryArray{
+//							&sdwan.RoutePolicyDefinitionSequenceActionEntryArgs{
+//								Type:                pulumi.String("aggregator"),
+//								Aggregator:          pulumi.Int(10),
+//								AggregatorIpAddress: pulumi.String("10.1.2.3"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

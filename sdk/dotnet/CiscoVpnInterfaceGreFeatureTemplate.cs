@@ -15,6 +15,52 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoVpnInterfaceGreFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         InterfaceName = "gre0/0",
+    ///         InterfaceDescription = "My Description",
+    ///         IpAddress = "1.1.1.1/24",
+    ///         TunnelSource = "1.2.3.4",
+    ///         Shutdown = true,
+    ///         TunnelSourceInterface = "e1",
+    ///         TunnelDestination = "3.4.5.6",
+    ///         Application = "sig",
+    ///         IpMtu = 1500,
+    ///         TcpMssAdjust = 1400,
+    ///         ClearDontFragment = true,
+    ///         RewriteRule = "ACL1",
+    ///         AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoVpnInterfaceGreFeatureTemplateAccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL2",
+    ///             },
+    ///         },
+    ///         Trackers = new[]
+    ///         {
+    ///             "TRACKER1",
+    ///         },
+    ///         TunnelRouteVia = "g0/0",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -6107,6 +6107,20 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     prefixListVersion?: number;
     /**
+     * Region ID, Attribute conditional on `type` being equal to `regionId`
+     *   - Range: `0`-`63`
+     */
+    regionId?: number;
+    /**
+     * Region list ID, Attribute conditional on `type` being equal to `regionList`
+     */
+    regionListId?: string;
+    /**
+     * Role, Attribute conditional on `type` being equal to `regionId`
+     *   - Choices: `border-router`, `edge-router`
+     */
+    role?: string;
+    /**
      * Site ID, Attribute conditional on `type` being equal to `siteId`
      *   - Range: `0`-`4294967295`
      */
@@ -6142,7 +6156,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     tlocListVersion?: number;
     /**
      * Type of match entry
-     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
      */
     type: string;
     /**
@@ -12006,6 +12020,18 @@ export interface GetCustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     prefixListVersion: number;
     /**
+     * Region ID
+     */
+    regionId: number;
+    /**
+     * Region list ID
+     */
+    regionListId: string;
+    /**
+     * Role
+     */
+    role: string;
+    /**
      * Site ID
      */
     siteId: number;
@@ -13310,6 +13336,10 @@ export interface GetPolicyObjectSecurityPortListEntry {
     port: string;
 }
 
+export interface GetPolicyObjectSecurityProtocolListEntry {
+    protocolName: string;
+}
+
 export interface GetPolicyObjectSecurityScalableGroupTagListEntry {
     sgtName: string;
     tag: string;
@@ -13401,7 +13431,7 @@ export interface GetQosMapPolicyDefinitionQosScheduler {
      */
     burst: number;
     /**
-     * Class map ID
+     * Class map ID (can be empty for queue 0 when left as Control)
      */
     classMapId: string;
     /**
@@ -22093,6 +22123,10 @@ export interface GetZoneBasedFirewallPolicyDefinitionRule {
      */
     baseAction: string;
     /**
+     * Rule Type
+     */
+    ipType: string;
+    /**
      * List of match entries
      */
     matchEntries: outputs.GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry[];
@@ -23166,6 +23200,13 @@ export interface PolicyObjectSecurityPortListEntry {
     port?: string;
 }
 
+export interface PolicyObjectSecurityProtocolListEntry {
+    /**
+     * - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrolAgent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvpTunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+     */
+    protocolName?: string;
+}
+
 export interface PolicyObjectSecurityScalableGroupTagListEntry {
     sgtName?: string;
     tag?: string;
@@ -23283,9 +23324,9 @@ export interface QosMapPolicyDefinitionQosScheduler {
      */
     burst?: number;
     /**
-     * Class map ID
+     * Class map ID (can be empty for queue 0 when left as Control)
      */
-    classMapId: string;
+    classMapId?: string;
     /**
      * Class map version
      */
@@ -32733,6 +32774,11 @@ export interface ZoneBasedFirewallPolicyDefinitionRule {
      *   - Choices: `pass`, `drop`, `inspect`
      */
     baseAction: string;
+    /**
+     * Rule Type
+     *   - Choices: `ipv4`, `ipv6`
+     */
+    ipType?: string;
     /**
      * List of match entries
      */

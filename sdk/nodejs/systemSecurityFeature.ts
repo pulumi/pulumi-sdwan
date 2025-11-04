@@ -12,6 +12,42 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemSecurityFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     rekey: 86400,
+ *     antiReplayWindow: "512",
+ *     extendedAntiReplayWindow: 256,
+ *     ipsecPairwiseKeying: false,
+ *     integrityTypes: ["esp"],
+ *     keychains: [{
+ *         keyChainName: "aaa",
+ *         keyId: 1,
+ *     }],
+ *     keys: [{
+ *         id: 0,
+ *         name: "aaa",
+ *         sendId: 1,
+ *         receiverId: 2,
+ *         includeTcpOptions: false,
+ *         acceptAoMismatch: false,
+ *         cryptoAlgorithm: "aes-128-cmac",
+ *         keyString: "abcabc",
+ *         sendLifeTimeLocal: true,
+ *         sendLifeTimeStartEpoch: 1659284400,
+ *         sendLifeTimeInfinite: true,
+ *         acceptLifeTimeLocal: true,
+ *         acceptLifeTimeStartEpoch: 1659284400,
+ *         acceptLifeTimeInfinite: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

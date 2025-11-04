@@ -16,6 +16,58 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCustomControlTopologyPolicyDefinition(ctx, "example", &sdwan.CustomControlTopologyPolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				DefaultAction: pulumi.String("reject"),
+//				Sequences: sdwan.CustomControlTopologyPolicyDefinitionSequenceArray{
+//					&sdwan.CustomControlTopologyPolicyDefinitionSequenceArgs{
+//						Id:         pulumi.Int(1),
+//						Name:       pulumi.String("Region1"),
+//						Type:       pulumi.String("route"),
+//						IpType:     pulumi.String("ipv4"),
+//						BaseAction: pulumi.String("accept"),
+//						MatchEntries: sdwan.CustomControlTopologyPolicyDefinitionSequenceMatchEntryArray{
+//							&sdwan.CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs{
+//								Type:   pulumi.String("ompTag"),
+//								OmpTag: pulumi.Int(100),
+//							},
+//						},
+//						ActionEntries: sdwan.CustomControlTopologyPolicyDefinitionSequenceActionEntryArray{
+//							&sdwan.CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs{
+//								Type: pulumi.String("set"),
+//								SetParameters: sdwan.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArray{
+//									&sdwan.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs{
+//										Type:       pulumi.String("preference"),
+//										Preference: pulumi.Int(100),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

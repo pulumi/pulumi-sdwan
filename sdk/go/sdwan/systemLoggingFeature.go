@@ -17,6 +17,66 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemLoggingFeature(ctx, "example", &sdwan.SystemLoggingFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DiskEnable:       pulumi.Bool(true),
+//				DiskFileSize:     pulumi.Int(9),
+//				DiskFileRotate:   pulumi.Int(10),
+//				TlsProfiles: sdwan.SystemLoggingFeatureTlsProfileArray{
+//					&sdwan.SystemLoggingFeatureTlsProfileArgs{
+//						Profile:    pulumi.String("test"),
+//						TlsVersion: pulumi.String("TLSv1.1"),
+//						CipherSuites: pulumi.StringArray{
+//							pulumi.String("aes-128-cbc-sha"),
+//						},
+//					},
+//				},
+//				Ipv4Servers: sdwan.SystemLoggingFeatureIpv4ServerArray{
+//					&sdwan.SystemLoggingFeatureIpv4ServerArgs{
+//						HostnameIp:                 pulumi.String("1.1.1.1"),
+//						Vpn:                        pulumi.Int(512),
+//						SourceInterface:            pulumi.String("GigabitEthernet1"),
+//						Priority:                   pulumi.String("informational"),
+//						TlsEnable:                  pulumi.Bool(true),
+//						TlsPropertiesCustomProfile: pulumi.Bool(true),
+//						TlsPropertiesProfile:       pulumi.String("test"),
+//					},
+//				},
+//				Ipv6Servers: sdwan.SystemLoggingFeatureIpv6ServerArray{
+//					&sdwan.SystemLoggingFeatureIpv6ServerArgs{
+//						HostnameIp:                 pulumi.String("1.1.1.1"),
+//						Vpn:                        pulumi.Int(512),
+//						SourceInterface:            pulumi.String("GigabitEthernet1"),
+//						Priority:                   pulumi.String("informational"),
+//						TlsEnable:                  pulumi.Bool(true),
+//						TlsPropertiesCustomProfile: pulumi.Bool(true),
+//						TlsPropertiesProfile:       pulumi.String("test"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

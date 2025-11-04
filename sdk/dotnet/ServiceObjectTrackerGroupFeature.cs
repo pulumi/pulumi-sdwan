@@ -15,6 +15,33 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceObjectTrackerGroupFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         ObjectTrackerId = 10,
+    ///         TrackerElements = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceObjectTrackerGroupFeatureTrackerElementArgs
+    ///             {
+    ///                 ObjectTrackerId = "615d948f-34ee-4a2e-810e-a9bd8d3d48ec",
+    ///             },
+    ///         },
+    ///         Reachable = "or",
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

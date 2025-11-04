@@ -15,6 +15,42 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.OtherUcseFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Bay = 2,
+    ///         Slot = 0,
+    ///         AccessPortDedicated = false,
+    ///         AccessPortSharedType = "ge1",
+    ///         AccessPortSharedFailoverType = "ge2",
+    ///         Ipv4Address = "2.2.2.2/24",
+    ///         DefaultGateway = "2.2.2.2",
+    ///         VlanId = 3,
+    ///         AssignPriority = 3,
+    ///         Interfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.OtherUcseFeatureInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "ucse2/0",
+    ///                 UcseInterfaceVpn = 2,
+    ///                 Ipv4Address = "10.1.15.15/24",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -17,6 +17,64 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportIpv4AclFeature(ctx, "example", &sdwan.TransportIpv4AclFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("drop"),
+//				Sequences: sdwan.TransportIpv4AclFeatureSequenceArray{
+//					&sdwan.TransportIpv4AclFeatureSequenceArgs{
+//						SequenceId:   pulumi.Int(1),
+//						SequenceName: pulumi.String("AccessControlList1"),
+//						MatchEntries: sdwan.TransportIpv4AclFeatureSequenceMatchEntryArray{
+//							&sdwan.TransportIpv4AclFeatureSequenceMatchEntryArgs{
+//								Dscps: pulumi.IntArray{
+//									pulumi.Int(16),
+//								},
+//								PacketLength: pulumi.String("1500"),
+//								Protocols: pulumi.IntArray{
+//									pulumi.Int(1),
+//								},
+//								SourcePorts: sdwan.TransportIpv4AclFeatureSequenceMatchEntrySourcePortArray{
+//									&sdwan.TransportIpv4AclFeatureSequenceMatchEntrySourcePortArgs{
+//										Port: pulumi.String("8000"),
+//									},
+//								},
+//								TcpState: pulumi.String("syn"),
+//							},
+//						},
+//						Actions: sdwan.TransportIpv4AclFeatureSequenceActionArray{
+//							&sdwan.TransportIpv4AclFeatureSequenceActionArgs{
+//								AcceptSetDscp:     pulumi.Int(60),
+//								AcceptCounterName: pulumi.String("COUNTER_1"),
+//								AcceptLog:         pulumi.Bool(false),
+//								AcceptSetNextHop:  pulumi.String("1.2.3.4"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

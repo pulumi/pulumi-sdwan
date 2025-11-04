@@ -17,6 +17,79 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportRoutingOspfv3Ipv6Feature(ctx, "example", &sdwan.TransportRoutingOspfv3Ipv6FeatureArgs{
+//				Name:                                  pulumi.String("Example"),
+//				Description:                           pulumi.String("My Example"),
+//				FeatureProfileId:                      pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				RouterId:                              pulumi.String("1.2.3.4"),
+//				Distance:                              pulumi.Int(110),
+//				DistanceExternal:                      pulumi.Int(110),
+//				DistanceInterArea:                     pulumi.Int(110),
+//				DistanceIntraArea:                     pulumi.Int(110),
+//				ReferenceBandwidth:                    pulumi.Int(101),
+//				Rfc1583Compatible:                     pulumi.Bool(true),
+//				DefaultInformationOriginate:           pulumi.Bool(false),
+//				DefaultInformationOriginateAlways:     pulumi.Bool(false),
+//				DefaultInformationOriginateMetric:     pulumi.Int(1),
+//				DefaultInformationOriginateMetricType: pulumi.String("type1"),
+//				SpfCalculationDelay:                   pulumi.Int(200),
+//				SpfInitialHoldTime:                    pulumi.Int(1000),
+//				SpfMaximumHoldTime:                    pulumi.Int(10000),
+//				Filter:                                pulumi.Bool(false),
+//				Redistributes: sdwan.TransportRoutingOspfv3Ipv6FeatureRedistributeArray{
+//					&sdwan.TransportRoutingOspfv3Ipv6FeatureRedistributeArgs{
+//						Protocol: pulumi.String("static"),
+//					},
+//				},
+//				RouterLsaAction:        pulumi.String("on-startup"),
+//				RouterLsaOnStartupTime: pulumi.Int(30),
+//				Areas: sdwan.TransportRoutingOspfv3Ipv6FeatureAreaArray{
+//					&sdwan.TransportRoutingOspfv3Ipv6FeatureAreaArgs{
+//						AreaNumber: pulumi.Int(1),
+//						AreaType:   pulumi.String("stub"),
+//						Interfaces: sdwan.TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArray{
+//							&sdwan.TransportRoutingOspfv3Ipv6FeatureAreaInterfaceArgs{
+//								Name:                  pulumi.String("GigabitEthernet2"),
+//								HelloInterval:         pulumi.Int(10),
+//								DeadInterval:          pulumi.Int(40),
+//								LsaRetransmitInterval: pulumi.Int(5),
+//								Cost:                  pulumi.Int(10),
+//								NetworkType:           pulumi.String("broadcast"),
+//								PassiveInterface:      pulumi.Bool(false),
+//								AuthenticationType:    pulumi.String("no-auth"),
+//							},
+//						},
+//						Ranges: sdwan.TransportRoutingOspfv3Ipv6FeatureAreaRangeArray{
+//							&sdwan.TransportRoutingOspfv3Ipv6FeatureAreaRangeArgs{
+//								Prefix:      pulumi.String("3002::/96"),
+//								Cost:        pulumi.Int(1),
+//								NoAdvertise: pulumi.Bool(false),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

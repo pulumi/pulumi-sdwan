@@ -16,6 +16,50 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewApplicationAwareRoutingPolicyDefinition(ctx, "example", &sdwan.ApplicationAwareRoutingPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				Sequences: sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceArray{
+//					&sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceArgs{
+//						Id:     pulumi.Int(1),
+//						Name:   pulumi.String("Region1"),
+//						IpType: pulumi.String("ipv4"),
+//						MatchEntries: sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArray{
+//							&sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntryArgs{
+//								Type:              pulumi.String("appList"),
+//								ApplicationListId: pulumi.String("e3aad846-abb9-425f-aaa8-9ed17b9c8d7c"),
+//							},
+//						},
+//						ActionEntries: sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArray{
+//							&sdwan.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntryArgs{
+//								Type:                    pulumi.String("backupSlaPreferredColor"),
+//								BackupSlaPreferredColor: pulumi.String("bronze"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:
@@ -26,6 +70,13 @@ import (
 type ApplicationAwareRoutingPolicyDefinition struct {
 	pulumi.CustomResourceState
 
+	// Type of default action
+	//   - Choices: `slaClass`
+	DefaultAction pulumi.StringPtrOutput `pulumi:"defaultAction"`
+	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	DefaultActionSlaClassListId pulumi.StringPtrOutput `pulumi:"defaultActionSlaClassListId"`
+	// SLA class list version
+	DefaultActionSlaClassListVersion pulumi.IntPtrOutput `pulumi:"defaultActionSlaClassListVersion"`
 	// The description of the policy definition
 	Description pulumi.StringOutput `pulumi:"description"`
 	// The name of the policy definition
@@ -74,6 +125,13 @@ func GetApplicationAwareRoutingPolicyDefinition(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ApplicationAwareRoutingPolicyDefinition resources.
 type applicationAwareRoutingPolicyDefinitionState struct {
+	// Type of default action
+	//   - Choices: `slaClass`
+	DefaultAction *string `pulumi:"defaultAction"`
+	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	DefaultActionSlaClassListId *string `pulumi:"defaultActionSlaClassListId"`
+	// SLA class list version
+	DefaultActionSlaClassListVersion *int `pulumi:"defaultActionSlaClassListVersion"`
 	// The description of the policy definition
 	Description *string `pulumi:"description"`
 	// The name of the policy definition
@@ -87,6 +145,13 @@ type applicationAwareRoutingPolicyDefinitionState struct {
 }
 
 type ApplicationAwareRoutingPolicyDefinitionState struct {
+	// Type of default action
+	//   - Choices: `slaClass`
+	DefaultAction pulumi.StringPtrInput
+	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	DefaultActionSlaClassListId pulumi.StringPtrInput
+	// SLA class list version
+	DefaultActionSlaClassListVersion pulumi.IntPtrInput
 	// The description of the policy definition
 	Description pulumi.StringPtrInput
 	// The name of the policy definition
@@ -104,6 +169,13 @@ func (ApplicationAwareRoutingPolicyDefinitionState) ElementType() reflect.Type {
 }
 
 type applicationAwareRoutingPolicyDefinitionArgs struct {
+	// Type of default action
+	//   - Choices: `slaClass`
+	DefaultAction *string `pulumi:"defaultAction"`
+	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	DefaultActionSlaClassListId *string `pulumi:"defaultActionSlaClassListId"`
+	// SLA class list version
+	DefaultActionSlaClassListVersion *int `pulumi:"defaultActionSlaClassListVersion"`
 	// The description of the policy definition
 	Description string `pulumi:"description"`
 	// The name of the policy definition
@@ -114,6 +186,13 @@ type applicationAwareRoutingPolicyDefinitionArgs struct {
 
 // The set of arguments for constructing a ApplicationAwareRoutingPolicyDefinition resource.
 type ApplicationAwareRoutingPolicyDefinitionArgs struct {
+	// Type of default action
+	//   - Choices: `slaClass`
+	DefaultAction pulumi.StringPtrInput
+	// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+	DefaultActionSlaClassListId pulumi.StringPtrInput
+	// SLA class list version
+	DefaultActionSlaClassListVersion pulumi.IntPtrInput
 	// The description of the policy definition
 	Description pulumi.StringInput
 	// The name of the policy definition
@@ -207,6 +286,26 @@ func (o ApplicationAwareRoutingPolicyDefinitionOutput) ToApplicationAwareRouting
 
 func (o ApplicationAwareRoutingPolicyDefinitionOutput) ToApplicationAwareRoutingPolicyDefinitionOutputWithContext(ctx context.Context) ApplicationAwareRoutingPolicyDefinitionOutput {
 	return o
+}
+
+// Type of default action
+//   - Choices: `slaClass`
+func (o ApplicationAwareRoutingPolicyDefinitionOutput) DefaultAction() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ApplicationAwareRoutingPolicyDefinition) pulumi.StringPtrOutput { return v.DefaultAction }).(pulumi.StringPtrOutput)
+}
+
+// SLA class list ID, Attribute conditional on `defaultAction` being equal to `slaClass`
+func (o ApplicationAwareRoutingPolicyDefinitionOutput) DefaultActionSlaClassListId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ApplicationAwareRoutingPolicyDefinition) pulumi.StringPtrOutput {
+		return v.DefaultActionSlaClassListId
+	}).(pulumi.StringPtrOutput)
+}
+
+// SLA class list version
+func (o ApplicationAwareRoutingPolicyDefinitionOutput) DefaultActionSlaClassListVersion() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ApplicationAwareRoutingPolicyDefinition) pulumi.IntPtrOutput {
+		return v.DefaultActionSlaClassListVersion
+	}).(pulumi.IntPtrOutput)
 }
 
 // The description of the policy definition

@@ -193,6 +193,19 @@ class PolicyObjectExtendedCommunityList(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectExtendedCommunityList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "extended_community": "soo 10.0.0.1:30",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -221,6 +234,19 @@ class PolicyObjectExtendedCommunityList(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectExtendedCommunityList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "extended_community": "soo 10.0.0.1:30",
+            }])
+        ```
 
         ## Import
 

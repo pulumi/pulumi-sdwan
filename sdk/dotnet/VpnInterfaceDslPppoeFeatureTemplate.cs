@@ -15,6 +15,164 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.VpnInterfaceDslPppoeFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         EthernetInterfaceName = "Example",
+    ///         Shutdown = true,
+    ///         EthernetDescription = "My Description",
+    ///         VdslConfigurations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceDslPppoeFeatureTemplateVdslConfigurationArgs
+    ///             {
+    ///                 ControllerVdslSlot = "Example",
+    ///                 Sra = true,
+    ///                 ModeAdsl1 = false,
+    ///                 ModeAdsl2 = false,
+    ///                 ModeAdsl2plus = false,
+    ///                 ModeVdsl2 = false,
+    ///                 ModeAnsi = false,
+    ///                 VdslModemConfiguration = "100",
+    ///             },
+    ///         },
+    ///         EthernetVlanId = 4094,
+    ///         EthernetDialerPoolNumber = 255,
+    ///         EthernetPppMaximumPayload = 1790,
+    ///         EthernetDialerAddressNegotiated = false,
+    ///         EthernetUnnumberedLoopbackInterface = "example",
+    ///         PppAuthenticationProtocol = "chap",
+    ///         PppAuthenticationProtocolPap = false,
+    ///         ChapHostname = "chap-example",
+    ///         ChapPppAuthPassword = "myPassword",
+    ///         PapUsername = "pap-username",
+    ///         PapPassword = true,
+    ///         PapPppAuthPassword = "myPassword",
+    ///         PppAuthenticationType = "callin",
+    ///         EnableCoreRegion = true,
+    ///         CoreRegion = "core",
+    ///         SecondaryRegion = "off",
+    ///         TunnelInterfaceEncapsulations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceDslPppoeFeatureTemplateTunnelInterfaceEncapsulationArgs
+    ///             {
+    ///                 Encapsulation = "gre",
+    ///                 Preference = 4294967,
+    ///                 Weight = 250,
+    ///             },
+    ///         },
+    ///         TunnelInterfaceGroups = new[]
+    ///         {
+    ///             42949672,
+    ///         },
+    ///         TunnelInterfaceBorder = true,
+    ///         PerTunnelQos = true,
+    ///         PerTunnelQosAggregator = false,
+    ///         TunnelQosMode = "spoke",
+    ///         TunnelInterfaceColor = "custom1",
+    ///         TunnelInterfaceLastResortCircuit = false,
+    ///         TunnelInterfaceLowBandwidthLink = false,
+    ///         TunnelInterfaceTunnelTcpMss = 1460,
+    ///         TunnelInterfaceClearDontFragment = false,
+    ///         TunnelInterfaceNetworkBroadcast = false,
+    ///         TunnelInterfaceMaxControlConnections = 8,
+    ///         TunnelInterfaceControlConnections = true,
+    ///         TunnelInterfaceVbondAsStunServer = false,
+    ///         TunnelInterfaceExcludeControllerGroupLists = new[]
+    ///         {
+    ///             100,
+    ///         },
+    ///         TunnelInterfaceVmanageConnectionPreference = 5,
+    ///         TunnelInterfacePortHop = false,
+    ///         TunnelInterfaceColorRestrict = false,
+    ///         TunnelInterfaceCarrier = "carrier1",
+    ///         TunnelInterfaceNatRefreshInterval = 15,
+    ///         TunnelInterfaceHelloInterval = 1000,
+    ///         TunnelInterfaceHelloTolerance = 12,
+    ///         TunnelInterfaceBindLoopbackTunnel = "12",
+    ///         TunnelInterfaceAllowAll = false,
+    ///         TunnelInterfaceAllowBgp = false,
+    ///         TunnelInterfaceAllowDhcp = true,
+    ///         TunnelInterfaceAllowDns = true,
+    ///         TunnelInterfaceAllowIcmp = true,
+    ///         TunnelInterfaceAllowSsh = false,
+    ///         TunnelInterfaceAllowNtp = false,
+    ///         TunnelInterfaceAllowNetconf = false,
+    ///         TunnelInterfaceAllowOspf = false,
+    ///         TunnelInterfaceAllowStun = false,
+    ///         TunnelInterfaceAllowSnmp = false,
+    ///         TunnelInterfaceAllowHttps = true,
+    ///         Nat = true,
+    ///         NatRefreshMode = "outbound",
+    ///         NatUdpTimeout = 1,
+    ///         NatTcpTimeout = 60,
+    ///         NatBlockIcmpError = true,
+    ///         NatResponseToPing = false,
+    ///         NatPortForwards = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceDslPppoeFeatureTemplateNatPortForwardArgs
+    ///             {
+    ///                 PortStartRange = 0,
+    ///                 PortEndRange = 65530,
+    ///                 Protocol = "tcp",
+    ///                 PrivateVpn = 65530,
+    ///                 PrivateIpAddress = "1.2.3.4",
+    ///             },
+    ///         },
+    ///         QosAdaptivePeriod = 15,
+    ///         QosAdaptiveBandwidthDownstream = 10000,
+    ///         QosAdaptiveMinDownstream = 100,
+    ///         QosAdaptiveMaxDownstream = 100000,
+    ///         QosAdaptiveBandwidthUpstream = 10000,
+    ///         QosAdaptiveMinUpstream = 100,
+    ///         QosAdaptiveMaxUpstream = 100000,
+    ///         ShapingRate = 10000000,
+    ///         QosMap = "test",
+    ///         VpnQosMap = "test",
+    ///         BandwidthUpstream = 214748300,
+    ///         BandwidthDownstream = 214748300,
+    ///         WriteRule = "RULE1",
+    ///         AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceDslPppoeFeatureTemplateAccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL1",
+    ///             },
+    ///         },
+    ///         Policers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceDslPppoeFeatureTemplatePolicerArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 PolicerName = "example",
+    ///             },
+    ///         },
+    ///         IpMtu = 1500,
+    ///         TcpMss = 720,
+    ///         TlocExtension = "tloc",
+    ///         Trackers = new[]
+    ///         {
+    ///             "tracker1",
+    ///         },
+    ///         IpDirectedBroadcast = true,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -15,6 +15,54 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoNtpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         Master = true,
+    ///         MasterStratum = 6,
+    ///         MasterSourceInterface = "e1",
+    ///         TrustedKeys = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         AuthenticationKeys = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoNtpFeatureTemplateAuthenticationKeyArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Value = "12345",
+    ///             },
+    ///         },
+    ///         Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoNtpFeatureTemplateServerArgs
+    ///             {
+    ///                 HostnameIp = "NTP_SERVER1",
+    ///                 AuthenticationKeyId = 1,
+    ///                 VpnId = 1,
+    ///                 Version = 4,
+    ///                 SourceInterface = "e1",
+    ///                 Prefer = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

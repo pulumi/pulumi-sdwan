@@ -17,6 +17,46 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewOtherThousandeyesFeature(ctx, "example", &sdwan.OtherThousandeyesFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				VirtualApplications: sdwan.OtherThousandeyesFeatureVirtualApplicationArray{
+//					&sdwan.OtherThousandeyesFeatureVirtualApplicationArgs{
+//						AccountGroupToken:    pulumi.String("qwer"),
+//						Vpn:                  pulumi.Int(1),
+//						ManagementIp:         pulumi.String("10.0.0.2"),
+//						ManagementSubnetMask: pulumi.String("255.255.255.0"),
+//						AgentDefaultGateway:  pulumi.String("10.0.0.1"),
+//						NameServerIp:         pulumi.String("77.77.77.71"),
+//						Hostname:             pulumi.String("thousandeyesHost"),
+//						ProxyType:            pulumi.String("static"),
+//						ProxyHost:            pulumi.String("proxy.thousandeyes.com"),
+//						ProxyPort:            pulumi.Int(3128),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

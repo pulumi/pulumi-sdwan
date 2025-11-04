@@ -193,6 +193,20 @@ class PolicyObjectDataIpv6PrefixList(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectDataIpv6PrefixList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "ipv6_address": "2001:db8:85a3::8a2e:370:7334",
+                "ipv6_prefix_length": 64,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -221,6 +235,20 @@ class PolicyObjectDataIpv6PrefixList(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectDataIpv6PrefixList("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "ipv6_address": "2001:db8:85a3::8a2e:370:7334",
+                "ipv6_prefix_length": 64,
+            }])
+        ```
 
         ## Import
 

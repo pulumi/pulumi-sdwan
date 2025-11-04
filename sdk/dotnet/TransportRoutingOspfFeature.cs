@@ -15,6 +15,89 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportRoutingOspfFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         RouterId = "1.2.3.4",
+    ///         ReferenceBandwidth = 101,
+    ///         Rfc1583Compatible = true,
+    ///         DefaultInformationOriginate = false,
+    ///         DefaultInformationOriginateAlways = false,
+    ///         DefaultInformationOriginateMetric = 1,
+    ///         DefaultInformationOriginateMetricType = "type1",
+    ///         DistanceExternal = 110,
+    ///         DistanceInterArea = 110,
+    ///         DistanceIntraArea = 110,
+    ///         SpfCalculationDelay = 200,
+    ///         SpfInitialHoldTime = 1000,
+    ///         SpfMaximumHoldTime = 10000,
+    ///         Redistributes = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingOspfFeatureRedistributeArgs
+    ///             {
+    ///                 Protocol = "static",
+    ///                 NatDia = true,
+    ///             },
+    ///         },
+    ///         RouterLsas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingOspfFeatureRouterLsaArgs
+    ///             {
+    ///                 Type = "on-startup",
+    ///                 Time = 5,
+    ///             },
+    ///         },
+    ///         Areas = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingOspfFeatureAreaArgs
+    ///             {
+    ///                 AreaNumber = 1,
+    ///                 AreaType = "stub",
+    ///                 NoSummary = false,
+    ///                 Interfaces = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportRoutingOspfFeatureAreaInterfaceArgs
+    ///                     {
+    ///                         Name = "GigabitEthernet2",
+    ///                         HelloInterval = 10,
+    ///                         DeadInterval = 40,
+    ///                         LsaRetransmitInterval = 5,
+    ///                         Cost = 10,
+    ///                         DesignatedRouterPriority = 1,
+    ///                         NetworkType = "broadcast",
+    ///                         PassiveInterface = false,
+    ///                         AuthenticationType = "message-digest",
+    ///                         MessageDigestKeyId = 7,
+    ///                         MessageDigestKey = "sdjfhsghbjdjr",
+    ///                     },
+    ///                 },
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportRoutingOspfFeatureAreaRangeArgs
+    ///                     {
+    ///                         IpAddress = "10.1.1.0",
+    ///                         SubnetMask = "255.255.255.0",
+    ///                         Cost = 1,
+    ///                         NoAdvertise = false,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -236,6 +236,7 @@ __all__ = [
     'PolicyObjectSecurityLocalApplicationListEntry',
     'PolicyObjectSecurityLocalDomainListEntry',
     'PolicyObjectSecurityPortListEntry',
+    'PolicyObjectSecurityProtocolListEntry',
     'PolicyObjectSecurityScalableGroupTagListEntry',
     'PolicyObjectSecurityUrlAllowListEntry',
     'PolicyObjectSecurityUrlBlockListEntry',
@@ -745,6 +746,7 @@ __all__ = [
     'GetPolicyObjectSecurityLocalApplicationListEntryResult',
     'GetPolicyObjectSecurityLocalDomainListEntryResult',
     'GetPolicyObjectSecurityPortListEntryResult',
+    'GetPolicyObjectSecurityProtocolListEntryResult',
     'GetPolicyObjectSecurityScalableGroupTagListEntryResult',
     'GetPolicyObjectSecurityUrlAllowListEntryResult',
     'GetPolicyObjectSecurityUrlBlockListEntryResult',
@@ -22676,6 +22678,10 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
             suggest = "prefix_list_id"
         elif key == "prefixListVersion":
             suggest = "prefix_list_version"
+        elif key == "regionId":
+            suggest = "region_id"
+        elif key == "regionListId":
+            suggest = "region_list_id"
         elif key == "siteId":
             suggest = "site_id"
         elif key == "siteListId":
@@ -22728,6 +22734,9 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
                  preference: Optional[_builtins.int] = None,
                  prefix_list_id: Optional[_builtins.str] = None,
                  prefix_list_version: Optional[_builtins.int] = None,
+                 region_id: Optional[_builtins.int] = None,
+                 region_list_id: Optional[_builtins.str] = None,
+                 role: Optional[_builtins.str] = None,
                  site_id: Optional[_builtins.int] = None,
                  site_list_id: Optional[_builtins.str] = None,
                  site_list_version: Optional[_builtins.int] = None,
@@ -22741,7 +22750,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
                  vpn_list_version: Optional[_builtins.int] = None):
         """
         :param _builtins.str type: Type of match entry
-                 - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+                 - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
         :param _builtins.str carrier: Carrier, Attribute conditional on `type` being equal to `carrier`
                  - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
         :param _builtins.str color_list_id: Color list ID, Attribute conditional on `type` being equal to `colorList`
@@ -22765,6 +22774,11 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
                  - Range: `0`-`4294967295`
         :param _builtins.str prefix_list_id: Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
         :param _builtins.int prefix_list_version: Prefix list version
+        :param _builtins.int region_id: Region ID, Attribute conditional on `type` being equal to `regionId`
+                 - Range: `0`-`63`
+        :param _builtins.str region_list_id: Region list ID, Attribute conditional on `type` being equal to `regionList`
+        :param _builtins.str role: Role, Attribute conditional on `type` being equal to `regionId`
+                 - Choices: `border-router`, `edge-router`
         :param _builtins.int site_id: Site ID, Attribute conditional on `type` being equal to `siteId`
                  - Range: `0`-`4294967295`
         :param _builtins.str site_list_id: Site list ID, Attribute conditional on `type` being equal to `siteList`
@@ -22813,6 +22827,12 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
             pulumi.set(__self__, "prefix_list_id", prefix_list_id)
         if prefix_list_version is not None:
             pulumi.set(__self__, "prefix_list_version", prefix_list_version)
+        if region_id is not None:
+            pulumi.set(__self__, "region_id", region_id)
+        if region_list_id is not None:
+            pulumi.set(__self__, "region_list_id", region_list_id)
+        if role is not None:
+            pulumi.set(__self__, "role", role)
         if site_id is not None:
             pulumi.set(__self__, "site_id", site_id)
         if site_list_id is not None:
@@ -22841,7 +22861,7 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
     def type(self) -> _builtins.str:
         """
         Type of match entry
-          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+          - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
         """
         return pulumi.get(self, "type")
 
@@ -22979,6 +22999,32 @@ class CustomControlTopologyPolicyDefinitionSequenceMatchEntry(dict):
         Prefix list version
         """
         return pulumi.get(self, "prefix_list_version")
+
+    @_builtins.property
+    @pulumi.getter(name="regionId")
+    def region_id(self) -> Optional[_builtins.int]:
+        """
+        Region ID, Attribute conditional on `type` being equal to `regionId`
+          - Range: `0`-`63`
+        """
+        return pulumi.get(self, "region_id")
+
+    @_builtins.property
+    @pulumi.getter(name="regionListId")
+    def region_list_id(self) -> Optional[_builtins.str]:
+        """
+        Region list ID, Attribute conditional on `type` being equal to `regionList`
+        """
+        return pulumi.get(self, "region_list_id")
+
+    @_builtins.property
+    @pulumi.getter
+    def role(self) -> Optional[_builtins.str]:
+        """
+        Role, Attribute conditional on `type` being equal to `regionId`
+          - Choices: `border-router`, `edge-router`
+        """
+        return pulumi.get(self, "role")
 
     @_builtins.property
     @pulumi.getter(name="siteId")
@@ -27869,6 +27915,42 @@ class PolicyObjectSecurityPortListEntry(dict):
 
 
 @pulumi.output_type
+class PolicyObjectSecurityProtocolListEntry(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "protocolName":
+            suggest = "protocol_name"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in PolicyObjectSecurityProtocolListEntry. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        PolicyObjectSecurityProtocolListEntry.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        PolicyObjectSecurityProtocolListEntry.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 protocol_name: Optional[_builtins.str] = None):
+        """
+        :param _builtins.str protocol_name: - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+        """
+        if protocol_name is not None:
+            pulumi.set(__self__, "protocol_name", protocol_name)
+
+    @_builtins.property
+    @pulumi.getter(name="protocolName")
+    def protocol_name(self) -> Optional[_builtins.str]:
+        """
+        - Choices: `snmp`, `icmp`, `tcp`, `udp`, `echo`, `telnet`, `wins`, `n2h2server`, `nntp`, `pptp`, `rtsp`, `bootpc`, `gdoi`, `tacacs`, `gopher`, `icabrowser`, `skinny`, `sunrpc`, `biff`, `router`, `ircs`, `orasrv`, `ms-cluster-net`, `kermit`, `isakmp`, `sshell`, `realsecure`, `ircu`, `appleqtc`, `pwdgen`, `rdb-dbs-disp`, `creativepartnr`, `finger`, `ftps`, `giop`, `rsvd`, `hp-alarm-mgr`, `uucp`, `kerberos`, `imap`, `time`, `bootps`, `tftp`, `oracle`, `snmptrap`, `http`, `qmtp`, `radius`, `oracle-em-vp`, `tarantella`, `pcanywheredata`, `ldap`, `mgcp`, `sqlsrv`, `hsrp`, `cisco-net-mgmt`, `smtp`, `pcanywherestat`, `exec`, `send`, `stun`, `syslog`, `ms-sql-m`, `citrix`, `creativeserver`, `cifs`, `cisco-sys`, `cisco-tna`, `ms-dotnetster`, `gtpv1`, `gtpv0`, `imap3`, `fcip-port`, `netbios-dgm`, `sip-tls`, `pop3s`, `cisco-fna`, `802-11-iapp`, `oem-agent`, `cisco-tdp`, `tr-rsrb`, `r-winsock`, `sql-net`, `syslog-conn`, `tacacs-ds`, `h225ras`, `ace-svr`, `dhcp-failover`, `igmpv3lite`, `irc-serv`, `entrust-svcs`, `dbcontrol_agent`, `cisco-svcs`, `ipsec-msft`, `microsoft-ds`, `ms-sna`, `rsvp_tunnel`, `rsvp-encap`, `hp-collector`, `netbios-ns`, `msexch-routing`, `h323`, `l2tp`, `ldap-admin`, `pop3`, `h323callsigalt`, `ms-sql`, `iscsi-target`, `webster`, `lotusnote`, `ipx`, `entrust-svc-hand`, `citriximaclient`, `rtc-pm-port`, `ftp`, `aol`, `xdmcp`, `oraclenames`, `login`, `iscsi`, `ttc`, `imaps`, `socks`, `ssh`, `dnsix`, `daytime`, `sip`, `discard`, `ntp`, `ldaps`, `https`, `vdolive`, `ica`, `net8-cman`, `cuseeme`, `netstat`, `sms`, `streamworks`, `rtelnet`, `who`, `kazaa`, `ssp`, `dbase`, `timed`, `cddbp`, `telnets`, `ymsgr`, `ident`, `bgp`, `ddns-v3`, `vqp`, `irc`, `ipass`, `x11`, `dns`, `lotusmtap`, `mysql`, `nfs`, `msnmsgr`, `netshow`, `sqlserv`, `hp-managed-node`, `ncp`, `shell`, `realmedia`, `msrpc`, `clp`
+        """
+        return pulumi.get(self, "protocol_name")
+
+
+@pulumi.output_type
 class PolicyObjectSecurityScalableGroupTagListEntry(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -28246,12 +28328,12 @@ class QosMapPolicyDefinitionQosScheduler(dict):
             suggest = "bandwidth_percent"
         elif key == "bufferPercent":
             suggest = "buffer_percent"
-        elif key == "classMapId":
-            suggest = "class_map_id"
         elif key == "dropType":
             suggest = "drop_type"
         elif key == "schedulingType":
             suggest = "scheduling_type"
+        elif key == "classMapId":
+            suggest = "class_map_id"
         elif key == "classMapVersion":
             suggest = "class_map_version"
 
@@ -28269,18 +28351,17 @@ class QosMapPolicyDefinitionQosScheduler(dict):
     def __init__(__self__, *,
                  bandwidth_percent: _builtins.int,
                  buffer_percent: _builtins.int,
-                 class_map_id: _builtins.str,
                  drop_type: _builtins.str,
                  queue: _builtins.int,
                  scheduling_type: _builtins.str,
                  burst: Optional[_builtins.int] = None,
+                 class_map_id: Optional[_builtins.str] = None,
                  class_map_version: Optional[_builtins.int] = None):
         """
         :param _builtins.int bandwidth_percent: Bandwidth percent
                  - Range: `0`-`100`
         :param _builtins.int buffer_percent: Buffer percent
                  - Range: `0`-`100`
-        :param _builtins.str class_map_id: Class map ID
         :param _builtins.str drop_type: Drop type
                  - Choices: `tail-drop`, `red-drop`
         :param _builtins.int queue: Queue number
@@ -28289,16 +28370,18 @@ class QosMapPolicyDefinitionQosScheduler(dict):
                  - Choices: `llq`, `wrr`
         :param _builtins.int burst: Burst size
                  - Range: `5000`-`10000000`
+        :param _builtins.str class_map_id: Class map ID (can be empty for queue 0 when left as Control)
         :param _builtins.int class_map_version: Class map version
         """
         pulumi.set(__self__, "bandwidth_percent", bandwidth_percent)
         pulumi.set(__self__, "buffer_percent", buffer_percent)
-        pulumi.set(__self__, "class_map_id", class_map_id)
         pulumi.set(__self__, "drop_type", drop_type)
         pulumi.set(__self__, "queue", queue)
         pulumi.set(__self__, "scheduling_type", scheduling_type)
         if burst is not None:
             pulumi.set(__self__, "burst", burst)
+        if class_map_id is not None:
+            pulumi.set(__self__, "class_map_id", class_map_id)
         if class_map_version is not None:
             pulumi.set(__self__, "class_map_version", class_map_version)
 
@@ -28319,14 +28402,6 @@ class QosMapPolicyDefinitionQosScheduler(dict):
           - Range: `0`-`100`
         """
         return pulumi.get(self, "buffer_percent")
-
-    @_builtins.property
-    @pulumi.getter(name="classMapId")
-    def class_map_id(self) -> _builtins.str:
-        """
-        Class map ID
-        """
-        return pulumi.get(self, "class_map_id")
 
     @_builtins.property
     @pulumi.getter(name="dropType")
@@ -28363,6 +28438,14 @@ class QosMapPolicyDefinitionQosScheduler(dict):
           - Range: `5000`-`10000000`
         """
         return pulumi.get(self, "burst")
+
+    @_builtins.property
+    @pulumi.getter(name="classMapId")
+    def class_map_id(self) -> Optional[_builtins.str]:
+        """
+        Class map ID (can be empty for queue 0 when left as Control)
+        """
+        return pulumi.get(self, "class_map_id")
 
     @_builtins.property
     @pulumi.getter(name="classMapVersion")
@@ -62841,6 +62924,8 @@ class ZoneBasedFirewallPolicyDefinitionRule(dict):
             suggest = "rule_order"
         elif key == "actionEntries":
             suggest = "action_entries"
+        elif key == "ipType":
+            suggest = "ip_type"
         elif key == "matchEntries":
             suggest = "match_entries"
 
@@ -62860,6 +62945,7 @@ class ZoneBasedFirewallPolicyDefinitionRule(dict):
                  rule_name: _builtins.str,
                  rule_order: _builtins.int,
                  action_entries: Optional[Sequence['outputs.ZoneBasedFirewallPolicyDefinitionRuleActionEntry']] = None,
+                 ip_type: Optional[_builtins.str] = None,
                  match_entries: Optional[Sequence['outputs.ZoneBasedFirewallPolicyDefinitionRuleMatchEntry']] = None):
         """
         :param _builtins.str base_action: Base action
@@ -62867,6 +62953,8 @@ class ZoneBasedFirewallPolicyDefinitionRule(dict):
         :param _builtins.str rule_name: Rule name
         :param _builtins.int rule_order: Rule
         :param Sequence['ZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs'] action_entries: List of actions entries
+        :param _builtins.str ip_type: Rule Type
+                 - Choices: `ipv4`, `ipv6`
         :param Sequence['ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs'] match_entries: List of match entries
         """
         pulumi.set(__self__, "base_action", base_action)
@@ -62874,6 +62962,8 @@ class ZoneBasedFirewallPolicyDefinitionRule(dict):
         pulumi.set(__self__, "rule_order", rule_order)
         if action_entries is not None:
             pulumi.set(__self__, "action_entries", action_entries)
+        if ip_type is not None:
+            pulumi.set(__self__, "ip_type", ip_type)
         if match_entries is not None:
             pulumi.set(__self__, "match_entries", match_entries)
 
@@ -62909,6 +62999,15 @@ class ZoneBasedFirewallPolicyDefinitionRule(dict):
         List of actions entries
         """
         return pulumi.get(self, "action_entries")
+
+    @_builtins.property
+    @pulumi.getter(name="ipType")
+    def ip_type(self) -> Optional[_builtins.str]:
+        """
+        Rule Type
+          - Choices: `ipv4`, `ipv6`
+        """
+        return pulumi.get(self, "ip_type")
 
     @_builtins.property
     @pulumi.getter(name="matchEntries")
@@ -78338,6 +78437,9 @@ class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntryResult(dict):
                  preference: _builtins.int,
                  prefix_list_id: _builtins.str,
                  prefix_list_version: _builtins.int,
+                 region_id: _builtins.int,
+                 region_list_id: _builtins.str,
+                 role: _builtins.str,
                  site_id: _builtins.int,
                  site_list_id: _builtins.str,
                  site_list_version: _builtins.int,
@@ -78367,6 +78469,9 @@ class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntryResult(dict):
         :param _builtins.int preference: Preference
         :param _builtins.str prefix_list_id: Prefix list ID
         :param _builtins.int prefix_list_version: Prefix list version
+        :param _builtins.int region_id: Region ID
+        :param _builtins.str region_list_id: Region list ID
+        :param _builtins.str role: Role
         :param _builtins.int site_id: Site ID
         :param _builtins.str site_list_id: Site list ID
         :param _builtins.int site_list_version: Site list version
@@ -78396,6 +78501,9 @@ class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntryResult(dict):
         pulumi.set(__self__, "preference", preference)
         pulumi.set(__self__, "prefix_list_id", prefix_list_id)
         pulumi.set(__self__, "prefix_list_version", prefix_list_version)
+        pulumi.set(__self__, "region_id", region_id)
+        pulumi.set(__self__, "region_list_id", region_list_id)
+        pulumi.set(__self__, "role", role)
         pulumi.set(__self__, "site_id", site_id)
         pulumi.set(__self__, "site_list_id", site_list_id)
         pulumi.set(__self__, "site_list_version", site_list_version)
@@ -78536,6 +78644,30 @@ class GetCustomControlTopologyPolicyDefinitionSequenceMatchEntryResult(dict):
         Prefix list version
         """
         return pulumi.get(self, "prefix_list_version")
+
+    @_builtins.property
+    @pulumi.getter(name="regionId")
+    def region_id(self) -> _builtins.int:
+        """
+        Region ID
+        """
+        return pulumi.get(self, "region_id")
+
+    @_builtins.property
+    @pulumi.getter(name="regionListId")
+    def region_list_id(self) -> _builtins.str:
+        """
+        Region list ID
+        """
+        return pulumi.get(self, "region_list_id")
+
+    @_builtins.property
+    @pulumi.getter
+    def role(self) -> _builtins.str:
+        """
+        Role
+        """
+        return pulumi.get(self, "role")
 
     @_builtins.property
     @pulumi.getter(name="siteId")
@@ -82067,6 +82199,18 @@ class GetPolicyObjectSecurityPortListEntryResult(dict):
 
 
 @pulumi.output_type
+class GetPolicyObjectSecurityProtocolListEntryResult(dict):
+    def __init__(__self__, *,
+                 protocol_name: _builtins.str):
+        pulumi.set(__self__, "protocol_name", protocol_name)
+
+    @_builtins.property
+    @pulumi.getter(name="protocolName")
+    def protocol_name(self) -> _builtins.str:
+        return pulumi.get(self, "protocol_name")
+
+
+@pulumi.output_type
 class GetPolicyObjectSecurityScalableGroupTagListEntryResult(dict):
     def __init__(__self__, *,
                  sgt_name: _builtins.str,
@@ -82320,7 +82464,7 @@ class GetQosMapPolicyDefinitionQosSchedulerResult(dict):
         :param _builtins.int bandwidth_percent: Bandwidth percent
         :param _builtins.int buffer_percent: Buffer percent
         :param _builtins.int burst: Burst size
-        :param _builtins.str class_map_id: Class map ID
+        :param _builtins.str class_map_id: Class map ID (can be empty for queue 0 when left as Control)
         :param _builtins.int class_map_version: Class map version
         :param _builtins.str drop_type: Drop type
         :param _builtins.int queue: Queue number
@@ -82363,7 +82507,7 @@ class GetQosMapPolicyDefinitionQosSchedulerResult(dict):
     @pulumi.getter(name="classMapId")
     def class_map_id(self) -> _builtins.str:
         """
-        Class map ID
+        Class map ID (can be empty for queue 0 when left as Control)
         """
         return pulumi.get(self, "class_map_id")
 
@@ -106278,18 +106422,21 @@ class GetZoneBasedFirewallPolicyDefinitionRuleResult(dict):
     def __init__(__self__, *,
                  action_entries: Sequence['outputs.GetZoneBasedFirewallPolicyDefinitionRuleActionEntryResult'],
                  base_action: _builtins.str,
+                 ip_type: _builtins.str,
                  match_entries: Sequence['outputs.GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryResult'],
                  rule_name: _builtins.str,
                  rule_order: _builtins.int):
         """
         :param Sequence['GetZoneBasedFirewallPolicyDefinitionRuleActionEntryArgs'] action_entries: List of actions entries
         :param _builtins.str base_action: Base action
+        :param _builtins.str ip_type: Rule Type
         :param Sequence['GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs'] match_entries: List of match entries
         :param _builtins.str rule_name: Rule name
         :param _builtins.int rule_order: Rule
         """
         pulumi.set(__self__, "action_entries", action_entries)
         pulumi.set(__self__, "base_action", base_action)
+        pulumi.set(__self__, "ip_type", ip_type)
         pulumi.set(__self__, "match_entries", match_entries)
         pulumi.set(__self__, "rule_name", rule_name)
         pulumi.set(__self__, "rule_order", rule_order)
@@ -106309,6 +106456,14 @@ class GetZoneBasedFirewallPolicyDefinitionRuleResult(dict):
         Base action
         """
         return pulumi.get(self, "base_action")
+
+    @_builtins.property
+    @pulumi.getter(name="ipType")
+    def ip_type(self) -> _builtins.str:
+        """
+        Rule Type
+        """
+        return pulumi.get(self, "ip_type")
 
     @_builtins.property
     @pulumi.getter(name="matchEntries")

@@ -127,6 +127,17 @@ class VpnListPolicyObject(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "vpn_id": "100-200",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -150,6 +161,17 @@ class VpnListPolicyObject(pulumi.CustomResource):
         This resource can manage a VPN List Policy Object .
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.VpnListPolicyObject("example",
+            name="Example",
+            entries=[{
+                "vpn_id": "100-200",
+            }])
+        ```
 
         ## Import
 

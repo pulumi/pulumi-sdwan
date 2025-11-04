@@ -25,6 +25,82 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportRoutingOspfv3Ipv4Feature;
+ * import com.pulumi.sdwan.TransportRoutingOspfv3Ipv4FeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureRedistributeArgs;
+ * import com.pulumi.sdwan.inputs.TransportRoutingOspfv3Ipv4FeatureAreaArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportRoutingOspfv3Ipv4Feature("example", TransportRoutingOspfv3Ipv4FeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .routerId("1.2.3.4")
+ *             .distance(110)
+ *             .distanceExternal(110)
+ *             .distanceInterArea(110)
+ *             .distanceIntraArea(110)
+ *             .referenceBandwidth(101)
+ *             .rfc1583Compatible(true)
+ *             .defaultInformationOriginate(false)
+ *             .defaultInformationOriginateAlways(false)
+ *             .defaultInformationOriginateMetric(1)
+ *             .defaultInformationOriginateMetricType("type1")
+ *             .spfCalculationDelay(200)
+ *             .spfInitialHoldTime(1000)
+ *             .spfMaximumHoldTime(10000)
+ *             .filter(false)
+ *             .redistributes(TransportRoutingOspfv3Ipv4FeatureRedistributeArgs.builder()
+ *                 .protocol("nat-route")
+ *                 .natDia(true)
+ *                 .build())
+ *             .routerLsaAction("on-startup")
+ *             .routerLsaOnStartupTime(30)
+ *             .areas(TransportRoutingOspfv3Ipv4FeatureAreaArgs.builder()
+ *                 .areaNumber(1)
+ *                 .areaType("stub")
+ *                 .interfaces(TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs.builder()
+ *                     .name("GigabitEthernet2")
+ *                     .helloInterval(10)
+ *                     .deadInterval(40)
+ *                     .lsaRetransmitInterval(5)
+ *                     .cost(10)
+ *                     .networkType("broadcast")
+ *                     .passiveInterface(false)
+ *                     .authenticationType("no-auth")
+ *                     .build())
+ *                 .ranges(TransportRoutingOspfv3Ipv4FeatureAreaRangeArgs.builder()
+ *                     .ipAddress("10.1.1.0")
+ *                     .subnetMask("255.255.255.0")
+ *                     .cost(1)
+ *                     .noAdvertise(false)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

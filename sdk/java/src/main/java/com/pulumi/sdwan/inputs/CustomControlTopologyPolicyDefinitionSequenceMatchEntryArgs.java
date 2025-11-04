@@ -272,6 +272,55 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
+     * Region ID, Attribute conditional on `type` being equal to `regionId`
+     *   - Range: `0`-`63`
+     * 
+     */
+    @Import(name="regionId")
+    private @Nullable Output<Integer> regionId;
+
+    /**
+     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     *   - Range: `0`-`63`
+     * 
+     */
+    public Optional<Output<Integer>> regionId() {
+        return Optional.ofNullable(this.regionId);
+    }
+
+    /**
+     * Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * 
+     */
+    @Import(name="regionListId")
+    private @Nullable Output<String> regionListId;
+
+    /**
+     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * 
+     */
+    public Optional<Output<String>> regionListId() {
+        return Optional.ofNullable(this.regionListId);
+    }
+
+    /**
+     * Role, Attribute conditional on `type` being equal to `regionId`
+     *   - Choices: `border-router`, `edge-router`
+     * 
+     */
+    @Import(name="role")
+    private @Nullable Output<String> role;
+
+    /**
+     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     *   - Choices: `border-router`, `edge-router`
+     * 
+     */
+    public Optional<Output<String>> role() {
+        return Optional.ofNullable(this.role);
+    }
+
+    /**
      * Site ID, Attribute conditional on `type` being equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
@@ -397,7 +446,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
 
     /**
      * Type of match entry
-     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
      * 
      */
     @Import(name="type", required=true)
@@ -405,7 +454,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
 
     /**
      * @return Type of match entry
-     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+     *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
      * 
      */
     public Output<String> type() {
@@ -478,6 +527,9 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         this.preference = $.preference;
         this.prefixListId = $.prefixListId;
         this.prefixListVersion = $.prefixListVersion;
+        this.regionId = $.regionId;
+        this.regionListId = $.regionListId;
+        this.role = $.role;
         this.siteId = $.siteId;
         this.siteListId = $.siteListId;
         this.siteListVersion = $.siteListVersion;
@@ -861,6 +913,73 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
+         * @param regionId Region ID, Attribute conditional on `type` being equal to `regionId`
+         *   - Range: `0`-`63`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionId(@Nullable Output<Integer> regionId) {
+            $.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * @param regionId Region ID, Attribute conditional on `type` being equal to `regionId`
+         *   - Range: `0`-`63`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionId(Integer regionId) {
+            return regionId(Output.of(regionId));
+        }
+
+        /**
+         * @param regionListId Region list ID, Attribute conditional on `type` being equal to `regionList`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionListId(@Nullable Output<String> regionListId) {
+            $.regionListId = regionListId;
+            return this;
+        }
+
+        /**
+         * @param regionListId Region list ID, Attribute conditional on `type` being equal to `regionList`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionListId(String regionListId) {
+            return regionListId(Output.of(regionListId));
+        }
+
+        /**
+         * @param role Role, Attribute conditional on `type` being equal to `regionId`
+         *   - Choices: `border-router`, `edge-router`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder role(@Nullable Output<String> role) {
+            $.role = role;
+            return this;
+        }
+
+        /**
+         * @param role Role, Attribute conditional on `type` being equal to `regionId`
+         *   - Choices: `border-router`, `edge-router`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder role(String role) {
+            return role(Output.of(role));
+        }
+
+        /**
          * @param siteId Site ID, Attribute conditional on `type` being equal to `siteId`
          *   - Range: `0`-`4294967295`
          * 
@@ -1034,7 +1153,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
 
         /**
          * @param type Type of match entry
-         *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+         *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
          * 
          * @return builder
          * 
@@ -1046,7 +1165,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
 
         /**
          * @param type Type of match entry
-         *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`
+         *   - Choices: `colorList`, `community`, `expandedCommunity`, `ompTag`, `origin`, `originator`, `preference`, `siteList`, `pathType`, `tlocList`, `vpnList`, `prefixList`, `vpn`, `tloc`, `siteId`, `carrier`, `domainId`, `groupId`, `regionId`, `role`, `regionList`
          * 
          * @return builder
          * 

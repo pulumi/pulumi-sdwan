@@ -35,6 +35,226 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoVpnInterfaceFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoVpnInterfaceFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateAccessListArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateStaticArpArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoVpnInterfaceFeatureTemplate("example", CiscoVpnInterfaceFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .interfaceName("ge0/0")
+ *             .interfaceDescription("My Interface Description")
+ *             .poe(false)
+ *             .address("1.1.1.1/24")
+ *             .ipv4SecondaryAddresses(CiscoVpnInterfaceFeatureTemplateIpv4SecondaryAddressArgs.builder()
+ *                 .address("2.2.2.2/24")
+ *                 .build())
+ *             .dhcp(false)
+ *             .dhcpDistance(10)
+ *             .ipv6Address("2001:1::1/48")
+ *             .dhcpv6(false)
+ *             .ipv6SecondaryAddresses(CiscoVpnInterfaceFeatureTemplateIpv6SecondaryAddressArgs.builder()
+ *                 .address("2.2.2.2/24")
+ *                 .build())
+ *             .ipv6AccessLists(CiscoVpnInterfaceFeatureTemplateIpv6AccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL1")
+ *                 .build())
+ *             .ipv4DhcpHelpers("6.6.6.6")
+ *             .ipv6DhcpHelpers(CiscoVpnInterfaceFeatureTemplateIpv6DhcpHelperArgs.builder()
+ *                 .address("2001:7::7/48")
+ *                 .vpnId(5)
+ *                 .build())
+ *             .trackers("tracker1")
+ *             .autoBandwidthDetect(false)
+ *             .iperfServer("8.8.8.8")
+ *             .nat(true)
+ *             .natType("interface")
+ *             .udpTimeout(1)
+ *             .tcpTimeout(60)
+ *             .natPoolRangeStart("10.1.1.1")
+ *             .natPoolRangeEnd("10.1.1.255")
+ *             .natOverload(false)
+ *             .natInsideSourceLoopbackInterface("lo1")
+ *             .natPoolPrefixLength(24)
+ *             .ipv6Nat(false)
+ *             .nat64Interface(false)
+ *             .nat66Interface(false)
+ *             .staticNat66Entries(CiscoVpnInterfaceFeatureTemplateStaticNat66EntryArgs.builder()
+ *                 .sourcePrefix("2001:7::/48")
+ *                 .translatedSourcePrefix("2001:8::/48")
+ *                 .sourceVpnId(1)
+ *                 .build())
+ *             .staticNatEntries(CiscoVpnInterfaceFeatureTemplateStaticNatEntryArgs.builder()
+ *                 .sourceIp("10.1.1.1")
+ *                 .translateIp("100.1.1.1")
+ *                 .staticNatDirection("inside")
+ *                 .sourceVpnId(1)
+ *                 .build())
+ *             .staticPortForwardEntries(CiscoVpnInterfaceFeatureTemplateStaticPortForwardEntryArgs.builder()
+ *                 .sourceIp("10.1.1.1")
+ *                 .translateIp("100.1.1.1")
+ *                 .staticNatDirection("inside")
+ *                 .sourcePort(8000)
+ *                 .translatePort(9000)
+ *                 .protocol("tcp")
+ *                 .sourceVpnId(1)
+ *                 .build())
+ *             .enableCoreRegion(false)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
+ *             .tunnelInterfaceEncapsulations(CiscoVpnInterfaceFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
+ *                 .encapsulation("gre")
+ *                 .preference(10)
+ *                 .weight(100)
+ *                 .build())
+ *             .tunnelInterfaceBorder(false)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelBandwidth(50)
+ *             .tunnelInterfaceGroups(5)
+ *             .tunnelInterfaceColor("gold")
+ *             .tunnelInterfaceMaxControlConnections(10)
+ *             .tunnelInterfaceControlConnections(false)
+ *             .tunnelInterfaceVbondAsStunServer(false)
+ *             .tunnelInterfaceExcludeControllerGroupLists(10)
+ *             .tunnelInterfaceVmanageConnectionPreference(5)
+ *             .tunnelInterfacePortHop(false)
+ *             .tunnelInterfaceColorRestrict(false)
+ *             .tunnelInterfaceGreTunnelDestinationIp("5.5.5.5")
+ *             .tunnelInterfaceCarrier("carrier1")
+ *             .tunnelInterfaceNatRefreshInterval(5)
+ *             .tunnelInterfaceHelloInterval(1000)
+ *             .tunnelInterfaceHelloTolerance(12)
+ *             .tunnelInterfaceBindLoopbackTunnel("1")
+ *             .tunnelInterfaceLastResortCircuit(false)
+ *             .tunnelInterfaceLowBandwidthLink(false)
+ *             .tunnelInterfaceTunnelTcpMss(1460)
+ *             .tunnelInterfaceClearDontFragment(false)
+ *             .tunnelInterfacePropagateSgt(false)
+ *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceAllowAll(false)
+ *             .tunnelInterfaceAllowBgp(false)
+ *             .tunnelInterfaceAllowDhcp(false)
+ *             .tunnelInterfaceAllowDns(false)
+ *             .tunnelInterfaceAllowIcmp(false)
+ *             .tunnelInterfaceAllowSsh(false)
+ *             .tunnelInterfaceAllowNetconf(false)
+ *             .tunnelInterfaceAllowNtp(false)
+ *             .tunnelInterfaceAllowOspf(false)
+ *             .tunnelInterfaceAllowStun(false)
+ *             .tunnelInterfaceAllowSnmp(false)
+ *             .tunnelInterfaceAllowHttps(false)
+ *             .mediaType("auto-select")
+ *             .interfaceMtu(9216)
+ *             .ipMtu(1500)
+ *             .tcpMssAdjust(1460)
+ *             .tlocExtension("123")
+ *             .loadInterval(30)
+ *             .greTunnelSourceIp("3.3.3.3")
+ *             .greTunnelXconnect("a123")
+ *             .macAddress("00-B0-D0-63-C2-26")
+ *             .speed("1000")
+ *             .duplex("full")
+ *             .shutdown(false)
+ *             .arpTimeout(1200)
+ *             .autonegotiate(true)
+ *             .ipDirectedBroadcast(false)
+ *             .icmpRedirectDisable(false)
+ *             .qosAdaptivePeriod(15)
+ *             .qosAdaptiveBandwidthDownstream(10000)
+ *             .qosAdaptiveMinDownstream(100)
+ *             .qosAdaptiveMaxDownstream(100000)
+ *             .qosAdaptiveBandwidthUpstream(10000)
+ *             .qosAdaptiveMinUpstream(100)
+ *             .qosAdaptiveMaxUpstream(100000)
+ *             .shapingRate(1000)
+ *             .qosMap("QOSMAP1")
+ *             .qosMapVpn("QOSMAP2")
+ *             .bandwidthUpstream(10000)
+ *             .bandwidthDownstream(10000)
+ *             .blockNonSourceIp(false)
+ *             .rewriteRuleName("RULE1")
+ *             .accessLists(CiscoVpnInterfaceFeatureTemplateAccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL1")
+ *                 .build())
+ *             .staticArps(CiscoVpnInterfaceFeatureTemplateStaticArpArgs.builder()
+ *                 .ipAddress("8.8.8.8")
+ *                 .mac("00-B0-D0-63-C2-26")
+ *                 .build())
+ *             .ipv4Vrrps(CiscoVpnInterfaceFeatureTemplateIpv4VrrpArgs.builder()
+ *                 .groupId(100)
+ *                 .priority(100)
+ *                 .timer(100)
+ *                 .trackOmp(false)
+ *                 .trackPrefixList("PL1")
+ *                 .ipAddress("2.2.2.2")
+ *                 .ipv4SecondaryAddresses(CiscoVpnInterfaceFeatureTemplateIpv4VrrpIpv4SecondaryAddressArgs.builder()
+ *                     .ipAddress("2.2.2.3")
+ *                     .build())
+ *                 .tlocPreferenceChange(false)
+ *                 .tlocPreferenceChangeValue(10)
+ *                 .trackingObjects(CiscoVpnInterfaceFeatureTemplateIpv4VrrpTrackingObjectArgs.builder()
+ *                     .trackerId(10)
+ *                     .trackAction("decrement")
+ *                     .decrementValue(100)
+ *                     .build())
+ *                 .build())
+ *             .ipv6Vrrps(CiscoVpnInterfaceFeatureTemplateIpv6VrrpArgs.builder()
+ *                 .groupId(100)
+ *                 .priority(100)
+ *                 .timer(100)
+ *                 .trackOmp(false)
+ *                 .trackPrefixList("PL1")
+ *                 .ipv6Addresses(CiscoVpnInterfaceFeatureTemplateIpv6VrrpIpv6AddressArgs.builder()
+ *                     .ipv6LinkLocal("fe80::260:8ff:fe52:f9d8")
+ *                     .prefix("2001:9::/48")
+ *                     .build())
+ *                 .build())
+ *             .propagateSgt(false)
+ *             .staticSgt(1003)
+ *             .staticSgtTrusted(false)
+ *             .enableSgt(true)
+ *             .sgtEnforcement(true)
+ *             .sgtEnforcementSgt(1004)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

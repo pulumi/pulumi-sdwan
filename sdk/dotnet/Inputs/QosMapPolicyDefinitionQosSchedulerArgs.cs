@@ -34,10 +34,10 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? Burst { get; set; }
 
         /// <summary>
-        /// Class map ID
+        /// Class map ID (can be empty for queue 0 when left as Control)
         /// </summary>
-        [Input("classMapId", required: true)]
-        public Input<string> ClassMapId { get; set; } = null!;
+        [Input("classMapId")]
+        public Input<string>? ClassMapId { get; set; }
 
         /// <summary>
         /// Class map version

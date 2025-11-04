@@ -11,6 +11,30 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.Ipv4DeviceAclPolicyDefinition("example", {
+ *     name: "Example",
+ *     description: "My description",
+ *     defaultAction: "drop",
+ *     sequences: [{
+ *         id: 10,
+ *         name: "Sequence 10",
+ *         baseAction: "accept",
+ *         matchEntries: [{
+ *             type: "destinationPort",
+ *             destinationPort: 22,
+ *         }],
+ *         actionEntries: [{
+ *             type: "count",
+ *             counterName: "count1",
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

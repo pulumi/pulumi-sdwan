@@ -28,6 +28,153 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnInterfaceDslIpoeFeatureTemplate;
+ * import com.pulumi.sdwan.VpnInterfaceDslIpoeFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslIpoeFeatureTemplateAccessListArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceDslIpoeFeatureTemplatePolicerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnInterfaceDslIpoeFeatureTemplate("example", VpnInterfaceDslIpoeFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .ethernetInterfaceName("Example")
+ *             .ethernetIpv4Address("1.2.3.4/24")
+ *             .ethernetEnableDhcp(false)
+ *             .ethernetDhcpDistance(1234)
+ *             .ethernetDhcpHelpers("3")
+ *             .internalControllerType("ipoe")
+ *             .shutdown(true)
+ *             .ethernetDescription("My Description")
+ *             .vdslConfigurations(VpnInterfaceDslIpoeFeatureTemplateVdslConfigurationArgs.builder()
+ *                 .controllerVdslSlot("Example")
+ *                 .sra(true)
+ *                 .modeAdsl1(false)
+ *                 .modeAdsl2(false)
+ *                 .modeAdsl2plus(false)
+ *                 .modeVdsl2(false)
+ *                 .modeAnsi(false)
+ *                 .vdslModemConfiguration("100")
+ *                 .build())
+ *             .encap(4094)
+ *             .dialerPoolNumber(255)
+ *             .pppMaximumPayload(1790)
+ *             .dialerAddressNegotiated(false)
+ *             .unnumberedLoopbackInterface("example")
+ *             .pppAuthenticationProtocol("chap")
+ *             .pppAuthenticationProtocolPap(false)
+ *             .chapHostname("chap-example")
+ *             .chapPppAuthPassword("myPassword")
+ *             .papUsername("pap-username")
+ *             .papPassword(true)
+ *             .papPppAuthPassword("myPassword")
+ *             .tunnelInterfaceEncapsulations(VpnInterfaceDslIpoeFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
+ *                 .encapsulation("gre")
+ *                 .preference(4294967)
+ *                 .weight(250)
+ *                 .build())
+ *             .tunnelInterfaceGroups(42949672)
+ *             .tunnelInterfaceBorder(true)
+ *             .perTunnelQos(true)
+ *             .perTunnelQosAggregator(false)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
+ *             .tunnelInterfaceLastResortCircuit(false)
+ *             .tunnelInterfaceLowBandwidthLink(false)
+ *             .tunnelInterfaceTunnelTcpMss(1460)
+ *             .tunnelInterfaceClearDontFragment(false)
+ *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceMaxControlConnections(8)
+ *             .tunnelInterfaceControlConnections(true)
+ *             .tunnelInterfaceVbondAsStunServer(false)
+ *             .tunnelInterfaceExcludeControllerGroupLists(100)
+ *             .tunnelInterfaceVmanageConnectionPreference(5)
+ *             .tunnelInterfacePortHop(false)
+ *             .tunnelInterfaceColorRestrict(false)
+ *             .tunnelInterfaceCarrier("carrier1")
+ *             .tunnelInterfaceNatRefreshInterval(15)
+ *             .tunnelInterfaceHelloInterval(1000)
+ *             .tunnelInterfaceHelloTolerance(12)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
+ *             .tunnelInterfaceAllowAll(false)
+ *             .tunnelInterfaceAllowBgp(false)
+ *             .tunnelInterfaceAllowDhcp(true)
+ *             .tunnelInterfaceAllowDns(true)
+ *             .tunnelInterfaceAllowIcmp(true)
+ *             .tunnelInterfaceAllowSsh(false)
+ *             .tunnelInterfaceAllowNtp(false)
+ *             .tunnelInterfaceAllowNetconf(false)
+ *             .tunnelInterfaceAllowOspf(false)
+ *             .tunnelInterfaceAllowStun(false)
+ *             .tunnelInterfaceAllowSnmp(false)
+ *             .tunnelInterfaceAllowHttps(true)
+ *             .nat(true)
+ *             .natRefreshMode("outbound")
+ *             .natUdpTimeout(1)
+ *             .natTcpTimeout(60)
+ *             .natBlockIcmpError(true)
+ *             .natResponseToPing(false)
+ *             .natPortForwards(VpnInterfaceDslIpoeFeatureTemplateNatPortForwardArgs.builder()
+ *                 .portStartRange(0)
+ *                 .portEndRange(65530)
+ *                 .protocol("tcp")
+ *                 .privateVpn(65530)
+ *                 .privateIpAddress("1.2.3.4")
+ *                 .build())
+ *             .qosAdaptivePeriod(15)
+ *             .qosAdaptiveBandwidthDownstream(10000)
+ *             .qosAdaptiveMinDownstream(100)
+ *             .qosAdaptiveMaxDownstream(100000)
+ *             .qosAdaptiveBandwidthUpstream(10000)
+ *             .qosAdaptiveMinUpstream(100)
+ *             .qosAdaptiveMaxUpstream(100000)
+ *             .shapingRate(10000000)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
+ *             .bandwidthUpstream(214748300)
+ *             .bandwidthDownstream(214748300)
+ *             .writeRule("RULE1")
+ *             .accessLists(VpnInterfaceDslIpoeFeatureTemplateAccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL1")
+ *                 .build())
+ *             .policers(VpnInterfaceDslIpoeFeatureTemplatePolicerArgs.builder()
+ *                 .direction("in")
+ *                 .policerName("example")
+ *                 .build())
+ *             .ipMtu(1500)
+ *             .tcpMss(720)
+ *             .tlocExtension("tloc")
+ *             .trackers("tracker1")
+ *             .ipDirectedBroadcast(true)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

@@ -15,6 +15,151 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportRoutingBgpFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AsNumber = 429,
+    ///         RouterId = "1.2.3.4",
+    ///         PropagateAsPath = false,
+    ///         PropagateCommunity = false,
+    ///         ExternalRoutesDistance = 20,
+    ///         InternalRoutesDistance = 200,
+    ///         LocalRoutesDistance = 20,
+    ///         KeepaliveTime = 60,
+    ///         HoldTime = 180,
+    ///         AlwaysCompareMed = false,
+    ///         DeterministicMed = false,
+    ///         MissingMedAsWorst = false,
+    ///         CompareRouterId = false,
+    ///         MultipathRelax = false,
+    ///         Ipv4Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4NeighborArgs
+    ///             {
+    ///                 Address = "1.2.3.4",
+    ///                 Description = "neighbor1",
+    ///                 Shutdown = false,
+    ///                 RemoteAs = 200,
+    ///                 LocalAs = 200,
+    ///                 KeepaliveTime = 40,
+    ///                 HoldTime = 200,
+    ///                 UpdateSourceInterface = "GigabitEthernet0",
+    ///                 NextHopSelf = false,
+    ///                 SendCommunity = true,
+    ///                 SendExtendedCommunity = true,
+    ///                 EbgpMultihop = 1,
+    ///                 Password = "myPassword",
+    ///                 SendLabel = true,
+    ///                 ExplicitNull = false,
+    ///                 AsOverride = false,
+    ///                 AllowasInNumber = 1,
+    ///                 AddressFamilies = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs
+    ///                     {
+    ///                         FamilyType = "ipv4-unicast",
+    ///                         PolicyType = "restart",
+    ///                         RestartMaxNumberOfPrefixes = 2000,
+    ///                         RestartThreshold = 75,
+    ///                         RestartInterval = 30,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6NeighborArgs
+    ///             {
+    ///                 Address = "2001::1",
+    ///                 Description = "neighbor2",
+    ///                 Shutdown = false,
+    ///                 RemoteAs = 200,
+    ///                 LocalAs = 200,
+    ///                 KeepaliveTime = 180,
+    ///                 HoldTime = 60,
+    ///                 UpdateSourceInterface = "Loopback1",
+    ///                 NextHopSelf = true,
+    ///                 SendCommunity = true,
+    ///                 SendExtendedCommunity = true,
+    ///                 EbgpMultihop = 3,
+    ///                 Password = "myPassword",
+    ///                 AsOverride = true,
+    ///                 AllowasInNumber = 3,
+    ///                 AddressFamilies = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs
+    ///                     {
+    ///                         FamilyType = "ipv6-unicast",
+    ///                         MaxNumberOfPrefixes = 2000,
+    ///                         Threshold = 75,
+    ///                         PolicyType = "restart",
+    ///                         RestartInterval = 30,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4AggregateAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4AggregateAddressArgs
+    ///             {
+    ///                 NetworkAddress = "10.10.0.0",
+    ///                 SubnetMask = "255.255.0.0",
+    ///                 AsSetPath = false,
+    ///                 SummaryOnly = false,
+    ///             },
+    ///         },
+    ///         Ipv4Networks = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv4NetworkArgs
+    ///             {
+    ///                 NetworkAddress = "10.10.0.0",
+    ///                 SubnetMask = "255.255.0.0",
+    ///             },
+    ///         },
+    ///         Ipv4EibgpMaximumPaths = 1,
+    ///         Ipv4Originate = false,
+    ///         Ipv4TableMapFilter = false,
+    ///         Ipv6AggregateAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6AggregateAddressArgs
+    ///             {
+    ///                 AggregatePrefix = "3001::1/128",
+    ///                 AsSetPath = false,
+    ///                 SummaryOnly = false,
+    ///             },
+    ///         },
+    ///         Ipv6Networks = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureIpv6NetworkArgs
+    ///             {
+    ///                 NetworkPrefix = "2001:0DB8:0000:000b::/64",
+    ///             },
+    ///         },
+    ///         Ipv6EibgpMaximumPaths = 2,
+    ///         Ipv6Originate = true,
+    ///         Ipv6TableMapFilter = false,
+    ///         MplsInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutingBgpFeatureMplsInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

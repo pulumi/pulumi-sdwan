@@ -25,6 +25,11 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
      */
     private String baseAction;
     /**
+     * @return Rule Type
+     * 
+     */
+    private String ipType;
+    /**
      * @return List of match entries
      * 
      */
@@ -54,6 +59,13 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
      */
     public String baseAction() {
         return this.baseAction;
+    }
+    /**
+     * @return Rule Type
+     * 
+     */
+    public String ipType() {
+        return this.ipType;
     }
     /**
      * @return List of match entries
@@ -88,6 +100,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
     public static final class Builder {
         private List<GetZoneBasedFirewallPolicyDefinitionRuleActionEntry> actionEntries;
         private String baseAction;
+        private String ipType;
         private List<GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry> matchEntries;
         private String ruleName;
         private Integer ruleOrder;
@@ -96,6 +109,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
     	      Objects.requireNonNull(defaults);
     	      this.actionEntries = defaults.actionEntries;
     	      this.baseAction = defaults.baseAction;
+    	      this.ipType = defaults.ipType;
     	      this.matchEntries = defaults.matchEntries;
     	      this.ruleName = defaults.ruleName;
     	      this.ruleOrder = defaults.ruleOrder;
@@ -118,6 +132,14 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
               throw new MissingRequiredPropertyException("GetZoneBasedFirewallPolicyDefinitionRule", "baseAction");
             }
             this.baseAction = baseAction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipType(String ipType) {
+            if (ipType == null) {
+              throw new MissingRequiredPropertyException("GetZoneBasedFirewallPolicyDefinitionRule", "ipType");
+            }
+            this.ipType = ipType;
             return this;
         }
         @CustomType.Setter
@@ -151,6 +173,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRule {
             final var _resultValue = new GetZoneBasedFirewallPolicyDefinitionRule();
             _resultValue.actionEntries = actionEntries;
             _resultValue.baseAction = baseAction;
+            _resultValue.ipType = ipType;
             _resultValue.matchEntries = matchEntries;
             _resultValue.ruleName = ruleName;
             _resultValue.ruleOrder = ruleOrder;

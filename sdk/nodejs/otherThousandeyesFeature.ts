@@ -12,6 +12,29 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.OtherThousandeyesFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     virtualApplications: [{
+ *         accountGroupToken: "qwer",
+ *         vpn: 1,
+ *         managementIp: "10.0.0.2",
+ *         managementSubnetMask: "255.255.255.0",
+ *         agentDefaultGateway: "10.0.0.1",
+ *         nameServerIp: "77.77.77.71",
+ *         hostname: "thousandeyesHost",
+ *         proxyType: "static",
+ *         proxyHost: "proxy.thousandeyes.com",
+ *         proxyPort: 3128,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

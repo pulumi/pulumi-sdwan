@@ -12,6 +12,32 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ApplicationPriorityTrafficPolicyPolicy("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     defaultAction: "accept",
+ *     vpns: ["edge_basic_vpn1"],
+ *     direction: "all",
+ *     sequences: [{
+ *         sequenceId: 1,
+ *         sequenceName: "traffic",
+ *         baseAction: "accept",
+ *         protocol: "ipv4",
+ *         matchEntries: [{
+ *             dscp: 1,
+ *         }],
+ *         actions: [{
+ *             setParameters: [{}],
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

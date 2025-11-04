@@ -17,6 +17,141 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportRoutingBgpFeature(ctx, "example", &sdwan.TransportRoutingBgpFeatureArgs{
+//				Name:                   pulumi.String("Example"),
+//				Description:            pulumi.String("My Example"),
+//				FeatureProfileId:       pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AsNumber:               pulumi.Int(429),
+//				RouterId:               pulumi.String("1.2.3.4"),
+//				PropagateAsPath:        pulumi.Bool(false),
+//				PropagateCommunity:     pulumi.Bool(false),
+//				ExternalRoutesDistance: pulumi.Int(20),
+//				InternalRoutesDistance: pulumi.Int(200),
+//				LocalRoutesDistance:    pulumi.Int(20),
+//				KeepaliveTime:          pulumi.Int(60),
+//				HoldTime:               pulumi.Int(180),
+//				AlwaysCompareMed:       pulumi.Bool(false),
+//				DeterministicMed:       pulumi.Bool(false),
+//				MissingMedAsWorst:      pulumi.Bool(false),
+//				CompareRouterId:        pulumi.Bool(false),
+//				MultipathRelax:         pulumi.Bool(false),
+//				Ipv4Neighbors: sdwan.TransportRoutingBgpFeatureIpv4NeighborArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv4NeighborArgs{
+//						Address:               pulumi.String("1.2.3.4"),
+//						Description:           pulumi.String("neighbor1"),
+//						Shutdown:              pulumi.Bool(false),
+//						RemoteAs:              pulumi.Int(200),
+//						LocalAs:               pulumi.Int(200),
+//						KeepaliveTime:         pulumi.Int(40),
+//						HoldTime:              pulumi.Int(200),
+//						UpdateSourceInterface: pulumi.String("GigabitEthernet0"),
+//						NextHopSelf:           pulumi.Bool(false),
+//						SendCommunity:         pulumi.Bool(true),
+//						SendExtendedCommunity: pulumi.Bool(true),
+//						EbgpMultihop:          pulumi.Int(1),
+//						Password:              pulumi.String("myPassword"),
+//						SendLabel:             pulumi.Bool(true),
+//						ExplicitNull:          pulumi.Bool(false),
+//						AsOverride:            pulumi.Bool(false),
+//						AllowasInNumber:       pulumi.Int(1),
+//						AddressFamilies: sdwan.TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArray{
+//							&sdwan.TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs{
+//								FamilyType:                 pulumi.String("ipv4-unicast"),
+//								PolicyType:                 pulumi.String("restart"),
+//								RestartMaxNumberOfPrefixes: pulumi.Int(2000),
+//								RestartThreshold:           pulumi.Int(75),
+//								RestartInterval:            pulumi.Int(30),
+//							},
+//						},
+//					},
+//				},
+//				Ipv6Neighbors: sdwan.TransportRoutingBgpFeatureIpv6NeighborArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv6NeighborArgs{
+//						Address:               pulumi.String("2001::1"),
+//						Description:           pulumi.String("neighbor2"),
+//						Shutdown:              pulumi.Bool(false),
+//						RemoteAs:              pulumi.Int(200),
+//						LocalAs:               pulumi.Int(200),
+//						KeepaliveTime:         pulumi.Int(180),
+//						HoldTime:              pulumi.Int(60),
+//						UpdateSourceInterface: pulumi.String("Loopback1"),
+//						NextHopSelf:           pulumi.Bool(true),
+//						SendCommunity:         pulumi.Bool(true),
+//						SendExtendedCommunity: pulumi.Bool(true),
+//						EbgpMultihop:          pulumi.Int(3),
+//						Password:              pulumi.String("myPassword"),
+//						AsOverride:            pulumi.Bool(true),
+//						AllowasInNumber:       pulumi.Int(3),
+//						AddressFamilies: sdwan.TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArray{
+//							&sdwan.TransportRoutingBgpFeatureIpv6NeighborAddressFamilyArgs{
+//								FamilyType:          pulumi.String("ipv6-unicast"),
+//								MaxNumberOfPrefixes: pulumi.Int(2000),
+//								Threshold:           pulumi.Int(75),
+//								PolicyType:          pulumi.String("restart"),
+//								RestartInterval:     pulumi.Int(30),
+//							},
+//						},
+//					},
+//				},
+//				Ipv4AggregateAddresses: sdwan.TransportRoutingBgpFeatureIpv4AggregateAddressArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv4AggregateAddressArgs{
+//						NetworkAddress: pulumi.String("10.10.0.0"),
+//						SubnetMask:     pulumi.String("255.255.0.0"),
+//						AsSetPath:      pulumi.Bool(false),
+//						SummaryOnly:    pulumi.Bool(false),
+//					},
+//				},
+//				Ipv4Networks: sdwan.TransportRoutingBgpFeatureIpv4NetworkArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv4NetworkArgs{
+//						NetworkAddress: pulumi.String("10.10.0.0"),
+//						SubnetMask:     pulumi.String("255.255.0.0"),
+//					},
+//				},
+//				Ipv4EibgpMaximumPaths: pulumi.Int(1),
+//				Ipv4Originate:         pulumi.Bool(false),
+//				Ipv4TableMapFilter:    pulumi.Bool(false),
+//				Ipv6AggregateAddresses: sdwan.TransportRoutingBgpFeatureIpv6AggregateAddressArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv6AggregateAddressArgs{
+//						AggregatePrefix: pulumi.String("3001::1/128"),
+//						AsSetPath:       pulumi.Bool(false),
+//						SummaryOnly:     pulumi.Bool(false),
+//					},
+//				},
+//				Ipv6Networks: sdwan.TransportRoutingBgpFeatureIpv6NetworkArray{
+//					&sdwan.TransportRoutingBgpFeatureIpv6NetworkArgs{
+//						NetworkPrefix: pulumi.String("2001:0DB8:0000:000b::/64"),
+//					},
+//				},
+//				Ipv6EibgpMaximumPaths: pulumi.Int(2),
+//				Ipv6Originate:         pulumi.Bool(true),
+//				Ipv6TableMapFilter:    pulumi.Bool(false),
+//				MplsInterfaces: sdwan.TransportRoutingBgpFeatureMplsInterfaceArray{
+//					&sdwan.TransportRoutingBgpFeatureMplsInterfaceArgs{
+//						InterfaceName: pulumi.String("GigabitEthernet1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

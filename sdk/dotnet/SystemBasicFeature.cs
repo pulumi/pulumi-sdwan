@@ -15,6 +15,81 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemBasicFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Timezone = "UTC",
+    ///         ConfigDescription = "example",
+    ///         Location = "example",
+    ///         GpsLongitude = -77,
+    ///         GpsLatitude = 38,
+    ///         GpsGeoFencingEnable = true,
+    ///         GpsGeoFencingRange = 100,
+    ///         GpsSmsEnable = true,
+    ///         GpsSmsMobileNumbers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemBasicFeatureGpsSmsMobileNumberArgs
+    ///             {
+    ///                 Number = "+11111233",
+    ///             },
+    ///         },
+    ///         DeviceGroups = new[]
+    ///         {
+    ///             "example",
+    ///         },
+    ///         ControllerGroups = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         OverlayId = 1,
+    ///         PortOffset = 19,
+    ///         PortHopping = true,
+    ///         ControlSessionPps = 300,
+    ///         TrackTransport = true,
+    ///         TrackInterfaceTag = 2,
+    ///         ConsoleBaudRate = "9600",
+    ///         MaxOmpSessions = 24,
+    ///         MultiTenant = false,
+    ///         TrackDefaultGateway = true,
+    ///         AdminTechOnFailure = true,
+    ///         IdleTimeout = 10,
+    ///         OnDemandEnable = true,
+    ///         OnDemandIdleTimeout = 10,
+    ///         TransportGateway = false,
+    ///         EnhancedAppAwareRouting = "aggressive",
+    ///         SiteTypes = new[]
+    ///         {
+    ///             "type-1",
+    ///         },
+    ///         AffinityGroupNumber = 1,
+    ///         AffinityGroupPreferences = new[]
+    ///         {
+    ///             1,
+    ///         },
+    ///         AffinityPreferenceAuto = false,
+    ///         AffinityPerVrfs = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemBasicFeatureAffinityPerVrfArgs
+    ///             {
+    ///                 AffinityGroupNumber = 1,
+    ///                 VrfRange = "123-456",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

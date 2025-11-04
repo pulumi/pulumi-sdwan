@@ -23,6 +23,47 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CedgeIgmpFeatureTemplate;
+ * import com.pulumi.sdwan.CedgeIgmpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CedgeIgmpFeatureTemplateInterfaceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CedgeIgmpFeatureTemplate("example", CedgeIgmpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .interfaces(CedgeIgmpFeatureTemplateInterfaceArgs.builder()
+ *                 .name("Ethernet0")
+ *                 .joinGroups(CedgeIgmpFeatureTemplateInterfaceJoinGroupArgs.builder()
+ *                     .groupAddress("235.1.1.1")
+ *                     .source("1.2.3.4")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

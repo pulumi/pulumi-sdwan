@@ -224,6 +224,8 @@ import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityLocalDomainListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityPortListPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityScalableGroupTagListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityUrlAllowListArgs;
@@ -236,6 +238,18 @@ import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectStandardCommunityListPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectTlocListPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionPlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfilePlainArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringPlainArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupArgs;
 import com.pulumi.sdwan.inputs.GetPolicyObjectVpnGroupPlainArgs;
 import com.pulumi.sdwan.inputs.GetPortListPolicyObjectArgs;
@@ -583,12 +597,19 @@ import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityIpsSignatureResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityLocalApplicationListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityLocalDomainListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityPortListResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityProtocolListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityScalableGroupTagListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityUrlAllowListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSecurityUrlBlockListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectSlaClassListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectStandardCommunityListResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectTlocListResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedAdvancedInspectionProfileResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedIntrusionPreventionResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedTlsSslDecryptionResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedTlsSslProfileResult;
+import com.pulumi.sdwan.outputs.GetPolicyObjectUnifiedUrlFilteringResult;
 import com.pulumi.sdwan.outputs.GetPolicyObjectVpnGroupResult;
 import com.pulumi.sdwan.outputs.GetPortListPolicyObjectResult;
 import com.pulumi.sdwan.outputs.GetPreferredColorGroupPolicyObjectResult;
@@ -24901,6 +24922,211 @@ public final class SdwanFunctions {
         return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectSecurityPortList:getPolicyObjectSecurityPortList", TypeShape.of(GetPolicyObjectSecurityPortListResult.class), args, Utilities.withVersion(options));
     }
     /**
+     * This data source can read the Policy Object Security Protocol List Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityProtocolListResult> getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs args) {
+        return getPolicyObjectSecurityProtocolList(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Security Protocol List Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectSecurityProtocolListResult> getPolicyObjectSecurityProtocolListPlain(GetPolicyObjectSecurityProtocolListPlainArgs args) {
+        return getPolicyObjectSecurityProtocolListPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Security Protocol List Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityProtocolListResult> getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectSecurityProtocolList:getPolicyObjectSecurityProtocolList", TypeShape.of(GetPolicyObjectSecurityProtocolListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Security Protocol List Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectSecurityProtocolListResult> getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectSecurityProtocolList:getPolicyObjectSecurityProtocolList", TypeShape.of(GetPolicyObjectSecurityProtocolListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Security Protocol List Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectSecurityProtocolListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectSecurityProtocolList(GetPolicyObjectSecurityProtocolListArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectSecurityProtocolListResult> getPolicyObjectSecurityProtocolListPlain(GetPolicyObjectSecurityProtocolListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectSecurityProtocolList:getPolicyObjectSecurityProtocolList", TypeShape.of(GetPolicyObjectSecurityProtocolListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
      * This data source can read the Policy Object Security Scalable Group Tag List Policy_object.
      * 
      * ## Example Usage
@@ -26129,6 +26355,1236 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetPolicyObjectTlocListResult> getPolicyObjectTlocListPlain(GetPolicyObjectTlocListPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectTlocList:getPolicyObjectTlocList", TypeShape.of(GetPolicyObjectTlocListResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedInspectionProfileResult> getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs args) {
+        return getPolicyObjectUnifiedAdvancedInspectionProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedAdvancedInspectionProfileResult> getPolicyObjectUnifiedAdvancedInspectionProfilePlain(GetPolicyObjectUnifiedAdvancedInspectionProfilePlainArgs args) {
+        return getPolicyObjectUnifiedAdvancedInspectionProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedInspectionProfileResult> getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile", TypeShape.of(GetPolicyObjectUnifiedAdvancedInspectionProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedInspectionProfileResult> getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile", TypeShape.of(GetPolicyObjectUnifiedAdvancedInspectionProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Inspection Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedInspectionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedInspectionProfile(GetPolicyObjectUnifiedAdvancedInspectionProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedAdvancedInspectionProfileResult> getPolicyObjectUnifiedAdvancedInspectionProfilePlain(GetPolicyObjectUnifiedAdvancedInspectionProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedAdvancedInspectionProfile:getPolicyObjectUnifiedAdvancedInspectionProfile", TypeShape.of(GetPolicyObjectUnifiedAdvancedInspectionProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Malware Protection Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedMalwareProtectionResult> getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs args) {
+        return getPolicyObjectUnifiedAdvancedMalwareProtection(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Malware Protection Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedAdvancedMalwareProtectionResult> getPolicyObjectUnifiedAdvancedMalwareProtectionPlain(GetPolicyObjectUnifiedAdvancedMalwareProtectionPlainArgs args) {
+        return getPolicyObjectUnifiedAdvancedMalwareProtectionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Malware Protection Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedMalwareProtectionResult> getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedAdvancedMalwareProtection:getPolicyObjectUnifiedAdvancedMalwareProtection", TypeShape.of(GetPolicyObjectUnifiedAdvancedMalwareProtectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Malware Protection Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedAdvancedMalwareProtectionResult> getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedAdvancedMalwareProtection:getPolicyObjectUnifiedAdvancedMalwareProtection", TypeShape.of(GetPolicyObjectUnifiedAdvancedMalwareProtectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Advanced Malware Protection Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedAdvancedMalwareProtection(GetPolicyObjectUnifiedAdvancedMalwareProtectionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedAdvancedMalwareProtectionResult> getPolicyObjectUnifiedAdvancedMalwareProtectionPlain(GetPolicyObjectUnifiedAdvancedMalwareProtectionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedAdvancedMalwareProtection:getPolicyObjectUnifiedAdvancedMalwareProtection", TypeShape.of(GetPolicyObjectUnifiedAdvancedMalwareProtectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Intrusion Prevention Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedIntrusionPreventionResult> getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs args) {
+        return getPolicyObjectUnifiedIntrusionPrevention(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Intrusion Prevention Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedIntrusionPreventionResult> getPolicyObjectUnifiedIntrusionPreventionPlain(GetPolicyObjectUnifiedIntrusionPreventionPlainArgs args) {
+        return getPolicyObjectUnifiedIntrusionPreventionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified Intrusion Prevention Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedIntrusionPreventionResult> getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention", TypeShape.of(GetPolicyObjectUnifiedIntrusionPreventionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Intrusion Prevention Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedIntrusionPreventionResult> getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention", TypeShape.of(GetPolicyObjectUnifiedIntrusionPreventionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified Intrusion Prevention Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedIntrusionPreventionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedIntrusionPrevention(GetPolicyObjectUnifiedIntrusionPreventionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedIntrusionPreventionResult> getPolicyObjectUnifiedIntrusionPreventionPlain(GetPolicyObjectUnifiedIntrusionPreventionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedIntrusionPrevention:getPolicyObjectUnifiedIntrusionPrevention", TypeShape.of(GetPolicyObjectUnifiedIntrusionPreventionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslDecryptionResult> getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs args) {
+        return getPolicyObjectUnifiedTlsSslDecryption(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedTlsSslDecryptionResult> getPolicyObjectUnifiedTlsSslDecryptionPlain(GetPolicyObjectUnifiedTlsSslDecryptionPlainArgs args) {
+        return getPolicyObjectUnifiedTlsSslDecryptionPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslDecryptionResult> getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption", TypeShape.of(GetPolicyObjectUnifiedTlsSslDecryptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslDecryptionResult> getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption", TypeShape.of(GetPolicyObjectUnifiedTlsSslDecryptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Decryption Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslDecryptionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslDecryption(GetPolicyObjectUnifiedTlsSslDecryptionArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedTlsSslDecryptionResult> getPolicyObjectUnifiedTlsSslDecryptionPlain(GetPolicyObjectUnifiedTlsSslDecryptionPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedTlsSslDecryption:getPolicyObjectUnifiedTlsSslDecryption", TypeShape.of(GetPolicyObjectUnifiedTlsSslDecryptionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslProfileResult> getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs args) {
+        return getPolicyObjectUnifiedTlsSslProfile(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedTlsSslProfileResult> getPolicyObjectUnifiedTlsSslProfilePlain(GetPolicyObjectUnifiedTlsSslProfilePlainArgs args) {
+        return getPolicyObjectUnifiedTlsSslProfilePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslProfileResult> getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile", TypeShape.of(GetPolicyObjectUnifiedTlsSslProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedTlsSslProfileResult> getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile", TypeShape.of(GetPolicyObjectUnifiedTlsSslProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified TLS SSL Profile Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedTlsSslProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedTlsSslProfile(GetPolicyObjectUnifiedTlsSslProfileArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedTlsSslProfileResult> getPolicyObjectUnifiedTlsSslProfilePlain(GetPolicyObjectUnifiedTlsSslProfilePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedTlsSslProfile:getPolicyObjectUnifiedTlsSslProfile", TypeShape.of(GetPolicyObjectUnifiedTlsSslProfileResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified URL Filtering Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedUrlFilteringResult> getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs args) {
+        return getPolicyObjectUnifiedUrlFiltering(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified URL Filtering Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedUrlFilteringResult> getPolicyObjectUnifiedUrlFilteringPlain(GetPolicyObjectUnifiedUrlFilteringPlainArgs args) {
+        return getPolicyObjectUnifiedUrlFilteringPlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the Policy Object Unified URL Filtering Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedUrlFilteringResult> getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering", TypeShape.of(GetPolicyObjectUnifiedUrlFilteringResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified URL Filtering Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetPolicyObjectUnifiedUrlFilteringResult> getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering", TypeShape.of(GetPolicyObjectUnifiedUrlFilteringResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the Policy Object Unified URL Filtering Policy_object.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetPolicyObjectUnifiedUrlFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getPolicyObjectUnifiedUrlFiltering(GetPolicyObjectUnifiedUrlFilteringArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetPolicyObjectUnifiedUrlFilteringResult> getPolicyObjectUnifiedUrlFilteringPlain(GetPolicyObjectUnifiedUrlFilteringPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getPolicyObjectUnifiedUrlFiltering:getPolicyObjectUnifiedUrlFiltering", TypeShape.of(GetPolicyObjectUnifiedUrlFilteringResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the Policy Object VPN Group Policy_object.

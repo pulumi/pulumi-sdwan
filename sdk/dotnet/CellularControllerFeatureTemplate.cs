@@ -15,6 +15,41 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CellularControllerFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         CellularInterfaceId = "1",
+    ///         DataProfiles = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CellularControllerFeatureTemplateDataProfileArgs
+    ///             {
+    ///                 SlotNumber = 1,
+    ///                 DataProfile = 8,
+    ///                 AttachProfile = 8,
+    ///             },
+    ///         },
+    ///         PrimarySimSlot = 100,
+    ///         SimFailoverRetries = 160,
+    ///         SimFailoverTimeout = 3,
+    ///         FirmwareAutoSim = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -15,6 +15,134 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceLanVpnInterfaceEthernetFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         ServiceLanVpnFeatureId = "140331f6-5418-4755-a059-13c77eb96037",
+    ///         Shutdown = false,
+    ///         InterfaceName = "GigabitEthernet3",
+    ///         InterfaceDescription = "LAN",
+    ///         Ipv4ConfigurationType = "static",
+    ///         Ipv4Address = "1.2.3.4",
+    ///         Ipv4SubnetMask = "0.0.0.0",
+    ///         Ipv4SecondaryAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs
+    ///             {
+    ///                 Address = "1.2.3.5",
+    ///                 SubnetMask = "0.0.0.0",
+    ///             },
+    ///         },
+    ///         Ipv4DhcpHelpers = new[]
+    ///         {
+    ///             "1.2.3.4",
+    ///         },
+    ///         Ipv6ConfigurationType = "static",
+    ///         Ipv6DhcpHelpers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs
+    ///             {
+    ///                 Address = "2001:0:0:1::0",
+    ///                 Dhcpv6HelperVpn = 1,
+    ///             },
+    ///         },
+    ///         Ipv4Nat = false,
+    ///         Ipv4NatRangeStart = "1.2.3.4",
+    ///         Ipv4NatRangeEnd = "4.5.6.7",
+    ///         Ipv4NatPrefixLength = 1,
+    ///         Ipv4NatOverload = true,
+    ///         Ipv6Nat = true,
+    ///         Nat64 = false,
+    ///         AclShapingRate = 12,
+    ///         Ipv6Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs
+    ///             {
+    ///                 GroupId = 1,
+    ///                 Priority = 100,
+    ///                 Timer = 1000,
+    ///                 TrackOmp = false,
+    ///                 Ipv6Addresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6AddressArgs
+    ///                     {
+    ///                         LinkLocalAddress = "1::1",
+    ///                         GlobalAddress = "1::1/24",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4Vrrps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs
+    ///             {
+    ///                 GroupId = 1,
+    ///                 Priority = 100,
+    ///                 Timer = 1000,
+    ///                 TrackOmp = false,
+    ///                 Address = "1.2.3.4",
+    ///                 SecondaryAddresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpSecondaryAddressArgs
+    ///                     {
+    ///                         Address = "2.3.4.5",
+    ///                         SubnetMask = "0.0.0.0",
+    ///                     },
+    ///                 },
+    ///                 TlocPrefixChange = true,
+    ///                 TlocPrefChangeValue = 100,
+    ///                 TrackingObjects = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpTrackingObjectArgs
+    ///                     {
+    ///                         TrackerId = "1b270f6d-479b-47e3-ab0b-51bc6811a303",
+    ///                         TrackerAction = "Decrement",
+    ///                         DecrementValue = 100,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Arps = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnInterfaceEthernetFeatureArpArgs
+    ///             {
+    ///                 IpAddress = "1.2.3.4",
+    ///                 MacAddress = "00-B0-D0-63-C2-26",
+    ///             },
+    ///         },
+    ///         TrustsecEnableSgtPropogation = false,
+    ///         TrustsecPropogate = true,
+    ///         TrustsecSecurityGroupTag = 123,
+    ///         TrustsecEnableEnforcedPropogation = false,
+    ///         TrustsecEnforcedSecurityGroupTag = 1234,
+    ///         Duplex = "full",
+    ///         MacAddress = "00-B0-D0-63-C2-26",
+    ///         IpMtu = 1500,
+    ///         InterfaceMtu = 1500,
+    ///         TcpMss = 500,
+    ///         Speed = "1000",
+    ///         ArpTimeout = 1200,
+    ///         Autonegotiate = false,
+    ///         MediaType = "auto-select",
+    ///         LoadInterval = 30,
+    ///         IcmpRedirectDisable = true,
+    ///         Xconnect = "1",
+    ///         IpDirectedBroadcast = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -282,6 +282,31 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ApplicationPriorityTrafficPolicyPolicy("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="accept",
+            vpns=["edge_basic_vpn1"],
+            direction="all",
+            sequences=[{
+                "sequence_id": 1,
+                "sequence_name": "traffic",
+                "base_action": "accept",
+                "protocol": "ipv4",
+                "match_entries": [{
+                    "dscp": 1,
+                }],
+                "actions": [{
+                    "set_parameters": [{}],
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -312,6 +337,31 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.ApplicationPriorityTrafficPolicyPolicy("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            default_action="accept",
+            vpns=["edge_basic_vpn1"],
+            direction="all",
+            sequences=[{
+                "sequence_id": 1,
+                "sequence_name": "traffic",
+                "base_action": "accept",
+                "protocol": "ipv4",
+                "match_entries": [{
+                    "dscp": 1,
+                }],
+                "actions": [{
+                    "set_parameters": [{}],
+                }],
+            }])
+        ```
 
         ## Import
 

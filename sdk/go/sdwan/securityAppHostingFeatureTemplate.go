@@ -17,6 +17,47 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSecurityAppHostingFeatureTemplate(ctx, "example", &sdwan.SecurityAppHostingFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VirtualApplications: sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArray{
+//					&sdwan.SecurityAppHostingFeatureTemplateVirtualApplicationArgs{
+//						InstanceId:       pulumi.String("2e89c1fe-440a-43f5-9f3a-54a9836fdbb5"),
+//						ApplicationType:  pulumi.String("utd"),
+//						Nat:              pulumi.Bool(true),
+//						DatabaseUrl:      pulumi.Bool(false),
+//						ResourceProfile:  pulumi.String("low"),
+//						ServiceGatewayIp: pulumi.String("1.2.3.4/24"),
+//						ServiceIp:        pulumi.String("1.2.3.5/24"),
+//						DataGatewayIp:    pulumi.String("192.0.2.1/24"),
+//						DataServiceIp:    pulumi.String("192.0.2.2/24"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

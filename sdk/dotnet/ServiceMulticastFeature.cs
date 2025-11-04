@@ -15,6 +15,108 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.ServiceMulticastFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         SptOnly = false,
+    ///         LocalReplicator = false,
+    ///         LocalReplicatorThreshold = 10,
+    ///         IgmpInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureIgmpInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet1",
+    ///                 Version = 2,
+    ///                 JoinGroups = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceMulticastFeatureIgmpInterfaceJoinGroupArgs
+    ///                     {
+    ///                         GroupAddress = "224.0.0.0",
+    ///                         SourceAddress = "1.2.3.4",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         PimSourceSpecificMulticastEnable = true,
+    ///         PimSourceSpecificMulticastAccessList = "1",
+    ///         PimSptThreshold = "0",
+    ///         PimInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet1",
+    ///                 QueryInterval = 30,
+    ///                 JoinPruneInterval = 60,
+    ///             },
+    ///         },
+    ///         StaticRpAddresses = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureStaticRpAddressArgs
+    ///             {
+    ///                 IpAddress = "1.2.3.4",
+    ///                 AccessList = "1",
+    ///                 Override = false,
+    ///             },
+    ///         },
+    ///         EnableAutoRp = false,
+    ///         PimBsrRpCandidates = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimBsrRpCandidateArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet1",
+    ///                 AccessListId = "2",
+    ///                 Interval = 30,
+    ///                 Priority = 1,
+    ///             },
+    ///         },
+    ///         PimBsrCandidates = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeaturePimBsrCandidateArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet1",
+    ///                 HashMaskLength = 30,
+    ///                 Priority = 120,
+    ///                 AcceptCandidateAccessList = "test",
+    ///             },
+    ///         },
+    ///         MsdpGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceMulticastFeatureMsdpGroupArgs
+    ///             {
+    ///                 MeshGroupName = "Example",
+    ///                 Peers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.ServiceMulticastFeatureMsdpGroupPeerArgs
+    ///                     {
+    ///                         PeerIp = "1.2.3.4",
+    ///                         ConnectionSourceInterface = "GigabitEthernet1",
+    ///                         RemoteAs = 1,
+    ///                         PeerAuthenticationPassword = "Password123!",
+    ///                         KeepaliveInterval = 15,
+    ///                         KeepaliveHoldTime = 30,
+    ///                         SaLimit = 1,
+    ///                         DefaultPeer = false,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         MsdpOriginatorId = "GigabitEthernet1",
+    ///         MsdpConnectionRetryInterval = 30,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

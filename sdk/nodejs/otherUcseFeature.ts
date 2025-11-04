@@ -12,6 +12,31 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.OtherUcseFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     bay: 2,
+ *     slot: 0,
+ *     accessPortDedicated: false,
+ *     accessPortSharedType: "ge1",
+ *     accessPortSharedFailoverType: "ge2",
+ *     ipv4Address: "2.2.2.2/24",
+ *     defaultGateway: "2.2.2.2",
+ *     vlanId: 3,
+ *     assignPriority: 3,
+ *     interfaces: [{
+ *         interfaceName: "ucse2/0",
+ *         ucseInterfaceVpn: 2,
+ *         ipv4Address: "10.1.15.15/24",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

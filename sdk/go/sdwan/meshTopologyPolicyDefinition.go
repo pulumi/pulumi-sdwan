@@ -16,6 +16,40 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewMeshTopologyPolicyDefinition(ctx, "example", &sdwan.MeshTopologyPolicyDefinitionArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My description"),
+//				VpnListId:   pulumi.String("04fcbb0b-efbf-43d2-a04b-847d3a7b104e"),
+//				Regions: sdwan.MeshTopologyPolicyDefinitionRegionArray{
+//					&sdwan.MeshTopologyPolicyDefinitionRegionArgs{
+//						Name: pulumi.String("Region1"),
+//						SiteListIds: pulumi.StringArray{
+//							pulumi.String("e858e1c4-6aa8-4de7-99df-c3adbf80290d"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:
