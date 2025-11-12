@@ -15,6 +15,58 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportRoutePolicyFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "accept",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportRoutePolicyFeatureSequenceArgs
+    ///             {
+    ///                 Id = 1,
+    ///                 Name = "SEQ_1",
+    ///                 BaseAction = "reject",
+    ///                 Protocol = "IPV4",
+    ///                 Actions = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportRoutePolicyFeatureSequenceActionArgs
+    ///                     {
+    ///                         AsPathPrepend = new[]
+    ///                         {
+    ///                             65521,
+    ///                         },
+    ///                         CommunityAdditive = false,
+    ///                         Community = new[]
+    ///                         {
+    ///                             "internet",
+    ///                         },
+    ///                         LocalPreference = 100,
+    ///                         Metric = 20,
+    ///                         MetricType = "type1",
+    ///                         OmpTag = 200,
+    ///                         Origin = "EGP",
+    ///                         OspfTag = 1200,
+    ///                         Weight = 2200,
+    ///                         Ipv4NextHop = "10.0.0.1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

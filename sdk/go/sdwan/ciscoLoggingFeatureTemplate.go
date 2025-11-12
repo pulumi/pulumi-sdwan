@@ -17,6 +17,69 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoLoggingFeatureTemplate(ctx, "example", &sdwan.CiscoLoggingFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				DiskLogging:  pulumi.Bool(true),
+//				MaxSize:      pulumi.Int(10),
+//				LogRotations: pulumi.Int(10),
+//				TlsProfiles: sdwan.CiscoLoggingFeatureTemplateTlsProfileArray{
+//					&sdwan.CiscoLoggingFeatureTemplateTlsProfileArgs{
+//						Name:               pulumi.String("PROF1"),
+//						Version:            pulumi.String("TLSv1.2"),
+//						AuthenticationType: pulumi.String("Server"),
+//						CiphersuiteList: []string{
+//							"aes-128-cbc-sha",
+//						},
+//					},
+//				},
+//				Ipv4Servers: sdwan.CiscoLoggingFeatureTemplateIpv4ServerArray{
+//					&sdwan.CiscoLoggingFeatureTemplateIpv4ServerArgs{
+//						HostnameIp:      pulumi.String("2.2.2.2"),
+//						VpnId:           pulumi.Int(1),
+//						SourceInterface: pulumi.String("e1"),
+//						LoggingLevel:    pulumi.String("information"),
+//						EnableTls:       pulumi.Bool(true),
+//						CustomProfile:   pulumi.Bool(true),
+//						Profile:         pulumi.String("PROF1"),
+//					},
+//				},
+//				Ipv6Servers: sdwan.CiscoLoggingFeatureTemplateIpv6ServerArray{
+//					&sdwan.CiscoLoggingFeatureTemplateIpv6ServerArgs{
+//						HostnameIp:      pulumi.String("2001::1"),
+//						VpnId:           pulumi.Int(1),
+//						SourceInterface: pulumi.String("e1"),
+//						LoggingLevel:    pulumi.String("information"),
+//						EnableTls:       pulumi.Bool(true),
+//						CustomProfile:   pulumi.Bool(true),
+//						Profile:         pulumi.String("PROF1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

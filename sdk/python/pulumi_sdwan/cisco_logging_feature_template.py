@@ -497,6 +497,43 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoLoggingFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            disk_logging=True,
+            max_size=10,
+            log_rotations=10,
+            tls_profiles=[{
+                "name": "PROF1",
+                "version": "TLSv1.2",
+                "authentication_type": "Server",
+                "ciphersuite_list": ["aes-128-cbc-sha"],
+            }],
+            ipv4_servers=[{
+                "hostname_ip": "2.2.2.2",
+                "vpn_id": 1,
+                "source_interface": "e1",
+                "logging_level": "information",
+                "enable_tls": True,
+                "custom_profile": True,
+                "profile": "PROF1",
+            }],
+            ipv6_servers=[{
+                "hostname_ip": "2001::1",
+                "vpn_id": 1,
+                "source_interface": "e1",
+                "logging_level": "information",
+                "enable_tls": True,
+                "custom_profile": True,
+                "profile": "PROF1",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -537,6 +574,43 @@ class CiscoLoggingFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoLoggingFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            disk_logging=True,
+            max_size=10,
+            log_rotations=10,
+            tls_profiles=[{
+                "name": "PROF1",
+                "version": "TLSv1.2",
+                "authentication_type": "Server",
+                "ciphersuite_list": ["aes-128-cbc-sha"],
+            }],
+            ipv4_servers=[{
+                "hostname_ip": "2.2.2.2",
+                "vpn_id": 1,
+                "source_interface": "e1",
+                "logging_level": "information",
+                "enable_tls": True,
+                "custom_profile": True,
+                "profile": "PROF1",
+            }],
+            ipv6_servers=[{
+                "hostname_ip": "2001::1",
+                "vpn_id": 1,
+                "source_interface": "e1",
+                "logging_level": "information",
+                "enable_tls": True,
+                "custom_profile": True,
+                "profile": "PROF1",
+            }])
+        ```
 
         ## Import
 

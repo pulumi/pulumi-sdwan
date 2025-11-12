@@ -42,6 +42,210 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoVpnFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoVpnFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateDnsIpv4ServerArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateDnsIpv6ServerArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateDnsHostArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateServiceArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateIpv4StaticRouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateIpv6StaticRouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateNat64PoolArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateNatPoolArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateStaticNatRuleArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplatePortForwardRuleArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteGlobalImportArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteVpnImportArgs;
+ * import com.pulumi.sdwan.inputs.CiscoVpnFeatureTemplateRouteGlobalExportArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoVpnFeatureTemplate("example", CiscoVpnFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .vpnId(1)
+ *             .vpnName("VPN1")
+ *             .tenantVpnId(1)
+ *             .organizationName("org1")
+ *             .ompAdminDistanceIpv4(10)
+ *             .ompAdminDistanceIpv6(10)
+ *             .enhanceEcmpKeying(true)
+ *             .dnsIpv4Servers(CiscoVpnFeatureTemplateDnsIpv4ServerArgs.builder()
+ *                 .address("9.9.9.9")
+ *                 .role("primary")
+ *                 .build())
+ *             .dnsIpv6Servers(CiscoVpnFeatureTemplateDnsIpv6ServerArgs.builder()
+ *                 .address("2001::9")
+ *                 .role("primary")
+ *                 .build())
+ *             .dnsHosts(CiscoVpnFeatureTemplateDnsHostArgs.builder()
+ *                 .hostname("abc1")
+ *                 .ip(List.of("7.7.7.7"))
+ *                 .build())
+ *             .services(CiscoVpnFeatureTemplateServiceArgs.builder()
+ *                 .serviceTypes("FW")
+ *                 .address(List.of("8.8.8.8"))
+ *                 .interface_("e1")
+ *                 .trackEnable(true)
+ *                 .build())
+ *             .ipv4StaticServiceRoutes(CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs.builder()
+ *                 .prefix("2.2.2.0/24")
+ *                 .vpnId(2)
+ *                 .service("sig")
+ *                 .build())
+ *             .ipv4StaticRoutes(CiscoVpnFeatureTemplateIpv4StaticRouteArgs.builder()
+ *                 .prefix("3.3.3.0/24")
+ *                 .null0(false)
+ *                 .distance(10)
+ *                 .vpnId(5)
+ *                 .dhcp(false)
+ *                 .nextHops(CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs.builder()
+ *                     .address("11.1.1.1")
+ *                     .distance(20)
+ *                     .build())
+ *                 .trackNextHops(CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs.builder()
+ *                     .address("12.1.1.1")
+ *                     .distance(20)
+ *                     .tracker("tracker1")
+ *                     .build())
+ *                 .build())
+ *             .ipv6StaticRoutes(CiscoVpnFeatureTemplateIpv6StaticRouteArgs.builder()
+ *                 .prefix("2001::/48")
+ *                 .null0(false)
+ *                 .vpnId(5)
+ *                 .nat("NAT64")
+ *                 .nextHops(CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs.builder()
+ *                     .address("2001::11")
+ *                     .distance(20)
+ *                     .build())
+ *                 .build())
+ *             .ipv4StaticGreRoutes(CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs.builder()
+ *                 .prefix("3.3.3.0/24")
+ *                 .vpnId(2)
+ *                 .interfaces("e1")
+ *                 .build())
+ *             .ipv4StaticIpsecRoutes(CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs.builder()
+ *                 .prefix("4.4.4.0/24")
+ *                 .vpnId(2)
+ *                 .interfaces("e1")
+ *                 .build())
+ *             .ompAdvertiseIpv4Routes(CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs.builder()
+ *                 .protocol("bgp")
+ *                 .routePolicy("rp1")
+ *                 .protocolSubType(List.of("external"))
+ *                 .prefixes(CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs.builder()
+ *                     .prefixEntry("1.1.1.0/24")
+ *                     .aggregateOnly(true)
+ *                     .build())
+ *                 .build())
+ *             .ompAdvertiseIpv6Routes(CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs.builder()
+ *                 .protocol("bgp")
+ *                 .routePolicy("rp1")
+ *                 .protocolSubType(List.of("external"))
+ *                 .prefixes(CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs.builder()
+ *                     .prefixEntry("2001:2::/48")
+ *                     .aggregateOnly(true)
+ *                     .build())
+ *                 .build())
+ *             .nat64Pools(CiscoVpnFeatureTemplateNat64PoolArgs.builder()
+ *                 .name("POOL1")
+ *                 .startAddress("100.1.1.1")
+ *                 .endAddress("100.1.2.255")
+ *                 .overload(true)
+ *                 .leakFromGlobal(true)
+ *                 .leakFromGlobalProtocol("rip")
+ *                 .leakToGlobal(true)
+ *                 .build())
+ *             .natPools(CiscoVpnFeatureTemplateNatPoolArgs.builder()
+ *                 .name(1)
+ *                 .prefixLength(24)
+ *                 .rangeStart("101.1.1.1")
+ *                 .rangeEnd("101.1.2.255")
+ *                 .overload(true)
+ *                 .direction("inside")
+ *                 .trackerId(10)
+ *                 .build())
+ *             .staticNatRules(CiscoVpnFeatureTemplateStaticNatRuleArgs.builder()
+ *                 .poolName(1)
+ *                 .sourceIp("10.1.1.1")
+ *                 .translateIp("105.1.1.1")
+ *                 .staticNatDirection("inside")
+ *                 .trackerId(10)
+ *                 .build())
+ *             .staticNatSubnetRules(CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs.builder()
+ *                 .sourceIpSubnet("10.2.1.0")
+ *                 .translateIpSubnet("105.2.1.0")
+ *                 .prefixLength(24)
+ *                 .staticNatDirection("inside")
+ *                 .trackerId(10)
+ *                 .build())
+ *             .portForwardRules(CiscoVpnFeatureTemplatePortForwardRuleArgs.builder()
+ *                 .poolName(1)
+ *                 .sourcePort(5000)
+ *                 .translatePort(6000)
+ *                 .sourceIp("10.3.1.1")
+ *                 .translateIp("120.3.1.1")
+ *                 .protocol("tcp")
+ *                 .build())
+ *             .routeGlobalImports(CiscoVpnFeatureTemplateRouteGlobalImportArgs.builder()
+ *                 .protocol("ospf")
+ *                 .protocolSubType(List.of("external"))
+ *                 .routePolicy("policy1")
+ *                 .redistributes(CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs.builder()
+ *                     .protocol("bgp")
+ *                     .routePolicy("policy1")
+ *                     .build())
+ *                 .build())
+ *             .routeVpnImports(CiscoVpnFeatureTemplateRouteVpnImportArgs.builder()
+ *                 .sourceVpnId(5)
+ *                 .protocol("ospf")
+ *                 .protocolSubType(List.of("external"))
+ *                 .routePolicy("policy1")
+ *                 .redistributes(CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs.builder()
+ *                     .protocol("bgp")
+ *                     .routePolicy("policy1")
+ *                     .build())
+ *                 .build())
+ *             .routeGlobalExports(CiscoVpnFeatureTemplateRouteGlobalExportArgs.builder()
+ *                 .protocol("ospf")
+ *                 .protocolSubType(List.of("external"))
+ *                 .routePolicy("policy1")
+ *                 .redistributes(CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs.builder()
+ *                     .protocol("bgp")
+ *                     .routePolicy("policy1")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

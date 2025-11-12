@@ -15,6 +15,69 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoLoggingFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         DiskLogging = true,
+    ///         MaxSize = 10,
+    ///         LogRotations = 10,
+    ///         TlsProfiles = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateTlsProfileArgs
+    ///             {
+    ///                 Name = "PROF1",
+    ///                 Version = "TLSv1.2",
+    ///                 AuthenticationType = "Server",
+    ///                 CiphersuiteList = new[]
+    ///                 {
+    ///                     "aes-128-cbc-sha",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateIpv4ServerArgs
+    ///             {
+    ///                 HostnameIp = "2.2.2.2",
+    ///                 VpnId = 1,
+    ///                 SourceInterface = "e1",
+    ///                 LoggingLevel = "information",
+    ///                 EnableTls = true,
+    ///                 CustomProfile = true,
+    ///                 Profile = "PROF1",
+    ///             },
+    ///         },
+    ///         Ipv6Servers = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoLoggingFeatureTemplateIpv6ServerArgs
+    ///             {
+    ///                 HostnameIp = "2001::1",
+    ///                 VpnId = 1,
+    ///                 SourceInterface = "e1",
+    ///                 LoggingLevel = "information",
+    ///                 EnableTls = true,
+    ///                 CustomProfile = true,
+    ///                 Profile = "PROF1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

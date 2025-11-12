@@ -16,6 +16,60 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTlsSslDecryptionPolicyDefinition(ctx, "example", &sdwan.TlsSslDecryptionPolicyDefinitionArgs{
+//				Name:          pulumi.String("Example"),
+//				Description:   pulumi.String("My description"),
+//				Mode:          pulumi.String("security"),
+//				DefaultAction: pulumi.String("noIntent"),
+//				NetworkRules: sdwan.TlsSslDecryptionPolicyDefinitionNetworkRuleArray{
+//					&sdwan.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs{
+//						BaseAction: pulumi.String("doNotDecrypt"),
+//						RuleId:     pulumi.Int(4),
+//						RuleName:   pulumi.String("Example"),
+//						RuleType:   pulumi.String("sslDecryption"),
+//						SourceAndDestinationConfiguration: []map[string]interface{}{
+//							map[string]interface{}{
+//								"option": "destinationIp",
+//								"value":  "10.0.0.0/12",
+//							},
+//						},
+//					},
+//				},
+//				SslDecryptionEnabled:        pulumi.String("true"),
+//				ExpiredCertificate:          pulumi.String("drop"),
+//				UntrustedCertificate:        pulumi.String("drop"),
+//				CertificateRevocationStatus: pulumi.String("none"),
+//				UnknownRevocationStatus:     pulumi.String("drop"),
+//				UnsupportedProtocolVersions: pulumi.String("drop"),
+//				UnsupportedCipherSuites:     pulumi.String("drop"),
+//				FailureMode:                 pulumi.String("close"),
+//				RsaKeyPairModulus:           pulumi.String("2048"),
+//				EcKeyType:                   pulumi.String("P384"),
+//				CertificateLifetimeInDays:   pulumi.Int(1),
+//				MinimalTlsVersion:           pulumi.String("TLSv1.2"),
+//				UseDefaultCaCertBundle:      pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

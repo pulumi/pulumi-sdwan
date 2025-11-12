@@ -15,6 +15,45 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.PolicyObjectPreferredColorGroup("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         Entries = new[]
+    ///         {
+    ///             new Sdwan.Inputs.PolicyObjectPreferredColorGroupEntryArgs
+    ///             {
+    ///                 PrimaryColorPreference = new[]
+    ///                 {
+    ///                     "default",
+    ///                 },
+    ///                 PrimaryPathPreference = "direct-path",
+    ///                 SecondaryColorPreference = new[]
+    ///                 {
+    ///                     "bronze",
+    ///                 },
+    ///                 SecondaryPathPreference = "all-paths",
+    ///                 TertiaryColorPreference = new[]
+    ///                 {
+    ///                     "blue",
+    ///                 },
+    ///                 TertiaryPathPreference = "all-paths",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

@@ -15,6 +15,122 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.SystemAaaFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         AuthenticationGroup = true,
+    ///         AccountingGroup = true,
+    ///         ServerAuthOrders = new[]
+    ///         {
+    ///             "local",
+    ///         },
+    ///         Users = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureUserArgs
+    ///             {
+    ///                 Name = "User1",
+    ///                 Password = "cisco123",
+    ///                 Privilege = "15",
+    ///                 PublicKeys = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemAaaFeatureUserPublicKeyArgs
+    ///                     {
+    ///                         KeyString = "AAAAB3NzaC1yc2",
+    ///                         KeyType = "ssh-rsa",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         RadiusGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureRadiusGroupArgs
+    ///             {
+    ///                 GroupName = "RGROUP1",
+    ///                 Vpn = 10,
+    ///                 SourceInterface = "GigabitEthernet0",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemAaaFeatureRadiusGroupServerArgs
+    ///                     {
+    ///                         Address = "1.2.3.4",
+    ///                         AuthPort = 1812,
+    ///                         AcctPort = 1813,
+    ///                         Timeout = 5,
+    ///                         Retransmit = 3,
+    ///                         Key = "cisco123",
+    ///                         SecretKey = "cisco123",
+    ///                         KeyEnum = "7",
+    ///                         KeyType = "key",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         TacacsGroups = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureTacacsGroupArgs
+    ///             {
+    ///                 GroupName = "TGROUP1",
+    ///                 Vpn = 10,
+    ///                 SourceInterface = "GigabitEthernet0",
+    ///                 Servers = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.SystemAaaFeatureTacacsGroupServerArgs
+    ///                     {
+    ///                         Address = "1.2.3.4",
+    ///                         Port = 49,
+    ///                         Timeout = 5,
+    ///                         Key = "cisco123",
+    ///                         SecretKey = "cisco123",
+    ///                         KeyEnum = "7",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         AccountingRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureAccountingRuleArgs
+    ///             {
+    ///                 RuleId = "1",
+    ///                 Method = "commands",
+    ///                 Level = "15",
+    ///                 StartStop = true,
+    ///                 Group = new[]
+    ///                 {
+    ///                     "RGROUP1",
+    ///                 },
+    ///             },
+    ///         },
+    ///         AuthorizationConsole = true,
+    ///         AuthorizationConfigCommands = true,
+    ///         AuthorizationRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.SystemAaaFeatureAuthorizationRuleArgs
+    ///             {
+    ///                 RuleId = "1",
+    ///                 Method = "commands",
+    ///                 Level = "15",
+    ///                 Group = new[]
+    ///                 {
+    ///                     "RGROUP1",
+    ///                 },
+    ///                 IfAuthenticated = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

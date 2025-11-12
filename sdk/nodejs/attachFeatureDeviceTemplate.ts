@@ -11,6 +11,24 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.AttachFeatureDeviceTemplate("example", {
+ *     id: DT1.id,
+ *     devices: [{
+ *         id: "C8K-CC678D1C-8EDF-3966-4F51-ABFAB64F5ABE",
+ *         variables: {
+ *             systemSiteId: "1001",
+ *             systemSystemIp: "1.1.1.1",
+ *             systemHostName: "router1",
+ *             vpnIfNameDefaultVEdgeDHCPTunnelInterface: "GigabitEthernet1",
+ *         },
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

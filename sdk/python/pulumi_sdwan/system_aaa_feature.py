@@ -638,6 +638,73 @@ class SystemAaaFeature(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemAaaFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            authentication_group=True,
+            accounting_group=True,
+            server_auth_orders=["local"],
+            users=[{
+                "name": "User1",
+                "password": "cisco123",
+                "privilege": "15",
+                "public_keys": [{
+                    "key_string": "AAAAB3NzaC1yc2",
+                    "key_type": "ssh-rsa",
+                }],
+            }],
+            radius_groups=[{
+                "group_name": "RGROUP1",
+                "vpn": 10,
+                "source_interface": "GigabitEthernet0",
+                "servers": [{
+                    "address": "1.2.3.4",
+                    "auth_port": 1812,
+                    "acct_port": 1813,
+                    "timeout": 5,
+                    "retransmit": 3,
+                    "key": "cisco123",
+                    "secret_key": "cisco123",
+                    "key_enum": "7",
+                    "key_type": "key",
+                }],
+            }],
+            tacacs_groups=[{
+                "group_name": "TGROUP1",
+                "vpn": 10,
+                "source_interface": "GigabitEthernet0",
+                "servers": [{
+                    "address": "1.2.3.4",
+                    "port": 49,
+                    "timeout": 5,
+                    "key": "cisco123",
+                    "secret_key": "cisco123",
+                    "key_enum": "7",
+                }],
+            }],
+            accounting_rules=[{
+                "rule_id": "1",
+                "method": "commands",
+                "level": "15",
+                "start_stop": True,
+                "group": ["RGROUP1"],
+            }],
+            authorization_console=True,
+            authorization_config_commands=True,
+            authorization_rules=[{
+                "rule_id": "1",
+                "method": "commands",
+                "level": "15",
+                "group": ["RGROUP1"],
+                "if_authenticated": True,
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -683,6 +750,73 @@ class SystemAaaFeature(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.SystemAaaFeature("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            authentication_group=True,
+            accounting_group=True,
+            server_auth_orders=["local"],
+            users=[{
+                "name": "User1",
+                "password": "cisco123",
+                "privilege": "15",
+                "public_keys": [{
+                    "key_string": "AAAAB3NzaC1yc2",
+                    "key_type": "ssh-rsa",
+                }],
+            }],
+            radius_groups=[{
+                "group_name": "RGROUP1",
+                "vpn": 10,
+                "source_interface": "GigabitEthernet0",
+                "servers": [{
+                    "address": "1.2.3.4",
+                    "auth_port": 1812,
+                    "acct_port": 1813,
+                    "timeout": 5,
+                    "retransmit": 3,
+                    "key": "cisco123",
+                    "secret_key": "cisco123",
+                    "key_enum": "7",
+                    "key_type": "key",
+                }],
+            }],
+            tacacs_groups=[{
+                "group_name": "TGROUP1",
+                "vpn": 10,
+                "source_interface": "GigabitEthernet0",
+                "servers": [{
+                    "address": "1.2.3.4",
+                    "port": 49,
+                    "timeout": 5,
+                    "key": "cisco123",
+                    "secret_key": "cisco123",
+                    "key_enum": "7",
+                }],
+            }],
+            accounting_rules=[{
+                "rule_id": "1",
+                "method": "commands",
+                "level": "15",
+                "start_stop": True,
+                "group": ["RGROUP1"],
+            }],
+            authorization_console=True,
+            authorization_config_commands=True,
+            authorization_rules=[{
+                "rule_id": "1",
+                "method": "commands",
+                "level": "15",
+                "group": ["RGROUP1"],
+                "if_authenticated": True,
+            }])
+        ```
 
         ## Import
 

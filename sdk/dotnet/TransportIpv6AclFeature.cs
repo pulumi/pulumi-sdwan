@@ -15,6 +15,63 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TransportIpv6AclFeature("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         FeatureProfileId = "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+    ///         DefaultAction = "drop",
+    ///         Sequences = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TransportIpv6AclFeatureSequenceArgs
+    ///             {
+    ///                 SequenceId = 1,
+    ///                 SequenceName = "AccessControlList1",
+    ///                 MatchEntries = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportIpv6AclFeatureSequenceMatchEntryArgs
+    ///                     {
+    ///                         NextHeader = 10,
+    ///                         PacketLength = "1500",
+    ///                         SourcePorts = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs
+    ///                             {
+    ///                                 Port = "8000",
+    ///                             },
+    ///                         },
+    ///                         TcpState = "syn",
+    ///                         TrafficClass = new[]
+    ///                         {
+    ///                             10,
+    ///                         },
+    ///                     },
+    ///                 },
+    ///                 Actions = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.TransportIpv6AclFeatureSequenceActionArgs
+    ///                     {
+    ///                         AcceptCounterName = "COUNTER_1",
+    ///                         AcceptLog = false,
+    ///                         AcceptSetNextHop = "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+    ///                         AcceptTrafficClass = 10,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

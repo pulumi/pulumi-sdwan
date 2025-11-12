@@ -1440,6 +1440,129 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoBgpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            as_number="65000",
+            shutdown=True,
+            router_id="1.2.3.4",
+            propagate_aspath=True,
+            propagate_community=True,
+            ipv4_route_targets=[{
+                "vpn_id": 1,
+                "export": [{
+                    "asnIp": "10:100",
+                }],
+                "import_": [{
+                    "asnIp": "10:100",
+                }],
+            }],
+            ipv6_route_targets=[{
+                "vpn_id": 1,
+                "export": [{
+                    "asnIp": "10:100",
+                }],
+                "import_": [{
+                    "asnIp": "10:100",
+                }],
+            }],
+            mpls_interfaces=[{
+                "interface_name": "GigabitEthernet0",
+            }],
+            distance_external=30,
+            distance_internal=210,
+            distance_local=30,
+            keepalive=90,
+            holdtime=220,
+            always_compare_med=True,
+            deterministic_med=True,
+            missing_med_worst=True,
+            compare_router_id=True,
+            multipath_relax=True,
+            address_families=[{
+                "family_type": "ipv4-unicast",
+                "ipv4_aggregate_addresses": [{
+                    "prefix": "10.0.0.0/8",
+                    "as_set_path": True,
+                    "summary_only": True,
+                }],
+                "ipv4_networks": [{
+                    "prefix": "10.2.2.0/24",
+                }],
+                "maximum_paths": 8,
+                "default_information_originate": True,
+                "table_map_policy": "MAP1",
+                "table_map_filter": True,
+                "redistribute_routes": [{
+                    "protocol": "ospf",
+                    "route_policy": "POLICY1",
+                }],
+            }],
+            ipv4_neighbors=[{
+                "address": "10.2.2.2",
+                "description": "My neighbor",
+                "shutdown": True,
+                "remote_as": "65001",
+                "keepalive": 30,
+                "holdtime": 90,
+                "source_interface": "GigabitEthernet1",
+                "next_hop_self": True,
+                "send_community": False,
+                "send_ext_community": False,
+                "ebgp_multihop": 10,
+                "password": "cisco123",
+                "send_label": True,
+                "send_label_explicit": True,
+                "as_override": True,
+                "allow_as_in": 5,
+                "address_families": [{
+                    "family_type": "ipv4-unicast",
+                    "maximum_prefixes": 10000,
+                    "maximum_prefixes_threshold": 80,
+                    "maximum_prefixes_restart": 180,
+                    "maximum_prefixes_warning_only": True,
+                    "route_policies": [{
+                        "direction": "in",
+                        "policy_name": "POLICY1",
+                    }],
+                }],
+            }],
+            ipv6_neighbors=[{
+                "address": "2001:1::1",
+                "description": "My neighbor",
+                "shutdown": True,
+                "remote_as": "65001",
+                "keepalive": 30,
+                "holdtime": 90,
+                "source_interface": "GigabitEthernet1",
+                "next_hop_self": True,
+                "send_community": False,
+                "send_ext_community": False,
+                "ebgp_multihop": 10,
+                "password": "cisco123",
+                "send_label": True,
+                "send_label_explicit": True,
+                "as_override": True,
+                "allow_as_in": 5,
+                "address_families": [{
+                    "family_type": "ipv6-unicast",
+                    "maximum_prefixes": 10000,
+                    "maximum_prefixes_threshold": 80,
+                    "maximum_prefixes_restart": 180,
+                    "maximum_prefixes_warning_only": True,
+                    "route_policies": [{
+                        "direction": "in",
+                        "policy_name": "POLICY1",
+                    }],
+                }],
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -1520,6 +1643,129 @@ class CiscoBgpFeatureTemplate(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `15.0.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.CiscoBgpFeatureTemplate("example",
+            name="Example",
+            description="My Example",
+            device_types=["vedge-C8000V"],
+            as_number="65000",
+            shutdown=True,
+            router_id="1.2.3.4",
+            propagate_aspath=True,
+            propagate_community=True,
+            ipv4_route_targets=[{
+                "vpn_id": 1,
+                "export": [{
+                    "asnIp": "10:100",
+                }],
+                "import_": [{
+                    "asnIp": "10:100",
+                }],
+            }],
+            ipv6_route_targets=[{
+                "vpn_id": 1,
+                "export": [{
+                    "asnIp": "10:100",
+                }],
+                "import_": [{
+                    "asnIp": "10:100",
+                }],
+            }],
+            mpls_interfaces=[{
+                "interface_name": "GigabitEthernet0",
+            }],
+            distance_external=30,
+            distance_internal=210,
+            distance_local=30,
+            keepalive=90,
+            holdtime=220,
+            always_compare_med=True,
+            deterministic_med=True,
+            missing_med_worst=True,
+            compare_router_id=True,
+            multipath_relax=True,
+            address_families=[{
+                "family_type": "ipv4-unicast",
+                "ipv4_aggregate_addresses": [{
+                    "prefix": "10.0.0.0/8",
+                    "as_set_path": True,
+                    "summary_only": True,
+                }],
+                "ipv4_networks": [{
+                    "prefix": "10.2.2.0/24",
+                }],
+                "maximum_paths": 8,
+                "default_information_originate": True,
+                "table_map_policy": "MAP1",
+                "table_map_filter": True,
+                "redistribute_routes": [{
+                    "protocol": "ospf",
+                    "route_policy": "POLICY1",
+                }],
+            }],
+            ipv4_neighbors=[{
+                "address": "10.2.2.2",
+                "description": "My neighbor",
+                "shutdown": True,
+                "remote_as": "65001",
+                "keepalive": 30,
+                "holdtime": 90,
+                "source_interface": "GigabitEthernet1",
+                "next_hop_self": True,
+                "send_community": False,
+                "send_ext_community": False,
+                "ebgp_multihop": 10,
+                "password": "cisco123",
+                "send_label": True,
+                "send_label_explicit": True,
+                "as_override": True,
+                "allow_as_in": 5,
+                "address_families": [{
+                    "family_type": "ipv4-unicast",
+                    "maximum_prefixes": 10000,
+                    "maximum_prefixes_threshold": 80,
+                    "maximum_prefixes_restart": 180,
+                    "maximum_prefixes_warning_only": True,
+                    "route_policies": [{
+                        "direction": "in",
+                        "policy_name": "POLICY1",
+                    }],
+                }],
+            }],
+            ipv6_neighbors=[{
+                "address": "2001:1::1",
+                "description": "My neighbor",
+                "shutdown": True,
+                "remote_as": "65001",
+                "keepalive": 30,
+                "holdtime": 90,
+                "source_interface": "GigabitEthernet1",
+                "next_hop_self": True,
+                "send_community": False,
+                "send_ext_community": False,
+                "ebgp_multihop": 10,
+                "password": "cisco123",
+                "send_label": True,
+                "send_label_explicit": True,
+                "as_override": True,
+                "allow_as_in": 5,
+                "address_families": [{
+                    "family_type": "ipv6-unicast",
+                    "maximum_prefixes": 10000,
+                    "maximum_prefixes_threshold": 80,
+                    "maximum_prefixes_restart": 180,
+                    "maximum_prefixes_warning_only": True,
+                    "route_policies": [{
+                        "direction": "in",
+                        "policy_name": "POLICY1",
+                    }],
+                }],
+            }])
+        ```
 
         ## Import
 

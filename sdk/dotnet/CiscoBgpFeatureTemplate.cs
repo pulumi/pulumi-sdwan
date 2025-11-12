@@ -15,6 +15,208 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.CiscoBgpFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         AsNumber = "65000",
+    ///         Shutdown = true,
+    ///         RouterId = "1.2.3.4",
+    ///         PropagateAspath = true,
+    ///         PropagateCommunity = true,
+    ///         Ipv4RouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv4RouteTargetArgs
+    ///             {
+    ///                 VpnId = 1,
+    ///                 Export = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "asnIp", "10:100" },
+    ///                     },
+    ///                 },
+    ///                 Import = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "asnIp", "10:100" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6RouteTargets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv6RouteTargetArgs
+    ///             {
+    ///                 VpnId = 1,
+    ///                 Export = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "asnIp", "10:100" },
+    ///                     },
+    ///                 },
+    ///                 Import = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "asnIp", "10:100" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         MplsInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateMplsInterfaceArgs
+    ///             {
+    ///                 InterfaceName = "GigabitEthernet0",
+    ///             },
+    ///         },
+    ///         DistanceExternal = 30,
+    ///         DistanceInternal = 210,
+    ///         DistanceLocal = 30,
+    ///         Keepalive = 90,
+    ///         Holdtime = 220,
+    ///         AlwaysCompareMed = true,
+    ///         DeterministicMed = true,
+    ///         MissingMedWorst = true,
+    ///         CompareRouterId = true,
+    ///         MultipathRelax = true,
+    ///         AddressFamilies = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateAddressFamilyArgs
+    ///             {
+    ///                 FamilyType = "ipv4-unicast",
+    ///                 Ipv4AggregateAddresses = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs
+    ///                     {
+    ///                         Prefix = "10.0.0.0/8",
+    ///                         AsSetPath = true,
+    ///                         SummaryOnly = true,
+    ///                     },
+    ///                 },
+    ///                 Ipv4Networks = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs
+    ///                     {
+    ///                         Prefix = "10.2.2.0/24",
+    ///                     },
+    ///                 },
+    ///                 MaximumPaths = 8,
+    ///                 DefaultInformationOriginate = true,
+    ///                 TableMapPolicy = "MAP1",
+    ///                 TableMapFilter = true,
+    ///                 RedistributeRoutes = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs
+    ///                     {
+    ///                         Protocol = "ospf",
+    ///                         RoutePolicy = "POLICY1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv4Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv4NeighborArgs
+    ///             {
+    ///                 Address = "10.2.2.2",
+    ///                 Description = "My neighbor",
+    ///                 Shutdown = true,
+    ///                 RemoteAs = "65001",
+    ///                 Keepalive = 30,
+    ///                 Holdtime = 90,
+    ///                 SourceInterface = "GigabitEthernet1",
+    ///                 NextHopSelf = true,
+    ///                 SendCommunity = false,
+    ///                 SendExtCommunity = false,
+    ///                 EbgpMultihop = 10,
+    ///                 Password = "cisco123",
+    ///                 SendLabel = true,
+    ///                 SendLabelExplicit = true,
+    ///                 AsOverride = true,
+    ///                 AllowAsIn = 5,
+    ///                 AddressFamilies = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs
+    ///                     {
+    ///                         FamilyType = "ipv4-unicast",
+    ///                         MaximumPrefixes = 10000,
+    ///                         MaximumPrefixesThreshold = 80,
+    ///                         MaximumPrefixesRestart = 180,
+    ///                         MaximumPrefixesWarningOnly = true,
+    ///                         RoutePolicies = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs
+    ///                             {
+    ///                                 Direction = "in",
+    ///                                 PolicyName = "POLICY1",
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Ipv6Neighbors = new[]
+    ///         {
+    ///             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv6NeighborArgs
+    ///             {
+    ///                 Address = "2001:1::1",
+    ///                 Description = "My neighbor",
+    ///                 Shutdown = true,
+    ///                 RemoteAs = "65001",
+    ///                 Keepalive = 30,
+    ///                 Holdtime = 90,
+    ///                 SourceInterface = "GigabitEthernet1",
+    ///                 NextHopSelf = true,
+    ///                 SendCommunity = false,
+    ///                 SendExtCommunity = false,
+    ///                 EbgpMultihop = 10,
+    ///                 Password = "cisco123",
+    ///                 SendLabel = true,
+    ///                 SendLabelExplicit = true,
+    ///                 AsOverride = true,
+    ///                 AllowAsIn = 5,
+    ///                 AddressFamilies = new[]
+    ///                 {
+    ///                     new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs
+    ///                     {
+    ///                         FamilyType = "ipv6-unicast",
+    ///                         MaximumPrefixes = 10000,
+    ///                         MaximumPrefixesThreshold = 80,
+    ///                         MaximumPrefixesRestart = 180,
+    ///                         MaximumPrefixesWarningOnly = true,
+    ///                         RoutePolicies = new[]
+    ///                         {
+    ///                             new Sdwan.Inputs.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs
+    ///                             {
+    ///                                 Direction = "in",
+    ///                                 PolicyName = "POLICY1",
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

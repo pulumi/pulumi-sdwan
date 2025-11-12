@@ -12,6 +12,44 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoLoggingFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     diskLogging: true,
+ *     maxSize: 10,
+ *     logRotations: 10,
+ *     tlsProfiles: [{
+ *         name: "PROF1",
+ *         version: "TLSv1.2",
+ *         authenticationType: "Server",
+ *         ciphersuiteList: ["aes-128-cbc-sha"],
+ *     }],
+ *     ipv4Servers: [{
+ *         hostnameIp: "2.2.2.2",
+ *         vpnId: 1,
+ *         sourceInterface: "e1",
+ *         loggingLevel: "information",
+ *         enableTls: true,
+ *         customProfile: true,
+ *         profile: "PROF1",
+ *     }],
+ *     ipv6Servers: [{
+ *         hostnameIp: "2001::1",
+ *         vpnId: 1,
+ *         sourceInterface: "e1",
+ *         loggingLevel: "information",
+ *         enableTls: true,
+ *         customProfile: true,
+ *         profile: "PROF1",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

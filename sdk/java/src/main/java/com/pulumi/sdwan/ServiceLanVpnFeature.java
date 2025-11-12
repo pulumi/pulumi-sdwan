@@ -43,6 +43,146 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.ServiceLanVpnFeature;
+ * import com.pulumi.sdwan.ServiceLanVpnFeatureArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureHostMappingArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4StaticRouteArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6StaticRouteArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureServiceArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureServiceRouteArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureGreRouteArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpsecRouteArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNatPoolArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNatPortForwardArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureStaticNatArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNat64V4PoolArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4ImportRouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4ExportRouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6ImportRouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6ExportRouteTargetArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ServiceLanVpnFeature("example", ServiceLanVpnFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .vpn(1)
+ *             .configDescription("VPN1")
+ *             .ompAdminDistanceIpv4(1)
+ *             .ompAdminDistanceIpv6(1)
+ *             .enableSdwanRemoteAccess(false)
+ *             .primaryDnsAddressIpv4("1.2.3.4")
+ *             .secondaryDnsAddressIpv4("2.3.4.5")
+ *             .primaryDnsAddressIpv6("2001:0:0:1::0")
+ *             .secondaryDnsAddressIpv6("2001:0:0:2::0")
+ *             .hostMappings(ServiceLanVpnFeatureHostMappingArgs.builder()
+ *                 .hostName("HOSTMAPPING1")
+ *                 .listOfIps("1.2.3.4")
+ *                 .build())
+ *             .ipv4StaticRoutes(ServiceLanVpnFeatureIpv4StaticRouteArgs.builder()
+ *                 .networkAddress("1.2.3.4")
+ *                 .subnetMask("0.0.0.0")
+ *                 .gateway("nextHop")
+ *                 .nextHops(ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs.builder()
+ *                     .address("1.2.3.4")
+ *                     .administrativeDistance(1)
+ *                     .build())
+ *                 .build())
+ *             .ipv6StaticRoutes(ServiceLanVpnFeatureIpv6StaticRouteArgs.builder()
+ *                 .prefix("2001:0:0:1::0/12")
+ *                 .gateway("nextHop")
+ *                 .nextHops(ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs.builder()
+ *                     .address("2001:0:0:1::0")
+ *                     .administrativeDistance(1)
+ *                     .build())
+ *                 .build())
+ *             .services(ServiceLanVpnFeatureServiceArgs.builder()
+ *                 .serviceType("FW")
+ *                 .ipv4Addresses("1.2.3.4")
+ *                 .tracking(true)
+ *                 .build())
+ *             .serviceRoutes(ServiceLanVpnFeatureServiceRouteArgs.builder()
+ *                 .networkAddress("1.2.3.4")
+ *                 .subnetMask("0.0.0.0")
+ *                 .service("SIG")
+ *                 .vpn(0)
+ *                 .build())
+ *             .greRoutes(ServiceLanVpnFeatureGreRouteArgs.builder()
+ *                 .networkAddress("1.2.3.4")
+ *                 .subnetMask("0.0.0.0")
+ *                 .interface_(List.of("gre01"))
+ *                 .vpn(0)
+ *                 .build())
+ *             .ipsecRoutes(ServiceLanVpnFeatureIpsecRouteArgs.builder()
+ *                 .networkAddress("1.2.3.4")
+ *                 .subnetMask("0.0.0.0")
+ *                 .interface_(List.of("ipsec01"))
+ *                 .build())
+ *             .natPools(ServiceLanVpnFeatureNatPoolArgs.builder()
+ *                 .natPoolName(1)
+ *                 .prefixLength(3)
+ *                 .rangeStart("1.2.3.4")
+ *                 .rangeEnd("2.3.4.5")
+ *                 .overload(true)
+ *                 .direction("inside")
+ *                 .build())
+ *             .natPortForwards(ServiceLanVpnFeatureNatPortForwardArgs.builder()
+ *                 .natPoolName(2)
+ *                 .sourcePort(122)
+ *                 .translatePort(330)
+ *                 .sourceIp("1.2.3.4")
+ *                 .translatedSourceIp("2.3.4.5")
+ *                 .protocol("TCP")
+ *                 .build())
+ *             .staticNats(ServiceLanVpnFeatureStaticNatArgs.builder()
+ *                 .natPoolName(3)
+ *                 .sourceIp("1.2.3.4")
+ *                 .translatedSourceIp("2.3.4.5")
+ *                 .staticNatDirection("inside")
+ *                 .build())
+ *             .nat64V4Pools(ServiceLanVpnFeatureNat64V4PoolArgs.builder()
+ *                 .name("NATPOOL1")
+ *                 .rangeStart("1.2.3.4")
+ *                 .rangeEnd("2.3.4.5")
+ *                 .overload(false)
+ *                 .build())
+ *             .ipv4ImportRouteTargets(ServiceLanVpnFeatureIpv4ImportRouteTargetArgs.builder()
+ *                 .routeTarget("1.1.1.3:200")
+ *                 .build())
+ *             .ipv4ExportRouteTargets(ServiceLanVpnFeatureIpv4ExportRouteTargetArgs.builder()
+ *                 .routeTarget("1.1.1.3:200")
+ *                 .build())
+ *             .ipv6ImportRouteTargets(ServiceLanVpnFeatureIpv6ImportRouteTargetArgs.builder()
+ *                 .routeTarget("1.1.1.3:200")
+ *                 .build())
+ *             .ipv6ExportRouteTargets(ServiceLanVpnFeatureIpv6ExportRouteTargetArgs.builder()
+ *                 .routeTarget("1.1.1.3:200")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
