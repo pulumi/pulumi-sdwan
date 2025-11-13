@@ -24,6 +24,75 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SwitchportFeatureTemplate;
+ * import com.pulumi.sdwan.SwitchportFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.SwitchportFeatureTemplateInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.SwitchportFeatureTemplateStaticMacAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchportFeatureTemplate("example", SwitchportFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .slot(0)
+ *             .subSlot(0)
+ *             .moduleType("4")
+ *             .interfaces(SwitchportFeatureTemplateInterfaceArgs.builder()
+ *                 .name("GigabitEthernet0/0/0")
+ *                 .switchportMode("access")
+ *                 .shutdown(true)
+ *                 .speed("100")
+ *                 .duplex("full")
+ *                 .switchportAccessVlan(100)
+ *                 .switchportTrunkAllowedVlans("100,200")
+ *                 .switchportTrunkNativeVlan(100)
+ *                 .dot1xEnable(true)
+ *                 .dot1xPortControl("auto")
+ *                 .dot1xAuthenticationOrder(List.of("dot1x"))
+ *                 .voiceVlan(200)
+ *                 .dot1xPaeEnable(true)
+ *                 .dot1xMacAuthenticationBypass(true)
+ *                 .dot1xHostMode("multi-domain")
+ *                 .dot1xEnablePeriodicReauth(true)
+ *                 .dot1xPeriodicReauthInactivityTimeout(100)
+ *                 .dot1xPeriodicReauthInterval(60)
+ *                 .dot1xControlDirection("both")
+ *                 .dot1xRestrictedVlan(100)
+ *                 .dot1xGuestVlan(101)
+ *                 .dot1xCriticalVlan(102)
+ *                 .dot1xEnableCriticialVoiceVlan(true)
+ *                 .build())
+ *             .ageOutTime(500)
+ *             .staticMacAddresses(SwitchportFeatureTemplateStaticMacAddressArgs.builder()
+ *                 .macAddress("0000.0000.0000")
+ *                 .ifName("GigabitEthernet0/0/0")
+ *                 .vlan(100)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

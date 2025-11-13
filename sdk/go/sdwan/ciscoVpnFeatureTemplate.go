@@ -17,6 +17,258 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoVpnFeatureTemplate(ctx, "example", &sdwan.CiscoVpnFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				VpnId:                pulumi.Int(1),
+//				VpnName:              pulumi.String("VPN1"),
+//				TenantVpnId:          pulumi.Int(1),
+//				OrganizationName:     pulumi.String("org1"),
+//				OmpAdminDistanceIpv4: pulumi.Int(10),
+//				OmpAdminDistanceIpv6: pulumi.Int(10),
+//				EnhanceEcmpKeying:    pulumi.Bool(true),
+//				DnsIpv4Servers: sdwan.CiscoVpnFeatureTemplateDnsIpv4ServerArray{
+//					&sdwan.CiscoVpnFeatureTemplateDnsIpv4ServerArgs{
+//						Address: pulumi.String("9.9.9.9"),
+//						Role:    pulumi.String("primary"),
+//					},
+//				},
+//				DnsIpv6Servers: sdwan.CiscoVpnFeatureTemplateDnsIpv6ServerArray{
+//					&sdwan.CiscoVpnFeatureTemplateDnsIpv6ServerArgs{
+//						Address: pulumi.String("2001::9"),
+//						Role:    pulumi.String("primary"),
+//					},
+//				},
+//				DnsHosts: sdwan.CiscoVpnFeatureTemplateDnsHostArray{
+//					&sdwan.CiscoVpnFeatureTemplateDnsHostArgs{
+//						Hostname: pulumi.String("abc1"),
+//						Ip: []string{
+//							"7.7.7.7",
+//						},
+//					},
+//				},
+//				Services: sdwan.CiscoVpnFeatureTemplateServiceArray{
+//					&sdwan.CiscoVpnFeatureTemplateServiceArgs{
+//						ServiceTypes: pulumi.String("FW"),
+//						Address: []string{
+//							"8.8.8.8",
+//						},
+//						Interface:   pulumi.String("e1"),
+//						TrackEnable: pulumi.Bool(true),
+//					},
+//				},
+//				Ipv4StaticServiceRoutes: sdwan.CiscoVpnFeatureTemplateIpv4StaticServiceRouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateIpv4StaticServiceRouteArgs{
+//						Prefix:  pulumi.String("2.2.2.0/24"),
+//						VpnId:   pulumi.Int(2),
+//						Service: pulumi.String("sig"),
+//					},
+//				},
+//				Ipv4StaticRoutes: sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteArgs{
+//						Prefix:   pulumi.String("3.3.3.0/24"),
+//						Null0:    pulumi.Bool(false),
+//						Distance: pulumi.Int(10),
+//						VpnId:    pulumi.Int(5),
+//						Dhcp:     pulumi.Bool(false),
+//						NextHops: sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArray{
+//							&sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteNextHopArgs{
+//								Address:  pulumi.String("11.1.1.1"),
+//								Distance: pulumi.Int(20),
+//							},
+//						},
+//						TrackNextHops: sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArray{
+//							&sdwan.CiscoVpnFeatureTemplateIpv4StaticRouteTrackNextHopArgs{
+//								Address:  pulumi.String("12.1.1.1"),
+//								Distance: pulumi.Int(20),
+//								Tracker:  pulumi.String("tracker1"),
+//							},
+//						},
+//					},
+//				},
+//				Ipv6StaticRoutes: sdwan.CiscoVpnFeatureTemplateIpv6StaticRouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateIpv6StaticRouteArgs{
+//						Prefix: pulumi.String("2001::/48"),
+//						Null0:  pulumi.Bool(false),
+//						VpnId:  pulumi.Int(5),
+//						Nat:    pulumi.String("NAT64"),
+//						NextHops: sdwan.CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArray{
+//							&sdwan.CiscoVpnFeatureTemplateIpv6StaticRouteNextHopArgs{
+//								Address:  pulumi.String("2001::11"),
+//								Distance: pulumi.Int(20),
+//							},
+//						},
+//					},
+//				},
+//				Ipv4StaticGreRoutes: sdwan.CiscoVpnFeatureTemplateIpv4StaticGreRouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateIpv4StaticGreRouteArgs{
+//						Prefix: pulumi.String("3.3.3.0/24"),
+//						VpnId:  pulumi.Int(2),
+//						Interfaces: pulumi.StringArray{
+//							pulumi.String("e1"),
+//						},
+//					},
+//				},
+//				Ipv4StaticIpsecRoutes: sdwan.CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateIpv4StaticIpsecRouteArgs{
+//						Prefix: pulumi.String("4.4.4.0/24"),
+//						VpnId:  pulumi.Int(2),
+//						Interfaces: pulumi.StringArray{
+//							pulumi.String("e1"),
+//						},
+//					},
+//				},
+//				OmpAdvertiseIpv4Routes: sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RouteArgs{
+//						Protocol:    pulumi.String("bgp"),
+//						RoutePolicy: pulumi.String("rp1"),
+//						ProtocolSubType: []string{
+//							"external",
+//						},
+//						Prefixes: sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArray{
+//							&sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv4RoutePrefixArgs{
+//								PrefixEntry:   pulumi.String("1.1.1.0/24"),
+//								AggregateOnly: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//				OmpAdvertiseIpv6Routes: sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArray{
+//					&sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RouteArgs{
+//						Protocol:    pulumi.String("bgp"),
+//						RoutePolicy: pulumi.String("rp1"),
+//						ProtocolSubType: []string{
+//							"external",
+//						},
+//						Prefixes: sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArray{
+//							&sdwan.CiscoVpnFeatureTemplateOmpAdvertiseIpv6RoutePrefixArgs{
+//								PrefixEntry:   pulumi.String("2001:2::/48"),
+//								AggregateOnly: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//				Nat64Pools: sdwan.CiscoVpnFeatureTemplateNat64PoolArray{
+//					&sdwan.CiscoVpnFeatureTemplateNat64PoolArgs{
+//						Name:                   pulumi.String("POOL1"),
+//						StartAddress:           pulumi.String("100.1.1.1"),
+//						EndAddress:             pulumi.String("100.1.2.255"),
+//						Overload:               pulumi.Bool(true),
+//						LeakFromGlobal:         pulumi.Bool(true),
+//						LeakFromGlobalProtocol: pulumi.String("rip"),
+//						LeakToGlobal:           pulumi.Bool(true),
+//					},
+//				},
+//				NatPools: sdwan.CiscoVpnFeatureTemplateNatPoolArray{
+//					&sdwan.CiscoVpnFeatureTemplateNatPoolArgs{
+//						Name:         pulumi.Int(1),
+//						PrefixLength: pulumi.Int(24),
+//						RangeStart:   pulumi.String("101.1.1.1"),
+//						RangeEnd:     pulumi.String("101.1.2.255"),
+//						Overload:     pulumi.Bool(true),
+//						Direction:    pulumi.String("inside"),
+//						TrackerId:    pulumi.Int(10),
+//					},
+//				},
+//				StaticNatRules: sdwan.CiscoVpnFeatureTemplateStaticNatRuleArray{
+//					&sdwan.CiscoVpnFeatureTemplateStaticNatRuleArgs{
+//						PoolName:           pulumi.Int(1),
+//						SourceIp:           pulumi.String("10.1.1.1"),
+//						TranslateIp:        pulumi.String("105.1.1.1"),
+//						StaticNatDirection: pulumi.String("inside"),
+//						TrackerId:          pulumi.Int(10),
+//					},
+//				},
+//				StaticNatSubnetRules: sdwan.CiscoVpnFeatureTemplateStaticNatSubnetRuleArray{
+//					&sdwan.CiscoVpnFeatureTemplateStaticNatSubnetRuleArgs{
+//						SourceIpSubnet:     pulumi.String("10.2.1.0"),
+//						TranslateIpSubnet:  pulumi.String("105.2.1.0"),
+//						PrefixLength:       pulumi.Int(24),
+//						StaticNatDirection: pulumi.String("inside"),
+//						TrackerId:          pulumi.Int(10),
+//					},
+//				},
+//				PortForwardRules: sdwan.CiscoVpnFeatureTemplatePortForwardRuleArray{
+//					&sdwan.CiscoVpnFeatureTemplatePortForwardRuleArgs{
+//						PoolName:      pulumi.Int(1),
+//						SourcePort:    pulumi.Int(5000),
+//						TranslatePort: pulumi.Int(6000),
+//						SourceIp:      pulumi.String("10.3.1.1"),
+//						TranslateIp:   pulumi.String("120.3.1.1"),
+//						Protocol:      pulumi.String("tcp"),
+//					},
+//				},
+//				RouteGlobalImports: sdwan.CiscoVpnFeatureTemplateRouteGlobalImportArray{
+//					&sdwan.CiscoVpnFeatureTemplateRouteGlobalImportArgs{
+//						Protocol: pulumi.String("ospf"),
+//						ProtocolSubType: []string{
+//							"external",
+//						},
+//						RoutePolicy: pulumi.String("policy1"),
+//						Redistributes: sdwan.CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArray{
+//							&sdwan.CiscoVpnFeatureTemplateRouteGlobalImportRedistributeArgs{
+//								Protocol:    pulumi.String("bgp"),
+//								RoutePolicy: pulumi.String("policy1"),
+//							},
+//						},
+//					},
+//				},
+//				RouteVpnImports: sdwan.CiscoVpnFeatureTemplateRouteVpnImportArray{
+//					&sdwan.CiscoVpnFeatureTemplateRouteVpnImportArgs{
+//						SourceVpnId: pulumi.Int(5),
+//						Protocol:    pulumi.String("ospf"),
+//						ProtocolSubType: []string{
+//							"external",
+//						},
+//						RoutePolicy: pulumi.String("policy1"),
+//						Redistributes: sdwan.CiscoVpnFeatureTemplateRouteVpnImportRedistributeArray{
+//							&sdwan.CiscoVpnFeatureTemplateRouteVpnImportRedistributeArgs{
+//								Protocol:    pulumi.String("bgp"),
+//								RoutePolicy: pulumi.String("policy1"),
+//							},
+//						},
+//					},
+//				},
+//				RouteGlobalExports: sdwan.CiscoVpnFeatureTemplateRouteGlobalExportArray{
+//					&sdwan.CiscoVpnFeatureTemplateRouteGlobalExportArgs{
+//						Protocol: pulumi.String("ospf"),
+//						ProtocolSubType: []string{
+//							"external",
+//						},
+//						RoutePolicy: pulumi.String("policy1"),
+//						Redistributes: sdwan.CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArray{
+//							&sdwan.CiscoVpnFeatureTemplateRouteGlobalExportRedistributeArgs{
+//								Protocol:    pulumi.String("bgp"),
+//								RoutePolicy: pulumi.String("policy1"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

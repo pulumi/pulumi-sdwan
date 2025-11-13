@@ -15,6 +15,164 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.VpnInterfaceMultilinkFeatureTemplate("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My Example",
+    ///         DeviceTypes = new[]
+    ///         {
+    ///             "vedge-C8000V",
+    ///         },
+    ///         InterfaceName = "Example",
+    ///         MultilinkGroupNumber = 2147483,
+    ///         InterfaceDescription = "My Description",
+    ///         Ipv4Address = "1.2.3.4",
+    ///         Ipv6Address = "2001:0:0:1::/64",
+    ///         Ipv6AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL1",
+    ///             },
+    ///         },
+    ///         PppAuthenticationProtocol = "chap",
+    ///         PppAuthenticationProtocolPap = false,
+    ///         ChapHostname = "chap-example",
+    ///         ChapPppAuthPassword = "myPassword",
+    ///         PapUsername = "pap-username",
+    ///         PapPassword = true,
+    ///         PapPppAuthPassword = "myPassword",
+    ///         PppAuthenticationType = "callin",
+    ///         EnableCoreRegion = true,
+    ///         CoreRegion = "core",
+    ///         SecondaryRegion = "off",
+    ///         TunnelInterfaceEncapsulations = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs
+    ///             {
+    ///                 Encapsulation = "gre",
+    ///                 Preference = 4294967,
+    ///                 Weight = 250,
+    ///             },
+    ///         },
+    ///         TunnelInterfaceGroups = new[]
+    ///         {
+    ///             42949672,
+    ///         },
+    ///         TunnelInterfaceBorder = true,
+    ///         PerTunnelQos = true,
+    ///         PerTunnelQosAggregator = false,
+    ///         TunnelQosMode = "spoke",
+    ///         TunnelInterfaceColor = "custom1",
+    ///         TunnelInterfaceLastResortCircuit = false,
+    ///         TunnelInterfaceLowBandwidthLink = false,
+    ///         TunnelInterfaceTunnelTcpMss = 1460,
+    ///         TunnelInterfaceClearDontFragment = false,
+    ///         TunnelInterfaceNetworkBroadcast = false,
+    ///         TunnelInterfaceMaxControlConnections = 8,
+    ///         TunnelInterfaceControlConnections = true,
+    ///         TunnelInterfaceVbondAsStunServer = false,
+    ///         TunnelInterfaceExcludeControllerGroupLists = new[]
+    ///         {
+    ///             100,
+    ///         },
+    ///         TunnelInterfaceVmanageConnectionPreference = 5,
+    ///         TunnelInterfacePortHop = false,
+    ///         TunnelInterfaceColorRestrict = false,
+    ///         TunnelInterfaceCarrier = "carrier1",
+    ///         TunnelInterfaceNatRefreshInterval = 15,
+    ///         TunnelInterfaceHelloInterval = 1000,
+    ///         TunnelInterfaceHelloTolerance = 12,
+    ///         TunnelInterfaceBindLoopbackTunnel = "12",
+    ///         TunnelInterfaceAllowAll = false,
+    ///         TunnelInterfaceAllowBgp = false,
+    ///         TunnelInterfaceAllowDhcp = true,
+    ///         TunnelInterfaceAllowDns = true,
+    ///         TunnelInterfaceAllowIcmp = true,
+    ///         TunnelInterfaceAllowSsh = false,
+    ///         TunnelInterfaceAllowNtp = false,
+    ///         TunnelInterfaceAllowNetconf = false,
+    ///         TunnelInterfaceAllowOspf = false,
+    ///         TunnelInterfaceAllowStun = false,
+    ///         TunnelInterfaceAllowSnmp = false,
+    ///         TunnelInterfaceAllowHttps = true,
+    ///         DisableFragmentation = true,
+    ///         FragmentMaxDelay = 1,
+    ///         InterleavingFragment = false,
+    ///         ClearDontFragmentBit = false,
+    ///         PmtuDiscovery = false,
+    ///         IpMtu = 1500,
+    ///         StaticIngressQos = 6,
+    ///         TcpMss = 720,
+    ///         TlocExtension = "tloc",
+    ///         Shutdown = true,
+    ///         Autonegotiate = true,
+    ///         ShapingRate = 10000000,
+    ///         QosMap = "test",
+    ///         QosMapVpn = "test",
+    ///         BandwidthUpstream = 214748300,
+    ///         BandwidthDownstream = 214748300,
+    ///         WriteRule = "RULE1",
+    ///         AccessLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceMultilinkFeatureTemplateAccessListArgs
+    ///             {
+    ///                 Direction = "in",
+    ///                 AclName = "ACL2",
+    ///             },
+    ///         },
+    ///         MultilinkInterfaces = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs
+    ///             {
+    ///                 InterfaceType = "E1",
+    ///                 Slot = "interface-t1",
+    ///                 Framing = "example-framing",
+    ///                 LineMode = "primary",
+    ///                 Internal = false,
+    ///                 Description = "example-interface",
+    ///                 Linecode = "ami",
+    ///                 SetLengthForLong = "100",
+    ///                 SetLengthForShort = "100",
+    ///                 ChannelGroupList = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "channelGroup", 30 },
+    ///                         { "timeSlot", new[]
+    ///                         {
+    ///                             "example",
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         NimInterfaceLists = new[]
+    ///         {
+    ///             new Sdwan.Inputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs
+    ///             {
+    ///                 NimSerialInterfaceType = "2T",
+    ///                 InterfaceName = "nim-interface",
+    ///                 InterfaceDescription = "My Description",
+    ///                 Bandwidth = 21474836,
+    ///                 ClockRate = 120000,
+    ///                 EncapsulationSerial = "hdlc",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

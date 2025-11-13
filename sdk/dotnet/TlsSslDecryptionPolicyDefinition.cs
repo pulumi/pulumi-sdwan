@@ -14,6 +14,56 @@ namespace Pulumi.Sdwan
     /// 
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Sdwan = Pulumi.Sdwan;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Sdwan.TlsSslDecryptionPolicyDefinition("example", new()
+    ///     {
+    ///         Name = "Example",
+    ///         Description = "My description",
+    ///         Mode = "security",
+    ///         DefaultAction = "noIntent",
+    ///         NetworkRules = new[]
+    ///         {
+    ///             new Sdwan.Inputs.TlsSslDecryptionPolicyDefinitionNetworkRuleArgs
+    ///             {
+    ///                 BaseAction = "doNotDecrypt",
+    ///                 RuleId = 4,
+    ///                 RuleName = "Example",
+    ///                 RuleType = "sslDecryption",
+    ///                 SourceAndDestinationConfiguration = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "option", "destinationIp" },
+    ///                         { "value", "10.0.0.0/12" },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         SslDecryptionEnabled = "true",
+    ///         ExpiredCertificate = "drop",
+    ///         UntrustedCertificate = "drop",
+    ///         CertificateRevocationStatus = "none",
+    ///         UnknownRevocationStatus = "drop",
+    ///         UnsupportedProtocolVersions = "drop",
+    ///         UnsupportedCipherSuites = "drop",
+    ///         FailureMode = "close",
+    ///         RsaKeyPairModulus = "2048",
+    ///         EcKeyType = "P384",
+    ///         CertificateLifetimeInDays = 1,
+    ///         MinimalTlsVersion = "TLSv1.2",
+    ///         UseDefaultCaCertBundle = true,
+    ///     });
+    /// 
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// The `pulumi import` command can be used, for example:

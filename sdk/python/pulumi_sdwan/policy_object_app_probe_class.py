@@ -193,6 +193,23 @@ class PolicyObjectAppProbeClass(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectAppProbeClass("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "map": [{
+                    "color": "3g",
+                    "dscp": 45,
+                }],
+                "forwarding_class": "classlist1",
+            }])
+        ```
+
         ## Import
 
         The `pulumi import` command can be used, for example:
@@ -221,6 +238,23 @@ class PolicyObjectAppProbeClass(pulumi.CustomResource):
           - Minimum SD-WAN Manager version: `20.12.0`
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_sdwan as sdwan
+
+        example = sdwan.PolicyObjectAppProbeClass("example",
+            name="Example",
+            description="My Example",
+            feature_profile_id="f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+            entries=[{
+                "map": [{
+                    "color": "3g",
+                    "dscp": 45,
+                }],
+                "forwarding_class": "classlist1",
+            }])
+        ```
 
         ## Import
 

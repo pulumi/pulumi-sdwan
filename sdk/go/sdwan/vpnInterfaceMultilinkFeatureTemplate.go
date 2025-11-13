@@ -17,6 +17,156 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewVpnInterfaceMultilinkFeatureTemplate(ctx, "example", &sdwan.VpnInterfaceMultilinkFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				InterfaceName:        pulumi.String("Example"),
+//				MultilinkGroupNumber: pulumi.Int(2147483),
+//				InterfaceDescription: pulumi.String("My Description"),
+//				Ipv4Address:          pulumi.String("1.2.3.4"),
+//				Ipv6Address:          pulumi.String("2001:0:0:1::/64"),
+//				Ipv6AccessLists: sdwan.VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArray{
+//					&sdwan.VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs{
+//						Direction: pulumi.String("in"),
+//						AclName:   pulumi.String("ACL1"),
+//					},
+//				},
+//				PppAuthenticationProtocol:    pulumi.String("chap"),
+//				PppAuthenticationProtocolPap: pulumi.Bool(false),
+//				ChapHostname:                 pulumi.String("chap-example"),
+//				ChapPppAuthPassword:          pulumi.String("myPassword"),
+//				PapUsername:                  pulumi.String("pap-username"),
+//				PapPassword:                  pulumi.Bool(true),
+//				PapPppAuthPassword:           pulumi.String("myPassword"),
+//				PppAuthenticationType:        pulumi.String("callin"),
+//				EnableCoreRegion:             pulumi.Bool(true),
+//				CoreRegion:                   pulumi.String("core"),
+//				SecondaryRegion:              pulumi.String("off"),
+//				TunnelInterfaceEncapsulations: sdwan.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArray{
+//					&sdwan.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs{
+//						Encapsulation: pulumi.String("gre"),
+//						Preference:    pulumi.Int(4294967),
+//						Weight:        pulumi.Int(250),
+//					},
+//				},
+//				TunnelInterfaceGroups: pulumi.IntArray{
+//					pulumi.Int(42949672),
+//				},
+//				TunnelInterfaceBorder:                pulumi.Bool(true),
+//				PerTunnelQos:                         pulumi.Bool(true),
+//				PerTunnelQosAggregator:               pulumi.Bool(false),
+//				TunnelQosMode:                        pulumi.String("spoke"),
+//				TunnelInterfaceColor:                 pulumi.String("custom1"),
+//				TunnelInterfaceLastResortCircuit:     pulumi.Bool(false),
+//				TunnelInterfaceLowBandwidthLink:      pulumi.Bool(false),
+//				TunnelInterfaceTunnelTcpMss:          pulumi.Int(1460),
+//				TunnelInterfaceClearDontFragment:     pulumi.Bool(false),
+//				TunnelInterfaceNetworkBroadcast:      pulumi.Bool(false),
+//				TunnelInterfaceMaxControlConnections: pulumi.Int(8),
+//				TunnelInterfaceControlConnections:    pulumi.Bool(true),
+//				TunnelInterfaceVbondAsStunServer:     pulumi.Bool(false),
+//				TunnelInterfaceExcludeControllerGroupLists: pulumi.IntArray{
+//					pulumi.Int(100),
+//				},
+//				TunnelInterfaceVmanageConnectionPreference: pulumi.Int(5),
+//				TunnelInterfacePortHop:                     pulumi.Bool(false),
+//				TunnelInterfaceColorRestrict:               pulumi.Bool(false),
+//				TunnelInterfaceCarrier:                     pulumi.String("carrier1"),
+//				TunnelInterfaceNatRefreshInterval:          pulumi.Int(15),
+//				TunnelInterfaceHelloInterval:               pulumi.Int(1000),
+//				TunnelInterfaceHelloTolerance:              pulumi.Int(12),
+//				TunnelInterfaceBindLoopbackTunnel:          pulumi.String("12"),
+//				TunnelInterfaceAllowAll:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowBgp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowDhcp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowDns:                    pulumi.Bool(true),
+//				TunnelInterfaceAllowIcmp:                   pulumi.Bool(true),
+//				TunnelInterfaceAllowSsh:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowNtp:                    pulumi.Bool(false),
+//				TunnelInterfaceAllowNetconf:                pulumi.Bool(false),
+//				TunnelInterfaceAllowOspf:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowStun:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowSnmp:                   pulumi.Bool(false),
+//				TunnelInterfaceAllowHttps:                  pulumi.Bool(true),
+//				DisableFragmentation:                       pulumi.Bool(true),
+//				FragmentMaxDelay:                           pulumi.Int(1),
+//				InterleavingFragment:                       pulumi.Bool(false),
+//				ClearDontFragmentBit:                       pulumi.Bool(false),
+//				PmtuDiscovery:                              pulumi.Bool(false),
+//				IpMtu:                                      pulumi.Int(1500),
+//				StaticIngressQos:                           pulumi.Int(6),
+//				TcpMss:                                     pulumi.Int(720),
+//				TlocExtension:                              pulumi.String("tloc"),
+//				Shutdown:                                   pulumi.Bool(true),
+//				Autonegotiate:                              pulumi.Bool(true),
+//				ShapingRate:                                pulumi.Int(10000000),
+//				QosMap:                                     pulumi.String("test"),
+//				QosMapVpn:                                  pulumi.String("test"),
+//				BandwidthUpstream:                          pulumi.Int(214748300),
+//				BandwidthDownstream:                        pulumi.Int(214748300),
+//				WriteRule:                                  pulumi.String("RULE1"),
+//				AccessLists: sdwan.VpnInterfaceMultilinkFeatureTemplateAccessListArray{
+//					&sdwan.VpnInterfaceMultilinkFeatureTemplateAccessListArgs{
+//						Direction: pulumi.String("in"),
+//						AclName:   pulumi.String("ACL2"),
+//					},
+//				},
+//				MultilinkInterfaces: sdwan.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArray{
+//					&sdwan.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs{
+//						InterfaceType:     pulumi.String("E1"),
+//						Slot:              pulumi.String("interface-t1"),
+//						Framing:           pulumi.String("example-framing"),
+//						LineMode:          pulumi.String("primary"),
+//						Internal:          pulumi.Bool(false),
+//						Description:       pulumi.String("example-interface"),
+//						Linecode:          pulumi.String("ami"),
+//						SetLengthForLong:  pulumi.String("100"),
+//						SetLengthForShort: pulumi.String("100"),
+//						ChannelGroupList: []map[string]interface{}{
+//							map[string]interface{}{
+//								"channelGroup": 30,
+//								"timeSlot": []string{
+//									"example",
+//								},
+//							},
+//						},
+//					},
+//				},
+//				NimInterfaceLists: sdwan.VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArray{
+//					&sdwan.VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs{
+//						NimSerialInterfaceType: pulumi.String("2T"),
+//						InterfaceName:          pulumi.String("nim-interface"),
+//						InterfaceDescription:   pulumi.String("My Description"),
+//						Bandwidth:              pulumi.Int(21474836),
+//						ClockRate:              pulumi.Int(120000),
+//						EncapsulationSerial:    pulumi.String("hdlc"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

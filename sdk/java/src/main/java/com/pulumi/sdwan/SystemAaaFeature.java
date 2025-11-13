@@ -28,6 +28,101 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.SystemAaaFeature;
+ * import com.pulumi.sdwan.SystemAaaFeatureArgs;
+ * import com.pulumi.sdwan.inputs.SystemAaaFeatureUserArgs;
+ * import com.pulumi.sdwan.inputs.SystemAaaFeatureRadiusGroupArgs;
+ * import com.pulumi.sdwan.inputs.SystemAaaFeatureTacacsGroupArgs;
+ * import com.pulumi.sdwan.inputs.SystemAaaFeatureAccountingRuleArgs;
+ * import com.pulumi.sdwan.inputs.SystemAaaFeatureAuthorizationRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SystemAaaFeature("example", SystemAaaFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .authenticationGroup(true)
+ *             .accountingGroup(true)
+ *             .serverAuthOrders("local")
+ *             .users(SystemAaaFeatureUserArgs.builder()
+ *                 .name("User1")
+ *                 .password("cisco123")
+ *                 .privilege("15")
+ *                 .publicKeys(SystemAaaFeatureUserPublicKeyArgs.builder()
+ *                     .keyString("AAAAB3NzaC1yc2")
+ *                     .keyType("ssh-rsa")
+ *                     .build())
+ *                 .build())
+ *             .radiusGroups(SystemAaaFeatureRadiusGroupArgs.builder()
+ *                 .groupName("RGROUP1")
+ *                 .vpn(10)
+ *                 .sourceInterface("GigabitEthernet0")
+ *                 .servers(SystemAaaFeatureRadiusGroupServerArgs.builder()
+ *                     .address("1.2.3.4")
+ *                     .authPort(1812)
+ *                     .acctPort(1813)
+ *                     .timeout(5)
+ *                     .retransmit(3)
+ *                     .key("cisco123")
+ *                     .secretKey("cisco123")
+ *                     .keyEnum("7")
+ *                     .keyType("key")
+ *                     .build())
+ *                 .build())
+ *             .tacacsGroups(SystemAaaFeatureTacacsGroupArgs.builder()
+ *                 .groupName("TGROUP1")
+ *                 .vpn(10)
+ *                 .sourceInterface("GigabitEthernet0")
+ *                 .servers(SystemAaaFeatureTacacsGroupServerArgs.builder()
+ *                     .address("1.2.3.4")
+ *                     .port(49)
+ *                     .timeout(5)
+ *                     .key("cisco123")
+ *                     .secretKey("cisco123")
+ *                     .keyEnum("7")
+ *                     .build())
+ *                 .build())
+ *             .accountingRules(SystemAaaFeatureAccountingRuleArgs.builder()
+ *                 .ruleId("1")
+ *                 .method("commands")
+ *                 .level("15")
+ *                 .startStop(true)
+ *                 .group(List.of("RGROUP1"))
+ *                 .build())
+ *             .authorizationConsole(true)
+ *             .authorizationConfigCommands(true)
+ *             .authorizationRules(SystemAaaFeatureAuthorizationRuleArgs.builder()
+ *                 .ruleId("1")
+ *                 .method("commands")
+ *                 .level("15")
+ *                 .group(List.of("RGROUP1"))
+ *                 .ifAuthenticated(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

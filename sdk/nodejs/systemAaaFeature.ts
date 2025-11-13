@@ -12,6 +12,74 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SystemAaaFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     authenticationGroup: true,
+ *     accountingGroup: true,
+ *     serverAuthOrders: ["local"],
+ *     users: [{
+ *         name: "User1",
+ *         password: "cisco123",
+ *         privilege: "15",
+ *         publicKeys: [{
+ *             keyString: "AAAAB3NzaC1yc2",
+ *             keyType: "ssh-rsa",
+ *         }],
+ *     }],
+ *     radiusGroups: [{
+ *         groupName: "RGROUP1",
+ *         vpn: 10,
+ *         sourceInterface: "GigabitEthernet0",
+ *         servers: [{
+ *             address: "1.2.3.4",
+ *             authPort: 1812,
+ *             acctPort: 1813,
+ *             timeout: 5,
+ *             retransmit: 3,
+ *             key: "cisco123",
+ *             secretKey: "cisco123",
+ *             keyEnum: "7",
+ *             keyType: "key",
+ *         }],
+ *     }],
+ *     tacacsGroups: [{
+ *         groupName: "TGROUP1",
+ *         vpn: 10,
+ *         sourceInterface: "GigabitEthernet0",
+ *         servers: [{
+ *             address: "1.2.3.4",
+ *             port: 49,
+ *             timeout: 5,
+ *             key: "cisco123",
+ *             secretKey: "cisco123",
+ *             keyEnum: "7",
+ *         }],
+ *     }],
+ *     accountingRules: [{
+ *         ruleId: "1",
+ *         method: "commands",
+ *         level: "15",
+ *         startStop: true,
+ *         group: ["RGROUP1"],
+ *     }],
+ *     authorizationConsole: true,
+ *     authorizationConfigCommands: true,
+ *     authorizationRules: [{
+ *         ruleId: "1",
+ *         method: "commands",
+ *         level: "15",
+ *         group: ["RGROUP1"],
+ *         ifAuthenticated: true,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

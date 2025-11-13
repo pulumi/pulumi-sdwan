@@ -17,6 +17,111 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewSystemAaaFeature(ctx, "example", &sdwan.SystemAaaFeatureArgs{
+//				Name:                pulumi.String("Example"),
+//				Description:         pulumi.String("My Example"),
+//				FeatureProfileId:    pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				AuthenticationGroup: pulumi.Bool(true),
+//				AccountingGroup:     pulumi.Bool(true),
+//				ServerAuthOrders: pulumi.StringArray{
+//					pulumi.String("local"),
+//				},
+//				Users: sdwan.SystemAaaFeatureUserArray{
+//					&sdwan.SystemAaaFeatureUserArgs{
+//						Name:      pulumi.String("User1"),
+//						Password:  pulumi.String("cisco123"),
+//						Privilege: pulumi.String("15"),
+//						PublicKeys: sdwan.SystemAaaFeatureUserPublicKeyArray{
+//							&sdwan.SystemAaaFeatureUserPublicKeyArgs{
+//								KeyString: pulumi.String("AAAAB3NzaC1yc2"),
+//								KeyType:   pulumi.String("ssh-rsa"),
+//							},
+//						},
+//					},
+//				},
+//				RadiusGroups: sdwan.SystemAaaFeatureRadiusGroupArray{
+//					&sdwan.SystemAaaFeatureRadiusGroupArgs{
+//						GroupName:       pulumi.String("RGROUP1"),
+//						Vpn:             pulumi.Int(10),
+//						SourceInterface: pulumi.String("GigabitEthernet0"),
+//						Servers: sdwan.SystemAaaFeatureRadiusGroupServerArray{
+//							&sdwan.SystemAaaFeatureRadiusGroupServerArgs{
+//								Address:    pulumi.String("1.2.3.4"),
+//								AuthPort:   pulumi.Int(1812),
+//								AcctPort:   pulumi.Int(1813),
+//								Timeout:    pulumi.Int(5),
+//								Retransmit: pulumi.Int(3),
+//								Key:        pulumi.String("cisco123"),
+//								SecretKey:  pulumi.String("cisco123"),
+//								KeyEnum:    pulumi.String("7"),
+//								KeyType:    pulumi.String("key"),
+//							},
+//						},
+//					},
+//				},
+//				TacacsGroups: sdwan.SystemAaaFeatureTacacsGroupArray{
+//					&sdwan.SystemAaaFeatureTacacsGroupArgs{
+//						GroupName:       pulumi.String("TGROUP1"),
+//						Vpn:             pulumi.Int(10),
+//						SourceInterface: pulumi.String("GigabitEthernet0"),
+//						Servers: sdwan.SystemAaaFeatureTacacsGroupServerArray{
+//							&sdwan.SystemAaaFeatureTacacsGroupServerArgs{
+//								Address:   pulumi.String("1.2.3.4"),
+//								Port:      pulumi.Int(49),
+//								Timeout:   pulumi.Int(5),
+//								Key:       pulumi.String("cisco123"),
+//								SecretKey: pulumi.String("cisco123"),
+//								KeyEnum:   pulumi.String("7"),
+//							},
+//						},
+//					},
+//				},
+//				AccountingRules: sdwan.SystemAaaFeatureAccountingRuleArray{
+//					&sdwan.SystemAaaFeatureAccountingRuleArgs{
+//						RuleId:    pulumi.String("1"),
+//						Method:    pulumi.String("commands"),
+//						Level:     pulumi.String("15"),
+//						StartStop: pulumi.Bool(true),
+//						Group: []string{
+//							"RGROUP1",
+//						},
+//					},
+//				},
+//				AuthorizationConsole:        pulumi.Bool(true),
+//				AuthorizationConfigCommands: pulumi.Bool(true),
+//				AuthorizationRules: sdwan.SystemAaaFeatureAuthorizationRuleArray{
+//					&sdwan.SystemAaaFeatureAuthorizationRuleArgs{
+//						RuleId: pulumi.String("1"),
+//						Method: pulumi.String("commands"),
+//						Level:  pulumi.String("15"),
+//						Group: []string{
+//							"RGROUP1",
+//						},
+//						IfAuthenticated: pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:
