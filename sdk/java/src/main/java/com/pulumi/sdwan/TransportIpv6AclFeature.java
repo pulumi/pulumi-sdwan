@@ -23,6 +23,60 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.TransportIpv6AclFeature;
+ * import com.pulumi.sdwan.TransportIpv6AclFeatureArgs;
+ * import com.pulumi.sdwan.inputs.TransportIpv6AclFeatureSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new TransportIpv6AclFeature("example", TransportIpv6AclFeatureArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+ *             .defaultAction("drop")
+ *             .sequences(TransportIpv6AclFeatureSequenceArgs.builder()
+ *                 .sequenceId(1)
+ *                 .sequenceName("AccessControlList1")
+ *                 .matchEntries(TransportIpv6AclFeatureSequenceMatchEntryArgs.builder()
+ *                     .nextHeader(10)
+ *                     .packetLength("1500")
+ *                     .sourcePorts(TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs.builder()
+ *                         .port("8000")
+ *                         .build())
+ *                     .tcpState("syn")
+ *                     .trafficClass(List.of(10))
+ *                     .build())
+ *                 .actions(TransportIpv6AclFeatureSequenceActionArgs.builder()
+ *                     .acceptCounterName("COUNTER_1")
+ *                     .acceptLog(false)
+ *                     .acceptSetNextHop("2001:0db8:85a3:0000:0000:8a2e:0370:7334")
+ *                     .acceptTrafficClass(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

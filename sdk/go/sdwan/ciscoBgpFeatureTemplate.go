@@ -17,6 +17,181 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewCiscoBgpFeatureTemplate(ctx, "example", &sdwan.CiscoBgpFeatureTemplateArgs{
+//				Name:        pulumi.String("Example"),
+//				Description: pulumi.String("My Example"),
+//				DeviceTypes: pulumi.StringArray{
+//					pulumi.String("vedge-C8000V"),
+//				},
+//				AsNumber:           pulumi.String("65000"),
+//				Shutdown:           pulumi.Bool(true),
+//				RouterId:           pulumi.String("1.2.3.4"),
+//				PropagateAspath:    pulumi.Bool(true),
+//				PropagateCommunity: pulumi.Bool(true),
+//				Ipv4RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv4RouteTargetArgs{
+//						VpnId: pulumi.Int(1),
+//						Export: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//						Import: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//					},
+//				},
+//				Ipv6RouteTargets: sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv6RouteTargetArgs{
+//						VpnId: pulumi.Int(1),
+//						Export: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//						Import: []map[string]interface{}{
+//							map[string]interface{}{
+//								"asnIp": "10:100",
+//							},
+//						},
+//					},
+//				},
+//				MplsInterfaces: sdwan.CiscoBgpFeatureTemplateMplsInterfaceArray{
+//					&sdwan.CiscoBgpFeatureTemplateMplsInterfaceArgs{
+//						InterfaceName: pulumi.String("GigabitEthernet0"),
+//					},
+//				},
+//				DistanceExternal: pulumi.Int(30),
+//				DistanceInternal: pulumi.Int(210),
+//				DistanceLocal:    pulumi.Int(30),
+//				Keepalive:        pulumi.Int(90),
+//				Holdtime:         pulumi.Int(220),
+//				AlwaysCompareMed: pulumi.Bool(true),
+//				DeterministicMed: pulumi.Bool(true),
+//				MissingMedWorst:  pulumi.Bool(true),
+//				CompareRouterId:  pulumi.Bool(true),
+//				MultipathRelax:   pulumi.Bool(true),
+//				AddressFamilies: sdwan.CiscoBgpFeatureTemplateAddressFamilyArray{
+//					&sdwan.CiscoBgpFeatureTemplateAddressFamilyArgs{
+//						FamilyType: pulumi.String("ipv4-unicast"),
+//						Ipv4AggregateAddresses: sdwan.CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArray{
+//							&sdwan.CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs{
+//								Prefix:      pulumi.String("10.0.0.0/8"),
+//								AsSetPath:   pulumi.Bool(true),
+//								SummaryOnly: pulumi.Bool(true),
+//							},
+//						},
+//						Ipv4Networks: sdwan.CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArray{
+//							&sdwan.CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs{
+//								Prefix: pulumi.String("10.2.2.0/24"),
+//							},
+//						},
+//						MaximumPaths:                pulumi.Int(8),
+//						DefaultInformationOriginate: pulumi.Bool(true),
+//						TableMapPolicy:              pulumi.String("MAP1"),
+//						TableMapFilter:              pulumi.Bool(true),
+//						RedistributeRoutes: sdwan.CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArray{
+//							&sdwan.CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs{
+//								Protocol:    pulumi.String("ospf"),
+//								RoutePolicy: pulumi.String("POLICY1"),
+//							},
+//						},
+//					},
+//				},
+//				Ipv4Neighbors: sdwan.CiscoBgpFeatureTemplateIpv4NeighborArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv4NeighborArgs{
+//						Address:           pulumi.String("10.2.2.2"),
+//						Description:       pulumi.String("My neighbor"),
+//						Shutdown:          pulumi.Bool(true),
+//						RemoteAs:          pulumi.String("65001"),
+//						Keepalive:         pulumi.Int(30),
+//						Holdtime:          pulumi.Int(90),
+//						SourceInterface:   pulumi.String("GigabitEthernet1"),
+//						NextHopSelf:       pulumi.Bool(true),
+//						SendCommunity:     pulumi.Bool(false),
+//						SendExtCommunity:  pulumi.Bool(false),
+//						EbgpMultihop:      pulumi.Int(10),
+//						Password:          pulumi.String("cisco123"),
+//						SendLabel:         pulumi.Bool(true),
+//						SendLabelExplicit: pulumi.Bool(true),
+//						AsOverride:        pulumi.Bool(true),
+//						AllowAsIn:         pulumi.Int(5),
+//						AddressFamilies: sdwan.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArray{
+//							&sdwan.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs{
+//								FamilyType:                 pulumi.String("ipv4-unicast"),
+//								MaximumPrefixes:            pulumi.Int(10000),
+//								MaximumPrefixesThreshold:   pulumi.Int(80),
+//								MaximumPrefixesRestart:     pulumi.Int(180),
+//								MaximumPrefixesWarningOnly: pulumi.Bool(true),
+//								RoutePolicies: sdwan.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArray{
+//									&sdwan.CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs{
+//										Direction:  pulumi.String("in"),
+//										PolicyName: pulumi.String("POLICY1"),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//				Ipv6Neighbors: sdwan.CiscoBgpFeatureTemplateIpv6NeighborArray{
+//					&sdwan.CiscoBgpFeatureTemplateIpv6NeighborArgs{
+//						Address:           pulumi.String("2001:1::1"),
+//						Description:       pulumi.String("My neighbor"),
+//						Shutdown:          pulumi.Bool(true),
+//						RemoteAs:          pulumi.String("65001"),
+//						Keepalive:         pulumi.Int(30),
+//						Holdtime:          pulumi.Int(90),
+//						SourceInterface:   pulumi.String("GigabitEthernet1"),
+//						NextHopSelf:       pulumi.Bool(true),
+//						SendCommunity:     pulumi.Bool(false),
+//						SendExtCommunity:  pulumi.Bool(false),
+//						EbgpMultihop:      pulumi.Int(10),
+//						Password:          pulumi.String("cisco123"),
+//						SendLabel:         pulumi.Bool(true),
+//						SendLabelExplicit: pulumi.Bool(true),
+//						AsOverride:        pulumi.Bool(true),
+//						AllowAsIn:         pulumi.Int(5),
+//						AddressFamilies: sdwan.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArray{
+//							&sdwan.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs{
+//								FamilyType:                 pulumi.String("ipv6-unicast"),
+//								MaximumPrefixes:            pulumi.Int(10000),
+//								MaximumPrefixesThreshold:   pulumi.Int(80),
+//								MaximumPrefixesRestart:     pulumi.Int(180),
+//								MaximumPrefixesWarningOnly: pulumi.Bool(true),
+//								RoutePolicies: sdwan.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArray{
+//									&sdwan.CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs{
+//										Direction:  pulumi.String("in"),
+//										PolicyName: pulumi.String("POLICY1"),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

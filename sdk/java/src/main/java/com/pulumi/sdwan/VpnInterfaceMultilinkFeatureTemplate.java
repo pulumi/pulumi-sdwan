@@ -28,6 +28,148 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.VpnInterfaceMultilinkFeatureTemplate;
+ * import com.pulumi.sdwan.VpnInterfaceMultilinkFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateAccessListArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VpnInterfaceMultilinkFeatureTemplate("example", VpnInterfaceMultilinkFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .interfaceName("Example")
+ *             .multilinkGroupNumber(2147483)
+ *             .interfaceDescription("My Description")
+ *             .ipv4Address("1.2.3.4")
+ *             .ipv6Address("2001:0:0:1::/64")
+ *             .ipv6AccessLists(VpnInterfaceMultilinkFeatureTemplateIpv6AccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL1")
+ *                 .build())
+ *             .pppAuthenticationProtocol("chap")
+ *             .pppAuthenticationProtocolPap(false)
+ *             .chapHostname("chap-example")
+ *             .chapPppAuthPassword("myPassword")
+ *             .papUsername("pap-username")
+ *             .papPassword(true)
+ *             .papPppAuthPassword("myPassword")
+ *             .pppAuthenticationType("callin")
+ *             .enableCoreRegion(true)
+ *             .coreRegion("core")
+ *             .secondaryRegion("off")
+ *             .tunnelInterfaceEncapsulations(VpnInterfaceMultilinkFeatureTemplateTunnelInterfaceEncapsulationArgs.builder()
+ *                 .encapsulation("gre")
+ *                 .preference(4294967)
+ *                 .weight(250)
+ *                 .build())
+ *             .tunnelInterfaceGroups(42949672)
+ *             .tunnelInterfaceBorder(true)
+ *             .perTunnelQos(true)
+ *             .perTunnelQosAggregator(false)
+ *             .tunnelQosMode("spoke")
+ *             .tunnelInterfaceColor("custom1")
+ *             .tunnelInterfaceLastResortCircuit(false)
+ *             .tunnelInterfaceLowBandwidthLink(false)
+ *             .tunnelInterfaceTunnelTcpMss(1460)
+ *             .tunnelInterfaceClearDontFragment(false)
+ *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceMaxControlConnections(8)
+ *             .tunnelInterfaceControlConnections(true)
+ *             .tunnelInterfaceVbondAsStunServer(false)
+ *             .tunnelInterfaceExcludeControllerGroupLists(100)
+ *             .tunnelInterfaceVmanageConnectionPreference(5)
+ *             .tunnelInterfacePortHop(false)
+ *             .tunnelInterfaceColorRestrict(false)
+ *             .tunnelInterfaceCarrier("carrier1")
+ *             .tunnelInterfaceNatRefreshInterval(15)
+ *             .tunnelInterfaceHelloInterval(1000)
+ *             .tunnelInterfaceHelloTolerance(12)
+ *             .tunnelInterfaceBindLoopbackTunnel("12")
+ *             .tunnelInterfaceAllowAll(false)
+ *             .tunnelInterfaceAllowBgp(false)
+ *             .tunnelInterfaceAllowDhcp(true)
+ *             .tunnelInterfaceAllowDns(true)
+ *             .tunnelInterfaceAllowIcmp(true)
+ *             .tunnelInterfaceAllowSsh(false)
+ *             .tunnelInterfaceAllowNtp(false)
+ *             .tunnelInterfaceAllowNetconf(false)
+ *             .tunnelInterfaceAllowOspf(false)
+ *             .tunnelInterfaceAllowStun(false)
+ *             .tunnelInterfaceAllowSnmp(false)
+ *             .tunnelInterfaceAllowHttps(true)
+ *             .disableFragmentation(true)
+ *             .fragmentMaxDelay(1)
+ *             .interleavingFragment(false)
+ *             .clearDontFragmentBit(false)
+ *             .pmtuDiscovery(false)
+ *             .ipMtu(1500)
+ *             .staticIngressQos(6)
+ *             .tcpMss(720)
+ *             .tlocExtension("tloc")
+ *             .shutdown(true)
+ *             .autonegotiate(true)
+ *             .shapingRate(10000000)
+ *             .qosMap("test")
+ *             .qosMapVpn("test")
+ *             .bandwidthUpstream(214748300)
+ *             .bandwidthDownstream(214748300)
+ *             .writeRule("RULE1")
+ *             .accessLists(VpnInterfaceMultilinkFeatureTemplateAccessListArgs.builder()
+ *                 .direction("in")
+ *                 .aclName("ACL2")
+ *                 .build())
+ *             .multilinkInterfaces(VpnInterfaceMultilinkFeatureTemplateMultilinkInterfaceArgs.builder()
+ *                 .interfaceType("E1")
+ *                 .slot("interface-t1")
+ *                 .framing("example-framing")
+ *                 .lineMode("primary")
+ *                 .internal(false)
+ *                 .description("example-interface")
+ *                 .linecode("ami")
+ *                 .setLengthForLong("100")
+ *                 .setLengthForShort("100")
+ *                 .channelGroupList(List.of(Map.ofEntries(
+ *                     Map.entry("channelGroup", 30),
+ *                     Map.entry("timeSlot", List.of("example"))
+ *                 )))
+ *                 .build())
+ *             .nimInterfaceLists(VpnInterfaceMultilinkFeatureTemplateNimInterfaceListArgs.builder()
+ *                 .nimSerialInterfaceType("2T")
+ *                 .interfaceName("nim-interface")
+ *                 .interfaceDescription("My Description")
+ *                 .bandwidth(21474836)
+ *                 .clockRate(120000)
+ *                 .encapsulationSerial("hdlc")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:

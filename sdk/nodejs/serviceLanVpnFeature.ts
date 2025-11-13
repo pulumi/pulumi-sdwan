@@ -12,6 +12,109 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.ServiceLanVpnFeature("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     featureProfileId: "f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac",
+ *     vpn: 1,
+ *     configDescription: "VPN1",
+ *     ompAdminDistanceIpv4: 1,
+ *     ompAdminDistanceIpv6: 1,
+ *     enableSdwanRemoteAccess: false,
+ *     primaryDnsAddressIpv4: "1.2.3.4",
+ *     secondaryDnsAddressIpv4: "2.3.4.5",
+ *     primaryDnsAddressIpv6: "2001:0:0:1::0",
+ *     secondaryDnsAddressIpv6: "2001:0:0:2::0",
+ *     hostMappings: [{
+ *         hostName: "HOSTMAPPING1",
+ *         listOfIps: ["1.2.3.4"],
+ *     }],
+ *     ipv4StaticRoutes: [{
+ *         networkAddress: "1.2.3.4",
+ *         subnetMask: "0.0.0.0",
+ *         gateway: "nextHop",
+ *         nextHops: [{
+ *             address: "1.2.3.4",
+ *             administrativeDistance: 1,
+ *         }],
+ *     }],
+ *     ipv6StaticRoutes: [{
+ *         prefix: "2001:0:0:1::0/12",
+ *         gateway: "nextHop",
+ *         nextHops: [{
+ *             address: "2001:0:0:1::0",
+ *             administrativeDistance: 1,
+ *         }],
+ *     }],
+ *     services: [{
+ *         serviceType: "FW",
+ *         ipv4Addresses: ["1.2.3.4"],
+ *         tracking: true,
+ *     }],
+ *     serviceRoutes: [{
+ *         networkAddress: "1.2.3.4",
+ *         subnetMask: "0.0.0.0",
+ *         service: "SIG",
+ *         vpn: 0,
+ *     }],
+ *     greRoutes: [{
+ *         networkAddress: "1.2.3.4",
+ *         subnetMask: "0.0.0.0",
+ *         "interface": ["gre01"],
+ *         vpn: 0,
+ *     }],
+ *     ipsecRoutes: [{
+ *         networkAddress: "1.2.3.4",
+ *         subnetMask: "0.0.0.0",
+ *         "interface": ["ipsec01"],
+ *     }],
+ *     natPools: [{
+ *         natPoolName: 1,
+ *         prefixLength: 3,
+ *         rangeStart: "1.2.3.4",
+ *         rangeEnd: "2.3.4.5",
+ *         overload: true,
+ *         direction: "inside",
+ *     }],
+ *     natPortForwards: [{
+ *         natPoolName: 2,
+ *         sourcePort: 122,
+ *         translatePort: 330,
+ *         sourceIp: "1.2.3.4",
+ *         translatedSourceIp: "2.3.4.5",
+ *         protocol: "TCP",
+ *     }],
+ *     staticNats: [{
+ *         natPoolName: 3,
+ *         sourceIp: "1.2.3.4",
+ *         translatedSourceIp: "2.3.4.5",
+ *         staticNatDirection: "inside",
+ *     }],
+ *     nat64V4Pools: [{
+ *         name: "NATPOOL1",
+ *         rangeStart: "1.2.3.4",
+ *         rangeEnd: "2.3.4.5",
+ *         overload: false,
+ *     }],
+ *     ipv4ImportRouteTargets: [{
+ *         routeTarget: "1.1.1.3:200",
+ *     }],
+ *     ipv4ExportRouteTargets: [{
+ *         routeTarget: "1.1.1.3:200",
+ *     }],
+ *     ipv6ImportRouteTargets: [{
+ *         routeTarget: "1.1.1.3:200",
+ *     }],
+ *     ipv6ExportRouteTargets: [{
+ *         routeTarget: "1.1.1.3:200",
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

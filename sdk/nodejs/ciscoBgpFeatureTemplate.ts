@@ -12,6 +12,130 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.CiscoBgpFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     asNumber: "65000",
+ *     shutdown: true,
+ *     routerId: "1.2.3.4",
+ *     propagateAspath: true,
+ *     propagateCommunity: true,
+ *     ipv4RouteTargets: [{
+ *         vpnId: 1,
+ *         "export": [{
+ *             asnIp: "10:100",
+ *         }],
+ *         "import": [{
+ *             asnIp: "10:100",
+ *         }],
+ *     }],
+ *     ipv6RouteTargets: [{
+ *         vpnId: 1,
+ *         "export": [{
+ *             asnIp: "10:100",
+ *         }],
+ *         "import": [{
+ *             asnIp: "10:100",
+ *         }],
+ *     }],
+ *     mplsInterfaces: [{
+ *         interfaceName: "GigabitEthernet0",
+ *     }],
+ *     distanceExternal: 30,
+ *     distanceInternal: 210,
+ *     distanceLocal: 30,
+ *     keepalive: 90,
+ *     holdtime: 220,
+ *     alwaysCompareMed: true,
+ *     deterministicMed: true,
+ *     missingMedWorst: true,
+ *     compareRouterId: true,
+ *     multipathRelax: true,
+ *     addressFamilies: [{
+ *         familyType: "ipv4-unicast",
+ *         ipv4AggregateAddresses: [{
+ *             prefix: "10.0.0.0/8",
+ *             asSetPath: true,
+ *             summaryOnly: true,
+ *         }],
+ *         ipv4Networks: [{
+ *             prefix: "10.2.2.0/24",
+ *         }],
+ *         maximumPaths: 8,
+ *         defaultInformationOriginate: true,
+ *         tableMapPolicy: "MAP1",
+ *         tableMapFilter: true,
+ *         redistributeRoutes: [{
+ *             protocol: "ospf",
+ *             routePolicy: "POLICY1",
+ *         }],
+ *     }],
+ *     ipv4Neighbors: [{
+ *         address: "10.2.2.2",
+ *         description: "My neighbor",
+ *         shutdown: true,
+ *         remoteAs: "65001",
+ *         keepalive: 30,
+ *         holdtime: 90,
+ *         sourceInterface: "GigabitEthernet1",
+ *         nextHopSelf: true,
+ *         sendCommunity: false,
+ *         sendExtCommunity: false,
+ *         ebgpMultihop: 10,
+ *         password: "cisco123",
+ *         sendLabel: true,
+ *         sendLabelExplicit: true,
+ *         asOverride: true,
+ *         allowAsIn: 5,
+ *         addressFamilies: [{
+ *             familyType: "ipv4-unicast",
+ *             maximumPrefixes: 10000,
+ *             maximumPrefixesThreshold: 80,
+ *             maximumPrefixesRestart: 180,
+ *             maximumPrefixesWarningOnly: true,
+ *             routePolicies: [{
+ *                 direction: "in",
+ *                 policyName: "POLICY1",
+ *             }],
+ *         }],
+ *     }],
+ *     ipv6Neighbors: [{
+ *         address: "2001:1::1",
+ *         description: "My neighbor",
+ *         shutdown: true,
+ *         remoteAs: "65001",
+ *         keepalive: 30,
+ *         holdtime: 90,
+ *         sourceInterface: "GigabitEthernet1",
+ *         nextHopSelf: true,
+ *         sendCommunity: false,
+ *         sendExtCommunity: false,
+ *         ebgpMultihop: 10,
+ *         password: "cisco123",
+ *         sendLabel: true,
+ *         sendLabelExplicit: true,
+ *         asOverride: true,
+ *         allowAsIn: 5,
+ *         addressFamilies: [{
+ *             familyType: "ipv6-unicast",
+ *             maximumPrefixes: 10000,
+ *             maximumPrefixesThreshold: 80,
+ *             maximumPrefixesRestart: 180,
+ *             maximumPrefixesWarningOnly: true,
+ *             routePolicies: [{
+ *                 direction: "in",
+ *                 policyName: "POLICY1",
+ *             }],
+ *         }],
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

@@ -12,6 +12,51 @@ import * as utilities from "./utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as sdwan from "@pulumi/sdwan";
+ *
+ * const example = new sdwan.SwitchportFeatureTemplate("example", {
+ *     name: "Example",
+ *     description: "My Example",
+ *     deviceTypes: ["vedge-C8000V"],
+ *     slot: 0,
+ *     subSlot: 0,
+ *     moduleType: "4",
+ *     interfaces: [{
+ *         name: "GigabitEthernet0/0/0",
+ *         switchportMode: "access",
+ *         shutdown: true,
+ *         speed: "100",
+ *         duplex: "full",
+ *         switchportAccessVlan: 100,
+ *         switchportTrunkAllowedVlans: "100,200",
+ *         switchportTrunkNativeVlan: 100,
+ *         dot1xEnable: true,
+ *         dot1xPortControl: "auto",
+ *         dot1xAuthenticationOrder: ["dot1x"],
+ *         voiceVlan: 200,
+ *         dot1xPaeEnable: true,
+ *         dot1xMacAuthenticationBypass: true,
+ *         dot1xHostMode: "multi-domain",
+ *         dot1xEnablePeriodicReauth: true,
+ *         dot1xPeriodicReauthInactivityTimeout: 100,
+ *         dot1xPeriodicReauthInterval: 60,
+ *         dot1xControlDirection: "both",
+ *         dot1xRestrictedVlan: 100,
+ *         dot1xGuestVlan: 101,
+ *         dot1xCriticalVlan: 102,
+ *         dot1xEnableCriticialVoiceVlan: true,
+ *     }],
+ *     ageOutTime: 500,
+ *     staticMacAddresses: [{
+ *         macAddress: "0000.0000.0000",
+ *         ifName: "GigabitEthernet0/0/0",
+ *         vlan: 100,
+ *     }],
+ * });
+ * ```
+ *
  * ## Import
  *
  * The `pulumi import` command can be used, for example:

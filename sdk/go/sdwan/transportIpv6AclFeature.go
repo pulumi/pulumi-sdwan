@@ -17,6 +17,62 @@ import (
 //
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-sdwan/sdk/go/sdwan"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := sdwan.NewTransportIpv6AclFeature(ctx, "example", &sdwan.TransportIpv6AclFeatureArgs{
+//				Name:             pulumi.String("Example"),
+//				Description:      pulumi.String("My Example"),
+//				FeatureProfileId: pulumi.String("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac"),
+//				DefaultAction:    pulumi.String("drop"),
+//				Sequences: sdwan.TransportIpv6AclFeatureSequenceArray{
+//					&sdwan.TransportIpv6AclFeatureSequenceArgs{
+//						SequenceId:   pulumi.Int(1),
+//						SequenceName: pulumi.String("AccessControlList1"),
+//						MatchEntries: sdwan.TransportIpv6AclFeatureSequenceMatchEntryArray{
+//							&sdwan.TransportIpv6AclFeatureSequenceMatchEntryArgs{
+//								NextHeader:   pulumi.Int(10),
+//								PacketLength: pulumi.String("1500"),
+//								SourcePorts: sdwan.TransportIpv6AclFeatureSequenceMatchEntrySourcePortArray{
+//									&sdwan.TransportIpv6AclFeatureSequenceMatchEntrySourcePortArgs{
+//										Port: pulumi.String("8000"),
+//									},
+//								},
+//								TcpState: pulumi.String("syn"),
+//								TrafficClass: []float64{
+//									10,
+//								},
+//							},
+//						},
+//						Actions: sdwan.TransportIpv6AclFeatureSequenceActionArray{
+//							&sdwan.TransportIpv6AclFeatureSequenceActionArgs{
+//								AcceptCounterName:  pulumi.String("COUNTER_1"),
+//								AcceptLog:          pulumi.Bool(false),
+//								AcceptSetNextHop:   pulumi.String("2001:0db8:85a3:0000:0000:8a2e:0370:7334"),
+//								AcceptTrafficClass: pulumi.Int(10),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // The `pulumi import` command can be used, for example:

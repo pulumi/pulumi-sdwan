@@ -29,6 +29,150 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.sdwan.CiscoBgpFeatureTemplate;
+ * import com.pulumi.sdwan.CiscoBgpFeatureTemplateArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv4RouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv6RouteTargetArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateMplsInterfaceArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateAddressFamilyArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv4NeighborArgs;
+ * import com.pulumi.sdwan.inputs.CiscoBgpFeatureTemplateIpv6NeighborArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new CiscoBgpFeatureTemplate("example", CiscoBgpFeatureTemplateArgs.builder()
+ *             .name("Example")
+ *             .description("My Example")
+ *             .deviceTypes("vedge-C8000V")
+ *             .asNumber("65000")
+ *             .shutdown(true)
+ *             .routerId("1.2.3.4")
+ *             .propagateAspath(true)
+ *             .propagateCommunity(true)
+ *             .ipv4RouteTargets(CiscoBgpFeatureTemplateIpv4RouteTargetArgs.builder()
+ *                 .vpnId(1)
+ *                 .export(List.of(Map.of("asnIp", "10:100")))
+ *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .build())
+ *             .ipv6RouteTargets(CiscoBgpFeatureTemplateIpv6RouteTargetArgs.builder()
+ *                 .vpnId(1)
+ *                 .export(List.of(Map.of("asnIp", "10:100")))
+ *                 .import_(List.of(Map.of("asnIp", "10:100")))
+ *                 .build())
+ *             .mplsInterfaces(CiscoBgpFeatureTemplateMplsInterfaceArgs.builder()
+ *                 .interfaceName("GigabitEthernet0")
+ *                 .build())
+ *             .distanceExternal(30)
+ *             .distanceInternal(210)
+ *             .distanceLocal(30)
+ *             .keepalive(90)
+ *             .holdtime(220)
+ *             .alwaysCompareMed(true)
+ *             .deterministicMed(true)
+ *             .missingMedWorst(true)
+ *             .compareRouterId(true)
+ *             .multipathRelax(true)
+ *             .addressFamilies(CiscoBgpFeatureTemplateAddressFamilyArgs.builder()
+ *                 .familyType("ipv4-unicast")
+ *                 .ipv4AggregateAddresses(CiscoBgpFeatureTemplateAddressFamilyIpv4AggregateAddressArgs.builder()
+ *                     .prefix("10.0.0.0/8")
+ *                     .asSetPath(true)
+ *                     .summaryOnly(true)
+ *                     .build())
+ *                 .ipv4Networks(CiscoBgpFeatureTemplateAddressFamilyIpv4NetworkArgs.builder()
+ *                     .prefix("10.2.2.0/24")
+ *                     .build())
+ *                 .maximumPaths(8)
+ *                 .defaultInformationOriginate(true)
+ *                 .tableMapPolicy("MAP1")
+ *                 .tableMapFilter(true)
+ *                 .redistributeRoutes(CiscoBgpFeatureTemplateAddressFamilyRedistributeRouteArgs.builder()
+ *                     .protocol("ospf")
+ *                     .routePolicy("POLICY1")
+ *                     .build())
+ *                 .build())
+ *             .ipv4Neighbors(CiscoBgpFeatureTemplateIpv4NeighborArgs.builder()
+ *                 .address("10.2.2.2")
+ *                 .description("My neighbor")
+ *                 .shutdown(true)
+ *                 .remoteAs("65001")
+ *                 .keepalive(30)
+ *                 .holdtime(90)
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .nextHopSelf(true)
+ *                 .sendCommunity(false)
+ *                 .sendExtCommunity(false)
+ *                 .ebgpMultihop(10)
+ *                 .password("cisco123")
+ *                 .sendLabel(true)
+ *                 .sendLabelExplicit(true)
+ *                 .asOverride(true)
+ *                 .allowAsIn(5)
+ *                 .addressFamilies(CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyArgs.builder()
+ *                     .familyType("ipv4-unicast")
+ *                     .maximumPrefixes(10000)
+ *                     .maximumPrefixesThreshold(80)
+ *                     .maximumPrefixesRestart(180)
+ *                     .maximumPrefixesWarningOnly(true)
+ *                     .routePolicies(CiscoBgpFeatureTemplateIpv4NeighborAddressFamilyRoutePolicyArgs.builder()
+ *                         .direction("in")
+ *                         .policyName("POLICY1")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .ipv6Neighbors(CiscoBgpFeatureTemplateIpv6NeighborArgs.builder()
+ *                 .address("2001:1::1")
+ *                 .description("My neighbor")
+ *                 .shutdown(true)
+ *                 .remoteAs("65001")
+ *                 .keepalive(30)
+ *                 .holdtime(90)
+ *                 .sourceInterface("GigabitEthernet1")
+ *                 .nextHopSelf(true)
+ *                 .sendCommunity(false)
+ *                 .sendExtCommunity(false)
+ *                 .ebgpMultihop(10)
+ *                 .password("cisco123")
+ *                 .sendLabel(true)
+ *                 .sendLabelExplicit(true)
+ *                 .asOverride(true)
+ *                 .allowAsIn(5)
+ *                 .addressFamilies(CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyArgs.builder()
+ *                     .familyType("ipv6-unicast")
+ *                     .maximumPrefixes(10000)
+ *                     .maximumPrefixesThreshold(80)
+ *                     .maximumPrefixesRestart(180)
+ *                     .maximumPrefixesWarningOnly(true)
+ *                     .routePolicies(CiscoBgpFeatureTemplateIpv6NeighborAddressFamilyRoutePolicyArgs.builder()
+ *                         .direction("in")
+ *                         .policyName("POLICY1")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * The `pulumi import` command can be used, for example:
