@@ -130,6 +130,8 @@ type LookupServiceLanVpnFeatureResult struct {
 	ServiceRoutes []GetServiceLanVpnFeatureServiceRoute `pulumi:"serviceRoutes"`
 	// Service
 	Services []GetServiceLanVpnFeatureService `pulumi:"services"`
+	// Static NAT Subnet Rules
+	StaticNatSubnets []GetServiceLanVpnFeatureStaticNatSubnet `pulumi:"staticNatSubnets"`
 	// Static NAT Rules
 	StaticNats []GetServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
 	// The version of the Feature
@@ -383,6 +385,13 @@ func (o LookupServiceLanVpnFeatureResultOutput) ServiceRoutes() GetServiceLanVpn
 // Service
 func (o LookupServiceLanVpnFeatureResultOutput) Services() GetServiceLanVpnFeatureServiceArrayOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnFeatureResult) []GetServiceLanVpnFeatureService { return v.Services }).(GetServiceLanVpnFeatureServiceArrayOutput)
+}
+
+// Static NAT Subnet Rules
+func (o LookupServiceLanVpnFeatureResultOutput) StaticNatSubnets() GetServiceLanVpnFeatureStaticNatSubnetArrayOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnFeatureResult) []GetServiceLanVpnFeatureStaticNatSubnet {
+		return v.StaticNatSubnets
+	}).(GetServiceLanVpnFeatureStaticNatSubnetArrayOutput)
 }
 
 // Static NAT Rules

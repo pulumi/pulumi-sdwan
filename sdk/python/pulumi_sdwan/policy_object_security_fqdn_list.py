@@ -181,7 +181,7 @@ class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Policy Object Security FQDN List Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -222,7 +222,7 @@ class PolicyObjectSecurityFqdnList(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Policy Object Security FQDN List Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

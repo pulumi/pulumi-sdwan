@@ -30,6 +30,14 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string ServiceVariable;
         /// <summary>
+        /// SSE Instance name
+        /// </summary>
+        public readonly string SseInstance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string SseInstanceVariable;
+        /// <summary>
         /// Subnet Mask
         /// </summary>
         public readonly string SubnetMask;
@@ -52,6 +60,10 @@ namespace Pulumi.Sdwan.Outputs
 
             string serviceVariable,
 
+            string sseInstance,
+
+            string sseInstanceVariable,
+
             string subnetMask,
 
             string subnetMaskVariable,
@@ -62,6 +74,8 @@ namespace Pulumi.Sdwan.Outputs
             NetworkAddressVariable = networkAddressVariable;
             Service = service;
             ServiceVariable = serviceVariable;
+            SseInstance = sseInstance;
+            SseInstanceVariable = sseInstanceVariable;
             SubnetMask = subnetMask;
             SubnetMaskVariable = subnetMaskVariable;
             Vpn = vpn;

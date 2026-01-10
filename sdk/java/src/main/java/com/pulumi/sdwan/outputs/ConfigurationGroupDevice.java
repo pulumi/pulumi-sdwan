@@ -26,6 +26,11 @@ public final class ConfigurationGroupDevice {
      */
     private @Nullable String id;
     /**
+     * @return Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    private @Nullable String topologyLabel;
+    /**
      * @return List of variables
      * 
      */
@@ -48,6 +53,13 @@ public final class ConfigurationGroupDevice {
         return Optional.ofNullable(this.id);
     }
     /**
+     * @return Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    public Optional<String> topologyLabel() {
+        return Optional.ofNullable(this.topologyLabel);
+    }
+    /**
      * @return List of variables
      * 
      */
@@ -66,12 +78,14 @@ public final class ConfigurationGroupDevice {
     public static final class Builder {
         private @Nullable Boolean deploy;
         private @Nullable String id;
+        private @Nullable String topologyLabel;
         private @Nullable List<ConfigurationGroupDeviceVariable> variables;
         public Builder() {}
         public Builder(ConfigurationGroupDevice defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.deploy = defaults.deploy;
     	      this.id = defaults.id;
+    	      this.topologyLabel = defaults.topologyLabel;
     	      this.variables = defaults.variables;
         }
 
@@ -88,6 +102,12 @@ public final class ConfigurationGroupDevice {
             return this;
         }
         @CustomType.Setter
+        public Builder topologyLabel(@Nullable String topologyLabel) {
+
+            this.topologyLabel = topologyLabel;
+            return this;
+        }
+        @CustomType.Setter
         public Builder variables(@Nullable List<ConfigurationGroupDeviceVariable> variables) {
 
             this.variables = variables;
@@ -100,6 +120,7 @@ public final class ConfigurationGroupDevice {
             final var _resultValue = new ConfigurationGroupDevice();
             _resultValue.deploy = deploy;
             _resultValue.id = id;
+            _resultValue.topologyLabel = topologyLabel;
             _resultValue.variables = variables;
             return _resultValue;
         }

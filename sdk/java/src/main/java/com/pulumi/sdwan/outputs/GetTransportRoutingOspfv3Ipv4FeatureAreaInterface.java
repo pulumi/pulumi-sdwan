@@ -33,7 +33,7 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     private String authenticationSpiVariable;
     /**
-     * @return No Authentication by default
+     * @return Set OSPF interface authentication configuration
      * 
      */
     private String authenticationType;
@@ -138,7 +138,7 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
         return this.authenticationSpiVariable;
     }
     /**
-     * @return No Authentication by default
+     * @return Set OSPF interface authentication configuration
      * 
      */
     public String authenticationType() {

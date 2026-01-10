@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Service LAN VPN Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -101,6 +101,7 @@ namespace Pulumi.Sdwan
     ///                 SubnetMask = "0.0.0.0",
     ///                 Service = "SIG",
     ///                 Vpn = 0,
+    ///                 SseInstance = "1",
     ///             },
     ///         },
     ///         GreRoutes = new[]
@@ -159,6 +160,16 @@ namespace Pulumi.Sdwan
     ///                 NatPoolName = 3,
     ///                 SourceIp = "1.2.3.4",
     ///                 TranslatedSourceIp = "2.3.4.5",
+    ///                 StaticNatDirection = "inside",
+    ///             },
+    ///         },
+    ///         StaticNatSubnets = new[]
+    ///         {
+    ///             new Sdwan.Inputs.ServiceLanVpnFeatureStaticNatSubnetArgs
+    ///             {
+    ///                 SourceIpSubnet = "1.2.3.4",
+    ///                 TranslatedSourceIpSubnet = "2.3.4.5",
+    ///                 PrefixLength = 6,
     ///                 StaticNatDirection = "inside",
     ///             },
     ///         },
@@ -427,6 +438,12 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("services")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnFeatureService>> Services { get; private set; } = null!;
+
+        /// <summary>
+        /// Static NAT Subnet Rules
+        /// </summary>
+        [Output("staticNatSubnets")]
+        public Output<ImmutableArray<Outputs.ServiceLanVpnFeatureStaticNatSubnet>> StaticNatSubnets { get; private set; } = null!;
 
         /// <summary>
         /// Static NAT Rules
@@ -819,6 +836,18 @@ namespace Pulumi.Sdwan
             set => _services = value;
         }
 
+        [Input("staticNatSubnets")]
+        private InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetArgs>? _staticNatSubnets;
+
+        /// <summary>
+        /// Static NAT Subnet Rules
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetArgs> StaticNatSubnets
+        {
+            get => _staticNatSubnets ?? (_staticNatSubnets = new InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetArgs>());
+            set => _staticNatSubnets = value;
+        }
+
         [Input("staticNats")]
         private InputList<Inputs.ServiceLanVpnFeatureStaticNatArgs>? _staticNats;
 
@@ -1170,6 +1199,18 @@ namespace Pulumi.Sdwan
         {
             get => _services ?? (_services = new InputList<Inputs.ServiceLanVpnFeatureServiceGetArgs>());
             set => _services = value;
+        }
+
+        [Input("staticNatSubnets")]
+        private InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetGetArgs>? _staticNatSubnets;
+
+        /// <summary>
+        /// Static NAT Subnet Rules
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetGetArgs> StaticNatSubnets
+        {
+            get => _staticNatSubnets ?? (_staticNatSubnets = new InputList<Inputs.ServiceLanVpnFeatureStaticNatSubnetGetArgs>());
+            set => _staticNatSubnets = value;
         }
 
         [Input("staticNats")]

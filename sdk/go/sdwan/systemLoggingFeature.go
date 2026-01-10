@@ -58,7 +58,7 @@ import (
 //				},
 //				Ipv6Servers: sdwan.SystemLoggingFeatureIpv6ServerArray{
 //					&sdwan.SystemLoggingFeatureIpv6ServerArgs{
-//						HostnameIp:                 pulumi.String("1.1.1.1"),
+//						HostnameIp:                 pulumi.String("2001:0:0:1::0"),
 //						Vpn:                        pulumi.Int(512),
 //						SourceInterface:            pulumi.String("GigabitEthernet1"),
 //						Priority:                   pulumi.String("informational"),

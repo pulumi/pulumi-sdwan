@@ -38,8 +38,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AreaNumberVariable { get; set; }
 
         /// <summary>
-        /// stub area type
-        ///   - Choices: `Stub`
+        /// Set OSPFv3 area type
+        ///   - Choices: `Stub`, `Nssa`, `Normal`
         /// </summary>
         [Input("areaType")]
         public Input<string>? AreaType { get; set; }

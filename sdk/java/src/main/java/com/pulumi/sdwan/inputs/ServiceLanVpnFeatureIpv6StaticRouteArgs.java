@@ -5,6 +5,7 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv6StaticRouteNextHopArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRouteArgs extends com.pulumi.re
 
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      * 
      */
     @Import(name="gateway")
@@ -28,11 +29,26 @@ public final class ServiceLanVpnFeatureIpv6StaticRouteArgs extends com.pulumi.re
 
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      * 
      */
     public Optional<Output<String>> gateway() {
         return Optional.ofNullable(this.gateway);
+    }
+
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    @Import(name="ipv6StaticRouteInterfaces")
+    private @Nullable Output<List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs>> ipv6StaticRouteInterfaces;
+
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs>>> ipv6StaticRouteInterfaces() {
+        return Optional.ofNullable(this.ipv6StaticRouteInterfaces);
     }
 
     /**
@@ -131,6 +147,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRouteArgs extends com.pulumi.re
 
     private ServiceLanVpnFeatureIpv6StaticRouteArgs(ServiceLanVpnFeatureIpv6StaticRouteArgs $) {
         this.gateway = $.gateway;
+        this.ipv6StaticRouteInterfaces = $.ipv6StaticRouteInterfaces;
         this.nat = $.nat;
         this.natVariable = $.natVariable;
         this.nextHops = $.nextHops;
@@ -159,7 +176,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRouteArgs extends com.pulumi.re
 
         /**
          * @param gateway Gateway type
-         *   - Choices: `nextHop`, `null0`, `nat`
+         *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
          * 
          * @return builder
          * 
@@ -171,13 +188,44 @@ public final class ServiceLanVpnFeatureIpv6StaticRouteArgs extends com.pulumi.re
 
         /**
          * @param gateway Gateway type
-         *   - Choices: `nextHop`, `null0`, `nat`
+         *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
          * 
          * @return builder
          * 
          */
         public Builder gateway(String gateway) {
             return gateway(Output.of(gateway));
+        }
+
+        /**
+         * @param ipv6StaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6StaticRouteInterfaces(@Nullable Output<List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs>> ipv6StaticRouteInterfaces) {
+            $.ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
+            return this;
+        }
+
+        /**
+         * @param ipv6StaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6StaticRouteInterfaces(List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs> ipv6StaticRouteInterfaces) {
+            return ipv6StaticRouteInterfaces(Output.of(ipv6StaticRouteInterfaces));
+        }
+
+        /**
+         * @param ipv6StaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6StaticRouteInterfaces(ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceArgs... ipv6StaticRouteInterfaces) {
+            return ipv6StaticRouteInterfaces(List.of(ipv6StaticRouteInterfaces));
         }
 
         /**

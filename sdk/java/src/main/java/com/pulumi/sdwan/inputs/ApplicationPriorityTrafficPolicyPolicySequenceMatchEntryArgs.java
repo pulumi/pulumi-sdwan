@@ -125,20 +125,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
     }
 
     /**
-     * DSCP number
-     *   - Range: `0`-`63`
+     * DSCP numbers
      * 
      */
-    @Import(name="dscp")
-    private @Nullable Output<Integer> dscp;
+    @Import(name="dscps")
+    private @Nullable Output<List<Integer>> dscps;
 
     /**
-     * @return DSCP number
-     *   - Range: `0`-`63`
+     * @return DSCP numbers
      * 
      */
-    public Optional<Output<Integer>> dscp() {
-        return Optional.ofNullable(this.dscp);
+    public Optional<Output<List<Integer>>> dscps() {
+        return Optional.ofNullable(this.dscps);
     }
 
     /**
@@ -223,18 +221,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
         return Optional.ofNullable(this.serviceAreas);
     }
 
-    @Import(name="sourceDataIpv4PrefxListId")
-    private @Nullable Output<String> sourceDataIpv4PrefxListId;
+    @Import(name="sourceDataIpv4PrefixListId")
+    private @Nullable Output<String> sourceDataIpv4PrefixListId;
 
-    public Optional<Output<String>> sourceDataIpv4PrefxListId() {
-        return Optional.ofNullable(this.sourceDataIpv4PrefxListId);
+    public Optional<Output<String>> sourceDataIpv4PrefixListId() {
+        return Optional.ofNullable(this.sourceDataIpv4PrefixListId);
     }
 
-    @Import(name="sourceDataIpv6PrefxListId")
-    private @Nullable Output<String> sourceDataIpv6PrefxListId;
+    @Import(name="sourceDataIpv6PrefixListId")
+    private @Nullable Output<String> sourceDataIpv6PrefixListId;
 
-    public Optional<Output<String>> sourceDataIpv6PrefxListId() {
-        return Optional.ofNullable(this.sourceDataIpv6PrefxListId);
+    public Optional<Output<String>> sourceDataIpv6PrefixListId() {
+        return Optional.ofNullable(this.sourceDataIpv6PrefixListId);
     }
 
     /**
@@ -362,15 +360,15 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
         this.destinationRegion = $.destinationRegion;
         this.dns = $.dns;
         this.dnsApplicationListId = $.dnsApplicationListId;
-        this.dscp = $.dscp;
+        this.dscps = $.dscps;
         this.icmp6Messages = $.icmp6Messages;
         this.icmpMessages = $.icmpMessages;
         this.packetLength = $.packetLength;
         this.protocols = $.protocols;
         this.saasApplicationListId = $.saasApplicationListId;
         this.serviceAreas = $.serviceAreas;
-        this.sourceDataIpv4PrefxListId = $.sourceDataIpv4PrefxListId;
-        this.sourceDataIpv6PrefxListId = $.sourceDataIpv6PrefxListId;
+        this.sourceDataIpv4PrefixListId = $.sourceDataIpv4PrefixListId;
+        this.sourceDataIpv6PrefixListId = $.sourceDataIpv6PrefixListId;
         this.sourceIpv4Prefix = $.sourceIpv4Prefix;
         this.sourceIpv6Prefix = $.sourceIpv6Prefix;
         this.sourcePorts = $.sourcePorts;
@@ -554,26 +552,34 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
         }
 
         /**
-         * @param dscp DSCP number
-         *   - Range: `0`-`63`
+         * @param dscps DSCP numbers
          * 
          * @return builder
          * 
          */
-        public Builder dscp(@Nullable Output<Integer> dscp) {
-            $.dscp = dscp;
+        public Builder dscps(@Nullable Output<List<Integer>> dscps) {
+            $.dscps = dscps;
             return this;
         }
 
         /**
-         * @param dscp DSCP number
-         *   - Range: `0`-`63`
+         * @param dscps DSCP numbers
          * 
          * @return builder
          * 
          */
-        public Builder dscp(Integer dscp) {
-            return dscp(Output.of(dscp));
+        public Builder dscps(List<Integer> dscps) {
+            return dscps(Output.of(dscps));
+        }
+
+        /**
+         * @param dscps DSCP numbers
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dscps(Integer... dscps) {
+            return dscps(List.of(dscps));
         }
 
         /**
@@ -730,22 +736,22 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs 
             return serviceAreas(List.of(serviceAreas));
         }
 
-        public Builder sourceDataIpv4PrefxListId(@Nullable Output<String> sourceDataIpv4PrefxListId) {
-            $.sourceDataIpv4PrefxListId = sourceDataIpv4PrefxListId;
+        public Builder sourceDataIpv4PrefixListId(@Nullable Output<String> sourceDataIpv4PrefixListId) {
+            $.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             return this;
         }
 
-        public Builder sourceDataIpv4PrefxListId(String sourceDataIpv4PrefxListId) {
-            return sourceDataIpv4PrefxListId(Output.of(sourceDataIpv4PrefxListId));
+        public Builder sourceDataIpv4PrefixListId(String sourceDataIpv4PrefixListId) {
+            return sourceDataIpv4PrefixListId(Output.of(sourceDataIpv4PrefixListId));
         }
 
-        public Builder sourceDataIpv6PrefxListId(@Nullable Output<String> sourceDataIpv6PrefxListId) {
-            $.sourceDataIpv6PrefxListId = sourceDataIpv6PrefxListId;
+        public Builder sourceDataIpv6PrefixListId(@Nullable Output<String> sourceDataIpv6PrefixListId) {
+            $.sourceDataIpv6PrefixListId = sourceDataIpv6PrefixListId;
             return this;
         }
 
-        public Builder sourceDataIpv6PrefxListId(String sourceDataIpv6PrefxListId) {
-            return sourceDataIpv6PrefxListId(Output.of(sourceDataIpv6PrefxListId));
+        public Builder sourceDataIpv6PrefixListId(String sourceDataIpv6PrefixListId) {
+            return sourceDataIpv6PrefixListId(Output.of(sourceDataIpv6PrefixListId));
         }
 
         /**

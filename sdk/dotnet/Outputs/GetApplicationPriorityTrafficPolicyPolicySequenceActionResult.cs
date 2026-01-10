@@ -13,10 +13,14 @@ namespace Pulumi.Sdwan.Outputs
     [OutputType]
     public sealed class GetApplicationPriorityTrafficPolicyPolicySequenceActionResult
     {
+        public readonly bool AppqoeDreOptimization;
+        public readonly string AppqoeServiceNodeGroup;
+        public readonly bool AppqoeTcpOptimization;
         /// <summary>
         /// Backup SLA perferred color
         /// </summary>
         public readonly ImmutableArray<string> BackupSlaPreferredColors;
+        public readonly bool Cflowd;
         public readonly bool CloudProbe;
         public readonly bool CloudSaas;
         public readonly string Count;
@@ -33,6 +37,8 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string RedirectDnsField;
         public readonly string RedirectDnsValue;
         public readonly bool SecureInternetGateway;
+        public readonly bool SecureServiceEdge;
+        public readonly string SecureServiceEdgeInstance;
         public readonly ImmutableArray<Outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult> SetParameters;
         /// <summary>
         /// slaClass
@@ -41,7 +47,15 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetApplicationPriorityTrafficPolicyPolicySequenceActionResult(
+            bool appqoeDreOptimization,
+
+            string appqoeServiceNodeGroup,
+
+            bool appqoeTcpOptimization,
+
             ImmutableArray<string> backupSlaPreferredColors,
+
+            bool cflowd,
 
             bool cloudProbe,
 
@@ -75,11 +89,19 @@ namespace Pulumi.Sdwan.Outputs
 
             bool secureInternetGateway,
 
+            bool secureServiceEdge,
+
+            string secureServiceEdgeInstance,
+
             ImmutableArray<Outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult> setParameters,
 
             ImmutableArray<Outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClassResult> slaClasses)
         {
+            AppqoeDreOptimization = appqoeDreOptimization;
+            AppqoeServiceNodeGroup = appqoeServiceNodeGroup;
+            AppqoeTcpOptimization = appqoeTcpOptimization;
             BackupSlaPreferredColors = backupSlaPreferredColors;
+            Cflowd = cflowd;
             CloudProbe = cloudProbe;
             CloudSaas = cloudSaas;
             Count = count;
@@ -96,6 +118,8 @@ namespace Pulumi.Sdwan.Outputs
             RedirectDnsField = redirectDnsField;
             RedirectDnsValue = redirectDnsValue;
             SecureInternetGateway = secureInternetGateway;
+            SecureServiceEdge = secureServiceEdge;
+            SecureServiceEdgeInstance = secureServiceEdgeInstance;
             SetParameters = setParameters;
             SlaClasses = slaClasses;
         }

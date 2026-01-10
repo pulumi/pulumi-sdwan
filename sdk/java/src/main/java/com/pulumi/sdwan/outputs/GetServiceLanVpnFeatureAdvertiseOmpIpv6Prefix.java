@@ -26,6 +26,16 @@ public final class GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * 
      */
     private String prefixVariable;
+    /**
+     * @return Applied to Region
+     * 
+     */
+    private String region;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String regionVariable;
 
     private GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix() {}
     /**
@@ -49,6 +59,20 @@ public final class GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
     public String prefixVariable() {
         return this.prefixVariable;
     }
+    /**
+     * @return Applied to Region
+     * 
+     */
+    public String region() {
+        return this.region;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String regionVariable() {
+        return this.regionVariable;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -62,12 +86,16 @@ public final class GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
         private Boolean aggregateOnly;
         private String prefix;
         private String prefixVariable;
+        private String region;
+        private String regionVariable;
         public Builder() {}
         public Builder(GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.aggregateOnly = defaults.aggregateOnly;
     	      this.prefix = defaults.prefix;
     	      this.prefixVariable = defaults.prefixVariable;
+    	      this.region = defaults.region;
+    	      this.regionVariable = defaults.regionVariable;
         }
 
         @CustomType.Setter
@@ -94,11 +122,29 @@ public final class GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
             this.prefixVariable = prefixVariable;
             return this;
         }
+        @CustomType.Setter
+        public Builder region(String region) {
+            if (region == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix", "region");
+            }
+            this.region = region;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder regionVariable(String regionVariable) {
+            if (regionVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix", "regionVariable");
+            }
+            this.regionVariable = regionVariable;
+            return this;
+        }
         public GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix build() {
             final var _resultValue = new GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix();
             _resultValue.aggregateOnly = aggregateOnly;
             _resultValue.prefix = prefix;
             _resultValue.prefixVariable = prefixVariable;
+            _resultValue.region = region;
+            _resultValue.regionVariable = regionVariable;
             return _resultValue;
         }
     }

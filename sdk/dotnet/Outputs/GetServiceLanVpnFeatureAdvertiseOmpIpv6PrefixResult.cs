@@ -25,6 +25,14 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string PrefixVariable;
+        /// <summary>
+        /// Applied to Region
+        /// </summary>
+        public readonly string Region;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string RegionVariable;
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureAdvertiseOmpIpv6PrefixResult(
@@ -32,11 +40,17 @@ namespace Pulumi.Sdwan.Outputs
 
             string prefix,
 
-            string prefixVariable)
+            string prefixVariable,
+
+            string region,
+
+            string regionVariable)
         {
             AggregateOnly = aggregateOnly;
             Prefix = prefix;
             PrefixVariable = prefixVariable;
+            Region = region;
+            RegionVariable = regionVariable;
         }
     }
 }

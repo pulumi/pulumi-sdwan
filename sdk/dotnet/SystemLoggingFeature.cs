@@ -60,7 +60,7 @@ namespace Pulumi.Sdwan
     ///         {
     ///             new Sdwan.Inputs.SystemLoggingFeatureIpv6ServerArgs
     ///             {
-    ///                 HostnameIp = "1.1.1.1",
+    ///                 HostnameIp = "2001:0:0:1::0",
     ///                 Vpn = 512,
     ///                 SourceInterface = "GigabitEthernet1",
     ///                 Priority = "informational",

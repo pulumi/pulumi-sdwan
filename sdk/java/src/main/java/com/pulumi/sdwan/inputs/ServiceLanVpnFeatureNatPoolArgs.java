@@ -115,7 +115,7 @@ public final class ServiceLanVpnFeatureNatPoolArgs extends com.pulumi.resources.
 
     /**
      * NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      * 
      */
     @Import(name="prefixLength")
@@ -123,7 +123,7 @@ public final class ServiceLanVpnFeatureNatPoolArgs extends com.pulumi.resources.
 
     /**
      * @return NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      * 
      */
     public Optional<Output<Integer>> prefixLength() {
@@ -382,7 +382,7 @@ public final class ServiceLanVpnFeatureNatPoolArgs extends com.pulumi.resources.
 
         /**
          * @param prefixLength NAT Pool Prefix Length
-         *   - Range: `1`-`32`
+         *   - Range: `1`-`30`
          * 
          * @return builder
          * 
@@ -394,7 +394,7 @@ public final class ServiceLanVpnFeatureNatPoolArgs extends com.pulumi.resources.
 
         /**
          * @param prefixLength NAT Pool Prefix Length
-         *   - Range: `1`-`32`
+         *   - Range: `1`-`30`
          * 
          * @return builder
          * 

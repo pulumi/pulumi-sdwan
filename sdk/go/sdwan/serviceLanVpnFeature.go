@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Service LAN VPN Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -90,6 +90,7 @@ import (
 //						SubnetMask:     pulumi.String("0.0.0.0"),
 //						Service:        pulumi.String("SIG"),
 //						Vpn:            pulumi.Int(0),
+//						SseInstance:    pulumi.String("1"),
 //					},
 //				},
 //				GreRoutes: sdwan.ServiceLanVpnFeatureGreRouteArray{
@@ -137,6 +138,14 @@ import (
 //						SourceIp:           pulumi.String("1.2.3.4"),
 //						TranslatedSourceIp: pulumi.String("2.3.4.5"),
 //						StaticNatDirection: pulumi.String("inside"),
+//					},
+//				},
+//				StaticNatSubnets: sdwan.ServiceLanVpnFeatureStaticNatSubnetArray{
+//					&sdwan.ServiceLanVpnFeatureStaticNatSubnetArgs{
+//						SourceIpSubnet:           pulumi.String("1.2.3.4"),
+//						TranslatedSourceIpSubnet: pulumi.String("2.3.4.5"),
+//						PrefixLength:             pulumi.Int(6),
+//						StaticNatDirection:       pulumi.String("inside"),
 //					},
 //				},
 //				Nat64V4Pools: sdwan.ServiceLanVpnFeatureNat64V4PoolArray{
@@ -261,6 +270,8 @@ type ServiceLanVpnFeature struct {
 	ServiceRoutes ServiceLanVpnFeatureServiceRouteArrayOutput `pulumi:"serviceRoutes"`
 	// Service
 	Services ServiceLanVpnFeatureServiceArrayOutput `pulumi:"services"`
+	// Static NAT Subnet Rules
+	StaticNatSubnets ServiceLanVpnFeatureStaticNatSubnetArrayOutput `pulumi:"staticNatSubnets"`
 	// Static NAT Rules
 	StaticNats ServiceLanVpnFeatureStaticNatArrayOutput `pulumi:"staticNats"`
 	// The version of the Feature
@@ -378,6 +389,8 @@ type serviceLanVpnFeatureState struct {
 	ServiceRoutes []ServiceLanVpnFeatureServiceRoute `pulumi:"serviceRoutes"`
 	// Service
 	Services []ServiceLanVpnFeatureService `pulumi:"services"`
+	// Static NAT Subnet Rules
+	StaticNatSubnets []ServiceLanVpnFeatureStaticNatSubnet `pulumi:"staticNatSubnets"`
 	// Static NAT Rules
 	StaticNats []ServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
 	// The version of the Feature
@@ -463,6 +476,8 @@ type ServiceLanVpnFeatureState struct {
 	ServiceRoutes ServiceLanVpnFeatureServiceRouteArrayInput
 	// Service
 	Services ServiceLanVpnFeatureServiceArrayInput
+	// Static NAT Subnet Rules
+	StaticNatSubnets ServiceLanVpnFeatureStaticNatSubnetArrayInput
 	// Static NAT Rules
 	StaticNats ServiceLanVpnFeatureStaticNatArrayInput
 	// The version of the Feature
@@ -552,6 +567,8 @@ type serviceLanVpnFeatureArgs struct {
 	ServiceRoutes []ServiceLanVpnFeatureServiceRoute `pulumi:"serviceRoutes"`
 	// Service
 	Services []ServiceLanVpnFeatureService `pulumi:"services"`
+	// Static NAT Subnet Rules
+	StaticNatSubnets []ServiceLanVpnFeatureStaticNatSubnet `pulumi:"staticNatSubnets"`
 	// Static NAT Rules
 	StaticNats []ServiceLanVpnFeatureStaticNat `pulumi:"staticNats"`
 	// VPN
@@ -636,6 +653,8 @@ type ServiceLanVpnFeatureArgs struct {
 	ServiceRoutes ServiceLanVpnFeatureServiceRouteArrayInput
 	// Service
 	Services ServiceLanVpnFeatureServiceArrayInput
+	// Static NAT Subnet Rules
+	StaticNatSubnets ServiceLanVpnFeatureStaticNatSubnetArrayInput
 	// Static NAT Rules
 	StaticNats ServiceLanVpnFeatureStaticNatArrayInput
 	// VPN
@@ -936,6 +955,13 @@ func (o ServiceLanVpnFeatureOutput) ServiceRoutes() ServiceLanVpnFeatureServiceR
 // Service
 func (o ServiceLanVpnFeatureOutput) Services() ServiceLanVpnFeatureServiceArrayOutput {
 	return o.ApplyT(func(v *ServiceLanVpnFeature) ServiceLanVpnFeatureServiceArrayOutput { return v.Services }).(ServiceLanVpnFeatureServiceArrayOutput)
+}
+
+// Static NAT Subnet Rules
+func (o ServiceLanVpnFeatureOutput) StaticNatSubnets() ServiceLanVpnFeatureStaticNatSubnetArrayOutput {
+	return o.ApplyT(func(v *ServiceLanVpnFeature) ServiceLanVpnFeatureStaticNatSubnetArrayOutput {
+		return v.StaticNatSubnets
+	}).(ServiceLanVpnFeatureStaticNatSubnetArrayOutput)
 }
 
 // Static NAT Rules

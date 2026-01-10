@@ -129,7 +129,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RegionListId { get; set; }
 
         /// <summary>
-        /// Role, Attribute conditional on `Type` being equal to `regionId`
+        /// Role, Attribute conditional on `Type` being equal to `Role`
         ///   - Choices: `border-router`, `edge-router`
         /// </summary>
         [Input("role")]

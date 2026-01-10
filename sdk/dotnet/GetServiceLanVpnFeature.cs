@@ -270,6 +270,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<Outputs.GetServiceLanVpnFeatureServiceResult> Services;
         /// <summary>
+        /// Static NAT Subnet Rules
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnFeatureStaticNatSubnetResult> StaticNatSubnets;
+        /// <summary>
         /// Static NAT Rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetServiceLanVpnFeatureStaticNatResult> StaticNats;
@@ -364,6 +368,8 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetServiceLanVpnFeatureServiceResult> services,
 
+            ImmutableArray<Outputs.GetServiceLanVpnFeatureStaticNatSubnetResult> staticNatSubnets,
+
             ImmutableArray<Outputs.GetServiceLanVpnFeatureStaticNatResult> staticNats,
 
             int version,
@@ -410,6 +416,7 @@ namespace Pulumi.Sdwan
             SecondaryDnsAddressIpv6Variable = secondaryDnsAddressIpv6Variable;
             ServiceRoutes = serviceRoutes;
             Services = services;
+            StaticNatSubnets = staticNatSubnets;
             StaticNats = staticNats;
             Version = version;
             Vpn = vpn;

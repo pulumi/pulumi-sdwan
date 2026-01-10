@@ -26,6 +26,16 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? PrefixVariable;
+        /// <summary>
+        /// Applied to Region
+        ///   - Choices: `core-and-access`, `Core`, `Access`
+        ///   - Default value: `core-and-access`
+        /// </summary>
+        public readonly string? Region;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? RegionVariable;
 
         [OutputConstructor]
         private ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix(
@@ -33,11 +43,17 @@ namespace Pulumi.Sdwan.Outputs
 
             string? prefix,
 
-            string? prefixVariable)
+            string? prefixVariable,
+
+            string? region,
+
+            string? regionVariable)
         {
             AggregateOnly = aggregateOnly;
             Prefix = prefix;
             PrefixVariable = prefixVariable;
+            Region = region;
+            RegionVariable = regionVariable;
         }
     }
 }

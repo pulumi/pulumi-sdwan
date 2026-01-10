@@ -62,12 +62,17 @@ namespace Pulumi.Sdwan.Inputs
         [Input("dnsApplicationListId")]
         public Input<string>? DnsApplicationListId { get; set; }
 
+        [Input("dscps")]
+        private InputList<int>? _dscps;
+
         /// <summary>
-        /// DSCP number
-        ///   - Range: `0`-`63`
+        /// DSCP numbers
         /// </summary>
-        [Input("dscp")]
-        public Input<int>? Dscp { get; set; }
+        public InputList<int> Dscps
+        {
+            get => _dscps ?? (_dscps = new InputList<int>());
+            set => _dscps = value;
+        }
 
         [Input("icmp6Messages")]
         private InputList<string>? _icmp6Messages;
@@ -126,11 +131,11 @@ namespace Pulumi.Sdwan.Inputs
             set => _serviceAreas = value;
         }
 
-        [Input("sourceDataIpv4PrefxListId")]
-        public Input<string>? SourceDataIpv4PrefxListId { get; set; }
+        [Input("sourceDataIpv4PrefixListId")]
+        public Input<string>? SourceDataIpv4PrefixListId { get; set; }
 
-        [Input("sourceDataIpv6PrefxListId")]
-        public Input<string>? SourceDataIpv6PrefxListId { get; set; }
+        [Input("sourceDataIpv6PrefixListId")]
+        public Input<string>? SourceDataIpv6PrefixListId { get; set; }
 
         /// <summary>
         /// Source Data IP Prefix

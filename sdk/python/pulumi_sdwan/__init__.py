@@ -244,6 +244,7 @@ from .get_system_aaa_feature import *
 from .get_system_banner_feature import *
 from .get_system_basic_feature import *
 from .get_system_bfd_feature import *
+from .get_system_ca_certificate_feature import *
 from .get_system_feature_profile import *
 from .get_system_flexible_port_speed_feature import *
 from .get_system_global_feature import *
@@ -422,6 +423,7 @@ from .system_aaa_feature import *
 from .system_banner_feature import *
 from .system_basic_feature import *
 from .system_bfd_feature import *
+from .system_ca_certificate_feature import *
 from .system_feature_profile import *
 from .system_flexible_port_speed_feature import *
 from .system_global_feature import *
@@ -1892,6 +1894,14 @@ _utilities.register(
   "fqn": "pulumi_sdwan",
   "classes": {
    "sdwan:index/systemBfdFeature:SystemBfdFeature": "SystemBfdFeature"
+  }
+ },
+ {
+  "pkg": "sdwan",
+  "mod": "index/systemCaCertificateFeature",
+  "fqn": "pulumi_sdwan",
+  "classes": {
+   "sdwan:index/systemCaCertificateFeature:SystemCaCertificateFeature": "SystemCaCertificateFeature"
   }
  },
  {

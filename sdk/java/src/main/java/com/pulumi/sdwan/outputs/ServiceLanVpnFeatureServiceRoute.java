@@ -24,7 +24,7 @@ public final class ServiceLanVpnFeatureServiceRoute {
     private @Nullable String networkAddressVariable;
     /**
      * @return Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      * 
      */
@@ -34,6 +34,16 @@ public final class ServiceLanVpnFeatureServiceRoute {
      * 
      */
     private @Nullable String serviceVariable;
+    /**
+     * @return SSE Instance name
+     * 
+     */
+    private @Nullable String sseInstance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String sseInstanceVariable;
     /**
      * @return Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -68,7 +78,7 @@ public final class ServiceLanVpnFeatureServiceRoute {
     }
     /**
      * @return Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      * 
      */
@@ -81,6 +91,20 @@ public final class ServiceLanVpnFeatureServiceRoute {
      */
     public Optional<String> serviceVariable() {
         return Optional.ofNullable(this.serviceVariable);
+    }
+    /**
+     * @return SSE Instance name
+     * 
+     */
+    public Optional<String> sseInstance() {
+        return Optional.ofNullable(this.sseInstance);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> sseInstanceVariable() {
+        return Optional.ofNullable(this.sseInstanceVariable);
     }
     /**
      * @return Subnet Mask
@@ -118,6 +142,8 @@ public final class ServiceLanVpnFeatureServiceRoute {
         private @Nullable String networkAddressVariable;
         private @Nullable String service;
         private @Nullable String serviceVariable;
+        private @Nullable String sseInstance;
+        private @Nullable String sseInstanceVariable;
         private @Nullable String subnetMask;
         private @Nullable String subnetMaskVariable;
         private @Nullable Integer vpn;
@@ -128,6 +154,8 @@ public final class ServiceLanVpnFeatureServiceRoute {
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.service = defaults.service;
     	      this.serviceVariable = defaults.serviceVariable;
+    	      this.sseInstance = defaults.sseInstance;
+    	      this.sseInstanceVariable = defaults.sseInstanceVariable;
     	      this.subnetMask = defaults.subnetMask;
     	      this.subnetMaskVariable = defaults.subnetMaskVariable;
     	      this.vpn = defaults.vpn;
@@ -158,6 +186,18 @@ public final class ServiceLanVpnFeatureServiceRoute {
             return this;
         }
         @CustomType.Setter
+        public Builder sseInstance(@Nullable String sseInstance) {
+
+            this.sseInstance = sseInstance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sseInstanceVariable(@Nullable String sseInstanceVariable) {
+
+            this.sseInstanceVariable = sseInstanceVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder subnetMask(@Nullable String subnetMask) {
 
             this.subnetMask = subnetMask;
@@ -181,6 +221,8 @@ public final class ServiceLanVpnFeatureServiceRoute {
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.service = service;
             _resultValue.serviceVariable = serviceVariable;
+            _resultValue.sseInstance = sseInstance;
+            _resultValue.sseInstanceVariable = sseInstanceVariable;
             _resultValue.subnetMask = subnetMask;
             _resultValue.subnetMaskVariable = subnetMaskVariable;
             _resultValue.vpn = vpn;

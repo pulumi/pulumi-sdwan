@@ -88,7 +88,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
     }
 
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -96,12 +96,27 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
     private @Nullable Output<Boolean> translateRibMetric;
 
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> translateRibMetric() {
         return Optional.ofNullable(this.translateRibMetric);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * 
+     */
+    @Import(name="translateRibMetricVariable")
+    private @Nullable Output<String> translateRibMetricVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * 
+     */
+    public Optional<Output<String>> translateRibMetricVariable() {
+        return Optional.ofNullable(this.translateRibMetricVariable);
     }
 
     private ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs() {}
@@ -113,6 +128,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
         this.protocolVariable = $.protocolVariable;
         this.routePolicyId = $.routePolicyId;
         this.translateRibMetric = $.translateRibMetric;
+        this.translateRibMetricVariable = $.translateRibMetricVariable;
     }
 
     public static Builder builder() {
@@ -231,7 +247,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -243,7 +259,7 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -251,6 +267,27 @@ public final class ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs extends com.p
          */
         public Builder translateRibMetric(Boolean translateRibMetric) {
             return translateRibMetric(Output.of(translateRibMetric));
+        }
+
+        /**
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` being equal to `omp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetricVariable(@Nullable Output<String> translateRibMetricVariable) {
+            $.translateRibMetricVariable = translateRibMetricVariable;
+            return this;
+        }
+
+        /**
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` being equal to `omp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translateRibMetricVariable(String translateRibMetricVariable) {
+            return translateRibMetricVariable(Output.of(translateRibMetricVariable));
         }
 
         public ServiceRoutingOspfv3Ipv4FeatureRedistributeArgs build() {

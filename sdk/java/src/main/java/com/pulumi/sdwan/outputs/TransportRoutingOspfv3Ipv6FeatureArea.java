@@ -38,8 +38,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureArea {
      */
     private @Nullable String areaNumberVariable;
     /**
-     * @return stub area type
-     *   - Choices: `stub`
+     * @return Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     private @Nullable String areaType;
@@ -95,8 +95,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureArea {
         return Optional.ofNullable(this.areaNumberVariable);
     }
     /**
-     * @return stub area type
-     *   - Choices: `stub`
+     * @return Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     public Optional<String> areaType() {

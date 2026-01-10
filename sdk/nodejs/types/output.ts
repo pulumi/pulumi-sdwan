@@ -249,10 +249,14 @@ export interface ApplicationPriorityTrafficPolicyPolicySequence {
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
+    appqoeDreOptimization?: boolean;
+    appqoeServiceNodeGroup?: string;
+    appqoeTcpOptimization?: boolean;
     /**
      * Backup SLA perferred color
      */
     backupSlaPreferredColors?: string[];
+    cflowd?: boolean;
     cloudProbe?: boolean;
     cloudSaas?: boolean;
     count?: string;
@@ -276,11 +280,16 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
     natPool?: number;
     natVpn?: boolean;
     /**
-     * - Choices: `ipAddress`, `redirectDns`
+     * - Choices: `ipAddress`, `dnsHost`
      */
     redirectDnsField?: string;
     redirectDnsValue?: string;
     secureInternetGateway?: boolean;
+    secureServiceEdge?: boolean;
+    /**
+     * - Choices: `Cisco-Secure-Access`, `zScaler`
+     */
+    secureServiceEdgeInstance?: string;
     setParameters?: outputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter[];
     /**
      * slaClass
@@ -299,14 +308,14 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Choices: `ipsec`, `gre`
      */
     localTlocListEncapsulation?: string;
-    localTlocListRestrict?: string;
+    localTlocListRestrict?: boolean;
     nextHopIpv4?: string;
     nextHopIpv6?: string;
     nextHopLoose?: boolean;
     policerId?: string;
     preferredColorGroupId?: string;
-    preferredRemoteColorIds?: string[];
-    preferredRemoteColorRestrict?: string;
+    preferredRemoteColorRestrict?: boolean;
+    preferredRemoteColors?: string[];
     serviceChainFallbackToRouting?: boolean;
     serviceChainLocal?: boolean;
     serviceChainTlocColors?: string[];
@@ -324,6 +333,8 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Range: `0`-`65530`
      */
     serviceChainVpn?: number;
+    serviceLocal?: boolean;
+    serviceRestrict?: boolean;
     serviceTlocColors?: string[];
     /**
      * - Choices: `ipsec`, `gre`
@@ -335,7 +346,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
      */
     serviceType?: string;
-    serviceVpn?: string;
+    /**
+     * - Range: `0`-`65530`
+     */
+    serviceVpn?: number;
     tlocColors?: string[];
     /**
      * - Choices: `ipsec`, `gre`
@@ -343,7 +357,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
     tlocEncapsulation?: string;
     tlocIp?: string;
     tlocListId?: string;
-    vpn?: string;
+    /**
+     * - Range: `0`-`65530`
+     */
+    vpn?: number;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
@@ -384,10 +401,9 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     dns?: string;
     dnsApplicationListId?: string;
     /**
-     * DSCP number
-     *   - Range: `0`-`63`
+     * DSCP numbers
      */
-    dscp?: number;
+    dscps?: number[];
     /**
      * ICMP6 Message
      */
@@ -409,8 +425,8 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * M365 Service Area
      */
     serviceAreas?: string[];
-    sourceDataIpv4PrefxListId?: string;
-    sourceDataIpv6PrefxListId?: string;
+    sourceDataIpv4PrefixListId?: string;
+    sourceDataIpv6PrefixListId?: string;
     /**
      * Source Data IP Prefix
      */
@@ -5849,6 +5865,10 @@ export interface ConfigurationGroupDevice {
      */
     id?: string;
     /**
+     * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     */
+    topologyLabel?: string;
+    /**
      * List of variables
      */
     variables?: outputs.ConfigurationGroupDeviceVariable[];
@@ -6116,7 +6136,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     regionListId?: string;
     /**
-     * Role, Attribute conditional on `type` being equal to `regionId`
+     * Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      */
     role?: string;
@@ -6681,10 +6701,14 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequence {
 }
 
 export interface GetApplicationPriorityTrafficPolicyPolicySequenceAction {
+    appqoeDreOptimization: boolean;
+    appqoeServiceNodeGroup: string;
+    appqoeTcpOptimization: boolean;
     /**
      * Backup SLA perferred color
      */
     backupSlaPreferredColors: string[];
+    cflowd: boolean;
     cloudProbe: boolean;
     cloudSaas: boolean;
     count: string;
@@ -6701,6 +6725,8 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceAction {
     redirectDnsField: string;
     redirectDnsValue: string;
     secureInternetGateway: boolean;
+    secureServiceEdge: boolean;
+    secureServiceEdgeInstance: string;
     setParameters: outputs.GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter[];
     /**
      * slaClass
@@ -6713,14 +6739,14 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParam
     forwardingClassListId: string;
     localTlocListColors: string[];
     localTlocListEncapsulation: string;
-    localTlocListRestrict: string;
+    localTlocListRestrict: boolean;
     nextHopIpv4: string;
     nextHopIpv6: string;
     nextHopLoose: boolean;
     policerId: string;
     preferredColorGroupId: string;
-    preferredRemoteColorIds: string[];
-    preferredRemoteColorRestrict: string;
+    preferredRemoteColorRestrict: boolean;
+    preferredRemoteColors: string[];
     serviceChainFallbackToRouting: boolean;
     serviceChainLocal: boolean;
     serviceChainTlocColors: string[];
@@ -6729,17 +6755,19 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParam
     serviceChainTlocListId: string;
     serviceChainType: string;
     serviceChainVpn: number;
+    serviceLocal: boolean;
+    serviceRestrict: boolean;
     serviceTlocColors: string[];
     serviceTlocEncapsulation: string;
     serviceTlocIp: string;
     serviceTlocListId: string;
     serviceType: string;
-    serviceVpn: string;
+    serviceVpn: number;
     tlocColors: string[];
     tlocEncapsulation: string;
     tlocIp: string;
     tlocListId: string;
-    vpn: string;
+    vpn: number;
 }
 
 export interface GetApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
@@ -6778,9 +6806,9 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     dns: string;
     dnsApplicationListId: string;
     /**
-     * DSCP number
+     * DSCP numbers
      */
-    dscp: number;
+    dscps: number[];
     /**
      * ICMP6 Message
      */
@@ -6802,8 +6830,8 @@ export interface GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * M365 Service Area
      */
     serviceAreas: string[];
-    sourceDataIpv4PrefxListId: string;
-    sourceDataIpv6PrefxListId: string;
+    sourceDataIpv4PrefixListId: string;
+    sourceDataIpv6PrefixListId: string;
     /**
      * Source Data IP Prefix
      */
@@ -11783,6 +11811,10 @@ export interface GetConfigurationGroupDevice {
      */
     id: string;
     /**
+     * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     */
+    topologyLabel: string;
+    /**
      * List of variables
      */
     variables: outputs.GetConfigurationGroupDeviceVariable[];
@@ -14296,6 +14328,14 @@ export interface GetServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * Variable name
      */
     prefixVariable: string;
+    /**
+     * Applied to Region
+     */
+    region: string;
+    /**
+     * Variable name
+     */
+    regionVariable: string;
 }
 
 export interface GetServiceLanVpnFeatureGreRoute {
@@ -14399,6 +14439,14 @@ export interface GetServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface GetServiceLanVpnFeatureIpv4StaticRoute {
     /**
+     * Gateway distance
+     */
+    administrativeDistance: number;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable: string;
+    /**
      * IPv4 Route Gateway DHCP
      */
     dhcp: boolean;
@@ -14406,6 +14454,7 @@ export interface GetServiceLanVpnFeatureIpv4StaticRoute {
      * Gateway type
      */
     gateway: string;
+    ipStaticRouteInterfaces: outputs.GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface[];
     /**
      * IP Address
      */
@@ -14438,6 +14487,34 @@ export interface GetServiceLanVpnFeatureIpv4StaticRoute {
      * IPv4 Route Gateway VPN
      */
     vpn: boolean;
+}
+
+export interface GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface {
+    interfaceName: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable: string;
+    nextHops: outputs.GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop[];
+}
+
+export interface GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop {
+    /**
+     * IPv4 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Administrative distance
+     */
+    administrativeDistance: number;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable: string;
 }
 
 export interface GetServiceLanVpnFeatureIpv4StaticRouteNextHop {
@@ -14506,6 +14583,7 @@ export interface GetServiceLanVpnFeatureIpv6StaticRoute {
      * Gateway type
      */
     gateway: string;
+    ipv6StaticRouteInterfaces: outputs.GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface[];
     /**
      * IPv6 Nat
      */
@@ -14530,6 +14608,34 @@ export interface GetServiceLanVpnFeatureIpv6StaticRoute {
      * Variable name
      */
     prefixVariable: string;
+}
+
+export interface GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface {
+    interfaceName: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable: string;
+    nextHops: outputs.GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop[];
+}
+
+export interface GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop {
+    /**
+     * IPv6 Address
+     */
+    address: string;
+    /**
+     * Variable name
+     */
+    addressVariable: string;
+    /**
+     * Administrative distance
+     */
+    administrativeDistance: number;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable: string;
 }
 
 export interface GetServiceLanVpnFeatureIpv6StaticRouteNextHop {
@@ -14826,6 +14932,14 @@ export interface GetServiceLanVpnFeatureServiceRoute {
      */
     serviceVariable: string;
     /**
+     * SSE Instance name
+     */
+    sseInstance: string;
+    /**
+     * Variable name
+     */
+    sseInstanceVariable: string;
+    /**
      * Subnet Mask
      */
     subnetMask: string;
@@ -14873,6 +14987,42 @@ export interface GetServiceLanVpnFeatureStaticNat {
      * Variable name
      */
     translatedSourceIpVariable: string;
+}
+
+export interface GetServiceLanVpnFeatureStaticNatSubnet {
+    /**
+     * Network Prefix Length
+     */
+    prefixLength: number;
+    /**
+     * Variable name
+     */
+    prefixLengthVariable: string;
+    /**
+     * Source IP Subnet
+     */
+    sourceIpSubnet: string;
+    /**
+     * Variable name
+     */
+    sourceIpSubnetVariable: string;
+    /**
+     * Static NAT Direction
+     */
+    staticNatDirection: string;
+    /**
+     * Variable name
+     */
+    staticNatDirectionVariable: string;
+    trackerObjectId: string;
+    /**
+     * Translated Source IP Subnet
+     */
+    translatedSourceIpSubnet: string;
+    /**
+     * Variable name
+     */
+    translatedSourceIpSubnetVariable: string;
 }
 
 export interface GetServiceLanVpnInterfaceEthernetFeatureArp {
@@ -16196,18 +16346,26 @@ export interface GetServiceRoutingBgpFeatureIpv6Neighbor {
 
 export interface GetServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    disablePeerMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    disablePeerMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    disablePeerThreshold: number;
+    /**
+     * Variable name
+     */
+    disablePeerThresholdVariable: string;
+    /**
      * Set IPv6 unicast address family
      */
     familyType: string;
     inRoutePolicyId: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     */
-    maxNumberOfPrefixes: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable: string;
     outRoutePolicyId: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
@@ -16222,13 +16380,37 @@ export interface GetServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
      */
     restartIntervalVariable: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer
      */
-    threshold: number;
+    restartMaxNumberOfPrefixes: number;
     /**
      * Variable name
      */
-    thresholdVariable: string;
+    restartMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    restartThreshold: number;
+    /**
+     * Variable name
+     */
+    restartThresholdVariable: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    warningMessageMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    warningMessageMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    warningMessageThreshold: number;
+    /**
+     * Variable name
+     */
+    warningMessageThresholdVariable: string;
 }
 
 export interface GetServiceRoutingBgpFeatureIpv6Network {
@@ -16552,7 +16734,7 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable: string;
     /**
-     * stub area type
+     * Set OSPFv3 area type
      */
     areaType: string;
     /**
@@ -16591,7 +16773,7 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable: string;
     /**
-     * No Authentication by default
+     * Set OSPF interface authentication configuration
      */
     authenticationType: string;
     /**
@@ -16700,9 +16882,13 @@ export interface GetServiceRoutingOspfv3Ipv4FeatureRedistribute {
     protocolVariable: string;
     routePolicyId: string;
     /**
-     * Translate Rib Metric
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
     translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetServiceRoutingOspfv3Ipv6FeatureArea {
@@ -16723,7 +16909,7 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable: string;
     /**
-     * stub area type
+     * Set OSPFv3 area type
      */
     areaType: string;
     /**
@@ -16762,7 +16948,7 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable: string;
     /**
-     * No Authentication by default
+     * Set OSPF interface authentication configuration
      */
     authenticationType: string;
     /**
@@ -16861,9 +17047,13 @@ export interface GetServiceRoutingOspfv3Ipv6FeatureRedistribute {
     protocolVariable: string;
     routePolicyId: string;
     /**
-     * Translate Rib Metric
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
      */
     translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetServiceSwitchportFeatureInterface {
@@ -17694,6 +17884,17 @@ export interface GetSystemBfdFeatureColor {
      * Variable name
      */
     pmtuDiscoveryVariable: string;
+}
+
+export interface GetSystemCaCertificateFeatureCertificate {
+    /**
+     * UUID of Certificate Record in Database
+     */
+    caCertificateId: string;
+    /**
+     * Trust Point Name of Certificate
+     */
+    trustPointName: string;
 }
 
 export interface GetSystemIpv4DeviceAccessFeatureSequence {
@@ -19612,18 +19813,26 @@ export interface GetTransportRoutingBgpFeatureIpv6Neighbor {
 
 export interface GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    disablePeerMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    disablePeerMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    disablePeerThreshold: number;
+    /**
+     * Variable name
+     */
+    disablePeerThresholdVariable: string;
+    /**
      * Set IPv6 unicast address family
      */
     familyType: string;
     inRoutePolicyId: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     */
-    maxNumberOfPrefixes: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable: string;
     outRoutePolicyId: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
@@ -19638,13 +19847,37 @@ export interface GetTransportRoutingBgpFeatureIpv6NeighborAddressFamily {
      */
     restartIntervalVariable: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer
      */
-    threshold: number;
+    restartMaxNumberOfPrefixes: number;
     /**
      * Variable name
      */
-    thresholdVariable: string;
+    restartMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    restartThreshold: number;
+    /**
+     * Variable name
+     */
+    restartThresholdVariable: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer
+     */
+    warningMessageMaxNumberOfPrefixes: number;
+    /**
+     * Variable name
+     */
+    warningMessageMaxNumberOfPrefixesVariable: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message
+     */
+    warningMessageThreshold: number;
+    /**
+     * Variable name
+     */
+    warningMessageThresholdVariable: string;
 }
 
 export interface GetTransportRoutingBgpFeatureIpv6Network {
@@ -19891,7 +20124,7 @@ export interface GetTransportRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable: string;
     /**
-     * stub area type
+     * Set OSPFv3 area type
      */
     areaType: string;
     /**
@@ -19930,7 +20163,7 @@ export interface GetTransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable: string;
     /**
-     * No Authentication by default
+     * Set OSPF interface authentication configuration
      */
     authenticationType: string;
     /**
@@ -20038,6 +20271,14 @@ export interface GetTransportRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+     */
+    translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetTransportRoutingOspfv3Ipv6FeatureArea {
@@ -20058,7 +20299,7 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable: string;
     /**
-     * stub area type
+     * Set OSPFv3 area type
      */
     areaType: string;
     /**
@@ -20097,7 +20338,7 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable: string;
     /**
-     * No Authentication by default
+     * Set OSPF interface authentication configuration
      */
     authenticationType: string;
     /**
@@ -20195,6 +20436,14 @@ export interface GetTransportRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable: string;
     routePolicyId: string;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
+     */
+    translateRibMetric: boolean;
+    /**
+     * Variable name
+     */
+    translateRibMetricVariable: string;
 }
 
 export interface GetTransportT1E1ControllerFeatureEntry {
@@ -22152,6 +22401,10 @@ export interface GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      * policy id for selected match entry
      */
     policyId: string;
+    /**
+     * Policy version
+     */
+    policyVersion: string;
     /**
      * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      */
@@ -24251,6 +24504,16 @@ export interface ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * Variable name
      */
     prefixVariable?: string;
+    /**
+     * Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     */
+    region?: string;
+    /**
+     * Variable name
+     */
+    regionVariable?: string;
 }
 
 export interface ServiceLanVpnFeatureGreRoute {
@@ -24356,14 +24619,27 @@ export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
+     * Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     */
+    administrativeDistance?: number;
+    /**
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     */
+    administrativeDistanceVariable?: string;
+    /**
      * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      */
     dhcp?: boolean;
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      */
     gateway?: string;
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     */
+    ipStaticRouteInterfaces?: outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface[];
     /**
      * IP Address
      */
@@ -24397,6 +24673,35 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      */
     vpn?: boolean;
+}
+
+export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface {
+    interfaceName?: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: string;
+    nextHops?: outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop[];
+}
+
+export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop {
+    /**
+     * IPv4 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Administrative distance
+     *   - Range: `1`-`255`
+     */
+    administrativeDistance?: number;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable?: string;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
@@ -24467,9 +24772,13 @@ export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
 export interface ServiceLanVpnFeatureIpv6StaticRoute {
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      */
     gateway?: string;
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     */
+    ipv6StaticRouteInterfaces?: outputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface[];
     /**
      * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
@@ -24495,6 +24804,35 @@ export interface ServiceLanVpnFeatureIpv6StaticRoute {
      * Variable name
      */
     prefixVariable?: string;
+}
+
+export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface {
+    interfaceName?: string;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: string;
+    nextHops?: outputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop[];
+}
+
+export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop {
+    /**
+     * IPv6 Address
+     */
+    address?: string;
+    /**
+     * Variable name
+     */
+    addressVariable?: string;
+    /**
+     * Administrative distance
+     *   - Range: `1`-`254`
+     */
+    administrativeDistance?: number;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable?: string;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
@@ -24584,7 +24922,7 @@ export interface ServiceLanVpnFeatureNatPool {
     overloadVariable?: string;
     /**
      * NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      */
     prefixLength?: number;
     /**
@@ -24639,6 +24977,7 @@ export interface ServiceLanVpnFeatureNatPortForward {
     sourceIpVariable?: string;
     /**
      * Source Port
+     *   - Range: `0`-`65535`
      */
     sourcePort?: number;
     /**
@@ -24647,6 +24986,7 @@ export interface ServiceLanVpnFeatureNatPortForward {
     sourcePortVariable?: string;
     /**
      * Translate Port
+     *   - Range: `0`-`65535`
      */
     translatePort?: number;
     /**
@@ -24802,7 +25142,7 @@ export interface ServiceLanVpnFeatureServiceRoute {
     networkAddressVariable?: string;
     /**
      * Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      */
     service?: string;
@@ -24810,6 +25150,14 @@ export interface ServiceLanVpnFeatureServiceRoute {
      * Variable name
      */
     serviceVariable?: string;
+    /**
+     * SSE Instance name
+     */
+    sseInstance?: string;
+    /**
+     * Variable name
+     */
+    sseInstanceVariable?: string;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -24861,6 +25209,44 @@ export interface ServiceLanVpnFeatureStaticNat {
      * Variable name
      */
     translatedSourceIpVariable?: string;
+}
+
+export interface ServiceLanVpnFeatureStaticNatSubnet {
+    /**
+     * Network Prefix Length
+     *   - Range: `1`-`32`
+     */
+    prefixLength?: number;
+    /**
+     * Variable name
+     */
+    prefixLengthVariable?: string;
+    /**
+     * Source IP Subnet
+     */
+    sourceIpSubnet?: string;
+    /**
+     * Variable name
+     */
+    sourceIpSubnetVariable?: string;
+    /**
+     * Static NAT Direction
+     *   - Choices: `inside`, `outside`
+     */
+    staticNatDirection?: string;
+    /**
+     * Variable name
+     */
+    staticNatDirectionVariable?: string;
+    trackerObjectId?: string;
+    /**
+     * Translated Source IP Subnet
+     */
+    translatedSourceIpSubnet?: string;
+    /**
+     * Variable name
+     */
+    translatedSourceIpSubnetVariable?: string;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureArp {
@@ -26310,43 +26696,82 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: string;
+    /**
      * Set IPv6 unicast address family
      */
     familyType?: string;
     inRoutePolicyId?: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: string;
     outRoutePolicyId?: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: number;
+    restartThreshold?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: string;
+    restartThresholdVariable?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: string;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6Network {
@@ -26707,8 +27132,8 @@ export interface ServiceRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable?: string;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: string;
     /**
@@ -26748,8 +27173,8 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable?: string;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: string;
     /**
@@ -26874,10 +27299,14 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureArea {
@@ -26899,8 +27328,8 @@ export interface ServiceRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable?: string;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: string;
     /**
@@ -26940,8 +27369,8 @@ export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable?: string;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: string;
     /**
@@ -27052,10 +27481,14 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface ServiceSwitchportFeatureInterface {
@@ -27976,6 +28409,17 @@ export interface SystemBfdFeatureColor {
      * Variable name
      */
     pmtuDiscoveryVariable?: string;
+}
+
+export interface SystemCaCertificateFeatureCertificate {
+    /**
+     * UUID of Certificate Record in Database
+     */
+    caCertificateId?: string;
+    /**
+     * Trust Point Name of Certificate
+     */
+    trustPointName?: string;
 }
 
 export interface SystemIpv4DeviceAccessFeatureSequence {
@@ -30065,44 +30509,83 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: string;
+    /**
      * Set IPv6 unicast address family
      *   - Choices: `ipv6-unicast`, `vpnv6-unicast`
      */
     familyType?: string;
     inRoutePolicyId?: string;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: number;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: string;
     outRoutePolicyId?: string;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: number;
+    restartThreshold?: number;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: string;
+    restartThresholdVariable?: string;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: string;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: number;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: string;
 }
 
 export interface TransportRoutingBgpFeatureIpv6Network {
@@ -30375,8 +30858,8 @@ export interface TransportRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable?: string;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: string;
     /**
@@ -30416,8 +30899,8 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable?: string;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: string;
     /**
@@ -30541,6 +31024,15 @@ export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureArea {
@@ -30562,8 +31054,8 @@ export interface TransportRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable?: string;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: string;
     /**
@@ -30603,8 +31095,8 @@ export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable?: string;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: string;
     /**
@@ -30714,6 +31206,15 @@ export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable?: string;
     routePolicyId?: string;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: boolean;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: string;
 }
 
 export interface TransportT1E1ControllerFeatureEntry {
@@ -30944,6 +31445,7 @@ export interface TransportWanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
@@ -32806,6 +33308,10 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      * policy id for selected match entry
      */
     policyId?: string;
+    /**
+     * Policy version
+     */
+    policyVersion?: string;
     /**
      * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      */

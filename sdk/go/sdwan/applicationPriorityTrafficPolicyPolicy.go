@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Application Priority Traffic Policy Policy.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -46,7 +46,9 @@ import (
 //						Protocol:     pulumi.String("ipv4"),
 //						MatchEntries: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArray{
 //							&sdwan.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs{
-//								Dscp: pulumi.Int(1),
+//								Dscps: pulumi.IntArray{
+//									pulumi.Int(1),
+//								},
 //							},
 //						},
 //						Actions: sdwan.ApplicationPriorityTrafficPolicyPolicySequenceActionArray{

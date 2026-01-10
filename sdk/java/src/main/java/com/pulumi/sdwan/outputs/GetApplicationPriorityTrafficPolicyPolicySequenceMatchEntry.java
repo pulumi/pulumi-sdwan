@@ -42,10 +42,10 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     private String dns;
     private String dnsApplicationListId;
     /**
-     * @return DSCP number
+     * @return DSCP numbers
      * 
      */
-    private Integer dscp;
+    private List<Integer> dscps;
     /**
      * @return ICMP6 Message
      * 
@@ -72,8 +72,8 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * 
      */
     private List<String> serviceAreas;
-    private String sourceDataIpv4PrefxListId;
-    private String sourceDataIpv6PrefxListId;
+    private String sourceDataIpv4PrefixListId;
+    private String sourceDataIpv6PrefixListId;
     /**
      * @return Source Data IP Prefix
      * 
@@ -159,11 +159,11 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         return this.dnsApplicationListId;
     }
     /**
-     * @return DSCP number
+     * @return DSCP numbers
      * 
      */
-    public Integer dscp() {
-        return this.dscp;
+    public List<Integer> dscps() {
+        return this.dscps;
     }
     /**
      * @return ICMP6 Message
@@ -203,11 +203,11 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     public List<String> serviceAreas() {
         return this.serviceAreas;
     }
-    public String sourceDataIpv4PrefxListId() {
-        return this.sourceDataIpv4PrefxListId;
+    public String sourceDataIpv4PrefixListId() {
+        return this.sourceDataIpv4PrefixListId;
     }
-    public String sourceDataIpv6PrefxListId() {
-        return this.sourceDataIpv6PrefxListId;
+    public String sourceDataIpv6PrefixListId() {
+        return this.sourceDataIpv6PrefixListId;
     }
     /**
      * @return Source Data IP Prefix
@@ -277,15 +277,15 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
         private String destinationRegion;
         private String dns;
         private String dnsApplicationListId;
-        private Integer dscp;
+        private List<Integer> dscps;
         private List<String> icmp6Messages;
         private List<String> icmpMessages;
         private String packetLength;
         private List<String> protocols;
         private String saasApplicationListId;
         private List<String> serviceAreas;
-        private String sourceDataIpv4PrefxListId;
-        private String sourceDataIpv6PrefxListId;
+        private String sourceDataIpv4PrefixListId;
+        private String sourceDataIpv6PrefixListId;
         private String sourceIpv4Prefix;
         private String sourceIpv6Prefix;
         private List<String> sourcePorts;
@@ -305,15 +305,15 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     	      this.destinationRegion = defaults.destinationRegion;
     	      this.dns = defaults.dns;
     	      this.dnsApplicationListId = defaults.dnsApplicationListId;
-    	      this.dscp = defaults.dscp;
+    	      this.dscps = defaults.dscps;
     	      this.icmp6Messages = defaults.icmp6Messages;
     	      this.icmpMessages = defaults.icmpMessages;
     	      this.packetLength = defaults.packetLength;
     	      this.protocols = defaults.protocols;
     	      this.saasApplicationListId = defaults.saasApplicationListId;
     	      this.serviceAreas = defaults.serviceAreas;
-    	      this.sourceDataIpv4PrefxListId = defaults.sourceDataIpv4PrefxListId;
-    	      this.sourceDataIpv6PrefxListId = defaults.sourceDataIpv6PrefxListId;
+    	      this.sourceDataIpv4PrefixListId = defaults.sourceDataIpv4PrefixListId;
+    	      this.sourceDataIpv6PrefixListId = defaults.sourceDataIpv6PrefixListId;
     	      this.sourceIpv4Prefix = defaults.sourceIpv4Prefix;
     	      this.sourceIpv6Prefix = defaults.sourceIpv6Prefix;
     	      this.sourcePorts = defaults.sourcePorts;
@@ -399,12 +399,15 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
             return this;
         }
         @CustomType.Setter
-        public Builder dscp(Integer dscp) {
-            if (dscp == null) {
-              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "dscp");
+        public Builder dscps(List<Integer> dscps) {
+            if (dscps == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "dscps");
             }
-            this.dscp = dscp;
+            this.dscps = dscps;
             return this;
+        }
+        public Builder dscps(Integer... dscps) {
+            return dscps(List.of(dscps));
         }
         @CustomType.Setter
         public Builder icmp6Messages(List<String> icmp6Messages) {
@@ -467,19 +470,19 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
             return serviceAreas(List.of(serviceAreas));
         }
         @CustomType.Setter
-        public Builder sourceDataIpv4PrefxListId(String sourceDataIpv4PrefxListId) {
-            if (sourceDataIpv4PrefxListId == null) {
-              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "sourceDataIpv4PrefxListId");
+        public Builder sourceDataIpv4PrefixListId(String sourceDataIpv4PrefixListId) {
+            if (sourceDataIpv4PrefixListId == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "sourceDataIpv4PrefixListId");
             }
-            this.sourceDataIpv4PrefxListId = sourceDataIpv4PrefxListId;
+            this.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
             return this;
         }
         @CustomType.Setter
-        public Builder sourceDataIpv6PrefxListId(String sourceDataIpv6PrefxListId) {
-            if (sourceDataIpv6PrefxListId == null) {
-              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "sourceDataIpv6PrefxListId");
+        public Builder sourceDataIpv6PrefixListId(String sourceDataIpv6PrefixListId) {
+            if (sourceDataIpv6PrefixListId == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry", "sourceDataIpv6PrefixListId");
             }
-            this.sourceDataIpv6PrefxListId = sourceDataIpv6PrefxListId;
+            this.sourceDataIpv6PrefixListId = sourceDataIpv6PrefixListId;
             return this;
         }
         @CustomType.Setter
@@ -552,15 +555,15 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
             _resultValue.destinationRegion = destinationRegion;
             _resultValue.dns = dns;
             _resultValue.dnsApplicationListId = dnsApplicationListId;
-            _resultValue.dscp = dscp;
+            _resultValue.dscps = dscps;
             _resultValue.icmp6Messages = icmp6Messages;
             _resultValue.icmpMessages = icmpMessages;
             _resultValue.packetLength = packetLength;
             _resultValue.protocols = protocols;
             _resultValue.saasApplicationListId = saasApplicationListId;
             _resultValue.serviceAreas = serviceAreas;
-            _resultValue.sourceDataIpv4PrefxListId = sourceDataIpv4PrefxListId;
-            _resultValue.sourceDataIpv6PrefxListId = sourceDataIpv6PrefxListId;
+            _resultValue.sourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
+            _resultValue.sourceDataIpv6PrefixListId = sourceDataIpv6PrefixListId;
             _resultValue.sourceIpv4Prefix = sourceIpv4Prefix;
             _resultValue.sourceIpv6Prefix = sourceIpv6Prefix;
             _resultValue.sourcePorts = sourcePorts;

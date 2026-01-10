@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a CLI Feature Profile .
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 

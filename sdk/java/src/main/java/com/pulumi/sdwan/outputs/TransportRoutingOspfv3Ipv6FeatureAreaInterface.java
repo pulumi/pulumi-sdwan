@@ -35,8 +35,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     private @Nullable String authenticationSpiVariable;
     /**
-     * @return No Authentication by default
-     *   - Choices: `no-auth`
+     * @return Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      * 
      */
     private @Nullable String authenticationType;
@@ -151,8 +151,8 @@ public final class TransportRoutingOspfv3Ipv6FeatureAreaInterface {
         return Optional.ofNullable(this.authenticationSpiVariable);
     }
     /**
-     * @return No Authentication by default
-     *   - Choices: `no-auth`
+     * @return Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      * 
      */
     public Optional<String> authenticationType() {

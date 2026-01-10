@@ -27,7 +27,7 @@ class GetServiceLanVpnFeatureResult:
     """
     A collection of values returned by getServiceLanVpnFeature.
     """
-    def __init__(__self__, advertise_omp_ipv4s=None, advertise_omp_ipv6s=None, config_description=None, config_description_variable=None, description=None, enable_sdwan_remote_access=None, feature_profile_id=None, gre_routes=None, host_mappings=None, id=None, ipsec_routes=None, ipv4_export_route_targets=None, ipv4_import_route_targets=None, ipv4_static_routes=None, ipv6_export_route_targets=None, ipv6_import_route_targets=None, ipv6_static_routes=None, name=None, nat64_v4_pools=None, nat_pools=None, nat_port_forwards=None, omp_admin_distance_ipv4=None, omp_admin_distance_ipv4_variable=None, omp_admin_distance_ipv6=None, omp_admin_distance_ipv6_variable=None, primary_dns_address_ipv4=None, primary_dns_address_ipv4_variable=None, primary_dns_address_ipv6=None, primary_dns_address_ipv6_variable=None, route_leak_from_global_vpns=None, route_leak_from_other_services=None, route_leak_to_global_vpns=None, secondary_dns_address_ipv4=None, secondary_dns_address_ipv4_variable=None, secondary_dns_address_ipv6=None, secondary_dns_address_ipv6_variable=None, service_routes=None, services=None, static_nats=None, version=None, vpn=None, vpn_variable=None):
+    def __init__(__self__, advertise_omp_ipv4s=None, advertise_omp_ipv6s=None, config_description=None, config_description_variable=None, description=None, enable_sdwan_remote_access=None, feature_profile_id=None, gre_routes=None, host_mappings=None, id=None, ipsec_routes=None, ipv4_export_route_targets=None, ipv4_import_route_targets=None, ipv4_static_routes=None, ipv6_export_route_targets=None, ipv6_import_route_targets=None, ipv6_static_routes=None, name=None, nat64_v4_pools=None, nat_pools=None, nat_port_forwards=None, omp_admin_distance_ipv4=None, omp_admin_distance_ipv4_variable=None, omp_admin_distance_ipv6=None, omp_admin_distance_ipv6_variable=None, primary_dns_address_ipv4=None, primary_dns_address_ipv4_variable=None, primary_dns_address_ipv6=None, primary_dns_address_ipv6_variable=None, route_leak_from_global_vpns=None, route_leak_from_other_services=None, route_leak_to_global_vpns=None, secondary_dns_address_ipv4=None, secondary_dns_address_ipv4_variable=None, secondary_dns_address_ipv6=None, secondary_dns_address_ipv6_variable=None, service_routes=None, services=None, static_nat_subnets=None, static_nats=None, version=None, vpn=None, vpn_variable=None):
         if advertise_omp_ipv4s and not isinstance(advertise_omp_ipv4s, list):
             raise TypeError("Expected argument 'advertise_omp_ipv4s' to be a list")
         pulumi.set(__self__, "advertise_omp_ipv4s", advertise_omp_ipv4s)
@@ -142,6 +142,9 @@ class GetServiceLanVpnFeatureResult:
         if services and not isinstance(services, list):
             raise TypeError("Expected argument 'services' to be a list")
         pulumi.set(__self__, "services", services)
+        if static_nat_subnets and not isinstance(static_nat_subnets, list):
+            raise TypeError("Expected argument 'static_nat_subnets' to be a list")
+        pulumi.set(__self__, "static_nat_subnets", static_nat_subnets)
         if static_nats and not isinstance(static_nats, list):
             raise TypeError("Expected argument 'static_nats' to be a list")
         pulumi.set(__self__, "static_nats", static_nats)
@@ -445,6 +448,14 @@ class GetServiceLanVpnFeatureResult:
         return pulumi.get(self, "services")
 
     @_builtins.property
+    @pulumi.getter(name="staticNatSubnets")
+    def static_nat_subnets(self) -> Sequence['outputs.GetServiceLanVpnFeatureStaticNatSubnetResult']:
+        """
+        Static NAT Subnet Rules
+        """
+        return pulumi.get(self, "static_nat_subnets")
+
+    @_builtins.property
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> Sequence['outputs.GetServiceLanVpnFeatureStaticNatResult']:
         """
@@ -521,6 +532,7 @@ class AwaitableGetServiceLanVpnFeatureResult(GetServiceLanVpnFeatureResult):
             secondary_dns_address_ipv6_variable=self.secondary_dns_address_ipv6_variable,
             service_routes=self.service_routes,
             services=self.services,
+            static_nat_subnets=self.static_nat_subnets,
             static_nats=self.static_nats,
             version=self.version,
             vpn=self.vpn,
@@ -592,6 +604,7 @@ def get_service_lan_vpn_feature(feature_profile_id: Optional[_builtins.str] = No
         secondary_dns_address_ipv6_variable=pulumi.get(__ret__, 'secondary_dns_address_ipv6_variable'),
         service_routes=pulumi.get(__ret__, 'service_routes'),
         services=pulumi.get(__ret__, 'services'),
+        static_nat_subnets=pulumi.get(__ret__, 'static_nat_subnets'),
         static_nats=pulumi.get(__ret__, 'static_nats'),
         version=pulumi.get(__ret__, 'version'),
         vpn=pulumi.get(__ret__, 'vpn'),
@@ -660,6 +673,7 @@ def get_service_lan_vpn_feature_output(feature_profile_id: Optional[pulumi.Input
         secondary_dns_address_ipv6_variable=pulumi.get(__response__, 'secondary_dns_address_ipv6_variable'),
         service_routes=pulumi.get(__response__, 'service_routes'),
         services=pulumi.get(__response__, 'services'),
+        static_nat_subnets=pulumi.get(__response__, 'static_nat_subnets'),
         static_nats=pulumi.get(__response__, 'static_nats'),
         version=pulumi.get(__response__, 'version'),
         vpn=pulumi.get(__response__, 'vpn'),

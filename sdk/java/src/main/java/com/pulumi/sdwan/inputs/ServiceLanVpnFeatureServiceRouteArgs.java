@@ -48,7 +48,7 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
 
     /**
      * Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      * 
      */
@@ -57,7 +57,7 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
 
     /**
      * @return Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      * 
      */
@@ -78,6 +78,36 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
      */
     public Optional<Output<String>> serviceVariable() {
         return Optional.ofNullable(this.serviceVariable);
+    }
+
+    /**
+     * SSE Instance name
+     * 
+     */
+    @Import(name="sseInstance")
+    private @Nullable Output<String> sseInstance;
+
+    /**
+     * @return SSE Instance name
+     * 
+     */
+    public Optional<Output<String>> sseInstance() {
+        return Optional.ofNullable(this.sseInstance);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="sseInstanceVariable")
+    private @Nullable Output<String> sseInstanceVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> sseInstanceVariable() {
+        return Optional.ofNullable(this.sseInstanceVariable);
     }
 
     /**
@@ -134,6 +164,8 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
         this.networkAddressVariable = $.networkAddressVariable;
         this.service = $.service;
         this.serviceVariable = $.serviceVariable;
+        this.sseInstance = $.sseInstance;
+        this.sseInstanceVariable = $.sseInstanceVariable;
         this.subnetMask = $.subnetMask;
         this.subnetMaskVariable = $.subnetMaskVariable;
         this.vpn = $.vpn;
@@ -201,7 +233,7 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
 
         /**
          * @param service Service
-         *   - Choices: `SIG`
+         *   - Choices: `SIG`, `SSE`
          *   - Default value: `SIG`
          * 
          * @return builder
@@ -214,7 +246,7 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
 
         /**
          * @param service Service
-         *   - Choices: `SIG`
+         *   - Choices: `SIG`, `SSE`
          *   - Default value: `SIG`
          * 
          * @return builder
@@ -243,6 +275,48 @@ public final class ServiceLanVpnFeatureServiceRouteArgs extends com.pulumi.resou
          */
         public Builder serviceVariable(String serviceVariable) {
             return serviceVariable(Output.of(serviceVariable));
+        }
+
+        /**
+         * @param sseInstance SSE Instance name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sseInstance(@Nullable Output<String> sseInstance) {
+            $.sseInstance = sseInstance;
+            return this;
+        }
+
+        /**
+         * @param sseInstance SSE Instance name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sseInstance(String sseInstance) {
+            return sseInstance(Output.of(sseInstance));
+        }
+
+        /**
+         * @param sseInstanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sseInstanceVariable(@Nullable Output<String> sseInstanceVariable) {
+            $.sseInstanceVariable = sseInstanceVariable;
+            return this;
+        }
+
+        /**
+         * @param sseInstanceVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder sseInstanceVariable(String sseInstanceVariable) {
+            return sseInstanceVariable(Output.of(sseInstanceVariable));
         }
 
         /**

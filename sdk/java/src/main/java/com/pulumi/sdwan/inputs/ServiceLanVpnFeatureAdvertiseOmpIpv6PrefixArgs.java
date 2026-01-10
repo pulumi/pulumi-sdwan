@@ -63,12 +63,48 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs extends com.pu
         return Optional.ofNullable(this.prefixVariable);
     }
 
+    /**
+     * Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     * 
+     */
+    @Import(name="region")
+    private @Nullable Output<String> region;
+
+    /**
+     * @return Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     * 
+     */
+    public Optional<Output<String>> region() {
+        return Optional.ofNullable(this.region);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="regionVariable")
+    private @Nullable Output<String> regionVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> regionVariable() {
+        return Optional.ofNullable(this.regionVariable);
+    }
+
     private ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs() {}
 
     private ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs(ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs $) {
         this.aggregateOnly = $.aggregateOnly;
         this.prefix = $.prefix;
         this.prefixVariable = $.prefixVariable;
+        this.region = $.region;
+        this.regionVariable = $.regionVariable;
     }
 
     public static Builder builder() {
@@ -152,6 +188,52 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs extends com.pu
          */
         public Builder prefixVariable(String prefixVariable) {
             return prefixVariable(Output.of(prefixVariable));
+        }
+
+        /**
+         * @param region Applied to Region
+         *   - Choices: `core-and-access`, `core`, `access`
+         *   - Default value: `core-and-access`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(@Nullable Output<String> region) {
+            $.region = region;
+            return this;
+        }
+
+        /**
+         * @param region Applied to Region
+         *   - Choices: `core-and-access`, `core`, `access`
+         *   - Default value: `core-and-access`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder region(String region) {
+            return region(Output.of(region));
+        }
+
+        /**
+         * @param regionVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionVariable(@Nullable Output<String> regionVariable) {
+            $.regionVariable = regionVariable;
+            return this;
+        }
+
+        /**
+         * @param regionVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder regionVariable(String regionVariable) {
+            return regionVariable(Output.of(regionVariable));
         }
 
         public ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs build() {

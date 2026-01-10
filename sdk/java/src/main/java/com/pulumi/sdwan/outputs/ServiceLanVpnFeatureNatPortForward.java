@@ -46,6 +46,7 @@ public final class ServiceLanVpnFeatureNatPortForward {
     private @Nullable String sourceIpVariable;
     /**
      * @return Source Port
+     *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer sourcePort;
@@ -56,6 +57,7 @@ public final class ServiceLanVpnFeatureNatPortForward {
     private @Nullable String sourcePortVariable;
     /**
      * @return Translate Port
+     *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer translatePort;
@@ -122,6 +124,7 @@ public final class ServiceLanVpnFeatureNatPortForward {
     }
     /**
      * @return Source Port
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Integer> sourcePort() {
@@ -136,6 +139,7 @@ public final class ServiceLanVpnFeatureNatPortForward {
     }
     /**
      * @return Translate Port
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Integer> translatePort() {

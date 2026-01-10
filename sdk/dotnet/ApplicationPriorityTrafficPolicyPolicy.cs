@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Application Priority Traffic Policy Policy.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -46,7 +46,10 @@ namespace Pulumi.Sdwan
     ///                 {
     ///                     new Sdwan.Inputs.ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs
     ///                     {
-    ///                         Dscp = 1,
+    ///                         Dscps = new[]
+    ///                         {
+    ///                             1,
+    ///                         },
     ///                     },
     ///                 },
     ///                 Actions = new[]

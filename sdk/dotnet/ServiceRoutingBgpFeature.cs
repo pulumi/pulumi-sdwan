@@ -99,9 +99,9 @@ namespace Pulumi.Sdwan
     ///                     new Sdwan.Inputs.ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs
     ///                     {
     ///                         FamilyType = "ipv6-unicast",
-    ///                         MaxNumberOfPrefixes = 2000,
-    ///                         Threshold = 75,
     ///                         PolicyType = "restart",
+    ///                         RestartMaxNumberOfPrefixes = 2000,
+    ///                         RestartThreshold = 75,
     ///                         RestartInterval = 30,
     ///                     },
     ///                 },

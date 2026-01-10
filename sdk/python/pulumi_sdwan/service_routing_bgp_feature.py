@@ -1952,9 +1952,9 @@ class ServiceRoutingBgpFeature(pulumi.CustomResource):
                 "allowas_in_number": 3,
                 "address_families": [{
                     "family_type": "ipv6-unicast",
-                    "max_number_of_prefixes": 2000,
-                    "threshold": 75,
                     "policy_type": "restart",
+                    "restart_max_number_of_prefixes": 2000,
+                    "restart_threshold": 75,
                     "restart_interval": 30,
                 }],
             }],
@@ -2148,9 +2148,9 @@ class ServiceRoutingBgpFeature(pulumi.CustomResource):
                 "allowas_in_number": 3,
                 "address_families": [{
                     "family_type": "ipv6-unicast",
-                    "max_number_of_prefixes": 2000,
-                    "threshold": 75,
                     "policy_type": "restart",
+                    "restart_max_number_of_prefixes": 2000,
+                    "restart_threshold": 75,
                     "restart_interval": 30,
                 }],
             }],

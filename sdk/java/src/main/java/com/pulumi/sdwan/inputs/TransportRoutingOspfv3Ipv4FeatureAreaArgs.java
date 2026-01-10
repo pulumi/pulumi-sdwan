@@ -83,16 +83,16 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaArgs extends com.pulumi.
     }
 
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     @Import(name="areaType")
     private @Nullable Output<String> areaType;
 
     /**
-     * @return stub area type
-     *   - Choices: `stub`
+     * @return Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     public Optional<Output<String>> areaType() {
@@ -278,8 +278,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaArgs extends com.pulumi.
         }
 
         /**
-         * @param areaType stub area type
-         *   - Choices: `stub`
+         * @param areaType Set OSPFv3 area type
+         *   - Choices: `stub`, `nssa`, `normal`
          * 
          * @return builder
          * 
@@ -290,8 +290,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaArgs extends com.pulumi.
         }
 
         /**
-         * @param areaType stub area type
-         *   - Choices: `stub`
+         * @param areaType Set OSPFv3 area type
+         *   - Choices: `stub`, `nssa`, `normal`
          * 
          * @return builder
          * 

@@ -25,6 +25,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("id")]
         public Input<string>? Id { get; set; }
 
+        /// <summary>
+        /// Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+        /// </summary>
+        [Input("topologyLabel")]
+        public Input<string>? TopologyLabel { get; set; }
+
         [Input("variables")]
         private InputList<Inputs.ConfigurationGroupDeviceVariableGetArgs>? _variables;
 

@@ -31,9 +31,13 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string ProtocolVariable;
         public readonly string RoutePolicyId;
         /// <summary>
-        /// Translate Rib Metric
+        /// Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network.
         /// </summary>
         public readonly bool TranslateRibMetric;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TranslateRibMetricVariable;
 
         [OutputConstructor]
         private GetServiceRoutingOspfv3Ipv4FeatureRedistributeResult(
@@ -47,7 +51,9 @@ namespace Pulumi.Sdwan.Outputs
 
             string routePolicyId,
 
-            bool translateRibMetric)
+            bool translateRibMetric,
+
+            string translateRibMetricVariable)
         {
             NatDia = natDia;
             NatDiaVariable = natDiaVariable;
@@ -55,6 +61,7 @@ namespace Pulumi.Sdwan.Outputs
             ProtocolVariable = protocolVariable;
             RoutePolicyId = routePolicyId;
             TranslateRibMetric = translateRibMetric;
+            TranslateRibMetricVariable = translateRibMetricVariable;
         }
     }
 }

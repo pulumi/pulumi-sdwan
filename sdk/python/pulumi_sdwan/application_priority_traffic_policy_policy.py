@@ -278,7 +278,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Application Priority Traffic Policy Policy.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -299,7 +299,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                 "base_action": "accept",
                 "protocol": "ipv4",
                 "match_entries": [{
-                    "dscp": 1,
+                    "dscps": [1],
                 }],
                 "actions": [{
                     "set_parameters": [{}],
@@ -334,7 +334,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Application Priority Traffic Policy Policy.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -355,7 +355,7 @@ class ApplicationPriorityTrafficPolicyPolicy(pulumi.CustomResource):
                 "base_action": "accept",
                 "protocol": "ipv4",
                 "match_entries": [{
-                    "dscp": 1,
+                    "dscps": [1],
                 }],
                 "actions": [{
                     "set_parameters": [{}],

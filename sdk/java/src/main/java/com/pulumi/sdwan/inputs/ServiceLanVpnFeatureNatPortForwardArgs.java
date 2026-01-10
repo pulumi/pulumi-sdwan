@@ -112,6 +112,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
     /**
      * Source Port
+     *   - Range: `0`-`65535`
      * 
      */
     @Import(name="sourcePort")
@@ -119,6 +120,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
     /**
      * @return Source Port
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Output<Integer>> sourcePort() {
@@ -142,6 +144,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
     /**
      * Translate Port
+     *   - Range: `0`-`65535`
      * 
      */
     @Import(name="translatePort")
@@ -149,6 +152,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
     /**
      * @return Translate Port
+     *   - Range: `0`-`65535`
      * 
      */
     public Optional<Output<Integer>> translatePort() {
@@ -367,6 +371,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
         /**
          * @param sourcePort Source Port
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -378,6 +383,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
         /**
          * @param sourcePort Source Port
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -409,6 +415,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
         /**
          * @param translatePort Translate Port
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 
@@ -420,6 +427,7 @@ public final class ServiceLanVpnFeatureNatPortForwardArgs extends com.pulumi.res
 
         /**
          * @param translatePort Translate Port
+         *   - Range: `0`-`65535`
          * 
          * @return builder
          * 

@@ -14,6 +14,14 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class GetServiceLanVpnFeatureIpv4StaticRouteResult
     {
         /// <summary>
+        /// Gateway distance
+        /// </summary>
+        public readonly int AdministrativeDistance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string AdministrativeDistanceVariable;
+        /// <summary>
         /// IPv4 Route Gateway DHCP
         /// </summary>
         public readonly bool Dhcp;
@@ -21,6 +29,7 @@ namespace Pulumi.Sdwan.Outputs
         /// Gateway type
         /// </summary>
         public readonly string Gateway;
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceResult> IpStaticRouteInterfaces;
         /// <summary>
         /// IP Address
         /// </summary>
@@ -56,9 +65,15 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private GetServiceLanVpnFeatureIpv4StaticRouteResult(
+            int administrativeDistance,
+
+            string administrativeDistanceVariable,
+
             bool dhcp,
 
             string gateway,
+
+            ImmutableArray<Outputs.GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceResult> ipStaticRouteInterfaces,
 
             string networkAddress,
 
@@ -76,8 +91,11 @@ namespace Pulumi.Sdwan.Outputs
 
             bool vpn)
         {
+            AdministrativeDistance = administrativeDistance;
+            AdministrativeDistanceVariable = administrativeDistanceVariable;
             Dhcp = dhcp;
             Gateway = gateway;
+            IpStaticRouteInterfaces = ipStaticRouteInterfaces;
             NetworkAddress = networkAddress;
             NetworkAddressVariable = networkAddressVariable;
             NextHopWithTrackers = nextHopWithTrackers;

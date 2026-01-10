@@ -38,7 +38,7 @@ import * as utilities from "./utilities";
  *         tlsPropertiesProfile: "test",
  *     }],
  *     ipv6Servers: [{
- *         hostnameIp: "1.1.1.1",
+ *         hostnameIp: "2001:0:0:1::0",
  *         vpn: 512,
  *         sourceInterface: "GigabitEthernet1",
  *         priority: "informational",

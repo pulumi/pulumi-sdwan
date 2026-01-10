@@ -12,6 +12,15 @@ namespace Pulumi.Sdwan.Inputs
 
     public sealed class ApplicationPriorityTrafficPolicyPolicySequenceActionGetArgs : global::Pulumi.ResourceArgs
     {
+        [Input("appqoeDreOptimization")]
+        public Input<bool>? AppqoeDreOptimization { get; set; }
+
+        [Input("appqoeServiceNodeGroup")]
+        public Input<string>? AppqoeServiceNodeGroup { get; set; }
+
+        [Input("appqoeTcpOptimization")]
+        public Input<bool>? AppqoeTcpOptimization { get; set; }
+
         [Input("backupSlaPreferredColors")]
         private InputList<string>? _backupSlaPreferredColors;
 
@@ -23,6 +32,9 @@ namespace Pulumi.Sdwan.Inputs
             get => _backupSlaPreferredColors ?? (_backupSlaPreferredColors = new InputList<string>());
             set => _backupSlaPreferredColors = value;
         }
+
+        [Input("cflowd")]
+        public Input<bool>? Cflowd { get; set; }
 
         [Input("cloudProbe")]
         public Input<bool>? CloudProbe { get; set; }
@@ -83,7 +95,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<bool>? NatVpn { get; set; }
 
         /// <summary>
-        /// - Choices: `ipAddress`, `redirectDns`
+        /// - Choices: `ipAddress`, `dnsHost`
         /// </summary>
         [Input("redirectDnsField")]
         public Input<string>? RedirectDnsField { get; set; }
@@ -93,6 +105,15 @@ namespace Pulumi.Sdwan.Inputs
 
         [Input("secureInternetGateway")]
         public Input<bool>? SecureInternetGateway { get; set; }
+
+        [Input("secureServiceEdge")]
+        public Input<bool>? SecureServiceEdge { get; set; }
+
+        /// <summary>
+        /// - Choices: `Cisco-Secure-Access`, `zScaler`
+        /// </summary>
+        [Input("secureServiceEdgeInstance")]
+        public Input<string>? SecureServiceEdgeInstance { get; set; }
 
         [Input("setParameters")]
         private InputList<Inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterGetArgs>? _setParameters;

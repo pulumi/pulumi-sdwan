@@ -28,6 +28,18 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * 
      */
     private @Nullable String prefixVariable;
+    /**
+     * @return Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     * 
+     */
+    private @Nullable String region;
+    /**
+     * @return Variable name
+     * 
+     */
+    private @Nullable String regionVariable;
 
     private ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix() {}
     /**
@@ -52,6 +64,22 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
     public Optional<String> prefixVariable() {
         return Optional.ofNullable(this.prefixVariable);
     }
+    /**
+     * @return Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     * 
+     */
+    public Optional<String> region() {
+        return Optional.ofNullable(this.region);
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> regionVariable() {
+        return Optional.ofNullable(this.regionVariable);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -65,12 +93,16 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
         private @Nullable Boolean aggregateOnly;
         private @Nullable String prefix;
         private @Nullable String prefixVariable;
+        private @Nullable String region;
+        private @Nullable String regionVariable;
         public Builder() {}
         public Builder(ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.aggregateOnly = defaults.aggregateOnly;
     	      this.prefix = defaults.prefix;
     	      this.prefixVariable = defaults.prefixVariable;
+    	      this.region = defaults.region;
+    	      this.regionVariable = defaults.regionVariable;
         }
 
         @CustomType.Setter
@@ -91,11 +123,25 @@ public final class ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
             this.prefixVariable = prefixVariable;
             return this;
         }
+        @CustomType.Setter
+        public Builder region(@Nullable String region) {
+
+            this.region = region;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder regionVariable(@Nullable String regionVariable) {
+
+            this.regionVariable = regionVariable;
+            return this;
+        }
         public ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix build() {
             final var _resultValue = new ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix();
             _resultValue.aggregateOnly = aggregateOnly;
             _resultValue.prefix = prefix;
             _resultValue.prefixVariable = prefixVariable;
+            _resultValue.region = region;
+            _resultValue.regionVariable = regionVariable;
             return _resultValue;
         }
     }

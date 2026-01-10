@@ -23,6 +23,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? Id;
         /// <summary>
+        /// Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+        /// </summary>
+        public readonly string? TopologyLabel;
+        /// <summary>
         /// List of variables
         /// </summary>
         public readonly ImmutableArray<Outputs.ConfigurationGroupDeviceVariable> Variables;
@@ -33,10 +37,13 @@ namespace Pulumi.Sdwan.Outputs
 
             string? id,
 
+            string? topologyLabel,
+
             ImmutableArray<Outputs.ConfigurationGroupDeviceVariable> variables)
         {
             Deploy = deploy;
             Id = id;
+            TopologyLabel = topologyLabel;
             Variables = variables;
         }
     }

@@ -63,9 +63,9 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
     }
 
     @Import(name="localTlocListRestrict")
-    private @Nullable Output<String> localTlocListRestrict;
+    private @Nullable Output<Boolean> localTlocListRestrict;
 
-    public Optional<Output<String>> localTlocListRestrict() {
+    public Optional<Output<Boolean>> localTlocListRestrict() {
         return Optional.ofNullable(this.localTlocListRestrict);
     }
 
@@ -104,18 +104,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         return Optional.ofNullable(this.preferredColorGroupId);
     }
 
-    @Import(name="preferredRemoteColorIds")
-    private @Nullable Output<List<String>> preferredRemoteColorIds;
+    @Import(name="preferredRemoteColorRestrict")
+    private @Nullable Output<Boolean> preferredRemoteColorRestrict;
 
-    public Optional<Output<List<String>>> preferredRemoteColorIds() {
-        return Optional.ofNullable(this.preferredRemoteColorIds);
+    public Optional<Output<Boolean>> preferredRemoteColorRestrict() {
+        return Optional.ofNullable(this.preferredRemoteColorRestrict);
     }
 
-    @Import(name="preferredRemoteColorRestrict")
-    private @Nullable Output<String> preferredRemoteColorRestrict;
+    @Import(name="preferredRemoteColors")
+    private @Nullable Output<List<String>> preferredRemoteColors;
 
-    public Optional<Output<String>> preferredRemoteColorRestrict() {
-        return Optional.ofNullable(this.preferredRemoteColorRestrict);
+    public Optional<Output<List<String>>> preferredRemoteColors() {
+        return Optional.ofNullable(this.preferredRemoteColors);
     }
 
     @Import(name="serviceChainFallbackToRouting")
@@ -198,6 +198,20 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         return Optional.ofNullable(this.serviceChainVpn);
     }
 
+    @Import(name="serviceLocal")
+    private @Nullable Output<Boolean> serviceLocal;
+
+    public Optional<Output<Boolean>> serviceLocal() {
+        return Optional.ofNullable(this.serviceLocal);
+    }
+
+    @Import(name="serviceRestrict")
+    private @Nullable Output<Boolean> serviceRestrict;
+
+    public Optional<Output<Boolean>> serviceRestrict() {
+        return Optional.ofNullable(this.serviceRestrict);
+    }
+
     @Import(name="serviceTlocColors")
     private @Nullable Output<List<String>> serviceTlocColors;
 
@@ -249,10 +263,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         return Optional.ofNullable(this.serviceType);
     }
 
+    /**
+     * - Range: `0`-`65530`
+     * 
+     */
     @Import(name="serviceVpn")
-    private @Nullable Output<String> serviceVpn;
+    private @Nullable Output<Integer> serviceVpn;
 
-    public Optional<Output<String>> serviceVpn() {
+    /**
+     * @return - Range: `0`-`65530`
+     * 
+     */
+    public Optional<Output<Integer>> serviceVpn() {
         return Optional.ofNullable(this.serviceVpn);
     }
 
@@ -292,10 +314,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         return Optional.ofNullable(this.tlocListId);
     }
 
+    /**
+     * - Range: `0`-`65530`
+     * 
+     */
     @Import(name="vpn")
-    private @Nullable Output<String> vpn;
+    private @Nullable Output<Integer> vpn;
 
-    public Optional<Output<String>> vpn() {
+    /**
+     * @return - Range: `0`-`65530`
+     * 
+     */
+    public Optional<Output<Integer>> vpn() {
         return Optional.ofNullable(this.vpn);
     }
 
@@ -312,8 +342,8 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         this.nextHopLoose = $.nextHopLoose;
         this.policerId = $.policerId;
         this.preferredColorGroupId = $.preferredColorGroupId;
-        this.preferredRemoteColorIds = $.preferredRemoteColorIds;
         this.preferredRemoteColorRestrict = $.preferredRemoteColorRestrict;
+        this.preferredRemoteColors = $.preferredRemoteColors;
         this.serviceChainFallbackToRouting = $.serviceChainFallbackToRouting;
         this.serviceChainLocal = $.serviceChainLocal;
         this.serviceChainTlocColors = $.serviceChainTlocColors;
@@ -322,6 +352,8 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
         this.serviceChainTlocListId = $.serviceChainTlocListId;
         this.serviceChainType = $.serviceChainType;
         this.serviceChainVpn = $.serviceChainVpn;
+        this.serviceLocal = $.serviceLocal;
+        this.serviceRestrict = $.serviceRestrict;
         this.serviceTlocColors = $.serviceTlocColors;
         this.serviceTlocEncapsulation = $.serviceTlocEncapsulation;
         this.serviceTlocIp = $.serviceTlocIp;
@@ -417,12 +449,12 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             return localTlocListEncapsulation(Output.of(localTlocListEncapsulation));
         }
 
-        public Builder localTlocListRestrict(@Nullable Output<String> localTlocListRestrict) {
+        public Builder localTlocListRestrict(@Nullable Output<Boolean> localTlocListRestrict) {
             $.localTlocListRestrict = localTlocListRestrict;
             return this;
         }
 
-        public Builder localTlocListRestrict(String localTlocListRestrict) {
+        public Builder localTlocListRestrict(Boolean localTlocListRestrict) {
             return localTlocListRestrict(Output.of(localTlocListRestrict));
         }
 
@@ -471,26 +503,26 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             return preferredColorGroupId(Output.of(preferredColorGroupId));
         }
 
-        public Builder preferredRemoteColorIds(@Nullable Output<List<String>> preferredRemoteColorIds) {
-            $.preferredRemoteColorIds = preferredRemoteColorIds;
-            return this;
-        }
-
-        public Builder preferredRemoteColorIds(List<String> preferredRemoteColorIds) {
-            return preferredRemoteColorIds(Output.of(preferredRemoteColorIds));
-        }
-
-        public Builder preferredRemoteColorIds(String... preferredRemoteColorIds) {
-            return preferredRemoteColorIds(List.of(preferredRemoteColorIds));
-        }
-
-        public Builder preferredRemoteColorRestrict(@Nullable Output<String> preferredRemoteColorRestrict) {
+        public Builder preferredRemoteColorRestrict(@Nullable Output<Boolean> preferredRemoteColorRestrict) {
             $.preferredRemoteColorRestrict = preferredRemoteColorRestrict;
             return this;
         }
 
-        public Builder preferredRemoteColorRestrict(String preferredRemoteColorRestrict) {
+        public Builder preferredRemoteColorRestrict(Boolean preferredRemoteColorRestrict) {
             return preferredRemoteColorRestrict(Output.of(preferredRemoteColorRestrict));
+        }
+
+        public Builder preferredRemoteColors(@Nullable Output<List<String>> preferredRemoteColors) {
+            $.preferredRemoteColors = preferredRemoteColors;
+            return this;
+        }
+
+        public Builder preferredRemoteColors(List<String> preferredRemoteColors) {
+            return preferredRemoteColors(Output.of(preferredRemoteColors));
+        }
+
+        public Builder preferredRemoteColors(String... preferredRemoteColors) {
+            return preferredRemoteColors(List.of(preferredRemoteColors));
         }
 
         public Builder serviceChainFallbackToRouting(@Nullable Output<Boolean> serviceChainFallbackToRouting) {
@@ -605,6 +637,24 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             return serviceChainVpn(Output.of(serviceChainVpn));
         }
 
+        public Builder serviceLocal(@Nullable Output<Boolean> serviceLocal) {
+            $.serviceLocal = serviceLocal;
+            return this;
+        }
+
+        public Builder serviceLocal(Boolean serviceLocal) {
+            return serviceLocal(Output.of(serviceLocal));
+        }
+
+        public Builder serviceRestrict(@Nullable Output<Boolean> serviceRestrict) {
+            $.serviceRestrict = serviceRestrict;
+            return this;
+        }
+
+        public Builder serviceRestrict(Boolean serviceRestrict) {
+            return serviceRestrict(Output.of(serviceRestrict));
+        }
+
         public Builder serviceTlocColors(@Nullable Output<List<String>> serviceTlocColors) {
             $.serviceTlocColors = serviceTlocColors;
             return this;
@@ -678,12 +728,24 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             return serviceType(Output.of(serviceType));
         }
 
-        public Builder serviceVpn(@Nullable Output<String> serviceVpn) {
+        /**
+         * @param serviceVpn - Range: `0`-`65530`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceVpn(@Nullable Output<Integer> serviceVpn) {
             $.serviceVpn = serviceVpn;
             return this;
         }
 
-        public Builder serviceVpn(String serviceVpn) {
+        /**
+         * @param serviceVpn - Range: `0`-`65530`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder serviceVpn(Integer serviceVpn) {
             return serviceVpn(Output.of(serviceVpn));
         }
 
@@ -739,12 +801,24 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionSetParame
             return tlocListId(Output.of(tlocListId));
         }
 
-        public Builder vpn(@Nullable Output<String> vpn) {
+        /**
+         * @param vpn - Range: `0`-`65530`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpn(@Nullable Output<Integer> vpn) {
             $.vpn = vpn;
             return this;
         }
 
-        public Builder vpn(String vpn) {
+        /**
+         * @param vpn - Range: `0`-`65530`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vpn(Integer vpn) {
             return vpn(Output.of(vpn));
         }
 

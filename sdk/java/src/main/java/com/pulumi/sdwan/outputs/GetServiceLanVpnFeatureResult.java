@@ -25,6 +25,7 @@ import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureRouteLeakToGlobalVpn;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureService;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureServiceRoute;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureStaticNat;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureStaticNatSubnet;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -203,6 +204,11 @@ public final class GetServiceLanVpnFeatureResult {
      * 
      */
     private List<GetServiceLanVpnFeatureService> services;
+    /**
+     * @return Static NAT Subnet Rules
+     * 
+     */
+    private List<GetServiceLanVpnFeatureStaticNatSubnet> staticNatSubnets;
     /**
      * @return Static NAT Rules
      * 
@@ -472,6 +478,13 @@ public final class GetServiceLanVpnFeatureResult {
         return this.services;
     }
     /**
+     * @return Static NAT Subnet Rules
+     * 
+     */
+    public List<GetServiceLanVpnFeatureStaticNatSubnet> staticNatSubnets() {
+        return this.staticNatSubnets;
+    }
+    /**
      * @return Static NAT Rules
      * 
      */
@@ -547,6 +560,7 @@ public final class GetServiceLanVpnFeatureResult {
         private String secondaryDnsAddressIpv6Variable;
         private List<GetServiceLanVpnFeatureServiceRoute> serviceRoutes;
         private List<GetServiceLanVpnFeatureService> services;
+        private List<GetServiceLanVpnFeatureStaticNatSubnet> staticNatSubnets;
         private List<GetServiceLanVpnFeatureStaticNat> staticNats;
         private Integer version;
         private Integer vpn;
@@ -592,6 +606,7 @@ public final class GetServiceLanVpnFeatureResult {
     	      this.secondaryDnsAddressIpv6Variable = defaults.secondaryDnsAddressIpv6Variable;
     	      this.serviceRoutes = defaults.serviceRoutes;
     	      this.services = defaults.services;
+    	      this.staticNatSubnets = defaults.staticNatSubnets;
     	      this.staticNats = defaults.staticNats;
     	      this.version = defaults.version;
     	      this.vpn = defaults.vpn;
@@ -960,6 +975,17 @@ public final class GetServiceLanVpnFeatureResult {
             return services(List.of(services));
         }
         @CustomType.Setter
+        public Builder staticNatSubnets(List<GetServiceLanVpnFeatureStaticNatSubnet> staticNatSubnets) {
+            if (staticNatSubnets == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureResult", "staticNatSubnets");
+            }
+            this.staticNatSubnets = staticNatSubnets;
+            return this;
+        }
+        public Builder staticNatSubnets(GetServiceLanVpnFeatureStaticNatSubnet... staticNatSubnets) {
+            return staticNatSubnets(List.of(staticNatSubnets));
+        }
+        @CustomType.Setter
         public Builder staticNats(List<GetServiceLanVpnFeatureStaticNat> staticNats) {
             if (staticNats == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureResult", "staticNats");
@@ -1034,6 +1060,7 @@ public final class GetServiceLanVpnFeatureResult {
             _resultValue.secondaryDnsAddressIpv6Variable = secondaryDnsAddressIpv6Variable;
             _resultValue.serviceRoutes = serviceRoutes;
             _resultValue.services = services;
+            _resultValue.staticNatSubnets = staticNatSubnets;
             _resultValue.staticNats = staticNats;
             _resultValue.version = version;
             _resultValue.vpn = vpn;

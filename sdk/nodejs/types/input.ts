@@ -249,10 +249,14 @@ export interface ApplicationPriorityTrafficPolicyPolicySequence {
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
+    appqoeDreOptimization?: pulumi.Input<boolean>;
+    appqoeServiceNodeGroup?: pulumi.Input<string>;
+    appqoeTcpOptimization?: pulumi.Input<boolean>;
     /**
      * Backup SLA perferred color
      */
     backupSlaPreferredColors?: pulumi.Input<pulumi.Input<string>[]>;
+    cflowd?: pulumi.Input<boolean>;
     cloudProbe?: pulumi.Input<boolean>;
     cloudSaas?: pulumi.Input<boolean>;
     count?: pulumi.Input<string>;
@@ -276,11 +280,16 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceAction {
     natPool?: pulumi.Input<number>;
     natVpn?: pulumi.Input<boolean>;
     /**
-     * - Choices: `ipAddress`, `redirectDns`
+     * - Choices: `ipAddress`, `dnsHost`
      */
     redirectDnsField?: pulumi.Input<string>;
     redirectDnsValue?: pulumi.Input<string>;
     secureInternetGateway?: pulumi.Input<boolean>;
+    secureServiceEdge?: pulumi.Input<boolean>;
+    /**
+     * - Choices: `Cisco-Secure-Access`, `zScaler`
+     */
+    secureServiceEdgeInstance?: pulumi.Input<string>;
     setParameters?: pulumi.Input<pulumi.Input<inputs.ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter>[]>;
     /**
      * slaClass
@@ -299,14 +308,14 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Choices: `ipsec`, `gre`
      */
     localTlocListEncapsulation?: pulumi.Input<string>;
-    localTlocListRestrict?: pulumi.Input<string>;
+    localTlocListRestrict?: pulumi.Input<boolean>;
     nextHopIpv4?: pulumi.Input<string>;
     nextHopIpv6?: pulumi.Input<string>;
     nextHopLoose?: pulumi.Input<boolean>;
     policerId?: pulumi.Input<string>;
     preferredColorGroupId?: pulumi.Input<string>;
-    preferredRemoteColorIds?: pulumi.Input<pulumi.Input<string>[]>;
-    preferredRemoteColorRestrict?: pulumi.Input<string>;
+    preferredRemoteColorRestrict?: pulumi.Input<boolean>;
+    preferredRemoteColors?: pulumi.Input<pulumi.Input<string>[]>;
     serviceChainFallbackToRouting?: pulumi.Input<boolean>;
     serviceChainLocal?: pulumi.Input<boolean>;
     serviceChainTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
@@ -324,6 +333,8 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Range: `0`-`65530`
      */
     serviceChainVpn?: pulumi.Input<number>;
+    serviceLocal?: pulumi.Input<boolean>;
+    serviceRestrict?: pulumi.Input<boolean>;
     serviceTlocColors?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * - Choices: `ipsec`, `gre`
@@ -335,7 +346,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
      * - Choices: `FW`, `IDS`, `IDP`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `appqoe`
      */
     serviceType?: pulumi.Input<string>;
-    serviceVpn?: pulumi.Input<string>;
+    /**
+     * - Range: `0`-`65530`
+     */
+    serviceVpn?: pulumi.Input<number>;
     tlocColors?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * - Choices: `ipsec`, `gre`
@@ -343,7 +357,10 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSetParamete
     tlocEncapsulation?: pulumi.Input<string>;
     tlocIp?: pulumi.Input<string>;
     tlocListId?: pulumi.Input<string>;
-    vpn?: pulumi.Input<string>;
+    /**
+     * - Range: `0`-`65530`
+     */
+    vpn?: pulumi.Input<number>;
 }
 
 export interface ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass {
@@ -384,10 +401,9 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
     dns?: pulumi.Input<string>;
     dnsApplicationListId?: pulumi.Input<string>;
     /**
-     * DSCP number
-     *   - Range: `0`-`63`
+     * DSCP numbers
      */
-    dscp?: pulumi.Input<number>;
+    dscps?: pulumi.Input<pulumi.Input<number>[]>;
     /**
      * ICMP6 Message
      */
@@ -409,8 +425,8 @@ export interface ApplicationPriorityTrafficPolicyPolicySequenceMatchEntry {
      * M365 Service Area
      */
     serviceAreas?: pulumi.Input<pulumi.Input<string>[]>;
-    sourceDataIpv4PrefxListId?: pulumi.Input<string>;
-    sourceDataIpv6PrefxListId?: pulumi.Input<string>;
+    sourceDataIpv4PrefixListId?: pulumi.Input<string>;
+    sourceDataIpv6PrefixListId?: pulumi.Input<string>;
     /**
      * Source Data IP Prefix
      */
@@ -5849,6 +5865,10 @@ export interface ConfigurationGroupDevice {
      */
     id?: pulumi.Input<string>;
     /**
+     * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     */
+    topologyLabel?: pulumi.Input<string>;
+    /**
      * List of variables
      */
     variables?: pulumi.Input<pulumi.Input<inputs.ConfigurationGroupDeviceVariable>[]>;
@@ -6116,7 +6136,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     regionListId?: pulumi.Input<string>;
     /**
-     * Role, Attribute conditional on `type` being equal to `regionId`
+     * Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      */
     role?: pulumi.Input<string>;
@@ -8520,6 +8540,16 @@ export interface ServiceLanVpnFeatureAdvertiseOmpIpv6Prefix {
      * Variable name
      */
     prefixVariable?: pulumi.Input<string>;
+    /**
+     * Applied to Region
+     *   - Choices: `core-and-access`, `core`, `access`
+     *   - Default value: `core-and-access`
+     */
+    region?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    regionVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnFeatureGreRoute {
@@ -8625,14 +8655,27 @@ export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
+     * Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     */
+    administrativeDistance?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     */
+    administrativeDistanceVariable?: pulumi.Input<string>;
+    /**
      * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      */
     dhcp?: pulumi.Input<boolean>;
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      */
     gateway?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     */
+    ipStaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface>[]>;
     /**
      * IP Address
      */
@@ -8666,6 +8709,35 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
      */
     vpn?: pulumi.Input<boolean>;
+}
+
+export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface {
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop>[]>;
+}
+
+export interface ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceNextHop {
+    /**
+     * IPv4 Address
+     */
+    address?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    addressVariable?: pulumi.Input<string>;
+    /**
+     * Administrative distance
+     *   - Range: `1`-`255`
+     */
+    administrativeDistance?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnFeatureIpv4StaticRouteNextHop {
@@ -8736,9 +8808,13 @@ export interface ServiceLanVpnFeatureIpv6ImportRouteTarget {
 export interface ServiceLanVpnFeatureIpv6StaticRoute {
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      */
     gateway?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     */
+    ipv6StaticRouteInterfaces?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface>[]>;
     /**
      * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
@@ -8764,6 +8840,35 @@ export interface ServiceLanVpnFeatureIpv6StaticRoute {
      * Variable name
      */
     prefixVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface {
+    interfaceName?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    interfaceNameVariable?: pulumi.Input<string>;
+    nextHops?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop>[]>;
+}
+
+export interface ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceNextHop {
+    /**
+     * IPv6 Address
+     */
+    address?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    addressVariable?: pulumi.Input<string>;
+    /**
+     * Administrative distance
+     *   - Range: `1`-`254`
+     */
+    administrativeDistance?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    administrativeDistanceVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnFeatureIpv6StaticRouteNextHop {
@@ -8853,7 +8958,7 @@ export interface ServiceLanVpnFeatureNatPool {
     overloadVariable?: pulumi.Input<string>;
     /**
      * NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      */
     prefixLength?: pulumi.Input<number>;
     /**
@@ -8908,6 +9013,7 @@ export interface ServiceLanVpnFeatureNatPortForward {
     sourceIpVariable?: pulumi.Input<string>;
     /**
      * Source Port
+     *   - Range: `0`-`65535`
      */
     sourcePort?: pulumi.Input<number>;
     /**
@@ -8916,6 +9022,7 @@ export interface ServiceLanVpnFeatureNatPortForward {
     sourcePortVariable?: pulumi.Input<string>;
     /**
      * Translate Port
+     *   - Range: `0`-`65535`
      */
     translatePort?: pulumi.Input<number>;
     /**
@@ -9071,7 +9178,7 @@ export interface ServiceLanVpnFeatureServiceRoute {
     networkAddressVariable?: pulumi.Input<string>;
     /**
      * Service
-     *   - Choices: `SIG`
+     *   - Choices: `SIG`, `SSE`
      *   - Default value: `SIG`
      */
     service?: pulumi.Input<string>;
@@ -9079,6 +9186,14 @@ export interface ServiceLanVpnFeatureServiceRoute {
      * Variable name
      */
     serviceVariable?: pulumi.Input<string>;
+    /**
+     * SSE Instance name
+     */
+    sseInstance?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    sseInstanceVariable?: pulumi.Input<string>;
     /**
      * Subnet Mask
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
@@ -9130,6 +9245,44 @@ export interface ServiceLanVpnFeatureStaticNat {
      * Variable name
      */
     translatedSourceIpVariable?: pulumi.Input<string>;
+}
+
+export interface ServiceLanVpnFeatureStaticNatSubnet {
+    /**
+     * Network Prefix Length
+     *   - Range: `1`-`32`
+     */
+    prefixLength?: pulumi.Input<number>;
+    /**
+     * Variable name
+     */
+    prefixLengthVariable?: pulumi.Input<string>;
+    /**
+     * Source IP Subnet
+     */
+    sourceIpSubnet?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    sourceIpSubnetVariable?: pulumi.Input<string>;
+    /**
+     * Static NAT Direction
+     *   - Choices: `inside`, `outside`
+     */
+    staticNatDirection?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    staticNatDirectionVariable?: pulumi.Input<string>;
+    trackerObjectId?: pulumi.Input<string>;
+    /**
+     * Translated Source IP Subnet
+     */
+    translatedSourceIpSubnet?: pulumi.Input<string>;
+    /**
+     * Variable name
+     */
+    translatedSourceIpSubnetVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureArp {
@@ -10579,43 +10732,82 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: pulumi.Input<string>;
+    /**
      * Set IPv6 unicast address family
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: pulumi.Input<string>;
     outRoutePolicyId?: pulumi.Input<string>;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: pulumi.Input<string>;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string>;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingBgpFeatureIpv6Network {
@@ -10976,8 +11168,8 @@ export interface ServiceRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable?: pulumi.Input<string>;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: pulumi.Input<string>;
     /**
@@ -11017,8 +11209,8 @@ export interface ServiceRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable?: pulumi.Input<string>;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -11143,10 +11335,14 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceRoutingOspfv3Ipv6FeatureArea {
@@ -11168,8 +11364,8 @@ export interface ServiceRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable?: pulumi.Input<string>;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: pulumi.Input<string>;
     /**
@@ -11209,8 +11405,8 @@ export interface ServiceRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable?: pulumi.Input<string>;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -11321,10 +11517,14 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface ServiceSwitchportFeatureInterface {
@@ -12245,6 +12445,17 @@ export interface SystemBfdFeatureColor {
      * Variable name
      */
     pmtuDiscoveryVariable?: pulumi.Input<string>;
+}
+
+export interface SystemCaCertificateFeatureCertificate {
+    /**
+     * UUID of Certificate Record in Database
+     */
+    caCertificateId?: pulumi.Input<string>;
+    /**
+     * Trust Point Name of Certificate
+     */
+    trustPointName?: pulumi.Input<string>;
 }
 
 export interface SystemIpv4DeviceAccessFeatureSequence {
@@ -14334,44 +14545,83 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`4294967295`
+     */
+    disablePeerMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    disablePeerThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     */
+    disablePeerThresholdVariable?: pulumi.Input<string>;
+    /**
      * Set IPv6 unicast address family
      *   - Choices: `ipv6-unicast`, `vpnv6-unicast`
      */
     familyType?: pulumi.Input<string>;
     inRoutePolicyId?: pulumi.Input<string>;
-    /**
-     * Set maximum number of prefixes accepted from BGP peer
-     *   - Range: `1`-`4294967295`
-     */
-    maxNumberOfPrefixes?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    maxNumberOfPrefixesVariable?: pulumi.Input<string>;
     outRoutePolicyId?: pulumi.Input<string>;
     /**
      * Neighbor received maximum prefix policy is disabled.
+     *   - Choices: `restart`, `off`, `warning-only`, `disable-peer`
      */
     policyType?: pulumi.Input<string>;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
     restartIntervalVariable?: pulumi.Input<string>;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     *   - Range: `1`-`4294967295`
+     */
+    restartMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     */
+    restartMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
-    threshold?: pulumi.Input<number>;
+    restartThreshold?: pulumi.Input<number>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `policyType` being equal to `restart`
      */
-    thresholdVariable?: pulumi.Input<string>;
+    restartThresholdVariable?: pulumi.Input<string>;
+    /**
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`4294967295`
+     */
+    warningMessageMaxNumberOfPrefixes?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageMaxNumberOfPrefixesVariable?: pulumi.Input<string>;
+    /**
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     *   - Range: `1`-`100`
+     *   - Default value: `75`
+     */
+    warningMessageThreshold?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     */
+    warningMessageThresholdVariable?: pulumi.Input<string>;
 }
 
 export interface TransportRoutingBgpFeatureIpv6Network {
@@ -14644,8 +14894,8 @@ export interface TransportRoutingOspfv3Ipv4FeatureArea {
      */
     areaNumberVariable?: pulumi.Input<string>;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: pulumi.Input<string>;
     /**
@@ -14685,8 +14935,8 @@ export interface TransportRoutingOspfv3Ipv4FeatureAreaInterface {
      */
     authenticationSpiVariable?: pulumi.Input<string>;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -14810,6 +15060,15 @@ export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface TransportRoutingOspfv3Ipv6FeatureArea {
@@ -14831,8 +15090,8 @@ export interface TransportRoutingOspfv3Ipv6FeatureArea {
      */
     areaNumberVariable?: pulumi.Input<string>;
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      */
     areaType?: pulumi.Input<string>;
     /**
@@ -14872,8 +15131,8 @@ export interface TransportRoutingOspfv3Ipv6FeatureAreaInterface {
      */
     authenticationSpiVariable?: pulumi.Input<string>;
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      */
     authenticationType?: pulumi.Input<string>;
     /**
@@ -14983,6 +15242,15 @@ export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
      */
     protocolVariable?: pulumi.Input<string>;
     routePolicyId?: pulumi.Input<string>;
+    /**
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     *   - Default value: `false`
+     */
+    translateRibMetric?: pulumi.Input<boolean>;
+    /**
+     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     */
+    translateRibMetricVariable?: pulumi.Input<string>;
 }
 
 export interface TransportT1E1ControllerFeatureEntry {
@@ -15213,6 +15481,7 @@ export interface TransportWanVpnFeatureIpv6StaticRouteNextHop {
     /**
      * Administrative distance
      *   - Range: `1`-`254`
+     *   - Default value: `1`
      */
     administrativeDistance?: pulumi.Input<number>;
     /**
@@ -17075,6 +17344,10 @@ export interface ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      * policy id for selected match entry
      */
     policyId?: pulumi.Input<string>;
+    /**
+     * Policy version
+     */
+    policyVersion?: pulumi.Input<string>;
     /**
      * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      */

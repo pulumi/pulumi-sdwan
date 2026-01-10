@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Service LAN VPN Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -60,6 +60,7 @@ import * as utilities from "./utilities";
  *         subnetMask: "0.0.0.0",
  *         service: "SIG",
  *         vpn: 0,
+ *         sseInstance: "1",
  *     }],
  *     greRoutes: [{
  *         networkAddress: "1.2.3.4",
@@ -92,6 +93,12 @@ import * as utilities from "./utilities";
  *         natPoolName: 3,
  *         sourceIp: "1.2.3.4",
  *         translatedSourceIp: "2.3.4.5",
+ *         staticNatDirection: "inside",
+ *     }],
+ *     staticNatSubnets: [{
+ *         sourceIpSubnet: "1.2.3.4",
+ *         translatedSourceIpSubnet: "2.3.4.5",
+ *         prefixLength: 6,
  *         staticNatDirection: "inside",
  *     }],
  *     nat64V4Pools: [{
@@ -290,6 +297,10 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
      */
     declare public readonly services: pulumi.Output<outputs.ServiceLanVpnFeatureService[] | undefined>;
     /**
+     * Static NAT Subnet Rules
+     */
+    declare public readonly staticNatSubnets: pulumi.Output<outputs.ServiceLanVpnFeatureStaticNatSubnet[] | undefined>;
+    /**
      * Static NAT Rules
      */
     declare public readonly staticNats: pulumi.Output<outputs.ServiceLanVpnFeatureStaticNat[] | undefined>;
@@ -358,6 +369,7 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
             resourceInputs["secondaryDnsAddressIpv6Variable"] = state?.secondaryDnsAddressIpv6Variable;
             resourceInputs["serviceRoutes"] = state?.serviceRoutes;
             resourceInputs["services"] = state?.services;
+            resourceInputs["staticNatSubnets"] = state?.staticNatSubnets;
             resourceInputs["staticNats"] = state?.staticNats;
             resourceInputs["version"] = state?.version;
             resourceInputs["vpn"] = state?.vpn;
@@ -404,6 +416,7 @@ export class ServiceLanVpnFeature extends pulumi.CustomResource {
             resourceInputs["secondaryDnsAddressIpv6Variable"] = args?.secondaryDnsAddressIpv6Variable;
             resourceInputs["serviceRoutes"] = args?.serviceRoutes;
             resourceInputs["services"] = args?.services;
+            resourceInputs["staticNatSubnets"] = args?.staticNatSubnets;
             resourceInputs["staticNats"] = args?.staticNats;
             resourceInputs["vpn"] = args?.vpn;
             resourceInputs["vpnVariable"] = args?.vpnVariable;
@@ -554,6 +567,10 @@ export interface ServiceLanVpnFeatureState {
      * Service
      */
     services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[]>;
+    /**
+     * Static NAT Subnet Rules
+     */
+    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[]>;
     /**
      * Static NAT Rules
      */
@@ -714,6 +731,10 @@ export interface ServiceLanVpnFeatureArgs {
      * Service
      */
     services?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureService>[]>;
+    /**
+     * Static NAT Subnet Rules
+     */
+    staticNatSubnets?: pulumi.Input<pulumi.Input<inputs.ServiceLanVpnFeatureStaticNatSubnet>[]>;
     /**
      * Static NAT Rules
      */

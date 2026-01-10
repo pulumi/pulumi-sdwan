@@ -83,16 +83,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureAreaArgs extends com.pulumi.re
     }
 
     /**
-     * stub area type
-     *   - Choices: `stub`
+     * Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     @Import(name="areaType")
     private @Nullable Output<String> areaType;
 
     /**
-     * @return stub area type
-     *   - Choices: `stub`
+     * @return Set OSPFv3 area type
+     *   - Choices: `stub`, `nssa`, `normal`
      * 
      */
     public Optional<Output<String>> areaType() {
@@ -278,8 +278,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureAreaArgs extends com.pulumi.re
         }
 
         /**
-         * @param areaType stub area type
-         *   - Choices: `stub`
+         * @param areaType Set OSPFv3 area type
+         *   - Choices: `stub`, `nssa`, `normal`
          * 
          * @return builder
          * 
@@ -290,8 +290,8 @@ public final class ServiceRoutingOspfv3Ipv6FeatureAreaArgs extends com.pulumi.re
         }
 
         /**
-         * @param areaType stub area type
-         *   - Choices: `stub`
+         * @param areaType Set OSPFv3 area type
+         *   - Choices: `stub`, `nssa`, `normal`
          * 
          * @return builder
          * 

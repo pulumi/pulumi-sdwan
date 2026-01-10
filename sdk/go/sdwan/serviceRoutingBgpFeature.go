@@ -95,11 +95,11 @@ import (
 //						AllowasInNumber:       pulumi.Int(3),
 //						AddressFamilies: sdwan.ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArray{
 //							&sdwan.ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyArgs{
-//								FamilyType:          pulumi.String("ipv6-unicast"),
-//								MaxNumberOfPrefixes: pulumi.Int(2000),
-//								Threshold:           pulumi.Int(75),
-//								PolicyType:          pulumi.String("restart"),
-//								RestartInterval:     pulumi.Int(30),
+//								FamilyType:                 pulumi.String("ipv6-unicast"),
+//								PolicyType:                 pulumi.String("restart"),
+//								RestartMaxNumberOfPrefixes: pulumi.Int(2000),
+//								RestartThreshold:           pulumi.Int(75),
+//								RestartInterval:            pulumi.Int(30),
 //							},
 //						},
 //					},

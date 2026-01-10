@@ -32,6 +32,21 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs extends c
     }
 
     /**
+     * Policy version
+     * 
+     */
+    @Import(name="policyVersion")
+    private @Nullable Output<String> policyVersion;
+
+    /**
+     * @return Policy version
+     * 
+     */
+    public Optional<Output<String>> policyVersion() {
+        return Optional.ofNullable(this.policyVersion);
+    }
+
+    /**
      * Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      * 
      */
@@ -97,6 +112,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs extends c
 
     private ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs(ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs $) {
         this.policyId = $.policyId;
+        this.policyVersion = $.policyVersion;
         this.protocolType = $.protocolType;
         this.type = $.type;
         this.value = $.value;
@@ -140,6 +156,27 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntryArgs extends c
          */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
+        }
+
+        /**
+         * @param policyVersion Policy version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyVersion(@Nullable Output<String> policyVersion) {
+            $.policyVersion = policyVersion;
+            return this;
+        }
+
+        /**
+         * @param policyVersion Policy version
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyVersion(String policyVersion) {
+            return policyVersion(Output.of(policyVersion));
         }
 
         /**

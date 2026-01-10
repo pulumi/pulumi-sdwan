@@ -16,11 +16,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
+    private @Nullable Boolean appqoeDreOptimization;
+    private @Nullable String appqoeServiceNodeGroup;
+    private @Nullable Boolean appqoeTcpOptimization;
     /**
      * @return Backup SLA perferred color
      * 
      */
     private @Nullable List<String> backupSlaPreferredColors;
+    private @Nullable Boolean cflowd;
     private @Nullable Boolean cloudProbe;
     private @Nullable Boolean cloudSaas;
     private @Nullable String count;
@@ -47,12 +51,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     private @Nullable Integer natPool;
     private @Nullable Boolean natVpn;
     /**
-     * @return - Choices: `ipAddress`, `redirectDns`
+     * @return - Choices: `ipAddress`, `dnsHost`
      * 
      */
     private @Nullable String redirectDnsField;
     private @Nullable String redirectDnsValue;
     private @Nullable Boolean secureInternetGateway;
+    private @Nullable Boolean secureServiceEdge;
+    /**
+     * @return - Choices: `Cisco-Secure-Access`, `zScaler`
+     * 
+     */
+    private @Nullable String secureServiceEdgeInstance;
     private @Nullable List<ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter> setParameters;
     /**
      * @return slaClass
@@ -61,12 +71,24 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     private @Nullable List<ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass> slaClasses;
 
     private ApplicationPriorityTrafficPolicyPolicySequenceAction() {}
+    public Optional<Boolean> appqoeDreOptimization() {
+        return Optional.ofNullable(this.appqoeDreOptimization);
+    }
+    public Optional<String> appqoeServiceNodeGroup() {
+        return Optional.ofNullable(this.appqoeServiceNodeGroup);
+    }
+    public Optional<Boolean> appqoeTcpOptimization() {
+        return Optional.ofNullable(this.appqoeTcpOptimization);
+    }
     /**
      * @return Backup SLA perferred color
      * 
      */
     public List<String> backupSlaPreferredColors() {
         return this.backupSlaPreferredColors == null ? List.of() : this.backupSlaPreferredColors;
+    }
+    public Optional<Boolean> cflowd() {
+        return Optional.ofNullable(this.cflowd);
     }
     public Optional<Boolean> cloudProbe() {
         return Optional.ofNullable(this.cloudProbe);
@@ -120,7 +142,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
         return Optional.ofNullable(this.natVpn);
     }
     /**
-     * @return - Choices: `ipAddress`, `redirectDns`
+     * @return - Choices: `ipAddress`, `dnsHost`
      * 
      */
     public Optional<String> redirectDnsField() {
@@ -131,6 +153,16 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     }
     public Optional<Boolean> secureInternetGateway() {
         return Optional.ofNullable(this.secureInternetGateway);
+    }
+    public Optional<Boolean> secureServiceEdge() {
+        return Optional.ofNullable(this.secureServiceEdge);
+    }
+    /**
+     * @return - Choices: `Cisco-Secure-Access`, `zScaler`
+     * 
+     */
+    public Optional<String> secureServiceEdgeInstance() {
+        return Optional.ofNullable(this.secureServiceEdgeInstance);
     }
     public List<ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter> setParameters() {
         return this.setParameters == null ? List.of() : this.setParameters;
@@ -152,7 +184,11 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Boolean appqoeDreOptimization;
+        private @Nullable String appqoeServiceNodeGroup;
+        private @Nullable Boolean appqoeTcpOptimization;
         private @Nullable List<String> backupSlaPreferredColors;
+        private @Nullable Boolean cflowd;
         private @Nullable Boolean cloudProbe;
         private @Nullable Boolean cloudSaas;
         private @Nullable String count;
@@ -169,12 +205,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
         private @Nullable String redirectDnsField;
         private @Nullable String redirectDnsValue;
         private @Nullable Boolean secureInternetGateway;
+        private @Nullable Boolean secureServiceEdge;
+        private @Nullable String secureServiceEdgeInstance;
         private @Nullable List<ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter> setParameters;
         private @Nullable List<ApplicationPriorityTrafficPolicyPolicySequenceActionSlaClass> slaClasses;
         public Builder() {}
         public Builder(ApplicationPriorityTrafficPolicyPolicySequenceAction defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.appqoeDreOptimization = defaults.appqoeDreOptimization;
+    	      this.appqoeServiceNodeGroup = defaults.appqoeServiceNodeGroup;
+    	      this.appqoeTcpOptimization = defaults.appqoeTcpOptimization;
     	      this.backupSlaPreferredColors = defaults.backupSlaPreferredColors;
+    	      this.cflowd = defaults.cflowd;
     	      this.cloudProbe = defaults.cloudProbe;
     	      this.cloudSaas = defaults.cloudSaas;
     	      this.count = defaults.count;
@@ -191,10 +233,30 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
     	      this.redirectDnsField = defaults.redirectDnsField;
     	      this.redirectDnsValue = defaults.redirectDnsValue;
     	      this.secureInternetGateway = defaults.secureInternetGateway;
+    	      this.secureServiceEdge = defaults.secureServiceEdge;
+    	      this.secureServiceEdgeInstance = defaults.secureServiceEdgeInstance;
     	      this.setParameters = defaults.setParameters;
     	      this.slaClasses = defaults.slaClasses;
         }
 
+        @CustomType.Setter
+        public Builder appqoeDreOptimization(@Nullable Boolean appqoeDreOptimization) {
+
+            this.appqoeDreOptimization = appqoeDreOptimization;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder appqoeServiceNodeGroup(@Nullable String appqoeServiceNodeGroup) {
+
+            this.appqoeServiceNodeGroup = appqoeServiceNodeGroup;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder appqoeTcpOptimization(@Nullable Boolean appqoeTcpOptimization) {
+
+            this.appqoeTcpOptimization = appqoeTcpOptimization;
+            return this;
+        }
         @CustomType.Setter
         public Builder backupSlaPreferredColors(@Nullable List<String> backupSlaPreferredColors) {
 
@@ -203,6 +265,12 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
         }
         public Builder backupSlaPreferredColors(String... backupSlaPreferredColors) {
             return backupSlaPreferredColors(List.of(backupSlaPreferredColors));
+        }
+        @CustomType.Setter
+        public Builder cflowd(@Nullable Boolean cflowd) {
+
+            this.cflowd = cflowd;
+            return this;
         }
         @CustomType.Setter
         public Builder cloudProbe(@Nullable Boolean cloudProbe) {
@@ -307,6 +375,18 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
             return this;
         }
         @CustomType.Setter
+        public Builder secureServiceEdge(@Nullable Boolean secureServiceEdge) {
+
+            this.secureServiceEdge = secureServiceEdge;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder secureServiceEdgeInstance(@Nullable String secureServiceEdgeInstance) {
+
+            this.secureServiceEdgeInstance = secureServiceEdgeInstance;
+            return this;
+        }
+        @CustomType.Setter
         public Builder setParameters(@Nullable List<ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter> setParameters) {
 
             this.setParameters = setParameters;
@@ -326,7 +406,11 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
         }
         public ApplicationPriorityTrafficPolicyPolicySequenceAction build() {
             final var _resultValue = new ApplicationPriorityTrafficPolicyPolicySequenceAction();
+            _resultValue.appqoeDreOptimization = appqoeDreOptimization;
+            _resultValue.appqoeServiceNodeGroup = appqoeServiceNodeGroup;
+            _resultValue.appqoeTcpOptimization = appqoeTcpOptimization;
             _resultValue.backupSlaPreferredColors = backupSlaPreferredColors;
+            _resultValue.cflowd = cflowd;
             _resultValue.cloudProbe = cloudProbe;
             _resultValue.cloudSaas = cloudSaas;
             _resultValue.count = count;
@@ -343,6 +427,8 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceAction {
             _resultValue.redirectDnsField = redirectDnsField;
             _resultValue.redirectDnsValue = redirectDnsValue;
             _resultValue.secureInternetGateway = secureInternetGateway;
+            _resultValue.secureServiceEdge = secureServiceEdge;
+            _resultValue.secureServiceEdgeInstance = secureServiceEdgeInstance;
             _resultValue.setParameters = setParameters;
             _resultValue.slaClasses = slaClasses;
             return _resultValue;

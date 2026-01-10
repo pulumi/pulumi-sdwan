@@ -40,10 +40,9 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? Dns;
         public readonly string? DnsApplicationListId;
         /// <summary>
-        /// DSCP number
-        ///   - Range: `0`-`63`
+        /// DSCP numbers
         /// </summary>
-        public readonly int? Dscp;
+        public readonly ImmutableArray<int> Dscps;
         /// <summary>
         /// ICMP6 Message
         /// </summary>
@@ -65,8 +64,8 @@ namespace Pulumi.Sdwan.Outputs
         /// M365 Service Area
         /// </summary>
         public readonly ImmutableArray<string> ServiceAreas;
-        public readonly string? SourceDataIpv4PrefxListId;
-        public readonly string? SourceDataIpv6PrefxListId;
+        public readonly string? SourceDataIpv4PrefixListId;
+        public readonly string? SourceDataIpv6PrefixListId;
         /// <summary>
         /// Source Data IP Prefix
         /// </summary>
@@ -120,7 +119,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string? dnsApplicationListId,
 
-            int? dscp,
+            ImmutableArray<int> dscps,
 
             ImmutableArray<string> icmp6Messages,
 
@@ -134,9 +133,9 @@ namespace Pulumi.Sdwan.Outputs
 
             ImmutableArray<string> serviceAreas,
 
-            string? sourceDataIpv4PrefxListId,
+            string? sourceDataIpv4PrefixListId,
 
-            string? sourceDataIpv6PrefxListId,
+            string? sourceDataIpv6PrefixListId,
 
             string? sourceIpv4Prefix,
 
@@ -161,15 +160,15 @@ namespace Pulumi.Sdwan.Outputs
             DestinationRegion = destinationRegion;
             Dns = dns;
             DnsApplicationListId = dnsApplicationListId;
-            Dscp = dscp;
+            Dscps = dscps;
             Icmp6Messages = icmp6Messages;
             IcmpMessages = icmpMessages;
             PacketLength = packetLength;
             Protocols = protocols;
             SaasApplicationListId = saasApplicationListId;
             ServiceAreas = serviceAreas;
-            SourceDataIpv4PrefxListId = sourceDataIpv4PrefxListId;
-            SourceDataIpv6PrefxListId = sourceDataIpv6PrefxListId;
+            SourceDataIpv4PrefixListId = sourceDataIpv4PrefixListId;
+            SourceDataIpv6PrefixListId = sourceDataIpv6PrefixListId;
             SourceIpv4Prefix = sourceIpv4Prefix;
             SourceIpv6Prefix = sourceIpv6Prefix;
             SourcePorts = sourcePorts;
