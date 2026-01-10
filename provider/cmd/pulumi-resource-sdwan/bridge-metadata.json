@@ -92,23 +92,23 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
-                                            "backup_sla_preferred_color": {
+                                            "backup_sla_preferred_colors": {
                                                 "maxItemsOne": false
                                             },
-                                            "nat_dia_interface": {
+                                            "nat_dia_interfaces": {
                                                 "maxItemsOne": false
                                             },
-                                            "nat_dia_pool": {
+                                            "nat_dia_pools": {
                                                 "maxItemsOne": false
                                             },
                                             "set_parameters": {
                                                 "maxItemsOne": false,
                                                 "elem": {
                                                     "fields": {
-                                                        "local_tloc_list_color": {
+                                                        "local_tloc_list_colors": {
                                                             "maxItemsOne": false
                                                         },
-                                                        "preferred_remote_color_id": {
+                                                        "preferred_remote_colors": {
                                                             "maxItemsOne": false
                                                         },
                                                         "service_chain_tloc_color": {
@@ -127,10 +127,10 @@
                                                 "maxItemsOne": false,
                                                 "elem": {
                                                     "fields": {
-                                                        "preferred_color": {
+                                                        "preferred_colors": {
                                                             "maxItemsOne": false
                                                         },
-                                                        "preferred_remote_color": {
+                                                        "preferred_remote_colors": {
                                                             "maxItemsOne": false
                                                         }
                                                     }
@@ -146,16 +146,19 @@
                                             "destination_ports": {
                                                 "maxItemsOne": false
                                             },
-                                            "icmp6_message": {
+                                            "dscps": {
                                                 "maxItemsOne": false
                                             },
-                                            "icmp_message": {
+                                            "icmp6_messages": {
+                                                "maxItemsOne": false
+                                            },
+                                            "icmp_messages": {
                                                 "maxItemsOne": false
                                             },
                                             "protocols": {
                                                 "maxItemsOne": false
                                             },
-                                            "service_area": {
+                                            "service_areas": {
                                                 "maxItemsOne": false
                                             },
                                             "source_ports": {
@@ -2132,6 +2135,16 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "ip_static_route_interface": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "next_hop": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                },
                                 "next_hop_with_trackers": {
                                     "maxItemsOne": false
                                 },
@@ -2151,6 +2164,16 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "ipv6_static_route_interface": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "next_hop": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                },
                                 "next_hops": {
                                     "maxItemsOne": false
                                 }
@@ -2208,6 +2231,9 @@
                                 }
                             }
                         }
+                    },
+                    "static_nat_subnets": {
+                        "maxItemsOne": false
                     },
                     "static_nats": {
                         "maxItemsOne": false
@@ -2731,6 +2757,14 @@
                 "current": "sdwan:index/systemBfdFeature:SystemBfdFeature",
                 "fields": {
                     "colors": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_system_ca_certificate_feature": {
+                "current": "sdwan:index/systemCaCertificateFeature:SystemCaCertificateFeature",
+                "fields": {
+                    "certificates": {
                         "maxItemsOne": false
                     }
                 }
@@ -3884,23 +3918,23 @@
                                     "maxItemsOne": false,
                                     "elem": {
                                         "fields": {
-                                            "backup_sla_preferred_color": {
+                                            "backup_sla_preferred_colors": {
                                                 "maxItemsOne": false
                                             },
-                                            "nat_dia_interface": {
+                                            "nat_dia_interfaces": {
                                                 "maxItemsOne": false
                                             },
-                                            "nat_dia_pool": {
+                                            "nat_dia_pools": {
                                                 "maxItemsOne": false
                                             },
                                             "set_parameters": {
                                                 "maxItemsOne": false,
                                                 "elem": {
                                                     "fields": {
-                                                        "local_tloc_list_color": {
+                                                        "local_tloc_list_colors": {
                                                             "maxItemsOne": false
                                                         },
-                                                        "preferred_remote_color_id": {
+                                                        "preferred_remote_colors": {
                                                             "maxItemsOne": false
                                                         },
                                                         "service_chain_tloc_color": {
@@ -3919,10 +3953,10 @@
                                                 "maxItemsOne": false,
                                                 "elem": {
                                                     "fields": {
-                                                        "preferred_color": {
+                                                        "preferred_colors": {
                                                             "maxItemsOne": false
                                                         },
-                                                        "preferred_remote_color": {
+                                                        "preferred_remote_colors": {
                                                             "maxItemsOne": false
                                                         }
                                                     }
@@ -3938,16 +3972,19 @@
                                             "destination_ports": {
                                                 "maxItemsOne": false
                                             },
-                                            "icmp6_message": {
+                                            "dscps": {
                                                 "maxItemsOne": false
                                             },
-                                            "icmp_message": {
+                                            "icmp6_messages": {
+                                                "maxItemsOne": false
+                                            },
+                                            "icmp_messages": {
                                                 "maxItemsOne": false
                                             },
                                             "protocols": {
                                                 "maxItemsOne": false
                                             },
-                                            "service_area": {
+                                            "service_areas": {
                                                 "maxItemsOne": false
                                             },
                                             "source_ports": {
@@ -5924,6 +5961,16 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "ip_static_route_interface": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "next_hop": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                },
                                 "next_hop_with_trackers": {
                                     "maxItemsOne": false
                                 },
@@ -5943,6 +5990,16 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
+                                "ipv6_static_route_interface": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "next_hop": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                },
                                 "next_hops": {
                                     "maxItemsOne": false
                                 }
@@ -6000,6 +6057,9 @@
                                 }
                             }
                         }
+                    },
+                    "static_nat_subnets": {
+                        "maxItemsOne": false
                     },
                     "static_nats": {
                         "maxItemsOne": false
@@ -6523,6 +6583,14 @@
                 "current": "sdwan:index/getSystemBfdFeature:getSystemBfdFeature",
                 "fields": {
                     "colors": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "sdwan_system_ca_certificate_feature": {
+                "current": "sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature",
+                "fields": {
+                    "certificates": {
                         "maxItemsOne": false
                     }
                 }
