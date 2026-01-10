@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureIpv6StaticRouteNextHop;
 import java.lang.Boolean;
 import java.lang.String;
@@ -18,6 +19,7 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
      * 
      */
     private String gateway;
+    private List<GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces;
     /**
      * @return IPv6 Nat
      * 
@@ -56,6 +58,9 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
      */
     public String gateway() {
         return this.gateway;
+    }
+    public List<GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces() {
+        return this.ipv6StaticRouteInterfaces;
     }
     /**
      * @return IPv6 Nat
@@ -110,6 +115,7 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
     @CustomType.Builder
     public static final class Builder {
         private String gateway;
+        private List<GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces;
         private String nat;
         private String natVariable;
         private List<GetServiceLanVpnFeatureIpv6StaticRouteNextHop> nextHops;
@@ -120,6 +126,7 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
         public Builder(GetServiceLanVpnFeatureIpv6StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.gateway = defaults.gateway;
+    	      this.ipv6StaticRouteInterfaces = defaults.ipv6StaticRouteInterfaces;
     	      this.nat = defaults.nat;
     	      this.natVariable = defaults.natVariable;
     	      this.nextHops = defaults.nextHops;
@@ -135,6 +142,17 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
             }
             this.gateway = gateway;
             return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6StaticRouteInterfaces(List<GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces) {
+            if (ipv6StaticRouteInterfaces == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv6StaticRoute", "ipv6StaticRouteInterfaces");
+            }
+            this.ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
+            return this;
+        }
+        public Builder ipv6StaticRouteInterfaces(GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface... ipv6StaticRouteInterfaces) {
+            return ipv6StaticRouteInterfaces(List.of(ipv6StaticRouteInterfaces));
         }
         @CustomType.Setter
         public Builder nat(String nat) {
@@ -190,6 +208,7 @@ public final class GetServiceLanVpnFeatureIpv6StaticRoute {
         public GetServiceLanVpnFeatureIpv6StaticRoute build() {
             final var _resultValue = new GetServiceLanVpnFeatureIpv6StaticRoute();
             _resultValue.gateway = gateway;
+            _resultValue.ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
             _resultValue.nat = nat;
             _resultValue.natVariable = natVariable;
             _resultValue.nextHops = nextHops;

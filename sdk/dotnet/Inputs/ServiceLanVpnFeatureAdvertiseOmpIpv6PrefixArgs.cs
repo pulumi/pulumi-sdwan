@@ -31,6 +31,20 @@ namespace Pulumi.Sdwan.Inputs
         [Input("prefixVariable")]
         public Input<string>? PrefixVariable { get; set; }
 
+        /// <summary>
+        /// Applied to Region
+        ///   - Choices: `core-and-access`, `Core`, `Access`
+        ///   - Default value: `core-and-access`
+        /// </summary>
+        [Input("region")]
+        public Input<string>? Region { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("regionVariable")]
+        public Input<string>? RegionVariable { get; set; }
+
         public ServiceLanVpnFeatureAdvertiseOmpIpv6PrefixArgs()
         {
         }

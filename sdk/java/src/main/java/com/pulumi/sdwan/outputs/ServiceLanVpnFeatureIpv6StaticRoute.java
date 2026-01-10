@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop;
 import java.lang.Boolean;
 import java.lang.String;
@@ -16,10 +17,15 @@ import javax.annotation.Nullable;
 public final class ServiceLanVpnFeatureIpv6StaticRoute {
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      * 
      */
     private @Nullable String gateway;
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    private @Nullable List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces;
     /**
      * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
@@ -55,11 +61,18 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
     private ServiceLanVpnFeatureIpv6StaticRoute() {}
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `nat`
+     *   - Choices: `nextHop`, `null0`, `nat`, `staticRouteInterface`
      * 
      */
     public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
+    }
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    public List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces() {
+        return this.ipv6StaticRouteInterfaces == null ? List.of() : this.ipv6StaticRouteInterfaces;
     }
     /**
      * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
@@ -115,6 +128,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String gateway;
+        private @Nullable List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces;
         private @Nullable String nat;
         private @Nullable String natVariable;
         private @Nullable List<ServiceLanVpnFeatureIpv6StaticRouteNextHop> nextHops;
@@ -125,6 +139,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
         public Builder(ServiceLanVpnFeatureIpv6StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.gateway = defaults.gateway;
+    	      this.ipv6StaticRouteInterfaces = defaults.ipv6StaticRouteInterfaces;
     	      this.nat = defaults.nat;
     	      this.natVariable = defaults.natVariable;
     	      this.nextHops = defaults.nextHops;
@@ -138,6 +153,15 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
 
             this.gateway = gateway;
             return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6StaticRouteInterfaces(@Nullable List<ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface> ipv6StaticRouteInterfaces) {
+
+            this.ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
+            return this;
+        }
+        public Builder ipv6StaticRouteInterfaces(ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface... ipv6StaticRouteInterfaces) {
+            return ipv6StaticRouteInterfaces(List.of(ipv6StaticRouteInterfaces));
         }
         @CustomType.Setter
         public Builder nat(@Nullable String nat) {
@@ -181,6 +205,7 @@ public final class ServiceLanVpnFeatureIpv6StaticRoute {
         public ServiceLanVpnFeatureIpv6StaticRoute build() {
             final var _resultValue = new ServiceLanVpnFeatureIpv6StaticRoute();
             _resultValue.gateway = gateway;
+            _resultValue.ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
             _resultValue.nat = nat;
             _resultValue.natVariable = natVariable;
             _resultValue.nextHops = nextHops;

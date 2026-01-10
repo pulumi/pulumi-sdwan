@@ -185,6 +185,10 @@ export interface GetServiceLanVpnFeatureResult {
      */
     readonly services: outputs.GetServiceLanVpnFeatureService[];
     /**
+     * Static NAT Subnet Rules
+     */
+    readonly staticNatSubnets: outputs.GetServiceLanVpnFeatureStaticNatSubnet[];
+    /**
      * Static NAT Rules
      */
     readonly staticNats: outputs.GetServiceLanVpnFeatureStaticNat[];

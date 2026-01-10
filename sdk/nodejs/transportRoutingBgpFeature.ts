@@ -78,9 +78,9 @@ import * as utilities from "./utilities";
  *         allowasInNumber: 3,
  *         addressFamilies: [{
  *             familyType: "ipv6-unicast",
- *             maxNumberOfPrefixes: 2000,
- *             threshold: 75,
  *             policyType: "restart",
+ *             restartMaxNumberOfPrefixes: 2000,
+ *             restartThreshold: 75,
  *             restartInterval: 30,
  *         }],
  *     }],

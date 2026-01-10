@@ -36,7 +36,7 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureArea {
      */
     private String areaNumberVariable;
     /**
-     * @return stub area type
+     * @return Set OSPFv3 area type
      * 
      */
     private String areaType;
@@ -91,7 +91,7 @@ public final class GetTransportRoutingOspfv3Ipv4FeatureArea {
         return this.areaNumberVariable;
     }
     /**
-     * @return stub area type
+     * @return Set OSPFv3 area type
      * 
      */
     public String areaType() {

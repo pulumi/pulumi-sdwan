@@ -17,14 +17,14 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string ForwardingClassListId;
         public readonly ImmutableArray<string> LocalTlocListColors;
         public readonly string LocalTlocListEncapsulation;
-        public readonly string LocalTlocListRestrict;
+        public readonly bool LocalTlocListRestrict;
         public readonly string NextHopIpv4;
         public readonly string NextHopIpv6;
         public readonly bool NextHopLoose;
         public readonly string PolicerId;
         public readonly string PreferredColorGroupId;
-        public readonly ImmutableArray<string> PreferredRemoteColorIds;
-        public readonly string PreferredRemoteColorRestrict;
+        public readonly bool PreferredRemoteColorRestrict;
+        public readonly ImmutableArray<string> PreferredRemoteColors;
         public readonly bool ServiceChainFallbackToRouting;
         public readonly bool ServiceChainLocal;
         public readonly ImmutableArray<string> ServiceChainTlocColors;
@@ -33,17 +33,19 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string ServiceChainTlocListId;
         public readonly string ServiceChainType;
         public readonly int ServiceChainVpn;
+        public readonly bool ServiceLocal;
+        public readonly bool ServiceRestrict;
         public readonly ImmutableArray<string> ServiceTlocColors;
         public readonly string ServiceTlocEncapsulation;
         public readonly string ServiceTlocIp;
         public readonly string ServiceTlocListId;
         public readonly string ServiceType;
-        public readonly string ServiceVpn;
+        public readonly int ServiceVpn;
         public readonly ImmutableArray<string> TlocColors;
         public readonly string TlocEncapsulation;
         public readonly string TlocIp;
         public readonly string TlocListId;
-        public readonly string Vpn;
+        public readonly int Vpn;
 
         [OutputConstructor]
         private GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterResult(
@@ -55,7 +57,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string localTlocListEncapsulation,
 
-            string localTlocListRestrict,
+            bool localTlocListRestrict,
 
             string nextHopIpv4,
 
@@ -67,9 +69,9 @@ namespace Pulumi.Sdwan.Outputs
 
             string preferredColorGroupId,
 
-            ImmutableArray<string> preferredRemoteColorIds,
+            bool preferredRemoteColorRestrict,
 
-            string preferredRemoteColorRestrict,
+            ImmutableArray<string> preferredRemoteColors,
 
             bool serviceChainFallbackToRouting,
 
@@ -87,6 +89,10 @@ namespace Pulumi.Sdwan.Outputs
 
             int serviceChainVpn,
 
+            bool serviceLocal,
+
+            bool serviceRestrict,
+
             ImmutableArray<string> serviceTlocColors,
 
             string serviceTlocEncapsulation,
@@ -97,7 +103,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string serviceType,
 
-            string serviceVpn,
+            int serviceVpn,
 
             ImmutableArray<string> tlocColors,
 
@@ -107,7 +113,7 @@ namespace Pulumi.Sdwan.Outputs
 
             string tlocListId,
 
-            string vpn)
+            int vpn)
         {
             Dscp = dscp;
             ForwardingClassListId = forwardingClassListId;
@@ -119,8 +125,8 @@ namespace Pulumi.Sdwan.Outputs
             NextHopLoose = nextHopLoose;
             PolicerId = policerId;
             PreferredColorGroupId = preferredColorGroupId;
-            PreferredRemoteColorIds = preferredRemoteColorIds;
             PreferredRemoteColorRestrict = preferredRemoteColorRestrict;
+            PreferredRemoteColors = preferredRemoteColors;
             ServiceChainFallbackToRouting = serviceChainFallbackToRouting;
             ServiceChainLocal = serviceChainLocal;
             ServiceChainTlocColors = serviceChainTlocColors;
@@ -129,6 +135,8 @@ namespace Pulumi.Sdwan.Outputs
             ServiceChainTlocListId = serviceChainTlocListId;
             ServiceChainType = serviceChainType;
             ServiceChainVpn = serviceChainVpn;
+            ServiceLocal = serviceLocal;
+            ServiceRestrict = serviceRestrict;
             ServiceTlocColors = serviceTlocColors;
             ServiceTlocEncapsulation = serviceTlocEncapsulation;
             ServiceTlocIp = serviceTlocIp;

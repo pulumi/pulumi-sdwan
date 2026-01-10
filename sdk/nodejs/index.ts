@@ -1195,6 +1195,11 @@ export const getSystemBfdFeature: typeof import("./getSystemBfdFeature").getSyst
 export const getSystemBfdFeatureOutput: typeof import("./getSystemBfdFeature").getSystemBfdFeatureOutput = null as any;
 utilities.lazyLoad(exports, ["getSystemBfdFeature","getSystemBfdFeatureOutput"], () => require("./getSystemBfdFeature"));
 
+export { GetSystemCaCertificateFeatureArgs, GetSystemCaCertificateFeatureResult, GetSystemCaCertificateFeatureOutputArgs } from "./getSystemCaCertificateFeature";
+export const getSystemCaCertificateFeature: typeof import("./getSystemCaCertificateFeature").getSystemCaCertificateFeature = null as any;
+export const getSystemCaCertificateFeatureOutput: typeof import("./getSystemCaCertificateFeature").getSystemCaCertificateFeatureOutput = null as any;
+utilities.lazyLoad(exports, ["getSystemCaCertificateFeature","getSystemCaCertificateFeatureOutput"], () => require("./getSystemCaCertificateFeature"));
+
 export { GetSystemFeatureProfileArgs, GetSystemFeatureProfileResult, GetSystemFeatureProfileOutputArgs } from "./getSystemFeatureProfile";
 export const getSystemFeatureProfile: typeof import("./getSystemFeatureProfile").getSystemFeatureProfile = null as any;
 export const getSystemFeatureProfileOutput: typeof import("./getSystemFeatureProfile").getSystemFeatureProfileOutput = null as any;
@@ -2083,6 +2088,11 @@ export type SystemBfdFeature = import("./systemBfdFeature").SystemBfdFeature;
 export const SystemBfdFeature: typeof import("./systemBfdFeature").SystemBfdFeature = null as any;
 utilities.lazyLoad(exports, ["SystemBfdFeature"], () => require("./systemBfdFeature"));
 
+export { SystemCaCertificateFeatureArgs, SystemCaCertificateFeatureState } from "./systemCaCertificateFeature";
+export type SystemCaCertificateFeature = import("./systemCaCertificateFeature").SystemCaCertificateFeature;
+export const SystemCaCertificateFeature: typeof import("./systemCaCertificateFeature").SystemCaCertificateFeature = null as any;
+utilities.lazyLoad(exports, ["SystemCaCertificateFeature"], () => require("./systemCaCertificateFeature"));
+
 export { SystemFeatureProfileArgs, SystemFeatureProfileState } from "./systemFeatureProfile";
 export type SystemFeatureProfile = import("./systemFeatureProfile").SystemFeatureProfile;
 export const SystemFeatureProfile: typeof import("./systemFeatureProfile").SystemFeatureProfile = null as any;
@@ -2780,6 +2790,8 @@ const _module = {
                 return new SystemBasicFeature(name, <any>undefined, { urn })
             case "sdwan:index/systemBfdFeature:SystemBfdFeature":
                 return new SystemBfdFeature(name, <any>undefined, { urn })
+            case "sdwan:index/systemCaCertificateFeature:SystemCaCertificateFeature":
+                return new SystemCaCertificateFeature(name, <any>undefined, { urn })
             case "sdwan:index/systemFeatureProfile:SystemFeatureProfile":
                 return new SystemFeatureProfile(name, <any>undefined, { urn })
             case "sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature":
@@ -3093,6 +3105,7 @@ pulumi.runtime.registerResourceModule("sdwan", "index/systemAaaFeature", _module
 pulumi.runtime.registerResourceModule("sdwan", "index/systemBannerFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemBasicFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemBfdFeature", _module)
+pulumi.runtime.registerResourceModule("sdwan", "index/systemCaCertificateFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemFeatureProfile", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemFlexiblePortSpeedFeature", _module)
 pulumi.runtime.registerResourceModule("sdwan", "index/systemGlobalFeature", _module)

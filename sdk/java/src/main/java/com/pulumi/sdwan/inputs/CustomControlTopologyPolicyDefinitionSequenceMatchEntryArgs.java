@@ -304,7 +304,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Role, Attribute conditional on `type` being equal to `regionId`
+     * Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -312,7 +312,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> role;
 
     /**
-     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     * @return Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -957,7 +957,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param role Role, Attribute conditional on `type` being equal to `regionId`
+         * @param role Role, Attribute conditional on `type` being equal to `role`
          *   - Choices: `border-router`, `edge-router`
          * 
          * @return builder
@@ -969,7 +969,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param role Role, Attribute conditional on `type` being equal to `regionId`
+         * @param role Role, Attribute conditional on `type` being equal to `role`
          *   - Choices: `border-router`, `edge-router`
          * 
          * @return builder

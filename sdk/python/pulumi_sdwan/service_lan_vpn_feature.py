@@ -58,6 +58,7 @@ class ServiceLanVpnFeatureArgs:
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  service_routes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceRouteArgs']]]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]]] = None,
+                 static_nat_subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]] = None,
                  static_nats: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]]] = None,
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None):
@@ -98,6 +99,7 @@ class ServiceLanVpnFeatureArgs:
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceRouteArgs']]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] vpn: VPN
                  - Range: `1`-`65527`
@@ -177,6 +179,8 @@ class ServiceLanVpnFeatureArgs:
             pulumi.set(__self__, "service_routes", service_routes)
         if services is not None:
             pulumi.set(__self__, "services", services)
+        if static_nat_subnets is not None:
+            pulumi.set(__self__, "static_nat_subnets", static_nat_subnets)
         if static_nats is not None:
             pulumi.set(__self__, "static_nats", static_nats)
         if vpn is not None:
@@ -617,6 +621,18 @@ class ServiceLanVpnFeatureArgs:
         pulumi.set(self, "services", value)
 
     @_builtins.property
+    @pulumi.getter(name="staticNatSubnets")
+    def static_nat_subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]]:
+        """
+        Static NAT Subnet Rules
+        """
+        return pulumi.get(self, "static_nat_subnets")
+
+    @static_nat_subnets.setter
+    def static_nat_subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]]):
+        pulumi.set(self, "static_nat_subnets", value)
+
+    @_builtins.property
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]]]:
         """
@@ -695,6 +711,7 @@ class _ServiceLanVpnFeatureState:
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  service_routes: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceRouteArgs']]]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]]] = None,
+                 static_nat_subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]] = None,
                  static_nats: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]]] = None,
                  version: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
@@ -736,6 +753,7 @@ class _ServiceLanVpnFeatureState:
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceRouteArgs']]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureServiceArgs']]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.int] vpn: VPN
@@ -817,6 +835,8 @@ class _ServiceLanVpnFeatureState:
             pulumi.set(__self__, "service_routes", service_routes)
         if services is not None:
             pulumi.set(__self__, "services", services)
+        if static_nat_subnets is not None:
+            pulumi.set(__self__, "static_nat_subnets", static_nat_subnets)
         if static_nats is not None:
             pulumi.set(__self__, "static_nats", static_nats)
         if version is not None:
@@ -1259,6 +1279,18 @@ class _ServiceLanVpnFeatureState:
         pulumi.set(self, "services", value)
 
     @_builtins.property
+    @pulumi.getter(name="staticNatSubnets")
+    def static_nat_subnets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]]:
+        """
+        Static NAT Subnet Rules
+        """
+        return pulumi.get(self, "static_nat_subnets")
+
+    @static_nat_subnets.setter
+    def static_nat_subnets(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatSubnetArgs']]]]):
+        pulumi.set(self, "static_nat_subnets", value)
+
+    @_builtins.property
     @pulumi.getter(name="staticNats")
     def static_nats(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ServiceLanVpnFeatureStaticNatArgs']]]]:
         """
@@ -1352,13 +1384,14 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  service_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]]] = None,
+                 static_nat_subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]]] = None,
                  static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]]] = None,
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         This resource can manage a Service LAN VPN Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1410,6 +1443,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                 "subnet_mask": "0.0.0.0",
                 "service": "SIG",
                 "vpn": 0,
+                "sse_instance": "1",
             }],
             gre_routes=[{
                 "network_address": "1.2.3.4",
@@ -1442,6 +1476,12 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                 "nat_pool_name": 3,
                 "source_ip": "1.2.3.4",
                 "translated_source_ip": "2.3.4.5",
+                "static_nat_direction": "inside",
+            }],
+            static_nat_subnets=[{
+                "source_ip_subnet": "1.2.3.4",
+                "translated_source_ip_subnet": "2.3.4.5",
+                "prefix_length": 6,
                 "static_nat_direction": "inside",
             }],
             nat64_v4_pools=[{
@@ -1511,6 +1551,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] vpn: VPN
                  - Range: `1`-`65527`
@@ -1525,7 +1566,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Service LAN VPN Feature.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -1577,6 +1618,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                 "subnet_mask": "0.0.0.0",
                 "service": "SIG",
                 "vpn": 0,
+                "sse_instance": "1",
             }],
             gre_routes=[{
                 "network_address": "1.2.3.4",
@@ -1609,6 +1651,12 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                 "nat_pool_name": 3,
                 "source_ip": "1.2.3.4",
                 "translated_source_ip": "2.3.4.5",
+                "static_nat_direction": "inside",
+            }],
+            static_nat_subnets=[{
+                "source_ip_subnet": "1.2.3.4",
+                "translated_source_ip_subnet": "2.3.4.5",
+                "prefix_length": 6,
                 "static_nat_direction": "inside",
             }],
             nat64_v4_pools=[{
@@ -1693,6 +1741,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
                  secondary_dns_address_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
                  service_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]]] = None,
+                 static_nat_subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]]] = None,
                  static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]]] = None,
                  vpn: Optional[pulumi.Input[_builtins.int]] = None,
                  vpn_variable: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1744,6 +1793,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
             __props__.__dict__["secondary_dns_address_ipv6_variable"] = secondary_dns_address_ipv6_variable
             __props__.__dict__["service_routes"] = service_routes
             __props__.__dict__["services"] = services
+            __props__.__dict__["static_nat_subnets"] = static_nat_subnets
             __props__.__dict__["static_nats"] = static_nats
             __props__.__dict__["vpn"] = vpn
             __props__.__dict__["vpn_variable"] = vpn_variable
@@ -1795,6 +1845,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
             secondary_dns_address_ipv6_variable: Optional[pulumi.Input[_builtins.str]] = None,
             service_routes: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]]] = None,
+            static_nat_subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]]] = None,
             static_nats: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]]] = None,
             version: Optional[pulumi.Input[_builtins.int]] = None,
             vpn: Optional[pulumi.Input[_builtins.int]] = None,
@@ -1841,6 +1892,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] secondary_dns_address_ipv6_variable: Variable name
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceRouteArgs', 'ServiceLanVpnFeatureServiceRouteArgsDict']]]] service_routes: Service
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureServiceArgs', 'ServiceLanVpnFeatureServiceArgsDict']]]] services: Service
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatSubnetArgs', 'ServiceLanVpnFeatureStaticNatSubnetArgsDict']]]] static_nat_subnets: Static NAT Subnet Rules
         :param pulumi.Input[Sequence[pulumi.Input[Union['ServiceLanVpnFeatureStaticNatArgs', 'ServiceLanVpnFeatureStaticNatArgsDict']]]] static_nats: Static NAT Rules
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         :param pulumi.Input[_builtins.int] vpn: VPN
@@ -1889,6 +1941,7 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         __props__.__dict__["secondary_dns_address_ipv6_variable"] = secondary_dns_address_ipv6_variable
         __props__.__dict__["service_routes"] = service_routes
         __props__.__dict__["services"] = services
+        __props__.__dict__["static_nat_subnets"] = static_nat_subnets
         __props__.__dict__["static_nats"] = static_nats
         __props__.__dict__["version"] = version
         __props__.__dict__["vpn"] = vpn
@@ -2178,6 +2231,14 @@ class ServiceLanVpnFeature(pulumi.CustomResource):
         Service
         """
         return pulumi.get(self, "services")
+
+    @_builtins.property
+    @pulumi.getter(name="staticNatSubnets")
+    def static_nat_subnets(self) -> pulumi.Output[Optional[Sequence['outputs.ServiceLanVpnFeatureStaticNatSubnet']]]:
+        """
+        Static NAT Subnet Rules
+        """
+        return pulumi.get(self, "static_nat_subnets")
 
     @_builtins.property
     @pulumi.getter(name="staticNats")

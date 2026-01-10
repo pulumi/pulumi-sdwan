@@ -25,11 +25,16 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistribute {
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      * 
      */
     private @Nullable Boolean translateRibMetric;
+    /**
+     * @return Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * 
+     */
+    private @Nullable String translateRibMetricVariable;
 
     private ServiceRoutingOspfv3Ipv6FeatureRedistribute() {}
     /**
@@ -51,12 +56,19 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistribute {
         return Optional.ofNullable(this.routePolicyId);
     }
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
      *   - Default value: `false`
      * 
      */
     public Optional<Boolean> translateRibMetric() {
         return Optional.ofNullable(this.translateRibMetric);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * 
+     */
+    public Optional<String> translateRibMetricVariable() {
+        return Optional.ofNullable(this.translateRibMetricVariable);
     }
 
     public static Builder builder() {
@@ -72,6 +84,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistribute {
         private @Nullable String protocolVariable;
         private @Nullable String routePolicyId;
         private @Nullable Boolean translateRibMetric;
+        private @Nullable String translateRibMetricVariable;
         public Builder() {}
         public Builder(ServiceRoutingOspfv3Ipv6FeatureRedistribute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -79,6 +92,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistribute {
     	      this.protocolVariable = defaults.protocolVariable;
     	      this.routePolicyId = defaults.routePolicyId;
     	      this.translateRibMetric = defaults.translateRibMetric;
+    	      this.translateRibMetricVariable = defaults.translateRibMetricVariable;
         }
 
         @CustomType.Setter
@@ -105,12 +119,19 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistribute {
             this.translateRibMetric = translateRibMetric;
             return this;
         }
+        @CustomType.Setter
+        public Builder translateRibMetricVariable(@Nullable String translateRibMetricVariable) {
+
+            this.translateRibMetricVariable = translateRibMetricVariable;
+            return this;
+        }
         public ServiceRoutingOspfv3Ipv6FeatureRedistribute build() {
             final var _resultValue = new ServiceRoutingOspfv3Ipv6FeatureRedistribute();
             _resultValue.protocol = protocol;
             _resultValue.protocolVariable = protocolVariable;
             _resultValue.routePolicyId = routePolicyId;
             _resultValue.translateRibMetric = translateRibMetric;
+            _resultValue.translateRibMetricVariable = translateRibMetricVariable;
             return _resultValue;
         }
     }

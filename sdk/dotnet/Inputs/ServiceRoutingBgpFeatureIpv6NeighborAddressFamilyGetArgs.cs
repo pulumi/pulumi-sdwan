@@ -13,6 +13,33 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `disable-peer`
+        ///   - Range: `1`-`4294967295`
+        /// </summary>
+        [Input("disablePeerMaxNumberOfPrefixes")]
+        public Input<int>? DisablePeerMaxNumberOfPrefixes { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
+        /// </summary>
+        [Input("disablePeerMaxNumberOfPrefixesVariable")]
+        public Input<string>? DisablePeerMaxNumberOfPrefixesVariable { get; set; }
+
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `disable-peer`
+        ///   - Range: `1`-`100`
+        ///   - Default value: `75`
+        /// </summary>
+        [Input("disablePeerThreshold")]
+        public Input<int>? DisablePeerThreshold { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `disable-peer`
+        /// </summary>
+        [Input("disablePeerThresholdVariable")]
+        public Input<string>? DisablePeerThresholdVariable { get; set; }
+
+        /// <summary>
         /// Set IPv6 unicast address family
         /// </summary>
         [Input("familyType")]
@@ -21,54 +48,82 @@ namespace Pulumi.Sdwan.Inputs
         [Input("inRoutePolicyId")]
         public Input<string>? InRoutePolicyId { get; set; }
 
-        /// <summary>
-        /// Set maximum number of prefixes accepted from BGP peer
-        ///   - Range: `1`-`4294967295`
-        /// </summary>
-        [Input("maxNumberOfPrefixes")]
-        public Input<int>? MaxNumberOfPrefixes { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("maxNumberOfPrefixesVariable")]
-        public Input<string>? MaxNumberOfPrefixesVariable { get; set; }
-
         [Input("outRoutePolicyId")]
         public Input<string>? OutRoutePolicyId { get; set; }
 
         /// <summary>
         /// Neighbor received maximum prefix policy is disabled.
+        ///   - Choices: `Restart`, `Off`, `warning-only`, `disable-peer`
         /// </summary>
         [Input("policyType")]
         public Input<string>? PolicyType { get; set; }
 
         /// <summary>
-        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded
+        /// Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`65535`
         /// </summary>
         [Input("restartInterval")]
         public Input<int>? RestartInterval { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
         [Input("restartIntervalVariable")]
         public Input<string>? RestartIntervalVariable { get; set; }
 
         /// <summary>
-        /// Set threshold(1 to 100) at which to generate a warning message
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `Restart`
+        ///   - Range: `1`-`4294967295`
+        /// </summary>
+        [Input("restartMaxNumberOfPrefixes")]
+        public Input<int>? RestartMaxNumberOfPrefixes { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
+        /// </summary>
+        [Input("restartMaxNumberOfPrefixesVariable")]
+        public Input<string>? RestartMaxNumberOfPrefixesVariable { get; set; }
+
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `Restart`
         ///   - Range: `1`-`100`
         ///   - Default value: `75`
         /// </summary>
-        [Input("threshold")]
-        public Input<int>? Threshold { get; set; }
+        [Input("restartThreshold")]
+        public Input<int>? RestartThreshold { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `Restart`
         /// </summary>
-        [Input("thresholdVariable")]
-        public Input<string>? ThresholdVariable { get; set; }
+        [Input("restartThresholdVariable")]
+        public Input<string>? RestartThresholdVariable { get; set; }
+
+        /// <summary>
+        /// Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `PolicyType` being equal to `warning-only`
+        ///   - Range: `1`-`4294967295`
+        /// </summary>
+        [Input("warningMessageMaxNumberOfPrefixes")]
+        public Input<int>? WarningMessageMaxNumberOfPrefixes { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
+        /// </summary>
+        [Input("warningMessageMaxNumberOfPrefixesVariable")]
+        public Input<string>? WarningMessageMaxNumberOfPrefixesVariable { get; set; }
+
+        /// <summary>
+        /// Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `PolicyType` being equal to `warning-only`
+        ///   - Range: `1`-`100`
+        ///   - Default value: `75`
+        /// </summary>
+        [Input("warningMessageThreshold")]
+        public Input<int>? WarningMessageThreshold { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PolicyType` being equal to `warning-only`
+        /// </summary>
+        [Input("warningMessageThresholdVariable")]
+        public Input<string>? WarningMessageThresholdVariable { get; set; }
 
         public ServiceRoutingBgpFeatureIpv6NeighborAddressFamilyGetArgs()
         {

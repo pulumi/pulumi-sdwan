@@ -42,7 +42,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? OverloadVariable;
         /// <summary>
         /// NAT Pool Prefix Length
-        ///   - Range: `1`-`32`
+        ///   - Range: `1`-`30`
         /// </summary>
         public readonly int? PrefixLength;
         /// <summary>

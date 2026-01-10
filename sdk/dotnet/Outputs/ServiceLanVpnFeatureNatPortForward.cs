@@ -41,6 +41,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourceIpVariable;
         /// <summary>
         /// Source Port
+        ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? SourcePort;
         /// <summary>
@@ -49,6 +50,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? SourcePortVariable;
         /// <summary>
         /// Translate Port
+        ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? TranslatePort;
         /// <summary>

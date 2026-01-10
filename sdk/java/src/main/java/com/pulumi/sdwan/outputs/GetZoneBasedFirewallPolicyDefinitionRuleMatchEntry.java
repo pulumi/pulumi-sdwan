@@ -16,6 +16,11 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      */
     private String policyId;
     /**
+     * @return Policy version
+     * 
+     */
+    private String policyVersion;
+    /**
      * @return Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      * 
      */
@@ -43,6 +48,13 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      */
     public String policyId() {
         return this.policyId;
+    }
+    /**
+     * @return Policy version
+     * 
+     */
+    public String policyVersion() {
+        return this.policyVersion;
     }
     /**
      * @return Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
@@ -83,6 +95,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     @CustomType.Builder
     public static final class Builder {
         private String policyId;
+        private String policyVersion;
         private String protocolType;
         private String type;
         private String value;
@@ -91,6 +104,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
         public Builder(GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.policyId = defaults.policyId;
+    	      this.policyVersion = defaults.policyVersion;
     	      this.protocolType = defaults.protocolType;
     	      this.type = defaults.type;
     	      this.value = defaults.value;
@@ -103,6 +117,14 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
               throw new MissingRequiredPropertyException("GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry", "policyId");
             }
             this.policyId = policyId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder policyVersion(String policyVersion) {
+            if (policyVersion == null) {
+              throw new MissingRequiredPropertyException("GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry", "policyVersion");
+            }
+            this.policyVersion = policyVersion;
             return this;
         }
         @CustomType.Setter
@@ -140,6 +162,7 @@ public final class GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
         public GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry build() {
             final var _resultValue = new GetZoneBasedFirewallPolicyDefinitionRuleMatchEntry();
             _resultValue.policyId = policyId;
+            _resultValue.policyVersion = policyVersion;
             _resultValue.protocolType = protocolType;
             _resultValue.type = type;
             _resultValue.value = value;

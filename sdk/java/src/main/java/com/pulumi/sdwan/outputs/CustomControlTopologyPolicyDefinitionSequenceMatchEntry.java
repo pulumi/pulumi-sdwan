@@ -112,7 +112,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable String regionListId;
     /**
-     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     * @return Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -318,7 +318,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.regionListId);
     }
     /**
-     * @return Role, Attribute conditional on `type` being equal to `regionId`
+     * @return Role, Attribute conditional on `type` being equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */

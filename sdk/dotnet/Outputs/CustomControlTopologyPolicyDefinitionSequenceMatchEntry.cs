@@ -94,7 +94,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? RegionListId;
         /// <summary>
-        /// Role, Attribute conditional on `Type` being equal to `regionId`
+        /// Role, Attribute conditional on `Type` being equal to `Role`
         ///   - Choices: `border-router`, `edge-router`
         /// </summary>
         public readonly string? Role;

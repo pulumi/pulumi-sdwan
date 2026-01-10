@@ -13,6 +13,19 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRouteGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Gateway distance, Attribute conditional on `Gateway` being equal to `Null0`
+        ///   - Range: `1`-`255`
+        /// </summary>
+        [Input("administrativeDistance")]
+        public Input<int>? AdministrativeDistance { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
+        /// </summary>
+        [Input("administrativeDistanceVariable")]
+        public Input<string>? AdministrativeDistanceVariable { get; set; }
+
+        /// <summary>
         /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` being equal to `Dhcp`
         /// </summary>
         [Input("dhcp")]
@@ -20,10 +33,22 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Gateway type
-        ///   - Choices: `nextHop`, `Null0`, `Vpn`, `Dhcp`
+        ///   - Choices: `nextHop`, `Null0`, `Vpn`, `Dhcp`, `staticRouteInterface`
         /// </summary>
         [Input("gateway")]
         public Input<string>? Gateway { get; set; }
+
+        [Input("ipStaticRouteInterfaces")]
+        private InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceGetArgs>? _ipStaticRouteInterfaces;
+
+        /// <summary>
+        /// , Attribute conditional on `Gateway` being equal to `staticRouteInterface`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceGetArgs> IpStaticRouteInterfaces
+        {
+            get => _ipStaticRouteInterfaces ?? (_ipStaticRouteInterfaces = new InputList<Inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceGetArgs>());
+            set => _ipStaticRouteInterfaces = value;
+        }
 
         /// <summary>
         /// IP Address

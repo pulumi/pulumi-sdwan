@@ -51,6 +51,21 @@ public final class ConfigurationGroupDeviceArgs extends com.pulumi.resources.Res
     }
 
     /**
+     * Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    @Import(name="topologyLabel")
+    private @Nullable Output<String> topologyLabel;
+
+    /**
+     * @return Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    public Optional<Output<String>> topologyLabel() {
+        return Optional.ofNullable(this.topologyLabel);
+    }
+
+    /**
      * List of variables
      * 
      */
@@ -70,6 +85,7 @@ public final class ConfigurationGroupDeviceArgs extends com.pulumi.resources.Res
     private ConfigurationGroupDeviceArgs(ConfigurationGroupDeviceArgs $) {
         this.deploy = $.deploy;
         this.id = $.id;
+        this.topologyLabel = $.topologyLabel;
         this.variables = $.variables;
     }
 
@@ -133,6 +149,27 @@ public final class ConfigurationGroupDeviceArgs extends com.pulumi.resources.Res
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param topologyLabel Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topologyLabel(@Nullable Output<String> topologyLabel) {
+            $.topologyLabel = topologyLabel;
+            return this;
+        }
+
+        /**
+         * @param topologyLabel Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder topologyLabel(String topologyLabel) {
+            return topologyLabel(Output.of(topologyLabel));
         }
 
         /**

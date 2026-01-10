@@ -31,8 +31,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? AuthenticationSpiVariable;
         /// <summary>
-        /// No Authentication by default
-        ///   - Choices: `no-auth`
+        /// Set OSPF interface authentication configuration
+        ///   - Choices: `no-auth`, `ipsec-sha1`
         /// </summary>
         public readonly string? AuthenticationType;
         /// <summary>

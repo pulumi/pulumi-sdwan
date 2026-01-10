@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// SD-WAN manager supports only a single policy object feature profile to be configured. This resource will therefore either create a new one if none exists or update the existing one.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 

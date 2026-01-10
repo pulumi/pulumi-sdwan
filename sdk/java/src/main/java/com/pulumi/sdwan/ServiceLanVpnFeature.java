@@ -30,6 +30,7 @@ import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureRouteLeakToGlobalVpn;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureService;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureServiceRoute;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureStaticNat;
+import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureStaticNatSubnet;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +40,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Service LAN VPN Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -62,6 +63,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNatPoolArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNatPortForwardArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureStaticNatArgs;
+ * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureStaticNatSubnetArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureNat64V4PoolArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4ImportRouteTargetArgs;
  * import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4ExportRouteTargetArgs;
@@ -124,6 +126,7 @@ import javax.annotation.Nullable;
  *                 .subnetMask("0.0.0.0")
  *                 .service("SIG")
  *                 .vpn(0)
+ *                 .sseInstance("1")
  *                 .build())
  *             .greRoutes(ServiceLanVpnFeatureGreRouteArgs.builder()
  *                 .networkAddress("1.2.3.4")
@@ -156,6 +159,12 @@ import javax.annotation.Nullable;
  *                 .natPoolName(3)
  *                 .sourceIp("1.2.3.4")
  *                 .translatedSourceIp("2.3.4.5")
+ *                 .staticNatDirection("inside")
+ *                 .build())
+ *             .staticNatSubnets(ServiceLanVpnFeatureStaticNatSubnetArgs.builder()
+ *                 .sourceIpSubnet("1.2.3.4")
+ *                 .translatedSourceIpSubnet("2.3.4.5")
+ *                 .prefixLength(6)
  *                 .staticNatDirection("inside")
  *                 .build())
  *             .nat64V4Pools(ServiceLanVpnFeatureNat64V4PoolArgs.builder()
@@ -679,6 +688,20 @@ public class ServiceLanVpnFeature extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<ServiceLanVpnFeatureService>>> services() {
         return Codegen.optional(this.services);
+    }
+    /**
+     * Static NAT Subnet Rules
+     * 
+     */
+    @Export(name="staticNatSubnets", refs={List.class,ServiceLanVpnFeatureStaticNatSubnet.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<ServiceLanVpnFeatureStaticNatSubnet>> staticNatSubnets;
+
+    /**
+     * @return Static NAT Subnet Rules
+     * 
+     */
+    public Output<Optional<List<ServiceLanVpnFeatureStaticNatSubnet>>> staticNatSubnets() {
+        return Codegen.optional(this.staticNatSubnets);
     }
     /**
      * Static NAT Rules

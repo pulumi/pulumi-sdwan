@@ -5,15 +5,27 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureIpv4StaticRouteNextHop;
 import com.pulumi.sdwan.outputs.GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
 @CustomType
 public final class GetServiceLanVpnFeatureIpv4StaticRoute {
+    /**
+     * @return Gateway distance
+     * 
+     */
+    private Integer administrativeDistance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String administrativeDistanceVariable;
     /**
      * @return IPv4 Route Gateway DHCP
      * 
@@ -24,6 +36,7 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
      * 
      */
     private String gateway;
+    private List<GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces;
     /**
      * @return IP Address
      * 
@@ -67,6 +80,20 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
 
     private GetServiceLanVpnFeatureIpv4StaticRoute() {}
     /**
+     * @return Gateway distance
+     * 
+     */
+    public Integer administrativeDistance() {
+        return this.administrativeDistance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String administrativeDistanceVariable() {
+        return this.administrativeDistanceVariable;
+    }
+    /**
      * @return IPv4 Route Gateway DHCP
      * 
      */
@@ -79,6 +106,9 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
      */
     public String gateway() {
         return this.gateway;
+    }
+    public List<GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces() {
+        return this.ipStaticRouteInterfaces;
     }
     /**
      * @return IP Address
@@ -146,8 +176,11 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
+        private Integer administrativeDistance;
+        private String administrativeDistanceVariable;
         private Boolean dhcp;
         private String gateway;
+        private List<GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces;
         private String networkAddress;
         private String networkAddressVariable;
         private List<GetServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers;
@@ -159,8 +192,11 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
         public Builder() {}
         public Builder(GetServiceLanVpnFeatureIpv4StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.administrativeDistance = defaults.administrativeDistance;
+    	      this.administrativeDistanceVariable = defaults.administrativeDistanceVariable;
     	      this.dhcp = defaults.dhcp;
     	      this.gateway = defaults.gateway;
+    	      this.ipStaticRouteInterfaces = defaults.ipStaticRouteInterfaces;
     	      this.networkAddress = defaults.networkAddress;
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.nextHopWithTrackers = defaults.nextHopWithTrackers;
@@ -171,6 +207,22 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
     	      this.vpn = defaults.vpn;
         }
 
+        @CustomType.Setter
+        public Builder administrativeDistance(Integer administrativeDistance) {
+            if (administrativeDistance == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "administrativeDistance");
+            }
+            this.administrativeDistance = administrativeDistance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder administrativeDistanceVariable(String administrativeDistanceVariable) {
+            if (administrativeDistanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "administrativeDistanceVariable");
+            }
+            this.administrativeDistanceVariable = administrativeDistanceVariable;
+            return this;
+        }
         @CustomType.Setter
         public Builder dhcp(Boolean dhcp) {
             if (dhcp == null) {
@@ -186,6 +238,17 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
             }
             this.gateway = gateway;
             return this;
+        }
+        @CustomType.Setter
+        public Builder ipStaticRouteInterfaces(List<GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces) {
+            if (ipStaticRouteInterfaces == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureIpv4StaticRoute", "ipStaticRouteInterfaces");
+            }
+            this.ipStaticRouteInterfaces = ipStaticRouteInterfaces;
+            return this;
+        }
+        public Builder ipStaticRouteInterfaces(GetServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface... ipStaticRouteInterfaces) {
+            return ipStaticRouteInterfaces(List.of(ipStaticRouteInterfaces));
         }
         @CustomType.Setter
         public Builder networkAddress(String networkAddress) {
@@ -259,8 +322,11 @@ public final class GetServiceLanVpnFeatureIpv4StaticRoute {
         }
         public GetServiceLanVpnFeatureIpv4StaticRoute build() {
             final var _resultValue = new GetServiceLanVpnFeatureIpv4StaticRoute();
+            _resultValue.administrativeDistance = administrativeDistance;
+            _resultValue.administrativeDistanceVariable = administrativeDistanceVariable;
             _resultValue.dhcp = dhcp;
             _resultValue.gateway = gateway;
+            _resultValue.ipStaticRouteInterfaces = ipStaticRouteInterfaces;
             _resultValue.networkAddress = networkAddress;
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.nextHopWithTrackers = nextHopWithTrackers;

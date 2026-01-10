@@ -18,6 +18,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string PolicyId;
         /// <summary>
+        /// Policy version
+        /// </summary>
+        public readonly string PolicyVersion;
+        /// <summary>
         /// Should be included with additionally entries for `destinationPort` and `Protocol` whenever the type `protocolName` is used.
         /// </summary>
         public readonly string ProtocolType;
@@ -38,6 +42,8 @@ namespace Pulumi.Sdwan.Outputs
         private GetZoneBasedFirewallPolicyDefinitionRuleMatchEntryResult(
             string policyId,
 
+            string policyVersion,
+
             string protocolType,
 
             string type,
@@ -47,6 +53,7 @@ namespace Pulumi.Sdwan.Outputs
             string valueVariable)
         {
             PolicyId = policyId;
+            PolicyVersion = policyVersion;
             ProtocolType = protocolType;
             Type = type;
             Value = value;

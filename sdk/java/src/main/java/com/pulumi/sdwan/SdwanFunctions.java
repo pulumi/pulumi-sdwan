@@ -356,6 +356,8 @@ import com.pulumi.sdwan.inputs.GetSystemBasicFeatureArgs;
 import com.pulumi.sdwan.inputs.GetSystemBasicFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetSystemBfdFeatureArgs;
 import com.pulumi.sdwan.inputs.GetSystemBfdFeaturePlainArgs;
+import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeaturePlainArgs;
 import com.pulumi.sdwan.inputs.GetSystemFeatureProfileArgs;
 import com.pulumi.sdwan.inputs.GetSystemFeatureProfilePlainArgs;
 import com.pulumi.sdwan.inputs.GetSystemFlexiblePortSpeedFeatureArgs;
@@ -663,6 +665,7 @@ import com.pulumi.sdwan.outputs.GetSystemAaaFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemBannerFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemBasicFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemBfdFeatureResult;
+import com.pulumi.sdwan.outputs.GetSystemCaCertificateFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemFeatureProfileResult;
 import com.pulumi.sdwan.outputs.GetSystemFlexiblePortSpeedFeatureResult;
 import com.pulumi.sdwan.outputs.GetSystemGlobalFeatureResult;
@@ -38630,6 +38633,211 @@ public final class SdwanFunctions {
      */
     public static CompletableFuture<GetSystemBfdFeatureResult> getSystemBfdFeaturePlain(GetSystemBfdFeaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("sdwan:index/getSystemBfdFeature:getSystemBfdFeature", TypeShape.of(GetSystemBfdFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the System CA Certificate Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemCaCertificateFeatureResult> getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs args) {
+        return getSystemCaCertificateFeature(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the System CA Certificate Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSystemCaCertificateFeatureResult> getSystemCaCertificateFeaturePlain(GetSystemCaCertificateFeaturePlainArgs args) {
+        return getSystemCaCertificateFeaturePlain(args, InvokeOptions.Empty);
+    }
+    /**
+     * This data source can read the System CA Certificate Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemCaCertificateFeatureResult> getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", TypeShape.of(GetSystemCaCertificateFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the System CA Certificate Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static Output<GetSystemCaCertificateFeatureResult> getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", TypeShape.of(GetSystemCaCertificateFeatureResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * This data source can read the System CA Certificate Feature.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.sdwan.SdwanFunctions;
+     * import com.pulumi.sdwan.inputs.GetSystemCaCertificateFeatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = SdwanFunctions.getSystemCaCertificateFeature(GetSystemCaCertificateFeatureArgs.builder()
+     *             .id("f6b2c44c-693c-4763-b010-895aa3d236bd")
+     *             .featureProfileId("f6dd22c8-0b4f-496c-9a0b-6813d1f8b8ac")
+     *             .build());
+     * 
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
+     */
+    public static CompletableFuture<GetSystemCaCertificateFeatureResult> getSystemCaCertificateFeaturePlain(GetSystemCaCertificateFeaturePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("sdwan:index/getSystemCaCertificateFeature:getSystemCaCertificateFeature", TypeShape.of(GetSystemCaCertificateFeatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * This data source can read the System Feature Profile .

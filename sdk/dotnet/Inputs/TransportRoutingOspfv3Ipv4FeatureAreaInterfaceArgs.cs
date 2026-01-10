@@ -38,8 +38,8 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AuthenticationSpiVariable { get; set; }
 
         /// <summary>
-        /// No Authentication by default
-        ///   - Choices: `no-auth`
+        /// Set OSPF interface authentication configuration
+        ///   - Choices: `no-auth`, `ipsec-sha1`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }

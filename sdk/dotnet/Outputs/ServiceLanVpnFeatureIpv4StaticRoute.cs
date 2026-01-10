@@ -14,14 +14,27 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRoute
     {
         /// <summary>
+        /// Gateway distance, Attribute conditional on `Gateway` being equal to `Null0`
+        ///   - Range: `1`-`255`
+        /// </summary>
+        public readonly int? AdministrativeDistance;
+        /// <summary>
+        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
+        /// </summary>
+        public readonly string? AdministrativeDistanceVariable;
+        /// <summary>
         /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` being equal to `Dhcp`
         /// </summary>
         public readonly bool? Dhcp;
         /// <summary>
         /// Gateway type
-        ///   - Choices: `nextHop`, `Null0`, `Vpn`, `Dhcp`
+        ///   - Choices: `nextHop`, `Null0`, `Vpn`, `Dhcp`, `staticRouteInterface`
         /// </summary>
         public readonly string? Gateway;
+        /// <summary>
+        /// , Attribute conditional on `Gateway` being equal to `staticRouteInterface`
+        /// </summary>
+        public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> IpStaticRouteInterfaces;
         /// <summary>
         /// IP Address
         /// </summary>
@@ -58,9 +71,15 @@ namespace Pulumi.Sdwan.Outputs
 
         [OutputConstructor]
         private ServiceLanVpnFeatureIpv4StaticRoute(
+            int? administrativeDistance,
+
+            string? administrativeDistanceVariable,
+
             bool? dhcp,
 
             string? gateway,
+
+            ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces,
 
             string? networkAddress,
 
@@ -78,8 +97,11 @@ namespace Pulumi.Sdwan.Outputs
 
             bool? vpn)
         {
+            AdministrativeDistance = administrativeDistance;
+            AdministrativeDistanceVariable = administrativeDistanceVariable;
             Dhcp = dhcp;
             Gateway = gateway;
+            IpStaticRouteInterfaces = ipStaticRouteInterfaces;
             NetworkAddress = networkAddress;
             NetworkAddressVariable = networkAddressVariable;
             NextHopWithTrackers = nextHopWithTrackers;

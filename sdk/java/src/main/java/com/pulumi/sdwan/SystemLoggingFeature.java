@@ -73,7 +73,7 @@ import javax.annotation.Nullable;
  *                 .tlsPropertiesProfile("test")
  *                 .build())
  *             .ipv6Servers(SystemLoggingFeatureIpv6ServerArgs.builder()
- *                 .hostnameIp("1.1.1.1")
+ *                 .hostnameIp("2001:0:0:1::0")
  *                 .vpn(512)
  *                 .sourceInterface("GigabitEthernet1")
  *                 .priority("informational")

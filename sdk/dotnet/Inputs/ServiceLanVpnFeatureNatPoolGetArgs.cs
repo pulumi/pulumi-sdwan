@@ -53,7 +53,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// NAT Pool Prefix Length
-        ///   - Range: `1`-`32`
+        ///   - Range: `1`-`30`
         /// </summary>
         [Input("prefixLength")]
         public Input<int>? PrefixLength { get; set; }

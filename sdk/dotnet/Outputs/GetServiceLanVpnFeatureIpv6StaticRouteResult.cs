@@ -17,6 +17,7 @@ namespace Pulumi.Sdwan.Outputs
         /// Gateway type
         /// </summary>
         public readonly string Gateway;
+        public readonly ImmutableArray<Outputs.GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceResult> Ipv6StaticRouteInterfaces;
         /// <summary>
         /// IPv6 Nat
         /// </summary>
@@ -46,6 +47,8 @@ namespace Pulumi.Sdwan.Outputs
         private GetServiceLanVpnFeatureIpv6StaticRouteResult(
             string gateway,
 
+            ImmutableArray<Outputs.GetServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceResult> ipv6StaticRouteInterfaces,
+
             string nat,
 
             string natVariable,
@@ -59,6 +62,7 @@ namespace Pulumi.Sdwan.Outputs
             string prefixVariable)
         {
             Gateway = gateway;
+            Ipv6StaticRouteInterfaces = ipv6StaticRouteInterfaces;
             Nat = nat;
             NatVariable = natVariable;
             NextHops = nextHops;

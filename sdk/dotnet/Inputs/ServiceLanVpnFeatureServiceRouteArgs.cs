@@ -26,7 +26,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Service
-        ///   - Choices: `SIG`
+        ///   - Choices: `SIG`, `SSE`
         ///   - Default value: `SIG`
         /// </summary>
         [Input("service")]
@@ -37,6 +37,18 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("serviceVariable")]
         public Input<string>? ServiceVariable { get; set; }
+
+        /// <summary>
+        /// SSE Instance name
+        /// </summary>
+        [Input("sseInstance")]
+        public Input<string>? SseInstance { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("sseInstanceVariable")]
+        public Input<string>? SseInstanceVariable { get; set; }
 
         /// <summary>
         /// Subnet Mask

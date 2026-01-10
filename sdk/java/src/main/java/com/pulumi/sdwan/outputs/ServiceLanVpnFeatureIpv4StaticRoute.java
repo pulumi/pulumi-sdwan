@@ -4,9 +4,11 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop;
 import com.pulumi.sdwan.outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,16 +18,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceLanVpnFeatureIpv4StaticRoute {
     /**
+     * @return Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     * 
+     */
+    private @Nullable Integer administrativeDistance;
+    /**
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * 
+     */
+    private @Nullable String administrativeDistanceVariable;
+    /**
      * @return IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
     private @Nullable Boolean dhcp;
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      * 
      */
     private @Nullable String gateway;
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces;
     /**
      * @return IP Address
      * 
@@ -70,6 +88,21 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
 
     private ServiceLanVpnFeatureIpv4StaticRoute() {}
     /**
+     * @return Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     * 
+     */
+    public Optional<Integer> administrativeDistance() {
+        return Optional.ofNullable(this.administrativeDistance);
+    }
+    /**
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * 
+     */
+    public Optional<String> administrativeDistanceVariable() {
+        return Optional.ofNullable(this.administrativeDistanceVariable);
+    }
+    /**
      * @return IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
      * 
      */
@@ -78,11 +111,18 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
     }
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      * 
      */
     public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
+    }
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    public List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces() {
+        return this.ipStaticRouteInterfaces == null ? List.of() : this.ipStaticRouteInterfaces;
     }
     /**
      * @return IP Address
@@ -151,8 +191,11 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable Integer administrativeDistance;
+        private @Nullable String administrativeDistanceVariable;
         private @Nullable Boolean dhcp;
         private @Nullable String gateway;
+        private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces;
         private @Nullable String networkAddress;
         private @Nullable String networkAddressVariable;
         private @Nullable List<ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> nextHopWithTrackers;
@@ -164,8 +207,11 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         public Builder() {}
         public Builder(ServiceLanVpnFeatureIpv4StaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.administrativeDistance = defaults.administrativeDistance;
+    	      this.administrativeDistanceVariable = defaults.administrativeDistanceVariable;
     	      this.dhcp = defaults.dhcp;
     	      this.gateway = defaults.gateway;
+    	      this.ipStaticRouteInterfaces = defaults.ipStaticRouteInterfaces;
     	      this.networkAddress = defaults.networkAddress;
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.nextHopWithTrackers = defaults.nextHopWithTrackers;
@@ -177,6 +223,18 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         }
 
         @CustomType.Setter
+        public Builder administrativeDistance(@Nullable Integer administrativeDistance) {
+
+            this.administrativeDistance = administrativeDistance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder administrativeDistanceVariable(@Nullable String administrativeDistanceVariable) {
+
+            this.administrativeDistanceVariable = administrativeDistanceVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder dhcp(@Nullable Boolean dhcp) {
 
             this.dhcp = dhcp;
@@ -187,6 +245,15 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
 
             this.gateway = gateway;
             return this;
+        }
+        @CustomType.Setter
+        public Builder ipStaticRouteInterfaces(@Nullable List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> ipStaticRouteInterfaces) {
+
+            this.ipStaticRouteInterfaces = ipStaticRouteInterfaces;
+            return this;
+        }
+        public Builder ipStaticRouteInterfaces(ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface... ipStaticRouteInterfaces) {
+            return ipStaticRouteInterfaces(List.of(ipStaticRouteInterfaces));
         }
         @CustomType.Setter
         public Builder networkAddress(@Nullable String networkAddress) {
@@ -244,8 +311,11 @@ public final class ServiceLanVpnFeatureIpv4StaticRoute {
         }
         public ServiceLanVpnFeatureIpv4StaticRoute build() {
             final var _resultValue = new ServiceLanVpnFeatureIpv4StaticRoute();
+            _resultValue.administrativeDistance = administrativeDistance;
+            _resultValue.administrativeDistanceVariable = administrativeDistanceVariable;
             _resultValue.dhcp = dhcp;
             _resultValue.gateway = gateway;
+            _resultValue.ipStaticRouteInterfaces = ipStaticRouteInterfaces;
             _resultValue.networkAddress = networkAddress;
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.nextHopWithTrackers = nextHopWithTrackers;

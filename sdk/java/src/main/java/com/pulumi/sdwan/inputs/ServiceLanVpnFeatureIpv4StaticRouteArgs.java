@@ -5,9 +5,11 @@ package com.pulumi.sdwan.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTrackerArgs;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,6 +20,38 @@ import javax.annotation.Nullable;
 public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
 
     public static final ServiceLanVpnFeatureIpv4StaticRouteArgs Empty = new ServiceLanVpnFeatureIpv4StaticRouteArgs();
+
+    /**
+     * Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     * 
+     */
+    @Import(name="administrativeDistance")
+    private @Nullable Output<Integer> administrativeDistance;
+
+    /**
+     * @return Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     *   - Range: `1`-`255`
+     * 
+     */
+    public Optional<Output<Integer>> administrativeDistance() {
+        return Optional.ofNullable(this.administrativeDistance);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * 
+     */
+    @Import(name="administrativeDistanceVariable")
+    private @Nullable Output<String> administrativeDistanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * 
+     */
+    public Optional<Output<String>> administrativeDistanceVariable() {
+        return Optional.ofNullable(this.administrativeDistanceVariable);
+    }
 
     /**
      * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
@@ -36,7 +70,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
 
     /**
      * Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      * 
      */
     @Import(name="gateway")
@@ -44,11 +78,26 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
 
     /**
      * @return Gateway type
-     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+     *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
      * 
      */
     public Optional<Output<String>> gateway() {
         return Optional.ofNullable(this.gateway);
+    }
+
+    /**
+     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    @Import(name="ipStaticRouteInterfaces")
+    private @Nullable Output<List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs>> ipStaticRouteInterfaces;
+
+    /**
+     * @return , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs>>> ipStaticRouteInterfaces() {
+        return Optional.ofNullable(this.ipStaticRouteInterfaces);
     }
 
     /**
@@ -176,8 +225,11 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
     private ServiceLanVpnFeatureIpv4StaticRouteArgs() {}
 
     private ServiceLanVpnFeatureIpv4StaticRouteArgs(ServiceLanVpnFeatureIpv4StaticRouteArgs $) {
+        this.administrativeDistance = $.administrativeDistance;
+        this.administrativeDistanceVariable = $.administrativeDistanceVariable;
         this.dhcp = $.dhcp;
         this.gateway = $.gateway;
+        this.ipStaticRouteInterfaces = $.ipStaticRouteInterfaces;
         this.networkAddress = $.networkAddress;
         this.networkAddressVariable = $.networkAddressVariable;
         this.nextHopWithTrackers = $.nextHopWithTrackers;
@@ -207,6 +259,50 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
         }
 
         /**
+         * @param administrativeDistance Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+         *   - Range: `1`-`255`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder administrativeDistance(@Nullable Output<Integer> administrativeDistance) {
+            $.administrativeDistance = administrativeDistance;
+            return this;
+        }
+
+        /**
+         * @param administrativeDistance Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+         *   - Range: `1`-`255`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder administrativeDistance(Integer administrativeDistance) {
+            return administrativeDistance(Output.of(administrativeDistance));
+        }
+
+        /**
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder administrativeDistanceVariable(@Nullable Output<String> administrativeDistanceVariable) {
+            $.administrativeDistanceVariable = administrativeDistanceVariable;
+            return this;
+        }
+
+        /**
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder administrativeDistanceVariable(String administrativeDistanceVariable) {
+            return administrativeDistanceVariable(Output.of(administrativeDistanceVariable));
+        }
+
+        /**
          * @param dhcp IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
          * 
          * @return builder
@@ -229,7 +325,7 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
 
         /**
          * @param gateway Gateway type
-         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
          * 
          * @return builder
          * 
@@ -241,13 +337,44 @@ public final class ServiceLanVpnFeatureIpv4StaticRouteArgs extends com.pulumi.re
 
         /**
          * @param gateway Gateway type
-         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`
+         *   - Choices: `nextHop`, `null0`, `vpn`, `dhcp`, `staticRouteInterface`
          * 
          * @return builder
          * 
          */
         public Builder gateway(String gateway) {
             return gateway(Output.of(gateway));
+        }
+
+        /**
+         * @param ipStaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipStaticRouteInterfaces(@Nullable Output<List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs>> ipStaticRouteInterfaces) {
+            $.ipStaticRouteInterfaces = ipStaticRouteInterfaces;
+            return this;
+        }
+
+        /**
+         * @param ipStaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipStaticRouteInterfaces(List<ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs> ipStaticRouteInterfaces) {
+            return ipStaticRouteInterfaces(Output.of(ipStaticRouteInterfaces));
+        }
+
+        /**
+         * @param ipStaticRouteInterfaces , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipStaticRouteInterfaces(ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterfaceArgs... ipStaticRouteInterfaces) {
+            return ipStaticRouteInterfaces(List.of(ipStaticRouteInterfaces));
         }
 
         /**

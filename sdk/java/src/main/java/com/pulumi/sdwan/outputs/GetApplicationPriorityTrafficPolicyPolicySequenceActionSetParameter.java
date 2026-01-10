@@ -17,14 +17,14 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     private String forwardingClassListId;
     private List<String> localTlocListColors;
     private String localTlocListEncapsulation;
-    private String localTlocListRestrict;
+    private Boolean localTlocListRestrict;
     private String nextHopIpv4;
     private String nextHopIpv6;
     private Boolean nextHopLoose;
     private String policerId;
     private String preferredColorGroupId;
-    private List<String> preferredRemoteColorIds;
-    private String preferredRemoteColorRestrict;
+    private Boolean preferredRemoteColorRestrict;
+    private List<String> preferredRemoteColors;
     private Boolean serviceChainFallbackToRouting;
     private Boolean serviceChainLocal;
     private List<String> serviceChainTlocColors;
@@ -33,17 +33,19 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     private String serviceChainTlocListId;
     private String serviceChainType;
     private Integer serviceChainVpn;
+    private Boolean serviceLocal;
+    private Boolean serviceRestrict;
     private List<String> serviceTlocColors;
     private String serviceTlocEncapsulation;
     private String serviceTlocIp;
     private String serviceTlocListId;
     private String serviceType;
-    private String serviceVpn;
+    private Integer serviceVpn;
     private List<String> tlocColors;
     private String tlocEncapsulation;
     private String tlocIp;
     private String tlocListId;
-    private String vpn;
+    private Integer vpn;
 
     private GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter() {}
     public Integer dscp() {
@@ -58,7 +60,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     public String localTlocListEncapsulation() {
         return this.localTlocListEncapsulation;
     }
-    public String localTlocListRestrict() {
+    public Boolean localTlocListRestrict() {
         return this.localTlocListRestrict;
     }
     public String nextHopIpv4() {
@@ -76,11 +78,11 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     public String preferredColorGroupId() {
         return this.preferredColorGroupId;
     }
-    public List<String> preferredRemoteColorIds() {
-        return this.preferredRemoteColorIds;
-    }
-    public String preferredRemoteColorRestrict() {
+    public Boolean preferredRemoteColorRestrict() {
         return this.preferredRemoteColorRestrict;
+    }
+    public List<String> preferredRemoteColors() {
+        return this.preferredRemoteColors;
     }
     public Boolean serviceChainFallbackToRouting() {
         return this.serviceChainFallbackToRouting;
@@ -106,6 +108,12 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     public Integer serviceChainVpn() {
         return this.serviceChainVpn;
     }
+    public Boolean serviceLocal() {
+        return this.serviceLocal;
+    }
+    public Boolean serviceRestrict() {
+        return this.serviceRestrict;
+    }
     public List<String> serviceTlocColors() {
         return this.serviceTlocColors;
     }
@@ -121,7 +129,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     public String serviceType() {
         return this.serviceType;
     }
-    public String serviceVpn() {
+    public Integer serviceVpn() {
         return this.serviceVpn;
     }
     public List<String> tlocColors() {
@@ -136,7 +144,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     public String tlocListId() {
         return this.tlocListId;
     }
-    public String vpn() {
+    public Integer vpn() {
         return this.vpn;
     }
 
@@ -153,14 +161,14 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
         private String forwardingClassListId;
         private List<String> localTlocListColors;
         private String localTlocListEncapsulation;
-        private String localTlocListRestrict;
+        private Boolean localTlocListRestrict;
         private String nextHopIpv4;
         private String nextHopIpv6;
         private Boolean nextHopLoose;
         private String policerId;
         private String preferredColorGroupId;
-        private List<String> preferredRemoteColorIds;
-        private String preferredRemoteColorRestrict;
+        private Boolean preferredRemoteColorRestrict;
+        private List<String> preferredRemoteColors;
         private Boolean serviceChainFallbackToRouting;
         private Boolean serviceChainLocal;
         private List<String> serviceChainTlocColors;
@@ -169,17 +177,19 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
         private String serviceChainTlocListId;
         private String serviceChainType;
         private Integer serviceChainVpn;
+        private Boolean serviceLocal;
+        private Boolean serviceRestrict;
         private List<String> serviceTlocColors;
         private String serviceTlocEncapsulation;
         private String serviceTlocIp;
         private String serviceTlocListId;
         private String serviceType;
-        private String serviceVpn;
+        private Integer serviceVpn;
         private List<String> tlocColors;
         private String tlocEncapsulation;
         private String tlocIp;
         private String tlocListId;
-        private String vpn;
+        private Integer vpn;
         public Builder() {}
         public Builder(GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter defaults) {
     	      Objects.requireNonNull(defaults);
@@ -193,8 +203,8 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     	      this.nextHopLoose = defaults.nextHopLoose;
     	      this.policerId = defaults.policerId;
     	      this.preferredColorGroupId = defaults.preferredColorGroupId;
-    	      this.preferredRemoteColorIds = defaults.preferredRemoteColorIds;
     	      this.preferredRemoteColorRestrict = defaults.preferredRemoteColorRestrict;
+    	      this.preferredRemoteColors = defaults.preferredRemoteColors;
     	      this.serviceChainFallbackToRouting = defaults.serviceChainFallbackToRouting;
     	      this.serviceChainLocal = defaults.serviceChainLocal;
     	      this.serviceChainTlocColors = defaults.serviceChainTlocColors;
@@ -203,6 +213,8 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
     	      this.serviceChainTlocListId = defaults.serviceChainTlocListId;
     	      this.serviceChainType = defaults.serviceChainType;
     	      this.serviceChainVpn = defaults.serviceChainVpn;
+    	      this.serviceLocal = defaults.serviceLocal;
+    	      this.serviceRestrict = defaults.serviceRestrict;
     	      this.serviceTlocColors = defaults.serviceTlocColors;
     	      this.serviceTlocEncapsulation = defaults.serviceTlocEncapsulation;
     	      this.serviceTlocIp = defaults.serviceTlocIp;
@@ -252,7 +264,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             return this;
         }
         @CustomType.Setter
-        public Builder localTlocListRestrict(String localTlocListRestrict) {
+        public Builder localTlocListRestrict(Boolean localTlocListRestrict) {
             if (localTlocListRestrict == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "localTlocListRestrict");
             }
@@ -300,23 +312,23 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             return this;
         }
         @CustomType.Setter
-        public Builder preferredRemoteColorIds(List<String> preferredRemoteColorIds) {
-            if (preferredRemoteColorIds == null) {
-              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "preferredRemoteColorIds");
-            }
-            this.preferredRemoteColorIds = preferredRemoteColorIds;
-            return this;
-        }
-        public Builder preferredRemoteColorIds(String... preferredRemoteColorIds) {
-            return preferredRemoteColorIds(List.of(preferredRemoteColorIds));
-        }
-        @CustomType.Setter
-        public Builder preferredRemoteColorRestrict(String preferredRemoteColorRestrict) {
+        public Builder preferredRemoteColorRestrict(Boolean preferredRemoteColorRestrict) {
             if (preferredRemoteColorRestrict == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "preferredRemoteColorRestrict");
             }
             this.preferredRemoteColorRestrict = preferredRemoteColorRestrict;
             return this;
+        }
+        @CustomType.Setter
+        public Builder preferredRemoteColors(List<String> preferredRemoteColors) {
+            if (preferredRemoteColors == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "preferredRemoteColors");
+            }
+            this.preferredRemoteColors = preferredRemoteColors;
+            return this;
+        }
+        public Builder preferredRemoteColors(String... preferredRemoteColors) {
+            return preferredRemoteColors(List.of(preferredRemoteColors));
         }
         @CustomType.Setter
         public Builder serviceChainFallbackToRouting(Boolean serviceChainFallbackToRouting) {
@@ -386,6 +398,22 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             return this;
         }
         @CustomType.Setter
+        public Builder serviceLocal(Boolean serviceLocal) {
+            if (serviceLocal == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "serviceLocal");
+            }
+            this.serviceLocal = serviceLocal;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder serviceRestrict(Boolean serviceRestrict) {
+            if (serviceRestrict == null) {
+              throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "serviceRestrict");
+            }
+            this.serviceRestrict = serviceRestrict;
+            return this;
+        }
+        @CustomType.Setter
         public Builder serviceTlocColors(List<String> serviceTlocColors) {
             if (serviceTlocColors == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "serviceTlocColors");
@@ -429,7 +457,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             return this;
         }
         @CustomType.Setter
-        public Builder serviceVpn(String serviceVpn) {
+        public Builder serviceVpn(Integer serviceVpn) {
             if (serviceVpn == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "serviceVpn");
             }
@@ -472,7 +500,7 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             return this;
         }
         @CustomType.Setter
-        public Builder vpn(String vpn) {
+        public Builder vpn(Integer vpn) {
             if (vpn == null) {
               throw new MissingRequiredPropertyException("GetApplicationPriorityTrafficPolicyPolicySequenceActionSetParameter", "vpn");
             }
@@ -491,8 +519,8 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             _resultValue.nextHopLoose = nextHopLoose;
             _resultValue.policerId = policerId;
             _resultValue.preferredColorGroupId = preferredColorGroupId;
-            _resultValue.preferredRemoteColorIds = preferredRemoteColorIds;
             _resultValue.preferredRemoteColorRestrict = preferredRemoteColorRestrict;
+            _resultValue.preferredRemoteColors = preferredRemoteColors;
             _resultValue.serviceChainFallbackToRouting = serviceChainFallbackToRouting;
             _resultValue.serviceChainLocal = serviceChainLocal;
             _resultValue.serviceChainTlocColors = serviceChainTlocColors;
@@ -501,6 +529,8 @@ public final class GetApplicationPriorityTrafficPolicyPolicySequenceActionSetPar
             _resultValue.serviceChainTlocListId = serviceChainTlocListId;
             _resultValue.serviceChainType = serviceChainType;
             _resultValue.serviceChainVpn = serviceChainVpn;
+            _resultValue.serviceLocal = serviceLocal;
+            _resultValue.serviceRestrict = serviceRestrict;
             _resultValue.serviceTlocColors = serviceTlocColors;
             _resultValue.serviceTlocEncapsulation = serviceTlocEncapsulation;
             _resultValue.serviceTlocIp = serviceTlocIp;

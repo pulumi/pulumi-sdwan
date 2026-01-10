@@ -369,6 +369,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &SystemBasicFeature{}
 	case "sdwan:index/systemBfdFeature:SystemBfdFeature":
 		r = &SystemBfdFeature{}
+	case "sdwan:index/systemCaCertificateFeature:SystemCaCertificateFeature":
+		r = &SystemCaCertificateFeature{}
 	case "sdwan:index/systemFeatureProfile:SystemFeatureProfile":
 		r = &SystemFeatureProfile{}
 	case "sdwan:index/systemFlexiblePortSpeedFeature:SystemFlexiblePortSpeedFeature":
@@ -1402,6 +1404,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"sdwan",
 		"index/systemBfdFeature",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"sdwan",
+		"index/systemCaCertificateFeature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

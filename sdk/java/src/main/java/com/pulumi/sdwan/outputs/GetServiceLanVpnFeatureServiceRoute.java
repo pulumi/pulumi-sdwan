@@ -32,6 +32,16 @@ public final class GetServiceLanVpnFeatureServiceRoute {
      */
     private String serviceVariable;
     /**
+     * @return SSE Instance name
+     * 
+     */
+    private String sseInstance;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String sseInstanceVariable;
+    /**
      * @return Subnet Mask
      * 
      */
@@ -77,6 +87,20 @@ public final class GetServiceLanVpnFeatureServiceRoute {
         return this.serviceVariable;
     }
     /**
+     * @return SSE Instance name
+     * 
+     */
+    public String sseInstance() {
+        return this.sseInstance;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String sseInstanceVariable() {
+        return this.sseInstanceVariable;
+    }
+    /**
      * @return Subnet Mask
      * 
      */
@@ -111,6 +135,8 @@ public final class GetServiceLanVpnFeatureServiceRoute {
         private String networkAddressVariable;
         private String service;
         private String serviceVariable;
+        private String sseInstance;
+        private String sseInstanceVariable;
         private String subnetMask;
         private String subnetMaskVariable;
         private Integer vpn;
@@ -121,6 +147,8 @@ public final class GetServiceLanVpnFeatureServiceRoute {
     	      this.networkAddressVariable = defaults.networkAddressVariable;
     	      this.service = defaults.service;
     	      this.serviceVariable = defaults.serviceVariable;
+    	      this.sseInstance = defaults.sseInstance;
+    	      this.sseInstanceVariable = defaults.sseInstanceVariable;
     	      this.subnetMask = defaults.subnetMask;
     	      this.subnetMaskVariable = defaults.subnetMaskVariable;
     	      this.vpn = defaults.vpn;
@@ -159,6 +187,22 @@ public final class GetServiceLanVpnFeatureServiceRoute {
             return this;
         }
         @CustomType.Setter
+        public Builder sseInstance(String sseInstance) {
+            if (sseInstance == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureServiceRoute", "sseInstance");
+            }
+            this.sseInstance = sseInstance;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sseInstanceVariable(String sseInstanceVariable) {
+            if (sseInstanceVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureServiceRoute", "sseInstanceVariable");
+            }
+            this.sseInstanceVariable = sseInstanceVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder subnetMask(String subnetMask) {
             if (subnetMask == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnFeatureServiceRoute", "subnetMask");
@@ -188,6 +232,8 @@ public final class GetServiceLanVpnFeatureServiceRoute {
             _resultValue.networkAddressVariable = networkAddressVariable;
             _resultValue.service = service;
             _resultValue.serviceVariable = serviceVariable;
+            _resultValue.sseInstance = sseInstance;
+            _resultValue.sseInstanceVariable = sseInstanceVariable;
             _resultValue.subnetMask = subnetMask;
             _resultValue.subnetMaskVariable = subnetMaskVariable;
             _resultValue.vpn = vpn;

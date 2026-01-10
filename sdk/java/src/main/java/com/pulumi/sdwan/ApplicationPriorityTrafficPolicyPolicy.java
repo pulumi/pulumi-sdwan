@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Application Priority Traffic Policy Policy.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  *                 .baseAction("accept")
  *                 .protocol("ipv4")
  *                 .matchEntries(ApplicationPriorityTrafficPolicyPolicySequenceMatchEntryArgs.builder()
- *                     .dscp(1)
+ *                     .dscps(1)
  *                     .build())
  *                 .actions(ApplicationPriorityTrafficPolicyPolicySequenceActionArgs.builder()
  *                     .setParameters(ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs.builder()

@@ -24,6 +24,11 @@ public final class GetConfigurationGroupDevice {
      */
     private String id;
     /**
+     * @return Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    private String topologyLabel;
+    /**
      * @return List of variables
      * 
      */
@@ -45,6 +50,13 @@ public final class GetConfigurationGroupDevice {
         return this.id;
     }
     /**
+     * @return Topology label for dual device configuration group (supported from version 20.18.1 onwards)
+     * 
+     */
+    public String topologyLabel() {
+        return this.topologyLabel;
+    }
+    /**
      * @return List of variables
      * 
      */
@@ -63,12 +75,14 @@ public final class GetConfigurationGroupDevice {
     public static final class Builder {
         private Boolean deploy;
         private String id;
+        private String topologyLabel;
         private List<GetConfigurationGroupDeviceVariable> variables;
         public Builder() {}
         public Builder(GetConfigurationGroupDevice defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.deploy = defaults.deploy;
     	      this.id = defaults.id;
+    	      this.topologyLabel = defaults.topologyLabel;
     	      this.variables = defaults.variables;
         }
 
@@ -89,6 +103,14 @@ public final class GetConfigurationGroupDevice {
             return this;
         }
         @CustomType.Setter
+        public Builder topologyLabel(String topologyLabel) {
+            if (topologyLabel == null) {
+              throw new MissingRequiredPropertyException("GetConfigurationGroupDevice", "topologyLabel");
+            }
+            this.topologyLabel = topologyLabel;
+            return this;
+        }
+        @CustomType.Setter
         public Builder variables(List<GetConfigurationGroupDeviceVariable> variables) {
             if (variables == null) {
               throw new MissingRequiredPropertyException("GetConfigurationGroupDevice", "variables");
@@ -103,6 +125,7 @@ public final class GetConfigurationGroupDevice {
             final var _resultValue = new GetConfigurationGroupDevice();
             _resultValue.deploy = deploy;
             _resultValue.id = id;
+            _resultValue.topologyLabel = topologyLabel;
             _resultValue.variables = variables;
             return _resultValue;
         }

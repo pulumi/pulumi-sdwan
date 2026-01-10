@@ -20,6 +20,27 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
 
     public static final ApplicationPriorityTrafficPolicyPolicySequenceActionArgs Empty = new ApplicationPriorityTrafficPolicyPolicySequenceActionArgs();
 
+    @Import(name="appqoeDreOptimization")
+    private @Nullable Output<Boolean> appqoeDreOptimization;
+
+    public Optional<Output<Boolean>> appqoeDreOptimization() {
+        return Optional.ofNullable(this.appqoeDreOptimization);
+    }
+
+    @Import(name="appqoeServiceNodeGroup")
+    private @Nullable Output<String> appqoeServiceNodeGroup;
+
+    public Optional<Output<String>> appqoeServiceNodeGroup() {
+        return Optional.ofNullable(this.appqoeServiceNodeGroup);
+    }
+
+    @Import(name="appqoeTcpOptimization")
+    private @Nullable Output<Boolean> appqoeTcpOptimization;
+
+    public Optional<Output<Boolean>> appqoeTcpOptimization() {
+        return Optional.ofNullable(this.appqoeTcpOptimization);
+    }
+
     /**
      * Backup SLA perferred color
      * 
@@ -33,6 +54,13 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
      */
     public Optional<Output<List<String>>> backupSlaPreferredColors() {
         return Optional.ofNullable(this.backupSlaPreferredColors);
+    }
+
+    @Import(name="cflowd")
+    private @Nullable Output<Boolean> cflowd;
+
+    public Optional<Output<Boolean>> cflowd() {
+        return Optional.ofNullable(this.cflowd);
     }
 
     @Import(name="cloudProbe")
@@ -151,14 +179,14 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
     }
 
     /**
-     * - Choices: `ipAddress`, `redirectDns`
+     * - Choices: `ipAddress`, `dnsHost`
      * 
      */
     @Import(name="redirectDnsField")
     private @Nullable Output<String> redirectDnsField;
 
     /**
-     * @return - Choices: `ipAddress`, `redirectDns`
+     * @return - Choices: `ipAddress`, `dnsHost`
      * 
      */
     public Optional<Output<String>> redirectDnsField() {
@@ -177,6 +205,28 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
 
     public Optional<Output<Boolean>> secureInternetGateway() {
         return Optional.ofNullable(this.secureInternetGateway);
+    }
+
+    @Import(name="secureServiceEdge")
+    private @Nullable Output<Boolean> secureServiceEdge;
+
+    public Optional<Output<Boolean>> secureServiceEdge() {
+        return Optional.ofNullable(this.secureServiceEdge);
+    }
+
+    /**
+     * - Choices: `Cisco-Secure-Access`, `zScaler`
+     * 
+     */
+    @Import(name="secureServiceEdgeInstance")
+    private @Nullable Output<String> secureServiceEdgeInstance;
+
+    /**
+     * @return - Choices: `Cisco-Secure-Access`, `zScaler`
+     * 
+     */
+    public Optional<Output<String>> secureServiceEdgeInstance() {
+        return Optional.ofNullable(this.secureServiceEdgeInstance);
     }
 
     @Import(name="setParameters")
@@ -204,7 +254,11 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
     private ApplicationPriorityTrafficPolicyPolicySequenceActionArgs() {}
 
     private ApplicationPriorityTrafficPolicyPolicySequenceActionArgs(ApplicationPriorityTrafficPolicyPolicySequenceActionArgs $) {
+        this.appqoeDreOptimization = $.appqoeDreOptimization;
+        this.appqoeServiceNodeGroup = $.appqoeServiceNodeGroup;
+        this.appqoeTcpOptimization = $.appqoeTcpOptimization;
         this.backupSlaPreferredColors = $.backupSlaPreferredColors;
+        this.cflowd = $.cflowd;
         this.cloudProbe = $.cloudProbe;
         this.cloudSaas = $.cloudSaas;
         this.count = $.count;
@@ -221,6 +275,8 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         this.redirectDnsField = $.redirectDnsField;
         this.redirectDnsValue = $.redirectDnsValue;
         this.secureInternetGateway = $.secureInternetGateway;
+        this.secureServiceEdge = $.secureServiceEdge;
+        this.secureServiceEdgeInstance = $.secureServiceEdgeInstance;
         this.setParameters = $.setParameters;
         this.slaClasses = $.slaClasses;
     }
@@ -241,6 +297,33 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
 
         public Builder(ApplicationPriorityTrafficPolicyPolicySequenceActionArgs defaults) {
             $ = new ApplicationPriorityTrafficPolicyPolicySequenceActionArgs(Objects.requireNonNull(defaults));
+        }
+
+        public Builder appqoeDreOptimization(@Nullable Output<Boolean> appqoeDreOptimization) {
+            $.appqoeDreOptimization = appqoeDreOptimization;
+            return this;
+        }
+
+        public Builder appqoeDreOptimization(Boolean appqoeDreOptimization) {
+            return appqoeDreOptimization(Output.of(appqoeDreOptimization));
+        }
+
+        public Builder appqoeServiceNodeGroup(@Nullable Output<String> appqoeServiceNodeGroup) {
+            $.appqoeServiceNodeGroup = appqoeServiceNodeGroup;
+            return this;
+        }
+
+        public Builder appqoeServiceNodeGroup(String appqoeServiceNodeGroup) {
+            return appqoeServiceNodeGroup(Output.of(appqoeServiceNodeGroup));
+        }
+
+        public Builder appqoeTcpOptimization(@Nullable Output<Boolean> appqoeTcpOptimization) {
+            $.appqoeTcpOptimization = appqoeTcpOptimization;
+            return this;
+        }
+
+        public Builder appqoeTcpOptimization(Boolean appqoeTcpOptimization) {
+            return appqoeTcpOptimization(Output.of(appqoeTcpOptimization));
         }
 
         /**
@@ -272,6 +355,15 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
          */
         public Builder backupSlaPreferredColors(String... backupSlaPreferredColors) {
             return backupSlaPreferredColors(List.of(backupSlaPreferredColors));
+        }
+
+        public Builder cflowd(@Nullable Output<Boolean> cflowd) {
+            $.cflowd = cflowd;
+            return this;
+        }
+
+        public Builder cflowd(Boolean cflowd) {
+            return cflowd(Output.of(cflowd));
         }
 
         public Builder cloudProbe(@Nullable Output<Boolean> cloudProbe) {
@@ -436,7 +528,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         }
 
         /**
-         * @param redirectDnsField - Choices: `ipAddress`, `redirectDns`
+         * @param redirectDnsField - Choices: `ipAddress`, `dnsHost`
          * 
          * @return builder
          * 
@@ -447,7 +539,7 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
         }
 
         /**
-         * @param redirectDnsField - Choices: `ipAddress`, `redirectDns`
+         * @param redirectDnsField - Choices: `ipAddress`, `dnsHost`
          * 
          * @return builder
          * 
@@ -472,6 +564,36 @@ public final class ApplicationPriorityTrafficPolicyPolicySequenceActionArgs exte
 
         public Builder secureInternetGateway(Boolean secureInternetGateway) {
             return secureInternetGateway(Output.of(secureInternetGateway));
+        }
+
+        public Builder secureServiceEdge(@Nullable Output<Boolean> secureServiceEdge) {
+            $.secureServiceEdge = secureServiceEdge;
+            return this;
+        }
+
+        public Builder secureServiceEdge(Boolean secureServiceEdge) {
+            return secureServiceEdge(Output.of(secureServiceEdge));
+        }
+
+        /**
+         * @param secureServiceEdgeInstance - Choices: `Cisco-Secure-Access`, `zScaler`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secureServiceEdgeInstance(@Nullable Output<String> secureServiceEdgeInstance) {
+            $.secureServiceEdgeInstance = secureServiceEdgeInstance;
+            return this;
+        }
+
+        /**
+         * @param secureServiceEdgeInstance - Choices: `Cisco-Secure-Access`, `zScaler`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder secureServiceEdgeInstance(String secureServiceEdgeInstance) {
+            return secureServiceEdgeInstance(Output.of(secureServiceEdgeInstance));
         }
 
         public Builder setParameters(@Nullable Output<List<ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs>> setParameters) {

@@ -52,6 +52,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Source Port
+        ///   - Range: `0`-`65535`
         /// </summary>
         [Input("sourcePort")]
         public Input<int>? SourcePort { get; set; }
@@ -64,6 +65,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Translate Port
+        ///   - Range: `0`-`65535`
         /// </summary>
         [Input("translatePort")]
         public Input<int>? TranslatePort { get; set; }

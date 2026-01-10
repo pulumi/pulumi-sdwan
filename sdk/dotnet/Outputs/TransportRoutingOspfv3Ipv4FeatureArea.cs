@@ -31,8 +31,8 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? AreaNumberVariable;
         /// <summary>
-        /// stub area type
-        ///   - Choices: `Stub`
+        /// Set OSPFv3 area type
+        ///   - Choices: `Stub`, `Nssa`, `Normal`
         /// </summary>
         public readonly string? AreaType;
         /// <summary>

@@ -18,6 +18,11 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      */
     private @Nullable String policyId;
     /**
+     * @return Policy version
+     * 
+     */
+    private @Nullable String policyVersion;
+    /**
      * @return Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
      * 
      */
@@ -46,6 +51,13 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
      */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
+    }
+    /**
+     * @return Policy version
+     * 
+     */
+    public Optional<String> policyVersion() {
+        return Optional.ofNullable(this.policyVersion);
     }
     /**
      * @return Should be included with additionally entries for `destinationPort` and `protocol` whenever the type `protocolName` is used.
@@ -87,6 +99,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String policyId;
+        private @Nullable String policyVersion;
         private @Nullable String protocolType;
         private String type;
         private @Nullable String value;
@@ -95,6 +108,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
         public Builder(ZoneBasedFirewallPolicyDefinitionRuleMatchEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.policyId = defaults.policyId;
+    	      this.policyVersion = defaults.policyVersion;
     	      this.protocolType = defaults.protocolType;
     	      this.type = defaults.type;
     	      this.value = defaults.value;
@@ -105,6 +119,12 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
         public Builder policyId(@Nullable String policyId) {
 
             this.policyId = policyId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder policyVersion(@Nullable String policyVersion) {
+
+            this.policyVersion = policyVersion;
             return this;
         }
         @CustomType.Setter
@@ -136,6 +156,7 @@ public final class ZoneBasedFirewallPolicyDefinitionRuleMatchEntry {
         public ZoneBasedFirewallPolicyDefinitionRuleMatchEntry build() {
             final var _resultValue = new ZoneBasedFirewallPolicyDefinitionRuleMatchEntry();
             _resultValue.policyId = policyId;
+            _resultValue.policyVersion = policyVersion;
             _resultValue.protocolType = protocolType;
             _resultValue.type = type;
             _resultValue.value = value;

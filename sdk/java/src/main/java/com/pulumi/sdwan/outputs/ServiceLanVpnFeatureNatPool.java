@@ -48,7 +48,7 @@ public final class ServiceLanVpnFeatureNatPool {
     private @Nullable String overloadVariable;
     /**
      * @return NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      * 
      */
     private @Nullable Integer prefixLength;
@@ -127,7 +127,7 @@ public final class ServiceLanVpnFeatureNatPool {
     }
     /**
      * @return NAT Pool Prefix Length
-     *   - Range: `1`-`32`
+     *   - Range: `1`-`30`
      * 
      */
     public Optional<Integer> prefixLength() {

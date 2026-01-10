@@ -19,6 +19,12 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? PolicyId { get; set; }
 
         /// <summary>
+        /// Policy version
+        /// </summary>
+        [Input("policyVersion")]
+        public Input<string>? PolicyVersion { get; set; }
+
+        /// <summary>
         /// Should be included with additionally entries for `destinationPort` and `Protocol` whenever the type `protocolName` is used.
         /// </summary>
         [Input("protocolType")]

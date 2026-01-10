@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? LocalTlocListEncapsulation { get; set; }
 
         [Input("localTlocListRestrict")]
-        public Input<string>? LocalTlocListRestrict { get; set; }
+        public Input<bool>? LocalTlocListRestrict { get; set; }
 
         [Input("nextHopIpv4")]
         public Input<string>? NextHopIpv4 { get; set; }
@@ -53,16 +53,16 @@ namespace Pulumi.Sdwan.Inputs
         [Input("preferredColorGroupId")]
         public Input<string>? PreferredColorGroupId { get; set; }
 
-        [Input("preferredRemoteColorIds")]
-        private InputList<string>? _preferredRemoteColorIds;
-        public InputList<string> PreferredRemoteColorIds
-        {
-            get => _preferredRemoteColorIds ?? (_preferredRemoteColorIds = new InputList<string>());
-            set => _preferredRemoteColorIds = value;
-        }
-
         [Input("preferredRemoteColorRestrict")]
-        public Input<string>? PreferredRemoteColorRestrict { get; set; }
+        public Input<bool>? PreferredRemoteColorRestrict { get; set; }
+
+        [Input("preferredRemoteColors")]
+        private InputList<string>? _preferredRemoteColors;
+        public InputList<string> PreferredRemoteColors
+        {
+            get => _preferredRemoteColors ?? (_preferredRemoteColors = new InputList<string>());
+            set => _preferredRemoteColors = value;
+        }
 
         [Input("serviceChainFallbackToRouting")]
         public Input<bool>? ServiceChainFallbackToRouting { get; set; }
@@ -102,6 +102,12 @@ namespace Pulumi.Sdwan.Inputs
         [Input("serviceChainVpn")]
         public Input<int>? ServiceChainVpn { get; set; }
 
+        [Input("serviceLocal")]
+        public Input<bool>? ServiceLocal { get; set; }
+
+        [Input("serviceRestrict")]
+        public Input<bool>? ServiceRestrict { get; set; }
+
         [Input("serviceTlocColors")]
         private InputList<string>? _serviceTlocColors;
         public InputList<string> ServiceTlocColors
@@ -128,8 +134,11 @@ namespace Pulumi.Sdwan.Inputs
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
 
+        /// <summary>
+        /// - Range: `0`-`65530`
+        /// </summary>
         [Input("serviceVpn")]
-        public Input<string>? ServiceVpn { get; set; }
+        public Input<int>? ServiceVpn { get; set; }
 
         [Input("tlocColors")]
         private InputList<string>? _tlocColors;
@@ -151,8 +160,11 @@ namespace Pulumi.Sdwan.Inputs
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }
 
+        /// <summary>
+        /// - Range: `0`-`65530`
+        /// </summary>
         [Input("vpn")]
-        public Input<string>? Vpn { get; set; }
+        public Input<int>? Vpn { get; set; }
 
         public ApplicationPriorityTrafficPolicyPolicySequenceActionSetParameterArgs()
         {

@@ -25,6 +25,7 @@ import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureRouteLeakToGlobalVpnArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureServiceArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureServiceRouteArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureStaticNatArgs;
+import com.pulumi.sdwan.inputs.ServiceLanVpnFeatureStaticNatSubnetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -560,6 +561,21 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
     }
 
     /**
+     * Static NAT Subnet Rules
+     * 
+     */
+    @Import(name="staticNatSubnets")
+    private @Nullable Output<List<ServiceLanVpnFeatureStaticNatSubnetArgs>> staticNatSubnets;
+
+    /**
+     * @return Static NAT Subnet Rules
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnFeatureStaticNatSubnetArgs>>> staticNatSubnets() {
+        return Optional.ofNullable(this.staticNatSubnets);
+    }
+
+    /**
      * Static NAT Rules
      * 
      */
@@ -663,6 +679,7 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
         this.secondaryDnsAddressIpv6Variable = $.secondaryDnsAddressIpv6Variable;
         this.serviceRoutes = $.serviceRoutes;
         this.services = $.services;
+        this.staticNatSubnets = $.staticNatSubnets;
         this.staticNats = $.staticNats;
         this.version = $.version;
         this.vpn = $.vpn;
@@ -1568,6 +1585,37 @@ public final class ServiceLanVpnFeatureState extends com.pulumi.resources.Resour
          */
         public Builder services(ServiceLanVpnFeatureServiceArgs... services) {
             return services(List.of(services));
+        }
+
+        /**
+         * @param staticNatSubnets Static NAT Subnet Rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticNatSubnets(@Nullable Output<List<ServiceLanVpnFeatureStaticNatSubnetArgs>> staticNatSubnets) {
+            $.staticNatSubnets = staticNatSubnets;
+            return this;
+        }
+
+        /**
+         * @param staticNatSubnets Static NAT Subnet Rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticNatSubnets(List<ServiceLanVpnFeatureStaticNatSubnetArgs> staticNatSubnets) {
+            return staticNatSubnets(Output.of(staticNatSubnets));
+        }
+
+        /**
+         * @param staticNatSubnets Static NAT Subnet Rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticNatSubnets(ServiceLanVpnFeatureStaticNatSubnetArgs... staticNatSubnets) {
+            return staticNatSubnets(List.of(staticNatSubnets));
         }
 
         /**

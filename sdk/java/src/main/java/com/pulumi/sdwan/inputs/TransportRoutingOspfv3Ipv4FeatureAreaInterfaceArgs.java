@@ -80,16 +80,16 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
     }
 
     /**
-     * No Authentication by default
-     *   - Choices: `no-auth`
+     * Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      * 
      */
     @Import(name="authenticationType")
     private @Nullable Output<String> authenticationType;
 
     /**
-     * @return No Authentication by default
-     *   - Choices: `no-auth`
+     * @return Set OSPF interface authentication configuration
+     *   - Choices: `no-auth`, `ipsec-sha1`
      * 
      */
     public Optional<Output<String>> authenticationType() {
@@ -453,8 +453,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
         }
 
         /**
-         * @param authenticationType No Authentication by default
-         *   - Choices: `no-auth`
+         * @param authenticationType Set OSPF interface authentication configuration
+         *   - Choices: `no-auth`, `ipsec-sha1`
          * 
          * @return builder
          * 
@@ -465,8 +465,8 @@ public final class TransportRoutingOspfv3Ipv4FeatureAreaInterfaceArgs extends co
         }
 
         /**
-         * @param authenticationType No Authentication by default
-         *   - Choices: `no-auth`
+         * @param authenticationType Set OSPF interface authentication configuration
+         *   - Choices: `no-auth`, `ipsec-sha1`
          * 
          * @return builder
          * 

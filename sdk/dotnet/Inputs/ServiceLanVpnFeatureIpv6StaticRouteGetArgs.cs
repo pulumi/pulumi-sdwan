@@ -14,10 +14,22 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Gateway type
-        ///   - Choices: `nextHop`, `Null0`, `Nat`
+        ///   - Choices: `nextHop`, `Null0`, `Nat`, `staticRouteInterface`
         /// </summary>
         [Input("gateway")]
         public Input<string>? Gateway { get; set; }
+
+        [Input("ipv6StaticRouteInterfaces")]
+        private InputList<Inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceGetArgs>? _ipv6StaticRouteInterfaces;
+
+        /// <summary>
+        /// , Attribute conditional on `Gateway` being equal to `staticRouteInterface`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceGetArgs> Ipv6StaticRouteInterfaces
+        {
+            get => _ipv6StaticRouteInterfaces ?? (_ipv6StaticRouteInterfaces = new InputList<Inputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterfaceGetArgs>());
+            set => _ipv6StaticRouteInterfaces = value;
+        }
 
         /// <summary>
         /// IPv6 Nat, Attribute conditional on `Gateway` being equal to `Nat`
