@@ -20,14 +20,14 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
     public static final ZoneBasedFirewallPolicyDefinitionArgs Empty = new ZoneBasedFirewallPolicyDefinitionArgs();
 
     /**
-     * , Attribute conditional on `mode` being equal to `security`
+     * , Attribute conditional on `mode` equal to `security`
      * 
      */
     @Import(name="applyZonePairs")
     private @Nullable Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>> applyZonePairs;
 
     /**
-     * @return , Attribute conditional on `mode` being equal to `security`
+     * @return , Attribute conditional on `mode` equal to `security`
      * 
      */
     public Optional<Output<List<ZoneBasedFirewallPolicyDefinitionApplyZonePairArgs>>> applyZonePairs() {
@@ -135,7 +135,7 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * @param applyZonePairs , Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * @param applyZonePairs , Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class ZoneBasedFirewallPolicyDefinitionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param applyZonePairs , Attribute conditional on `mode` being equal to `security`
+         * @param applyZonePairs , Attribute conditional on `mode` equal to `security`
          * 
          * @return builder
          * 

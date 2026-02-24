@@ -56,7 +56,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
     }
 
     /**
-     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -64,7 +64,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
     private @Nullable Output<Boolean> translateRibMetric;
 
     /**
-     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * @return Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -73,14 +73,14 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
     }
 
     /**
-     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
      * 
      */
     @Import(name="translateRibMetricVariable")
     private @Nullable Output<String> translateRibMetricVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * @return Variable name, Attribute conditional on `protocol` equal to `omp`
      * 
      */
     public Optional<Output<String>> translateRibMetricVariable() {
@@ -169,7 +169,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -181,7 +181,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -192,7 +192,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` equal to `omp`
          * 
          * @return builder
          * 
@@ -203,7 +203,7 @@ public final class ServiceRoutingOspfv3Ipv6FeatureRedistributeArgs extends com.p
         }
 
         /**
-         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetricVariable Variable name, Attribute conditional on `protocol` equal to `omp`
          * 
          * @return builder
          * 

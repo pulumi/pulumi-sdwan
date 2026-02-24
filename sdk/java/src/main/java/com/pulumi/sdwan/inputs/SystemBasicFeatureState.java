@@ -999,6 +999,38 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
     }
 
     /**
+     * Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="trackerDiaStabilizeStatus")
+    private @Nullable Output<Boolean> trackerDiaStabilizeStatus;
+
+    /**
+     * @return Enable or disable endpoint tracker diaStabilize status
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> trackerDiaStabilizeStatus() {
+        return Optional.ofNullable(this.trackerDiaStabilizeStatus);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="trackerDiaStabilizeStatusVariable")
+    private @Nullable Output<String> trackerDiaStabilizeStatusVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> trackerDiaStabilizeStatusVariable() {
+        return Optional.ofNullable(this.trackerDiaStabilizeStatusVariable);
+    }
+
+    /**
      * Enable transport gateway
      *   - Default value: `false`
      * 
@@ -1109,6 +1141,8 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
         this.trackInterfaceTagVariable = $.trackInterfaceTagVariable;
         this.trackTransport = $.trackTransport;
         this.trackTransportVariable = $.trackTransportVariable;
+        this.trackerDiaStabilizeStatus = $.trackerDiaStabilizeStatus;
+        this.trackerDiaStabilizeStatusVariable = $.trackerDiaStabilizeStatusVariable;
         this.transportGateway = $.transportGateway;
         this.transportGatewayVariable = $.transportGatewayVariable;
         this.version = $.version;
@@ -2533,6 +2567,50 @@ public final class SystemBasicFeatureState extends com.pulumi.resources.Resource
          */
         public Builder trackTransportVariable(String trackTransportVariable) {
             return trackTransportVariable(Output.of(trackTransportVariable));
+        }
+
+        /**
+         * @param trackerDiaStabilizeStatus Enable or disable endpoint tracker diaStabilize status
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackerDiaStabilizeStatus(@Nullable Output<Boolean> trackerDiaStabilizeStatus) {
+            $.trackerDiaStabilizeStatus = trackerDiaStabilizeStatus;
+            return this;
+        }
+
+        /**
+         * @param trackerDiaStabilizeStatus Enable or disable endpoint tracker diaStabilize status
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackerDiaStabilizeStatus(Boolean trackerDiaStabilizeStatus) {
+            return trackerDiaStabilizeStatus(Output.of(trackerDiaStabilizeStatus));
+        }
+
+        /**
+         * @param trackerDiaStabilizeStatusVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackerDiaStabilizeStatusVariable(@Nullable Output<String> trackerDiaStabilizeStatusVariable) {
+            $.trackerDiaStabilizeStatusVariable = trackerDiaStabilizeStatusVariable;
+            return this;
+        }
+
+        /**
+         * @param trackerDiaStabilizeStatusVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder trackerDiaStabilizeStatusVariable(String trackerDiaStabilizeStatusVariable) {
+            return trackerDiaStabilizeStatusVariable(Output.of(trackerDiaStabilizeStatusVariable));
         }
 
         /**

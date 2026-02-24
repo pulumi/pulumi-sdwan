@@ -76,12 +76,12 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
      */
     declare public readonly accessPointNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` equal to `true`
      *   - Choices: `pap`, `chap`, `papChap`
      */
     declare public readonly authenticationType: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     declare public readonly authenticationTypeVariable: pulumi.Output<string | undefined>;
     /**
@@ -124,19 +124,19 @@ export class TransportCellularProfileFeature extends pulumi.CustomResource {
      */
     declare public readonly profileIdVariable: pulumi.Output<string | undefined>;
     /**
-     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     declare public readonly profilePassword: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     declare public readonly profilePasswordVariable: pulumi.Output<string | undefined>;
     /**
-     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     declare public readonly profileUsername: pulumi.Output<string | undefined>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     declare public readonly profileUsernameVariable: pulumi.Output<string | undefined>;
     /**
@@ -224,12 +224,12 @@ export interface TransportCellularProfileFeatureState {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` equal to `true`
      *   - Choices: `pap`, `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
@@ -272,19 +272,19 @@ export interface TransportCellularProfileFeatureState {
      */
     profileIdVariable?: pulumi.Input<string>;
     /**
-     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profilePassword?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profilePasswordVariable?: pulumi.Input<string>;
     /**
-     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profileUsername?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profileUsernameVariable?: pulumi.Input<string>;
     /**
@@ -311,12 +311,12 @@ export interface TransportCellularProfileFeatureArgs {
      */
     accessPointNameVariable?: pulumi.Input<string>;
     /**
-     * Set authentication type, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set authentication type, Attribute conditional on `requiresAuthentication` equal to `true`
      *   - Choices: `pap`, `chap`, `papChap`
      */
     authenticationType?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     authenticationTypeVariable?: pulumi.Input<string>;
     /**
@@ -359,19 +359,19 @@ export interface TransportCellularProfileFeatureArgs {
      */
     profileIdVariable?: pulumi.Input<string>;
     /**
-     * Set the profile password, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile password, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profilePassword?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profilePasswordVariable?: pulumi.Input<string>;
     /**
-     * Set the profile username, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Set the profile username, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profileUsername?: pulumi.Input<string>;
     /**
-     * Variable name, Attribute conditional on `requiresAuthentication` being equal to `true`
+     * Variable name, Attribute conditional on `requiresAuthentication` equal to `true`
      */
     profileUsernameVariable?: pulumi.Input<string>;
     /**

@@ -18,6 +18,7 @@ public final class PolicyObjectAppProbeClassEntry {
      * 
      */
     private @Nullable String forwardingClass;
+    private @Nullable String forwardingClassId;
     /**
      * @return Map
      * 
@@ -31,6 +32,9 @@ public final class PolicyObjectAppProbeClassEntry {
      */
     public Optional<String> forwardingClass() {
         return Optional.ofNullable(this.forwardingClass);
+    }
+    public Optional<String> forwardingClassId() {
+        return Optional.ofNullable(this.forwardingClassId);
     }
     /**
      * @return Map
@@ -50,11 +54,13 @@ public final class PolicyObjectAppProbeClassEntry {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String forwardingClass;
+        private @Nullable String forwardingClassId;
         private @Nullable List<PolicyObjectAppProbeClassEntryMap> maps;
         public Builder() {}
         public Builder(PolicyObjectAppProbeClassEntry defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.forwardingClass = defaults.forwardingClass;
+    	      this.forwardingClassId = defaults.forwardingClassId;
     	      this.maps = defaults.maps;
         }
 
@@ -62,6 +68,12 @@ public final class PolicyObjectAppProbeClassEntry {
         public Builder forwardingClass(@Nullable String forwardingClass) {
 
             this.forwardingClass = forwardingClass;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder forwardingClassId(@Nullable String forwardingClassId) {
+
+            this.forwardingClassId = forwardingClassId;
             return this;
         }
         @CustomType.Setter
@@ -76,6 +88,7 @@ public final class PolicyObjectAppProbeClassEntry {
         public PolicyObjectAppProbeClassEntry build() {
             final var _resultValue = new PolicyObjectAppProbeClassEntry();
             _resultValue.forwardingClass = forwardingClass;
+            _resultValue.forwardingClassId = forwardingClassId;
             _resultValue.maps = maps;
             return _resultValue;
         }

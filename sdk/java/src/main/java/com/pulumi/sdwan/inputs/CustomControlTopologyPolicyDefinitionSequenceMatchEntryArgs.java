@@ -18,7 +18,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     public static final CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs Empty = new CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Carrier, Attribute conditional on `type` being equal to `carrier`
+     * Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      * 
      */
@@ -26,7 +26,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> carrier;
 
     /**
-     * @return Carrier, Attribute conditional on `type` being equal to `carrier`
+     * @return Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      * 
      */
@@ -35,14 +35,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Color list ID, Attribute conditional on `type` being equal to `colorList`
+     * Color list ID, Attribute conditional on `type` equal to `colorList`
      * 
      */
     @Import(name="colorListId")
     private @Nullable Output<String> colorListId;
 
     /**
-     * @return Color list ID, Attribute conditional on `type` being equal to `colorList`
+     * @return Color list ID, Attribute conditional on `type` equal to `colorList`
      * 
      */
     public Optional<Output<String>> colorListId() {
@@ -65,14 +65,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Community list ID, Attribute conditional on `type` being equal to `community`
+     * Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     @Import(name="communityListId")
     private @Nullable Output<String> communityListId;
 
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     public Optional<Output<String>> communityListId() {
@@ -95,7 +95,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Domain ID, Attribute conditional on `type` being equal to `domainId`
+     * Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -103,7 +103,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> domainId;
 
     /**
-     * @return Domain ID, Attribute conditional on `type` being equal to `domainId`
+     * @return Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -112,14 +112,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     @Import(name="expandedCommunityListId")
     private @Nullable Output<String> expandedCommunityListId;
 
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     public Optional<Output<String>> expandedCommunityListId() {
@@ -142,7 +142,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Group ID, Attribute conditional on `type` being equal to `groupId`
+     * Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -150,7 +150,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> groupId;
 
     /**
-     * @return Group ID, Attribute conditional on `type` being equal to `groupId`
+     * @return Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -159,7 +159,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -167,7 +167,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> ompTag;
 
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -176,7 +176,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Origin, Attribute conditional on `type` being equal to `origin`
+     * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      * 
      */
@@ -184,7 +184,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      * 
      */
@@ -193,14 +193,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Originator IP, Attribute conditional on `type` being equal to `originator`
+     * Originator IP, Attribute conditional on `type` equal to `originator`
      * 
      */
     @Import(name="originator")
     private @Nullable Output<String> originator;
 
     /**
-     * @return Originator IP, Attribute conditional on `type` being equal to `originator`
+     * @return Originator IP, Attribute conditional on `type` equal to `originator`
      * 
      */
     public Optional<Output<String>> originator() {
@@ -208,7 +208,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Path type, Attribute conditional on `type` being equal to `pathType`
+     * Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      * 
      */
@@ -216,7 +216,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> pathType;
 
     /**
-     * @return Path type, Attribute conditional on `type` being equal to `pathType`
+     * @return Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      * 
      */
@@ -225,7 +225,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Preference, Attribute conditional on `type` being equal to `preference`
+     * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -233,7 +233,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> preference;
 
     /**
-     * @return Preference, Attribute conditional on `type` being equal to `preference`
+     * @return Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -242,14 +242,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+     * Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      * 
      */
     @Import(name="prefixListId")
     private @Nullable Output<String> prefixListId;
 
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      * 
      */
     public Optional<Output<String>> prefixListId() {
@@ -272,7 +272,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Region ID, Attribute conditional on `type` being equal to `regionId`
+     * Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      * 
      */
@@ -280,7 +280,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> regionId;
 
     /**
-     * @return Region ID, Attribute conditional on `type` being equal to `regionId`
+     * @return Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      * 
      */
@@ -289,14 +289,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * Region list ID, Attribute conditional on `type` equal to `regionList`
      * 
      */
     @Import(name="regionListId")
     private @Nullable Output<String> regionListId;
 
     /**
-     * @return Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * @return Region list ID, Attribute conditional on `type` equal to `regionList`
      * 
      */
     public Optional<Output<String>> regionListId() {
@@ -304,7 +304,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Role, Attribute conditional on `type` being equal to `role`
+     * Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -312,7 +312,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> role;
 
     /**
-     * @return Role, Attribute conditional on `type` being equal to `role`
+     * @return Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      * 
      */
@@ -321,7 +321,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Site ID, Attribute conditional on `type` being equal to `siteId`
+     * Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -329,7 +329,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> siteId;
 
     /**
-     * @return Site ID, Attribute conditional on `type` being equal to `siteId`
+     * @return Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -338,14 +338,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * Site list ID, Attribute conditional on `type` being equal to `siteList`
+     * Site list ID, Attribute conditional on `type` equal to `siteList`
      * 
      */
     @Import(name="siteListId")
     private @Nullable Output<String> siteListId;
 
     /**
-     * @return Site list ID, Attribute conditional on `type` being equal to `siteList`
+     * @return Site list ID, Attribute conditional on `type` equal to `siteList`
      * 
      */
     public Optional<Output<String>> siteListId() {
@@ -368,14 +368,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     @Import(name="tlocColor")
     private @Nullable Output<String> tlocColor;
 
     /**
-     * @return TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC color, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<Output<String>> tlocColor() {
@@ -383,7 +383,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -391,7 +391,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<String> tlocEncapsulation;
 
     /**
-     * @return TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      * 
      */
@@ -400,14 +400,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     @Import(name="tlocIp")
     private @Nullable Output<String> tlocIp;
 
     /**
-     * @return TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * @return TLOC IP address, Attribute conditional on `type` equal to `tloc`
      * 
      */
     public Optional<Output<String>> tlocIp() {
@@ -415,14 +415,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     @Import(name="tlocListId")
     private @Nullable Output<String> tlocListId;
 
     /**
-     * @return TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * @return TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      * 
      */
     public Optional<Output<String>> tlocListId() {
@@ -462,7 +462,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * VPN ID, Attribute conditional on `type` being equal to `vpn`
+     * VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      * 
      */
@@ -470,7 +470,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     private @Nullable Output<Integer> vpnId;
 
     /**
-     * @return VPN ID, Attribute conditional on `type` being equal to `vpn`
+     * @return VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      * 
      */
@@ -479,14 +479,14 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
     }
 
     /**
-     * VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+     * VPN list ID, Attribute conditional on `type` equal to `vpnList`
      * 
      */
     @Import(name="vpnListId")
     private @Nullable Output<String> vpnListId;
 
     /**
-     * @return VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+     * @return VPN list ID, Attribute conditional on `type` equal to `vpnList`
      * 
      */
     public Optional<Output<String>> vpnListId() {
@@ -563,7 +563,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param carrier Carrier, Attribute conditional on `type` being equal to `carrier`
+         * @param carrier Carrier, Attribute conditional on `type` equal to `carrier`
          *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
          * 
          * @return builder
@@ -575,7 +575,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param carrier Carrier, Attribute conditional on `type` being equal to `carrier`
+         * @param carrier Carrier, Attribute conditional on `type` equal to `carrier`
          *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
          * 
          * @return builder
@@ -586,7 +586,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param colorListId Color list ID, Attribute conditional on `type` being equal to `colorList`
+         * @param colorListId Color list ID, Attribute conditional on `type` equal to `colorList`
          * 
          * @return builder
          * 
@@ -597,7 +597,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param colorListId Color list ID, Attribute conditional on `type` being equal to `colorList`
+         * @param colorListId Color list ID, Attribute conditional on `type` equal to `colorList`
          * 
          * @return builder
          * 
@@ -628,7 +628,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * @param communityListId Community list ID, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -639,7 +639,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * @param communityListId Community list ID, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -670,7 +670,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param domainId Domain ID, Attribute conditional on `type` being equal to `domainId`
+         * @param domainId Domain ID, Attribute conditional on `type` equal to `domainId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -682,7 +682,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param domainId Domain ID, Attribute conditional on `type` being equal to `domainId`
+         * @param domainId Domain ID, Attribute conditional on `type` equal to `domainId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -693,7 +693,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
          * 
          * @return builder
          * 
@@ -704,7 +704,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
          * 
          * @return builder
          * 
@@ -735,7 +735,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param groupId Group ID, Attribute conditional on `type` being equal to `groupId`
+         * @param groupId Group ID, Attribute conditional on `type` equal to `groupId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -747,7 +747,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param groupId Group ID, Attribute conditional on `type` being equal to `groupId`
+         * @param groupId Group ID, Attribute conditional on `type` equal to `groupId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -758,7 +758,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -770,7 +770,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -781,7 +781,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
+         * @param origin Origin, Attribute conditional on `type` equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
          * 
          * @return builder
@@ -793,7 +793,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
+         * @param origin Origin, Attribute conditional on `type` equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
          * 
          * @return builder
@@ -804,7 +804,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param originator Originator IP, Attribute conditional on `type` being equal to `originator`
+         * @param originator Originator IP, Attribute conditional on `type` equal to `originator`
          * 
          * @return builder
          * 
@@ -815,7 +815,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param originator Originator IP, Attribute conditional on `type` being equal to `originator`
+         * @param originator Originator IP, Attribute conditional on `type` equal to `originator`
          * 
          * @return builder
          * 
@@ -825,7 +825,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param pathType Path type, Attribute conditional on `type` being equal to `pathType`
+         * @param pathType Path type, Attribute conditional on `type` equal to `pathType`
          *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
          * 
          * @return builder
@@ -837,7 +837,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param pathType Path type, Attribute conditional on `type` being equal to `pathType`
+         * @param pathType Path type, Attribute conditional on `type` equal to `pathType`
          *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
          * 
          * @return builder
@@ -848,7 +848,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param preference Preference, Attribute conditional on `type` being equal to `preference`
+         * @param preference Preference, Attribute conditional on `type` equal to `preference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -860,7 +860,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param preference Preference, Attribute conditional on `type` being equal to `preference`
+         * @param preference Preference, Attribute conditional on `type` equal to `preference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -871,7 +871,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param prefixListId Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+         * @param prefixListId Prefix list ID, Attribute conditional on `type` equal to `prefixList`
          * 
          * @return builder
          * 
@@ -882,7 +882,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param prefixListId Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+         * @param prefixListId Prefix list ID, Attribute conditional on `type` equal to `prefixList`
          * 
          * @return builder
          * 
@@ -913,7 +913,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param regionId Region ID, Attribute conditional on `type` being equal to `regionId`
+         * @param regionId Region ID, Attribute conditional on `type` equal to `regionId`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -925,7 +925,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param regionId Region ID, Attribute conditional on `type` being equal to `regionId`
+         * @param regionId Region ID, Attribute conditional on `type` equal to `regionId`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -936,7 +936,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param regionListId Region list ID, Attribute conditional on `type` being equal to `regionList`
+         * @param regionListId Region list ID, Attribute conditional on `type` equal to `regionList`
          * 
          * @return builder
          * 
@@ -947,7 +947,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param regionListId Region list ID, Attribute conditional on `type` being equal to `regionList`
+         * @param regionListId Region list ID, Attribute conditional on `type` equal to `regionList`
          * 
          * @return builder
          * 
@@ -957,7 +957,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param role Role, Attribute conditional on `type` being equal to `role`
+         * @param role Role, Attribute conditional on `type` equal to `role`
          *   - Choices: `border-router`, `edge-router`
          * 
          * @return builder
@@ -969,7 +969,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param role Role, Attribute conditional on `type` being equal to `role`
+         * @param role Role, Attribute conditional on `type` equal to `role`
          *   - Choices: `border-router`, `edge-router`
          * 
          * @return builder
@@ -980,7 +980,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param siteId Site ID, Attribute conditional on `type` being equal to `siteId`
+         * @param siteId Site ID, Attribute conditional on `type` equal to `siteId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -992,7 +992,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param siteId Site ID, Attribute conditional on `type` being equal to `siteId`
+         * @param siteId Site ID, Attribute conditional on `type` equal to `siteId`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -1003,7 +1003,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param siteListId Site list ID, Attribute conditional on `type` being equal to `siteList`
+         * @param siteListId Site list ID, Attribute conditional on `type` equal to `siteList`
          * 
          * @return builder
          * 
@@ -1014,7 +1014,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param siteListId Site list ID, Attribute conditional on `type` being equal to `siteList`
+         * @param siteListId Site list ID, Attribute conditional on `type` equal to `siteList`
          * 
          * @return builder
          * 
@@ -1045,7 +1045,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocColor TLOC color, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocColor TLOC color, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -1056,7 +1056,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocColor TLOC color, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocColor TLOC color, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -1066,7 +1066,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -1078,7 +1078,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocEncapsulation TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
          *   - Choices: `ipsec`, `gre`
          * 
          * @return builder
@@ -1089,7 +1089,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocIp TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocIp TLOC IP address, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -1100,7 +1100,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocIp TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+         * @param tlocIp TLOC IP address, Attribute conditional on `type` equal to `tloc`
          * 
          * @return builder
          * 
@@ -1110,7 +1110,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocListId TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+         * @param tlocListId TLOC list ID, Attribute conditional on `type` equal to `tlocList`
          * 
          * @return builder
          * 
@@ -1121,7 +1121,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param tlocListId TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+         * @param tlocListId TLOC list ID, Attribute conditional on `type` equal to `tlocList`
          * 
          * @return builder
          * 
@@ -1175,7 +1175,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param vpnId VPN ID, Attribute conditional on `type` being equal to `vpn`
+         * @param vpnId VPN ID, Attribute conditional on `type` equal to `vpn`
          *   - Range: `0`-`65536`
          * 
          * @return builder
@@ -1187,7 +1187,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param vpnId VPN ID, Attribute conditional on `type` being equal to `vpn`
+         * @param vpnId VPN ID, Attribute conditional on `type` equal to `vpn`
          *   - Range: `0`-`65536`
          * 
          * @return builder
@@ -1198,7 +1198,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param vpnListId VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+         * @param vpnListId VPN list ID, Attribute conditional on `type` equal to `vpnList`
          * 
          * @return builder
          * 
@@ -1209,7 +1209,7 @@ public final class CustomControlTopologyPolicyDefinitionSequenceMatchEntryArgs e
         }
 
         /**
-         * @param vpnListId VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+         * @param vpnListId VPN list ID, Attribute conditional on `type` equal to `vpnList`
          * 
          * @return builder
          * 

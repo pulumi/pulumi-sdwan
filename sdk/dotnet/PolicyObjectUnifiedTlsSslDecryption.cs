@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -128,7 +128,7 @@ namespace Pulumi.Sdwan
         public Output<string> RsaKeypairModules { get; private set; } = null!;
 
         /// <summary>
-        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` being equal to `Ocsp`
+        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` equal to `Ocsp`
         ///   - Choices: `Decrypt`, `Drop`
         /// </summary>
         [Output("unknownRevocationStatus")]
@@ -275,7 +275,7 @@ namespace Pulumi.Sdwan
         public Input<string> RsaKeypairModules { get; set; } = null!;
 
         /// <summary>
-        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` being equal to `Ocsp`
+        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` equal to `Ocsp`
         ///   - Choices: `Decrypt`, `Drop`
         /// </summary>
         [Input("unknownRevocationStatus")]
@@ -378,7 +378,7 @@ namespace Pulumi.Sdwan
         public Input<string>? RsaKeypairModules { get; set; }
 
         /// <summary>
-        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` being equal to `Ocsp`
+        /// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `CertificateRevocationStatus` equal to `Ocsp`
         ///   - Choices: `Decrypt`, `Drop`
         /// </summary>
         [Input("unknownRevocationStatus")]

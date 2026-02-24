@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a System Basic Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -61,6 +61,7 @@ namespace Pulumi.Sdwan
     ///         MaxOmpSessions = 24,
     ///         MultiTenant = false,
     ///         TrackDefaultGateway = true,
+    ///         TrackerDiaStabilizeStatus = false,
     ///         AdminTechOnFailure = true,
     ///         IdleTimeout = 10,
     ///         OnDemandEnable = true,
@@ -499,6 +500,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("trackTransportVariable")]
         public Output<string?> TrackTransportVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable or disable endpoint tracker diaStabilize status
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("trackerDiaStabilizeStatus")]
+        public Output<bool?> TrackerDiaStabilizeStatus { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Output("trackerDiaStabilizeStatusVariable")]
+        public Output<string?> TrackerDiaStabilizeStatusVariable { get; private set; } = null!;
 
         /// <summary>
         /// Enable transport gateway
@@ -999,6 +1013,19 @@ namespace Pulumi.Sdwan
         public Input<string>? TrackTransportVariable { get; set; }
 
         /// <summary>
+        /// Enable or disable endpoint tracker diaStabilize status
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("trackerDiaStabilizeStatus")]
+        public Input<bool>? TrackerDiaStabilizeStatus { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("trackerDiaStabilizeStatusVariable")]
+        public Input<string>? TrackerDiaStabilizeStatusVariable { get; set; }
+
+        /// <summary>
         /// Enable transport gateway
         ///   - Default value: `False`
         /// </summary>
@@ -1451,6 +1478,19 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("trackTransportVariable")]
         public Input<string>? TrackTransportVariable { get; set; }
+
+        /// <summary>
+        /// Enable or disable endpoint tracker diaStabilize status
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("trackerDiaStabilizeStatus")]
+        public Input<bool>? TrackerDiaStabilizeStatus { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("trackerDiaStabilizeStatusVariable")]
+        public Input<string>? TrackerDiaStabilizeStatusVariable { get; set; }
 
         /// <summary>
         /// Enable transport gateway

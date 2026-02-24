@@ -17,7 +17,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     private @Nullable String classMapId;
@@ -27,17 +27,17 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer classMapVersion;
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     private @Nullable String counterName;
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     private @Nullable Boolean log;
     /**
-     * @return Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * @return Mirror ID, Attribute conditional on `type` equal to `mirror`
      * 
      */
     private @Nullable String mirrorId;
@@ -47,7 +47,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer mirrorVersion;
     /**
-     * @return Policer ID, Attribute conditional on `type` being equal to `policer`
+     * @return Policer ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     private @Nullable String policerId;
@@ -57,7 +57,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     private @Nullable Integer policerVersion;
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     private @Nullable List<Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter> setParameters;
@@ -70,7 +70,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
 
     private Ipv6AclPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     public Optional<String> classMapId() {
@@ -84,21 +84,21 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.classMapVersion);
     }
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     public Optional<String> counterName() {
         return Optional.ofNullable(this.counterName);
     }
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * @return Mirror ID, Attribute conditional on `type` equal to `mirror`
      * 
      */
     public Optional<String> mirrorId() {
@@ -112,7 +112,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.mirrorVersion);
     }
     /**
-     * @return Policer ID, Attribute conditional on `type` being equal to `policer`
+     * @return Policer ID, Attribute conditional on `type` equal to `policer`
      * 
      */
     public Optional<String> policerId() {
@@ -126,7 +126,7 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.policerVersion);
     }
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     public List<Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter> setParameters() {

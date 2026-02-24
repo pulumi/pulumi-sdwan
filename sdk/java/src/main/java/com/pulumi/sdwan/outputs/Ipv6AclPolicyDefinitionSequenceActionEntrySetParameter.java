@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     private @Nullable String nextHop;
     /**
-     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * @return Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -33,14 +33,14 @@ public final class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
 
     private Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter() {}
     /**
-     * @return Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop IP, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     public Optional<String> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * @return Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */

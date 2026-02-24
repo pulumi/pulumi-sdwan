@@ -17,6 +17,7 @@ namespace Pulumi.Sdwan.Outputs
         /// Forwarding Class Name
         /// </summary>
         public readonly string? ForwardingClass;
+        public readonly string? ForwardingClassId;
         /// <summary>
         /// Map
         /// </summary>
@@ -26,9 +27,12 @@ namespace Pulumi.Sdwan.Outputs
         private PolicyObjectAppProbeClassEntry(
             string? forwardingClass,
 
+            string? forwardingClassId,
+
             ImmutableArray<Outputs.PolicyObjectAppProbeClassEntryMap> maps)
         {
             ForwardingClass = forwardingClass;
+            ForwardingClassId = forwardingClassId;
             Maps = maps;
         }
     }

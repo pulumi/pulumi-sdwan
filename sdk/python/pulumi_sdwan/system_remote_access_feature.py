@@ -65,48 +65,48 @@ class SystemRemoteAccessFeatureArgs:
         """
         The set of arguments for constructing a SystemRemoteAccessFeature resource.
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.bool] aaa_enable_accounting: Enable Accounting
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
                  - Default value: `false`
         :param pulumi.Input[_builtins.str] description: The description of the Feature
         :param pulumi.Input[_builtins.bool] enable_certificate_list_check: - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_certificate_list_check_variable: Variable name
-        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `10`-`1000`
                  - Default value: `100`
-        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `86400`
-        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
                  - Default value: `64`
-        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `3600`
-        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.int] ipv4_pool_size: IPv4 Pool Size
                  - Default value: `1000`
         :param pulumi.Input[_builtins.str] ipv4_pool_size_variable: Variable name
@@ -114,11 +114,11 @@ class SystemRemoteAccessFeatureArgs:
                  - Default value: `1024`
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.str] radius_group_name_variable: Variable name
         """
         pulumi.set(__self__, "feature_profile_id", feature_profile_id)
@@ -231,7 +231,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="aaaDeriveNameFromPeerDomain")
     def aaa_derive_name_from_peer_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain")
 
@@ -243,7 +243,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="aaaDeriveNameFromPeerDomainVariable")
     def aaa_derive_name_from_peer_domain_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain_variable")
 
@@ -255,7 +255,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentity")
     def aaa_derive_name_from_peer_identity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity")
 
@@ -267,7 +267,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentityVariable")
     def aaa_derive_name_from_peer_identity_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity_variable")
 
@@ -346,7 +346,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="anyConnectEapAuthenticationType")
     def any_connect_eap_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `user`, `device`
         """
         return pulumi.get(self, "any_connect_eap_authentication_type")
@@ -408,7 +408,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2AntiDosThreshold")
     def ikev2_anti_dos_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `10`-`1000`
           - Default value: `100`
         """
@@ -422,7 +422,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2AntiDosThresholdVariable")
     def ikev2_anti_dos_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_anti_dos_threshold_variable")
 
@@ -434,7 +434,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2LocalIkeIdentityType")
     def ikev2_local_ike_identity_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type")
@@ -447,7 +447,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2LocalIkeIdentityTypeVariable")
     def ikev2_local_ike_identity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type_variable")
 
@@ -459,7 +459,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2LocalIkeIdentityValue")
     def ikev2_local_ike_identity_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value")
 
@@ -471,7 +471,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2LocalIkeIdentityValueVariable")
     def ikev2_local_ike_identity_value_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value_variable")
 
@@ -483,7 +483,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2SecurityAssociationLifetime")
     def ikev2_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `86400`
         """
@@ -497,7 +497,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ikev2SecurityAssociationLifetimeVariable")
     def ikev2_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_security_association_lifetime_variable")
 
@@ -509,7 +509,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecAntiReplayWindowSize")
     def ipsec_anti_replay_window_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
           - Default value: `64`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size")
@@ -522,7 +522,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecAntiReplayWindowSizeVariable")
     def ipsec_anti_replay_window_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size_variable")
 
@@ -534,7 +534,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecEnableAntiReplay")
     def ipsec_enable_anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `true`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay")
@@ -547,7 +547,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecEnableAntiReplayVariable")
     def ipsec_enable_anti_replay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay_variable")
 
@@ -559,7 +559,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecy")
     def ipsec_enable_perfect_foward_secrecy(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy")
@@ -572,7 +572,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecyVariable")
     def ipsec_enable_perfect_foward_secrecy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy_variable")
 
@@ -584,7 +584,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecSecurityAssociationLifetime")
     def ipsec_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `3600`
         """
@@ -598,7 +598,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="ipsecSecurityAssociationLifetimeVariable")
     def ipsec_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_security_association_lifetime_variable")
 
@@ -672,7 +672,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="pskAuthenticationPreSharedKey")
     def psk_authentication_pre_shared_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -684,7 +684,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="pskAuthenticationPreSharedKeyVariable")
     def psk_authentication_pre_shared_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
@@ -696,7 +696,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="pskAuthenticationType")
     def psk_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `aaa`, `group`
         """
         return pulumi.get(self, "psk_authentication_type")
@@ -709,7 +709,7 @@ class SystemRemoteAccessFeatureArgs:
     @pulumi.getter(name="pskAuthenticationTypeVariable")
     def psk_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "psk_authentication_type_variable")
 
@@ -779,16 +779,16 @@ class _SystemRemoteAccessFeatureState:
                  version: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SystemRemoteAccessFeature resources.
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.bool] aaa_enable_accounting: Enable Accounting
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
                  - Default value: `false`
@@ -796,32 +796,32 @@ class _SystemRemoteAccessFeatureState:
         :param pulumi.Input[_builtins.bool] enable_certificate_list_check: - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_certificate_list_check_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `10`-`1000`
                  - Default value: `100`
-        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `86400`
-        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
                  - Default value: `64`
-        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `3600`
-        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.int] ipv4_pool_size: IPv4 Pool Size
                  - Default value: `1000`
         :param pulumi.Input[_builtins.str] ipv4_pool_size_variable: Variable name
@@ -829,11 +829,11 @@ class _SystemRemoteAccessFeatureState:
                  - Default value: `1024`
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.str] radius_group_name_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -930,7 +930,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="aaaDeriveNameFromPeerDomain")
     def aaa_derive_name_from_peer_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain")
 
@@ -942,7 +942,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="aaaDeriveNameFromPeerDomainVariable")
     def aaa_derive_name_from_peer_domain_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain_variable")
 
@@ -954,7 +954,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentity")
     def aaa_derive_name_from_peer_identity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity")
 
@@ -966,7 +966,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentityVariable")
     def aaa_derive_name_from_peer_identity_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity_variable")
 
@@ -1045,7 +1045,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="anyConnectEapAuthenticationType")
     def any_connect_eap_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `user`, `device`
         """
         return pulumi.get(self, "any_connect_eap_authentication_type")
@@ -1119,7 +1119,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2AntiDosThreshold")
     def ikev2_anti_dos_threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `10`-`1000`
           - Default value: `100`
         """
@@ -1133,7 +1133,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2AntiDosThresholdVariable")
     def ikev2_anti_dos_threshold_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_anti_dos_threshold_variable")
 
@@ -1145,7 +1145,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2LocalIkeIdentityType")
     def ikev2_local_ike_identity_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type")
@@ -1158,7 +1158,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2LocalIkeIdentityTypeVariable")
     def ikev2_local_ike_identity_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type_variable")
 
@@ -1170,7 +1170,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2LocalIkeIdentityValue")
     def ikev2_local_ike_identity_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value")
 
@@ -1182,7 +1182,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2LocalIkeIdentityValueVariable")
     def ikev2_local_ike_identity_value_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value_variable")
 
@@ -1194,7 +1194,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2SecurityAssociationLifetime")
     def ikev2_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `86400`
         """
@@ -1208,7 +1208,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ikev2SecurityAssociationLifetimeVariable")
     def ikev2_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_security_association_lifetime_variable")
 
@@ -1220,7 +1220,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecAntiReplayWindowSize")
     def ipsec_anti_replay_window_size(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
           - Default value: `64`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size")
@@ -1233,7 +1233,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecAntiReplayWindowSizeVariable")
     def ipsec_anti_replay_window_size_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size_variable")
 
@@ -1245,7 +1245,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecEnableAntiReplay")
     def ipsec_enable_anti_replay(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `true`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay")
@@ -1258,7 +1258,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecEnableAntiReplayVariable")
     def ipsec_enable_anti_replay_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay_variable")
 
@@ -1270,7 +1270,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecy")
     def ipsec_enable_perfect_foward_secrecy(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy")
@@ -1283,7 +1283,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecyVariable")
     def ipsec_enable_perfect_foward_secrecy_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy_variable")
 
@@ -1295,7 +1295,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecSecurityAssociationLifetime")
     def ipsec_security_association_lifetime(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `3600`
         """
@@ -1309,7 +1309,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="ipsecSecurityAssociationLifetimeVariable")
     def ipsec_security_association_lifetime_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_security_association_lifetime_variable")
 
@@ -1383,7 +1383,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="pskAuthenticationPreSharedKey")
     def psk_authentication_pre_shared_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -1395,7 +1395,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="pskAuthenticationPreSharedKeyVariable")
     def psk_authentication_pre_shared_key_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
@@ -1407,7 +1407,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="pskAuthenticationType")
     def psk_authentication_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `aaa`, `group`
         """
         return pulumi.get(self, "psk_authentication_type")
@@ -1420,7 +1420,7 @@ class _SystemRemoteAccessFeatureState:
     @pulumi.getter(name="pskAuthenticationTypeVariable")
     def psk_authentication_type_variable(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "psk_authentication_type_variable")
 
@@ -1556,16 +1556,16 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.bool] aaa_enable_accounting: Enable Accounting
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
                  - Default value: `false`
@@ -1573,32 +1573,32 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_certificate_list_check: - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_certificate_list_check_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `10`-`1000`
                  - Default value: `100`
-        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `86400`
-        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
                  - Default value: `64`
-        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `3600`
-        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.int] ipv4_pool_size: IPv4 Pool Size
                  - Default value: `1000`
         :param pulumi.Input[_builtins.str] ipv4_pool_size_variable: Variable name
@@ -1606,11 +1606,11 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  - Default value: `1024`
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.str] radius_group_name_variable: Variable name
         """
         ...
@@ -1837,16 +1837,16 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_domain_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] aaa_derive_name_from_peer_identity_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.bool] aaa_enable_accounting: Enable Accounting
                  - Default value: `true`
         :param pulumi.Input[_builtins.str] aaa_enable_accounting_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_name_variable: Variable name
         :param pulumi.Input[_builtins.str] aaa_specify_name_policy_password_variable: Variable name
-        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] any_connect_eap_authentication_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `user`, `device`
         :param pulumi.Input[_builtins.bool] connection_type_ssl: Enabled SSL VPN
                  - Default value: `false`
@@ -1854,32 +1854,32 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] enable_certificate_list_check: - Default value: `false`
         :param pulumi.Input[_builtins.str] enable_certificate_list_check_variable: Variable name
         :param pulumi.Input[_builtins.str] feature_profile_id: Feature Profile ID
-        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_anti_dos_threshold: Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `10`-`1000`
                  - Default value: `100`
-        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_anti_dos_threshold_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type: , Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value: , Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.str] ikev2_local_ike_identity_value_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ikev2_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `86400`
-        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        :param pulumi.Input[_builtins.str] ikev2_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_anti_replay_window_size: security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
                  - Default value: `64`
-        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_anti_replay_window_size_variable: Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_anti_replay: Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `true`
-        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_anti_replay_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.bool] ipsec_enable_perfect_foward_secrecy: security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Default value: `false`
-        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
-        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_enable_perfect_foward_secrecy_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
+        :param pulumi.Input[_builtins.int] ipsec_security_association_lifetime: Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Range: `3600`-`86400`
                  - Default value: `3600`
-        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] ipsec_security_association_lifetime_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.int] ipv4_pool_size: IPv4 Pool Size
                  - Default value: `1000`
         :param pulumi.Input[_builtins.str] ipv4_pool_size_variable: Variable name
@@ -1887,11 +1887,11 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
                  - Default value: `1024`
         :param pulumi.Input[_builtins.str] ipv6_pool_size_variable: Variable name
         :param pulumi.Input[_builtins.str] name: The name of the Feature
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key: PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_pre_shared_key_variable: Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
+        :param pulumi.Input[_builtins.str] psk_authentication_type: PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
                  - Choices: `aaa`, `group`
-        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        :param pulumi.Input[_builtins.str] psk_authentication_type_variable: Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         :param pulumi.Input[_builtins.str] radius_group_name_variable: Variable name
         :param pulumi.Input[_builtins.int] version: The version of the Feature
         """
@@ -1949,7 +1949,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="aaaDeriveNameFromPeerDomain")
     def aaa_derive_name_from_peer_domain(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain")
 
@@ -1957,7 +1957,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="aaaDeriveNameFromPeerDomainVariable")
     def aaa_derive_name_from_peer_domain_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_domain_variable")
 
@@ -1965,7 +1965,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentity")
     def aaa_derive_name_from_peer_identity(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity")
 
@@ -1973,7 +1973,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="aaaDeriveNameFromPeerIdentityVariable")
     def aaa_derive_name_from_peer_identity_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "aaa_derive_name_from_peer_identity_variable")
 
@@ -2024,7 +2024,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="anyConnectEapAuthenticationType")
     def any_connect_eap_authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `user`, `device`
         """
         return pulumi.get(self, "any_connect_eap_authentication_type")
@@ -2074,7 +2074,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2AntiDosThreshold")
     def ikev2_anti_dos_threshold(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Anti-DOS Threshold, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `10`-`1000`
           - Default value: `100`
         """
@@ -2084,7 +2084,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2AntiDosThresholdVariable")
     def ikev2_anti_dos_threshold_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_anti_dos_threshold_variable")
 
@@ -2092,7 +2092,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2LocalIkeIdentityType")
     def ikev2_local_ike_identity_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `EMAIL`, `FQDN`, `KEYID`, `IPv4 ADDRESS`, `IPv6 ADDRESS`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type")
@@ -2101,7 +2101,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2LocalIkeIdentityTypeVariable")
     def ikev2_local_ike_identity_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_type_variable")
 
@@ -2109,7 +2109,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2LocalIkeIdentityValue")
     def ikev2_local_ike_identity_value(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        , Attribute conditional on `connection_type_ssl` being equal to `false`
+        , Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value")
 
@@ -2117,7 +2117,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2LocalIkeIdentityValueVariable")
     def ikev2_local_ike_identity_value_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_local_ike_identity_value_variable")
 
@@ -2125,7 +2125,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2SecurityAssociationLifetime")
     def ikev2_security_association_lifetime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `86400`
         """
@@ -2135,7 +2135,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ikev2SecurityAssociationLifetimeVariable")
     def ikev2_security_association_lifetime_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ikev2_security_association_lifetime_variable")
 
@@ -2143,7 +2143,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecAntiReplayWindowSize")
     def ipsec_anti_replay_window_size(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        security Association Lifetime, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
           - Default value: `64`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size")
@@ -2152,7 +2152,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecAntiReplayWindowSizeVariable")
     def ipsec_anti_replay_window_size_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `ipsec_enable_anti_replay` being equal to `true`
+        Variable name, Attribute conditional on `ipsec_enable_anti_replay` equal to `true`
         """
         return pulumi.get(self, "ipsec_anti_replay_window_size_variable")
 
@@ -2160,7 +2160,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecEnableAntiReplay")
     def ipsec_enable_anti_replay(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Enable Anti-Replay, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `true`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay")
@@ -2169,7 +2169,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecEnableAntiReplayVariable")
     def ipsec_enable_anti_replay_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_anti_replay_variable")
 
@@ -2177,7 +2177,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecy")
     def ipsec_enable_perfect_foward_secrecy(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        security Association Lifetime, Attribute conditional on `connection_type_ssl` being equal to `false`
+        security Association Lifetime, Attribute conditional on `connection_type_ssl` equal to `false`
           - Default value: `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy")
@@ -2186,7 +2186,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecEnablePerfectFowardSecrecyVariable")
     def ipsec_enable_perfect_foward_secrecy_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_enable_perfect_foward_secrecy_variable")
 
@@ -2194,7 +2194,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecSecurityAssociationLifetime")
     def ipsec_security_association_lifetime(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Security Association Lifetime in Seconds, Attribute conditional on `connection_type_ssl` equal to `false`
           - Range: `3600`-`86400`
           - Default value: `3600`
         """
@@ -2204,7 +2204,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="ipsecSecurityAssociationLifetimeVariable")
     def ipsec_security_association_lifetime_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "ipsec_security_association_lifetime_variable")
 
@@ -2254,7 +2254,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="pskAuthenticationPreSharedKey")
     def psk_authentication_pre_shared_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` being equal to `group`
+        PSK Pre Shared Key, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key")
 
@@ -2262,7 +2262,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="pskAuthenticationPreSharedKeyVariable")
     def psk_authentication_pre_shared_key_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `psk_authentication_type` being equal to `group`
+        Variable name, Attribute conditional on `psk_authentication_type` equal to `group`
         """
         return pulumi.get(self, "psk_authentication_pre_shared_key_variable")
 
@@ -2270,7 +2270,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="pskAuthenticationType")
     def psk_authentication_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        PSK Selection, Attribute conditional on `connection_type_ssl` being equal to `false`
+        PSK Selection, Attribute conditional on `connection_type_ssl` equal to `false`
           - Choices: `aaa`, `group`
         """
         return pulumi.get(self, "psk_authentication_type")
@@ -2279,7 +2279,7 @@ class SystemRemoteAccessFeature(pulumi.CustomResource):
     @pulumi.getter(name="pskAuthenticationTypeVariable")
     def psk_authentication_type_variable(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Variable name, Attribute conditional on `connection_type_ssl` being equal to `false`
+        Variable name, Attribute conditional on `connection_type_ssl` equal to `false`
         """
         return pulumi.get(self, "psk_authentication_type_variable")
 

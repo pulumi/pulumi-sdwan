@@ -163,16 +163,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String interfaceNameVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
-     * 
-     */
-    private Integer ipMtu;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String ipMtuVariable;
-    /**
      * @return IPsec(ESP) encryption and integrity protocol
      * 
      */
@@ -208,12 +198,72 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      * 
      */
     private String ipv4AddressVariable;
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    private Integer ipv4Mtu;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4MtuVariable;
     private String ipv4SubnetMask;
     /**
      * @return Variable name
      * 
      */
     private String ipv4SubnetMaskVariable;
+    /**
+     * @return TCP MSS on SYN packets, in bytes
+     * 
+     */
+    private Integer ipv4TcpMss;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4TcpMssVariable;
+    /**
+     * @return Assign IPv6 address
+     * 
+     */
+    private String ipv6Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6AddressVariable;
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    private Integer ipv6Mtu;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6MtuVariable;
+    /**
+     * @return IPv6 TCP MSS on SYN packets, in bytes
+     * 
+     */
+    private Integer ipv6TcpMss;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6TcpMssVariable;
+    /**
+     * @return Tunnel multiplexing state
+     * 
+     */
+    private Boolean multiplexing;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String multiplexingVariable;
     /**
      * @return The name of the Feature
      * 
@@ -240,16 +290,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     private String shutdownVariable;
     /**
-     * @return TCP MSS on SYN packets, in bytes
-     * 
-     */
-    private Integer tcpMss;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String tcpMssVariable;
-    /**
      * @return Enable tracker for this interface
      * 
      */
@@ -270,12 +310,21 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      * 
      */
     private String tunnelDestinationIpv4AddressVariable;
-    private String tunnelDestinationIpv4SubnetMask;
+    /**
+     * @return Tunnel destination IPv6 Address
+     * 
+     */
+    private String tunnelDestinationIpv6Address;
     /**
      * @return Variable name
      * 
      */
-    private String tunnelDestinationIpv4SubnetMaskVariable;
+    private String tunnelDestinationIpv6AddressVariable;
+    /**
+     * @return IPsec Tunnel Mode
+     * 
+     */
+    private String tunnelMode;
     /**
      * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
      * 
@@ -302,12 +351,16 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      * 
      */
     private String tunnelSourceIpv4AddressVariable;
-    private String tunnelSourceIpv4SubnetMask;
+    /**
+     * @return Tunnel source IPv6 Address
+     * 
+     */
+    private String tunnelSourceIpv6Address;
     /**
      * @return Variable name
      * 
      */
-    private String tunnelSourceIpv4SubnetMaskVariable;
+    private String tunnelSourceIpv6AddressVariable;
     /**
      * @return The version of the Feature
      * 
@@ -526,20 +579,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.interfaceNameVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
-     * 
-     */
-    public Integer ipMtu() {
-        return this.ipMtu;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String ipMtuVariable() {
-        return this.ipMtuVariable;
-    }
-    /**
      * @return IPsec(ESP) encryption and integrity protocol
      * 
      */
@@ -591,6 +630,20 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
     public String ipv4AddressVariable() {
         return this.ipv4AddressVariable;
     }
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    public Integer ipv4Mtu() {
+        return this.ipv4Mtu;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4MtuVariable() {
+        return this.ipv4MtuVariable;
+    }
     public String ipv4SubnetMask() {
         return this.ipv4SubnetMask;
     }
@@ -600,6 +653,76 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
      */
     public String ipv4SubnetMaskVariable() {
         return this.ipv4SubnetMaskVariable;
+    }
+    /**
+     * @return TCP MSS on SYN packets, in bytes
+     * 
+     */
+    public Integer ipv4TcpMss() {
+        return this.ipv4TcpMss;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4TcpMssVariable() {
+        return this.ipv4TcpMssVariable;
+    }
+    /**
+     * @return Assign IPv6 address
+     * 
+     */
+    public String ipv6Address() {
+        return this.ipv6Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6AddressVariable() {
+        return this.ipv6AddressVariable;
+    }
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    public Integer ipv6Mtu() {
+        return this.ipv6Mtu;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6MtuVariable() {
+        return this.ipv6MtuVariable;
+    }
+    /**
+     * @return IPv6 TCP MSS on SYN packets, in bytes
+     * 
+     */
+    public Integer ipv6TcpMss() {
+        return this.ipv6TcpMss;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6TcpMssVariable() {
+        return this.ipv6TcpMssVariable;
+    }
+    /**
+     * @return Tunnel multiplexing state
+     * 
+     */
+    public Boolean multiplexing() {
+        return this.multiplexing;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String multiplexingVariable() {
+        return this.multiplexingVariable;
     }
     /**
      * @return The name of the Feature
@@ -637,20 +760,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         return this.shutdownVariable;
     }
     /**
-     * @return TCP MSS on SYN packets, in bytes
-     * 
-     */
-    public Integer tcpMss() {
-        return this.tcpMss;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String tcpMssVariable() {
-        return this.tcpMssVariable;
-    }
-    /**
      * @return Enable tracker for this interface
      * 
      */
@@ -681,15 +790,26 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
     public String tunnelDestinationIpv4AddressVariable() {
         return this.tunnelDestinationIpv4AddressVariable;
     }
-    public String tunnelDestinationIpv4SubnetMask() {
-        return this.tunnelDestinationIpv4SubnetMask;
+    /**
+     * @return Tunnel destination IPv6 Address
+     * 
+     */
+    public String tunnelDestinationIpv6Address() {
+        return this.tunnelDestinationIpv6Address;
     }
     /**
      * @return Variable name
      * 
      */
-    public String tunnelDestinationIpv4SubnetMaskVariable() {
-        return this.tunnelDestinationIpv4SubnetMaskVariable;
+    public String tunnelDestinationIpv6AddressVariable() {
+        return this.tunnelDestinationIpv6AddressVariable;
+    }
+    /**
+     * @return IPsec Tunnel Mode
+     * 
+     */
+    public String tunnelMode() {
+        return this.tunnelMode;
     }
     /**
      * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
@@ -729,15 +849,19 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
     public String tunnelSourceIpv4AddressVariable() {
         return this.tunnelSourceIpv4AddressVariable;
     }
-    public String tunnelSourceIpv4SubnetMask() {
-        return this.tunnelSourceIpv4SubnetMask;
+    /**
+     * @return Tunnel source IPv6 Address
+     * 
+     */
+    public String tunnelSourceIpv6Address() {
+        return this.tunnelSourceIpv6Address;
     }
     /**
      * @return Variable name
      * 
      */
-    public String tunnelSourceIpv4SubnetMaskVariable() {
-        return this.tunnelSourceIpv4SubnetMaskVariable;
+    public String tunnelSourceIpv6AddressVariable() {
+        return this.tunnelSourceIpv6AddressVariable;
     }
     /**
      * @return The version of the Feature
@@ -786,8 +910,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         private String interfaceDescriptionVariable;
         private String interfaceName;
         private String interfaceNameVariable;
-        private Integer ipMtu;
-        private String ipMtuVariable;
         private String ipsecCiphersuite;
         private String ipsecCiphersuiteVariable;
         private Integer ipsecRekeyInterval;
@@ -796,30 +918,41 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
         private String ipsecReplayWindowVariable;
         private String ipv4Address;
         private String ipv4AddressVariable;
+        private Integer ipv4Mtu;
+        private String ipv4MtuVariable;
         private String ipv4SubnetMask;
         private String ipv4SubnetMaskVariable;
+        private Integer ipv4TcpMss;
+        private String ipv4TcpMssVariable;
+        private String ipv6Address;
+        private String ipv6AddressVariable;
+        private Integer ipv6Mtu;
+        private String ipv6MtuVariable;
+        private Integer ipv6TcpMss;
+        private String ipv6TcpMssVariable;
+        private Boolean multiplexing;
+        private String multiplexingVariable;
         private String name;
         private String perfectForwardSecrecy;
         private String perfectForwardSecrecyVariable;
         private Boolean shutdown;
         private String shutdownVariable;
-        private Integer tcpMss;
-        private String tcpMssVariable;
         private String trackerId;
         private String trackerIdVariable;
         private String transportWanVpnFeatureId;
         private String tunnelDestinationIpv4Address;
         private String tunnelDestinationIpv4AddressVariable;
-        private String tunnelDestinationIpv4SubnetMask;
-        private String tunnelDestinationIpv4SubnetMaskVariable;
+        private String tunnelDestinationIpv6Address;
+        private String tunnelDestinationIpv6AddressVariable;
+        private String tunnelMode;
         private String tunnelRouteVia;
         private String tunnelRouteViaVariable;
         private String tunnelSourceInterface;
         private String tunnelSourceInterfaceVariable;
         private String tunnelSourceIpv4Address;
         private String tunnelSourceIpv4AddressVariable;
-        private String tunnelSourceIpv4SubnetMask;
-        private String tunnelSourceIpv4SubnetMaskVariable;
+        private String tunnelSourceIpv6Address;
+        private String tunnelSourceIpv6AddressVariable;
         private Integer version;
         public Builder() {}
         public Builder(GetTransportWanVpnInterfaceIpsecFeatureResult defaults) {
@@ -854,8 +987,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
     	      this.interfaceDescriptionVariable = defaults.interfaceDescriptionVariable;
     	      this.interfaceName = defaults.interfaceName;
     	      this.interfaceNameVariable = defaults.interfaceNameVariable;
-    	      this.ipMtu = defaults.ipMtu;
-    	      this.ipMtuVariable = defaults.ipMtuVariable;
     	      this.ipsecCiphersuite = defaults.ipsecCiphersuite;
     	      this.ipsecCiphersuiteVariable = defaults.ipsecCiphersuiteVariable;
     	      this.ipsecRekeyInterval = defaults.ipsecRekeyInterval;
@@ -864,30 +995,41 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
     	      this.ipsecReplayWindowVariable = defaults.ipsecReplayWindowVariable;
     	      this.ipv4Address = defaults.ipv4Address;
     	      this.ipv4AddressVariable = defaults.ipv4AddressVariable;
+    	      this.ipv4Mtu = defaults.ipv4Mtu;
+    	      this.ipv4MtuVariable = defaults.ipv4MtuVariable;
     	      this.ipv4SubnetMask = defaults.ipv4SubnetMask;
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
+    	      this.ipv4TcpMss = defaults.ipv4TcpMss;
+    	      this.ipv4TcpMssVariable = defaults.ipv4TcpMssVariable;
+    	      this.ipv6Address = defaults.ipv6Address;
+    	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
+    	      this.ipv6Mtu = defaults.ipv6Mtu;
+    	      this.ipv6MtuVariable = defaults.ipv6MtuVariable;
+    	      this.ipv6TcpMss = defaults.ipv6TcpMss;
+    	      this.ipv6TcpMssVariable = defaults.ipv6TcpMssVariable;
+    	      this.multiplexing = defaults.multiplexing;
+    	      this.multiplexingVariable = defaults.multiplexingVariable;
     	      this.name = defaults.name;
     	      this.perfectForwardSecrecy = defaults.perfectForwardSecrecy;
     	      this.perfectForwardSecrecyVariable = defaults.perfectForwardSecrecyVariable;
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
-    	      this.tcpMss = defaults.tcpMss;
-    	      this.tcpMssVariable = defaults.tcpMssVariable;
     	      this.trackerId = defaults.trackerId;
     	      this.trackerIdVariable = defaults.trackerIdVariable;
     	      this.transportWanVpnFeatureId = defaults.transportWanVpnFeatureId;
     	      this.tunnelDestinationIpv4Address = defaults.tunnelDestinationIpv4Address;
     	      this.tunnelDestinationIpv4AddressVariable = defaults.tunnelDestinationIpv4AddressVariable;
-    	      this.tunnelDestinationIpv4SubnetMask = defaults.tunnelDestinationIpv4SubnetMask;
-    	      this.tunnelDestinationIpv4SubnetMaskVariable = defaults.tunnelDestinationIpv4SubnetMaskVariable;
+    	      this.tunnelDestinationIpv6Address = defaults.tunnelDestinationIpv6Address;
+    	      this.tunnelDestinationIpv6AddressVariable = defaults.tunnelDestinationIpv6AddressVariable;
+    	      this.tunnelMode = defaults.tunnelMode;
     	      this.tunnelRouteVia = defaults.tunnelRouteVia;
     	      this.tunnelRouteViaVariable = defaults.tunnelRouteViaVariable;
     	      this.tunnelSourceInterface = defaults.tunnelSourceInterface;
     	      this.tunnelSourceInterfaceVariable = defaults.tunnelSourceInterfaceVariable;
     	      this.tunnelSourceIpv4Address = defaults.tunnelSourceIpv4Address;
     	      this.tunnelSourceIpv4AddressVariable = defaults.tunnelSourceIpv4AddressVariable;
-    	      this.tunnelSourceIpv4SubnetMask = defaults.tunnelSourceIpv4SubnetMask;
-    	      this.tunnelSourceIpv4SubnetMaskVariable = defaults.tunnelSourceIpv4SubnetMaskVariable;
+    	      this.tunnelSourceIpv6Address = defaults.tunnelSourceIpv6Address;
+    	      this.tunnelSourceIpv6AddressVariable = defaults.tunnelSourceIpv6AddressVariable;
     	      this.version = defaults.version;
         }
 
@@ -1132,22 +1274,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder ipMtu(Integer ipMtu) {
-            if (ipMtu == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipMtu");
-            }
-            this.ipMtu = ipMtu;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder ipMtuVariable(String ipMtuVariable) {
-            if (ipMtuVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipMtuVariable");
-            }
-            this.ipMtuVariable = ipMtuVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder ipsecCiphersuite(String ipsecCiphersuite) {
             if (ipsecCiphersuite == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipsecCiphersuite");
@@ -1212,6 +1338,22 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4Mtu(Integer ipv4Mtu) {
+            if (ipv4Mtu == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4Mtu");
+            }
+            this.ipv4Mtu = ipv4Mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4MtuVariable(String ipv4MtuVariable) {
+            if (ipv4MtuVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4MtuVariable");
+            }
+            this.ipv4MtuVariable = ipv4MtuVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv4SubnetMask(String ipv4SubnetMask) {
             if (ipv4SubnetMask == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4SubnetMask");
@@ -1225,6 +1367,86 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4SubnetMaskVariable");
             }
             this.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4TcpMss(Integer ipv4TcpMss) {
+            if (ipv4TcpMss == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4TcpMss");
+            }
+            this.ipv4TcpMss = ipv4TcpMss;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4TcpMssVariable(String ipv4TcpMssVariable) {
+            if (ipv4TcpMssVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv4TcpMssVariable");
+            }
+            this.ipv4TcpMssVariable = ipv4TcpMssVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6Address(String ipv6Address) {
+            if (ipv6Address == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6Address");
+            }
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6AddressVariable(String ipv6AddressVariable) {
+            if (ipv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6AddressVariable");
+            }
+            this.ipv6AddressVariable = ipv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6Mtu(Integer ipv6Mtu) {
+            if (ipv6Mtu == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6Mtu");
+            }
+            this.ipv6Mtu = ipv6Mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6MtuVariable(String ipv6MtuVariable) {
+            if (ipv6MtuVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6MtuVariable");
+            }
+            this.ipv6MtuVariable = ipv6MtuVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6TcpMss(Integer ipv6TcpMss) {
+            if (ipv6TcpMss == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6TcpMss");
+            }
+            this.ipv6TcpMss = ipv6TcpMss;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6TcpMssVariable(String ipv6TcpMssVariable) {
+            if (ipv6TcpMssVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "ipv6TcpMssVariable");
+            }
+            this.ipv6TcpMssVariable = ipv6TcpMssVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder multiplexing(Boolean multiplexing) {
+            if (multiplexing == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "multiplexing");
+            }
+            this.multiplexing = multiplexing;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder multiplexingVariable(String multiplexingVariable) {
+            if (multiplexingVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "multiplexingVariable");
+            }
+            this.multiplexingVariable = multiplexingVariable;
             return this;
         }
         @CustomType.Setter
@@ -1268,22 +1490,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder tcpMss(Integer tcpMss) {
-            if (tcpMss == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tcpMss");
-            }
-            this.tcpMss = tcpMss;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder tcpMssVariable(String tcpMssVariable) {
-            if (tcpMssVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tcpMssVariable");
-            }
-            this.tcpMssVariable = tcpMssVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder trackerId(String trackerId) {
             if (trackerId == null) {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "trackerId");
@@ -1324,19 +1530,27 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder tunnelDestinationIpv4SubnetMask(String tunnelDestinationIpv4SubnetMask) {
-            if (tunnelDestinationIpv4SubnetMask == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelDestinationIpv4SubnetMask");
+        public Builder tunnelDestinationIpv6Address(String tunnelDestinationIpv6Address) {
+            if (tunnelDestinationIpv6Address == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelDestinationIpv6Address");
             }
-            this.tunnelDestinationIpv4SubnetMask = tunnelDestinationIpv4SubnetMask;
+            this.tunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
             return this;
         }
         @CustomType.Setter
-        public Builder tunnelDestinationIpv4SubnetMaskVariable(String tunnelDestinationIpv4SubnetMaskVariable) {
-            if (tunnelDestinationIpv4SubnetMaskVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelDestinationIpv4SubnetMaskVariable");
+        public Builder tunnelDestinationIpv6AddressVariable(String tunnelDestinationIpv6AddressVariable) {
+            if (tunnelDestinationIpv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelDestinationIpv6AddressVariable");
             }
-            this.tunnelDestinationIpv4SubnetMaskVariable = tunnelDestinationIpv4SubnetMaskVariable;
+            this.tunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelMode(String tunnelMode) {
+            if (tunnelMode == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelMode");
+            }
+            this.tunnelMode = tunnelMode;
             return this;
         }
         @CustomType.Setter
@@ -1388,19 +1602,19 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder tunnelSourceIpv4SubnetMask(String tunnelSourceIpv4SubnetMask) {
-            if (tunnelSourceIpv4SubnetMask == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelSourceIpv4SubnetMask");
+        public Builder tunnelSourceIpv6Address(String tunnelSourceIpv6Address) {
+            if (tunnelSourceIpv6Address == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelSourceIpv6Address");
             }
-            this.tunnelSourceIpv4SubnetMask = tunnelSourceIpv4SubnetMask;
+            this.tunnelSourceIpv6Address = tunnelSourceIpv6Address;
             return this;
         }
         @CustomType.Setter
-        public Builder tunnelSourceIpv4SubnetMaskVariable(String tunnelSourceIpv4SubnetMaskVariable) {
-            if (tunnelSourceIpv4SubnetMaskVariable == null) {
-              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelSourceIpv4SubnetMaskVariable");
+        public Builder tunnelSourceIpv6AddressVariable(String tunnelSourceIpv6AddressVariable) {
+            if (tunnelSourceIpv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceIpsecFeatureResult", "tunnelSourceIpv6AddressVariable");
             }
-            this.tunnelSourceIpv4SubnetMaskVariable = tunnelSourceIpv4SubnetMaskVariable;
+            this.tunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
             return this;
         }
         @CustomType.Setter
@@ -1443,8 +1657,6 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             _resultValue.interfaceDescriptionVariable = interfaceDescriptionVariable;
             _resultValue.interfaceName = interfaceName;
             _resultValue.interfaceNameVariable = interfaceNameVariable;
-            _resultValue.ipMtu = ipMtu;
-            _resultValue.ipMtuVariable = ipMtuVariable;
             _resultValue.ipsecCiphersuite = ipsecCiphersuite;
             _resultValue.ipsecCiphersuiteVariable = ipsecCiphersuiteVariable;
             _resultValue.ipsecRekeyInterval = ipsecRekeyInterval;
@@ -1453,30 +1665,41 @@ public final class GetTransportWanVpnInterfaceIpsecFeatureResult {
             _resultValue.ipsecReplayWindowVariable = ipsecReplayWindowVariable;
             _resultValue.ipv4Address = ipv4Address;
             _resultValue.ipv4AddressVariable = ipv4AddressVariable;
+            _resultValue.ipv4Mtu = ipv4Mtu;
+            _resultValue.ipv4MtuVariable = ipv4MtuVariable;
             _resultValue.ipv4SubnetMask = ipv4SubnetMask;
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
+            _resultValue.ipv4TcpMss = ipv4TcpMss;
+            _resultValue.ipv4TcpMssVariable = ipv4TcpMssVariable;
+            _resultValue.ipv6Address = ipv6Address;
+            _resultValue.ipv6AddressVariable = ipv6AddressVariable;
+            _resultValue.ipv6Mtu = ipv6Mtu;
+            _resultValue.ipv6MtuVariable = ipv6MtuVariable;
+            _resultValue.ipv6TcpMss = ipv6TcpMss;
+            _resultValue.ipv6TcpMssVariable = ipv6TcpMssVariable;
+            _resultValue.multiplexing = multiplexing;
+            _resultValue.multiplexingVariable = multiplexingVariable;
             _resultValue.name = name;
             _resultValue.perfectForwardSecrecy = perfectForwardSecrecy;
             _resultValue.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;
-            _resultValue.tcpMss = tcpMss;
-            _resultValue.tcpMssVariable = tcpMssVariable;
             _resultValue.trackerId = trackerId;
             _resultValue.trackerIdVariable = trackerIdVariable;
             _resultValue.transportWanVpnFeatureId = transportWanVpnFeatureId;
             _resultValue.tunnelDestinationIpv4Address = tunnelDestinationIpv4Address;
             _resultValue.tunnelDestinationIpv4AddressVariable = tunnelDestinationIpv4AddressVariable;
-            _resultValue.tunnelDestinationIpv4SubnetMask = tunnelDestinationIpv4SubnetMask;
-            _resultValue.tunnelDestinationIpv4SubnetMaskVariable = tunnelDestinationIpv4SubnetMaskVariable;
+            _resultValue.tunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
+            _resultValue.tunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            _resultValue.tunnelMode = tunnelMode;
             _resultValue.tunnelRouteVia = tunnelRouteVia;
             _resultValue.tunnelRouteViaVariable = tunnelRouteViaVariable;
             _resultValue.tunnelSourceInterface = tunnelSourceInterface;
             _resultValue.tunnelSourceInterfaceVariable = tunnelSourceInterfaceVariable;
             _resultValue.tunnelSourceIpv4Address = tunnelSourceIpv4Address;
             _resultValue.tunnelSourceIpv4AddressVariable = tunnelSourceIpv4AddressVariable;
-            _resultValue.tunnelSourceIpv4SubnetMask = tunnelSourceIpv4SubnetMask;
-            _resultValue.tunnelSourceIpv4SubnetMaskVariable = tunnelSourceIpv4SubnetMaskVariable;
+            _resultValue.tunnelSourceIpv6Address = tunnelSourceIpv6Address;
+            _resultValue.tunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
             _resultValue.version = version;
             return _resultValue;
         }

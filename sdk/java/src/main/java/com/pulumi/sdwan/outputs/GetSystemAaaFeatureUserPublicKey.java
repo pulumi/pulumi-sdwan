@@ -16,15 +16,15 @@ public final class GetSystemAaaFeatureUserPublicKey {
      */
     private String keyString;
     /**
+     * @return Variable name
+     * 
+     */
+    private String keyStringVariable;
+    /**
      * @return Only RSA is supported
      * 
      */
     private String keyType;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String keyTypeVariable;
 
     private GetSystemAaaFeatureUserPublicKey() {}
     /**
@@ -35,18 +35,18 @@ public final class GetSystemAaaFeatureUserPublicKey {
         return this.keyString;
     }
     /**
+     * @return Variable name
+     * 
+     */
+    public String keyStringVariable() {
+        return this.keyStringVariable;
+    }
+    /**
      * @return Only RSA is supported
      * 
      */
     public String keyType() {
         return this.keyType;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String keyTypeVariable() {
-        return this.keyTypeVariable;
     }
 
     public static Builder builder() {
@@ -59,14 +59,14 @@ public final class GetSystemAaaFeatureUserPublicKey {
     @CustomType.Builder
     public static final class Builder {
         private String keyString;
+        private String keyStringVariable;
         private String keyType;
-        private String keyTypeVariable;
         public Builder() {}
         public Builder(GetSystemAaaFeatureUserPublicKey defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.keyString = defaults.keyString;
+    	      this.keyStringVariable = defaults.keyStringVariable;
     	      this.keyType = defaults.keyType;
-    	      this.keyTypeVariable = defaults.keyTypeVariable;
         }
 
         @CustomType.Setter
@@ -78,6 +78,14 @@ public final class GetSystemAaaFeatureUserPublicKey {
             return this;
         }
         @CustomType.Setter
+        public Builder keyStringVariable(String keyStringVariable) {
+            if (keyStringVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemAaaFeatureUserPublicKey", "keyStringVariable");
+            }
+            this.keyStringVariable = keyStringVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder keyType(String keyType) {
             if (keyType == null) {
               throw new MissingRequiredPropertyException("GetSystemAaaFeatureUserPublicKey", "keyType");
@@ -85,19 +93,11 @@ public final class GetSystemAaaFeatureUserPublicKey {
             this.keyType = keyType;
             return this;
         }
-        @CustomType.Setter
-        public Builder keyTypeVariable(String keyTypeVariable) {
-            if (keyTypeVariable == null) {
-              throw new MissingRequiredPropertyException("GetSystemAaaFeatureUserPublicKey", "keyTypeVariable");
-            }
-            this.keyTypeVariable = keyTypeVariable;
-            return this;
-        }
         public GetSystemAaaFeatureUserPublicKey build() {
             final var _resultValue = new GetSystemAaaFeatureUserPublicKey();
             _resultValue.keyString = keyString;
+            _resultValue.keyStringVariable = keyStringVariable;
             _resultValue.keyType = keyType;
-            _resultValue.keyTypeVariable = keyTypeVariable;
             return _resultValue;
         }
     }

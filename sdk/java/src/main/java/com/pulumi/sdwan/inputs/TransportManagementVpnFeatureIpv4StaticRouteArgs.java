@@ -19,7 +19,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
     public static final TransportManagementVpnFeatureIpv4StaticRouteArgs Empty = new TransportManagementVpnFeatureIpv4StaticRouteArgs();
 
     /**
-     * Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -28,7 +28,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
     private @Nullable Output<Integer> administrativeDistance;
 
     /**
-     * @return Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * @return Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -38,14 +38,14 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
     }
 
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * Variable name, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     @Import(name="administrativeDistanceVariable")
     private @Nullable Output<String> administrativeDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * @return Variable name, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     public Optional<Output<String>> administrativeDistanceVariable() {
@@ -102,14 +102,14 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
     }
 
     /**
-     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     @Import(name="nextHops")
     private @Nullable Output<List<TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs>> nextHops;
 
     /**
-     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     public Optional<Output<List<TransportManagementVpnFeatureIpv4StaticRouteNextHopArgs>>> nextHops() {
@@ -180,7 +180,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistance Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+         * @param administrativeDistance Administrative distance, Attribute conditional on `gateway` equal to `null0`
          *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
@@ -193,7 +193,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistance Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+         * @param administrativeDistance Administrative distance, Attribute conditional on `gateway` equal to `null0`
          *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
@@ -205,7 +205,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` equal to `null0`
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` being equal to `null0`
+         * @param administrativeDistanceVariable Variable name, Attribute conditional on `gateway` equal to `null0`
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRouteArgs extends com.
         }
 
         /**
-         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+         * @param nextHops IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
          * 
          * @return builder
          * 

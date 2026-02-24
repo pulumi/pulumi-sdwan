@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     private @Nullable String destinationDataIpv6PrefixListId;
@@ -24,18 +24,18 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer destinationDataIpv6PrefixListVersion;
     /**
-     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     private @Nullable String destinationIp;
     /**
-     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
     private @Nullable Integer destinationPort;
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     private @Nullable String sourceDataIpv6PrefixListId;
@@ -45,12 +45,12 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer sourceDataIpv6PrefixListVersion;
     /**
-     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     private @Nullable String sourceIp;
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     private @Nullable String sourcePorts;
@@ -63,7 +63,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
 
     private Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     public Optional<String> destinationDataIpv6PrefixListId() {
@@ -77,14 +77,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationDataIpv6PrefixListVersion);
     }
     /**
-     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     public Optional<String> destinationIp() {
         return Optional.ofNullable(this.destinationIp);
     }
     /**
-     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -92,7 +92,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.destinationPort);
     }
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     public Optional<String> sourceDataIpv6PrefixListId() {
@@ -106,14 +106,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.sourceDataIpv6PrefixListVersion);
     }
     /**
-     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     public Optional<String> sourceIp() {
         return Optional.ofNullable(this.sourceIp);
     }
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     public Optional<String> sourcePorts() {

@@ -18,6 +18,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress> Addresses;
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        public readonly bool? FollowDualRouterHighAvailability;
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>
@@ -72,6 +77,8 @@ namespace Pulumi.Sdwan.Outputs
         private ServiceLanVpnInterfaceSviFeatureIpv6Vrrp(
             ImmutableArray<Outputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress> addresses,
 
+            bool? followDualRouterHighAvailability,
+
             int? groupId,
 
             string? groupIdVariable,
@@ -95,6 +102,7 @@ namespace Pulumi.Sdwan.Outputs
             string? trackPrefixListVariable)
         {
             Addresses = addresses;
+            FollowDualRouterHighAvailability = followDualRouterHighAvailability;
             GroupId = groupId;
             GroupIdVariable = groupIdVariable;
             Priority = priority;

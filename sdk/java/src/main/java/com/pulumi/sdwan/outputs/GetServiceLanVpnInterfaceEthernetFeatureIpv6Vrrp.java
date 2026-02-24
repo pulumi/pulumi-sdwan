@@ -15,6 +15,11 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     * 
+     */
+    private Boolean followDualRouterHighAvailability;
+    /**
      * @return Group ID
      * 
      */
@@ -29,6 +34,16 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
      * 
      */
     private List<GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address> ipv6Addresses;
+    /**
+     * @return Minimum preempt delay in seconds
+     * 
+     */
+    private Integer minPreemptDelay;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String minPreemptDelayVariable;
     /**
      * @return Set priority
      * 
@@ -57,6 +72,13 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
 
     private GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp() {}
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     * 
+     */
+    public Boolean followDualRouterHighAvailability() {
+        return this.followDualRouterHighAvailability;
+    }
+    /**
      * @return Group ID
      * 
      */
@@ -76,6 +98,20 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
      */
     public List<GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address> ipv6Addresses() {
         return this.ipv6Addresses;
+    }
+    /**
+     * @return Minimum preempt delay in seconds
+     * 
+     */
+    public Integer minPreemptDelay() {
+        return this.minPreemptDelay;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String minPreemptDelayVariable() {
+        return this.minPreemptDelayVariable;
     }
     /**
      * @return Set priority
@@ -122,9 +158,12 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
     }
     @CustomType.Builder
     public static final class Builder {
+        private Boolean followDualRouterHighAvailability;
         private Integer groupId;
         private String groupIdVariable;
         private List<GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address> ipv6Addresses;
+        private Integer minPreemptDelay;
+        private String minPreemptDelayVariable;
         private Integer priority;
         private String priorityVariable;
         private Integer timer;
@@ -133,9 +172,12 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.followDualRouterHighAvailability = defaults.followDualRouterHighAvailability;
     	      this.groupId = defaults.groupId;
     	      this.groupIdVariable = defaults.groupIdVariable;
     	      this.ipv6Addresses = defaults.ipv6Addresses;
+    	      this.minPreemptDelay = defaults.minPreemptDelay;
+    	      this.minPreemptDelayVariable = defaults.minPreemptDelayVariable;
     	      this.priority = defaults.priority;
     	      this.priorityVariable = defaults.priorityVariable;
     	      this.timer = defaults.timer;
@@ -143,6 +185,14 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
     	      this.trackOmp = defaults.trackOmp;
         }
 
+        @CustomType.Setter
+        public Builder followDualRouterHighAvailability(Boolean followDualRouterHighAvailability) {
+            if (followDualRouterHighAvailability == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp", "followDualRouterHighAvailability");
+            }
+            this.followDualRouterHighAvailability = followDualRouterHighAvailability;
+            return this;
+        }
         @CustomType.Setter
         public Builder groupId(Integer groupId) {
             if (groupId == null) {
@@ -169,6 +219,22 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
         }
         public Builder ipv6Addresses(GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address... ipv6Addresses) {
             return ipv6Addresses(List.of(ipv6Addresses));
+        }
+        @CustomType.Setter
+        public Builder minPreemptDelay(Integer minPreemptDelay) {
+            if (minPreemptDelay == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp", "minPreemptDelay");
+            }
+            this.minPreemptDelay = minPreemptDelay;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder minPreemptDelayVariable(String minPreemptDelayVariable) {
+            if (minPreemptDelayVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp", "minPreemptDelayVariable");
+            }
+            this.minPreemptDelayVariable = minPreemptDelayVariable;
+            return this;
         }
         @CustomType.Setter
         public Builder priority(Integer priority) {
@@ -212,9 +278,12 @@ public final class GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
         }
         public GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp build() {
             final var _resultValue = new GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp();
+            _resultValue.followDualRouterHighAvailability = followDualRouterHighAvailability;
             _resultValue.groupId = groupId;
             _resultValue.groupIdVariable = groupIdVariable;
             _resultValue.ipv6Addresses = ipv6Addresses;
+            _resultValue.minPreemptDelay = minPreemptDelay;
+            _resultValue.minPreemptDelayVariable = minPreemptDelayVariable;
             _resultValue.priority = priority;
             _resultValue.priorityVariable = priorityVariable;
             _resultValue.timer = timer;

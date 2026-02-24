@@ -75,7 +75,7 @@ namespace Pulumi.Sdwan
         public Output<string?> DefaultAction { get; private set; } = null!;
 
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// SLA class list ID, Attribute conditional on `DefaultAction` equal to `slaClass`
         /// </summary>
         [Output("defaultActionSlaClassListId")]
         public Output<string?> DefaultActionSlaClassListId { get; private set; } = null!;
@@ -170,7 +170,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DefaultAction { get; set; }
 
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// SLA class list ID, Attribute conditional on `DefaultAction` equal to `slaClass`
         /// </summary>
         [Input("defaultActionSlaClassListId")]
         public Input<string>? DefaultActionSlaClassListId { get; set; }
@@ -221,7 +221,7 @@ namespace Pulumi.Sdwan
         public Input<string>? DefaultAction { get; set; }
 
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `DefaultAction` being equal to `slaClass`
+        /// SLA class list ID, Attribute conditional on `DefaultAction` equal to `slaClass`
         /// </summary>
         [Input("defaultActionSlaClassListId")]
         public Input<string>? DefaultActionSlaClassListId { get; set; }

@@ -21,23 +21,23 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
      */
     private @Nullable String gateway;
     /**
-     * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * @return IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
     private @Nullable String nat;
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * @return Variable name, Attribute conditional on `gateway` equal to `nat`
      * 
      */
     private @Nullable String natVariable;
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     private @Nullable List<TransportManagementVpnFeatureIpv6StaticRouteNextHop> nextHops;
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     private @Nullable Boolean null0;
@@ -62,7 +62,7 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
         return Optional.ofNullable(this.gateway);
     }
     /**
-     * @return IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * @return IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      * 
      */
@@ -70,21 +70,21 @@ public final class TransportManagementVpnFeatureIpv6StaticRoute {
         return Optional.ofNullable(this.nat);
     }
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * @return Variable name, Attribute conditional on `gateway` equal to `nat`
      * 
      */
     public Optional<String> natVariable() {
         return Optional.ofNullable(this.natVariable);
     }
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     public List<TransportManagementVpnFeatureIpv6StaticRouteNextHop> nextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
     }
     /**
-     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * @return IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     public Optional<Boolean> null0() {

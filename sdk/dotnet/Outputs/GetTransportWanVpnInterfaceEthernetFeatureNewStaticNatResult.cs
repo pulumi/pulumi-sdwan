@@ -18,6 +18,10 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Direction;
         /// <summary>
+        /// Enable DualRouter HA Mapping
+        /// </summary>
+        public readonly bool EnableDualRouterHaMapping;
+        /// <summary>
         /// Source IP address to be translated
         /// </summary>
         public readonly string SourceIp;
@@ -46,6 +50,8 @@ namespace Pulumi.Sdwan.Outputs
         private GetTransportWanVpnInterfaceEthernetFeatureNewStaticNatResult(
             string direction,
 
+            bool enableDualRouterHaMapping,
+
             string sourceIp,
 
             string sourceIpVariable,
@@ -59,6 +65,7 @@ namespace Pulumi.Sdwan.Outputs
             string translatedIpVariable)
         {
             Direction = direction;
+            EnableDualRouterHaMapping = enableDualRouterHaMapping;
             SourceIp = sourceIp;
             SourceIpVariable = sourceIpVariable;
             SourceVpn = sourceVpn;

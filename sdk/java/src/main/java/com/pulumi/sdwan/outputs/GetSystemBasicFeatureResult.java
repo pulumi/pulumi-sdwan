@@ -327,6 +327,16 @@ public final class GetSystemBasicFeatureResult {
      */
     private String trackTransportVariable;
     /**
+     * @return Enable or disable endpoint tracker diaStabilize status
+     * 
+     */
+    private Boolean trackerDiaStabilizeStatus;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String trackerDiaStabilizeStatusVariable;
+    /**
      * @return Enable transport gateway
      * 
      */
@@ -778,6 +788,20 @@ public final class GetSystemBasicFeatureResult {
         return this.trackTransportVariable;
     }
     /**
+     * @return Enable or disable endpoint tracker diaStabilize status
+     * 
+     */
+    public Boolean trackerDiaStabilizeStatus() {
+        return this.trackerDiaStabilizeStatus;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String trackerDiaStabilizeStatusVariable() {
+        return this.trackerDiaStabilizeStatusVariable;
+    }
+    /**
      * @return Enable transport gateway
      * 
      */
@@ -870,6 +894,8 @@ public final class GetSystemBasicFeatureResult {
         private String trackInterfaceTagVariable;
         private Boolean trackTransport;
         private String trackTransportVariable;
+        private Boolean trackerDiaStabilizeStatus;
+        private String trackerDiaStabilizeStatusVariable;
         private Boolean transportGateway;
         private String transportGatewayVariable;
         private Integer version;
@@ -938,6 +964,8 @@ public final class GetSystemBasicFeatureResult {
     	      this.trackInterfaceTagVariable = defaults.trackInterfaceTagVariable;
     	      this.trackTransport = defaults.trackTransport;
     	      this.trackTransportVariable = defaults.trackTransportVariable;
+    	      this.trackerDiaStabilizeStatus = defaults.trackerDiaStabilizeStatus;
+    	      this.trackerDiaStabilizeStatusVariable = defaults.trackerDiaStabilizeStatusVariable;
     	      this.transportGateway = defaults.transportGateway;
     	      this.transportGatewayVariable = defaults.transportGatewayVariable;
     	      this.version = defaults.version;
@@ -1458,6 +1486,22 @@ public final class GetSystemBasicFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder trackerDiaStabilizeStatus(Boolean trackerDiaStabilizeStatus) {
+            if (trackerDiaStabilizeStatus == null) {
+              throw new MissingRequiredPropertyException("GetSystemBasicFeatureResult", "trackerDiaStabilizeStatus");
+            }
+            this.trackerDiaStabilizeStatus = trackerDiaStabilizeStatus;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder trackerDiaStabilizeStatusVariable(String trackerDiaStabilizeStatusVariable) {
+            if (trackerDiaStabilizeStatusVariable == null) {
+              throw new MissingRequiredPropertyException("GetSystemBasicFeatureResult", "trackerDiaStabilizeStatusVariable");
+            }
+            this.trackerDiaStabilizeStatusVariable = trackerDiaStabilizeStatusVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder transportGateway(Boolean transportGateway) {
             if (transportGateway == null) {
               throw new MissingRequiredPropertyException("GetSystemBasicFeatureResult", "transportGateway");
@@ -1545,6 +1589,8 @@ public final class GetSystemBasicFeatureResult {
             _resultValue.trackInterfaceTagVariable = trackInterfaceTagVariable;
             _resultValue.trackTransport = trackTransport;
             _resultValue.trackTransportVariable = trackTransportVariable;
+            _resultValue.trackerDiaStabilizeStatus = trackerDiaStabilizeStatus;
+            _resultValue.trackerDiaStabilizeStatusVariable = trackerDiaStabilizeStatusVariable;
             _resultValue.transportGateway = transportGateway;
             _resultValue.transportGatewayVariable = transportGatewayVariable;
             _resultValue.version = version;

@@ -19,14 +19,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     public static final RoutePolicyDefinitionSequenceMatchEntryArgs Empty = new RoutePolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * AS path list ID, Attribute conditional on `type` being equal to `asPath`
+     * AS path list ID, Attribute conditional on `type` equal to `asPath`
      * 
      */
     @Import(name="asPathListId")
     private @Nullable Output<String> asPathListId;
 
     /**
-     * @return AS path list ID, Attribute conditional on `type` being equal to `asPath`
+     * @return AS path list ID, Attribute conditional on `type` equal to `asPath`
      * 
      */
     public Optional<Output<String>> asPathListId() {
@@ -49,14 +49,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Community list ID, Attribute conditional on `type` being equal to `community`
+     * Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     @Import(name="communityListId")
     private @Nullable Output<String> communityListId;
 
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     public Optional<Output<String>> communityListId() {
@@ -64,14 +64,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+     * Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      * 
      */
     @Import(name="communityListIds")
     private @Nullable Output<List<String>> communityListIds;
 
     /**
-     * @return Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      * 
      */
     public Optional<Output<List<String>>> communityListIds() {
@@ -126,14 +126,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     @Import(name="expandedCommunityListId")
     private @Nullable Output<String> expandedCommunityListId;
 
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     public Optional<Output<String>> expandedCommunityListId() {
@@ -141,14 +141,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      * 
      */
     @Import(name="expandedCommunityListVariable")
     private @Nullable Output<String> expandedCommunityListVariable;
 
     /**
-     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * @return Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      * 
      */
     public Optional<Output<String>> expandedCommunityListVariable() {
@@ -171,14 +171,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+     * Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      * 
      */
     @Import(name="extendedCommunityListId")
     private @Nullable Output<String> extendedCommunityListId;
 
     /**
-     * @return Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+     * @return Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      * 
      */
     public Optional<Output<String>> extendedCommunityListId() {
@@ -201,7 +201,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -209,7 +209,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<Integer> localPreference;
 
     /**
-     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * @return Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -218,7 +218,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Metric, Attribute conditional on `type` being equal to `metric`
+     * Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -226,7 +226,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric, Attribute conditional on `type` being equal to `metric`
+     * @return Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -235,14 +235,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     @Import(name="nextHopPrefixListId")
     private @Nullable Output<String> nextHopPrefixListId;
 
     /**
-     * @return Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     public Optional<Output<String>> nextHopPrefixListId() {
@@ -265,7 +265,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -273,7 +273,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<Integer> ompTag;
 
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -282,7 +282,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Origin, Attribute conditional on `type` being equal to `origin`
+     * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -290,7 +290,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -299,7 +299,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -307,7 +307,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     private @Nullable Output<Integer> ospfTag;
 
     /**
-     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * @return OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -316,14 +316,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Peer IP, Attribute conditional on `type` being equal to `peer`
+     * Peer IP, Attribute conditional on `type` equal to `peer`
      * 
      */
     @Import(name="peer")
     private @Nullable Output<String> peer;
 
     /**
-     * @return Peer IP, Attribute conditional on `type` being equal to `peer`
+     * @return Peer IP, Attribute conditional on `type` equal to `peer`
      * 
      */
     public Optional<Output<String>> peer() {
@@ -331,14 +331,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
     }
 
     /**
-     * Prefix list ID, Attribute conditional on `type` being equal to `address`
+     * Prefix list ID, Attribute conditional on `type` equal to `address`
      * 
      */
     @Import(name="prefixListId")
     private @Nullable Output<String> prefixListId;
 
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `address`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `address`
      * 
      */
     public Optional<Output<String>> prefixListId() {
@@ -424,7 +424,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param asPathListId AS path list ID, Attribute conditional on `type` being equal to `asPath`
+         * @param asPathListId AS path list ID, Attribute conditional on `type` equal to `asPath`
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param asPathListId AS path list ID, Attribute conditional on `type` being equal to `asPath`
+         * @param asPathListId AS path list ID, Attribute conditional on `type` equal to `asPath`
          * 
          * @return builder
          * 
@@ -466,7 +466,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * @param communityListId Community list ID, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -477,7 +477,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListId Community list ID, Attribute conditional on `type` being equal to `community`
+         * @param communityListId Community list ID, Attribute conditional on `type` equal to `community`
          * 
          * @return builder
          * 
@@ -487,7 +487,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListIds Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+         * @param communityListIds Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
          * 
          * @return builder
          * 
@@ -498,7 +498,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListIds Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+         * @param communityListIds Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
          * 
          * @return builder
          * 
@@ -508,7 +508,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param communityListIds Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+         * @param communityListIds Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
          * 
          * @return builder
          * 
@@ -593,7 +593,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
          * 
          * @return builder
          * 
@@ -604,7 +604,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+         * @param expandedCommunityListId Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
          * 
          * @return builder
          * 
@@ -614,7 +614,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
          * 
          * @return builder
          * 
@@ -625,7 +625,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+         * @param expandedCommunityListVariable Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
          * 
          * @return builder
          * 
@@ -656,7 +656,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param extendedCommunityListId Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+         * @param extendedCommunityListId Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
          * 
          * @return builder
          * 
@@ -667,7 +667,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param extendedCommunityListId Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+         * @param extendedCommunityListId Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
          * 
          * @return builder
          * 
@@ -698,7 +698,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param localPreference Local preference, Attribute conditional on `type` being equal to `localPreference`
+         * @param localPreference Local preference, Attribute conditional on `type` equal to `localPreference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -710,7 +710,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param localPreference Local preference, Attribute conditional on `type` being equal to `localPreference`
+         * @param localPreference Local preference, Attribute conditional on `type` equal to `localPreference`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -721,7 +721,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param metric Metric, Attribute conditional on `type` being equal to `metric`
+         * @param metric Metric, Attribute conditional on `type` equal to `metric`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -733,7 +733,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param metric Metric, Attribute conditional on `type` being equal to `metric`
+         * @param metric Metric, Attribute conditional on `type` equal to `metric`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -744,7 +744,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param nextHopPrefixListId Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+         * @param nextHopPrefixListId Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -755,7 +755,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param nextHopPrefixListId Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+         * @param nextHopPrefixListId Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
          * 
          * @return builder
          * 
@@ -786,7 +786,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -798,7 +798,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param ompTag OMP tag, Attribute conditional on `type` being equal to `ompTag`
+         * @param ompTag OMP tag, Attribute conditional on `type` equal to `ompTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -809,7 +809,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
+         * @param origin Origin, Attribute conditional on `type` equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`
          * 
          * @return builder
@@ -821,7 +821,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param origin Origin, Attribute conditional on `type` being equal to `origin`
+         * @param origin Origin, Attribute conditional on `type` equal to `origin`
          *   - Choices: `igp`, `egp`, `incomplete`
          * 
          * @return builder
@@ -832,7 +832,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param ospfTag OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+         * @param ospfTag OSPF tag, Attribute conditional on `type` equal to `ospfTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -844,7 +844,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param ospfTag OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+         * @param ospfTag OSPF tag, Attribute conditional on `type` equal to `ospfTag`
          *   - Range: `0`-`4294967295`
          * 
          * @return builder
@@ -855,7 +855,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param peer Peer IP, Attribute conditional on `type` being equal to `peer`
+         * @param peer Peer IP, Attribute conditional on `type` equal to `peer`
          * 
          * @return builder
          * 
@@ -866,7 +866,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param peer Peer IP, Attribute conditional on `type` being equal to `peer`
+         * @param peer Peer IP, Attribute conditional on `type` equal to `peer`
          * 
          * @return builder
          * 
@@ -876,7 +876,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param prefixListId Prefix list ID, Attribute conditional on `type` being equal to `address`
+         * @param prefixListId Prefix list ID, Attribute conditional on `type` equal to `address`
          * 
          * @return builder
          * 
@@ -887,7 +887,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntryArgs extends com.pulum
         }
 
         /**
-         * @param prefixListId Prefix list ID, Attribute conditional on `type` being equal to `address`
+         * @param prefixListId Prefix list ID, Attribute conditional on `type` equal to `address`
          * 
          * @return builder
          * 

@@ -14,11 +14,18 @@ namespace Pulumi.Sdwan.Inputs
     {
         /// <summary>
         /// Direction of static NAT translation
-        ///   - Choices: `Inside`, `Outside`
+        ///   - Choices: `Inside`
         ///   - Default value: `Inside`
         /// </summary>
         [Input("direction")]
         public Input<string>? Direction { get; set; }
+
+        /// <summary>
+        /// Enable DualRouter HA Mapping
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("enableDualRouterHaMapping")]
+        public Input<bool>? EnableDualRouterHaMapping { get; set; }
 
         /// <summary>
         /// Source IP address to be translated

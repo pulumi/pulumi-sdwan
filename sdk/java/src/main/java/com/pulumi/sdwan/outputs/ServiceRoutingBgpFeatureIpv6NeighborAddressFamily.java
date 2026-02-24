@@ -13,25 +13,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer disablePeerMaxNumberOfPrefixes;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     private @Nullable String disablePeerMaxNumberOfPrefixesVariable;
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
      */
     private @Nullable Integer disablePeerThreshold;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     private @Nullable String disablePeerThresholdVariable;
@@ -49,66 +49,66 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
      */
     private @Nullable String policyType;
     /**
-     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
     private @Nullable Integer restartInterval;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     private @Nullable String restartIntervalVariable;
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer restartMaxNumberOfPrefixes;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     private @Nullable String restartMaxNumberOfPrefixesVariable;
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
      */
     private @Nullable Integer restartThreshold;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     private @Nullable String restartThresholdVariable;
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      * 
      */
     private @Nullable Integer warningMessageMaxNumberOfPrefixes;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     private @Nullable String warningMessageMaxNumberOfPrefixesVariable;
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
      */
     private @Nullable Integer warningMessageThreshold;
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     private @Nullable String warningMessageThresholdVariable;
 
     private ServiceRoutingBgpFeatureIpv6NeighborAddressFamily() {}
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -116,14 +116,14 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.disablePeerMaxNumberOfPrefixes);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     public Optional<String> disablePeerMaxNumberOfPrefixesVariable() {
         return Optional.ofNullable(this.disablePeerMaxNumberOfPrefixesVariable);
     }
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -132,7 +132,7 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.disablePeerThreshold);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     public Optional<String> disablePeerThresholdVariable() {
@@ -160,7 +160,7 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.policyType);
     }
     /**
-     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
@@ -168,14 +168,14 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.restartInterval);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<String> restartIntervalVariable() {
         return Optional.ofNullable(this.restartIntervalVariable);
     }
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -183,14 +183,14 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.restartMaxNumberOfPrefixes);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<String> restartMaxNumberOfPrefixesVariable() {
         return Optional.ofNullable(this.restartMaxNumberOfPrefixesVariable);
     }
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -199,14 +199,14 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.restartThreshold);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<String> restartThresholdVariable() {
         return Optional.ofNullable(this.restartThresholdVariable);
     }
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -214,14 +214,14 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.warningMessageMaxNumberOfPrefixes);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     public Optional<String> warningMessageMaxNumberOfPrefixesVariable() {
         return Optional.ofNullable(this.warningMessageMaxNumberOfPrefixesVariable);
     }
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -230,7 +230,7 @@ public final class ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
         return Optional.ofNullable(this.warningMessageThreshold);
     }
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     public Optional<String> warningMessageThresholdVariable() {

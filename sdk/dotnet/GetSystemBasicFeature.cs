@@ -381,6 +381,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TrackTransportVariable;
         /// <summary>
+        /// Enable or disable endpoint tracker diaStabilize status
+        /// </summary>
+        public readonly bool TrackerDiaStabilizeStatus;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TrackerDiaStabilizeStatusVariable;
+        /// <summary>
         /// Enable transport gateway
         /// </summary>
         public readonly bool TransportGateway;
@@ -519,6 +527,10 @@ namespace Pulumi.Sdwan
 
             string trackTransportVariable,
 
+            bool trackerDiaStabilizeStatus,
+
+            string trackerDiaStabilizeStatusVariable,
+
             bool transportGateway,
 
             string transportGatewayVariable,
@@ -587,6 +599,8 @@ namespace Pulumi.Sdwan
             TrackInterfaceTagVariable = trackInterfaceTagVariable;
             TrackTransport = trackTransport;
             TrackTransportVariable = trackTransportVariable;
+            TrackerDiaStabilizeStatus = trackerDiaStabilizeStatus;
+            TrackerDiaStabilizeStatusVariable = trackerDiaStabilizeStatusVariable;
             TransportGateway = transportGateway;
             TransportGatewayVariable = transportGatewayVariable;
             Version = version;

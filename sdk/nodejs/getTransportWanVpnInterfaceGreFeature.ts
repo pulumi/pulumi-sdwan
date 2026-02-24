@@ -72,6 +72,22 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      */
     readonly description: string;
     /**
+     * IKE keepalive interval (seconds)
+     */
+    readonly dpdInterval: number;
+    /**
+     * Variable name
+     */
+    readonly dpdIntervalVariable: string;
+    /**
+     * IKE keepalive retries
+     */
+    readonly dpdRetries: number;
+    /**
+     * Variable name
+     */
+    readonly dpdRetriesVariable: string;
+    /**
      * Feature Profile ID
      */
     readonly featureProfileId: string;
@@ -79,6 +95,58 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      * The id of the Feature
      */
     readonly id: string;
+    /**
+     * IKE identity the IKE preshared secret belongs to
+     */
+    readonly ikeCiphersuite: string;
+    /**
+     * Variable name
+     */
+    readonly ikeCiphersuiteVariable: string;
+    /**
+     * IKE Diffie Hellman Groups
+     */
+    readonly ikeGroup: string;
+    /**
+     * Variable name
+     */
+    readonly ikeGroupVariable: string;
+    /**
+     * IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     */
+    readonly ikeLocalId: string;
+    /**
+     * Variable name
+     */
+    readonly ikeLocalIdVariable: string;
+    /**
+     * IKE integrity protocol
+     */
+    readonly ikeMode: string;
+    /**
+     * Variable name
+     */
+    readonly ikeModeVariable: string;
+    /**
+     * IKE rekey interval \n\n seconds
+     */
+    readonly ikeRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    readonly ikeRekeyIntervalVariable: string;
+    /**
+     * IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     */
+    readonly ikeRemoteId: string;
+    /**
+     * Variable name
+     */
+    readonly ikeRemoteIdVariable: string;
+    /**
+     * IKE Version \n\n
+     */
+    readonly ikeVersion: number;
     /**
      * Interface description
      */
@@ -96,27 +164,107 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      */
     readonly interfaceNameVariable: string;
     /**
-     * Interface MTU \n\n, in bytes
+     * IPsec(ESP) encryption and integrity protocol
      */
-    readonly ipMtu: number;
+    readonly ipsecCiphersuite: string;
     /**
      * Variable name
      */
-    readonly ipMtuVariable: string;
+    readonly ipsecCiphersuiteVariable: string;
+    /**
+     * IPsec rekey interval \n\n seconds
+     */
+    readonly ipsecRekeyInterval: number;
+    /**
+     * Variable name
+     */
+    readonly ipsecRekeyIntervalVariable: string;
+    /**
+     * Replay window size 32..8192 (must be a power of 2)
+     */
+    readonly ipsecReplayWindow: number;
+    /**
+     * Variable name
+     */
+    readonly ipsecReplayWindowVariable: string;
     readonly ipv4Address: string;
     /**
      * Variable name
      */
     readonly ipv4AddressVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    readonly ipv4Mtu: number;
+    /**
+     * Variable name
+     */
+    readonly ipv4MtuVariable: string;
     readonly ipv4SubnetMask: string;
     /**
      * Variable name
      */
     readonly ipv4SubnetMaskVariable: string;
     /**
+     * TCP MSS on SYN packets, in bytes
+     */
+    readonly ipv4TcpMss: number;
+    /**
+     * Variable name
+     */
+    readonly ipv4TcpMssVariable: string;
+    /**
+     * Assign IPv6 address
+     */
+    readonly ipv6Address: string;
+    /**
+     * Variable name
+     */
+    readonly ipv6AddressVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    readonly ipv6Mtu: number;
+    /**
+     * Variable name
+     */
+    readonly ipv6MtuVariable: string;
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes
+     */
+    readonly ipv6TcpMss: number;
+    /**
+     * Variable name
+     */
+    readonly ipv6TcpMssVariable: string;
+    /**
+     * Tunnel multiplexing state
+     */
+    readonly multiplexing: boolean;
+    /**
+     * Variable name
+     */
+    readonly multiplexingVariable: string;
+    /**
      * The name of the Feature
      */
     readonly name: string;
+    /**
+     * IPsec perfect forward secrecy settings
+     */
+    readonly perfectForwardSecrecy: string;
+    /**
+     * Variable name
+     */
+    readonly perfectForwardSecrecyVariable: string;
+    /**
+     * Use preshared key to authenticate IKE peer
+     */
+    readonly preSharedSecret: string;
+    /**
+     * Variable name
+     */
+    readonly preSharedSecretVariable: string;
     /**
      * Administrative state
      */
@@ -125,14 +273,6 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      * Variable name
      */
     readonly shutdownVariable: string;
-    /**
-     * TCP MSS on SYN packets, in bytes
-     */
-    readonly tcpMss: number;
-    /**
-     * Variable name
-     */
-    readonly tcpMssVariable: string;
     /**
      * Transport WAN VPN Feature ID
      */
@@ -146,7 +286,47 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      */
     readonly tunnelDestinationIpv4AddressVariable: string;
     /**
-     * \n\n Interface name, can't be Loopback interface
+     * Tunnel destination IPv6 Address
+     */
+    readonly tunnelDestinationIpv6Address: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelDestinationIpv6AddressVariable: string;
+    /**
+     * GRE Tunnel Mode
+     */
+    readonly tunnelMode: string;
+    /**
+     * Tunnel protection state
+     */
+    readonly tunnelProtection: boolean;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    readonly tunnelRouteViaInterface: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelRouteViaInterfaceVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    readonly tunnelRouteViaIpv4Address: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelRouteViaIpv4AddressVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     */
+    readonly tunnelRouteViaIpv6Address: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelRouteViaIpv6AddressVariable: string;
+    /**
+     * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
      */
     readonly tunnelRouteViaLoopback: string;
     /**
@@ -177,6 +357,14 @@ export interface GetTransportWanVpnInterfaceGreFeatureResult {
      * Variable name
      */
     readonly tunnelSourceIpv4AddressVariable: string;
+    /**
+     * Tunnel source IPv6 Address
+     */
+    readonly tunnelSourceIpv6Address: string;
+    /**
+     * Variable name
+     */
+    readonly tunnelSourceIpv6AddressVariable: string;
     /**
      * The version of the Feature
      */

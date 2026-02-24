@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -90,7 +90,7 @@ type PolicyObjectUnifiedTlsSslDecryption struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// - Choices: `1024`, `2048`, `4096`
 	RsaKeypairModules pulumi.StringOutput `pulumi:"rsaKeypairModules"`
-	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 	//   - Choices: `decrypt`, `drop`
 	UnknownRevocationStatus pulumi.StringPtrOutput `pulumi:"unknownRevocationStatus"`
 	// - Choices: `no-decrypt`, `drop`
@@ -190,7 +190,7 @@ type policyObjectUnifiedTlsSslDecryptionState struct {
 	Name *string `pulumi:"name"`
 	// - Choices: `1024`, `2048`, `4096`
 	RsaKeypairModules *string `pulumi:"rsaKeypairModules"`
-	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 	//   - Choices: `decrypt`, `drop`
 	UnknownRevocationStatus *string `pulumi:"unknownRevocationStatus"`
 	// - Choices: `no-decrypt`, `drop`
@@ -228,7 +228,7 @@ type PolicyObjectUnifiedTlsSslDecryptionState struct {
 	Name pulumi.StringPtrInput
 	// - Choices: `1024`, `2048`, `4096`
 	RsaKeypairModules pulumi.StringPtrInput
-	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 	//   - Choices: `decrypt`, `drop`
 	UnknownRevocationStatus pulumi.StringPtrInput
 	// - Choices: `no-decrypt`, `drop`
@@ -270,7 +270,7 @@ type policyObjectUnifiedTlsSslDecryptionArgs struct {
 	Name *string `pulumi:"name"`
 	// - Choices: `1024`, `2048`, `4096`
 	RsaKeypairModules string `pulumi:"rsaKeypairModules"`
-	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 	//   - Choices: `decrypt`, `drop`
 	UnknownRevocationStatus *string `pulumi:"unknownRevocationStatus"`
 	// - Choices: `no-decrypt`, `drop`
@@ -307,7 +307,7 @@ type PolicyObjectUnifiedTlsSslDecryptionArgs struct {
 	Name pulumi.StringPtrInput
 	// - Choices: `1024`, `2048`, `4096`
 	RsaKeypairModules pulumi.StringInput
-	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+	// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 	//   - Choices: `decrypt`, `drop`
 	UnknownRevocationStatus pulumi.StringPtrInput
 	// - Choices: `no-decrypt`, `drop`
@@ -468,7 +468,7 @@ func (o PolicyObjectUnifiedTlsSslDecryptionOutput) RsaKeypairModules() pulumi.St
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslDecryption) pulumi.StringOutput { return v.RsaKeypairModules }).(pulumi.StringOutput)
 }
 
-// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+// Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
 //   - Choices: `decrypt`, `drop`
 func (o PolicyObjectUnifiedTlsSslDecryptionOutput) UnknownRevocationStatus() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslDecryption) pulumi.StringPtrOutput { return v.UnknownRevocationStatus }).(pulumi.StringPtrOutput)

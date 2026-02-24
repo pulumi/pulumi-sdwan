@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -85,7 +85,7 @@ public class PolicyObjectUnifiedTlsSslProfile extends com.pulumi.resources.Custo
         return this.decryptCategories;
     }
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -93,7 +93,7 @@ public class PolicyObjectUnifiedTlsSslProfile extends com.pulumi.resources.Custo
     private Output</* @Nullable */ String> decryptThreshold;
 
     /**
-     * @return , Attribute conditional on `reputation` being equal to `true`
+     * @return , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -167,7 +167,7 @@ public class PolicyObjectUnifiedTlsSslProfile extends com.pulumi.resources.Custo
         return this.reputation;
     }
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -175,7 +175,7 @@ public class PolicyObjectUnifiedTlsSslProfile extends com.pulumi.resources.Custo
     private Output</* @Nullable */ String> thresholdCategories;
 
     /**
-     * @return , Attribute conditional on `reputation` being equal to `true`
+     * @return , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */

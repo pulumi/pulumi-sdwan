@@ -27,7 +27,7 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
     """
     A collection of values returned by getTransportWanVpnInterfaceEthernetFeature.
     """
-    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, arp_timeout=None, arp_timeout_variable=None, arps=None, auto_detect_bandwidth=None, auto_detect_bandwidth_variable=None, autonegotiate=None, autonegotiate_variable=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_upstream=None, bandwidth_upstream_variable=None, block_non_source_ip=None, block_non_source_ip_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, gre_tunnel_source_ip=None, gre_tunnel_source_ip_variable=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, iperf_server=None, iperf_server_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_configuration_type=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_configuration_type=None, ipv6_dhcp_secondary_addresses=None, ipv6_secondary_addresses=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, name=None, nat64=None, nat66=None, nat_ipv4=None, nat_ipv4_variable=None, nat_ipv6=None, nat_ipv6_variable=None, nat_loopback=None, nat_loopback_variable=None, nat_overload=None, nat_overload_variable=None, nat_prefix_length=None, nat_prefix_length_variable=None, nat_range_end=None, nat_range_end_variable=None, nat_range_start=None, nat_range_start_variable=None, nat_tcp_timeout=None, nat_tcp_timeout_variable=None, nat_type=None, nat_type_variable=None, nat_udp_timeout=None, nat_udp_timeout_variable=None, new_static_nats=None, per_tunnel_qos=None, per_tunnel_qos_variable=None, qos_adaptive=None, qos_adaptive_bandwidth_downstream=None, qos_adaptive_bandwidth_upstream=None, qos_adaptive_default_downstream=None, qos_adaptive_default_downstream_variable=None, qos_adaptive_default_upstream=None, qos_adaptive_default_upstream_variable=None, qos_adaptive_max_downstream=None, qos_adaptive_max_downstream_variable=None, qos_adaptive_max_upstream=None, qos_adaptive_max_upstream_variable=None, qos_adaptive_min_downstream=None, qos_adaptive_min_downstream_variable=None, qos_adaptive_min_upstream=None, qos_adaptive_min_upstream_variable=None, qos_adaptive_period=None, qos_adaptive_period_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, service_provider=None, service_provider_variable=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nat66s=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, tracker=None, tracker_variable=None, transport_wan_vpn_feature_id=None, tunnel_bandwidth_percent=None, tunnel_bandwidth_percent_variable=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_color=None, tunnel_interface_color_restrict=None, tunnel_interface_color_restrict_variable=None, tunnel_interface_color_variable=None, tunnel_interface_cts_sgt_propagation=None, tunnel_interface_cts_sgt_propagation_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_gre_tunnel_destination_ip=None, tunnel_interface_gre_tunnel_destination_ip_variable=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_network_broadcast=None, tunnel_interface_network_broadcast_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None, xconnect=None, xconnect_variable=None):
+    def __init__(__self__, acl_ipv4_egress_feature_id=None, acl_ipv4_ingress_feature_id=None, acl_ipv6_egress_feature_id=None, acl_ipv6_ingress_feature_id=None, arp_timeout=None, arp_timeout_variable=None, arps=None, auto_detect_bandwidth=None, auto_detect_bandwidth_variable=None, autonegotiate=None, autonegotiate_variable=None, bandwidth_downstream=None, bandwidth_downstream_variable=None, bandwidth_upstream=None, bandwidth_upstream_variable=None, block_non_source_ip=None, block_non_source_ip_variable=None, description=None, duplex=None, duplex_variable=None, enable_dhcpv6=None, feature_profile_id=None, gre_tunnel_source_ip=None, gre_tunnel_source_ip_variable=None, icmp_redirect_disable=None, icmp_redirect_disable_variable=None, id=None, interface_description=None, interface_description_variable=None, interface_mtu=None, interface_mtu_variable=None, interface_name=None, interface_name_variable=None, ip_directed_broadcast=None, ip_directed_broadcast_variable=None, ip_mtu=None, ip_mtu_variable=None, iperf_server=None, iperf_server_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_configuration_type=None, ipv4_dhcp_distance=None, ipv4_dhcp_distance_variable=None, ipv4_dhcp_helper_variable=None, ipv4_dhcp_helpers=None, ipv4_secondary_addresses=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_configuration_type=None, ipv6_dhcp_secondary_addresses=None, ipv6_secondary_addresses=None, load_interval=None, load_interval_variable=None, mac_address=None, mac_address_variable=None, media_type=None, media_type_variable=None, mrf_core_region_type=None, mrf_enable_core_region=None, name=None, nat64=None, nat66=None, nat_ipv4=None, nat_ipv4_loopbacks=None, nat_ipv4_pools=None, nat_ipv4_variable=None, nat_ipv6=None, nat_ipv6_variable=None, nat_loopback=None, nat_loopback_variable=None, nat_match_interface=None, nat_match_interface_variable=None, nat_overload=None, nat_overload_variable=None, nat_prefix_length=None, nat_prefix_length_variable=None, nat_range_end=None, nat_range_end_variable=None, nat_range_start=None, nat_range_start_variable=None, nat_tcp_timeout=None, nat_tcp_timeout_variable=None, nat_type=None, nat_udp_timeout=None, nat_udp_timeout_variable=None, new_static_nats=None, per_tunnel_qos=None, per_tunnel_qos_variable=None, port_channel_interface=None, port_channel_lacp_fast_switchover=None, port_channel_lacp_fast_switchover_variable=None, port_channel_lacp_load_balance=None, port_channel_lacp_load_balance_variable=None, port_channel_lacp_max_bundle=None, port_channel_lacp_max_bundle_variable=None, port_channel_lacp_member_links=None, port_channel_lacp_min_bundle=None, port_channel_lacp_min_bundle_variable=None, port_channel_lacp_qos_aggregate=None, port_channel_lacp_qos_aggregate_variable=None, port_channel_member_interface=None, port_channel_mode=None, port_channel_static_load_balance=None, port_channel_static_load_balance_variable=None, port_channel_static_member_links=None, port_channel_static_qos_aggregate=None, port_channel_static_qos_aggregate_variable=None, port_channel_subinterface=None, qos_adaptive=None, qos_adaptive_bandwidth_downstream=None, qos_adaptive_bandwidth_upstream=None, qos_adaptive_default_downstream=None, qos_adaptive_default_downstream_variable=None, qos_adaptive_default_upstream=None, qos_adaptive_default_upstream_variable=None, qos_adaptive_max_downstream=None, qos_adaptive_max_downstream_variable=None, qos_adaptive_max_upstream=None, qos_adaptive_max_upstream_variable=None, qos_adaptive_min_downstream=None, qos_adaptive_min_downstream_variable=None, qos_adaptive_min_upstream=None, qos_adaptive_min_upstream_variable=None, qos_adaptive_period=None, qos_adaptive_period_variable=None, qos_shaping_rate=None, qos_shaping_rate_variable=None, service_provider=None, service_provider_variable=None, shutdown=None, shutdown_variable=None, speed=None, speed_variable=None, static_nat66s=None, static_port_forwards=None, tcp_mss=None, tcp_mss_variable=None, tloc_extension=None, tloc_extension_variable=None, tracker=None, tracker_variable=None, transport_wan_vpn_feature_id=None, tunnel_bandwidth_percent=None, tunnel_bandwidth_percent_variable=None, tunnel_interface=None, tunnel_interface_allow_all=None, tunnel_interface_allow_all_variable=None, tunnel_interface_allow_bfd=None, tunnel_interface_allow_bfd_variable=None, tunnel_interface_allow_bgp=None, tunnel_interface_allow_bgp_variable=None, tunnel_interface_allow_dhcp=None, tunnel_interface_allow_dhcp_variable=None, tunnel_interface_allow_dns=None, tunnel_interface_allow_dns_variable=None, tunnel_interface_allow_fragmentation=None, tunnel_interface_allow_fragmentation_variable=None, tunnel_interface_allow_https=None, tunnel_interface_allow_https_variable=None, tunnel_interface_allow_icmp=None, tunnel_interface_allow_icmp_variable=None, tunnel_interface_allow_netconf=None, tunnel_interface_allow_netconf_variable=None, tunnel_interface_allow_ntp=None, tunnel_interface_allow_ntp_variable=None, tunnel_interface_allow_ospf=None, tunnel_interface_allow_ospf_variable=None, tunnel_interface_allow_snmp=None, tunnel_interface_allow_snmp_variable=None, tunnel_interface_allow_ssh=None, tunnel_interface_allow_ssh_variable=None, tunnel_interface_allow_stun=None, tunnel_interface_allow_stun_variable=None, tunnel_interface_bind_loopback_tunnel=None, tunnel_interface_bind_loopback_tunnel_variable=None, tunnel_interface_border=None, tunnel_interface_border_variable=None, tunnel_interface_carrier=None, tunnel_interface_carrier_variable=None, tunnel_interface_clear_dont_fragment=None, tunnel_interface_clear_dont_fragment_variable=None, tunnel_interface_color=None, tunnel_interface_color_restrict=None, tunnel_interface_color_restrict_variable=None, tunnel_interface_color_variable=None, tunnel_interface_cts_sgt_propagation=None, tunnel_interface_cts_sgt_propagation_variable=None, tunnel_interface_encapsulations=None, tunnel_interface_exclude_controller_group_list_variable=None, tunnel_interface_exclude_controller_group_lists=None, tunnel_interface_gre_tunnel_destination_ip=None, tunnel_interface_gre_tunnel_destination_ip_variable=None, tunnel_interface_groups=None, tunnel_interface_groups_variable=None, tunnel_interface_hello_interval=None, tunnel_interface_hello_interval_variable=None, tunnel_interface_hello_tolerance=None, tunnel_interface_hello_tolerance_variable=None, tunnel_interface_last_resort_circuit=None, tunnel_interface_last_resort_circuit_variable=None, tunnel_interface_low_bandwidth_link=None, tunnel_interface_low_bandwidth_link_variable=None, tunnel_interface_max_control_connections=None, tunnel_interface_max_control_connections_variable=None, tunnel_interface_nat_refresh_interval=None, tunnel_interface_nat_refresh_interval_variable=None, tunnel_interface_network_broadcast=None, tunnel_interface_network_broadcast_variable=None, tunnel_interface_port_hop=None, tunnel_interface_port_hop_variable=None, tunnel_interface_set_sdwan_tunnel_mtu_to_max=None, tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable=None, tunnel_interface_tunnel_tcp_mss=None, tunnel_interface_tunnel_tcp_mss_variable=None, tunnel_interface_vbond_as_stun_server=None, tunnel_interface_vbond_as_stun_server_variable=None, tunnel_interface_vmanage_connection_preference=None, tunnel_interface_vmanage_connection_preference_variable=None, tunnel_qos_mode=None, tunnel_qos_mode_variable=None, version=None, xconnect=None, xconnect_variable=None):
         if acl_ipv4_egress_feature_id and not isinstance(acl_ipv4_egress_feature_id, str):
             raise TypeError("Expected argument 'acl_ipv4_egress_feature_id' to be a str")
         pulumi.set(__self__, "acl_ipv4_egress_feature_id", acl_ipv4_egress_feature_id)
@@ -208,6 +208,12 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if media_type_variable and not isinstance(media_type_variable, str):
             raise TypeError("Expected argument 'media_type_variable' to be a str")
         pulumi.set(__self__, "media_type_variable", media_type_variable)
+        if mrf_core_region_type and not isinstance(mrf_core_region_type, str):
+            raise TypeError("Expected argument 'mrf_core_region_type' to be a str")
+        pulumi.set(__self__, "mrf_core_region_type", mrf_core_region_type)
+        if mrf_enable_core_region and not isinstance(mrf_enable_core_region, bool):
+            raise TypeError("Expected argument 'mrf_enable_core_region' to be a bool")
+        pulumi.set(__self__, "mrf_enable_core_region", mrf_enable_core_region)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
@@ -220,6 +226,12 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if nat_ipv4 and not isinstance(nat_ipv4, bool):
             raise TypeError("Expected argument 'nat_ipv4' to be a bool")
         pulumi.set(__self__, "nat_ipv4", nat_ipv4)
+        if nat_ipv4_loopbacks and not isinstance(nat_ipv4_loopbacks, list):
+            raise TypeError("Expected argument 'nat_ipv4_loopbacks' to be a list")
+        pulumi.set(__self__, "nat_ipv4_loopbacks", nat_ipv4_loopbacks)
+        if nat_ipv4_pools and not isinstance(nat_ipv4_pools, list):
+            raise TypeError("Expected argument 'nat_ipv4_pools' to be a list")
+        pulumi.set(__self__, "nat_ipv4_pools", nat_ipv4_pools)
         if nat_ipv4_variable and not isinstance(nat_ipv4_variable, str):
             raise TypeError("Expected argument 'nat_ipv4_variable' to be a str")
         pulumi.set(__self__, "nat_ipv4_variable", nat_ipv4_variable)
@@ -235,6 +247,12 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if nat_loopback_variable and not isinstance(nat_loopback_variable, str):
             raise TypeError("Expected argument 'nat_loopback_variable' to be a str")
         pulumi.set(__self__, "nat_loopback_variable", nat_loopback_variable)
+        if nat_match_interface and not isinstance(nat_match_interface, bool):
+            raise TypeError("Expected argument 'nat_match_interface' to be a bool")
+        pulumi.set(__self__, "nat_match_interface", nat_match_interface)
+        if nat_match_interface_variable and not isinstance(nat_match_interface_variable, str):
+            raise TypeError("Expected argument 'nat_match_interface_variable' to be a str")
+        pulumi.set(__self__, "nat_match_interface_variable", nat_match_interface_variable)
         if nat_overload and not isinstance(nat_overload, bool):
             raise TypeError("Expected argument 'nat_overload' to be a bool")
         pulumi.set(__self__, "nat_overload", nat_overload)
@@ -268,9 +286,6 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if nat_type and not isinstance(nat_type, str):
             raise TypeError("Expected argument 'nat_type' to be a str")
         pulumi.set(__self__, "nat_type", nat_type)
-        if nat_type_variable and not isinstance(nat_type_variable, str):
-            raise TypeError("Expected argument 'nat_type_variable' to be a str")
-        pulumi.set(__self__, "nat_type_variable", nat_type_variable)
         if nat_udp_timeout and not isinstance(nat_udp_timeout, int):
             raise TypeError("Expected argument 'nat_udp_timeout' to be a int")
         pulumi.set(__self__, "nat_udp_timeout", nat_udp_timeout)
@@ -286,6 +301,66 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if per_tunnel_qos_variable and not isinstance(per_tunnel_qos_variable, str):
             raise TypeError("Expected argument 'per_tunnel_qos_variable' to be a str")
         pulumi.set(__self__, "per_tunnel_qos_variable", per_tunnel_qos_variable)
+        if port_channel_interface and not isinstance(port_channel_interface, bool):
+            raise TypeError("Expected argument 'port_channel_interface' to be a bool")
+        pulumi.set(__self__, "port_channel_interface", port_channel_interface)
+        if port_channel_lacp_fast_switchover and not isinstance(port_channel_lacp_fast_switchover, bool):
+            raise TypeError("Expected argument 'port_channel_lacp_fast_switchover' to be a bool")
+        pulumi.set(__self__, "port_channel_lacp_fast_switchover", port_channel_lacp_fast_switchover)
+        if port_channel_lacp_fast_switchover_variable and not isinstance(port_channel_lacp_fast_switchover_variable, str):
+            raise TypeError("Expected argument 'port_channel_lacp_fast_switchover_variable' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_fast_switchover_variable", port_channel_lacp_fast_switchover_variable)
+        if port_channel_lacp_load_balance and not isinstance(port_channel_lacp_load_balance, str):
+            raise TypeError("Expected argument 'port_channel_lacp_load_balance' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_load_balance", port_channel_lacp_load_balance)
+        if port_channel_lacp_load_balance_variable and not isinstance(port_channel_lacp_load_balance_variable, str):
+            raise TypeError("Expected argument 'port_channel_lacp_load_balance_variable' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_load_balance_variable", port_channel_lacp_load_balance_variable)
+        if port_channel_lacp_max_bundle and not isinstance(port_channel_lacp_max_bundle, int):
+            raise TypeError("Expected argument 'port_channel_lacp_max_bundle' to be a int")
+        pulumi.set(__self__, "port_channel_lacp_max_bundle", port_channel_lacp_max_bundle)
+        if port_channel_lacp_max_bundle_variable and not isinstance(port_channel_lacp_max_bundle_variable, str):
+            raise TypeError("Expected argument 'port_channel_lacp_max_bundle_variable' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_max_bundle_variable", port_channel_lacp_max_bundle_variable)
+        if port_channel_lacp_member_links and not isinstance(port_channel_lacp_member_links, list):
+            raise TypeError("Expected argument 'port_channel_lacp_member_links' to be a list")
+        pulumi.set(__self__, "port_channel_lacp_member_links", port_channel_lacp_member_links)
+        if port_channel_lacp_min_bundle and not isinstance(port_channel_lacp_min_bundle, int):
+            raise TypeError("Expected argument 'port_channel_lacp_min_bundle' to be a int")
+        pulumi.set(__self__, "port_channel_lacp_min_bundle", port_channel_lacp_min_bundle)
+        if port_channel_lacp_min_bundle_variable and not isinstance(port_channel_lacp_min_bundle_variable, str):
+            raise TypeError("Expected argument 'port_channel_lacp_min_bundle_variable' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_min_bundle_variable", port_channel_lacp_min_bundle_variable)
+        if port_channel_lacp_qos_aggregate and not isinstance(port_channel_lacp_qos_aggregate, bool):
+            raise TypeError("Expected argument 'port_channel_lacp_qos_aggregate' to be a bool")
+        pulumi.set(__self__, "port_channel_lacp_qos_aggregate", port_channel_lacp_qos_aggregate)
+        if port_channel_lacp_qos_aggregate_variable and not isinstance(port_channel_lacp_qos_aggregate_variable, str):
+            raise TypeError("Expected argument 'port_channel_lacp_qos_aggregate_variable' to be a str")
+        pulumi.set(__self__, "port_channel_lacp_qos_aggregate_variable", port_channel_lacp_qos_aggregate_variable)
+        if port_channel_member_interface and not isinstance(port_channel_member_interface, bool):
+            raise TypeError("Expected argument 'port_channel_member_interface' to be a bool")
+        pulumi.set(__self__, "port_channel_member_interface", port_channel_member_interface)
+        if port_channel_mode and not isinstance(port_channel_mode, str):
+            raise TypeError("Expected argument 'port_channel_mode' to be a str")
+        pulumi.set(__self__, "port_channel_mode", port_channel_mode)
+        if port_channel_static_load_balance and not isinstance(port_channel_static_load_balance, str):
+            raise TypeError("Expected argument 'port_channel_static_load_balance' to be a str")
+        pulumi.set(__self__, "port_channel_static_load_balance", port_channel_static_load_balance)
+        if port_channel_static_load_balance_variable and not isinstance(port_channel_static_load_balance_variable, str):
+            raise TypeError("Expected argument 'port_channel_static_load_balance_variable' to be a str")
+        pulumi.set(__self__, "port_channel_static_load_balance_variable", port_channel_static_load_balance_variable)
+        if port_channel_static_member_links and not isinstance(port_channel_static_member_links, list):
+            raise TypeError("Expected argument 'port_channel_static_member_links' to be a list")
+        pulumi.set(__self__, "port_channel_static_member_links", port_channel_static_member_links)
+        if port_channel_static_qos_aggregate and not isinstance(port_channel_static_qos_aggregate, bool):
+            raise TypeError("Expected argument 'port_channel_static_qos_aggregate' to be a bool")
+        pulumi.set(__self__, "port_channel_static_qos_aggregate", port_channel_static_qos_aggregate)
+        if port_channel_static_qos_aggregate_variable and not isinstance(port_channel_static_qos_aggregate_variable, str):
+            raise TypeError("Expected argument 'port_channel_static_qos_aggregate_variable' to be a str")
+        pulumi.set(__self__, "port_channel_static_qos_aggregate_variable", port_channel_static_qos_aggregate_variable)
+        if port_channel_subinterface and not isinstance(port_channel_subinterface, bool):
+            raise TypeError("Expected argument 'port_channel_subinterface' to be a bool")
+        pulumi.set(__self__, "port_channel_subinterface", port_channel_subinterface)
         if qos_adaptive and not isinstance(qos_adaptive, bool):
             raise TypeError("Expected argument 'qos_adaptive' to be a bool")
         pulumi.set(__self__, "qos_adaptive", qos_adaptive)
@@ -364,6 +439,9 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if static_nat66s and not isinstance(static_nat66s, list):
             raise TypeError("Expected argument 'static_nat66s' to be a list")
         pulumi.set(__self__, "static_nat66s", static_nat66s)
+        if static_port_forwards and not isinstance(static_port_forwards, list):
+            raise TypeError("Expected argument 'static_port_forwards' to be a list")
+        pulumi.set(__self__, "static_port_forwards", static_port_forwards)
         if tcp_mss and not isinstance(tcp_mss, int):
             raise TypeError("Expected argument 'tcp_mss' to be a int")
         pulumi.set(__self__, "tcp_mss", tcp_mss)
@@ -424,6 +502,12 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if tunnel_interface_allow_dns_variable and not isinstance(tunnel_interface_allow_dns_variable, str):
             raise TypeError("Expected argument 'tunnel_interface_allow_dns_variable' to be a str")
         pulumi.set(__self__, "tunnel_interface_allow_dns_variable", tunnel_interface_allow_dns_variable)
+        if tunnel_interface_allow_fragmentation and not isinstance(tunnel_interface_allow_fragmentation, bool):
+            raise TypeError("Expected argument 'tunnel_interface_allow_fragmentation' to be a bool")
+        pulumi.set(__self__, "tunnel_interface_allow_fragmentation", tunnel_interface_allow_fragmentation)
+        if tunnel_interface_allow_fragmentation_variable and not isinstance(tunnel_interface_allow_fragmentation_variable, str):
+            raise TypeError("Expected argument 'tunnel_interface_allow_fragmentation_variable' to be a str")
+        pulumi.set(__self__, "tunnel_interface_allow_fragmentation_variable", tunnel_interface_allow_fragmentation_variable)
         if tunnel_interface_allow_https and not isinstance(tunnel_interface_allow_https, bool):
             raise TypeError("Expected argument 'tunnel_interface_allow_https' to be a bool")
         pulumi.set(__self__, "tunnel_interface_allow_https", tunnel_interface_allow_https)
@@ -583,6 +667,12 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         if tunnel_interface_port_hop_variable and not isinstance(tunnel_interface_port_hop_variable, str):
             raise TypeError("Expected argument 'tunnel_interface_port_hop_variable' to be a str")
         pulumi.set(__self__, "tunnel_interface_port_hop_variable", tunnel_interface_port_hop_variable)
+        if tunnel_interface_set_sdwan_tunnel_mtu_to_max and not isinstance(tunnel_interface_set_sdwan_tunnel_mtu_to_max, bool):
+            raise TypeError("Expected argument 'tunnel_interface_set_sdwan_tunnel_mtu_to_max' to be a bool")
+        pulumi.set(__self__, "tunnel_interface_set_sdwan_tunnel_mtu_to_max", tunnel_interface_set_sdwan_tunnel_mtu_to_max)
+        if tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable and not isinstance(tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable, str):
+            raise TypeError("Expected argument 'tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable' to be a str")
+        pulumi.set(__self__, "tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable", tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable)
         if tunnel_interface_tunnel_tcp_mss and not isinstance(tunnel_interface_tunnel_tcp_mss, int):
             raise TypeError("Expected argument 'tunnel_interface_tunnel_tcp_mss' to be a int")
         pulumi.set(__self__, "tunnel_interface_tunnel_tcp_mss", tunnel_interface_tunnel_tcp_mss)
@@ -1080,6 +1170,22 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "media_type_variable")
 
     @_builtins.property
+    @pulumi.getter(name="mrfCoreRegionType")
+    def mrf_core_region_type(self) -> _builtins.str:
+        """
+        Core Region
+        """
+        return pulumi.get(self, "mrf_core_region_type")
+
+    @_builtins.property
+    @pulumi.getter(name="mrfEnableCoreRegion")
+    def mrf_enable_core_region(self) -> _builtins.bool:
+        """
+        Enable Core Region
+        """
+        return pulumi.get(self, "mrf_enable_core_region")
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
@@ -1110,6 +1216,22 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         enable Network Address Translation on this interface
         """
         return pulumi.get(self, "nat_ipv4")
+
+    @_builtins.property
+    @pulumi.getter(name="natIpv4Loopbacks")
+    def nat_ipv4_loopbacks(self) -> Sequence['outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackResult']:
+        """
+        NAT Multiple Loopback
+        """
+        return pulumi.get(self, "nat_ipv4_loopbacks")
+
+    @_builtins.property
+    @pulumi.getter(name="natIpv4Pools")
+    def nat_ipv4_pools(self) -> Sequence['outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolResult']:
+        """
+        NAT Multiple Pool
+        """
+        return pulumi.get(self, "nat_ipv4_pools")
 
     @_builtins.property
     @pulumi.getter(name="natIpv4Variable")
@@ -1150,6 +1272,22 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         Variable name
         """
         return pulumi.get(self, "nat_loopback_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="natMatchInterface")
+    def nat_match_interface(self) -> _builtins.bool:
+        """
+        NAT Match Interface
+        """
+        return pulumi.get(self, "nat_match_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="natMatchInterfaceVariable")
+    def nat_match_interface_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "nat_match_interface_variable")
 
     @_builtins.property
     @pulumi.getter(name="natOverload")
@@ -1240,14 +1378,6 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "nat_type")
 
     @_builtins.property
-    @pulumi.getter(name="natTypeVariable")
-    def nat_type_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "nat_type_variable")
-
-    @_builtins.property
     @pulumi.getter(name="natUdpTimeout")
     def nat_udp_timeout(self) -> _builtins.int:
         """
@@ -1286,6 +1416,163 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         Variable name
         """
         return pulumi.get(self, "per_tunnel_qos_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelInterface")
+    def port_channel_interface(self) -> _builtins.bool:
+        """
+        Port-Channel interface on/off
+        """
+        return pulumi.get(self, "port_channel_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpFastSwitchover")
+    def port_channel_lacp_fast_switchover(self) -> _builtins.bool:
+        """
+        Eanble lacp fast switchover
+        """
+        return pulumi.get(self, "port_channel_lacp_fast_switchover")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpFastSwitchoverVariable")
+    def port_channel_lacp_fast_switchover_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_lacp_fast_switchover_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpLoadBalance")
+    def port_channel_lacp_load_balance(self) -> _builtins.str:
+        """
+        Enable QoS Port-Channel aggregate
+        """
+        return pulumi.get(self, "port_channel_lacp_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpLoadBalanceVariable")
+    def port_channel_lacp_load_balance_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_lacp_load_balance_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpMaxBundle")
+    def port_channel_lacp_max_bundle(self) -> _builtins.int:
+        """
+        Set LACP max bundle
+        """
+        return pulumi.get(self, "port_channel_lacp_max_bundle")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpMaxBundleVariable")
+    def port_channel_lacp_max_bundle_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_lacp_max_bundle_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpMemberLinks")
+    def port_channel_lacp_member_links(self) -> Sequence['outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkResult']:
+        """
+        Configure Port-Channel member links
+        """
+        return pulumi.get(self, "port_channel_lacp_member_links")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpMinBundle")
+    def port_channel_lacp_min_bundle(self) -> _builtins.int:
+        """
+        Set LACP min bundle
+        """
+        return pulumi.get(self, "port_channel_lacp_min_bundle")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpMinBundleVariable")
+    def port_channel_lacp_min_bundle_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_lacp_min_bundle_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpQosAggregate")
+    def port_channel_lacp_qos_aggregate(self) -> _builtins.bool:
+        """
+        Enable QoS Port-Channel aggregate
+        """
+        return pulumi.get(self, "port_channel_lacp_qos_aggregate")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelLacpQosAggregateVariable")
+    def port_channel_lacp_qos_aggregate_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_lacp_qos_aggregate_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelMemberInterface")
+    def port_channel_member_interface(self) -> _builtins.bool:
+        """
+        Port-Channel member interface on/off
+        """
+        return pulumi.get(self, "port_channel_member_interface")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelMode")
+    def port_channel_mode(self) -> _builtins.str:
+        """
+        Port Channel Mode
+        """
+        return pulumi.get(self, "port_channel_mode")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelStaticLoadBalance")
+    def port_channel_static_load_balance(self) -> _builtins.str:
+        """
+        Enable QoS Port-Channel aggregate
+        """
+        return pulumi.get(self, "port_channel_static_load_balance")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelStaticLoadBalanceVariable")
+    def port_channel_static_load_balance_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_static_load_balance_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelStaticMemberLinks")
+    def port_channel_static_member_links(self) -> Sequence['outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkResult']:
+        """
+        Configure Port-Channel member links
+        """
+        return pulumi.get(self, "port_channel_static_member_links")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelStaticQosAggregate")
+    def port_channel_static_qos_aggregate(self) -> _builtins.bool:
+        """
+        Enable QoS Port-Channel aggregate
+        """
+        return pulumi.get(self, "port_channel_static_qos_aggregate")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelStaticQosAggregateVariable")
+    def port_channel_static_qos_aggregate_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "port_channel_static_qos_aggregate_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="portChannelSubinterface")
+    def port_channel_subinterface(self) -> _builtins.bool:
+        return pulumi.get(self, "port_channel_subinterface")
 
     @_builtins.property
     @pulumi.getter(name="qosAdaptive")
@@ -1493,6 +1780,14 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "static_nat66s")
 
     @_builtins.property
+    @pulumi.getter(name="staticPortForwards")
+    def static_port_forwards(self) -> Sequence['outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardResult']:
+        """
+        Configure Port Forward entries
+        """
+        return pulumi.get(self, "static_port_forwards")
+
+    @_builtins.property
     @pulumi.getter(name="tcpMss")
     def tcp_mss(self) -> _builtins.int:
         """
@@ -1651,6 +1946,22 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         Variable name
         """
         return pulumi.get(self, "tunnel_interface_allow_dns_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceAllowFragmentation")
+    def tunnel_interface_allow_fragmentation(self) -> _builtins.bool:
+        """
+        Allow Fragmentation and will clear DF bit in outer IP
+        """
+        return pulumi.get(self, "tunnel_interface_allow_fragmentation")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceAllowFragmentationVariable")
+    def tunnel_interface_allow_fragmentation_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_interface_allow_fragmentation_variable")
 
     @_builtins.property
     @pulumi.getter(name="tunnelInterfaceAllowHttps")
@@ -2077,6 +2388,22 @@ class GetTransportWanVpnInterfaceEthernetFeatureResult:
         return pulumi.get(self, "tunnel_interface_port_hop_variable")
 
     @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceSetSdwanTunnelMtuToMax")
+    def tunnel_interface_set_sdwan_tunnel_mtu_to_max(self) -> _builtins.bool:
+        """
+        Set current tunnel mtu to 9k
+        """
+        return pulumi.get(self, "tunnel_interface_set_sdwan_tunnel_mtu_to_max")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelInterfaceSetSdwanTunnelMtuToMaxVariable")
+    def tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable")
+
+    @_builtins.property
     @pulumi.getter(name="tunnelInterfaceTunnelTcpMss")
     def tunnel_interface_tunnel_tcp_mss(self) -> _builtins.int:
         """
@@ -2231,15 +2558,21 @@ class AwaitableGetTransportWanVpnInterfaceEthernetFeatureResult(GetTransportWanV
             mac_address_variable=self.mac_address_variable,
             media_type=self.media_type,
             media_type_variable=self.media_type_variable,
+            mrf_core_region_type=self.mrf_core_region_type,
+            mrf_enable_core_region=self.mrf_enable_core_region,
             name=self.name,
             nat64=self.nat64,
             nat66=self.nat66,
             nat_ipv4=self.nat_ipv4,
+            nat_ipv4_loopbacks=self.nat_ipv4_loopbacks,
+            nat_ipv4_pools=self.nat_ipv4_pools,
             nat_ipv4_variable=self.nat_ipv4_variable,
             nat_ipv6=self.nat_ipv6,
             nat_ipv6_variable=self.nat_ipv6_variable,
             nat_loopback=self.nat_loopback,
             nat_loopback_variable=self.nat_loopback_variable,
+            nat_match_interface=self.nat_match_interface,
+            nat_match_interface_variable=self.nat_match_interface_variable,
             nat_overload=self.nat_overload,
             nat_overload_variable=self.nat_overload_variable,
             nat_prefix_length=self.nat_prefix_length,
@@ -2251,12 +2584,31 @@ class AwaitableGetTransportWanVpnInterfaceEthernetFeatureResult(GetTransportWanV
             nat_tcp_timeout=self.nat_tcp_timeout,
             nat_tcp_timeout_variable=self.nat_tcp_timeout_variable,
             nat_type=self.nat_type,
-            nat_type_variable=self.nat_type_variable,
             nat_udp_timeout=self.nat_udp_timeout,
             nat_udp_timeout_variable=self.nat_udp_timeout_variable,
             new_static_nats=self.new_static_nats,
             per_tunnel_qos=self.per_tunnel_qos,
             per_tunnel_qos_variable=self.per_tunnel_qos_variable,
+            port_channel_interface=self.port_channel_interface,
+            port_channel_lacp_fast_switchover=self.port_channel_lacp_fast_switchover,
+            port_channel_lacp_fast_switchover_variable=self.port_channel_lacp_fast_switchover_variable,
+            port_channel_lacp_load_balance=self.port_channel_lacp_load_balance,
+            port_channel_lacp_load_balance_variable=self.port_channel_lacp_load_balance_variable,
+            port_channel_lacp_max_bundle=self.port_channel_lacp_max_bundle,
+            port_channel_lacp_max_bundle_variable=self.port_channel_lacp_max_bundle_variable,
+            port_channel_lacp_member_links=self.port_channel_lacp_member_links,
+            port_channel_lacp_min_bundle=self.port_channel_lacp_min_bundle,
+            port_channel_lacp_min_bundle_variable=self.port_channel_lacp_min_bundle_variable,
+            port_channel_lacp_qos_aggregate=self.port_channel_lacp_qos_aggregate,
+            port_channel_lacp_qos_aggregate_variable=self.port_channel_lacp_qos_aggregate_variable,
+            port_channel_member_interface=self.port_channel_member_interface,
+            port_channel_mode=self.port_channel_mode,
+            port_channel_static_load_balance=self.port_channel_static_load_balance,
+            port_channel_static_load_balance_variable=self.port_channel_static_load_balance_variable,
+            port_channel_static_member_links=self.port_channel_static_member_links,
+            port_channel_static_qos_aggregate=self.port_channel_static_qos_aggregate,
+            port_channel_static_qos_aggregate_variable=self.port_channel_static_qos_aggregate_variable,
+            port_channel_subinterface=self.port_channel_subinterface,
             qos_adaptive=self.qos_adaptive,
             qos_adaptive_bandwidth_downstream=self.qos_adaptive_bandwidth_downstream,
             qos_adaptive_bandwidth_upstream=self.qos_adaptive_bandwidth_upstream,
@@ -2283,6 +2635,7 @@ class AwaitableGetTransportWanVpnInterfaceEthernetFeatureResult(GetTransportWanV
             speed=self.speed,
             speed_variable=self.speed_variable,
             static_nat66s=self.static_nat66s,
+            static_port_forwards=self.static_port_forwards,
             tcp_mss=self.tcp_mss,
             tcp_mss_variable=self.tcp_mss_variable,
             tloc_extension=self.tloc_extension,
@@ -2303,6 +2656,8 @@ class AwaitableGetTransportWanVpnInterfaceEthernetFeatureResult(GetTransportWanV
             tunnel_interface_allow_dhcp_variable=self.tunnel_interface_allow_dhcp_variable,
             tunnel_interface_allow_dns=self.tunnel_interface_allow_dns,
             tunnel_interface_allow_dns_variable=self.tunnel_interface_allow_dns_variable,
+            tunnel_interface_allow_fragmentation=self.tunnel_interface_allow_fragmentation,
+            tunnel_interface_allow_fragmentation_variable=self.tunnel_interface_allow_fragmentation_variable,
             tunnel_interface_allow_https=self.tunnel_interface_allow_https,
             tunnel_interface_allow_https_variable=self.tunnel_interface_allow_https_variable,
             tunnel_interface_allow_icmp=self.tunnel_interface_allow_icmp,
@@ -2356,6 +2711,8 @@ class AwaitableGetTransportWanVpnInterfaceEthernetFeatureResult(GetTransportWanV
             tunnel_interface_network_broadcast_variable=self.tunnel_interface_network_broadcast_variable,
             tunnel_interface_port_hop=self.tunnel_interface_port_hop,
             tunnel_interface_port_hop_variable=self.tunnel_interface_port_hop_variable,
+            tunnel_interface_set_sdwan_tunnel_mtu_to_max=self.tunnel_interface_set_sdwan_tunnel_mtu_to_max,
+            tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable=self.tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable,
             tunnel_interface_tunnel_tcp_mss=self.tunnel_interface_tunnel_tcp_mss,
             tunnel_interface_tunnel_tcp_mss_variable=self.tunnel_interface_tunnel_tcp_mss_variable,
             tunnel_interface_vbond_as_stun_server=self.tunnel_interface_vbond_as_stun_server,
@@ -2460,15 +2817,21 @@ def get_transport_wan_vpn_interface_ethernet_feature(feature_profile_id: Optiona
         mac_address_variable=pulumi.get(__ret__, 'mac_address_variable'),
         media_type=pulumi.get(__ret__, 'media_type'),
         media_type_variable=pulumi.get(__ret__, 'media_type_variable'),
+        mrf_core_region_type=pulumi.get(__ret__, 'mrf_core_region_type'),
+        mrf_enable_core_region=pulumi.get(__ret__, 'mrf_enable_core_region'),
         name=pulumi.get(__ret__, 'name'),
         nat64=pulumi.get(__ret__, 'nat64'),
         nat66=pulumi.get(__ret__, 'nat66'),
         nat_ipv4=pulumi.get(__ret__, 'nat_ipv4'),
+        nat_ipv4_loopbacks=pulumi.get(__ret__, 'nat_ipv4_loopbacks'),
+        nat_ipv4_pools=pulumi.get(__ret__, 'nat_ipv4_pools'),
         nat_ipv4_variable=pulumi.get(__ret__, 'nat_ipv4_variable'),
         nat_ipv6=pulumi.get(__ret__, 'nat_ipv6'),
         nat_ipv6_variable=pulumi.get(__ret__, 'nat_ipv6_variable'),
         nat_loopback=pulumi.get(__ret__, 'nat_loopback'),
         nat_loopback_variable=pulumi.get(__ret__, 'nat_loopback_variable'),
+        nat_match_interface=pulumi.get(__ret__, 'nat_match_interface'),
+        nat_match_interface_variable=pulumi.get(__ret__, 'nat_match_interface_variable'),
         nat_overload=pulumi.get(__ret__, 'nat_overload'),
         nat_overload_variable=pulumi.get(__ret__, 'nat_overload_variable'),
         nat_prefix_length=pulumi.get(__ret__, 'nat_prefix_length'),
@@ -2480,12 +2843,31 @@ def get_transport_wan_vpn_interface_ethernet_feature(feature_profile_id: Optiona
         nat_tcp_timeout=pulumi.get(__ret__, 'nat_tcp_timeout'),
         nat_tcp_timeout_variable=pulumi.get(__ret__, 'nat_tcp_timeout_variable'),
         nat_type=pulumi.get(__ret__, 'nat_type'),
-        nat_type_variable=pulumi.get(__ret__, 'nat_type_variable'),
         nat_udp_timeout=pulumi.get(__ret__, 'nat_udp_timeout'),
         nat_udp_timeout_variable=pulumi.get(__ret__, 'nat_udp_timeout_variable'),
         new_static_nats=pulumi.get(__ret__, 'new_static_nats'),
         per_tunnel_qos=pulumi.get(__ret__, 'per_tunnel_qos'),
         per_tunnel_qos_variable=pulumi.get(__ret__, 'per_tunnel_qos_variable'),
+        port_channel_interface=pulumi.get(__ret__, 'port_channel_interface'),
+        port_channel_lacp_fast_switchover=pulumi.get(__ret__, 'port_channel_lacp_fast_switchover'),
+        port_channel_lacp_fast_switchover_variable=pulumi.get(__ret__, 'port_channel_lacp_fast_switchover_variable'),
+        port_channel_lacp_load_balance=pulumi.get(__ret__, 'port_channel_lacp_load_balance'),
+        port_channel_lacp_load_balance_variable=pulumi.get(__ret__, 'port_channel_lacp_load_balance_variable'),
+        port_channel_lacp_max_bundle=pulumi.get(__ret__, 'port_channel_lacp_max_bundle'),
+        port_channel_lacp_max_bundle_variable=pulumi.get(__ret__, 'port_channel_lacp_max_bundle_variable'),
+        port_channel_lacp_member_links=pulumi.get(__ret__, 'port_channel_lacp_member_links'),
+        port_channel_lacp_min_bundle=pulumi.get(__ret__, 'port_channel_lacp_min_bundle'),
+        port_channel_lacp_min_bundle_variable=pulumi.get(__ret__, 'port_channel_lacp_min_bundle_variable'),
+        port_channel_lacp_qos_aggregate=pulumi.get(__ret__, 'port_channel_lacp_qos_aggregate'),
+        port_channel_lacp_qos_aggregate_variable=pulumi.get(__ret__, 'port_channel_lacp_qos_aggregate_variable'),
+        port_channel_member_interface=pulumi.get(__ret__, 'port_channel_member_interface'),
+        port_channel_mode=pulumi.get(__ret__, 'port_channel_mode'),
+        port_channel_static_load_balance=pulumi.get(__ret__, 'port_channel_static_load_balance'),
+        port_channel_static_load_balance_variable=pulumi.get(__ret__, 'port_channel_static_load_balance_variable'),
+        port_channel_static_member_links=pulumi.get(__ret__, 'port_channel_static_member_links'),
+        port_channel_static_qos_aggregate=pulumi.get(__ret__, 'port_channel_static_qos_aggregate'),
+        port_channel_static_qos_aggregate_variable=pulumi.get(__ret__, 'port_channel_static_qos_aggregate_variable'),
+        port_channel_subinterface=pulumi.get(__ret__, 'port_channel_subinterface'),
         qos_adaptive=pulumi.get(__ret__, 'qos_adaptive'),
         qos_adaptive_bandwidth_downstream=pulumi.get(__ret__, 'qos_adaptive_bandwidth_downstream'),
         qos_adaptive_bandwidth_upstream=pulumi.get(__ret__, 'qos_adaptive_bandwidth_upstream'),
@@ -2512,6 +2894,7 @@ def get_transport_wan_vpn_interface_ethernet_feature(feature_profile_id: Optiona
         speed=pulumi.get(__ret__, 'speed'),
         speed_variable=pulumi.get(__ret__, 'speed_variable'),
         static_nat66s=pulumi.get(__ret__, 'static_nat66s'),
+        static_port_forwards=pulumi.get(__ret__, 'static_port_forwards'),
         tcp_mss=pulumi.get(__ret__, 'tcp_mss'),
         tcp_mss_variable=pulumi.get(__ret__, 'tcp_mss_variable'),
         tloc_extension=pulumi.get(__ret__, 'tloc_extension'),
@@ -2532,6 +2915,8 @@ def get_transport_wan_vpn_interface_ethernet_feature(feature_profile_id: Optiona
         tunnel_interface_allow_dhcp_variable=pulumi.get(__ret__, 'tunnel_interface_allow_dhcp_variable'),
         tunnel_interface_allow_dns=pulumi.get(__ret__, 'tunnel_interface_allow_dns'),
         tunnel_interface_allow_dns_variable=pulumi.get(__ret__, 'tunnel_interface_allow_dns_variable'),
+        tunnel_interface_allow_fragmentation=pulumi.get(__ret__, 'tunnel_interface_allow_fragmentation'),
+        tunnel_interface_allow_fragmentation_variable=pulumi.get(__ret__, 'tunnel_interface_allow_fragmentation_variable'),
         tunnel_interface_allow_https=pulumi.get(__ret__, 'tunnel_interface_allow_https'),
         tunnel_interface_allow_https_variable=pulumi.get(__ret__, 'tunnel_interface_allow_https_variable'),
         tunnel_interface_allow_icmp=pulumi.get(__ret__, 'tunnel_interface_allow_icmp'),
@@ -2585,6 +2970,8 @@ def get_transport_wan_vpn_interface_ethernet_feature(feature_profile_id: Optiona
         tunnel_interface_network_broadcast_variable=pulumi.get(__ret__, 'tunnel_interface_network_broadcast_variable'),
         tunnel_interface_port_hop=pulumi.get(__ret__, 'tunnel_interface_port_hop'),
         tunnel_interface_port_hop_variable=pulumi.get(__ret__, 'tunnel_interface_port_hop_variable'),
+        tunnel_interface_set_sdwan_tunnel_mtu_to_max=pulumi.get(__ret__, 'tunnel_interface_set_sdwan_tunnel_mtu_to_max'),
+        tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable=pulumi.get(__ret__, 'tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable'),
         tunnel_interface_tunnel_tcp_mss=pulumi.get(__ret__, 'tunnel_interface_tunnel_tcp_mss'),
         tunnel_interface_tunnel_tcp_mss_variable=pulumi.get(__ret__, 'tunnel_interface_tunnel_tcp_mss_variable'),
         tunnel_interface_vbond_as_stun_server=pulumi.get(__ret__, 'tunnel_interface_vbond_as_stun_server'),
@@ -2686,15 +3073,21 @@ def get_transport_wan_vpn_interface_ethernet_feature_output(feature_profile_id: 
         mac_address_variable=pulumi.get(__response__, 'mac_address_variable'),
         media_type=pulumi.get(__response__, 'media_type'),
         media_type_variable=pulumi.get(__response__, 'media_type_variable'),
+        mrf_core_region_type=pulumi.get(__response__, 'mrf_core_region_type'),
+        mrf_enable_core_region=pulumi.get(__response__, 'mrf_enable_core_region'),
         name=pulumi.get(__response__, 'name'),
         nat64=pulumi.get(__response__, 'nat64'),
         nat66=pulumi.get(__response__, 'nat66'),
         nat_ipv4=pulumi.get(__response__, 'nat_ipv4'),
+        nat_ipv4_loopbacks=pulumi.get(__response__, 'nat_ipv4_loopbacks'),
+        nat_ipv4_pools=pulumi.get(__response__, 'nat_ipv4_pools'),
         nat_ipv4_variable=pulumi.get(__response__, 'nat_ipv4_variable'),
         nat_ipv6=pulumi.get(__response__, 'nat_ipv6'),
         nat_ipv6_variable=pulumi.get(__response__, 'nat_ipv6_variable'),
         nat_loopback=pulumi.get(__response__, 'nat_loopback'),
         nat_loopback_variable=pulumi.get(__response__, 'nat_loopback_variable'),
+        nat_match_interface=pulumi.get(__response__, 'nat_match_interface'),
+        nat_match_interface_variable=pulumi.get(__response__, 'nat_match_interface_variable'),
         nat_overload=pulumi.get(__response__, 'nat_overload'),
         nat_overload_variable=pulumi.get(__response__, 'nat_overload_variable'),
         nat_prefix_length=pulumi.get(__response__, 'nat_prefix_length'),
@@ -2706,12 +3099,31 @@ def get_transport_wan_vpn_interface_ethernet_feature_output(feature_profile_id: 
         nat_tcp_timeout=pulumi.get(__response__, 'nat_tcp_timeout'),
         nat_tcp_timeout_variable=pulumi.get(__response__, 'nat_tcp_timeout_variable'),
         nat_type=pulumi.get(__response__, 'nat_type'),
-        nat_type_variable=pulumi.get(__response__, 'nat_type_variable'),
         nat_udp_timeout=pulumi.get(__response__, 'nat_udp_timeout'),
         nat_udp_timeout_variable=pulumi.get(__response__, 'nat_udp_timeout_variable'),
         new_static_nats=pulumi.get(__response__, 'new_static_nats'),
         per_tunnel_qos=pulumi.get(__response__, 'per_tunnel_qos'),
         per_tunnel_qos_variable=pulumi.get(__response__, 'per_tunnel_qos_variable'),
+        port_channel_interface=pulumi.get(__response__, 'port_channel_interface'),
+        port_channel_lacp_fast_switchover=pulumi.get(__response__, 'port_channel_lacp_fast_switchover'),
+        port_channel_lacp_fast_switchover_variable=pulumi.get(__response__, 'port_channel_lacp_fast_switchover_variable'),
+        port_channel_lacp_load_balance=pulumi.get(__response__, 'port_channel_lacp_load_balance'),
+        port_channel_lacp_load_balance_variable=pulumi.get(__response__, 'port_channel_lacp_load_balance_variable'),
+        port_channel_lacp_max_bundle=pulumi.get(__response__, 'port_channel_lacp_max_bundle'),
+        port_channel_lacp_max_bundle_variable=pulumi.get(__response__, 'port_channel_lacp_max_bundle_variable'),
+        port_channel_lacp_member_links=pulumi.get(__response__, 'port_channel_lacp_member_links'),
+        port_channel_lacp_min_bundle=pulumi.get(__response__, 'port_channel_lacp_min_bundle'),
+        port_channel_lacp_min_bundle_variable=pulumi.get(__response__, 'port_channel_lacp_min_bundle_variable'),
+        port_channel_lacp_qos_aggregate=pulumi.get(__response__, 'port_channel_lacp_qos_aggregate'),
+        port_channel_lacp_qos_aggregate_variable=pulumi.get(__response__, 'port_channel_lacp_qos_aggregate_variable'),
+        port_channel_member_interface=pulumi.get(__response__, 'port_channel_member_interface'),
+        port_channel_mode=pulumi.get(__response__, 'port_channel_mode'),
+        port_channel_static_load_balance=pulumi.get(__response__, 'port_channel_static_load_balance'),
+        port_channel_static_load_balance_variable=pulumi.get(__response__, 'port_channel_static_load_balance_variable'),
+        port_channel_static_member_links=pulumi.get(__response__, 'port_channel_static_member_links'),
+        port_channel_static_qos_aggregate=pulumi.get(__response__, 'port_channel_static_qos_aggregate'),
+        port_channel_static_qos_aggregate_variable=pulumi.get(__response__, 'port_channel_static_qos_aggregate_variable'),
+        port_channel_subinterface=pulumi.get(__response__, 'port_channel_subinterface'),
         qos_adaptive=pulumi.get(__response__, 'qos_adaptive'),
         qos_adaptive_bandwidth_downstream=pulumi.get(__response__, 'qos_adaptive_bandwidth_downstream'),
         qos_adaptive_bandwidth_upstream=pulumi.get(__response__, 'qos_adaptive_bandwidth_upstream'),
@@ -2738,6 +3150,7 @@ def get_transport_wan_vpn_interface_ethernet_feature_output(feature_profile_id: 
         speed=pulumi.get(__response__, 'speed'),
         speed_variable=pulumi.get(__response__, 'speed_variable'),
         static_nat66s=pulumi.get(__response__, 'static_nat66s'),
+        static_port_forwards=pulumi.get(__response__, 'static_port_forwards'),
         tcp_mss=pulumi.get(__response__, 'tcp_mss'),
         tcp_mss_variable=pulumi.get(__response__, 'tcp_mss_variable'),
         tloc_extension=pulumi.get(__response__, 'tloc_extension'),
@@ -2758,6 +3171,8 @@ def get_transport_wan_vpn_interface_ethernet_feature_output(feature_profile_id: 
         tunnel_interface_allow_dhcp_variable=pulumi.get(__response__, 'tunnel_interface_allow_dhcp_variable'),
         tunnel_interface_allow_dns=pulumi.get(__response__, 'tunnel_interface_allow_dns'),
         tunnel_interface_allow_dns_variable=pulumi.get(__response__, 'tunnel_interface_allow_dns_variable'),
+        tunnel_interface_allow_fragmentation=pulumi.get(__response__, 'tunnel_interface_allow_fragmentation'),
+        tunnel_interface_allow_fragmentation_variable=pulumi.get(__response__, 'tunnel_interface_allow_fragmentation_variable'),
         tunnel_interface_allow_https=pulumi.get(__response__, 'tunnel_interface_allow_https'),
         tunnel_interface_allow_https_variable=pulumi.get(__response__, 'tunnel_interface_allow_https_variable'),
         tunnel_interface_allow_icmp=pulumi.get(__response__, 'tunnel_interface_allow_icmp'),
@@ -2811,6 +3226,8 @@ def get_transport_wan_vpn_interface_ethernet_feature_output(feature_profile_id: 
         tunnel_interface_network_broadcast_variable=pulumi.get(__response__, 'tunnel_interface_network_broadcast_variable'),
         tunnel_interface_port_hop=pulumi.get(__response__, 'tunnel_interface_port_hop'),
         tunnel_interface_port_hop_variable=pulumi.get(__response__, 'tunnel_interface_port_hop_variable'),
+        tunnel_interface_set_sdwan_tunnel_mtu_to_max=pulumi.get(__response__, 'tunnel_interface_set_sdwan_tunnel_mtu_to_max'),
+        tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable=pulumi.get(__response__, 'tunnel_interface_set_sdwan_tunnel_mtu_to_max_variable'),
         tunnel_interface_tunnel_tcp_mss=pulumi.get(__response__, 'tunnel_interface_tunnel_tcp_mss'),
         tunnel_interface_tunnel_tcp_mss_variable=pulumi.get(__response__, 'tunnel_interface_tunnel_tcp_mss_variable'),
         tunnel_interface_vbond_as_stun_server=pulumi.get(__response__, 'tunnel_interface_vbond_as_stun_server'),

@@ -172,14 +172,6 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureResult {
      */
     readonly interfaceNameVariable: string;
     /**
-     * Interface MTU \n\n, in bytes
-     */
-    readonly ipMtu: number;
-    /**
-     * Variable name
-     */
-    readonly ipMtuVariable: string;
-    /**
      * IPsec(ESP) encryption and integrity protocol
      */
     readonly ipsecCiphersuite: string;
@@ -208,11 +200,51 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureResult {
      * Variable name
      */
     readonly ipv4AddressVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    readonly ipv4Mtu: number;
+    /**
+     * Variable name
+     */
+    readonly ipv4MtuVariable: string;
     readonly ipv4SubnetMask: string;
     /**
      * Variable name
      */
     readonly ipv4SubnetMaskVariable: string;
+    /**
+     * TCP MSS on SYN packets, in bytes
+     */
+    readonly ipv4TcpMss: number;
+    /**
+     * Variable name
+     */
+    readonly ipv4TcpMssVariable: string;
+    /**
+     * Assign IPv6 address
+     */
+    readonly ipv6Address: string;
+    /**
+     * Variable name
+     */
+    readonly ipv6AddressVariable: string;
+    /**
+     * Interface MTU \n\n, in bytes
+     */
+    readonly ipv6Mtu: number;
+    /**
+     * Variable name
+     */
+    readonly ipv6MtuVariable: string;
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes
+     */
+    readonly ipv6TcpMss: number;
+    /**
+     * Variable name
+     */
+    readonly ipv6TcpMssVariable: string;
     /**
      * The name of the Feature
      */
@@ -238,14 +270,6 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureResult {
      */
     readonly shutdownVariable: string;
     /**
-     * TCP MSS on SYN packets, in bytes
-     */
-    readonly tcpMss: number;
-    /**
-     * Variable name
-     */
-    readonly tcpMssVariable: string;
-    /**
      * Enable tracker for this interface
      */
     readonly trackerId: string;
@@ -258,11 +282,18 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureResult {
      * Variable name
      */
     readonly tunnelDestinationIpv4AddressVariable: string;
-    readonly tunnelDestinationIpv4SubnetMask: string;
+    /**
+     * Tunnel destination IPv6 Address
+     */
+    readonly tunnelDestinationIpv6Address: string;
     /**
      * Variable name
      */
-    readonly tunnelDestinationIpv4SubnetMaskVariable: string;
+    readonly tunnelDestinationIpv6AddressVariable: string;
+    /**
+     * IPsec Tunnel Mode
+     */
+    readonly tunnelMode: string;
     /**
      * \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
      */
@@ -284,11 +315,14 @@ export interface GetServiceLanVpnInterfaceIpsecFeatureResult {
      * Variable name
      */
     readonly tunnelSourceIpv4AddressVariable: string;
-    readonly tunnelSourceIpv4SubnetMask: string;
+    /**
+     * Tunnel source IPv6 Address
+     */
+    readonly tunnelSourceIpv6Address: string;
     /**
      * Variable name
      */
-    readonly tunnelSourceIpv4SubnetMaskVariable: string;
+    readonly tunnelSourceIpv6AddressVariable: string;
     /**
      * The version of the Feature
      */

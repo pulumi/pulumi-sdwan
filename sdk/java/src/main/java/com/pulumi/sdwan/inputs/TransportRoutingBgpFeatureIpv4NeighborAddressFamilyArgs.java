@@ -17,7 +17,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     public static final TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs Empty = new TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs();
 
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -25,7 +25,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> disablePeerMaxNumberOfPrefixes;
 
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -34,14 +34,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     @Import(name="disablePeerMaxNumberOfPrefixesVariable")
     private @Nullable Output<String> disablePeerMaxNumberOfPrefixesVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     public Optional<Output<String>> disablePeerMaxNumberOfPrefixesVariable() {
@@ -49,7 +49,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -58,7 +58,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> disablePeerThreshold;
 
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -68,14 +68,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     @Import(name="disablePeerThresholdVariable")
     private @Nullable Output<String> disablePeerThresholdVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * @return Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      * 
      */
     public Optional<Output<String>> disablePeerThresholdVariable() {
@@ -131,7 +131,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
@@ -139,7 +139,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> restartInterval;
 
     /**
-     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      * 
      */
@@ -148,14 +148,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     @Import(name="restartIntervalVariable")
     private @Nullable Output<String> restartIntervalVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<Output<String>> restartIntervalVariable() {
@@ -163,7 +163,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -171,7 +171,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> restartMaxNumberOfPrefixes;
 
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -180,14 +180,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     @Import(name="restartMaxNumberOfPrefixesVariable")
     private @Nullable Output<String> restartMaxNumberOfPrefixesVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<Output<String>> restartMaxNumberOfPrefixesVariable() {
@@ -195,7 +195,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -204,7 +204,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> restartThreshold;
 
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -214,14 +214,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     @Import(name="restartThresholdVariable")
     private @Nullable Output<String> restartThresholdVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * @return Variable name, Attribute conditional on `policyType` equal to `restart`
      * 
      */
     public Optional<Output<String>> restartThresholdVariable() {
@@ -229,7 +229,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -237,7 +237,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> warningMessageMaxNumberOfPrefixes;
 
     /**
-     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -246,14 +246,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     @Import(name="warningMessageMaxNumberOfPrefixesVariable")
     private @Nullable Output<String> warningMessageMaxNumberOfPrefixesVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     public Optional<Output<String>> warningMessageMaxNumberOfPrefixesVariable() {
@@ -261,7 +261,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -270,7 +270,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     private @Nullable Output<Integer> warningMessageThreshold;
 
     /**
-     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      * 
@@ -280,14 +280,14 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
     }
 
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     @Import(name="warningMessageThresholdVariable")
     private @Nullable Output<String> warningMessageThresholdVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * @return Variable name, Attribute conditional on `policyType` equal to `warning-only`
      * 
      */
     public Optional<Output<String>> warningMessageThresholdVariable() {
@@ -336,7 +336,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -348,7 +348,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -359,7 +359,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `disable-peer`
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `disable-peer`
          * 
          * @return builder
          * 
@@ -380,7 +380,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -393,7 +393,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -405,7 +405,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerThresholdVariable Variable name, Attribute conditional on `policyType` equal to `disable-peer`
          * 
          * @return builder
          * 
@@ -416,7 +416,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param disablePeerThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+         * @param disablePeerThresholdVariable Variable name, Attribute conditional on `policyType` equal to `disable-peer`
          * 
          * @return builder
          * 
@@ -490,7 +490,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartInterval Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartInterval Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`65535`
          * 
          * @return builder
@@ -502,7 +502,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartInterval Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartInterval Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`65535`
          * 
          * @return builder
@@ -513,7 +513,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartIntervalVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartIntervalVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -524,7 +524,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartIntervalVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartIntervalVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -534,7 +534,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -546,7 +546,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -557,7 +557,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -568,7 +568,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -578,7 +578,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -591,7 +591,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -603,7 +603,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartThresholdVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -614,7 +614,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param restartThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `restart`
+         * @param restartThresholdVariable Variable name, Attribute conditional on `policyType` equal to `restart`
          * 
          * @return builder
          * 
@@ -624,7 +624,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -636,7 +636,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageMaxNumberOfPrefixes Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -647,7 +647,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `warning-only`
          * 
          * @return builder
          * 
@@ -658,7 +658,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageMaxNumberOfPrefixesVariable Variable name, Attribute conditional on `policyType` equal to `warning-only`
          * 
          * @return builder
          * 
@@ -668,7 +668,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -681,7 +681,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageThreshold Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
          *   - Range: `1`-`100`
          *   - Default value: `75`
          * 
@@ -693,7 +693,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageThresholdVariable Variable name, Attribute conditional on `policyType` equal to `warning-only`
          * 
          * @return builder
          * 
@@ -704,7 +704,7 @@ public final class TransportRoutingBgpFeatureIpv4NeighborAddressFamilyArgs exten
         }
 
         /**
-         * @param warningMessageThresholdVariable Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+         * @param warningMessageThresholdVariable Variable name, Attribute conditional on `policyType` equal to `warning-only`
          * 
          * @return builder
          * 

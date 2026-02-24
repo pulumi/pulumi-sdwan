@@ -100,14 +100,14 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
     }
 
     /**
-     * Set the Radius server shared key
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="key")
     private @Nullable Output<String> key;
 
     /**
-     * @return Set the Radius server shared key
+     * @return Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> key() {
@@ -163,6 +163,21 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
      */
     public Optional<Output<String>> keyTypeVariable() {
         return Optional.ofNullable(this.keyTypeVariable);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="keyVariable")
+    private @Nullable Output<String> keyVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> keyVariable() {
+        return Optional.ofNullable(this.keyVariable);
     }
 
     /**
@@ -275,6 +290,7 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
         this.keyEnum = $.keyEnum;
         this.keyType = $.keyType;
         this.keyTypeVariable = $.keyTypeVariable;
+        this.keyVariable = $.keyVariable;
         this.retransmit = $.retransmit;
         this.retransmitVariable = $.retransmitVariable;
         this.secretKey = $.secretKey;
@@ -415,7 +431,7 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
         }
 
         /**
-         * @param key Set the Radius server shared key
+         * @param key Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -426,7 +442,7 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
         }
 
         /**
-         * @param key Set the Radius server shared key
+         * @param key Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -502,6 +518,27 @@ public final class SystemAaaFeatureRadiusGroupServerArgs extends com.pulumi.reso
          */
         public Builder keyTypeVariable(String keyTypeVariable) {
             return keyTypeVariable(Output.of(keyTypeVariable));
+        }
+
+        /**
+         * @param keyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVariable(@Nullable Output<String> keyVariable) {
+            $.keyVariable = keyVariable;
+            return this;
+        }
+
+        /**
+         * @param keyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVariable(String keyVariable) {
+            return keyVariable(Output.of(keyVariable));
         }
 
         /**

@@ -13,57 +13,57 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enable cflowd, Attribute conditional on `Type` being equal to `Cflowd`
+        /// Enable cflowd, Attribute conditional on `Type` equal to `Cflowd`
         /// </summary>
         [Input("cflowd")]
         public Input<bool>? Cflowd { get; set; }
 
         /// <summary>
-        /// Counter name, Attribute conditional on `Type` being equal to `Count`
+        /// Counter name, Attribute conditional on `Type` equal to `Count`
         /// </summary>
         [Input("counter")]
         public Input<string>? Counter { get; set; }
 
         /// <summary>
-        /// Enable DRE optimization, Attribute conditional on `Type` being equal to `dreOptimization`
+        /// Enable DRE optimization, Attribute conditional on `Type` equal to `dreOptimization`
         /// </summary>
         [Input("dreOptimization")]
         public Input<bool>? DreOptimization { get; set; }
 
         /// <summary>
-        /// Enable fallback to routing, Attribute conditional on `Type` being equal to `fallbackToRouting`
+        /// Enable fallback to routing, Attribute conditional on `Type` equal to `fallbackToRouting`
         /// </summary>
         [Input("fallbackToRouting")]
         public Input<bool>? FallbackToRouting { get; set; }
 
         /// <summary>
-        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
+        /// Enable logging, Attribute conditional on `Type` equal to `Log`
         /// </summary>
         [Input("log")]
         public Input<bool>? Log { get; set; }
 
         /// <summary>
-        /// Loss correction, Attribute conditional on `Type` being equal to `lossProtect`
+        /// Loss correction, Attribute conditional on `Type` equal to `lossProtect`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrection")]
         public Input<string>? LossCorrection { get; set; }
 
         /// <summary>
-        /// Loss correction FEC, Attribute conditional on `Type` being equal to `lossProtectFec`
+        /// Loss correction FEC, Attribute conditional on `Type` equal to `lossProtectFec`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrectionFec")]
         public Input<string>? LossCorrectionFec { get; set; }
 
         /// <summary>
-        /// Loss correction FEC threshold, Attribute conditional on `Type` being equal to `lossProtectFec`
+        /// Loss correction FEC threshold, Attribute conditional on `Type` equal to `lossProtectFec`
         /// </summary>
         [Input("lossCorrectionFecThreshold")]
         public Input<string>? LossCorrectionFecThreshold { get; set; }
 
         /// <summary>
-        /// Loss correction packet duplication, Attribute conditional on `Type` being equal to `lossProtectPktDup`
+        /// Loss correction packet duplication, Attribute conditional on `Type` equal to `lossProtectPktDup`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         [Input("lossCorrectionPacketDuplication")]
@@ -73,7 +73,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameterGetArgs>? _natParameters;
 
         /// <summary>
-        /// List of NAT parameters, Attribute conditional on `Type` being equal to `Nat`
+        /// List of NAT parameters, Attribute conditional on `Type` equal to `Nat`
         /// </summary>
         public InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameterGetArgs> NatParameters
         {
@@ -82,47 +82,47 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// NAT pool, Attribute conditional on `Type` being equal to `Nat`
+        /// NAT pool, Attribute conditional on `Type` equal to `Nat`
         ///   - Choices: `Pool`
         /// </summary>
         [Input("natPool")]
         public Input<string>? NatPool { get; set; }
 
         /// <summary>
-        /// NAT pool ID, Attribute conditional on `Type` being equal to `Nat`
+        /// NAT pool ID, Attribute conditional on `Type` equal to `Nat`
         ///   - Range: `1`-`31`
         /// </summary>
         [Input("natPoolId")]
         public Input<int>? NatPoolId { get; set; }
 
         /// <summary>
-        /// Redirect DNS, Attribute conditional on `Type` being equal to `redirectDns`
+        /// Redirect DNS, Attribute conditional on `Type` equal to `redirectDns`
         ///   - Choices: `dnsType`, `ipAddress`
         /// </summary>
         [Input("redirectDns")]
         public Input<string>? RedirectDns { get; set; }
 
         /// <summary>
-        /// Redirect DNS IP address, Attribute conditional on `RedirectDns` being equal to `ipAddress`
+        /// Redirect DNS IP address, Attribute conditional on `RedirectDns` equal to `ipAddress`
         /// </summary>
         [Input("redirectDnsAddress")]
         public Input<string>? RedirectDnsAddress { get; set; }
 
         /// <summary>
-        /// Redirect DNS type, Attribute conditional on `RedirectDns` being equal to `dnsType`
+        /// Redirect DNS type, Attribute conditional on `RedirectDns` equal to `dnsType`
         ///   - Choices: `Host`, `Umbrella`
         /// </summary>
         [Input("redirectDnsType")]
         public Input<string>? RedirectDnsType { get; set; }
 
         /// <summary>
-        /// Enable secure internet gateway, Attribute conditional on `Type` being equal to `Sig`
+        /// Enable secure internet gateway, Attribute conditional on `Type` equal to `Sig`
         /// </summary>
         [Input("secureInternetGateway")]
         public Input<bool>? SecureInternetGateway { get; set; }
 
         /// <summary>
-        /// Service node group, Attribute conditional on `Type` being equal to `serviceNodeGroup`
+        /// Service node group, Attribute conditional on `Type` equal to `serviceNodeGroup`
         /// </summary>
         [Input("serviceNodeGroup")]
         public Input<string>? ServiceNodeGroup { get; set; }
@@ -131,7 +131,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameterGetArgs>? _setParameters;
 
         /// <summary>
-        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
+        /// List of set parameters, Attribute conditional on `Type` equal to `Set`
         /// </summary>
         public InputList<Inputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameterGetArgs> SetParameters
         {
@@ -140,7 +140,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Enable TCP optimization, Attribute conditional on `Type` being equal to `tcpOptimization`
+        /// Enable TCP optimization, Attribute conditional on `Type` equal to `tcpOptimization`
         /// </summary>
         [Input("tcpOptimization")]
         public Input<bool>? TcpOptimization { get; set; }

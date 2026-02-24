@@ -81,7 +81,7 @@ export class DnsSecurityPolicy extends pulumi.CustomResource {
      */
     declare public readonly dnsCrypt: pulumi.Output<boolean>;
     /**
-     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
      */
     declare public readonly dnsServerIp: pulumi.Output<string>;
     /**
@@ -102,7 +102,7 @@ export class DnsSecurityPolicy extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
      */
     declare public readonly targetVpns: pulumi.Output<outputs.DnsSecurityPolicyTargetVpn[] | undefined>;
     /**
@@ -200,7 +200,7 @@ export interface DnsSecurityPolicyState {
      */
     dnsCrypt?: pulumi.Input<boolean>;
     /**
-     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
      */
     dnsServerIp?: pulumi.Input<string>;
     /**
@@ -221,7 +221,7 @@ export interface DnsSecurityPolicyState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
      */
     targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[]>;
     /**
@@ -251,7 +251,7 @@ export interface DnsSecurityPolicyArgs {
      */
     dnsCrypt: pulumi.Input<boolean>;
     /**
-     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+     * Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
      */
     dnsServerIp: pulumi.Input<string>;
     /**
@@ -272,7 +272,7 @@ export interface DnsSecurityPolicyArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+     * Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
      */
     targetVpns?: pulumi.Input<pulumi.Input<inputs.DnsSecurityPolicyTargetVpn>[]>;
     /**

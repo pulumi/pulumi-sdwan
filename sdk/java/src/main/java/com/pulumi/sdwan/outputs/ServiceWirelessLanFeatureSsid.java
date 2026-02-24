@@ -36,12 +36,12 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable String broadcastSsidVariable;
     /**
-     * @return Set passphrase, Attribute conditional on `securityType` being equal to `personal`
+     * @return Set passphrase, Attribute conditional on `securityType` equal to `personal`
      * 
      */
     private @Nullable String passphrase;
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `personal`
+     * @return Variable name, Attribute conditional on `securityType` equal to `personal`
      * 
      */
     private @Nullable String passphraseVariable;
@@ -70,34 +70,34 @@ public final class ServiceWirelessLanFeatureSsid {
      */
     private @Nullable String radioTypeVariable;
     /**
-     * @return Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server IP, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerIp;
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerIpVariable;
     /**
-     * @return Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server authentication port, Attribute conditional on `securityType` equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      * 
      */
     private @Nullable Integer radiusServerPort;
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerPortVariable;
     /**
-     * @return Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerSecret;
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     private @Nullable String radiusServerSecretVariable;
@@ -156,14 +156,14 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.broadcastSsidVariable);
     }
     /**
-     * @return Set passphrase, Attribute conditional on `securityType` being equal to `personal`
+     * @return Set passphrase, Attribute conditional on `securityType` equal to `personal`
      * 
      */
     public Optional<String> passphrase() {
         return Optional.ofNullable(this.passphrase);
     }
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `personal`
+     * @return Variable name, Attribute conditional on `securityType` equal to `personal`
      * 
      */
     public Optional<String> passphraseVariable() {
@@ -202,21 +202,21 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.radioTypeVariable);
     }
     /**
-     * @return Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server IP, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerIp() {
         return Optional.ofNullable(this.radiusServerIp);
     }
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerIpVariable() {
         return Optional.ofNullable(this.radiusServerIpVariable);
     }
     /**
-     * @return Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server authentication port, Attribute conditional on `securityType` equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      * 
@@ -225,21 +225,21 @@ public final class ServiceWirelessLanFeatureSsid {
         return Optional.ofNullable(this.radiusServerPort);
     }
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerPortVariable() {
         return Optional.ofNullable(this.radiusServerPortVariable);
     }
     /**
-     * @return Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
     /**
-     * @return Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * @return Variable name, Attribute conditional on `securityType` equal to `enterprise`
      * 
      */
     public Optional<String> radiusServerSecretVariable() {

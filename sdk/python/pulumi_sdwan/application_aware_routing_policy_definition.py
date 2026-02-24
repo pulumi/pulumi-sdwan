@@ -33,7 +33,7 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationAwareRoutingPolicyDefinitionSequenceArgs']]] sequences: List of sequences
         :param pulumi.Input[_builtins.str] default_action: Type of default action
                  - Choices: `slaClass`
-        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
         """
@@ -89,7 +89,7 @@ class ApplicationAwareRoutingPolicyDefinitionArgs:
     @pulumi.getter(name="defaultActionSlaClassListId")
     def default_action_sla_class_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         """
         return pulumi.get(self, "default_action_sla_class_list_id")
 
@@ -137,7 +137,7 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
         Input properties used for looking up and filtering ApplicationAwareRoutingPolicyDefinition resources.
         :param pulumi.Input[_builtins.str] default_action: Type of default action
                  - Choices: `slaClass`
-        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -179,7 +179,7 @@ class _ApplicationAwareRoutingPolicyDefinitionState:
     @pulumi.getter(name="defaultActionSlaClassListId")
     def default_action_sla_class_list_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         """
         return pulumi.get(self, "default_action_sla_class_list_id")
 
@@ -312,7 +312,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Type of default action
                  - Choices: `slaClass`
-        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -428,7 +428,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_action: Type of default action
                  - Choices: `slaClass`
-        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        :param pulumi.Input[_builtins.str] default_action_sla_class_list_id: SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         :param pulumi.Input[_builtins.int] default_action_sla_class_list_version: SLA class list version
         :param pulumi.Input[_builtins.str] description: The description of the policy definition
         :param pulumi.Input[_builtins.str] name: The name of the policy definition
@@ -463,7 +463,7 @@ class ApplicationAwareRoutingPolicyDefinition(pulumi.CustomResource):
     @pulumi.getter(name="defaultActionSlaClassListId")
     def default_action_sla_class_list_id(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        SLA class list ID, Attribute conditional on `default_action` being equal to `slaClass`
+        SLA class list ID, Attribute conditional on `default_action` equal to `slaClass`
         """
         return pulumi.get(self, "default_action_sla_class_list_id")
 

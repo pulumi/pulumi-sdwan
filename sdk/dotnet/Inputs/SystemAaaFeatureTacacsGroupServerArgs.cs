@@ -19,7 +19,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? Address { get; set; }
 
         /// <summary>
-        /// Set the TACACS server shared key
+        /// Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
         /// </summary>
         [Input("key")]
         public Input<string>? Key { get; set; }
@@ -30,6 +30,12 @@ namespace Pulumi.Sdwan.Inputs
         /// </summary>
         [Input("keyEnum")]
         public Input<string>? KeyEnum { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("keyVariable")]
+        public Input<string>? KeyVariable { get; set; }
 
         /// <summary>
         /// TACACS Port

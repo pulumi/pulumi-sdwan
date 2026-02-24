@@ -16,7 +16,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.SecurityPolicyDefinitionEntryArgs>? _entries;
 
         /// <summary>
-        /// List of zone pair definitions, Attribute conditional on `Type` being equal to `zoneBasedFW`
+        /// List of zone pair definitions, Attribute conditional on `Type` equal to `zoneBasedFW`
         /// </summary>
         public InputList<Inputs.SecurityPolicyDefinitionEntryArgs> Entries
         {

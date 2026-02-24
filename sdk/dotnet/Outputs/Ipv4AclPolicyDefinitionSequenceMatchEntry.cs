@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv4AclPolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// Class map ID, Attribute conditional on `Type` being equal to `Class`
+        /// Class map ID, Attribute conditional on `Type` equal to `Class`
         /// </summary>
         public readonly string? ClassMapId;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ClassMapVersion;
         /// <summary>
-        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataPrefixList`
+        /// Destination data IPv4 prefix list ID, Attribute conditional on `Type` equal to `destinationDataPrefixList`
         /// </summary>
         public readonly string? DestinationDataIpv4PrefixListId;
         /// <summary>
@@ -30,41 +30,41 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? DestinationDataIpv4PrefixListVersion;
         /// <summary>
-        /// Destination IP prefix, Attribute conditional on `Type` being equal to `destinationIp`
+        /// Destination IP prefix, Attribute conditional on `Type` equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIp;
         /// <summary>
-        /// Destination IP prefix variable, Attribute conditional on `Type` being equal to `destinationIp`
+        /// Destination IP prefix variable, Attribute conditional on `Type` equal to `destinationIp`
         /// </summary>
         public readonly string? DestinationIpVariable;
         /// <summary>
-        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `destinationPort`
+        /// Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `destinationPort`
         /// </summary>
         public readonly string? DestinationPorts;
         /// <summary>
-        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
+        /// DSCP value, Attribute conditional on `Type` equal to `Dscp`
         /// </summary>
         public readonly string? Dscp;
         /// <summary>
-        /// ICMP Message, Attribute conditional on `Type` being equal to `icmpMessage`
+        /// ICMP Message, Attribute conditional on `Type` equal to `icmpMessage`
         /// </summary>
         public readonly string? IcmpMessage;
         /// <summary>
-        /// Packet length, Attribute conditional on `Type` being equal to `packetLength`
+        /// Packet length, Attribute conditional on `Type` equal to `packetLength`
         ///   - Range: `0`-`65535`
         /// </summary>
         public readonly int? PacketLength;
         /// <summary>
-        /// PLP - priority, Attribute conditional on `Type` being equal to `Plp`
+        /// PLP - priority, Attribute conditional on `Type` equal to `Plp`
         ///   - Choices: `High`, `Low`
         /// </summary>
         public readonly string? Priority;
         /// <summary>
-        /// Single value (0-255) or multiple values separated by spaces, Attribute conditional on `Type` being equal to `Protocol`
+        /// Single value (0-255) or multiple values separated by spaces, Attribute conditional on `Type` equal to `Protocol`
         /// </summary>
         public readonly string? Protocol;
         /// <summary>
-        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataPrefixList`
+        /// Source data IPv4 prefix list ID, Attribute conditional on `Type` equal to `sourceDataPrefixList`
         /// </summary>
         public readonly string? SourceDataIpv4PrefixListId;
         /// <summary>
@@ -72,19 +72,19 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? SourceDataIpv4PrefixListVersion;
         /// <summary>
-        /// Source IP prefix, Attribute conditional on `Type` being equal to `sourceIp`
+        /// Source IP prefix, Attribute conditional on `Type` equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIp;
         /// <summary>
-        /// Source IP prefix variable, Attribute conditional on `Type` being equal to `sourceIp`
+        /// Source IP prefix variable, Attribute conditional on `Type` equal to `sourceIp`
         /// </summary>
         public readonly string? SourceIpVariable;
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `sourcePort`
         /// </summary>
         public readonly string? SourcePorts;
         /// <summary>
-        /// TCP parameters, Attribute conditional on `Type` being equal to `Tcp`
+        /// TCP parameters, Attribute conditional on `Type` equal to `Tcp`
         ///   - Choices: `Syn`
         /// </summary>
         public readonly string? Tcp;

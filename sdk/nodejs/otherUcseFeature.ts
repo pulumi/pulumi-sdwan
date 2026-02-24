@@ -8,7 +8,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Other UCSE Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -81,12 +81,12 @@ export class OtherUcseFeature extends pulumi.CustomResource {
      */
     declare public readonly accessPortDedicated: pulumi.Output<boolean | undefined>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      */
     declare public readonly accessPortSharedFailoverType: pulumi.Output<string | undefined>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
     declare public readonly accessPortSharedType: pulumi.Output<string | undefined>;
@@ -231,12 +231,12 @@ export interface OtherUcseFeatureState {
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      */
     accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
     accessPortSharedType?: pulumi.Input<string>;
@@ -316,12 +316,12 @@ export interface OtherUcseFeatureArgs {
      */
     accessPortDedicated?: pulumi.Input<boolean>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      */
     accessPortSharedFailoverType?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      */
     accessPortSharedType?: pulumi.Input<string>;

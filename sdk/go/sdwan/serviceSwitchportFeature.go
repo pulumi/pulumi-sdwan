@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Service Switchport Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -43,6 +43,7 @@ import (
 //						SwitchportAccessVlan:        pulumi.Int(1),
 //						SwitchportTrunkAllowedVlans: pulumi.String("1"),
 //						SwitchportTrunkNativeVlan:   pulumi.Int(1),
+//						EnableDot1x:                 pulumi.Bool(false),
 //						PortControl:                 pulumi.String("auto"),
 //						VoiceVlan:                   pulumi.Int(1),
 //						PaeEnable:                   pulumi.Bool(true),

@@ -22,6 +22,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? AddressVariable;
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        public readonly bool? FollowDualRouterHighAvailability;
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>
@@ -30,6 +35,15 @@ namespace Pulumi.Sdwan.Outputs
         /// Variable name
         /// </summary>
         public readonly string? GroupIdVariable;
+        /// <summary>
+        /// Minimum preempt delay in seconds
+        ///   - Range: `0`-`3600`
+        /// </summary>
+        public readonly int? MinPreemptDelay;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string? MinPreemptDelayVariable;
         /// <summary>
         /// Set priority
         ///   - Range: `1`-`254`
@@ -56,7 +70,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? TimerVariable;
         /// <summary>
         /// Timer interval for successive advertisements, in milliseconds
-        ///   - Range: `100`-`4294967295`
+        ///   - Range: `1`-`4294967295`
         /// </summary>
         public readonly int? TlocPrefChangeValue;
         /// <summary>
@@ -80,9 +94,15 @@ namespace Pulumi.Sdwan.Outputs
 
             string? addressVariable,
 
+            bool? followDualRouterHighAvailability,
+
             int? groupId,
 
             string? groupIdVariable,
+
+            int? minPreemptDelay,
+
+            string? minPreemptDelayVariable,
 
             int? priority,
 
@@ -104,8 +124,11 @@ namespace Pulumi.Sdwan.Outputs
         {
             Address = address;
             AddressVariable = addressVariable;
+            FollowDualRouterHighAvailability = followDualRouterHighAvailability;
             GroupId = groupId;
             GroupIdVariable = groupIdVariable;
+            MinPreemptDelay = minPreemptDelay;
+            MinPreemptDelayVariable = minPreemptDelayVariable;
             Priority = priority;
             PriorityVariable = priorityVariable;
             SecondaryAddresses = secondaryAddresses;

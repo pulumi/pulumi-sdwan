@@ -24,7 +24,7 @@ namespace Pulumi.Sdwan.Outputs
         public readonly string? ProtocolVariable;
         public readonly string? RoutePolicyId;
         /// <summary>
-        /// Translate Rib Metric, Attribute conditional on `Protocol` being equal to `Omp`
+        /// Translate Rib Metric, Attribute conditional on `Protocol` equal to `Omp`
         ///   - Default value: `False`
         /// </summary>
         public readonly bool? TranslateRibMetric;

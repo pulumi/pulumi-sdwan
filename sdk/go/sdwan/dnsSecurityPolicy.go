@@ -68,7 +68,7 @@ type DnsSecurityPolicy struct {
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
 	DnsCrypt pulumi.BoolOutput `pulumi:"dnsCrypt"`
-	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 	DnsServerIp pulumi.StringOutput `pulumi:"dnsServerIp"`
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringOutput `pulumi:"featureProfileId"`
@@ -79,7 +79,7 @@ type DnsSecurityPolicy struct {
 	MatchAllVpn pulumi.BoolOutput `pulumi:"matchAllVpn"`
 	// The name of the Policy
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 	TargetVpns DnsSecurityPolicyTargetVpnArrayOutput `pulumi:"targetVpns"`
 	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
 	UmbrellaDefault pulumi.BoolOutput `pulumi:"umbrellaDefault"`
@@ -147,7 +147,7 @@ type dnsSecurityPolicyState struct {
 	Description *string `pulumi:"description"`
 	// If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
 	DnsCrypt *bool `pulumi:"dnsCrypt"`
-	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 	DnsServerIp *string `pulumi:"dnsServerIp"`
 	// Feature Profile ID
 	FeatureProfileId *string `pulumi:"featureProfileId"`
@@ -158,7 +158,7 @@ type dnsSecurityPolicyState struct {
 	MatchAllVpn *bool `pulumi:"matchAllVpn"`
 	// The name of the Policy
 	Name *string `pulumi:"name"`
-	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 	TargetVpns []DnsSecurityPolicyTargetVpn `pulumi:"targetVpns"`
 	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
 	UmbrellaDefault *bool `pulumi:"umbrellaDefault"`
@@ -173,7 +173,7 @@ type DnsSecurityPolicyState struct {
 	Description pulumi.StringPtrInput
 	// If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
 	DnsCrypt pulumi.BoolPtrInput
-	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 	DnsServerIp pulumi.StringPtrInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringPtrInput
@@ -184,7 +184,7 @@ type DnsSecurityPolicyState struct {
 	MatchAllVpn pulumi.BoolPtrInput
 	// The name of the Policy
 	Name pulumi.StringPtrInput
-	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 	TargetVpns DnsSecurityPolicyTargetVpnArrayInput
 	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
 	UmbrellaDefault pulumi.BoolPtrInput
@@ -203,7 +203,7 @@ type dnsSecurityPolicyArgs struct {
 	Description *string `pulumi:"description"`
 	// If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
 	DnsCrypt bool `pulumi:"dnsCrypt"`
-	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 	DnsServerIp string `pulumi:"dnsServerIp"`
 	// Feature Profile ID
 	FeatureProfileId string `pulumi:"featureProfileId"`
@@ -214,7 +214,7 @@ type dnsSecurityPolicyArgs struct {
 	MatchAllVpn bool `pulumi:"matchAllVpn"`
 	// The name of the Policy
 	Name *string `pulumi:"name"`
-	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 	TargetVpns []DnsSecurityPolicyTargetVpn `pulumi:"targetVpns"`
 	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
 	UmbrellaDefault bool `pulumi:"umbrellaDefault"`
@@ -228,7 +228,7 @@ type DnsSecurityPolicyArgs struct {
 	Description pulumi.StringPtrInput
 	// If matchAllVpn is false, this field is only true if at least one of the targetVpns entires contains an umbrellaDefault true
 	DnsCrypt pulumi.BoolInput
-	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 	DnsServerIp pulumi.StringInput
 	// Feature Profile ID
 	FeatureProfileId pulumi.StringInput
@@ -239,7 +239,7 @@ type DnsSecurityPolicyArgs struct {
 	MatchAllVpn pulumi.BoolInput
 	// The name of the Policy
 	Name pulumi.StringPtrInput
-	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+	// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 	TargetVpns DnsSecurityPolicyTargetVpnArrayInput
 	// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry
 	UmbrellaDefault pulumi.BoolInput
@@ -347,7 +347,7 @@ func (o DnsSecurityPolicyOutput) DnsCrypt() pulumi.BoolOutput {
 	return o.ApplyT(func(v *DnsSecurityPolicy) pulumi.BoolOutput { return v.DnsCrypt }).(pulumi.BoolOutput)
 }
 
-// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` being equal to `true`
+// Field will only be under data field if matchAllVpn is true, otherwise field will be under targetVpns and set per entry, Attribute conditional on `matchAllVpn` equal to `true`
 func (o DnsSecurityPolicyOutput) DnsServerIp() pulumi.StringOutput {
 	return o.ApplyT(func(v *DnsSecurityPolicy) pulumi.StringOutput { return v.DnsServerIp }).(pulumi.StringOutput)
 }
@@ -376,7 +376,7 @@ func (o DnsSecurityPolicyOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *DnsSecurityPolicy) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` being equal to `false`
+// Will be under data field only if matchAllVpn is false, if matchAllVpn is true field should not be in payload, Attribute conditional on `matchAllVpn` equal to `false`
 func (o DnsSecurityPolicyOutput) TargetVpns() DnsSecurityPolicyTargetVpnArrayOutput {
 	return o.ApplyT(func(v *DnsSecurityPolicy) DnsSecurityPolicyTargetVpnArrayOutput { return v.TargetVpns }).(DnsSecurityPolicyTargetVpnArrayOutput)
 }

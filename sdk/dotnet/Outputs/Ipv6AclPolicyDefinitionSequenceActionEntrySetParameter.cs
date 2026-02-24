@@ -14,11 +14,11 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter
     {
         /// <summary>
-        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         public readonly string? NextHop;
         /// <summary>
-        /// Traffic class, Attribute conditional on `Type` being equal to `trafficClass`
+        /// Traffic class, Attribute conditional on `Type` equal to `trafficClass`
         ///   - Range: `0`-`63`
         /// </summary>
         public readonly int? TrafficClass;

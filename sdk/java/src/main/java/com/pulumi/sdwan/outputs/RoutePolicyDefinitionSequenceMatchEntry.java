@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RoutePolicyDefinitionSequenceMatchEntry {
     /**
-     * @return AS path list ID, Attribute conditional on `type` being equal to `asPath`
+     * @return AS path list ID, Attribute conditional on `type` equal to `asPath`
      * 
      */
     private @Nullable String asPathListId;
@@ -25,12 +25,12 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer asPathListVersion;
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     private @Nullable String communityListId;
     /**
-     * @return Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      * 
      */
     private @Nullable List<String> communityListIds;
@@ -51,12 +51,12 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable List<String> communityListVersions;
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     private @Nullable String expandedCommunityListId;
     /**
-     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * @return Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      * 
      */
     private @Nullable String expandedCommunityListVariable;
@@ -66,7 +66,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer expandedCommunityListVersion;
     /**
-     * @return Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+     * @return Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      * 
      */
     private @Nullable String extendedCommunityListId;
@@ -76,19 +76,19 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer extendedCommunityListVersion;
     /**
-     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * @return Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer localPreference;
     /**
-     * @return Metric, Attribute conditional on `type` being equal to `metric`
+     * @return Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer metric;
     /**
-     * @return Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     private @Nullable String nextHopPrefixListId;
@@ -98,30 +98,30 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
      */
     private @Nullable Integer nextHopPrefixListVersion;
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer ompTag;
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
     private @Nullable String origin;
     /**
-     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * @return OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
     private @Nullable Integer ospfTag;
     /**
-     * @return Peer IP, Attribute conditional on `type` being equal to `peer`
+     * @return Peer IP, Attribute conditional on `type` equal to `peer`
      * 
      */
     private @Nullable String peer;
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `address`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `address`
      * 
      */
     private @Nullable String prefixListId;
@@ -139,7 +139,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
 
     private RoutePolicyDefinitionSequenceMatchEntry() {}
     /**
-     * @return AS path list ID, Attribute conditional on `type` being equal to `asPath`
+     * @return AS path list ID, Attribute conditional on `type` equal to `asPath`
      * 
      */
     public Optional<String> asPathListId() {
@@ -153,14 +153,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.asPathListVersion);
     }
     /**
-     * @return Community list ID, Attribute conditional on `type` being equal to `community`
+     * @return Community list ID, Attribute conditional on `type` equal to `community`
      * 
      */
     public Optional<String> communityListId() {
         return Optional.ofNullable(this.communityListId);
     }
     /**
-     * @return Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+     * @return Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      * 
      */
     public List<String> communityListIds() {
@@ -189,14 +189,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return this.communityListVersions == null ? List.of() : this.communityListVersions;
     }
     /**
-     * @return Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * @return Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      * 
      */
     public Optional<String> expandedCommunityListId() {
         return Optional.ofNullable(this.expandedCommunityListId);
     }
     /**
-     * @return Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * @return Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      * 
      */
     public Optional<String> expandedCommunityListVariable() {
@@ -210,7 +210,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.expandedCommunityListVersion);
     }
     /**
-     * @return Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+     * @return Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      * 
      */
     public Optional<String> extendedCommunityListId() {
@@ -224,7 +224,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.extendedCommunityListVersion);
     }
     /**
-     * @return Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * @return Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -232,7 +232,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.localPreference);
     }
     /**
-     * @return Metric, Attribute conditional on `type` being equal to `metric`
+     * @return Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -240,7 +240,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+     * @return Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      * 
      */
     public Optional<String> nextHopPrefixListId() {
@@ -254,7 +254,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.nextHopPrefixListVersion);
     }
     /**
-     * @return OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * @return OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -262,7 +262,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.ompTag);
     }
     /**
-     * @return Origin, Attribute conditional on `type` being equal to `origin`
+     * @return Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      * 
      */
@@ -270,7 +270,7 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * @return OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      * 
      */
@@ -278,14 +278,14 @@ public final class RoutePolicyDefinitionSequenceMatchEntry {
         return Optional.ofNullable(this.ospfTag);
     }
     /**
-     * @return Peer IP, Attribute conditional on `type` being equal to `peer`
+     * @return Peer IP, Attribute conditional on `type` equal to `peer`
      * 
      */
     public Optional<String> peer() {
         return Optional.ofNullable(this.peer);
     }
     /**
-     * @return Prefix list ID, Attribute conditional on `type` being equal to `address`
+     * @return Prefix list ID, Attribute conditional on `type` equal to `address`
      * 
      */
     public Optional<String> prefixListId() {

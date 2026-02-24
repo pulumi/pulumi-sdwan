@@ -36,7 +36,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -77,7 +77,7 @@ public final class ServiceRoutingOspfFeatureRedistribute {
         return Optional.ofNullable(this.routePolicyId);
     }
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */

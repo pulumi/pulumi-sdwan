@@ -38,6 +38,26 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String description;
     /**
+     * @return IKE keepalive interval (seconds)
+     * 
+     */
+    private Integer dpdInterval;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String dpdIntervalVariable;
+    /**
+     * @return IKE keepalive retries
+     * 
+     */
+    private Integer dpdRetries;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String dpdRetriesVariable;
+    /**
      * @return Feature Profile ID
      * 
      */
@@ -47,6 +67,71 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      * 
      */
     private String id;
+    /**
+     * @return IKE identity the IKE preshared secret belongs to
+     * 
+     */
+    private String ikeCiphersuite;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeCiphersuiteVariable;
+    /**
+     * @return IKE Diffie Hellman Groups
+     * 
+     */
+    private String ikeGroup;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeGroupVariable;
+    /**
+     * @return IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    private String ikeLocalId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeLocalIdVariable;
+    /**
+     * @return IKE integrity protocol
+     * 
+     */
+    private String ikeMode;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeModeVariable;
+    /**
+     * @return IKE rekey interval \n\n seconds
+     * 
+     */
+    private Integer ikeRekeyInterval;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeRekeyIntervalVariable;
+    /**
+     * @return IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    private String ikeRemoteId;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ikeRemoteIdVariable;
+    /**
+     * @return IKE Version \n\n
+     * 
+     */
+    private Integer ikeVersion;
     /**
      * @return Interface description
      * 
@@ -68,21 +153,51 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String interfaceNameVariable;
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return IPsec(ESP) encryption and integrity protocol
      * 
      */
-    private Integer ipMtu;
+    private String ipsecCiphersuite;
     /**
      * @return Variable name
      * 
      */
-    private String ipMtuVariable;
+    private String ipsecCiphersuiteVariable;
+    /**
+     * @return IPsec rekey interval \n\n seconds
+     * 
+     */
+    private Integer ipsecRekeyInterval;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipsecRekeyIntervalVariable;
+    /**
+     * @return Replay window size 32..8192 (must be a power of 2)
+     * 
+     */
+    private Integer ipsecReplayWindow;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipsecReplayWindowVariable;
     private String ipv4Address;
     /**
      * @return Variable name
      * 
      */
     private String ipv4AddressVariable;
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    private Integer ipv4Mtu;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4MtuVariable;
     private String ipv4SubnetMask;
     /**
      * @return Variable name
@@ -90,10 +205,70 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String ipv4SubnetMaskVariable;
     /**
+     * @return TCP MSS on SYN packets, in bytes
+     * 
+     */
+    private Integer ipv4TcpMss;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv4TcpMssVariable;
+    /**
+     * @return Assign IPv6 address
+     * 
+     */
+    private String ipv6Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6AddressVariable;
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    private Integer ipv6Mtu;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6MtuVariable;
+    /**
+     * @return IPv6 TCP MSS on SYN packets, in bytes
+     * 
+     */
+    private Integer ipv6TcpMss;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String ipv6TcpMssVariable;
+    /**
      * @return The name of the Feature
      * 
      */
     private String name;
+    /**
+     * @return IPsec perfect forward secrecy settings
+     * 
+     */
+    private String perfectForwardSecrecy;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String perfectForwardSecrecyVariable;
+    /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    private String preSharedSecret;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String preSharedSecretVariable;
     /**
      * @return Service LAN VPN Feature ID
      * 
@@ -110,16 +285,6 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String shutdownVariable;
     /**
-     * @return TCP MSS on SYN packets, in bytes
-     * 
-     */
-    private Integer tcpMss;
-    /**
-     * @return Variable name
-     * 
-     */
-    private String tcpMssVariable;
-    /**
      * @return Tunnel destination IP Address
      * 
      */
@@ -130,7 +295,57 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     private String tunnelDestinationIpv4AddressVariable;
     /**
-     * @return \n\n Interface name, can&#39;t be Loopback interface
+     * @return Tunnel destination IPv6 Address
+     * 
+     */
+    private String tunnelDestinationIpv6Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelDestinationIpv6AddressVariable;
+    /**
+     * @return GRE Tunnel Mode
+     * 
+     */
+    private String tunnelMode;
+    /**
+     * @return Tunnel protection state
+     * 
+     */
+    private Boolean tunnelProtection;
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    private String tunnelRouteViaInterface;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelRouteViaInterfaceVariable;
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    private String tunnelRouteViaIpv4Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelRouteViaIpv4AddressVariable;
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    private String tunnelRouteViaIpv6Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelRouteViaIpv6AddressVariable;
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
      * 
      */
     private String tunnelRouteViaLoopback;
@@ -169,6 +384,16 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      * 
      */
     private String tunnelSourceIpv4AddressVariable;
+    /**
+     * @return Tunnel source IPv6 Address
+     * 
+     */
+    private String tunnelSourceIpv6Address;
+    /**
+     * @return Variable name
+     * 
+     */
+    private String tunnelSourceIpv6AddressVariable;
     /**
      * @return The version of the Feature
      * 
@@ -212,6 +437,34 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.description;
     }
     /**
+     * @return IKE keepalive interval (seconds)
+     * 
+     */
+    public Integer dpdInterval() {
+        return this.dpdInterval;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String dpdIntervalVariable() {
+        return this.dpdIntervalVariable;
+    }
+    /**
+     * @return IKE keepalive retries
+     * 
+     */
+    public Integer dpdRetries() {
+        return this.dpdRetries;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String dpdRetriesVariable() {
+        return this.dpdRetriesVariable;
+    }
+    /**
      * @return Feature Profile ID
      * 
      */
@@ -224,6 +477,97 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     public String id() {
         return this.id;
+    }
+    /**
+     * @return IKE identity the IKE preshared secret belongs to
+     * 
+     */
+    public String ikeCiphersuite() {
+        return this.ikeCiphersuite;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeCiphersuiteVariable() {
+        return this.ikeCiphersuiteVariable;
+    }
+    /**
+     * @return IKE Diffie Hellman Groups
+     * 
+     */
+    public String ikeGroup() {
+        return this.ikeGroup;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeGroupVariable() {
+        return this.ikeGroupVariable;
+    }
+    /**
+     * @return IKE ID for the local endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    public String ikeLocalId() {
+        return this.ikeLocalId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeLocalIdVariable() {
+        return this.ikeLocalIdVariable;
+    }
+    /**
+     * @return IKE integrity protocol
+     * 
+     */
+    public String ikeMode() {
+        return this.ikeMode;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeModeVariable() {
+        return this.ikeModeVariable;
+    }
+    /**
+     * @return IKE rekey interval \n\n seconds
+     * 
+     */
+    public Integer ikeRekeyInterval() {
+        return this.ikeRekeyInterval;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeRekeyIntervalVariable() {
+        return this.ikeRekeyIntervalVariable;
+    }
+    /**
+     * @return IKE ID for the remote endpoint. Input IPv4 address, domain name, or email address
+     * 
+     */
+    public String ikeRemoteId() {
+        return this.ikeRemoteId;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ikeRemoteIdVariable() {
+        return this.ikeRemoteIdVariable;
+    }
+    /**
+     * @return IKE Version \n\n
+     * 
+     */
+    public Integer ikeVersion() {
+        return this.ikeVersion;
     }
     /**
      * @return Interface description
@@ -254,18 +598,46 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.interfaceNameVariable;
     }
     /**
-     * @return Interface MTU \n\n, in bytes
+     * @return IPsec(ESP) encryption and integrity protocol
      * 
      */
-    public Integer ipMtu() {
-        return this.ipMtu;
+    public String ipsecCiphersuite() {
+        return this.ipsecCiphersuite;
     }
     /**
      * @return Variable name
      * 
      */
-    public String ipMtuVariable() {
-        return this.ipMtuVariable;
+    public String ipsecCiphersuiteVariable() {
+        return this.ipsecCiphersuiteVariable;
+    }
+    /**
+     * @return IPsec rekey interval \n\n seconds
+     * 
+     */
+    public Integer ipsecRekeyInterval() {
+        return this.ipsecRekeyInterval;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipsecRekeyIntervalVariable() {
+        return this.ipsecRekeyIntervalVariable;
+    }
+    /**
+     * @return Replay window size 32..8192 (must be a power of 2)
+     * 
+     */
+    public Integer ipsecReplayWindow() {
+        return this.ipsecReplayWindow;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipsecReplayWindowVariable() {
+        return this.ipsecReplayWindowVariable;
     }
     public String ipv4Address() {
         return this.ipv4Address;
@@ -276,6 +648,20 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
      */
     public String ipv4AddressVariable() {
         return this.ipv4AddressVariable;
+    }
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    public Integer ipv4Mtu() {
+        return this.ipv4Mtu;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4MtuVariable() {
+        return this.ipv4MtuVariable;
     }
     public String ipv4SubnetMask() {
         return this.ipv4SubnetMask;
@@ -288,11 +674,95 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.ipv4SubnetMaskVariable;
     }
     /**
+     * @return TCP MSS on SYN packets, in bytes
+     * 
+     */
+    public Integer ipv4TcpMss() {
+        return this.ipv4TcpMss;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv4TcpMssVariable() {
+        return this.ipv4TcpMssVariable;
+    }
+    /**
+     * @return Assign IPv6 address
+     * 
+     */
+    public String ipv6Address() {
+        return this.ipv6Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6AddressVariable() {
+        return this.ipv6AddressVariable;
+    }
+    /**
+     * @return Interface MTU \n\n, in bytes
+     * 
+     */
+    public Integer ipv6Mtu() {
+        return this.ipv6Mtu;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6MtuVariable() {
+        return this.ipv6MtuVariable;
+    }
+    /**
+     * @return IPv6 TCP MSS on SYN packets, in bytes
+     * 
+     */
+    public Integer ipv6TcpMss() {
+        return this.ipv6TcpMss;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String ipv6TcpMssVariable() {
+        return this.ipv6TcpMssVariable;
+    }
+    /**
      * @return The name of the Feature
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return IPsec perfect forward secrecy settings
+     * 
+     */
+    public String perfectForwardSecrecy() {
+        return this.perfectForwardSecrecy;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String perfectForwardSecrecyVariable() {
+        return this.perfectForwardSecrecyVariable;
+    }
+    /**
+     * @return Use preshared key to authenticate IKE peer
+     * 
+     */
+    public String preSharedSecret() {
+        return this.preSharedSecret;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String preSharedSecretVariable() {
+        return this.preSharedSecretVariable;
     }
     /**
      * @return Service LAN VPN Feature ID
@@ -316,20 +786,6 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.shutdownVariable;
     }
     /**
-     * @return TCP MSS on SYN packets, in bytes
-     * 
-     */
-    public Integer tcpMss() {
-        return this.tcpMss;
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public String tcpMssVariable() {
-        return this.tcpMssVariable;
-    }
-    /**
      * @return Tunnel destination IP Address
      * 
      */
@@ -344,7 +800,77 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelDestinationIpv4AddressVariable;
     }
     /**
-     * @return \n\n Interface name, can&#39;t be Loopback interface
+     * @return Tunnel destination IPv6 Address
+     * 
+     */
+    public String tunnelDestinationIpv6Address() {
+        return this.tunnelDestinationIpv6Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelDestinationIpv6AddressVariable() {
+        return this.tunnelDestinationIpv6AddressVariable;
+    }
+    /**
+     * @return GRE Tunnel Mode
+     * 
+     */
+    public String tunnelMode() {
+        return this.tunnelMode;
+    }
+    /**
+     * @return Tunnel protection state
+     * 
+     */
+    public Boolean tunnelProtection() {
+        return this.tunnelProtection;
+    }
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    public String tunnelRouteViaInterface() {
+        return this.tunnelRouteViaInterface;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelRouteViaInterfaceVariable() {
+        return this.tunnelRouteViaInterfaceVariable;
+    }
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    public String tunnelRouteViaIpv4Address() {
+        return this.tunnelRouteViaIpv4Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelRouteViaIpv4AddressVariable() {
+        return this.tunnelRouteViaIpv4AddressVariable;
+    }
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
+     * 
+     */
+    public String tunnelRouteViaIpv6Address() {
+        return this.tunnelRouteViaIpv6Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelRouteViaIpv6AddressVariable() {
+        return this.tunnelRouteViaIpv6AddressVariable;
+    }
+    /**
+     * @return \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
      * 
      */
     public String tunnelRouteViaLoopback() {
@@ -400,6 +926,20 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         return this.tunnelSourceIpv4AddressVariable;
     }
     /**
+     * @return Tunnel source IPv6 Address
+     * 
+     */
+    public String tunnelSourceIpv6Address() {
+        return this.tunnelSourceIpv6Address;
+    }
+    /**
+     * @return Variable name
+     * 
+     */
+    public String tunnelSourceIpv6AddressVariable() {
+        return this.tunnelSourceIpv6AddressVariable;
+    }
+    /**
      * @return The version of the Feature
      * 
      */
@@ -421,26 +961,69 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         private Boolean clearDontFragment;
         private String clearDontFragmentVariable;
         private String description;
+        private Integer dpdInterval;
+        private String dpdIntervalVariable;
+        private Integer dpdRetries;
+        private String dpdRetriesVariable;
         private String featureProfileId;
         private String id;
+        private String ikeCiphersuite;
+        private String ikeCiphersuiteVariable;
+        private String ikeGroup;
+        private String ikeGroupVariable;
+        private String ikeLocalId;
+        private String ikeLocalIdVariable;
+        private String ikeMode;
+        private String ikeModeVariable;
+        private Integer ikeRekeyInterval;
+        private String ikeRekeyIntervalVariable;
+        private String ikeRemoteId;
+        private String ikeRemoteIdVariable;
+        private Integer ikeVersion;
         private String interfaceDescription;
         private String interfaceDescriptionVariable;
         private String interfaceName;
         private String interfaceNameVariable;
-        private Integer ipMtu;
-        private String ipMtuVariable;
+        private String ipsecCiphersuite;
+        private String ipsecCiphersuiteVariable;
+        private Integer ipsecRekeyInterval;
+        private String ipsecRekeyIntervalVariable;
+        private Integer ipsecReplayWindow;
+        private String ipsecReplayWindowVariable;
         private String ipv4Address;
         private String ipv4AddressVariable;
+        private Integer ipv4Mtu;
+        private String ipv4MtuVariable;
         private String ipv4SubnetMask;
         private String ipv4SubnetMaskVariable;
+        private Integer ipv4TcpMss;
+        private String ipv4TcpMssVariable;
+        private String ipv6Address;
+        private String ipv6AddressVariable;
+        private Integer ipv6Mtu;
+        private String ipv6MtuVariable;
+        private Integer ipv6TcpMss;
+        private String ipv6TcpMssVariable;
         private String name;
+        private String perfectForwardSecrecy;
+        private String perfectForwardSecrecyVariable;
+        private String preSharedSecret;
+        private String preSharedSecretVariable;
         private String serviceLanVpnFeatureId;
         private Boolean shutdown;
         private String shutdownVariable;
-        private Integer tcpMss;
-        private String tcpMssVariable;
         private String tunnelDestinationIpv4Address;
         private String tunnelDestinationIpv4AddressVariable;
+        private String tunnelDestinationIpv6Address;
+        private String tunnelDestinationIpv6AddressVariable;
+        private String tunnelMode;
+        private Boolean tunnelProtection;
+        private String tunnelRouteViaInterface;
+        private String tunnelRouteViaInterfaceVariable;
+        private String tunnelRouteViaIpv4Address;
+        private String tunnelRouteViaIpv4AddressVariable;
+        private String tunnelRouteViaIpv6Address;
+        private String tunnelRouteViaIpv6AddressVariable;
         private String tunnelRouteViaLoopback;
         private String tunnelRouteViaLoopbackVariable;
         private String tunnelSourceInterface;
@@ -449,6 +1032,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
         private String tunnelSourceInterfaceVariable;
         private String tunnelSourceIpv4Address;
         private String tunnelSourceIpv4AddressVariable;
+        private String tunnelSourceIpv6Address;
+        private String tunnelSourceIpv6AddressVariable;
         private Integer version;
         public Builder() {}
         public Builder(GetServiceLanVpnInterfaceGreFeatureResult defaults) {
@@ -458,26 +1043,69 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
     	      this.clearDontFragment = defaults.clearDontFragment;
     	      this.clearDontFragmentVariable = defaults.clearDontFragmentVariable;
     	      this.description = defaults.description;
+    	      this.dpdInterval = defaults.dpdInterval;
+    	      this.dpdIntervalVariable = defaults.dpdIntervalVariable;
+    	      this.dpdRetries = defaults.dpdRetries;
+    	      this.dpdRetriesVariable = defaults.dpdRetriesVariable;
     	      this.featureProfileId = defaults.featureProfileId;
     	      this.id = defaults.id;
+    	      this.ikeCiphersuite = defaults.ikeCiphersuite;
+    	      this.ikeCiphersuiteVariable = defaults.ikeCiphersuiteVariable;
+    	      this.ikeGroup = defaults.ikeGroup;
+    	      this.ikeGroupVariable = defaults.ikeGroupVariable;
+    	      this.ikeLocalId = defaults.ikeLocalId;
+    	      this.ikeLocalIdVariable = defaults.ikeLocalIdVariable;
+    	      this.ikeMode = defaults.ikeMode;
+    	      this.ikeModeVariable = defaults.ikeModeVariable;
+    	      this.ikeRekeyInterval = defaults.ikeRekeyInterval;
+    	      this.ikeRekeyIntervalVariable = defaults.ikeRekeyIntervalVariable;
+    	      this.ikeRemoteId = defaults.ikeRemoteId;
+    	      this.ikeRemoteIdVariable = defaults.ikeRemoteIdVariable;
+    	      this.ikeVersion = defaults.ikeVersion;
     	      this.interfaceDescription = defaults.interfaceDescription;
     	      this.interfaceDescriptionVariable = defaults.interfaceDescriptionVariable;
     	      this.interfaceName = defaults.interfaceName;
     	      this.interfaceNameVariable = defaults.interfaceNameVariable;
-    	      this.ipMtu = defaults.ipMtu;
-    	      this.ipMtuVariable = defaults.ipMtuVariable;
+    	      this.ipsecCiphersuite = defaults.ipsecCiphersuite;
+    	      this.ipsecCiphersuiteVariable = defaults.ipsecCiphersuiteVariable;
+    	      this.ipsecRekeyInterval = defaults.ipsecRekeyInterval;
+    	      this.ipsecRekeyIntervalVariable = defaults.ipsecRekeyIntervalVariable;
+    	      this.ipsecReplayWindow = defaults.ipsecReplayWindow;
+    	      this.ipsecReplayWindowVariable = defaults.ipsecReplayWindowVariable;
     	      this.ipv4Address = defaults.ipv4Address;
     	      this.ipv4AddressVariable = defaults.ipv4AddressVariable;
+    	      this.ipv4Mtu = defaults.ipv4Mtu;
+    	      this.ipv4MtuVariable = defaults.ipv4MtuVariable;
     	      this.ipv4SubnetMask = defaults.ipv4SubnetMask;
     	      this.ipv4SubnetMaskVariable = defaults.ipv4SubnetMaskVariable;
+    	      this.ipv4TcpMss = defaults.ipv4TcpMss;
+    	      this.ipv4TcpMssVariable = defaults.ipv4TcpMssVariable;
+    	      this.ipv6Address = defaults.ipv6Address;
+    	      this.ipv6AddressVariable = defaults.ipv6AddressVariable;
+    	      this.ipv6Mtu = defaults.ipv6Mtu;
+    	      this.ipv6MtuVariable = defaults.ipv6MtuVariable;
+    	      this.ipv6TcpMss = defaults.ipv6TcpMss;
+    	      this.ipv6TcpMssVariable = defaults.ipv6TcpMssVariable;
     	      this.name = defaults.name;
+    	      this.perfectForwardSecrecy = defaults.perfectForwardSecrecy;
+    	      this.perfectForwardSecrecyVariable = defaults.perfectForwardSecrecyVariable;
+    	      this.preSharedSecret = defaults.preSharedSecret;
+    	      this.preSharedSecretVariable = defaults.preSharedSecretVariable;
     	      this.serviceLanVpnFeatureId = defaults.serviceLanVpnFeatureId;
     	      this.shutdown = defaults.shutdown;
     	      this.shutdownVariable = defaults.shutdownVariable;
-    	      this.tcpMss = defaults.tcpMss;
-    	      this.tcpMssVariable = defaults.tcpMssVariable;
     	      this.tunnelDestinationIpv4Address = defaults.tunnelDestinationIpv4Address;
     	      this.tunnelDestinationIpv4AddressVariable = defaults.tunnelDestinationIpv4AddressVariable;
+    	      this.tunnelDestinationIpv6Address = defaults.tunnelDestinationIpv6Address;
+    	      this.tunnelDestinationIpv6AddressVariable = defaults.tunnelDestinationIpv6AddressVariable;
+    	      this.tunnelMode = defaults.tunnelMode;
+    	      this.tunnelProtection = defaults.tunnelProtection;
+    	      this.tunnelRouteViaInterface = defaults.tunnelRouteViaInterface;
+    	      this.tunnelRouteViaInterfaceVariable = defaults.tunnelRouteViaInterfaceVariable;
+    	      this.tunnelRouteViaIpv4Address = defaults.tunnelRouteViaIpv4Address;
+    	      this.tunnelRouteViaIpv4AddressVariable = defaults.tunnelRouteViaIpv4AddressVariable;
+    	      this.tunnelRouteViaIpv6Address = defaults.tunnelRouteViaIpv6Address;
+    	      this.tunnelRouteViaIpv6AddressVariable = defaults.tunnelRouteViaIpv6AddressVariable;
     	      this.tunnelRouteViaLoopback = defaults.tunnelRouteViaLoopback;
     	      this.tunnelRouteViaLoopbackVariable = defaults.tunnelRouteViaLoopbackVariable;
     	      this.tunnelSourceInterface = defaults.tunnelSourceInterface;
@@ -486,6 +1114,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
     	      this.tunnelSourceInterfaceVariable = defaults.tunnelSourceInterfaceVariable;
     	      this.tunnelSourceIpv4Address = defaults.tunnelSourceIpv4Address;
     	      this.tunnelSourceIpv4AddressVariable = defaults.tunnelSourceIpv4AddressVariable;
+    	      this.tunnelSourceIpv6Address = defaults.tunnelSourceIpv6Address;
+    	      this.tunnelSourceIpv6AddressVariable = defaults.tunnelSourceIpv6AddressVariable;
     	      this.version = defaults.version;
         }
 
@@ -530,6 +1160,38 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder dpdInterval(Integer dpdInterval) {
+            if (dpdInterval == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "dpdInterval");
+            }
+            this.dpdInterval = dpdInterval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dpdIntervalVariable(String dpdIntervalVariable) {
+            if (dpdIntervalVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "dpdIntervalVariable");
+            }
+            this.dpdIntervalVariable = dpdIntervalVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dpdRetries(Integer dpdRetries) {
+            if (dpdRetries == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "dpdRetries");
+            }
+            this.dpdRetries = dpdRetries;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dpdRetriesVariable(String dpdRetriesVariable) {
+            if (dpdRetriesVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "dpdRetriesVariable");
+            }
+            this.dpdRetriesVariable = dpdRetriesVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder featureProfileId(String featureProfileId) {
             if (featureProfileId == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "featureProfileId");
@@ -543,6 +1205,110 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeCiphersuite(String ikeCiphersuite) {
+            if (ikeCiphersuite == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeCiphersuite");
+            }
+            this.ikeCiphersuite = ikeCiphersuite;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeCiphersuiteVariable(String ikeCiphersuiteVariable) {
+            if (ikeCiphersuiteVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeCiphersuiteVariable");
+            }
+            this.ikeCiphersuiteVariable = ikeCiphersuiteVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeGroup(String ikeGroup) {
+            if (ikeGroup == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeGroup");
+            }
+            this.ikeGroup = ikeGroup;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeGroupVariable(String ikeGroupVariable) {
+            if (ikeGroupVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeGroupVariable");
+            }
+            this.ikeGroupVariable = ikeGroupVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeLocalId(String ikeLocalId) {
+            if (ikeLocalId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeLocalId");
+            }
+            this.ikeLocalId = ikeLocalId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeLocalIdVariable(String ikeLocalIdVariable) {
+            if (ikeLocalIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeLocalIdVariable");
+            }
+            this.ikeLocalIdVariable = ikeLocalIdVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeMode(String ikeMode) {
+            if (ikeMode == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeMode");
+            }
+            this.ikeMode = ikeMode;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeModeVariable(String ikeModeVariable) {
+            if (ikeModeVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeModeVariable");
+            }
+            this.ikeModeVariable = ikeModeVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeRekeyInterval(Integer ikeRekeyInterval) {
+            if (ikeRekeyInterval == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeRekeyInterval");
+            }
+            this.ikeRekeyInterval = ikeRekeyInterval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeRekeyIntervalVariable(String ikeRekeyIntervalVariable) {
+            if (ikeRekeyIntervalVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeRekeyIntervalVariable");
+            }
+            this.ikeRekeyIntervalVariable = ikeRekeyIntervalVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeRemoteId(String ikeRemoteId) {
+            if (ikeRemoteId == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeRemoteId");
+            }
+            this.ikeRemoteId = ikeRemoteId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeRemoteIdVariable(String ikeRemoteIdVariable) {
+            if (ikeRemoteIdVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeRemoteIdVariable");
+            }
+            this.ikeRemoteIdVariable = ikeRemoteIdVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ikeVersion(Integer ikeVersion) {
+            if (ikeVersion == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ikeVersion");
+            }
+            this.ikeVersion = ikeVersion;
             return this;
         }
         @CustomType.Setter
@@ -578,19 +1344,51 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder ipMtu(Integer ipMtu) {
-            if (ipMtu == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipMtu");
+        public Builder ipsecCiphersuite(String ipsecCiphersuite) {
+            if (ipsecCiphersuite == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecCiphersuite");
             }
-            this.ipMtu = ipMtu;
+            this.ipsecCiphersuite = ipsecCiphersuite;
             return this;
         }
         @CustomType.Setter
-        public Builder ipMtuVariable(String ipMtuVariable) {
-            if (ipMtuVariable == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipMtuVariable");
+        public Builder ipsecCiphersuiteVariable(String ipsecCiphersuiteVariable) {
+            if (ipsecCiphersuiteVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecCiphersuiteVariable");
             }
-            this.ipMtuVariable = ipMtuVariable;
+            this.ipsecCiphersuiteVariable = ipsecCiphersuiteVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipsecRekeyInterval(Integer ipsecRekeyInterval) {
+            if (ipsecRekeyInterval == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecRekeyInterval");
+            }
+            this.ipsecRekeyInterval = ipsecRekeyInterval;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipsecRekeyIntervalVariable(String ipsecRekeyIntervalVariable) {
+            if (ipsecRekeyIntervalVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecRekeyIntervalVariable");
+            }
+            this.ipsecRekeyIntervalVariable = ipsecRekeyIntervalVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipsecReplayWindow(Integer ipsecReplayWindow) {
+            if (ipsecReplayWindow == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecReplayWindow");
+            }
+            this.ipsecReplayWindow = ipsecReplayWindow;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipsecReplayWindowVariable(String ipsecReplayWindowVariable) {
+            if (ipsecReplayWindowVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipsecReplayWindowVariable");
+            }
+            this.ipsecReplayWindowVariable = ipsecReplayWindowVariable;
             return this;
         }
         @CustomType.Setter
@@ -610,6 +1408,22 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4Mtu(Integer ipv4Mtu) {
+            if (ipv4Mtu == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv4Mtu");
+            }
+            this.ipv4Mtu = ipv4Mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4MtuVariable(String ipv4MtuVariable) {
+            if (ipv4MtuVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv4MtuVariable");
+            }
+            this.ipv4MtuVariable = ipv4MtuVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder ipv4SubnetMask(String ipv4SubnetMask) {
             if (ipv4SubnetMask == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv4SubnetMask");
@@ -626,11 +1440,107 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder ipv4TcpMss(Integer ipv4TcpMss) {
+            if (ipv4TcpMss == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv4TcpMss");
+            }
+            this.ipv4TcpMss = ipv4TcpMss;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv4TcpMssVariable(String ipv4TcpMssVariable) {
+            if (ipv4TcpMssVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv4TcpMssVariable");
+            }
+            this.ipv4TcpMssVariable = ipv4TcpMssVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6Address(String ipv6Address) {
+            if (ipv6Address == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6Address");
+            }
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6AddressVariable(String ipv6AddressVariable) {
+            if (ipv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6AddressVariable");
+            }
+            this.ipv6AddressVariable = ipv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6Mtu(Integer ipv6Mtu) {
+            if (ipv6Mtu == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6Mtu");
+            }
+            this.ipv6Mtu = ipv6Mtu;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6MtuVariable(String ipv6MtuVariable) {
+            if (ipv6MtuVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6MtuVariable");
+            }
+            this.ipv6MtuVariable = ipv6MtuVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6TcpMss(Integer ipv6TcpMss) {
+            if (ipv6TcpMss == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6TcpMss");
+            }
+            this.ipv6TcpMss = ipv6TcpMss;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6TcpMssVariable(String ipv6TcpMssVariable) {
+            if (ipv6TcpMssVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "ipv6TcpMssVariable");
+            }
+            this.ipv6TcpMssVariable = ipv6TcpMssVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "name");
             }
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder perfectForwardSecrecy(String perfectForwardSecrecy) {
+            if (perfectForwardSecrecy == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "perfectForwardSecrecy");
+            }
+            this.perfectForwardSecrecy = perfectForwardSecrecy;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder perfectForwardSecrecyVariable(String perfectForwardSecrecyVariable) {
+            if (perfectForwardSecrecyVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "perfectForwardSecrecyVariable");
+            }
+            this.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecret(String preSharedSecret) {
+            if (preSharedSecret == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "preSharedSecret");
+            }
+            this.preSharedSecret = preSharedSecret;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder preSharedSecretVariable(String preSharedSecretVariable) {
+            if (preSharedSecretVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "preSharedSecretVariable");
+            }
+            this.preSharedSecretVariable = preSharedSecretVariable;
             return this;
         }
         @CustomType.Setter
@@ -658,22 +1568,6 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
-        public Builder tcpMss(Integer tcpMss) {
-            if (tcpMss == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tcpMss");
-            }
-            this.tcpMss = tcpMss;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder tcpMssVariable(String tcpMssVariable) {
-            if (tcpMssVariable == null) {
-              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tcpMssVariable");
-            }
-            this.tcpMssVariable = tcpMssVariable;
-            return this;
-        }
-        @CustomType.Setter
         public Builder tunnelDestinationIpv4Address(String tunnelDestinationIpv4Address) {
             if (tunnelDestinationIpv4Address == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelDestinationIpv4Address");
@@ -687,6 +1581,86 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelDestinationIpv4AddressVariable");
             }
             this.tunnelDestinationIpv4AddressVariable = tunnelDestinationIpv4AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelDestinationIpv6Address(String tunnelDestinationIpv6Address) {
+            if (tunnelDestinationIpv6Address == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelDestinationIpv6Address");
+            }
+            this.tunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelDestinationIpv6AddressVariable(String tunnelDestinationIpv6AddressVariable) {
+            if (tunnelDestinationIpv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelDestinationIpv6AddressVariable");
+            }
+            this.tunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelMode(String tunnelMode) {
+            if (tunnelMode == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelMode");
+            }
+            this.tunnelMode = tunnelMode;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelProtection(Boolean tunnelProtection) {
+            if (tunnelProtection == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelProtection");
+            }
+            this.tunnelProtection = tunnelProtection;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaInterface(String tunnelRouteViaInterface) {
+            if (tunnelRouteViaInterface == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaInterface");
+            }
+            this.tunnelRouteViaInterface = tunnelRouteViaInterface;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaInterfaceVariable(String tunnelRouteViaInterfaceVariable) {
+            if (tunnelRouteViaInterfaceVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaInterfaceVariable");
+            }
+            this.tunnelRouteViaInterfaceVariable = tunnelRouteViaInterfaceVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaIpv4Address(String tunnelRouteViaIpv4Address) {
+            if (tunnelRouteViaIpv4Address == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaIpv4Address");
+            }
+            this.tunnelRouteViaIpv4Address = tunnelRouteViaIpv4Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaIpv4AddressVariable(String tunnelRouteViaIpv4AddressVariable) {
+            if (tunnelRouteViaIpv4AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaIpv4AddressVariable");
+            }
+            this.tunnelRouteViaIpv4AddressVariable = tunnelRouteViaIpv4AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaIpv6Address(String tunnelRouteViaIpv6Address) {
+            if (tunnelRouteViaIpv6Address == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaIpv6Address");
+            }
+            this.tunnelRouteViaIpv6Address = tunnelRouteViaIpv6Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelRouteViaIpv6AddressVariable(String tunnelRouteViaIpv6AddressVariable) {
+            if (tunnelRouteViaIpv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelRouteViaIpv6AddressVariable");
+            }
+            this.tunnelRouteViaIpv6AddressVariable = tunnelRouteViaIpv6AddressVariable;
             return this;
         }
         @CustomType.Setter
@@ -754,6 +1728,22 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             return this;
         }
         @CustomType.Setter
+        public Builder tunnelSourceIpv6Address(String tunnelSourceIpv6Address) {
+            if (tunnelSourceIpv6Address == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelSourceIpv6Address");
+            }
+            this.tunnelSourceIpv6Address = tunnelSourceIpv6Address;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelSourceIpv6AddressVariable(String tunnelSourceIpv6AddressVariable) {
+            if (tunnelSourceIpv6AddressVariable == null) {
+              throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "tunnelSourceIpv6AddressVariable");
+            }
+            this.tunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder version(Integer version) {
             if (version == null) {
               throw new MissingRequiredPropertyException("GetServiceLanVpnInterfaceGreFeatureResult", "version");
@@ -768,26 +1758,69 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             _resultValue.clearDontFragment = clearDontFragment;
             _resultValue.clearDontFragmentVariable = clearDontFragmentVariable;
             _resultValue.description = description;
+            _resultValue.dpdInterval = dpdInterval;
+            _resultValue.dpdIntervalVariable = dpdIntervalVariable;
+            _resultValue.dpdRetries = dpdRetries;
+            _resultValue.dpdRetriesVariable = dpdRetriesVariable;
             _resultValue.featureProfileId = featureProfileId;
             _resultValue.id = id;
+            _resultValue.ikeCiphersuite = ikeCiphersuite;
+            _resultValue.ikeCiphersuiteVariable = ikeCiphersuiteVariable;
+            _resultValue.ikeGroup = ikeGroup;
+            _resultValue.ikeGroupVariable = ikeGroupVariable;
+            _resultValue.ikeLocalId = ikeLocalId;
+            _resultValue.ikeLocalIdVariable = ikeLocalIdVariable;
+            _resultValue.ikeMode = ikeMode;
+            _resultValue.ikeModeVariable = ikeModeVariable;
+            _resultValue.ikeRekeyInterval = ikeRekeyInterval;
+            _resultValue.ikeRekeyIntervalVariable = ikeRekeyIntervalVariable;
+            _resultValue.ikeRemoteId = ikeRemoteId;
+            _resultValue.ikeRemoteIdVariable = ikeRemoteIdVariable;
+            _resultValue.ikeVersion = ikeVersion;
             _resultValue.interfaceDescription = interfaceDescription;
             _resultValue.interfaceDescriptionVariable = interfaceDescriptionVariable;
             _resultValue.interfaceName = interfaceName;
             _resultValue.interfaceNameVariable = interfaceNameVariable;
-            _resultValue.ipMtu = ipMtu;
-            _resultValue.ipMtuVariable = ipMtuVariable;
+            _resultValue.ipsecCiphersuite = ipsecCiphersuite;
+            _resultValue.ipsecCiphersuiteVariable = ipsecCiphersuiteVariable;
+            _resultValue.ipsecRekeyInterval = ipsecRekeyInterval;
+            _resultValue.ipsecRekeyIntervalVariable = ipsecRekeyIntervalVariable;
+            _resultValue.ipsecReplayWindow = ipsecReplayWindow;
+            _resultValue.ipsecReplayWindowVariable = ipsecReplayWindowVariable;
             _resultValue.ipv4Address = ipv4Address;
             _resultValue.ipv4AddressVariable = ipv4AddressVariable;
+            _resultValue.ipv4Mtu = ipv4Mtu;
+            _resultValue.ipv4MtuVariable = ipv4MtuVariable;
             _resultValue.ipv4SubnetMask = ipv4SubnetMask;
             _resultValue.ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
+            _resultValue.ipv4TcpMss = ipv4TcpMss;
+            _resultValue.ipv4TcpMssVariable = ipv4TcpMssVariable;
+            _resultValue.ipv6Address = ipv6Address;
+            _resultValue.ipv6AddressVariable = ipv6AddressVariable;
+            _resultValue.ipv6Mtu = ipv6Mtu;
+            _resultValue.ipv6MtuVariable = ipv6MtuVariable;
+            _resultValue.ipv6TcpMss = ipv6TcpMss;
+            _resultValue.ipv6TcpMssVariable = ipv6TcpMssVariable;
             _resultValue.name = name;
+            _resultValue.perfectForwardSecrecy = perfectForwardSecrecy;
+            _resultValue.perfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
+            _resultValue.preSharedSecret = preSharedSecret;
+            _resultValue.preSharedSecretVariable = preSharedSecretVariable;
             _resultValue.serviceLanVpnFeatureId = serviceLanVpnFeatureId;
             _resultValue.shutdown = shutdown;
             _resultValue.shutdownVariable = shutdownVariable;
-            _resultValue.tcpMss = tcpMss;
-            _resultValue.tcpMssVariable = tcpMssVariable;
             _resultValue.tunnelDestinationIpv4Address = tunnelDestinationIpv4Address;
             _resultValue.tunnelDestinationIpv4AddressVariable = tunnelDestinationIpv4AddressVariable;
+            _resultValue.tunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
+            _resultValue.tunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            _resultValue.tunnelMode = tunnelMode;
+            _resultValue.tunnelProtection = tunnelProtection;
+            _resultValue.tunnelRouteViaInterface = tunnelRouteViaInterface;
+            _resultValue.tunnelRouteViaInterfaceVariable = tunnelRouteViaInterfaceVariable;
+            _resultValue.tunnelRouteViaIpv4Address = tunnelRouteViaIpv4Address;
+            _resultValue.tunnelRouteViaIpv4AddressVariable = tunnelRouteViaIpv4AddressVariable;
+            _resultValue.tunnelRouteViaIpv6Address = tunnelRouteViaIpv6Address;
+            _resultValue.tunnelRouteViaIpv6AddressVariable = tunnelRouteViaIpv6AddressVariable;
             _resultValue.tunnelRouteViaLoopback = tunnelRouteViaLoopback;
             _resultValue.tunnelRouteViaLoopbackVariable = tunnelRouteViaLoopbackVariable;
             _resultValue.tunnelSourceInterface = tunnelSourceInterface;
@@ -796,6 +1829,8 @@ public final class GetServiceLanVpnInterfaceGreFeatureResult {
             _resultValue.tunnelSourceInterfaceVariable = tunnelSourceInterfaceVariable;
             _resultValue.tunnelSourceIpv4Address = tunnelSourceIpv4Address;
             _resultValue.tunnelSourceIpv4AddressVariable = tunnelSourceIpv4AddressVariable;
+            _resultValue.tunnelSourceIpv6Address = tunnelSourceIpv6Address;
+            _resultValue.tunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
             _resultValue.version = version;
             return _resultValue;
         }

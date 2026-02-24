@@ -12,6 +12,8 @@ import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelp
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs;
+import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs;
+import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs;
 import com.pulumi.sdwan.inputs.ServiceLanVpnInterfaceEthernetFeatureStaticNatArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -55,7 +57,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Shaping Rate (Kbps)
+     * Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `8`-`100000000`
      * 
      */
@@ -63,7 +65,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> aclShapingRate;
 
     /**
-     * @return Shaping Rate (Kbps)
+     * @return Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `8`-`100000000`
      * 
      */
@@ -72,14 +74,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="aclShapingRateVariable")
     private @Nullable Output<String> aclShapingRateVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> aclShapingRateVariable() {
@@ -87,7 +89,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -96,7 +98,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -106,14 +108,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="arpTimeoutVariable")
     private @Nullable Output<String> arpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> arpTimeoutVariable() {
@@ -121,14 +123,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Configure ARP entries
+     * Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="arps")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureArpArgs>> arps;
 
     /**
-     * @return Configure ARP entries
+     * @return Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureArpArgs>>> arps() {
@@ -181,7 +183,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Duplex mode
+     * Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -189,7 +191,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<String> duplex;
 
     /**
-     * @return Duplex mode
+     * @return Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -198,14 +200,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="duplexVariable")
     private @Nullable Output<String> duplexVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> duplexVariable() {
@@ -213,14 +215,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -243,7 +245,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * ICMP/ICMPv6 Redirect Disable
+     * ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -251,7 +253,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable
+     * @return ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -260,14 +262,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="icmpRedirectDisableVariable")
     private @Nullable Output<String> icmpRedirectDisableVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> icmpRedirectDisableVariable() {
@@ -297,7 +299,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Interface MTU
+     * Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -306,7 +308,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU
+     * @return Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -316,14 +318,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="interfaceMtuVariable")
     private @Nullable Output<String> interfaceMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> interfaceMtuVariable() {
@@ -353,7 +355,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IP Directed-Broadcast
+     * IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -361,7 +363,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast
+     * @return IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -370,14 +372,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipDirectedBroadcastVariable")
     private @Nullable Output<String> ipDirectedBroadcastVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipDirectedBroadcastVariable() {
@@ -385,7 +387,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -394,7 +396,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -404,14 +406,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipMtuVariable")
     private @Nullable Output<String> ipMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipMtuVariable() {
@@ -419,14 +421,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -434,14 +436,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -449,8 +451,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -458,8 +460,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -468,8 +470,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -477,8 +479,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -487,14 +489,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -502,14 +504,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4DhcpHelperVariable")
     private @Nullable Output<String> ipv4DhcpHelperVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4DhcpHelperVariable() {
@@ -517,14 +519,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * List of DHCP IPv4 helper addresses (min 1, max 8)
+     * List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4DhcpHelpers")
     private @Nullable Output<List<String>> ipv4DhcpHelpers;
 
     /**
-     * @return List of DHCP IPv4 helper addresses (min 1, max 8)
+     * @return List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<String>>> ipv4DhcpHelpers() {
@@ -532,7 +534,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * enable Network Address Translation on this interface
+     * enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -540,7 +542,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> ipv4Nat;
 
     /**
-     * @return enable Network Address Translation on this interface
+     * @return enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -771,14 +773,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4SecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>>> ipv4SecondaryAddresses() {
@@ -786,7 +788,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -794,7 +796,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -803,14 +805,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -818,14 +820,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enable VRRP
+     * Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4Vrrps")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs>> ipv4Vrrps;
 
     /**
-     * @return Enable VRRP
+     * @return Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs>>> ipv4Vrrps() {
@@ -833,14 +835,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -848,14 +850,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -863,7 +865,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * IPv6 Configuration Type
+     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -872,7 +874,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type
+     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -882,14 +884,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6DhcpHelpers")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>> ipv6DhcpHelpers;
 
     /**
-     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>>> ipv6DhcpHelpers() {
@@ -897,14 +899,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="ipv6DhcpSecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>>> ipv6DhcpSecondaryAddresses() {
@@ -912,7 +914,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * enable Network Address Translation ipv6 on this interface
+     * enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -920,7 +922,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> ipv6Nat;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface
+     * @return enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -929,14 +931,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6SecondaryAddresses")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>>> ipv6SecondaryAddresses() {
@@ -944,14 +946,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enable VRRP Ipv6
+     * Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv6Vrrps")
     private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs>> ipv6Vrrps;
 
     /**
-     * @return Enable VRRP Ipv6
+     * @return Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs>>> ipv6Vrrps() {
@@ -993,14 +995,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * MAC Address
+     * MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="macAddress")
     private @Nullable Output<String> macAddress;
 
     /**
-     * @return MAC Address
+     * @return MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> macAddress() {
@@ -1008,14 +1010,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="macAddressVariable")
     private @Nullable Output<String> macAddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> macAddressVariable() {
@@ -1023,7 +1025,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Media type
+     * Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -1031,7 +1033,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<String> mediaType;
 
     /**
-     * @return Media type
+     * @return Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -1040,14 +1042,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="mediaTypeVariable")
     private @Nullable Output<String> mediaTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> mediaTypeVariable() {
@@ -1084,6 +1086,380 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
      */
     public Optional<Output<Boolean>> nat64() {
         return Optional.ofNullable(this.nat64);
+    }
+
+    /**
+     * Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="portChannelInterface")
+    private @Nullable Output<Boolean> portChannelInterface;
+
+    /**
+     * @return Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelInterface() {
+        return Optional.ofNullable(this.portChannelInterface);
+    }
+
+    /**
+     * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpFastSwitchover")
+    private @Nullable Output<Boolean> portChannelLacpFastSwitchover;
+
+    /**
+     * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelLacpFastSwitchover() {
+        return Optional.ofNullable(this.portChannelLacpFastSwitchover);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpFastSwitchoverVariable")
+    private @Nullable Output<String> portChannelLacpFastSwitchoverVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpFastSwitchoverVariable() {
+        return Optional.ofNullable(this.portChannelLacpFastSwitchoverVariable);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Import(name="portChannelLacpLoadBalance")
+    private @Nullable Output<String> portChannelLacpLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpLoadBalance() {
+        return Optional.ofNullable(this.portChannelLacpLoadBalance);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpLoadBalanceVariable")
+    private @Nullable Output<String> portChannelLacpLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpLoadBalanceVariable() {
+        return Optional.ofNullable(this.portChannelLacpLoadBalanceVariable);
+    }
+
+    /**
+     * Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Import(name="portChannelLacpMaxBundle")
+    private @Nullable Output<Integer> portChannelLacpMaxBundle;
+
+    /**
+     * @return Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Optional<Output<Integer>> portChannelLacpMaxBundle() {
+        return Optional.ofNullable(this.portChannelLacpMaxBundle);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMaxBundleVariable")
+    private @Nullable Output<String> portChannelLacpMaxBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpMaxBundleVariable() {
+        return Optional.ofNullable(this.portChannelLacpMaxBundleVariable);
+    }
+
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMemberLinks")
+    private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>> portChannelLacpMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>>> portChannelLacpMemberLinks() {
+        return Optional.ofNullable(this.portChannelLacpMemberLinks);
+    }
+
+    /**
+     * Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Import(name="portChannelLacpMinBundle")
+    private @Nullable Output<Integer> portChannelLacpMinBundle;
+
+    /**
+     * @return Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Optional<Output<Integer>> portChannelLacpMinBundle() {
+        return Optional.ofNullable(this.portChannelLacpMinBundle);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMinBundleVariable")
+    private @Nullable Output<String> portChannelLacpMinBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpMinBundleVariable() {
+        return Optional.ofNullable(this.portChannelLacpMinBundleVariable);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpQosAggregate")
+    private @Nullable Output<Boolean> portChannelLacpQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelLacpQosAggregate() {
+        return Optional.ofNullable(this.portChannelLacpQosAggregate);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpQosAggregateVariable")
+    private @Nullable Output<String> portChannelLacpQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpQosAggregateVariable() {
+        return Optional.ofNullable(this.portChannelLacpQosAggregateVariable);
+    }
+
+    /**
+     * Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="portChannelMemberInterface")
+    private @Nullable Output<Boolean> portChannelMemberInterface;
+
+    /**
+     * @return Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelMemberInterface() {
+        return Optional.ofNullable(this.portChannelMemberInterface);
+    }
+
+    /**
+     * Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    @Import(name="portChannelMode")
+    private @Nullable Output<String> portChannelMode;
+
+    /**
+     * @return Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelMode() {
+        return Optional.ofNullable(this.portChannelMode);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Import(name="portChannelStaticLoadBalance")
+    private @Nullable Output<String> portChannelStaticLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticLoadBalance() {
+        return Optional.ofNullable(this.portChannelStaticLoadBalance);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticLoadBalanceVariable")
+    private @Nullable Output<String> portChannelStaticLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticLoadBalanceVariable() {
+        return Optional.ofNullable(this.portChannelStaticLoadBalanceVariable);
+    }
+
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticMemberLinks")
+    private @Nullable Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>> portChannelStaticMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>>> portChannelStaticMemberLinks() {
+        return Optional.ofNullable(this.portChannelStaticMemberLinks);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticQosAggregate")
+    private @Nullable Output<Boolean> portChannelStaticQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelStaticQosAggregate() {
+        return Optional.ofNullable(this.portChannelStaticQosAggregate);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticQosAggregateVariable")
+    private @Nullable Output<String> portChannelStaticQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticQosAggregateVariable() {
+        return Optional.ofNullable(this.portChannelStaticQosAggregateVariable);
+    }
+
+    /**
+     * Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterface")
+    private @Nullable Output<Boolean> portChannelSubinterface;
+
+    /**
+     * @return Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelSubinterface() {
+        return Optional.ofNullable(this.portChannelSubinterface);
+    }
+
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterfacePrimaryInterfaceName")
+    private @Nullable Output<String> portChannelSubinterfacePrimaryInterfaceName;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> portChannelSubinterfacePrimaryInterfaceName() {
+        return Optional.ofNullable(this.portChannelSubinterfacePrimaryInterfaceName);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterfacePrimaryInterfaceNameVariable")
+    private @Nullable Output<String> portChannelSubinterfacePrimaryInterfaceNameVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> portChannelSubinterfacePrimaryInterfaceNameVariable() {
+        return Optional.ofNullable(this.portChannelSubinterfacePrimaryInterfaceNameVariable);
+    }
+
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterfaceSecondaryInterfaceName")
+    private @Nullable Output<String> portChannelSubinterfaceSecondaryInterfaceName;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> portChannelSubinterfaceSecondaryInterfaceName() {
+        return Optional.ofNullable(this.portChannelSubinterfaceSecondaryInterfaceName);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterfaceSecondaryInterfaceNameVariable")
+    private @Nullable Output<String> portChannelSubinterfaceSecondaryInterfaceNameVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> portChannelSubinterfaceSecondaryInterfaceNameVariable() {
+        return Optional.ofNullable(this.portChannelSubinterfaceSecondaryInterfaceNameVariable);
     }
 
     /**
@@ -1132,16 +1508,16 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     @Import(name="speed")
     private @Nullable Output<String> speed;
 
     /**
-     * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -1149,14 +1525,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="speedVariable")
     private @Nullable Output<String> speedVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> speedVariable() {
@@ -1179,7 +1555,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1187,7 +1563,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes
+     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1196,14 +1572,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tcpMssVariable")
     private @Nullable Output<String> tcpMssVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tcpMssVariable() {
@@ -1211,44 +1587,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enable tracker for this interface
-     * 
-     */
-    @Import(name="tracker")
-    private @Nullable Output<String> tracker;
-
-    /**
-     * @return Enable tracker for this interface
-     * 
-     */
-    public Optional<Output<String>> tracker() {
-        return Optional.ofNullable(this.tracker);
-    }
-
-    /**
-     * Variable name
-     * 
-     */
-    @Import(name="trackerVariable")
-    private @Nullable Output<String> trackerVariable;
-
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<Output<String>> trackerVariable() {
-        return Optional.ofNullable(this.trackerVariable);
-    }
-
-    /**
-     * Enable/Disable SGT Enforcement on an interface
+     * Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="trustsecEnableEnforcedPropogation")
     private @Nullable Output<Boolean> trustsecEnableEnforcedPropogation;
 
     /**
-     * @return Enable/Disable SGT Enforcement on an interface
+     * @return Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<Boolean>> trustsecEnableEnforcedPropogation() {
@@ -1256,7 +1602,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Indicates that the interface is trustworthy for CTS
+     * Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1264,7 +1610,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> trustsecEnableSgtPropogation;
 
     /**
-     * @return Indicates that the interface is trustworthy for CTS
+     * @return Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1273,7 +1619,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * SGT value between 2 and 65519
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1281,7 +1627,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> trustsecEnforcedSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1290,14 +1636,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="trustsecEnforcedSecurityGroupTagVariable")
     private @Nullable Output<String> trustsecEnforcedSecurityGroupTagVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> trustsecEnforcedSecurityGroupTagVariable() {
@@ -1305,7 +1651,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Enables the interface for CTS SGT authorization and forwarding
+     * Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1313,7 +1659,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Boolean> trustsecPropogate;
 
     /**
-     * @return Enables the interface for CTS SGT authorization and forwarding
+     * @return Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1322,7 +1668,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * SGT value between 2 and 65519
+     * SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1330,7 +1676,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     private @Nullable Output<Integer> trustsecSecurityGroupTag;
 
     /**
-     * @return SGT value between 2 and 65519
+     * @return SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `2`-`65519`
      * 
      */
@@ -1339,14 +1685,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="trustsecSecurityGroupTagVariable")
     private @Nullable Output<String> trustsecSecurityGroupTagVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> trustsecSecurityGroupTagVariable() {
@@ -1369,14 +1715,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Extend remote TLOC over a GRE tunnel to a local LAN interface
+     * Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="xconnect")
     private @Nullable Output<String> xconnect;
 
     /**
-     * @return Extend remote TLOC over a GRE tunnel to a local LAN interface
+     * @return Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> xconnect() {
@@ -1384,14 +1730,14 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="xconnectVariable")
     private @Nullable Output<String> xconnectVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> xconnectVariable() {
@@ -1471,6 +1817,30 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         this.mediaTypeVariable = $.mediaTypeVariable;
         this.name = $.name;
         this.nat64 = $.nat64;
+        this.portChannelInterface = $.portChannelInterface;
+        this.portChannelLacpFastSwitchover = $.portChannelLacpFastSwitchover;
+        this.portChannelLacpFastSwitchoverVariable = $.portChannelLacpFastSwitchoverVariable;
+        this.portChannelLacpLoadBalance = $.portChannelLacpLoadBalance;
+        this.portChannelLacpLoadBalanceVariable = $.portChannelLacpLoadBalanceVariable;
+        this.portChannelLacpMaxBundle = $.portChannelLacpMaxBundle;
+        this.portChannelLacpMaxBundleVariable = $.portChannelLacpMaxBundleVariable;
+        this.portChannelLacpMemberLinks = $.portChannelLacpMemberLinks;
+        this.portChannelLacpMinBundle = $.portChannelLacpMinBundle;
+        this.portChannelLacpMinBundleVariable = $.portChannelLacpMinBundleVariable;
+        this.portChannelLacpQosAggregate = $.portChannelLacpQosAggregate;
+        this.portChannelLacpQosAggregateVariable = $.portChannelLacpQosAggregateVariable;
+        this.portChannelMemberInterface = $.portChannelMemberInterface;
+        this.portChannelMode = $.portChannelMode;
+        this.portChannelStaticLoadBalance = $.portChannelStaticLoadBalance;
+        this.portChannelStaticLoadBalanceVariable = $.portChannelStaticLoadBalanceVariable;
+        this.portChannelStaticMemberLinks = $.portChannelStaticMemberLinks;
+        this.portChannelStaticQosAggregate = $.portChannelStaticQosAggregate;
+        this.portChannelStaticQosAggregateVariable = $.portChannelStaticQosAggregateVariable;
+        this.portChannelSubinterface = $.portChannelSubinterface;
+        this.portChannelSubinterfacePrimaryInterfaceName = $.portChannelSubinterfacePrimaryInterfaceName;
+        this.portChannelSubinterfacePrimaryInterfaceNameVariable = $.portChannelSubinterfacePrimaryInterfaceNameVariable;
+        this.portChannelSubinterfaceSecondaryInterfaceName = $.portChannelSubinterfaceSecondaryInterfaceName;
+        this.portChannelSubinterfaceSecondaryInterfaceNameVariable = $.portChannelSubinterfaceSecondaryInterfaceNameVariable;
         this.serviceLanVpnFeatureId = $.serviceLanVpnFeatureId;
         this.shutdown = $.shutdown;
         this.shutdownVariable = $.shutdownVariable;
@@ -1479,8 +1849,6 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         this.staticNats = $.staticNats;
         this.tcpMss = $.tcpMss;
         this.tcpMssVariable = $.tcpMssVariable;
-        this.tracker = $.tracker;
-        this.trackerVariable = $.trackerVariable;
         this.trustsecEnableEnforcedPropogation = $.trustsecEnableEnforcedPropogation;
         this.trustsecEnableSgtPropogation = $.trustsecEnableSgtPropogation;
         this.trustsecEnforcedSecurityGroupTag = $.trustsecEnforcedSecurityGroupTag;
@@ -1548,7 +1916,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRate Shaping Rate (Kbps)
+         * @param aclShapingRate Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `8`-`100000000`
          * 
          * @return builder
@@ -1560,7 +1928,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRate Shaping Rate (Kbps)
+         * @param aclShapingRate Shaping Rate (Kbps), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `8`-`100000000`
          * 
          * @return builder
@@ -1571,7 +1939,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRateVariable Variable name
+         * @param aclShapingRateVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1582,7 +1950,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param aclShapingRateVariable Variable name
+         * @param aclShapingRateVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1592,7 +1960,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `0`-`2147483`
          *   - Default value: `1200`
          * 
@@ -1605,7 +1973,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `0`-`2147483`
          *   - Default value: `1200`
          * 
@@ -1617,7 +1985,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeoutVariable Variable name
+         * @param arpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1628,7 +1996,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arpTimeoutVariable Variable name
+         * @param arpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1638,7 +2006,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1649,7 +2017,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1659,7 +2027,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1732,7 +2100,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplex Duplex mode
+         * @param duplex Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
@@ -1744,7 +2112,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplex Duplex mode
+         * @param duplex Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
@@ -1755,7 +2123,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplexVariable Variable name
+         * @param duplexVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1766,7 +2134,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param duplexVariable Variable name
+         * @param duplexVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1776,7 +2144,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1787,7 +2155,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -1818,7 +2186,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -1830,7 +2198,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -1841,7 +2209,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisableVariable Variable name
+         * @param icmpRedirectDisableVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1852,7 +2220,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param icmpRedirectDisableVariable Variable name
+         * @param icmpRedirectDisableVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1892,7 +2260,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtu Interface MTU
+         * @param interfaceMtu Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -1905,7 +2273,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtu Interface MTU
+         * @param interfaceMtu Interface MTU, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -1917,7 +2285,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtuVariable Variable name
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1928,7 +2296,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param interfaceMtuVariable Variable name
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -1968,7 +2336,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast
+         * @param ipDirectedBroadcast IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -1980,7 +2348,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast
+         * @param ipDirectedBroadcast IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -1991,7 +2359,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcastVariable Variable name
+         * @param ipDirectedBroadcastVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2002,7 +2370,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipDirectedBroadcastVariable Variable name
+         * @param ipDirectedBroadcastVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2012,7 +2380,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `576`-`9216`
          *   - Default value: `1500`
          * 
@@ -2025,7 +2393,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `576`-`9216`
          *   - Default value: `1500`
          * 
@@ -2037,7 +2405,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2048,7 +2416,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2058,7 +2426,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2069,7 +2437,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2079,7 +2447,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2090,7 +2458,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2100,8 +2468,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type
-         *   - Choices: `dynamic`, `static`
+         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `dynamic`
          * 
          * @return builder
@@ -2113,8 +2481,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type
-         *   - Choices: `dynamic`, `static`
+         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `dynamic`
          * 
          * @return builder
@@ -2125,8 +2493,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-         *   - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
          * @return builder
@@ -2138,8 +2506,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-         *   - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
          * @return builder
@@ -2150,7 +2518,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2161,7 +2529,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2171,7 +2539,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpHelperVariable Variable name
+         * @param ipv4DhcpHelperVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2182,7 +2550,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpHelperVariable Variable name
+         * @param ipv4DhcpHelperVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2192,7 +2560,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2203,7 +2571,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2213,7 +2581,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2223,7 +2591,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Nat enable Network Address Translation on this interface
+         * @param ipv4Nat enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -2235,7 +2603,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Nat enable Network Address Translation on this interface
+         * @param ipv4Nat enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -2552,7 +2920,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2563,7 +2931,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2573,7 +2941,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2583,7 +2951,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -2595,7 +2963,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -2606,7 +2974,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2617,7 +2985,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2627,7 +2995,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Vrrps Enable VRRP
+         * @param ipv4Vrrps Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2638,7 +3006,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Vrrps Enable VRRP
+         * @param ipv4Vrrps Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2648,7 +3016,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv4Vrrps Enable VRRP
+         * @param ipv4Vrrps Enable VRRP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2658,7 +3026,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2669,7 +3037,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2679,7 +3047,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2690,7 +3058,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2700,7 +3068,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type
+         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `none`
          * 
@@ -2713,7 +3081,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type
+         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `none`
          * 
@@ -2725,7 +3093,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2736,7 +3104,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2746,7 +3114,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6DhcpHelpers DHCPv6 Helper, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2756,7 +3124,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2767,7 +3135,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2777,7 +3145,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -2787,7 +3155,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Nat enable Network Address Translation ipv6 on this interface
+         * @param ipv6Nat enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -2799,7 +3167,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Nat enable Network Address Translation ipv6 on this interface
+         * @param ipv6Nat enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -2810,7 +3178,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2821,7 +3189,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2831,7 +3199,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -2841,7 +3209,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Vrrps Enable VRRP Ipv6
+         * @param ipv6Vrrps Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2852,7 +3220,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Vrrps Enable VRRP Ipv6
+         * @param ipv6Vrrps Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2862,7 +3230,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param ipv6Vrrps Enable VRRP Ipv6
+         * @param ipv6Vrrps Enable VRRP Ipv6, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2918,7 +3286,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param macAddress MAC Address
+         * @param macAddress MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2929,7 +3297,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param macAddress MAC Address
+         * @param macAddress MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2939,7 +3307,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param macAddressVariable Variable name
+         * @param macAddressVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2950,7 +3318,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param macAddressVariable Variable name
+         * @param macAddressVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2960,7 +3328,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaType Media type
+         * @param mediaType Media type, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
@@ -2972,7 +3340,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaType Media type
+         * @param mediaType Media type, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
@@ -2983,7 +3351,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaTypeVariable Variable name
+         * @param mediaTypeVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -2994,7 +3362,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param mediaTypeVariable Variable name
+         * @param mediaTypeVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3045,6 +3413,544 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
          */
         public Builder nat64(Boolean nat64) {
             return nat64(Output.of(nat64));
+        }
+
+        /**
+         * @param portChannelInterface Port-Channel interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelInterface(@Nullable Output<Boolean> portChannelInterface) {
+            $.portChannelInterface = portChannelInterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelInterface Port-Channel interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelInterface(Boolean portChannelInterface) {
+            return portChannelInterface(Output.of(portChannelInterface));
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchover(@Nullable Output<Boolean> portChannelLacpFastSwitchover) {
+            $.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchover(Boolean portChannelLacpFastSwitchover) {
+            return portChannelLacpFastSwitchover(Output.of(portChannelLacpFastSwitchover));
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchoverVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchoverVariable(@Nullable Output<String> portChannelLacpFastSwitchoverVariable) {
+            $.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchoverVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchoverVariable(String portChannelLacpFastSwitchoverVariable) {
+            return portChannelLacpFastSwitchoverVariable(Output.of(portChannelLacpFastSwitchoverVariable));
+        }
+
+        /**
+         * @param portChannelLacpLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalance(@Nullable Output<String> portChannelLacpLoadBalance) {
+            $.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalance(String portChannelLacpLoadBalance) {
+            return portChannelLacpLoadBalance(Output.of(portChannelLacpLoadBalance));
+        }
+
+        /**
+         * @param portChannelLacpLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalanceVariable(@Nullable Output<String> portChannelLacpLoadBalanceVariable) {
+            $.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalanceVariable(String portChannelLacpLoadBalanceVariable) {
+            return portChannelLacpLoadBalanceVariable(Output.of(portChannelLacpLoadBalanceVariable));
+        }
+
+        /**
+         * @param portChannelLacpMaxBundle Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundle(@Nullable Output<Integer> portChannelLacpMaxBundle) {
+            $.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMaxBundle Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundle(Integer portChannelLacpMaxBundle) {
+            return portChannelLacpMaxBundle(Output.of(portChannelLacpMaxBundle));
+        }
+
+        /**
+         * @param portChannelLacpMaxBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundleVariable(@Nullable Output<String> portChannelLacpMaxBundleVariable) {
+            $.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMaxBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundleVariable(String portChannelLacpMaxBundleVariable) {
+            return portChannelLacpMaxBundleVariable(Output.of(portChannelLacpMaxBundleVariable));
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(@Nullable Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>> portChannelLacpMemberLinks) {
+            $.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(List<ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs> portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(Output.of(portChannelLacpMemberLinks));
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs... portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(List.of(portChannelLacpMemberLinks));
+        }
+
+        /**
+         * @param portChannelLacpMinBundle Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundle(@Nullable Output<Integer> portChannelLacpMinBundle) {
+            $.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMinBundle Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundle(Integer portChannelLacpMinBundle) {
+            return portChannelLacpMinBundle(Output.of(portChannelLacpMinBundle));
+        }
+
+        /**
+         * @param portChannelLacpMinBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundleVariable(@Nullable Output<String> portChannelLacpMinBundleVariable) {
+            $.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMinBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundleVariable(String portChannelLacpMinBundleVariable) {
+            return portChannelLacpMinBundleVariable(Output.of(portChannelLacpMinBundleVariable));
+        }
+
+        /**
+         * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregate(@Nullable Output<Boolean> portChannelLacpQosAggregate) {
+            $.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregate(Boolean portChannelLacpQosAggregate) {
+            return portChannelLacpQosAggregate(Output.of(portChannelLacpQosAggregate));
+        }
+
+        /**
+         * @param portChannelLacpQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregateVariable(@Nullable Output<String> portChannelLacpQosAggregateVariable) {
+            $.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregateVariable(String portChannelLacpQosAggregateVariable) {
+            return portChannelLacpQosAggregateVariable(Output.of(portChannelLacpQosAggregateVariable));
+        }
+
+        /**
+         * @param portChannelMemberInterface Port-Channel member interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMemberInterface(@Nullable Output<Boolean> portChannelMemberInterface) {
+            $.portChannelMemberInterface = portChannelMemberInterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelMemberInterface Port-Channel member interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMemberInterface(Boolean portChannelMemberInterface) {
+            return portChannelMemberInterface(Output.of(portChannelMemberInterface));
+        }
+
+        /**
+         * @param portChannelMode Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+         *   - Choices: `lacp`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMode(@Nullable Output<String> portChannelMode) {
+            $.portChannelMode = portChannelMode;
+            return this;
+        }
+
+        /**
+         * @param portChannelMode Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+         *   - Choices: `lacp`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMode(String portChannelMode) {
+            return portChannelMode(Output.of(portChannelMode));
+        }
+
+        /**
+         * @param portChannelStaticLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalance(@Nullable Output<String> portChannelStaticLoadBalance) {
+            $.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalance(String portChannelStaticLoadBalance) {
+            return portChannelStaticLoadBalance(Output.of(portChannelStaticLoadBalance));
+        }
+
+        /**
+         * @param portChannelStaticLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalanceVariable(@Nullable Output<String> portChannelStaticLoadBalanceVariable) {
+            $.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalanceVariable(String portChannelStaticLoadBalanceVariable) {
+            return portChannelStaticLoadBalanceVariable(Output.of(portChannelStaticLoadBalanceVariable));
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(@Nullable Output<List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>> portChannelStaticMemberLinks) {
+            $.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(List<ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs> portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(Output.of(portChannelStaticMemberLinks));
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs... portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(List.of(portChannelStaticMemberLinks));
+        }
+
+        /**
+         * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregate(@Nullable Output<Boolean> portChannelStaticQosAggregate) {
+            $.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregate(Boolean portChannelStaticQosAggregate) {
+            return portChannelStaticQosAggregate(Output.of(portChannelStaticQosAggregate));
+        }
+
+        /**
+         * @param portChannelStaticQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregateVariable(@Nullable Output<String> portChannelStaticQosAggregateVariable) {
+            $.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregateVariable(String portChannelStaticQosAggregateVariable) {
+            return portChannelStaticQosAggregateVariable(Output.of(portChannelStaticQosAggregateVariable));
+        }
+
+        /**
+         * @param portChannelSubinterface Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterface(@Nullable Output<Boolean> portChannelSubinterface) {
+            $.portChannelSubinterface = portChannelSubinterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterface Port Channel Sub Interface on/off, Attribute conditional on `portChannelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterface(Boolean portChannelSubinterface) {
+            return portChannelSubinterface(Output.of(portChannelSubinterface));
+        }
+
+        /**
+         * @param portChannelSubinterfacePrimaryInterfaceName , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfacePrimaryInterfaceName(@Nullable Output<String> portChannelSubinterfacePrimaryInterfaceName) {
+            $.portChannelSubinterfacePrimaryInterfaceName = portChannelSubinterfacePrimaryInterfaceName;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterfacePrimaryInterfaceName , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfacePrimaryInterfaceName(String portChannelSubinterfacePrimaryInterfaceName) {
+            return portChannelSubinterfacePrimaryInterfaceName(Output.of(portChannelSubinterfacePrimaryInterfaceName));
+        }
+
+        /**
+         * @param portChannelSubinterfacePrimaryInterfaceNameVariable Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfacePrimaryInterfaceNameVariable(@Nullable Output<String> portChannelSubinterfacePrimaryInterfaceNameVariable) {
+            $.portChannelSubinterfacePrimaryInterfaceNameVariable = portChannelSubinterfacePrimaryInterfaceNameVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterfacePrimaryInterfaceNameVariable Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfacePrimaryInterfaceNameVariable(String portChannelSubinterfacePrimaryInterfaceNameVariable) {
+            return portChannelSubinterfacePrimaryInterfaceNameVariable(Output.of(portChannelSubinterfacePrimaryInterfaceNameVariable));
+        }
+
+        /**
+         * @param portChannelSubinterfaceSecondaryInterfaceName , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfaceSecondaryInterfaceName(@Nullable Output<String> portChannelSubinterfaceSecondaryInterfaceName) {
+            $.portChannelSubinterfaceSecondaryInterfaceName = portChannelSubinterfaceSecondaryInterfaceName;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterfaceSecondaryInterfaceName , Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfaceSecondaryInterfaceName(String portChannelSubinterfaceSecondaryInterfaceName) {
+            return portChannelSubinterfaceSecondaryInterfaceName(Output.of(portChannelSubinterfaceSecondaryInterfaceName));
+        }
+
+        /**
+         * @param portChannelSubinterfaceSecondaryInterfaceNameVariable Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfaceSecondaryInterfaceNameVariable(@Nullable Output<String> portChannelSubinterfaceSecondaryInterfaceNameVariable) {
+            $.portChannelSubinterfaceSecondaryInterfaceNameVariable = portChannelSubinterfaceSecondaryInterfaceNameVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterfaceSecondaryInterfaceNameVariable Variable name, Attribute conditional on `portChannelInterface` equal to `true` and `portChannelSubinterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterfaceSecondaryInterfaceNameVariable(String portChannelSubinterfaceSecondaryInterfaceNameVariable) {
+            return portChannelSubinterfaceSecondaryInterfaceNameVariable(Output.of(portChannelSubinterfaceSecondaryInterfaceNameVariable));
         }
 
         /**
@@ -3111,8 +4017,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -3123,8 +4029,8 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -3134,7 +4040,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speedVariable Variable name
+         * @param speedVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3145,7 +4051,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param speedVariable Variable name
+         * @param speedVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3186,7 +4092,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
+         * @param tcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -3198,7 +4104,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
+         * @param tcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -3209,7 +4115,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMssVariable Variable name
+         * @param tcpMssVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3220,7 +4126,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tcpMssVariable Variable name
+         * @param tcpMssVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3230,49 +4136,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param tracker Enable tracker for this interface
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tracker(@Nullable Output<String> tracker) {
-            $.tracker = tracker;
-            return this;
-        }
-
-        /**
-         * @param tracker Enable tracker for this interface
-         * 
-         * @return builder
-         * 
-         */
-        public Builder tracker(String tracker) {
-            return tracker(Output.of(tracker));
-        }
-
-        /**
-         * @param trackerVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder trackerVariable(@Nullable Output<String> trackerVariable) {
-            $.trackerVariable = trackerVariable;
-            return this;
-        }
-
-        /**
-         * @param trackerVariable Variable name
-         * 
-         * @return builder
-         * 
-         */
-        public Builder trackerVariable(String trackerVariable) {
-            return trackerVariable(Output.of(trackerVariable));
-        }
-
-        /**
-         * @param trustsecEnableEnforcedPropogation Enable/Disable SGT Enforcement on an interface
+         * @param trustsecEnableEnforcedPropogation Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3283,7 +4147,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnableEnforcedPropogation Enable/Disable SGT Enforcement on an interface
+         * @param trustsecEnableEnforcedPropogation Enable/Disable SGT Enforcement on an interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3293,7 +4157,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS
+         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3305,7 +4169,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS
+         * @param trustsecEnableSgtPropogation Indicates that the interface is trustworthy for CTS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3316,7 +4180,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519
+         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `2`-`65519`
          * 
          * @return builder
@@ -3328,7 +4192,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519
+         * @param trustsecEnforcedSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `2`-`65519`
          * 
          * @return builder
@@ -3339,7 +4203,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTagVariable Variable name
+         * @param trustsecEnforcedSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3350,7 +4214,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecEnforcedSecurityGroupTagVariable Variable name
+         * @param trustsecEnforcedSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3360,7 +4224,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding
+         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -3372,7 +4236,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding
+         * @param trustsecPropogate Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -3383,7 +4247,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTag SGT value between 2 and 65519
+         * @param trustsecSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `2`-`65519`
          * 
          * @return builder
@@ -3395,7 +4259,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTag SGT value between 2 and 65519
+         * @param trustsecSecurityGroupTag SGT value between 2 and 65519, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `2`-`65519`
          * 
          * @return builder
@@ -3406,7 +4270,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTagVariable Variable name
+         * @param trustsecSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3417,7 +4281,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param trustsecSecurityGroupTagVariable Variable name
+         * @param trustsecSecurityGroupTagVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3448,7 +4312,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param xconnect Extend remote TLOC over a GRE tunnel to a local LAN interface
+         * @param xconnect Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3459,7 +4323,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param xconnect Extend remote TLOC over a GRE tunnel to a local LAN interface
+         * @param xconnect Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3469,7 +4333,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param xconnectVariable Variable name
+         * @param xconnectVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3480,7 +4344,7 @@ public final class ServiceLanVpnInterfaceEthernetFeatureState extends com.pulumi
         }
 
         /**
-         * @param xconnectVariable Variable name
+         * @param xconnectVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 

@@ -18,14 +18,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     public static final Ipv6AclPolicyDefinitionSequenceMatchEntryArgs Empty = new Ipv6AclPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     @Import(name="classMapId")
     private @Nullable Output<String> classMapId;
 
     /**
-     * @return Class map ID, Attribute conditional on `type` being equal to `class`
+     * @return Class map ID, Attribute conditional on `type` equal to `class`
      * 
      */
     public Optional<Output<String>> classMapId() {
@@ -48,14 +48,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     @Import(name="destinationDataIpv6PrefixListId")
     private @Nullable Output<String> destinationDataIpv6PrefixListId;
 
     /**
-     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     public Optional<Output<String>> destinationDataIpv6PrefixListId() {
@@ -78,14 +78,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     @Import(name="destinationIp")
     private @Nullable Output<String> destinationIp;
 
     /**
-     * @return Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     public Optional<Output<String>> destinationIp() {
@@ -93,14 +93,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      * 
      */
     @Import(name="destinationPorts")
     private @Nullable Output<String> destinationPorts;
 
     /**
-     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      * 
      */
     public Optional<Output<String>> destinationPorts() {
@@ -108,7 +108,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Next header, Attribute conditional on `type` being equal to `nextHeader`
+     * Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      * 
      */
@@ -116,7 +116,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<Integer> nextHeader;
 
     /**
-     * @return Next header, Attribute conditional on `type` being equal to `nextHeader`
+     * @return Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      * 
      */
@@ -125,7 +125,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -133,7 +133,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<Integer> packetLength;
 
     /**
-     * @return Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * @return Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      * 
      */
@@ -142,7 +142,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -150,7 +150,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<String> priority;
 
     /**
-     * @return PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * @return PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      * 
      */
@@ -159,14 +159,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     @Import(name="sourceDataIpv6PrefixListId")
     private @Nullable Output<String> sourceDataIpv6PrefixListId;
 
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     public Optional<Output<String>> sourceDataIpv6PrefixListId() {
@@ -189,14 +189,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
     /**
-     * @return Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     public Optional<Output<String>> sourceIp() {
@@ -204,14 +204,14 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     @Import(name="sourcePorts")
     private @Nullable Output<String> sourcePorts;
 
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     public Optional<Output<String>> sourcePorts() {
@@ -219,7 +219,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -227,7 +227,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<String> tcp;
 
     /**
-     * @return TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * @return TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      * 
      */
@@ -236,7 +236,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     }
 
     /**
-     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -244,7 +244,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
     private @Nullable Output<Integer> trafficClass;
 
     /**
-     * @return Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * @return Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      * 
      */
@@ -309,7 +309,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
+         * @param classMapId Class map ID, Attribute conditional on `type` equal to `class`
          * 
          * @return builder
          * 
@@ -320,7 +320,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param classMapId Class map ID, Attribute conditional on `type` being equal to `class`
+         * @param classMapId Class map ID, Attribute conditional on `type` equal to `class`
          * 
          * @return builder
          * 
@@ -351,7 +351,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationDataIpv6PrefixListId Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+         * @param destinationDataIpv6PrefixListId Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -362,7 +362,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationDataIpv6PrefixListId Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+         * @param destinationDataIpv6PrefixListId Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -393,7 +393,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationIp Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+         * @param destinationIp Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationIp Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+         * @param destinationIp Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
          * 
          * @return builder
          * 
@@ -414,7 +414,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPorts Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
          * 
          * @return builder
          * 
@@ -435,7 +435,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param nextHeader Next header, Attribute conditional on `type` being equal to `nextHeader`
+         * @param nextHeader Next header, Attribute conditional on `type` equal to `nextHeader`
          *   - Range: `0`-`255`
          * 
          * @return builder
@@ -447,7 +447,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param nextHeader Next header, Attribute conditional on `type` being equal to `nextHeader`
+         * @param nextHeader Next header, Attribute conditional on `type` equal to `nextHeader`
          *   - Range: `0`-`255`
          * 
          * @return builder
@@ -458,7 +458,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
+         * @param packetLength Packet length, Attribute conditional on `type` equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -470,7 +470,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param packetLength Packet length, Attribute conditional on `type` being equal to `packetLength`
+         * @param packetLength Packet length, Attribute conditional on `type` equal to `packetLength`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -481,7 +481,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param priority PLP - priority, Attribute conditional on `type` being equal to `plp`
+         * @param priority PLP - priority, Attribute conditional on `type` equal to `plp`
          *   - Choices: `high`, `low`
          * 
          * @return builder
@@ -493,7 +493,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param priority PLP - priority, Attribute conditional on `type` being equal to `plp`
+         * @param priority PLP - priority, Attribute conditional on `type` equal to `plp`
          *   - Choices: `high`, `low`
          * 
          * @return builder
@@ -504,7 +504,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -515,7 +515,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -546,7 +546,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceIp Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+         * @param sourceIp Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
          * 
          * @return builder
          * 
@@ -557,7 +557,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourceIp Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+         * @param sourceIp Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
          * 
          * @return builder
          * 
@@ -567,7 +567,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -578,7 +578,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -588,7 +588,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param tcp TCP parameters, Attribute conditional on `type` being equal to `tcp`
+         * @param tcp TCP parameters, Attribute conditional on `type` equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder
@@ -600,7 +600,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param tcp TCP parameters, Attribute conditional on `type` being equal to `tcp`
+         * @param tcp TCP parameters, Attribute conditional on `type` equal to `tcp`
          *   - Choices: `syn`
          * 
          * @return builder
@@ -611,7 +611,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param trafficClass Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+         * @param trafficClass Traffic class, Attribute conditional on `type` equal to `trafficClass`
          *   - Range: `0`-`63`
          * 
          * @return builder
@@ -623,7 +623,7 @@ public final class Ipv6AclPolicyDefinitionSequenceMatchEntryArgs extends com.pul
         }
 
         /**
-         * @param trafficClass Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+         * @param trafficClass Traffic class, Attribute conditional on `type` equal to `trafficClass`
          *   - Range: `0`-`63`
          * 
          * @return builder

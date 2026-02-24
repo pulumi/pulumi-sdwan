@@ -51,23 +51,23 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequence {
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
     /**
-     * Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+     * Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `backupSlaPreferredColor`
      */
     backupSlaPreferredColor?: string;
     /**
-     * Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+     * Cloud SLA, Attribute conditional on `type` equal to `cloudSaas`
      */
     cloudSla?: boolean;
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counter?: string;
     /**
-     * Enable logging, Attribute conditional on `type` being equal to `log`
+     * Enable logging, Attribute conditional on `type` equal to `log`
      */
     log?: boolean;
     /**
-     * List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
+     * List of SLA class parameters, Attribute conditional on `type` equal to `slaClass`
      */
     slaClassParameters?: outputs.ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter[];
     /**
@@ -79,11 +79,11 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter {
     /**
-     * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+     * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      */
     preferredColor?: string;
     /**
-     * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      */
     preferredColorGroupListId?: string;
     /**
@@ -91,7 +91,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
      */
     preferredColorGroupListVersion?: number;
     /**
-     * SLA class list ID, Attribute conditional on `type` being equal to `name`
+     * SLA class list ID, Attribute conditional on `type` equal to `name`
      */
     slaClassListId?: string;
     /**
@@ -107,7 +107,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaCl
 
 export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
     /**
-     * Application list ID, Attribute conditional on `type` being equal to `appList`
+     * Application list ID, Attribute conditional on `type` equal to `appList`
      */
     applicationListId?: string;
     /**
@@ -115,7 +115,7 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     applicationListVersion?: number;
     /**
-     * Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * Destination Data Prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
     destinationDataPrefixListId?: string;
     /**
@@ -123,25 +123,25 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataPrefixListVersion?: number;
     /**
-     * Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `destinationPort`
      */
     destinationPort?: string;
     /**
-     * Destination region, Attribute conditional on `type` being equal to `destinationRegion`
+     * Destination region, Attribute conditional on `type` equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
     destinationRegion?: string;
     /**
-     * DNS request or response, Attribute conditional on `type` being equal to `dns`
+     * DNS request or response, Attribute conditional on `type` equal to `dns`
      *   - Choices: `request`, `response`
      */
     dns?: string;
     /**
-     * DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
+     * DNS Application list ID, Attribute conditional on `type` equal to `dnsAppList`
      */
     dnsApplicationListId?: string;
     /**
@@ -149,24 +149,24 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     dnsApplicationListVersion?: number;
     /**
-     * DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
     dscp?: string;
     /**
-     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+     * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * PLP, Attribute conditional on `type` being equal to `plp`
+     * PLP, Attribute conditional on `type` equal to `plp`
      *   - Choices: `low`, `high`
      */
     plp?: string;
     /**
-     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * Source Data Prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
     sourceDataPrefixListId?: string;
     /**
@@ -174,15 +174,15 @@ export interface ApplicationAwareRoutingPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataPrefixListVersion?: number;
     /**
-     * Source IP, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePort?: string;
     /**
-     * Traffic to, Attribute conditional on `type` being equal to `trafficTo`
+     * Traffic to, Attribute conditional on `type` equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
     trafficTo?: string;
@@ -5953,7 +5953,7 @@ export interface CustomControlTopologyPolicyDefinitionSequence {
 
 export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
     /**
-     * Export to VPN list ID, Attribute conditional on `type` being equal to `exportTo`
+     * Export to VPN list ID, Attribute conditional on `type` equal to `exportTo`
      */
     exportToVpnListId?: string;
     /**
@@ -5961,7 +5961,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
      */
     exportToVpnListVersion?: number;
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      */
     setParameters?: outputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -5973,38 +5973,38 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntry {
 
 export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      */
     community?: string;
     /**
-     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+     * Community additive, Attribute conditional on `type` equal to `communityAdditive`
      */
     communityAdditive?: boolean;
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Preference, Attribute conditional on `type` being equal to `preference`
+     * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      */
     preference?: number;
     /**
-     * Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * Service TLOC color, Attribute conditional on `type` equal to `service`
      */
     serviceTlocColor?: string;
     /**
-     * Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`
      */
     serviceTlocEncapsulation?: string;
     /**
-     * Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * Service TLOC IP address, Attribute conditional on `type` equal to `service`
      */
     serviceTlocIp?: string;
     /**
-     * Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * Service TLOC list ID, Attribute conditional on `type` equal to `service`
      */
     serviceTlocListId?: string;
     /**
@@ -6012,35 +6012,35 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPara
      */
     serviceTlocListVersion?: number;
     /**
-     * Service type, Attribute conditional on `type` being equal to `service`
+     * Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
     serviceType?: string;
     /**
-     * Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      */
     serviceVpnId?: number;
     /**
-     * TLOC action, Attribute conditional on `type` being equal to `tlocAction`
+     * TLOC action, Attribute conditional on `type` equal to `tlocAction`
      *   - Choices: `strict`, `primary`, `backup`, `ecmp`
      */
     tlocAction?: string;
     /**
-     * TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -6056,12 +6056,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceActionEntrySetPara
 
 export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
     /**
-     * Carrier, Attribute conditional on `type` being equal to `carrier`
+     * Carrier, Attribute conditional on `type` equal to `carrier`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      */
     carrier?: string;
     /**
-     * Color list ID, Attribute conditional on `type` being equal to `colorList`
+     * Color list ID, Attribute conditional on `type` equal to `colorList`
      */
     colorListId?: string;
     /**
@@ -6069,7 +6069,7 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     colorListVersion?: number;
     /**
-     * Community list ID, Attribute conditional on `type` being equal to `community`
+     * Community list ID, Attribute conditional on `type` equal to `community`
      */
     communityListId?: string;
     /**
@@ -6077,12 +6077,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     communityListVersion?: number;
     /**
-     * Domain ID, Attribute conditional on `type` being equal to `domainId`
+     * Domain ID, Attribute conditional on `type` equal to `domainId`
      *   - Range: `0`-`4294967295`
      */
     domainId?: number;
     /**
-     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      */
     expandedCommunityListId?: string;
     /**
@@ -6090,36 +6090,36 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListVersion?: number;
     /**
-     * Group ID, Attribute conditional on `type` being equal to `groupId`
+     * Group ID, Attribute conditional on `type` equal to `groupId`
      *   - Range: `0`-`4294967295`
      */
     groupId?: number;
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin, Attribute conditional on `type` being equal to `origin`
+     * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`, `aggregrate`, `bgp`, `bgp-external`, `bgp-internal`, `connected`, `eigrp`, `ospf`, `ospf-inter-area`, `ospf-intra-area`, `ospf-external1`, `ospf-external2`, `rip`, `static`, `eigrp-summary`, `eigrp-internal`, `eigrp-external`, `lisp`, `nat-dia`, `natpool`, `isis`, `isis-level1`, `isis-level2`
      */
     origin?: string;
     /**
-     * Originator IP, Attribute conditional on `type` being equal to `originator`
+     * Originator IP, Attribute conditional on `type` equal to `originator`
      */
     originator?: string;
     /**
-     * Path type, Attribute conditional on `type` being equal to `pathType`
+     * Path type, Attribute conditional on `type` equal to `pathType`
      *   - Choices: `hierarchical-path`, `direct-path`, `transport-gateway-path`
      */
     pathType?: string;
     /**
-     * Preference, Attribute conditional on `type` being equal to `preference`
+     * Preference, Attribute conditional on `type` equal to `preference`
      *   - Range: `0`-`4294967295`
      */
     preference?: number;
     /**
-     * Prefix list ID, Attribute conditional on `type` being equal to `prefixList`
+     * Prefix list ID, Attribute conditional on `type` equal to `prefixList`
      */
     prefixListId?: string;
     /**
@@ -6127,26 +6127,26 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     prefixListVersion?: number;
     /**
-     * Region ID, Attribute conditional on `type` being equal to `regionId`
+     * Region ID, Attribute conditional on `type` equal to `regionId`
      *   - Range: `0`-`63`
      */
     regionId?: number;
     /**
-     * Region list ID, Attribute conditional on `type` being equal to `regionList`
+     * Region list ID, Attribute conditional on `type` equal to `regionList`
      */
     regionListId?: string;
     /**
-     * Role, Attribute conditional on `type` being equal to `role`
+     * Role, Attribute conditional on `type` equal to `role`
      *   - Choices: `border-router`, `edge-router`
      */
     role?: string;
     /**
-     * Site ID, Attribute conditional on `type` being equal to `siteId`
+     * Site ID, Attribute conditional on `type` equal to `siteId`
      *   - Range: `0`-`4294967295`
      */
     siteId?: number;
     /**
-     * Site list ID, Attribute conditional on `type` being equal to `siteList`
+     * Site list ID, Attribute conditional on `type` equal to `siteList`
      */
     siteListId?: string;
     /**
@@ -6154,20 +6154,20 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     siteListVersion?: number;
     /**
-     * TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -6180,12 +6180,12 @@ export interface CustomControlTopologyPolicyDefinitionSequenceMatchEntry {
      */
     type: string;
     /**
-     * VPN ID, Attribute conditional on `type` being equal to `vpn`
+     * VPN ID, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65536`
      */
     vpnId?: number;
     /**
-     * VPN list ID, Attribute conditional on `type` being equal to `vpnList`
+     * VPN list ID, Attribute conditional on `type` equal to `vpnList`
      */
     vpnListId?: string;
     /**
@@ -13180,6 +13180,7 @@ export interface GetPolicyObjectAppProbeClassEntry {
      * Forwarding Class Name
      */
     forwardingClass: string;
+    forwardingClassId: string;
     /**
      * Map
      */
@@ -15073,6 +15074,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      */
     addressVariable: string;
     /**
+     * Follow RG state by default when B2B HA is configured
+     */
+    followDualRouterHighAvailability: boolean;
+    /**
      * Group ID
      */
     groupId: number;
@@ -15080,6 +15085,14 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      * Variable name
      */
     groupIdVariable: string;
+    /**
+     * Minimum preempt delay in seconds
+     */
+    minPreemptDelay: number;
+    /**
+     * Variable name
+     */
+    minPreemptDelayVariable: string;
     /**
      * Set priority
      */
@@ -15200,6 +15213,10 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
 
 export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
     /**
+     * Follow RG state by default when B2B HA is configured
+     */
+    followDualRouterHighAvailability: boolean;
+    /**
      * Group ID
      */
     groupId: number;
@@ -15211,6 +15228,14 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
      * IPv6 VRRP
      */
     ipv6Addresses: outputs.GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address[];
+    /**
+     * Minimum preempt delay in seconds
+     */
+    minPreemptDelay: number;
+    /**
+     * Variable name
+     */
+    minPreemptDelayVariable: string;
     /**
      * Set priority
      */
@@ -15250,6 +15275,38 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address {
      * Variable name
      */
     linkLocalAddressVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+    interfaceId: string;
+    /**
+     * Set lacp mode
+     */
+    lacpMode: string;
+    /**
+     * Variable name
+     */
+    lacpModeVariable: string;
+    /**
+     * Set lacp port priority
+     */
+    lacpPortPriority: number;
+    /**
+     * Variable name
+     */
+    lacpPortPriorityVariable: string;
+    /**
+     * Set lacp rate
+     */
+    lacpRate: string;
+    /**
+     * Variable name
+     */
+    lacpRateVariable: string;
+}
+
+export interface GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+    interfaceId: string;
 }
 
 export interface GetServiceLanVpnInterfaceEthernetFeatureStaticNat {
@@ -15330,6 +15387,10 @@ export interface GetServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      * Variable name
      */
     addressVariable: string;
+    /**
+     * Follow RG state by default when B2B HA is configured
+     */
+    followDualRouterHighAvailability: boolean;
     /**
      * Group ID
      */
@@ -15458,6 +15519,10 @@ export interface GetServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
      * IPv6 VRRP
      */
     addresses: outputs.GetServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress[];
+    /**
+     * Follow RG state by default when B2B HA is configured
+     */
+    followDualRouterHighAvailability: boolean;
     /**
      * Group ID
      */
@@ -17082,6 +17147,10 @@ export interface GetServiceSwitchportFeatureInterface {
      */
     duplexVariable: string;
     /**
+     * Set 802.1x on off
+     */
+    enableDot1x: boolean;
+    /**
      * Enable Periodic Reauthentication
      */
     enablePeriodicReauth: boolean;
@@ -17664,7 +17733,7 @@ export interface GetSystemAaaFeatureRadiusGroupServer {
      */
     authPortVariable: string;
     /**
-     * Set the Radius server shared key
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     key: string;
     /**
@@ -17679,6 +17748,10 @@ export interface GetSystemAaaFeatureRadiusGroupServer {
      * Variable name
      */
     keyTypeVariable: string;
+    /**
+     * Variable name
+     */
+    keyVariable: string;
     /**
      * Configure how many times to contact this Radius server
      */
@@ -17734,13 +17807,17 @@ export interface GetSystemAaaFeatureTacacsGroupServer {
      */
     address: string;
     /**
-     * Set the TACACS server shared key
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     key: string;
     /**
      * Type of encyption. To be used for type 6
      */
     keyEnum: string;
+    /**
+     * Variable name
+     */
+    keyVariable: string;
     /**
      * TACACS Port
      */
@@ -17777,7 +17854,7 @@ export interface GetSystemAaaFeatureUser {
      */
     nameVariable: string;
     /**
-     * Set the user password
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password: string;
     /**
@@ -17804,13 +17881,13 @@ export interface GetSystemAaaFeatureUserPublicKey {
      */
     keyString: string;
     /**
+     * Variable name
+     */
+    keyStringVariable: string;
+    /**
      * Only RSA is supported
      */
     keyType: string;
-    /**
-     * Variable name
-     */
-    keyTypeVariable: string;
 }
 
 export interface GetSystemBasicFeatureAffinityPerVrf {
@@ -20823,11 +20900,73 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress 
     addressVariable: string;
 }
 
+export interface GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback {
+    /**
+     * NAT Inside Source Loopback Interface
+     */
+    loopbackInterface: string;
+    /**
+     * Variable name
+     */
+    loopbackInterfaceVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
+    /**
+     * Enable DualRouter HA Mapping
+     */
+    enableDualRouterHaMapping: boolean;
+    /**
+     * NAT Pool Name
+     */
+    name: number;
+    /**
+     * Variable name
+     */
+    nameVariable: string;
+    /**
+     * NAT Overload
+     */
+    overload: boolean;
+    /**
+     * Variable name
+     */
+    overloadVariable: string;
+    /**
+     * NAT Pool Prefix Length
+     */
+    prefixLength: number;
+    /**
+     * Variable name
+     */
+    prefixLengthVariable: string;
+    /**
+     * NAT Pool Range End
+     */
+    rangeEnd: string;
+    /**
+     * Variable name
+     */
+    rangeEndVariable: string;
+    /**
+     * NAT Pool Range Start
+     */
+    rangeStart: string;
+    /**
+     * Variable name
+     */
+    rangeStartVariable: string;
+}
+
 export interface GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     /**
      * Direction of static NAT translation
      */
     direction: string;
+    /**
+     * Enable DualRouter HA Mapping
+     */
+    enableDualRouterHaMapping: boolean;
     /**
      * Source IP address to be translated
      */
@@ -20854,7 +20993,47 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     translatedIpVariable: string;
 }
 
+export interface GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+    interfaceId: string;
+    /**
+     * Set lacp mode
+     */
+    lacpMode: string;
+    /**
+     * Variable name
+     */
+    lacpModeVariable: string;
+    /**
+     * Set lacp port priority
+     */
+    lacpPortPriority: number;
+    /**
+     * Variable name
+     */
+    lacpPortPriorityVariable: string;
+    /**
+     * Set lacp rate
+     */
+    lacpRate: string;
+    /**
+     * Variable name
+     */
+    lacpRateVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+    interfaceId: string;
+}
+
 export interface GetTransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+    /**
+     * Egress Interface
+     */
+    egressInterface: boolean;
+    /**
+     * Variable name
+     */
+    egressInterfaceVariable: string;
     /**
      * Source Prefix
      */
@@ -20879,6 +21058,65 @@ export interface GetTransportWanVpnInterfaceEthernetFeatureStaticNat66 {
      * Variable name
      */
     translatedSourcePrefixVariable: string;
+}
+
+export interface GetTransportWanVpnInterfaceEthernetFeatureStaticPortForward {
+    /**
+     * Direction of static NAT translation
+     */
+    direction: string;
+    /**
+     * Enable DualRouter HA Mapping
+     */
+    enableDualRouterHaMapping: boolean;
+    /**
+     * Protocol
+     */
+    protocol: string;
+    /**
+     * Variable name
+     */
+    protocolVariable: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable: string;
+    /**
+     * source port to be translated
+     */
+    sourcePort: number;
+    /**
+     * Variable name
+     */
+    sourcePortVariable: string;
+    /**
+     * Source VPN ID
+     */
+    sourceVpn: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable: string;
+    /**
+     * Statically translated source IP address
+     */
+    translatedIp: string;
+    /**
+     * Variable name
+     */
+    translatedIpVariable: string;
+    /**
+     * Statically translated source IP address
+     */
+    translatedPort: number;
+    /**
+     * Variable name
+     */
+    translatedPortVariable: string;
 }
 
 export interface GetTransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {
@@ -22546,7 +22784,7 @@ export interface Ipv4AclPolicyDefinitionSequence {
 
 export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      */
     classMapId?: string;
     /**
@@ -22554,15 +22792,15 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     classMapVersion?: number;
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counterName?: string;
     /**
-     * Enable logging, Attribute conditional on `type` being equal to `log`
+     * Enable logging, Attribute conditional on `type` equal to `log`
      */
     log?: boolean;
     /**
-     * Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * Mirror ID, Attribute conditional on `type` equal to `mirror`
      */
     mirrorId?: string;
     /**
@@ -22570,7 +22808,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     mirrorVersion?: number;
     /**
-     * Policer ID, Attribute conditional on `type` being equal to `policer`
+     * Policer ID, Attribute conditional on `type` equal to `policer`
      */
     policerId?: string;
     /**
@@ -22578,7 +22816,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
      */
     policerVersion?: number;
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      */
     setParameters?: outputs.Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -22590,12 +22828,12 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * DSCP value, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
     nextHop?: string;
     /**
@@ -22607,7 +22845,7 @@ export interface Ipv4AclPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      */
     classMapId?: string;
     /**
@@ -22615,7 +22853,7 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     classMapVersion?: number;
     /**
-     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
     destinationDataIpv4PrefixListId?: string;
     /**
@@ -22623,41 +22861,41 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv4PrefixListVersion?: number;
     /**
-     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIpVariable?: string;
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      */
     destinationPorts?: string;
     /**
-     * DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
     dscp?: string;
     /**
-     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+     * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      */
     priority?: string;
     /**
-     * Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` being equal to `protocol`
+     * Single value (0-255) or multiple values separated by spaces, Attribute conditional on `type` equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
     sourceDataIpv4PrefixListId?: string;
     /**
@@ -22665,19 +22903,19 @@ export interface Ipv4AclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv4PrefixListVersion?: number;
     /**
-     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIpVariable?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
-     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
@@ -22715,7 +22953,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequence {
 
 export interface Ipv4DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counterName?: string;
     /**
@@ -22727,7 +22965,7 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Destination data IPv4 prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * Destination data IPv4 prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
     destinationDataIpv4PrefixListId?: string;
     /**
@@ -22735,20 +22973,20 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv4PrefixListVersion?: number;
     /**
-     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination IP prefix variable, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP prefix variable, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIpVariable?: string;
     /**
-     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
     destinationPort?: number;
     /**
-     * Source data IPv4 prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * Source data IPv4 prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
     sourceDataIpv4PrefixListId?: string;
     /**
@@ -22756,15 +22994,15 @@ export interface Ipv4DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv4PrefixListVersion?: number;
     /**
-     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source IP prefix variable, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP prefix variable, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIpVariable?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
@@ -22816,7 +23054,7 @@ export interface Ipv6AclPolicyDefinitionSequence {
 
 export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      */
     classMapId?: string;
     /**
@@ -22824,15 +23062,15 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     classMapVersion?: number;
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counterName?: string;
     /**
-     * Enable logging, Attribute conditional on `type` being equal to `log`
+     * Enable logging, Attribute conditional on `type` equal to `log`
      */
     log?: boolean;
     /**
-     * Mirror ID, Attribute conditional on `type` being equal to `mirror`
+     * Mirror ID, Attribute conditional on `type` equal to `mirror`
      */
     mirrorId?: string;
     /**
@@ -22840,7 +23078,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     mirrorVersion?: number;
     /**
-     * Policer ID, Attribute conditional on `type` being equal to `policer`
+     * Policer ID, Attribute conditional on `type` equal to `policer`
      */
     policerId?: string;
     /**
@@ -22848,7 +23086,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
      */
     policerVersion?: number;
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      */
     setParameters?: outputs.Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
@@ -22860,11 +23098,11 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      */
     trafficClass?: number;
@@ -22877,7 +23115,7 @@ export interface Ipv6AclPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Class map ID, Attribute conditional on `type` being equal to `class`
+     * Class map ID, Attribute conditional on `type` equal to `class`
      */
     classMapId?: string;
     /**
@@ -22885,7 +23123,7 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     classMapVersion?: number;
     /**
-     * Destination dataIPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * Destination dataIPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      */
     destinationDataIpv6PrefixListId?: string;
     /**
@@ -22893,30 +23131,30 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv6PrefixListVersion?: number;
     /**
-     * Destination IPv6 prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * Destination IPv6 prefix, Attribute conditional on `type` equal to `destinationIpv6`
      */
     destinationIp?: string;
     /**
-     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `destinationPort`
+     * Destination ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `destinationPort`
      */
     destinationPorts?: string;
     /**
-     * Next header, Attribute conditional on `type` being equal to `nextHeader`
+     * Next header, Attribute conditional on `type` equal to `nextHeader`
      *   - Range: `0`-`255`
      */
     nextHeader?: number;
     /**
-     * Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP - priority, Attribute conditional on `type` being equal to `plp`
+     * PLP - priority, Attribute conditional on `type` equal to `plp`
      *   - Choices: `high`, `low`
      */
     priority?: string;
     /**
-     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      */
     sourceDataIpv6PrefixListId?: string;
     /**
@@ -22924,20 +23162,20 @@ export interface Ipv6AclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv6PrefixListVersion?: number;
     /**
-     * Source IPv6 prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * Source IPv6 prefix, Attribute conditional on `type` equal to `sourceIpv6`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
-     * TCP parameters, Attribute conditional on `type` being equal to `tcp`
+     * TCP parameters, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
     /**
-     * Traffic class, Attribute conditional on `type` being equal to `trafficClass`
+     * Traffic class, Attribute conditional on `type` equal to `trafficClass`
      *   - Range: `0`-`63`
      */
     trafficClass?: number;
@@ -22975,7 +23213,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequence {
 
 export interface Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counterName?: string;
     /**
@@ -22987,7 +23225,7 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceActionEntry {
 
 export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
     /**
-     * Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      */
     destinationDataIpv6PrefixListId?: string;
     /**
@@ -22995,16 +23233,16 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataIpv6PrefixListVersion?: number;
     /**
-     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      */
     destinationIp?: string;
     /**
-     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      */
     destinationPort?: number;
     /**
-     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      */
     sourceDataIpv6PrefixListId?: string;
     /**
@@ -23012,11 +23250,11 @@ export interface Ipv6DeviceAclPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataIpv6PrefixListVersion?: number;
     /**
-     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      */
     sourceIp?: string;
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePorts?: string;
     /**
@@ -23237,6 +23475,7 @@ export interface PolicyObjectAppProbeClassEntry {
      * Forwarding Class Name
      */
     forwardingClass?: string;
+    forwardingClassId?: string;
     /**
      * Map
      */
@@ -23666,73 +23905,73 @@ export interface RoutePolicyDefinitionSequence {
 
 export interface RoutePolicyDefinitionSequenceActionEntry {
     /**
-     * Aggregator, Attribute conditional on `type` being equal to `aggregator`
+     * Aggregator, Attribute conditional on `type` equal to `aggregator`
      *   - Range: `0`-`4294967295`
      */
     aggregator?: number;
     /**
-     * IP address, Attribute conditional on `type` being equal to `aggregator`
+     * IP address, Attribute conditional on `type` equal to `aggregator`
      */
     aggregatorIpAddress?: string;
     /**
-     * Space separated list of ASN to exclude, Attribute conditional on `type` being equal to `asPath`
+     * Space separated list of ASN to exclude, Attribute conditional on `type` equal to `asPath`
      */
     asPathExclude?: string;
     /**
-     * Space separated list of ASN to prepend, Attribute conditional on `type` being equal to `asPath`
+     * Space separated list of ASN to prepend, Attribute conditional on `type` equal to `asPath`
      */
     asPathPrepend?: string;
     /**
-     * Atomic aggregate, Attribute conditional on `type` being equal to `atomicAggregate`
+     * Atomic aggregate, Attribute conditional on `type` equal to `atomicAggregate`
      */
     atomicAggregate?: boolean;
     /**
-     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` being equal to `community`
+     * Community value, e.g. `1000:10000` or `internet` or `local-AS`, Attribute conditional on `type` equal to `community`
      */
     community?: string;
     /**
-     * Community additive, Attribute conditional on `type` being equal to `communityAdditive`
+     * Community additive, Attribute conditional on `type` equal to `communityAdditive`
      */
     communityAdditive?: boolean;
     /**
-     * Community variable, Attribute conditional on `type` being equal to `community`
+     * Community variable, Attribute conditional on `type` equal to `community`
      */
     communityVariable?: string;
     /**
-     * Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
     localPreference?: number;
     /**
-     * Metric, Attribute conditional on `type` being equal to `metric`
+     * Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      */
     metric?: number;
     /**
-     * Metric type, Attribute conditional on `type` being equal to `metricType`
+     * Metric type, Attribute conditional on `type` equal to `metricType`
      *   - Choices: `type1`, `type2`
      */
     metricType?: string;
     /**
-     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin, Attribute conditional on `type` being equal to `origin`
+     * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
     origin?: string;
     /**
-     * Originator IP, Attribute conditional on `type` being equal to `originator`
+     * Originator IP, Attribute conditional on `type` equal to `originator`
      */
     originator?: string;
     /**
-     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
     ospfTag?: number;
@@ -23742,7 +23981,7 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
      */
     type: string;
     /**
-     * Weight, Attribute conditional on `type` being equal to `weight`
+     * Weight, Attribute conditional on `type` equal to `weight`
      *   - Range: `0`-`4294967295`
      */
     weight?: number;
@@ -23750,7 +23989,7 @@ export interface RoutePolicyDefinitionSequenceActionEntry {
 
 export interface RoutePolicyDefinitionSequenceMatchEntry {
     /**
-     * AS path list ID, Attribute conditional on `type` being equal to `asPath`
+     * AS path list ID, Attribute conditional on `type` equal to `asPath`
      */
     asPathListId?: string;
     /**
@@ -23758,11 +23997,11 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     asPathListVersion?: number;
     /**
-     * Community list ID, Attribute conditional on `type` being equal to `community`
+     * Community list ID, Attribute conditional on `type` equal to `community`
      */
     communityListId?: string;
     /**
-     * Community list IDs, Attribute conditional on `type` being equal to `advancedCommunity`
+     * Community list IDs, Attribute conditional on `type` equal to `advancedCommunity`
      */
     communityListIds?: string[];
     /**
@@ -23779,11 +24018,11 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     communityListVersions?: string[];
     /**
-     * Expanded community list ID, Attribute conditional on `type` being equal to `expandedCommunity`
+     * Expanded community list ID, Attribute conditional on `type` equal to `expandedCommunity`
      */
     expandedCommunityListId?: string;
     /**
-     * Expanded community list variable, Attribute conditional on `type` being equal to `expandedCommunityInline`
+     * Expanded community list variable, Attribute conditional on `type` equal to `expandedCommunityInline`
      */
     expandedCommunityListVariable?: string;
     /**
@@ -23791,7 +24030,7 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     expandedCommunityListVersion?: number;
     /**
-     * Extended community list ID, Attribute conditional on `type` being equal to `extCommunity`
+     * Extended community list ID, Attribute conditional on `type` equal to `extCommunity`
      */
     extendedCommunityListId?: string;
     /**
@@ -23799,17 +24038,17 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     extendedCommunityListVersion?: number;
     /**
-     * Local preference, Attribute conditional on `type` being equal to `localPreference`
+     * Local preference, Attribute conditional on `type` equal to `localPreference`
      *   - Range: `0`-`4294967295`
      */
     localPreference?: number;
     /**
-     * Metric, Attribute conditional on `type` being equal to `metric`
+     * Metric, Attribute conditional on `type` equal to `metric`
      *   - Range: `0`-`4294967295`
      */
     metric?: number;
     /**
-     * Next hop prefix list ID, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop prefix list ID, Attribute conditional on `type` equal to `nextHop`
      */
     nextHopPrefixListId?: string;
     /**
@@ -23817,26 +24056,26 @@ export interface RoutePolicyDefinitionSequenceMatchEntry {
      */
     nextHopPrefixListVersion?: number;
     /**
-     * OMP tag, Attribute conditional on `type` being equal to `ompTag`
+     * OMP tag, Attribute conditional on `type` equal to `ompTag`
      *   - Range: `0`-`4294967295`
      */
     ompTag?: number;
     /**
-     * Origin, Attribute conditional on `type` being equal to `origin`
+     * Origin, Attribute conditional on `type` equal to `origin`
      *   - Choices: `igp`, `egp`, `incomplete`
      */
     origin?: string;
     /**
-     * OSPF tag, Attribute conditional on `type` being equal to `ospfTag`
+     * OSPF tag, Attribute conditional on `type` equal to `ospfTag`
      *   - Range: `0`-`4294967295`
      */
     ospfTag?: number;
     /**
-     * Peer IP, Attribute conditional on `type` being equal to `peer`
+     * Peer IP, Attribute conditional on `type` equal to `peer`
      */
     peer?: string;
     /**
-     * Prefix list ID, Attribute conditional on `type` being equal to `address`
+     * Prefix list ID, Attribute conditional on `type` equal to `address`
      */
     prefixListId?: string;
     /**
@@ -24080,7 +24319,7 @@ export interface SecurityAppHostingFeatureTemplateVirtualApplication {
 
 export interface SecurityPolicyDefinition {
     /**
-     * List of zone pair definitions, Attribute conditional on `type` being equal to `zoneBasedFW`
+     * List of zone pair definitions, Attribute conditional on `type` equal to `zoneBasedFW`
      */
     entries?: outputs.SecurityPolicyDefinitionEntry[];
     /**
@@ -24619,16 +24858,16 @@ export interface ServiceLanVpnFeatureIpv4ImportRouteTarget {
 
 export interface ServiceLanVpnFeatureIpv4StaticRoute {
     /**
-     * Gateway distance, Attribute conditional on `gateway` being equal to `null0`
+     * Gateway distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      */
     administrativeDistance?: number;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
     administrativeDistanceVariable?: string;
     /**
-     * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` being equal to `dhcp`
+     * IPv4 Route Gateway DHCP, Attribute conditional on `gateway` equal to `dhcp`
      */
     dhcp?: boolean;
     /**
@@ -24637,7 +24876,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     gateway?: string;
     /**
-     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * , Attribute conditional on `gateway` equal to `staticRouteInterface`
      */
     ipStaticRouteInterfaces?: outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface[];
     /**
@@ -24649,15 +24888,15 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     networkAddressVariable?: string;
     /**
-     * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHopWithTrackers?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker[];
     /**
-     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop[];
     /**
-     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
     null0?: boolean;
     /**
@@ -24670,7 +24909,7 @@ export interface ServiceLanVpnFeatureIpv4StaticRoute {
      */
     subnetMaskVariable?: string;
     /**
-     * IPv4 Route Gateway VPN, Attribute conditional on `gateway` being equal to `vpn`
+     * IPv4 Route Gateway VPN, Attribute conditional on `gateway` equal to `vpn`
      */
     vpn?: boolean;
 }
@@ -24776,24 +25015,24 @@ export interface ServiceLanVpnFeatureIpv6StaticRoute {
      */
     gateway?: string;
     /**
-     * , Attribute conditional on `gateway` being equal to `staticRouteInterface`
+     * , Attribute conditional on `gateway` equal to `staticRouteInterface`
      */
     ipv6StaticRouteInterfaces?: outputs.ServiceLanVpnFeatureIpv6StaticRouteIpv6StaticRouteInterface[];
     /**
-     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: string;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
     natVariable?: string;
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.ServiceLanVpnFeatureIpv6StaticRouteNextHop[];
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
     null0?: boolean;
     /**
@@ -25298,6 +25537,11 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      */
     addressVariable?: string;
     /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     */
+    followDualRouterHighAvailability?: boolean;
+    /**
      * Group ID
      *   - Range: `1`-`255`
      */
@@ -25306,6 +25550,15 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
      * Variable name
      */
     groupIdVariable?: string;
+    /**
+     * Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     */
+    minPreemptDelay?: number;
+    /**
+     * Variable name
+     */
+    minPreemptDelayVariable?: string;
     /**
      * Set priority
      *   - Range: `1`-`254`
@@ -25332,7 +25585,7 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp {
     timerVariable?: string;
     /**
      * Timer interval for successive advertisements, in milliseconds
-     *   - Range: `100`-`4294967295`
+     *   - Range: `1`-`4294967295`
      */
     tlocPrefChangeValue?: number;
     /**
@@ -25437,6 +25690,11 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
 
 export interface ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
     /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     */
+    followDualRouterHighAvailability?: boolean;
+    /**
      * Group ID
      *   - Range: `1`-`255`
      */
@@ -25449,6 +25707,15 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp {
      * IPv6 VRRP
      */
     ipv6Addresses?: outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address[];
+    /**
+     * Minimum preempt delay in seconds
+     *   - Range: `0`-`3600`
+     */
+    minPreemptDelay?: number;
+    /**
+     * Variable name
+     */
+    minPreemptDelayVariable?: string;
     /**
      * Set priority
      *   - Range: `1`-`254`
@@ -25493,6 +25760,42 @@ export interface ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpIpv6Address {
      * Variable name
      */
     linkLocalAddressVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+    interfaceId?: string;
+    /**
+     * Set lacp mode
+     *   - Choices: `active`, `passive`
+     *   - Default value: `active`
+     */
+    lacpMode?: string;
+    /**
+     * Variable name
+     */
+    lacpModeVariable?: string;
+    /**
+     * Set lacp port priority
+     *   - Range: `1`-`65535`
+     */
+    lacpPortPriority?: number;
+    /**
+     * Variable name
+     */
+    lacpPortPriorityVariable?: string;
+    /**
+     * Set lacp rate
+     *   - Choices: `fast`, `normal`
+     */
+    lacpRate?: string;
+    /**
+     * Variable name
+     */
+    lacpRateVariable?: string;
+}
+
+export interface ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+    interfaceId?: string;
 }
 
 export interface ServiceLanVpnInterfaceEthernetFeatureStaticNat {
@@ -25578,6 +25881,11 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      * Variable name
      */
     addressVariable?: string;
+    /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     */
+    followDualRouterHighAvailability?: boolean;
     /**
      * Group ID
      *   - Range: `1`-`255`
@@ -25717,6 +26025,11 @@ export interface ServiceLanVpnInterfaceSviFeatureIpv6Vrrp {
      * IPv6 VRRP
      */
     addresses?: outputs.ServiceLanVpnInterfaceSviFeatureIpv6VrrpAddress[];
+    /**
+     * Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     */
+    followDualRouterHighAvailability?: boolean;
     /**
      * Group ID
      *   - Range: `1`-`255`
@@ -26414,22 +26727,22 @@ export interface ServiceRoutingBgpFeatureIpv4Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
     disablePeerMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     disablePeerThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerThresholdVariable?: string;
     /**
@@ -26444,50 +26757,50 @@ export interface ServiceRoutingBgpFeatureIpv4NeighborAddressFamily {
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
     restartMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     restartThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartThresholdVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
     warningMessageMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     warningMessageThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageThresholdVariable?: string;
 }
@@ -26520,7 +26833,7 @@ export interface ServiceRoutingBgpFeatureIpv4Redistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
@@ -26696,22 +27009,22 @@ export interface ServiceRoutingBgpFeatureIpv6Neighbor {
 
 export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
     disablePeerMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     disablePeerThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerThresholdVariable?: string;
     /**
@@ -26726,50 +27039,50 @@ export interface ServiceRoutingBgpFeatureIpv6NeighborAddressFamily {
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
     restartMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     restartThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartThresholdVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
     warningMessageMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     warningMessageThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageThresholdVariable?: string;
 }
@@ -26797,7 +27110,7 @@ export interface ServiceRoutingBgpFeatureIpv6Redistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
@@ -27090,7 +27403,7 @@ export interface ServiceRoutingOspfFeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
@@ -27299,12 +27612,12 @@ export interface ServiceRoutingOspfv3Ipv4FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
     /**
-     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
     translateRibMetricVariable?: string;
 }
@@ -27481,12 +27794,12 @@ export interface ServiceRoutingOspfv3Ipv6FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
     /**
-     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
     translateRibMetricVariable?: string;
 }
@@ -27519,6 +27832,11 @@ export interface ServiceSwitchportFeatureInterface {
      * Variable name
      */
     duplexVariable?: string;
+    /**
+     * Set 802.1x on off
+     *   - Default value: `true`
+     */
+    enableDot1x?: boolean;
     /**
      * Enable Periodic Reauthentication
      */
@@ -27630,7 +27948,7 @@ export interface ServiceSwitchportFeatureInterface {
     shutdownVariable?: string;
     /**
      * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      */
     speed?: string;
     /**
@@ -27726,11 +28044,11 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     broadcastSsidVariable?: string;
     /**
-     * Set passphrase, Attribute conditional on `securityType` being equal to `personal`
+     * Set passphrase, Attribute conditional on `securityType` equal to `personal`
      */
     passphrase?: string;
     /**
-     * Variable name, Attribute conditional on `securityType` being equal to `personal`
+     * Variable name, Attribute conditional on `securityType` equal to `personal`
      */
     passphraseVariable?: string;
     /**
@@ -27754,29 +28072,29 @@ export interface ServiceWirelessLanFeatureSsid {
      */
     radioTypeVariable?: string;
     /**
-     * Set RADIUS server IP, Attribute conditional on `securityType` being equal to `enterprise`
+     * Set RADIUS server IP, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerIp?: string;
     /**
-     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerIpVariable?: string;
     /**
-     * Set RADIUS server authentication port, Attribute conditional on `securityType` being equal to `enterprise`
+     * Set RADIUS server authentication port, Attribute conditional on `securityType` equal to `enterprise`
      *   - Range: `1`-`65535`
      *   - Default value: `1812`
      */
     radiusServerPort?: number;
     /**
-     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerPortVariable?: string;
     /**
-     * Set RADIUS server shared secret, Attribute conditional on `securityType` being equal to `enterprise`
+     * Set RADIUS server shared secret, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerSecret?: string;
     /**
-     * Variable name, Attribute conditional on `securityType` being equal to `enterprise`
+     * Variable name, Attribute conditional on `securityType` equal to `enterprise`
      */
     radiusServerSecretVariable?: string;
     /**
@@ -28164,7 +28482,7 @@ export interface SystemAaaFeatureRadiusGroupServer {
      */
     authPortVariable?: string;
     /**
-     * Set the Radius server shared key
+     * Set the Radius server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     key?: string;
     /**
@@ -28182,6 +28500,10 @@ export interface SystemAaaFeatureRadiusGroupServer {
      * Variable name
      */
     keyTypeVariable?: string;
+    /**
+     * Variable name
+     */
+    keyVariable?: string;
     /**
      * Configure how many times to contact this Radius server
      *   - Range: `1`-`100`
@@ -28243,7 +28565,7 @@ export interface SystemAaaFeatureTacacsGroupServer {
      */
     address?: string;
     /**
-     * Set the TACACS server shared key
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     key?: string;
     /**
@@ -28251,6 +28573,10 @@ export interface SystemAaaFeatureTacacsGroupServer {
      *   - Choices: `6`, `7`
      */
     keyEnum?: string;
+    /**
+     * Variable name
+     */
+    keyVariable?: string;
     /**
      * TACACS Port
      *   - Range: `1`-`65535`
@@ -28291,7 +28617,7 @@ export interface SystemAaaFeatureUser {
      */
     nameVariable?: string;
     /**
-     * Set the user password
+     * Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      */
     password?: string;
     /**
@@ -28320,13 +28646,14 @@ export interface SystemAaaFeatureUserPublicKey {
      */
     keyString?: string;
     /**
-     * Only RSA is supported
-     */
-    keyType?: string;
-    /**
      * Variable name
      */
-    keyTypeVariable?: string;
+    keyStringVariable?: string;
+    /**
+     * Only RSA is supported
+     *   - Choices: `ssh-rsa`
+     */
+    keyType?: string;
 }
 
 export interface SystemBasicFeatureAffinityPerVrf {
@@ -29175,86 +29502,86 @@ export interface TrafficDataPolicyDefinitionSequence {
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntry {
     /**
-     * Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
+     * Enable cflowd, Attribute conditional on `type` equal to `cflowd`
      */
     cflowd?: boolean;
     /**
-     * Counter name, Attribute conditional on `type` being equal to `count`
+     * Counter name, Attribute conditional on `type` equal to `count`
      */
     counter?: string;
     /**
-     * Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
+     * Enable DRE optimization, Attribute conditional on `type` equal to `dreOptimization`
      */
     dreOptimization?: boolean;
     /**
-     * Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
+     * Enable fallback to routing, Attribute conditional on `type` equal to `fallbackToRouting`
      */
     fallbackToRouting?: boolean;
     /**
-     * Enable logging, Attribute conditional on `type` being equal to `log`
+     * Enable logging, Attribute conditional on `type` equal to `log`
      */
     log?: boolean;
     /**
-     * Loss correction, Attribute conditional on `type` being equal to `lossProtect`
+     * Loss correction, Attribute conditional on `type` equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrection?: string;
     /**
-     * Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
+     * Loss correction FEC, Attribute conditional on `type` equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrectionFec?: string;
     /**
-     * Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
+     * Loss correction FEC threshold, Attribute conditional on `type` equal to `lossProtectFec`
      */
     lossCorrectionFecThreshold?: string;
     /**
-     * Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
+     * Loss correction packet duplication, Attribute conditional on `type` equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      */
     lossCorrectionPacketDuplication?: string;
     /**
-     * List of NAT parameters, Attribute conditional on `type` being equal to `nat`
+     * List of NAT parameters, Attribute conditional on `type` equal to `nat`
      */
     natParameters?: outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter[];
     /**
-     * NAT pool, Attribute conditional on `type` being equal to `nat`
+     * NAT pool, Attribute conditional on `type` equal to `nat`
      *   - Choices: `pool`
      */
     natPool?: string;
     /**
-     * NAT pool ID, Attribute conditional on `type` being equal to `nat`
+     * NAT pool ID, Attribute conditional on `type` equal to `nat`
      *   - Range: `1`-`31`
      */
     natPoolId?: number;
     /**
-     * Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
+     * Redirect DNS, Attribute conditional on `type` equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      */
     redirectDns?: string;
     /**
-     * Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
+     * Redirect DNS IP address, Attribute conditional on `redirectDns` equal to `ipAddress`
      */
     redirectDnsAddress?: string;
     /**
-     * Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
+     * Redirect DNS type, Attribute conditional on `redirectDns` equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      */
     redirectDnsType?: string;
     /**
-     * Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
+     * Enable secure internet gateway, Attribute conditional on `type` equal to `sig`
      */
     secureInternetGateway?: boolean;
     /**
-     * Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
+     * Service node group, Attribute conditional on `type` equal to `serviceNodeGroup`
      */
     serviceNodeGroup?: string;
     /**
-     * List of set parameters, Attribute conditional on `type` being equal to `set`
+     * List of set parameters, Attribute conditional on `type` equal to `set`
      */
     setParameters?: outputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter[];
     /**
-     * Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
+     * Enable TCP optimization, Attribute conditional on `type` equal to `tcpOptimization`
      */
     tcpOptimization?: boolean;
     /**
@@ -29266,7 +29593,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntry {
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
     /**
-     * Fallback, Attribute conditional on `type` being equal to `fallback`
+     * Fallback, Attribute conditional on `type` equal to `fallback`
      */
     fallback?: boolean;
     /**
@@ -29275,44 +29602,44 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntryNatParameter {
      */
     type: string;
     /**
-     * DSCP, Attribute conditional on `type` being equal to `useVpn`
+     * DSCP, Attribute conditional on `type` equal to `useVpn`
      */
     vpnId?: number;
 }
 
 export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
     /**
-     * DSCP, Attribute conditional on `type` being equal to `dscp`
+     * DSCP, Attribute conditional on `type` equal to `dscp`
      *   - Range: `0`-`63`
      */
     dscp?: number;
     /**
-     * Forwarding class, Attribute conditional on `type` being equal to `forwardingClass`
+     * Forwarding class, Attribute conditional on `type` equal to `forwardingClass`
      */
     forwardingClass?: string;
     /**
-     * Local TLOC list color. Space separated list of colors., Attribute conditional on `type` being equal to `localTlocList`
+     * Local TLOC list color. Space separated list of colors., Attribute conditional on `type` equal to `localTlocList`
      */
     localTlocListColor?: string;
     /**
-     * Local TLOC list encapsulation., Attribute conditional on `type` being equal to `localTlocList`
+     * Local TLOC list encapsulation., Attribute conditional on `type` equal to `localTlocList`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     localTlocListEncap?: string;
     /**
-     * Local TLOC list restrict, Attribute conditional on `type` being equal to `localTlocList`
+     * Local TLOC list restrict, Attribute conditional on `type` equal to `localTlocList`
      */
     localTlocListRestrict?: boolean;
     /**
-     * Next hop IP, Attribute conditional on `type` being equal to `nextHop`
+     * Next hop IP, Attribute conditional on `type` equal to `nextHop`
      */
     nextHop?: string;
     /**
-     * Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` being equal to `nextHopLoose`
+     * Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `type` equal to `nextHopLoose`
      */
     nextHopLoose?: boolean;
     /**
-     * Policer list ID, Attribute conditional on `type` being equal to `policer`
+     * Policer list ID, Attribute conditional on `type` equal to `policer`
      */
     policerListId?: string;
     /**
@@ -29320,7 +29647,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     policerListVersion?: number;
     /**
-     * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      */
     preferredColorGroupListId?: string;
     /**
@@ -29328,20 +29655,20 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     preferredColorGroupListVersion?: number;
     /**
-     * Service TLOC color, Attribute conditional on `type` being equal to `service`
+     * Service TLOC color, Attribute conditional on `type` equal to `service`
      */
     serviceTlocColor?: string;
     /**
-     * Service TLOC encapsulation, Attribute conditional on `type` being equal to `service`
+     * Service TLOC encapsulation, Attribute conditional on `type` equal to `service`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     serviceTlocEncapsulation?: string;
     /**
-     * Service TLOC IP address, Attribute conditional on `type` being equal to `service`
+     * Service TLOC IP address, Attribute conditional on `type` equal to `service`
      */
     serviceTlocIp?: string;
     /**
-     * Service TLOC list ID, Attribute conditional on `type` being equal to `service`
+     * Service TLOC list ID, Attribute conditional on `type` equal to `service`
      */
     serviceTlocListId?: string;
     /**
@@ -29349,38 +29676,38 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     serviceTlocListVersion?: number;
     /**
-     * Service TLOC Local, Attribute conditional on `type` being equal to `service`
+     * Service TLOC Local, Attribute conditional on `type` equal to `service`
      */
     serviceTlocLocal?: boolean;
     /**
-     * Service TLOC Restrict, Attribute conditional on `type` being equal to `service`
+     * Service TLOC Restrict, Attribute conditional on `type` equal to `service`
      */
     serviceTlocRestrict?: boolean;
     /**
-     * Service type, Attribute conditional on `type` being equal to `service`
+     * Service type, Attribute conditional on `type` equal to `service`
      *   - Choices: `FW`, `IDP`, `IDS`, `netsvc1`, `netsvc2`, `netsvc3`, `netsvc4`, `netsvc5`
      */
     serviceType?: string;
     /**
-     * Service VPN ID, Attribute conditional on `type` being equal to `service`
+     * Service VPN ID, Attribute conditional on `type` equal to `service`
      *   - Range: `0`-`65536`
      */
     serviceVpnId?: number;
     /**
-     * TLOC color, Attribute conditional on `type` being equal to `tloc`
+     * TLOC color, Attribute conditional on `type` equal to `tloc`
      */
     tlocColor?: string;
     /**
-     * TLOC encapsulation, Attribute conditional on `type` being equal to `tloc`
+     * TLOC encapsulation, Attribute conditional on `type` equal to `tloc`
      *   - Choices: `ipsec`, `gre`, `ipsec gre`
      */
     tlocEncapsulation?: string;
     /**
-     * TLOC IP address, Attribute conditional on `type` being equal to `tloc`
+     * TLOC IP address, Attribute conditional on `type` equal to `tloc`
      */
     tlocIp?: string;
     /**
-     * TLOC list ID, Attribute conditional on `type` being equal to `tlocList`
+     * TLOC list ID, Attribute conditional on `type` equal to `tlocList`
      */
     tlocListId?: string;
     /**
@@ -29393,7 +29720,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
      */
     type: string;
     /**
-     * DSCP, Attribute conditional on `type` being equal to `vpn`
+     * DSCP, Attribute conditional on `type` equal to `vpn`
      *   - Range: `0`-`65530`
      */
     vpnId?: number;
@@ -29401,7 +29728,7 @@ export interface TrafficDataPolicyDefinitionSequenceActionEntrySetParameter {
 
 export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
     /**
-     * Application list ID, Attribute conditional on `type` being equal to `appList`
+     * Application list ID, Attribute conditional on `type` equal to `appList`
      */
     applicationListId?: string;
     /**
@@ -29409,7 +29736,7 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     applicationListVersion?: number;
     /**
-     * Destination Data Prefix list ID, Attribute conditional on `type` being equal to `destinationDataPrefixList`
+     * Destination Data Prefix list ID, Attribute conditional on `type` equal to `destinationDataPrefixList`
      */
     destinationDataPrefixListId?: string;
     /**
@@ -29417,25 +29744,25 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     destinationDataPrefixListVersion?: number;
     /**
-     * Destination IP, Attribute conditional on `type` being equal to `destinationIp`
+     * Destination IP, Attribute conditional on `type` equal to `destinationIp`
      */
     destinationIp?: string;
     /**
-     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `destinationPort`
      */
     destinationPort?: string;
     /**
-     * Destination region, Attribute conditional on `type` being equal to `destinationRegion`
+     * Destination region, Attribute conditional on `type` equal to `destinationRegion`
      *   - Choices: `primary-region`, `secondary-region`, `other-region`
      */
     destinationRegion?: string;
     /**
-     * DNS request or response, Attribute conditional on `type` being equal to `dns`
+     * DNS request or response, Attribute conditional on `type` equal to `dns`
      *   - Choices: `request`, `response`
      */
     dns?: string;
     /**
-     * DNS Application list ID, Attribute conditional on `type` being equal to `dnsAppList`
+     * DNS Application list ID, Attribute conditional on `type` equal to `dnsAppList`
      */
     dnsApplicationListId?: string;
     /**
@@ -29443,29 +29770,29 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     dnsApplicationListVersion?: number;
     /**
-     * DSCP value, Attribute conditional on `type` being equal to `dscp`
+     * DSCP value, Attribute conditional on `type` equal to `dscp`
      */
     dscp?: string;
     /**
-     * ICMP Message, Attribute conditional on `type` being equal to `icmpMessage`
+     * ICMP Message, Attribute conditional on `type` equal to `icmpMessage`
      */
     icmpMessage?: string;
     /**
-     * Packet length, Attribute conditional on `type` being equal to `packetLength`
+     * Packet length, Attribute conditional on `type` equal to `packetLength`
      *   - Range: `0`-`65535`
      */
     packetLength?: number;
     /**
-     * PLP, Attribute conditional on `type` being equal to `plp`
+     * PLP, Attribute conditional on `type` equal to `plp`
      *   - Choices: `low`, `high`
      */
     plp?: string;
     /**
-     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `protocol`
+     * IP Protocol, 0-255 (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `protocol`
      */
     protocol?: string;
     /**
-     * Source Data Prefix list ID, Attribute conditional on `type` being equal to `sourceDataPrefixList`
+     * Source Data Prefix list ID, Attribute conditional on `type` equal to `sourceDataPrefixList`
      */
     sourceDataPrefixListId?: string;
     /**
@@ -29473,20 +29800,20 @@ export interface TrafficDataPolicyDefinitionSequenceMatchEntry {
      */
     sourceDataPrefixListVersion?: number;
     /**
-     * Source IP, Attribute conditional on `type` being equal to `sourceIp`
+     * Source IP, Attribute conditional on `type` equal to `sourceIp`
      */
     sourceIp?: string;
     /**
-     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` being equal to `sourcePort`
+     * Source port, 0-65535 (Single value, range or multiple values separated by spaces), Attribute conditional on `type` equal to `sourcePort`
      */
     sourcePort?: string;
     /**
-     * TCP flags, Attribute conditional on `type` being equal to `tcp`
+     * TCP flags, Attribute conditional on `type` equal to `tcp`
      *   - Choices: `syn`
      */
     tcp?: string;
     /**
-     * Traffic to, Attribute conditional on `type` being equal to `trafficTo`
+     * Traffic to, Attribute conditional on `type` equal to `trafficTo`
      *   - Choices: `access`, `core`, `service`
      */
     trafficTo?: string;
@@ -29740,13 +30067,13 @@ export interface TransportIpv6TrackerGroupFeatureTrackerElement {
 
 export interface TransportManagementVpnFeatureIpv4StaticRoute {
     /**
-     * Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
     administrativeDistanceVariable?: string;
     /**
@@ -29764,7 +30091,7 @@ export interface TransportManagementVpnFeatureIpv4StaticRoute {
      */
     networkAddressVariable?: string;
     /**
-     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.TransportManagementVpnFeatureIpv4StaticRouteNextHop[];
     /**
@@ -29806,20 +30133,20 @@ export interface TransportManagementVpnFeatureIpv6StaticRoute {
      */
     gateway?: string;
     /**
-     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: string;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
     natVariable?: string;
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.TransportManagementVpnFeatureIpv6StaticRouteNextHop[];
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
     null0?: boolean;
     /**
@@ -30231,22 +30558,22 @@ export interface TransportRoutingBgpFeatureIpv4Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
     disablePeerMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     disablePeerThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerThresholdVariable?: string;
     /**
@@ -30262,50 +30589,50 @@ export interface TransportRoutingBgpFeatureIpv4NeighborAddressFamily {
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
     restartMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     restartThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartThresholdVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
     warningMessageMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     warningMessageThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageThresholdVariable?: string;
 }
@@ -30509,22 +30836,22 @@ export interface TransportRoutingBgpFeatureIpv6Neighbor {
 
 export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`4294967295`
      */
     disablePeerMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `disable-peer`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     disablePeerThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `disable-peer`
+     * Variable name, Attribute conditional on `policyType` equal to `disable-peer`
      */
     disablePeerThresholdVariable?: string;
     /**
@@ -30540,50 +30867,50 @@ export interface TransportRoutingBgpFeatureIpv6NeighborAddressFamily {
      */
     policyType?: string;
     /**
-     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` being equal to `restart`
+     * Set the restart interval(minutes) when to restart BGP connection if threshold is exceeded, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`65535`
      */
     restartInterval?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartIntervalVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `restart`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`4294967295`
      */
     restartMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `restart`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `restart`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     restartThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `restart`
+     * Variable name, Attribute conditional on `policyType` equal to `restart`
      */
     restartThresholdVariable?: string;
     /**
-     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set maximum number of prefixes accepted from BGP peer, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`4294967295`
      */
     warningMessageMaxNumberOfPrefixes?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageMaxNumberOfPrefixesVariable?: string;
     /**
-     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` being equal to `warning-only`
+     * Set threshold(1 to 100) at which to generate a warning message, Attribute conditional on `policyType` equal to `warning-only`
      *   - Range: `1`-`100`
      *   - Default value: `75`
      */
     warningMessageThreshold?: number;
     /**
-     * Variable name, Attribute conditional on `policyType` being equal to `warning-only`
+     * Variable name, Attribute conditional on `policyType` equal to `warning-only`
      */
     warningMessageThresholdVariable?: string;
 }
@@ -31025,12 +31352,12 @@ export interface TransportRoutingOspfv3Ipv4FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
     /**
-     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
     translateRibMetricVariable?: string;
 }
@@ -31207,12 +31534,12 @@ export interface TransportRoutingOspfv3Ipv6FeatureRedistribute {
     protocolVariable?: string;
     routePolicyId?: string;
     /**
-     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` being equal to `omp`
+     * Devices within the Cisco Catalyst SD-WAN overlay network use OMP for control plane information. Outside of the overlay, devices use other control plane protocols such as BGP or OSPF. A device at the interface between devices within the overlay network and devices outside of the overlay can translate OMP route metrics when redistributing routes to BGP or OSPF, to be usable by devices outside the overlay network., Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      */
     translateRibMetric?: boolean;
     /**
-     * Variable name, Attribute conditional on `protocol` being equal to `omp`
+     * Variable name, Attribute conditional on `protocol` equal to `omp`
      */
     translateRibMetricVariable?: string;
 }
@@ -31264,21 +31591,21 @@ export interface TransportT1E1ControllerFeatureEntry {
      */
     e1LinecodeVariable?: string;
     /**
-     * length, Attribute conditional on `cableLength` being equal to `long`
+     * length, Attribute conditional on `cableLength` equal to `long`
      *   - Choices: `-15db`, `-22.5db`, `-7.5db`, `0db`
      */
     lengthLong?: string;
     /**
-     * Variable name, Attribute conditional on `cableLength` being equal to `long`
+     * Variable name, Attribute conditional on `cableLength` equal to `long`
      */
     lengthLongVariable?: string;
     /**
-     * length, Attribute conditional on `cableLength` being equal to `short`
+     * length, Attribute conditional on `cableLength` equal to `short`
      *   - Choices: `110ft`, `220ft`, `330ft`, `440ft`, `550ft`, `660ft`
      */
     lengthShort?: string;
     /**
-     * Variable name, Attribute conditional on `cableLength` being equal to `short`
+     * Variable name, Attribute conditional on `cableLength` equal to `short`
      */
     lengthShortVariable?: string;
     /**
@@ -31341,13 +31668,13 @@ export interface TransportTrackerGroupFeatureTrackerElement {
 
 export interface TransportWanVpnFeatureIpv4StaticRoute {
     /**
-     * Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      */
     administrativeDistance?: number;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * Variable name, Attribute conditional on `gateway` equal to `null0`
      */
     administrativeDistanceVariable?: string;
     /**
@@ -31365,7 +31692,7 @@ export interface TransportWanVpnFeatureIpv4StaticRoute {
      */
     networkAddressVariable?: string;
     /**
-     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.TransportWanVpnFeatureIpv4StaticRouteNextHop[];
     /**
@@ -31407,20 +31734,20 @@ export interface TransportWanVpnFeatureIpv6StaticRoute {
      */
     gateway?: string;
     /**
-     * IPv6 Nat, Attribute conditional on `gateway` being equal to `nat`
+     * IPv6 Nat, Attribute conditional on `gateway` equal to `nat`
      *   - Choices: `NAT64`, `NAT66`
      */
     nat?: string;
     /**
-     * Variable name, Attribute conditional on `gateway` being equal to `nat`
+     * Variable name, Attribute conditional on `gateway` equal to `nat`
      */
     natVariable?: string;
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      */
     nextHops?: outputs.TransportWanVpnFeatureIpv6StaticRouteNextHop[];
     /**
-     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `null0`
+     * IPv6 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `null0`
      */
     null0?: boolean;
     /**
@@ -31624,13 +31951,80 @@ export interface TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress {
     addressVariable?: string;
 }
 
+export interface TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback {
+    /**
+     * NAT Inside Source Loopback Interface
+     */
+    loopbackInterface?: string;
+    /**
+     * Variable name
+     */
+    loopbackInterfaceVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool {
+    /**
+     * Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     */
+    enableDualRouterHaMapping?: boolean;
+    /**
+     * NAT Pool Name
+     *   - Range: `1`-`4095`
+     */
+    name?: number;
+    /**
+     * Variable name
+     */
+    nameVariable?: string;
+    /**
+     * NAT Overload
+     *   - Default value: `true`
+     */
+    overload?: boolean;
+    /**
+     * Variable name
+     */
+    overloadVariable?: string;
+    /**
+     * NAT Pool Prefix Length
+     *   - Range: `1`-`32`
+     */
+    prefixLength?: number;
+    /**
+     * Variable name
+     */
+    prefixLengthVariable?: string;
+    /**
+     * NAT Pool Range End
+     */
+    rangeEnd?: string;
+    /**
+     * Variable name
+     */
+    rangeEndVariable?: string;
+    /**
+     * NAT Pool Range Start
+     */
+    rangeStart?: string;
+    /**
+     * Variable name
+     */
+    rangeStartVariable?: string;
+}
+
 export interface TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     /**
      * Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
+     *   - Choices: `inside`
      *   - Default value: `inside`
      */
     direction?: string;
+    /**
+     * Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     */
+    enableDualRouterHaMapping?: boolean;
     /**
      * Source IP address to be translated
      */
@@ -31659,7 +32053,52 @@ export interface TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     translatedIpVariable?: string;
 }
 
+export interface TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+    interfaceId?: string;
+    /**
+     * Set lacp mode
+     *   - Choices: `active`, `passive`
+     *   - Default value: `active`
+     */
+    lacpMode?: string;
+    /**
+     * Variable name
+     */
+    lacpModeVariable?: string;
+    /**
+     * Set lacp port priority
+     *   - Range: `1`-`65535`
+     */
+    lacpPortPriority?: number;
+    /**
+     * Variable name
+     */
+    lacpPortPriorityVariable?: string;
+    /**
+     * Set lacp rate
+     *   - Choices: `fast`, `normal`
+     */
+    lacpRate?: string;
+    /**
+     * Variable name
+     */
+    lacpRateVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+    interfaceId?: string;
+}
+
 export interface TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
+    /**
+     * Egress Interface
+     *   - Default value: `false`
+     */
+    egressInterface?: boolean;
+    /**
+     * Variable name
+     */
+    egressInterfaceVariable?: string;
     /**
      * Source Prefix
      */
@@ -31685,6 +32124,73 @@ export interface TransportWanVpnInterfaceEthernetFeatureStaticNat66 {
      * Variable name
      */
     translatedSourcePrefixVariable?: string;
+}
+
+export interface TransportWanVpnInterfaceEthernetFeatureStaticPortForward {
+    /**
+     * Direction of static NAT translation
+     *   - Choices: `inside`
+     *   - Default value: `inside`
+     */
+    direction?: string;
+    /**
+     * Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     */
+    enableDualRouterHaMapping?: boolean;
+    /**
+     * Protocol
+     *   - Choices: `tcp`, `udp`
+     */
+    protocol?: string;
+    /**
+     * Variable name
+     */
+    protocolVariable?: string;
+    /**
+     * Source IP address to be translated
+     */
+    sourceIp?: string;
+    /**
+     * Variable name
+     */
+    sourceIpVariable?: string;
+    /**
+     * source port to be translated
+     *   - Range: `1`-`65535`
+     */
+    sourcePort?: number;
+    /**
+     * Variable name
+     */
+    sourcePortVariable?: string;
+    /**
+     * Source VPN ID
+     *   - Range: `0`-`65530`
+     *   - Default value: `0`
+     */
+    sourceVpn?: number;
+    /**
+     * Variable name
+     */
+    sourceVpnVariable?: string;
+    /**
+     * Statically translated source IP address
+     */
+    translatedIp?: string;
+    /**
+     * Variable name
+     */
+    translatedIpVariable?: string;
+    /**
+     * Statically translated source IP address
+     *   - Range: `1`-`65535`
+     */
+    translatedPort?: number;
+    /**
+     * Variable name
+     */
+    translatedPortVariable?: string;
 }
 
 export interface TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation {

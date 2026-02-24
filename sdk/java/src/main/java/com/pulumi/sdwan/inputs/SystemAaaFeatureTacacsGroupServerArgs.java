@@ -32,14 +32,14 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
     }
 
     /**
-     * Set the TACACS server shared key
+     * Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     @Import(name="key")
     private @Nullable Output<String> key;
 
     /**
-     * @return Set the TACACS server shared key
+     * @return Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public Optional<Output<String>> key() {
@@ -61,6 +61,21 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
      */
     public Optional<Output<String>> keyEnum() {
         return Optional.ofNullable(this.keyEnum);
+    }
+
+    /**
+     * Variable name
+     * 
+     */
+    @Import(name="keyVariable")
+    private @Nullable Output<String> keyVariable;
+
+    /**
+     * @return Variable name
+     * 
+     */
+    public Optional<Output<String>> keyVariable() {
+        return Optional.ofNullable(this.keyVariable);
     }
 
     /**
@@ -167,6 +182,7 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
         this.address = $.address;
         this.key = $.key;
         this.keyEnum = $.keyEnum;
+        this.keyVariable = $.keyVariable;
         this.port = $.port;
         this.portVariable = $.portVariable;
         this.secretKey = $.secretKey;
@@ -215,7 +231,7 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
         }
 
         /**
-         * @param key Set the TACACS server shared key
+         * @param key Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -226,7 +242,7 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
         }
 
         /**
-         * @param key Set the TACACS server shared key
+         * @param key Set the TACACS server shared key [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
          * 
          * @return builder
          * 
@@ -256,6 +272,27 @@ public final class SystemAaaFeatureTacacsGroupServerArgs extends com.pulumi.reso
          */
         public Builder keyEnum(String keyEnum) {
             return keyEnum(Output.of(keyEnum));
+        }
+
+        /**
+         * @param keyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVariable(@Nullable Output<String> keyVariable) {
+            $.keyVariable = keyVariable;
+            return this;
+        }
+
+        /**
+         * @param keyVariable Variable name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder keyVariable(String keyVariable) {
+            return keyVariable(Output.of(keyVariable));
         }
 
         /**

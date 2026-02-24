@@ -43,6 +43,11 @@ public final class GetServiceSwitchportFeatureInterface {
      */
     private String duplexVariable;
     /**
+     * @return Set 802.1x on off
+     * 
+     */
+    private Boolean enableDot1x;
+    /**
      * @return Enable Periodic Reauthentication
      * 
      */
@@ -260,6 +265,13 @@ public final class GetServiceSwitchportFeatureInterface {
      */
     public String duplexVariable() {
         return this.duplexVariable;
+    }
+    /**
+     * @return Set 802.1x on off
+     * 
+     */
+    public Boolean enableDot1x() {
+        return this.enableDot1x;
     }
     /**
      * @return Enable Periodic Reauthentication
@@ -522,6 +534,7 @@ public final class GetServiceSwitchportFeatureInterface {
         private String criticalVlanVariable;
         private String duplex;
         private String duplexVariable;
+        private Boolean enableDot1x;
         private Boolean enablePeriodicReauth;
         private String enablePeriodicReauthVariable;
         private Boolean enableVoice;
@@ -566,6 +579,7 @@ public final class GetServiceSwitchportFeatureInterface {
     	      this.criticalVlanVariable = defaults.criticalVlanVariable;
     	      this.duplex = defaults.duplex;
     	      this.duplexVariable = defaults.duplexVariable;
+    	      this.enableDot1x = defaults.enableDot1x;
     	      this.enablePeriodicReauth = defaults.enablePeriodicReauth;
     	      this.enablePeriodicReauthVariable = defaults.enablePeriodicReauthVariable;
     	      this.enableVoice = defaults.enableVoice;
@@ -649,6 +663,14 @@ public final class GetServiceSwitchportFeatureInterface {
               throw new MissingRequiredPropertyException("GetServiceSwitchportFeatureInterface", "duplexVariable");
             }
             this.duplexVariable = duplexVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableDot1x(Boolean enableDot1x) {
+            if (enableDot1x == null) {
+              throw new MissingRequiredPropertyException("GetServiceSwitchportFeatureInterface", "enableDot1x");
+            }
+            this.enableDot1x = enableDot1x;
             return this;
         }
         @CustomType.Setter
@@ -939,6 +961,7 @@ public final class GetServiceSwitchportFeatureInterface {
             _resultValue.criticalVlanVariable = criticalVlanVariable;
             _resultValue.duplex = duplex;
             _resultValue.duplexVariable = duplexVariable;
+            _resultValue.enableDot1x = enableDot1x;
             _resultValue.enablePeriodicReauth = enablePeriodicReauth;
             _resultValue.enablePeriodicReauthVariable = enablePeriodicReauthVariable;
             _resultValue.enableVoice = enableVoice;

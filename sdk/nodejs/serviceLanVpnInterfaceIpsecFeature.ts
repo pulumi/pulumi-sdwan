@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Service LAN VPN Interface IPSec Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -21,18 +21,16 @@ import * as utilities from "./utilities";
  *     serviceLanVpnFeatureId: "140331f6-5418-4755-a059-13c77eb96037",
  *     interfaceName: "ipsec987",
  *     shutdown: true,
+ *     tunnelMode: "ipv4",
  *     interfaceDescription: "ipsec987",
  *     ipv4Address: "9.7.5.4",
  *     ipv4SubnetMask: "255.255.255.0",
  *     tunnelSourceIpv4Address: "1.3.5.88",
- *     tunnelSourceIpv4SubnetMask: "255.255.255.0",
- *     tunnelSourceInterface: "GigabitEthernet8",
  *     tunnelDestinationIpv4Address: "2.55.67.99",
- *     tunnelDestinationIpv4SubnetMask: "255.255.255.0",
  *     applicationTunnelType: "none",
- *     tcpMss: 1460,
+ *     ipv4TcpMss: 1460,
  *     clearDontFragment: false,
- *     ipMtu: 1500,
+ *     ipv4Mtu: 1500,
  *     dpdInterval: 10,
  *     dpdRetries: 3,
  *     ikePresharedKey: "123",
@@ -222,16 +220,6 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      */
     declare public readonly interfaceNameVariable: pulumi.Output<string | undefined>;
     /**
-     * Interface MTU <68..9216>, in bytes
-     *   - Range: `68`-`9216`
-     *   - Default value: `1500`
-     */
-    declare public readonly ipMtu: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    declare public readonly ipMtuVariable: pulumi.Output<string | undefined>;
-    /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
@@ -261,19 +249,68 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly ipsecReplayWindowVariable: pulumi.Output<string | undefined>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
     declare public readonly ipv4Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     declare public readonly ipv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Interface MTU <68..9216>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
+     */
+    declare public readonly ipv4Mtu: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    declare public readonly ipv4MtuVariable: pulumi.Output<string | undefined>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     declare public readonly ipv4SubnetMask: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     declare public readonly ipv4SubnetMaskVariable: pulumi.Output<string | undefined>;
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `500`-`1460`
+     */
+    declare public readonly ipv4TcpMss: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    declare public readonly ipv4TcpMssVariable: pulumi.Output<string | undefined>;
+    /**
+     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    declare public readonly ipv6Address: pulumi.Output<string | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    declare public readonly ipv6AddressVariable: pulumi.Output<string | undefined>;
+    /**
+     * Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `1280`-`9976`
+     */
+    declare public readonly ipv6Mtu: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    declare public readonly ipv6MtuVariable: pulumi.Output<string | undefined>;
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `40`-`1454`
+     */
+    declare public readonly ipv6TcpMss: pulumi.Output<number | undefined>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    declare public readonly ipv6TcpMssVariable: pulumi.Output<string | undefined>;
     /**
      * The name of the Feature
      */
@@ -302,15 +339,6 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      */
     declare public readonly shutdownVariable: pulumi.Output<string | undefined>;
     /**
-     * TCP MSS on SYN packets, in bytes
-     *   - Range: `500`-`1460`
-     */
-    declare public readonly tcpMss: pulumi.Output<number | undefined>;
-    /**
-     * Variable name
-     */
-    declare public readonly tcpMssVariable: pulumi.Output<string | undefined>;
-    /**
      * Enable tracker for this interface
      */
     declare public readonly trackerId: pulumi.Output<string | undefined>;
@@ -318,19 +346,28 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly trackerIdVariable: pulumi.Output<string | undefined>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     declare public readonly tunnelDestinationIpv4Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     declare public readonly tunnelDestinationIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    declare public readonly tunnelDestinationIpv4SubnetMask: pulumi.Output<string>;
+    declare public readonly tunnelDestinationIpv6Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    declare public readonly tunnelDestinationIpv4SubnetMaskVariable: pulumi.Output<string | undefined>;
+    declare public readonly tunnelDestinationIpv6AddressVariable: pulumi.Output<string | undefined>;
+    /**
+     * IPsec Tunnel Mode
+     *   - Choices: `ipv4`, `ipv6`, `ipv4-v6overlay`
+     *   - Default value: `ipv4`
+     */
+    declare public readonly tunnelMode: pulumi.Output<string | undefined>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
@@ -347,19 +384,22 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
      * Variable name
      */
     declare public readonly tunnelSourceInterfaceVariable: pulumi.Output<string | undefined>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     declare public readonly tunnelSourceIpv4Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     declare public readonly tunnelSourceIpv4AddressVariable: pulumi.Output<string | undefined>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    declare public readonly tunnelSourceIpv4SubnetMask: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv6Address: pulumi.Output<string | undefined>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    declare public readonly tunnelSourceIpv4SubnetMaskVariable: pulumi.Output<string | undefined>;
+    declare public readonly tunnelSourceIpv6AddressVariable: pulumi.Output<string | undefined>;
     /**
      * The version of the Feature
      */
@@ -407,8 +447,6 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             resourceInputs["interfaceDescriptionVariable"] = state?.interfaceDescriptionVariable;
             resourceInputs["interfaceName"] = state?.interfaceName;
             resourceInputs["interfaceNameVariable"] = state?.interfaceNameVariable;
-            resourceInputs["ipMtu"] = state?.ipMtu;
-            resourceInputs["ipMtuVariable"] = state?.ipMtuVariable;
             resourceInputs["ipsecCiphersuite"] = state?.ipsecCiphersuite;
             resourceInputs["ipsecCiphersuiteVariable"] = state?.ipsecCiphersuiteVariable;
             resourceInputs["ipsecRekeyInterval"] = state?.ipsecRekeyInterval;
@@ -417,30 +455,39 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             resourceInputs["ipsecReplayWindowVariable"] = state?.ipsecReplayWindowVariable;
             resourceInputs["ipv4Address"] = state?.ipv4Address;
             resourceInputs["ipv4AddressVariable"] = state?.ipv4AddressVariable;
+            resourceInputs["ipv4Mtu"] = state?.ipv4Mtu;
+            resourceInputs["ipv4MtuVariable"] = state?.ipv4MtuVariable;
             resourceInputs["ipv4SubnetMask"] = state?.ipv4SubnetMask;
             resourceInputs["ipv4SubnetMaskVariable"] = state?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv4TcpMss"] = state?.ipv4TcpMss;
+            resourceInputs["ipv4TcpMssVariable"] = state?.ipv4TcpMssVariable;
+            resourceInputs["ipv6Address"] = state?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = state?.ipv6AddressVariable;
+            resourceInputs["ipv6Mtu"] = state?.ipv6Mtu;
+            resourceInputs["ipv6MtuVariable"] = state?.ipv6MtuVariable;
+            resourceInputs["ipv6TcpMss"] = state?.ipv6TcpMss;
+            resourceInputs["ipv6TcpMssVariable"] = state?.ipv6TcpMssVariable;
             resourceInputs["name"] = state?.name;
             resourceInputs["perfectForwardSecrecy"] = state?.perfectForwardSecrecy;
             resourceInputs["perfectForwardSecrecyVariable"] = state?.perfectForwardSecrecyVariable;
             resourceInputs["serviceLanVpnFeatureId"] = state?.serviceLanVpnFeatureId;
             resourceInputs["shutdown"] = state?.shutdown;
             resourceInputs["shutdownVariable"] = state?.shutdownVariable;
-            resourceInputs["tcpMss"] = state?.tcpMss;
-            resourceInputs["tcpMssVariable"] = state?.tcpMssVariable;
             resourceInputs["trackerId"] = state?.trackerId;
             resourceInputs["trackerIdVariable"] = state?.trackerIdVariable;
             resourceInputs["tunnelDestinationIpv4Address"] = state?.tunnelDestinationIpv4Address;
             resourceInputs["tunnelDestinationIpv4AddressVariable"] = state?.tunnelDestinationIpv4AddressVariable;
-            resourceInputs["tunnelDestinationIpv4SubnetMask"] = state?.tunnelDestinationIpv4SubnetMask;
-            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = state?.tunnelDestinationIpv4SubnetMaskVariable;
+            resourceInputs["tunnelDestinationIpv6Address"] = state?.tunnelDestinationIpv6Address;
+            resourceInputs["tunnelDestinationIpv6AddressVariable"] = state?.tunnelDestinationIpv6AddressVariable;
+            resourceInputs["tunnelMode"] = state?.tunnelMode;
             resourceInputs["tunnelRouteVia"] = state?.tunnelRouteVia;
             resourceInputs["tunnelRouteViaVariable"] = state?.tunnelRouteViaVariable;
             resourceInputs["tunnelSourceInterface"] = state?.tunnelSourceInterface;
             resourceInputs["tunnelSourceInterfaceVariable"] = state?.tunnelSourceInterfaceVariable;
             resourceInputs["tunnelSourceIpv4Address"] = state?.tunnelSourceIpv4Address;
             resourceInputs["tunnelSourceIpv4AddressVariable"] = state?.tunnelSourceIpv4AddressVariable;
-            resourceInputs["tunnelSourceIpv4SubnetMask"] = state?.tunnelSourceIpv4SubnetMask;
-            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = state?.tunnelSourceIpv4SubnetMaskVariable;
+            resourceInputs["tunnelSourceIpv6Address"] = state?.tunnelSourceIpv6Address;
+            resourceInputs["tunnelSourceIpv6AddressVariable"] = state?.tunnelSourceIpv6AddressVariable;
             resourceInputs["version"] = state?.version;
         } else {
             const args = argsOrState as ServiceLanVpnInterfaceIpsecFeatureArgs | undefined;
@@ -449,9 +496,6 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             }
             if (args?.serviceLanVpnFeatureId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serviceLanVpnFeatureId'");
-            }
-            if (args?.tunnelDestinationIpv4SubnetMask === undefined && !opts.urn) {
-                throw new Error("Missing required property 'tunnelDestinationIpv4SubnetMask'");
             }
             resourceInputs["applicationTunnelType"] = args?.applicationTunnelType;
             resourceInputs["applicationTunnelTypeVariable"] = args?.applicationTunnelTypeVariable;
@@ -482,8 +526,6 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             resourceInputs["interfaceDescriptionVariable"] = args?.interfaceDescriptionVariable;
             resourceInputs["interfaceName"] = args?.interfaceName;
             resourceInputs["interfaceNameVariable"] = args?.interfaceNameVariable;
-            resourceInputs["ipMtu"] = args?.ipMtu;
-            resourceInputs["ipMtuVariable"] = args?.ipMtuVariable;
             resourceInputs["ipsecCiphersuite"] = args?.ipsecCiphersuite;
             resourceInputs["ipsecCiphersuiteVariable"] = args?.ipsecCiphersuiteVariable;
             resourceInputs["ipsecRekeyInterval"] = args?.ipsecRekeyInterval;
@@ -492,30 +534,39 @@ export class ServiceLanVpnInterfaceIpsecFeature extends pulumi.CustomResource {
             resourceInputs["ipsecReplayWindowVariable"] = args?.ipsecReplayWindowVariable;
             resourceInputs["ipv4Address"] = args?.ipv4Address;
             resourceInputs["ipv4AddressVariable"] = args?.ipv4AddressVariable;
+            resourceInputs["ipv4Mtu"] = args?.ipv4Mtu;
+            resourceInputs["ipv4MtuVariable"] = args?.ipv4MtuVariable;
             resourceInputs["ipv4SubnetMask"] = args?.ipv4SubnetMask;
             resourceInputs["ipv4SubnetMaskVariable"] = args?.ipv4SubnetMaskVariable;
+            resourceInputs["ipv4TcpMss"] = args?.ipv4TcpMss;
+            resourceInputs["ipv4TcpMssVariable"] = args?.ipv4TcpMssVariable;
+            resourceInputs["ipv6Address"] = args?.ipv6Address;
+            resourceInputs["ipv6AddressVariable"] = args?.ipv6AddressVariable;
+            resourceInputs["ipv6Mtu"] = args?.ipv6Mtu;
+            resourceInputs["ipv6MtuVariable"] = args?.ipv6MtuVariable;
+            resourceInputs["ipv6TcpMss"] = args?.ipv6TcpMss;
+            resourceInputs["ipv6TcpMssVariable"] = args?.ipv6TcpMssVariable;
             resourceInputs["name"] = args?.name;
             resourceInputs["perfectForwardSecrecy"] = args?.perfectForwardSecrecy;
             resourceInputs["perfectForwardSecrecyVariable"] = args?.perfectForwardSecrecyVariable;
             resourceInputs["serviceLanVpnFeatureId"] = args?.serviceLanVpnFeatureId;
             resourceInputs["shutdown"] = args?.shutdown;
             resourceInputs["shutdownVariable"] = args?.shutdownVariable;
-            resourceInputs["tcpMss"] = args?.tcpMss;
-            resourceInputs["tcpMssVariable"] = args?.tcpMssVariable;
             resourceInputs["trackerId"] = args?.trackerId;
             resourceInputs["trackerIdVariable"] = args?.trackerIdVariable;
             resourceInputs["tunnelDestinationIpv4Address"] = args?.tunnelDestinationIpv4Address;
             resourceInputs["tunnelDestinationIpv4AddressVariable"] = args?.tunnelDestinationIpv4AddressVariable;
-            resourceInputs["tunnelDestinationIpv4SubnetMask"] = args?.tunnelDestinationIpv4SubnetMask;
-            resourceInputs["tunnelDestinationIpv4SubnetMaskVariable"] = args?.tunnelDestinationIpv4SubnetMaskVariable;
+            resourceInputs["tunnelDestinationIpv6Address"] = args?.tunnelDestinationIpv6Address;
+            resourceInputs["tunnelDestinationIpv6AddressVariable"] = args?.tunnelDestinationIpv6AddressVariable;
+            resourceInputs["tunnelMode"] = args?.tunnelMode;
             resourceInputs["tunnelRouteVia"] = args?.tunnelRouteVia;
             resourceInputs["tunnelRouteViaVariable"] = args?.tunnelRouteViaVariable;
             resourceInputs["tunnelSourceInterface"] = args?.tunnelSourceInterface;
             resourceInputs["tunnelSourceInterfaceVariable"] = args?.tunnelSourceInterfaceVariable;
             resourceInputs["tunnelSourceIpv4Address"] = args?.tunnelSourceIpv4Address;
             resourceInputs["tunnelSourceIpv4AddressVariable"] = args?.tunnelSourceIpv4AddressVariable;
-            resourceInputs["tunnelSourceIpv4SubnetMask"] = args?.tunnelSourceIpv4SubnetMask;
-            resourceInputs["tunnelSourceIpv4SubnetMaskVariable"] = args?.tunnelSourceIpv4SubnetMaskVariable;
+            resourceInputs["tunnelSourceIpv6Address"] = args?.tunnelSourceIpv6Address;
+            resourceInputs["tunnelSourceIpv6AddressVariable"] = args?.tunnelSourceIpv6AddressVariable;
             resourceInputs["version"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -660,16 +711,6 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <68..9216>, in bytes
-     *   - Range: `68`-`9216`
-     *   - Default value: `1500`
-     */
-    ipMtu?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    ipMtuVariable?: pulumi.Input<string>;
-    /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
@@ -699,19 +740,68 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      * Variable name
      */
     ipsecReplayWindowVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Interface MTU <68..9216>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
+     */
+    ipv4Mtu?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    ipv4MtuVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `500`-`1460`
+     */
+    ipv4TcpMss?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    ipv4TcpMssVariable?: pulumi.Input<string>;
+    /**
+     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6Address?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `1280`-`9976`
+     */
+    ipv6Mtu?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6MtuVariable?: pulumi.Input<string>;
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `40`-`1454`
+     */
+    ipv6TcpMss?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6TcpMssVariable?: pulumi.Input<string>;
     /**
      * The name of the Feature
      */
@@ -740,15 +830,6 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes
-     *   - Range: `500`-`1460`
-     */
-    tcpMss?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    tcpMssVariable?: pulumi.Input<string>;
-    /**
      * Enable tracker for this interface
      */
     trackerId?: pulumi.Input<string>;
@@ -756,19 +837,28 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      * Variable name
      */
     trackerIdVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     tunnelDestinationIpv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     tunnelDestinationIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelDestinationIpv4SubnetMask?: pulumi.Input<string>;
+    tunnelDestinationIpv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelDestinationIpv4SubnetMaskVariable?: pulumi.Input<string>;
+    tunnelDestinationIpv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * IPsec Tunnel Mode
+     *   - Choices: `ipv4`, `ipv6`, `ipv4-v6overlay`
+     *   - Default value: `ipv4`
+     */
+    tunnelMode?: pulumi.Input<string>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
@@ -785,19 +875,22 @@ export interface ServiceLanVpnInterfaceIpsecFeatureState {
      * Variable name
      */
     tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     tunnelSourceIpv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     tunnelSourceIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelSourceIpv4SubnetMask?: pulumi.Input<string>;
+    tunnelSourceIpv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelSourceIpv4SubnetMaskVariable?: pulumi.Input<string>;
+    tunnelSourceIpv6AddressVariable?: pulumi.Input<string>;
     /**
      * The version of the Feature
      */
@@ -941,16 +1034,6 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     interfaceNameVariable?: pulumi.Input<string>;
     /**
-     * Interface MTU <68..9216>, in bytes
-     *   - Range: `68`-`9216`
-     *   - Default value: `1500`
-     */
-    ipMtu?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    ipMtuVariable?: pulumi.Input<string>;
-    /**
      * IPsec(ESP) encryption and integrity protocol
      *   - Choices: `aes256-cbc-sha1`, `aes256-cbc-sha384`, `aes256-cbc-sha256`, `aes256-cbc-sha512`, `aes256-gcm`, `null-sha1`, `null-sha384`, `null-sha256`, `null-sha512`
      *   - Default value: `aes256-gcm`
@@ -980,19 +1063,68 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * Variable name
      */
     ipsecReplayWindowVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
     ipv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     ipv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Interface MTU <68..9216>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `68`-`9216`
+     *   - Default value: `1500`
+     */
+    ipv4Mtu?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    ipv4MtuVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      */
     ipv4SubnetMask?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
      */
     ipv4SubnetMaskVariable?: pulumi.Input<string>;
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv4`
+     *   - Range: `500`-`1460`
+     */
+    ipv4TcpMss?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4`
+     */
+    ipv4TcpMssVariable?: pulumi.Input<string>;
+    /**
+     * Assign IPv6 address, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6Address?: pulumi.Input<string>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * Interface MTU <1280..9976>, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `1280`-`9976`
+     */
+    ipv6Mtu?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6MtuVariable?: pulumi.Input<string>;
+    /**
+     * IPv6 TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     *   - Range: `40`-`1454`
+     */
+    ipv6TcpMss?: pulumi.Input<number>;
+    /**
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
+    ipv6TcpMssVariable?: pulumi.Input<string>;
     /**
      * The name of the Feature
      */
@@ -1021,15 +1153,6 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      */
     shutdownVariable?: pulumi.Input<string>;
     /**
-     * TCP MSS on SYN packets, in bytes
-     *   - Range: `500`-`1460`
-     */
-    tcpMss?: pulumi.Input<number>;
-    /**
-     * Variable name
-     */
-    tcpMssVariable?: pulumi.Input<string>;
-    /**
      * Enable tracker for this interface
      */
     trackerId?: pulumi.Input<string>;
@@ -1037,19 +1160,28 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * Variable name
      */
     trackerIdVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     tunnelDestinationIpv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     tunnelDestinationIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel destination IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelDestinationIpv4SubnetMask: pulumi.Input<string>;
+    tunnelDestinationIpv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelDestinationIpv4SubnetMaskVariable?: pulumi.Input<string>;
+    tunnelDestinationIpv6AddressVariable?: pulumi.Input<string>;
+    /**
+     * IPsec Tunnel Mode
+     *   - Choices: `ipv4`, `ipv6`, `ipv4-v6overlay`
+     *   - Default value: `ipv4`
+     */
+    tunnelMode?: pulumi.Input<string>;
     /**
      * <1..32 characters> Interface name: ge0/<0-..> or ge0/<0-..>.vlanid
      */
@@ -1066,17 +1198,20 @@ export interface ServiceLanVpnInterfaceIpsecFeatureArgs {
      * Variable name
      */
     tunnelSourceInterfaceVariable?: pulumi.Input<string>;
+    /**
+     * , Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
+     */
     tunnelSourceIpv4Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv4` or `tunnelMode` equal to `ipv4-v6overlay`
      */
     tunnelSourceIpv4AddressVariable?: pulumi.Input<string>;
     /**
-     * - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
+     * Tunnel source IPv6 Address, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelSourceIpv4SubnetMask?: pulumi.Input<string>;
+    tunnelSourceIpv6Address?: pulumi.Input<string>;
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `tunnelMode` equal to `ipv6`
      */
-    tunnelSourceIpv4SubnetMaskVariable?: pulumi.Input<string>;
+    tunnelSourceIpv6AddressVariable?: pulumi.Input<string>;
 }

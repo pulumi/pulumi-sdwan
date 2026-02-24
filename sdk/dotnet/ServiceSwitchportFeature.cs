@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Service Switchport Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -40,6 +40,7 @@ namespace Pulumi.Sdwan
     ///                 SwitchportAccessVlan = 1,
     ///                 SwitchportTrunkAllowedVlans = "1",
     ///                 SwitchportTrunkNativeVlan = 1,
+    ///                 EnableDot1x = false,
     ///                 PortControl = "auto",
     ///                 VoiceVlan = 1,
     ///                 PaeEnable = true,

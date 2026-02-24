@@ -18,25 +18,25 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string KeyString;
         /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string KeyStringVariable;
+        /// <summary>
         /// Only RSA is supported
         /// </summary>
         public readonly string KeyType;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string KeyTypeVariable;
 
         [OutputConstructor]
         private GetSystemAaaFeatureUserPublicKeyResult(
             string keyString,
 
-            string keyType,
+            string keyStringVariable,
 
-            string keyTypeVariable)
+            string keyType)
         {
             KeyString = keyString;
+            KeyStringVariable = keyStringVariable;
             KeyType = keyType;
-            KeyTypeVariable = keyTypeVariable;
         }
     }
 }

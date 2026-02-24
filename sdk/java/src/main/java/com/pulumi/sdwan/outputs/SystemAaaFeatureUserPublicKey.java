@@ -17,15 +17,16 @@ public final class SystemAaaFeatureUserPublicKey {
      */
     private @Nullable String keyString;
     /**
-     * @return Only RSA is supported
-     * 
-     */
-    private @Nullable String keyType;
-    /**
      * @return Variable name
      * 
      */
-    private @Nullable String keyTypeVariable;
+    private @Nullable String keyStringVariable;
+    /**
+     * @return Only RSA is supported
+     *   - Choices: `ssh-rsa`
+     * 
+     */
+    private @Nullable String keyType;
 
     private SystemAaaFeatureUserPublicKey() {}
     /**
@@ -36,18 +37,19 @@ public final class SystemAaaFeatureUserPublicKey {
         return Optional.ofNullable(this.keyString);
     }
     /**
+     * @return Variable name
+     * 
+     */
+    public Optional<String> keyStringVariable() {
+        return Optional.ofNullable(this.keyStringVariable);
+    }
+    /**
      * @return Only RSA is supported
+     *   - Choices: `ssh-rsa`
      * 
      */
     public Optional<String> keyType() {
         return Optional.ofNullable(this.keyType);
-    }
-    /**
-     * @return Variable name
-     * 
-     */
-    public Optional<String> keyTypeVariable() {
-        return Optional.ofNullable(this.keyTypeVariable);
     }
 
     public static Builder builder() {
@@ -60,14 +62,14 @@ public final class SystemAaaFeatureUserPublicKey {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String keyString;
+        private @Nullable String keyStringVariable;
         private @Nullable String keyType;
-        private @Nullable String keyTypeVariable;
         public Builder() {}
         public Builder(SystemAaaFeatureUserPublicKey defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.keyString = defaults.keyString;
+    	      this.keyStringVariable = defaults.keyStringVariable;
     	      this.keyType = defaults.keyType;
-    	      this.keyTypeVariable = defaults.keyTypeVariable;
         }
 
         @CustomType.Setter
@@ -77,22 +79,22 @@ public final class SystemAaaFeatureUserPublicKey {
             return this;
         }
         @CustomType.Setter
+        public Builder keyStringVariable(@Nullable String keyStringVariable) {
+
+            this.keyStringVariable = keyStringVariable;
+            return this;
+        }
+        @CustomType.Setter
         public Builder keyType(@Nullable String keyType) {
 
             this.keyType = keyType;
             return this;
         }
-        @CustomType.Setter
-        public Builder keyTypeVariable(@Nullable String keyTypeVariable) {
-
-            this.keyTypeVariable = keyTypeVariable;
-            return this;
-        }
         public SystemAaaFeatureUserPublicKey build() {
             final var _resultValue = new SystemAaaFeatureUserPublicKey();
             _resultValue.keyString = keyString;
+            _resultValue.keyStringVariable = keyStringVariable;
             _resultValue.keyType = keyType;
-            _resultValue.keyTypeVariable = keyTypeVariable;
             return _resultValue;
         }
     }

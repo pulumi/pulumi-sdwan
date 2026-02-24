@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Policy Object Unified URL Filtering Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -69,7 +69,7 @@ export class PolicyObjectUnifiedUrlFiltering extends pulumi.CustomResource {
     }
 
     /**
-     * , Attribute conditional on `enableAlerts` being equal to `true`
+     * , Attribute conditional on `enableAlerts` equal to `true`
      */
     declare public readonly alerts: pulumi.Output<string[] | undefined>;
     /**
@@ -77,7 +77,7 @@ export class PolicyObjectUnifiedUrlFiltering extends pulumi.CustomResource {
      */
     declare public readonly blockPageAction: pulumi.Output<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `text`
+     * , Attribute conditional on `blockPageAction` equal to `text`
      */
     declare public readonly blockPageContents: pulumi.Output<string | undefined>;
     /**
@@ -94,7 +94,7 @@ export class PolicyObjectUnifiedUrlFiltering extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      */
     declare public readonly redirectUrl: pulumi.Output<string | undefined>;
     declare public readonly urlAllowListId: pulumi.Output<string | undefined>;
@@ -185,7 +185,7 @@ export class PolicyObjectUnifiedUrlFiltering extends pulumi.CustomResource {
  */
 export interface PolicyObjectUnifiedUrlFilteringState {
     /**
-     * , Attribute conditional on `enableAlerts` being equal to `true`
+     * , Attribute conditional on `enableAlerts` equal to `true`
      */
     alerts?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -193,7 +193,7 @@ export interface PolicyObjectUnifiedUrlFilteringState {
      */
     blockPageAction?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `text`
+     * , Attribute conditional on `blockPageAction` equal to `text`
      */
     blockPageContents?: pulumi.Input<string>;
     /**
@@ -210,7 +210,7 @@ export interface PolicyObjectUnifiedUrlFilteringState {
      */
     name?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      */
     redirectUrl?: pulumi.Input<string>;
     urlAllowListId?: pulumi.Input<string>;
@@ -235,7 +235,7 @@ export interface PolicyObjectUnifiedUrlFilteringState {
  */
 export interface PolicyObjectUnifiedUrlFilteringArgs {
     /**
-     * , Attribute conditional on `enableAlerts` being equal to `true`
+     * , Attribute conditional on `enableAlerts` equal to `true`
      */
     alerts?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -243,7 +243,7 @@ export interface PolicyObjectUnifiedUrlFilteringArgs {
      */
     blockPageAction: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `text`
+     * , Attribute conditional on `blockPageAction` equal to `text`
      */
     blockPageContents?: pulumi.Input<string>;
     /**
@@ -260,7 +260,7 @@ export interface PolicyObjectUnifiedUrlFilteringArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * , Attribute conditional on `blockPageAction` being equal to `redirect-url`
+     * , Attribute conditional on `blockPageAction` equal to `redirect-url`
      */
     redirectUrl?: pulumi.Input<string>;
     urlAllowListId?: pulumi.Input<string>;

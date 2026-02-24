@@ -18,14 +18,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     public static final Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs Empty = new Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs();
 
     /**
-     * Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     @Import(name="destinationDataIpv6PrefixListId")
     private @Nullable Output<String> destinationDataIpv6PrefixListId;
 
     /**
-     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+     * @return Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
      * 
      */
     public Optional<Output<String>> destinationDataIpv6PrefixListId() {
@@ -48,14 +48,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     @Import(name="destinationIp")
     private @Nullable Output<String> destinationIp;
 
     /**
-     * @return Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+     * @return Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
      * 
      */
     public Optional<Output<String>> destinationIp() {
@@ -63,7 +63,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -71,7 +71,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     private @Nullable Output<Integer> destinationPort;
 
     /**
-     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+     * @return Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
      *   - Range: `0`-`65535`
      * 
      */
@@ -80,14 +80,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     @Import(name="sourceDataIpv6PrefixListId")
     private @Nullable Output<String> sourceDataIpv6PrefixListId;
 
     /**
-     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+     * @return Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
      * 
      */
     public Optional<Output<String>> sourceDataIpv6PrefixListId() {
@@ -110,14 +110,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     @Import(name="sourceIp")
     private @Nullable Output<String> sourceIp;
 
     /**
-     * @return Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+     * @return Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
      * 
      */
     public Optional<Output<String>> sourceIp() {
@@ -125,14 +125,14 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
     }
 
     /**
-     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     @Import(name="sourcePorts")
     private @Nullable Output<String> sourcePorts;
 
     /**
-     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+     * @return Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
      * 
      */
     public Optional<Output<String>> sourcePorts() {
@@ -189,7 +189,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationDataIpv6PrefixListId Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+         * @param destinationDataIpv6PrefixListId Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationDataIpv6PrefixListId Destination data IPv6 prefix list ID, Attribute conditional on `type` being equal to `destinationDataIpv6PrefixList`
+         * @param destinationDataIpv6PrefixListId Destination data IPv6 prefix list ID, Attribute conditional on `type` equal to `destinationDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationIp Destination IP prefix, Attribute conditional on `type` being equal to `destinationIpv6`
+         * @param destinationIp Destination IP prefix, Attribute conditional on `type` equal to `destinationIpv6`
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -264,7 +264,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` being equal to `destinationPort`
+         * @param destinationPort Destination port, only `22` and `161` supported, Attribute conditional on `type` equal to `destinationPort`
          *   - Range: `0`-`65535`
          * 
          * @return builder
@@ -275,7 +275,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` being equal to `sourceDataIpv6PrefixList`
+         * @param sourceDataIpv6PrefixListId Source data IPv6 prefix list ID, Attribute conditional on `type` equal to `sourceDataIpv6PrefixList`
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
          * 
          * @return builder
          * 
@@ -328,7 +328,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourceIp Source IP prefix, Attribute conditional on `type` being equal to `sourceIpv6`
+         * @param sourceIp Source IP prefix, Attribute conditional on `type` equal to `sourceIpv6`
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryArgs extends c
         }
 
         /**
-         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` being equal to `sourcePort`
+         * @param sourcePorts Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `type` equal to `sourcePort`
          * 
          * @return builder
          * 

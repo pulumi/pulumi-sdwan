@@ -26,7 +26,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
     }
 
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -34,7 +34,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
     private @Nullable Output<String> decryptThreshold;
 
     /**
-     * @return , Attribute conditional on `reputation` being equal to `true`
+     * @return , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -116,7 +116,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
     }
 
     /**
-     * , Attribute conditional on `reputation` being equal to `true`
+     * , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -124,7 +124,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
     private @Nullable Output<String> thresholdCategories;
 
     /**
-     * @return , Attribute conditional on `reputation` being equal to `true`
+     * @return , Attribute conditional on `reputation` equal to `true`
      *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
      * 
      */
@@ -211,7 +211,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
         }
 
         /**
-         * @param decryptThreshold , Attribute conditional on `reputation` being equal to `true`
+         * @param decryptThreshold , Attribute conditional on `reputation` equal to `true`
          *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
          * 
          * @return builder
@@ -223,7 +223,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
         }
 
         /**
-         * @param decryptThreshold , Attribute conditional on `reputation` being equal to `true`
+         * @param decryptThreshold , Attribute conditional on `reputation` equal to `true`
          *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
          * 
          * @return builder
@@ -341,7 +341,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
         }
 
         /**
-         * @param thresholdCategories , Attribute conditional on `reputation` being equal to `true`
+         * @param thresholdCategories , Attribute conditional on `reputation` equal to `true`
          *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
          * 
          * @return builder
@@ -353,7 +353,7 @@ public final class PolicyObjectUnifiedTlsSslProfileState extends com.pulumi.reso
         }
 
         /**
-         * @param thresholdCategories , Attribute conditional on `reputation` being equal to `true`
+         * @param thresholdCategories , Attribute conditional on `reputation` equal to `true`
          *   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
          * 
          * @return builder

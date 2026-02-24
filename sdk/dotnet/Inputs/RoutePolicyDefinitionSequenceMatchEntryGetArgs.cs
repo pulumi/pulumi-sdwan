@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class RoutePolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// AS path list ID, Attribute conditional on `Type` being equal to `asPath`
+        /// AS path list ID, Attribute conditional on `Type` equal to `asPath`
         /// </summary>
         [Input("asPathListId")]
         public Input<string>? AsPathListId { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? AsPathListVersion { get; set; }
 
         /// <summary>
-        /// Community list ID, Attribute conditional on `Type` being equal to `Community`
+        /// Community list ID, Attribute conditional on `Type` equal to `Community`
         /// </summary>
         [Input("communityListId")]
         public Input<string>? CommunityListId { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<string>? _communityListIds;
 
         /// <summary>
-        /// Community list IDs, Attribute conditional on `Type` being equal to `advancedCommunity`
+        /// Community list IDs, Attribute conditional on `Type` equal to `advancedCommunity`
         /// </summary>
         public InputList<string> CommunityListIds
         {
@@ -68,13 +68,13 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// Expanded community list ID, Attribute conditional on `Type` being equal to `expandedCommunity`
+        /// Expanded community list ID, Attribute conditional on `Type` equal to `expandedCommunity`
         /// </summary>
         [Input("expandedCommunityListId")]
         public Input<string>? ExpandedCommunityListId { get; set; }
 
         /// <summary>
-        /// Expanded community list variable, Attribute conditional on `Type` being equal to `expandedCommunityInline`
+        /// Expanded community list variable, Attribute conditional on `Type` equal to `expandedCommunityInline`
         /// </summary>
         [Input("expandedCommunityListVariable")]
         public Input<string>? ExpandedCommunityListVariable { get; set; }
@@ -86,7 +86,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ExpandedCommunityListVersion { get; set; }
 
         /// <summary>
-        /// Extended community list ID, Attribute conditional on `Type` being equal to `extCommunity`
+        /// Extended community list ID, Attribute conditional on `Type` equal to `extCommunity`
         /// </summary>
         [Input("extendedCommunityListId")]
         public Input<string>? ExtendedCommunityListId { get; set; }
@@ -98,21 +98,21 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ExtendedCommunityListVersion { get; set; }
 
         /// <summary>
-        /// Local preference, Attribute conditional on `Type` being equal to `localPreference`
+        /// Local preference, Attribute conditional on `Type` equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
-        /// Metric, Attribute conditional on `Type` being equal to `Metric`
+        /// Metric, Attribute conditional on `Type` equal to `Metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Next hop prefix list ID, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop prefix list ID, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         [Input("nextHopPrefixListId")]
         public Input<string>? NextHopPrefixListId { get; set; }
@@ -124,34 +124,34 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? NextHopPrefixListVersion { get; set; }
 
         /// <summary>
-        /// OMP tag, Attribute conditional on `Type` being equal to `ompTag`
+        /// OMP tag, Attribute conditional on `Type` equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ompTag")]
         public Input<int>? OmpTag { get; set; }
 
         /// <summary>
-        /// Origin, Attribute conditional on `Type` being equal to `Origin`
+        /// Origin, Attribute conditional on `Type` equal to `Origin`
         ///   - Choices: `Igp`, `Egp`, `Incomplete`
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// OSPF tag, Attribute conditional on `Type` being equal to `ospfTag`
+        /// OSPF tag, Attribute conditional on `Type` equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         [Input("ospfTag")]
         public Input<int>? OspfTag { get; set; }
 
         /// <summary>
-        /// Peer IP, Attribute conditional on `Type` being equal to `Peer`
+        /// Peer IP, Attribute conditional on `Type` equal to `Peer`
         /// </summary>
         [Input("peer")]
         public Input<string>? Peer { get; set; }
 
         /// <summary>
-        /// Prefix list ID, Attribute conditional on `Type` being equal to `Address`
+        /// Prefix list ID, Attribute conditional on `Type` equal to `Address`
         /// </summary>
         [Input("prefixListId")]
         public Input<string>? PrefixListId { get; set; }

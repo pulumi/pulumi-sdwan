@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Service LAN VPN Interface SVI Feature.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -92,6 +92,7 @@ import (
 //								DecrementValue: pulumi.Int(100),
 //							},
 //						},
+//						FollowDualRouterHighAvailability: pulumi.Bool(false),
 //					},
 //				},
 //				Ipv6Vrrps: sdwan.ServiceLanVpnInterfaceSviFeatureIpv6VrrpArray{
@@ -112,6 +113,7 @@ import (
 //								Prefix: pulumi.String("::20/32"),
 //							},
 //						},
+//						FollowDualRouterHighAvailability: pulumi.Bool(false),
 //					},
 //				},
 //				EnableDhcpv6:        pulumi.Bool(false),

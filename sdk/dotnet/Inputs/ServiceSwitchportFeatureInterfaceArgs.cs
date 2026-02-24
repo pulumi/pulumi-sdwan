@@ -52,6 +52,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
+        /// Set 802.1x on off
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("enableDot1x")]
+        public Input<bool>? EnableDot1x { get; set; }
+
+        /// <summary>
         /// Enable Periodic Reauthentication
         /// </summary>
         [Input("enablePeriodicReauth")]
@@ -212,7 +219,7 @@ namespace Pulumi.Sdwan.Inputs
 
         /// <summary>
         /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }

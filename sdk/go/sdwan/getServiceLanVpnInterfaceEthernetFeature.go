@@ -198,6 +198,52 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	Name string `pulumi:"name"`
 	// NAT64 on this interface
 	Nat64 bool `pulumi:"nat64"`
+	// Port-Channel interface on/off
+	PortChannelInterface bool `pulumi:"portChannelInterface"`
+	// Eanble lacp fast switchover
+	PortChannelLacpFastSwitchover bool `pulumi:"portChannelLacpFastSwitchover"`
+	// Variable name
+	PortChannelLacpFastSwitchoverVariable string `pulumi:"portChannelLacpFastSwitchoverVariable"`
+	// Enable QoS Port-Channel aggregate
+	PortChannelLacpLoadBalance string `pulumi:"portChannelLacpLoadBalance"`
+	// Variable name
+	PortChannelLacpLoadBalanceVariable string `pulumi:"portChannelLacpLoadBalanceVariable"`
+	// Set LACP max bundle
+	PortChannelLacpMaxBundle int `pulumi:"portChannelLacpMaxBundle"`
+	// Variable name
+	PortChannelLacpMaxBundleVariable string `pulumi:"portChannelLacpMaxBundleVariable"`
+	// Configure Port-Channel member links
+	PortChannelLacpMemberLinks []GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink `pulumi:"portChannelLacpMemberLinks"`
+	// Set LACP min bundle
+	PortChannelLacpMinBundle int `pulumi:"portChannelLacpMinBundle"`
+	// Variable name
+	PortChannelLacpMinBundleVariable string `pulumi:"portChannelLacpMinBundleVariable"`
+	// Enable QoS Port-Channel aggregate
+	PortChannelLacpQosAggregate bool `pulumi:"portChannelLacpQosAggregate"`
+	// Variable name
+	PortChannelLacpQosAggregateVariable string `pulumi:"portChannelLacpQosAggregateVariable"`
+	// Port-Channel member interface on/off
+	PortChannelMemberInterface bool `pulumi:"portChannelMemberInterface"`
+	// Port Channel Mode
+	PortChannelMode string `pulumi:"portChannelMode"`
+	// Enable QoS Port-Channel aggregate
+	PortChannelStaticLoadBalance string `pulumi:"portChannelStaticLoadBalance"`
+	// Variable name
+	PortChannelStaticLoadBalanceVariable string `pulumi:"portChannelStaticLoadBalanceVariable"`
+	// Configure Port-Channel member links
+	PortChannelStaticMemberLinks []GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink `pulumi:"portChannelStaticMemberLinks"`
+	// Enable QoS Port-Channel aggregate
+	PortChannelStaticQosAggregate bool `pulumi:"portChannelStaticQosAggregate"`
+	// Variable name
+	PortChannelStaticQosAggregateVariable string `pulumi:"portChannelStaticQosAggregateVariable"`
+	// Port Channel Sub Interface on/off
+	PortChannelSubinterface                     bool   `pulumi:"portChannelSubinterface"`
+	PortChannelSubinterfacePrimaryInterfaceName string `pulumi:"portChannelSubinterfacePrimaryInterfaceName"`
+	// Variable name
+	PortChannelSubinterfacePrimaryInterfaceNameVariable string `pulumi:"portChannelSubinterfacePrimaryInterfaceNameVariable"`
+	PortChannelSubinterfaceSecondaryInterfaceName       string `pulumi:"portChannelSubinterfaceSecondaryInterfaceName"`
+	// Variable name
+	PortChannelSubinterfaceSecondaryInterfaceNameVariable string `pulumi:"portChannelSubinterfaceSecondaryInterfaceNameVariable"`
 	// Service LAN VPN Feature ID
 	ServiceLanVpnFeatureId string `pulumi:"serviceLanVpnFeatureId"`
 	Shutdown               bool   `pulumi:"shutdown"`
@@ -213,10 +259,6 @@ type LookupServiceLanVpnInterfaceEthernetFeatureResult struct {
 	TcpMss int `pulumi:"tcpMss"`
 	// Variable name
 	TcpMssVariable string `pulumi:"tcpMssVariable"`
-	// Enable tracker for this interface
-	Tracker string `pulumi:"tracker"`
-	// Variable name
-	TrackerVariable string `pulumi:"trackerVariable"`
 	// Enable/Disable SGT Enforcement on an interface
 	TrustsecEnableEnforcedPropogation bool `pulumi:"trustsecEnableEnforcedPropogation"`
 	// Indicates that the interface is trustworthy for CTS
@@ -642,6 +684,152 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Nat64() pulumi.
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.Nat64 }).(pulumi.BoolOutput)
 }
 
+// Port-Channel interface on/off
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelInterface }).(pulumi.BoolOutput)
+}
+
+// Eanble lacp fast switchover
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpFastSwitchover() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelLacpFastSwitchover }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpFastSwitchoverVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelLacpFastSwitchoverVariable
+	}).(pulumi.StringOutput)
+}
+
+// Enable QoS Port-Channel aggregate
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpLoadBalance() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.PortChannelLacpLoadBalance }).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpLoadBalanceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelLacpLoadBalanceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Set LACP max bundle
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpMaxBundle() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) int { return v.PortChannelLacpMaxBundle }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpMaxBundleVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelLacpMaxBundleVariable
+	}).(pulumi.StringOutput)
+}
+
+// Configure Port-Channel member links
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpMemberLinks() GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) []GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink {
+		return v.PortChannelLacpMemberLinks
+	}).(GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArrayOutput)
+}
+
+// Set LACP min bundle
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpMinBundle() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) int { return v.PortChannelLacpMinBundle }).(pulumi.IntOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpMinBundleVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelLacpMinBundleVariable
+	}).(pulumi.StringOutput)
+}
+
+// Enable QoS Port-Channel aggregate
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpQosAggregate() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelLacpQosAggregate }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelLacpQosAggregateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelLacpQosAggregateVariable
+	}).(pulumi.StringOutput)
+}
+
+// Port-Channel member interface on/off
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelMemberInterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelMemberInterface }).(pulumi.BoolOutput)
+}
+
+// Port Channel Mode
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelMode() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.PortChannelMode }).(pulumi.StringOutput)
+}
+
+// Enable QoS Port-Channel aggregate
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelStaticLoadBalance() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelStaticLoadBalance
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelStaticLoadBalanceVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelStaticLoadBalanceVariable
+	}).(pulumi.StringOutput)
+}
+
+// Configure Port-Channel member links
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelStaticMemberLinks() GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) []GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink {
+		return v.PortChannelStaticMemberLinks
+	}).(GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArrayOutput)
+}
+
+// Enable QoS Port-Channel aggregate
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelStaticQosAggregate() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelStaticQosAggregate }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelStaticQosAggregateVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelStaticQosAggregateVariable
+	}).(pulumi.StringOutput)
+}
+
+// Port Channel Sub Interface on/off
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelSubinterface() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) bool { return v.PortChannelSubinterface }).(pulumi.BoolOutput)
+}
+
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelSubinterfacePrimaryInterfaceName() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelSubinterfacePrimaryInterfaceName
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelSubinterfacePrimaryInterfaceNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelSubinterfacePrimaryInterfaceNameVariable
+	}).(pulumi.StringOutput)
+}
+
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelSubinterfaceSecondaryInterfaceName() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelSubinterfaceSecondaryInterfaceName
+	}).(pulumi.StringOutput)
+}
+
+// Variable name
+func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) PortChannelSubinterfaceSecondaryInterfaceNameVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string {
+		return v.PortChannelSubinterfaceSecondaryInterfaceNameVariable
+	}).(pulumi.StringOutput)
+}
+
 // Service LAN VPN Feature ID
 func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) ServiceLanVpnFeatureId() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.ServiceLanVpnFeatureId }).(pulumi.StringOutput)
@@ -681,16 +869,6 @@ func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) TcpMss() pulumi
 // Variable name
 func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) TcpMssVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.TcpMssVariable }).(pulumi.StringOutput)
-}
-
-// Enable tracker for this interface
-func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) Tracker() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.Tracker }).(pulumi.StringOutput)
-}
-
-// Variable name
-func (o LookupServiceLanVpnInterfaceEthernetFeatureResultOutput) TrackerVariable() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceLanVpnInterfaceEthernetFeatureResult) string { return v.TrackerVariable }).(pulumi.StringOutput)
 }
 
 // Enable/Disable SGT Enforcement on an interface

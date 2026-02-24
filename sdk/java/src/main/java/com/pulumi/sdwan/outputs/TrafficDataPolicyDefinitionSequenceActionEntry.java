@@ -18,104 +18,104 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficDataPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
+     * @return Enable cflowd, Attribute conditional on `type` equal to `cflowd`
      * 
      */
     private @Nullable Boolean cflowd;
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     private @Nullable String counter;
     /**
-     * @return Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
+     * @return Enable DRE optimization, Attribute conditional on `type` equal to `dreOptimization`
      * 
      */
     private @Nullable Boolean dreOptimization;
     /**
-     * @return Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
+     * @return Enable fallback to routing, Attribute conditional on `type` equal to `fallbackToRouting`
      * 
      */
     private @Nullable Boolean fallbackToRouting;
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     private @Nullable Boolean log;
     /**
-     * @return Loss correction, Attribute conditional on `type` being equal to `lossProtect`
+     * @return Loss correction, Attribute conditional on `type` equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
     private @Nullable String lossCorrection;
     /**
-     * @return Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
+     * @return Loss correction FEC, Attribute conditional on `type` equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
     private @Nullable String lossCorrectionFec;
     /**
-     * @return Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
+     * @return Loss correction FEC threshold, Attribute conditional on `type` equal to `lossProtectFec`
      * 
      */
     private @Nullable String lossCorrectionFecThreshold;
     /**
-     * @return Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
+     * @return Loss correction packet duplication, Attribute conditional on `type` equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
     private @Nullable String lossCorrectionPacketDuplication;
     /**
-     * @return List of NAT parameters, Attribute conditional on `type` being equal to `nat`
+     * @return List of NAT parameters, Attribute conditional on `type` equal to `nat`
      * 
      */
     private @Nullable List<TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> natParameters;
     /**
-     * @return NAT pool, Attribute conditional on `type` being equal to `nat`
+     * @return NAT pool, Attribute conditional on `type` equal to `nat`
      *   - Choices: `pool`
      * 
      */
     private @Nullable String natPool;
     /**
-     * @return NAT pool ID, Attribute conditional on `type` being equal to `nat`
+     * @return NAT pool ID, Attribute conditional on `type` equal to `nat`
      *   - Range: `1`-`31`
      * 
      */
     private @Nullable Integer natPoolId;
     /**
-     * @return Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
+     * @return Redirect DNS, Attribute conditional on `type` equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      * 
      */
     private @Nullable String redirectDns;
     /**
-     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
+     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` equal to `ipAddress`
      * 
      */
     private @Nullable String redirectDnsAddress;
     /**
-     * @return Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
+     * @return Redirect DNS type, Attribute conditional on `redirectDns` equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
     private @Nullable String redirectDnsType;
     /**
-     * @return Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
+     * @return Enable secure internet gateway, Attribute conditional on `type` equal to `sig`
      * 
      */
     private @Nullable Boolean secureInternetGateway;
     /**
-     * @return Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
+     * @return Service node group, Attribute conditional on `type` equal to `serviceNodeGroup`
      * 
      */
     private @Nullable String serviceNodeGroup;
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     private @Nullable List<TrafficDataPolicyDefinitionSequenceActionEntrySetParameter> setParameters;
     /**
-     * @return Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
+     * @return Enable TCP optimization, Attribute conditional on `type` equal to `tcpOptimization`
      * 
      */
     private @Nullable Boolean tcpOptimization;
@@ -128,42 +128,42 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
 
     private TrafficDataPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Enable cflowd, Attribute conditional on `type` being equal to `cflowd`
+     * @return Enable cflowd, Attribute conditional on `type` equal to `cflowd`
      * 
      */
     public Optional<Boolean> cflowd() {
         return Optional.ofNullable(this.cflowd);
     }
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     public Optional<String> counter() {
         return Optional.ofNullable(this.counter);
     }
     /**
-     * @return Enable DRE optimization, Attribute conditional on `type` being equal to `dreOptimization`
+     * @return Enable DRE optimization, Attribute conditional on `type` equal to `dreOptimization`
      * 
      */
     public Optional<Boolean> dreOptimization() {
         return Optional.ofNullable(this.dreOptimization);
     }
     /**
-     * @return Enable fallback to routing, Attribute conditional on `type` being equal to `fallbackToRouting`
+     * @return Enable fallback to routing, Attribute conditional on `type` equal to `fallbackToRouting`
      * 
      */
     public Optional<Boolean> fallbackToRouting() {
         return Optional.ofNullable(this.fallbackToRouting);
     }
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return Loss correction, Attribute conditional on `type` being equal to `lossProtect`
+     * @return Loss correction, Attribute conditional on `type` equal to `lossProtect`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -171,7 +171,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.lossCorrection);
     }
     /**
-     * @return Loss correction FEC, Attribute conditional on `type` being equal to `lossProtectFec`
+     * @return Loss correction FEC, Attribute conditional on `type` equal to `lossProtectFec`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -179,14 +179,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.lossCorrectionFec);
     }
     /**
-     * @return Loss correction FEC threshold, Attribute conditional on `type` being equal to `lossProtectFec`
+     * @return Loss correction FEC threshold, Attribute conditional on `type` equal to `lossProtectFec`
      * 
      */
     public Optional<String> lossCorrectionFecThreshold() {
         return Optional.ofNullable(this.lossCorrectionFecThreshold);
     }
     /**
-     * @return Loss correction packet duplication, Attribute conditional on `type` being equal to `lossProtectPktDup`
+     * @return Loss correction packet duplication, Attribute conditional on `type` equal to `lossProtectPktDup`
      *   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
      * 
      */
@@ -194,14 +194,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.lossCorrectionPacketDuplication);
     }
     /**
-     * @return List of NAT parameters, Attribute conditional on `type` being equal to `nat`
+     * @return List of NAT parameters, Attribute conditional on `type` equal to `nat`
      * 
      */
     public List<TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> natParameters() {
         return this.natParameters == null ? List.of() : this.natParameters;
     }
     /**
-     * @return NAT pool, Attribute conditional on `type` being equal to `nat`
+     * @return NAT pool, Attribute conditional on `type` equal to `nat`
      *   - Choices: `pool`
      * 
      */
@@ -209,7 +209,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.natPool);
     }
     /**
-     * @return NAT pool ID, Attribute conditional on `type` being equal to `nat`
+     * @return NAT pool ID, Attribute conditional on `type` equal to `nat`
      *   - Range: `1`-`31`
      * 
      */
@@ -217,7 +217,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.natPoolId);
     }
     /**
-     * @return Redirect DNS, Attribute conditional on `type` being equal to `redirectDns`
+     * @return Redirect DNS, Attribute conditional on `type` equal to `redirectDns`
      *   - Choices: `dnsType`, `ipAddress`
      * 
      */
@@ -225,14 +225,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.redirectDns);
     }
     /**
-     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` being equal to `ipAddress`
+     * @return Redirect DNS IP address, Attribute conditional on `redirectDns` equal to `ipAddress`
      * 
      */
     public Optional<String> redirectDnsAddress() {
         return Optional.ofNullable(this.redirectDnsAddress);
     }
     /**
-     * @return Redirect DNS type, Attribute conditional on `redirectDns` being equal to `dnsType`
+     * @return Redirect DNS type, Attribute conditional on `redirectDns` equal to `dnsType`
      *   - Choices: `host`, `umbrella`
      * 
      */
@@ -240,28 +240,28 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntry {
         return Optional.ofNullable(this.redirectDnsType);
     }
     /**
-     * @return Enable secure internet gateway, Attribute conditional on `type` being equal to `sig`
+     * @return Enable secure internet gateway, Attribute conditional on `type` equal to `sig`
      * 
      */
     public Optional<Boolean> secureInternetGateway() {
         return Optional.ofNullable(this.secureInternetGateway);
     }
     /**
-     * @return Service node group, Attribute conditional on `type` being equal to `serviceNodeGroup`
+     * @return Service node group, Attribute conditional on `type` equal to `serviceNodeGroup`
      * 
      */
     public Optional<String> serviceNodeGroup() {
         return Optional.ofNullable(this.serviceNodeGroup);
     }
     /**
-     * @return List of set parameters, Attribute conditional on `type` being equal to `set`
+     * @return List of set parameters, Attribute conditional on `type` equal to `set`
      * 
      */
     public List<TrafficDataPolicyDefinitionSequenceActionEntrySetParameter> setParameters() {
         return this.setParameters == null ? List.of() : this.setParameters;
     }
     /**
-     * @return Enable TCP optimization, Attribute conditional on `type` being equal to `tcpOptimization`
+     * @return Enable TCP optimization, Attribute conditional on `type` equal to `tcpOptimization`
      * 
      */
     public Optional<Boolean> tcpOptimization() {

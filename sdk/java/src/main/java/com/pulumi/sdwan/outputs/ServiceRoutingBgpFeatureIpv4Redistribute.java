@@ -25,7 +25,7 @@ public final class ServiceRoutingBgpFeatureIpv4Redistribute {
     private @Nullable String protocolVariable;
     private @Nullable String routePolicyId;
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -51,7 +51,7 @@ public final class ServiceRoutingBgpFeatureIpv4Redistribute {
         return Optional.ofNullable(this.routePolicyId);
     }
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */

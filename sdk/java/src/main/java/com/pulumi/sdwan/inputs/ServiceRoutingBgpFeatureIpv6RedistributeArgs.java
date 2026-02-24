@@ -56,7 +56,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
     }
 
     /**
-     * Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -64,7 +64,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
     private @Nullable Output<Boolean> translateRibMetric;
 
     /**
-     * @return Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+     * @return Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
      *   - Default value: `false`
      * 
      */
@@ -153,7 +153,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder
@@ -165,7 +165,7 @@ public final class ServiceRoutingBgpFeatureIpv6RedistributeArgs extends com.pulu
         }
 
         /**
-         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` being equal to `omp`
+         * @param translateRibMetric Translate Rib Metric, Attribute conditional on `protocol` equal to `omp`
          *   - Default value: `false`
          * 
          * @return builder

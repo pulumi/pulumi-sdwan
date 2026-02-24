@@ -13,14 +13,14 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv4AclPolicyDefinitionSequenceActionEntrySetParameterGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// DSCP value, Attribute conditional on `Type` being equal to `Dscp`
+        /// DSCP value, Attribute conditional on `Type` equal to `Dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         [Input("dscp")]
         public Input<int>? Dscp { get; set; }
 
         /// <summary>
-        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         [Input("nextHop")]
         public Input<string>? NextHop { get; set; }

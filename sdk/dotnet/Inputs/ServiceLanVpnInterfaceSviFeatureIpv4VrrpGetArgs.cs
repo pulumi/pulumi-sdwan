@@ -25,6 +25,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? AddressVariable { get; set; }
 
         /// <summary>
+        /// Follow RG state by default when B2B HA is configured
+        ///   - Default value: `True`
+        /// </summary>
+        [Input("followDualRouterHighAvailability")]
+        public Input<bool>? FollowDualRouterHighAvailability { get; set; }
+
+        /// <summary>
         /// Group ID
         ///   - Range: `1`-`255`
         /// </summary>

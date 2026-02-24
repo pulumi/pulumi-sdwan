@@ -183,6 +183,10 @@ type LookupSystemBasicFeatureResult struct {
 	TrackTransport bool `pulumi:"trackTransport"`
 	// Variable name
 	TrackTransportVariable string `pulumi:"trackTransportVariable"`
+	// Enable or disable endpoint tracker diaStabilize status
+	TrackerDiaStabilizeStatus bool `pulumi:"trackerDiaStabilizeStatus"`
+	// Variable name
+	TrackerDiaStabilizeStatusVariable string `pulumi:"trackerDiaStabilizeStatusVariable"`
 	// Enable transport gateway
 	TransportGateway bool `pulumi:"transportGateway"`
 	// Variable name
@@ -537,6 +541,16 @@ func (o LookupSystemBasicFeatureResultOutput) TrackTransport() pulumi.BoolOutput
 // Variable name
 func (o LookupSystemBasicFeatureResultOutput) TrackTransportVariable() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSystemBasicFeatureResult) string { return v.TrackTransportVariable }).(pulumi.StringOutput)
+}
+
+// Enable or disable endpoint tracker diaStabilize status
+func (o LookupSystemBasicFeatureResultOutput) TrackerDiaStabilizeStatus() pulumi.BoolOutput {
+	return o.ApplyT(func(v LookupSystemBasicFeatureResult) bool { return v.TrackerDiaStabilizeStatus }).(pulumi.BoolOutput)
+}
+
+// Variable name
+func (o LookupSystemBasicFeatureResultOutput) TrackerDiaStabilizeStatusVariable() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSystemBasicFeatureResult) string { return v.TrackerDiaStabilizeStatusVariable }).(pulumi.StringOutput)
 }
 
 // Enable transport gateway

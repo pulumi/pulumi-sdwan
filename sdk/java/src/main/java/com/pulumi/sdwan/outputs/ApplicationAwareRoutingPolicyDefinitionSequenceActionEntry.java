@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
     /**
-     * @return Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+     * @return Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `backupSlaPreferredColor`
      * 
      */
     private @Nullable String backupSlaPreferredColor;
     /**
-     * @return Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+     * @return Cloud SLA, Attribute conditional on `type` equal to `cloudSaas`
      * 
      */
     private @Nullable Boolean cloudSla;
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     private @Nullable String counter;
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     private @Nullable Boolean log;
     /**
-     * @return List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
+     * @return List of SLA class parameters, Attribute conditional on `type` equal to `slaClass`
      * 
      */
     private @Nullable List<ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter> slaClassParameters;
@@ -49,35 +49,35 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry {
 
     private ApplicationAwareRoutingPolicyDefinitionSequenceActionEntry() {}
     /**
-     * @return Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `backupSlaPreferredColor`
+     * @return Backup SLA preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `backupSlaPreferredColor`
      * 
      */
     public Optional<String> backupSlaPreferredColor() {
         return Optional.ofNullable(this.backupSlaPreferredColor);
     }
     /**
-     * @return Cloud SLA, Attribute conditional on `type` being equal to `cloudSaas`
+     * @return Cloud SLA, Attribute conditional on `type` equal to `cloudSaas`
      * 
      */
     public Optional<Boolean> cloudSla() {
         return Optional.ofNullable(this.cloudSla);
     }
     /**
-     * @return Counter name, Attribute conditional on `type` being equal to `count`
+     * @return Counter name, Attribute conditional on `type` equal to `count`
      * 
      */
     public Optional<String> counter() {
         return Optional.ofNullable(this.counter);
     }
     /**
-     * @return Enable logging, Attribute conditional on `type` being equal to `log`
+     * @return Enable logging, Attribute conditional on `type` equal to `log`
      * 
      */
     public Optional<Boolean> log() {
         return Optional.ofNullable(this.log);
     }
     /**
-     * @return List of SLA class parameters, Attribute conditional on `type` being equal to `slaClass`
+     * @return List of SLA class parameters, Attribute conditional on `type` equal to `slaClass`
      * 
      */
     public List<ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameter> slaClassParameters() {

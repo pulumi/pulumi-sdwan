@@ -67,14 +67,14 @@ namespace Pulumi.Sdwan
         public Output<string?> AccessPointNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set authentication type, Attribute conditional on `RequiresAuthentication` equal to `True`
         ///   - Choices: `Pap`, `Chap`, `PapChap`
         /// </summary>
         [Output("authenticationType")]
         public Output<string?> AuthenticationType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("authenticationTypeVariable")]
         public Output<string?> AuthenticationTypeVariable { get; private set; } = null!;
@@ -137,25 +137,25 @@ namespace Pulumi.Sdwan
         public Output<string?> ProfileIdVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("profilePassword")]
         public Output<string?> ProfilePassword { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("profilePasswordVariable")]
         public Output<string?> ProfilePasswordVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set the profile username, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("profileUsername")]
         public Output<string?> ProfileUsername { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Output("profileUsernameVariable")]
         public Output<string?> ProfileUsernameVariable { get; private set; } = null!;
@@ -232,14 +232,14 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set authentication type, Attribute conditional on `RequiresAuthentication` equal to `True`
         ///   - Choices: `Pap`, `Chap`, `PapChap`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("authenticationTypeVariable")]
         public Input<string>? AuthenticationTypeVariable { get; set; }
@@ -302,25 +302,25 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileIdVariable { get; set; }
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePassword")]
         public Input<string>? ProfilePassword { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePasswordVariable")]
         public Input<string>? ProfilePasswordVariable { get; set; }
 
         /// <summary>
-        /// Set the profile username, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profileUsername")]
         public Input<string>? ProfileUsername { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profileUsernameVariable")]
         public Input<string>? ProfileUsernameVariable { get; set; }
@@ -353,14 +353,14 @@ namespace Pulumi.Sdwan
         public Input<string>? AccessPointNameVariable { get; set; }
 
         /// <summary>
-        /// Set authentication type, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set authentication type, Attribute conditional on `RequiresAuthentication` equal to `True`
         ///   - Choices: `Pap`, `Chap`, `PapChap`
         /// </summary>
         [Input("authenticationType")]
         public Input<string>? AuthenticationType { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("authenticationTypeVariable")]
         public Input<string>? AuthenticationTypeVariable { get; set; }
@@ -423,25 +423,25 @@ namespace Pulumi.Sdwan
         public Input<string>? ProfileIdVariable { get; set; }
 
         /// <summary>
-        /// Set the profile password, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile password, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePassword")]
         public Input<string>? ProfilePassword { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profilePasswordVariable")]
         public Input<string>? ProfilePasswordVariable { get; set; }
 
         /// <summary>
-        /// Set the profile username, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Set the profile username, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profileUsername")]
         public Input<string>? ProfileUsername { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `RequiresAuthentication` being equal to `True`
+        /// Variable name, Attribute conditional on `RequiresAuthentication` equal to `True`
         /// </summary>
         [Input("profileUsernameVariable")]
         public Input<string>? ProfileUsernameVariable { get; set; }

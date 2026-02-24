@@ -6,7 +6,7 @@ import * as utilities from "./utilities";
 
 /**
  * This resource can manage a Policy Object Unified TLS SSL Decryption Policy_object.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  *
  * ## Example Usage
  *
@@ -115,7 +115,7 @@ export class PolicyObjectUnifiedTlsSslDecryption extends pulumi.CustomResource {
      */
     declare public readonly rsaKeypairModules: pulumi.Output<string>;
     /**
-     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      */
     declare public readonly unknownRevocationStatus: pulumi.Output<string | undefined>;
@@ -275,7 +275,7 @@ export interface PolicyObjectUnifiedTlsSslDecryptionState {
      */
     rsaKeypairModules?: pulumi.Input<string>;
     /**
-     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      */
     unknownRevocationStatus?: pulumi.Input<string>;
@@ -346,7 +346,7 @@ export interface PolicyObjectUnifiedTlsSslDecryptionArgs {
      */
     rsaKeypairModules: pulumi.Input<string>;
     /**
-     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn't be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      */
     unknownRevocationStatus?: pulumi.Input<string>;

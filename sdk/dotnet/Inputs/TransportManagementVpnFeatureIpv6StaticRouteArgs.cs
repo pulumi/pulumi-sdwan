@@ -20,14 +20,14 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? Gateway { get; set; }
 
         /// <summary>
-        /// IPv6 Nat, Attribute conditional on `Gateway` being equal to `Nat`
+        /// IPv6 Nat, Attribute conditional on `Gateway` equal to `Nat`
         ///   - Choices: `NAT64`, `NAT66`
         /// </summary>
         [Input("nat")]
         public Input<string>? Nat { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Gateway` being equal to `Nat`
+        /// Variable name, Attribute conditional on `Gateway` equal to `Nat`
         /// </summary>
         [Input("natVariable")]
         public Input<string>? NatVariable { get; set; }
@@ -36,7 +36,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs>? _nextHops;
 
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public InputList<Inputs.TransportManagementVpnFeatureIpv6StaticRouteNextHopArgs> NextHops
         {
@@ -45,7 +45,7 @@ namespace Pulumi.Sdwan.Inputs
         }
 
         /// <summary>
-        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `Null0`
+        /// IPv6 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         [Input("null0")]
         public Input<bool>? Null0 { get; set; }

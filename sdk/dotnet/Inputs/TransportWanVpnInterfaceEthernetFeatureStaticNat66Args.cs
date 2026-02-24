@@ -13,6 +13,19 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TransportWanVpnInterfaceEthernetFeatureStaticNat66Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Egress Interface
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("egressInterface")]
+        public Input<bool>? EgressInterface { get; set; }
+
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        [Input("egressInterfaceVariable")]
+        public Input<string>? EgressInterfaceVariable { get; set; }
+
+        /// <summary>
         /// Source Prefix
         /// </summary>
         [Input("sourcePrefix")]

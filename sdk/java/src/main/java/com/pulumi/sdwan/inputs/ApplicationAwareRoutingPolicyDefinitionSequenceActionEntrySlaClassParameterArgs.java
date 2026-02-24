@@ -18,14 +18,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
     public static final ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs Empty = new ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterArgs();
 
     /**
-     * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+     * preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      * 
      */
     @Import(name="preferredColor")
     private @Nullable Output<String> preferredColor;
 
     /**
-     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+     * @return preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
      * 
      */
     public Optional<Output<String>> preferredColor() {
@@ -33,14 +33,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
     }
 
     /**
-     * Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     @Import(name="preferredColorGroupListId")
     private @Nullable Output<String> preferredColorGroupListId;
 
     /**
-     * @return Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+     * @return Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
      * 
      */
     public Optional<Output<String>> preferredColorGroupListId() {
@@ -63,14 +63,14 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
     }
 
     /**
-     * SLA class list ID, Attribute conditional on `type` being equal to `name`
+     * SLA class list ID, Attribute conditional on `type` equal to `name`
      * 
      */
     @Import(name="slaClassListId")
     private @Nullable Output<String> slaClassListId;
 
     /**
-     * @return SLA class list ID, Attribute conditional on `type` being equal to `name`
+     * @return SLA class list ID, Attribute conditional on `type` equal to `name`
      * 
      */
     public Optional<Output<String>> slaClassListId() {
@@ -139,7 +139,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param preferredColor preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+         * @param preferredColor preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param preferredColor preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` being equal to `preferredColor`
+         * @param preferredColor preferred color (Single value or multiple values separated by spaces), Attribute conditional on `type` equal to `preferredColor`
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` being equal to `preferredColorGroup`
+         * @param preferredColorGroupListId Preferred color group list ID, Attribute conditional on `type` equal to `preferredColorGroup`
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param slaClassListId SLA class list ID, Attribute conditional on `type` being equal to `name`
+         * @param slaClassListId SLA class list ID, Attribute conditional on `type` equal to `name`
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySla
         }
 
         /**
-         * @param slaClassListId SLA class list ID, Attribute conditional on `type` being equal to `name`
+         * @param slaClassListId SLA class list ID, Attribute conditional on `type` equal to `name`
          * 
          * @return builder
          * 

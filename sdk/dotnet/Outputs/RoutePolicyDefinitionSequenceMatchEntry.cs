@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class RoutePolicyDefinitionSequenceMatchEntry
     {
         /// <summary>
-        /// AS path list ID, Attribute conditional on `Type` being equal to `asPath`
+        /// AS path list ID, Attribute conditional on `Type` equal to `asPath`
         /// </summary>
         public readonly string? AsPathListId;
         /// <summary>
@@ -22,11 +22,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? AsPathListVersion;
         /// <summary>
-        /// Community list ID, Attribute conditional on `Type` being equal to `Community`
+        /// Community list ID, Attribute conditional on `Type` equal to `Community`
         /// </summary>
         public readonly string? CommunityListId;
         /// <summary>
-        /// Community list IDs, Attribute conditional on `Type` being equal to `advancedCommunity`
+        /// Community list IDs, Attribute conditional on `Type` equal to `advancedCommunity`
         /// </summary>
         public readonly ImmutableArray<string> CommunityListIds;
         /// <summary>
@@ -43,11 +43,11 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly ImmutableArray<string> CommunityListVersions;
         /// <summary>
-        /// Expanded community list ID, Attribute conditional on `Type` being equal to `expandedCommunity`
+        /// Expanded community list ID, Attribute conditional on `Type` equal to `expandedCommunity`
         /// </summary>
         public readonly string? ExpandedCommunityListId;
         /// <summary>
-        /// Expanded community list variable, Attribute conditional on `Type` being equal to `expandedCommunityInline`
+        /// Expanded community list variable, Attribute conditional on `Type` equal to `expandedCommunityInline`
         /// </summary>
         public readonly string? ExpandedCommunityListVariable;
         /// <summary>
@@ -55,7 +55,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExpandedCommunityListVersion;
         /// <summary>
-        /// Extended community list ID, Attribute conditional on `Type` being equal to `extCommunity`
+        /// Extended community list ID, Attribute conditional on `Type` equal to `extCommunity`
         /// </summary>
         public readonly string? ExtendedCommunityListId;
         /// <summary>
@@ -63,17 +63,17 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ExtendedCommunityListVersion;
         /// <summary>
-        /// Local preference, Attribute conditional on `Type` being equal to `localPreference`
+        /// Local preference, Attribute conditional on `Type` equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
-        /// Metric, Attribute conditional on `Type` being equal to `Metric`
+        /// Metric, Attribute conditional on `Type` equal to `Metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Next hop prefix list ID, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop prefix list ID, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         public readonly string? NextHopPrefixListId;
         /// <summary>
@@ -81,26 +81,26 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? NextHopPrefixListVersion;
         /// <summary>
-        /// OMP tag, Attribute conditional on `Type` being equal to `ompTag`
+        /// OMP tag, Attribute conditional on `Type` equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Origin, Attribute conditional on `Type` being equal to `Origin`
+        /// Origin, Attribute conditional on `Type` equal to `Origin`
         ///   - Choices: `Igp`, `Egp`, `Incomplete`
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// OSPF tag, Attribute conditional on `Type` being equal to `ospfTag`
+        /// OSPF tag, Attribute conditional on `Type` equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OspfTag;
         /// <summary>
-        /// Peer IP, Attribute conditional on `Type` being equal to `Peer`
+        /// Peer IP, Attribute conditional on `Type` equal to `Peer`
         /// </summary>
         public readonly string? Peer;
         /// <summary>
-        /// Prefix list ID, Attribute conditional on `Type` being equal to `Address`
+        /// Prefix list ID, Attribute conditional on `Type` equal to `Address`
         /// </summary>
         public readonly string? PrefixListId;
         /// <summary>

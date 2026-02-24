@@ -19,14 +19,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
     public static final TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs Empty = new TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArgs();
 
     /**
-     * Fallback, Attribute conditional on `type` being equal to `fallback`
+     * Fallback, Attribute conditional on `type` equal to `fallback`
      * 
      */
     @Import(name="fallback")
     private @Nullable Output<Boolean> fallback;
 
     /**
-     * @return Fallback, Attribute conditional on `type` being equal to `fallback`
+     * @return Fallback, Attribute conditional on `type` equal to `fallback`
      * 
      */
     public Optional<Output<Boolean>> fallback() {
@@ -51,14 +51,14 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
     }
 
     /**
-     * DSCP, Attribute conditional on `type` being equal to `useVpn`
+     * DSCP, Attribute conditional on `type` equal to `useVpn`
      * 
      */
     @Import(name="vpnId")
     private @Nullable Output<Integer> vpnId;
 
     /**
-     * @return DSCP, Attribute conditional on `type` being equal to `useVpn`
+     * @return DSCP, Attribute conditional on `type` equal to `useVpn`
      * 
      */
     public Optional<Output<Integer>> vpnId() {
@@ -92,7 +92,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
         }
 
         /**
-         * @param fallback Fallback, Attribute conditional on `type` being equal to `fallback`
+         * @param fallback Fallback, Attribute conditional on `type` equal to `fallback`
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
         }
 
         /**
-         * @param fallback Fallback, Attribute conditional on `type` being equal to `fallback`
+         * @param fallback Fallback, Attribute conditional on `type` equal to `fallback`
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
         }
 
         /**
-         * @param vpnId DSCP, Attribute conditional on `type` being equal to `useVpn`
+         * @param vpnId DSCP, Attribute conditional on `type` equal to `useVpn`
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class TrafficDataPolicyDefinitionSequenceActionEntryNatParameterArg
         }
 
         /**
-         * @param vpnId DSCP, Attribute conditional on `type` being equal to `useVpn`
+         * @param vpnId DSCP, Attribute conditional on `type` equal to `useVpn`
          * 
          * @return builder
          * 

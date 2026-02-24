@@ -39,13 +39,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? BroadcastSsidVariable { get; set; }
 
         /// <summary>
-        /// Set passphrase, Attribute conditional on `SecurityType` being equal to `Personal`
+        /// Set passphrase, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         [Input("passphrase")]
         public Input<string>? Passphrase { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Personal`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Personal`
         /// </summary>
         [Input("passphraseVariable")]
         public Input<string>? PassphraseVariable { get; set; }
@@ -79,19 +79,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string>? RadioTypeVariable { get; set; }
 
         /// <summary>
-        /// Set RADIUS server IP, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server IP, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerIp")]
         public Input<string>? RadiusServerIp { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerIpVariable")]
         public Input<string>? RadiusServerIpVariable { get; set; }
 
         /// <summary>
-        /// Set RADIUS server authentication port, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server authentication port, Attribute conditional on `SecurityType` equal to `Enterprise`
         ///   - Range: `1`-`65535`
         ///   - Default value: `1812`
         /// </summary>
@@ -99,19 +99,19 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? RadiusServerPort { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerPortVariable")]
         public Input<string>? RadiusServerPortVariable { get; set; }
 
         /// <summary>
-        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Set RADIUS server shared secret, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerSecret")]
         public Input<string>? RadiusServerSecret { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `SecurityType` being equal to `Enterprise`
+        /// Variable name, Attribute conditional on `SecurityType` equal to `Enterprise`
         /// </summary>
         [Input("radiusServerSecretVariable")]
         public Input<string>? RadiusServerSecretVariable { get; set; }

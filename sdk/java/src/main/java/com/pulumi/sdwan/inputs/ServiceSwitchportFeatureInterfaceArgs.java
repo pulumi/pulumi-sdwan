@@ -114,6 +114,23 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
     }
 
     /**
+     * Set 802.1x on off
+     *   - Default value: `true`
+     * 
+     */
+    @Import(name="enableDot1x")
+    private @Nullable Output<Boolean> enableDot1x;
+
+    /**
+     * @return Set 802.1x on off
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Output<Boolean>> enableDot1x() {
+        return Optional.ofNullable(this.enableDot1x);
+    }
+
+    /**
      * Enable Periodic Reauthentication
      * 
      */
@@ -508,7 +525,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
     /**
      * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     @Import(name="speed")
@@ -516,7 +533,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
     /**
      * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -673,6 +690,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
         this.criticalVlanVariable = $.criticalVlanVariable;
         this.duplex = $.duplex;
         this.duplexVariable = $.duplexVariable;
+        this.enableDot1x = $.enableDot1x;
         this.enablePeriodicReauth = $.enablePeriodicReauth;
         this.enablePeriodicReauthVariable = $.enablePeriodicReauthVariable;
         this.enableVoice = $.enableVoice;
@@ -858,6 +876,29 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
          */
         public Builder duplexVariable(String duplexVariable) {
             return duplexVariable(Output.of(duplexVariable));
+        }
+
+        /**
+         * @param enableDot1x Set 802.1x on off
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableDot1x(@Nullable Output<Boolean> enableDot1x) {
+            $.enableDot1x = enableDot1x;
+            return this;
+        }
+
+        /**
+         * @param enableDot1x Set 802.1x on off
+         *   - Default value: `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder enableDot1x(Boolean enableDot1x) {
+            return enableDot1x(Output.of(enableDot1x));
         }
 
         /**
@@ -1405,7 +1446,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
         /**
          * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -1417,7 +1458,7 @@ public final class ServiceSwitchportFeatureInterfaceArgs extends com.pulumi.reso
 
         /**
          * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 

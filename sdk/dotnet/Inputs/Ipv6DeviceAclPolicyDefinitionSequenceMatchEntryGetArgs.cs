@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class Ipv6DeviceAclPolicyDefinitionSequenceMatchEntryGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Destination data IPv6 prefix list ID, Attribute conditional on `Type` being equal to `destinationDataIpv6PrefixList`
+        /// Destination data IPv6 prefix list ID, Attribute conditional on `Type` equal to `destinationDataIpv6PrefixList`
         /// </summary>
         [Input("destinationDataIpv6PrefixListId")]
         public Input<string>? DestinationDataIpv6PrefixListId { get; set; }
@@ -25,20 +25,20 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? DestinationDataIpv6PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Destination IP prefix, Attribute conditional on `Type` being equal to `destinationIpv6`
+        /// Destination IP prefix, Attribute conditional on `Type` equal to `destinationIpv6`
         /// </summary>
         [Input("destinationIp")]
         public Input<string>? DestinationIp { get; set; }
 
         /// <summary>
-        /// Destination port, only `22` and `161` supported, Attribute conditional on `Type` being equal to `destinationPort`
+        /// Destination port, only `22` and `161` supported, Attribute conditional on `Type` equal to `destinationPort`
         ///   - Range: `0`-`65535`
         /// </summary>
         [Input("destinationPort")]
         public Input<int>? DestinationPort { get; set; }
 
         /// <summary>
-        /// Source data IPv6 prefix list ID, Attribute conditional on `Type` being equal to `sourceDataIpv6PrefixList`
+        /// Source data IPv6 prefix list ID, Attribute conditional on `Type` equal to `sourceDataIpv6PrefixList`
         /// </summary>
         [Input("sourceDataIpv6PrefixListId")]
         public Input<string>? SourceDataIpv6PrefixListId { get; set; }
@@ -50,13 +50,13 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? SourceDataIpv6PrefixListVersion { get; set; }
 
         /// <summary>
-        /// Source IP prefix, Attribute conditional on `Type` being equal to `sourceIpv6`
+        /// Source IP prefix, Attribute conditional on `Type` equal to `sourceIpv6`
         /// </summary>
         [Input("sourceIp")]
         public Input<string>? SourceIp { get; set; }
 
         /// <summary>
-        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` being equal to `sourcePort`
+        /// Source ports. Single value (0-65535) or ranges separated by spaces., Attribute conditional on `Type` equal to `sourcePort`
         /// </summary>
         [Input("sourcePorts")]
         public Input<string>? SourcePorts { get; set; }

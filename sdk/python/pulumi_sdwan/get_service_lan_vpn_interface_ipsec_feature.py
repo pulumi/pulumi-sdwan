@@ -26,7 +26,7 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
     """
     A collection of values returned by getServiceLanVpnInterfaceIpsecFeature.
     """
-    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_diffie_hellman_group=None, ike_diffie_hellman_group_variable=None, ike_id_local_end_point=None, ike_id_local_end_point_variable=None, ike_id_remote_end_point=None, ike_id_remote_end_point_variable=None, ike_integrity_protocol=None, ike_integrity_protocol_variable=None, ike_preshared_key=None, ike_preshared_key_variable=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ip_mtu=None, ip_mtu_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tcp_mss=None, tcp_mss_variable=None, tracker_id=None, tracker_id_variable=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv4_subnet_mask=None, tunnel_destination_ipv4_subnet_mask_variable=None, tunnel_route_via=None, tunnel_route_via_variable=None, tunnel_source_interface=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv4_subnet_mask=None, tunnel_source_ipv4_subnet_mask_variable=None, version=None):
+    def __init__(__self__, application_tunnel_type=None, application_tunnel_type_variable=None, clear_dont_fragment=None, clear_dont_fragment_variable=None, description=None, dpd_interval=None, dpd_interval_variable=None, dpd_retries=None, dpd_retries_variable=None, feature_profile_id=None, id=None, ike_ciphersuite=None, ike_ciphersuite_variable=None, ike_diffie_hellman_group=None, ike_diffie_hellman_group_variable=None, ike_id_local_end_point=None, ike_id_local_end_point_variable=None, ike_id_remote_end_point=None, ike_id_remote_end_point_variable=None, ike_integrity_protocol=None, ike_integrity_protocol_variable=None, ike_preshared_key=None, ike_preshared_key_variable=None, ike_rekey_interval=None, ike_rekey_interval_variable=None, ike_version=None, interface_description=None, interface_description_variable=None, interface_name=None, interface_name_variable=None, ipsec_ciphersuite=None, ipsec_ciphersuite_variable=None, ipsec_rekey_interval=None, ipsec_rekey_interval_variable=None, ipsec_replay_window=None, ipsec_replay_window_variable=None, ipv4_address=None, ipv4_address_variable=None, ipv4_mtu=None, ipv4_mtu_variable=None, ipv4_subnet_mask=None, ipv4_subnet_mask_variable=None, ipv4_tcp_mss=None, ipv4_tcp_mss_variable=None, ipv6_address=None, ipv6_address_variable=None, ipv6_mtu=None, ipv6_mtu_variable=None, ipv6_tcp_mss=None, ipv6_tcp_mss_variable=None, name=None, perfect_forward_secrecy=None, perfect_forward_secrecy_variable=None, service_lan_vpn_feature_id=None, shutdown=None, shutdown_variable=None, tracker_id=None, tracker_id_variable=None, tunnel_destination_ipv4_address=None, tunnel_destination_ipv4_address_variable=None, tunnel_destination_ipv6_address=None, tunnel_destination_ipv6_address_variable=None, tunnel_mode=None, tunnel_route_via=None, tunnel_route_via_variable=None, tunnel_source_interface=None, tunnel_source_interface_variable=None, tunnel_source_ipv4_address=None, tunnel_source_ipv4_address_variable=None, tunnel_source_ipv6_address=None, tunnel_source_ipv6_address_variable=None, version=None):
         if application_tunnel_type and not isinstance(application_tunnel_type, str):
             raise TypeError("Expected argument 'application_tunnel_type' to be a str")
         pulumi.set(__self__, "application_tunnel_type", application_tunnel_type)
@@ -117,12 +117,6 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if interface_name_variable and not isinstance(interface_name_variable, str):
             raise TypeError("Expected argument 'interface_name_variable' to be a str")
         pulumi.set(__self__, "interface_name_variable", interface_name_variable)
-        if ip_mtu and not isinstance(ip_mtu, int):
-            raise TypeError("Expected argument 'ip_mtu' to be a int")
-        pulumi.set(__self__, "ip_mtu", ip_mtu)
-        if ip_mtu_variable and not isinstance(ip_mtu_variable, str):
-            raise TypeError("Expected argument 'ip_mtu_variable' to be a str")
-        pulumi.set(__self__, "ip_mtu_variable", ip_mtu_variable)
         if ipsec_ciphersuite and not isinstance(ipsec_ciphersuite, str):
             raise TypeError("Expected argument 'ipsec_ciphersuite' to be a str")
         pulumi.set(__self__, "ipsec_ciphersuite", ipsec_ciphersuite)
@@ -147,12 +141,42 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if ipv4_address_variable and not isinstance(ipv4_address_variable, str):
             raise TypeError("Expected argument 'ipv4_address_variable' to be a str")
         pulumi.set(__self__, "ipv4_address_variable", ipv4_address_variable)
+        if ipv4_mtu and not isinstance(ipv4_mtu, int):
+            raise TypeError("Expected argument 'ipv4_mtu' to be a int")
+        pulumi.set(__self__, "ipv4_mtu", ipv4_mtu)
+        if ipv4_mtu_variable and not isinstance(ipv4_mtu_variable, str):
+            raise TypeError("Expected argument 'ipv4_mtu_variable' to be a str")
+        pulumi.set(__self__, "ipv4_mtu_variable", ipv4_mtu_variable)
         if ipv4_subnet_mask and not isinstance(ipv4_subnet_mask, str):
             raise TypeError("Expected argument 'ipv4_subnet_mask' to be a str")
         pulumi.set(__self__, "ipv4_subnet_mask", ipv4_subnet_mask)
         if ipv4_subnet_mask_variable and not isinstance(ipv4_subnet_mask_variable, str):
             raise TypeError("Expected argument 'ipv4_subnet_mask_variable' to be a str")
         pulumi.set(__self__, "ipv4_subnet_mask_variable", ipv4_subnet_mask_variable)
+        if ipv4_tcp_mss and not isinstance(ipv4_tcp_mss, int):
+            raise TypeError("Expected argument 'ipv4_tcp_mss' to be a int")
+        pulumi.set(__self__, "ipv4_tcp_mss", ipv4_tcp_mss)
+        if ipv4_tcp_mss_variable and not isinstance(ipv4_tcp_mss_variable, str):
+            raise TypeError("Expected argument 'ipv4_tcp_mss_variable' to be a str")
+        pulumi.set(__self__, "ipv4_tcp_mss_variable", ipv4_tcp_mss_variable)
+        if ipv6_address and not isinstance(ipv6_address, str):
+            raise TypeError("Expected argument 'ipv6_address' to be a str")
+        pulumi.set(__self__, "ipv6_address", ipv6_address)
+        if ipv6_address_variable and not isinstance(ipv6_address_variable, str):
+            raise TypeError("Expected argument 'ipv6_address_variable' to be a str")
+        pulumi.set(__self__, "ipv6_address_variable", ipv6_address_variable)
+        if ipv6_mtu and not isinstance(ipv6_mtu, int):
+            raise TypeError("Expected argument 'ipv6_mtu' to be a int")
+        pulumi.set(__self__, "ipv6_mtu", ipv6_mtu)
+        if ipv6_mtu_variable and not isinstance(ipv6_mtu_variable, str):
+            raise TypeError("Expected argument 'ipv6_mtu_variable' to be a str")
+        pulumi.set(__self__, "ipv6_mtu_variable", ipv6_mtu_variable)
+        if ipv6_tcp_mss and not isinstance(ipv6_tcp_mss, int):
+            raise TypeError("Expected argument 'ipv6_tcp_mss' to be a int")
+        pulumi.set(__self__, "ipv6_tcp_mss", ipv6_tcp_mss)
+        if ipv6_tcp_mss_variable and not isinstance(ipv6_tcp_mss_variable, str):
+            raise TypeError("Expected argument 'ipv6_tcp_mss_variable' to be a str")
+        pulumi.set(__self__, "ipv6_tcp_mss_variable", ipv6_tcp_mss_variable)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
@@ -171,12 +195,6 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if shutdown_variable and not isinstance(shutdown_variable, str):
             raise TypeError("Expected argument 'shutdown_variable' to be a str")
         pulumi.set(__self__, "shutdown_variable", shutdown_variable)
-        if tcp_mss and not isinstance(tcp_mss, int):
-            raise TypeError("Expected argument 'tcp_mss' to be a int")
-        pulumi.set(__self__, "tcp_mss", tcp_mss)
-        if tcp_mss_variable and not isinstance(tcp_mss_variable, str):
-            raise TypeError("Expected argument 'tcp_mss_variable' to be a str")
-        pulumi.set(__self__, "tcp_mss_variable", tcp_mss_variable)
         if tracker_id and not isinstance(tracker_id, str):
             raise TypeError("Expected argument 'tracker_id' to be a str")
         pulumi.set(__self__, "tracker_id", tracker_id)
@@ -189,12 +207,15 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if tunnel_destination_ipv4_address_variable and not isinstance(tunnel_destination_ipv4_address_variable, str):
             raise TypeError("Expected argument 'tunnel_destination_ipv4_address_variable' to be a str")
         pulumi.set(__self__, "tunnel_destination_ipv4_address_variable", tunnel_destination_ipv4_address_variable)
-        if tunnel_destination_ipv4_subnet_mask and not isinstance(tunnel_destination_ipv4_subnet_mask, str):
-            raise TypeError("Expected argument 'tunnel_destination_ipv4_subnet_mask' to be a str")
-        pulumi.set(__self__, "tunnel_destination_ipv4_subnet_mask", tunnel_destination_ipv4_subnet_mask)
-        if tunnel_destination_ipv4_subnet_mask_variable and not isinstance(tunnel_destination_ipv4_subnet_mask_variable, str):
-            raise TypeError("Expected argument 'tunnel_destination_ipv4_subnet_mask_variable' to be a str")
-        pulumi.set(__self__, "tunnel_destination_ipv4_subnet_mask_variable", tunnel_destination_ipv4_subnet_mask_variable)
+        if tunnel_destination_ipv6_address and not isinstance(tunnel_destination_ipv6_address, str):
+            raise TypeError("Expected argument 'tunnel_destination_ipv6_address' to be a str")
+        pulumi.set(__self__, "tunnel_destination_ipv6_address", tunnel_destination_ipv6_address)
+        if tunnel_destination_ipv6_address_variable and not isinstance(tunnel_destination_ipv6_address_variable, str):
+            raise TypeError("Expected argument 'tunnel_destination_ipv6_address_variable' to be a str")
+        pulumi.set(__self__, "tunnel_destination_ipv6_address_variable", tunnel_destination_ipv6_address_variable)
+        if tunnel_mode and not isinstance(tunnel_mode, str):
+            raise TypeError("Expected argument 'tunnel_mode' to be a str")
+        pulumi.set(__self__, "tunnel_mode", tunnel_mode)
         if tunnel_route_via and not isinstance(tunnel_route_via, str):
             raise TypeError("Expected argument 'tunnel_route_via' to be a str")
         pulumi.set(__self__, "tunnel_route_via", tunnel_route_via)
@@ -213,12 +234,12 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         if tunnel_source_ipv4_address_variable and not isinstance(tunnel_source_ipv4_address_variable, str):
             raise TypeError("Expected argument 'tunnel_source_ipv4_address_variable' to be a str")
         pulumi.set(__self__, "tunnel_source_ipv4_address_variable", tunnel_source_ipv4_address_variable)
-        if tunnel_source_ipv4_subnet_mask and not isinstance(tunnel_source_ipv4_subnet_mask, str):
-            raise TypeError("Expected argument 'tunnel_source_ipv4_subnet_mask' to be a str")
-        pulumi.set(__self__, "tunnel_source_ipv4_subnet_mask", tunnel_source_ipv4_subnet_mask)
-        if tunnel_source_ipv4_subnet_mask_variable and not isinstance(tunnel_source_ipv4_subnet_mask_variable, str):
-            raise TypeError("Expected argument 'tunnel_source_ipv4_subnet_mask_variable' to be a str")
-        pulumi.set(__self__, "tunnel_source_ipv4_subnet_mask_variable", tunnel_source_ipv4_subnet_mask_variable)
+        if tunnel_source_ipv6_address and not isinstance(tunnel_source_ipv6_address, str):
+            raise TypeError("Expected argument 'tunnel_source_ipv6_address' to be a str")
+        pulumi.set(__self__, "tunnel_source_ipv6_address", tunnel_source_ipv6_address)
+        if tunnel_source_ipv6_address_variable and not isinstance(tunnel_source_ipv6_address_variable, str):
+            raise TypeError("Expected argument 'tunnel_source_ipv6_address_variable' to be a str")
+        pulumi.set(__self__, "tunnel_source_ipv6_address_variable", tunnel_source_ipv6_address_variable)
         if version and not isinstance(version, int):
             raise TypeError("Expected argument 'version' to be a int")
         pulumi.set(__self__, "version", version)
@@ -464,22 +485,6 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         return pulumi.get(self, "interface_name_variable")
 
     @_builtins.property
-    @pulumi.getter(name="ipMtu")
-    def ip_mtu(self) -> _builtins.int:
-        """
-        Interface MTU \\n\\n, in bytes
-        """
-        return pulumi.get(self, "ip_mtu")
-
-    @_builtins.property
-    @pulumi.getter(name="ipMtuVariable")
-    def ip_mtu_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "ip_mtu_variable")
-
-    @_builtins.property
     @pulumi.getter(name="ipsecCiphersuite")
     def ipsec_ciphersuite(self) -> _builtins.str:
         """
@@ -541,6 +546,22 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         return pulumi.get(self, "ipv4_address_variable")
 
     @_builtins.property
+    @pulumi.getter(name="ipv4Mtu")
+    def ipv4_mtu(self) -> _builtins.int:
+        """
+        Interface MTU \\n\\n, in bytes
+        """
+        return pulumi.get(self, "ipv4_mtu")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4MtuVariable")
+    def ipv4_mtu_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv4_mtu_variable")
+
+    @_builtins.property
     @pulumi.getter(name="ipv4SubnetMask")
     def ipv4_subnet_mask(self) -> _builtins.str:
         return pulumi.get(self, "ipv4_subnet_mask")
@@ -552,6 +573,70 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         Variable name
         """
         return pulumi.get(self, "ipv4_subnet_mask_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4TcpMss")
+    def ipv4_tcp_mss(self) -> _builtins.int:
+        """
+        TCP MSS on SYN packets, in bytes
+        """
+        return pulumi.get(self, "ipv4_tcp_mss")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv4TcpMssVariable")
+    def ipv4_tcp_mss_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv4_tcp_mss_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6Address")
+    def ipv6_address(self) -> _builtins.str:
+        """
+        Assign IPv6 address
+        """
+        return pulumi.get(self, "ipv6_address")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6AddressVariable")
+    def ipv6_address_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_address_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6Mtu")
+    def ipv6_mtu(self) -> _builtins.int:
+        """
+        Interface MTU \\n\\n, in bytes
+        """
+        return pulumi.get(self, "ipv6_mtu")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6MtuVariable")
+    def ipv6_mtu_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_mtu_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6TcpMss")
+    def ipv6_tcp_mss(self) -> _builtins.int:
+        """
+        IPv6 TCP MSS on SYN packets, in bytes
+        """
+        return pulumi.get(self, "ipv6_tcp_mss")
+
+    @_builtins.property
+    @pulumi.getter(name="ipv6TcpMssVariable")
+    def ipv6_tcp_mss_variable(self) -> _builtins.str:
+        """
+        Variable name
+        """
+        return pulumi.get(self, "ipv6_tcp_mss_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -602,22 +687,6 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         return pulumi.get(self, "shutdown_variable")
 
     @_builtins.property
-    @pulumi.getter(name="tcpMss")
-    def tcp_mss(self) -> _builtins.int:
-        """
-        TCP MSS on SYN packets, in bytes
-        """
-        return pulumi.get(self, "tcp_mss")
-
-    @_builtins.property
-    @pulumi.getter(name="tcpMssVariable")
-    def tcp_mss_variable(self) -> _builtins.str:
-        """
-        Variable name
-        """
-        return pulumi.get(self, "tcp_mss_variable")
-
-    @_builtins.property
     @pulumi.getter(name="trackerId")
     def tracker_id(self) -> _builtins.str:
         """
@@ -647,17 +716,28 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         return pulumi.get(self, "tunnel_destination_ipv4_address_variable")
 
     @_builtins.property
-    @pulumi.getter(name="tunnelDestinationIpv4SubnetMask")
-    def tunnel_destination_ipv4_subnet_mask(self) -> _builtins.str:
-        return pulumi.get(self, "tunnel_destination_ipv4_subnet_mask")
+    @pulumi.getter(name="tunnelDestinationIpv6Address")
+    def tunnel_destination_ipv6_address(self) -> _builtins.str:
+        """
+        Tunnel destination IPv6 Address
+        """
+        return pulumi.get(self, "tunnel_destination_ipv6_address")
 
     @_builtins.property
-    @pulumi.getter(name="tunnelDestinationIpv4SubnetMaskVariable")
-    def tunnel_destination_ipv4_subnet_mask_variable(self) -> _builtins.str:
+    @pulumi.getter(name="tunnelDestinationIpv6AddressVariable")
+    def tunnel_destination_ipv6_address_variable(self) -> _builtins.str:
         """
         Variable name
         """
-        return pulumi.get(self, "tunnel_destination_ipv4_subnet_mask_variable")
+        return pulumi.get(self, "tunnel_destination_ipv6_address_variable")
+
+    @_builtins.property
+    @pulumi.getter(name="tunnelMode")
+    def tunnel_mode(self) -> _builtins.str:
+        """
+        IPsec Tunnel Mode
+        """
+        return pulumi.get(self, "tunnel_mode")
 
     @_builtins.property
     @pulumi.getter(name="tunnelRouteVia")
@@ -705,17 +785,20 @@ class GetServiceLanVpnInterfaceIpsecFeatureResult:
         return pulumi.get(self, "tunnel_source_ipv4_address_variable")
 
     @_builtins.property
-    @pulumi.getter(name="tunnelSourceIpv4SubnetMask")
-    def tunnel_source_ipv4_subnet_mask(self) -> _builtins.str:
-        return pulumi.get(self, "tunnel_source_ipv4_subnet_mask")
+    @pulumi.getter(name="tunnelSourceIpv6Address")
+    def tunnel_source_ipv6_address(self) -> _builtins.str:
+        """
+        Tunnel source IPv6 Address
+        """
+        return pulumi.get(self, "tunnel_source_ipv6_address")
 
     @_builtins.property
-    @pulumi.getter(name="tunnelSourceIpv4SubnetMaskVariable")
-    def tunnel_source_ipv4_subnet_mask_variable(self) -> _builtins.str:
+    @pulumi.getter(name="tunnelSourceIpv6AddressVariable")
+    def tunnel_source_ipv6_address_variable(self) -> _builtins.str:
         """
         Variable name
         """
-        return pulumi.get(self, "tunnel_source_ipv4_subnet_mask_variable")
+        return pulumi.get(self, "tunnel_source_ipv6_address_variable")
 
     @_builtins.property
     @pulumi.getter
@@ -762,8 +845,6 @@ class AwaitableGetServiceLanVpnInterfaceIpsecFeatureResult(GetServiceLanVpnInter
             interface_description_variable=self.interface_description_variable,
             interface_name=self.interface_name,
             interface_name_variable=self.interface_name_variable,
-            ip_mtu=self.ip_mtu,
-            ip_mtu_variable=self.ip_mtu_variable,
             ipsec_ciphersuite=self.ipsec_ciphersuite,
             ipsec_ciphersuite_variable=self.ipsec_ciphersuite_variable,
             ipsec_rekey_interval=self.ipsec_rekey_interval,
@@ -772,30 +853,39 @@ class AwaitableGetServiceLanVpnInterfaceIpsecFeatureResult(GetServiceLanVpnInter
             ipsec_replay_window_variable=self.ipsec_replay_window_variable,
             ipv4_address=self.ipv4_address,
             ipv4_address_variable=self.ipv4_address_variable,
+            ipv4_mtu=self.ipv4_mtu,
+            ipv4_mtu_variable=self.ipv4_mtu_variable,
             ipv4_subnet_mask=self.ipv4_subnet_mask,
             ipv4_subnet_mask_variable=self.ipv4_subnet_mask_variable,
+            ipv4_tcp_mss=self.ipv4_tcp_mss,
+            ipv4_tcp_mss_variable=self.ipv4_tcp_mss_variable,
+            ipv6_address=self.ipv6_address,
+            ipv6_address_variable=self.ipv6_address_variable,
+            ipv6_mtu=self.ipv6_mtu,
+            ipv6_mtu_variable=self.ipv6_mtu_variable,
+            ipv6_tcp_mss=self.ipv6_tcp_mss,
+            ipv6_tcp_mss_variable=self.ipv6_tcp_mss_variable,
             name=self.name,
             perfect_forward_secrecy=self.perfect_forward_secrecy,
             perfect_forward_secrecy_variable=self.perfect_forward_secrecy_variable,
             service_lan_vpn_feature_id=self.service_lan_vpn_feature_id,
             shutdown=self.shutdown,
             shutdown_variable=self.shutdown_variable,
-            tcp_mss=self.tcp_mss,
-            tcp_mss_variable=self.tcp_mss_variable,
             tracker_id=self.tracker_id,
             tracker_id_variable=self.tracker_id_variable,
             tunnel_destination_ipv4_address=self.tunnel_destination_ipv4_address,
             tunnel_destination_ipv4_address_variable=self.tunnel_destination_ipv4_address_variable,
-            tunnel_destination_ipv4_subnet_mask=self.tunnel_destination_ipv4_subnet_mask,
-            tunnel_destination_ipv4_subnet_mask_variable=self.tunnel_destination_ipv4_subnet_mask_variable,
+            tunnel_destination_ipv6_address=self.tunnel_destination_ipv6_address,
+            tunnel_destination_ipv6_address_variable=self.tunnel_destination_ipv6_address_variable,
+            tunnel_mode=self.tunnel_mode,
             tunnel_route_via=self.tunnel_route_via,
             tunnel_route_via_variable=self.tunnel_route_via_variable,
             tunnel_source_interface=self.tunnel_source_interface,
             tunnel_source_interface_variable=self.tunnel_source_interface_variable,
             tunnel_source_ipv4_address=self.tunnel_source_ipv4_address,
             tunnel_source_ipv4_address_variable=self.tunnel_source_ipv4_address_variable,
-            tunnel_source_ipv4_subnet_mask=self.tunnel_source_ipv4_subnet_mask,
-            tunnel_source_ipv4_subnet_mask_variable=self.tunnel_source_ipv4_subnet_mask_variable,
+            tunnel_source_ipv6_address=self.tunnel_source_ipv6_address,
+            tunnel_source_ipv6_address_variable=self.tunnel_source_ipv6_address_variable,
             version=self.version)
 
 
@@ -860,8 +950,6 @@ def get_service_lan_vpn_interface_ipsec_feature(feature_profile_id: Optional[_bu
         interface_description_variable=pulumi.get(__ret__, 'interface_description_variable'),
         interface_name=pulumi.get(__ret__, 'interface_name'),
         interface_name_variable=pulumi.get(__ret__, 'interface_name_variable'),
-        ip_mtu=pulumi.get(__ret__, 'ip_mtu'),
-        ip_mtu_variable=pulumi.get(__ret__, 'ip_mtu_variable'),
         ipsec_ciphersuite=pulumi.get(__ret__, 'ipsec_ciphersuite'),
         ipsec_ciphersuite_variable=pulumi.get(__ret__, 'ipsec_ciphersuite_variable'),
         ipsec_rekey_interval=pulumi.get(__ret__, 'ipsec_rekey_interval'),
@@ -870,30 +958,39 @@ def get_service_lan_vpn_interface_ipsec_feature(feature_profile_id: Optional[_bu
         ipsec_replay_window_variable=pulumi.get(__ret__, 'ipsec_replay_window_variable'),
         ipv4_address=pulumi.get(__ret__, 'ipv4_address'),
         ipv4_address_variable=pulumi.get(__ret__, 'ipv4_address_variable'),
+        ipv4_mtu=pulumi.get(__ret__, 'ipv4_mtu'),
+        ipv4_mtu_variable=pulumi.get(__ret__, 'ipv4_mtu_variable'),
         ipv4_subnet_mask=pulumi.get(__ret__, 'ipv4_subnet_mask'),
         ipv4_subnet_mask_variable=pulumi.get(__ret__, 'ipv4_subnet_mask_variable'),
+        ipv4_tcp_mss=pulumi.get(__ret__, 'ipv4_tcp_mss'),
+        ipv4_tcp_mss_variable=pulumi.get(__ret__, 'ipv4_tcp_mss_variable'),
+        ipv6_address=pulumi.get(__ret__, 'ipv6_address'),
+        ipv6_address_variable=pulumi.get(__ret__, 'ipv6_address_variable'),
+        ipv6_mtu=pulumi.get(__ret__, 'ipv6_mtu'),
+        ipv6_mtu_variable=pulumi.get(__ret__, 'ipv6_mtu_variable'),
+        ipv6_tcp_mss=pulumi.get(__ret__, 'ipv6_tcp_mss'),
+        ipv6_tcp_mss_variable=pulumi.get(__ret__, 'ipv6_tcp_mss_variable'),
         name=pulumi.get(__ret__, 'name'),
         perfect_forward_secrecy=pulumi.get(__ret__, 'perfect_forward_secrecy'),
         perfect_forward_secrecy_variable=pulumi.get(__ret__, 'perfect_forward_secrecy_variable'),
         service_lan_vpn_feature_id=pulumi.get(__ret__, 'service_lan_vpn_feature_id'),
         shutdown=pulumi.get(__ret__, 'shutdown'),
         shutdown_variable=pulumi.get(__ret__, 'shutdown_variable'),
-        tcp_mss=pulumi.get(__ret__, 'tcp_mss'),
-        tcp_mss_variable=pulumi.get(__ret__, 'tcp_mss_variable'),
         tracker_id=pulumi.get(__ret__, 'tracker_id'),
         tracker_id_variable=pulumi.get(__ret__, 'tracker_id_variable'),
         tunnel_destination_ipv4_address=pulumi.get(__ret__, 'tunnel_destination_ipv4_address'),
         tunnel_destination_ipv4_address_variable=pulumi.get(__ret__, 'tunnel_destination_ipv4_address_variable'),
-        tunnel_destination_ipv4_subnet_mask=pulumi.get(__ret__, 'tunnel_destination_ipv4_subnet_mask'),
-        tunnel_destination_ipv4_subnet_mask_variable=pulumi.get(__ret__, 'tunnel_destination_ipv4_subnet_mask_variable'),
+        tunnel_destination_ipv6_address=pulumi.get(__ret__, 'tunnel_destination_ipv6_address'),
+        tunnel_destination_ipv6_address_variable=pulumi.get(__ret__, 'tunnel_destination_ipv6_address_variable'),
+        tunnel_mode=pulumi.get(__ret__, 'tunnel_mode'),
         tunnel_route_via=pulumi.get(__ret__, 'tunnel_route_via'),
         tunnel_route_via_variable=pulumi.get(__ret__, 'tunnel_route_via_variable'),
         tunnel_source_interface=pulumi.get(__ret__, 'tunnel_source_interface'),
         tunnel_source_interface_variable=pulumi.get(__ret__, 'tunnel_source_interface_variable'),
         tunnel_source_ipv4_address=pulumi.get(__ret__, 'tunnel_source_ipv4_address'),
         tunnel_source_ipv4_address_variable=pulumi.get(__ret__, 'tunnel_source_ipv4_address_variable'),
-        tunnel_source_ipv4_subnet_mask=pulumi.get(__ret__, 'tunnel_source_ipv4_subnet_mask'),
-        tunnel_source_ipv4_subnet_mask_variable=pulumi.get(__ret__, 'tunnel_source_ipv4_subnet_mask_variable'),
+        tunnel_source_ipv6_address=pulumi.get(__ret__, 'tunnel_source_ipv6_address'),
+        tunnel_source_ipv6_address_variable=pulumi.get(__ret__, 'tunnel_source_ipv6_address_variable'),
         version=pulumi.get(__ret__, 'version'))
 def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                                                        id: Optional[pulumi.Input[_builtins.str]] = None,
@@ -955,8 +1052,6 @@ def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optio
         interface_description_variable=pulumi.get(__response__, 'interface_description_variable'),
         interface_name=pulumi.get(__response__, 'interface_name'),
         interface_name_variable=pulumi.get(__response__, 'interface_name_variable'),
-        ip_mtu=pulumi.get(__response__, 'ip_mtu'),
-        ip_mtu_variable=pulumi.get(__response__, 'ip_mtu_variable'),
         ipsec_ciphersuite=pulumi.get(__response__, 'ipsec_ciphersuite'),
         ipsec_ciphersuite_variable=pulumi.get(__response__, 'ipsec_ciphersuite_variable'),
         ipsec_rekey_interval=pulumi.get(__response__, 'ipsec_rekey_interval'),
@@ -965,28 +1060,37 @@ def get_service_lan_vpn_interface_ipsec_feature_output(feature_profile_id: Optio
         ipsec_replay_window_variable=pulumi.get(__response__, 'ipsec_replay_window_variable'),
         ipv4_address=pulumi.get(__response__, 'ipv4_address'),
         ipv4_address_variable=pulumi.get(__response__, 'ipv4_address_variable'),
+        ipv4_mtu=pulumi.get(__response__, 'ipv4_mtu'),
+        ipv4_mtu_variable=pulumi.get(__response__, 'ipv4_mtu_variable'),
         ipv4_subnet_mask=pulumi.get(__response__, 'ipv4_subnet_mask'),
         ipv4_subnet_mask_variable=pulumi.get(__response__, 'ipv4_subnet_mask_variable'),
+        ipv4_tcp_mss=pulumi.get(__response__, 'ipv4_tcp_mss'),
+        ipv4_tcp_mss_variable=pulumi.get(__response__, 'ipv4_tcp_mss_variable'),
+        ipv6_address=pulumi.get(__response__, 'ipv6_address'),
+        ipv6_address_variable=pulumi.get(__response__, 'ipv6_address_variable'),
+        ipv6_mtu=pulumi.get(__response__, 'ipv6_mtu'),
+        ipv6_mtu_variable=pulumi.get(__response__, 'ipv6_mtu_variable'),
+        ipv6_tcp_mss=pulumi.get(__response__, 'ipv6_tcp_mss'),
+        ipv6_tcp_mss_variable=pulumi.get(__response__, 'ipv6_tcp_mss_variable'),
         name=pulumi.get(__response__, 'name'),
         perfect_forward_secrecy=pulumi.get(__response__, 'perfect_forward_secrecy'),
         perfect_forward_secrecy_variable=pulumi.get(__response__, 'perfect_forward_secrecy_variable'),
         service_lan_vpn_feature_id=pulumi.get(__response__, 'service_lan_vpn_feature_id'),
         shutdown=pulumi.get(__response__, 'shutdown'),
         shutdown_variable=pulumi.get(__response__, 'shutdown_variable'),
-        tcp_mss=pulumi.get(__response__, 'tcp_mss'),
-        tcp_mss_variable=pulumi.get(__response__, 'tcp_mss_variable'),
         tracker_id=pulumi.get(__response__, 'tracker_id'),
         tracker_id_variable=pulumi.get(__response__, 'tracker_id_variable'),
         tunnel_destination_ipv4_address=pulumi.get(__response__, 'tunnel_destination_ipv4_address'),
         tunnel_destination_ipv4_address_variable=pulumi.get(__response__, 'tunnel_destination_ipv4_address_variable'),
-        tunnel_destination_ipv4_subnet_mask=pulumi.get(__response__, 'tunnel_destination_ipv4_subnet_mask'),
-        tunnel_destination_ipv4_subnet_mask_variable=pulumi.get(__response__, 'tunnel_destination_ipv4_subnet_mask_variable'),
+        tunnel_destination_ipv6_address=pulumi.get(__response__, 'tunnel_destination_ipv6_address'),
+        tunnel_destination_ipv6_address_variable=pulumi.get(__response__, 'tunnel_destination_ipv6_address_variable'),
+        tunnel_mode=pulumi.get(__response__, 'tunnel_mode'),
         tunnel_route_via=pulumi.get(__response__, 'tunnel_route_via'),
         tunnel_route_via_variable=pulumi.get(__response__, 'tunnel_route_via_variable'),
         tunnel_source_interface=pulumi.get(__response__, 'tunnel_source_interface'),
         tunnel_source_interface_variable=pulumi.get(__response__, 'tunnel_source_interface_variable'),
         tunnel_source_ipv4_address=pulumi.get(__response__, 'tunnel_source_ipv4_address'),
         tunnel_source_ipv4_address_variable=pulumi.get(__response__, 'tunnel_source_ipv4_address_variable'),
-        tunnel_source_ipv4_subnet_mask=pulumi.get(__response__, 'tunnel_source_ipv4_subnet_mask'),
-        tunnel_source_ipv4_subnet_mask_variable=pulumi.get(__response__, 'tunnel_source_ipv4_subnet_mask_variable'),
+        tunnel_source_ipv6_address=pulumi.get(__response__, 'tunnel_source_ipv6_address'),
+        tunnel_source_ipv6_address_variable=pulumi.get(__response__, 'tunnel_source_ipv6_address_variable'),
         version=pulumi.get(__response__, 'version')))

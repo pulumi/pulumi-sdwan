@@ -14,7 +14,7 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class SecurityPolicyDefinition
     {
         /// <summary>
-        /// List of zone pair definitions, Attribute conditional on `Type` being equal to `zoneBasedFW`
+        /// List of zone pair definitions, Attribute conditional on `Type` equal to `zoneBasedFW`
         /// </summary>
         public readonly ImmutableArray<Outputs.SecurityPolicyDefinitionEntry> Entries;
         /// <summary>

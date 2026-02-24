@@ -14,73 +14,73 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class RoutePolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Aggregator, Attribute conditional on `Type` being equal to `Aggregator`
+        /// Aggregator, Attribute conditional on `Type` equal to `Aggregator`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Aggregator;
         /// <summary>
-        /// IP address, Attribute conditional on `Type` being equal to `Aggregator`
+        /// IP address, Attribute conditional on `Type` equal to `Aggregator`
         /// </summary>
         public readonly string? AggregatorIpAddress;
         /// <summary>
-        /// Space separated list of ASN to exclude, Attribute conditional on `Type` being equal to `asPath`
+        /// Space separated list of ASN to exclude, Attribute conditional on `Type` equal to `asPath`
         /// </summary>
         public readonly string? AsPathExclude;
         /// <summary>
-        /// Space separated list of ASN to prepend, Attribute conditional on `Type` being equal to `asPath`
+        /// Space separated list of ASN to prepend, Attribute conditional on `Type` equal to `asPath`
         /// </summary>
         public readonly string? AsPathPrepend;
         /// <summary>
-        /// Atomic aggregate, Attribute conditional on `Type` being equal to `atomicAggregate`
+        /// Atomic aggregate, Attribute conditional on `Type` equal to `atomicAggregate`
         /// </summary>
         public readonly bool? AtomicAggregate;
         /// <summary>
-        /// Community value, e.g. `1000:10000` or `Internet` or `local-AS`, Attribute conditional on `Type` being equal to `Community`
+        /// Community value, e.g. `1000:10000` or `Internet` or `local-AS`, Attribute conditional on `Type` equal to `Community`
         /// </summary>
         public readonly string? Community;
         /// <summary>
-        /// Community additive, Attribute conditional on `Type` being equal to `communityAdditive`
+        /// Community additive, Attribute conditional on `Type` equal to `communityAdditive`
         /// </summary>
         public readonly bool? CommunityAdditive;
         /// <summary>
-        /// Community variable, Attribute conditional on `Type` being equal to `Community`
+        /// Community variable, Attribute conditional on `Type` equal to `Community`
         /// </summary>
         public readonly string? CommunityVariable;
         /// <summary>
-        /// Local preference, Attribute conditional on `Type` being equal to `localPreference`
+        /// Local preference, Attribute conditional on `Type` equal to `localPreference`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
-        /// Metric, Attribute conditional on `Type` being equal to `Metric`
+        /// Metric, Attribute conditional on `Type` equal to `Metric`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Metric type, Attribute conditional on `Type` being equal to `metricType`
+        /// Metric type, Attribute conditional on `Type` equal to `metricType`
         ///   - Choices: `Type1`, `Type2`
         /// </summary>
         public readonly string? MetricType;
         /// <summary>
-        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         public readonly string? NextHop;
         /// <summary>
-        /// OMP tag, Attribute conditional on `Type` being equal to `ompTag`
+        /// OMP tag, Attribute conditional on `Type` equal to `ompTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OmpTag;
         /// <summary>
-        /// Origin, Attribute conditional on `Type` being equal to `Origin`
+        /// Origin, Attribute conditional on `Type` equal to `Origin`
         ///   - Choices: `Igp`, `Egp`, `Incomplete`
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Originator IP, Attribute conditional on `Type` being equal to `Originator`
+        /// Originator IP, Attribute conditional on `Type` equal to `Originator`
         /// </summary>
         public readonly string? Originator;
         /// <summary>
-        /// OSPF tag, Attribute conditional on `Type` being equal to `ospfTag`
+        /// OSPF tag, Attribute conditional on `Type` equal to `ospfTag`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? OspfTag;
@@ -90,7 +90,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// Weight, Attribute conditional on `Type` being equal to `Weight`
+        /// Weight, Attribute conditional on `Type` equal to `Weight`
         ///   - Range: `0`-`4294967295`
         /// </summary>
         public readonly int? Weight;

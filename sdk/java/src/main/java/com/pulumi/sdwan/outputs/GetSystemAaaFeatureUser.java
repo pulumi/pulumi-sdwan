@@ -23,7 +23,7 @@ public final class GetSystemAaaFeatureUser {
      */
     private String nameVariable;
     /**
-     * @return Set the user password
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     private String password;
@@ -64,7 +64,7 @@ public final class GetSystemAaaFeatureUser {
         return this.nameVariable;
     }
     /**
-     * @return Set the user password
+     * @return Set the user password [Note: Catalyst SD-WAN Manager will encrypt this field before saving. Cleartext strings will not be returned back to the user in GET responses for sensitive fields.]
      * 
      */
     public String password() {

@@ -32,6 +32,13 @@ public final class PolicyObjectAppProbeClassEntryArgs extends com.pulumi.resourc
         return Optional.ofNullable(this.forwardingClass);
     }
 
+    @Import(name="forwardingClassId")
+    private @Nullable Output<String> forwardingClassId;
+
+    public Optional<Output<String>> forwardingClassId() {
+        return Optional.ofNullable(this.forwardingClassId);
+    }
+
     /**
      * Map
      * 
@@ -51,6 +58,7 @@ public final class PolicyObjectAppProbeClassEntryArgs extends com.pulumi.resourc
 
     private PolicyObjectAppProbeClassEntryArgs(PolicyObjectAppProbeClassEntryArgs $) {
         this.forwardingClass = $.forwardingClass;
+        this.forwardingClassId = $.forwardingClassId;
         this.maps = $.maps;
     }
 
@@ -91,6 +99,15 @@ public final class PolicyObjectAppProbeClassEntryArgs extends com.pulumi.resourc
          */
         public Builder forwardingClass(String forwardingClass) {
             return forwardingClass(Output.of(forwardingClass));
+        }
+
+        public Builder forwardingClassId(@Nullable Output<String> forwardingClassId) {
+            $.forwardingClassId = forwardingClassId;
+            return this;
+        }
+
+        public Builder forwardingClassId(String forwardingClassId) {
+            return forwardingClassId(Output.of(forwardingClassId));
         }
 
         /**

@@ -5,6 +5,7 @@ package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,6 +17,11 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
      * 
      */
     private String direction;
+    /**
+     * @return Enable DualRouter HA Mapping
+     * 
+     */
+    private Boolean enableDualRouterHaMapping;
     /**
      * @return Source IP address to be translated
      * 
@@ -54,6 +60,13 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
      */
     public String direction() {
         return this.direction;
+    }
+    /**
+     * @return Enable DualRouter HA Mapping
+     * 
+     */
+    public Boolean enableDualRouterHaMapping() {
+        return this.enableDualRouterHaMapping;
     }
     /**
      * @return Source IP address to be translated
@@ -108,6 +121,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     @CustomType.Builder
     public static final class Builder {
         private String direction;
+        private Boolean enableDualRouterHaMapping;
         private String sourceIp;
         private String sourceIpVariable;
         private Integer sourceVpn;
@@ -118,6 +132,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
         public Builder(GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.direction = defaults.direction;
+    	      this.enableDualRouterHaMapping = defaults.enableDualRouterHaMapping;
     	      this.sourceIp = defaults.sourceIp;
     	      this.sourceIpVariable = defaults.sourceIpVariable;
     	      this.sourceVpn = defaults.sourceVpn;
@@ -132,6 +147,14 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
               throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat", "direction");
             }
             this.direction = direction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableDualRouterHaMapping(Boolean enableDualRouterHaMapping) {
+            if (enableDualRouterHaMapping == null) {
+              throw new MissingRequiredPropertyException("GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat", "enableDualRouterHaMapping");
+            }
+            this.enableDualRouterHaMapping = enableDualRouterHaMapping;
             return this;
         }
         @CustomType.Setter
@@ -185,6 +208,7 @@ public final class GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat {
         public GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat build() {
             final var _resultValue = new GetTransportWanVpnInterfaceEthernetFeatureNewStaticNat();
             _resultValue.direction = direction;
+            _resultValue.enableDualRouterHaMapping = enableDualRouterHaMapping;
             _resultValue.sourceIp = sourceIp;
             _resultValue.sourceIpVariable = sourceIpVariable;
             _resultValue.sourceVpn = sourceVpn;

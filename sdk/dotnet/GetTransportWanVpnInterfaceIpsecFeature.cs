@@ -268,14 +268,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string InterfaceNameVariable;
         /// <summary>
-        /// Interface MTU \n\n, in bytes
-        /// </summary>
-        public readonly int IpMtu;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string IpMtuVariable;
-        /// <summary>
         /// IPsec(ESP) encryption and integrity protocol
         /// </summary>
         public readonly string IpsecCiphersuite;
@@ -304,11 +296,59 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string Ipv4AddressVariable;
+        /// <summary>
+        /// Interface MTU \n\n, in bytes
+        /// </summary>
+        public readonly int Ipv4Mtu;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv4MtuVariable;
         public readonly string Ipv4SubnetMask;
         /// <summary>
         /// Variable name
         /// </summary>
         public readonly string Ipv4SubnetMaskVariable;
+        /// <summary>
+        /// TCP MSS on SYN packets, in bytes
+        /// </summary>
+        public readonly int Ipv4TcpMss;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv4TcpMssVariable;
+        /// <summary>
+        /// Assign IPv6 address
+        /// </summary>
+        public readonly string Ipv6Address;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv6AddressVariable;
+        /// <summary>
+        /// Interface MTU \n\n, in bytes
+        /// </summary>
+        public readonly int Ipv6Mtu;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv6MtuVariable;
+        /// <summary>
+        /// IPv6 TCP MSS on SYN packets, in bytes
+        /// </summary>
+        public readonly int Ipv6TcpMss;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string Ipv6TcpMssVariable;
+        /// <summary>
+        /// Tunnel multiplexing state
+        /// </summary>
+        public readonly bool Multiplexing;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string MultiplexingVariable;
         /// <summary>
         /// The name of the Feature
         /// </summary>
@@ -330,14 +370,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string ShutdownVariable;
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes
-        /// </summary>
-        public readonly int TcpMss;
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string TcpMssVariable;
-        /// <summary>
         /// Enable tracker for this interface
         /// </summary>
         public readonly string TrackerId;
@@ -354,11 +386,18 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string TunnelDestinationIpv4AddressVariable;
-        public readonly string TunnelDestinationIpv4SubnetMask;
+        /// <summary>
+        /// Tunnel destination IPv6 Address
+        /// </summary>
+        public readonly string TunnelDestinationIpv6Address;
         /// <summary>
         /// Variable name
         /// </summary>
-        public readonly string TunnelDestinationIpv4SubnetMaskVariable;
+        public readonly string TunnelDestinationIpv6AddressVariable;
+        /// <summary>
+        /// IPsec Tunnel Mode
+        /// </summary>
+        public readonly string TunnelMode;
         /// <summary>
         /// \n\n Interface name: ge0/\n\n or ge0/\n\n.vlanid
         /// </summary>
@@ -380,11 +419,14 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string TunnelSourceIpv4AddressVariable;
-        public readonly string TunnelSourceIpv4SubnetMask;
+        /// <summary>
+        /// Tunnel source IPv6 Address
+        /// </summary>
+        public readonly string TunnelSourceIpv6Address;
         /// <summary>
         /// Variable name
         /// </summary>
-        public readonly string TunnelSourceIpv4SubnetMaskVariable;
+        public readonly string TunnelSourceIpv6AddressVariable;
         /// <summary>
         /// The version of the Feature
         /// </summary>
@@ -452,10 +494,6 @@ namespace Pulumi.Sdwan
 
             string interfaceNameVariable,
 
-            int ipMtu,
-
-            string ipMtuVariable,
-
             string ipsecCiphersuite,
 
             string ipsecCiphersuiteVariable,
@@ -472,9 +510,33 @@ namespace Pulumi.Sdwan
 
             string ipv4AddressVariable,
 
+            int ipv4Mtu,
+
+            string ipv4MtuVariable,
+
             string ipv4SubnetMask,
 
             string ipv4SubnetMaskVariable,
+
+            int ipv4TcpMss,
+
+            string ipv4TcpMssVariable,
+
+            string ipv6Address,
+
+            string ipv6AddressVariable,
+
+            int ipv6Mtu,
+
+            string ipv6MtuVariable,
+
+            int ipv6TcpMss,
+
+            string ipv6TcpMssVariable,
+
+            bool multiplexing,
+
+            string multiplexingVariable,
 
             string name,
 
@@ -486,10 +548,6 @@ namespace Pulumi.Sdwan
 
             string shutdownVariable,
 
-            int tcpMss,
-
-            string tcpMssVariable,
-
             string trackerId,
 
             string trackerIdVariable,
@@ -500,9 +558,11 @@ namespace Pulumi.Sdwan
 
             string tunnelDestinationIpv4AddressVariable,
 
-            string tunnelDestinationIpv4SubnetMask,
+            string tunnelDestinationIpv6Address,
 
-            string tunnelDestinationIpv4SubnetMaskVariable,
+            string tunnelDestinationIpv6AddressVariable,
+
+            string tunnelMode,
 
             string tunnelRouteVia,
 
@@ -516,9 +576,9 @@ namespace Pulumi.Sdwan
 
             string tunnelSourceIpv4AddressVariable,
 
-            string tunnelSourceIpv4SubnetMask,
+            string tunnelSourceIpv6Address,
 
-            string tunnelSourceIpv4SubnetMaskVariable,
+            string tunnelSourceIpv6AddressVariable,
 
             int version)
         {
@@ -552,8 +612,6 @@ namespace Pulumi.Sdwan
             InterfaceDescriptionVariable = interfaceDescriptionVariable;
             InterfaceName = interfaceName;
             InterfaceNameVariable = interfaceNameVariable;
-            IpMtu = ipMtu;
-            IpMtuVariable = ipMtuVariable;
             IpsecCiphersuite = ipsecCiphersuite;
             IpsecCiphersuiteVariable = ipsecCiphersuiteVariable;
             IpsecRekeyInterval = ipsecRekeyInterval;
@@ -562,30 +620,41 @@ namespace Pulumi.Sdwan
             IpsecReplayWindowVariable = ipsecReplayWindowVariable;
             Ipv4Address = ipv4Address;
             Ipv4AddressVariable = ipv4AddressVariable;
+            Ipv4Mtu = ipv4Mtu;
+            Ipv4MtuVariable = ipv4MtuVariable;
             Ipv4SubnetMask = ipv4SubnetMask;
             Ipv4SubnetMaskVariable = ipv4SubnetMaskVariable;
+            Ipv4TcpMss = ipv4TcpMss;
+            Ipv4TcpMssVariable = ipv4TcpMssVariable;
+            Ipv6Address = ipv6Address;
+            Ipv6AddressVariable = ipv6AddressVariable;
+            Ipv6Mtu = ipv6Mtu;
+            Ipv6MtuVariable = ipv6MtuVariable;
+            Ipv6TcpMss = ipv6TcpMss;
+            Ipv6TcpMssVariable = ipv6TcpMssVariable;
+            Multiplexing = multiplexing;
+            MultiplexingVariable = multiplexingVariable;
             Name = name;
             PerfectForwardSecrecy = perfectForwardSecrecy;
             PerfectForwardSecrecyVariable = perfectForwardSecrecyVariable;
             Shutdown = shutdown;
             ShutdownVariable = shutdownVariable;
-            TcpMss = tcpMss;
-            TcpMssVariable = tcpMssVariable;
             TrackerId = trackerId;
             TrackerIdVariable = trackerIdVariable;
             TransportWanVpnFeatureId = transportWanVpnFeatureId;
             TunnelDestinationIpv4Address = tunnelDestinationIpv4Address;
             TunnelDestinationIpv4AddressVariable = tunnelDestinationIpv4AddressVariable;
-            TunnelDestinationIpv4SubnetMask = tunnelDestinationIpv4SubnetMask;
-            TunnelDestinationIpv4SubnetMaskVariable = tunnelDestinationIpv4SubnetMaskVariable;
+            TunnelDestinationIpv6Address = tunnelDestinationIpv6Address;
+            TunnelDestinationIpv6AddressVariable = tunnelDestinationIpv6AddressVariable;
+            TunnelMode = tunnelMode;
             TunnelRouteVia = tunnelRouteVia;
             TunnelRouteViaVariable = tunnelRouteViaVariable;
             TunnelSourceInterface = tunnelSourceInterface;
             TunnelSourceInterfaceVariable = tunnelSourceInterfaceVariable;
             TunnelSourceIpv4Address = tunnelSourceIpv4Address;
             TunnelSourceIpv4AddressVariable = tunnelSourceIpv4AddressVariable;
-            TunnelSourceIpv4SubnetMask = tunnelSourceIpv4SubnetMask;
-            TunnelSourceIpv4SubnetMaskVariable = tunnelSourceIpv4SubnetMaskVariable;
+            TunnelSourceIpv6Address = tunnelSourceIpv6Address;
+            TunnelSourceIpv6AddressVariable = tunnelSourceIpv6AddressVariable;
             Version = version;
         }
     }

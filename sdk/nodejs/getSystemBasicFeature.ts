@@ -296,6 +296,14 @@ export interface GetSystemBasicFeatureResult {
      */
     readonly trackTransportVariable: string;
     /**
+     * Enable or disable endpoint tracker diaStabilize status
+     */
+    readonly trackerDiaStabilizeStatus: boolean;
+    /**
+     * Variable name
+     */
+    readonly trackerDiaStabilizeStatusVariable: string;
+    /**
      * Enable transport gateway
      */
     readonly transportGateway: boolean;

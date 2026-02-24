@@ -13,7 +13,7 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class CustomControlTopologyPolicyDefinitionSequenceActionEntryArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Export to VPN list ID, Attribute conditional on `Type` being equal to `exportTo`
+        /// Export to VPN list ID, Attribute conditional on `Type` equal to `exportTo`
         /// </summary>
         [Input("exportToVpnListId")]
         public Input<string>? ExportToVpnListId { get; set; }
@@ -28,7 +28,7 @@ namespace Pulumi.Sdwan.Inputs
         private InputList<Inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs>? _setParameters;
 
         /// <summary>
-        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
+        /// List of set parameters, Attribute conditional on `Type` equal to `Set`
         /// </summary>
         public InputList<Inputs.CustomControlTopologyPolicyDefinitionSequenceActionEntrySetParameterArgs> SetParameters
         {

@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Other UCSE Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -102,7 +102,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accessPortDedicated);
     }
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -110,7 +110,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> accessPortSharedFailoverType;
 
     /**
-     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge2`, `te2`
      * 
      */
@@ -118,7 +118,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.accessPortSharedFailoverType);
     }
     /**
-     * , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */
@@ -126,7 +126,7 @@ public class OtherUcseFeature extends com.pulumi.resources.CustomResource {
     private Output</* @Nullable */ String> accessPortSharedType;
 
     /**
-     * @return , Attribute conditional on `accessPortDedicated` being equal to `false`
+     * @return , Attribute conditional on `accessPortDedicated` equal to `false`
      *   - Choices: `ge1`, `ge2`, `ge3`, `te2`, `te3`, `console`, `failover`
      * 
      */

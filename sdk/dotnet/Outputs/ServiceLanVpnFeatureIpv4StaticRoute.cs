@@ -14,16 +14,16 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class ServiceLanVpnFeatureIpv4StaticRoute
     {
         /// <summary>
-        /// Gateway distance, Attribute conditional on `Gateway` being equal to `Null0`
+        /// Gateway distance, Attribute conditional on `Gateway` equal to `Null0`
         ///   - Range: `1`-`255`
         /// </summary>
         public readonly int? AdministrativeDistance;
         /// <summary>
-        /// Variable name, Attribute conditional on `Gateway` being equal to `Null0`
+        /// Variable name, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         public readonly string? AdministrativeDistanceVariable;
         /// <summary>
-        /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` being equal to `Dhcp`
+        /// IPv4 Route Gateway DHCP, Attribute conditional on `Gateway` equal to `Dhcp`
         /// </summary>
         public readonly bool? Dhcp;
         /// <summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? Gateway;
         /// <summary>
-        /// , Attribute conditional on `Gateway` being equal to `staticRouteInterface`
+        /// , Attribute conditional on `Gateway` equal to `staticRouteInterface`
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteIpStaticRouteInterface> IpStaticRouteInterfaces;
         /// <summary>
@@ -44,15 +44,15 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? NetworkAddressVariable;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop with Tracker, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHopWithTracker> NextHopWithTrackers;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `nextHop`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `nextHop`
         /// </summary>
         public readonly ImmutableArray<Outputs.ServiceLanVpnFeatureIpv4StaticRouteNextHop> NextHops;
         /// <summary>
-        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` being equal to `Null0`
+        /// IPv4 Route Gateway Next Hop, Attribute conditional on `Gateway` equal to `Null0`
         /// </summary>
         public readonly bool? Null0;
         /// <summary>
@@ -65,7 +65,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string? SubnetMaskVariable;
         /// <summary>
-        /// IPv4 Route Gateway VPN, Attribute conditional on `Gateway` being equal to `Vpn`
+        /// IPv4 Route Gateway VPN, Attribute conditional on `Gateway` equal to `Vpn`
         /// </summary>
         public readonly bool? Vpn;
 

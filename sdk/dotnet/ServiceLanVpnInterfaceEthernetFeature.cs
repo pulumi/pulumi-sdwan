@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Service LAN VPN Interface Ethernet Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -80,6 +80,8 @@ namespace Pulumi.Sdwan
     ///                         GlobalAddress = "1::1/24",
     ///                     },
     ///                 },
+    ///                 FollowDualRouterHighAvailability = false,
+    ///                 MinPreemptDelay = 60,
     ///             },
     ///         },
     ///         Ipv4Vrrps = new[]
@@ -110,6 +112,8 @@ namespace Pulumi.Sdwan
     ///                         DecrementValue = 100,
     ///                     },
     ///                 },
+    ///                 FollowDualRouterHighAvailability = false,
+    ///                 MinPreemptDelay = 60,
     ///             },
     ///         },
     ///         Arps = new[]
@@ -169,20 +173,20 @@ namespace Pulumi.Sdwan
         public Output<string?> AclIpv6IngressPolicyId { get; private set; } = null!;
 
         /// <summary>
-        /// Shaping Rate (Kbps)
+        /// Shaping Rate (Kbps), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `8`-`100000000`
         /// </summary>
         [Output("aclShapingRate")]
         public Output<int?> AclShapingRate { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("aclShapingRateVariable")]
         public Output<string?> AclShapingRateVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `0`-`2147483`
         ///   - Default value: `1200`
         /// </summary>
@@ -190,13 +194,13 @@ namespace Pulumi.Sdwan
         public Output<int?> ArpTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("arpTimeoutVariable")]
         public Output<string?> ArpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Configure ARP entries
+        /// Configure ARP entries, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("arps")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureArp>> Arps { get; private set; } = null!;
@@ -220,20 +224,20 @@ namespace Pulumi.Sdwan
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Duplex mode
+        /// Duplex mode, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Output("duplex")]
         public Output<string?> Duplex { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Output("duplexVariable")]
         public Output<string?> DuplexVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Output("enableDhcpv6")]
         public Output<bool?> EnableDhcpv6 { get; private set; } = null!;
@@ -245,14 +249,14 @@ namespace Pulumi.Sdwan
         public Output<string> FeatureProfileId { get; private set; } = null!;
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable
+        /// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Output("icmpRedirectDisable")]
         public Output<bool?> IcmpRedirectDisable { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("icmpRedirectDisableVariable")]
         public Output<string?> IcmpRedirectDisableVariable { get; private set; } = null!;
@@ -267,7 +271,7 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceDescriptionVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Interface MTU
+        /// Interface MTU, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1500`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -275,7 +279,7 @@ namespace Pulumi.Sdwan
         public Output<int?> InterfaceMtu { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("interfaceMtuVariable")]
         public Output<string?> InterfaceMtuVariable { get; private set; } = null!;
@@ -290,20 +294,20 @@ namespace Pulumi.Sdwan
         public Output<string?> InterfaceNameVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Directed-Broadcast
+        /// IP Directed-Broadcast, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Output("ipDirectedBroadcast")]
         public Output<bool?> IpDirectedBroadcast { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipDirectedBroadcastVariable")]
         public Output<string?> IpDirectedBroadcastVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `576`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -311,59 +315,59 @@ namespace Pulumi.Sdwan
         public Output<int?> IpMtu { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipMtuVariable")]
         public Output<string?> IpMtuVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv4Address")]
         public Output<string?> Ipv4Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv4AddressVariable")]
         public Output<string?> Ipv4AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPv4 Configuration Type
-        ///   - Choices: `Dynamic`, `Static`
+        /// IPv4 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `Dynamic`
         /// </summary>
         [Output("ipv4ConfigurationType")]
         public Output<string?> Ipv4ConfigurationType { get; private set; } = null!;
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
-        ///   - Range: `1`-`65536`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
+        ///   - Range: `1`-`255`
         ///   - Default value: `1`
         /// </summary>
         [Output("ipv4DhcpDistance")]
         public Output<int?> Ipv4DhcpDistance { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Output("ipv4DhcpDistanceVariable")]
         public Output<string?> Ipv4DhcpDistanceVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4DhcpHelperVariable")]
         public Output<string?> Ipv4DhcpHelperVariable { get; private set; } = null!;
 
         /// <summary>
-        /// List of DHCP IPv4 helper addresses (min 1, max 8)
+        /// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4DhcpHelpers")]
         public Output<ImmutableArray<string>> Ipv4DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// enable Network Address Translation on this interface
+        /// enable Network Address Translation on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Output("ipv4Nat")]
@@ -460,44 +464,44 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv4NatUdpTimeoutVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv4SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> Ipv4SecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Output("ipv4SubnetMask")]
         public Output<string?> Ipv4SubnetMask { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv4SubnetMaskVariable")]
         public Output<string?> Ipv4SubnetMaskVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable VRRP
+        /// Enable VRRP, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv4Vrrps")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv4Vrrp>> Ipv4Vrrps { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv6Address")]
         public Output<string?> Ipv6Address { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv6AddressVariable")]
         public Output<string?> Ipv6AddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// IPv6 Configuration Type
+        /// IPv6 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `None`
         /// </summary>
@@ -505,32 +509,32 @@ namespace Pulumi.Sdwan
         public Output<string?> Ipv6ConfigurationType { get; private set; } = null!;
 
         /// <summary>
-        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv6DhcpHelpers")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelper>> Ipv6DhcpHelpers { get; private set; } = null!;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Output("ipv6DhcpSecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> Ipv6DhcpSecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface
+        /// enable Network Address Translation ipv6 on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Output("ipv6Nat")]
         public Output<bool?> Ipv6Nat { get; private set; } = null!;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Output("ipv6SecondaryAddresses")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> Ipv6SecondaryAddresses { get; private set; } = null!;
 
         /// <summary>
-        /// Enable VRRP Ipv6
+        /// Enable VRRP Ipv6, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("ipv6Vrrps")]
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureIpv6Vrrp>> Ipv6Vrrps { get; private set; } = null!;
@@ -550,26 +554,26 @@ namespace Pulumi.Sdwan
         public Output<string?> LoadIntervalVariable { get; private set; } = null!;
 
         /// <summary>
-        /// MAC Address
+        /// MAC Address, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Output("macAddress")]
         public Output<string?> MacAddress { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Output("macAddressVariable")]
         public Output<string?> MacAddressVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Media type
+        /// Media type, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Output("mediaType")]
         public Output<string?> MediaType { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Output("mediaTypeVariable")]
         public Output<string?> MediaTypeVariable { get; private set; } = null!;
@@ -586,6 +590,157 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Output("nat64")]
         public Output<bool?> Nat64 { get; private set; } = null!;
+
+        /// <summary>
+        /// Port-Channel interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("portChannelInterface")]
+        public Output<bool?> PortChannelInterface { get; private set; } = null!;
+
+        /// <summary>
+        /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpFastSwitchover")]
+        public Output<bool?> PortChannelLacpFastSwitchover { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpFastSwitchoverVariable")]
+        public Output<string?> PortChannelLacpFastSwitchoverVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Output("portChannelLacpLoadBalance")]
+        public Output<string?> PortChannelLacpLoadBalance { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpLoadBalanceVariable")]
+        public Output<string?> PortChannelLacpLoadBalanceVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Set LACP max bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Output("portChannelLacpMaxBundle")]
+        public Output<int?> PortChannelLacpMaxBundle { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpMaxBundleVariable")]
+        public Output<string?> PortChannelLacpMaxBundleVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpMemberLinks")]
+        public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink>> PortChannelLacpMemberLinks { get; private set; } = null!;
+
+        /// <summary>
+        /// Set LACP min bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Output("portChannelLacpMinBundle")]
+        public Output<int?> PortChannelLacpMinBundle { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpMinBundleVariable")]
+        public Output<string?> PortChannelLacpMinBundleVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpQosAggregate")]
+        public Output<bool?> PortChannelLacpQosAggregate { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Output("portChannelLacpQosAggregateVariable")]
+        public Output<string?> PortChannelLacpQosAggregateVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Port-Channel member interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Output("portChannelMemberInterface")]
+        public Output<bool?> PortChannelMemberInterface { get; private set; } = null!;
+
+        /// <summary>
+        /// Port Channel Mode, Attribute conditional on `PortChannelInterface` equal to `True`
+        ///   - Choices: `Lacp`, `Static`
+        /// </summary>
+        [Output("portChannelMode")]
+        public Output<string?> PortChannelMode { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Output("portChannelStaticLoadBalance")]
+        public Output<string?> PortChannelStaticLoadBalance { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Output("portChannelStaticLoadBalanceVariable")]
+        public Output<string?> PortChannelStaticLoadBalanceVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Output("portChannelStaticMemberLinks")]
+        public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>> PortChannelStaticMemberLinks { get; private set; } = null!;
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Output("portChannelStaticQosAggregate")]
+        public Output<bool?> PortChannelStaticQosAggregate { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Output("portChannelStaticQosAggregateVariable")]
+        public Output<string?> PortChannelStaticQosAggregateVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// Port Channel Sub Interface on/off, Attribute conditional on `PortChannelInterface` equal to `True`
+        /// </summary>
+        [Output("portChannelSubinterface")]
+        public Output<bool?> PortChannelSubinterface { get; private set; } = null!;
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Output("portChannelSubinterfacePrimaryInterfaceName")]
+        public Output<string?> PortChannelSubinterfacePrimaryInterfaceName { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Output("portChannelSubinterfacePrimaryInterfaceNameVariable")]
+        public Output<string?> PortChannelSubinterfacePrimaryInterfaceNameVariable { get; private set; } = null!;
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Output("portChannelSubinterfaceSecondaryInterfaceName")]
+        public Output<string?> PortChannelSubinterfaceSecondaryInterfaceName { get; private set; } = null!;
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Output("portChannelSubinterfaceSecondaryInterfaceNameVariable")]
+        public Output<string?> PortChannelSubinterfaceSecondaryInterfaceNameVariable { get; private set; } = null!;
 
         /// <summary>
         /// Service LAN VPN Feature ID
@@ -606,14 +761,14 @@ namespace Pulumi.Sdwan
         public Output<string?> ShutdownVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed, Attribute conditional on `PortChannelInterface` not equal to `True`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
         /// </summary>
         [Output("speed")]
         public Output<string?> Speed { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Output("speedVariable")]
         public Output<string?> SpeedVariable { get; private set; } = null!;
@@ -625,72 +780,60 @@ namespace Pulumi.Sdwan
         public Output<ImmutableArray<Outputs.ServiceLanVpnInterfaceEthernetFeatureStaticNat>> StaticNats { get; private set; } = null!;
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes
+        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Output("tcpMss")]
         public Output<int?> TcpMss { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("tcpMssVariable")]
         public Output<string?> TcpMssVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enable tracker for this interface
-        /// </summary>
-        [Output("tracker")]
-        public Output<string?> Tracker { get; private set; } = null!;
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Output("trackerVariable")]
-        public Output<string?> TrackerVariable { get; private set; } = null!;
-
-        /// <summary>
-        /// Enable/Disable SGT Enforcement on an interface
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("trustsecEnableEnforcedPropogation")]
         public Output<bool?> TrustsecEnableEnforcedPropogation { get; private set; } = null!;
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Output("trustsecEnableSgtPropogation")]
         public Output<bool?> TrustsecEnableSgtPropogation { get; private set; } = null!;
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Output("trustsecEnforcedSecurityGroupTag")]
         public Output<int?> TrustsecEnforcedSecurityGroupTag { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("trustsecEnforcedSecurityGroupTagVariable")]
         public Output<string?> TrustsecEnforcedSecurityGroupTagVariable { get; private set; } = null!;
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Output("trustsecPropogate")]
         public Output<bool?> TrustsecPropogate { get; private set; } = null!;
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Output("trustsecSecurityGroupTag")]
         public Output<int?> TrustsecSecurityGroupTag { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("trustsecSecurityGroupTagVariable")]
         public Output<string?> TrustsecSecurityGroupTagVariable { get; private set; } = null!;
@@ -702,13 +845,13 @@ namespace Pulumi.Sdwan
         public Output<int> Version { get; private set; } = null!;
 
         /// <summary>
-        /// Extend remote TLOC over a GRE tunnel to a local LAN interface
+        /// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("xconnect")]
         public Output<string?> Xconnect { get; private set; } = null!;
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Output("xconnectVariable")]
         public Output<string?> XconnectVariable { get; private set; } = null!;
@@ -772,20 +915,20 @@ namespace Pulumi.Sdwan
         public Input<string>? AclIpv6IngressPolicyId { get; set; }
 
         /// <summary>
-        /// Shaping Rate (Kbps)
+        /// Shaping Rate (Kbps), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `8`-`100000000`
         /// </summary>
         [Input("aclShapingRate")]
         public Input<int>? AclShapingRate { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("aclShapingRateVariable")]
         public Input<string>? AclShapingRateVariable { get; set; }
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `0`-`2147483`
         ///   - Default value: `1200`
         /// </summary>
@@ -793,7 +936,7 @@ namespace Pulumi.Sdwan
         public Input<int>? ArpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("arpTimeoutVariable")]
         public Input<string>? ArpTimeoutVariable { get; set; }
@@ -802,7 +945,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureArpArgs>? _arps;
 
         /// <summary>
-        /// Configure ARP entries
+        /// Configure ARP entries, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureArpArgs> Arps
         {
@@ -829,20 +972,20 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Duplex mode
+        /// Duplex mode, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("duplexVariable")]
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -854,14 +997,14 @@ namespace Pulumi.Sdwan
         public Input<string> FeatureProfileId { get; set; } = null!;
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable
+        /// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("icmpRedirectDisableVariable")]
         public Input<string>? IcmpRedirectDisableVariable { get; set; }
@@ -876,7 +1019,7 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU
+        /// Interface MTU, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1500`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -884,7 +1027,7 @@ namespace Pulumi.Sdwan
         public Input<int>? InterfaceMtu { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("interfaceMtuVariable")]
         public Input<string>? InterfaceMtuVariable { get; set; }
@@ -899,20 +1042,20 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast
+        /// IP Directed-Broadcast, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipDirectedBroadcastVariable")]
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `576`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -920,47 +1063,47 @@ namespace Pulumi.Sdwan
         public Input<int>? IpMtu { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipMtuVariable")]
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// IPv4 Configuration Type
-        ///   - Choices: `Dynamic`, `Static`
+        /// IPv4 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `Dynamic`
         /// </summary>
         [Input("ipv4ConfigurationType")]
         public Input<string>? Ipv4ConfigurationType { get; set; }
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
-        ///   - Range: `1`-`65536`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
+        ///   - Range: `1`-`255`
         ///   - Default value: `1`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4DhcpHelperVariable")]
         public Input<string>? Ipv4DhcpHelperVariable { get; set; }
@@ -969,7 +1112,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _ipv4DhcpHelpers;
 
         /// <summary>
-        /// List of DHCP IPv4 helper addresses (min 1, max 8)
+        /// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<string> Ipv4DhcpHelpers
         {
@@ -978,7 +1121,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation on this interface
+        /// enable Network Address Translation on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Nat")]
@@ -1078,7 +1221,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs> Ipv4SecondaryAddresses
         {
@@ -1087,14 +1230,14 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -1103,7 +1246,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs>? _ipv4Vrrps;
 
         /// <summary>
-        /// Enable VRRP
+        /// Enable VRRP, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpArgs> Ipv4Vrrps
         {
@@ -1112,19 +1255,19 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// IPv6 Configuration Type
+        /// IPv6 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `None`
         /// </summary>
@@ -1135,7 +1278,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs>? _ipv6DhcpHelpers;
 
         /// <summary>
-        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperArgs> Ipv6DhcpHelpers
         {
@@ -1147,7 +1290,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -1156,7 +1299,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface
+        /// enable Network Address Translation ipv6 on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Nat")]
@@ -1166,7 +1309,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs> Ipv6SecondaryAddresses
         {
@@ -1178,7 +1321,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs>? _ipv6Vrrps;
 
         /// <summary>
-        /// Enable VRRP Ipv6
+        /// Enable VRRP Ipv6, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpArgs> Ipv6Vrrps
         {
@@ -1201,26 +1344,26 @@ namespace Pulumi.Sdwan
         public Input<string>? LoadIntervalVariable { get; set; }
 
         /// <summary>
-        /// MAC Address
+        /// MAC Address, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("macAddress")]
         public Input<string>? MacAddress { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("macAddressVariable")]
         public Input<string>? MacAddressVariable { get; set; }
 
         /// <summary>
-        /// Media type
+        /// Media type, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("mediaTypeVariable")]
         public Input<string>? MediaTypeVariable { get; set; }
@@ -1237,6 +1380,169 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
+
+        /// <summary>
+        /// Port-Channel interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("portChannelInterface")]
+        public Input<bool>? PortChannelInterface { get; set; }
+
+        /// <summary>
+        /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpFastSwitchover")]
+        public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpFastSwitchoverVariable")]
+        public Input<string>? PortChannelLacpFastSwitchoverVariable { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Input("portChannelLacpLoadBalance")]
+        public Input<string>? PortChannelLacpLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpLoadBalanceVariable")]
+        public Input<string>? PortChannelLacpLoadBalanceVariable { get; set; }
+
+        /// <summary>
+        /// Set LACP max bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Input("portChannelLacpMaxBundle")]
+        public Input<int>? PortChannelLacpMaxBundle { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpMaxBundleVariable")]
+        public Input<string>? PortChannelLacpMaxBundleVariable { get; set; }
+
+        [Input("portChannelLacpMemberLinks")]
+        private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>? _portChannelLacpMemberLinks;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs> PortChannelLacpMemberLinks
+        {
+            get => _portChannelLacpMemberLinks ?? (_portChannelLacpMemberLinks = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>());
+            set => _portChannelLacpMemberLinks = value;
+        }
+
+        /// <summary>
+        /// Set LACP min bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Input("portChannelLacpMinBundle")]
+        public Input<int>? PortChannelLacpMinBundle { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpMinBundleVariable")]
+        public Input<string>? PortChannelLacpMinBundleVariable { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpQosAggregate")]
+        public Input<bool>? PortChannelLacpQosAggregate { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpQosAggregateVariable")]
+        public Input<string>? PortChannelLacpQosAggregateVariable { get; set; }
+
+        /// <summary>
+        /// Port-Channel member interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("portChannelMemberInterface")]
+        public Input<bool>? PortChannelMemberInterface { get; set; }
+
+        /// <summary>
+        /// Port Channel Mode, Attribute conditional on `PortChannelInterface` equal to `True`
+        ///   - Choices: `Lacp`, `Static`
+        /// </summary>
+        [Input("portChannelMode")]
+        public Input<string>? PortChannelMode { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Input("portChannelStaticLoadBalance")]
+        public Input<string>? PortChannelStaticLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticLoadBalanceVariable")]
+        public Input<string>? PortChannelStaticLoadBalanceVariable { get; set; }
+
+        [Input("portChannelStaticMemberLinks")]
+        private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>? _portChannelStaticMemberLinks;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs> PortChannelStaticMemberLinks
+        {
+            get => _portChannelStaticMemberLinks ?? (_portChannelStaticMemberLinks = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>());
+            set => _portChannelStaticMemberLinks = value;
+        }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticQosAggregate")]
+        public Input<bool>? PortChannelStaticQosAggregate { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticQosAggregateVariable")]
+        public Input<string>? PortChannelStaticQosAggregateVariable { get; set; }
+
+        /// <summary>
+        /// Port Channel Sub Interface on/off, Attribute conditional on `PortChannelInterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterface")]
+        public Input<bool>? PortChannelSubinterface { get; set; }
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfacePrimaryInterfaceName")]
+        public Input<string>? PortChannelSubinterfacePrimaryInterfaceName { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfacePrimaryInterfaceNameVariable")]
+        public Input<string>? PortChannelSubinterfacePrimaryInterfaceNameVariable { get; set; }
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfaceSecondaryInterfaceName")]
+        public Input<string>? PortChannelSubinterfaceSecondaryInterfaceName { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfaceSecondaryInterfaceNameVariable")]
+        public Input<string>? PortChannelSubinterfaceSecondaryInterfaceNameVariable { get; set; }
 
         /// <summary>
         /// Service LAN VPN Feature ID
@@ -1257,14 +1563,14 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed, Attribute conditional on `PortChannelInterface` not equal to `True`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("speedVariable")]
         public Input<string>? SpeedVariable { get; set; }
@@ -1282,84 +1588,72 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes
+        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("tcpMssVariable")]
         public Input<string>? TcpMssVariable { get; set; }
 
         /// <summary>
-        /// Enable tracker for this interface
-        /// </summary>
-        [Input("tracker")]
-        public Input<string>? Tracker { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("trackerVariable")]
-        public Input<string>? TrackerVariable { get; set; }
-
-        /// <summary>
-        /// Enable/Disable SGT Enforcement on an interface
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecEnableEnforcedPropogation")]
         public Input<bool>? TrustsecEnableEnforcedPropogation { get; set; }
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTag")]
         public Input<int>? TrustsecEnforcedSecurityGroupTag { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTagVariable")]
         public Input<string>? TrustsecEnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecSecurityGroupTag")]
         public Input<int>? TrustsecSecurityGroupTag { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecSecurityGroupTagVariable")]
         public Input<string>? TrustsecSecurityGroupTagVariable { get; set; }
 
         /// <summary>
-        /// Extend remote TLOC over a GRE tunnel to a local LAN interface
+        /// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("xconnect")]
         public Input<string>? Xconnect { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("xconnectVariable")]
         public Input<string>? XconnectVariable { get; set; }
@@ -1385,20 +1679,20 @@ namespace Pulumi.Sdwan
         public Input<string>? AclIpv6IngressPolicyId { get; set; }
 
         /// <summary>
-        /// Shaping Rate (Kbps)
+        /// Shaping Rate (Kbps), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `8`-`100000000`
         /// </summary>
         [Input("aclShapingRate")]
         public Input<int>? AclShapingRate { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("aclShapingRateVariable")]
         public Input<string>? AclShapingRateVariable { get; set; }
 
         /// <summary>
-        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+        /// Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `0`-`2147483`
         ///   - Default value: `1200`
         /// </summary>
@@ -1406,7 +1700,7 @@ namespace Pulumi.Sdwan
         public Input<int>? ArpTimeout { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("arpTimeoutVariable")]
         public Input<string>? ArpTimeoutVariable { get; set; }
@@ -1415,7 +1709,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureArpGetArgs>? _arps;
 
         /// <summary>
-        /// Configure ARP entries
+        /// Configure ARP entries, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureArpGetArgs> Arps
         {
@@ -1442,20 +1736,20 @@ namespace Pulumi.Sdwan
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Duplex mode
+        /// Duplex mode, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `Full`, `Half`, `Auto`
         /// </summary>
         [Input("duplex")]
         public Input<string>? Duplex { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("duplexVariable")]
         public Input<string>? DuplexVariable { get; set; }
 
         /// <summary>
-        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// Enable DHCPv6, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Input("enableDhcpv6")]
         public Input<bool>? EnableDhcpv6 { get; set; }
@@ -1467,14 +1761,14 @@ namespace Pulumi.Sdwan
         public Input<string>? FeatureProfileId { get; set; }
 
         /// <summary>
-        /// ICMP/ICMPv6 Redirect Disable
+        /// ICMP/ICMPv6 Redirect Disable, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("icmpRedirectDisable")]
         public Input<bool>? IcmpRedirectDisable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("icmpRedirectDisableVariable")]
         public Input<string>? IcmpRedirectDisableVariable { get; set; }
@@ -1489,7 +1783,7 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceDescriptionVariable { get; set; }
 
         /// <summary>
-        /// Interface MTU
+        /// Interface MTU, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `1500`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -1497,7 +1791,7 @@ namespace Pulumi.Sdwan
         public Input<int>? InterfaceMtu { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("interfaceMtuVariable")]
         public Input<string>? InterfaceMtuVariable { get; set; }
@@ -1512,20 +1806,20 @@ namespace Pulumi.Sdwan
         public Input<string>? InterfaceNameVariable { get; set; }
 
         /// <summary>
-        /// IP Directed-Broadcast
+        /// IP Directed-Broadcast, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipDirectedBroadcast")]
         public Input<bool>? IpDirectedBroadcast { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipDirectedBroadcastVariable")]
         public Input<string>? IpDirectedBroadcastVariable { get; set; }
 
         /// <summary>
-        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+        /// IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `576`-`9216`
         ///   - Default value: `1500`
         /// </summary>
@@ -1533,47 +1827,47 @@ namespace Pulumi.Sdwan
         public Input<int>? IpMtu { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipMtuVariable")]
         public Input<string>? IpMtuVariable { get; set; }
 
         /// <summary>
-        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// IP Address, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4Address")]
         public Input<string>? Ipv4Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4AddressVariable")]
         public Input<string>? Ipv4AddressVariable { get; set; }
 
         /// <summary>
-        /// IPv4 Configuration Type
-        ///   - Choices: `Dynamic`, `Static`
+        /// IPv4 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
+        ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `Dynamic`
         /// </summary>
         [Input("ipv4ConfigurationType")]
         public Input<string>? Ipv4ConfigurationType { get; set; }
 
         /// <summary>
-        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
-        ///   - Range: `1`-`65536`
+        /// DHCP Distance, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
+        ///   - Range: `1`-`255`
         ///   - Default value: `1`
         /// </summary>
         [Input("ipv4DhcpDistance")]
         public Input<int>? Ipv4DhcpDistance { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Dynamic`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Dynamic`
         /// </summary>
         [Input("ipv4DhcpDistanceVariable")]
         public Input<string>? Ipv4DhcpDistanceVariable { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("ipv4DhcpHelperVariable")]
         public Input<string>? Ipv4DhcpHelperVariable { get; set; }
@@ -1582,7 +1876,7 @@ namespace Pulumi.Sdwan
         private InputList<string>? _ipv4DhcpHelpers;
 
         /// <summary>
-        /// List of DHCP IPv4 helper addresses (min 1, max 8)
+        /// List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<string> Ipv4DhcpHelpers
         {
@@ -1591,7 +1885,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation on this interface
+        /// enable Network Address Translation on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipv4Nat")]
@@ -1691,7 +1985,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs>? _ipv4SecondaryAddresses;
 
         /// <summary>
-        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Secondary IpV4 Addresses, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4SecondaryAddressGetArgs> Ipv4SecondaryAddresses
         {
@@ -1700,14 +1994,14 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Subnet Mask, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         ///   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
         /// </summary>
         [Input("ipv4SubnetMask")]
         public Input<string>? Ipv4SubnetMask { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv4ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv4SubnetMaskVariable")]
         public Input<string>? Ipv4SubnetMaskVariable { get; set; }
@@ -1716,7 +2010,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpGetArgs>? _ipv4Vrrps;
 
         /// <summary>
-        /// Enable VRRP
+        /// Enable VRRP, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv4VrrpGetArgs> Ipv4Vrrps
         {
@@ -1725,19 +2019,19 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// IPv6 Address Secondary, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
-        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Variable name, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         [Input("ipv6AddressVariable")]
         public Input<string>? Ipv6AddressVariable { get; set; }
 
         /// <summary>
-        /// IPv6 Configuration Type
+        /// IPv6 Configuration Type, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Choices: `Dynamic`, `Static`, `None`
         ///   - Default value: `None`
         /// </summary>
@@ -1748,7 +2042,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperGetArgs>? _ipv6DhcpHelpers;
 
         /// <summary>
-        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// DHCPv6 Helper, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpHelperGetArgs> Ipv6DhcpHelpers
         {
@@ -1760,7 +2054,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs>? _ipv6DhcpSecondaryAddresses;
 
         /// <summary>
-        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Dynamic`
+        /// secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Dynamic`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressGetArgs> Ipv6DhcpSecondaryAddresses
         {
@@ -1769,7 +2063,7 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// enable Network Address Translation ipv6 on this interface
+        /// enable Network Address Translation ipv6 on this interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("ipv6Nat")]
@@ -1779,7 +2073,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs>? _ipv6SecondaryAddresses;
 
         /// <summary>
-        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` being equal to `Static`
+        /// Static secondary IPv6 addresses, Attribute conditional on `Ipv6ConfigurationType` equal to `Static`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6SecondaryAddressGetArgs> Ipv6SecondaryAddresses
         {
@@ -1791,7 +2085,7 @@ namespace Pulumi.Sdwan
         private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpGetArgs>? _ipv6Vrrps;
 
         /// <summary>
-        /// Enable VRRP Ipv6
+        /// Enable VRRP Ipv6, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeatureIpv6VrrpGetArgs> Ipv6Vrrps
         {
@@ -1814,26 +2108,26 @@ namespace Pulumi.Sdwan
         public Input<string>? LoadIntervalVariable { get; set; }
 
         /// <summary>
-        /// MAC Address
+        /// MAC Address, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("macAddress")]
         public Input<string>? MacAddress { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True` and `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("macAddressVariable")]
         public Input<string>? MacAddressVariable { get; set; }
 
         /// <summary>
-        /// Media type
+        /// Media type, Attribute conditional on `PortChannelInterface` not equal to `True`
         ///   - Choices: `auto-select`, `Rj45`, `Sfp`
         /// </summary>
         [Input("mediaType")]
         public Input<string>? MediaType { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("mediaTypeVariable")]
         public Input<string>? MediaTypeVariable { get; set; }
@@ -1850,6 +2144,169 @@ namespace Pulumi.Sdwan
         /// </summary>
         [Input("nat64")]
         public Input<bool>? Nat64 { get; set; }
+
+        /// <summary>
+        /// Port-Channel interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("portChannelInterface")]
+        public Input<bool>? PortChannelInterface { get; set; }
+
+        /// <summary>
+        /// Eanble lacp fast switchover, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpFastSwitchover")]
+        public Input<bool>? PortChannelLacpFastSwitchover { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpFastSwitchoverVariable")]
+        public Input<string>? PortChannelLacpFastSwitchoverVariable { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Input("portChannelLacpLoadBalance")]
+        public Input<string>? PortChannelLacpLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpLoadBalanceVariable")]
+        public Input<string>? PortChannelLacpLoadBalanceVariable { get; set; }
+
+        /// <summary>
+        /// Set LACP max bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Input("portChannelLacpMaxBundle")]
+        public Input<int>? PortChannelLacpMaxBundle { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpMaxBundleVariable")]
+        public Input<string>? PortChannelLacpMaxBundleVariable { get; set; }
+
+        [Input("portChannelLacpMemberLinks")]
+        private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkGetArgs>? _portChannelLacpMemberLinks;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkGetArgs> PortChannelLacpMemberLinks
+        {
+            get => _portChannelLacpMemberLinks ?? (_portChannelLacpMemberLinks = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkGetArgs>());
+            set => _portChannelLacpMemberLinks = value;
+        }
+
+        /// <summary>
+        /// Set LACP min bundle, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        ///   - Range: `1`-`16`
+        /// </summary>
+        [Input("portChannelLacpMinBundle")]
+        public Input<int>? PortChannelLacpMinBundle { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpMinBundleVariable")]
+        public Input<string>? PortChannelLacpMinBundleVariable { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpQosAggregate")]
+        public Input<bool>? PortChannelLacpQosAggregate { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Lacp`
+        /// </summary>
+        [Input("portChannelLacpQosAggregateVariable")]
+        public Input<string>? PortChannelLacpQosAggregateVariable { get; set; }
+
+        /// <summary>
+        /// Port-Channel member interface on/off
+        ///   - Default value: `False`
+        /// </summary>
+        [Input("portChannelMemberInterface")]
+        public Input<bool>? PortChannelMemberInterface { get; set; }
+
+        /// <summary>
+        /// Port Channel Mode, Attribute conditional on `PortChannelInterface` equal to `True`
+        ///   - Choices: `Lacp`, `Static`
+        /// </summary>
+        [Input("portChannelMode")]
+        public Input<string>? PortChannelMode { get; set; }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        ///   - Choices: `Flow`, `Vlan`
+        /// </summary>
+        [Input("portChannelStaticLoadBalance")]
+        public Input<string>? PortChannelStaticLoadBalance { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticLoadBalanceVariable")]
+        public Input<string>? PortChannelStaticLoadBalanceVariable { get; set; }
+
+        [Input("portChannelStaticMemberLinks")]
+        private InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkGetArgs>? _portChannelStaticMemberLinks;
+
+        /// <summary>
+        /// Configure Port-Channel member links, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        public InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkGetArgs> PortChannelStaticMemberLinks
+        {
+            get => _portChannelStaticMemberLinks ?? (_portChannelStaticMemberLinks = new InputList<Inputs.ServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkGetArgs>());
+            set => _portChannelStaticMemberLinks = value;
+        }
+
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticQosAggregate")]
+        public Input<bool>? PortChannelStaticQosAggregate { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelMode` equal to `Static`
+        /// </summary>
+        [Input("portChannelStaticQosAggregateVariable")]
+        public Input<string>? PortChannelStaticQosAggregateVariable { get; set; }
+
+        /// <summary>
+        /// Port Channel Sub Interface on/off, Attribute conditional on `PortChannelInterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterface")]
+        public Input<bool>? PortChannelSubinterface { get; set; }
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfacePrimaryInterfaceName")]
+        public Input<string>? PortChannelSubinterfacePrimaryInterfaceName { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfacePrimaryInterfaceNameVariable")]
+        public Input<string>? PortChannelSubinterfacePrimaryInterfaceNameVariable { get; set; }
+
+        /// <summary>
+        /// , Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfaceSecondaryInterfaceName")]
+        public Input<string>? PortChannelSubinterfaceSecondaryInterfaceName { get; set; }
+
+        /// <summary>
+        /// Variable name, Attribute conditional on `PortChannelInterface` equal to `True` and `PortChannelSubinterface` equal to `True`
+        /// </summary>
+        [Input("portChannelSubinterfaceSecondaryInterfaceNameVariable")]
+        public Input<string>? PortChannelSubinterfaceSecondaryInterfaceNameVariable { get; set; }
 
         /// <summary>
         /// Service LAN VPN Feature ID
@@ -1870,14 +2327,14 @@ namespace Pulumi.Sdwan
         public Input<string>? ShutdownVariable { get; set; }
 
         /// <summary>
-        /// Set interface speed
-        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+        /// Set interface speed, Attribute conditional on `PortChannelInterface` not equal to `True`
+        ///   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
         /// </summary>
         [Input("speed")]
         public Input<string>? Speed { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelInterface` not equal to `True`
         /// </summary>
         [Input("speedVariable")]
         public Input<string>? SpeedVariable { get; set; }
@@ -1895,72 +2352,60 @@ namespace Pulumi.Sdwan
         }
 
         /// <summary>
-        /// TCP MSS on SYN packets, in bytes
+        /// TCP MSS on SYN packets, in bytes, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `500`-`1460`
         /// </summary>
         [Input("tcpMss")]
         public Input<int>? TcpMss { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("tcpMssVariable")]
         public Input<string>? TcpMssVariable { get; set; }
 
         /// <summary>
-        /// Enable tracker for this interface
-        /// </summary>
-        [Input("tracker")]
-        public Input<string>? Tracker { get; set; }
-
-        /// <summary>
-        /// Variable name
-        /// </summary>
-        [Input("trackerVariable")]
-        public Input<string>? TrackerVariable { get; set; }
-
-        /// <summary>
-        /// Enable/Disable SGT Enforcement on an interface
+        /// Enable/Disable SGT Enforcement on an interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecEnableEnforcedPropogation")]
         public Input<bool>? TrustsecEnableEnforcedPropogation { get; set; }
 
         /// <summary>
-        /// Indicates that the interface is trustworthy for CTS
+        /// Indicates that the interface is trustworthy for CTS, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `False`
         /// </summary>
         [Input("trustsecEnableSgtPropogation")]
         public Input<bool>? TrustsecEnableSgtPropogation { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTag")]
         public Input<int>? TrustsecEnforcedSecurityGroupTag { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecEnforcedSecurityGroupTagVariable")]
         public Input<string>? TrustsecEnforcedSecurityGroupTagVariable { get; set; }
 
         /// <summary>
-        /// Enables the interface for CTS SGT authorization and forwarding
+        /// Enables the interface for CTS SGT authorization and forwarding, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Default value: `True`
         /// </summary>
         [Input("trustsecPropogate")]
         public Input<bool>? TrustsecPropogate { get; set; }
 
         /// <summary>
-        /// SGT value between 2 and 65519
+        /// SGT value between 2 and 65519, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         ///   - Range: `2`-`65519`
         /// </summary>
         [Input("trustsecSecurityGroupTag")]
         public Input<int>? TrustsecSecurityGroupTag { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("trustsecSecurityGroupTagVariable")]
         public Input<string>? TrustsecSecurityGroupTagVariable { get; set; }
@@ -1972,13 +2417,13 @@ namespace Pulumi.Sdwan
         public Input<int>? Version { get; set; }
 
         /// <summary>
-        /// Extend remote TLOC over a GRE tunnel to a local LAN interface
+        /// Extend remote TLOC over a GRE tunnel to a local LAN interface, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("xconnect")]
         public Input<string>? Xconnect { get; set; }
 
         /// <summary>
-        /// Variable name
+        /// Variable name, Attribute conditional on `PortChannelMemberInterface` not equal to `True`
         /// </summary>
         [Input("xconnectVariable")]
         public Input<string>? XconnectVariable { get; set; }

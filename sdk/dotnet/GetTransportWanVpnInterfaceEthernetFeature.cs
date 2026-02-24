@@ -370,6 +370,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string MediaTypeVariable;
         /// <summary>
+        /// Core Region
+        /// </summary>
+        public readonly string MrfCoreRegionType;
+        /// <summary>
+        /// Enable Core Region
+        /// </summary>
+        public readonly bool MrfEnableCoreRegion;
+        /// <summary>
         /// The name of the Feature
         /// </summary>
         public readonly string Name;
@@ -385,6 +393,14 @@ namespace Pulumi.Sdwan
         /// enable Network Address Translation on this interface
         /// </summary>
         public readonly bool NatIpv4;
+        /// <summary>
+        /// NAT Multiple Loopback
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackResult> NatIpv4Loopbacks;
+        /// <summary>
+        /// NAT Multiple Pool
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolResult> NatIpv4Pools;
         /// <summary>
         /// Variable name
         /// </summary>
@@ -405,6 +421,14 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string NatLoopbackVariable;
+        /// <summary>
+        /// NAT Match Interface
+        /// </summary>
+        public readonly bool NatMatchInterface;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string NatMatchInterfaceVariable;
         /// <summary>
         /// NAT Overload
         /// </summary>
@@ -450,10 +474,6 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string NatType;
         /// <summary>
-        /// Variable name
-        /// </summary>
-        public readonly string NatTypeVariable;
-        /// <summary>
         /// Set NAT UDP session timeout, in minutes
         /// </summary>
         public readonly int NatUdpTimeout;
@@ -473,6 +493,83 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string PerTunnelQosVariable;
+        /// <summary>
+        /// Port-Channel interface on/off
+        /// </summary>
+        public readonly bool PortChannelInterface;
+        /// <summary>
+        /// Eanble lacp fast switchover
+        /// </summary>
+        public readonly bool PortChannelLacpFastSwitchover;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpFastSwitchoverVariable;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly string PortChannelLacpLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpLoadBalanceVariable;
+        /// <summary>
+        /// Set LACP max bundle
+        /// </summary>
+        public readonly int PortChannelLacpMaxBundle;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpMaxBundleVariable;
+        /// <summary>
+        /// Configure Port-Channel member links
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkResult> PortChannelLacpMemberLinks;
+        /// <summary>
+        /// Set LACP min bundle
+        /// </summary>
+        public readonly int PortChannelLacpMinBundle;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpMinBundleVariable;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly bool PortChannelLacpQosAggregate;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelLacpQosAggregateVariable;
+        /// <summary>
+        /// Port-Channel member interface on/off
+        /// </summary>
+        public readonly bool PortChannelMemberInterface;
+        /// <summary>
+        /// Port Channel Mode
+        /// </summary>
+        public readonly string PortChannelMode;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly string PortChannelStaticLoadBalance;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelStaticLoadBalanceVariable;
+        /// <summary>
+        /// Configure Port-Channel member links
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkResult> PortChannelStaticMemberLinks;
+        /// <summary>
+        /// Enable QoS Port-Channel aggregate
+        /// </summary>
+        public readonly bool PortChannelStaticQosAggregate;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string PortChannelStaticQosAggregateVariable;
+        public readonly bool PortChannelSubinterface;
         /// <summary>
         /// Adaptive QoS
         /// </summary>
@@ -575,6 +672,10 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Result> StaticNat66s;
         /// <summary>
+        /// Configure Port Forward entries
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardResult> StaticPortForwards;
+        /// <summary>
         /// TCP MSS on SYN packets, in bytes
         /// </summary>
         public readonly int TcpMss;
@@ -654,6 +755,14 @@ namespace Pulumi.Sdwan
         /// Variable name
         /// </summary>
         public readonly string TunnelInterfaceAllowDnsVariable;
+        /// <summary>
+        /// Allow Fragmentation and will clear DF bit in outer IP
+        /// </summary>
+        public readonly bool TunnelInterfaceAllowFragmentation;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceAllowFragmentationVariable;
         /// <summary>
         /// Allow/Deny HTTPS
         /// </summary>
@@ -867,6 +976,14 @@ namespace Pulumi.Sdwan
         /// </summary>
         public readonly string TunnelInterfacePortHopVariable;
         /// <summary>
+        /// Set current tunnel mtu to 9k
+        /// </summary>
+        public readonly bool TunnelInterfaceSetSdwanTunnelMtuToMax;
+        /// <summary>
+        /// Variable name
+        /// </summary>
+        public readonly string TunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+        /// <summary>
         /// Tunnel TCP MSS on SYN packets, in bytes
         /// </summary>
         public readonly int TunnelInterfaceTunnelTcpMss;
@@ -1033,6 +1150,10 @@ namespace Pulumi.Sdwan
 
             string mediaTypeVariable,
 
+            string mrfCoreRegionType,
+
+            bool mrfEnableCoreRegion,
+
             string name,
 
             bool nat64,
@@ -1040,6 +1161,10 @@ namespace Pulumi.Sdwan
             bool nat66,
 
             bool natIpv4,
+
+            ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackResult> natIpv4Loopbacks,
+
+            ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureNatIpv4PoolResult> natIpv4Pools,
 
             string natIpv4Variable,
 
@@ -1050,6 +1175,10 @@ namespace Pulumi.Sdwan
             string natLoopback,
 
             string natLoopbackVariable,
+
+            bool natMatchInterface,
+
+            string natMatchInterfaceVariable,
 
             bool natOverload,
 
@@ -1073,8 +1202,6 @@ namespace Pulumi.Sdwan
 
             string natType,
 
-            string natTypeVariable,
-
             int natUdpTimeout,
 
             string natUdpTimeoutVariable,
@@ -1084,6 +1211,46 @@ namespace Pulumi.Sdwan
             bool perTunnelQos,
 
             string perTunnelQosVariable,
+
+            bool portChannelInterface,
+
+            bool portChannelLacpFastSwitchover,
+
+            string portChannelLacpFastSwitchoverVariable,
+
+            string portChannelLacpLoadBalance,
+
+            string portChannelLacpLoadBalanceVariable,
+
+            int portChannelLacpMaxBundle,
+
+            string portChannelLacpMaxBundleVariable,
+
+            ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkResult> portChannelLacpMemberLinks,
+
+            int portChannelLacpMinBundle,
+
+            string portChannelLacpMinBundleVariable,
+
+            bool portChannelLacpQosAggregate,
+
+            string portChannelLacpQosAggregateVariable,
+
+            bool portChannelMemberInterface,
+
+            string portChannelMode,
+
+            string portChannelStaticLoadBalance,
+
+            string portChannelStaticLoadBalanceVariable,
+
+            ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkResult> portChannelStaticMemberLinks,
+
+            bool portChannelStaticQosAggregate,
+
+            string portChannelStaticQosAggregateVariable,
+
+            bool portChannelSubinterface,
 
             bool qosAdaptive,
 
@@ -1137,6 +1304,8 @@ namespace Pulumi.Sdwan
 
             ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticNat66Result> staticNat66s,
 
+            ImmutableArray<Outputs.GetTransportWanVpnInterfaceEthernetFeatureStaticPortForwardResult> staticPortForwards,
+
             int tcpMss,
 
             string tcpMssVariable,
@@ -1176,6 +1345,10 @@ namespace Pulumi.Sdwan
             bool tunnelInterfaceAllowDns,
 
             string tunnelInterfaceAllowDnsVariable,
+
+            bool tunnelInterfaceAllowFragmentation,
+
+            string tunnelInterfaceAllowFragmentationVariable,
 
             bool tunnelInterfaceAllowHttps,
 
@@ -1283,6 +1456,10 @@ namespace Pulumi.Sdwan
 
             string tunnelInterfacePortHopVariable,
 
+            bool tunnelInterfaceSetSdwanTunnelMtuToMax,
+
+            string tunnelInterfaceSetSdwanTunnelMtuToMaxVariable,
+
             int tunnelInterfaceTunnelTcpMss,
 
             string tunnelInterfaceTunnelTcpMssVariable,
@@ -1365,15 +1542,21 @@ namespace Pulumi.Sdwan
             MacAddressVariable = macAddressVariable;
             MediaType = mediaType;
             MediaTypeVariable = mediaTypeVariable;
+            MrfCoreRegionType = mrfCoreRegionType;
+            MrfEnableCoreRegion = mrfEnableCoreRegion;
             Name = name;
             Nat64 = nat64;
             Nat66 = nat66;
             NatIpv4 = natIpv4;
+            NatIpv4Loopbacks = natIpv4Loopbacks;
+            NatIpv4Pools = natIpv4Pools;
             NatIpv4Variable = natIpv4Variable;
             NatIpv6 = natIpv6;
             NatIpv6Variable = natIpv6Variable;
             NatLoopback = natLoopback;
             NatLoopbackVariable = natLoopbackVariable;
+            NatMatchInterface = natMatchInterface;
+            NatMatchInterfaceVariable = natMatchInterfaceVariable;
             NatOverload = natOverload;
             NatOverloadVariable = natOverloadVariable;
             NatPrefixLength = natPrefixLength;
@@ -1385,12 +1568,31 @@ namespace Pulumi.Sdwan
             NatTcpTimeout = natTcpTimeout;
             NatTcpTimeoutVariable = natTcpTimeoutVariable;
             NatType = natType;
-            NatTypeVariable = natTypeVariable;
             NatUdpTimeout = natUdpTimeout;
             NatUdpTimeoutVariable = natUdpTimeoutVariable;
             NewStaticNats = newStaticNats;
             PerTunnelQos = perTunnelQos;
             PerTunnelQosVariable = perTunnelQosVariable;
+            PortChannelInterface = portChannelInterface;
+            PortChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            PortChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            PortChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            PortChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            PortChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            PortChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            PortChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            PortChannelLacpMinBundle = portChannelLacpMinBundle;
+            PortChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            PortChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            PortChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            PortChannelMemberInterface = portChannelMemberInterface;
+            PortChannelMode = portChannelMode;
+            PortChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            PortChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            PortChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            PortChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            PortChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            PortChannelSubinterface = portChannelSubinterface;
             QosAdaptive = qosAdaptive;
             QosAdaptiveBandwidthDownstream = qosAdaptiveBandwidthDownstream;
             QosAdaptiveBandwidthUpstream = qosAdaptiveBandwidthUpstream;
@@ -1417,6 +1619,7 @@ namespace Pulumi.Sdwan
             Speed = speed;
             SpeedVariable = speedVariable;
             StaticNat66s = staticNat66s;
+            StaticPortForwards = staticPortForwards;
             TcpMss = tcpMss;
             TcpMssVariable = tcpMssVariable;
             TlocExtension = tlocExtension;
@@ -1437,6 +1640,8 @@ namespace Pulumi.Sdwan
             TunnelInterfaceAllowDhcpVariable = tunnelInterfaceAllowDhcpVariable;
             TunnelInterfaceAllowDns = tunnelInterfaceAllowDns;
             TunnelInterfaceAllowDnsVariable = tunnelInterfaceAllowDnsVariable;
+            TunnelInterfaceAllowFragmentation = tunnelInterfaceAllowFragmentation;
+            TunnelInterfaceAllowFragmentationVariable = tunnelInterfaceAllowFragmentationVariable;
             TunnelInterfaceAllowHttps = tunnelInterfaceAllowHttps;
             TunnelInterfaceAllowHttpsVariable = tunnelInterfaceAllowHttpsVariable;
             TunnelInterfaceAllowIcmp = tunnelInterfaceAllowIcmp;
@@ -1490,6 +1695,8 @@ namespace Pulumi.Sdwan
             TunnelInterfaceNetworkBroadcastVariable = tunnelInterfaceNetworkBroadcastVariable;
             TunnelInterfacePortHop = tunnelInterfacePortHop;
             TunnelInterfacePortHopVariable = tunnelInterfacePortHopVariable;
+            TunnelInterfaceSetSdwanTunnelMtuToMax = tunnelInterfaceSetSdwanTunnelMtuToMax;
+            TunnelInterfaceSetSdwanTunnelMtuToMaxVariable = tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
             TunnelInterfaceTunnelTcpMss = tunnelInterfaceTunnelTcpMss;
             TunnelInterfaceTunnelTcpMssVariable = tunnelInterfaceTunnelTcpMssVariable;
             TunnelInterfaceVbondAsStunServer = tunnelInterfaceVbondAsStunServer;

@@ -10,8 +10,13 @@ import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureArpArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs;
+import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs;
+import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs;
+import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs;
+import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args;
+import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs;
 import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -55,7 +60,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -64,7 +69,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -74,14 +79,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="arpTimeoutVariable")
     private @Nullable Output<String> arpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> arpTimeoutVariable() {
@@ -89,14 +94,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Configure ARP entries
+     * Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="arps")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureArpArgs>> arps;
 
     /**
-     * @return Configure ARP entries
+     * @return Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureArpArgs>>> arps() {
@@ -104,7 +109,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Interface auto detect bandwidth
+     * Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -112,7 +117,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> autoDetectBandwidth;
 
     /**
-     * @return Interface auto detect bandwidth
+     * @return Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -121,14 +126,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="autoDetectBandwidthVariable")
     private @Nullable Output<String> autoDetectBandwidthVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> autoDetectBandwidthVariable() {
@@ -166,7 +171,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Interface downstream bandwidth capacity, in kbps
+     * Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -174,7 +179,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps
+     * @return Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -183,14 +188,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="bandwidthDownstreamVariable")
     private @Nullable Output<String> bandwidthDownstreamVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> bandwidthDownstreamVariable() {
@@ -198,7 +203,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Interface upstream bandwidth capacity, in kbps
+     * Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -206,7 +211,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> bandwidthUpstream;
 
     /**
-     * @return Interface upstream bandwidth capacity, in kbps
+     * @return Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -215,14 +220,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="bandwidthUpstreamVariable")
     private @Nullable Output<String> bandwidthUpstreamVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> bandwidthUpstreamVariable() {
@@ -230,7 +235,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Block packets originating from IP address that is not from this source
+     * Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -238,7 +243,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> blockNonSourceIp;
 
     /**
-     * @return Block packets originating from IP address that is not from this source
+     * @return Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -247,14 +252,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="blockNonSourceIpVariable")
     private @Nullable Output<String> blockNonSourceIpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> blockNonSourceIpVariable() {
@@ -277,7 +282,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Duplex mode
+     * Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -285,7 +290,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> duplex;
 
     /**
-     * @return Duplex mode
+     * @return Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -294,14 +299,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="duplexVariable")
     private @Nullable Output<String> duplexVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> duplexVariable() {
@@ -309,14 +314,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="enableDhcpv6")
     private @Nullable Output<Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<Boolean>> enableDhcpv6() {
@@ -339,14 +344,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * GRE tunnel source IP
+     * GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="greTunnelSourceIp")
     private @Nullable Output<String> greTunnelSourceIp;
 
     /**
-     * @return GRE tunnel source IP
+     * @return GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> greTunnelSourceIp() {
@@ -354,14 +359,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="greTunnelSourceIpVariable")
     private @Nullable Output<String> greTunnelSourceIpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> greTunnelSourceIpVariable() {
@@ -369,7 +374,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * ICMP/ICMPv6 Redirect Disable
+     * ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -377,7 +382,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable
+     * @return ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -386,14 +391,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="icmpRedirectDisableVariable")
     private @Nullable Output<String> icmpRedirectDisableVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> icmpRedirectDisableVariable() {
@@ -423,7 +428,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -432,7 +437,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -442,14 +447,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="interfaceMtuVariable")
     private @Nullable Output<String> interfaceMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> interfaceMtuVariable() {
@@ -479,7 +484,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IP Directed-Broadcast
+     * IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -487,7 +492,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast
+     * @return IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -496,14 +501,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipDirectedBroadcastVariable")
     private @Nullable Output<String> ipDirectedBroadcastVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipDirectedBroadcastVariable() {
@@ -511,7 +516,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -520,7 +525,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -530,14 +535,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipMtuVariable")
     private @Nullable Output<String> ipMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipMtuVariable() {
@@ -545,14 +550,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Iperf server for auto bandwidth detect
+     * Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="iperfServer")
     private @Nullable Output<String> iperfServer;
 
     /**
-     * @return Iperf server for auto bandwidth detect
+     * @return Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> iperfServer() {
@@ -560,14 +565,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="iperfServerVariable")
     private @Nullable Output<String> iperfServerVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> iperfServerVariable() {
@@ -575,14 +580,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -590,14 +595,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4AddressVariable")
     private @Nullable Output<String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4AddressVariable() {
@@ -605,8 +610,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -614,8 +619,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -624,8 +629,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -633,8 +638,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -643,14 +648,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="ipv4DhcpDistanceVariable")
     private @Nullable Output<String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<String>> ipv4DhcpDistanceVariable() {
@@ -658,14 +663,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4DhcpHelperVariable")
     private @Nullable Output<String> ipv4DhcpHelperVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> ipv4DhcpHelperVariable() {
@@ -673,14 +678,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * List of DHCP IPv4 helper addresses (min 1, max 8)
+     * List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="ipv4DhcpHelpers")
     private @Nullable Output<List<String>> ipv4DhcpHelpers;
 
     /**
-     * @return List of DHCP IPv4 helper addresses (min 1, max 8)
+     * @return List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<String>>> ipv4DhcpHelpers() {
@@ -688,14 +693,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4SecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs>>> ipv4SecondaryAddresses() {
@@ -703,7 +708,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -711,7 +716,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -720,14 +725,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv4SubnetMaskVariable")
     private @Nullable Output<String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv4SubnetMaskVariable() {
@@ -735,14 +740,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -750,14 +755,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6AddressVariable")
     private @Nullable Output<String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<String>> ipv6AddressVariable() {
@@ -765,7 +770,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * IPv6 Configuration Type
+     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -774,7 +779,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type
+     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -784,14 +789,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Import(name="ipv6DhcpSecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddressArgs>>> ipv6DhcpSecondaryAddresses() {
@@ -799,14 +804,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Import(name="ipv6SecondaryAddresses")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddressArgs>>> ipv6SecondaryAddresses() {
@@ -848,14 +853,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * MAC Address
+     * MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="macAddress")
     private @Nullable Output<String> macAddress;
 
     /**
-     * @return MAC Address
+     * @return MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> macAddress() {
@@ -863,14 +868,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="macAddressVariable")
     private @Nullable Output<String> macAddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> macAddressVariable() {
@@ -878,7 +883,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Media type
+     * Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -886,7 +891,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> mediaType;
 
     /**
-     * @return Media type
+     * @return Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -895,18 +900,54 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="mediaTypeVariable")
     private @Nullable Output<String> mediaTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> mediaTypeVariable() {
         return Optional.ofNullable(this.mediaTypeVariable);
+    }
+
+    /**
+     * Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Import(name="mrfCoreRegionType")
+    private @Nullable Output<String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Optional<Output<String>> mrfCoreRegionType() {
+        return Optional.ofNullable(this.mrfCoreRegionType);
+    }
+
+    /**
+     * Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="mrfEnableCoreRegion")
+    private @Nullable Output<Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> mrfEnableCoreRegion() {
+        return Optional.ofNullable(this.mrfEnableCoreRegion);
     }
 
     /**
@@ -925,7 +966,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -933,7 +974,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> nat64;
 
     /**
-     * @return NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * @return NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -942,7 +983,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -950,7 +991,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> nat66;
 
     /**
-     * @return NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * @return NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -959,7 +1000,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * enable Network Address Translation on this interface
+     * enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -967,7 +1008,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> natIpv4;
 
     /**
-     * @return enable Network Address Translation on this interface
+     * @return enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -976,14 +1017,44 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Import(name="natIpv4Loopbacks")
+    private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs>> natIpv4Loopbacks;
+
+    /**
+     * @return NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs>>> natIpv4Loopbacks() {
+        return Optional.ofNullable(this.natIpv4Loopbacks);
+    }
+
+    /**
+     * NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Import(name="natIpv4Pools")
+    private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs>> natIpv4Pools;
+
+    /**
+     * @return NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs>>> natIpv4Pools() {
+        return Optional.ofNullable(this.natIpv4Pools);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="natIpv4Variable")
     private @Nullable Output<String> natIpv4Variable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> natIpv4Variable() {
@@ -991,7 +1062,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * enable Network Address Translation ipv6 on this interface
+     * enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -999,7 +1070,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> natIpv6;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface
+     * @return enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1008,14 +1079,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="natIpv6Variable")
     private @Nullable Output<String> natIpv6Variable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> natIpv6Variable() {
@@ -1023,14 +1094,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natLoopback")
     private @Nullable Output<String> natLoopback;
 
     /**
-     * @return NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natLoopback() {
@@ -1038,14 +1109,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natLoopbackVariable")
     private @Nullable Output<String> natLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natLoopbackVariable() {
@@ -1053,7 +1124,39 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="natMatchInterface")
+    private @Nullable Output<Boolean> natMatchInterface;
+
+    /**
+     * @return NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> natMatchInterface() {
+        return Optional.ofNullable(this.natMatchInterface);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Import(name="natMatchInterfaceVariable")
+    private @Nullable Output<String> natMatchInterfaceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> natMatchInterfaceVariable() {
+        return Optional.ofNullable(this.natMatchInterfaceVariable);
+    }
+
+    /**
+     * NAT Overload, Attribute conditional on `natIpv4` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1061,7 +1164,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> natOverload;
 
     /**
-     * @return NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Overload, Attribute conditional on `natIpv4` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1070,14 +1173,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natOverloadVariable")
     private @Nullable Output<String> natOverloadVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natOverloadVariable() {
@@ -1085,7 +1188,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -1093,7 +1196,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> natPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -1102,14 +1205,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natPrefixLengthVariable")
     private @Nullable Output<String> natPrefixLengthVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natPrefixLengthVariable() {
@@ -1117,14 +1220,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natRangeEnd")
     private @Nullable Output<String> natRangeEnd;
 
     /**
-     * @return NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natRangeEnd() {
@@ -1132,14 +1235,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natRangeEndVariable")
     private @Nullable Output<String> natRangeEndVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natRangeEndVariable() {
@@ -1147,14 +1250,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natRangeStart")
     private @Nullable Output<String> natRangeStart;
 
     /**
-     * @return NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natRangeStart() {
@@ -1162,14 +1265,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natRangeStartVariable")
     private @Nullable Output<String> natRangeStartVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natRangeStartVariable() {
@@ -1177,7 +1280,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -1186,7 +1289,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> natTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -1196,14 +1299,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natTcpTimeoutVariable")
     private @Nullable Output<String> natTcpTimeoutVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natTcpTimeoutVariable() {
@@ -1211,7 +1314,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Type, Attribute conditional on `natIpv4` equal to `true`
      *   - Choices: `interface`, `pool`, `loopback`
      *   - Default value: `interface`
      * 
@@ -1220,7 +1323,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> natType;
 
     /**
-     * @return NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Type, Attribute conditional on `natIpv4` equal to `true`
      *   - Choices: `interface`, `pool`, `loopback`
      *   - Default value: `interface`
      * 
@@ -1230,22 +1333,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     * 
-     */
-    @Import(name="natTypeVariable")
-    private @Nullable Output<String> natTypeVariable;
-
-    /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     * 
-     */
-    public Optional<Output<String>> natTypeVariable() {
-        return Optional.ofNullable(this.natTypeVariable);
-    }
-
-    /**
-     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -1254,7 +1342,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> natUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -1264,14 +1352,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="natUdpTimeoutVariable")
     private @Nullable Output<String> natUdpTimeoutVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<String>> natUdpTimeoutVariable() {
@@ -1279,14 +1367,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * static NAT, Attribute conditional on `natIpv4` being equal to `true`
+     * static NAT, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Import(name="newStaticNats")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs>> newStaticNats;
 
     /**
-     * @return static NAT, Attribute conditional on `natIpv4` being equal to `true`
+     * @return static NAT, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs>>> newStaticNats() {
@@ -1294,7 +1382,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1302,7 +1390,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1311,14 +1399,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="perTunnelQosVariable")
     private @Nullable Output<String> perTunnelQosVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> perTunnelQosVariable() {
@@ -1326,7 +1414,321 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Adaptive QoS
+     * Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="portChannelInterface")
+    private @Nullable Output<Boolean> portChannelInterface;
+
+    /**
+     * @return Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelInterface() {
+        return Optional.ofNullable(this.portChannelInterface);
+    }
+
+    /**
+     * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpFastSwitchover")
+    private @Nullable Output<Boolean> portChannelLacpFastSwitchover;
+
+    /**
+     * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelLacpFastSwitchover() {
+        return Optional.ofNullable(this.portChannelLacpFastSwitchover);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpFastSwitchoverVariable")
+    private @Nullable Output<String> portChannelLacpFastSwitchoverVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpFastSwitchoverVariable() {
+        return Optional.ofNullable(this.portChannelLacpFastSwitchoverVariable);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Import(name="portChannelLacpLoadBalance")
+    private @Nullable Output<String> portChannelLacpLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpLoadBalance() {
+        return Optional.ofNullable(this.portChannelLacpLoadBalance);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpLoadBalanceVariable")
+    private @Nullable Output<String> portChannelLacpLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpLoadBalanceVariable() {
+        return Optional.ofNullable(this.portChannelLacpLoadBalanceVariable);
+    }
+
+    /**
+     * Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Import(name="portChannelLacpMaxBundle")
+    private @Nullable Output<Integer> portChannelLacpMaxBundle;
+
+    /**
+     * @return Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Optional<Output<Integer>> portChannelLacpMaxBundle() {
+        return Optional.ofNullable(this.portChannelLacpMaxBundle);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMaxBundleVariable")
+    private @Nullable Output<String> portChannelLacpMaxBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpMaxBundleVariable() {
+        return Optional.ofNullable(this.portChannelLacpMaxBundleVariable);
+    }
+
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMemberLinks")
+    private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>> portChannelLacpMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>>> portChannelLacpMemberLinks() {
+        return Optional.ofNullable(this.portChannelLacpMemberLinks);
+    }
+
+    /**
+     * Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Import(name="portChannelLacpMinBundle")
+    private @Nullable Output<Integer> portChannelLacpMinBundle;
+
+    /**
+     * @return Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Optional<Output<Integer>> portChannelLacpMinBundle() {
+        return Optional.ofNullable(this.portChannelLacpMinBundle);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpMinBundleVariable")
+    private @Nullable Output<String> portChannelLacpMinBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpMinBundleVariable() {
+        return Optional.ofNullable(this.portChannelLacpMinBundleVariable);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpQosAggregate")
+    private @Nullable Output<Boolean> portChannelLacpQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelLacpQosAggregate() {
+        return Optional.ofNullable(this.portChannelLacpQosAggregate);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Import(name="portChannelLacpQosAggregateVariable")
+    private @Nullable Output<String> portChannelLacpQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Optional<Output<String>> portChannelLacpQosAggregateVariable() {
+        return Optional.ofNullable(this.portChannelLacpQosAggregateVariable);
+    }
+
+    /**
+     * Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="portChannelMemberInterface")
+    private @Nullable Output<Boolean> portChannelMemberInterface;
+
+    /**
+     * @return Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelMemberInterface() {
+        return Optional.ofNullable(this.portChannelMemberInterface);
+    }
+
+    /**
+     * Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    @Import(name="portChannelMode")
+    private @Nullable Output<String> portChannelMode;
+
+    /**
+     * @return Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelMode() {
+        return Optional.ofNullable(this.portChannelMode);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Import(name="portChannelStaticLoadBalance")
+    private @Nullable Output<String> portChannelStaticLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticLoadBalance() {
+        return Optional.ofNullable(this.portChannelStaticLoadBalance);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticLoadBalanceVariable")
+    private @Nullable Output<String> portChannelStaticLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticLoadBalanceVariable() {
+        return Optional.ofNullable(this.portChannelStaticLoadBalanceVariable);
+    }
+
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticMemberLinks")
+    private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>> portChannelStaticMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>>> portChannelStaticMemberLinks() {
+        return Optional.ofNullable(this.portChannelStaticMemberLinks);
+    }
+
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticQosAggregate")
+    private @Nullable Output<Boolean> portChannelStaticQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelStaticQosAggregate() {
+        return Optional.ofNullable(this.portChannelStaticQosAggregate);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Import(name="portChannelStaticQosAggregateVariable")
+    private @Nullable Output<String> portChannelStaticQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Optional<Output<String>> portChannelStaticQosAggregateVariable() {
+        return Optional.ofNullable(this.portChannelStaticQosAggregateVariable);
+    }
+
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    @Import(name="portChannelSubinterface")
+    private @Nullable Output<Boolean> portChannelSubinterface;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    public Optional<Output<Boolean>> portChannelSubinterface() {
+        return Optional.ofNullable(this.portChannelSubinterface);
+    }
+
+    /**
+     * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1334,7 +1736,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> qosAdaptive;
 
     /**
-     * @return Adaptive QoS
+     * @return Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1635,14 +2037,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Service Provider Name
+     * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="serviceProvider")
     private @Nullable Output<String> serviceProvider;
 
     /**
-     * @return Service Provider Name
+     * @return Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> serviceProvider() {
@@ -1650,14 +2052,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="serviceProviderVariable")
     private @Nullable Output<String> serviceProviderVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> serviceProviderVariable() {
@@ -1695,16 +2097,16 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     @Import(name="speed")
     private @Nullable Output<String> speed;
 
     /**
-     * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Optional<Output<String>> speed() {
@@ -1712,14 +2114,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Import(name="speedVariable")
     private @Nullable Output<String> speedVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> speedVariable() {
@@ -1727,14 +2129,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+     * static NAT66, Attribute conditional on `natIpv6` equal to `true`
      * 
      */
     @Import(name="staticNat66s")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureStaticNat66Args>> staticNat66s;
 
     /**
-     * @return static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+     * @return static NAT66, Attribute conditional on `natIpv6` equal to `true`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureStaticNat66Args>>> staticNat66s() {
@@ -1742,7 +2144,22 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * TCP MSS on SYN packets, in bytes
+     * Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Import(name="staticPortForwards")
+    private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs>> staticPortForwards;
+
+    /**
+     * @return Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs>>> staticPortForwards() {
+        return Optional.ofNullable(this.staticPortForwards);
+    }
+
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1750,7 +2167,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes
+     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1759,14 +2176,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tcpMssVariable")
     private @Nullable Output<String> tcpMssVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tcpMssVariable() {
@@ -1774,14 +2191,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Extends a local TLOC to a remote node only for vpn 0
+     * Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tlocExtension")
     private @Nullable Output<String> tlocExtension;
 
     /**
-     * @return Extends a local TLOC to a remote node only for vpn 0
+     * @return Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tlocExtension() {
@@ -1789,14 +2206,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tlocExtensionVariable")
     private @Nullable Output<String> tlocExtensionVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tlocExtensionVariable() {
@@ -1804,14 +2221,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Enable tracker for this interface
+     * Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tracker")
     private @Nullable Output<String> tracker;
 
     /**
-     * @return Enable tracker for this interface
+     * @return Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tracker() {
@@ -1819,14 +2236,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="trackerVariable")
     private @Nullable Output<String> trackerVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> trackerVariable() {
@@ -1849,7 +2266,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -1858,7 +2275,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelBandwidthPercent;
 
     /**
-     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -1868,14 +2285,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelBandwidthPercentVariable")
     private @Nullable Output<String> tunnelBandwidthPercentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelBandwidthPercentVariable() {
@@ -1900,7 +2317,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1908,7 +2325,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1917,14 +2334,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowAllVariable")
     private @Nullable Output<String> tunnelInterfaceAllowAllVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowAllVariable() {
@@ -1932,7 +2349,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny BFD
+     * Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1940,7 +2357,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowBfd;
 
     /**
-     * @return Allow/Deny BFD
+     * @return Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1949,14 +2366,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowBfdVariable")
     private @Nullable Output<String> tunnelInterfaceAllowBfdVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowBfdVariable() {
@@ -1964,7 +2381,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/deny BGP
+     * Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1972,7 +2389,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP
+     * @return Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1981,14 +2398,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowBgpVariable")
     private @Nullable Output<String> tunnelInterfaceAllowBgpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowBgpVariable() {
@@ -1996,7 +2413,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny DHCP
+     * Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2004,7 +2421,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP
+     * @return Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2013,14 +2430,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDhcpVariable")
     private @Nullable Output<String> tunnelInterfaceAllowDhcpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowDhcpVariable() {
@@ -2028,7 +2445,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny DNS
+     * Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2036,7 +2453,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS
+     * @return Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2045,14 +2462,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowDnsVariable")
     private @Nullable Output<String> tunnelInterfaceAllowDnsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowDnsVariable() {
@@ -2060,7 +2477,39 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny HTTPS
+     * Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelInterfaceAllowFragmentation")
+    private @Nullable Output<Boolean> tunnelInterfaceAllowFragmentation;
+
+    /**
+     * @return Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelInterfaceAllowFragmentation() {
+        return Optional.ofNullable(this.tunnelInterfaceAllowFragmentation);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    @Import(name="tunnelInterfaceAllowFragmentationVariable")
+    private @Nullable Output<String> tunnelInterfaceAllowFragmentationVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceAllowFragmentationVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceAllowFragmentationVariable);
+    }
+
+    /**
+     * Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2068,7 +2517,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny HTTPS
+     * @return Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2077,14 +2526,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowHttpsVariable")
     private @Nullable Output<String> tunnelInterfaceAllowHttpsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowHttpsVariable() {
@@ -2092,7 +2541,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny ICMP
+     * Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2100,7 +2549,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP
+     * @return Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2109,14 +2558,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowIcmpVariable")
     private @Nullable Output<String> tunnelInterfaceAllowIcmpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowIcmpVariable() {
@@ -2124,7 +2573,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny NETCONF
+     * Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2132,7 +2581,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF
+     * @return Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2141,14 +2590,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowNetconfVariable")
     private @Nullable Output<String> tunnelInterfaceAllowNetconfVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowNetconfVariable() {
@@ -2156,16 +2605,16 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny NTP
-     *   - Default value: `true`
+     * Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowNtp")
     private @Nullable Output<Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP
-     *   - Default value: `true`
+     * @return Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowNtp() {
@@ -2173,14 +2622,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowNtpVariable")
     private @Nullable Output<String> tunnelInterfaceAllowNtpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowNtpVariable() {
@@ -2188,7 +2637,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny OSPF
+     * Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2196,7 +2645,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF
+     * @return Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2205,14 +2654,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowOspfVariable")
     private @Nullable Output<String> tunnelInterfaceAllowOspfVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowOspfVariable() {
@@ -2220,7 +2669,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny SNMP
+     * Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2228,7 +2677,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP
+     * @return Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2237,14 +2686,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowSnmpVariable")
     private @Nullable Output<String> tunnelInterfaceAllowSnmpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowSnmpVariable() {
@@ -2252,16 +2701,16 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny SSH
-     *   - Default value: `true`
+     * Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     @Import(name="tunnelInterfaceAllowSsh")
     private @Nullable Output<Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH
-     *   - Default value: `true`
+     * @return Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     public Optional<Output<Boolean>> tunnelInterfaceAllowSsh() {
@@ -2269,14 +2718,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowSshVariable")
     private @Nullable Output<String> tunnelInterfaceAllowSshVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowSshVariable() {
@@ -2284,7 +2733,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Allow/Deny STUN
+     * Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2292,7 +2741,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN
+     * @return Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2301,14 +2750,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceAllowStunVariable")
     private @Nullable Output<String> tunnelInterfaceAllowStunVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceAllowStunVariable() {
@@ -2316,14 +2765,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceBindLoopbackTunnel")
     private @Nullable Output<String> tunnelInterfaceBindLoopbackTunnel;
 
     /**
-     * @return Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceBindLoopbackTunnel() {
@@ -2331,14 +2780,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceBindLoopbackTunnelVariable")
     private @Nullable Output<String> tunnelInterfaceBindLoopbackTunnelVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceBindLoopbackTunnelVariable() {
@@ -2346,7 +2795,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2354,7 +2803,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2363,14 +2812,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceBorderVariable")
     private @Nullable Output<String> tunnelInterfaceBorderVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceBorderVariable() {
@@ -2378,7 +2827,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      * 
@@ -2387,7 +2836,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      * 
@@ -2397,14 +2846,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceCarrierVariable")
     private @Nullable Output<String> tunnelInterfaceCarrierVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceCarrierVariable() {
@@ -2412,7 +2861,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2420,7 +2869,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2429,14 +2878,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceClearDontFragmentVariable")
     private @Nullable Output<String> tunnelInterfaceClearDontFragmentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceClearDontFragmentVariable() {
@@ -2444,7 +2893,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
@@ -2453,7 +2902,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
@@ -2463,7 +2912,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2471,7 +2920,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2480,14 +2929,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceColorRestrictVariable")
     private @Nullable Output<String> tunnelInterfaceColorRestrictVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceColorRestrictVariable() {
@@ -2495,14 +2944,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceColorVariable")
     private @Nullable Output<String> tunnelInterfaceColorVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceColorVariable() {
@@ -2510,7 +2959,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2518,7 +2967,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceCtsSgtPropagation;
 
     /**
-     * @return CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2527,14 +2976,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceCtsSgtPropagationVariable")
     private @Nullable Output<String> tunnelInterfaceCtsSgtPropagationVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceCtsSgtPropagationVariable() {
@@ -2542,14 +2991,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Encapsulation for TLOC
+     * Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceEncapsulations")
     private @Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs>> tunnelInterfaceEncapsulations;
 
     /**
-     * @return Encapsulation for TLOC
+     * @return Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<List<TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs>>> tunnelInterfaceEncapsulations() {
@@ -2557,14 +3006,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceExcludeControllerGroupListVariable")
     private @Nullable Output<String> tunnelInterfaceExcludeControllerGroupListVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceExcludeControllerGroupListVariable() {
@@ -2572,14 +3021,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceExcludeControllerGroupLists")
     private @Nullable Output<List<Integer>> tunnelInterfaceExcludeControllerGroupLists;
 
     /**
-     * @return Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
@@ -2587,14 +3036,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+     * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceGreTunnelDestinationIp")
     private @Nullable Output<String> tunnelInterfaceGreTunnelDestinationIp;
 
     /**
-     * @return GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceGreTunnelDestinationIp() {
@@ -2602,14 +3051,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceGreTunnelDestinationIpVariable")
     private @Nullable Output<String> tunnelInterfaceGreTunnelDestinationIpVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceGreTunnelDestinationIpVariable() {
@@ -2617,7 +3066,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     * List of groups, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -2625,7 +3074,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceGroups;
 
     /**
-     * @return List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return List of groups, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -2634,14 +3083,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceGroupsVariable")
     private @Nullable Output<String> tunnelInterfaceGroupsVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceGroupsVariable() {
@@ -2649,7 +3098,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      * 
@@ -2658,7 +3107,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      * 
@@ -2668,14 +3117,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceHelloIntervalVariable")
     private @Nullable Output<String> tunnelInterfaceHelloIntervalVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceHelloIntervalVariable() {
@@ -2683,7 +3132,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      * 
@@ -2692,7 +3141,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      * 
@@ -2702,14 +3151,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceHelloToleranceVariable")
     private @Nullable Output<String> tunnelInterfaceHelloToleranceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceHelloToleranceVariable() {
@@ -2717,7 +3166,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2725,7 +3174,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2734,14 +3183,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceLastResortCircuitVariable")
     private @Nullable Output<String> tunnelInterfaceLastResortCircuitVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceLastResortCircuitVariable() {
@@ -2749,7 +3198,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2757,7 +3206,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2766,14 +3215,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceLowBandwidthLinkVariable")
     private @Nullable Output<String> tunnelInterfaceLowBandwidthLinkVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceLowBandwidthLinkVariable() {
@@ -2781,7 +3230,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`100`
      * 
      */
@@ -2789,7 +3238,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`100`
      * 
      */
@@ -2798,14 +3247,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceMaxControlConnectionsVariable")
     private @Nullable Output<String> tunnelInterfaceMaxControlConnectionsVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceMaxControlConnectionsVariable() {
@@ -2813,7 +3262,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`60`
      *   - Default value: `5`
      * 
@@ -2822,7 +3271,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`60`
      *   - Default value: `5`
      * 
@@ -2832,14 +3281,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceNatRefreshIntervalVariable")
     private @Nullable Output<String> tunnelInterfaceNatRefreshIntervalVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceNatRefreshIntervalVariable() {
@@ -2847,7 +3296,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2855,7 +3304,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2864,14 +3313,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceNetworkBroadcastVariable")
     private @Nullable Output<String> tunnelInterfaceNetworkBroadcastVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceNetworkBroadcastVariable() {
@@ -2879,7 +3328,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2887,7 +3336,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2896,14 +3345,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfacePortHopVariable")
     private @Nullable Output<String> tunnelInterfacePortHopVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfacePortHopVariable() {
@@ -2911,7 +3360,39 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Import(name="tunnelInterfaceSetSdwanTunnelMtuToMax")
+    private @Nullable Output<Boolean> tunnelInterfaceSetSdwanTunnelMtuToMax;
+
+    /**
+     * @return Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Output<Boolean>> tunnelInterfaceSetSdwanTunnelMtuToMax() {
+        return Optional.ofNullable(this.tunnelInterfaceSetSdwanTunnelMtuToMax);
+    }
+
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    @Import(name="tunnelInterfaceSetSdwanTunnelMtuToMaxVariable")
+    private @Nullable Output<String> tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    public Optional<Output<String>> tunnelInterfaceSetSdwanTunnelMtuToMaxVariable() {
+        return Optional.ofNullable(this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable);
+    }
+
+    /**
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -2919,7 +3400,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -2928,14 +3409,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceTunnelTcpMssVariable")
     private @Nullable Output<String> tunnelInterfaceTunnelTcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceTunnelTcpMssVariable() {
@@ -2943,7 +3424,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2951,7 +3432,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2960,14 +3441,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceVbondAsStunServerVariable")
     private @Nullable Output<String> tunnelInterfaceVbondAsStunServerVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceVbondAsStunServerVariable() {
@@ -2975,7 +3456,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`8`
      *   - Default value: `5`
      * 
@@ -2984,7 +3465,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`8`
      *   - Default value: `5`
      * 
@@ -2994,14 +3475,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelInterfaceVmanageConnectionPreferenceVariable")
     private @Nullable Output<String> tunnelInterfaceVmanageConnectionPreferenceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelInterfaceVmanageConnectionPreferenceVariable() {
@@ -3009,7 +3490,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `hub`, `spoke`
      * 
      */
@@ -3017,7 +3498,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     private @Nullable Output<String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `hub`, `spoke`
      * 
      */
@@ -3026,14 +3507,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Import(name="tunnelQosModeVariable")
     private @Nullable Output<String> tunnelQosModeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Optional<Output<String>> tunnelQosModeVariable() {
@@ -3041,14 +3522,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Extend remote TLOC over a GRE tunnel to a local WAN interface
+     * Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="xconnect")
     private @Nullable Output<String> xconnect;
 
     /**
-     * @return Extend remote TLOC over a GRE tunnel to a local WAN interface
+     * @return Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> xconnect() {
@@ -3056,14 +3537,14 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
     }
 
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Import(name="xconnectVariable")
     private @Nullable Output<String> xconnectVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Optional<Output<String>> xconnectVariable() {
@@ -3132,15 +3613,21 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.macAddressVariable = $.macAddressVariable;
         this.mediaType = $.mediaType;
         this.mediaTypeVariable = $.mediaTypeVariable;
+        this.mrfCoreRegionType = $.mrfCoreRegionType;
+        this.mrfEnableCoreRegion = $.mrfEnableCoreRegion;
         this.name = $.name;
         this.nat64 = $.nat64;
         this.nat66 = $.nat66;
         this.natIpv4 = $.natIpv4;
+        this.natIpv4Loopbacks = $.natIpv4Loopbacks;
+        this.natIpv4Pools = $.natIpv4Pools;
         this.natIpv4Variable = $.natIpv4Variable;
         this.natIpv6 = $.natIpv6;
         this.natIpv6Variable = $.natIpv6Variable;
         this.natLoopback = $.natLoopback;
         this.natLoopbackVariable = $.natLoopbackVariable;
+        this.natMatchInterface = $.natMatchInterface;
+        this.natMatchInterfaceVariable = $.natMatchInterfaceVariable;
         this.natOverload = $.natOverload;
         this.natOverloadVariable = $.natOverloadVariable;
         this.natPrefixLength = $.natPrefixLength;
@@ -3152,12 +3639,31 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.natTcpTimeout = $.natTcpTimeout;
         this.natTcpTimeoutVariable = $.natTcpTimeoutVariable;
         this.natType = $.natType;
-        this.natTypeVariable = $.natTypeVariable;
         this.natUdpTimeout = $.natUdpTimeout;
         this.natUdpTimeoutVariable = $.natUdpTimeoutVariable;
         this.newStaticNats = $.newStaticNats;
         this.perTunnelQos = $.perTunnelQos;
         this.perTunnelQosVariable = $.perTunnelQosVariable;
+        this.portChannelInterface = $.portChannelInterface;
+        this.portChannelLacpFastSwitchover = $.portChannelLacpFastSwitchover;
+        this.portChannelLacpFastSwitchoverVariable = $.portChannelLacpFastSwitchoverVariable;
+        this.portChannelLacpLoadBalance = $.portChannelLacpLoadBalance;
+        this.portChannelLacpLoadBalanceVariable = $.portChannelLacpLoadBalanceVariable;
+        this.portChannelLacpMaxBundle = $.portChannelLacpMaxBundle;
+        this.portChannelLacpMaxBundleVariable = $.portChannelLacpMaxBundleVariable;
+        this.portChannelLacpMemberLinks = $.portChannelLacpMemberLinks;
+        this.portChannelLacpMinBundle = $.portChannelLacpMinBundle;
+        this.portChannelLacpMinBundleVariable = $.portChannelLacpMinBundleVariable;
+        this.portChannelLacpQosAggregate = $.portChannelLacpQosAggregate;
+        this.portChannelLacpQosAggregateVariable = $.portChannelLacpQosAggregateVariable;
+        this.portChannelMemberInterface = $.portChannelMemberInterface;
+        this.portChannelMode = $.portChannelMode;
+        this.portChannelStaticLoadBalance = $.portChannelStaticLoadBalance;
+        this.portChannelStaticLoadBalanceVariable = $.portChannelStaticLoadBalanceVariable;
+        this.portChannelStaticMemberLinks = $.portChannelStaticMemberLinks;
+        this.portChannelStaticQosAggregate = $.portChannelStaticQosAggregate;
+        this.portChannelStaticQosAggregateVariable = $.portChannelStaticQosAggregateVariable;
+        this.portChannelSubinterface = $.portChannelSubinterface;
         this.qosAdaptive = $.qosAdaptive;
         this.qosAdaptiveBandwidthDownstream = $.qosAdaptiveBandwidthDownstream;
         this.qosAdaptiveBandwidthUpstream = $.qosAdaptiveBandwidthUpstream;
@@ -3184,6 +3690,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.speed = $.speed;
         this.speedVariable = $.speedVariable;
         this.staticNat66s = $.staticNat66s;
+        this.staticPortForwards = $.staticPortForwards;
         this.tcpMss = $.tcpMss;
         this.tcpMssVariable = $.tcpMssVariable;
         this.tlocExtension = $.tlocExtension;
@@ -3204,6 +3711,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.tunnelInterfaceAllowDhcpVariable = $.tunnelInterfaceAllowDhcpVariable;
         this.tunnelInterfaceAllowDns = $.tunnelInterfaceAllowDns;
         this.tunnelInterfaceAllowDnsVariable = $.tunnelInterfaceAllowDnsVariable;
+        this.tunnelInterfaceAllowFragmentation = $.tunnelInterfaceAllowFragmentation;
+        this.tunnelInterfaceAllowFragmentationVariable = $.tunnelInterfaceAllowFragmentationVariable;
         this.tunnelInterfaceAllowHttps = $.tunnelInterfaceAllowHttps;
         this.tunnelInterfaceAllowHttpsVariable = $.tunnelInterfaceAllowHttpsVariable;
         this.tunnelInterfaceAllowIcmp = $.tunnelInterfaceAllowIcmp;
@@ -3257,6 +3766,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         this.tunnelInterfaceNetworkBroadcastVariable = $.tunnelInterfaceNetworkBroadcastVariable;
         this.tunnelInterfacePortHop = $.tunnelInterfacePortHop;
         this.tunnelInterfacePortHopVariable = $.tunnelInterfacePortHopVariable;
+        this.tunnelInterfaceSetSdwanTunnelMtuToMax = $.tunnelInterfaceSetSdwanTunnelMtuToMax;
+        this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable = $.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
         this.tunnelInterfaceTunnelTcpMss = $.tunnelInterfaceTunnelTcpMss;
         this.tunnelInterfaceTunnelTcpMssVariable = $.tunnelInterfaceTunnelTcpMssVariable;
         this.tunnelInterfaceVbondAsStunServer = $.tunnelInterfaceVbondAsStunServer;
@@ -3324,7 +3835,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `0`-`2147483`
          *   - Default value: `1200`
          * 
@@ -3337,7 +3848,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+         * @param arpTimeout Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `0`-`2147483`
          *   - Default value: `1200`
          * 
@@ -3349,7 +3860,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arpTimeoutVariable Variable name
+         * @param arpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3360,7 +3871,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arpTimeoutVariable Variable name
+         * @param arpTimeoutVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3370,7 +3881,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3381,7 +3892,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3391,7 +3902,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param arps Configure ARP entries
+         * @param arps Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3401,7 +3912,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param autoDetectBandwidth Interface auto detect bandwidth
+         * @param autoDetectBandwidth Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3413,7 +3924,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param autoDetectBandwidth Interface auto detect bandwidth
+         * @param autoDetectBandwidth Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3424,7 +3935,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param autoDetectBandwidthVariable Variable name
+         * @param autoDetectBandwidthVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3435,7 +3946,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param autoDetectBandwidthVariable Variable name
+         * @param autoDetectBandwidthVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3487,7 +3998,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`2147483647`
          * 
          * @return builder
@@ -3499,7 +4010,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps
+         * @param bandwidthDownstream Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`2147483647`
          * 
          * @return builder
@@ -3510,7 +4021,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthDownstreamVariable Variable name
+         * @param bandwidthDownstreamVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3521,7 +4032,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthDownstreamVariable Variable name
+         * @param bandwidthDownstreamVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3531,7 +4042,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`2147483647`
          * 
          * @return builder
@@ -3543,7 +4054,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps
+         * @param bandwidthUpstream Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1`-`2147483647`
          * 
          * @return builder
@@ -3554,7 +4065,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthUpstreamVariable Variable name
+         * @param bandwidthUpstreamVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3565,7 +4076,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param bandwidthUpstreamVariable Variable name
+         * @param bandwidthUpstreamVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3575,7 +4086,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param blockNonSourceIp Block packets originating from IP address that is not from this source
+         * @param blockNonSourceIp Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3587,7 +4098,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param blockNonSourceIp Block packets originating from IP address that is not from this source
+         * @param blockNonSourceIp Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3598,7 +4109,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param blockNonSourceIpVariable Variable name
+         * @param blockNonSourceIpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3609,7 +4120,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param blockNonSourceIpVariable Variable name
+         * @param blockNonSourceIpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3640,7 +4151,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param duplex Duplex mode
+         * @param duplex Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
@@ -3652,7 +4163,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param duplex Duplex mode
+         * @param duplex Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `full`, `half`, `auto`
          * 
          * @return builder
@@ -3663,7 +4174,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param duplexVariable Variable name
+         * @param duplexVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3674,7 +4185,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param duplexVariable Variable name
+         * @param duplexVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3684,7 +4195,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -3695,7 +4206,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param enableDhcpv6 Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -3726,7 +4237,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param greTunnelSourceIp GRE tunnel source IP
+         * @param greTunnelSourceIp GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3737,7 +4248,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param greTunnelSourceIp GRE tunnel source IP
+         * @param greTunnelSourceIp GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3747,7 +4258,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param greTunnelSourceIpVariable Variable name
+         * @param greTunnelSourceIpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3758,7 +4269,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param greTunnelSourceIpVariable Variable name
+         * @param greTunnelSourceIpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3768,7 +4279,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -3780,7 +4291,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable
+         * @param icmpRedirectDisable ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -3791,7 +4302,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param icmpRedirectDisableVariable Variable name
+         * @param icmpRedirectDisableVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3802,7 +4313,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param icmpRedirectDisableVariable Variable name
+         * @param icmpRedirectDisableVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3842,7 +4353,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -3855,7 +4366,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+         * @param interfaceMtu Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `1500`-`9216`
          *   - Default value: `1500`
          * 
@@ -3867,7 +4378,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param interfaceMtuVariable Variable name
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3878,7 +4389,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param interfaceMtuVariable Variable name
+         * @param interfaceMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3918,7 +4429,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast
+         * @param ipDirectedBroadcast IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3930,7 +4441,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipDirectedBroadcast IP Directed-Broadcast
+         * @param ipDirectedBroadcast IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -3941,7 +4452,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipDirectedBroadcastVariable Variable name
+         * @param ipDirectedBroadcastVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3952,7 +4463,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipDirectedBroadcastVariable Variable name
+         * @param ipDirectedBroadcastVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3962,7 +4473,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `576`-`9216`
          *   - Default value: `1500`
          * 
@@ -3975,7 +4486,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+         * @param ipMtu IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `576`-`9216`
          *   - Default value: `1500`
          * 
@@ -3987,7 +4498,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -3998,7 +4509,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipMtuVariable Variable name
+         * @param ipMtuVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4008,7 +4519,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param iperfServer Iperf server for auto bandwidth detect
+         * @param iperfServer Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4019,7 +4530,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param iperfServer Iperf server for auto bandwidth detect
+         * @param iperfServer Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4029,7 +4540,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param iperfServerVariable Variable name
+         * @param iperfServerVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4040,7 +4551,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param iperfServerVariable Variable name
+         * @param iperfServerVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4050,7 +4561,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4061,7 +4572,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4Address IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4071,7 +4582,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4082,7 +4593,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4AddressVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4092,8 +4603,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type
-         *   - Choices: `dynamic`, `static`
+         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `dynamic`
          * 
          * @return builder
@@ -4105,8 +4616,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4ConfigurationType IPv4 Configuration Type
-         *   - Choices: `dynamic`, `static`
+         * @param ipv4ConfigurationType IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `dynamic`
          * 
          * @return builder
@@ -4117,8 +4628,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-         *   - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
          * @return builder
@@ -4130,8 +4641,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-         *   - Range: `1`-`65536`
+         * @param ipv4DhcpDistance DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+         *   - Range: `1`-`255`
          *   - Default value: `1`
          * 
          * @return builder
@@ -4142,7 +4653,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4153,7 +4664,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+         * @param ipv4DhcpDistanceVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4163,7 +4674,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpHelperVariable Variable name
+         * @param ipv4DhcpHelperVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4174,7 +4685,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpHelperVariable Variable name
+         * @param ipv4DhcpHelperVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4184,7 +4695,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4195,7 +4706,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4205,7 +4716,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8)
+         * @param ipv4DhcpHelpers List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4215,7 +4726,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4226,7 +4737,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4236,7 +4747,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SecondaryAddresses Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4246,7 +4757,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -4258,7 +4769,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMask Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
          * 
          * @return builder
@@ -4269,7 +4780,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4280,7 +4791,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+         * @param ipv4SubnetMaskVariable Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4290,7 +4801,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4301,7 +4812,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6Address IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4311,7 +4822,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4322,7 +4833,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6AddressVariable Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4332,7 +4843,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type
+         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `none`
          * 
@@ -4345,7 +4856,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6ConfigurationType IPv6 Configuration Type
+         * @param ipv6ConfigurationType IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Choices: `dynamic`, `static`, `none`
          *   - Default value: `none`
          * 
@@ -4357,7 +4868,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4368,7 +4879,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4378,7 +4889,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+         * @param ipv6DhcpSecondaryAddresses secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
          * 
          * @return builder
          * 
@@ -4388,7 +4899,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4399,7 +4910,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4409,7 +4920,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+         * @param ipv6SecondaryAddresses Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
          * 
          * @return builder
          * 
@@ -4465,7 +4976,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param macAddress MAC Address
+         * @param macAddress MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4476,7 +4987,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param macAddress MAC Address
+         * @param macAddress MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4486,7 +4997,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param macAddressVariable Variable name
+         * @param macAddressVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4497,7 +5008,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param macAddressVariable Variable name
+         * @param macAddressVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4507,7 +5018,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param mediaType Media type
+         * @param mediaType Media type, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
@@ -4519,7 +5030,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param mediaType Media type
+         * @param mediaType Media type, Attribute conditional on `portChannelInterface` not equal to `true`
          *   - Choices: `auto-select`, `rj45`, `sfp`
          * 
          * @return builder
@@ -4530,7 +5041,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param mediaTypeVariable Variable name
+         * @param mediaTypeVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4541,13 +5052,61 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param mediaTypeVariable Variable name
+         * @param mediaTypeVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
          */
         public Builder mediaTypeVariable(String mediaTypeVariable) {
             return mediaTypeVariable(Output.of(mediaTypeVariable));
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(@Nullable Output<String> mrfCoreRegionType) {
+            $.mrfCoreRegionType = mrfCoreRegionType;
+            return this;
+        }
+
+        /**
+         * @param mrfCoreRegionType Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Choices: `core-shared`, `core`
+         *   - Default value: `core-shared`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfCoreRegionType(String mrfCoreRegionType) {
+            return mrfCoreRegionType(Output.of(mrfCoreRegionType));
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(@Nullable Output<Boolean> mrfEnableCoreRegion) {
+            $.mrfEnableCoreRegion = mrfEnableCoreRegion;
+            return this;
+        }
+
+        /**
+         * @param mrfEnableCoreRegion Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder mrfEnableCoreRegion(Boolean mrfEnableCoreRegion) {
+            return mrfEnableCoreRegion(Output.of(mrfEnableCoreRegion));
         }
 
         /**
@@ -4572,7 +5131,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param nat64 NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+         * @param nat64 NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4584,7 +5143,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param nat64 NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+         * @param nat64 NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4595,7 +5154,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param nat66 NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+         * @param nat66 NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4607,7 +5166,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param nat66 NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+         * @param nat66 NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4618,7 +5177,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv4 enable Network Address Translation on this interface
+         * @param natIpv4 enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4630,7 +5189,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv4 enable Network Address Translation on this interface
+         * @param natIpv4 enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4641,7 +5200,69 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv4Variable Variable name
+         * @param natIpv4Loopbacks NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Loopbacks(@Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs>> natIpv4Loopbacks) {
+            $.natIpv4Loopbacks = natIpv4Loopbacks;
+            return this;
+        }
+
+        /**
+         * @param natIpv4Loopbacks NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Loopbacks(List<TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs> natIpv4Loopbacks) {
+            return natIpv4Loopbacks(Output.of(natIpv4Loopbacks));
+        }
+
+        /**
+         * @param natIpv4Loopbacks NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Loopbacks(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs... natIpv4Loopbacks) {
+            return natIpv4Loopbacks(List.of(natIpv4Loopbacks));
+        }
+
+        /**
+         * @param natIpv4Pools NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Pools(@Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs>> natIpv4Pools) {
+            $.natIpv4Pools = natIpv4Pools;
+            return this;
+        }
+
+        /**
+         * @param natIpv4Pools NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Pools(List<TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs> natIpv4Pools) {
+            return natIpv4Pools(Output.of(natIpv4Pools));
+        }
+
+        /**
+         * @param natIpv4Pools NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natIpv4Pools(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs... natIpv4Pools) {
+            return natIpv4Pools(List.of(natIpv4Pools));
+        }
+
+        /**
+         * @param natIpv4Variable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4652,7 +5273,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv4Variable Variable name
+         * @param natIpv4Variable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4662,7 +5283,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv6 enable Network Address Translation ipv6 on this interface
+         * @param natIpv6 enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4674,7 +5295,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv6 enable Network Address Translation ipv6 on this interface
+         * @param natIpv6 enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -4685,7 +5306,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv6Variable Variable name
+         * @param natIpv6Variable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4696,7 +5317,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natIpv6Variable Variable name
+         * @param natIpv6Variable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -4706,7 +5327,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natLoopback NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natLoopback NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4717,7 +5338,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natLoopback NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natLoopback NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4727,7 +5348,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natLoopbackVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natLoopbackVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4738,7 +5359,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natLoopbackVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natLoopbackVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4748,7 +5369,51 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natOverload NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natMatchInterface NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natMatchInterface(@Nullable Output<Boolean> natMatchInterface) {
+            $.natMatchInterface = natMatchInterface;
+            return this;
+        }
+
+        /**
+         * @param natMatchInterface NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natMatchInterface(Boolean natMatchInterface) {
+            return natMatchInterface(Output.of(natMatchInterface));
+        }
+
+        /**
+         * @param natMatchInterfaceVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natMatchInterfaceVariable(@Nullable Output<String> natMatchInterfaceVariable) {
+            $.natMatchInterfaceVariable = natMatchInterfaceVariable;
+            return this;
+        }
+
+        /**
+         * @param natMatchInterfaceVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder natMatchInterfaceVariable(String natMatchInterfaceVariable) {
+            return natMatchInterfaceVariable(Output.of(natMatchInterfaceVariable));
+        }
+
+        /**
+         * @param natOverload NAT Overload, Attribute conditional on `natIpv4` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -4760,7 +5425,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natOverload NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natOverload NAT Overload, Attribute conditional on `natIpv4` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -4771,7 +5436,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natOverloadVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natOverloadVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4782,7 +5447,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natOverloadVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natOverloadVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4792,7 +5457,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natPrefixLength NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natPrefixLength NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`32`
          * 
          * @return builder
@@ -4804,7 +5469,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natPrefixLength NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natPrefixLength NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`32`
          * 
          * @return builder
@@ -4815,7 +5480,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natPrefixLengthVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natPrefixLengthVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4826,7 +5491,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natPrefixLengthVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natPrefixLengthVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4836,7 +5501,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeEnd NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeEnd NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4847,7 +5512,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeEnd NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeEnd NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4857,7 +5522,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeEndVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeEndVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4868,7 +5533,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeEndVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeEndVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4878,7 +5543,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeStart NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeStart NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4889,7 +5554,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeStart NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeStart NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4899,7 +5564,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeStartVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeStartVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4910,7 +5575,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natRangeStartVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natRangeStartVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4920,7 +5585,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `60`
          * 
@@ -4933,7 +5598,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natTcpTimeout Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `60`
          * 
@@ -4945,7 +5610,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natTcpTimeoutVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natTcpTimeoutVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4956,7 +5621,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natTcpTimeoutVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natTcpTimeoutVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -4966,7 +5631,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natType NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natType NAT Type, Attribute conditional on `natIpv4` equal to `true`
          *   - Choices: `interface`, `pool`, `loopback`
          *   - Default value: `interface`
          * 
@@ -4979,7 +5644,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natType NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natType NAT Type, Attribute conditional on `natIpv4` equal to `true`
          *   - Choices: `interface`, `pool`, `loopback`
          *   - Default value: `interface`
          * 
@@ -4991,28 +5656,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natTypeVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder natTypeVariable(@Nullable Output<String> natTypeVariable) {
-            $.natTypeVariable = natTypeVariable;
-            return this;
-        }
-
-        /**
-         * @param natTypeVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
-         * 
-         * @return builder
-         * 
-         */
-        public Builder natTypeVariable(String natTypeVariable) {
-            return natTypeVariable(Output.of(natTypeVariable));
-        }
-
-        /**
-         * @param natUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `1`
          * 
@@ -5025,7 +5669,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natUdpTimeout Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
          *   - Range: `1`-`8947`
          *   - Default value: `1`
          * 
@@ -5037,7 +5681,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natUdpTimeoutVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natUdpTimeoutVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -5048,7 +5692,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param natUdpTimeoutVariable Variable name, Attribute conditional on `natIpv4` being equal to `true`
+         * @param natUdpTimeoutVariable Variable name, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -5058,7 +5702,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` being equal to `true`
+         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -5069,7 +5713,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` being equal to `true`
+         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -5079,7 +5723,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` being equal to `true`
+         * @param newStaticNats static NAT, Attribute conditional on `natIpv4` equal to `true`
          * 
          * @return builder
          * 
@@ -5089,7 +5733,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param perTunnelQos Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5101,7 +5745,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param perTunnelQos Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param perTunnelQos Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5112,7 +5756,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param perTunnelQosVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param perTunnelQosVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -5123,7 +5767,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param perTunnelQosVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param perTunnelQosVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -5133,7 +5777,461 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param qosAdaptive Adaptive QoS
+         * @param portChannelInterface Port-Channel interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelInterface(@Nullable Output<Boolean> portChannelInterface) {
+            $.portChannelInterface = portChannelInterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelInterface Port-Channel interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelInterface(Boolean portChannelInterface) {
+            return portChannelInterface(Output.of(portChannelInterface));
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchover(@Nullable Output<Boolean> portChannelLacpFastSwitchover) {
+            $.portChannelLacpFastSwitchover = portChannelLacpFastSwitchover;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchover Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchover(Boolean portChannelLacpFastSwitchover) {
+            return portChannelLacpFastSwitchover(Output.of(portChannelLacpFastSwitchover));
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchoverVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchoverVariable(@Nullable Output<String> portChannelLacpFastSwitchoverVariable) {
+            $.portChannelLacpFastSwitchoverVariable = portChannelLacpFastSwitchoverVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpFastSwitchoverVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpFastSwitchoverVariable(String portChannelLacpFastSwitchoverVariable) {
+            return portChannelLacpFastSwitchoverVariable(Output.of(portChannelLacpFastSwitchoverVariable));
+        }
+
+        /**
+         * @param portChannelLacpLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalance(@Nullable Output<String> portChannelLacpLoadBalance) {
+            $.portChannelLacpLoadBalance = portChannelLacpLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalance(String portChannelLacpLoadBalance) {
+            return portChannelLacpLoadBalance(Output.of(portChannelLacpLoadBalance));
+        }
+
+        /**
+         * @param portChannelLacpLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalanceVariable(@Nullable Output<String> portChannelLacpLoadBalanceVariable) {
+            $.portChannelLacpLoadBalanceVariable = portChannelLacpLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpLoadBalanceVariable(String portChannelLacpLoadBalanceVariable) {
+            return portChannelLacpLoadBalanceVariable(Output.of(portChannelLacpLoadBalanceVariable));
+        }
+
+        /**
+         * @param portChannelLacpMaxBundle Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundle(@Nullable Output<Integer> portChannelLacpMaxBundle) {
+            $.portChannelLacpMaxBundle = portChannelLacpMaxBundle;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMaxBundle Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundle(Integer portChannelLacpMaxBundle) {
+            return portChannelLacpMaxBundle(Output.of(portChannelLacpMaxBundle));
+        }
+
+        /**
+         * @param portChannelLacpMaxBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundleVariable(@Nullable Output<String> portChannelLacpMaxBundleVariable) {
+            $.portChannelLacpMaxBundleVariable = portChannelLacpMaxBundleVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMaxBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMaxBundleVariable(String portChannelLacpMaxBundleVariable) {
+            return portChannelLacpMaxBundleVariable(Output.of(portChannelLacpMaxBundleVariable));
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(@Nullable Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs>> portChannelLacpMemberLinks) {
+            $.portChannelLacpMemberLinks = portChannelLacpMemberLinks;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs> portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(Output.of(portChannelLacpMemberLinks));
+        }
+
+        /**
+         * @param portChannelLacpMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMemberLinks(TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLinkArgs... portChannelLacpMemberLinks) {
+            return portChannelLacpMemberLinks(List.of(portChannelLacpMemberLinks));
+        }
+
+        /**
+         * @param portChannelLacpMinBundle Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundle(@Nullable Output<Integer> portChannelLacpMinBundle) {
+            $.portChannelLacpMinBundle = portChannelLacpMinBundle;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMinBundle Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+         *   - Range: `1`-`16`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundle(Integer portChannelLacpMinBundle) {
+            return portChannelLacpMinBundle(Output.of(portChannelLacpMinBundle));
+        }
+
+        /**
+         * @param portChannelLacpMinBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundleVariable(@Nullable Output<String> portChannelLacpMinBundleVariable) {
+            $.portChannelLacpMinBundleVariable = portChannelLacpMinBundleVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpMinBundleVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpMinBundleVariable(String portChannelLacpMinBundleVariable) {
+            return portChannelLacpMinBundleVariable(Output.of(portChannelLacpMinBundleVariable));
+        }
+
+        /**
+         * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregate(@Nullable Output<Boolean> portChannelLacpQosAggregate) {
+            $.portChannelLacpQosAggregate = portChannelLacpQosAggregate;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregate(Boolean portChannelLacpQosAggregate) {
+            return portChannelLacpQosAggregate(Output.of(portChannelLacpQosAggregate));
+        }
+
+        /**
+         * @param portChannelLacpQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregateVariable(@Nullable Output<String> portChannelLacpQosAggregateVariable) {
+            $.portChannelLacpQosAggregateVariable = portChannelLacpQosAggregateVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelLacpQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelLacpQosAggregateVariable(String portChannelLacpQosAggregateVariable) {
+            return portChannelLacpQosAggregateVariable(Output.of(portChannelLacpQosAggregateVariable));
+        }
+
+        /**
+         * @param portChannelMemberInterface Port-Channel member interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMemberInterface(@Nullable Output<Boolean> portChannelMemberInterface) {
+            $.portChannelMemberInterface = portChannelMemberInterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelMemberInterface Port-Channel member interface on/off
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMemberInterface(Boolean portChannelMemberInterface) {
+            return portChannelMemberInterface(Output.of(portChannelMemberInterface));
+        }
+
+        /**
+         * @param portChannelMode Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+         *   - Choices: `lacp`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMode(@Nullable Output<String> portChannelMode) {
+            $.portChannelMode = portChannelMode;
+            return this;
+        }
+
+        /**
+         * @param portChannelMode Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+         *   - Choices: `lacp`, `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelMode(String portChannelMode) {
+            return portChannelMode(Output.of(portChannelMode));
+        }
+
+        /**
+         * @param portChannelStaticLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalance(@Nullable Output<String> portChannelStaticLoadBalance) {
+            $.portChannelStaticLoadBalance = portChannelStaticLoadBalance;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticLoadBalance Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         *   - Choices: `flow`, `vlan`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalance(String portChannelStaticLoadBalance) {
+            return portChannelStaticLoadBalance(Output.of(portChannelStaticLoadBalance));
+        }
+
+        /**
+         * @param portChannelStaticLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalanceVariable(@Nullable Output<String> portChannelStaticLoadBalanceVariable) {
+            $.portChannelStaticLoadBalanceVariable = portChannelStaticLoadBalanceVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticLoadBalanceVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticLoadBalanceVariable(String portChannelStaticLoadBalanceVariable) {
+            return portChannelStaticLoadBalanceVariable(Output.of(portChannelStaticLoadBalanceVariable));
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(@Nullable Output<List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs>> portChannelStaticMemberLinks) {
+            $.portChannelStaticMemberLinks = portChannelStaticMemberLinks;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs> portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(Output.of(portChannelStaticMemberLinks));
+        }
+
+        /**
+         * @param portChannelStaticMemberLinks Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticMemberLinks(TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLinkArgs... portChannelStaticMemberLinks) {
+            return portChannelStaticMemberLinks(List.of(portChannelStaticMemberLinks));
+        }
+
+        /**
+         * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregate(@Nullable Output<Boolean> portChannelStaticQosAggregate) {
+            $.portChannelStaticQosAggregate = portChannelStaticQosAggregate;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticQosAggregate Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregate(Boolean portChannelStaticQosAggregate) {
+            return portChannelStaticQosAggregate(Output.of(portChannelStaticQosAggregate));
+        }
+
+        /**
+         * @param portChannelStaticQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregateVariable(@Nullable Output<String> portChannelStaticQosAggregateVariable) {
+            $.portChannelStaticQosAggregateVariable = portChannelStaticQosAggregateVariable;
+            return this;
+        }
+
+        /**
+         * @param portChannelStaticQosAggregateVariable Variable name, Attribute conditional on `portChannelMode` equal to `static`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelStaticQosAggregateVariable(String portChannelStaticQosAggregateVariable) {
+            return portChannelStaticQosAggregateVariable(Output.of(portChannelStaticQosAggregateVariable));
+        }
+
+        /**
+         * @param portChannelSubinterface , Attribute conditional on `portChannelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterface(@Nullable Output<Boolean> portChannelSubinterface) {
+            $.portChannelSubinterface = portChannelSubinterface;
+            return this;
+        }
+
+        /**
+         * @param portChannelSubinterface , Attribute conditional on `portChannelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder portChannelSubinterface(Boolean portChannelSubinterface) {
+            return portChannelSubinterface(Output.of(portChannelSubinterface));
+        }
+
+        /**
+         * @param qosAdaptive Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5145,7 +6243,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param qosAdaptive Adaptive QoS
+         * @param qosAdaptive Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5556,7 +6654,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param serviceProvider Service Provider Name
+         * @param serviceProvider Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5567,7 +6665,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param serviceProvider Service Provider Name
+         * @param serviceProvider Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5577,7 +6675,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param serviceProviderVariable Variable name
+         * @param serviceProviderVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5588,7 +6686,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param serviceProviderVariable Variable name
+         * @param serviceProviderVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5640,8 +6738,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -5652,8 +6750,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param speed Set interface speed
-         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+         * @param speed Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+         *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
          * 
          * @return builder
          * 
@@ -5663,7 +6761,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param speedVariable Variable name
+         * @param speedVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5674,7 +6772,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param speedVariable Variable name
+         * @param speedVariable Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5684,7 +6782,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` equal to `true`
          * 
          * @return builder
          * 
@@ -5695,7 +6793,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` equal to `true`
          * 
          * @return builder
          * 
@@ -5705,7 +6803,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+         * @param staticNat66s static NAT66, Attribute conditional on `natIpv6` equal to `true`
          * 
          * @return builder
          * 
@@ -5715,7 +6813,38 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
+         * @param staticPortForwards Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticPortForwards(@Nullable Output<List<TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs>> staticPortForwards) {
+            $.staticPortForwards = staticPortForwards;
+            return this;
+        }
+
+        /**
+         * @param staticPortForwards Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticPortForwards(List<TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs> staticPortForwards) {
+            return staticPortForwards(Output.of(staticPortForwards));
+        }
+
+        /**
+         * @param staticPortForwards Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder staticPortForwards(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs... staticPortForwards) {
+            return staticPortForwards(List.of(staticPortForwards));
+        }
+
+        /**
+         * @param tcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -5727,7 +6856,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tcpMss TCP MSS on SYN packets, in bytes
+         * @param tcpMss TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -5738,7 +6867,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tcpMssVariable Variable name
+         * @param tcpMssVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5749,7 +6878,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tcpMssVariable Variable name
+         * @param tcpMssVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5759,7 +6888,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tlocExtension Extends a local TLOC to a remote node only for vpn 0
+         * @param tlocExtension Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5770,7 +6899,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tlocExtension Extends a local TLOC to a remote node only for vpn 0
+         * @param tlocExtension Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5780,7 +6909,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tlocExtensionVariable Variable name
+         * @param tlocExtensionVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5791,7 +6920,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tlocExtensionVariable Variable name
+         * @param tlocExtensionVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5801,7 +6930,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tracker Enable tracker for this interface
+         * @param tracker Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5812,7 +6941,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tracker Enable tracker for this interface
+         * @param tracker Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5822,7 +6951,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param trackerVariable Variable name
+         * @param trackerVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5833,7 +6962,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param trackerVariable Variable name
+         * @param trackerVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5864,7 +6993,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`100`
          *   - Default value: `50`
          * 
@@ -5877,7 +7006,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelBandwidthPercent Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`100`
          *   - Default value: `50`
          * 
@@ -5889,7 +7018,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -5900,7 +7029,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelBandwidthPercentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -5933,7 +7062,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5945,7 +7074,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set
+         * @param tunnelInterfaceAllowAll Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5956,7 +7085,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowAllVariable Variable name
+         * @param tunnelInterfaceAllowAllVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5967,7 +7096,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowAllVariable Variable name
+         * @param tunnelInterfaceAllowAllVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -5977,7 +7106,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBfd Allow/Deny BFD
+         * @param tunnelInterfaceAllowBfd Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -5989,7 +7118,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBfd Allow/Deny BFD
+         * @param tunnelInterfaceAllowBfd Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6000,7 +7129,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBfdVariable Variable name
+         * @param tunnelInterfaceAllowBfdVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6011,7 +7140,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBfdVariable Variable name
+         * @param tunnelInterfaceAllowBfdVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6021,7 +7150,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6033,7 +7162,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBgp Allow/deny BGP
+         * @param tunnelInterfaceAllowBgp Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6044,7 +7173,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBgpVariable Variable name
+         * @param tunnelInterfaceAllowBgpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6055,7 +7184,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowBgpVariable Variable name
+         * @param tunnelInterfaceAllowBgpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6065,7 +7194,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6077,7 +7206,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP
+         * @param tunnelInterfaceAllowDhcp Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6088,7 +7217,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcpVariable Variable name
+         * @param tunnelInterfaceAllowDhcpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6099,7 +7228,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDhcpVariable Variable name
+         * @param tunnelInterfaceAllowDhcpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6109,7 +7238,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6121,7 +7250,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDns Allow/Deny DNS
+         * @param tunnelInterfaceAllowDns Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6132,7 +7261,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDnsVariable Variable name
+         * @param tunnelInterfaceAllowDnsVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6143,7 +7272,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowDnsVariable Variable name
+         * @param tunnelInterfaceAllowDnsVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6153,7 +7282,51 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny HTTPS
+         * @param tunnelInterfaceAllowFragmentation Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceAllowFragmentation(@Nullable Output<Boolean> tunnelInterfaceAllowFragmentation) {
+            $.tunnelInterfaceAllowFragmentation = tunnelInterfaceAllowFragmentation;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceAllowFragmentation Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceAllowFragmentation(Boolean tunnelInterfaceAllowFragmentation) {
+            return tunnelInterfaceAllowFragmentation(Output.of(tunnelInterfaceAllowFragmentation));
+        }
+
+        /**
+         * @param tunnelInterfaceAllowFragmentationVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceAllowFragmentationVariable(@Nullable Output<String> tunnelInterfaceAllowFragmentationVariable) {
+            $.tunnelInterfaceAllowFragmentationVariable = tunnelInterfaceAllowFragmentationVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceAllowFragmentationVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceAllowFragmentationVariable(String tunnelInterfaceAllowFragmentationVariable) {
+            return tunnelInterfaceAllowFragmentationVariable(Output.of(tunnelInterfaceAllowFragmentationVariable));
+        }
+
+        /**
+         * @param tunnelInterfaceAllowHttps Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6165,7 +7338,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowHttps Allow/Deny HTTPS
+         * @param tunnelInterfaceAllowHttps Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6176,7 +7349,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowHttpsVariable Variable name
+         * @param tunnelInterfaceAllowHttpsVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6187,7 +7360,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowHttpsVariable Variable name
+         * @param tunnelInterfaceAllowHttpsVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6197,7 +7370,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6209,7 +7382,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP
+         * @param tunnelInterfaceAllowIcmp Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -6220,7 +7393,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmpVariable Variable name
+         * @param tunnelInterfaceAllowIcmpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6231,7 +7404,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowIcmpVariable Variable name
+         * @param tunnelInterfaceAllowIcmpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6241,7 +7414,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6253,7 +7426,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF
+         * @param tunnelInterfaceAllowNetconf Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6264,7 +7437,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconfVariable Variable name
+         * @param tunnelInterfaceAllowNetconfVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6275,7 +7448,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNetconfVariable Variable name
+         * @param tunnelInterfaceAllowNetconfVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6285,8 +7458,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
-         *   - Default value: `true`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6297,8 +7470,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNtp Allow/Deny NTP
-         *   - Default value: `true`
+         * @param tunnelInterfaceAllowNtp Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6308,7 +7481,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNtpVariable Variable name
+         * @param tunnelInterfaceAllowNtpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6319,7 +7492,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowNtpVariable Variable name
+         * @param tunnelInterfaceAllowNtpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6329,7 +7502,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6341,7 +7514,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF
+         * @param tunnelInterfaceAllowOspf Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6352,7 +7525,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowOspfVariable Variable name
+         * @param tunnelInterfaceAllowOspfVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6363,7 +7536,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowOspfVariable Variable name
+         * @param tunnelInterfaceAllowOspfVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6373,7 +7546,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6385,7 +7558,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP
+         * @param tunnelInterfaceAllowSnmp Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6396,7 +7569,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmpVariable Variable name
+         * @param tunnelInterfaceAllowSnmpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6407,7 +7580,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSnmpVariable Variable name
+         * @param tunnelInterfaceAllowSnmpVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6417,8 +7590,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
-         *   - Default value: `true`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6429,8 +7602,8 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSsh Allow/Deny SSH
-         *   - Default value: `true`
+         * @param tunnelInterfaceAllowSsh Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+         *   - Default value: `false`
          * 
          * @return builder
          * 
@@ -6440,7 +7613,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSshVariable Variable name
+         * @param tunnelInterfaceAllowSshVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6451,7 +7624,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowSshVariable Variable name
+         * @param tunnelInterfaceAllowSshVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6461,7 +7634,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6473,7 +7646,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowStun Allow/Deny STUN
+         * @param tunnelInterfaceAllowStun Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6484,7 +7657,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowStunVariable Variable name
+         * @param tunnelInterfaceAllowStunVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6495,7 +7668,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceAllowStunVariable Variable name
+         * @param tunnelInterfaceAllowStunVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6505,7 +7678,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBindLoopbackTunnel Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBindLoopbackTunnel Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6516,7 +7689,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBindLoopbackTunnel Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBindLoopbackTunnel Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6526,7 +7699,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBindLoopbackTunnelVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBindLoopbackTunnelVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6537,7 +7710,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBindLoopbackTunnelVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBindLoopbackTunnelVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6547,7 +7720,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6559,7 +7732,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBorder Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBorder Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6570,7 +7743,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBorderVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBorderVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6581,7 +7754,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceBorderVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceBorderVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6591,7 +7764,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
          *   - Default value: `default`
          * 
@@ -6604,7 +7777,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCarrier Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCarrier Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
          *   - Default value: `default`
          * 
@@ -6616,7 +7789,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCarrierVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCarrierVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6627,7 +7800,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCarrierVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCarrierVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6637,7 +7810,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6649,7 +7822,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceClearDontFragment Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6660,7 +7833,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragmentVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceClearDontFragmentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6671,7 +7844,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceClearDontFragmentVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceClearDontFragmentVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6681,7 +7854,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColor Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
          *   - Default value: `mpls`
          * 
@@ -6694,7 +7867,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColor Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColor Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
          *   - Default value: `mpls`
          * 
@@ -6706,7 +7879,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6718,7 +7891,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorRestrict Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6729,7 +7902,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorRestrictVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorRestrictVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6740,7 +7913,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorRestrictVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorRestrictVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6750,7 +7923,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6761,7 +7934,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceColorVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceColorVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6771,7 +7944,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCtsSgtPropagation CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCtsSgtPropagation CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6783,7 +7956,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCtsSgtPropagation CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCtsSgtPropagation CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -6794,7 +7967,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCtsSgtPropagationVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCtsSgtPropagationVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6805,7 +7978,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceCtsSgtPropagationVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceCtsSgtPropagationVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6815,7 +7988,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC
+         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6826,7 +7999,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC
+         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6836,7 +8009,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC
+         * @param tunnelInterfaceEncapsulations Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -6846,7 +8019,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceExcludeControllerGroupListVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceExcludeControllerGroupListVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6857,7 +8030,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceExcludeControllerGroupListVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceExcludeControllerGroupListVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6867,7 +8040,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6878,7 +8051,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6888,7 +8061,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceExcludeControllerGroupLists Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6898,7 +8071,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGreTunnelDestinationIp GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGreTunnelDestinationIp GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6909,7 +8082,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGreTunnelDestinationIp GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGreTunnelDestinationIp GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6919,7 +8092,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGreTunnelDestinationIpVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGreTunnelDestinationIpVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6930,7 +8103,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGreTunnelDestinationIpVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGreTunnelDestinationIpVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6940,7 +8113,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGroups List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGroups List of groups, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -6952,7 +8125,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGroups List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGroups List of groups, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`4294967295`
          * 
          * @return builder
@@ -6963,7 +8136,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGroupsVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGroupsVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6974,7 +8147,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceGroupsVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceGroupsVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -6984,7 +8157,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `100`-`600000`
          *   - Default value: `1000`
          * 
@@ -6997,7 +8170,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloInterval Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `100`-`600000`
          *   - Default value: `1000`
          * 
@@ -7009,7 +8182,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloIntervalVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloIntervalVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7020,7 +8193,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloIntervalVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloIntervalVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7030,7 +8203,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `12`-`6000`
          *   - Default value: `12`
          * 
@@ -7043,7 +8216,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloTolerance Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `12`-`6000`
          *   - Default value: `12`
          * 
@@ -7055,7 +8228,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloToleranceVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloToleranceVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7066,7 +8239,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceHelloToleranceVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceHelloToleranceVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7076,7 +8249,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7088,7 +8261,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLastResortCircuit Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7099,7 +8272,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuitVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLastResortCircuitVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7110,7 +8283,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLastResortCircuitVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLastResortCircuitVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7120,7 +8293,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7132,7 +8305,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLowBandwidthLink Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7143,7 +8316,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLinkVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLowBandwidthLinkVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7154,7 +8327,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceLowBandwidthLinkVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceLowBandwidthLinkVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7164,7 +8337,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceMaxControlConnections Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `0`-`100`
          * 
          * @return builder
@@ -7176,7 +8349,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnections Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceMaxControlConnections Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `0`-`100`
          * 
          * @return builder
@@ -7187,7 +8360,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnectionsVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceMaxControlConnectionsVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7198,7 +8371,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceMaxControlConnectionsVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceMaxControlConnectionsVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7208,7 +8381,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`60`
          *   - Default value: `5`
          * 
@@ -7221,7 +8394,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNatRefreshInterval Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `1`-`60`
          *   - Default value: `5`
          * 
@@ -7233,7 +8406,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshIntervalVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNatRefreshIntervalVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7244,7 +8417,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNatRefreshIntervalVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNatRefreshIntervalVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7254,7 +8427,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7266,7 +8439,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNetworkBroadcast Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7277,7 +8450,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcastVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNetworkBroadcastVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7288,7 +8461,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceNetworkBroadcastVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceNetworkBroadcastVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7298,7 +8471,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -7310,7 +8483,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfacePortHop Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `true`
          * 
          * @return builder
@@ -7321,7 +8494,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHopVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfacePortHopVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7332,7 +8505,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfacePortHopVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfacePortHopVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7342,7 +8515,51 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceSetSdwanTunnelMtuToMax Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMax(@Nullable Output<Boolean> tunnelInterfaceSetSdwanTunnelMtuToMax) {
+            $.tunnelInterfaceSetSdwanTunnelMtuToMax = tunnelInterfaceSetSdwanTunnelMtuToMax;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceSetSdwanTunnelMtuToMax Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+         *   - Default value: `false`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMax(Boolean tunnelInterfaceSetSdwanTunnelMtuToMax) {
+            return tunnelInterfaceSetSdwanTunnelMtuToMax(Output.of(tunnelInterfaceSetSdwanTunnelMtuToMax));
+        }
+
+        /**
+         * @param tunnelInterfaceSetSdwanTunnelMtuToMaxVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMaxVariable(@Nullable Output<String> tunnelInterfaceSetSdwanTunnelMtuToMaxVariable) {
+            $.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable = tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterfaceSetSdwanTunnelMtuToMaxVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterfaceSetSdwanTunnelMtuToMaxVariable(String tunnelInterfaceSetSdwanTunnelMtuToMaxVariable) {
+            return tunnelInterfaceSetSdwanTunnelMtuToMaxVariable(Output.of(tunnelInterfaceSetSdwanTunnelMtuToMaxVariable));
+        }
+
+        /**
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -7354,7 +8571,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceTunnelTcpMss Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `500`-`1460`
          * 
          * @return builder
@@ -7365,7 +8582,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMssVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceTunnelTcpMssVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7376,7 +8593,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceTunnelTcpMssVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceTunnelTcpMssVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7386,7 +8603,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7398,7 +8615,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVbondAsStunServer Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Default value: `false`
          * 
          * @return builder
@@ -7409,7 +8626,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServerVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVbondAsStunServerVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7420,7 +8637,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVbondAsStunServerVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVbondAsStunServerVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7430,7 +8647,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `0`-`8`
          *   - Default value: `5`
          * 
@@ -7443,7 +8660,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVmanageConnectionPreference Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Range: `0`-`8`
          *   - Default value: `5`
          * 
@@ -7455,7 +8672,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreferenceVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVmanageConnectionPreferenceVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7466,7 +8683,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelInterfaceVmanageConnectionPreferenceVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelInterfaceVmanageConnectionPreferenceVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7476,7 +8693,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelQosMode Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `hub`, `spoke`
          * 
          * @return builder
@@ -7488,7 +8705,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelQosMode Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelQosMode Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
          *   - Choices: `hub`, `spoke`
          * 
          * @return builder
@@ -7499,7 +8716,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelQosModeVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelQosModeVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7510,7 +8727,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param tunnelQosModeVariable Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+         * @param tunnelQosModeVariable Variable name, Attribute conditional on `tunnelInterface` equal to `true`
          * 
          * @return builder
          * 
@@ -7520,7 +8737,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param xconnect Extend remote TLOC over a GRE tunnel to a local WAN interface
+         * @param xconnect Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -7531,7 +8748,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param xconnect Extend remote TLOC over a GRE tunnel to a local WAN interface
+         * @param xconnect Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -7541,7 +8758,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param xconnectVariable Variable name
+         * @param xconnectVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 
@@ -7552,7 +8769,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureArgs extends com.pulum
         }
 
         /**
-         * @param xconnectVariable Variable name
+         * @param xconnectVariable Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
          * 
          * @return builder
          * 

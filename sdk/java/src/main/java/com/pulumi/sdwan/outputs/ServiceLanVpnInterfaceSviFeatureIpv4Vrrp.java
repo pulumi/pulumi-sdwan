@@ -27,6 +27,12 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      */
     private @Nullable String addressVariable;
     /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    private @Nullable Boolean followDualRouterHighAvailability;
+    /**
      * @return Group ID
      *   - Range: `1`-`255`
      * 
@@ -124,6 +130,14 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
      */
     public Optional<String> addressVariable() {
         return Optional.ofNullable(this.addressVariable);
+    }
+    /**
+     * @return Follow RG state by default when B2B HA is configured
+     *   - Default value: `true`
+     * 
+     */
+    public Optional<Boolean> followDualRouterHighAvailability() {
+        return Optional.ofNullable(this.followDualRouterHighAvailability);
     }
     /**
      * @return Group ID
@@ -250,6 +264,7 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
     public static final class Builder {
         private @Nullable String address;
         private @Nullable String addressVariable;
+        private @Nullable Boolean followDualRouterHighAvailability;
         private @Nullable Integer groupId;
         private @Nullable String groupIdVariable;
         private @Nullable String prefixList;
@@ -270,6 +285,7 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
     	      Objects.requireNonNull(defaults);
     	      this.address = defaults.address;
     	      this.addressVariable = defaults.addressVariable;
+    	      this.followDualRouterHighAvailability = defaults.followDualRouterHighAvailability;
     	      this.groupId = defaults.groupId;
     	      this.groupIdVariable = defaults.groupIdVariable;
     	      this.prefixList = defaults.prefixList;
@@ -297,6 +313,12 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
         public Builder addressVariable(@Nullable String addressVariable) {
 
             this.addressVariable = addressVariable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder followDualRouterHighAvailability(@Nullable Boolean followDualRouterHighAvailability) {
+
+            this.followDualRouterHighAvailability = followDualRouterHighAvailability;
             return this;
         }
         @CustomType.Setter
@@ -399,6 +421,7 @@ public final class ServiceLanVpnInterfaceSviFeatureIpv4Vrrp {
             final var _resultValue = new ServiceLanVpnInterfaceSviFeatureIpv4Vrrp();
             _resultValue.address = address;
             _resultValue.addressVariable = addressVariable;
+            _resultValue.followDualRouterHighAvailability = followDualRouterHighAvailability;
             _resultValue.groupId = groupId;
             _resultValue.groupIdVariable = groupIdVariable;
             _resultValue.prefixList = prefixList;

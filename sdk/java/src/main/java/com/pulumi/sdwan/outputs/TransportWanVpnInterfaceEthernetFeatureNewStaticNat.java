@@ -4,6 +4,7 @@
 package com.pulumi.sdwan.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,11 +15,17 @@ import javax.annotation.Nullable;
 public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     /**
      * @return Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
+     *   - Choices: `inside`
      *   - Default value: `inside`
      * 
      */
     private @Nullable String direction;
+    /**
+     * @return Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     * 
+     */
+    private @Nullable Boolean enableDualRouterHaMapping;
     /**
      * @return Source IP address to be translated
      * 
@@ -55,12 +62,20 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     private TransportWanVpnInterfaceEthernetFeatureNewStaticNat() {}
     /**
      * @return Direction of static NAT translation
-     *   - Choices: `inside`, `outside`
+     *   - Choices: `inside`
      *   - Default value: `inside`
      * 
      */
     public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
+    }
+    /**
+     * @return Enable DualRouter HA Mapping
+     *   - Default value: `false`
+     * 
+     */
+    public Optional<Boolean> enableDualRouterHaMapping() {
+        return Optional.ofNullable(this.enableDualRouterHaMapping);
     }
     /**
      * @return Source IP address to be translated
@@ -117,6 +132,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String direction;
+        private @Nullable Boolean enableDualRouterHaMapping;
         private @Nullable String sourceIp;
         private @Nullable String sourceIpVariable;
         private @Nullable Integer sourceVpn;
@@ -127,6 +143,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
         public Builder(TransportWanVpnInterfaceEthernetFeatureNewStaticNat defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.direction = defaults.direction;
+    	      this.enableDualRouterHaMapping = defaults.enableDualRouterHaMapping;
     	      this.sourceIp = defaults.sourceIp;
     	      this.sourceIpVariable = defaults.sourceIpVariable;
     	      this.sourceVpn = defaults.sourceVpn;
@@ -139,6 +156,12 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
         public Builder direction(@Nullable String direction) {
 
             this.direction = direction;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enableDualRouterHaMapping(@Nullable Boolean enableDualRouterHaMapping) {
+
+            this.enableDualRouterHaMapping = enableDualRouterHaMapping;
             return this;
         }
         @CustomType.Setter
@@ -180,6 +203,7 @@ public final class TransportWanVpnInterfaceEthernetFeatureNewStaticNat {
         public TransportWanVpnInterfaceEthernetFeatureNewStaticNat build() {
             final var _resultValue = new TransportWanVpnInterfaceEthernetFeatureNewStaticNat();
             _resultValue.direction = direction;
+            _resultValue.enableDualRouterHaMapping = enableDualRouterHaMapping;
             _resultValue.sourceIp = sourceIp;
             _resultValue.sourceIpVariable = sourceIpVariable;
             _resultValue.sourceVpn = sourceVpn;

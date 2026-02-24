@@ -321,7 +321,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
                  __props__=None):
         """
         This resource can manage a Policy Object Unified Intrusion Prevention Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 
@@ -371,7 +371,7 @@ class PolicyObjectUnifiedIntrusionPrevention(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         This resource can manage a Policy Object Unified Intrusion Prevention Policy_object.
-          - Minimum SD-WAN Manager version: `20.12.0`
+          - Minimum SD-WAN Manager version: `20.15.0`
 
         ## Example Usage
 

@@ -14,8 +14,13 @@ import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureArp;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress;
+import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback;
+import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNat;
+import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink;
+import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66;
+import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForward;
 import com.pulumi.sdwan.outputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +31,7 @@ import javax.annotation.Nullable;
 
 /**
  * This resource can manage a Transport WAN VPN Interface Ethernet Feature.
- *   - Minimum SD-WAN Manager version: `20.12.0`
+ *   - Minimum SD-WAN Manager version: `20.15.0`
  * 
  * ## Example Usage
  * 
@@ -41,7 +46,10 @@ import javax.annotation.Nullable;
  * import com.pulumi.sdwan.TransportWanVpnInterfaceEthernetFeatureArgs;
  * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddressArgs;
  * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulationArgs;
+ * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs;
+ * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs;
  * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs;
+ * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs;
  * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureStaticNat66Args;
  * import com.pulumi.sdwan.inputs.TransportWanVpnInterfaceEthernetFeatureArpArgs;
  * import java.util.List;
@@ -74,6 +82,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .ipv4DhcpHelpers("1.2.3.4")
  *             .ipv6ConfigurationType("static")
+ *             .ipv6Address("2001:0:0:1::1/64")
  *             .iperfServer("example")
  *             .blockNonSourceIp(false)
  *             .serviceProvider("example")
@@ -86,7 +95,7 @@ import javax.annotation.Nullable;
  *             .tunnelBandwidthPercent(82)
  *             .tunnelInterfaceBindLoopbackTunnel("example")
  *             .tunnelInterfaceCarrier("default")
- *             .tunnelInterfaceColor("default")
+ *             .tunnelInterfaceColor("mpls")
  *             .tunnelInterfaceHelloInterval(1000)
  *             .tunnelInterfaceHelloTolerance(12)
  *             .tunnelInterfaceLastResortCircuit(false)
@@ -105,6 +114,8 @@ import javax.annotation.Nullable;
  *             .tunnelInterfaceClearDontFragment(false)
  *             .tunnelInterfaceCtsSgtPropagation(false)
  *             .tunnelInterfaceNetworkBroadcast(false)
+ *             .tunnelInterfaceAllowFragmentation(false)
+ *             .tunnelInterfaceSetSdwanTunnelMtuToMax(false)
  *             .tunnelInterfaceAllowAll(false)
  *             .tunnelInterfaceAllowBgp(false)
  *             .tunnelInterfaceAllowDhcp(true)
@@ -125,6 +136,17 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .natIpv4(true)
  *             .natType("interface")
+ *             .natIpv4Pools(TransportWanVpnInterfaceEthernetFeatureNatIpv4PoolArgs.builder()
+ *                 .name(10)
+ *                 .rangeStart("203.0.115.50")
+ *                 .rangeEnd("203.0.115.100")
+ *                 .overload(true)
+ *                 .prefixLength(25)
+ *                 .enableDualRouterHaMapping(false)
+ *                 .build())
+ *             .natIpv4Loopbacks(TransportWanVpnInterfaceEthernetFeatureNatIpv4LoopbackArgs.builder()
+ *                 .loopbackInterface("Loopback0")
+ *                 .build())
  *             .natUdpTimeout(1)
  *             .natTcpTimeout(60)
  *             .newStaticNats(TransportWanVpnInterfaceEthernetFeatureNewStaticNatArgs.builder()
@@ -132,6 +154,17 @@ import javax.annotation.Nullable;
  *                 .translatedIp("2.3.4.5")
  *                 .direction("inside")
  *                 .sourceVpn(3)
+ *                 .enableDualRouterHaMapping(false)
+ *                 .build())
+ *             .staticPortForwards(TransportWanVpnInterfaceEthernetFeatureStaticPortForwardArgs.builder()
+ *                 .protocol("tcp")
+ *                 .sourceIp("1.2.3.4")
+ *                 .sourcePort(8080)
+ *                 .translatedIp("2.3.4.5")
+ *                 .translatedPort(80)
+ *                 .direction("inside")
+ *                 .sourceVpn(3)
+ *                 .enableDualRouterHaMapping(false)
  *                 .build())
  *             .natIpv6(true)
  *             .nat64(false)
@@ -140,6 +173,7 @@ import javax.annotation.Nullable;
  *                 .sourcePrefix("2001:0db8:85a3::/48")
  *                 .translatedSourcePrefix("abcd:1234:5678::/48")
  *                 .sourceVpnId(4)
+ *                 .egressInterface(true)
  *                 .build())
  *             .qosAdaptive(false)
  *             .qosShapingRate(16)
@@ -210,7 +244,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.aclIpv6IngressFeatureId);
     }
     /**
-     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -219,7 +253,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> arpTimeout;
 
     /**
-     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds
+     * @return Timeout value for dynamically learned ARP entries, &lt;0..2678400&gt; seconds, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `0`-`2147483`
      *   - Default value: `1200`
      * 
@@ -228,35 +262,35 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.arpTimeout);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="arpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> arpTimeoutVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> arpTimeoutVariable() {
         return Codegen.optional(this.arpTimeoutVariable);
     }
     /**
-     * Configure ARP entries
+     * Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="arps", refs={List.class,TransportWanVpnInterfaceEthernetFeatureArp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureArp>> arps;
 
     /**
-     * @return Configure ARP entries
+     * @return Configure ARP entries, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureArp>>> arps() {
         return Codegen.optional(this.arps);
     }
     /**
-     * Interface auto detect bandwidth
+     * Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -264,7 +298,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> autoDetectBandwidth;
 
     /**
-     * @return Interface auto detect bandwidth
+     * @return Interface auto detect bandwidth, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -272,14 +306,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.autoDetectBandwidth);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="autoDetectBandwidthVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> autoDetectBandwidthVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> autoDetectBandwidthVariable() {
@@ -314,7 +348,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.autonegotiateVariable);
     }
     /**
-     * Interface downstream bandwidth capacity, in kbps
+     * Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -322,7 +356,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> bandwidthDownstream;
 
     /**
-     * @return Interface downstream bandwidth capacity, in kbps
+     * @return Interface downstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -330,21 +364,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.bandwidthDownstream);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="bandwidthDownstreamVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> bandwidthDownstreamVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> bandwidthDownstreamVariable() {
         return Codegen.optional(this.bandwidthDownstreamVariable);
     }
     /**
-     * Interface upstream bandwidth capacity, in kbps
+     * Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -352,7 +386,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> bandwidthUpstream;
 
     /**
-     * @return Interface upstream bandwidth capacity, in kbps
+     * @return Interface upstream bandwidth capacity, in kbps, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1`-`2147483647`
      * 
      */
@@ -360,21 +394,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.bandwidthUpstream);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="bandwidthUpstreamVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> bandwidthUpstreamVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> bandwidthUpstreamVariable() {
         return Codegen.optional(this.bandwidthUpstreamVariable);
     }
     /**
-     * Block packets originating from IP address that is not from this source
+     * Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -382,7 +416,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> blockNonSourceIp;
 
     /**
-     * @return Block packets originating from IP address that is not from this source
+     * @return Block packets originating from IP address that is not from this source, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -390,14 +424,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.blockNonSourceIp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="blockNonSourceIpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> blockNonSourceIpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> blockNonSourceIpVariable() {
@@ -418,7 +452,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.description);
     }
     /**
-     * Duplex mode
+     * Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -426,7 +460,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> duplex;
 
     /**
-     * @return Duplex mode
+     * @return Duplex mode, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `full`, `half`, `auto`
      * 
      */
@@ -434,28 +468,28 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.duplex);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="duplexVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> duplexVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> duplexVariable() {
         return Codegen.optional(this.duplexVariable);
     }
     /**
-     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="enableDhcpv6", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> enableDhcpv6;
 
     /**
-     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return Enable DHCPv6, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<Boolean>> enableDhcpv6() {
@@ -476,35 +510,35 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.featureProfileId;
     }
     /**
-     * GRE tunnel source IP
+     * GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="greTunnelSourceIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> greTunnelSourceIp;
 
     /**
-     * @return GRE tunnel source IP
+     * @return GRE tunnel source IP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> greTunnelSourceIp() {
         return Codegen.optional(this.greTunnelSourceIp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="greTunnelSourceIpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> greTunnelSourceIpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> greTunnelSourceIpVariable() {
         return Codegen.optional(this.greTunnelSourceIpVariable);
     }
     /**
-     * ICMP/ICMPv6 Redirect Disable
+     * ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -512,7 +546,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> icmpRedirectDisable;
 
     /**
-     * @return ICMP/ICMPv6 Redirect Disable
+     * @return ICMP/ICMPv6 Redirect Disable, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -520,14 +554,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.icmpRedirectDisable);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="icmpRedirectDisableVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> icmpRedirectDisableVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> icmpRedirectDisableVariable() {
@@ -554,7 +588,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.interfaceDescriptionVariable);
     }
     /**
-     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     * Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -563,7 +597,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> interfaceMtu;
 
     /**
-     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes
+     * @return Interface MTU GigabitEthernet0 &lt;1500..1518&gt;, Other GigabitEthernet &lt;1500..9216&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `1500`-`9216`
      *   - Default value: `1500`
      * 
@@ -572,14 +606,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.interfaceMtu);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="interfaceMtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> interfaceMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> interfaceMtuVariable() {
@@ -606,7 +640,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.interfaceNameVariable);
     }
     /**
-     * IP Directed-Broadcast
+     * IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -614,7 +648,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> ipDirectedBroadcast;
 
     /**
-     * @return IP Directed-Broadcast
+     * @return IP Directed-Broadcast, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -622,21 +656,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipDirectedBroadcast);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipDirectedBroadcastVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipDirectedBroadcastVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipDirectedBroadcastVariable() {
         return Codegen.optional(this.ipDirectedBroadcastVariable);
     }
     /**
-     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -645,7 +679,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> ipMtu;
 
     /**
-     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes
+     * @return IP MTU for GigabitEthernet main &lt;576..Interface MTU&gt;, GigabitEthernet subinterface &lt;576..9216&gt;, Other Interfaces &lt;576..2000&gt; in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `576`-`9216`
      *   - Default value: `1500`
      * 
@@ -654,78 +688,78 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipMtu);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipMtuVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipMtuVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipMtuVariable() {
         return Codegen.optional(this.ipMtuVariable);
     }
     /**
-     * Iperf server for auto bandwidth detect
+     * Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="iperfServer", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> iperfServer;
 
     /**
-     * @return Iperf server for auto bandwidth detect
+     * @return Iperf server for auto bandwidth detect, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> iperfServer() {
         return Codegen.optional(this.iperfServer);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="iperfServerVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> iperfServerVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> iperfServerVariable() {
         return Codegen.optional(this.iperfServerVariable);
     }
     /**
-     * IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4Address;
 
     /**
-     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return IP Address, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4Address() {
         return Codegen.optional(this.ipv4Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4AddressVariable() {
         return Codegen.optional(this.ipv4AddressVariable);
     }
     /**
-     * IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -733,8 +767,8 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> ipv4ConfigurationType;
 
     /**
-     * @return IPv4 Configuration Type
-     *   - Choices: `dynamic`, `static`
+     * @return IPv4 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `dynamic`
      * 
      */
@@ -742,8 +776,8 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4ConfigurationType);
     }
     /**
-     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -751,8 +785,8 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> ipv4DhcpDistance;
 
     /**
-     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
-     *   - Range: `1`-`65536`
+     * @return DHCP Distance, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
+     *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
@@ -760,63 +794,63 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4DhcpDistance);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="ipv4DhcpDistanceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpDistanceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `dynamic`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<String>> ipv4DhcpDistanceVariable() {
         return Codegen.optional(this.ipv4DhcpDistanceVariable);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4DhcpHelperVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4DhcpHelperVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> ipv4DhcpHelperVariable() {
         return Codegen.optional(this.ipv4DhcpHelperVariable);
     }
     /**
-     * List of DHCP IPv4 helper addresses (min 1, max 8)
+     * List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="ipv4DhcpHelpers", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> ipv4DhcpHelpers;
 
     /**
-     * @return List of DHCP IPv4 helper addresses (min 1, max 8)
+     * @return List of DHCP IPv4 helper addresses (min 1, max 8), Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<String>>> ipv4DhcpHelpers() {
         return Codegen.optional(this.ipv4DhcpHelpers);
     }
     /**
-     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4SecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>> ipv4SecondaryAddresses;
 
     /**
-     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Secondary IpV4 Addresses, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv4SecondaryAddress>>> ipv4SecondaryAddresses() {
         return Codegen.optional(this.ipv4SecondaryAddresses);
     }
     /**
-     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -824,7 +858,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> ipv4SubnetMask;
 
     /**
-     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Subnet Mask, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      *   - Choices: `255.255.255.255`, `255.255.255.254`, `255.255.255.252`, `255.255.255.248`, `255.255.255.240`, `255.255.255.224`, `255.255.255.192`, `255.255.255.128`, `255.255.255.0`, `255.255.254.0`, `255.255.252.0`, `255.255.248.0`, `255.255.240.0`, `255.255.224.0`, `255.255.192.0`, `255.255.128.0`, `255.255.0.0`, `255.254.0.0`, `255.252.0.0`, `255.240.0.0`, `255.224.0.0`, `255.192.0.0`, `255.128.0.0`, `255.0.0.0`, `254.0.0.0`, `252.0.0.0`, `248.0.0.0`, `240.0.0.0`, `224.0.0.0`, `192.0.0.0`, `128.0.0.0`, `0.0.0.0`
      * 
      */
@@ -832,49 +866,49 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv4SubnetMask);
     }
     /**
-     * Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv4SubnetMaskVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv4SubnetMaskVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv4ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv4SubnetMaskVariable() {
         return Codegen.optional(this.ipv4SubnetMaskVariable);
     }
     /**
-     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6Address", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6Address;
 
     /**
-     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return IPv6 Address Secondary, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6Address() {
         return Codegen.optional(this.ipv6Address);
     }
     /**
-     * Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6AddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ipv6AddressVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Variable name, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<String>> ipv6AddressVariable() {
         return Codegen.optional(this.ipv6AddressVariable);
     }
     /**
-     * IPv6 Configuration Type
+     * IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -883,7 +917,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> ipv6ConfigurationType;
 
     /**
-     * @return IPv6 Configuration Type
+     * @return IPv6 Configuration Type, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Choices: `dynamic`, `static`, `none`
      *   - Default value: `none`
      * 
@@ -892,28 +926,28 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.ipv6ConfigurationType);
     }
     /**
-     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     @Export(name="ipv6DhcpSecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>> ipv6DhcpSecondaryAddresses;
 
     /**
-     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `dynamic`
+     * @return secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `dynamic`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv6DhcpSecondaryAddress>>> ipv6DhcpSecondaryAddresses() {
         return Codegen.optional(this.ipv6DhcpSecondaryAddresses);
     }
     /**
-     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     @Export(name="ipv6SecondaryAddresses", refs={List.class,TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>> ipv6SecondaryAddresses;
 
     /**
-     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` being equal to `static`
+     * @return Static secondary IPv6 addresses, Attribute conditional on `ipv6ConfigurationType` equal to `static`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureIpv6SecondaryAddress>>> ipv6SecondaryAddresses() {
@@ -952,35 +986,35 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.loadIntervalVariable);
     }
     /**
-     * MAC Address
+     * MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="macAddress", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> macAddress;
 
     /**
-     * @return MAC Address
+     * @return MAC Address, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> macAddress() {
         return Codegen.optional(this.macAddress);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="macAddressVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> macAddressVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true` and `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> macAddressVariable() {
         return Codegen.optional(this.macAddressVariable);
     }
     /**
-     * Media type
+     * Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -988,7 +1022,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> mediaType;
 
     /**
-     * @return Media type
+     * @return Media type, Attribute conditional on `portChannelInterface` not equal to `true`
      *   - Choices: `auto-select`, `rj45`, `sfp`
      * 
      */
@@ -996,18 +1030,52 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.mediaType);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="mediaTypeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> mediaTypeVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> mediaTypeVariable() {
         return Codegen.optional(this.mediaTypeVariable);
+    }
+    /**
+     * Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    @Export(name="mrfCoreRegionType", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> mrfCoreRegionType;
+
+    /**
+     * @return Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Choices: `core-shared`, `core`
+     *   - Default value: `core-shared`
+     * 
+     */
+    public Output<Optional<String>> mrfCoreRegionType() {
+        return Codegen.optional(this.mrfCoreRegionType);
+    }
+    /**
+     * Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="mrfEnableCoreRegion", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> mrfEnableCoreRegion;
+
+    /**
+     * @return Enable Core Region, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> mrfEnableCoreRegion() {
+        return Codegen.optional(this.mrfEnableCoreRegion);
     }
     /**
      * The name of the Feature
@@ -1024,7 +1092,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.name;
     }
     /**
-     * NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1032,7 +1100,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> nat64;
 
     /**
-     * @return NAT64 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * @return NAT64 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1040,7 +1108,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.nat64);
     }
     /**
-     * NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1048,7 +1116,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> nat66;
 
     /**
-     * @return NAT66 on this interface, Attribute conditional on `natIpv6` being equal to `true`
+     * @return NAT66 on this interface, Attribute conditional on `natIpv6` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1056,7 +1124,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.nat66);
     }
     /**
-     * enable Network Address Translation on this interface
+     * enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1064,7 +1132,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> natIpv4;
 
     /**
-     * @return enable Network Address Translation on this interface
+     * @return enable Network Address Translation on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1072,21 +1140,49 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natIpv4);
     }
     /**
-     * Variable name
+     * NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Export(name="natIpv4Loopbacks", refs={List.class,TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback>> natIpv4Loopbacks;
+
+    /**
+     * @return NAT Multiple Loopback, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4Loopback>>> natIpv4Loopbacks() {
+        return Codegen.optional(this.natIpv4Loopbacks);
+    }
+    /**
+     * NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Export(name="natIpv4Pools", refs={List.class,TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool>> natIpv4Pools;
+
+    /**
+     * @return NAT Multiple Pool, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureNatIpv4Pool>>> natIpv4Pools() {
+        return Codegen.optional(this.natIpv4Pools);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="natIpv4Variable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natIpv4Variable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> natIpv4Variable() {
         return Codegen.optional(this.natIpv4Variable);
     }
     /**
-     * enable Network Address Translation ipv6 on this interface
+     * enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1094,7 +1190,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> natIpv6;
 
     /**
-     * @return enable Network Address Translation ipv6 on this interface
+     * @return enable Network Address Translation ipv6 on this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1102,49 +1198,79 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natIpv6);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="natIpv6Variable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natIpv6Variable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> natIpv6Variable() {
         return Codegen.optional(this.natIpv6Variable);
     }
     /**
-     * NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natLoopback", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natLoopback;
 
     /**
-     * @return NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Inside Source Loopback Interface, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natLoopback() {
         return Codegen.optional(this.natLoopback);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natLoopbackVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natLoopbackVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natLoopbackVariable() {
         return Codegen.optional(this.natLoopbackVariable);
     }
     /**
-     * NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="natMatchInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> natMatchInterface;
+
+    /**
+     * @return NAT Match Interface, Attribute conditional on `natIpv4` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> natMatchInterface() {
+        return Codegen.optional(this.natMatchInterface);
+    }
+    /**
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Export(name="natMatchInterfaceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> natMatchInterfaceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> natMatchInterfaceVariable() {
+        return Codegen.optional(this.natMatchInterfaceVariable);
+    }
+    /**
+     * NAT Overload, Attribute conditional on `natIpv4` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1152,7 +1278,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> natOverload;
 
     /**
-     * @return NAT Overload, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Overload, Attribute conditional on `natIpv4` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -1160,21 +1286,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natOverload);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natOverloadVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natOverloadVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natOverloadVariable() {
         return Codegen.optional(this.natOverloadVariable);
     }
     /**
-     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -1182,7 +1308,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> natPrefixLength;
 
     /**
-     * @return NAT Pool Prefix Length, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Prefix Length, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`32`
      * 
      */
@@ -1190,77 +1316,77 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natPrefixLength);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natPrefixLengthVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natPrefixLengthVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natPrefixLengthVariable() {
         return Codegen.optional(this.natPrefixLengthVariable);
     }
     /**
-     * NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natRangeEnd", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeEnd;
 
     /**
-     * @return NAT Pool Range End, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Range End, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeEnd() {
         return Codegen.optional(this.natRangeEnd);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natRangeEndVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeEndVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeEndVariable() {
         return Codegen.optional(this.natRangeEndVariable);
     }
     /**
-     * NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natRangeStart", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeStart;
 
     /**
-     * @return NAT Pool Range Start, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Pool Range Start, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeStart() {
         return Codegen.optional(this.natRangeStart);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natRangeStartVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natRangeStartVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natRangeStartVariable() {
         return Codegen.optional(this.natRangeStartVariable);
     }
     /**
-     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -1269,7 +1395,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> natTcpTimeout;
 
     /**
-     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Set NAT TCP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `60`
      * 
@@ -1278,21 +1404,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natTcpTimeout);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natTcpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natTcpTimeoutVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natTcpTimeoutVariable() {
         return Codegen.optional(this.natTcpTimeoutVariable);
     }
     /**
-     * NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     * NAT Type, Attribute conditional on `natIpv4` equal to `true`
      *   - Choices: `interface`, `pool`, `loopback`
      *   - Default value: `interface`
      * 
@@ -1301,7 +1427,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> natType;
 
     /**
-     * @return NAT Type, Attribute conditional on `natIpv4` being equal to `true`
+     * @return NAT Type, Attribute conditional on `natIpv4` equal to `true`
      *   - Choices: `interface`, `pool`, `loopback`
      *   - Default value: `interface`
      * 
@@ -1310,21 +1436,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natType);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     * 
-     */
-    @Export(name="natTypeVariable", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> natTypeVariable;
-
-    /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
-     * 
-     */
-    public Output<Optional<String>> natTypeVariable() {
-        return Codegen.optional(this.natTypeVariable);
-    }
-    /**
-     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -1333,7 +1445,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> natUdpTimeout;
 
     /**
-     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Set NAT UDP session timeout, in minutes, Attribute conditional on `natIpv4` equal to `true`
      *   - Range: `1`-`8947`
      *   - Default value: `1`
      * 
@@ -1342,35 +1454,35 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.natUdpTimeout);
     }
     /**
-     * Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="natUdpTimeoutVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> natUdpTimeoutVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `natIpv4` being equal to `true`
+     * @return Variable name, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<String>> natUdpTimeoutVariable() {
         return Codegen.optional(this.natUdpTimeoutVariable);
     }
     /**
-     * static NAT, Attribute conditional on `natIpv4` being equal to `true`
+     * static NAT, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     @Export(name="newStaticNats", refs={List.class,TransportWanVpnInterfaceEthernetFeatureNewStaticNat.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureNewStaticNat>> newStaticNats;
 
     /**
-     * @return static NAT, Attribute conditional on `natIpv4` being equal to `true`
+     * @return static NAT, Attribute conditional on `natIpv4` equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureNewStaticNat>>> newStaticNats() {
         return Codegen.optional(this.newStaticNats);
     }
     /**
-     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1378,7 +1490,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> perTunnelQos;
 
     /**
-     * @return Per-tunnel Qos, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Per-tunnel Qos, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1386,21 +1498,315 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.perTunnelQos);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="perTunnelQosVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> perTunnelQosVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> perTunnelQosVariable() {
         return Codegen.optional(this.perTunnelQosVariable);
     }
     /**
-     * Adaptive QoS
+     * Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="portChannelInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelInterface;
+
+    /**
+     * @return Port-Channel interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelInterface() {
+        return Codegen.optional(this.portChannelInterface);
+    }
+    /**
+     * Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpFastSwitchover", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelLacpFastSwitchover;
+
+    /**
+     * @return Eanble lacp fast switchover, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelLacpFastSwitchover() {
+        return Codegen.optional(this.portChannelLacpFastSwitchover);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpFastSwitchoverVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpFastSwitchoverVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpFastSwitchoverVariable() {
+        return Codegen.optional(this.portChannelLacpFastSwitchoverVariable);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Export(name="portChannelLacpLoadBalance", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpLoadBalance() {
+        return Codegen.optional(this.portChannelLacpLoadBalance);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpLoadBalanceVariable() {
+        return Codegen.optional(this.portChannelLacpLoadBalanceVariable);
+    }
+    /**
+     * Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Export(name="portChannelLacpMaxBundle", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> portChannelLacpMaxBundle;
+
+    /**
+     * @return Set LACP max bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Output<Optional<Integer>> portChannelLacpMaxBundle() {
+        return Codegen.optional(this.portChannelLacpMaxBundle);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMaxBundleVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpMaxBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpMaxBundleVariable() {
+        return Codegen.optional(this.portChannelLacpMaxBundleVariable);
+    }
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMemberLinks", refs={List.class,TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink>> portChannelLacpMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<List<TransportWanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink>>> portChannelLacpMemberLinks() {
+        return Codegen.optional(this.portChannelLacpMemberLinks);
+    }
+    /**
+     * Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    @Export(name="portChannelLacpMinBundle", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> portChannelLacpMinBundle;
+
+    /**
+     * @return Set LACP min bundle, Attribute conditional on `portChannelMode` equal to `lacp`
+     *   - Range: `1`-`16`
+     * 
+     */
+    public Output<Optional<Integer>> portChannelLacpMinBundle() {
+        return Codegen.optional(this.portChannelLacpMinBundle);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpMinBundleVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpMinBundleVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpMinBundleVariable() {
+        return Codegen.optional(this.portChannelLacpMinBundleVariable);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpQosAggregate", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelLacpQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelLacpQosAggregate() {
+        return Codegen.optional(this.portChannelLacpQosAggregate);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    @Export(name="portChannelLacpQosAggregateVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelLacpQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `lacp`
+     * 
+     */
+    public Output<Optional<String>> portChannelLacpQosAggregateVariable() {
+        return Codegen.optional(this.portChannelLacpQosAggregateVariable);
+    }
+    /**
+     * Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="portChannelMemberInterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelMemberInterface;
+
+    /**
+     * @return Port-Channel member interface on/off
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelMemberInterface() {
+        return Codegen.optional(this.portChannelMemberInterface);
+    }
+    /**
+     * Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    @Export(name="portChannelMode", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelMode;
+
+    /**
+     * @return Port Channel Mode, Attribute conditional on `portChannelInterface` equal to `true`
+     *   - Choices: `lacp`, `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelMode() {
+        return Codegen.optional(this.portChannelMode);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    @Export(name="portChannelStaticLoadBalance", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticLoadBalance;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     *   - Choices: `flow`, `vlan`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticLoadBalance() {
+        return Codegen.optional(this.portChannelStaticLoadBalance);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticLoadBalanceVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticLoadBalanceVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticLoadBalanceVariable() {
+        return Codegen.optional(this.portChannelStaticLoadBalanceVariable);
+    }
+    /**
+     * Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticMemberLinks", refs={List.class,TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>> portChannelStaticMemberLinks;
+
+    /**
+     * @return Configure Port-Channel member links, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<List<TransportWanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink>>> portChannelStaticMemberLinks() {
+        return Codegen.optional(this.portChannelStaticMemberLinks);
+    }
+    /**
+     * Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticQosAggregate", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelStaticQosAggregate;
+
+    /**
+     * @return Enable QoS Port-Channel aggregate, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelStaticQosAggregate() {
+        return Codegen.optional(this.portChannelStaticQosAggregate);
+    }
+    /**
+     * Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    @Export(name="portChannelStaticQosAggregateVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> portChannelStaticQosAggregateVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `portChannelMode` equal to `static`
+     * 
+     */
+    public Output<Optional<String>> portChannelStaticQosAggregateVariable() {
+        return Codegen.optional(this.portChannelStaticQosAggregateVariable);
+    }
+    /**
+     * , Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    @Export(name="portChannelSubinterface", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> portChannelSubinterface;
+
+    /**
+     * @return , Attribute conditional on `portChannelInterface` equal to `true`
+     * 
+     */
+    public Output<Optional<Boolean>> portChannelSubinterface() {
+        return Codegen.optional(this.portChannelSubinterface);
+    }
+    /**
+     * Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1408,7 +1814,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> qosAdaptive;
 
     /**
-     * @return Adaptive QoS
+     * @return Adaptive QoS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1690,28 +2096,28 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.qosShapingRateVariable);
     }
     /**
-     * Service Provider Name
+     * Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="serviceProvider", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> serviceProvider;
 
     /**
-     * @return Service Provider Name
+     * @return Service Provider Name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> serviceProvider() {
         return Codegen.optional(this.serviceProvider);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="serviceProviderVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> serviceProviderVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> serviceProviderVariable() {
@@ -1746,51 +2152,65 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.shutdownVariable);
     }
     /**
-     * Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     @Export(name="speed", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speed;
 
     /**
-     * @return Set interface speed
-     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`
+     * @return Set interface speed, Attribute conditional on `portChannelInterface` not equal to `true`
+     *   - Choices: `10`, `100`, `1000`, `2500`, `10000`, `25000`
      * 
      */
     public Output<Optional<String>> speed() {
         return Codegen.optional(this.speed);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     @Export(name="speedVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> speedVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> speedVariable() {
         return Codegen.optional(this.speedVariable);
     }
     /**
-     * static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+     * static NAT66, Attribute conditional on `natIpv6` equal to `true`
      * 
      */
     @Export(name="staticNat66s", refs={List.class,TransportWanVpnInterfaceEthernetFeatureStaticNat66.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureStaticNat66>> staticNat66s;
 
     /**
-     * @return static NAT66, Attribute conditional on `natIpv6` being equal to `true`
+     * @return static NAT66, Attribute conditional on `natIpv6` equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureStaticNat66>>> staticNat66s() {
         return Codegen.optional(this.staticNat66s);
     }
     /**
-     * TCP MSS on SYN packets, in bytes
+     * Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    @Export(name="staticPortForwards", refs={List.class,TransportWanVpnInterfaceEthernetFeatureStaticPortForward.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureStaticPortForward>> staticPortForwards;
+
+    /**
+     * @return Configure Port Forward entries, Attribute conditional on `natIpv4` equal to `true`
+     * 
+     */
+    public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureStaticPortForward>>> staticPortForwards() {
+        return Codegen.optional(this.staticPortForwards);
+    }
+    /**
+     * TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1798,7 +2218,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tcpMss;
 
     /**
-     * @return TCP MSS on SYN packets, in bytes
+     * @return TCP MSS on SYN packets, in bytes, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -1806,70 +2226,70 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tcpMss);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tcpMssVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tcpMssVariable() {
         return Codegen.optional(this.tcpMssVariable);
     }
     /**
-     * Extends a local TLOC to a remote node only for vpn 0
+     * Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tlocExtension", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tlocExtension;
 
     /**
-     * @return Extends a local TLOC to a remote node only for vpn 0
+     * @return Extends a local TLOC to a remote node only for vpn 0, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tlocExtension() {
         return Codegen.optional(this.tlocExtension);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tlocExtensionVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tlocExtensionVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tlocExtensionVariable() {
         return Codegen.optional(this.tlocExtensionVariable);
     }
     /**
-     * Enable tracker for this interface
+     * Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tracker", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tracker;
 
     /**
-     * @return Enable tracker for this interface
+     * @return Enable tracker for this interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tracker() {
         return Codegen.optional(this.tracker);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="trackerVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> trackerVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> trackerVariable() {
@@ -1890,7 +2310,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.transportWanVpnFeatureId;
     }
     /**
-     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -1899,7 +2319,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelBandwidthPercent;
 
     /**
-     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Tunnels Bandwidth Percent, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`100`
      *   - Default value: `50`
      * 
@@ -1908,14 +2328,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelBandwidthPercent);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelBandwidthPercentVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelBandwidthPercentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelBandwidthPercentVariable() {
@@ -1938,7 +2358,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterface);
     }
     /**
-     * Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     * Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1946,7 +2366,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowAll;
 
     /**
-     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set
+     * @return Allow all traffic. Overrides all other allow-service options if allow-service all is set, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1954,21 +2374,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowAll);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowAllVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowAllVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowAllVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowAllVariable);
     }
     /**
-     * Allow/Deny BFD
+     * Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1976,7 +2396,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowBfd;
 
     /**
-     * @return Allow/Deny BFD
+     * @return Allow/Deny BFD, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -1984,21 +2404,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowBfd);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowBfdVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowBfdVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowBfdVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowBfdVariable);
     }
     /**
-     * Allow/deny BGP
+     * Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2006,7 +2426,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowBgp;
 
     /**
-     * @return Allow/deny BGP
+     * @return Allow/deny BGP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2014,21 +2434,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowBgp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowBgpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowBgpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowBgpVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowBgpVariable);
     }
     /**
-     * Allow/Deny DHCP
+     * Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2036,7 +2456,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDhcp;
 
     /**
-     * @return Allow/Deny DHCP
+     * @return Allow/Deny DHCP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2044,21 +2464,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowDhcp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDhcpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowDhcpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowDhcpVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowDhcpVariable);
     }
     /**
-     * Allow/Deny DNS
+     * Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2066,7 +2486,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowDns;
 
     /**
-     * @return Allow/Deny DNS
+     * @return Allow/Deny DNS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2074,21 +2494,51 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowDns);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowDnsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowDnsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowDnsVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowDnsVariable);
     }
     /**
-     * Allow/Deny HTTPS
+     * Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="tunnelInterfaceAllowFragmentation", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> tunnelInterfaceAllowFragmentation;
+
+    /**
+     * @return Allow Fragmentation and will clear DF bit in outer IP, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> tunnelInterfaceAllowFragmentation() {
+        return Codegen.optional(this.tunnelInterfaceAllowFragmentation);
+    }
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    @Export(name="tunnelInterfaceAllowFragmentationVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceAllowFragmentationVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceAllowFragmentationVariable() {
+        return Codegen.optional(this.tunnelInterfaceAllowFragmentationVariable);
+    }
+    /**
+     * Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2096,7 +2546,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowHttps;
 
     /**
-     * @return Allow/Deny HTTPS
+     * @return Allow/Deny HTTPS, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2104,21 +2554,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowHttps);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowHttpsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowHttpsVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowHttpsVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowHttpsVariable);
     }
     /**
-     * Allow/Deny ICMP
+     * Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2126,7 +2576,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowIcmp;
 
     /**
-     * @return Allow/Deny ICMP
+     * @return Allow/Deny ICMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2134,21 +2584,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowIcmp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowIcmpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowIcmpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowIcmpVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowIcmpVariable);
     }
     /**
-     * Allow/Deny NETCONF
+     * Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2156,7 +2606,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNetconf;
 
     /**
-     * @return Allow/Deny NETCONF
+     * @return Allow/Deny NETCONF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2164,51 +2614,51 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowNetconf);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowNetconfVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowNetconfVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowNetconfVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowNetconfVariable);
     }
     /**
-     * Allow/Deny NTP
-     *   - Default value: `true`
+     * Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowNtp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowNtp;
 
     /**
-     * @return Allow/Deny NTP
-     *   - Default value: `true`
+     * @return Allow/Deny NTP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowNtp() {
         return Codegen.optional(this.tunnelInterfaceAllowNtp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowNtpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowNtpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowNtpVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowNtpVariable);
     }
     /**
-     * Allow/Deny OSPF
+     * Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2216,7 +2666,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowOspf;
 
     /**
-     * @return Allow/Deny OSPF
+     * @return Allow/Deny OSPF, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2224,21 +2674,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowOspf);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowOspfVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowOspfVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowOspfVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowOspfVariable);
     }
     /**
-     * Allow/Deny SNMP
+     * Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2246,7 +2696,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSnmp;
 
     /**
-     * @return Allow/Deny SNMP
+     * @return Allow/Deny SNMP, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2254,51 +2704,51 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowSnmp);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowSnmpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowSnmpVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowSnmpVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowSnmpVariable);
     }
     /**
-     * Allow/Deny SSH
-     *   - Default value: `true`
+     * Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     @Export(name="tunnelInterfaceAllowSsh", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowSsh;
 
     /**
-     * @return Allow/Deny SSH
-     *   - Default value: `true`
+     * @return Allow/Deny SSH, Attribute conditional on `portChannelMemberInterface` not equal to `true`
+     *   - Default value: `false`
      * 
      */
     public Output<Optional<Boolean>> tunnelInterfaceAllowSsh() {
         return Codegen.optional(this.tunnelInterfaceAllowSsh);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowSshVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowSshVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowSshVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowSshVariable);
     }
     /**
-     * Allow/Deny STUN
+     * Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2306,7 +2756,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceAllowStun;
 
     /**
-     * @return Allow/Deny STUN
+     * @return Allow/Deny STUN, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2314,49 +2764,49 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceAllowStun);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceAllowStunVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceAllowStunVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceAllowStunVariable() {
         return Codegen.optional(this.tunnelInterfaceAllowStunVariable);
     }
     /**
-     * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceBindLoopbackTunnel", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBindLoopbackTunnel;
 
     /**
-     * @return Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Bind loopback tunnel interface to a physical interface, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBindLoopbackTunnel() {
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnel);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceBindLoopbackTunnelVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBindLoopbackTunnelVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBindLoopbackTunnelVariable() {
         return Codegen.optional(this.tunnelInterfaceBindLoopbackTunnelVariable);
     }
     /**
-     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2364,7 +2814,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceBorder;
 
     /**
-     * @return Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set TLOC as border TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2372,21 +2822,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceBorder);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceBorderVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceBorderVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceBorderVariable() {
         return Codegen.optional(this.tunnelInterfaceBorderVariable);
     }
     /**
-     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      * 
@@ -2395,7 +2845,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> tunnelInterfaceCarrier;
 
     /**
-     * @return Set carrier for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set carrier for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `carrier1`, `carrier2`, `carrier3`, `carrier4`, `carrier5`, `carrier6`, `carrier7`, `carrier8`
      *   - Default value: `default`
      * 
@@ -2404,21 +2854,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceCarrier);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceCarrierVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCarrierVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCarrierVariable() {
         return Codegen.optional(this.tunnelInterfaceCarrierVariable);
     }
     /**
-     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     * Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2426,7 +2876,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceClearDontFragment;
 
     /**
-     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Enable clear dont fragment (Currently Only SDWAN Tunnel Interface), Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2434,21 +2884,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceClearDontFragment);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceClearDontFragmentVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceClearDontFragmentVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceClearDontFragmentVariable() {
         return Codegen.optional(this.tunnelInterfaceClearDontFragmentVariable);
     }
     /**
-     * Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
@@ -2457,7 +2907,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> tunnelInterfaceColor;
 
     /**
-     * @return Set color for TLOC, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set color for TLOC, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `default`, `mpls`, `metro-ethernet`, `biz-internet`, `public-internet`, `lte`, `3g`, `red`, `green`, `blue`, `gold`, `silver`, `bronze`, `custom1`, `custom2`, `custom3`, `private1`, `private2`, `private3`, `private4`, `private5`, `private6`
      *   - Default value: `mpls`
      * 
@@ -2466,7 +2916,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceColor);
     }
     /**
-     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2474,7 +2924,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceColorRestrict;
 
     /**
-     * @return Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Restrict this TLOC behavior, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2482,35 +2932,35 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceColorRestrict);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceColorRestrictVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColorRestrictVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColorRestrictVariable() {
         return Codegen.optional(this.tunnelInterfaceColorRestrictVariable);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceColorVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceColorVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceColorVariable() {
         return Codegen.optional(this.tunnelInterfaceColorVariable);
     }
     /**
-     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     * CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2518,7 +2968,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceCtsSgtPropagation;
 
     /**
-     * @return CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return CTS SGT Propagation configuration, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2526,91 +2976,91 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceCtsSgtPropagation);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceCtsSgtPropagationVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceCtsSgtPropagationVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceCtsSgtPropagationVariable() {
         return Codegen.optional(this.tunnelInterfaceCtsSgtPropagationVariable);
     }
     /**
-     * Encapsulation for TLOC
+     * Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceEncapsulations", refs={List.class,TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation.class}, tree="[0,1]")
     private Output</* @Nullable */ List<TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation>> tunnelInterfaceEncapsulations;
 
     /**
-     * @return Encapsulation for TLOC
+     * @return Encapsulation for TLOC, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<List<TransportWanVpnInterfaceEthernetFeatureTunnelInterfaceEncapsulation>>> tunnelInterfaceEncapsulations() {
         return Codegen.optional(this.tunnelInterfaceEncapsulations);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceExcludeControllerGroupListVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceExcludeControllerGroupListVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceExcludeControllerGroupListVariable() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupListVariable);
     }
     /**
-     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+     * Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceExcludeControllerGroupLists", refs={List.class,Integer.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Integer>> tunnelInterfaceExcludeControllerGroupLists;
 
     /**
-     * @return Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Exclude the following controller groups defined in this list., Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<List<Integer>>> tunnelInterfaceExcludeControllerGroupLists() {
         return Codegen.optional(this.tunnelInterfaceExcludeControllerGroupLists);
     }
     /**
-     * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+     * GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGreTunnelDestinationIp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGreTunnelDestinationIp;
 
     /**
-     * @return GRE tunnel destination IP, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return GRE tunnel destination IP, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGreTunnelDestinationIp() {
         return Codegen.optional(this.tunnelInterfaceGreTunnelDestinationIp);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGreTunnelDestinationIpVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGreTunnelDestinationIpVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGreTunnelDestinationIpVariable() {
         return Codegen.optional(this.tunnelInterfaceGreTunnelDestinationIpVariable);
     }
     /**
-     * List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     * List of groups, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -2618,7 +3068,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceGroups;
 
     /**
-     * @return List of groups, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return List of groups, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`4294967295`
      * 
      */
@@ -2626,21 +3076,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceGroups);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceGroupsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceGroupsVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceGroupsVariable() {
         return Codegen.optional(this.tunnelInterfaceGroupsVariable);
     }
     /**
-     * Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      * 
@@ -2649,7 +3099,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloInterval;
 
     /**
-     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set time period of control hello packets &lt;100..600000&gt; milli seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `100`-`600000`
      *   - Default value: `1000`
      * 
@@ -2658,21 +3108,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceHelloInterval);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceHelloIntervalVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceHelloIntervalVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceHelloIntervalVariable() {
         return Codegen.optional(this.tunnelInterfaceHelloIntervalVariable);
     }
     /**
-     * Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      * 
@@ -2681,7 +3131,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceHelloTolerance;
 
     /**
-     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set tolerance of control hello packets &lt;12..6000&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `12`-`6000`
      *   - Default value: `12`
      * 
@@ -2690,21 +3140,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceHelloTolerance);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceHelloToleranceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceHelloToleranceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceHelloToleranceVariable() {
         return Codegen.optional(this.tunnelInterfaceHelloToleranceVariable);
     }
     /**
-     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2712,7 +3162,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceLastResortCircuit;
 
     /**
-     * @return Set TLOC as last resort, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set TLOC as last resort, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2720,21 +3170,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceLastResortCircuit);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceLastResortCircuitVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceLastResortCircuitVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceLastResortCircuitVariable() {
         return Codegen.optional(this.tunnelInterfaceLastResortCircuitVariable);
     }
     /**
-     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2742,7 +3192,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceLowBandwidthLink;
 
     /**
-     * @return Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set the interface as a low-bandwidth circuit, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2750,21 +3200,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLink);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceLowBandwidthLinkVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceLowBandwidthLinkVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceLowBandwidthLinkVariable() {
         return Codegen.optional(this.tunnelInterfaceLowBandwidthLinkVariable);
     }
     /**
-     * Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`100`
      * 
      */
@@ -2772,7 +3222,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceMaxControlConnections;
 
     /**
-     * @return Maximum Control Connections, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Maximum Control Connections, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`100`
      * 
      */
@@ -2780,21 +3230,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceMaxControlConnections);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceMaxControlConnectionsVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceMaxControlConnectionsVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceMaxControlConnectionsVariable() {
         return Codegen.optional(this.tunnelInterfaceMaxControlConnectionsVariable);
     }
     /**
-     * Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`60`
      *   - Default value: `5`
      * 
@@ -2803,7 +3253,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceNatRefreshInterval;
 
     /**
-     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set time period of nat refresh packets &lt;1...60&gt; seconds, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `1`-`60`
      *   - Default value: `5`
      * 
@@ -2812,21 +3262,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceNatRefreshInterval);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceNatRefreshIntervalVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceNatRefreshIntervalVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceNatRefreshIntervalVariable() {
         return Codegen.optional(this.tunnelInterfaceNatRefreshIntervalVariable);
     }
     /**
-     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2834,7 +3284,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceNetworkBroadcast;
 
     /**
-     * @return Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Accept and respond to network-prefix-directed broadcasts, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2842,21 +3292,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcast);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceNetworkBroadcastVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceNetworkBroadcastVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceNetworkBroadcastVariable() {
         return Codegen.optional(this.tunnelInterfaceNetworkBroadcastVariable);
     }
     /**
-     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2864,7 +3314,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfacePortHop;
 
     /**
-     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Disallow port hopping on the tunnel interface, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `true`
      * 
      */
@@ -2872,21 +3322,51 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfacePortHop);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfacePortHopVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfacePortHopVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfacePortHopVariable() {
         return Codegen.optional(this.tunnelInterfacePortHopVariable);
     }
     /**
-     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    @Export(name="tunnelInterfaceSetSdwanTunnelMtuToMax", refs={Boolean.class}, tree="[0]")
+    private Output</* @Nullable */ Boolean> tunnelInterfaceSetSdwanTunnelMtuToMax;
+
+    /**
+     * @return Set current tunnel mtu to 9k, Attribute conditional on `tunnelInterface` equal to `true`
+     *   - Default value: `false`
+     * 
+     */
+    public Output<Optional<Boolean>> tunnelInterfaceSetSdwanTunnelMtuToMax() {
+        return Codegen.optional(this.tunnelInterfaceSetSdwanTunnelMtuToMax);
+    }
+    /**
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    @Export(name="tunnelInterfaceSetSdwanTunnelMtuToMaxVariable", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> tunnelInterfaceSetSdwanTunnelMtuToMaxVariable;
+
+    /**
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
+     * 
+     */
+    public Output<Optional<String>> tunnelInterfaceSetSdwanTunnelMtuToMaxVariable() {
+        return Codegen.optional(this.tunnelInterfaceSetSdwanTunnelMtuToMaxVariable);
+    }
+    /**
+     * Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -2894,7 +3374,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceTunnelTcpMss;
 
     /**
-     * @return Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Tunnel TCP MSS on SYN packets, in bytes, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `500`-`1460`
      * 
      */
@@ -2902,21 +3382,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMss);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceTunnelTcpMssVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceTunnelTcpMssVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceTunnelTcpMssVariable() {
         return Codegen.optional(this.tunnelInterfaceTunnelTcpMssVariable);
     }
     /**
-     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2924,7 +3404,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Boolean> tunnelInterfaceVbondAsStunServer;
 
     /**
-     * @return Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Put this wan interface in STUN mode only, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Default value: `false`
      * 
      */
@@ -2932,21 +3412,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServer);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceVbondAsStunServerVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceVbondAsStunServerVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceVbondAsStunServerVariable() {
         return Codegen.optional(this.tunnelInterfaceVbondAsStunServerVariable);
     }
     /**
-     * Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`8`
      *   - Default value: `5`
      * 
@@ -2955,7 +3435,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ Integer> tunnelInterfaceVmanageConnectionPreference;
 
     /**
-     * @return Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set interface preference for control connection to vManage &lt;0..8&gt;, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Range: `0`-`8`
      *   - Default value: `5`
      * 
@@ -2964,21 +3444,21 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreference);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelInterfaceVmanageConnectionPreferenceVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelInterfaceVmanageConnectionPreferenceVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelInterfaceVmanageConnectionPreferenceVariable() {
         return Codegen.optional(this.tunnelInterfaceVmanageConnectionPreferenceVariable);
     }
     /**
-     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `hub`, `spoke`
      * 
      */
@@ -2986,7 +3466,7 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
     private Output</* @Nullable */ String> tunnelQosMode;
 
     /**
-     * @return Set tunnel QoS mode, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Set tunnel QoS mode, Attribute conditional on `tunnelInterface` equal to `true`
      *   - Choices: `hub`, `spoke`
      * 
      */
@@ -2994,14 +3474,14 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return Codegen.optional(this.tunnelQosMode);
     }
     /**
-     * Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     @Export(name="tunnelQosModeVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> tunnelQosModeVariable;
 
     /**
-     * @return Variable name, Attribute conditional on `tunnelInterface` being equal to `true`
+     * @return Variable name, Attribute conditional on `tunnelInterface` equal to `true`
      * 
      */
     public Output<Optional<String>> tunnelQosModeVariable() {
@@ -3022,28 +3502,28 @@ public class TransportWanVpnInterfaceEthernetFeature extends com.pulumi.resource
         return this.version;
     }
     /**
-     * Extend remote TLOC over a GRE tunnel to a local WAN interface
+     * Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="xconnect", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> xconnect;
 
     /**
-     * @return Extend remote TLOC over a GRE tunnel to a local WAN interface
+     * @return Extend remote TLOC over a GRE tunnel to a local WAN interface, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> xconnect() {
         return Codegen.optional(this.xconnect);
     }
     /**
-     * Variable name
+     * Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     @Export(name="xconnectVariable", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> xconnectVariable;
 
     /**
-     * @return Variable name
+     * @return Variable name, Attribute conditional on `portChannelMemberInterface` not equal to `true`
      * 
      */
     public Output<Optional<String>> xconnectVariable() {

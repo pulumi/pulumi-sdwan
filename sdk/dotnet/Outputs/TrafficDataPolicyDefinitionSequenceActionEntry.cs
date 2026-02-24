@@ -14,86 +14,86 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntry
     {
         /// <summary>
-        /// Enable cflowd, Attribute conditional on `Type` being equal to `Cflowd`
+        /// Enable cflowd, Attribute conditional on `Type` equal to `Cflowd`
         /// </summary>
         public readonly bool? Cflowd;
         /// <summary>
-        /// Counter name, Attribute conditional on `Type` being equal to `Count`
+        /// Counter name, Attribute conditional on `Type` equal to `Count`
         /// </summary>
         public readonly string? Counter;
         /// <summary>
-        /// Enable DRE optimization, Attribute conditional on `Type` being equal to `dreOptimization`
+        /// Enable DRE optimization, Attribute conditional on `Type` equal to `dreOptimization`
         /// </summary>
         public readonly bool? DreOptimization;
         /// <summary>
-        /// Enable fallback to routing, Attribute conditional on `Type` being equal to `fallbackToRouting`
+        /// Enable fallback to routing, Attribute conditional on `Type` equal to `fallbackToRouting`
         /// </summary>
         public readonly bool? FallbackToRouting;
         /// <summary>
-        /// Enable logging, Attribute conditional on `Type` being equal to `Log`
+        /// Enable logging, Attribute conditional on `Type` equal to `Log`
         /// </summary>
         public readonly bool? Log;
         /// <summary>
-        /// Loss correction, Attribute conditional on `Type` being equal to `lossProtect`
+        /// Loss correction, Attribute conditional on `Type` equal to `lossProtect`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrection;
         /// <summary>
-        /// Loss correction FEC, Attribute conditional on `Type` being equal to `lossProtectFec`
+        /// Loss correction FEC, Attribute conditional on `Type` equal to `lossProtectFec`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrectionFec;
         /// <summary>
-        /// Loss correction FEC threshold, Attribute conditional on `Type` being equal to `lossProtectFec`
+        /// Loss correction FEC threshold, Attribute conditional on `Type` equal to `lossProtectFec`
         /// </summary>
         public readonly string? LossCorrectionFecThreshold;
         /// <summary>
-        /// Loss correction packet duplication, Attribute conditional on `Type` being equal to `lossProtectPktDup`
+        /// Loss correction packet duplication, Attribute conditional on `Type` equal to `lossProtectPktDup`
         ///   - Choices: `fecAdaptive`, `fecAlways`, `packetDuplication`
         /// </summary>
         public readonly string? LossCorrectionPacketDuplication;
         /// <summary>
-        /// List of NAT parameters, Attribute conditional on `Type` being equal to `Nat`
+        /// List of NAT parameters, Attribute conditional on `Type` equal to `Nat`
         /// </summary>
         public readonly ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntryNatParameter> NatParameters;
         /// <summary>
-        /// NAT pool, Attribute conditional on `Type` being equal to `Nat`
+        /// NAT pool, Attribute conditional on `Type` equal to `Nat`
         ///   - Choices: `Pool`
         /// </summary>
         public readonly string? NatPool;
         /// <summary>
-        /// NAT pool ID, Attribute conditional on `Type` being equal to `Nat`
+        /// NAT pool ID, Attribute conditional on `Type` equal to `Nat`
         ///   - Range: `1`-`31`
         /// </summary>
         public readonly int? NatPoolId;
         /// <summary>
-        /// Redirect DNS, Attribute conditional on `Type` being equal to `redirectDns`
+        /// Redirect DNS, Attribute conditional on `Type` equal to `redirectDns`
         ///   - Choices: `dnsType`, `ipAddress`
         /// </summary>
         public readonly string? RedirectDns;
         /// <summary>
-        /// Redirect DNS IP address, Attribute conditional on `RedirectDns` being equal to `ipAddress`
+        /// Redirect DNS IP address, Attribute conditional on `RedirectDns` equal to `ipAddress`
         /// </summary>
         public readonly string? RedirectDnsAddress;
         /// <summary>
-        /// Redirect DNS type, Attribute conditional on `RedirectDns` being equal to `dnsType`
+        /// Redirect DNS type, Attribute conditional on `RedirectDns` equal to `dnsType`
         ///   - Choices: `Host`, `Umbrella`
         /// </summary>
         public readonly string? RedirectDnsType;
         /// <summary>
-        /// Enable secure internet gateway, Attribute conditional on `Type` being equal to `Sig`
+        /// Enable secure internet gateway, Attribute conditional on `Type` equal to `Sig`
         /// </summary>
         public readonly bool? SecureInternetGateway;
         /// <summary>
-        /// Service node group, Attribute conditional on `Type` being equal to `serviceNodeGroup`
+        /// Service node group, Attribute conditional on `Type` equal to `serviceNodeGroup`
         /// </summary>
         public readonly string? ServiceNodeGroup;
         /// <summary>
-        /// List of set parameters, Attribute conditional on `Type` being equal to `Set`
+        /// List of set parameters, Attribute conditional on `Type` equal to `Set`
         /// </summary>
         public readonly ImmutableArray<Outputs.TrafficDataPolicyDefinitionSequenceActionEntrySetParameter> SetParameters;
         /// <summary>
-        /// Enable TCP optimization, Attribute conditional on `Type` being equal to `tcpOptimization`
+        /// Enable TCP optimization, Attribute conditional on `Type` equal to `tcpOptimization`
         /// </summary>
         public readonly bool? TcpOptimization;
         /// <summary>

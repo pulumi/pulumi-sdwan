@@ -14,37 +14,37 @@ namespace Pulumi.Sdwan.Outputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntrySetParameter
     {
         /// <summary>
-        /// DSCP, Attribute conditional on `Type` being equal to `Dscp`
+        /// DSCP, Attribute conditional on `Type` equal to `Dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         public readonly int? Dscp;
         /// <summary>
-        /// Forwarding class, Attribute conditional on `Type` being equal to `forwardingClass`
+        /// Forwarding class, Attribute conditional on `Type` equal to `forwardingClass`
         /// </summary>
         public readonly string? ForwardingClass;
         /// <summary>
-        /// Local TLOC list color. Space separated list of colors., Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list color. Space separated list of colors., Attribute conditional on `Type` equal to `localTlocList`
         /// </summary>
         public readonly string? LocalTlocListColor;
         /// <summary>
-        /// Local TLOC list encapsulation., Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list encapsulation., Attribute conditional on `Type` equal to `localTlocList`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         public readonly string? LocalTlocListEncap;
         /// <summary>
-        /// Local TLOC list restrict, Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list restrict, Attribute conditional on `Type` equal to `localTlocList`
         /// </summary>
         public readonly bool? LocalTlocListRestrict;
         /// <summary>
-        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         public readonly string? NextHop;
         /// <summary>
-        /// Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `Type` being equal to `nextHopLoose`
+        /// Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `Type` equal to `nextHopLoose`
         /// </summary>
         public readonly bool? NextHopLoose;
         /// <summary>
-        /// Policer list ID, Attribute conditional on `Type` being equal to `Policer`
+        /// Policer list ID, Attribute conditional on `Type` equal to `Policer`
         /// </summary>
         public readonly string? PolicerListId;
         /// <summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PolicerListVersion;
         /// <summary>
-        /// Preferred color group list ID, Attribute conditional on `Type` being equal to `preferredColorGroup`
+        /// Preferred color group list ID, Attribute conditional on `Type` equal to `preferredColorGroup`
         /// </summary>
         public readonly string? PreferredColorGroupListId;
         /// <summary>
@@ -60,20 +60,20 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? PreferredColorGroupListVersion;
         /// <summary>
-        /// Service TLOC color, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC color, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         public readonly string? ServiceTlocColor;
         /// <summary>
-        /// Service TLOC encapsulation, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC encapsulation, Attribute conditional on `Type` equal to `Service`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         public readonly string? ServiceTlocEncapsulation;
         /// <summary>
-        /// Service TLOC IP address, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC IP address, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         public readonly string? ServiceTlocIp;
         /// <summary>
-        /// Service TLOC list ID, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC list ID, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         public readonly string? ServiceTlocListId;
         /// <summary>
@@ -81,38 +81,38 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly int? ServiceTlocListVersion;
         /// <summary>
-        /// Service TLOC Local, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC Local, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         public readonly bool? ServiceTlocLocal;
         /// <summary>
-        /// Service TLOC Restrict, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC Restrict, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         public readonly bool? ServiceTlocRestrict;
         /// <summary>
-        /// Service type, Attribute conditional on `Type` being equal to `Service`
+        /// Service type, Attribute conditional on `Type` equal to `Service`
         ///   - Choices: `FW`, `IDP`, `IDS`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `Netsvc5`
         /// </summary>
         public readonly string? ServiceType;
         /// <summary>
-        /// Service VPN ID, Attribute conditional on `Type` being equal to `Service`
+        /// Service VPN ID, Attribute conditional on `Type` equal to `Service`
         ///   - Range: `0`-`65536`
         /// </summary>
         public readonly int? ServiceVpnId;
         /// <summary>
-        /// TLOC color, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC color, Attribute conditional on `Type` equal to `Tloc`
         /// </summary>
         public readonly string? TlocColor;
         /// <summary>
-        /// TLOC encapsulation, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC encapsulation, Attribute conditional on `Type` equal to `Tloc`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         public readonly string? TlocEncapsulation;
         /// <summary>
-        /// TLOC IP address, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC IP address, Attribute conditional on `Type` equal to `Tloc`
         /// </summary>
         public readonly string? TlocIp;
         /// <summary>
-        /// TLOC list ID, Attribute conditional on `Type` being equal to `tlocList`
+        /// TLOC list ID, Attribute conditional on `Type` equal to `tlocList`
         /// </summary>
         public readonly string? TlocListId;
         /// <summary>
@@ -125,7 +125,7 @@ namespace Pulumi.Sdwan.Outputs
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// DSCP, Attribute conditional on `Type` being equal to `Vpn`
+        /// DSCP, Attribute conditional on `Type` equal to `Vpn`
         ///   - Range: `0`-`65530`
         /// </summary>
         public readonly int? VpnId;

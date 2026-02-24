@@ -13,7 +13,7 @@ import (
 )
 
 // This resource can manage a Policy Object Unified TLS SSL Profile Policy_object.
-//   - Minimum SD-WAN Manager version: `20.12.0`
+//   - Minimum SD-WAN Manager version: `20.15.0`
 //
 // ## Example Usage
 //
@@ -71,7 +71,7 @@ type PolicyObjectUnifiedTlsSslProfile struct {
 	pulumi.CustomResourceState
 
 	DecryptCategories pulumi.StringArrayOutput `pulumi:"decryptCategories"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrOutput `pulumi:"decryptThreshold"`
 	// The description of the Policy_object
@@ -84,7 +84,7 @@ type PolicyObjectUnifiedTlsSslProfile struct {
 	NoDecryptCategories   pulumi.StringArrayOutput `pulumi:"noDecryptCategories"`
 	PassThroughCategories pulumi.StringArrayOutput `pulumi:"passThroughCategories"`
 	Reputation            pulumi.BoolOutput        `pulumi:"reputation"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	ThresholdCategories pulumi.StringPtrOutput `pulumi:"thresholdCategories"`
 	UrlAllowListId      pulumi.StringPtrOutput `pulumi:"urlAllowListId"`
@@ -142,7 +142,7 @@ func GetPolicyObjectUnifiedTlsSslProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering PolicyObjectUnifiedTlsSslProfile resources.
 type policyObjectUnifiedTlsSslProfileState struct {
 	DecryptCategories []string `pulumi:"decryptCategories"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	DecryptThreshold *string `pulumi:"decryptThreshold"`
 	// The description of the Policy_object
@@ -155,7 +155,7 @@ type policyObjectUnifiedTlsSslProfileState struct {
 	NoDecryptCategories   []string `pulumi:"noDecryptCategories"`
 	PassThroughCategories []string `pulumi:"passThroughCategories"`
 	Reputation            *bool    `pulumi:"reputation"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	ThresholdCategories *string `pulumi:"thresholdCategories"`
 	UrlAllowListId      *string `pulumi:"urlAllowListId"`
@@ -166,7 +166,7 @@ type policyObjectUnifiedTlsSslProfileState struct {
 
 type PolicyObjectUnifiedTlsSslProfileState struct {
 	DecryptCategories pulumi.StringArrayInput
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrInput
 	// The description of the Policy_object
@@ -179,7 +179,7 @@ type PolicyObjectUnifiedTlsSslProfileState struct {
 	NoDecryptCategories   pulumi.StringArrayInput
 	PassThroughCategories pulumi.StringArrayInput
 	Reputation            pulumi.BoolPtrInput
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	ThresholdCategories pulumi.StringPtrInput
 	UrlAllowListId      pulumi.StringPtrInput
@@ -194,7 +194,7 @@ func (PolicyObjectUnifiedTlsSslProfileState) ElementType() reflect.Type {
 
 type policyObjectUnifiedTlsSslProfileArgs struct {
 	DecryptCategories []string `pulumi:"decryptCategories"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	DecryptThreshold *string `pulumi:"decryptThreshold"`
 	// The description of the Policy_object
@@ -207,7 +207,7 @@ type policyObjectUnifiedTlsSslProfileArgs struct {
 	NoDecryptCategories   []string `pulumi:"noDecryptCategories"`
 	PassThroughCategories []string `pulumi:"passThroughCategories"`
 	Reputation            bool     `pulumi:"reputation"`
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	ThresholdCategories *string `pulumi:"thresholdCategories"`
 	UrlAllowListId      *string `pulumi:"urlAllowListId"`
@@ -217,7 +217,7 @@ type policyObjectUnifiedTlsSslProfileArgs struct {
 // The set of arguments for constructing a PolicyObjectUnifiedTlsSslProfile resource.
 type PolicyObjectUnifiedTlsSslProfileArgs struct {
 	DecryptCategories pulumi.StringArrayInput
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	DecryptThreshold pulumi.StringPtrInput
 	// The description of the Policy_object
@@ -230,7 +230,7 @@ type PolicyObjectUnifiedTlsSslProfileArgs struct {
 	NoDecryptCategories   pulumi.StringArrayInput
 	PassThroughCategories pulumi.StringArrayInput
 	Reputation            pulumi.BoolInput
-	// , Attribute conditional on `reputation` being equal to `true`
+	// , Attribute conditional on `reputation` equal to `true`
 	//   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 	ThresholdCategories pulumi.StringPtrInput
 	UrlAllowListId      pulumi.StringPtrInput
@@ -328,7 +328,7 @@ func (o PolicyObjectUnifiedTlsSslProfileOutput) DecryptCategories() pulumi.Strin
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslProfile) pulumi.StringArrayOutput { return v.DecryptCategories }).(pulumi.StringArrayOutput)
 }
 
-// , Attribute conditional on `reputation` being equal to `true`
+// , Attribute conditional on `reputation` equal to `true`
 //   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 func (o PolicyObjectUnifiedTlsSslProfileOutput) DecryptThreshold() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslProfile) pulumi.StringPtrOutput { return v.DecryptThreshold }).(pulumi.StringPtrOutput)
@@ -365,7 +365,7 @@ func (o PolicyObjectUnifiedTlsSslProfileOutput) Reputation() pulumi.BoolOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslProfile) pulumi.BoolOutput { return v.Reputation }).(pulumi.BoolOutput)
 }
 
-// , Attribute conditional on `reputation` being equal to `true`
+// , Attribute conditional on `reputation` equal to `true`
 //   - Choices: `high-risk`, `low-risk`, `moderate-risk`, `suspicious`, `trustworthy`
 func (o PolicyObjectUnifiedTlsSslProfileOutput) ThresholdCategories() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PolicyObjectUnifiedTlsSslProfile) pulumi.StringPtrOutput { return v.ThresholdCategories }).(pulumi.StringPtrOutput)

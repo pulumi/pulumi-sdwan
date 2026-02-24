@@ -11,7 +11,7 @@ namespace Pulumi.Sdwan
 {
     /// <summary>
     /// This resource can manage a Other UCSE Feature.
-    ///   - Minimum SD-WAN Manager version: `20.12.0`
+    ///   - Minimum SD-WAN Manager version: `20.15.0`
     /// 
     /// ## Example Usage
     /// 
@@ -72,14 +72,14 @@ namespace Pulumi.Sdwan
         public Output<bool?> AccessPortDedicated { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Output("accessPortSharedFailoverType")]
         public Output<string?> AccessPortSharedFailoverType { get; private set; } = null!;
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Output("accessPortSharedType")]
@@ -233,14 +233,14 @@ namespace Pulumi.Sdwan
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Input("accessPortSharedType")]
@@ -356,14 +356,14 @@ namespace Pulumi.Sdwan
         public Input<bool>? AccessPortDedicated { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge2`, `Te2`
         /// </summary>
         [Input("accessPortSharedFailoverType")]
         public Input<string>? AccessPortSharedFailoverType { get; set; }
 
         /// <summary>
-        /// , Attribute conditional on `AccessPortDedicated` being equal to `False`
+        /// , Attribute conditional on `AccessPortDedicated` equal to `False`
         ///   - Choices: `Ge1`, `Ge2`, `Ge3`, `Te2`, `Te3`, `Console`, `Failover`
         /// </summary>
         [Input("accessPortSharedType")]

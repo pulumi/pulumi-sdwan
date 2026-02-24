@@ -13,51 +13,51 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class TrafficDataPolicyDefinitionSequenceActionEntrySetParameterArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// DSCP, Attribute conditional on `Type` being equal to `Dscp`
+        /// DSCP, Attribute conditional on `Type` equal to `Dscp`
         ///   - Range: `0`-`63`
         /// </summary>
         [Input("dscp")]
         public Input<int>? Dscp { get; set; }
 
         /// <summary>
-        /// Forwarding class, Attribute conditional on `Type` being equal to `forwardingClass`
+        /// Forwarding class, Attribute conditional on `Type` equal to `forwardingClass`
         /// </summary>
         [Input("forwardingClass")]
         public Input<string>? ForwardingClass { get; set; }
 
         /// <summary>
-        /// Local TLOC list color. Space separated list of colors., Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list color. Space separated list of colors., Attribute conditional on `Type` equal to `localTlocList`
         /// </summary>
         [Input("localTlocListColor")]
         public Input<string>? LocalTlocListColor { get; set; }
 
         /// <summary>
-        /// Local TLOC list encapsulation., Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list encapsulation., Attribute conditional on `Type` equal to `localTlocList`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         [Input("localTlocListEncap")]
         public Input<string>? LocalTlocListEncap { get; set; }
 
         /// <summary>
-        /// Local TLOC list restrict, Attribute conditional on `Type` being equal to `localTlocList`
+        /// Local TLOC list restrict, Attribute conditional on `Type` equal to `localTlocList`
         /// </summary>
         [Input("localTlocListRestrict")]
         public Input<bool>? LocalTlocListRestrict { get; set; }
 
         /// <summary>
-        /// Next hop IP, Attribute conditional on `Type` being equal to `nextHop`
+        /// Next hop IP, Attribute conditional on `Type` equal to `nextHop`
         /// </summary>
         [Input("nextHop")]
         public Input<string>? NextHop { get; set; }
 
         /// <summary>
-        /// Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `Type` being equal to `nextHopLoose`
+        /// Use routing table entry to forward the packet in case Next-hop is not available, Attribute conditional on `Type` equal to `nextHopLoose`
         /// </summary>
         [Input("nextHopLoose")]
         public Input<bool>? NextHopLoose { get; set; }
 
         /// <summary>
-        /// Policer list ID, Attribute conditional on `Type` being equal to `Policer`
+        /// Policer list ID, Attribute conditional on `Type` equal to `Policer`
         /// </summary>
         [Input("policerListId")]
         public Input<string>? PolicerListId { get; set; }
@@ -69,7 +69,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PolicerListVersion { get; set; }
 
         /// <summary>
-        /// Preferred color group list ID, Attribute conditional on `Type` being equal to `preferredColorGroup`
+        /// Preferred color group list ID, Attribute conditional on `Type` equal to `preferredColorGroup`
         /// </summary>
         [Input("preferredColorGroupListId")]
         public Input<string>? PreferredColorGroupListId { get; set; }
@@ -81,26 +81,26 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PreferredColorGroupListVersion { get; set; }
 
         /// <summary>
-        /// Service TLOC color, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC color, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         [Input("serviceTlocColor")]
         public Input<string>? ServiceTlocColor { get; set; }
 
         /// <summary>
-        /// Service TLOC encapsulation, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC encapsulation, Attribute conditional on `Type` equal to `Service`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         [Input("serviceTlocEncapsulation")]
         public Input<string>? ServiceTlocEncapsulation { get; set; }
 
         /// <summary>
-        /// Service TLOC IP address, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC IP address, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         [Input("serviceTlocIp")]
         public Input<string>? ServiceTlocIp { get; set; }
 
         /// <summary>
-        /// Service TLOC list ID, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC list ID, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         [Input("serviceTlocListId")]
         public Input<string>? ServiceTlocListId { get; set; }
@@ -112,52 +112,52 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? ServiceTlocListVersion { get; set; }
 
         /// <summary>
-        /// Service TLOC Local, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC Local, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         [Input("serviceTlocLocal")]
         public Input<bool>? ServiceTlocLocal { get; set; }
 
         /// <summary>
-        /// Service TLOC Restrict, Attribute conditional on `Type` being equal to `Service`
+        /// Service TLOC Restrict, Attribute conditional on `Type` equal to `Service`
         /// </summary>
         [Input("serviceTlocRestrict")]
         public Input<bool>? ServiceTlocRestrict { get; set; }
 
         /// <summary>
-        /// Service type, Attribute conditional on `Type` being equal to `Service`
+        /// Service type, Attribute conditional on `Type` equal to `Service`
         ///   - Choices: `FW`, `IDP`, `IDS`, `Netsvc1`, `Netsvc2`, `Netsvc3`, `Netsvc4`, `Netsvc5`
         /// </summary>
         [Input("serviceType")]
         public Input<string>? ServiceType { get; set; }
 
         /// <summary>
-        /// Service VPN ID, Attribute conditional on `Type` being equal to `Service`
+        /// Service VPN ID, Attribute conditional on `Type` equal to `Service`
         ///   - Range: `0`-`65536`
         /// </summary>
         [Input("serviceVpnId")]
         public Input<int>? ServiceVpnId { get; set; }
 
         /// <summary>
-        /// TLOC color, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC color, Attribute conditional on `Type` equal to `Tloc`
         /// </summary>
         [Input("tlocColor")]
         public Input<string>? TlocColor { get; set; }
 
         /// <summary>
-        /// TLOC encapsulation, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC encapsulation, Attribute conditional on `Type` equal to `Tloc`
         ///   - Choices: `Ipsec`, `Gre`, `ipsec gre`
         /// </summary>
         [Input("tlocEncapsulation")]
         public Input<string>? TlocEncapsulation { get; set; }
 
         /// <summary>
-        /// TLOC IP address, Attribute conditional on `Type` being equal to `Tloc`
+        /// TLOC IP address, Attribute conditional on `Type` equal to `Tloc`
         /// </summary>
         [Input("tlocIp")]
         public Input<string>? TlocIp { get; set; }
 
         /// <summary>
-        /// TLOC list ID, Attribute conditional on `Type` being equal to `tlocList`
+        /// TLOC list ID, Attribute conditional on `Type` equal to `tlocList`
         /// </summary>
         [Input("tlocListId")]
         public Input<string>? TlocListId { get; set; }
@@ -176,7 +176,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<string> Type { get; set; } = null!;
 
         /// <summary>
-        /// DSCP, Attribute conditional on `Type` being equal to `Vpn`
+        /// DSCP, Attribute conditional on `Type` equal to `Vpn`
         ///   - Range: `0`-`65530`
         /// </summary>
         [Input("vpnId")]

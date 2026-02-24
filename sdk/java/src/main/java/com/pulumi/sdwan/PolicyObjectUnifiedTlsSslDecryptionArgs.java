@@ -191,7 +191,7 @@ public final class PolicyObjectUnifiedTlsSslDecryptionArgs extends com.pulumi.re
     }
 
     /**
-     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      * 
      */
@@ -199,7 +199,7 @@ public final class PolicyObjectUnifiedTlsSslDecryptionArgs extends com.pulumi.re
     private @Nullable Output<String> unknownRevocationStatus;
 
     /**
-     * @return Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+     * @return Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
      *   - Choices: `decrypt`, `drop`
      * 
      */
@@ -532,7 +532,7 @@ public final class PolicyObjectUnifiedTlsSslDecryptionArgs extends com.pulumi.re
         }
 
         /**
-         * @param unknownRevocationStatus Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+         * @param unknownRevocationStatus Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
          *   - Choices: `decrypt`, `drop`
          * 
          * @return builder
@@ -544,7 +544,7 @@ public final class PolicyObjectUnifiedTlsSslDecryptionArgs extends com.pulumi.re
         }
 
         /**
-         * @param unknownRevocationStatus Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` being equal to `ocsp`
+         * @param unknownRevocationStatus Only required if certificateRevocationStatus is oscp, if value is none then field shouldn&#39;t be here, Attribute conditional on `certificateRevocationStatus` equal to `ocsp`
          *   - Choices: `decrypt`, `drop`
          * 
          * @return builder

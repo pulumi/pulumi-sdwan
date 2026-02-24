@@ -320,6 +320,96 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      */
     readonly nat64: boolean;
     /**
+     * Port-Channel interface on/off
+     */
+    readonly portChannelInterface: boolean;
+    /**
+     * Eanble lacp fast switchover
+     */
+    readonly portChannelLacpFastSwitchover: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpFastSwitchoverVariable: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelLacpLoadBalance: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpLoadBalanceVariable: string;
+    /**
+     * Set LACP max bundle
+     */
+    readonly portChannelLacpMaxBundle: number;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpMaxBundleVariable: string;
+    /**
+     * Configure Port-Channel member links
+     */
+    readonly portChannelLacpMemberLinks: outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelLacpMemberLink[];
+    /**
+     * Set LACP min bundle
+     */
+    readonly portChannelLacpMinBundle: number;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpMinBundleVariable: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelLacpQosAggregate: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelLacpQosAggregateVariable: string;
+    /**
+     * Port-Channel member interface on/off
+     */
+    readonly portChannelMemberInterface: boolean;
+    /**
+     * Port Channel Mode
+     */
+    readonly portChannelMode: string;
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelStaticLoadBalance: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelStaticLoadBalanceVariable: string;
+    /**
+     * Configure Port-Channel member links
+     */
+    readonly portChannelStaticMemberLinks: outputs.GetServiceLanVpnInterfaceEthernetFeaturePortChannelStaticMemberLink[];
+    /**
+     * Enable QoS Port-Channel aggregate
+     */
+    readonly portChannelStaticQosAggregate: boolean;
+    /**
+     * Variable name
+     */
+    readonly portChannelStaticQosAggregateVariable: string;
+    /**
+     * Port Channel Sub Interface on/off
+     */
+    readonly portChannelSubinterface: boolean;
+    readonly portChannelSubinterfacePrimaryInterfaceName: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelSubinterfacePrimaryInterfaceNameVariable: string;
+    readonly portChannelSubinterfaceSecondaryInterfaceName: string;
+    /**
+     * Variable name
+     */
+    readonly portChannelSubinterfaceSecondaryInterfaceNameVariable: string;
+    /**
      * Service LAN VPN Feature ID
      */
     readonly serviceLanVpnFeatureId: string;
@@ -348,14 +438,6 @@ export interface GetServiceLanVpnInterfaceEthernetFeatureResult {
      * Variable name
      */
     readonly tcpMssVariable: string;
-    /**
-     * Enable tracker for this interface
-     */
-    readonly tracker: string;
-    /**
-     * Variable name
-     */
-    readonly trackerVariable: string;
     /**
      * Enable/Disable SGT Enforcement on an interface
      */

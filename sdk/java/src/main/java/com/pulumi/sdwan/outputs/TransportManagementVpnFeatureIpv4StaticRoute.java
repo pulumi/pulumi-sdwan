@@ -15,14 +15,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TransportManagementVpnFeatureIpv4StaticRoute {
     /**
-     * @return Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * @return Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
      */
     private @Nullable Integer administrativeDistance;
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * @return Variable name, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     private @Nullable String administrativeDistanceVariable;
@@ -44,7 +44,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
      */
     private @Nullable String networkAddressVariable;
     /**
-     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     private @Nullable List<TransportManagementVpnFeatureIpv4StaticRouteNextHop> nextHops;
@@ -62,7 +62,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
 
     private TransportManagementVpnFeatureIpv4StaticRoute() {}
     /**
-     * @return Administrative distance, Attribute conditional on `gateway` being equal to `null0`
+     * @return Administrative distance, Attribute conditional on `gateway` equal to `null0`
      *   - Range: `1`-`255`
      *   - Default value: `1`
      * 
@@ -71,7 +71,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
         return Optional.ofNullable(this.administrativeDistance);
     }
     /**
-     * @return Variable name, Attribute conditional on `gateway` being equal to `null0`
+     * @return Variable name, Attribute conditional on `gateway` equal to `null0`
      * 
      */
     public Optional<String> administrativeDistanceVariable() {
@@ -101,7 +101,7 @@ public final class TransportManagementVpnFeatureIpv4StaticRoute {
         return Optional.ofNullable(this.networkAddressVariable);
     }
     /**
-     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` being equal to `nextHop`
+     * @return IPv4 Route Gateway Next Hop, Attribute conditional on `gateway` equal to `nextHop`
      * 
      */
     public List<TransportManagementVpnFeatureIpv4StaticRouteNextHop> nextHops() {

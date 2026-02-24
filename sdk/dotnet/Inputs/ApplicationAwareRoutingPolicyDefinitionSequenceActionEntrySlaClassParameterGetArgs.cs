@@ -13,13 +13,13 @@ namespace Pulumi.Sdwan.Inputs
     public sealed class ApplicationAwareRoutingPolicyDefinitionSequenceActionEntrySlaClassParameterGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` being equal to `preferredColor`
+        /// preferred color (Single value or multiple values separated by spaces), Attribute conditional on `Type` equal to `preferredColor`
         /// </summary>
         [Input("preferredColor")]
         public Input<string>? PreferredColor { get; set; }
 
         /// <summary>
-        /// Preferred color group list ID, Attribute conditional on `Type` being equal to `preferredColorGroup`
+        /// Preferred color group list ID, Attribute conditional on `Type` equal to `preferredColorGroup`
         /// </summary>
         [Input("preferredColorGroupListId")]
         public Input<string>? PreferredColorGroupListId { get; set; }
@@ -31,7 +31,7 @@ namespace Pulumi.Sdwan.Inputs
         public Input<int>? PreferredColorGroupListVersion { get; set; }
 
         /// <summary>
-        /// SLA class list ID, Attribute conditional on `Type` being equal to `Name`
+        /// SLA class list ID, Attribute conditional on `Type` equal to `Name`
         /// </summary>
         [Input("slaClassListId")]
         public Input<string>? SlaClassListId { get; set; }
